@@ -44,7 +44,12 @@ model="$1"
 
 if [ -z "$model" ]; then
   echo "Usage: $0 <model-file>"
-  echo "Checks an LDraw .mpd, .ldr, or .dat model file for errors."
+  echo "Checks an LDraw .mpd, .ldr, or .dat model file for errors, reporting them in JSON format."
+  echo '
+Example outputs:
+{"error":"Error parsing line.","file":"42000-1-corrupted.mpd","line":46,"content":"19 0 20 0 -20 0 -1 0 1 0 0 0 0 1 32524.dat"}
+{"error":"Singular matrix.","file":"2210-1-broken.mpd","line":57,"content":"1 0 20 0 -20 0 -1 0 0 0 0 0 0 1 12624.dat"}
+  '
   exit 1
 fi
 
