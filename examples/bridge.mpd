@@ -1,0 +1,24 @@
+0 FILE bridge-main.ldr
+0 Small display bridge with two pillars and a studded deck
+0 Name: bridge-main.ldr
+0 Author: LDraw Astra example
+0 !LDRAW_ORG Model
+0 // left: left red pillar
+1 4 -40 0 0 1 0 0 0 1 0 0 0 1 bridge-pillar.ldr
+0 // right: right blue pillar
+1 1 40 0 0 0 0 1 0 1 0 -1 0 0 bridge-pillar.ldr
+0 STEP
+0 // deck: yellow deck spanning both pillars
+1 14 0 -32 0 1 0 0 0 1 0 0 0 1 3032.dat
+0 NOFILE
+0 FILE bridge-pillar.ldr
+0 Reusable pillar inheriting its parent colour
+0 Name: bridge-pillar.ldr
+0 Author: LDraw Astra example
+0 !LDRAW_ORG Model
+0 // foot: 2 by 2 plate foot
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // column: brick above foot; upper body height sets Y
+1 16 0 -24 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 NOFILE

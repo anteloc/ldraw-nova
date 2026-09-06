@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ldraw-astra"
+version = "0.1.0"
+description = "Specification-grounded generation and review tools for LDraw assemblies"
+requires-python = ">=3.12"
+dependencies = ["pyldraw3==1.7.0", "numpy==2.5.2", "jsonschema==4.26.0"]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[project.scripts]
+ldraw-agent = "ldraw_tools.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["ldraw_tools*"]
+
+[tool.setuptools.package-data]
+ldraw_tools = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

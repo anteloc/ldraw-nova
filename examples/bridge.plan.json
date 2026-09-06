@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "LDraw Astra example",
+  "sections": [
+    {
+      "name": "bridge-main.ldr",
+      "description": "Small display bridge with two pillars and a studded deck",
+      "steps": [
+        [
+          {"id": "left", "ref": "bridge-pillar.ldr", "colour": 4, "at": [-40, 0, 0], "purpose": "left red pillar"},
+          {"id": "right", "ref": "bridge-pillar.ldr", "colour": 1, "at": [40, 0, 0], "yaw": 90, "purpose": "right blue pillar"}
+        ],
+        [
+          {"id": "deck", "ref": "3032.dat", "colour": 14, "at": [0, -32, 0], "purpose": "yellow deck spanning both pillars"}
+        ]
+      ]
+    },
+    {
+      "name": "bridge-pillar.ldr",
+      "description": "Reusable pillar inheriting its parent colour",
+      "steps": [
+        [{"id": "foot", "ref": "3022.dat", "colour": 16, "at": [0, 0, 0], "purpose": "2 by 2 plate foot"}],
+        [{"id": "column", "ref": "3003.dat", "colour": 16, "on": "foot", "purpose": "brick above foot; upper body height sets Y"}]
+      ]
+    }
+  ]
+}

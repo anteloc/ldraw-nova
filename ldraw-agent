@@ -1,0 +1,8 @@
+#!/bin/sh
+set -eu
+task_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ ! -x "$task_dir/.venv/bin/python" ]; then
+  echo 'Run ./setup.sh first.' >&2
+  exit 2
+fi
+exec "$task_dir/.venv/bin/python" -m ldraw_tools.cli "$@"

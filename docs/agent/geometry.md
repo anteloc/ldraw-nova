@@ -1,0 +1,63 @@
+# Placement and physical review
+
+## Inspect before placing
+
+Run `./ldraw-agent part 3001 --limit 30`. It returns actual library metadata, origin-relative bounds, dimensions, stud positions, connectors, provenance, and completeness. Bounds include decorative geometry and stud height; **bounding-box height is not stacking height**. Do not infer axes from the part description alone.
+
+The PDF's standard dimensions (p.63) are:
+
+| Quantity | LDU |
+|---|---:|
+| Stud grid pitch / brick unit width | 20 |
+| Brick body height | 24 |
+| Plate body height | 8 |
+| Stud diameter | 12 |
+| Stud height | 4 |
+| Approximate millimetres per LDU | 0.4 |
+
+The typical studded-part origin is the centre of the top stud group at the **base** of the studs, Y=0; body extends downward toward positive Y (PDF p.143). Hinge origins often lie on the rotation axis. These are generic conventions: inspect the actual file, especially slopes, wheels, hinges, minifigures, brackets and asymmetric parts.
+
+Verified against this library, `3001.dat` (2×4 brick) has bounds X=-40..40, Y=-4..24, Z=-20..20. Its body is 24 high, its full bounds 28 high, and its longest dimension is local X. Stud centres are X=-30,-10,10,30 and Z=-10,10, at Y=0.
+
+## Stacking ordinary bricks and plates
+
+For upright standard parts, the **upper part's underside** must meet the **lower part's top body plane**:
+
+```text
+y_upper = y_lower - height_of_upper_body
+```
+
+A plate placed on a brick at Y=0 goes at Y=-8. A brick placed on that plate goes at Y=-32. Do not subtract the lower part's height or add a 4-LDU gap for the stud. Studs enter the upper part's sockets, so their bounding boxes legitimately overlap.
+
+The plan's `on` field implements this rule for the curated parts in `./ldraw-agent profiles`. `offset_studs: [x,z]` is measured in **the supporting part's local axes**, times 20 LDU. `yaw` describes the new part's orientation in the containing section, independently of the support's yaw. `on` requires an earlier placement ID in the same section and at least one aligned stud grid point. It is not available for unknown part profiles, tiles, slopes, rotated sideways parts, or submodel references; use inspection and explicit `at` coordinates instead.
+
+Half-stud offsets are 10 LDU. A centred 1×1 over a 2×2 needs an X/Z offset to an actual stud, e.g. `[0.5,0.5]`, not `[0,0]`. Side-by-side bricks touching walls have no clutch connection; bridge them with a plate or a correctly mated connector. Place long plates across seams for connected assemblies.
+
+## Reuse subassemblies and connection evidence
+
+Search `./ldraw-agent search submodels 'steering' --limit 5`, then inspect the original section with `sections`. Learn its real relative transforms and mating components, but verify names, variants, completeness and annotations. OMR examples are evidence, not proof that every legacy transform is rigid or every annotation accurate. Preserve attribution if copying actual source.
+
+For hinges, axles, wheels and clips:
+
+1. Inspect both parts' connector frames, profile dimensions, kind, occupancy, and source/confidence. Matching visual bounds alone is insufficient. Optional LDCad shadow metadata can improve coverage.
+2. Put them in a small test MPD. Use `inspect` to obtain stable occurrence indices and current contacts.
+3. Run `snap test.mpd --moving 1 --fixed 0 --limit 5` for candidate **world** transforms. Select a candidate consistent with the intended construction. For a nested part, convert world to its parent's frame: `M_local = inverse(M_parent) @ M_world`, `t_local = inverse(M_parent) @ (t_world - t_parent)`.
+4. Rebuild and rerun geometry checks. Snapping proposes a fit; it does not test other parts for collision, stresses, permitted articulation ranges, or strength.
+
+Use actual matching wheel/rim/tyre assemblies from inspected official shortcuts or verified references. Do not invent axle diameters, hinge pivots, or minifigure offsets.
+
+## Interpret geometry reports honestly
+
+`validate --geometry` and `inspect` recursively expand referenced library geometry through pyldraw3 and report world bounds for each leaf, parent source lines, connections, and overlaps. Conditional-line control points are excluded from physical extents by the geometry engine. Shortcuts remain library leaf assemblies in the BOM; they are not necessarily one manufactured piece.
+
+`rectangular_body_overlap` is an error for curated ordinary upright bricks/plates at quarter turns. Other `review_aabb_only` pairs are broad-phase candidates: hollow parts can have overlapping boxes without material intersection, while an AABB cannot determine stud/socket legality. `stud_zone_overlap_review_connections` is expected when correctly stacked but still needs connector evidence.
+
+`confirmed_components` and `optimistic_components` describe the connector algorithm's evidence. “Confirmed” is a library inference status, not a promise of real-world fit. Multiple groups can mean floating parts, missing connector metadata, or deliberately separate objects (e.g. a figure beside a vehicle). Document which explanation you verified. One connected group also does not prove that the model is strong or stable.
+
+The report always says `physical_validity: not_proven`. Visually inspect home/top/front views and any obscured connection. For difficult geometry:
+
+```sh
+./prepare-glb.sh --file output/my-model.mpd output/my-model.glb
+```
+
+Use Blender MCP to import into a new collection without deleting the user's scene. Inspect named part instances and custom properties, world transforms, bounds, and suspect contact regions. GLB coordinates/units may differ from LDraw: establish the conversion using a known 20-LDU spacing before comparing numbers. Draco compression/tessellation and surface-only intersections have tolerances; coplanar contact and intended socket engagement are not automatically collisions. Inspect material intersections and connector clearance, including containment. Keep all fixes in the source plan/MPD and regenerate the GLB. Missing Blender access is not a successful geometry check: record any remaining uncertainty and simplify unverified construction where practical.
