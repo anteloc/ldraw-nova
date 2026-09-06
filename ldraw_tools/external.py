@@ -3,8 +3,124 @@ from __future__ import annotations
 
 import subprocess
 import math
+import csv
+import hashlib
 from pathlib import Path
 from tempfile import TemporaryDirectory
+
+
+def cad_source(path, library, temp):
+    """Materialize embedded DAT definitions for LeoCAD without modifying source.
+
+    LeoCAD's MPD loader treats inline DAT geometry as model contents and can omit
+    those parts in snapshots/CSV. Give it a minimal ordinary library instead.
+    """
+    from .document import parse_source, section_table, is_part, source_blocks
+    from .common import get_parts, normalized, atomic_write
+    from ldraw import Piece
+    path,library,temp=Path(path).resolve(),Path(library).resolve(),Path(temp)
+    if path.suffix.casefold() not in {".mpd",".ldr"}:
+        return path,library,{}
+    model=parse_source(path)
+    table=section_table(model)
+    embedded=[s for s in table.values() if is_part(s)]
+    if not embedded:
+        return path,library,{}
+    digest=hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+    renames={normalized(s.name):f"astra-{digest}-{i:03d}.dat" for i,s in enumerate(embedded)}
+    parts=get_parts(library)
+    mini=temp/'library';mini.mkdir()
+    (mini/'parts').mkdir();(mini/'p').mkdir()
+    config=next(p for p in library.iterdir() if p.name.casefold()=='ldconfig.ldr')
+    (mini/'LDConfig.ldr').symlink_to(config)
+    seen=set();index={}
+
+    def include(code):
+        code=normalized(code).removesuffix('.dat')
+        if code in seen or code+'.dat' in table:
+            return
+        seen.add(code)
+        part=parts.find_part(code=code)
+        if part is None:
+            raise ValueError(f"Cannot render: unresolved library dependency {code}.dat")
+        source=part.path.resolve()
+        relative=source.relative_to(library)
+        destination=mini/relative
+        destination.parent.mkdir(parents=True,exist_ok=True)
+        if not destination.exists():destination.symlink_to(source)
+        if relative.parent==Path('parts'):
+            index[relative.name]=part.description
+        for obj in part.objects:
+            if isinstance(obj,Piece):include(obj.reference)
+
+    for sub in table.values():
+        for p in sub.pieces:
+            if normalized(p.reference) not in table:include(p.reference)
+    blocks=source_blocks(path)
+    if not blocks:
+        raise ValueError("Embedded DAT rendering requires MPD FILE blocks")
+
+    def rewritten(sub):
+        result=[]
+        for _,line in blocks[normalized(sub.name)]:
+            tokens=line.split(None,14)
+            if tokens[:2]==['0','Name:'] and is_part(sub):
+                line='0 Name: '+renames[normalized(sub.name)]
+            elif tokens[:1]==['1'] and len(tokens)==15 and normalized(tokens[14]) in renames:
+                line=' '.join(tokens[:14])+' '+renames[normalized(tokens[14])]
+            result.append(line)
+        return result
+    lines=[]
+    if is_part(model):
+        wrapper='astra-cad-root.ldr'
+        while normalized(wrapper) in table:wrapper='_'+wrapper
+        lines.extend(['0 FILE '+wrapper,'0 Embedded part preview',
+                      '1 7 0 0 0 1 0 0 0 1 0 0 0 1 '+renames[normalized(model.name)]])
+    for sub in table.values():
+        body=rewritten(sub)
+        if is_part(sub):
+            filename=renames[normalized(sub.name)]
+            atomic_write(mini/'parts'/filename,'\r\n'.join(body)+'\r\n')
+            index[filename]=sub.description or sub.name
+        else:
+            lines.extend(['0 FILE '+sub.name,*body])
+    lines.append('0 NOFILE')
+    prepared=temp/'leocad-source.mpd'
+    atomic_write(prepared,'\r\n'.join(lines)+'\r\n')
+    atomic_write(mini/'parts.lst','\n'.join(f'{name} {title}' for name,title in sorted(index.items()))+'\n')
+    return prepared,mini,{new:table[old].name for old,new in renames.items()}
+
+
+def restore_bom_names(path, names):
+    if not names:return
+    with Path(path).open(newline='',encoding='utf-8-sig') as f:
+        reader=csv.DictReader(f);fields=reader.fieldnames;rows=list(reader)
+    for row in rows:
+        row['Part ID']=names.get(row['Part ID'],row['Part ID'])
+    with Path(path).open('w',newline='',encoding='utf-8') as f:
+        writer=csv.DictWriter(f,fieldnames=fields);writer.writeheader();writer.writerows(rows)
+
+
+def compare_bom(model,parts,csv_path):
+    from collections import Counter
+    from .common import normalized
+    from .document import physical_context
+    model,parts=physical_context(model,parts)
+    expected=Counter()
+    for row in model.bill_of_materials(parts=parts):
+        expected[(normalized(row.part).removesuffix('.dat'),row.colour_code)]+=row.quantity
+    actual=Counter()
+    with Path(csv_path).open(newline='',encoding='utf-8-sig') as f:
+        reader=csv.DictReader(f)
+        if not {'Part ID','Color Code','Quantity'}.issubset(reader.fieldnames or []):
+            raise ValueError('CSV must be a LeoCAD BOM with Part ID, Color Code, Quantity columns')
+        for row in reader:
+            quantity=int(row['Quantity'])
+            if quantity<0:raise ValueError('BOM quantities must be nonnegative')
+            actual[(normalized(row['Part ID']).removesuffix('.dat'),int(row['Color Code']))]+=quantity
+    differences=[dict(part=part+'.dat',colour=colour,python=expected[(part,colour)],leocad=actual[(part,colour)])
+                 for part,colour in sorted(expected.keys()|actual.keys()) if expected[(part,colour)]!=actual[(part,colour)]]
+    return dict(matches=not differences,physical_placements=sum(expected.values()),leocad_placements=sum(actual.values()),differences=differences)
 
 
 def cad_check(path, library, *, timeout=90):
@@ -37,6 +153,7 @@ def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90,
     results = []
     # Unique temporary outputs ensure an old artifact cannot make a failed run pass.
     with TemporaryDirectory(prefix=".render-", dir=outdir) as temp:
+        path,library,embedded_names=cad_source(path,library,temp)
         for view in views:
             if view not in {"home", "front", "back", "left", "right", "top", "bottom"}:
                 raise ValueError(f"Unknown view {view}")
@@ -66,5 +183,7 @@ def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90,
         result = subprocess.run(["leocad", "-l", str(library), "-csv", str(bom), str(Path(path).resolve())], capture_output=True, text=True, timeout=timeout)
         if result.returncode or not bom.exists():
             raise ValueError(f"LeoCAD BOM failed: {result.stdout}\n{result.stderr}")
+        restore_bom_names(bom,embedded_names)
         bom.replace(outdir / bom.name)
-    return dict(images=results, bom=str(outdir / "leocad-bom.csv"), visual_review="required: open and inspect the images")
+    return dict(images=results, bom=str(outdir / "leocad-bom.csv"), embedded_definitions_materialized=len(embedded_names),
+                visual_review="required: open and inspect the images")

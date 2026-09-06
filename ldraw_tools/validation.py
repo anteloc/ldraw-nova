@@ -16,7 +16,7 @@ BFC = {"CERTIFY", "CERTIFY CCW", "CERTIFY CW", "NOCERTIFY", "CW", "CCW",
 UNSUPPORTED = {"!TEXMAP", "!DATA", "!:", "!COLOUR", "CLEAR"}
 
 
-def polygon_issues(obj, line, section):
+def polygon_issues(obj, line, section, *, part_geometry=False):
     p = np.array([[v.x, v.y, v.z] for v in obj.points], dtype=float)
     if not np.isfinite(p).all():
         return [issue("number.nonfinite", "Coordinates must be finite.", line=line, section=section)]
@@ -30,7 +30,20 @@ def polygon_issues(obj, line, section):
         return [issue("geometry.degenerate", "Polygon contains collinear/coincident vertices.", line=line, section=section)]
     if isinstance(obj, Quadrilateral):
         normal = cross / np.linalg.norm(cross)
-        if abs(np.dot(p[3] - p[0], normal)) > 1e-5 * scale:
+        if part_geometry:
+            # PDF p.142 requires testing BOTH diagonals. Under 1 degree is the
+            # ordinary part tolerance; 1–3 requires justification, >3 is invalid.
+            angles = []
+            for indices in [(0,1,2,0,2,3), (0,1,3,1,2,3)]:
+                a,b,c,d,e,f = p[list(indices)]
+                n, q = np.cross(b-a,c-a), np.cross(e-d,f-d)
+                length = np.linalg.norm(n) * np.linalg.norm(q)
+                angles.append(180.0 if length == 0 else float(np.degrees(np.arccos(np.clip(n @ q / length, -1, 1)))))
+            if max(angles) > 3:
+                return [issue("geometry.nonplanar", "Part quad exceeds 3-degree tolerance (PDF p.142).", line=line, section=section, angle_degrees=max(angles))]
+            if max(angles) >= 1:
+                return [issue("geometry.quad_warp_review", "Part quad needs author justification for 1–3 degree warp (PDF p.142).", line=line, section=section, severity="warning", angle_degrees=max(angles))]
+        elif abs(np.dot(p[3] - p[0], normal)) > 1e-5 * scale:
             return [issue("geometry.nonplanar", "Quad is not planar; split it into triangles.", line=line, section=section)]
         turns = [np.dot(np.cross(p[(i+1)%4]-p[i], p[(i+2)%4]-p[(i+1)%4]), normal) for i in range(4)]
         if min(turns) <= 1e-9 * scale**2:
@@ -38,7 +51,7 @@ def polygon_issues(obj, line, section):
     return []
 
 
-def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None):
+def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None, instance_limit=100000):
     problems = []
     raw = text.encode("utf-8") if raw is None else raw
     if raw.startswith(b"\xef\xbb\xbf"):
@@ -70,9 +83,9 @@ def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None):
                 problems.append(issue("mpd.filename", "FILE needs a filename.", line=number))
             if len(section) > 255:
                 problems.append(issue("mpd.filename", "Filename exceeds 255 characters.", line=number))
-            if assembly and ("/" in normalized(section) or not section.lower().endswith(".ldr")):
-                problems.append(issue("assembly.section_name", "Use a unique, flat .ldr section name for model assemblies.", line=number))
-            if parts.find_part(code=section.removesuffix(".dat")) is not None:
+            if assembly and not section.lower().endswith((".ldr", ".dat")):
+                problems.append(issue("assembly.section_name", "Use .ldr for assemblies and classified .dat for embedded definitions.", line=number))
+            if parts.find_part(code=normalized(section).removesuffix(".dat")) is not None:
                 problems.append(issue("mpd.library_shadow", "Embedded filename shadows a library part/primitive.", line=number, section=section))
             active = started = True
             pending_bfc = None
@@ -116,7 +129,7 @@ def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None):
                     certified = True
                 if options == "INVERTNEXT":
                     pending_bfc = number
-                    if assembly:
+                    if assembly and not (section or name).lower().endswith(".dat"):
                         problems.append(issue("assembly.invertnext", "Do not invert physical parts. Mirroring and BFC inversion are distinct (PDF pp.96–98).", line=number, section=section))
                 seen_bfc = True
             sanitized.append(line)
@@ -153,7 +166,12 @@ def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None):
     if model is None:
         return model, problems
     all_models = [model, *model.submodels.values()]
+    from .document import is_part, section_table, assembly_view, dependency_closure
+    table = section_table(model)
     for sub in all_models:
+        part_scope = is_part(sub)
+        if assembly and part_scope and not any(word in (sub.ldraw_org or "").casefold() for word in ("part", "primitive", "shortcut")):
+            problems.append(issue("part.missing_classification", "Embedded .dat definitions require an accurate !LDRAW_ORG part/subpart/primitive/shortcut classification.", section=sub.name))
         if assembly:
             for value, label in [(sub.description, "title"), (sub.header_name, "Name:"), (sub.author, "Author:")]:
                 if not value:
@@ -163,17 +181,22 @@ def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None):
         for obj in sub.objects:
             line = sub.source_line_for(obj)
             if isinstance(obj, (Line, OptionalLine, Triangle, Quadrilateral)):
-                problems.extend(polygon_issues(obj, line, sub.name))
-                if assembly:
+                problems.extend(polygon_issues(obj, line, sub.name, part_geometry=part_scope))
+                if assembly and not part_scope:
                     problems.append(issue("coverage.raw_geometry", "Assembly analysis requires library parts; custom type 2–5 geometry needs external review.", line=line, section=sub.name))
         for piece in sub.pieces:
             line = sub.source_line_for(piece)
             a = np.array(piece.matrix.rows)
             if not np.isfinite(a).all() or abs(np.linalg.det(a)) < 1e-9:
                 problems.append(issue("matrix.singular", "Singular transform collapses geometry.", line=line, section=sub.name))
-            elif assembly and (not np.allclose(a.T @ a, np.eye(3), atol=ROTATION_TOLERANCE, rtol=0) or np.linalg.det(a) < 0):
+            elif assembly and not part_scope and (not np.allclose(a.T @ a, np.eye(3), atol=ROTATION_TOLERANCE, rtol=0) or np.linalg.det(a) < 0):
                 problems.append(issue("assembly.nonrigid", "Use a proper rotation: physical parts must not be scaled, sheared, or mirrored.", line=line, section=sub.name))
-            if sub.submodel_for(piece) is None and assembly:
+            embedded = table.get(normalized(piece.reference))
+            if assembly and not part_scope and embedded is not None and is_part(embedded):
+                kind = (embedded.ldraw_org or "").casefold()
+                if "primitive" in kind or "subpart" in kind or normalized(embedded.name).startswith("s/"):
+                    problems.append(issue("assembly.library_internal", "Do not place embedded primitives/subparts as physical parts.", line=line, section=sub.name))
+            if embedded is None and assembly and not part_scope:
                 part = parts.find_part(code=piece.part)
                 if part:
                     filetype = part.metadata.file_kind
@@ -184,12 +207,12 @@ def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None):
                         problems.append(issue("part.alias_or_internal", "Inspect this alias/internal part and prefer a current physical part.", line=line, section=sub.name, severity="warning"))
     if not any(p["severity"] == "error" for p in problems):
         occurrences = []
-        for occurrence in model.iter_occurrences():
+        for occurrence in assembly_view(model).iter_occurrences():
             occurrences.append(occurrence)
-            if len(occurrences) > 5000:
-                problems.append(issue("coverage.instance_budget", "More than 5000 leaf occurrences; validate smaller assemblies separately."))
+            if len(occurrences) > instance_limit:
+                problems.append(issue("coverage.instance_budget", f"More than {instance_limit} physical occurrences; increase --max-instances or select a section."))
                 return model, problems
-        used = {normalized(model.name)}
+        used = {normalized(s.name) for s in dependency_closure(model)}
         placements = {}
         for occ in occurrences:
             used.update(normalized(p.model.name) for p in occ.path)
@@ -197,7 +220,7 @@ def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None):
                 problems.append(issue("colour.unresolved_current", "Choose an explicit colour on the root placement; this leaf still inherits 16.", line=occ.source_line, section=occ.source_model.name))
             key = (normalized(occ.reference), tuple(np.round([occ.position.x, occ.position.y, occ.position.z], 6)), tuple(np.round(np.array(occ.matrix.rows).ravel(), 6)))
             if key in placements:
-                problems.append(issue("assembly.duplicate", "Same part is placed twice at the same world transform (including across submodels).", line=occ.source_line, section=occ.source_model.name))
+                problems.append(issue("assembly.duplicate", "Same part is placed twice at the same world transform (including across submodels).", line=occ.source_line, section=occ.source_model.name, severity="error" if assembly else "warning"))
             placements[key] = occ
         for sub in all_models[1:]:
             if normalized(sub.name) not in used:
@@ -207,10 +230,25 @@ def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None):
     return model, problems
 
 
-def validate_file(path, parts, *, assembly=True):
+def validate_file(path, parts, *, assembly=True, instance_limit=100000, section=None, colour=None):
+    if section is not None:
+        from .document import selected_source, section_table
+        text, line_map = selected_source(path, section, colour)
+        model, diagnostics = validate_text(text, parts, name=str(path), assembly=assembly, instance_limit=instance_limit)
+        for d in diagnostics:
+            if d.get("line_number") is not None:
+                d["line_number"] = line_map.get(d["line_number"])
+        if model:
+            # Keep instance/source paths useful after selecting/reordering FILE blocks.
+            for sub in section_table(model).values():
+                sub._source_lines = {obj: line_map.get(n) for obj,n in sub._source_lines.items()}
+                sub._object_source_lines = {obj: line_map.get(n) for obj,n in sub._object_source_lines.items()}
+        return model, diagnostics
+    if colour is not None:
+        raise ValueError("--colour requires --section")
     raw = Path(path).read_bytes()
     try:
         text = raw.decode("utf-8")
     except UnicodeDecodeError:
         return None, [issue("encoding.utf8", "New files must be UTF-8 (PDF p.61).")]
-    return validate_text(text, parts, name=str(path), assembly=assembly, raw=raw)
+    return validate_text(text, parts, name=str(path), assembly=assembly, raw=raw, instance_limit=instance_limit)

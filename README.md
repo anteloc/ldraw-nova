@@ -1,6 +1,8 @@
 # LDraw generation tools
 
-Generate MPD assemblies using real LDraw parts, inspect their geometry and connections, and check the result with Python and LeoCAD.
+Generate modular MPD scenes with thousands of real part placements, inspect their assemblies and connections, and check the result with Python and LeoCAD.
+
+For complex scenes, start with the [Bookshop case study and module workflow](docs/agent/complex-models.md), its [measured assembly inventory](docs/agent/resources/bookshop-study.json), and the original [Copper Lane generator](examples/modular-street/README.md). Plans support nested includes, attributed MPD assets, named attachment frames and regular repeats. Inspection supports selected sections and bounded reports; embedded DAT parts resolve without inflating physical BOM counts.
 
 Start an agent with [instructions.md](instructions.md). Read the [tool reference](docs/agent/tooling.md), [LDraw rules](docs/agent/ldraw-reference.md), and [geometry guide](docs/agent/geometry.md). The mandatory source is [docs/ldraw-specs.pdf](docs/ldraw-specs.pdf); the [source map](docs/agent/specification-map.md) links rules to its pages.
 
@@ -20,3 +22,14 @@ Open the PNGs for visual review. The checked source is also included as [example
 Defaults resolve relative to this repository: `../ldraw-lib/ldraw` and `../ldraw-lib/models-annotated`. Override with `LDRAW_DIR`, `MODELS_DIR`, or the CLI's `--library` / `--models` options before the command.
 
 The implementation reuses [pyldraw3](https://github.com/hbmartin/pyldraw3) for parsing, writing, geometry expansion, BOMs, and connector inference; NumPy for matrix/geometry checks; JSON Schema for generation plans; the existing SQLite model index for retrieval; Poppler for the supplied PDF; and LeoCAD for renders. Local validation fills gaps needed by the documented assembly workflow. These are checks and review evidence, not a proof of physical buildability. See the explicit [coverage and repair guide](docs/agent/validation.md).
+
+## Complex example
+
+```sh
+.venv/bin/python examples/modular-street/generate.py
+./ldraw-agent build examples/modular-street/scene.plan.json --output output/copper-lane.mpd --detail summary
+./ldraw-agent render output/copper-lane.mpd --outdir output/copper-lane-review
+./ldraw-agent compare-bom output/copper-lane.mpd --csv output/copper-lane-review/leocad-bom.csv
+```
+
+The default scene has 1,544 placements across ten FILE blocks. Read the [verification record](docs/agent/verification.md) for tested scope, contact/collision limits, and defects found in the annotated Bookshop reference. LeoCAD snapshots use a temporary library for embedded DAT definitions; original libraries and source models remain unchanged.

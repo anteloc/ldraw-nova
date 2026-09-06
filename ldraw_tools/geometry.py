@@ -47,7 +47,10 @@ def components(nodes, edges):
     return result
 
 
-def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=5000):
+def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
+                     detail="full", contacts="auto", output_limit=200, offset=0):
+    from .document import physical_context
+    model, parts = physical_context(model, parts)
     occurrences = []
     for occ in model.iter_occurrences(include_steps=True):
         occurrences.append(occ)
@@ -119,40 +122,57 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=5000):
                 body_depths = np.minimum(ba[1], bb[1]) - np.maximum(ba[0], bb[0])
                 if np.all(body_depths > 1e-5):
                     status = "rectangular_body_overlap"
-                    problems.append(issue("assembly.body_overlap", "Upright rectangular brick/plate bodies overlap; reposition them.", instances=[first.index, second.index]))
+                    problems.append(issue("assembly.body_overlap", "Upright rectangular brick/plate bodies overlap; reposition them.", instances=[first.index, second.index], depths=body_depths.tolist(),
+                                          sources=[dict(part=o.occurrence.reference, section=o.occurrence.source_model.name,
+                                                        line_number=o.occurrence.source_line, source_path=jsonable(o.attribution.source_line_path)) for o in [first,second]]))
                 else:
                     status = "stud_zone_overlap_review_connections"
             if len(overlaps) < pair_limit:
                 overlaps.append(dict(instances=[first.index, second.index], depths=depths.tolist(), status=status))
-    contacts = inspection.connection_contacts()
+    contact_mode = "all" if contacts == "auto" and len(occurrences) <= 500 else "none" if contacts == "auto" else contacts
+    contact_results = inspection.connection_contacts() if contact_mode == "all" else []
     links = []
     confirmed, optimistic = [], []
-    for contact in contacts:
+    for contact in contact_results:
         edge = (contact.first_occurrence.index, contact.second_occurrence.index)
         optimistic.append(edge)
         if str(contact.status) == "confirmed":
             confirmed.append(edge)
-        links.append(dict(instances=list(edge), status=str(contact.status),
+        if len(links) < output_limit:
+            links.append(dict(instances=list(edge), status=str(contact.status),
                           kinds=[str(contact.first.kind), str(contact.second.kind)],
                           sources=[str(contact.first.source), str(contact.second.source)],
                           confidence=[contact.first.confidence, contact.second.confidence], residual=jsonable(contact.residual)))
     nodes = list(range(inspection.occurrence_count))
     groups = components(nodes, optimistic)
-    if len(groups) > 1:
-        problems.append(issue("assembly.disconnected_evidence", "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.", severity="warning", components=groups))
+    confirmed_groups = components(nodes, confirmed)
+    if contact_mode == "all" and len(groups) > 1:
+        problems.append(issue("assembly.disconnected_evidence", "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.", severity="warning", component_count=len(groups)))
+    if contact_mode == "none":
+        problems.append(issue("coverage.contacts_skipped", "Contacts were not computed. Select a subassembly or request --contacts all; no connectivity conclusion is available.", severity="warning"))
     if len(bodies) < len(occurrences):
         problems.append(issue("coverage.collision_review", "Some parts/orientations lack rectangular body checks; inspect AABB candidates in a renderer/Blender.", severity="warning"))
     return dict(complete=inspection.complete and not any(p["code"].startswith("coverage.") and p["severity"] == "error" for p in problems),
                 physical_validity="not_proven", bounds=jsonable(inspection.bounds), occurrence_count=len(occurrences),
-                instances=instances, contacts=links, confirmed_components=components(nodes, confirmed),
-                optimistic_components=groups, overlap_candidate_count=overlap_count, overlaps=overlaps,
-                overlaps_truncated=overlap_count > len(overlaps), diagnostics=problems,
+                detail=detail, instance_offset=offset, instances=instances[offset:offset+output_limit] if detail == "full" else [],
+                instances_truncated=detail != "full" or offset > 0 or len(instances) > output_limit,
+                contacts_checked=contact_mode == "all", contact_count=len(contact_results) if contact_mode == "all" else None,
+                contacts=links if detail == "full" else [], contacts_truncated=len(contact_results) > (len(links) if detail == "full" else 0),
+                confirmed_components=[g[:output_limit] for g in confirmed_groups[:output_limit]] if contact_mode == "all" and detail == "full" else None,
+                optimistic_components=[g[:output_limit] for g in groups[:output_limit]] if contact_mode == "all" and detail == "full" else None,
+                optimistic_component_count=len(groups) if contact_mode == "all" else None,
+                confirmed_component_count=len(confirmed_groups) if contact_mode == "all" else None,
+                components_truncated=contact_mode == "all" and (detail != "full" or max([len(groups),len(confirmed_groups),*[len(g) for g in groups+confirmed_groups]],default=0) > output_limit),
+                overlap_candidate_count=overlap_count, overlaps=overlaps if detail == "full" else [],
+                overlaps_truncated=overlap_count > (len(overlaps) if detail == "full" else 0), diagnostics=problems,
                 limitations=["AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
                              "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
                              "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."])
 
 
 def snap(model, parts, moving, fixed, limit=5):
+    from .document import physical_context
+    model, parts = physical_context(model, parts)
     inspection = inspect_model(model, parts)
     if not inspection.complete:
         raise ValueError("Cannot suggest snaps using incomplete geometry")

@@ -8,16 +8,18 @@ import subprocess
 import sys
 from importlib.metadata import version
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import jsonschema
 from ldraw.errors import PartError
 
-from .builder import build_plan, rotation
+from .builder import build_plan, load_plan, rotation
 from .common import ROOT, DATA, atomic_write, dumps, get_parts, jsonable, library_path, models_path
-from .external import cad_check, render, prepare_glb
+from .external import cad_check, render, prepare_glb, compare_bom
 from .geometry import analyze_geometry, profiles, snap
 from .resources import search_spec, search_models, model_sections
-from .validation import validate_file
+from .validation import validate_file, validate_text
+from .document import study_model, extract_section, physical_context, selected_source
 
 
 def positive(value):
@@ -25,6 +27,26 @@ def positive(value):
     if value <= 0:
         raise argparse.ArgumentTypeError("must be positive")
     return value
+
+
+def geometry_options(c):
+    c.add_argument("--detail", choices=["summary", "full"], default="full")
+    c.add_argument("--contacts", choices=["auto", "all", "none"], default="auto", help="auto computes contacts for at most 500 physical placements; scope larger models to sections")
+    c.add_argument("--limit", type=positive, default=200, help="Maximum instance/contact/pair/component rows (does not limit checks)")
+    c.add_argument("--offset", type=int, default=0, help="First physical occurrence to display")
+    c.add_argument("--max-instances", type=positive, default=100000, help="Physical expansion budget")
+
+
+def geometry_report(model, parts, args):
+    if args.offset < 0:
+        raise ValueError("--offset must be nonnegative")
+    return analyze_geometry(model, parts, detail=args.detail, contacts=args.contacts,
+                            output_limit=args.limit, pair_limit=args.limit, offset=args.offset, instance_limit=args.max_instances)
+
+
+def scope_options(c):
+    c.add_argument("--section", help="Inspect only this FILE block and its dependency closure; indices become section-local")
+    c.add_argument("--colour", type=int, help="Explicit inherited colour for a selected subassembly")
 
 
 def parser():
@@ -51,6 +73,20 @@ def parser():
     c = commands.add_parser("sections", help="Read original annotated model sections with source line numbers")
     c.add_argument("file")
     c.add_argument("--section")
+    c = commands.add_parser("study", help="Inventory an OMR assembly hierarchy, physical BOM, and source issues")
+    c.add_argument("file")
+    c.add_argument("--report")
+    c.add_argument("--max-instances", type=positive, default=100000)
+    c.add_argument("--detail", choices=["summary", "full"], default="summary")
+    c.add_argument("--limit", type=positive, default=30, help="Summary section/diagnostic rows")
+    c = commands.add_parser("extract", help="Copy one dependency-closed section with namespacing and attribution manifest")
+    c.add_argument("file")
+    c.add_argument("--section", required=True)
+    c.add_argument("--namespace", required=True)
+    c.add_argument("--output", required=True)
+    c.add_argument("--repair-bfc-comments", action="store_true", help="Explicitly move annotation comments before INVERTNEXT, recording each edit")
+    c.add_argument("--normalize-rotations", action="store_true", help="Project nearly rigid assembly matrices (error <=0.002) to proper rotations; record changes")
+    c.add_argument("--force", action="store_true")
     c = commands.add_parser("matrix", help="Compute a right-handed rotation in LDraw coordinates")
     c.add_argument("axis", choices=["x", "y", "z"])
     c.add_argument("degrees", type=float)
@@ -60,10 +96,16 @@ def parser():
     c.add_argument("--output", required=True)
     c.add_argument("--report")
     c.add_argument("--force", action="store_true", help="Replace an existing MPD after successful validation")
-    for command in ["validate", "inspect", "bom", "snap"]:
+    geometry_options(c)
+    for command in ["validate", "inspect", "bom", "compare-bom", "snap"]:
         c = commands.add_parser(command)
         c.add_argument("file")
         c.add_argument("--report")
+        scope_options(c)
+        if command in {"validate", "inspect"}:
+            geometry_options(c)
+        if command == "compare-bom":
+            c.add_argument("--csv", required=True, help="LeoCAD-exported BOM")
         if command == "validate":
             c.add_argument("--profile", choices=["assembly", "syntax"], default="assembly")
             c.add_argument("--geometry", action="store_true")
@@ -75,11 +117,13 @@ def parser():
     c = commands.add_parser("cad-check", help="Run Python validation and a LeoCAD snapshot/BOM import check")
     c.add_argument("file")
     c.add_argument("--timeout", type=positive, default=90)
+    scope_options(c)
     c = commands.add_parser("render", help="Render review views and export a LeoCAD BOM")
     c.add_argument("file")
     c.add_argument("--outdir", required=True)
     c.add_argument("--views", nargs="+", default=["home", "top", "front"])
     c.add_argument("--timeout", type=positive, default=90)
+    scope_options(c)
     c = commands.add_parser("glb", help="Convert a local model or part with semantic descriptions")
     c.add_argument("file")
     c.add_argument("--output", required=True)
@@ -108,23 +152,69 @@ def run(args):
     parts = get_parts(library, refresh=args.command == "index")
     for shadow in args.shadow:
         parts.add_connection_shadow(shadow)
+    if args.command == "study":
+        # An informational inventory is useful even when the reference has errors.
+        report=study_model(args.file, parts, instance_limit=args.max_instances)
+        report["detail"]=args.detail
+        if args.detail=="summary":
+            report.pop("bom")
+            report["sections_truncated"]=len(report["sections"])>args.limit
+            report["sections"]=[{k:v for k,v in s.items() if k in {"name","kind","direct_placements","physical_placements","scene_instances","reachable","steps"}}
+                                for s in report["sections"][:args.limit]]
+            report["diagnostics_truncated"]=len(report["diagnostics"])>args.limit
+            report["diagnostics"]=report["diagnostics"][:args.limit]
+        return report, 0
+    if args.command == "extract":
+        target = Path(args.output)
+        manifest_path = target.with_suffix(".manifest.json")
+        if target.suffix.casefold() != ".mpd":
+            raise ValueError("Output must end in .mpd")
+        if target.resolve() == Path(args.file).resolve():
+            raise ValueError("Extraction must not overwrite the source")
+        if (target.exists() or manifest_path.exists()) and not args.force:
+            raise ValueError("Output/manifest exists; use --force")
+        text, manifest = extract_section(args.file,args.section,namespace=args.namespace,
+                                        repair_bfc=args.repair_bfc_comments, normalize_rotations=args.normalize_rotations)
+        _, diagnostics = validate_text(text, parts, assembly=False)
+        manifest.update(syntax_checks_passed=not any(d["severity"] == "error" for d in diagnostics), diagnostics=diagnostics)
+        # Extraction intentionally retains invalid source for review; never claims a validated build.
+        atomic_write(target,text)
+        atomic_write(manifest_path,dumps(manifest)+"\n")
+        return dict(output=str(target),manifest=str(manifest_path),root=manifest["root"],
+                    written=True,checks_passed=manifest["syntax_checks_passed"],diagnostics=diagnostics,
+                    changes=len(manifest["changes"])), 0 if manifest["syntax_checks_passed"] else 1
     if args.command == "render":
         from ldraw import inspect_model
         from ldraw.lines import Line, OptionalLine, Triangle, Quadrilateral
-        model, diagnostics = validate_file(args.file, parts, assembly=False)
+        model, diagnostics = validate_file(args.file, parts, assembly=False, section=args.section, colour=args.colour)
         bounds = None
         if model and not any(d["severity"] == "error" for d in diagnostics):
+            model, render_parts = physical_context(model, parts)
             raw_geometry = any(isinstance(obj, (Line, OptionalLine, Triangle, Quadrilateral))
                                for m in [model, *model.submodels.values()] for obj in m.objects)
             if not raw_geometry:
-                inspection = inspect_model(model, parts)
+                inspection = inspect_model(model, render_parts)
                 if inspection.complete:
                     bounds = inspection.bounds
-        return render(args.file, library, args.outdir, views=args.views, timeout=args.timeout, bounds=bounds), 0
+        with TemporaryDirectory(prefix="ldraw-section-") as tmp:
+            source = args.file
+            if args.section:
+                text, _ = selected_source(args.file,args.section,args.colour)
+                source = Path(tmp)/"section.mpd"
+                atomic_write(source,text)
+            report = render(source, library, args.outdir, views=args.views, timeout=args.timeout, bounds=bounds)
+        report.update(source=args.file, section=args.section, source_diagnostics=diagnostics)
+        return report, 0
     if args.command == "cad-check":
-        model, diagnostics = validate_file(args.file, parts, assembly=Path(args.file).suffix.casefold() == ".mpd")
+        model, diagnostics = validate_file(args.file, parts, assembly=Path(args.file).suffix.casefold() == ".mpd", section=args.section, colour=args.colour)
         if model and not any(d["severity"] == "error" for d in diagnostics):
-            report = cad_check(args.file, library, timeout=args.timeout)
+            with TemporaryDirectory(prefix="ldraw-section-") as tmp:
+                source = args.file
+                if args.section:
+                    text,_ = selected_source(args.file,args.section,args.colour)
+                    source = Path(tmp)/"section.mpd"
+                    atomic_write(source,text)
+                report = cad_check(source, library, timeout=args.timeout)
             return dict(checks_passed=True, diagnostics=diagnostics, cad=report), 0
         return dict(checks_passed=False, diagnostics=diagnostics, cad=None), 1
     if args.command == "glb":
@@ -159,11 +249,11 @@ def run(args):
             raise ValueError("Output must end in .mpd")
         if target.exists() and not args.force:
             raise ValueError("Output exists; use --force to replace after successful validation")
-        plan = json.loads(Path(args.plan).read_text(), parse_constant=lambda v: (_ for _ in ()).throw(ValueError(f"Nonfinite JSON value {v}")))
-        text, model, diagnostics = build_plan(plan, parts)
+        plan = load_plan(args.plan)
+        text, model, diagnostics = build_plan(plan, parts, instance_limit=args.max_instances)
         geometry = None
         if not any(d["severity"] == "error" for d in diagnostics):
-            geometry = analyze_geometry(model, parts)
+            geometry = geometry_report(model, parts, args)
             diagnostics += geometry["diagnostics"]
         passed = not any(d["severity"] == "error" for d in diagnostics)
         report = dict(profile="assembly", checks_passed=passed, physical_validity="not_proven", output=str(target),
@@ -172,16 +262,23 @@ def run(args):
             atomic_write(target, text)
         return report, 0 if passed else 1
     assembly = args.command == "validate" and args.profile == "assembly"
-    model, diagnostics = validate_file(args.file, parts, assembly=assembly)
-    report = dict(file=args.file, profile="assembly" if assembly else "syntax", checks_passed=False,
+    model, diagnostics = validate_file(args.file, parts, assembly=assembly, section=args.section, colour=args.colour,
+                                       instance_limit=getattr(args,"max_instances",100000))
+    report = dict(file=args.file, section=args.section, profile="assembly" if assembly else "syntax", checks_passed=False,
                   physical_validity="not_proven", diagnostics=diagnostics)
     if model and not any(d["severity"] == "error" for d in diagnostics):
         if args.command == "bom":
+            model, parts = physical_context(model, parts)
             report["bom"] = jsonable(model.bill_of_materials(parts=parts))
+            report["physical_placements"] = sum(row["quantity"] for row in report["bom"])
+        elif args.command == "compare-bom":
+            report["comparison"] = compare_bom(model,parts,args.csv)
+            report["checks_passed"] = report["comparison"]["matches"]
+            return report, 0 if report["checks_passed"] else 1
         elif args.command == "snap":
             report["candidates"] = snap(model, parts, args.moving, args.fixed, args.limit)
         elif args.command == "inspect" or (args.command == "validate" and args.geometry):
-            report["geometry"] = analyze_geometry(model, parts)
+            report["geometry"] = geometry_report(model, parts, args)
             diagnostics += report["geometry"]["diagnostics"]
         report["checks_passed"] = not any(d["severity"] == "error" for d in diagnostics)
     failed = not report["checks_passed"] or (getattr(args, "strict", False) and bool(diagnostics))

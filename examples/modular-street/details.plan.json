@@ -1,0 +1,384 @@
+{
+  "version": 1,
+  "author": "ldraw-astra example generator",
+  "sections": [
+    {
+      "name": "lane-window.ldr",
+      "description": "Two stacked window frames with matching glazing",
+      "steps": [
+        [
+          {
+            "id": "frame",
+            "ref": "60592.dat",
+            "colour": 16,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                0,
+                -48,
+                0
+              ]
+            }
+          },
+          {
+            "id": "glass",
+            "ref": "60601.dat",
+            "colour": 47,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                0,
+                -48,
+                0
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "lane-door.ldr",
+      "description": "Glazed entrance with a closed hinged door",
+      "steps": [
+        [
+          {
+            "id": "frame",
+            "ref": "60596.dat",
+            "colour": 16,
+            "at": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "door",
+            "ref": "60623.dat",
+            "colour": 2,
+            "at": [
+              -32,
+              0,
+              5
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "lane-bookcase.ldr",
+      "description": "Three shelf bookcase with coloured brick books",
+      "steps": [
+        [
+          {
+            "id": "left",
+            "ref": "3005.dat",
+            "colour": 16,
+            "at": [
+              -50,
+              -24,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -32,
+                0
+              ]
+            }
+          },
+          {
+            "id": "right",
+            "ref": "3005.dat",
+            "colour": 16,
+            "at": [
+              50,
+              -24,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -32,
+                0
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "id": "shelves",
+            "ref": "3666.dat",
+            "colour": 16,
+            "at": [
+              0,
+              -32,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -32,
+                0
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "id": "books-0",
+            "ref": "3005.dat",
+            "colour": 4,
+            "at": [
+              -30,
+              -24,
+              0
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                20,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "books-1",
+            "ref": "3005.dat",
+            "colour": 1,
+            "at": [
+              -30,
+              -56,
+              0
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                20,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "books-2",
+            "ref": "3005.dat",
+            "colour": 2,
+            "at": [
+              -30,
+              -88,
+              0
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                20,
+                0,
+                0
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "lane-table.ldr",
+      "description": "Reading table on four legs",
+      "steps": [
+        [
+          {
+            "id": "leg--30--10",
+            "ref": "3005.dat",
+            "colour": 16,
+            "at": [
+              -30,
+              -24,
+              -10
+            ]
+          },
+          {
+            "id": "leg--30-10",
+            "ref": "3005.dat",
+            "colour": 16,
+            "at": [
+              -30,
+              -24,
+              10
+            ]
+          },
+          {
+            "id": "leg-30--10",
+            "ref": "3005.dat",
+            "colour": 16,
+            "at": [
+              30,
+              -24,
+              -10
+            ]
+          },
+          {
+            "id": "leg-30-10",
+            "ref": "3005.dat",
+            "colour": 16,
+            "at": [
+              30,
+              -24,
+              10
+            ]
+          }
+        ],
+        [
+          {
+            "id": "top",
+            "ref": "3020.dat",
+            "colour": 16,
+            "at": [
+              0,
+              -32,
+              0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "lane-tree.ldr",
+      "description": "Brick-built ornamental tree in a square planter",
+      "steps": [
+        [
+          {
+            "id": "planter",
+            "ref": "3031.dat",
+            "colour": 70,
+            "at": [
+              0,
+              -8,
+              0
+            ]
+          },
+          {
+            "id": "trunk",
+            "ref": "3062b.dat",
+            "colour": 70,
+            "at": [
+              -10,
+              -32,
+              -10
+            ],
+            "repeat": {
+              "count": 6,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "id": "canopy",
+            "ref": "3020.dat",
+            "colour": 2,
+            "at": [
+              0,
+              -160,
+              0
+            ]
+          },
+          {
+            "id": "crown",
+            "ref": "3003.dat",
+            "colour": 2,
+            "at": [
+              0,
+              -184,
+              0
+            ]
+          },
+          {
+            "id": "crown-cap",
+            "ref": "3022.dat",
+            "colour": 10,
+            "at": [
+              0,
+              -192,
+              0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "lane-lamp.ldr",
+      "description": "Street lamp with round column and translucent lantern",
+      "steps": [
+        [
+          {
+            "id": "foot",
+            "ref": "3022.dat",
+            "colour": 0,
+            "at": [
+              0,
+              -8,
+              0
+            ]
+          },
+          {
+            "id": "shaft",
+            "ref": "3941.dat",
+            "colour": 0,
+            "at": [
+              0,
+              -32,
+              0
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "id": "lantern",
+            "ref": "3003.dat",
+            "colour": 46,
+            "at": [
+              0,
+              -152,
+              0
+            ]
+          },
+          {
+            "id": "cap",
+            "ref": "3022.dat",
+            "colour": 0,
+            "at": [
+              0,
+              -160,
+              0
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}

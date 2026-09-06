@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import math
+import copy
 from pathlib import Path
 
 import jsonschema
@@ -13,6 +14,70 @@ from ldraw.lines import Comment
 from .common import DATA, normalized
 from .geometry import profiles
 from .validation import validate_text
+
+
+def check_schema(plan):
+    jsonschema.Draft202012Validator(json.loads((DATA / "plan.schema.json").read_text())).validate(plan)
+
+
+def load_plan(path):
+    """Resolve relative plan includes once; retain each module's authorship."""
+    loaded, sections, assets = set(), [], []
+    root_plan = None
+
+    def visit(path, active):
+        nonlocal root_plan
+        path = Path(path).resolve()
+        if path in active:
+            raise ValueError("Plan include cycle: " + " -> ".join(map(str, (*active,path))))
+        if path in loaded:
+            return
+        if len(loaded) >= 200:
+            raise ValueError("Plan exceeds 200 included files")
+        loaded.add(path)
+        plan = json.loads(path.read_text(), parse_constant=lambda v: (_ for _ in ()).throw(ValueError(f"Nonfinite JSON {v}")))
+        check_schema(plan)
+        if root_plan is None:
+            root_plan = plan
+        for section in plan["sections"]:
+            section = copy.deepcopy(section)
+            section.setdefault("author",plan["author"])
+            if plan.get("license"):
+                section.setdefault("license",plan["license"])
+            sections.append(section)
+        for asset in plan.get("assets",[]):
+            asset = str((path.parent / asset).resolve())
+            if asset not in assets:
+                assets.append(asset)
+        for child in plan.get("includes",[]):
+            visit(path.parent / child, (*active,path))
+    visit(path, ())
+    # Licences were copied to the sections owned by each declaring plan. Keeping
+    # the root licence here would incorrectly apply it to unlicensed includes.
+    result = {k:v for k,v in root_plan.items() if k not in {"includes","assets","sections","license"}}
+    result.update(sections=sections, assets=assets)
+    check_schema(result)
+    return result
+
+
+def frame(value):
+    result = np.eye(4)
+    result[:3, 3] = value["at"]
+    result[:3, :3] = value.get("matrix", np.eye(3))
+    a = result[:3, :3]
+    if not np.isfinite(result).all() or not np.allclose(a.T @ a,np.eye(3),atol=1e-4,rtol=0) or np.linalg.det(a) < 0:
+        raise ValueError("An anchor frame must use a finite proper rotation")
+    return result
+
+
+def repeated(entries):
+    for entry in entries:
+        if "repeat" not in entry:
+            yield entry
+            continue
+        for i in range(entry["repeat"]["count"]):
+            yield {**{k:v for k,v in entry.items() if k != "repeat"}, "id":f"{entry['id']}-{i}",
+                   "at":(np.array(entry["at"]) + i*np.array(entry["repeat"]["step"])).tolist()}
 
 
 def rotation(axis="y", degrees=0):
@@ -34,24 +99,36 @@ def serialize_mpd(model):
     return text.replace("\r\n", "\n").replace("\n", "\r\n") + "\r\n"
 
 
-def build_plan(plan, parts):
-    jsonschema.Draft202012Validator(json.loads((DATA / "plan.schema.json").read_text())).validate(plan)
+def build_plan(plan, parts, *, instance_limit=100000):
+    check_schema(plan)
+    if plan.get("includes"):
+        raise ValueError("Resolve includes with load_plan(path) before build_plan")
     names = [s["name"] for s in plan["sections"]]
     if len(set(map(normalized, names))) != len(names):
         raise ValueError("Section names must be unique ignoring case")
-    known = set(map(normalized, names))
     models = {s["name"]: Model(name=s["name"]) for s in plan["sections"]}
+    from .document import parse_source, section_table
+    for asset in plan.get("assets", []):
+        for sub in section_table(parse_source(asset)).values():
+            if normalized(sub.name) in {normalized(n) for n in models}:
+                raise ValueError(f"Duplicate section {sub.name}; extract assets with unique namespaces")
+            from dataclasses import replace
+            models[sub.name] = replace(sub, submodels={})
+    known = set(map(normalized, models))
+    anchors = {normalized(s["name"]): {name:frame(value) for name,value in s.get("anchors",{}).items()} for s in plan["sections"]}
     regular = profiles()
     for section in plan["sections"]:
         model = models[section["name"]]
-        model.set_header(description=section["description"], name=model.name, author=plan["author"], ldraw_org="Model")
-        if plan.get("license"):
-            model.set_header(license=plan["license"])
+        model.set_header(description=section["description"], name=model.name, author=section.get("author",plan["author"]), ldraw_org="Model")
+        if section.get("license",plan.get("license")):
+            model.set_header(license=section.get("license",plan.get("license")))
         placed = {}
         for step_index, step in enumerate(section["steps"]):
             if step_index:
                 model.add_step()
-            for entry in step:
+            for entry in repeated(step):
+                if len(placed) >= instance_limit:
+                    raise ValueError(f"More than {instance_limit} direct placements in a section")
                 if entry["id"] in placed:
                     raise ValueError(f"Duplicate placement id {entry['id']} in {model.name}")
                 ref = entry["ref"]
@@ -80,6 +157,21 @@ def build_plan(plan, parts):
                     upper = stud_centres(regular[code], position, matrix)
                     if not any(abs(a.x-b.x) < 1e-5 and abs(a.z-b.z) < 1e-5 for a in lower for b in upper):
                         raise ValueError(f"on: {entry['id']} has no aligned stud/socket with {support_id}; check half-stud offsets and part axes")
+                elif "attach" in entry:
+                    attach = entry["attach"]
+                    if attach["to"] not in placed:
+                        raise ValueError("attach.to must identify an earlier placement in the same section")
+                    support, _ = placed[attach["to"]]
+                    try:
+                        fixed_frame = anchors[normalized(support.reference)][attach["anchor"]]
+                        moving_frame = anchors[normalized(ref)][attach["using"]]
+                    except KeyError as exc:
+                        raise ValueError(f"Unknown module anchor {exc.args[0]}; declare both interfaces in the plans") from exc
+                    support_frame = frame(dict(at=[support.position.x,support.position.y,support.position.z],matrix=support.matrix.rows))
+                    offset = frame(dict(at=attach.get("offset",[0,0,0])))
+                    transform = support_frame @ fixed_frame @ offset @ np.linalg.inv(moving_frame)
+                    position = Vector(*transform[:3,3])
+                    matrix = Matrix(transform[:3,:3].tolist())
                 else:
                     position = Vector(*entry["at"])
                 model.add(Comment(f"// {entry['id']}: {entry.get('purpose', ref)}"))
@@ -90,7 +182,7 @@ def build_plan(plan, parts):
     # MPD namespace is shared across all sections; serializer emits each section once.
     root.submodels = {normalized(m.name): m for m in list(models.values())[1:]}
     text = serialize_mpd(root)
-    parsed, diagnostics = validate_text(text, parts, name=names[0])
+    parsed, diagnostics = validate_text(text, parts, name=names[0], instance_limit=instance_limit)
     if any(d["severity"] == "error" for d in diagnostics):
         return text, parsed, diagnostics
     return text, parsed, diagnostics

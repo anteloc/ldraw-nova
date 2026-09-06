@@ -1,116 +1,120 @@
-# Generate a new LDraw model
+# Generate and verify a new LDraw model
 
-Create an original, coherent LEGO-style model and deliver its editable `.mpd` source. Follow the user's subject, size, features, palette, and constraints. If the user gives no subject, choose a modest recognizable object you can finish and verify, such as a small building, bridge, or brick-built sculpture. Prefer a simple complete construction over features whose connections you cannot verify. Continue through generation, checking, repair, rendering, and delivery.
+Create the model the user requests and deliver its editable `.mpd`, reproducible source plans/generator, checks, BOM and reviewed previews. Match the requested subject, scale, palette, features and complexity. For a large model, divide it into modules and finish them in stages. Do not silently reduce a requested detailed scene to a few bricks. When no subject is supplied, choose a recognizable subject and state its scope briefly.
 
-Your objective is correct LDraw syntax, real part references and colours, sensible geometry, and a physically plausible connected assembly. Use the tools below to obtain evidence. Do not claim that parsing or rendering alone proves physical buildability.
+Work through design, construction, checks, repair, rendering and delivery. Correct syntax, a plausible picture and a connected-component result are separate kinds of evidence; none alone proves physical buildability.
 
-## 1. Prepare and read
+## 1. Prepare
 
-Work from this repository's root. Run:
+Run from this repository's root:
 
 ```sh
 ./ldraw-agent doctor
 ```
 
-If the environment is missing, run `./setup.sh`. It installs Python tools into `.venv` and prepares local indexes. Python 3.12+, Poppler `pdftotext`, and LeoCAD are required for the complete workflow. `mpd2glb.sh` is optional for detailed Blender inspection. Use **LeoCAD for snapshots** on this macOS system.
+Run `./setup.sh` if needed. It installs pinned Python packages in `.venv` and prepares local indexes. Use **LeoCAD for snapshots on this Mac**, including embedded unofficial parts; the render adapter supplies those parts through an isolated temporary library. Use `./prepare-glb.sh --file MODEL.mpd MODEL.glb` when semantic GLB/Blender inspection is needed.
 
-Read these short references before constructing the model:
+Read:
 
-- [docs/agent/ldraw-reference.md](docs/agent/ldraw-reference.md): MPD structure, colours, transforms, headers, steps, and BFC.
-- [docs/agent/geometry.md](docs/agent/geometry.md): part origins, stacking, connection evidence, collisions, and Blender review.
-- [docs/agent/tooling.md](docs/agent/tooling.md): executable commands and JSON plan fields.
-- [docs/agent/validation.md](docs/agent/validation.md): what the checks cover and how to repair failures.
+- [LDraw rules](docs/agent/ldraw-reference.md): records, coordinates, colours, MPD, BFC and headers.
+- [Geometry](docs/agent/geometry.md): origins, stacking, connectors and collision evidence.
+- [Tool reference](docs/agent/tooling.md) and [validation guide](docs/agent/validation.md).
+- For complex work, [module workflow and Bookshop case study](docs/agent/complex-models.md), [measured reference inventory](docs/agent/resources/bookshop-study.json), and [Copper Lane example](examples/modular-street/README.md).
 
-The mandatory source of language rules is [docs/ldraw-specs.pdf](docs/ldraw-specs.pdf). The [source map](docs/agent/specification-map.md) gives exact PDF pages. Retrieve a disputed rule with `./ldraw-agent spec --page 65` or search with `./ldraw-agent spec 'INVERTNEXT'`. Do not confuse official part-submission rules with requirements for a personal model.
+The language authority is the mandatory [docs/ldraw-specs.pdf](docs/ldraw-specs.pdf). Use `./ldraw-agent spec --page 65` or `./ldraw-agent spec 'INVERTNEXT'`; the [source map](docs/agent/specification-map.md) identifies relevant pages. Distinguish official part-authoring rules from personal model rules.
 
-Resources default to `../ldraw-lib/ldraw/parts/` and `../ldraw-lib/models-annotated/`. Use `LDRAW_DIR` / `MODELS_DIR` or global `--library` / `--models` options if the resources are elsewhere. Keep source libraries and reference OMR models unchanged; put your work under `output/`.
+The supplied resources are `../ldraw-lib/ldraw/` and `../ldraw-lib/models-annotated/`. Override with `LDRAW_DIR` / `MODELS_DIR` or global `--library` / `--models` before the command. Keep the official library and OMR originals unchanged. Put new work under `output/`.
 
-## 2. Choose real parts and plan the assembly
+## 2. Plan the model and study useful constructions
 
-Briefly identify the model, its intended features, approximate size, palette, and useful subassemblies. Design the structural base and connections before decorative details. Use purposeful section names such as `garden-house-main.ldr` and `garden-house-roof.ldr`.
+Record a short design brief: dimensions in studs/LDU, palette, essential features, physical subassemblies, build order, and intentional separate objects. For a building scene, separate the street/base, individual storeys, roofs, façade/window modules, interiors and landscaping. Allocate space and attachment surfaces before decoration. Keep a module checklist with local origin, envelope, anchors, dependencies and review status.
 
-Search and inspect actual parts:
+Search and inspect real parts:
 
 ```sh
 ./ldraw-agent search parts 'brick 2 x 4' --limit 8
-./ldraw-agent part 3001 --limit 30
+./ldraw-agent part 3001 --limit 20
 ./ldraw-agent colours 'blue'
 ./ldraw-agent profiles
 ```
 
-Never invent a part number, infer an Element ID from a description, or assume a filename exists. For every unfamiliar part, inspect its description, variant/replacement, local origin, axes, bounds, and connectors. Use current physical parts rather than arbitrary primitives or internal subparts. A palette code being valid does not prove that the chosen part was manufactured in that colour; check inventory separately if real-world purchasing/building is required.
+Never invent a part ID or infer axes from a description. Inspect each unfamiliar part's actual bounds, origin, variant/status and connector frames. Use physical parts, not arbitrary primitives or internal subparts. A valid palette code does not prove retail part/colour availability.
 
-For an unfamiliar mechanism or assembly, use the annotated reference models:
+Study references in small sections:
 
 ```sh
-./ldraw-agent search submodels 'wheel OR steering' --limit 5
-./ldraw-agent sections '../ldraw-lib/models-annotated/106-1.mpd'
-./ldraw-agent sections '../ldraw-lib/models-annotated/106-1.mpd' --section '106 - car.ldr'
+./ldraw-agent search submodels 'window OR balcony' --limit 5
+./ldraw-agent study ../ldraw-lib/models-annotated/10270-1.mpd --report output/reference-study.json
+./ldraw-agent sections ../ldraw-lib/models-annotated/10270-1.mpd --section '10270 - Pendulum_Clock.ldr'
 ```
 
-The search reports the original file path and whether it exists. Read the original section and its dependencies before applying its construction. Treat annotations and legacy placements as clues to verify. Preserve original author/licence information if copying source; do not pass a copied OMR model off as a new design.
+Read `source_checks_passed`, reachability and physical counts. An annotation can describe empty or unreferenced modules. Embedded `.dat` parts count as physical leaves; their studs/primitives are geometry, not separate BOM pieces. OMR examples can contain real source errors and rounded transforms.
 
-## 3. Generate reproducibly
+To copy a useful module, use `extract --section NAME --namespace UNIQUE --output output/assets/NAME.mpd`. It includes transitive dependencies, renames references and preserves author/licence headers. Keep its `.manifest.json`. Read the returned `root` instead of guessing the new filename. Review source problems before using the asset. `--repair-bfc-comments` and `--normalize-rotations` are explicit, recorded changes to a copy; neither certifies the construction. Do not present copied source as an original design.
 
-Prefer a JSON plan using [examples/bridge.plan.json](examples/bridge.plan.json) as a **format example**. Build your own model, not merely a renamed copy. Follow [ldraw_tools/data/plan.schema.json](ldraw_tools/data/plan.schema.json):
+## 3. Build reproducibly with module contracts
 
-- Top level: `version: 1`, accurate `author`, and `sections`; optionally an authorized `license`.
-- First section is the main model. Each section has a unique flat `.ldr` name, a useful description, and `steps` containing arrays of placements.
-- Each placement has a unique local `id`, a real `ref`, a `colour`, and either `at: [x,y,z]` in LDU or `on: "earlier-id"`. Add a short `purpose` describing its role.
-- Optional `yaw` rotates around +Y; use `matrix` instead for other rigid orientations. Never provide both. `offset_studs: [x,z]` is only for `on`, in the supporting part's local axes.
-- `on` works only for curated upright studded bricks/plates in `profiles`. Use explicit inspected placement for other parts or submodels. Check half-stud parity; an offset of `0.5` is 10 LDU.
+Use the [JSON schema](ldraw_tools/data/plan.schema.json). The [bridge](examples/bridge.plan.json) teaches basic format; the [modular street plans](examples/modular-street/scene.plan.json) teach complex composition. Use these as examples of technique, then design the requested model.
 
-Critical placement rules:
+- Every plan has `version: 1`, accurate `author` and `sections`; an authorized `license` is optional. The root plan's first section is the scene main.
+- Use `includes` for other JSON plans and `assets` for extracted MPDs. Paths are relative to the declaring plan. Section names must be unique across all inputs; copied headers retain their authorship.
+- Each generated section has a unique flat `.ldr` name, useful `description` and `steps` of placement arrays. Optional `anchors` expose named local frames (`at` and optional proper `matrix`).
+- Each placement has a unique local `id`, real `ref`, `colour`, and exactly one position mode: `at: [x,y,z]`, `on: "earlier-id"`, or `attach: {"to":"earlier-module-id","anchor":"seat","using":"base"}`. Add a short useful `purpose`.
+- `on` supports only curated upright bricks/plates. Optional `offset_studs: [x,z]` uses the supporting part's axes. Inspect other connections and use explicit placement or module anchors.
+- `attach` aligns the two authored module frames, including orientation. Optional `offset` is in the support anchor's axes. Anchors describe intended interfaces; verify the actual mating parts.
+- With `at` or `on`, use `yaw` or a proper `matrix`, never both. `attach` already determines the matrix. `repeat: {"count":N,"step":[dx,dy,dz]}` works with `at`; offsets use the containing section's axes and IDs become `id-0`, `id-1`, etc.
 
-- Negative Y is up. Stud pitch is 20 LDU, brick body height 24, and plate body height 8.
-- Typical studded-part origins lie on the top body plane. For a standard upright upper part: **`y_upper = y_lower - upper_body_height`**. Stud height does not add a gap.
-- Inspect actual axes: `3001.dat` is 80 LDU along local X and 40 along Z. Its 28-LDU full height includes the stud; its stacking height is 24.
-- Complete parts must not be stretched, sheared, or mirrored. Compute rotations with `./ldraw-agent matrix y 90` or the Python API.
-- Colour `16` inherits from a parent; colour every root placement so all visible leaves resolve. Colour `24` is for edges, never part placements.
-- Repeated assemblies belong in submodels. Embed all model subassemblies in the MPD and reference the official part library for `.dat` files. No cycles, duplicate FILE names, library-name shadowing, or coincident duplicate parts.
-- Use construction steps in a sensible installation order. Side-by-side touching bricks need a real connecting plate or other verified mating interface.
+Keep these placement rules visible while constructing:
 
-Generate:
+1. Negative Y is up; stud pitch is 20 LDU; a brick body is 24 high and a plate body is 8.
+2. For ordinary upright stacking, **`y_upper = y_lower - upper_body_height`**. Stud height does not add a gap. A brick's full bounding-box height is not its stacking height.
+3. Check half-stud parity. For example, a 1×1 above a centred 2×2 needs an actual stud offset such as `[0.5,0.5]`.
+4. Do not stretch, shear or mirror complete parts. Compute rotations with `./ldraw-agent matrix y 90` or the Python API. Arbitrary rigid SNOT/hinge orientations require connection and clearance review.
+5. Colour 16 inherits; explicit ancestor placements must resolve all visible leaves. Colour 24 is for edges, not part placements.
+6. Model subassemblies belong in embedded `.ldr` blocks. Imported classified `.dat` definitions may contain polygons and primitive transforms; keep those internal definitions separate from rigid physical placements.
+7. Avoid cycles, unresolved dependencies, library-name shadowing and coincident duplicates. Bridge adjacent brick seams with actual connecting parts. Leave floor, roof, hinge and door interfaces clear.
+
+Use Python for parameterized bonds, openings, stepped roofs or other conditional patterns. See [generate.py](examples/modular-street/generate.py). Use `load_plan(path)`, `build_plan`, `rotation`, and pyldraw3's existing classes; do not implement another LDraw parser/serializer. Keep geometry fixes in the generator/plan so rebuilding retains them.
 
 ```sh
-./ldraw-agent build output/my-model.plan.json --output output/my-model.mpd --report output/my-model.build.json
+./ldraw-agent build output/my-model.plan.json --output output/my-model.mpd \
+  --detail summary --report output/my-model.build.json
 ```
 
-Replace `my-model` with your chosen descriptive basename consistently. Existing MPDs require `--force` for a deliberate rebuild; errors prevent writing. The builder emits UTF-8 without BOM, CRLF, model headers, comments, and step boundaries. Fix the plan and rebuild rather than editing an output that will later be overwritten.
+Use one descriptive basename consistently. `build` writes only after selected assembly/geometry checks have no errors; warnings remain visible. It emits UTF-8 without BOM, CRLF, headers, comments and steps. Use `--force` for an intentional rebuild. Texture/data/custom colour semantics and newly authored unofficial part geometry need the additional review described in the references.
 
-For procedural repetition, see [examples/python_api.py](examples/python_api.py), executed with `.venv/bin/python`. Reuse `build_plan`, `rotation`, and the existing `ldraw` classes instead of writing your own parser or transform serializer. The standard workflow uses real parts; custom polygons, textures, embedded images, local colour definitions, and unofficial part authoring require additional external review and are explicitly outside the generation profile.
+## 4. Check details, modules and the assembled scene
 
-## 4. Check, repair, and inspect the result
-
-Run each command and check its exit status and JSON diagnostics:
+Work locally first: test one window/hinge/roof detail, then its containing module, then the full scene. A checked module can still collide with its neighbour after assembly.
 
 ```sh
-./ldraw-agent validate output/my-model.mpd --geometry --report output/my-model.validation.json
+./ldraw-agent inspect output/my-model.mpd --section my-floor.ldr --colour 19 \
+  --contacts all --detail full --limit 30 --report output/my-floor.inspection.json
+./ldraw-agent render output/my-model.mpd --section my-floor.ldr --colour 19 \
+  --outdir output/my-floor-review --views home top
+./ldraw-agent validate output/my-model.mpd --geometry --detail summary \
+  --report output/my-model.validation.json
 ./ldraw-agent bom output/my-model.mpd --report output/my-model.bom.json
 ./check-model.sh output/my-model.mpd
 ./ldraw-agent render output/my-model.mpd --outdir output/my-model-review
+./ldraw-agent compare-bom output/my-model.mpd --csv output/my-model-review/leocad-bom.csv \
+  --report output/my-model.bom-comparison.json
 ```
 
-Exit 0 means the selected checks completed; 1 means validation/coverage failed; 2 means input, dependency, or execution failure. Read warnings and completeness flags even after exit 0. Use `validate --strict` when the model should have no warnings. `check-model.sh` uses the Python validator and LeoCAD for a temporary snapshot/BOM import test; it does not perform all physical checks.
+Replace example section names with your actual FILE names. `--section` includes dependencies, resolves inherited colour when supplied, and preserves original source-line attribution. Its occurrence indices are local to that selection. Use `--offset 30 --limit 30` to retrieve another page; `snap --moving N --fixed M` uses these indices with the same selection. Snap candidates are world transforms: convert through the parent inverse before changing a nested placement.
 
-Repair all errors in the plan and regenerate. Use reported section/source line paths to find the placement, including inside repeated submodels. Resolve each warning or document the specific evidence that explains it. Never suppress a problem merely to obtain a passing status.
+Automatic contacts run for at most 500 physical placements. Larger scenes explicitly report `coverage.contacts_skipped`; check contacts on modules or deliberately request `--contacts all`. `--contacts none` still checks resolved geometry and curated body overlaps. No contacts means no connectivity conclusion. `--detail summary` suppresses long lists, not checks. The default expansion budget is 100,000 placements; use `--max-instances` when justified.
 
-Inspect the rendered **home, top, and front PNGs**. Check silhouette, scale, orientation, missing parts, unintended intersections, floating pieces, supported overhangs, and connections hidden from the home view. Add side/bottom views when necessary. Compare the Python BOM with `my-model-review/leocad-bom.csv` by part, colour, and quantity. Do not say you visually reviewed images unless you opened them.
+Read exit status, errors, warnings, `complete`, truncation flags and `contacts_checked`. Exit 0 means the selected operation completed; 1 means checks/BOM comparison failed; 2 means input/dependency/execution failure. `study` is informational; `extract` may write a failing review copy. `validate --strict` also fails warnings, without increasing coverage.
 
-For uncertain connections, use `inspect` for occurrence indices and `snap --moving N --fixed M` for candidate world transforms. Revalidate after applying a candidate. An AABB overlap is only a potential collision; correctly engaged studs and sockets normally overlap in bounding boxes. A connector algorithm's “confirmed” label and a single connected group are evidence, not guarantees of strength, legal stress, stability, or buildability.
+Repair every error, rebuild and rerun affected checks. Explain each remaining warning using specific evidence. AABB candidates are not material-collision proofs; engaged studs/sockets normally overlap in bounds. Fragmented connector groups can indicate missing metadata, floating parts or intentionally separate objects. Investigate the implicated parts instead of deleting warnings.
 
-For deeper examination:
+Open the final PNGs. Inspect silhouette, palette, orientation, support, openings, missing parts, intersections and overhangs. Review individual floors/interiors and obscured rear/side interfaces. Compare Python and LeoCAD BOMs by reference, colour and quantity using `compare-bom`; do not reconcile a mismatch by discarding parts. The macOS adapter handles embedded DAT definitions without modifying the source library.
 
-```sh
-./prepare-glb.sh --file output/my-model.mpd output/my-model.glb
-```
+For uncertain material intersections or unusual mechanisms, convert the selected model to semantic GLB and inspect it through available Blender tools. Confirm the LDraw/Blender axis and unit conversion using a known 20-LDU distance. Record any physical checks that remain unperformed. Do not claim visual review unless the images were opened, or buildability merely because a renderer succeeded.
 
-Import that annotated GLB with Blender MCP into a separate collection and inspect suspect part geometry and custom properties. Establish the LDraw-to-Blender unit/axis conversion before comparing coordinates. Keep source changes in the plan/MPD and regenerate derived files. If a complex construction cannot be verified, simplify it to an inspected construction or report precisely what remains uncertain.
+## 5. Deliver the exact final revision
 
-After the last source change, rerun the affected checks and regenerate the final renders/BOM. Deliver artifacts from the exact final MPD, not an earlier revision.
+After the last source change, regenerate affected checks, BOMs and renders. Provide clickable paths to the final `.mpd`, plans/generator, reused-asset manifests, validation report, BOM comparison and preview images. Briefly state actual features and physical placement count, which checks passed, and specific unresolved physical/inventory limitations. The toolkit's `physical_validity: not_proven` is intentional.
 
-## 5. Deliver
-
-Provide clickable paths to the final `.mpd`, editable plan or Python generator, validation report, BOM, and preview images. Briefly describe the model and its actual features, part count, checks performed, and any unresolved physical/inventory limitations. The tooling reports `physical_validity: not_proven`; describe concrete review evidence instead of declaring guaranteed correctness.
-
-The task is complete when the requested model is generated, errors are fixed, warnings are assessed, final artifacts are consistent, and the visual/physical review is performed to the available tools' stated coverage. Do not stop at a design proposal or merely provide instructions for the user to run.
+Finish the requested model and its review artifacts. Do not stop at a design proposal or instructions for the user to run.

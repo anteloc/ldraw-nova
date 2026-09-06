@@ -102,5 +102,7 @@ def test_external_failures_cannot_pass(monkeypatch,tmp_path):
     def fake_run(*args,**kwargs):
         return subprocess.CompletedProcess(args[0],0,"","")
     monkeypatch.setattr(subprocess,"run",fake_run)
+    source=tmp_path/"model.mpd"
+    source.write_text(mpd(ref()))
     with pytest.raises(ValueError,match="render failed"):
-        cad_check("model.mpd",tmp_path)
+        cad_check(source,tmp_path)

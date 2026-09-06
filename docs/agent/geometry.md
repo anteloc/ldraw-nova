@@ -61,3 +61,9 @@ The report always says `physical_validity: not_proven`. Visually inspect home/to
 ```
 
 Use Blender MCP to import into a new collection without deleting the user's scene. Inspect named part instances and custom properties, world transforms, bounds, and suspect contact regions. GLB coordinates/units may differ from LDraw: establish the conversion using a known 20-LDU spacing before comparing numbers. Draco compression/tessellation and surface-only intersections have tolerances; coplanar contact and intended socket engagement are not automatically collisions. Inspect material intersections and connector clearance, including containment. Keep all fixes in the source plan/MPD and regenerate the GLB. Missing Blender access is not a successful geometry check: record any remaining uncertainty and simplify unverified construction where practical.
+
+## Module interfaces and large scenes
+
+The [complex-model guide](complex-models.md) defines named anchor frames, relative plan includes, dependency-closed assets and regular repeats. Anchor alignment composes full rigid transforms and accounts for each module's local origin. It is an authored interface, not automatic connector detection. Keep actual mating studs/holes clear and inspect both modules together.
+
+Use `--section NAME --colour CODE` for a floor, roof or furniture detail. Source line paths remain tied to the input, while occurrence indices restart in the selected frame. Use `--detail full --limit 30 --offset 30` to obtain another instance page. Full-scene summary reports still check all resolved bounds and curated overlaps. Contacts are computed automatically through 500 physical leaves; above that, skipped coverage is explicit. `--contacts none` yields null component counts; `--contacts all` requests the full computation. Embedded physical DAT definitions are geometry leaves for BOM/instance purposes, while their internal geometry is expanded through an isolated document library overlay.

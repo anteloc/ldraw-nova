@@ -4,7 +4,7 @@ Read this before writing source. Full authority and page links are in [specifica
 
 ## Use the assembly workflow
 
-Build new models from existing official `.dat` **physical parts**, referenced by type 1 records. Group reusable assemblies in uniquely named embedded `.ldr` blocks inside a single `.mpd`. Prefer `./ldraw-agent build` with a JSON plan; it writes the transform fields, headers, steps, and MPD boundaries for you. Primitive/subpart authoring has separate rules and is outside the generated-assembly profile.
+Build new models from existing official `.dat` **physical parts**, referenced by type 1 records. Group reusable assemblies in uniquely named embedded `.ldr` blocks inside a single `.mpd`. Prefer `./ldraw-agent build` with a JSON plan; it writes the transform fields, headers, steps, and MPD boundaries for you. Reuse of classified embedded DAT definitions is supported through dependency-closed assets. Those definitions retain their polygons, internal primitive transforms, BFC and authorship; only complete physical placements must be rigid. Creating new primitives/subparts still needs a separate part-authoring review.
 
 Write UTF-8 without BOM and CRLF newlines. Blank lines are allowed. Fields are separated by spaces/tabs. Type 1's filename is the entire remainder after its 12 numeric transform values; ordinary spaces in names are allowed. For portability use simple ASCII names with single spaces or hyphens. Never quote a type 1 filename. `!TEXMAP` filenames use different quoting rules.
 
@@ -34,7 +34,7 @@ t_world = M_parent @ t_child + t_parent
 
 For identity use `1 0 0 0 1 0 0 0 1`. `./ldraw-agent matrix y 90` returns `[[0,0,1],[0,1,0],[-1,0,0]]`: it sends local +X toward world -Z. This is an active rotation, not a camera angle. For composed rotations order matters. Use matrix multiplication, not addition of Euler angles. Complete physical parts need proper rigid rotations; scaling, shear, and reflection may render but do not correspond to the original physical part.
 
-The general language permits scaling/mirroring, especially when constructing parts from primitives. The assembly profile deliberately rejects these on new model placements. A negative determinant and BFC inversion have different meanings; do not insert `INVERTNEXT` to compensate for a mirrored complete part.
+The general language permits scaling/mirroring, especially when constructing parts from primitives. The assembly profile deliberately rejects these on physical model placements while permitting them inside embedded DAT definitions. A negative determinant and BFC inversion have different meanings; do not insert `INVERTNEXT` to compensate for a mirrored complete part.
 
 ## Colours (PDF pp.68–70,84–87)
 
