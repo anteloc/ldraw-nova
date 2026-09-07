@@ -1,0 +1,707 @@
+[
+  {
+    "key": "porch",
+    "description": "Supported porch: base underside Y=0, entry at rear +Z; keep middle four studs clear",
+    "root": "porch-15-72-8-4-144.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      },
+      "entry": {
+        "at": [
+          0,
+          -8,
+          40.0
+        ]
+      },
+      "canopy": {
+        "at": [
+          0,
+          -168,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -80.0,
+        -168.0,
+        -40.0
+      ],
+      "max": [
+        80.0,
+        0.0,
+        40.0
+      ]
+    },
+    "physical_placements": 36,
+    "contact_count": 36,
+    "optimistic_component_count": 24,
+    "placement_notes": [
+      "Centre on a real entrance; rear edge abuts the wall, not its centre plane.",
+      "Match column trim to the building and keep the approach four studs wide."
+    ],
+    "source_sha256": "601e61631906d9bcc34c5b5847a324cd3ec4095c7ae2048d50ae451f0f8ca7d8",
+    "model": "details/porch/porch.mpd",
+    "plan": "details/porch/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "bench",
+    "description": "Four-stud garden/platform bench; bottom Y=0; front -Z",
+    "root": "bench-70.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -40.0,
+        -60.0,
+        -20.0
+      ],
+      "max": [
+        40.0,
+        0.0,
+        20.0
+      ]
+    },
+    "physical_placements": 6,
+    "contact_count": 8,
+    "optimistic_component_count": 1,
+    "placement_notes": [
+      "Face the view or path; leave a two-stud approach in front.",
+      "Use garden timber for rural scenes, dark frames for transport scenes."
+    ],
+    "source_sha256": "90cf52326ca0196881bbdb30749d8f1a78dc1facf7423e4652d09108a426c630",
+    "model": "details/bench/bench.mpd",
+    "plan": "details/bench/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "tree",
+    "description": "Layered garden tree; bottom Y=0; foliage needs a nine-stud clearing",
+    "root": "leaf-tree-288-5.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      },
+      "trunk": {
+        "at": [
+          -10.0,
+          -136,
+          -10.0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -78.0,
+        -244.0,
+        -78.0
+      ],
+      "max": [
+        40.0,
+        0.0,
+        58.0
+      ]
+    },
+    "physical_placements": 18,
+    "contact_count": 19,
+    "optimistic_component_count": 1,
+    "placement_notes": [
+      "Reserve a nine-stud canopy clearing rather than only the four-stud plinth.",
+      "Frame a building asymmetrically; do not put foliage across its focal entrance."
+    ],
+    "source_sha256": "92502b6eb169586f9c388e3181618dfbed86594e6bb1bacd603b4a950827bb00",
+    "model": "details/tree/tree.mpd",
+    "plan": "details/tree/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "lamppost",
+    "description": "Fluted lamppost with warm lantern; bottom Y=0, 2x2 stud foot",
+    "root": "fluted-lamp.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -20.0,
+        -244.0,
+        -20.0
+      ],
+      "max": [
+        20.0,
+        0.0,
+        20.0
+      ]
+    },
+    "physical_placements": 6,
+    "contact_count": 3,
+    "optimistic_component_count": 3,
+    "placement_notes": [
+      "Place beside the path, outside a door swing and away from important lettering.",
+      "Best with traditional town, station or civic architecture; use the beacon for a space base."
+    ],
+    "source_sha256": "46e8a75245b11caf4f7ddacd55aa2d8f22fe01a83e7658e4f675d0090dcdbdcd",
+    "model": "details/lamppost/lamppost.mpd",
+    "plan": "details/lamppost/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "flower-box",
+    "description": "Four by two stud planter with flowers; bottom Y=0",
+    "root": "flower-box-5.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -40.0,
+        -44.0,
+        -20.0
+      ],
+      "max": [
+        40.0,
+        0.0,
+        20.043100000000003
+      ]
+    },
+    "physical_placements": 13,
+    "contact_count": 8,
+    "optimistic_component_count": 5,
+    "placement_notes": [],
+    "source_sha256": "91e507e9a42e591da586fbd9ff6ebbfd2b6dc6c4c969770fd1176bf7496b67ed",
+    "model": "details/flower-box/flower-box.mpd",
+    "plan": "details/flower-box/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "stairs",
+    "description": "Supported steps, 8 LDU rise and one-stud tread; front -Z",
+    "root": "stairs-6-3.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      },
+      "landing": {
+        "at": [
+          0,
+          -24,
+          30.0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -60.0,
+        -28.0,
+        -30.0
+      ],
+      "max": [
+        60.0,
+        0.0,
+        30.0
+      ]
+    },
+    "physical_placements": 4,
+    "contact_count": 18,
+    "optimistic_component_count": 1,
+    "placement_notes": [
+      "The landing must meet the destination deck exactly; reserve the approach before paving."
+    ],
+    "source_sha256": "539ea81ed7b8873ff0472702867abb933405b6fb16d6e3529a1f70d4ebe67fcf",
+    "model": "details/stairs/stairs.mpd",
+    "plan": "details/stairs/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "fence",
+    "description": "Supported garden fence; underside Y=0; do not cross circulation routes",
+    "root": "fence-8-70.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -80.0,
+        -60.0,
+        0.0
+      ],
+      "max": [
+        80.0,
+        0.0,
+        20.0
+      ]
+    },
+    "physical_placements": 5,
+    "contact_count": 2,
+    "optimistic_component_count": 3,
+    "placement_notes": [
+      "Footprint is X=-w/2..w/2, Z=0..1; both posts lie on the site stud lattice."
+    ],
+    "source_sha256": "0b81bfea6500124fa7e504608cc5cddc3d03e0fcdfa5963326efb66efb839a3d",
+    "model": "details/fence/fence.mpd",
+    "plan": "details/fence/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "beacon",
+    "description": "Low blue landing beacon; functional industrial lighting",
+    "root": "landing-beacon.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -20.000504910000004,
+        -68.0,
+        -20.000504910000004
+      ],
+      "max": [
+        20.000504910000004,
+        0.0,
+        20.000504910000004
+      ]
+    },
+    "physical_placements": 4,
+    "contact_count": 8,
+    "optimistic_component_count": 2,
+    "placement_notes": [],
+    "source_sha256": "d23e14efbd447308a25ca73144099cbcfa21096e239a6910197057329d4f9fcb",
+    "model": "details/beacon/beacon.mpd",
+    "plan": "details/beacon/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "chimney",
+    "description": "Banded industrial chimney on a 4x4 stud equipment plinth",
+    "root": "utility-stack.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -40.0,
+        -236.0,
+        -40.0
+      ],
+      "max": [
+        40.0,
+        0.0,
+        40.0
+      ]
+    },
+    "physical_placements": 12,
+    "contact_count": 36,
+    "optimistic_component_count": 2,
+    "placement_notes": [],
+    "source_sha256": "a76daa7a73fe37b5e51ff860297784dbcf0dc66037273f1b6a3f77238ccf0e3e",
+    "model": "details/chimney/chimney.mpd",
+    "plan": "details/chimney/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "window",
+    "description": "Four-stud glazed bay; bottom Y=0, body height 72 LDU, front -Z",
+    "root": "window4-15-47.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -40.0,
+        -76.0,
+        -10.0
+      ],
+      "max": [
+        40.0,
+        0.0,
+        10.0
+      ]
+    },
+    "physical_placements": 3,
+    "contact_count": 0,
+    "optimistic_component_count": 3,
+    "placement_notes": [],
+    "source_sha256": "961d423088629b93f342fd9b493b6f007116b230b38680f6091ca6f15f5331d0",
+    "model": "details/window/window.mpd",
+    "plan": "details/window/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "glazed-door",
+    "description": "Four-stud closed hinged entrance; bottom Y=0, height 144 LDU; front -Z",
+    "root": "door4-15-15-glazed.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -40.0,
+        -148.0,
+        -10.0
+      ],
+      "max": [
+        40.0,
+        0.0,
+        10.0
+      ]
+    },
+    "physical_placements": 2,
+    "contact_count": 0,
+    "optimistic_component_count": 2,
+    "placement_notes": [],
+    "source_sha256": "19eba065c511bf83071be13be14c2f214e3eff325ecd309d7b511ea18c93b77e",
+    "model": "details/glazed-door/glazed-door.mpd",
+    "plan": "details/glazed-door/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "display-window",
+    "description": "Four-stud full-height fixed glazing; bottom Y=0, height 144 LDU",
+    "root": "display4-288.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -40.0,
+        -148.0,
+        -10.0
+      ],
+      "max": [
+        40.0,
+        0.0,
+        10.0
+      ]
+    },
+    "physical_placements": 2,
+    "contact_count": 0,
+    "optimistic_component_count": 2,
+    "placement_notes": [],
+    "source_sha256": "979e410705abd000355bb5ee6f09b484a32455d8d6bbad4c1cc380529600adc0",
+    "model": "details/display-window/display-window.mpd",
+    "plan": "details/display-window/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "fountain",
+    "description": "Six-stud pool and central water column; base Y=0, front -Z",
+    "root": "garden-fountain.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -60.0,
+        -76.0,
+        -60.0
+      ],
+      "max": [
+        60.0,
+        0.0,
+        60.0
+      ]
+    },
+    "physical_placements": 27,
+    "contact_count": 49,
+    "optimistic_component_count": 14,
+    "placement_notes": [
+      "Reserve a six-stud pool plus pedestrian clearance.",
+      "Use as a secondary focal point in a garden court, away from the main doorway axis."
+    ],
+    "source_sha256": "2b9ee7c84d931185396e0df02ce6a92270acc5250042410584f9a96959032d54",
+    "model": "details/fountain/fountain.mpd",
+    "plan": "details/fountain/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "solar-array",
+    "description": "Eight by four stud static solar rack; base Y=0; all panels rest on real supports",
+    "root": "solar-array.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -80.0,
+        -40.0,
+        -40.0
+      ],
+      "max": [
+        80.0,
+        0.0,
+        40.0
+      ]
+    },
+    "physical_placements": 14,
+    "contact_count": 48,
+    "optimistic_component_count": 2,
+    "placement_notes": [
+      "Reserve an eight-by-four equipment footprint on bare studs.",
+      "Group beside a habitat or workshop; avoid using the panel as unrelated façade ornament."
+    ],
+    "source_sha256": "df826ff74ecb32044eb3f18fe0192f1046a68cca61aed3001aad88fb0d7e8506",
+    "model": "details/solar-array/solar-array.mpd",
+    "plan": "details/solar-array/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "market-stall",
+    "description": "Four-stud market stall; supported counter, posts and striped canopy",
+    "root": "teaching-stall.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -60.0,
+        -124.0,
+        -40.0
+      ],
+      "max": [
+        60.0,
+        0.0,
+        40.0
+      ]
+    },
+    "physical_placements": 33,
+    "contact_count": 48,
+    "optimistic_component_count": 15,
+    "placement_notes": [],
+    "source_sha256": "3f889e0d5bf2237cf2b44fc5659d425e7591198fb88b8c6e6d712cba76657696",
+    "model": "details/market-stall/market-stall.mpd",
+    "plan": "details/market-stall/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "clock",
+    "description": "Printed civic clock, standing on a two-stud support surface",
+    "root": "clock.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -20.0,
+        -36.0,
+        -20.0
+      ],
+      "max": [
+        20.0,
+        0.0,
+        20.0
+      ]
+    },
+    "physical_placements": 2,
+    "contact_count": 4,
+    "optimistic_component_count": 1,
+    "placement_notes": [],
+    "source_sha256": "41d76b6bfd3e1427c22bc1c212d703e19464416bbbb2c08236cec71cbab53aa8",
+    "model": "details/clock/clock.mpd",
+    "plan": "details/clock/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "battlement",
+    "description": "Square tower top: connected deck, low parapet and alternating merlons",
+    "root": "teaching-battlement.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -80.0,
+        -60.0,
+        -100.0
+      ],
+      "max": [
+        80.0,
+        0.0,
+        100.0
+      ]
+    },
+    "physical_placements": 25,
+    "contact_count": 32,
+    "optimistic_component_count": 17,
+    "placement_notes": [],
+    "source_sha256": "cbf2b0d2dba98736c56ae9431d3fe3c8186f87093e43d1be11b407909af1be2c",
+    "model": "details/battlement/battlement.mpd",
+    "plan": "details/battlement/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  },
+  {
+    "key": "dormer-roof",
+    "description": "Removable gabled roof: supported slope courses, contrasting gable core and tiled ridge",
+    "root": "teaching-dormer-roof.ldr",
+    "anchors": {
+      "base": {
+        "at": [
+          0,
+          0,
+          0
+        ]
+      },
+      "ridge": {
+        "at": [
+          0,
+          -136,
+          0
+        ]
+      }
+    },
+    "bounds_ldu": {
+      "min": [
+        -180.0,
+        -136.0,
+        -120.0
+      ],
+      "max": [
+        180.0,
+        0.0,
+        120.0
+      ]
+    },
+    "physical_placements": 213,
+    "contact_count": 750,
+    "optimistic_component_count": 6,
+    "placement_notes": [],
+    "source_sha256": "e3b27dfbc875e833a101d7ffa99292d5ca175ab98ee9bc13398b13161a58e202",
+    "model": "details/dormer-roof/dormer-roof.mpd",
+    "plan": "details/dormer-roof/scene.plan.json",
+    "checks_passed": true,
+    "bom_matches": true,
+    "visual_review_recorded": false
+  }
+]

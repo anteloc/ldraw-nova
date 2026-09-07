@@ -1,0 +1,62 @@
+{
+  "checks_passed": true,
+  "source_sha256": "0b81bfea6500124fa7e504608cc5cddc3d03e0fcdfa5963326efb66efb839a3d",
+  "diagnostics": [
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 3
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -80.0,
+        -60.0,
+        0.0
+      ],
+      "max": [
+        80.0,
+        0.0,
+        20.0
+      ]
+    },
+    "occurrence_count": 5,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": true,
+    "contact_count": 2,
+    "contacts": [],
+    "contacts_truncated": true,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": 3,
+    "confirmed_component_count": 3,
+    "components_truncated": true,
+    "overlap_candidate_count": 4,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 3
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  }
+}

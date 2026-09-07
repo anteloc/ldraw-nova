@@ -1,0 +1,76 @@
+{
+  "checks_passed": true,
+  "source_sha256": "91e507e9a42e591da586fbd9ff6ebbfd2b6dc6c4c969770fd1176bf7496b67ed",
+  "diagnostics": [
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 5
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts/orientations lack rectangular body checks; inspect AABB candidates in a renderer/Blender.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -40.0,
+        -44.0,
+        -20.0
+      ],
+      "max": [
+        40.0,
+        0.0,
+        20.043100000000003
+      ]
+    },
+    "occurrence_count": 13,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": true,
+    "contact_count": 8,
+    "contacts": [],
+    "contacts_truncated": true,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": 5,
+    "confirmed_component_count": 5,
+    "components_truncated": true,
+    "overlap_candidate_count": 12,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 5
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts/orientations lack rectangular body checks; inspect AABB candidates in a renderer/Blender.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  }
+}

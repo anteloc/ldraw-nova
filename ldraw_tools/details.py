@@ -60,7 +60,9 @@ def detail_section(name, palette='botanical-bookshop'):
         # 2x4 tile rotated +90° about X mates its underside at Z=-20
         # to all four side studs; the printed face points towards -Z.
         orient=[[1,0,0],[0,0,-1],[0,1,0]]
-        steps=[[p('base','3020','trim',[0,-8,0]),
+        # A two-stud-wide foot fits between the adjacent upper window sills;
+        # each side-stud mount engages one row on this shared foot.
+        steps=[[p('base','3022','trim',[0,-8,0]),
                 p('mount-left','@bricks.Brick1X2WithTwoStudsOnOneSide','shopfront',[-20,-32,-10]),
                 p('mount-right','@bricks.Brick1X2WithTwoStudsOnOneSide','shopfront',[20,-32,-10]),
                 p('books-sign','@tiles.Tile2X4WithMetallicGold_Books_Pattern','shopfront',[0,-22,-28],matrix=orient),

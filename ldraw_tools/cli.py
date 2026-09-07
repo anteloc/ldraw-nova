@@ -55,6 +55,11 @@ def parser():
     p.add_argument("--models", help="Annotated model directory (default MODELS_DIR)")
     p.add_argument("--shadow", action="append", default=[], help="Optional LDCad connector directory/zip/csl; repeatable")
     commands = p.add_subparsers(dest="command", required=True)
+    c = commands.add_parser("examples", help="Find relevant generated building or detail examples")
+    c.add_argument("query", nargs="?", default="")
+    c.add_argument("--limit", type=positive, default=5)
+    c.add_argument("--scale", choices=["minifigure", "microscale"])
+    c.add_argument("--details", action="store_true")
     c = commands.add_parser("catalog", help="Search the supplied part/colour categories using descriptive symbols")
     c.add_argument("kind", choices=["categories", "parts", "colours"])
     c.add_argument("query", nargs="?", default="")
@@ -151,6 +156,10 @@ def parser():
 
 
 def run(args):
+    if args.command == "examples":
+        from .examples import search_examples
+        if args.details and args.scale:raise ValueError('--scale applies to building examples')
+        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details),0
     library = library_path(args.library)
     if args.command == "doctor":
         report = dict(python=sys.version.split()[0], packages={n: version(n) for n in ["pyldraw3", "numpy", "jsonschema"]},

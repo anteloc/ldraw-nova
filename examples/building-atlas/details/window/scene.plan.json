@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "author": "ldraw-astra building atlas",
+  "sections": [
+    {
+      "name": "window4-15-47.ldr",
+      "description": "Four-stud glazed bay; bottom Y=0, body height 72 LDU, front -Z",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "p0001",
+            "ref": "@windows.Window1X4X3WithoutShutterTabs",
+            "colour": 15,
+            "at": [
+              0,
+              -72,
+              0
+            ]
+          },
+          {
+            "id": "p0002",
+            "ref": "@windows.Window1X2X3PaneWithThickCornerTabs",
+            "colour": 47,
+            "at": [
+              -32.0,
+              -68,
+              4.0
+            ],
+            "yaw": -90
+          },
+          {
+            "id": "p0003",
+            "ref": "@windows.Window1X2X3PaneWithThickCornerTabs",
+            "colour": 47,
+            "at": [
+              32.0,
+              -68,
+              4.0
+            ],
+            "yaw": 90
+          }
+        ]
+      ]
+    }
+  ]
+}

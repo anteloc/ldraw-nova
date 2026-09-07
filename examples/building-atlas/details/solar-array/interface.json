@@ -1,0 +1,36 @@
+{
+  "key": "solar-array",
+  "description": "Eight by four stud static solar rack; base Y=0; all panels rest on real supports",
+  "root": "solar-array.ldr",
+  "anchors": {
+    "base": {
+      "at": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "bounds_ldu": {
+    "min": [
+      -80.0,
+      -40.0,
+      -40.0
+    ],
+    "max": [
+      80.0,
+      0.0,
+      40.0
+    ]
+  },
+  "physical_placements": 14,
+  "contact_count": 48,
+  "optimistic_component_count": 2,
+  "placement_notes": [
+    "Reserve an eight-by-four equipment footprint on bare studs.",
+    "Group beside a habitat or workshop; avoid using the panel as unrelated façade ornament."
+  ],
+  "source_sha256": "df826ff74ecb32044eb3f18fe0192f1046a68cca61aed3001aad88fb0d7e8506",
+  "model": "details/solar-array/solar-array.mpd",
+  "plan": "details/solar-array/scene.plan.json"
+}

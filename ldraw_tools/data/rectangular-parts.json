@@ -1,5 +1,5 @@
 {
-  "provenance": "Curated ordinary rectangular studded bricks/plates; local axes and body dimensions verified against supplied official .dat geometry. LDU and origin rules: docs/ldraw-specs.pdf pp.63,143. Not inferred for arbitrary parts.",
+  "provenance": "Curated ordinary rectangular bricks, plates and tiles; tiles participate in body-overlap checks but studs=false excludes them from the on placement shortcut; local axes and body dimensions verified against supplied official .dat geometry. LDU and origin rules: docs/ldraw-specs.pdf pp.63,143. Not inferred for arbitrary parts.",
   "parts": {
     "3001": {
       "description": "Brick  2 x  4",
@@ -158,6 +158,48 @@
     "3622": {
       "description": "Brick 1 x 3",
       "x_studs": 3,
+      "z_studs": 1,
+      "height": 24.0,
+      "studs": true
+    },
+    "3623": {
+      "description": "Plate  1 x  3",
+      "x_studs": 3,
+      "z_studs": 1,
+      "height": 8.0,
+      "studs": true
+    },
+    "3795": {
+      "description": "Plate  2 x  6",
+      "x_studs": 6,
+      "z_studs": 2,
+      "height": 8.0,
+      "studs": true
+    },
+    "60479": {
+      "description": "Plate  1 x 12",
+      "x_studs": 12,
+      "z_studs": 1,
+      "height": 8.0,
+      "studs": true
+    },
+    "3068b": {
+      "description": "Tile  2 x  2 with Groove",
+      "x_studs": 2,
+      "z_studs": 2,
+      "height": 8.0,
+      "studs": false
+    },
+    "3070b": {
+      "description": "Tile  1 x  1 with Groove",
+      "x_studs": 1,
+      "z_studs": 1,
+      "height": 8.0,
+      "studs": false
+    },
+    "98283": {
+      "description": "Brick  1 x  2 with Embossed Bricks",
+      "x_studs": 2,
       "z_studs": 1,
       "height": 24.0,
       "studs": true

@@ -1,0 +1,35 @@
+{
+  "key": "fence",
+  "description": "Supported garden fence; underside Y=0; do not cross circulation routes",
+  "root": "fence-8-70.ldr",
+  "anchors": {
+    "base": {
+      "at": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "bounds_ldu": {
+    "min": [
+      -80.0,
+      -60.0,
+      0.0
+    ],
+    "max": [
+      80.0,
+      0.0,
+      20.0
+    ]
+  },
+  "physical_placements": 5,
+  "contact_count": 2,
+  "optimistic_component_count": 3,
+  "placement_notes": [
+    "Footprint is X=-w/2..w/2, Z=0..1; both posts lie on the site stud lattice."
+  ],
+  "source_sha256": "0b81bfea6500124fa7e504608cc5cddc3d03e0fcdfa5963326efb66efb839a3d",
+  "model": "details/fence/fence.mpd",
+  "plan": "details/fence/scene.plan.json"
+}

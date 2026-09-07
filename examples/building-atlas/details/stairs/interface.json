@@ -1,0 +1,42 @@
+{
+  "key": "stairs",
+  "description": "Supported steps, 8 LDU rise and one-stud tread; front -Z",
+  "root": "stairs-6-3.ldr",
+  "anchors": {
+    "base": {
+      "at": [
+        0,
+        0,
+        0
+      ]
+    },
+    "landing": {
+      "at": [
+        0,
+        -24,
+        30.0
+      ]
+    }
+  },
+  "bounds_ldu": {
+    "min": [
+      -60.0,
+      -28.0,
+      -30.0
+    ],
+    "max": [
+      60.0,
+      0.0,
+      30.0
+    ]
+  },
+  "physical_placements": 4,
+  "contact_count": 18,
+  "optimistic_component_count": 1,
+  "placement_notes": [
+    "The landing must meet the destination deck exactly; reserve the approach before paving."
+  ],
+  "source_sha256": "539ea81ed7b8873ff0472702867abb933405b6fb16d6e3529a1f70d4ebe67fcf",
+  "model": "details/stairs/stairs.mpd",
+  "plan": "details/stairs/scene.plan.json"
+}

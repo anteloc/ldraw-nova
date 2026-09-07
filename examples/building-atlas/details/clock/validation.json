@@ -1,0 +1,60 @@
+{
+  "checks_passed": true,
+  "source_sha256": "41d76b6bfd3e1427c22bc1c212d703e19464416bbbb2c08236cec71cbab53aa8",
+  "diagnostics": [
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts/orientations lack rectangular body checks; inspect AABB candidates in a renderer/Blender.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -20.0,
+        -36.0,
+        -20.0
+      ],
+      "max": [
+        20.0,
+        0.0,
+        20.0
+      ]
+    },
+    "occurrence_count": 2,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": true,
+    "contact_count": 4,
+    "contacts": [],
+    "contacts_truncated": true,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": 1,
+    "confirmed_component_count": 1,
+    "components_truncated": true,
+    "overlap_candidate_count": 1,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts/orientations lack rectangular body checks; inspect AABB candidates in a renderer/Blender.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  }
+}

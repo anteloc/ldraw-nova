@@ -1,0 +1,50 @@
+{
+  "key": "porch",
+  "description": "Supported porch: base underside Y=0, entry at rear +Z; keep middle four studs clear",
+  "root": "porch-15-72-8-4-144.ldr",
+  "anchors": {
+    "base": {
+      "at": [
+        0,
+        0,
+        0
+      ]
+    },
+    "entry": {
+      "at": [
+        0,
+        -8,
+        40.0
+      ]
+    },
+    "canopy": {
+      "at": [
+        0,
+        -168,
+        0
+      ]
+    }
+  },
+  "bounds_ldu": {
+    "min": [
+      -80.0,
+      -168.0,
+      -40.0
+    ],
+    "max": [
+      80.0,
+      0.0,
+      40.0
+    ]
+  },
+  "physical_placements": 36,
+  "contact_count": 36,
+  "optimistic_component_count": 24,
+  "placement_notes": [
+    "Centre on a real entrance; rear edge abuts the wall, not its centre plane.",
+    "Match column trim to the building and keep the approach four studs wide."
+  ],
+  "source_sha256": "601e61631906d9bcc34c5b5847a324cd3ec4095c7ae2048d50ae451f0f8ca7d8",
+  "model": "details/porch/porch.mpd",
+  "plan": "details/porch/scene.plan.json"
+}

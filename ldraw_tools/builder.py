@@ -145,7 +145,8 @@ def build_plan(plan, parts, *, instance_limit=100000):
                     if support_id not in placed:
                         raise ValueError(f"on: {support_id} must refer to an earlier placement in the same section")
                     support, support_code = placed[support_id]
-                    if code not in regular or support_code not in regular:
+                    if (code not in regular or support_code not in regular
+                            or not regular[code]['studs'] or not regular[support_code]['studs']):
                         raise ValueError("on placement only supports curated rectangular studded bricks/plates; use part inspection and explicit at for other parts")
                     if not np.allclose(np.array(support.matrix.rows)[:, 1], [0, 1, 0], atol=1e-6) or not np.allclose(np.array(matrix.rows)[:, 1], [0, 1, 0], atol=1e-6):
                         raise ValueError("on requires upright parts")
