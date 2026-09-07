@@ -158,7 +158,9 @@ def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90,
             if view not in {"home", "front", "back", "left", "right", "top", "bottom"}:
                 raise ValueError(f"Unknown view {view}")
             target = Path(temp) / f"{view}.png"
-            command = ["leocad", "-l", str(library), "-i", str(target), "-w", "1000", "-h", "800", str(Path(path).resolve())]
+            command = ["leocad", "-l", str(library), "-i", str(target), "-w", "1000", "-h", "800",
+                       "--aa-samples", "4", "--shading", "full", "--line-width", "1",
+                       "--no-highlight", "--no-fade-steps", str(Path(path).resolve())]
             if bounds is None:
                 command += ["--viewpoint", view]
             if bounds is not None:

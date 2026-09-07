@@ -1,6 +1,6 @@
 # Generate and verify a new LDraw model
 
-Create the model the user requests and deliver its editable `.mpd`, reproducible source plans/generator, checks, BOM and reviewed previews. Match the requested subject, scale, palette, features and complexity. For a large model, divide it into modules and finish them in stages. Do not silently reduce a requested detailed scene to a few bricks. When no subject is supplied, choose a recognizable subject and state its scope briefly.
+Create the model the user requests and deliver its editable `.mpd`, reproducible source plans/generator, checks, BOM and reviewed previews. Match the requested subject, scale, palette, features and complexity. Make visual quality an explicit design objective: recognizable proportions, a controlled palette, depth, coherent details and a readable focal feature. Geometric correctness alone does not complete the task. For a large model, divide it into modules and finish them in stages. Do not silently reduce a requested detailed scene to a few bricks. When no subject is supplied, choose a recognizable subject and state its scope briefly.
 
 Work through design, construction, checks, repair, rendering and delivery. Correct syntax, a plausible picture and a connected-component result are separate kinds of evidence; none alone proves physical buildability.
 
@@ -18,6 +18,7 @@ Read:
 
 - [LDraw rules](docs/agent/ldraw-reference.md): records, coordinates, colours, MPD, BFC and headers.
 - [Geometry](docs/agent/geometry.md): origins, stacking, connectors and collision evidence.
+- [Visual design](docs/agent/visual-design.md): composition, category discovery, role-based palettes, reusable details and visual iteration.
 - [Tool reference](docs/agent/tooling.md) and [validation guide](docs/agent/validation.md).
 - For complex work, [module workflow and Bookshop case study](docs/agent/complex-models.md), [measured reference inventory](docs/agent/resources/bookshop-study.json), and [Copper Lane example](examples/modular-street/README.md).
 
@@ -27,18 +28,23 @@ The supplied resources are `../ldraw-lib/ldraw/` and `../ldraw-lib/models-annota
 
 ## 2. Plan the model and study useful constructions
 
-Record a short design brief: dimensions in studs/LDU, palette, essential features, physical subassemblies, build order, and intentional separate objects. For a building scene, separate the street/base, individual storeys, roofs, façade/window modules, interiors and landscaping. Allocate space and attachment surfaces before decoration. Keep a module checklist with local origin, envelope, anchors, dependencies and review status.
+Record a short design brief outside the assembly plan: subject/story, silhouette, dimensions, palette roles, primary focal feature, two supporting features, detail vocabulary, quiet surfaces, physical subassemblies and build order. State what will make this particular design attractive; do not equate part count with quality. For a building scene, separate the street/base, individual storeys, roofs, façade/window modules, interiors and landscaping. Allocate space and attachment surfaces before decoration. Keep a module checklist with local origin, envelope, anchors, dependencies and review status.
 
 Search and inspect real parts:
 
 ```sh
+./ldraw-agent catalog categories
+./ldraw-agent catalog parts 'arch 1 x 6' --category arches --limit 5 --measure
+./ldraw-agent catalog parts 'leaves' --category plants --limit 5
+./ldraw-agent design palettes
+./ldraw-agent design details
 ./ldraw-agent search parts 'brick 2 x 4' --limit 8
 ./ldraw-agent part 3001 --limit 20
 ./ldraw-agent colours 'blue'
 ./ldraw-agent profiles
 ```
 
-Never invent a part ID or infer axes from a description. Inspect each unfamiliar part's actual bounds, origin, variant/status and connector frames. Use physical parts, not arbitrary primitives or internal subparts. A valid palette code does not prove retail part/colour availability.
+Use categories to discover appropriate forms, then compare a short list visually with `part-board REF ... --outdir output/part-shortlist` when names are insufficient. Categories supply descriptive symbols and dimension hints; current LDraw geometry and LDConfig remain authoritative. Cached dimensions may differ, include studs, and are not stacking heights. Never invent a part ID or infer axes from a description. Inspect each unfamiliar part's actual bounds, origin, variant/status and connector frames. Use physical parts, not arbitrary primitives or internal subparts. A valid palette code does not prove retail part/colour availability.
 
 Study references in small sections:
 
@@ -59,6 +65,8 @@ Use the [JSON schema](ldraw_tools/data/plan.schema.json). The [bridge](examples/
 - Every plan has `version: 1`, accurate `author` and `sections`; an authorized `license` is optional. The root plan's first section is the scene main.
 - Use `includes` for other JSON plans and `assets` for extracted MPDs. Paths are relative to the declaring plan. Section names must be unique across all inputs; copied headers retain their authorship.
 - Each generated section has a unique flat `.ldr` name, useful `description` and `steps` of placement arrays. Optional `anchors` expose named local frames (`at` and optional proper `matrix`).
+- Refs may be descriptive category symbols such as `@arches.Arch1X6X2WithThickTopAndReinforcedUnderside`, and colours may be `@colours.Tan`. The builder resolves these to numeric LDraw source without changing the symbolic plan. Missing symbols/parts fail explicitly.
+- Use `design details NAME --palette PALETTE --output output/detail.plan.json` for a starting detail. Build/render it, reserve its envelope, and adapt its interface; do not paste decoration through existing wall/roof parts.
 - Each placement has a unique local `id`, real `ref`, `colour`, and exactly one position mode: `at: [x,y,z]`, `on: "earlier-id"`, or `attach: {"to":"earlier-module-id","anchor":"seat","using":"base"}`. Add a short useful `purpose`.
 - `on` supports only curated upright bricks/plates. Optional `offset_studs: [x,z]` uses the supporting part's axes. Inspect other connections and use explicit placement or module anchors.
 - `attach` aligns the two authored module frames, including orientation. Optional `offset` is in the support anchor's axes. Anchors describe intended interfaces; verify the actual mating parts.
@@ -109,12 +117,14 @@ Read exit status, errors, warnings, `complete`, truncation flags and `contacts_c
 
 Repair every error, rebuild and rerun affected checks. Explain each remaining warning using specific evidence. AABB candidates are not material-collision proofs; engaged studs/sockets normally overlap in bounds. Fragmented connector groups can indicate missing metadata, floating parts or intentionally separate objects. Investigate the implicated parts instead of deleting warnings.
 
+Open the first whole-model PNGs and perform a visual design pass before final delivery. Check thumbnail silhouette, proportions, focal hierarchy, palette balance, depth/shadows, useful variation, quiet versus detailed areas, exposed side/rear walls, and readable entrances. Improve specific weaknesses and render again. Do not add random ornament everywhere or stop because geometry passes. Record the viewed images, problems found and revisions in a short visual-review document.
+
 Open the final PNGs. Inspect silhouette, palette, orientation, support, openings, missing parts, intersections and overhangs. Review individual floors/interiors and obscured rear/side interfaces. Compare Python and LeoCAD BOMs by reference, colour and quantity using `compare-bom`; do not reconcile a mismatch by discarding parts. The macOS adapter handles embedded DAT definitions without modifying the source library.
 
 For uncertain material intersections or unusual mechanisms, convert the selected model to semantic GLB and inspect it through available Blender tools. Confirm the LDraw/Blender axis and unit conversion using a known 20-LDU distance. Record any physical checks that remain unperformed. Do not claim visual review unless the images were opened, or buildability merely because a renderer succeeded.
 
 ## 5. Deliver the exact final revision
 
-After the last source change, regenerate affected checks, BOMs and renders. Provide clickable paths to the final `.mpd`, plans/generator, reused-asset manifests, validation report, BOM comparison and preview images. Briefly state actual features and physical placement count, which checks passed, and specific unresolved physical/inventory limitations. The toolkit's `physical_validity: not_proven` is intentional.
+After the last source change, regenerate affected checks, BOMs and renders. Provide clickable paths to the final `.mpd`, plans/generator, reused-asset manifests, design brief/visual review, validation report, BOM comparison and preview images. Briefly state actual features and physical placement count, which checks passed, and specific unresolved physical/inventory limitations. The toolkit's `physical_validity: not_proven` is intentional.
 
 Finish the requested model and its review artifacts. Do not stop at a design proposal or instructions for the user to run.

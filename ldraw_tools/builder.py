@@ -101,6 +101,8 @@ def serialize_mpd(model):
 
 def build_plan(plan, parts, *, instance_limit=100000):
     check_schema(plan)
+    from .catalog import resolve_plan
+    plan = resolve_plan(plan, parts)
     if plan.get("includes"):
         raise ValueError("Resolve includes with load_plan(path) before build_plan")
     names = [s["name"] for s in plan["sections"]]

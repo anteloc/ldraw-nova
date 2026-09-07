@@ -255,67 +255,271 @@
       ]
     },
     {
-      "name": "lane-tree.ldr",
-      "description": "Brick-built ornamental tree in a square planter",
+      "name": "lane-house-door.ldr",
+      "description": "Glazed entrance with a closed hinged door",
       "steps": [
         [
           {
-            "id": "planter",
-            "ref": "3031.dat",
-            "colour": 70,
+            "id": "frame",
+            "ref": "60596.dat",
+            "colour": 16,
             "at": [
               0,
-              -8,
+              0,
               0
             ]
           },
           {
-            "id": "trunk",
-            "ref": "3062b.dat",
-            "colour": 70,
+            "id": "door",
+            "ref": "60623.dat",
+            "colour": "@colours.Reddish_Brown",
             "at": [
-              -10,
               -32,
+              0,
+              5
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "detail-arched-window.ldr",
+      "description": "Six-stud window bay: projecting sill, contrasting piers, arch and flower accents. Support plane Y=0; highest body plane Y=-128; front is -Z.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "sill",
+            "ref": "@plates.Plate2X6",
+            "colour": "@colours.White",
+            "at": [
+              0,
+              -8,
               -10
+            ]
+          },
+          {
+            "id": "frame",
+            "ref": "@windows.Window1X4X3WithoutShutterTabs",
+            "colour": "@colours.Dark_Green",
+            "at": [
+              0,
+              -80,
+              0
+            ]
+          },
+          {
+            "id": "left-pane",
+            "ref": "@windows.Window1X2X3PaneWithThickCornerTabs",
+            "colour": "@colours.Trans_Clear",
+            "at": [
+              -32,
+              -76,
+              4
+            ],
+            "yaw": -90
+          },
+          {
+            "id": "right-pane",
+            "ref": "@windows.Window1X2X3PaneWithThickCornerTabs",
+            "colour": "@colours.Trans_Clear",
+            "at": [
+              32,
+              -76,
+              4
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "left-pier",
+            "ref": "3005.dat",
+            "colour": "@colours.White",
+            "at": [
+              -50,
+              -32,
+              0
             ],
             "repeat": {
-              "count": 6,
+              "count": 3,
               "step": [
                 0,
                 -24,
                 0
               ]
             }
+          },
+          {
+            "id": "right-pier",
+            "ref": "3005.dat",
+            "colour": "@colours.White",
+            "at": [
+              50,
+              -32,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "arch",
+            "ref": "@arches.Arch1X6X2WithThickTopAndReinforcedUnderside",
+            "colour": "@colours.White",
+            "at": [
+              0,
+              -128,
+              0
+            ]
+          },
+          {
+            "id": "flower--30",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Dark_Pink",
+            "at": [
+              -30,
+              -16,
+              -20
+            ]
+          },
+          {
+            "id": "flower-10",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Dark_Pink",
+            "at": [
+              10,
+              -16,
+              -20
+            ]
+          },
+          {
+            "id": "flower-30",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Dark_Pink",
+            "at": [
+              30,
+              -16,
+              -20
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "detail-striped-awning.ldr",
+      "description": "Eight-stud canopy with alternating fabric stripes and scalloped slope profile. Place on an exposed stud row at Z=0, Y=0; front projects to Z=-50.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "beam",
+            "ref": "3034.dat",
+            "colour": "@colours.White",
+            "at": [
+              0,
+              -8,
+              -10
+            ]
           }
         ],
         [
           {
-            "id": "canopy",
-            "ref": "3020.dat",
-            "colour": 2,
+            "id": "stripe-0",
+            "ref": "@slopes.SlopeBrick333X1",
+            "colour": "@colours.Dark_Green",
             "at": [
-              0,
-              -160,
+              -70,
+              -32,
               0
             ]
           },
           {
-            "id": "crown",
-            "ref": "3003.dat",
-            "colour": 2,
+            "id": "stripe-1",
+            "ref": "@slopes.SlopeBrick333X1",
+            "colour": "@colours.White",
             "at": [
-              0,
-              -184,
+              -50,
+              -32,
               0
             ]
           },
           {
-            "id": "crown-cap",
-            "ref": "3022.dat",
-            "colour": 10,
+            "id": "stripe-2",
+            "ref": "@slopes.SlopeBrick333X1",
+            "colour": "@colours.Dark_Green",
             "at": [
-              0,
-              -192,
+              -30,
+              -32,
+              0
+            ]
+          },
+          {
+            "id": "stripe-3",
+            "ref": "@slopes.SlopeBrick333X1",
+            "colour": "@colours.White",
+            "at": [
+              -10,
+              -32,
+              0
+            ]
+          },
+          {
+            "id": "stripe-4",
+            "ref": "@slopes.SlopeBrick333X1",
+            "colour": "@colours.Dark_Green",
+            "at": [
+              10,
+              -32,
+              0
+            ]
+          },
+          {
+            "id": "stripe-5",
+            "ref": "@slopes.SlopeBrick333X1",
+            "colour": "@colours.White",
+            "at": [
+              30,
+              -32,
+              0
+            ]
+          },
+          {
+            "id": "stripe-6",
+            "ref": "@slopes.SlopeBrick333X1",
+            "colour": "@colours.Dark_Green",
+            "at": [
+              50,
+              -32,
+              0
+            ]
+          },
+          {
+            "id": "stripe-7",
+            "ref": "@slopes.SlopeBrick333X1",
+            "colour": "@colours.White",
+            "at": [
+              70,
+              -32,
               0
             ]
           }
@@ -323,8 +527,543 @@
       ]
     },
     {
+      "name": "detail-flower-planter.ldr",
+      "description": "Four-stud stone planter with a layered leaf canopy and small flowers. Bottom plane Y=0. Reserve its foliage envelope, not just the base footprint.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "base",
+            "ref": "3031.dat",
+            "colour": "@colours.White",
+            "at": [
+              0,
+              -8,
+              0
+            ]
+          },
+          {
+            "id": "soil",
+            "ref": "3022.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -16,
+              0
+            ]
+          },
+          {
+            "id": "flower--30",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Dark_Pink",
+            "at": [
+              -30,
+              -16,
+              -30
+            ]
+          },
+          {
+            "id": "flower-10",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Dark_Pink",
+            "at": [
+              10,
+              -16,
+              -30
+            ]
+          },
+          {
+            "id": "flower-30",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Dark_Pink",
+            "at": [
+              30,
+              -16,
+              -30
+            ]
+          }
+        ],
+        [
+          {
+            "id": "trunk",
+            "ref": "@bricks.Brick1X1RoundWithHollowStud",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              -10,
+              -40,
+              -10
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "lower-leaves",
+            "ref": "@plants.PlantLeaves6X5",
+            "colour": "@colours.Dark_Green",
+            "at": [
+              -10,
+              -96,
+              -10
+            ]
+          },
+          {
+            "id": "branch-1",
+            "ref": "3062b.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              -10,
+              -120,
+              -10
+            ]
+          },
+          {
+            "id": "middle-leaves",
+            "ref": "@plants.PlantLeaves6X5",
+            "colour": "@colours.Green",
+            "at": [
+              -10,
+              -128,
+              -10
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "branch-2",
+            "ref": "3062b.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              -10,
+              -152,
+              -10
+            ]
+          },
+          {
+            "id": "upper-leaves",
+            "ref": "@plants.PlantLeaves4X3",
+            "colour": "@colours.Dark_Green",
+            "at": [
+              -10,
+              -160,
+              -10
+            ],
+            "yaw": 180
+          },
+          {
+            "id": "crown",
+            "ref": "@plants.PlantLeaves4X3",
+            "colour": "@colours.Bright_Green",
+            "at": [
+              -10,
+              -168,
+              -10
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "detail-book-sign.ldr",
+      "description": "Stud-mounted upright gold BOOKS sign, using a real patterned tile and side-stud bricks. Bottom Y=0, front -Z. Use above a door or awning.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "base",
+            "ref": "3020.dat",
+            "colour": "@colours.White",
+            "at": [
+              0,
+              -8,
+              0
+            ]
+          },
+          {
+            "id": "mount-left",
+            "ref": "@bricks.Brick1X2WithTwoStudsOnOneSide",
+            "colour": "@colours.Dark_Green",
+            "at": [
+              -20,
+              -32,
+              -10
+            ]
+          },
+          {
+            "id": "mount-right",
+            "ref": "@bricks.Brick1X2WithTwoStudsOnOneSide",
+            "colour": "@colours.Dark_Green",
+            "at": [
+              20,
+              -32,
+              -10
+            ]
+          },
+          {
+            "id": "books-sign",
+            "ref": "@tiles.Tile2X4WithMetallicGold_Books_Pattern",
+            "colour": "@colours.Dark_Green",
+            "at": [
+              0,
+              -22,
+              -28
+            ],
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "binding",
+            "ref": "3020.dat",
+            "colour": "@colours.Pearl_Gold",
+            "at": [
+              0,
+              -40,
+              0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "lane-house-window.ldr",
+      "description": "Six-stud window bay: projecting sill, contrasting piers, arch and flower accents. Support plane Y=0; highest body plane Y=-128; front is -Z.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "sill",
+            "ref": "@plates.Plate2X6",
+            "colour": "@colours.Tan",
+            "at": [
+              0,
+              -8,
+              -10
+            ]
+          },
+          {
+            "id": "frame",
+            "ref": "@windows.Window1X4X3WithoutShutterTabs",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -80,
+              0
+            ]
+          },
+          {
+            "id": "left-pane",
+            "ref": "@windows.Window1X2X3PaneWithThickCornerTabs",
+            "colour": "@colours.Trans_Clear",
+            "at": [
+              -32,
+              -76,
+              4
+            ],
+            "yaw": -90
+          },
+          {
+            "id": "right-pane",
+            "ref": "@windows.Window1X2X3PaneWithThickCornerTabs",
+            "colour": "@colours.Trans_Clear",
+            "at": [
+              32,
+              -76,
+              4
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "left-pier",
+            "ref": "3005.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              -50,
+              -32,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "right-pier",
+            "ref": "3005.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              50,
+              -32,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "arch",
+            "ref": "@arches.Arch1X6X2WithThickTopAndReinforcedUnderside",
+            "colour": "@colours.Tan",
+            "at": [
+              0,
+              -128,
+              0
+            ]
+          },
+          {
+            "id": "flower--30",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Bright_Pink",
+            "at": [
+              -30,
+              -16,
+              -20
+            ]
+          },
+          {
+            "id": "flower-10",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Bright_Pink",
+            "at": [
+              10,
+              -16,
+              -20
+            ]
+          },
+          {
+            "id": "flower-30",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Bright_Pink",
+            "at": [
+              30,
+              -16,
+              -20
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "lane-tall-tree.ldr",
+      "description": "Four-stud stone planter with a layered leaf canopy and small flowers. Bottom plane Y=0. Reserve its foliage envelope, not just the base footprint.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "base",
+            "ref": "3031.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              0,
+              -8,
+              0
+            ]
+          },
+          {
+            "id": "soil",
+            "ref": "3022.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -16,
+              0
+            ]
+          },
+          {
+            "id": "flower--30",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Bright_Pink",
+            "at": [
+              -30,
+              -16,
+              -30
+            ]
+          },
+          {
+            "id": "flower-10",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Bright_Pink",
+            "at": [
+              10,
+              -16,
+              -30
+            ]
+          },
+          {
+            "id": "flower-30",
+            "ref": "@plates.Plate1X1With5Petals",
+            "colour": "@colours.Bright_Pink",
+            "at": [
+              30,
+              -16,
+              -30
+            ]
+          }
+        ],
+        [
+          {
+            "id": "lower-trunk",
+            "ref": "3062b.dat",
+            "colour": 70,
+            "at": [
+              -10,
+              -40,
+              -10
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "trunk",
+            "ref": "@bricks.Brick1X1RoundWithHollowStud",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              -10,
+              -88,
+              -10
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "lower-leaves",
+            "ref": "@plants.PlantLeaves6X5",
+            "colour": "@colours.Green",
+            "at": [
+              -10,
+              -144,
+              -10
+            ]
+          },
+          {
+            "id": "branch-1",
+            "ref": "3062b.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              -10,
+              -168,
+              -10
+            ]
+          },
+          {
+            "id": "middle-leaves",
+            "ref": "@plants.PlantLeaves6X5",
+            "colour": "@colours.Green",
+            "at": [
+              -10,
+              -176,
+              -10
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "branch-2",
+            "ref": "3062b.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              -10,
+              -200,
+              -10
+            ]
+          },
+          {
+            "id": "upper-leaves",
+            "ref": "@plants.PlantLeaves4X3",
+            "colour": "@colours.Green",
+            "at": [
+              -10,
+              -208,
+              -10
+            ],
+            "yaw": 180
+          },
+          {
+            "id": "crown",
+            "ref": "@plants.PlantLeaves4X3",
+            "colour": "@colours.Bright_Green",
+            "at": [
+              -10,
+              -216,
+              -10
+            ]
+          }
+        ]
+      ]
+    },
+    {
       "name": "lane-lamp.ldr",
-      "description": "Street lamp with round column and translucent lantern",
+      "description": "Fluted street lamp with brass collar and a translucent lantern",
       "steps": [
         [
           {
@@ -338,42 +1077,52 @@
             ]
           },
           {
-            "id": "shaft",
-            "ref": "3941.dat",
+            "id": "fluted-column",
+            "ref": "@supports.Support2X2X7LamppostWith6BaseFlutes",
             "colour": 0,
             "at": [
               0,
-              -32,
-              0
-            ],
-            "repeat": {
-              "count": 5,
-              "step": [
-                0,
-                -24,
-                0
-              ]
-            }
-          }
-        ],
-        [
-          {
-            "id": "lantern",
-            "ref": "3003.dat",
-            "colour": 46,
-            "at": [
-              0,
-              -152,
+              -176,
               0
             ]
           },
           {
-            "id": "cap",
-            "ref": "3022.dat",
+            "id": "collar",
+            "ref": "6141.dat",
+            "colour": 297,
+            "at": [
+              0,
+              -184,
+              0
+            ]
+          },
+          {
+            "id": "lantern",
+            "ref": "3062b.dat",
+            "colour": 46,
+            "at": [
+              0,
+              -208,
+              0
+            ]
+          },
+          {
+            "id": "shade",
+            "ref": "4740.dat",
             "colour": 0,
             "at": [
               0,
-              -160,
+              -216,
+              0
+            ]
+          },
+          {
+            "id": "finial",
+            "ref": "4589.dat",
+            "colour": 0,
+            "at": [
+              0,
+              -240,
               0
             ]
           }

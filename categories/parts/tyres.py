@@ -1,0 +1,127 @@
+# coding=utf-8
+"""
+library/parts.py - Auto-generated Part classes for the Python ldraw package.
+
+Copyright (C) 2020 Matthieu Berthomé <matthieu@mmea.fr>
+
+This file is part of the ldraw Python package.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+<< This file is auto-generated, you shouldn't have to modify it>>
+"""
+# pylint: disable=invalid-name, line-too-long, too-many-lines
+
+_Tyre6_4_75X8ShallowOffsetTread = "42611"
+_Tyre6_30X11 = "50945"
+_Tyre12_40X11Wide = "60700"
+_Tyre12_61X11Balloon = "28290"
+DuploTyre25_53X19 = "6292"
+Tyre3_100X8DoubleSmooth = "451b"
+Tyre4_80X8SingleSmoothType1 = "3139b"
+Tyre4_80X8SingleSmoothType2 = "59895"
+Tyre6_4_75X8ShallowOffsetTread = "51011"
+Tyre6_4_75X8ShallowOffsetTreadWithCentreBand = "92409"
+Tyre6_30X11 = "50951"
+Tyre6_50X8OffsetTread = "3641"
+Tyre6_50X8OffsetTreadWithCentreBand = "87414"
+Tyre6_58X14OffsetTread = "50861"
+Tyre7_2_45X8_8 = "u9131"
+Tyre7_45X17OffsetTreadWithMiddleBand = "61254"
+Tyre7_56X17OffsetTread = "3483"
+Tyre7_86X17WithCentreGroove = "44799"
+Tyre8_40X8SlickSmooth = "30028b"
+Tyre8_75X8OffsetTread = "4084"
+Tyre10_32X14 = "11209"
+Tyre10_130X17OffsetTread = "3634"
+Tyre10_130X17OffsetTreadForTechnicGear9Tooth = "574"
+Tyre11_2_28X17_6Intermediate = "18977"
+Tyre11_65X18Offset = "56897"
+Tyre12_7_51X30 = "2696"
+Tyre12_40X11Wide = "6015"
+Tyre12_40X11WideWithCentreBand = "87697"
+Tyre12_50X16OffsetTread = "2346"
+Tyre12_61X11Balloon = "56890"
+Tyre13_75X56 = "7860"
+Tyre14_66X61ZRacing = "6596"
+Tyre14_20X60 = "32076"
+Tyre14_25X17ShallowStaggeredTreads = "30648"
+Tyre14_25X17ShallowStaggeredTreadsWithMiddleBand = "89201"
+Tyre14_36X20Vr = "6578"
+Tyre14_36X20Vr_DeformedTo10_67X24_ = "6578c01"
+Tyre14_43X30WithGroovedTread = "30699"
+Tyre14_43X30WithOffsetTread = "56898"
+Tyre14_50X17 = "30391"
+Tyre14_50X17Vr = "58090"
+Tyre14_50X17WithCentreBand = "92402"
+Tyre14_68X30 = "70490"
+Tyre14_70X17 = "35578"
+Tyre17_70X62MotorcycleOffroad = "2902"
+Tyre18_56X17Off_RoadWithOffsetCentre = "56891"
+Tyre19_67X75MotorcycleWithMotocrossTread = "11957"
+Tyre20_33X62Motorcycle = "80542"
+Tyre20_40X33OffRoad = "6581"
+Tyre20_46X30OffRoad = "2857"
+Tyre20_48X30 = "15413"
+Tyre20_64X37S = "32019"
+Tyre20_83X30OffsetTread = "4267"
+Tyre21_48X75MotorcycleWithRacingTread = "88516"
+Tyre22_14X30Zr = "55978"
+Tyre22_30X30H = "44308"
+Tyre22_30X30Zr = "44309"
+Tyre23_41X75MotorcycleWithRacingTread = "67140"
+Tyre24_65X41 = "32003"
+Tyre24_80X43OffsetTread = "3740"
+Tyre26_24X30SandRacing = "61481"
+Tyre26_36X22OffRoad = "6579"
+Tyre26_49X30Tractor = "70695"
+Tyre26_52X30OffRoad = "55976"
+Tyre27_48X107MotorcycleWithRacingTread = "71721"
+Tyre27_48X43 = "52985"
+Tyre28_21X57 = "32078"
+Tyre28_23X43ZrStreet = "41897"
+Tyre28_38X28Vr = "6594"
+Tyre28_57X43OffRoad = "69909"
+Tyre30_42X28RBalloon = "32180"
+Tyre32_33X61RacingWet = "32196"
+Tyre34_37X43OffRoad = "61480"
+Tyre34_38X56Zr = "2997"
+Tyre35_42X56Racing = "56907"
+Tyre35_46X56Zr = "44771"
+Tyre35_55X43RTractor = "69912"
+Tyre36_36X43HOff_Road = "41893"
+Tyre36_43X56All_Terrain = "4455"
+Tyre37_38X107MotorcycleWithRacingTread = "71722"
+Tyre38_26X75 = "46335"
+Tyre38_50X43OffRoad = "45982"
+Tyre38_76X56 = "92912"
+Tyre40_48X30OffRoad = "2995"
+Tyre44_15X75 = "80279"
+Tyre44_22X62Zr = "23799"
+Tyre44_30X56SmoothRacing = "4410"
+Tyre44_44X56OffRoad = "54120"
+Tyre44_58X56RTractor = "23798"
+Tyre44_91X43R = "18450"
+Tyre50_29X54TechnicRacing = "32296"
+Tyre50_29X54WithWhite_TechnicRacing_Pattern = "32296p01"
+Tyre61_41X54OffRoad = "32298"
+Tyre61_41X54PowerPullerW_White_TechnicPower_Pattern = "32298p01"
+TyreLarge = "36"
+TyreMinifigBicycle_NeedsWork_ = "2807"
+TyreForElectricTrain12VMotorConicallyDeformed = "458c01"
+TyreForTrainWheelForElectricTrainMotor12V = "458"
+TyreForWheel41MmZnap = "539"
+_Tyre7_22X26RacingSlick = "u9081"
+_Tyre36_8X14Zr_HardRubber_ = "u9031"

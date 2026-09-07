@@ -1,6 +1,6 @@
 # Building complex models with small, verifiable modules
 
-Use this workflow for multi-building scenes, vehicles with mechanisms, articulated figures, and models with hundreds or thousands of placements. Complexity comes from composing inspected modules; a single enormous list of coordinates is difficult to repair. The original [Copper Lane generator](../../examples/modular-street/generate.py) and [modular plans](../../examples/modular-street/scene.plan.json) demonstrate a complete 1,544-placement, ten-section streetscape.
+Use this workflow for multi-building scenes, vehicles with mechanisms, articulated figures, and models with hundreds or thousands of placements. Complexity comes from composing inspected modules; a single enormous list of coordinates is difficult to repair. The original [Copper Lane generator](../../examples/modular-street/generate.py) and [modular plans](../../examples/modular-street/scene.plan.json) demonstrate a complete 1,655-placement, nineteen-section streetscape. Start with its [visual brief and review](../../examples/modular-street/visual-review.md): complexity should serve an attractive, readable design.
 
 ## 1. Study structure before geometry
 
@@ -64,11 +64,11 @@ In JSON plans, a section can expose named **anchor frames**:
 ```json
 "anchors": {
   "base": {"at": [0, 8, 0]},
-  "next": {"at": [0, -152, 0]}
+  "next": {"at": [0, -160, 0]}
 }
 ```
 
-These match Copper Lane's floor plate: its underside is at +8, while its cornice top is at -152. The resulting storey pitch is 160 LDU. Frames may have an explicit proper `matrix`; omitted matrices are identity. Keep the interface clear of decorative geometry and leave actual attachment studs/sockets accessible.
+These match Copper Lane's floor plate: its underside is at +8, while its cornice top is at -160. The resulting storey pitch is 168 LDU. Frames may have an explicit proper `matrix`; omitted matrices are identity. Keep the interface clear of decorative geometry and leave actual attachment studs/sockets accessible.
 
 A containing section can place a floor and attach another:
 
@@ -124,4 +124,4 @@ The LeoCAD adapter materializes embedded DAT definitions and their library depen
 
 ## Example scope
 
-Copper Lane has a three-storey tan bookshop beside a two-storey turquoise townhouse, distinct red/blue roofs, five furnished removable floors, 46 glazed window frames, two doors, two trees and two lamps. Floor/roof interfaces are studded; levels are accessed by lifting them off, and the example does not include a minifigure stairwell. Its small brick-built trees are deliberately simple. This is an original modular construction example, not a recreation of set 10270 or a guarantee of retail part/colour availability. See the [verification record](verification.md) for measured coverage and remaining physical review limits.
+Copper Lane has a three-storey tan/green bookshop beside a two-storey sand-green townhouse. Arched flower windows, striped awnings, a gold BOOKS sign, a dormer and stepped clock pediment distinguish their façades. It includes exposed-side glazing, localized masonry, layered leaf trees, two lamps and five furnished removable floors. The [design guide](visual-design.md) explains how category symbols, palette roles and reusable details express these choices. Floor/roof interfaces are studded; levels are accessed by lifting them off, and the example does not include a minifigure stairwell. This is an original modular construction example, not a recreation of set 10270 or a guarantee of retail part/colour availability. See the [verification record](verification.md) for measured coverage and remaining physical review limits.

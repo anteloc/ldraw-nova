@@ -94,3 +94,22 @@ For loops, procedural repetition, or matrix composition, use the [Python example
 Reports are JSON. Exit **0** means the selected command/checks completed successfully; **1** means validation/coverage failed (or warnings failed under `--strict`); **2** means bad input, dependency, I/O, conversion, budget, or execution failure. Read `diagnostics`, `complete`, truncation flags, and `physical_validity`, not just the exit code. `study` is informational: read `source_checks_passed`. `extract` can write a failing review artifact with exit 1. Empty search results are a successful empty query. `--report` writes a report in addition to stdout. Do not use a shell pipeline that loses the first command's exit status.
 
 Shell examples that redirect output intentionally retain the command's exit status. Paths with spaces must be shell quoted. For local development, run `.venv/bin/python -m pytest -q`. Tests cover malformed syntax, transforms, MPD references/cycles, colour inheritance, nested duplicates, polygon degeneracy, failed writes, normal stud overlap, floating parts, and the real-library example. Official-library integration tests skip explicitly if that resource is absent; a skipped integration test is not evidence of working library geometry.
+
+## Category discovery and visual design
+
+```sh
+./ldraw-agent catalog categories
+./ldraw-agent catalog parts 'arch 1 x 6' --category arches --limit 5 --measure
+./ldraw-agent catalog parts 'leaves' --category plants --max-size 110 40 130
+./ldraw-agent catalog colours 'sand'
+./ldraw-agent part @arches.Arch1X6X2WithThickTopAndReinforcedUnderside
+./ldraw-agent design palettes botanical-bookshop
+./ldraw-agent design details arched-window --palette rose-townhouse --output output/window.plan.json
+./ldraw-agent part-board @plants.PlantLeaves6X5 @plants.PlantTreeOval4X4X6 --colour @colours.Green --outdir output/plant-shortlist
+```
+
+`catalog` reads the provided Python categories as static metadata, without importing `py4bricks` or executing generated modules. Results include source symbols, file/line provenance, installed availability, and dimension hints. Missing/legacy/internal entries are hidden by default (`--include-unavailable` exposes them). `--measure` expands selected results and flags disagreement with the dimension snapshot; `--max-size` is a coarse **snapshot** filter, not a fit guarantee. `LDRAW_CATEGORIES` overrides the category directory. Numeric plans still work without it.
+
+Plans accept `@category.Symbol` refs (including nested categories such as `@minifig.heads.Symbol`) and `@colours.Name`. Resolution checks the installed library and leaves editable plans intact. Current `LDConfig.ldr` controls colour properties. `design palettes` exposes roles and composition guidance; it is not an inventory compatibility database. `design details` lists authored recipes, or writes an ordinary JSON plan with `--output`; existing output requires `--force`. Include the resulting sections using the usual module workflow.
+
+`part-board` renders 1–12 candidates through LeoCAD and creates an offline `index.html` and `board.json`, measured bounds, individual MPDs and images. Cards are framed independently; compare listed dimensions to judge scale. Read the [visual design guide](visual-design.md) and actually inspect the candidates. These tools support choices and visual iteration; they do not assign a beauty score.

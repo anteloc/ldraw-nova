@@ -4,6 +4,8 @@
 
 Run `./ldraw-agent part 3001 --limit 30`. It returns actual library metadata, origin-relative bounds, dimensions, stud positions, connectors, provenance, and completeness. Bounds include decorative geometry and stud height; **bounding-box height is not stacking height**. Do not infer axes from the part description alone.
 
+Use `catalog parts QUERY --category NAME --measure` to discover shapes through the supplied categories and compare cached dimensions with the installed geometry. Category `ldu_y`, `plates_y` and rounded `studs_*` fields describe extents, not connection planes. For example, the supplied `3659` arch cache reports Y=37.41191 LDU while the installed file measures 28. The [visual-design guide](visual-design.md) explains selection boards, palettes and supported detail recipes. Reserve openings and overhangs before adding them; a new ornament must be checked in its containing module too.
+
 The PDF's standard dimensions (p.63) are:
 
 | Quantity | LDU |

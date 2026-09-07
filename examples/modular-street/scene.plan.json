@@ -4,7 +4,7 @@
   "sections": [
     {
       "name": "copper-lane.ldr",
-      "description": "Copper Lane bookshop and townhouse streetscape",
+      "description": "Leaf and Letter: botanical bookshop and Rose House on Copper Lane",
       "steps": [
         [
           {
@@ -882,7 +882,7 @@
           {
             "id": "bookshop-ground",
             "ref": "lane-ground.ldr",
-            "colour": 19,
+            "colour": "@colours.Tan",
             "at": [
               -160,
               -8,
@@ -892,7 +892,7 @@
           {
             "id": "bookshop-floor-1",
             "ref": "lane-upper.ldr",
-            "colour": 19,
+            "colour": "@colours.Tan",
             "attach": {
               "to": "bookshop-ground",
               "anchor": "next",
@@ -902,7 +902,7 @@
           {
             "id": "bookshop-floor-2",
             "ref": "lane-upper.ldr",
-            "colour": 19,
+            "colour": "@colours.Tan",
             "attach": {
               "to": "bookshop-floor-1",
               "anchor": "next",
@@ -912,7 +912,7 @@
           {
             "id": "bookshop-roof",
             "ref": "lane-roof.ldr",
-            "colour": 320,
+            "colour": "@colours.Dark_Blue",
             "attach": {
               "to": "bookshop-floor-2",
               "anchor": "next",
@@ -923,8 +923,8 @@
         [
           {
             "id": "townhouse-ground",
-            "ref": "lane-ground.ldr",
-            "colour": 3,
+            "ref": "lane-house-ground.ldr",
+            "colour": "@colours.Sand_Green",
             "at": [
               160,
               -8,
@@ -933,8 +933,8 @@
           },
           {
             "id": "townhouse-floor-1",
-            "ref": "lane-upper.ldr",
-            "colour": 3,
+            "ref": "lane-house-upper.ldr",
+            "colour": "@colours.Sand_Green",
             "attach": {
               "to": "townhouse-ground",
               "anchor": "next",
@@ -943,8 +943,8 @@
           },
           {
             "id": "townhouse-roof",
-            "ref": "lane-roof.ldr",
-            "colour": 272,
+            "ref": "lane-house-roof.ldr",
+            "colour": "@colours.Dark_Red",
             "attach": {
               "to": "townhouse-floor-1",
               "anchor": "next",
@@ -955,7 +955,7 @@
         [
           {
             "id": "left-tree",
-            "ref": "lane-tree.ldr",
+            "ref": "detail-flower-planter.ldr",
             "colour": 2,
             "at": [
               -280,
@@ -965,7 +965,7 @@
           },
           {
             "id": "right-tree",
-            "ref": "lane-tree.ldr",
+            "ref": "lane-tall-tree.ldr",
             "colour": 2,
             "at": [
               280,

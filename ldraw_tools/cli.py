@@ -55,6 +55,25 @@ def parser():
     p.add_argument("--models", help="Annotated model directory (default MODELS_DIR)")
     p.add_argument("--shadow", action="append", default=[], help="Optional LDCad connector directory/zip/csl; repeatable")
     commands = p.add_subparsers(dest="command", required=True)
+    c = commands.add_parser("catalog", help="Search the supplied part/colour categories using descriptive symbols")
+    c.add_argument("kind", choices=["categories", "parts", "colours"])
+    c.add_argument("query", nargs="?", default="")
+    c.add_argument("--category")
+    c.add_argument("--limit", type=positive, default=12)
+    c.add_argument("--max-size", type=float, nargs=3, metavar=("X","Y","Z"), help="Maximum cached full bounds in LDU; not stacking dimensions")
+    c.add_argument("--include-unavailable", action="store_true", help="Include missing, alias and internal entries with status flags")
+    c.add_argument("--measure", action="store_true", help="Measure selected part results and flag differences from cached dimensions")
+    c = commands.add_parser("design", help="Role-based palettes and reusable architectural detail plans")
+    c.add_argument("kind", choices=["palettes", "details"])
+    c.add_argument("name", nargs="?")
+    c.add_argument("--palette", default="botanical-bookshop")
+    c.add_argument("--output", help="Write a detail JSON plan")
+    c.add_argument("--force", action="store_true")
+    c = commands.add_parser("part-board", help="Render 1–12 real part candidates into an offline visual shortlist")
+    c.add_argument("refs", nargs='+')
+    c.add_argument("--outdir", required=True)
+    c.add_argument("--colour", default='19', help="Installed colour code or @colours.Name")
+    c.add_argument("--timeout", type=positive, default=90)
     commands.add_parser("doctor", help="Show dependencies and source paths")
     commands.add_parser("index", help="Refresh the local parts index; source library remains unchanged")
     c = commands.add_parser("search", help="Search actual library parts or annotated models")
@@ -152,6 +171,26 @@ def run(args):
     parts = get_parts(library, refresh=args.command == "index")
     for shadow in args.shadow:
         parts.add_connection_shadow(shadow)
+    if args.command == "part-board":
+        from .boards import part_board
+        return part_board(args.refs,parts,library,args.outdir,colour=args.colour,timeout=args.timeout), 0
+    if args.command == "catalog":
+        from .catalog import search_catalog
+        return search_catalog(parts,args.kind,args.query,category=args.category,limit=args.limit,
+                              include_unavailable=args.include_unavailable,max_size=args.max_size,measure=args.measure), 0
+    if args.command == "design":
+        from .details import RECIPES, detail_plan, palette_report
+        if args.kind == 'palettes':
+            if args.output:raise ValueError('--output is for detail plans')
+            return palette_report(parts,args.name), 0
+        if not args.name:
+            if args.output:raise ValueError('Choose a detail name to export')
+            return RECIPES, 0
+        plan=detail_plan(args.name,args.palette)
+        if args.output:
+            if Path(args.output).exists() and not args.force:raise ValueError('Output exists; use --force')
+            atomic_write(args.output,dumps(plan)+'\n')
+        return dict(plan=plan,output=args.output,review='Build, inspect and render this detail before placing it; reserve its envelope at the interface.'), 0
     if args.command == "study":
         # An informational inventory is useful even when the reference has errors.
         report=study_model(args.file, parts, instance_limit=args.max_instances)
@@ -233,7 +272,8 @@ def run(args):
         return [jsonable(c) for k, c in sorted(parts.colours_by_code.items())
                 if args.query.casefold() in (str(k) + " " + (c.name or "")).casefold()], 0
     if args.command == "part":
-        code = args.code.casefold().removesuffix(".dat")
+        from .catalog import resolve_part
+        code = (resolve_part(args.code,parts) if args.code.startswith('@') else args.code).casefold().removesuffix(".dat")
         part = parts.part(code=code)
         g = parts.geometry(code)
         return dict(code=code + ".dat", path=str(part.path.resolve()), metadata=jsonable(part.metadata),

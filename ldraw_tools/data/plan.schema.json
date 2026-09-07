@@ -128,13 +128,30 @@
           "$ref": "#/$defs/text"
         },
         "ref": {
-          "type": "string",
-          "pattern": "^[A-Za-z0-9][A-Za-z0-9 _-]*\\.(dat|ldr)$",
-          "maxLength": 200
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9 _-]*\\.(dat|ldr)$",
+              "maxLength": 200
+            },
+            {
+              "type": "string",
+              "pattern": "^@[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)+$",
+              "maxLength": 300
+            }
+          ]
         },
         "colour": {
-          "type": "integer",
-          "minimum": 0
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "string",
+              "pattern": "^@colours\\.[A-Za-z_][A-Za-z0-9_]*$"
+            }
+          ]
         },
         "at": {
           "$ref": "#/$defs/vector"
