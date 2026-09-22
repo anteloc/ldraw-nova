@@ -1,0 +1,12 @@
+0 LDCad shadow info for "Technic Axle Hole Open Two Opposite Sides"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-03 {Roland Melkert} Initial info for axlehol5.dat
+
+0 //Axle, will be scaled in higher references as long only the y axle is scaled.
+0 // center=false and non zero pos here, because the primitive isn't centered at 0,0,0 which would cause displacement due to scaling.
+0 // Use an ID so unwanted axle info can be dropped in higher parts using a more complicated composed hole.
+0 //TODO, change id to axleHole4 (chk cur [id=axleHole] clears first)
+0 !LDCAD SNAP_CYL [id=axleHole] [gender=F] [caps=none] [secs=A 6 1] [slide=true] [pos=0 1 0] [scale=YOnly]

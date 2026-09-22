@@ -1,0 +1,21 @@
+0 LDCad shadow info for "Technic Brick  4 x  6 with Open Centre  2 x  4 with Cross Underside Studs"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2014-01-02 {Roland Melkert} Initial info for 32531.dat
+0 !HISTORY 2022-12-29 {Roland Melkert} Moved to 32531a.dat
+
+0 //Holes
+0 !LDCAD SNAP_INCL [ref=connhole.dat] [pos=-50 10 0] [ori=0 -1 0 0 0 -1 1 0 0]
+0 !LDCAD SNAP_INCL [ref=connhole.dat] [pos=50 10 0] [ori=0 -1 0 0 0 -1 1 0 0]
+0 !LDCAD SNAP_INCL [ref=connhole.dat] [pos=0 10 -30] [ori=1 0 0 0 0 -1 0 1 0] [grid=C 3 1 20 0]
+0 !LDCAD SNAP_INCL [ref=connhole.dat] [pos=0 10 30] [ori=1 0 0 0 0 -1 0 1 0] [grid=C 3 1 20 0]
+0 //Corner ones need a different cap
+0 !LDCAD SNAP_CYL [gender=F] [caps=B] [secs=R 8 2   R 6 16   R 8 2] [center=true] [slide=true] [pos=-50 10 0] [ori=0 -1 0 0 0 -1 1 0 0] [grid=C 2 1 40 0]
+0 !LDCAD SNAP_CYL [gender=F] [caps=A] [secs=R 8 2   R 6 16   R 8 2] [center=true] [slide=true] [pos=50 10 0] [ori=0 -1 0 0 0 -1 1 0 0] [grid=C 2 1 40 0]
+
+0 //Antistuds
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=S 6 4] [pos=0 24 0] [grid=C 2 C 4 100 20]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 4] [pos=0 24 0] [grid=C 2 C 2 60 60]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=S 6 4] [pos=0 24 0] [grid=C 2 C 2 20 60]

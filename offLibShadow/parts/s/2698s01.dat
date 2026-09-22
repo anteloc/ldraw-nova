@@ -1,0 +1,19 @@
+0 LDCad shadow info for "~Technic Action Figure Torso without Front Face"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2015-01-24 {Roland Melkert} Initial info for s\2698s01.dat
+
+0 //head
+0 !LDCAD SNAP_GEN [gender=F] [bounding=sph 10] [match=size] [placement=free] [pos=0 -52 0]
+
+0 //arms (should be R 3.2, but the related pins are 3.0 so..)
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 3 4   R 3.6 6.2] [pos=-16.8 -46 0] [ori=0 -1 0 1 0 0 0 0 1]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 3 4   R 3.6 6.2] [pos=16.8 -46 0] [ori=0 1 0 -1 0 0 0 0 1]
+
+0 //pelvis
+0 !LDCAD SNAP_GEN [group=techFigPel] [gender=F] [bounding=box 20 4 10]
+
+0 //hips
+0 !LDCAD SNAP_GEN [group=techFigHips] [gender=F] [bounding=box 2 20 8] [pos=0 -20 0]

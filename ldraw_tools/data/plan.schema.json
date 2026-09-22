@@ -223,6 +223,42 @@
               "$ref": "#/$defs/vector"
             }
           }
+        },
+        "snap": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "to"
+          ],
+          "properties": {
+            "to": {
+              "$ref": "#/$defs/text"
+            },
+            "near": {
+              "$ref": "#/$defs/vector"
+            },
+            "moving_leaf": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 99999
+            },
+            "fixed_leaf": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 99999
+            },
+            "candidate": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 99
+            },
+            "moving_feature": {
+              "$ref": "#/$defs/text"
+            },
+            "fixed_feature": {
+              "$ref": "#/$defs/text"
+            }
+          }
         }
       },
       "oneOf": [
@@ -245,6 +281,11 @@
               {
                 "required": [
                   "offset_studs"
+                ]
+              },
+              {
+                "required": [
+                  "snap"
                 ]
               }
             ]
@@ -269,6 +310,11 @@
               {
                 "required": [
                   "repeat"
+                ]
+              },
+              {
+                "required": [
+                  "snap"
                 ]
               }
             ]
@@ -303,6 +349,45 @@
               {
                 "required": [
                   "yaw"
+                ]
+              },
+              {
+                "required": [
+                  "repeat"
+                ]
+              },
+              {
+                "required": [
+                  "snap"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "snap"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "at"
+                ]
+              },
+              {
+                "required": [
+                  "on"
+                ]
+              },
+              {
+                "required": [
+                  "attach"
+                ]
+              },
+              {
+                "required": [
+                  "offset_studs"
                 ]
               },
               {

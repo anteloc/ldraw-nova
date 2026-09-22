@@ -69,6 +69,7 @@ class DocumentParts(Parts):
         super().__init__(base.path)
         self._connection_shadow_libraries = list(base._connection_shadow_libraries)
         self._studio_connection_libraries = list(base._studio_connection_libraries)
+        self._connection_overrides = dict(base._connection_overrides)
         self.embedded = {}
         self.embedded_names = {}
         for section in section_table(model).values():

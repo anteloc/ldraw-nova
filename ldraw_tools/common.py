@@ -65,7 +65,28 @@ def dumps(value):
     return json.dumps(jsonable(value), indent=2, ensure_ascii=False, allow_nan=False)
 
 
-def get_parts(root=None, *, refresh=False):
+def shadow_paths(sources=None):
+    """Explicit sources replace defaults; [] disables all external shadows."""
+    if sources is None:
+        configured = os.environ.get("LDRAW_SHADOW")
+        sources = configured.split(os.pathsep) if configured else ([ROOT / "offLibShadow"] if (ROOT / "offLibShadow").is_dir() else [])
+    result = []
+    for source in sources:
+        path = Path(source).expanduser().resolve()
+        if not path.exists():
+            raise ValueError(f"LDCad shadow library missing at {path}")
+        if path.is_dir() and not any((path / name).is_dir() for name in ("parts", "p")):
+            raise ValueError(f"Shadow directory must contain parts/ or p/: {path}")
+        if path.is_file():
+            import zipfile
+            if not zipfile.is_zipfile(path):
+                raise ValueError(f"Shadow archive must be a ZIP or CSL: {path}")
+        if path not in result:
+            result.append(path)
+    return result
+
+
+def get_parts(root=None, *, refresh=False, shadows=None):
     """Supply pyldraw3's required index without writing into the source library."""
     root = library_path(root)
     if not (root / "parts").is_dir() or not (root / "p").is_dir():
@@ -94,7 +115,10 @@ def get_parts(root=None, *, refresh=False):
             rows.append(f"{p.name} {title}")
         atomic_write(index, "\n".join(rows) + "\n")
         atomic_write(stamp, signature)
-    return Parts(index)
+    parts = Parts(index)
+    for source in shadow_paths(shadows):
+        parts.add_connection_shadow(source)
+    return parts
 
 
 def issue(code, message, *, line=None, section=None, severity="error", **extra):

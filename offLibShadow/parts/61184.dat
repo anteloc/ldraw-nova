@@ -1,0 +1,15 @@
+0 LDCad shadow info for "Technic Pin  1/2 with Bar 2L"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2014-01-11 {Roland Melkert} Initial info for 61184.dat
+
+0 !LDCAD SNAP_CLEAR 
+0 //NOTE: split cyl to force better snapping on pins inside connholes, a future implementation might not needs this.
+0 !LDCAD SNAP_CYL [gender=M] [caps=none] [secs=R 6 4   R 8 2   R 6 16   _L 6.5 2] [slide=true] [pos=4 0 0] [ori=0 1 0 -1 0 0 0 0 1]
+0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 4 40] [slide=true] [pos=-20 0 0] [ori=0 1 0 -1 0 0 0 0 1]
+0 //Stud hole
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 4 4] [pos=4 0 0] [ori=0 1 0 -1 0 0 0 0 1]
+0 //Def x is not symmetric
+0 !LDCAD MIRROR_INFO [baseFlip=Z] [counterPart=self]

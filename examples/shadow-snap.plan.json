@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "LDraw tooling example",
+  "sections": [
+    {
+      "name": "shadow-snap.ldr",
+      "description": "A cap submodel snapped onto a brick using shadow connectors",
+      "steps": [
+        [{"id": "base", "ref": "3001.dat", "colour": 4, "at": [0, 0, 0]}],
+        [{"id": "cap", "ref": "cap.ldr", "colour": 1, "snap": {"to": "base", "near": [0, -8, 0]}}]
+      ]
+    },
+    {
+      "name": "cap.ldr",
+      "description": "A plate and brick assembled by connector snapping",
+      "steps": [
+        [{"id": "plate", "ref": "3022.dat", "colour": 16, "at": [0, 0, 0]}],
+        [{"id": "brick", "ref": "3003.dat", "colour": 14, "snap": {"to": "plate", "near": [0, -24, 0]}}]
+      ]
+    }
+  ]
+}

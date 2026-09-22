@@ -1,0 +1,17 @@
+0 LDCad shadow info for "Technic Action Figure Arm Segment"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2015-01-24 {Roland Melkert} Initial info for 2700.dat
+
+0 //hole
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 2.5 18] [center=true] [slide=true]
+
+0 //pin hole (radius should be slightly bigger, but the related pins are 3.0 so we need to use it here too.)
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 3 4   R 4 2] [pos=0 0 -21.5] [ori=1 0 0 0 0 1 0 -1 0]
+
+0 //elbow
+0 !LDCAD SNAP_FGR [group=techFigElbw] [genderOfs=M] [seq=5 8 5] [radius=9.5]
+
+0 !LDCAD MIRROR_INFO [baseFlip=Y] [counterPart=self]

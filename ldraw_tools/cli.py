@@ -14,12 +14,13 @@ import jsonschema
 from ldraw.errors import PartError
 
 from .builder import build_plan, load_plan, rotation
-from .common import ROOT, DATA, atomic_write, dumps, get_parts, jsonable, library_path, models_path
+from .common import ROOT, DATA, atomic_write, dumps, get_parts, jsonable, library_path, models_path, shadow_paths
 from .external import cad_check, render, prepare_glb, compare_bom
-from .geometry import analyze_geometry, profiles, snap
+from .geometry import analyze_geometry, profiles
 from .resources import search_spec, search_models, model_sections
 from .validation import validate_file, validate_text
 from .document import study_model, extract_section, physical_context, selected_source
+from .connectivity import connection_report, metadata_summary, snap_report, apply_snap
 
 
 def positive(value):
@@ -53,7 +54,9 @@ def parser():
     p = argparse.ArgumentParser(description="Generate, inspect and review LDraw MPD assemblies. All reports are JSON. See docs/agent/tooling.md.")
     p.add_argument("--library", help="LDraw library root (default LDRAW_DIR or ../ldraw-lib/ldraw)")
     p.add_argument("--models", help="Annotated model directory (default MODELS_DIR)")
-    p.add_argument("--shadow", action="append", default=[], help="Optional LDCad connector directory/zip/csl; repeatable")
+    shadows = p.add_mutually_exclusive_group()
+    shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./offLibShadow")
+    shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
     c = commands.add_parser("examples", help="Find relevant generated building or detail examples")
     c.add_argument("query", nargs="?", default="")
@@ -121,7 +124,7 @@ def parser():
     c.add_argument("--report")
     c.add_argument("--force", action="store_true", help="Replace an existing MPD after successful validation")
     geometry_options(c)
-    for command in ["validate", "inspect", "bom", "compare-bom", "snap"]:
+    for command in ["validate", "inspect", "bom", "compare-bom", "snap", "connectors"]:
         c = commands.add_parser(command)
         c.add_argument("file")
         c.add_argument("--report")
@@ -136,8 +139,22 @@ def parser():
             c.add_argument("--strict", action="store_true", help="Warnings also fail (does not extend check coverage)")
         if command == "snap":
             c.add_argument("--moving", type=int, required=True)
-            c.add_argument("--fixed", type=int, required=True)
+            c.add_argument("--fixed", type=int, help="Fixed leaf index; omitted searches other occurrences")
             c.add_argument("--limit", type=positive, default=5)
+            c.add_argument("--moving-depth", type=int, help="Move this ancestor of the moving leaf: 0 is outermost placement; omitted moves the leaf")
+            c.add_argument("--moving-feature", help="Stable connector ID from connectors")
+            c.add_argument("--fixed-feature", help="Stable connector ID from connectors")
+            c.add_argument("--max-candidates", type=positive, default=100)
+            c.add_argument("--max-instances", type=positive, default=100000)
+            c.add_argument("--allow-occupied", action="store_true", help="Allow deliberate reuse of occupied interfaces, e.g. sliding bars")
+            c.add_argument("--output", help="Apply a candidate to a new MPD after validation")
+            c.add_argument("--candidate", type=int, default=0, help="Zero-based candidate to apply")
+            c.add_argument("--force", action="store_true")
+        if command == "connectors":
+            c.add_argument("--occurrence", type=int, required=True)
+            c.add_argument("--limit", type=positive, default=50)
+            c.add_argument("--offset", type=int, default=0)
+            c.add_argument("--max-instances", type=positive, default=100000)
     c = commands.add_parser("cad-check", help="Run Python validation and a LeoCAD snapshot/BOM import check")
     c.add_argument("file")
     c.add_argument("--timeout", type=positive, default=90)
@@ -165,6 +182,7 @@ def run(args):
         report = dict(python=sys.version.split()[0], packages={n: version(n) for n in ["pyldraw3", "numpy", "jsonschema"]},
                       library=str(library), library_present=(library / "parts").is_dir(),
                       models=str(models_path(args.models)), pdf=str(ROOT / "docs/ldraw-specs.pdf"),
+                      shadow_sources=jsonable(shadow_paths([] if args.no_shadow else args.shadow)),
                       tools={t: shutil.which(t) for t in ["pdftotext", "leocad", "mpd2glb.sh"]})
         return report, 0 if report["library_present"] and report["tools"]["pdftotext"] else 2
     if args.command == "spec":
@@ -177,9 +195,7 @@ def run(args):
         return json.loads((DATA / "rectangular-parts.json").read_text()), 0
     if args.command == "search" and args.kind != "parts":
         return search_models(args.query, root=args.models, limit=args.limit, submodels=args.kind == "submodels"), 0
-    parts = get_parts(library, refresh=args.command == "index")
-    for shadow in args.shadow:
-        parts.add_connection_shadow(shadow)
+    parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
     if args.command == "part-board":
         from .boards import part_board
         return part_board(args.refs,parts,library,args.outdir,colour=args.colour,timeout=args.timeout), 0
@@ -290,6 +306,7 @@ def run(args):
                     stud_positions=[jsonable(s.position) for s in g.top_studs],
                     connector_count=len(g.connections), connectors=jsonable(g.connections[:args.limit]),
                     connectors_truncated=len(g.connections) > args.limit, diagnostics=jsonable(g.diagnostics),
+                    connection_metadata=metadata_summary(g.connection_metadata),
                     rectangular_profile=profiles().get(code),
                     note="All coordinates are local LDU. Connector inference is evidence; inspect uncertain fits."), 0 if g.complete else 1
     if args.command == "build":
@@ -325,7 +342,39 @@ def run(args):
             report["checks_passed"] = report["comparison"]["matches"]
             return report, 0 if report["checks_passed"] else 1
         elif args.command == "snap":
-            report["candidates"] = snap(model, parts, args.moving, args.fixed, args.limit)
+            result = snap_report(model, parts, args.moving, args.fixed, limit=args.limit,
+                moving_depth=args.moving_depth, moving_feature=args.moving_feature, fixed_feature=args.fixed_feature,
+                max_candidates=args.max_candidates, instance_limit=args.max_instances, allow_occupied=args.allow_occupied)
+            report.update(result)
+            if args.output:
+                from .builder import serialize_mpd
+                target = Path(args.output)
+                if target.resolve() == Path(args.file).resolve():
+                    raise ValueError('Snap output must differ from the source file')
+                if target.suffix.casefold() != '.mpd':
+                    raise ValueError('Snap output must end in .mpd')
+                if target.exists() and not args.force:
+                    raise ValueError('Output exists; use --force')
+                updated = apply_snap(model, result, args.candidate)
+                text = serialize_mpd(updated)
+                parsed, checked = validate_text(text, parts, assembly=True, instance_limit=args.max_instances)
+                diagnostics.extend(checked)
+                if not any(d['severity']=='error' for d in diagnostics):
+                    geometry = analyze_geometry(parsed, parts, detail='summary', instance_limit=args.max_instances)
+                    report['geometry'] = geometry
+                    diagnostics.extend(geometry['diagnostics'])
+                report.update(output=str(target), written=not any(d['severity']=='error' for d in diagnostics))
+                if report['written']:
+                    atomic_write(target, text)
+            elif not result['candidates']:
+                report.update(checks_passed=False, reason='No eligible verified snap candidates; inspect connector coverage, occupancy, and search limits')
+                return report, 1
+        elif args.command == "connectors":
+            report['connections'] = connection_report(model, parts, args.occurrence, limit=args.limit,
+                offset=args.offset, instance_limit=args.max_instances)
+            if not report['connections']['complete']:
+                report.update(checks_passed=False)
+                return report, 1
         elif args.command == "inspect" or (args.command == "validate" and args.geometry):
             report["geometry"] = geometry_report(model, parts, args)
             diagnostics += report["geometry"]["diagnostics"]

@@ -1,0 +1,19 @@
+0 LDCad shadow info for "~Brick  2 x  4 Half Round without Outside surface"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-16 {Roland Melkert} Initial info for 716.dat
+0 !HISTORY 2025-01-09 {Roland Melkert} Moved to 716b.dat and antistud corrections
+0 !HISTORY 2026-01-08 {Roland Melkert} Moved to s\716s01.dat
+
+0 //Inherited studs have non id orientations, this is not always wanted while snapping
+0 !LDCAD SNAP_CLEAR 
+
+0 //Studs
+0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [pos=-30 0 10] [grid=2 1 60 0]
+0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [pos=-10 0 -10] [grid=2 1 20 0]
+
+0 //Anti studs
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 4] [pos=-30 24 10] [grid=2 1 60 0]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 4] [pos=-10 24 -10] [grid=2 1 20 0]

@@ -41,10 +41,10 @@ Search `./ldraw-agent search submodels 'steering' --limit 5`, then inspect the o
 
 For hinges, axles, wheels and clips:
 
-1. Inspect both parts' connector frames, profile dimensions, kind, occupancy, and source/confidence. Matching visual bounds alone is insufficient. Optional LDCad shadow metadata can improve coverage.
+1. Inspect both parts' connector frames, profile dimensions, kind, occupancy, and source/confidence. Matching visual bounds alone is insufficient. The supplied LDCad shadow metadata loads automatically; inspect its coverage and diagnostics.
 2. Put them in a small test MPD. Use `inspect` to obtain stable occurrence indices and current contacts.
-3. Run `snap test.mpd --moving 1 --fixed 0 --limit 5` for candidate **world** transforms. Select a candidate consistent with the intended construction. For a nested part, convert world to its parent's frame: `M_local = inverse(M_parent) @ M_world`, `t_local = inverse(M_parent) @ (t_world - t_parent)`.
-4. Rebuild and rerun geometry checks. Snapping proposes a fit; it does not test other parts for collision, stresses, permitted articulation ranges, or strength.
+3. Run `connectors test.mpd --occurrence 1` to find feature IDs, then `snap test.mpd --moving 1 --fixed 0 --limit 5`. Candidates include world and parent-local poses with collision reports. `--moving-depth 0` moves the whole outer submodel. See the [snapping guide](snapping.md) for filters, application to an MPD copy and reproducible plan snaps.
+4. Review candidate collisions, apply the selected pose and rerun assembly checks. Snapping checks moving descendants against stationary parts using body and oriented envelopes. General material intersections, stresses, permitted articulation ranges and strength still need review.
 
 Use actual matching wheel/rim/tyre assemblies from inspected official shortcuts or verified references. Do not invent axle diameters, hinge pivots, or minifigure offsets.
 
@@ -52,7 +52,7 @@ Use actual matching wheel/rim/tyre assemblies from inspected official shortcuts 
 
 `validate --geometry` and `inspect` recursively expand referenced library geometry through pyldraw3 and report world bounds for each leaf, parent source lines, connections, and overlaps. Conditional-line control points are excluded from physical extents by the geometry engine. Shortcuts remain library leaf assemblies in the BOM; they are not necessarily one manufactured piece.
 
-`rectangular_body_overlap` is an error for curated ordinary upright bricks/plates at quarter turns. Other `review_aabb_only` pairs are broad-phase candidates: hollow parts can have overlapping boxes without material intersection, while an AABB cannot determine stud/socket legality. `stud_zone_overlap_review_connections` is expected when correctly stacked but still needs connector evidence.
+`rectangular_body_overlap` is an error for curated ordinary bricks/plates in rigid orientations. Oriented bounds can eliminate AABB false positives; remaining `review_oriented_bounds` / `review_aabb_only` pairs are candidates: hollow parts can have overlapping boxes without material intersection, while an AABB cannot determine stud/socket legality. `stud_zone_overlap_review_connections` is expected when correctly stacked but still needs connector evidence.
 
 `confirmed_components` and `optimistic_components` describe the connector algorithm's evidence. “Confirmed” is a library inference status, not a promise of real-world fit. Multiple groups can mean floating parts, missing connector metadata, or deliberately separate objects (e.g. a figure beside a vehicle). Document which explanation you verified. One connected group also does not prove that the model is strong or stable.
 

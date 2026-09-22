@@ -1,0 +1,17 @@
+0 LDCad shadow info for "Technic Brick  1 x  4 x  1.667 Wing Front"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2014-01-02 {Roland Melkert} Initial info for 2743.dat
+
+0 //Peg holes
+0 !LDCAD SNAP_INCL [ref=connhole.dat] [pos=-10 10 0] [ori=1 0 0 0 0 1 0 -1 0] [grid=C 2 1 20 0]
+
+0 //Antistuds
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=S 6 6] [pos=-20 24 0] [grid=C 2 1 20 0]
+
+0 //NOTE: bottom of angled part needs a new kind of shape. Using normal cyl ones will result in unwanted snapping most of the time.
+0 //!LDCAD SNAP_CYL [gender=F] [caps=one] [secs=S 6 6] .........
+
+0 !LDCAD MIRROR_INFO [baseFlip=Z] [counterPart=self]

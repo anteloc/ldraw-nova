@@ -1,0 +1,20 @@
+0 LDCad shadow info for "Brick  4 x  4 Round with Holes"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-17 {Roland Melkert} Initial info for 6222.dat
+
+0 //Anti studs
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 20] [pos=0 24 0] [grid=C 4 C 2 20 20]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 20] [pos=0 24 0] [grid=C 2 C 2 20 60]
+
+0 //Con holes
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 8 2   R 6 16   R 8 4] [pos=0 10 -40] [ori=1 0 0 0 0 1 0 -1 0]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 8 2   R 6 16   R 8 4] [pos=0 10 40] [ori=-1 0 0 0 0 1 0 1 0]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 8 2   R 6 16   R 8 4] [pos=40 10 0] [ori=0 1 0 0 0 1 1 0 0]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 8 2   R 6 16   R 8 4] [pos=-40 10 0] [ori=0 -1 0 0 0 1 -1 0 0]
+
+0 //Top axle hole
+0 !LDCAD SNAP_CLEAR [id=axleHole]
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 6 4   A 6 20] [pos=0 24 0]

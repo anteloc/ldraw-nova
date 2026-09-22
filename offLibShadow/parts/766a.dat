@@ -1,0 +1,14 @@
+0 LDCad shadow info for "~Electric Plug (Type 4) Twin with Centre Plastic Pin"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2014-09-01 {Roland Melkert} Initial info for 766a.dat
+
+0 //center pin
+0 !LDCAD SNAP_GEN [group=elecDblPin] [gender=M] [bounding=box 14 6 8]
+0 !LDCAD SNAP_GEN [group=elecDblPin] [gender=F] [bounding=box 14 6 8] [pos=0 -7.5 7] [ori=1 0 0 0 0 -1 0 1 0]
+0 !LDCAD SNAP_GEN [group=elecDblPin] [gender=F] [bounding=box 14 6 8] [pos=0 7.5 7] [ori=1 0 0 0 0 1 0 -1 0]
+
+0 //connector holes
+0 !LDCAD SNAP_CYL [group=elec] [gender=F] [caps=none] [secs=R 3.5 15] [center=true] [slide=true] [pos=0 0 7] [grid=C 2 1 20 0]

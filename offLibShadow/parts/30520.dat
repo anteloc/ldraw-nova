@@ -1,0 +1,15 @@
+0 LDCad shadow info for "Brick  2 x  8 with Axleholes and  6 Notches"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-16 {Roland Melkert} Initial info for 30520.dat
+0 !HISTORY 2023-07-08 {Roland Melkert} Replaced 3023 include
+
+0 //Base brick
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 20] [pos=0 24 0] [grid=C 8 C 2 20 20]
+
+0 //Axle holes
+0 // Drop the half baked ones.
+0 !LDCAD SNAP_CLEAR [id=axleHole]
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 6 4   A 6 20] [pos=0 24 0] [grid=C 2 1 120 0]

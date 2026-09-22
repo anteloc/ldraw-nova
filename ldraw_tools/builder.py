@@ -11,7 +11,7 @@ import numpy as np
 from ldraw import Model, Piece, Vector, Matrix
 from ldraw.lines import Comment
 
-from .common import DATA, normalized
+from .common import DATA, normalized, jsonable
 from .geometry import profiles
 from .validation import validate_text
 
@@ -99,6 +99,61 @@ def serialize_mpd(model):
     return text.replace("\r\n", "\n").replace("\n", "\r\n") + "\r\n"
 
 
+def dependency_order(sections):
+    """Build referenced modules before using their physical snap interfaces."""
+    table = {normalized(s['name']): s for s in sections}
+    ordered, done, active = [], set(), set()
+    def visit(key):
+        if key in active:
+            raise ValueError(f'Plan submodel cycle at {key}')
+        if key in done:
+            return
+        active.add(key)
+        for step in table[key]['steps']:
+            for entry in step:
+                child = normalized(entry['ref'])
+                if child in table:
+                    visit(child)
+        active.remove(key)
+        done.add(key)
+        ordered.append(table[key])
+    for key in table:
+        visit(key)
+    return ordered
+
+
+def snap_placement(entry, model, models, placed, parts, matrix, instance_limit):
+    from .connectivity import inspect_connections, snap_report
+    from dataclasses import replace
+    options = entry['snap']
+    if options['to'] not in placed:
+        raise ValueError('snap.to must identify an earlier placement in the same section')
+    support, _ = placed[options['to']]
+    moving = Piece.place(entry['ref'], colour=entry['colour'],
+                         position=Vector(*options.get('near', jsonable(support.position))), matrix=matrix)
+    preview = replace(model, objects=[*model.objects, moving],
+                      submodels={normalized(m.name): m for m in models.values() if m is not model})
+    inspection = inspect_connections(preview, parts, instance_limit)
+    groups = [[o.index for o in inspection.occurrences if o.occurrence.path[0].piece is piece]
+              for piece in (moving, support)]
+    try:
+        moving_index = groups[0][options.get('moving_leaf', 0)]
+        fixed_index = groups[1][options.get('fixed_leaf', 0)]
+    except IndexError as exc:
+        raise ValueError('snap leaf index is outside the selected part/submodel') from exc
+    candidate_index = options.get('candidate', 0)
+    report = snap_report(preview, parts, moving_index, fixed_index, moving_depth=0,
+                         limit=candidate_index+1, instance_limit=instance_limit,
+                         moving_feature=options.get('moving_feature'), fixed_feature=options.get('fixed_feature'))
+    if candidate_index >= len(report['candidates']):
+        raise ValueError(f"snap {entry['id']}: no candidate {candidate_index}; inspect connector coverage/occupancy")
+    candidate = report['candidates'][candidate_index]
+    if candidate['collision']['status'] == 'blocked':
+        raise ValueError(f"snap {entry['id']}: candidate collides with a rectangular body")
+    local = candidate['local_placement']
+    return Vector(*local['at']), Matrix(local['matrix'])
+
+
 def build_plan(plan, parts, *, instance_limit=100000):
     check_schema(plan)
     from .catalog import resolve_plan
@@ -119,7 +174,7 @@ def build_plan(plan, parts, *, instance_limit=100000):
     known = set(map(normalized, models))
     anchors = {normalized(s["name"]): {name:frame(value) for name,value in s.get("anchors",{}).items()} for s in plan["sections"]}
     regular = profiles()
-    for section in plan["sections"]:
+    for section in dependency_order(plan["sections"]):
         model = models[section["name"]]
         model.set_header(description=section["description"], name=model.name, author=section.get("author",plan["author"]), ldraw_org="Model")
         if section.get("license",plan.get("license")):
@@ -140,7 +195,9 @@ def build_plan(plan, parts, *, instance_limit=100000):
                 if entry["colour"] not in parts.colours_by_code or entry["colour"] == 24:
                     raise ValueError(f"Unknown or unsuitable placement colour {entry['colour']}")
                 matrix = Matrix(entry["matrix"]) if "matrix" in entry else rotation("y", entry.get("yaw", 0))
-                if "on" in entry:
+                if "snap" in entry:
+                    position, matrix = snap_placement(entry, model, models, placed, parts, matrix, instance_limit)
+                elif "on" in entry:
                     support_id = entry["on"]
                     if support_id not in placed:
                         raise ValueError(f"on: {support_id} must refer to an earlier placement in the same section")

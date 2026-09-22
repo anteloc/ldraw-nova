@@ -4,6 +4,8 @@ Run commands from the repository root. `./setup.sh` installs the pinned Python t
 
 `./ldraw-agent --help` lists the executable interface. Global `--library`, `--models`, and repeatable `--shadow` options go **before** the command. Default directories are relative to this repository, not `$HOME`; `LDRAW_DIR` and `MODELS_DIR` override them. The local `.cache` directory can be deleted and rebuilt. No library download, database mutation, or global pyldraw configuration is needed.
 
+The supplied `offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides the default; explicit `--shadow` paths replace defaults, and `--no-shadow` disables external shadows. `doctor` reports selected sources. See the [shadow and snapping guide](snapping.md) for coverage, connector discovery, candidate application and the pyldraw3 1.7 adapters.
+
 ## Discover and inspect
 
 ```sh
@@ -48,16 +50,17 @@ Copy the structure of [examples/bridge.plan.json](../../examples/bridge.plan.jso
 ./ldraw-agent build output/my-model.plan.json --output output/my-model.mpd --report output/my-model.build.json
 ```
 
-Top-level keys: `version: 1`, `author`, optional `license`, ordered `sections`, and optional `includes` (relative JSON plan paths) / `assets` (relative MPD paths). `load_plan(path)` resolves nested includes once and preserves each module's headers; cycles and namespace collisions fail. The **first section is the main model**. Each section has `name` ending in `.ldr`, a descriptive `description`, and `steps`, an array of arrays of placements. Every placement has a unique section-local `id`, `ref`, `colour`, optional `purpose`, and exactly one of `at`, `on`, or `attach`. Sections may declare named `anchors` and their own `author`/`license`. See the complete [module contract examples](complex-models.md).
+Top-level keys: `version: 1`, `author`, optional `license`, ordered `sections`, and optional `includes` (relative JSON plan paths) / `assets` (relative MPD paths). `load_plan(path)` resolves nested includes once and preserves each module's headers; cycles and namespace collisions fail. The **first section is the main model**. Each section has `name` ending in `.ldr`, a descriptive `description`, and `steps`, an array of arrays of placements. Every placement has a unique section-local `id`, `ref`, `colour`, optional `purpose`, and exactly one of `at`, `on`, `attach`, or `snap`. Sections may declare named `anchors` and their own `author`/`license`. See the complete [module contract examples](complex-models.md).
 
 | Field | Meaning |
 |---|---|
-| `at: [x,y,z]` | Translation in LDU, in the containing section's coordinate system. Required unless using `on` or `attach`. |
+| `at: [x,y,z]` | Translation in LDU, in the containing section's coordinate system. Required unless using `on`, `attach`, or `snap`. |
 | `yaw: degrees` | Optional right-handed rotation about that section's +Y axis; default zero. |
 | `matrix: [[a,b,c],[d,e,f],[g,h,i]]` | Optional explicit proper rotation; mutually exclusive with `yaw`. |
 | `on: "earlier-id"` | Stack a curated upright brick/plate on an earlier placement in the same section. Computes Y from the upper body's height and checks stud-grid alignment. |
 | `offset_studs: [x,z]` | Only with `on`: offset in the support's local X/Z axes, multiplied by 20 LDU. Default `[0,0]`. |
 | `attach: {"to":"earlier-id","anchor":"seat","using":"base"}` | Align named frames on generated modules, including orientation. Optional `offset` is in the support anchor frame. Mutually exclusive with explicit position/orientation and repeats. |
+| `snap: {"to":"earlier-id","near":[0,-8,0]}` | Mate a selected leaf interface and move the complete part/submodel. Optional leaf and feature selectors; see [snapping](snapping.md). |
 | `repeat: {"count":8,"step":[40,0,0]}` | Repeat an `at` placement in containing-section axes; generated IDs are `id-0` etc. |
 | `colour: 16` | Permitted within reusable submodels; explicit ancestor colours must resolve every visible leaf. |
 
@@ -83,7 +86,7 @@ For loops, procedural repetition, or matrix composition, use the [Python example
 
 `check-model.sh` now runs Python syntax/reference checks and a **LeoCAD** snapshot/BOM import test. It returns one JSON object, and its exit status reflects failure. It no longer uses LDView. LeoCAD import success supplements the Python checks; it is not the equivalent of LDView's error diagnostics. Geometry analysis remains the separate `validate --geometry` step.
 
-`render`, `cad-check`, `validate`, `inspect`, `bom`, `compare-bom` and `snap` accept `--section NAME` and optional `--colour CODE`. A selected section has its own occurrence indices; pass the same selection to `snap`. `compare-bom FILE --csv leocad-bom.csv` checks exact reference/colour/quantity equality and returns 1 on differences.
+`render`, `cad-check`, `validate`, `inspect`, `bom`, `compare-bom`, `connectors` and `snap` accept `--section NAME` and optional `--colour CODE`. A selected section has its own occurrence indices; pass the same selection to `snap`. `compare-bom FILE --csv leocad-bom.csv` checks exact reference/colour/quantity equality and returns 1 on differences.
 
 `render` saves `home.png`, `top.png`, `front.png`, and `leocad-bom.csv`. Override `--views` with any of `home front back left right top bottom`. Supported assemblies use cameras framed from their resolved bounds; other inputs use LeoCAD's preset view framing. Outputs are rendered to unique temporary files first, so stale files cannot count as a successful export. Existing destination images are replaced on successful export. Open the images and inspect them; merely producing a PNG is not visual review. For MPDs with embedded DAT geometry, the adapter writes a temporary dependency library and model view for LeoCAD, then restores original embedded names in the CSV. The originals and installed library remain unchanged. This avoids the supplied LeoCAD omitting embedded parts. Compare the Python BOM with LeoCAD using `compare-bom`. Commands use explicit library paths and per-process timeouts (`--timeout`, default 90 seconds).
 

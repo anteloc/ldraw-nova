@@ -1,0 +1,18 @@
+0 LDCad shadow info for "Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-03 {Roland Melkert} Initial info for 4735.dat
+
+0 //Clip
+0 !LDCAD SNAP_CLP [radius=4] [length=8] [center=true] [pos=0 4 -40]
+
+0 //Arm
+0 !LDCAD SNAP_CYL [gender=M] [caps=two] [secs=R 4 22] [slide=true] [pos=0 4 -8] [ori=1 0 0 0 0 -1 0 1 0]
+
+0 //Stud
+0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4]
+
+0 //Hole through stud (incl anti stud)
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 6 4   R 4 16] [slide=true] [pos=0 16 0]

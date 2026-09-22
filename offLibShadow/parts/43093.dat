@@ -1,0 +1,14 @@
+0 LDCad shadow info for "Technic Axle Pin with Friction"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-31 {Roland Melkert} Initial info for 43093.dat
+
+0 //Reset to dump stuff inherited from primitives
+0 !LDCAD SNAP_CLEAR 
+0 //Redo the whole shape as a single cyl
+0 //NOTE don't incl from 3749 because a future version might support friction differences.
+0 !LDCAD SNAP_CYL [gender=M] [caps=none] [secs=L_ 6.25 2   R 6 16   R 8 2   A 6 20] [center=true] [slide=true] [ori=0 -1 0 1 0 0 0 0 1]
+0 //Def x is not symmetric
+0 !LDCAD MIRROR_INFO [baseFlip=Z] [counterPart=self]

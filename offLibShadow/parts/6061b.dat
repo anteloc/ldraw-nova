@@ -1,0 +1,17 @@
+0 LDCad shadow info for "Brick  2 x  4 x  2 with 3 Understuds with Axlehole on Long Sides"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-16 {Roland Melkert} Initial info for 6061.dat
+0 !HISTORY 2025-01-09 {Roland Melkert} Moved to 6061b.dat
+
+0 //Anti studs
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 8] [pos=0 48 0] [grid=C 4 C 2 20 20]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 18] [pos=0 20 -20] [ori=1 0 0 0 0 1 0 -1 0] [grid=C 4 C 2 20 20]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 18] [pos=0 20 20] [ori=1 0 0 0 0 -1 0 1 0] [grid=C 4 C 2 20 20]
+
+0 //Holes
+0 //  Drop the old axle holes
+0 !LDCAD SNAP_CLEAR [id=axleHole]
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 6 10   A 6 20   R 6 10] [center=true] [pos=0 20 0] [ori=1 0 0 0 0 -1 0 1 0] [grid=C 3 1 20 0]

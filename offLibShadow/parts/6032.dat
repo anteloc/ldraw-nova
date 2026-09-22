@@ -1,0 +1,19 @@
+0 LDCad shadow info for "Brick  2 x  3 x  1.667 Octagonal Offset"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-16 {Roland Melkert} Initial info for 6032.dat
+
+0 //Dump the wrong axle info
+0 !LDCAD SNAP_CLEAR 
+
+0 //Studs
+0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [grid=C 2 C 2 20 20]
+
+0 //Anti studs
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 4] [pos=0 40 20] [grid=C 2 C 2 20 20]
+
+0 //Ver holes
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 4   A 6 20] [pos=0 24 0]
+0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=R 6 4   A 6 14] [pos=0 40 20]

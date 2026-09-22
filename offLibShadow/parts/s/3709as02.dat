@@ -1,0 +1,19 @@
+0 LDCad shadow info for "~Brick  2 x  4 with Top/Side/End Holes - Base"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-16 {Roland Melkert} Initial info for s\3709as02.dat
+
+0 //Anti studs, Same as plate, but compensate for this being a brick.
+0 !LDCAD SNAP_INCL [ref=3020.dat] [pos=0 16 0]
+
+0 //Axle holes
+0 // X-Axis
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 6 80] [center=true] [pos=0 10 0] [ori=0 -1 0 1 0 0 0 0 1]
+
+0 // Y-Axis
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 6 24] [center=true] [pos=0 12 0] [grid=C 3 1 20 0]
+
+0 // Z-Axis
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 6 40] [center=true] [pos=0 10 0] [ori=1 0 0 0 0 1 0 -1 0] [grid=C 3 1 20 0]

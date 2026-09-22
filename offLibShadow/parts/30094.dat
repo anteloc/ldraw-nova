@@ -1,0 +1,20 @@
+0 LDCad shadow info for "Plate  2 x  2 with Rod Frame Rectangular"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2013-12-19 {Roland Melkert} Initial info for 30094.dat
+
+0 //Anti studs
+0 !LDCAD SNAP_INCL [ref=3022.dat]
+
+0 //Axlehole
+0 !LDCAD SNAP_CLEAR [id=axleHole]
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 6 4   A 6 4] [pos=0 8 0]
+
+0 //Bars
+0 !LDCAD SNAP_CYL [gender=M] [caps=two] [secs=R 4 28] [center=true] [pos=0 2 16] [ori=1 0 0 0 0 -1 0 1 0] [grid=C 2 1 80 0]
+0 !LDCAD SNAP_CYL [gender=M] [caps=two] [secs=R 4 28] [center=true] [pos=0 2 -16] [ori=1 0 0 0 0 -1 0 1 0] [grid=C 2 1 80 0]
+
+0 !LDCAD SNAP_CYL [gender=M] [caps=two] [secs=R 4 28] [center=true] [pos=16 2 0] [ori=0 1 0 0 0 -1 -1 0 0] [grid=C 2 1 80 0]
+0 !LDCAD SNAP_CYL [gender=M] [caps=two] [secs=R 4 28] [center=true] [pos=-16 2 0] [ori=0 1 0 0 0 -1 -1 0 0] [grid=C 2 1 80 0]

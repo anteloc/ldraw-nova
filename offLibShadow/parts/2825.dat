@@ -1,0 +1,14 @@
+0 LDCad shadow info for "Technic Beam  4 x  0.5 Liftarm with Boss"
+
+0 Author: LDCad Shadow Library
+0 !LICENSE CC BY-SA 4.0, see LICENSE.md
+
+0 !HISTORY 2014-01-02 {Roland Melkert} Initial info for 2825.dat
+
+0 //extra conhole
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 8 2   R 6 6   R 8 2] [center=true] [slide=true] [pos=0 5 20]
+
+0 //Reset axle holes so we can do the longer/mixed one in a single meta
+0 !LDCAD SNAP_CLEAR [id=axleHole]
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=A 6 10] [center=true] [slide=true] [pos=0 5 60]
+0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=A 6 10   R 6 10] [center=true] [slide=true]

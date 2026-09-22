@@ -4,6 +4,8 @@ Generate modular MPD scenes with thousands of real part placements, inspect thei
 
 For visual design, start with the [design guide](docs/agent/visual-design.md). The supplied categories now support descriptive refs and named colours directly in plans, bounded search with live dimension checks, role-based palettes, reusable architectural details, and LeoCAD part-selection boards.
 
+For connector-based assembly, start with the [shadow and snapping guide](docs/agent/snapping.md). The supplied `offLibShadow/` loads automatically. Discover connector IDs with `connectors`, preview and apply checked part/submodel snaps with `snap`, or use `snap` placements in JSON plans. Try [shadow-snap.plan.json](examples/shadow-snap.plan.json).
+
 For complex scenes, start with the [Bookshop case study and module workflow](docs/agent/complex-models.md), its [measured assembly inventory](docs/agent/resources/bookshop-study.json), and the original [Copper Lane generator](examples/modular-street/README.md). Plans support nested includes, attributed MPD assets, named attachment frames and regular repeats. Inspection supports selected sections and bounded reports; embedded DAT parts resolve without inflating physical BOM counts.
 
 Start an agent with [instructions.md](instructions.md). Read the [tool reference](docs/agent/tooling.md), [LDraw rules](docs/agent/ldraw-reference.md), and [geometry guide](docs/agent/geometry.md). The mandatory source is [docs/ldraw-specs.pdf](docs/ldraw-specs.pdf); the [source map](docs/agent/specification-map.md) links rules to its pages.
