@@ -4,9 +4,11 @@ from pathlib import Path
 from .common import ROOT
 
 
-def search_examples(query='', *, limit=5, scale=None, details=False):
-    path=ROOT/'examples/building-atlas/catalog.json'
-    if not path.is_file():raise ValueError('Building atlas catalog missing; generate the atlas and run catalogue.py')
+def search_examples(query='', *, limit=5, scale=None, details=False, family='building'):
+    if family not in {'building','vehicle'}:raise ValueError('Unknown example family')
+    if family=='vehicle' and (scale or details):raise ValueError('Vehicle examples do not use building scale/detail filters')
+    path=ROOT/f'examples/{family}-atlas/catalog.json'
+    if not path.is_file():raise ValueError(f'{family.title()} atlas catalog missing')
     catalog=json.loads(path.read_text())
     terms=query.casefold().split();rows=[]
     for row in catalog['details' if details else 'examples']:

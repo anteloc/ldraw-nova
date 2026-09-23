@@ -2,6 +2,19 @@
 
 Generate modular MPD scenes with thousands of real part placements, inspect their assemblies and connections, and check the result with Python and LeoCAD.
 
+For **stud-built vehicles**, start with the [vehicle workflow](docs/agent/vehicles.md)
+and [vehicle atlas](examples/vehicle-atlas/README.md). The toolkit includes measured
+wheel packages, three editable body families, vehicle palettes and road-layout
+checks. Technic mechanisms are outside this workflow.
+
+```sh
+./ldraw-agent vehicle list
+./ldraw-agent vehicle plan grand-tourer --output output/tourer.plan.json
+./ldraw-agent build output/tourer.plan.json --output output/tourer.mpd --detail summary
+./ldraw-agent vehicle check output/tourer.mpd
+./ldraw-agent render output/tourer.mpd --outdir output/tourer-review --views home front back right top bottom
+```
+
 For visual design, start with the [design guide](docs/agent/visual-design.md). The supplied categories now support descriptive refs and named colours directly in plans, bounded search with live dimension checks, role-based palettes, reusable architectural details, and LeoCAD part-selection boards.
 
 For connector-based assembly, start with the [shadow and snapping guide](docs/agent/snapping.md). The supplied `offLibShadow/` loads automatically. Discover connector IDs with `connectors`, preview and apply checked part/submodel snaps with `snap`, or use `snap` placements in JSON plans. Try [shadow-snap.plan.json](examples/shadow-snap.plan.json).

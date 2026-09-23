@@ -27,6 +27,8 @@ def detail_section(name, palette='botanical-bookshop'):
     if name not in RECIPES:raise ValueError(f'Unknown detail {name}; use design details')
     if palette not in palettes():raise ValueError(f'Unknown palette {palette}')
     c=palettes()[palette]['roles']
+    if palettes()[palette].get('family') == 'vehicle':
+        raise ValueError('Architectural details need an architectural palette; use vehicle plan for vehicle palettes')
     def p(id,ref,role,at,**kw):
         return dict(id=id,ref=ref if ref.startswith('@') or ref.endswith('.dat') else ref+'.dat',colour=c.get(role,role),at=at,**kw)
     if name=='arched-window':

@@ -1,0 +1,1454 @@
+{
+  "version": 1,
+  "author": "ldraw-astra vehicle examples",
+  "sections": [
+    {
+      "name": "pickup.ldr",
+      "description": "Workshop pickup; six-stud System body, front -Z, ground Y=0",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "front-axle",
+            "ref": "axle-touring.ldr",
+            "colour": 0,
+            "at": [
+              0,
+              0,
+              -120.0
+            ]
+          },
+          {
+            "id": "rear-axle",
+            "ref": "axle-touring.ldr",
+            "colour": 0,
+            "at": [
+              0,
+              0,
+              120.0
+            ]
+          },
+          {
+            "id": "chassis",
+            "ref": "pickup-chassis.ldr",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "body",
+            "ref": "pickup-body.ldr",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "front-fascia",
+            "ref": "pickup-front.ldr",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0,
+              -38,
+              -210.0
+            ]
+          },
+          {
+            "id": "rear-fascia",
+            "ref": "pickup-rear.ldr",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0,
+              -38,
+              210.0
+            ],
+            "yaw": 180
+          },
+          {
+            "id": "p0007",
+            "ref": "69729.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              0,
+              -78,
+              -200
+            ]
+          },
+          {
+            "id": "p0008",
+            "ref": "69729.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              0,
+              -78,
+              200
+            ]
+          },
+          {
+            "id": "cabin",
+            "ref": "pickup-cabin.ldr",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0,
+              0,
+              0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "axle-touring.ldr",
+      "description": "Fixed wheel-pin axle; separate rims and tyres; ground Y=0",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "deck": {
+          "at": [
+            0,
+            -22.0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "holder",
+            "ref": "6157.dat",
+            "colour": 0,
+            "at": [
+              0,
+              -30.0,
+              0
+            ]
+          },
+          {
+            "id": "left-rim",
+            "ref": "6014b.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              -40.0,
+              -25.0,
+              0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "left-tyre",
+            "ref": "6015.dat",
+            "colour": 256,
+            "at": [
+              -46.0,
+              -25.0,
+              0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "right-rim",
+            "ref": "6014b.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              40.0,
+              -25.0,
+              0
+            ],
+            "yaw": -90
+          },
+          {
+            "id": "right-tyre",
+            "ref": "6015.dat",
+            "colour": 256,
+            "at": [
+              46.0,
+              -25.0,
+              0
+            ],
+            "yaw": -90
+          }
+        ]
+      ]
+    },
+    {
+      "name": "pickup-chassis.ldr",
+      "description": "Bonded narrow spine; reserved wheel wells; body deck at h=38",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "p0001",
+            "ref": "3034.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -30,
+              -120.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0002",
+            "ref": "3034.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -30,
+              40.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0003",
+            "ref": "3020.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -30,
+              160.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0004",
+            "ref": "3022.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -38,
+              -180.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0005",
+            "ref": "3034.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -38,
+              -80.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0006",
+            "ref": "3034.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -38,
+              80.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0007",
+            "ref": "3022.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -38,
+              180.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0008",
+            "ref": "3795.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0.0,
+              -46,
+              -180.0
+            ]
+          },
+          {
+            "id": "p0009",
+            "ref": "3795.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0.0,
+              -46,
+              -60.0
+            ]
+          },
+          {
+            "id": "p0010",
+            "ref": "3795.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0.0,
+              -46,
+              -20.0
+            ]
+          },
+          {
+            "id": "p0011",
+            "ref": "3795.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0.0,
+              -46,
+              20.0
+            ]
+          },
+          {
+            "id": "p0012",
+            "ref": "3795.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0.0,
+              -46,
+              60.0
+            ]
+          },
+          {
+            "id": "p0013",
+            "ref": "3795.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0.0,
+              -46,
+              180.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "pickup-body.ldr",
+      "description": "Shaped body with four reserved wheel wells and a continuous shoulder line",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "p0001",
+            "ref": "98282.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -20,
+              -62,
+              -120.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0002",
+            "ref": "98282.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              20,
+              -62,
+              -120.0
+            ],
+            "yaw": -90
+          },
+          {
+            "id": "p0003",
+            "ref": "98282.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -20,
+              -62,
+              120.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0004",
+            "ref": "98282.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              20,
+              -62,
+              120.0
+            ],
+            "yaw": -90
+          },
+          {
+            "id": "p0005",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -54,
+              -180.0
+            ]
+          },
+          {
+            "id": "p0006",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -62,
+              -180.0
+            ]
+          },
+          {
+            "id": "p0007",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -54,
+              -60.0
+            ]
+          },
+          {
+            "id": "p0008",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -54,
+              -20.0
+            ]
+          },
+          {
+            "id": "p0009",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -54,
+              20.0
+            ]
+          },
+          {
+            "id": "p0010",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -54,
+              60.0
+            ]
+          },
+          {
+            "id": "p0011",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -62,
+              -60.0
+            ]
+          },
+          {
+            "id": "p0012",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -62,
+              -20.0
+            ]
+          },
+          {
+            "id": "p0013",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -62,
+              20.0
+            ]
+          },
+          {
+            "id": "p0014",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -62,
+              60.0
+            ]
+          },
+          {
+            "id": "p0015",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -54,
+              180.0
+            ]
+          },
+          {
+            "id": "p0016",
+            "ref": "3795.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -62,
+              180.0
+            ]
+          },
+          {
+            "id": "p0017",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              -180.0
+            ]
+          },
+          {
+            "id": "p0018",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              -140.0
+            ]
+          },
+          {
+            "id": "p0019",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              -100.0
+            ]
+          },
+          {
+            "id": "p0020",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              -60.0
+            ]
+          },
+          {
+            "id": "p0021",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              -20.0
+            ]
+          },
+          {
+            "id": "p0022",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              20.0
+            ]
+          },
+          {
+            "id": "p0023",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              60.0
+            ]
+          },
+          {
+            "id": "p0024",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              100.0
+            ]
+          },
+          {
+            "id": "p0025",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              140.0
+            ]
+          },
+          {
+            "id": "p0026",
+            "ref": "3020.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -70,
+              180.0
+            ]
+          },
+          {
+            "id": "p0027",
+            "ref": "3460.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -50.0,
+              -70,
+              -120.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0028",
+            "ref": "3460.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -50.0,
+              -70,
+              40.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0029",
+            "ref": "3710.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -50.0,
+              -70,
+              160.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0030",
+            "ref": "3460.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              50.0,
+              -70,
+              -120.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0031",
+            "ref": "3460.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              50.0,
+              -70,
+              40.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0032",
+            "ref": "3710.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              50.0,
+              -70,
+              160.0
+            ],
+            "yaw": 90
+          }
+        ]
+      ]
+    },
+    {
+      "name": "pickup-front.ldr",
+      "description": "Stud-mounted lamps and grille; reserve the projecting front envelope",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "p0001",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -50.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0002",
+            "ref": "6141.dat",
+            "colour": "@colours.Trans_Clear",
+            "at": [
+              -50.0,
+              -14,
+              -14.0
+            ],
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "p0003",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -30.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0004",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -10.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0005",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              10.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0006",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              30.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0007",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              50.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0008",
+            "ref": "6141.dat",
+            "colour": "@colours.Trans_Clear",
+            "at": [
+              50.0,
+              -14,
+              -14.0
+            ],
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "p0009",
+            "ref": "2412b.dat",
+            "colour": 0,
+            "at": [
+              -20,
+              -14,
+              -14.0
+            ],
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "p0010",
+            "ref": "2412b.dat",
+            "colour": 0,
+            "at": [
+              20,
+              -14,
+              -14.0
+            ],
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "p0011",
+            "ref": "3666.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              0.0,
+              -32,
+              0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "pickup-rear.ldr",
+      "description": "Stud-mounted lamps and grille; reserve the projecting front envelope",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "p0001",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -50.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0002",
+            "ref": "6141.dat",
+            "colour": "@colours.Trans_Red",
+            "at": [
+              -50.0,
+              -14,
+              -14.0
+            ],
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "p0003",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -30.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0004",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -10.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0005",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              10.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0006",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              30.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0007",
+            "ref": "4070.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              50.0,
+              -24,
+              0
+            ]
+          },
+          {
+            "id": "p0008",
+            "ref": "6141.dat",
+            "colour": "@colours.Trans_Red",
+            "at": [
+              50.0,
+              -14,
+              -14.0
+            ],
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "p0009",
+            "ref": "3069b.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -20,
+              -14,
+              -14.0
+            ],
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "p0010",
+            "ref": "3069b.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              20,
+              -14,
+              -14.0
+            ],
+            "matrix": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "p0011",
+            "ref": "3666.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              0.0,
+              -32,
+              0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "pickup-cabin.ldr",
+      "description": "Glazing, supported roof and readable passenger/cargo volumes",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "p0001",
+            "ref": "4176.dat",
+            "colour": "@colours.Trans_Black",
+            "at": [
+              0,
+              -118,
+              -70.0
+            ]
+          },
+          {
+            "id": "p0002",
+            "ref": "3005.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              -50.0,
+              -94,
+              -10.0
+            ]
+          },
+          {
+            "id": "p0003",
+            "ref": "3005.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              -50.0,
+              -118,
+              -10.0
+            ]
+          },
+          {
+            "id": "p0004",
+            "ref": "3005.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              50.0,
+              -94,
+              -10.0
+            ]
+          },
+          {
+            "id": "p0005",
+            "ref": "3005.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              50.0,
+              -118,
+              -10.0
+            ]
+          },
+          {
+            "id": "p0006",
+            "ref": "3022.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              -20,
+              -78,
+              -20
+            ]
+          },
+          {
+            "id": "p0007",
+            "ref": "3004.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              -20,
+              -102,
+              -10.0
+            ]
+          },
+          {
+            "id": "p0008",
+            "ref": "3069b.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              -20,
+              -86,
+              -30.0
+            ]
+          },
+          {
+            "id": "p0009",
+            "ref": "3022.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              20,
+              -78,
+              -20
+            ]
+          },
+          {
+            "id": "p0010",
+            "ref": "3004.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              20,
+              -102,
+              -10.0
+            ]
+          },
+          {
+            "id": "p0011",
+            "ref": "3069b.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              20,
+              -86,
+              -30.0
+            ]
+          },
+          {
+            "id": "p0012",
+            "ref": "3829c01.dat",
+            "colour": "@colours.Black",
+            "at": [
+              -20,
+              -78,
+              -50.0
+            ]
+          },
+          {
+            "id": "p0013",
+            "ref": "3795.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              0.0,
+              -126,
+              -60.0
+            ]
+          },
+          {
+            "id": "p0014",
+            "ref": "3795.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              0.0,
+              -126,
+              -20.0
+            ]
+          },
+          {
+            "id": "p0015",
+            "ref": "69729.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              0,
+              -134,
+              -60
+            ]
+          },
+          {
+            "id": "p0016",
+            "ref": "69729.dat",
+            "colour": "@colours.Tan",
+            "at": [
+              0,
+              -134,
+              -20
+            ]
+          },
+          {
+            "id": "p0017",
+            "ref": "50950.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -50.0,
+              -94,
+              -150.0
+            ]
+          },
+          {
+            "id": "p0018",
+            "ref": "50950.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -30.0,
+              -94,
+              -150.0
+            ]
+          },
+          {
+            "id": "p0019",
+            "ref": "50950.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -10.0,
+              -94,
+              -150.0
+            ]
+          },
+          {
+            "id": "p0020",
+            "ref": "50950.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              10.0,
+              -94,
+              -150.0
+            ]
+          },
+          {
+            "id": "p0021",
+            "ref": "50950.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              30.0,
+              -94,
+              -150.0
+            ]
+          },
+          {
+            "id": "p0022",
+            "ref": "50950.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              50.0,
+              -94,
+              -150.0
+            ]
+          },
+          {
+            "id": "p0023",
+            "ref": "6636.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0,
+              -78,
+              -110.0
+            ]
+          },
+          {
+            "id": "p0024",
+            "ref": "3009.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -94,
+              10.0
+            ]
+          },
+          {
+            "id": "p0025",
+            "ref": "3009.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -118,
+              10.0
+            ]
+          },
+          {
+            "id": "p0026",
+            "ref": "3008.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              -50.0,
+              -94,
+              100.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0027",
+            "ref": "4162.dat",
+            "colour": "@colours.Black",
+            "at": [
+              -50.0,
+              -102,
+              100.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0028",
+            "ref": "3008.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              50.0,
+              -94,
+              100.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0029",
+            "ref": "4162.dat",
+            "colour": "@colours.Black",
+            "at": [
+              50.0,
+              -102,
+              100.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "p0030",
+            "ref": "3010.dat",
+            "colour": "@colours.Dark_Orange",
+            "at": [
+              0.0,
+              -94,
+              170.0
+            ]
+          },
+          {
+            "id": "p0031",
+            "ref": "87079.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -78,
+              40
+            ]
+          },
+          {
+            "id": "p0032",
+            "ref": "87079.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -78,
+              80
+            ]
+          },
+          {
+            "id": "p0033",
+            "ref": "87079.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -78,
+              120
+            ]
+          },
+          {
+            "id": "p0034",
+            "ref": "2431.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -78,
+              150.0
+            ]
+          },
+          {
+            "id": "p0035",
+            "ref": "2431.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -102,
+              170.0
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}

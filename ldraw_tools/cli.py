@@ -63,6 +63,24 @@ def parser():
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
+    c.add_argument("--family", choices=["building", "vehicle"], default="building")
+    c = commands.add_parser("vehicle", help="System vehicle designs, measured wheel packs and road-vehicle review")
+    vehicle_commands = c.add_subparsers(dest="vehicle_command", required=True)
+    vehicle_commands.add_parser("list", help="List editable vehicle starting points")
+    v = vehicle_commands.add_parser("wheels", help="Inspect measured, matched wheel packs")
+    v.add_argument("name", nargs="?")
+    v = vehicle_commands.add_parser("plan", help="Export an editable vehicle plan and its design brief")
+    v.add_argument("name")
+    v.add_argument("--palette", help="Vehicle palette (default depends on design)")
+    v.add_argument("--output", required=True)
+    v.add_argument("--force", action="store_true")
+    v = vehicle_commands.add_parser("check", help="Check fixed-axle road vehicles: -Z front, X width, Y=0 ground")
+    v.add_argument("file")
+    v.add_argument("--ground-y", type=float, default=0)
+    v.add_argument("--report")
+    v.add_argument("--limit", type=positive, default=100)
+    v.add_argument("--max-instances", type=positive, default=100000)
+    scope_options(v)
     c = commands.add_parser("catalog", help="Search the supplied part/colour categories using descriptive symbols")
     c.add_argument("kind", choices=["categories", "parts", "colours"])
     c.add_argument("query", nargs="?", default="")
@@ -176,7 +194,7 @@ def run(args):
     if args.command == "examples":
         from .examples import search_examples
         if args.details and args.scale:raise ValueError('--scale applies to building examples')
-        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details),0
+        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family),0
     library = library_path(args.library)
     if args.command == "doctor":
         report = dict(python=sys.version.split()[0], packages={n: version(n) for n in ["pyldraw3", "numpy", "jsonschema"]},
@@ -196,6 +214,39 @@ def run(args):
     if args.command == "search" and args.kind != "parts":
         return search_models(args.query, root=args.models, limit=args.limit, submodels=args.kind == "submodels"), 0
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
+    if args.command == "vehicle":
+        from .vehicles import DESIGNS, vehicle_plan, wheel_report, design_brief
+        if args.vehicle_command == "list":
+            return DESIGNS, 0
+        if args.vehicle_command == "wheels":
+            return wheel_report(parts, args.name), 0
+        if args.vehicle_command == "plan":
+            target = Path(args.output)
+            if target.suffix.casefold() != '.json':
+                raise ValueError('Plan output must end in .json')
+            brief = target.with_name(target.stem+'.brief.json')
+            if not args.force and (target.exists() or brief.exists()):
+                raise ValueError('Plan/brief exists; use --force')
+            plan = vehicle_plan(args.name, args.palette)
+            # Resolve and validate before exporting; standard build still does
+            # the full geometry/contact pass on the saved editable plan.
+            _, _, diagnostics = build_plan(plan, parts)
+            if any(d['severity']=='error' for d in diagnostics):
+                return dict(checks_passed=False, written=False, diagnostics=diagnostics), 1
+            atomic_write(target, dumps(plan)+'\n')
+            atomic_write(brief, dumps(design_brief(args.name, args.palette))+'\n')
+            return dict(plan=str(target), brief=str(brief), diagnostics=diagnostics,
+                        next='Build, validate, vehicle check, render and open all review views.'), 0
+        from .vehicle_review import review_vehicle
+        model, diagnostics = validate_file(args.file, parts, assembly=True, section=args.section,
+                                           colour=args.colour, instance_limit=args.max_instances)
+        if model is None or any(d['severity']=='error' for d in diagnostics):
+            return dict(checks_passed=False, diagnostics=diagnostics), 1
+        report = review_vehicle(model, parts, ground_y=args.ground_y, limit=args.limit,
+                                instance_limit=args.max_instances)
+        report['diagnostics'] = diagnostics+report['diagnostics']
+        report.update(file=args.file, section=args.section)
+        return report, 0 if report['checks_passed'] else 1
     if args.command == "part-board":
         from .boards import part_board
         return part_board(args.refs,parts,library,args.outdir,colour=args.colour,timeout=args.timeout), 0

@@ -1,0 +1,240 @@
+0 FILE grand-tourer.ldr
+0 Grand tourer; six-stud System body, front -Z, ground Y=0
+0 Name: grand-tourer.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // front-axle: axle-touring.ldr
+1 0 0 0 -100 1 0 0 0 1 0 0 0 1 axle-touring.ldr
+0 // rear-axle: axle-touring.ldr
+1 0 0 0 100 1 0 0 0 1 0 0 0 1 axle-touring.ldr
+0 // chassis: grand-tourer-chassis.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 grand-tourer-chassis.ldr
+0 // body: grand-tourer-body.ldr
+1 288 0 0 0 1 0 0 0 1 0 0 0 1 grand-tourer-body.ldr
+0 // front-fascia: grand-tourer-front.ldr
+1 288 0 -38 -190 1 0 0 0 1 0 0 0 1 grand-tourer-front.ldr
+0 // rear-fascia: grand-tourer-rear.ldr
+1 288 0 -38 190 -1 0 0 0 1 0 0 0 -1 grand-tourer-rear.ldr
+0 // p0007: 69729.dat
+1 71 0 -78 -180 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0008: 69729.dat
+1 71 0 -78 180 1 0 0 0 1 0 0 0 1 69729.dat
+0 // cabin: grand-tourer-cabin.ldr
+1 288 0 0 0 1 0 0 0 1 0 0 0 1 grand-tourer-cabin.ldr
+0 NOFILE
+0 FILE axle-touring.ldr
+0 Fixed wheel-pin axle; separate rims and tyres; ground Y=0
+0 Name: axle-touring.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // holder: 6157.dat
+1 0 0 -30 0 1 0 0 0 1 0 0 0 1 6157.dat
+0 // left-rim: 6014b.dat
+1 71 -40 -25 0 0 0 1 0 1 0 -1 0 0 6014b.dat
+0 // left-tyre: 6015.dat
+1 256 -46 -25 0 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // right-rim: 6014b.dat
+1 71 40 -25 0 0 0 -1 0 1 0 1 0 0 6014b.dat
+0 // right-tyre: 6015.dat
+1 256 46 -25 0 0 0 -1 0 1 0 1 0 0 6015.dat
+0 NOFILE
+0 FILE grand-tourer-chassis.ldr
+0 Bonded narrow spine; reserved wheel wells; body deck at h=38
+0 Name: grand-tourer-chassis.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 3034.dat
+1 0 0 -30 -100 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0002: 3034.dat
+1 0 0 -30 60 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0003: 3022.dat
+1 0 0 -30 160 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // p0004: 3022.dat
+1 0 0 -38 -160 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // p0005: 3034.dat
+1 0 0 -38 -60 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0006: 3034.dat
+1 0 0 -38 100 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0007: 3795.dat
+1 0 0 -46 -160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0008: 3795.dat
+1 0 0 -46 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0009: 3795.dat
+1 0 0 -46 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0010: 3795.dat
+1 0 0 -46 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0011: 3795.dat
+1 0 0 -46 160 1 0 0 0 1 0 0 0 1 3795.dat
+0 NOFILE
+0 FILE grand-tourer-body.ldr
+0 Shaped body with four reserved wheel wells and a continuous shoulder line
+0 Name: grand-tourer-body.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 98282.dat
+1 288 -20 -62 -100 0 0 1 0 1 0 -1 0 0 98282.dat
+0 // p0002: 98282.dat
+1 288 20 -62 -100 0 0 -1 0 1 0 1 0 0 98282.dat
+0 // p0003: 98282.dat
+1 288 -20 -62 100 0 0 1 0 1 0 -1 0 0 98282.dat
+0 // p0004: 98282.dat
+1 288 20 -62 100 0 0 -1 0 1 0 1 0 0 98282.dat
+0 // p0005: 3795.dat
+1 288 0 -54 -160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0006: 3795.dat
+1 288 0 -62 -160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0007: 3795.dat
+1 288 0 -54 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0008: 3795.dat
+1 288 0 -54 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0009: 3795.dat
+1 288 0 -54 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0010: 3795.dat
+1 288 0 -62 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0011: 3795.dat
+1 288 0 -62 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0012: 3795.dat
+1 288 0 -62 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0013: 3795.dat
+1 288 0 -54 160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0014: 3795.dat
+1 288 0 -62 160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0015: 3020.dat
+1 288 0 -70 -160 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0016: 3020.dat
+1 288 0 -70 -120 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0017: 3020.dat
+1 288 0 -70 -80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0018: 3020.dat
+1 288 0 -70 -40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0019: 3020.dat
+1 288 0 -70 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0020: 3020.dat
+1 288 0 -70 40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0021: 3020.dat
+1 288 0 -70 80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0022: 3020.dat
+1 288 0 -70 120 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0023: 3020.dat
+1 288 0 -70 160 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0024: 3460.dat
+1 288 -50 -70 -100 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0025: 3460.dat
+1 288 -50 -70 60 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0026: 3023b.dat
+1 288 -50 -70 160 0 0 1 0 1 0 -1 0 0 3023b.dat
+0 // p0027: 3460.dat
+1 288 50 -70 -100 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0028: 3460.dat
+1 288 50 -70 60 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0029: 3023b.dat
+1 288 50 -70 160 0 0 1 0 1 0 -1 0 0 3023b.dat
+0 NOFILE
+0 FILE grand-tourer-front.ldr
+0 Stud-mounted lamps and grille; reserve the projecting front envelope
+0 Name: grand-tourer-front.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 4070.dat
+1 288 -50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0002: 6141.dat
+1 47 -50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0003: 4070.dat
+1 288 -30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0004: 4070.dat
+1 288 -10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0005: 4070.dat
+1 288 10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0006: 4070.dat
+1 288 30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0007: 4070.dat
+1 288 50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0008: 6141.dat
+1 47 50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0009: 2412b.dat
+1 0 -20 -14 -14 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // p0010: 2412b.dat
+1 0 20 -14 -14 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // p0011: 3666.dat
+1 71 0 -32 0 1 0 0 0 1 0 0 0 1 3666.dat
+0 NOFILE
+0 FILE grand-tourer-rear.ldr
+0 Stud-mounted lamps and grille; reserve the projecting front envelope
+0 Name: grand-tourer-rear.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 4070.dat
+1 288 -50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0002: 6141.dat
+1 36 -50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0003: 4070.dat
+1 288 -30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0004: 4070.dat
+1 288 -10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0005: 4070.dat
+1 288 10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0006: 4070.dat
+1 288 30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0007: 4070.dat
+1 288 50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0008: 6141.dat
+1 36 50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0009: 3069b.dat
+1 288 -20 -14 -14 1 0 0 0 0 -1 0 1 0 3069b.dat
+0 // p0010: 3069b.dat
+1 288 20 -14 -14 1 0 0 0 0 -1 0 1 0 3069b.dat
+0 // p0011: 3666.dat
+1 71 0 -32 0 1 0 0 0 1 0 0 0 1 3666.dat
+0 NOFILE
+0 FILE grand-tourer-cabin.ldr
+0 Glazing, supported roof and readable passenger/cargo volumes
+0 Name: grand-tourer-cabin.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 2437.dat
+1 10375 0 -102 -30 1 0 0 0 1 0 0 0 1 2437.dat
+0 // p0002: 2437.dat
+1 10375 0 -102 30 -1 0 0 0 1 0 0 0 -1 2437.dat
+0 // p0003: 3020.dat
+1 19 0 -110 -20 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0004: 3020.dat
+1 19 0 -110 20 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0005: 3020.dat
+1 19 0 -118 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0006: 93273.dat
+1 19 -30 -110 0 1 0 0 0 1 0 0 0 1 93273.dat
+0 // p0007: 93273.dat
+1 19 -10 -110 0 1 0 0 0 1 0 0 0 1 93273.dat
+0 // p0008: 93273.dat
+1 19 10 -110 0 1 0 0 0 1 0 0 0 1 93273.dat
+0 // p0009: 93273.dat
+1 19 30 -110 0 1 0 0 0 1 0 0 0 1 93273.dat
+0 // p0010: 50950.dat
+1 288 -50 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0011: 50950.dat
+1 288 -30 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0012: 50950.dat
+1 288 -10 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0013: 50950.dat
+1 288 10 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0014: 50950.dat
+1 288 30 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0015: 50950.dat
+1 288 50 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0016: 3795.dat
+1 288 0 -78 -80 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0017: 3795.dat
+1 288 0 -86 -80 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0018: 69729.dat
+1 288 0 -94 -80 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0019: 69729.dat
+1 288 0 -78 80 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0020: 69729.dat
+1 288 0 -78 120 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0021: 6636.dat
+1 288 0 -78 150 1 0 0 0 1 0 0 0 1 6636.dat
+0 // p0022: 6636.dat
+1 288 -50 -78 0 0 0 1 0 1 0 -1 0 0 6636.dat
+0 // p0023: 6636.dat
+1 288 50 -78 0 0 0 1 0 1 0 -1 0 0 6636.dat
+0 NOFILE

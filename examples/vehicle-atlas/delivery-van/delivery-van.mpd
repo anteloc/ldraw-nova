@@ -1,0 +1,270 @@
+0 FILE delivery-van.ldr
+0 Delivery van; six-stud System body, front -Z, ground Y=0
+0 Name: delivery-van.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // front-axle: axle-touring.ldr
+1 0 0 0 -100 1 0 0 0 1 0 0 0 1 axle-touring.ldr
+0 // rear-axle: axle-touring.ldr
+1 0 0 0 100 1 0 0 0 1 0 0 0 1 axle-touring.ldr
+0 // chassis: delivery-van-chassis.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 delivery-van-chassis.ldr
+0 // body: delivery-van-body.ldr
+1 379 0 0 0 1 0 0 0 1 0 0 0 1 delivery-van-body.ldr
+0 // front-fascia: delivery-van-front.ldr
+1 379 0 -38 -190 1 0 0 0 1 0 0 0 1 delivery-van-front.ldr
+0 // rear-fascia: delivery-van-rear.ldr
+1 379 0 -38 190 -1 0 0 0 1 0 0 0 -1 delivery-van-rear.ldr
+0 // p0007: 69729.dat
+1 71 0 -78 -180 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0008: 69729.dat
+1 71 0 -78 180 1 0 0 0 1 0 0 0 1 69729.dat
+0 // cabin: delivery-van-cabin.ldr
+1 379 0 0 0 1 0 0 0 1 0 0 0 1 delivery-van-cabin.ldr
+0 NOFILE
+0 FILE axle-touring.ldr
+0 Fixed wheel-pin axle; separate rims and tyres; ground Y=0
+0 Name: axle-touring.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // holder: 6157.dat
+1 0 0 -30 0 1 0 0 0 1 0 0 0 1 6157.dat
+0 // left-rim: 6014b.dat
+1 71 -40 -25 0 0 0 1 0 1 0 -1 0 0 6014b.dat
+0 // left-tyre: 6015.dat
+1 256 -46 -25 0 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // right-rim: 6014b.dat
+1 71 40 -25 0 0 0 -1 0 1 0 1 0 0 6014b.dat
+0 // right-tyre: 6015.dat
+1 256 46 -25 0 0 0 -1 0 1 0 1 0 0 6015.dat
+0 NOFILE
+0 FILE delivery-van-chassis.ldr
+0 Bonded narrow spine; reserved wheel wells; body deck at h=38
+0 Name: delivery-van-chassis.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 3034.dat
+1 0 0 -30 -100 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0002: 3034.dat
+1 0 0 -30 60 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0003: 3022.dat
+1 0 0 -30 160 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // p0004: 3022.dat
+1 0 0 -38 -160 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // p0005: 3034.dat
+1 0 0 -38 -60 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0006: 3034.dat
+1 0 0 -38 100 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0007: 3795.dat
+1 0 0 -46 -160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0008: 3795.dat
+1 0 0 -46 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0009: 3795.dat
+1 0 0 -46 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0010: 3795.dat
+1 0 0 -46 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0011: 3795.dat
+1 0 0 -46 160 1 0 0 0 1 0 0 0 1 3795.dat
+0 NOFILE
+0 FILE delivery-van-body.ldr
+0 Shaped body with four reserved wheel wells and a continuous shoulder line
+0 Name: delivery-van-body.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 98282.dat
+1 379 -20 -62 -100 0 0 1 0 1 0 -1 0 0 98282.dat
+0 // p0002: 98282.dat
+1 379 20 -62 -100 0 0 -1 0 1 0 1 0 0 98282.dat
+0 // p0003: 98282.dat
+1 379 -20 -62 100 0 0 1 0 1 0 -1 0 0 98282.dat
+0 // p0004: 98282.dat
+1 379 20 -62 100 0 0 -1 0 1 0 1 0 0 98282.dat
+0 // p0005: 3795.dat
+1 379 0 -54 -160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0006: 3795.dat
+1 379 0 -62 -160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0007: 3795.dat
+1 379 0 -54 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0008: 3795.dat
+1 379 0 -54 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0009: 3795.dat
+1 379 0 -54 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0010: 3795.dat
+1 379 0 -62 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0011: 3795.dat
+1 379 0 -62 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0012: 3795.dat
+1 379 0 -62 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0013: 3795.dat
+1 379 0 -54 160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0014: 3795.dat
+1 379 0 -62 160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0015: 3020.dat
+1 379 0 -70 -160 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0016: 3020.dat
+1 379 0 -70 -120 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0017: 3020.dat
+1 379 0 -70 -80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0018: 3020.dat
+1 379 0 -70 -40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0019: 3020.dat
+1 379 0 -70 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0020: 3020.dat
+1 379 0 -70 40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0021: 3020.dat
+1 379 0 -70 80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0022: 3020.dat
+1 379 0 -70 120 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0023: 3020.dat
+1 379 0 -70 160 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0024: 3460.dat
+1 379 -50 -70 -100 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0025: 3460.dat
+1 379 -50 -70 60 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0026: 3023b.dat
+1 379 -50 -70 160 0 0 1 0 1 0 -1 0 0 3023b.dat
+0 // p0027: 3460.dat
+1 379 50 -70 -100 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0028: 3460.dat
+1 379 50 -70 60 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0029: 3023b.dat
+1 379 50 -70 160 0 0 1 0 1 0 -1 0 0 3023b.dat
+0 NOFILE
+0 FILE delivery-van-front.ldr
+0 Stud-mounted lamps and grille; reserve the projecting front envelope
+0 Name: delivery-van-front.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 4070.dat
+1 379 -50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0002: 6141.dat
+1 47 -50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0003: 4070.dat
+1 379 -30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0004: 4070.dat
+1 379 -10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0005: 4070.dat
+1 379 10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0006: 4070.dat
+1 379 30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0007: 4070.dat
+1 379 50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0008: 6141.dat
+1 47 50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0009: 2412b.dat
+1 0 -20 -14 -14 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // p0010: 2412b.dat
+1 0 20 -14 -14 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // p0011: 3666.dat
+1 71 0 -32 0 1 0 0 0 1 0 0 0 1 3666.dat
+0 NOFILE
+0 FILE delivery-van-rear.ldr
+0 Stud-mounted lamps and grille; reserve the projecting front envelope
+0 Name: delivery-van-rear.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 4070.dat
+1 379 -50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0002: 6141.dat
+1 36 -50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0003: 4070.dat
+1 379 -30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0004: 4070.dat
+1 379 -10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0005: 4070.dat
+1 379 10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0006: 4070.dat
+1 379 30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0007: 4070.dat
+1 379 50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0008: 6141.dat
+1 36 50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0009: 3069b.dat
+1 379 -20 -14 -14 1 0 0 0 0 -1 0 1 0 3069b.dat
+0 // p0010: 3069b.dat
+1 379 20 -14 -14 1 0 0 0 0 -1 0 1 0 3069b.dat
+0 // p0011: 3666.dat
+1 71 0 -32 0 1 0 0 0 1 0 0 0 1 3666.dat
+0 NOFILE
+0 FILE delivery-van-cabin.ldr
+0 Glazing, supported roof and readable passenger/cargo volumes
+0 Name: delivery-van-cabin.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 4176.dat
+1 10375 0 -118 -70 1 0 0 0 1 0 0 0 1 4176.dat
+0 // p0002: 3005.dat
+1 15 -50 -94 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // p0003: 3005.dat
+1 15 -50 -118 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // p0004: 3005.dat
+1 15 50 -94 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // p0005: 3005.dat
+1 15 50 -118 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // p0006: 3022.dat
+1 70 -20 -78 -20 1 0 0 0 1 0 0 0 1 3022.dat
+0 // p0007: 3004.dat
+1 70 -20 -102 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // p0008: 3069b.dat
+1 70 -20 -86 -30 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // p0009: 3022.dat
+1 70 20 -78 -20 1 0 0 0 1 0 0 0 1 3022.dat
+0 // p0010: 3004.dat
+1 70 20 -102 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // p0011: 3069b.dat
+1 70 20 -86 -30 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // p0012: 3829c01.dat
+1 0 -20 -78 -50 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 // p0013: 3795.dat
+1 15 0 -126 -60 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0014: 3795.dat
+1 15 0 -126 -20 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0015: 69729.dat
+1 15 0 -134 -60 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0016: 69729.dat
+1 15 0 -134 -20 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0017: 50950.dat
+1 379 -50 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0018: 50950.dat
+1 379 -30 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0019: 50950.dat
+1 379 -10 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0020: 50950.dat
+1 379 10 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0021: 50950.dat
+1 379 30 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0022: 50950.dat
+1 379 50 -94 -130 1 0 0 0 1 0 0 0 1 50950.dat
+0 // p0023: 3008.dat
+1 379 -50 -94 80 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // p0024: 3008.dat
+1 379 50 -94 80 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // p0025: 3010.dat
+1 379 0 -94 150 1 0 0 0 1 0 0 0 1 3010.dat
+0 // p0026: 3010.dat
+1 379 0 -94 10 1 0 0 0 1 0 0 0 1 3010.dat
+0 // p0027: 3008.dat
+1 15 -50 -118 80 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // p0028: 3008.dat
+1 15 50 -118 80 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // p0029: 3010.dat
+1 15 0 -118 150 1 0 0 0 1 0 0 0 1 3010.dat
+0 // p0030: 3010.dat
+1 15 0 -118 10 1 0 0 0 1 0 0 0 1 3010.dat
+0 // p0031: 3795.dat
+1 15 0 -126 20 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0032: 3795.dat
+1 15 0 -126 60 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0033: 3795.dat
+1 15 0 -126 100 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0034: 3795.dat
+1 15 0 -126 140 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0035: 69729.dat
+1 15 0 -134 20 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0036: 69729.dat
+1 15 0 -134 60 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0037: 69729.dat
+1 15 0 -134 100 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0038: 69729.dat
+1 15 0 -134 140 1 0 0 0 1 0 0 0 1 69729.dat
+0 NOFILE

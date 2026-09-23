@@ -8,6 +8,31 @@ The supplied `offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides t
 
 ## Discover and inspect
 
+### System vehicles
+
+```sh
+./ldraw-agent vehicle list
+./ldraw-agent vehicle wheels touring
+./ldraw-agent vehicle plan pickup --palette desert-utility --output output/pickup.plan.json
+./ldraw-agent examples --family vehicle --limit 3
+./ldraw-agent vehicle check output/pickup.mpd --report output/pickup.vehicle.json
+```
+
+`vehicle plan` writes an ordinary editable plan and a sibling `.brief.json`,
+resolving parts before writing; use `--force` to replace either. Run normal
+`build`/`validate --geometry` afterwards. Vehicle palettes also appear under
+`design palettes`; architectural detail recipes require architectural palettes.
+The building example search remains the default.
+
+`vehicle check` accepts `--section`, `--colour`, `--ground-y`, `--limit` and
+`--max-instances`. It checks the supported separate wheel/tyre pairs in the
+documented road frame. Diagnostics distinguish layout errors, unknown-wheel
+coverage and conservative wheel-space warnings. It does not replace assembly
+validation, material clearance inspection or visual review. Full usage and
+limitations are in the [vehicle guide](vehicles.md).
+
+### General discovery
+
 ```sh
 ./ldraw-agent doctor
 ./ldraw-agent index

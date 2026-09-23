@@ -1,0 +1,96 @@
+{
+  "source_sha256": "92ba0de76f62ced36292cbaf75aa456149d1fee84555214eaf48442664337d8c",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "ground_y": 0.0,
+  "diagnostics": [],
+  "wheel_count": 4,
+  "axle_count": 2,
+  "wheelbase_ldu": 200.0,
+  "wheels": [
+    {
+      "instance": 2,
+      "ref": "6015.dat",
+      "centre": [
+        -46.0,
+        -25.0,
+        -100.0
+      ],
+      "radius_ldu": 25.0000106192,
+      "width_ldu": 28.0,
+      "ground_error_ldu": 1.0619200001116269e-05
+    },
+    {
+      "instance": 4,
+      "ref": "6015.dat",
+      "centre": [
+        46.0,
+        -25.0,
+        -100.0
+      ],
+      "radius_ldu": 25.0000106192,
+      "width_ldu": 28.0,
+      "ground_error_ldu": 1.0619200001116269e-05
+    },
+    {
+      "instance": 7,
+      "ref": "6015.dat",
+      "centre": [
+        -46.0,
+        -25.0,
+        100.0
+      ],
+      "radius_ldu": 25.0000106192,
+      "width_ldu": 28.0,
+      "ground_error_ldu": 1.0619200001116269e-05
+    },
+    {
+      "instance": 9,
+      "ref": "6015.dat",
+      "centre": [
+        46.0,
+        -25.0,
+        100.0
+      ],
+      "radius_ldu": 25.0000106192,
+      "width_ldu": 28.0,
+      "ground_error_ldu": 1.0619200001116269e-05
+    }
+  ],
+  "axles": [
+    {
+      "z_ldu": -100.0,
+      "instances": [
+        2,
+        4
+      ],
+      "track_ldu": 92.0
+    },
+    {
+      "z_ldu": 100.0,
+      "instances": [
+        7,
+        9
+      ],
+      "track_ldu": 92.0
+    }
+  ],
+  "unreviewed_wheels": [],
+  "wheel_space_candidates": [],
+  "truncated": false,
+  "coverage": {
+    "geometry_complete": true,
+    "occurrences": 97,
+    "supported_tyres": [
+      "3641",
+      "6015"
+    ],
+    "clearance": "Circular wheel envelope versus upright curated rectangular bodies only"
+  },
+  "limitations": [
+    "Symmetric road vehicles in the documented frame only; no steering, suspension, dual wheels or spare-wheel classification.",
+    "Curved fenders, slopes and SNOT bodywork still require material/visual clearance review.",
+    "Rim alignment does not establish wheel-pin retention, clutch, strength or physical rolling freedom.",
+    "No aesthetic score or part/colour availability claim; use assembly validation and opened renders too."
+  ]
+}

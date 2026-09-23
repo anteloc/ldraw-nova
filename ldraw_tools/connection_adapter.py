@@ -1,4 +1,4 @@
-"""Version-pinned frame adaptation for pyldraw3 1.7 stud mating.
+"""Version-pinned frame adaptation for pyldraw3 1.7 stud/wheel mating.
 
 LDCad SNAP_CYL female spans point inward (-Y in the meta frame). pyldraw's
 strict stud contact query expects an outward receptacle axis instead. Its
@@ -17,7 +17,22 @@ REVERSE_AXIS = Matrix([[1, 0, 0], [0, -1, 0], [0, 0, 1]])
 
 
 def query_frames(inspection, *, snapping=False):
-    def adapt(feature):
+    def adapt(feature, item):
+        # 6014a/b is wider along Z than its rim diameter. The 1.7 annular
+        # heuristic picks the shortest bounding-box axis (X), although the
+        # wheel hole and official 6014bc01 shortcut establish local Z as axle.
+        # Correct query evidence only, retaining the official shortcut centre
+        # at Z=-6 and its compatibility list. Never rewrite source geometry.
+        if (item.occurrence.part_code.casefold() in {'6014a', '6014b'}
+                and feature.kind is ConnectionKind.RIM_SEAT
+                and feature.source is ConnectionSource.SHORTCUT
+                and '6015' in feature.compatible_parts):
+            bounds = item.local.bounds
+            feature = replace(feature,
+                              frame=item.occurrence.matrix * Matrix([[1,0,0],[0,0,-1],[0,1,0]]),
+                              profile=replace(feature.profile, radius=max(bounds.size.x,bounds.size.y)/2,
+                                              width=bounds.size.z),
+                              provenance=(*feature.provenance, 'astra:6014-local-Z-wheel-axis'))
         authored = feature.source in LDCAD
         profile = feature.profile
         # LDCad uses closed S 6 cavities for ordinary 1-wide brick/slope
@@ -39,7 +54,7 @@ def query_frames(inspection, *, snapping=False):
             feature = replace(feature, frame=feature.frame * REVERSE_AXIS)
         return feature
     return replace(inspection, occurrences=tuple(
-        replace(item, connections=tuple(adapt(f) for f in item.connections))
+        replace(item, connections=tuple(adapt(f, item) for f in item.connections))
         for item in inspection.occurrences))
 
 

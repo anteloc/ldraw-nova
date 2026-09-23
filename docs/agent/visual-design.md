@@ -2,6 +2,12 @@
 
 Geometric correctness is a constraint, not the design brief. An attractive model needs a recognizable subject, clear proportions, a controlled palette, depth, and details that belong to its story. A thousand repetitive bricks do not substitute for these decisions. Make a visual revision after opening the first render; do not end at the first valid assembly.
 
+For vehicles, use the [vehicle design workflow](vehicles.md) and its review criteria:
+stance, wheel/arch balance, bonnet/cabin/tail proportions, continuous body lines,
+glazing, clean surfaces and front/rear identity. `vehicle list`, `vehicle wheels`,
+`vehicle plan` and `vehicle check` provide executable starting points and evidence.
+Architectural motifs below are examples for buildings, not a vehicle vocabulary.
+
 ## Start with composition
 
 Write a short `design-brief.json` or Markdown brief outside the assembly plan. Record:
