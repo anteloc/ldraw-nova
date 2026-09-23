@@ -1,0 +1,89 @@
+{
+  "title": "The Copper Bean",
+  "subject": "A three-storey apartment block over a corner coffee shop, with three people having coffee under a parasol on the pavement terrace outside",
+  "scale": "minifigure",
+  "site": "One 32x32 stud baseplate (3811); road and kerb at the front, pavement and café terrace, side and rear gardens",
+  "identity": "A small-town corner café with flats above it. The mood is warm and everyday: a green shopfront under a striped awning, tan brick apartments with balconies, and a pavement terrace where three regulars sit over their coffee.",
+  "silhouette": [
+    "One tall vertical mass, 16 x 12 studs in plan and 552 LDU high, read as three clearly banded storeys",
+    "A taller ground floor (200 LDU) than the two apartment floors (160 LDU each), which is what makes the shop read as a shop",
+    "A flat roof with a white parapet, broken asymmetrically by a stair head and a chimney",
+    "A low, wide horizontal counterpoint on the pavement: the 8 x 8 stud parasol canopy"
+  ],
+  "focal_hierarchy": {
+    "primary": "The shopfront: two full-height display bays, a glazed entrance, a printed coffee-cup sign board and a green-and-white striped awning",
+    "supporting": [
+      "The pavement café under the parasol: pierced table, three white bistro chairs and three seated guests with cups",
+      "The top-floor balcony: a French door behind a white lattice balustrade carried on the projecting cornice"
+    ],
+    "accents": [
+      "Cornice string courses that wrap all four elevations",
+      "Balcony flower pots, terrace flower boxes, the roof planter and garden flower clusters"
+    ]
+  },
+  "palette_roles": {
+    "shopfront": "288 Dark_Green (walls, awning stripes, parasol)",
+    "body": "19 Tan (apartment walls)",
+    "trim": "15 White (window and door frames, cornices, balustrade, parapet, bistro chairs, sign board)",
+    "timber": "70 Reddish_Brown (storey decks, table top, seat tiles, chimney)",
+    "stone": "72 Dark_Bluish_Grey (shop plinth, roof surface, road)",
+    "paving": "71 Light_Bluish_Grey (pavement and garden path)",
+    "decking": "28 Dark_Tan (café terrace)",
+    "planting": "2 Green with 4 Red / 14 Yellow / 5 Dark_Pink flowers",
+    "glazing": "47 Trans_Clear"
+  },
+  "depth_devices": [
+    "Cornice ring at every storey head: two studs proud at the front, one stud proud on the flanks and rear, so each elevation gets a shadow line",
+    "Recessed window and door reveals inside one-stud-deep walls",
+    "The awning oversails the pavement by two studs above the sign band",
+    "Balcony railing set at the outer edge of the cornice, a full two studs in front of the wall"
+  ],
+  "detail_vocabulary": [
+    "Four-stud window bays repeated on every elevation, in a band two courses above each deck",
+    "Projecting white string courses",
+    "Round-brick table and tree trunks",
+    "Flower clusters (1x1 round brick plus a 5-petal plate) used sparingly at bases and on ledges"
+  ],
+  "quiet_surfaces": [
+    "The tan wall field between the window band and the cornice",
+    "The tiled roof terrace on the west half of the roof",
+    "The open pavement west of the café"
+  ],
+  "story": [
+    "Three guests sit around a pierced terrace table under a dark green parasol, each with a Minifig Cup within reach and their arms swung forward over the table",
+    "The shop interior holds a service counter, an espresso machine and two window tables with stools, all visible through the display glazing",
+    "A service door at the rear opens onto a tiled garden path, planting beds and a quiet garden seat"
+  ],
+  "modules": [
+    {"name": "bean-shop.ldr", "envelope_studs": [16, 12], "height_ldu": 208, "anchors": ["base", "roof", "doorstep"], "review": "inspected with --contacts all; 203 placements, 418 contacts"},
+    {"name": "bean-flat-one.ldr", "envelope_studs": [16, 12], "height_ldu": 160, "anchors": ["base", "roof"], "note": "three front windows; its cornice carries the balcony balustrade and flower pots"},
+    {"name": "bean-flat-two.ldr", "envelope_studs": [16, 12], "height_ldu": 160, "anchors": ["base", "roof"], "note": "two front windows and a central French door onto the balcony below"},
+    {"name": "bean-roof.ldr", "envelope_studs": [16, 12], "height_ldu": 40, "anchors": ["base"], "note": "parapet, tiled terrace, studded service bay with stair head, chimney and planter"},
+    {"name": "bean-terrace.ldr", "envelope_studs": [12, 10], "anchors": ["base", "mast"], "note": "parasol, pierced table, three chairs, three seated guests, three cups"},
+    {"name": "cafe-table.ldr", "envelope_studs": [5, 4], "note": "1 x 2 stud void around the 10 LDU parasol mast; four round legs, rails at 56 LDU carry the centre plates"},
+    {"name": "cafe-chair.ldr", "envelope_studs": [2, 3], "note": "one 2x3 base plate ties the seat block to the back frame; smooth seat top at 40 LDU"},
+    {"name": "bean-guest-*.ldr", "note": "assembled minifigure, seated; hips and thighs share one bearing plane"}
+  ],
+  "part_selection_evidence": {
+    "minifigure_stack": {
+      "hips": "3815b (current part; 3815 is marked obsolete)",
+      "legs": "3816c / 3817c (current; 3816 / 3817 are marked obsolete)",
+      "torso": "973",
+      "arms": "43368 / 43369, Minifig Arm with Integral Hand",
+      "head": "3626bp01",
+      "hair": "3901 / 6093a / 43751",
+      "measured_offsets_ldu": {"legs_below_hips": 12, "torso_above_hips": 32, "head_above_hips": 57, "seat_plane_below_hips": 20.75, "standing_feet_below_hips": 40},
+      "why_not_973c01": "The 973c01 torso shortcut contains 3819, which is a mirrored reference to 3818. Its LDCad shadow connection frames are rejected under reflection, so pyldraw3 reports the geometry as incomplete and the assembly profile fails. 43368/43369 each carry their own geometry and pass.",
+      "seated_pose": "Legs carry a proper -90 degree rotation about the figure's own X axis (determinant +1). Arms carry Rz(+-9.79) composed with Rx(-60); the 9.79 degree splay is the angle 973c01 itself uses, and the -60 degree swing is the minimum that lifts the hands clear of the horizontal thighs."
+    },
+    "parasol": "958c01, Umbrella 8x8 with Square Tabs with Round Base (Complete). Its stand grips six deck studs at (+-20, 0, +-10); that fixes the mast to a stud centre in X and a stud line in Z, which is why the table is five studs wide and four deep rather than square.",
+    "table_top": "The mast parity means no symmetric four-leg square table can be stud-supported. Legs sit at (+-40, +-30) LDU from the mast, the only corner positions clear of the 60 LDU round stand.",
+    "sign": "3068bp25, Tile 2x2 with 4 Reddish Brown and White Coffee Cups Pattern, on three 11211 side-stud bricks, flanked by two plain 3068b panels.",
+    "awning": "3039 slope sockets lie on a grid offset half a stud in Z from the part origin, so the awning course is placed at z = -d/2 - 0.5. At -d/2 - 1 the slopes rested on the cornice without engaging any stud."
+  },
+  "physical_placements": 1022,
+  "distinct_bom_entries": 103,
+  "sections": 24,
+  "source_sha256": "2f42dacd184b9a4e8f29b5ca8ff970839b2ed98c135afe88e879d49735f085a6",
+  "physical_validity": "not_proven"
+}

@@ -1,0 +1,782 @@
+{
+  "file": "output/cathedral/cathedral.mpd",
+  "section": "cathedral-rose.ldr",
+  "profile": "syntax",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "diagnostics": [
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 4,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -60.0,
+        -60.0,
+        -32.0
+      ],
+      "max": [
+        60.0,
+        60.0,
+        0.0002999999999993008
+      ]
+    },
+    "occurrence_count": 4,
+    "detail": "full",
+    "instance_offset": 0,
+    "instances": [
+      {
+        "index": 0,
+        "part": "11213.dat",
+        "description": "Plate 6 x 6 Round with Hole and Snapstud",
+        "colour": {
+          "code": 33,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          -8.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -60.0,
+            -60.0,
+            -12.0
+          ],
+          "max": [
+            60.0,
+            60.0,
+            0.0002999999999993008
+          ]
+        },
+        "section": "cathedral-rose.ldr",
+        "line_number": 2978,
+        "source_path": [
+          null,
+          2978
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 50,
+        "placement_path": [
+          0,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 6,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 1,
+        "part": "4032a.dat",
+        "description": "Plate 2 x 2 Round with Axlehole",
+        "colour": {
+          "code": 33,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          -16.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -20.00052563,
+            -20.00052563,
+            -20.0
+          ],
+          "max": [
+            20.00052563,
+            20.00052563,
+            -8.0
+          ]
+        },
+        "section": "cathedral-rose.ldr",
+        "line_number": 2980,
+        "source_path": [
+          null,
+          2980
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 16,
+        "placement_path": [
+          0,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 6,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 2,
+        "part": "4285b.dat",
+        "description": "Dish 6 x 6 Inverted Webbed Type 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          -24.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -60.0,
+            -60.0,
+            -28.0
+          ],
+          "max": [
+            60.0,
+            60.0,
+            -8.0
+          ]
+        },
+        "section": "cathedral-rose.ldr",
+        "line_number": 2982,
+        "source_path": [
+          null,
+          2982
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 9,
+        "placement_path": [
+          0,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 3,
+        "part": "14769.dat",
+        "description": "Tile 2 x 2 Round with Round Underside Stud",
+        "colour": {
+          "code": 46,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          -32.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -20.000504910000004,
+            -20.000504910000004,
+            -32.0
+          ],
+          "max": [
+            20.000504910000004,
+            20.000504910000004,
+            -24.0
+          ]
+        },
+        "section": "cathedral-rose.ldr",
+        "line_number": 2984,
+        "source_path": [
+          null,
+          2984
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 6,
+        "placement_path": [
+          0,
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      }
+    ],
+    "instances_truncated": false,
+    "contacts_checked": true,
+    "contact_count": 12,
+    "contacts": [
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stug-4x4@R61/stug-2x2@R0/stud@R3/studC",
+          "snap_cyl@L9:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stug-4x4@R61/stug-2x2@R1/stud@R1/studC",
+          "snap_cyl@L9:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stug-4x4@R61/stug-2x2@R2/stud@R0/studC",
+          "snap_cyl@L9:I3"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stug-4x4@R61/stug-2x2@R3/stud@R2/studC",
+          "snap_cyl@L9:I2"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stug-4x4@R61/stug-2x2@R0/stud@R3/studC",
+          "snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 20.0
+        }
+      },
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stug-4x4@R61/stug-2x2@R1/stud@R1/studC",
+          "snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 20.0
+        }
+      },
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stug-4x4@R61/stug-2x2@R2/stud@R0/studC",
+          "snap_cyl@L8:I3"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 20.0
+        }
+      },
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stug-4x4@R61/stug-2x2@R3/stud@R2/studC",
+          "snap_cyl@L8:I2"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 20.0
+        }
+      },
+      {
+        "instances": [
+          2,
+          3
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R26/studC",
+          "s/14769s01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          2,
+          3
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R27/studC",
+          "s/14769s01@R0/snap_cyl@L8:I3"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          2,
+          3
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R28/studC",
+          "s/14769s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          2,
+          3
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R29/studC",
+          "s/14769s01@R0/snap_cyl@L8:I2"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      }
+    ],
+    "contacts_truncated": false,
+    "confirmed_components": [
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "optimistic_components": [
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "optimistic_component_count": 1,
+    "confirmed_component_count": 1,
+    "components_truncated": false,
+    "overlap_candidate_count": 4,
+    "overlaps": [
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "depths": [
+          120.0,
+          120.0,
+          4.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 4
+      },
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "depths": [
+          40.00105126,
+          40.00105126,
+          4.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 4
+      },
+      {
+        "instances": [
+          2,
+          1
+        ],
+        "depths": [
+          40.00105126,
+          40.00105126,
+          12.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          2,
+          3
+        ],
+        "depths": [
+          40.00100982000001,
+          40.00100982000001,
+          4.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 4
+      }
+    ],
+    "overlaps_truncated": false,
+    "diagnostics": [
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  }
+}

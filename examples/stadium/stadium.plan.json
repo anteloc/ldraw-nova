@@ -1,0 +1,4626 @@
+{
+  "version": 1,
+  "author": "ldraw-astra stadium example generator",
+  "sections": [
+    {
+      "name": "stadium.ldr",
+      "description": "Meridian Park: four-stand terrace ground with corner pylons",
+      "steps": [
+        [
+          {
+            "id": "pitch",
+            "ref": "pitch.ldr",
+            "colour": 16,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "elevated pitch, world origin"
+          }
+        ],
+        [
+          {
+            "id": "stand-main",
+            "ref": "stand-main.ldr",
+            "colour": 16,
+            "at": [
+              0,
+              0,
+              260
+            ],
+            "purpose": "8-row main stand, north touchline"
+          },
+          {
+            "id": "stand-long",
+            "ref": "stand-long.ldr",
+            "colour": 16,
+            "at": [
+              0,
+              0,
+              -260
+            ],
+            "yaw": 180,
+            "purpose": "6-row stand, south touchline"
+          }
+        ],
+        [
+          {
+            "id": "stand-end-e",
+            "ref": "stand-end.ldr",
+            "colour": 16,
+            "at": [
+              200,
+              0,
+              0
+            ],
+            "yaw": 90,
+            "purpose": "5-row east end stand"
+          },
+          {
+            "id": "stand-end-w",
+            "ref": "stand-end.ldr",
+            "colour": 16,
+            "at": [
+              -200,
+              0,
+              0
+            ],
+            "yaw": -90,
+            "purpose": "5-row west end stand"
+          }
+        ],
+        [
+          {
+            "id": "goal-n",
+            "ref": "goal.ldr",
+            "colour": 15,
+            "at": [
+              0,
+              -40,
+              240
+            ],
+            "yaw": 180,
+            "purpose": "north goal on the goal line"
+          },
+          {
+            "id": "goal-s",
+            "ref": "goal.ldr",
+            "colour": 15,
+            "at": [
+              0,
+              -40,
+              -240
+            ],
+            "purpose": "south goal on the goal line"
+          }
+        ],
+        [
+          {
+            "id": "pylon-ne",
+            "ref": "floodlight.ldr",
+            "colour": 16,
+            "at": [
+              310,
+              0,
+              330
+            ],
+            "purpose": "corner pylon"
+          },
+          {
+            "id": "pylon-nw",
+            "ref": "floodlight.ldr",
+            "colour": 16,
+            "at": [
+              -310,
+              0,
+              330
+            ]
+          },
+          {
+            "id": "pylon-se",
+            "ref": "floodlight.ldr",
+            "colour": 16,
+            "at": [
+              310,
+              0,
+              -330
+            ]
+          },
+          {
+            "id": "pylon-sw",
+            "ref": "floodlight.ldr",
+            "colour": 16,
+            "at": [
+              -310,
+              0,
+              -330
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "pitch.ldr",
+      "description": "Elevated pitch plinth with turf, markings, corner flags and ball",
+      "steps": [
+        [
+          {
+            "id": "plinth--180",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              -180
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "plinth base, rotated 2x8 column band"
+          }
+        ],
+        [
+          {
+            "id": "plinth--20",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              -20
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "plinth base, rotated 2x8 column band"
+          }
+        ],
+        [
+          {
+            "id": "plinth-140",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              140
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "plinth base, rotated 2x8 column band"
+          }
+        ],
+        [
+          {
+            "id": "plinth-cap-n",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              240
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "plinth north edge, 2x2 bricks"
+          }
+        ],
+        [
+          {
+            "id": "deck--180",
+            "ref": "3035.dat",
+            "colour": 72,
+            "at": [
+              -160,
+              -32,
+              -180
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "staggered bonding deck"
+          },
+          {
+            "id": "deck--20",
+            "ref": "3035.dat",
+            "colour": 72,
+            "at": [
+              -160,
+              -32,
+              -20
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "staggered bonding deck"
+          },
+          {
+            "id": "deck-140",
+            "ref": "3035.dat",
+            "colour": 72,
+            "at": [
+              -160,
+              -32,
+              140
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "staggered bonding deck"
+          },
+          {
+            "id": "deck-fill-n",
+            "ref": "3022.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -32,
+              240
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "id": "apron-side-w",
+            "ref": "3068b.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -40,
+              -220
+            ],
+            "repeat": {
+              "count": 12,
+              "step": [
+                0,
+                0,
+                40
+              ]
+            },
+            "purpose": "side apron 2x2 tiles"
+          },
+          {
+            "id": "apron-side-e",
+            "ref": "3068b.dat",
+            "colour": 72,
+            "at": [
+              180,
+              -40,
+              -220
+            ],
+            "repeat": {
+              "count": 12,
+              "step": [
+                0,
+                0,
+                40
+              ]
+            },
+            "purpose": "side apron 2x2 tiles"
+          },
+          {
+            "id": "apron-end-n",
+            "ref": "3069b.dat",
+            "colour": 72,
+            "at": [
+              -140,
+              -40,
+              250
+            ],
+            "repeat": {
+              "count": 8,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "end apron 1x2 tiles"
+          },
+          {
+            "id": "apron-end-s",
+            "ref": "3069b.dat",
+            "colour": 72,
+            "at": [
+              -140,
+              -40,
+              -250
+            ],
+            "repeat": {
+              "count": 8,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "end apron 1x2 tiles"
+          },
+          {
+            "id": "apron-corner-11",
+            "ref": "3069b.dat",
+            "colour": 72,
+            "at": [
+              180,
+              -40,
+              250
+            ]
+          },
+          {
+            "id": "apron-corner--11",
+            "ref": "3069b.dat",
+            "colour": 72,
+            "at": [
+              180,
+              -40,
+              -250
+            ]
+          },
+          {
+            "id": "apron-corner-1-1",
+            "ref": "3069b.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -40,
+              250
+            ]
+          },
+          {
+            "id": "apron-corner--1-1",
+            "ref": "3069b.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -40,
+              -250
+            ]
+          }
+        ],
+        [
+          {
+            "id": "turf--100",
+            "ref": "87079.dat",
+            "colour": 2,
+            "at": [
+              -120,
+              -40,
+              -100
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "mown turf row"
+          },
+          {
+            "id": "turf--60",
+            "ref": "87079.dat",
+            "colour": 2,
+            "at": [
+              -120,
+              -40,
+              -60
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "mown turf row"
+          },
+          {
+            "id": "turf-60",
+            "ref": "87079.dat",
+            "colour": 2,
+            "at": [
+              -120,
+              -40,
+              60
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "mown turf row"
+          },
+          {
+            "id": "turf-100",
+            "ref": "87079.dat",
+            "colour": 2,
+            "at": [
+              -120,
+              -40,
+              100
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "mown turf row"
+          }
+        ],
+        [
+          {
+            "id": "stripe-n",
+            "ref": "87079.dat",
+            "colour": 15,
+            "at": [
+              -120,
+              -40,
+              20
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "stripe-s",
+            "ref": "87079.dat",
+            "colour": 15,
+            "at": [
+              -120,
+              -40,
+              -20
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "id": "zone-n--140-140",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -140,
+              -40,
+              140
+            ]
+          },
+          {
+            "id": "zone-n--100-140",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -100,
+              -40,
+              140
+            ]
+          },
+          {
+            "id": "zone-n-100-140",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              100,
+              -40,
+              140
+            ]
+          },
+          {
+            "id": "zone-n-140-140",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              140,
+              -40,
+              140
+            ]
+          },
+          {
+            "id": "zone-n--140-180",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -140,
+              -40,
+              180
+            ]
+          },
+          {
+            "id": "zone-n--100-180",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -100,
+              -40,
+              180
+            ]
+          },
+          {
+            "id": "zone-n-100-180",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              100,
+              -40,
+              180
+            ]
+          },
+          {
+            "id": "zone-n-140-180",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              140,
+              -40,
+              180
+            ]
+          },
+          {
+            "id": "pen-side-n--60-140",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -40,
+              140
+            ],
+            "purpose": "penalty box side"
+          },
+          {
+            "id": "pen-side-n--60-180",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -40,
+              180
+            ],
+            "purpose": "penalty box side"
+          },
+          {
+            "id": "pen-side-n-60-140",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -40,
+              140
+            ],
+            "purpose": "penalty box side"
+          },
+          {
+            "id": "pen-side-n-60-180",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -40,
+              180
+            ],
+            "purpose": "penalty box side"
+          },
+          {
+            "id": "pen-front-n--20",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              -20,
+              -40,
+              140
+            ],
+            "purpose": "penalty box front"
+          },
+          {
+            "id": "pen-front-n-20",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              20,
+              -40,
+              140
+            ],
+            "purpose": "penalty box front"
+          },
+          {
+            "id": "goal-clamp-1--60-210",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -40,
+              210
+            ],
+            "purpose": "goal post footing"
+          },
+          {
+            "id": "goal-clamp-1--60-230",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -40,
+              230
+            ],
+            "purpose": "goal post footing"
+          },
+          {
+            "id": "goal-clamp-1-60-210",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -40,
+              210
+            ],
+            "purpose": "goal post footing"
+          },
+          {
+            "id": "goal-clamp-1-60-230",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -40,
+              230
+            ],
+            "purpose": "goal post footing"
+          },
+          {
+            "id": "goal-line-n--20",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -20,
+              -40,
+              220
+            ]
+          },
+          {
+            "id": "goal-line-n-20",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              20,
+              -40,
+              220
+            ]
+          },
+          {
+            "id": "zone-s--140--140",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -140,
+              -40,
+              -140
+            ]
+          },
+          {
+            "id": "zone-s--100--140",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -100,
+              -40,
+              -140
+            ]
+          },
+          {
+            "id": "zone-s-100--140",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              100,
+              -40,
+              -140
+            ]
+          },
+          {
+            "id": "zone-s-140--140",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              140,
+              -40,
+              -140
+            ]
+          },
+          {
+            "id": "zone-s--140--180",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -140,
+              -40,
+              -180
+            ]
+          },
+          {
+            "id": "zone-s--100--180",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -100,
+              -40,
+              -180
+            ]
+          },
+          {
+            "id": "zone-s-100--180",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              100,
+              -40,
+              -180
+            ]
+          },
+          {
+            "id": "zone-s-140--180",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              140,
+              -40,
+              -180
+            ]
+          },
+          {
+            "id": "pen-side-s--60--140",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -40,
+              -140
+            ],
+            "purpose": "penalty box side"
+          },
+          {
+            "id": "pen-side-s--60--180",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -40,
+              -180
+            ],
+            "purpose": "penalty box side"
+          },
+          {
+            "id": "pen-side-s-60--140",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -40,
+              -140
+            ],
+            "purpose": "penalty box side"
+          },
+          {
+            "id": "pen-side-s-60--180",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -40,
+              -180
+            ],
+            "purpose": "penalty box side"
+          },
+          {
+            "id": "pen-front-s--20",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              -20,
+              -40,
+              -140
+            ],
+            "purpose": "penalty box front"
+          },
+          {
+            "id": "pen-front-s-20",
+            "ref": "3068b.dat",
+            "colour": 15,
+            "at": [
+              20,
+              -40,
+              -140
+            ],
+            "purpose": "penalty box front"
+          },
+          {
+            "id": "goal-clamp--1--60--210",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -40,
+              -210
+            ],
+            "purpose": "goal post footing"
+          },
+          {
+            "id": "goal-clamp--1--60--230",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -40,
+              -230
+            ],
+            "purpose": "goal post footing"
+          },
+          {
+            "id": "goal-clamp--1-60--210",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -40,
+              -210
+            ],
+            "purpose": "goal post footing"
+          },
+          {
+            "id": "goal-clamp--1-60--230",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -40,
+              -230
+            ],
+            "purpose": "goal post footing"
+          },
+          {
+            "id": "goal-line-s--20",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              -20,
+              -40,
+              -220
+            ]
+          },
+          {
+            "id": "goal-line-s-20",
+            "ref": "3068b.dat",
+            "colour": 2,
+            "at": [
+              20,
+              -40,
+              -220
+            ]
+          }
+        ],
+        [
+          {
+            "id": "flag-base-ne-a",
+            "ref": "3023b.dat",
+            "colour": 2,
+            "at": [
+              140,
+              -40,
+              210
+            ]
+          },
+          {
+            "id": "flag-base-ne-b",
+            "ref": "3023b.dat",
+            "colour": 2,
+            "at": [
+              140,
+              -40,
+              230
+            ]
+          },
+          {
+            "id": "flag-pole-ne",
+            "ref": "3062b.dat",
+            "colour": 15,
+            "at": [
+              140,
+              -64,
+              230
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            },
+            "purpose": "corner flag pole"
+          },
+          {
+            "id": "flag-cap-ne",
+            "ref": "6141.dat",
+            "colour": 4,
+            "at": [
+              140,
+              -96,
+              230
+            ]
+          },
+          {
+            "id": "flag-base-se-a",
+            "ref": "3023b.dat",
+            "colour": 2,
+            "at": [
+              140,
+              -40,
+              -230
+            ]
+          },
+          {
+            "id": "flag-base-se-b",
+            "ref": "3023b.dat",
+            "colour": 2,
+            "at": [
+              140,
+              -40,
+              -210
+            ]
+          },
+          {
+            "id": "flag-pole-se",
+            "ref": "3062b.dat",
+            "colour": 15,
+            "at": [
+              140,
+              -64,
+              -210
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            },
+            "purpose": "corner flag pole"
+          },
+          {
+            "id": "flag-cap-se",
+            "ref": "6141.dat",
+            "colour": 4,
+            "at": [
+              140,
+              -96,
+              -210
+            ]
+          },
+          {
+            "id": "flag-base-nw-a",
+            "ref": "3023b.dat",
+            "colour": 2,
+            "at": [
+              -140,
+              -40,
+              210
+            ]
+          },
+          {
+            "id": "flag-base-nw-b",
+            "ref": "3023b.dat",
+            "colour": 2,
+            "at": [
+              -140,
+              -40,
+              230
+            ]
+          },
+          {
+            "id": "flag-pole-nw",
+            "ref": "3062b.dat",
+            "colour": 15,
+            "at": [
+              -140,
+              -64,
+              230
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            },
+            "purpose": "corner flag pole"
+          },
+          {
+            "id": "flag-cap-nw",
+            "ref": "6141.dat",
+            "colour": 4,
+            "at": [
+              -140,
+              -96,
+              230
+            ]
+          },
+          {
+            "id": "flag-base-sw-a",
+            "ref": "3023b.dat",
+            "colour": 2,
+            "at": [
+              -140,
+              -40,
+              -230
+            ]
+          },
+          {
+            "id": "flag-base-sw-b",
+            "ref": "3023b.dat",
+            "colour": 2,
+            "at": [
+              -140,
+              -40,
+              -210
+            ]
+          },
+          {
+            "id": "flag-pole-sw",
+            "ref": "3062b.dat",
+            "colour": 15,
+            "at": [
+              -140,
+              -64,
+              -210
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            },
+            "purpose": "corner flag pole"
+          },
+          {
+            "id": "flag-cap-sw",
+            "ref": "6141.dat",
+            "colour": 4,
+            "at": [
+              -140,
+              -96,
+              -210
+            ]
+          }
+        ],
+        [
+          {
+            "id": "ball",
+            "ref": "72824p01.dat",
+            "colour": 15,
+            "at": [
+              20,
+              -58,
+              150
+            ],
+            "purpose": "printed football at the edge of the box"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "goal.ldr",
+      "description": "Open-frame goal with back stanchions",
+      "steps": [
+        [
+          {
+            "id": "post-f--60",
+            "ref": "3004.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -24,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            },
+            "purpose": "front post"
+          },
+          {
+            "id": "post-b--60",
+            "ref": "3004.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -24,
+              20
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            },
+            "purpose": "back stanchion"
+          },
+          {
+            "id": "post-f-60",
+            "ref": "3004.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -24,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            },
+            "purpose": "front post"
+          },
+          {
+            "id": "post-b-60",
+            "ref": "3004.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -24,
+              20
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            },
+            "purpose": "back stanchion"
+          }
+        ],
+        [
+          {
+            "id": "bar-f",
+            "ref": "3666.dat",
+            "colour": 15,
+            "at": [
+              0,
+              -80,
+              0
+            ],
+            "purpose": "crossbar"
+          },
+          {
+            "id": "bar-b",
+            "ref": "3666.dat",
+            "colour": 15,
+            "at": [
+              0,
+              -80,
+              20
+            ],
+            "purpose": "back rail"
+          },
+          {
+            "id": "rail-w",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -88,
+              10
+            ],
+            "yaw": 90,
+            "purpose": "side rail"
+          },
+          {
+            "id": "rail-e",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              60,
+              -88,
+              10
+            ],
+            "yaw": 90
+          }
+        ]
+      ]
+    },
+    {
+      "name": "stand-main.ldr",
+      "description": "Main terrace stand: 8 grille rows, cantilever roof",
+      "steps": [
+        [
+          {
+            "id": "fw--24",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              20
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fw-f--24-240",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              240,
+              -24,
+              20
+            ]
+          },
+          {
+            "id": "fw--48",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -48,
+              20
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fw-f--48-240",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              240,
+              -48,
+              20
+            ]
+          },
+          {
+            "id": "walkway",
+            "ref": "3020.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -56,
+              20
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "front walkway"
+          },
+          {
+            "id": "walkway-f--240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -56,
+              20
+            ]
+          },
+          {
+            "id": "walkway-f-240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -56,
+              20
+            ]
+          }
+        ],
+        [
+          {
+            "id": "seat-r0",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -80,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 1"
+          },
+          {
+            "id": "seat-r1",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -104,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 2"
+          },
+          {
+            "id": "band-r1",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -112,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "tier walkway band"
+          },
+          {
+            "id": "seat-r2",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -128,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 3"
+          },
+          {
+            "id": "seat-r3",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -152,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 4"
+          },
+          {
+            "id": "band-r3",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -160,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "tier walkway band"
+          },
+          {
+            "id": "seat-r4",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -176,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 5"
+          },
+          {
+            "id": "seat-r5",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -200,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 6"
+          },
+          {
+            "id": "band-r5",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -208,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "tier walkway band"
+          },
+          {
+            "id": "seat-r6",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -224,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 7"
+          },
+          {
+            "id": "seat-r7",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -248,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 8"
+          },
+          {
+            "id": "band-top",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -256,
+              60
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "top walkway"
+          }
+        ],
+        [
+          {
+            "id": "side-a-e-20",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              20
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 10,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-e-60",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              60
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 10,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-cap-e--248-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -248,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-e--248-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -248,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-e--256-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -256,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-e--256-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -256,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-b-e-100",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-e-140",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              140
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-col-e",
+            "ref": "3005.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              170
+            ],
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-cap-e",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -272,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                0,
+                40
+              ]
+            },
+            "purpose": "roof trim band"
+          },
+          {
+            "id": "side-a-w-20",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              20
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 10,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-w-60",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              60
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 10,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-cap-w--248-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -248,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-w--248-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -248,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-w--256-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -256,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-w--256-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -256,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-b-w-100",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-w-140",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              140
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-col-w",
+            "ref": "3005.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              170
+            ],
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-cap-w",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -272,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                0,
+                40
+              ]
+            },
+            "purpose": "roof trim band"
+          }
+        ],
+        [
+          {
+            "id": "fac-1",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-1-240",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              240,
+              -24,
+              200
+            ]
+          },
+          {
+            "id": "fac-2",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -48,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-2-240",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              240,
+              -48,
+              200
+            ]
+          },
+          {
+            "id": "fac-3",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -72,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-3-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -72,
+              200
+            ]
+          },
+          {
+            "id": "fac-4",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -96,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-4-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -96,
+              200
+            ]
+          },
+          {
+            "id": "fac-5",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -120,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-5-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -120,
+              200
+            ]
+          },
+          {
+            "id": "fac-6",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -144,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-6-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -144,
+              200
+            ]
+          },
+          {
+            "id": "fac-7",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -168,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-7-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -168,
+              200
+            ]
+          },
+          {
+            "id": "fac-8",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -192,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-8-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -192,
+              200
+            ]
+          },
+          {
+            "id": "fac-9",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -216,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-9-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -216,
+              200
+            ]
+          },
+          {
+            "id": "fac-10",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -240,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-10-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -240,
+              200
+            ]
+          },
+          {
+            "id": "fac-11",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -264,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-11-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -264,
+              200
+            ]
+          },
+          {
+            "id": "fac-band",
+            "ref": "3020.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -272,
+              200
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "roof seating band"
+          },
+          {
+            "id": "fac-band-f--240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -272,
+              200
+            ]
+          },
+          {
+            "id": "fac-band-f-240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -272,
+              200
+            ]
+          }
+        ],
+        [
+          {
+            "id": "roof-plate",
+            "ref": "3035.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -280,
+              160
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            },
+            "purpose": "4-deep canopy plate"
+          },
+          {
+            "id": "roof-plate-f-240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -280,
+              160
+            ]
+          },
+          {
+            "id": "roof-tile-140",
+            "ref": "87079.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -288,
+              140
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "canopy roof tiles"
+          },
+          {
+            "id": "roof-tile-180",
+            "ref": "87079.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -288,
+              180
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "canopy roof tiles"
+          }
+        ],
+        [
+          {
+            "id": "fascia",
+            "ref": "4215b.dat",
+            "colour": 43,
+            "at": [
+              -160,
+              -272,
+              120
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "trans-light-blue windscreen fascia"
+          }
+        ],
+        [
+          {
+            "id": "sbox--312",
+            "ref": "3004.dat",
+            "colour": 0,
+            "at": [
+              -60,
+              -312,
+              190
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "scoreboard housing"
+          },
+          {
+            "id": "sbox--336",
+            "ref": "3004.dat",
+            "colour": 0,
+            "at": [
+              -60,
+              -336,
+              190
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "scoreboard housing"
+          },
+          {
+            "id": "sbox-cap",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -344,
+              190
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "sscreen",
+            "ref": "4215b.dat",
+            "colour": 43,
+            "at": [
+              -40,
+              -360,
+              170
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "glazed screen"
+          },
+          {
+            "id": "sscreen-cap",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -60,
+              -368,
+              170
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            }
+          }
+        ]
+      ]
+    },
+    {
+      "name": "stand-long.ldr",
+      "description": "Side terrace stand: 6 grille rows, cantilever roof",
+      "steps": [
+        [
+          {
+            "id": "fw--24",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              20
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fw-f--24-240",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              240,
+              -24,
+              20
+            ]
+          },
+          {
+            "id": "fw--48",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -48,
+              20
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fw-f--48-240",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              240,
+              -48,
+              20
+            ]
+          },
+          {
+            "id": "walkway",
+            "ref": "3020.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -56,
+              20
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "front walkway"
+          },
+          {
+            "id": "walkway-f--240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -56,
+              20
+            ]
+          },
+          {
+            "id": "walkway-f-240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -56,
+              20
+            ]
+          }
+        ],
+        [
+          {
+            "id": "seat-r0",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -80,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 1"
+          },
+          {
+            "id": "seat-r1",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -104,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 2"
+          },
+          {
+            "id": "band-r1",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -112,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "tier walkway band"
+          },
+          {
+            "id": "seat-r2",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -128,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 3"
+          },
+          {
+            "id": "seat-r3",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -152,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 4"
+          },
+          {
+            "id": "band-r3",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -160,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "tier walkway band"
+          },
+          {
+            "id": "seat-r4",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -176,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 5"
+          },
+          {
+            "id": "seat-r5",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -240,
+              -200,
+              50
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 6"
+          },
+          {
+            "id": "band-top",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -208,
+              60
+            ],
+            "repeat": {
+              "count": 13,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "top walkway"
+          }
+        ],
+        [
+          {
+            "id": "side-a-e-20",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              20
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-e-60",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              60
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-cap-e--200-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -200,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-e--200-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -200,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-e--208-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -208,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-e--208-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -208,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-b-e-100",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-e-140",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              140
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-col-e",
+            "ref": "3005.dat",
+            "colour": 72,
+            "at": [
+              270,
+              -24,
+              170
+            ],
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-cap-e",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              270,
+              -272,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                0,
+                40
+              ]
+            },
+            "purpose": "roof trim band"
+          },
+          {
+            "id": "side-a-w-20",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              20
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-w-60",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              60
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-cap-w--200-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -200,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-w--200-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -200,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-w--208-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -208,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-w--208-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -208,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-b-w-100",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-w-140",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              140
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-col-w",
+            "ref": "3005.dat",
+            "colour": 72,
+            "at": [
+              -270,
+              -24,
+              170
+            ],
+            "repeat": {
+              "count": 11,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-cap-w",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -270,
+              -272,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                0,
+                40
+              ]
+            },
+            "purpose": "roof trim band"
+          }
+        ],
+        [
+          {
+            "id": "fac-1",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-1-240",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              240,
+              -24,
+              200
+            ]
+          },
+          {
+            "id": "fac-2",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -48,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-2-240",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              240,
+              -48,
+              200
+            ]
+          },
+          {
+            "id": "fac-3",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -72,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-3-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -72,
+              200
+            ]
+          },
+          {
+            "id": "fac-4",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -96,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-4-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -96,
+              200
+            ]
+          },
+          {
+            "id": "fac-5",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -120,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-5-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -120,
+              200
+            ]
+          },
+          {
+            "id": "fac-6",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -144,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-6-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -144,
+              200
+            ]
+          },
+          {
+            "id": "fac-7",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -168,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-7-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -168,
+              200
+            ]
+          },
+          {
+            "id": "fac-8",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -192,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-8-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -192,
+              200
+            ]
+          },
+          {
+            "id": "fac-9",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -216,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-9-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -216,
+              200
+            ]
+          },
+          {
+            "id": "fac-10",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -240,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-10-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -240,
+              200
+            ]
+          },
+          {
+            "id": "fac-11",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -264,
+              200
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-11-240",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -264,
+              200
+            ]
+          },
+          {
+            "id": "fac-band",
+            "ref": "3020.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -272,
+              200
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "roof seating band"
+          },
+          {
+            "id": "fac-band-f--240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              -240,
+              -272,
+              200
+            ]
+          },
+          {
+            "id": "fac-band-f-240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -272,
+              200
+            ]
+          }
+        ],
+        [
+          {
+            "id": "roof-plate",
+            "ref": "3035.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -280,
+              160
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            },
+            "purpose": "4-deep canopy plate"
+          },
+          {
+            "id": "roof-plate-f-240",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              240,
+              -280,
+              160
+            ]
+          },
+          {
+            "id": "roof-tile-140",
+            "ref": "87079.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -288,
+              140
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "canopy roof tiles"
+          },
+          {
+            "id": "roof-tile-180",
+            "ref": "87079.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -288,
+              180
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "canopy roof tiles"
+          }
+        ],
+        [
+          {
+            "id": "fascia",
+            "ref": "4215b.dat",
+            "colour": 43,
+            "at": [
+              -160,
+              -272,
+              120
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "trans-light-blue windscreen fascia"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "stand-end.ldr",
+      "description": "End terrace stand: 5 grille rows, cantilever roof",
+      "steps": [
+        [
+          {
+            "id": "fw--24",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -80,
+              -24,
+              20
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fw-f--24--180",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              20
+            ]
+          },
+          {
+            "id": "fw-f--24-180",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              180,
+              -24,
+              20
+            ]
+          },
+          {
+            "id": "fw--48",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -80,
+              -48,
+              20
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fw-f--48--180",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -48,
+              20
+            ]
+          },
+          {
+            "id": "fw-f--48-180",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              180,
+              -48,
+              20
+            ]
+          },
+          {
+            "id": "walkway",
+            "ref": "3020.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -56,
+              20
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "front walkway"
+          }
+        ],
+        [
+          {
+            "id": "seat-r0",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -180,
+              -80,
+              50
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 1"
+          },
+          {
+            "id": "seat-r1",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -180,
+              -104,
+              50
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 2"
+          },
+          {
+            "id": "band-r1",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -112,
+              50
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "tier walkway band"
+          },
+          {
+            "id": "seat-r2",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -180,
+              -128,
+              50
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 3"
+          },
+          {
+            "id": "seat-r3",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -180,
+              -152,
+              50
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 4"
+          },
+          {
+            "id": "band-r3",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -160,
+              50
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "tier walkway band"
+          },
+          {
+            "id": "seat-r4",
+            "ref": "2877.dat",
+            "colour": 4,
+            "at": [
+              -180,
+              -176,
+              50
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "seat row 5"
+          },
+          {
+            "id": "band-top",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -184,
+              60
+            ],
+            "repeat": {
+              "count": 10,
+              "step": [
+                40,
+                0,
+                0
+              ]
+            },
+            "purpose": "top walkway"
+          }
+        ],
+        [
+          {
+            "id": "side-a-e-20",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              210,
+              -24,
+              20
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 7,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-e-60",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              210,
+              -24,
+              60
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 7,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-cap-e--176-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              210,
+              -176,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-e--176-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              210,
+              -176,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-e--184-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              210,
+              -184,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-e--184-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              210,
+              -184,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-b-e-100",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              210,
+              -24,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-e-140",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              210,
+              -24,
+              140
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-col-e",
+            "ref": "3005.dat",
+            "colour": 72,
+            "at": [
+              210,
+              -24,
+              170
+            ],
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-cap-e",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              210,
+              -200,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                0,
+                40
+              ]
+            },
+            "purpose": "roof trim band"
+          },
+          {
+            "id": "side-a-w-20",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -210,
+              -24,
+              20
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 7,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-w-60",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -210,
+              -24,
+              60
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 7,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-a-cap-w--176-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -210,
+              -176,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-w--176-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -210,
+              -176,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-w--184-20",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -210,
+              -184,
+              20
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-a-cap-w--184-60",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -210,
+              -184,
+              60
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "side-b-w-100",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -210,
+              -24,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-w-140",
+            "ref": "3004.dat",
+            "colour": 72,
+            "at": [
+              -210,
+              -24,
+              140
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-col-w",
+            "ref": "3005.dat",
+            "colour": 72,
+            "at": [
+              -210,
+              -24,
+              170
+            ],
+            "repeat": {
+              "count": 8,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "side-b-cap-w",
+            "ref": "3023b.dat",
+            "colour": 15,
+            "at": [
+              -210,
+              -200,
+              100
+            ],
+            "yaw": 90,
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                0,
+                40
+              ]
+            },
+            "purpose": "roof trim band"
+          }
+        ],
+        [
+          {
+            "id": "fac-1",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -80,
+              -24,
+              200
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-1--180",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -24,
+              200
+            ]
+          },
+          {
+            "id": "fac-f-1-180",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              180,
+              -24,
+              200
+            ]
+          },
+          {
+            "id": "fac-2",
+            "ref": "3007.dat",
+            "colour": 72,
+            "at": [
+              -80,
+              -48,
+              200
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-2--180",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              -180,
+              -48,
+              200
+            ]
+          },
+          {
+            "id": "fac-f-2-180",
+            "ref": "3003.dat",
+            "colour": 72,
+            "at": [
+              180,
+              -48,
+              200
+            ]
+          },
+          {
+            "id": "fac-3",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -80,
+              -72,
+              200
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-3--180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -72,
+              200
+            ]
+          },
+          {
+            "id": "fac-f-3-180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              180,
+              -72,
+              200
+            ]
+          },
+          {
+            "id": "fac-4",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -80,
+              -96,
+              200
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-4--180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -96,
+              200
+            ]
+          },
+          {
+            "id": "fac-f-4-180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              180,
+              -96,
+              200
+            ]
+          },
+          {
+            "id": "fac-5",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -80,
+              -120,
+              200
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-5--180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -120,
+              200
+            ]
+          },
+          {
+            "id": "fac-f-5-180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              180,
+              -120,
+              200
+            ]
+          },
+          {
+            "id": "fac-6",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -80,
+              -144,
+              200
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-6--180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -144,
+              200
+            ]
+          },
+          {
+            "id": "fac-f-6-180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              180,
+              -144,
+              200
+            ]
+          },
+          {
+            "id": "fac-7",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -80,
+              -168,
+              200
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-7--180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -168,
+              200
+            ]
+          },
+          {
+            "id": "fac-f-7-180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              180,
+              -168,
+              200
+            ]
+          },
+          {
+            "id": "fac-8",
+            "ref": "3007.dat",
+            "colour": 15,
+            "at": [
+              -80,
+              -192,
+              200
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            }
+          },
+          {
+            "id": "fac-f-8--180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -192,
+              200
+            ]
+          },
+          {
+            "id": "fac-f-8-180",
+            "ref": "3003.dat",
+            "colour": 15,
+            "at": [
+              180,
+              -192,
+              200
+            ]
+          },
+          {
+            "id": "fac-band",
+            "ref": "3020.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -200,
+              200
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "roof seating band"
+          }
+        ],
+        [
+          {
+            "id": "roof-plate",
+            "ref": "3035.dat",
+            "colour": 15,
+            "at": [
+              -80,
+              -208,
+              160
+            ],
+            "repeat": {
+              "count": 2,
+              "step": [
+                160,
+                0,
+                0
+              ]
+            },
+            "purpose": "4-deep canopy plate"
+          },
+          {
+            "id": "roof-plate-f--180",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              -180,
+              -208,
+              160
+            ]
+          },
+          {
+            "id": "roof-plate-f-180",
+            "ref": "3022.dat",
+            "colour": 15,
+            "at": [
+              180,
+              -208,
+              160
+            ]
+          },
+          {
+            "id": "roof-tile-140",
+            "ref": "87079.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -216,
+              140
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "canopy roof tiles"
+          },
+          {
+            "id": "roof-tile-180",
+            "ref": "87079.dat",
+            "colour": 15,
+            "at": [
+              -160,
+              -216,
+              180
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "canopy roof tiles"
+          }
+        ],
+        [
+          {
+            "id": "fascia",
+            "ref": "4215b.dat",
+            "colour": 43,
+            "at": [
+              -160,
+              -200,
+              120
+            ],
+            "repeat": {
+              "count": 5,
+              "step": [
+                80,
+                0,
+                0
+              ]
+            },
+            "purpose": "trans-light-blue windscreen fascia"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "floodlight.ldr",
+      "description": "Corner floodlight pylon with 8 clear lamps",
+      "steps": [
+        [
+          {
+            "id": "pylon-base",
+            "ref": "3022.dat",
+            "colour": 72,
+            "at": [
+              0,
+              -8,
+              0
+            ],
+            "purpose": "pylon footing"
+          }
+        ],
+        [
+          {
+            "id": "pylon-mast",
+            "ref": "3941.dat",
+            "colour": 15,
+            "at": [
+              0,
+              -32,
+              0
+            ],
+            "repeat": {
+              "count": 14,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            },
+            "purpose": "round-brick mast"
+          }
+        ],
+        [
+          {
+            "id": "pylon-rig",
+            "ref": "3020.dat",
+            "colour": 15,
+            "at": [
+              0,
+              -352,
+              0
+            ],
+            "purpose": "lamp rig plate"
+          }
+        ],
+        [
+          {
+            "id": "lamps-a",
+            "ref": "3062b.dat",
+            "colour": 47,
+            "at": [
+              -30,
+              -376,
+              -10
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                20,
+                0,
+                0
+              ]
+            },
+            "purpose": "lamp row"
+          },
+          {
+            "id": "lamps-b",
+            "ref": "3062b.dat",
+            "colour": 47,
+            "at": [
+              -30,
+              -376,
+              10
+            ],
+            "repeat": {
+              "count": 4,
+              "step": [
+                20,
+                0,
+                0
+              ]
+            },
+            "purpose": "lamp row"
+          }
+        ]
+      ]
+    }
+  ]
+}

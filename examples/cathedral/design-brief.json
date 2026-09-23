@@ -1,0 +1,544 @@
+{
+  "title": "Aurelia Cathedral",
+  "subject": "Original Gothic cathedral architectural display model",
+  "scale": "Architectural display; compressed interior, not a scale replica of a real cathedral",
+  "footprint_studs": [
+    48,
+    72
+  ],
+  "palette": {
+    "stone": "Tan",
+    "trim": "White",
+    "roof": "Dark Bluish Grey",
+    "glass": [
+      "Trans Dark Blue",
+      "Trans Yellow"
+    ]
+  },
+  "primary_focus": "Twin bell towers framing a pale ribbed blue rose window and deep pointed portal",
+  "supporting_features": [
+    "Long slate nave with clerestory",
+    "Six flying buttresses",
+    "Projecting transept chapels",
+    "Open belfries and slender pinnacles"
+  ],
+  "interior": [
+    "Central processional aisle",
+    "Sixteen pews",
+    "Raised altar"
+  ],
+  "modules": [
+    {
+      "name": "aurelia-cathedral.ldr",
+      "description": "Aurelia Cathedral: twin Gothic towers, rose window, nave and flying buttresses",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-foundation.ldr",
+      "description": "48 by 72 stud bonded display base and raised cathedral platform",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "platform": {
+          "at": [
+            0,
+            -24,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-base-crossbond.ldr",
+      "description": "Orthogonal base layer",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-nave.ldr",
+      "description": "Long nave, five pointed arcades each side and glazed clerestory",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "roof": {
+          "at": [
+            0,
+            -464,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-nave-arcade.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -168,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-clerestory.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -120,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-east-arcade.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -168,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-west-front.ldr",
+      "description": "Deep pointed entrance and recessed rose window between the towers",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-rose.ldr",
+      "description": "Six-stud blue rose window with eight pale stone ribs and amber centre",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-bell-tower.ldr",
+      "description": "Thirty-course bell tower with lancets, open belfry and four pinnacles",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-tower-lower.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -168,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-tower-middle.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -120,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-belfry-arch.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -168,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-pinnacle.ldr",
+      "description": "Two-stud stone pinnacle with slate taper and gold tip",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-nave-roof.ldr",
+      "description": "Removable gabled roof: supported slope courses, contrasting gable core and tiled ridge",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ridge": {
+          "at": [
+            0,
+            -184,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-cross.ldr",
+      "description": "Brick-built cross on a two-stud base, aligned to real studs",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-fleche.ldr",
+      "description": "Slender crossing fleche on a four-stud ridge saddle",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-aisle-m13.ldr",
+      "description": "Low side aisle with Gothic glass and a separately removable lean-to roof",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-aisle-m13-window.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -120,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-aisle-m13-roof.ldr",
+      "description": "Six-stud side-aisle lean-to; supported slate slope courses",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-aisle-15.ldr",
+      "description": "Low side aisle with Gothic glass and a separately removable lean-to roof",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-aisle-15-window.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -120,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-aisle-15-roof.ldr",
+      "description": "Six-stud side-aisle lean-to; supported slate slope courses",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-transept.ldr",
+      "description": "Projecting transept chapel with triple Gothic windows and a slate gable",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-transept-lancet.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -168,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-transept-roof.ldr",
+      "description": "Removable gabled roof: supported slope courses, contrasting gable core and tiled ridge",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ridge": {
+          "at": [
+            0,
+            -160,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-flying-buttress.ldr",
+      "description": "Twelve-stud raised arch between nave pier and freestanding stepped pier",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-interior.ldr",
+      "description": "Central processional aisle, pews and an elevated altar",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-east-chapel.ldr",
+      "description": "Square-ended choir chapel with three lancets and a lower roof",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-choir-lancet.ldr",
+      "description": "Paired Jev-selected 13965 pointed arches; reserved six-stud bay",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "top": {
+          "at": [
+            0,
+            -168,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "name": "cathedral-choir-roof.ldr",
+      "description": "Removable gabled roof: supported slope courses, contrasting gable core and tiled ridge",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "ridge": {
+          "at": [
+            0,
+            -136,
+            0
+          ]
+        }
+      }
+    }
+  ],
+  "construction": "Real library parts; rigid transforms; reserved openings; editable Python generator and JSON plan",
+  "limitations": [
+    "Physical buildability, strength and retail part/colour availability require separate review"
+  ]
+}

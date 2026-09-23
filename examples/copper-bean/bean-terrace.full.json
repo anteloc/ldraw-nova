@@ -1,0 +1,8979 @@
+{
+  "file": "output/copper-bean/copper-bean.mpd",
+  "section": "bean-terrace.ldr",
+  "profile": "syntax",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "diagnostics": [
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 18
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 58,
+      "partial": 0,
+      "none": 6
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -110.0,
+        -179.0,
+        -100.0
+      ],
+      "max": [
+        110.0,
+        0.0,
+        80.0
+      ]
+    },
+    "occurrence_count": 64,
+    "detail": "full",
+    "instance_offset": 0,
+    "instances": [
+      {
+        "index": 0,
+        "part": "958c01.dat",
+        "description": "Umbrella 8 x 8 with Square Tabs with Round Base (Complete)",
+        "colour": {
+          "code": 288,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -80.0,
+            -179.0,
+            -80.0
+          ],
+          "max": [
+            80.0,
+            0.0,
+            80.0
+          ]
+        },
+        "section": "bean-terrace.ldr",
+        "line_number": 1693,
+        "source_path": [
+          null,
+          1693
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 7,
+        "placement_path": [
+          0,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 1,
+        "part": "3062b.dat",
+        "description": "Brick 1 x 1 Round with Hollow Stud",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -40.0,
+          -24.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -50.0,
+            -28.0,
+            -40.0
+          ],
+          "max": [
+            -30.0,
+            0.0,
+            -20.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1726,
+        "source_path": [
+          null,
+          1695,
+          1726
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          1,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 2,
+        "part": "3062b.dat",
+        "description": "Brick 1 x 1 Round with Hollow Stud",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -40.0,
+          -48.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -50.0,
+            -52.0,
+            -40.0
+          ],
+          "max": [
+            -30.0,
+            -24.0,
+            -20.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1728,
+        "source_path": [
+          null,
+          1695,
+          1728
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          1,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 3,
+        "part": "3062b.dat",
+        "description": "Brick 1 x 1 Round with Hollow Stud",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -40.0,
+          -24.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -50.0,
+            -28.0,
+            20.0
+          ],
+          "max": [
+            -30.0,
+            0.0,
+            40.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1730,
+        "source_path": [
+          null,
+          1695,
+          1730
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          1,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 4,
+        "part": "3062b.dat",
+        "description": "Brick 1 x 1 Round with Hollow Stud",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -40.0,
+          -48.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -50.0,
+            -52.0,
+            20.0
+          ],
+          "max": [
+            -30.0,
+            -24.0,
+            40.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1732,
+        "source_path": [
+          null,
+          1695,
+          1732
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          1,
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 5,
+        "part": "3062b.dat",
+        "description": "Brick 1 x 1 Round with Hollow Stud",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          40.0,
+          -24.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            30.0,
+            -28.0,
+            -40.0
+          ],
+          "max": [
+            50.0,
+            0.0,
+            -20.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1734,
+        "source_path": [
+          null,
+          1695,
+          1734
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          1,
+          4
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 6,
+        "part": "3062b.dat",
+        "description": "Brick 1 x 1 Round with Hollow Stud",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          40.0,
+          -48.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            30.0,
+            -52.0,
+            -40.0
+          ],
+          "max": [
+            50.0,
+            -24.0,
+            -20.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1736,
+        "source_path": [
+          null,
+          1695,
+          1736
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          1,
+          5
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 7,
+        "part": "3062b.dat",
+        "description": "Brick 1 x 1 Round with Hollow Stud",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          40.0,
+          -24.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            30.0,
+            -28.0,
+            20.0
+          ],
+          "max": [
+            50.0,
+            0.0,
+            40.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1738,
+        "source_path": [
+          null,
+          1695,
+          1738
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          1,
+          6
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 8,
+        "part": "3062b.dat",
+        "description": "Brick 1 x 1 Round with Hollow Stud",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          40.0,
+          -48.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            30.0,
+            -52.0,
+            20.0
+          ],
+          "max": [
+            50.0,
+            -24.0,
+            40.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1740,
+        "source_path": [
+          null,
+          1695,
+          1740
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          1,
+          7
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 9,
+        "part": "3710.dat",
+        "description": "Plate 1 x 4",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -56.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -50.0,
+            -60.0,
+            -40.0
+          ],
+          "max": [
+            30.0,
+            -48.0,
+            -20.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1743,
+        "source_path": [
+          null,
+          1695,
+          1743
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 11,
+        "placement_path": [
+          0,
+          1,
+          8
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 10,
+        "part": "3024.dat",
+        "description": "Plate 1 x 1",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          40.0,
+          -56.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            30.0,
+            -60.0,
+            -40.0
+          ],
+          "max": [
+            50.0,
+            -48.0,
+            -20.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1745,
+        "source_path": [
+          null,
+          1695,
+          1745
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 3,
+        "placement_path": [
+          0,
+          1,
+          9
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 11,
+        "part": "3710.dat",
+        "description": "Plate 1 x 4",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -56.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -50.0,
+            -60.0,
+            20.0
+          ],
+          "max": [
+            30.0,
+            -48.0,
+            40.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1747,
+        "source_path": [
+          null,
+          1695,
+          1747
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 11,
+        "placement_path": [
+          0,
+          1,
+          10
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 12,
+        "part": "3024.dat",
+        "description": "Plate 1 x 1",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          40.0,
+          -56.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            30.0,
+            -60.0,
+            20.0
+          ],
+          "max": [
+            50.0,
+            -48.0,
+            40.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1749,
+        "source_path": [
+          null,
+          1695,
+          1749
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 3,
+        "placement_path": [
+          0,
+          1,
+          11
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 13,
+        "part": "3020.dat",
+        "description": "Plate 2 x 4",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -30.0,
+          -64.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -50.0,
+            -68.0,
+            -40.0
+          ],
+          "max": [
+            -10.0,
+            -56.0,
+            40.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1752,
+        "source_path": [
+          null,
+          1695,
+          1752
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 16,
+        "placement_path": [
+          0,
+          1,
+          12
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 14,
+        "part": "3020.dat",
+        "description": "Plate 2 x 4",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          30.0,
+          -64.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            10.0,
+            -68.0,
+            -40.0
+          ],
+          "max": [
+            50.0,
+            -56.0,
+            40.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1754,
+        "source_path": [
+          null,
+          1695,
+          1754
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 16,
+        "placement_path": [
+          0,
+          1,
+          13
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 15,
+        "part": "3024.dat",
+        "description": "Plate 1 x 1",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          -64.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -10.0,
+            -68.0,
+            -40.0
+          ],
+          "max": [
+            10.0,
+            -56.0,
+            -20.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1756,
+        "source_path": [
+          null,
+          1695,
+          1756
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 3,
+        "placement_path": [
+          0,
+          1,
+          14
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 16,
+        "part": "3024.dat",
+        "description": "Plate 1 x 1",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          -64.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -10.0,
+            -68.0,
+            20.0
+          ],
+          "max": [
+            10.0,
+            -56.0,
+            40.0
+          ]
+        },
+        "section": "cafe-table.ldr",
+        "line_number": 1758,
+        "source_path": [
+          null,
+          1695,
+          1758
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 3,
+        "placement_path": [
+          0,
+          1,
+          15
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 17,
+        "part": "3021.dat",
+        "description": "Plate 2 x 3",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -80.0,
+          -8.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -110.0,
+            -12.0,
+            -20.0
+          ],
+          "max": [
+            -50.0,
+            0.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1766,
+        "source_path": [
+          null,
+          1697,
+          1766
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 12,
+        "placement_path": [
+          0,
+          2,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 18,
+        "part": "3003.dat",
+        "description": "Brick 2 x 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -32.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -90.0,
+            -36.0,
+            -20.0
+          ],
+          "max": [
+            -50.0,
+            -8.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1768,
+        "source_path": [
+          null,
+          1697,
+          1768
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 23,
+        "placement_path": [
+          0,
+          2,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 5,
+          "recognized_record_count": 7,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 19,
+        "part": "3068b.dat",
+        "description": "Tile 2 x 2 with Groove",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -40.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -90.0,
+            -40.0,
+            -20.0
+          ],
+          "max": [
+            -50.0,
+            -32.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1770,
+        "source_path": [
+          null,
+          1697,
+          1770
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 6,
+        "placement_path": [
+          0,
+          2,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 20,
+        "part": "3004.dat",
+        "description": "Brick 1 x 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -100.0,
+          -32.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -110.0,
+            -36.0,
+            -20.0
+          ],
+          "max": [
+            -90.0,
+            -8.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1772,
+        "source_path": [
+          null,
+          1697,
+          1772
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 9,
+        "placement_path": [
+          0,
+          2,
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 21,
+        "part": "3004.dat",
+        "description": "Brick 1 x 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -100.0,
+          -56.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -110.0,
+            -60.0,
+            -20.0
+          ],
+          "max": [
+            -90.0,
+            -32.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1774,
+        "source_path": [
+          null,
+          1697,
+          1774
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 9,
+        "placement_path": [
+          0,
+          2,
+          4
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 22,
+        "part": "3023b.dat",
+        "description": "Plate 1 x 2",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -100.0,
+          -64.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -110.0,
+            -68.0,
+            -20.0
+          ],
+          "max": [
+            -90.0,
+            -56.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1776,
+        "source_path": [
+          null,
+          1697,
+          1776
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          2,
+          5
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 23,
+        "part": "3815b.dat",
+        "description": "Minifig Hips",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -60.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -80.0,
+            -71.75,
+            -18.0
+          ],
+          "max": [
+            -60.0,
+            -39.999775299,
+            18.0
+          ]
+        },
+        "section": "bean-guest-left.ldr",
+        "line_number": 1784,
+        "source_path": [
+          null,
+          1699,
+          1784
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          3,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 24,
+        "part": "3816c.dat",
+        "description": "Minifig Leg Right",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -48.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -78.75,
+            -60.0,
+            -19.25
+          ],
+          "max": [
+            -42.0,
+            -40.0,
+            -1.25
+          ]
+        },
+        "section": "bean-guest-left.ldr",
+        "line_number": 1786,
+        "source_path": [
+          null,
+          1699,
+          1786
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          3,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 25,
+        "part": "3817c.dat",
+        "description": "Minifig Leg Left",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -48.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -78.75,
+            -60.0,
+            1.25
+          ],
+          "max": [
+            -42.0,
+            -40.0,
+            19.25
+          ]
+        },
+        "section": "bean-guest-left.ldr",
+        "line_number": 1788,
+        "source_path": [
+          null,
+          1699,
+          1788
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          3,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 26,
+        "part": "973.dat",
+        "description": "Minifig Torso",
+        "colour": {
+          "code": 320,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -92.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -80.0,
+            -104.75,
+            -19.0
+          ],
+          "max": [
+            -60.0,
+            -60.75,
+            19.0
+          ]
+        },
+        "section": "bean-guest-left.ldr",
+        "line_number": 1790,
+        "source_path": [
+          null,
+          1699,
+          1790
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          3,
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 27,
+        "part": "43368.dat",
+        "description": "Minifig Arm Right with Integral Hand",
+        "colour": {
+          "code": 320,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -83.75,
+          -15.552
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.866025,
+            -0.5
+          ],
+          [
+            0.170038,
+            0.492719,
+            0.853414
+          ],
+          [
+            0.985438,
+            -0.085019,
+            -0.147257
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -76.044376575,
+            -90.006033894,
+            -27.728518325
+          ],
+          "max": [
+            -31.814027475000003,
+            -72.316180188,
+            -7.811015241889999
+          ]
+        },
+        "section": "bean-guest-left.ldr",
+        "line_number": 1792,
+        "source_path": [
+          null,
+          1699,
+          1792
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 0,
+        "placement_path": [
+          0,
+          3,
+          4
+        ],
+        "connection_metadata": {
+          "coverage": "none",
+          "source_count": 0,
+          "recognized_record_count": 0,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 28,
+        "part": "43369.dat",
+        "description": "Minifig Arm Left with Integral Hand",
+        "colour": {
+          "code": 320,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -83.75,
+          15.552
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.866025,
+            -0.5
+          ],
+          [
+            -0.170038,
+            0.492719,
+            0.853414
+          ],
+          [
+            0.985438,
+            0.085019,
+            0.147257
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -76.044376575,
+            -90.006033894,
+            7.811015241889999
+          ],
+          "max": [
+            -31.814027475000003,
+            -72.316180188,
+            27.728518325
+          ]
+        },
+        "section": "bean-guest-left.ldr",
+        "line_number": 1794,
+        "source_path": [
+          null,
+          1699,
+          1794
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 0,
+        "placement_path": [
+          0,
+          3,
+          5
+        ],
+        "connection_metadata": {
+          "coverage": "none",
+          "source_count": 0,
+          "recognized_record_count": 0,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 29,
+        "part": "3626bp01.dat",
+        "description": "Minifig Head with Standard Grin Pattern (Blocked Hollow Stud)",
+        "colour": {
+          "code": 14,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -117.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -83.0,
+            -121.75,
+            -13.0
+          ],
+          "max": [
+            -57.0,
+            -93.75,
+            13.0
+          ]
+        },
+        "section": "bean-guest-left.ldr",
+        "line_number": 1796,
+        "source_path": [
+          null,
+          1699,
+          1796
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          3,
+          6
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 30,
+        "part": "3901.dat",
+        "description": "Minifig Hair Male",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -70.0,
+          -117.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -85.908,
+            -124.787,
+            -15.113
+          ],
+          "max": [
+            -54.988,
+            -100.71600000000001,
+            14.911
+          ]
+        },
+        "section": "bean-guest-left.ldr",
+        "line_number": 1798,
+        "source_path": [
+          null,
+          1699,
+          1798
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          0,
+          3,
+          7
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 1,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 31,
+        "part": "3021.dat",
+        "description": "Plate 2 x 3",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          80.0,
+          -8.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            50.0,
+            -12.0,
+            -20.0
+          ],
+          "max": [
+            110.0,
+            0.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1766,
+        "source_path": [
+          null,
+          1701,
+          1766
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 12,
+        "placement_path": [
+          0,
+          4,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 32,
+        "part": "3003.dat",
+        "description": "Brick 2 x 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -32.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            50.0,
+            -36.0,
+            -20.0
+          ],
+          "max": [
+            90.0,
+            -8.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1768,
+        "source_path": [
+          null,
+          1701,
+          1768
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 23,
+        "placement_path": [
+          0,
+          4,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 5,
+          "recognized_record_count": 7,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 33,
+        "part": "3068b.dat",
+        "description": "Tile 2 x 2 with Groove",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -40.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            50.0,
+            -40.0,
+            -20.0
+          ],
+          "max": [
+            90.0,
+            -32.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1770,
+        "source_path": [
+          null,
+          1701,
+          1770
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 6,
+        "placement_path": [
+          0,
+          4,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 34,
+        "part": "3004.dat",
+        "description": "Brick 1 x 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          100.0,
+          -32.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            90.0,
+            -36.0,
+            -20.0
+          ],
+          "max": [
+            110.0,
+            -8.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1772,
+        "source_path": [
+          null,
+          1701,
+          1772
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 9,
+        "placement_path": [
+          0,
+          4,
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 35,
+        "part": "3004.dat",
+        "description": "Brick 1 x 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          100.0,
+          -56.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            90.0,
+            -60.0,
+            -20.0
+          ],
+          "max": [
+            110.0,
+            -32.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1774,
+        "source_path": [
+          null,
+          1701,
+          1774
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 9,
+        "placement_path": [
+          0,
+          4,
+          4
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 36,
+        "part": "3023b.dat",
+        "description": "Plate 1 x 2",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          100.0,
+          -64.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            90.0,
+            -68.0,
+            -20.0
+          ],
+          "max": [
+            110.0,
+            -56.0,
+            20.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1776,
+        "source_path": [
+          null,
+          1701,
+          1776
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          4,
+          5
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 37,
+        "part": "3815b.dat",
+        "description": "Minifig Hips",
+        "colour": {
+          "code": 72,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -60.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            60.0,
+            -71.75,
+            -18.0
+          ],
+          "max": [
+            80.0,
+            -39.999775299,
+            18.0
+          ]
+        },
+        "section": "bean-guest-right.ldr",
+        "line_number": 1806,
+        "source_path": [
+          null,
+          1703,
+          1806
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          5,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 38,
+        "part": "3816c.dat",
+        "description": "Minifig Leg Right",
+        "colour": {
+          "code": 72,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -48.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            42.0,
+            -60.0,
+            1.25
+          ],
+          "max": [
+            78.75,
+            -40.0,
+            19.25
+          ]
+        },
+        "section": "bean-guest-right.ldr",
+        "line_number": 1808,
+        "source_path": [
+          null,
+          1703,
+          1808
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          5,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 39,
+        "part": "3817c.dat",
+        "description": "Minifig Leg Left",
+        "colour": {
+          "code": 72,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -48.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            42.0,
+            -60.0,
+            -19.25
+          ],
+          "max": [
+            78.75,
+            -40.0,
+            -1.25
+          ]
+        },
+        "section": "bean-guest-right.ldr",
+        "line_number": 1810,
+        "source_path": [
+          null,
+          1703,
+          1810
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          5,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 40,
+        "part": "973.dat",
+        "description": "Minifig Torso",
+        "colour": {
+          "code": 1,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -92.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            60.0,
+            -104.75,
+            -19.0
+          ],
+          "max": [
+            80.0,
+            -60.75,
+            19.0
+          ]
+        },
+        "section": "bean-guest-right.ldr",
+        "line_number": 1812,
+        "source_path": [
+          null,
+          1703,
+          1812
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          5,
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 41,
+        "part": "43368.dat",
+        "description": "Minifig Arm Right with Integral Hand",
+        "colour": {
+          "code": 1,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -83.75,
+          15.552
+        ],
+        "matrix": [
+          [
+            0.0,
+            -0.866025,
+            0.5
+          ],
+          [
+            0.170038,
+            0.492719,
+            0.853414
+          ],
+          [
+            -0.985438,
+            0.085019,
+            0.147257
+          ]
+        ],
+        "bounds": {
+          "min": [
+            31.814027475000003,
+            -90.006033894,
+            7.811015241889999
+          ],
+          "max": [
+            76.044376575,
+            -72.316180188,
+            27.728518325
+          ]
+        },
+        "section": "bean-guest-right.ldr",
+        "line_number": 1814,
+        "source_path": [
+          null,
+          1703,
+          1814
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 0,
+        "placement_path": [
+          0,
+          5,
+          4
+        ],
+        "connection_metadata": {
+          "coverage": "none",
+          "source_count": 0,
+          "recognized_record_count": 0,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 42,
+        "part": "43369.dat",
+        "description": "Minifig Arm Left with Integral Hand",
+        "colour": {
+          "code": 1,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -83.75,
+          -15.552
+        ],
+        "matrix": [
+          [
+            0.0,
+            -0.866025,
+            0.5
+          ],
+          [
+            -0.170038,
+            0.492719,
+            0.853414
+          ],
+          [
+            -0.985438,
+            -0.085019,
+            -0.147257
+          ]
+        ],
+        "bounds": {
+          "min": [
+            31.814027475000003,
+            -90.006033894,
+            -27.728518325
+          ],
+          "max": [
+            76.044376575,
+            -72.316180188,
+            -7.811015241889999
+          ]
+        },
+        "section": "bean-guest-right.ldr",
+        "line_number": 1816,
+        "source_path": [
+          null,
+          1703,
+          1816
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 0,
+        "placement_path": [
+          0,
+          5,
+          5
+        ],
+        "connection_metadata": {
+          "coverage": "none",
+          "source_count": 0,
+          "recognized_record_count": 0,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 43,
+        "part": "3626bp01.dat",
+        "description": "Minifig Head with Standard Grin Pattern (Blocked Hollow Stud)",
+        "colour": {
+          "code": 14,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -117.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            57.0,
+            -121.75,
+            -13.0
+          ],
+          "max": [
+            83.0,
+            -93.75,
+            13.0
+          ]
+        },
+        "section": "bean-guest-right.ldr",
+        "line_number": 1818,
+        "source_path": [
+          null,
+          1703,
+          1818
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          5,
+          6
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 44,
+        "part": "6093a.dat",
+        "description": "Minifig Hair Ponytail",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          70.0,
+          -117.75,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            55.234,
+            -131.349,
+            -15.662
+          ],
+          "max": [
+            95.48400000000001,
+            -91.419,
+            15.838
+          ]
+        },
+        "section": "bean-guest-right.ldr",
+        "line_number": 1820,
+        "source_path": [
+          null,
+          1703,
+          1820
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          0,
+          5,
+          7
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 1,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 45,
+        "part": "3021.dat",
+        "description": "Plate 2 x 3",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -8.0,
+          -70.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -30.0,
+            -12.0,
+            -100.0
+          ],
+          "max": [
+            10.0,
+            0.0,
+            -40.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1766,
+        "source_path": [
+          null,
+          1705,
+          1766
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 12,
+        "placement_path": [
+          0,
+          6,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 46,
+        "part": "3003.dat",
+        "description": "Brick 2 x 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -32.0,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -30.0,
+            -36.0,
+            -80.0
+          ],
+          "max": [
+            10.0,
+            -8.0,
+            -40.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1768,
+        "source_path": [
+          null,
+          1705,
+          1768
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 23,
+        "placement_path": [
+          0,
+          6,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 5,
+          "recognized_record_count": 7,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 47,
+        "part": "3068b.dat",
+        "description": "Tile 2 x 2 with Groove",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -40.0,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -30.0,
+            -40.0,
+            -80.0
+          ],
+          "max": [
+            10.0,
+            -32.0,
+            -40.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1770,
+        "source_path": [
+          null,
+          1705,
+          1770
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 6,
+        "placement_path": [
+          0,
+          6,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 48,
+        "part": "3004.dat",
+        "description": "Brick 1 x 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -32.0,
+          -90.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -30.0,
+            -36.0,
+            -100.0
+          ],
+          "max": [
+            10.0,
+            -8.0,
+            -80.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1772,
+        "source_path": [
+          null,
+          1705,
+          1772
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 9,
+        "placement_path": [
+          0,
+          6,
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 49,
+        "part": "3004.dat",
+        "description": "Brick 1 x 2",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -56.0,
+          -90.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -30.0,
+            -60.0,
+            -100.0
+          ],
+          "max": [
+            10.0,
+            -32.0,
+            -80.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1774,
+        "source_path": [
+          null,
+          1705,
+          1774
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 9,
+        "placement_path": [
+          0,
+          6,
+          4
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 50,
+        "part": "3023b.dat",
+        "description": "Plate 1 x 2",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -64.0,
+          -90.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -30.0,
+            -68.0,
+            -100.0
+          ],
+          "max": [
+            10.0,
+            -56.0,
+            -80.0
+          ]
+        },
+        "section": "cafe-chair.ldr",
+        "line_number": 1776,
+        "source_path": [
+          null,
+          1705,
+          1776
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          6,
+          5
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 51,
+        "part": "3815b.dat",
+        "description": "Minifig Hips",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -60.75,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -28.0,
+            -71.75,
+            -70.0
+          ],
+          "max": [
+            8.0,
+            -39.999775299,
+            -50.0
+          ]
+        },
+        "section": "bean-guest-front.ldr",
+        "line_number": 1828,
+        "source_path": [
+          null,
+          1707,
+          1828
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          7,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 52,
+        "part": "3816c.dat",
+        "description": "Minifig Leg Right",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -48.75,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -8.75,
+            -60.0,
+            -68.75
+          ],
+          "max": [
+            9.25,
+            -40.0,
+            -32.0
+          ]
+        },
+        "section": "bean-guest-front.ldr",
+        "line_number": 1830,
+        "source_path": [
+          null,
+          1707,
+          1830
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          7,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 53,
+        "part": "3817c.dat",
+        "description": "Minifig Leg Left",
+        "colour": {
+          "code": 70,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -48.75,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -29.25,
+            -60.0,
+            -68.75
+          ],
+          "max": [
+            -11.25,
+            -40.0,
+            -32.0
+          ]
+        },
+        "section": "bean-guest-front.ldr",
+        "line_number": 1832,
+        "source_path": [
+          null,
+          1707,
+          1832
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          7,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 54,
+        "part": "973.dat",
+        "description": "Minifig Torso",
+        "colour": {
+          "code": 25,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -92.75,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -29.0,
+            -104.75,
+            -70.0
+          ],
+          "max": [
+            9.0,
+            -60.75,
+            -50.0
+          ]
+        },
+        "section": "bean-guest-front.ldr",
+        "line_number": 1834,
+        "source_path": [
+          null,
+          1707,
+          1834
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          7,
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 55,
+        "part": "43368.dat",
+        "description": "Minifig Arm Right with Integral Hand",
+        "colour": {
+          "code": 25,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          5.552,
+          -83.75,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -0.985438,
+            0.085019,
+            0.147257
+          ],
+          [
+            0.170038,
+            0.492719,
+            0.853414
+          ],
+          [
+            0.0,
+            0.866025,
+            -0.5
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -2.188984758110001,
+            -90.006033894,
+            -66.044376575
+          ],
+          "max": [
+            17.728518325,
+            -72.316180188,
+            -21.814027475000003
+          ]
+        },
+        "section": "bean-guest-front.ldr",
+        "line_number": 1836,
+        "source_path": [
+          null,
+          1707,
+          1836
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 0,
+        "placement_path": [
+          0,
+          7,
+          4
+        ],
+        "connection_metadata": {
+          "coverage": "none",
+          "source_count": 0,
+          "recognized_record_count": 0,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 56,
+        "part": "43369.dat",
+        "description": "Minifig Arm Left with Integral Hand",
+        "colour": {
+          "code": 25,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -25.552,
+          -83.75,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -0.985438,
+            -0.085019,
+            -0.147257
+          ],
+          [
+            -0.170038,
+            0.492719,
+            0.853414
+          ],
+          [
+            0.0,
+            0.866025,
+            -0.5
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -37.728518324999996,
+            -90.006033894,
+            -66.044376575
+          ],
+          "max": [
+            -17.811015241889997,
+            -72.316180188,
+            -21.814027475000003
+          ]
+        },
+        "section": "bean-guest-front.ldr",
+        "line_number": 1838,
+        "source_path": [
+          null,
+          1707,
+          1838
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 0,
+        "placement_path": [
+          0,
+          7,
+          5
+        ],
+        "connection_metadata": {
+          "coverage": "none",
+          "source_count": 0,
+          "recognized_record_count": 0,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 57,
+        "part": "3626bp01.dat",
+        "description": "Minifig Head with Standard Grin Pattern (Blocked Hollow Stud)",
+        "colour": {
+          "code": 14,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -117.75,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -23.0,
+            -121.75,
+            -73.0
+          ],
+          "max": [
+            3.0,
+            -93.75,
+            -47.0
+          ]
+        },
+        "section": "bean-guest-front.ldr",
+        "line_number": 1840,
+        "source_path": [
+          null,
+          1707,
+          1840
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          0,
+          7,
+          6
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 58,
+        "part": "43751.dat",
+        "description": "Minifig Hair Wavy",
+        "colour": {
+          "code": 28,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -10.0,
+          -117.75,
+          -60.0
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -27.664,
+            -126.71000000000001,
+            -81.343
+          ],
+          "max": [
+            6.295000000000002,
+            -97.816,
+            -39.831
+          ]
+        },
+        "section": "bean-guest-front.ldr",
+        "line_number": 1842,
+        "source_path": [
+          null,
+          1707,
+          1842
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 6,
+        "placement_path": [
+          0,
+          7,
+          7
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 1,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 59,
+        "part": "3899.dat",
+        "description": "Minifig Cup",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -40.0,
+          -88.0,
+          10.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -50.0,
+            -88.0,
+            0.0
+          ],
+          "max": [
+            -30.0,
+            -64.0,
+            34.0
+          ]
+        },
+        "section": "bean-terrace.ldr",
+        "line_number": 1710,
+        "source_path": [
+          null,
+          1710
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          0,
+          8
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 60,
+        "part": "3899.dat",
+        "description": "Minifig Cup",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          40.0,
+          -88.0,
+          10.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            30.0,
+            -88.0,
+            0.0
+          ],
+          "max": [
+            50.0,
+            -64.0,
+            34.0
+          ]
+        },
+        "section": "bean-terrace.ldr",
+        "line_number": 1712,
+        "source_path": [
+          null,
+          1712
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          0,
+          9
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 61,
+        "part": "3899.dat",
+        "description": "Minifig Cup",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          -88.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -10.0,
+            -88.0,
+            -40.0
+          ],
+          "max": [
+            10.0,
+            -64.0,
+            -6.0
+          ]
+        },
+        "section": "bean-terrace.ldr",
+        "line_number": 1714,
+        "source_path": [
+          null,
+          1714
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          0,
+          10
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 62,
+        "part": "6141.dat",
+        "description": "Plate 1 x 1 Round",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -20.0,
+          -72.0,
+          -10.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -30.0,
+            -76.0,
+            -20.0
+          ],
+          "max": [
+            -10.0,
+            -64.0,
+            0.0
+          ]
+        },
+        "section": "bean-terrace.ldr",
+        "line_number": 1716,
+        "source_path": [
+          null,
+          1716
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          0,
+          11
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 63,
+        "part": "24866.dat",
+        "description": "Plate 1 x 1 with 5 Petals",
+        "colour": {
+          "code": 4,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -20.0,
+          -80.0,
+          -10.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -29.926406862,
+            -84.0,
+            -19.500014307999997
+          ],
+          "max": [
+            -10.073593138,
+            -72.0,
+            0.043100000000000804
+          ]
+        },
+        "section": "bean-terrace.ldr",
+        "line_number": 1718,
+        "source_path": [
+          null,
+          1718
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          12
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      }
+    ],
+    "instances_truncated": false,
+    "contacts_checked": true,
+    "contact_count": 79,
+    "contacts": [
+      {
+        "instances": [
+          1,
+          2
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3062bs01@R0/stud2a@R5/studO",
+          "s/3062bs01@R0/stud4od@R11/stud4od"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          2,
+          9
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3062bs01@R0/stud2a@R5/studO",
+          "snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          3,
+          4
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3062bs01@R0/stud2a@R5/studO",
+          "s/3062bs01@R0/stud4od@R11/stud4od"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          4,
+          11
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3062bs01@R0/stud2a@R5/studO",
+          "snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          5,
+          6
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3062bs01@R0/stud2a@R5/studO",
+          "s/3062bs01@R0/stud4od@R11/stud4od"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          6,
+          10
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3062bs01@R0/stud2a@R5/studO",
+          "s/3024s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          7,
+          8
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3062bs01@R0/stud2a@R5/studO",
+          "s/3062bs01@R0/stud4od@R11/stud4od"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          8,
+          12
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3062bs01@R0/stud2a@R5/studO",
+          "s/3024s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          9,
+          13
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R0/studC",
+          "snap_cyl@L8:I6"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          9,
+          13
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R1/studC",
+          "snap_cyl@L8:I7"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          9,
+          14
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R3/studC",
+          "snap_cyl@L8:I6"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          9,
+          15
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R2/studC",
+          "s/3024s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          10,
+          14
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3024s01@R0/stud@R2/studC",
+          "snap_cyl@L8:I7"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          11,
+          13
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R0/studC",
+          "snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          11,
+          13
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R1/studC",
+          "snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          11,
+          14
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R3/studC",
+          "snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          11,
+          16
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R2/studC",
+          "s/3024s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          12,
+          14
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3024s01@R0/stud@R2/studC",
+          "snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          13,
+          59
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R11/studC",
+          "s/3899s01@R0/stud4@R0/stud4"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 24.0
+        }
+      },
+      {
+        "instances": [
+          14,
+          60
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R7/studC",
+          "s/3899s01@R0/stud4@R0/stud4"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 24.0
+        }
+      },
+      {
+        "instances": [
+          15,
+          61
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3024s01@R0/stud@R2/studC",
+          "s/3899s01@R0/stud4@R0/stud4"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 24.0
+        }
+      },
+      {
+        "instances": [
+          17,
+          18
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R4/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:+1+1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          17,
+          18
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R5/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:+1-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          17,
+          18
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R7/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:-1+1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          17,
+          18
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R8/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:-1-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          17,
+          20
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud@R6/studC",
+          "s/3004s01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          17,
+          20
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud@R9/studC",
+          "s/3004s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          18,
+          19
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R0/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          18,
+          19
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R1/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I2"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          18,
+          19
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R2/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          18,
+          19
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R3/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I3"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          20,
+          21
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R3/studC",
+          "s/3004s01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          20,
+          21
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R4/studC",
+          "s/3004s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          21,
+          22
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R3/studC",
+          "s/3023bs01@R0/snap_cyl@L9:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          21,
+          22
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R4/studC",
+          "s/3023bs01@R0/snap_cyl@L9:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          23,
+          24
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/snap_cyl@L8:I0",
+          "3817c@R0/s/3817cs01@R0/s/3817cs02@R0/snap_cyl@L11:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          23,
+          25
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/snap_cyl@L9:I0",
+          "s/3817cs01@R0/s/3817cs02@R0/snap_cyl@L11:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          23,
+          26
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/hipstud@R0/snap_cyl@L8:I0",
+          "s/973s01@R0/snap_cyl@L17:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          23,
+          26
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/hipstud@R1/snap_cyl@L8:I0",
+          "s/973s01@R0/snap_cyl@L16:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          26,
+          29
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/973s01@R0/snap_cyl@L13:I0",
+          "s/3626bs02@R2/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          31,
+          32
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R4/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:+1+1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          31,
+          32
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R5/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:+1-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          31,
+          32
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R7/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:-1+1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          31,
+          32
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R8/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:-1-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          31,
+          34
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud@R6/studC",
+          "s/3004s01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          31,
+          34
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud@R9/studC",
+          "s/3004s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          32,
+          33
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R0/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          32,
+          33
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R1/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I2"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          32,
+          33
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R2/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          32,
+          33
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R3/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I3"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          34,
+          35
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R3/studC",
+          "s/3004s01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          34,
+          35
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R4/studC",
+          "s/3004s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          35,
+          36
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R3/studC",
+          "s/3023bs01@R0/snap_cyl@L9:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          35,
+          36
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R4/studC",
+          "s/3023bs01@R0/snap_cyl@L9:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          37,
+          38
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/snap_cyl@L8:I0",
+          "3817c@R0/s/3817cs01@R0/s/3817cs02@R0/snap_cyl@L11:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          37,
+          39
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/snap_cyl@L9:I0",
+          "s/3817cs01@R0/s/3817cs02@R0/snap_cyl@L11:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          37,
+          40
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/hipstud@R0/snap_cyl@L8:I0",
+          "s/973s01@R0/snap_cyl@L17:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          37,
+          40
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/hipstud@R1/snap_cyl@L8:I0",
+          "s/973s01@R0/snap_cyl@L16:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          40,
+          43
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/973s01@R0/snap_cyl@L13:I0",
+          "s/3626bs02@R2/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          45,
+          46
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R4/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:+1+1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          45,
+          46
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R5/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:+1-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          45,
+          46
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R7/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:-1+1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          45,
+          46
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "primitive"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "stud@R8/studC",
+          "s/3003s01@R0/s/3003s02@R0/stud4@R0/stud4:socket:-1-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          45,
+          48
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud@R6/studC",
+          "s/3004s01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          45,
+          48
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud@R9/studC",
+          "s/3004s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          46,
+          47
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R0/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          46,
+          47
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R1/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I2"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          46,
+          47
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R2/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          46,
+          47
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3003s01@R0/s/3003s02@R0/stug-2x2@R3/stud@R3/studC",
+          "s/3068bs01@R0/snap_cyl@L8:I3"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 8.0
+        }
+      },
+      {
+        "instances": [
+          48,
+          49
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R3/studC",
+          "s/3004s01@R0/snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          48,
+          49
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R4/studC",
+          "s/3004s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          49,
+          50
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R3/studC",
+          "s/3023bs01@R0/snap_cyl@L9:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          49,
+          50
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3004s01@R0/stud@R4/studC",
+          "s/3023bs01@R0/snap_cyl@L9:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 12.0
+        }
+      },
+      {
+        "instances": [
+          51,
+          52
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/snap_cyl@L8:I0",
+          "3817c@R0/s/3817cs01@R0/s/3817cs02@R0/snap_cyl@L11:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          51,
+          53
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/snap_cyl@L9:I0",
+          "s/3817cs01@R0/s/3817cs02@R0/snap_cyl@L11:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          51,
+          54
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/hipstud@R0/snap_cyl@L8:I0",
+          "s/973s01@R0/snap_cyl@L17:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          51,
+          54
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/3815bs01@R0/hipstud@R1/snap_cyl@L8:I0",
+          "s/973s01@R0/snap_cyl@L16:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          54,
+          57
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "s/973s01@R0/snap_cyl@L13:I0",
+          "s/3626bs02@R2/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          62,
+          63
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "snap_cyl@L11:I0",
+          "snap_cyl@L9:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      }
+    ],
+    "contacts_truncated": false,
+    "confirmed_components": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        59,
+        60
+      ],
+      [
+        15,
+        61
+      ],
+      [
+        16
+      ],
+      [
+        17,
+        18,
+        19
+      ],
+      [
+        20
+      ],
+      [
+        21
+      ],
+      [
+        22
+      ],
+      [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      [
+        27
+      ],
+      [
+        28
+      ],
+      [
+        30
+      ],
+      [
+        31,
+        32,
+        33
+      ],
+      [
+        34
+      ],
+      [
+        35
+      ],
+      [
+        36
+      ],
+      [
+        37,
+        38,
+        39,
+        40,
+        43
+      ],
+      [
+        41
+      ],
+      [
+        42
+      ],
+      [
+        44
+      ],
+      [
+        45,
+        46,
+        47
+      ],
+      [
+        48
+      ],
+      [
+        49
+      ],
+      [
+        50
+      ],
+      [
+        51,
+        52,
+        53,
+        54,
+        57
+      ],
+      [
+        55
+      ],
+      [
+        56
+      ],
+      [
+        58
+      ],
+      [
+        62,
+        63
+      ]
+    ],
+    "optimistic_components": [
+      [
+        0
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        59,
+        60,
+        61
+      ],
+      [
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      [
+        23,
+        24,
+        25,
+        26,
+        29
+      ],
+      [
+        27
+      ],
+      [
+        28
+      ],
+      [
+        30
+      ],
+      [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      [
+        37,
+        38,
+        39,
+        40,
+        43
+      ],
+      [
+        41
+      ],
+      [
+        42
+      ],
+      [
+        44
+      ],
+      [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      [
+        51,
+        52,
+        53,
+        54,
+        57
+      ],
+      [
+        55
+      ],
+      [
+        56
+      ],
+      [
+        58
+      ],
+      [
+        62,
+        63
+      ]
+    ],
+    "optimistic_component_count": 18,
+    "confirmed_component_count": 33,
+    "components_truncated": false,
+    "overlap_candidate_count": 129,
+    "overlaps": [
+      {
+        "instances": [
+          17,
+          20
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          17,
+          18
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 4
+      },
+      {
+        "instances": [
+          17,
+          0
+        ],
+        "depths": [
+          30.0,
+          12.0,
+          40.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          20,
+          21
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          21,
+          22
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          18,
+          19
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 4
+      },
+      {
+        "instances": [
+          18,
+          0
+        ],
+        "depths": [
+          30.0,
+          28.0,
+          40.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          19,
+          0
+        ],
+        "depths": [
+          30.0,
+          8.0,
+          40.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          19,
+          23
+        ],
+        "depths": [
+          20.0,
+          0.00022470100000049342,
+          36.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          30,
+          29
+        ],
+        "depths": [
+          26.0,
+          21.033999999999992,
+          26.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          30,
+          0
+        ],
+        "depths": [
+          25.012,
+          24.070999999999998,
+          30.024
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          30,
+          26
+        ],
+        "depths": [
+          20.0,
+          4.033999999999992,
+          30.024
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          29,
+          0
+        ],
+        "depths": [
+          23.0,
+          28.0,
+          26.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          29,
+          26
+        ],
+        "depths": [
+          20.0,
+          11.0,
+          26.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          0,
+          23
+        ],
+        "depths": [
+          20.0,
+          31.750224701,
+          36.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          26
+        ],
+        "depths": [
+          20.0,
+          44.0,
+          38.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          24
+        ],
+        "depths": [
+          36.75,
+          20.0,
+          18.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          25
+        ],
+        "depths": [
+          36.75,
+          20.0,
+          18.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          27
+        ],
+        "depths": [
+          44.2303491,
+          17.689853705999994,
+          19.91750308311
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          28
+        ],
+        "depths": [
+          44.2303491,
+          17.689853705999994,
+          19.91750308311
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          3
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          4
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          9
+        ],
+        "depths": [
+          80.0,
+          12.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          11
+        ],
+        "depths": [
+          80.0,
+          12.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          13
+        ],
+        "depths": [
+          40.0,
+          12.0,
+          80.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          59
+        ],
+        "depths": [
+          20.0,
+          24.0,
+          34.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          56
+        ],
+        "depths": [
+          19.91750308311,
+          17.689853705999994,
+          44.2303491
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          45
+        ],
+        "depths": [
+          40.0,
+          12.0,
+          40.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          46
+        ],
+        "depths": [
+          40.0,
+          28.0,
+          40.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          47
+        ],
+        "depths": [
+          40.0,
+          8.0,
+          40.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          62
+        ],
+        "depths": [
+          20.0,
+          12.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          63
+        ],
+        "depths": [
+          19.852813724,
+          12.0,
+          19.543114308
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          53
+        ],
+        "depths": [
+          18.0,
+          20.0,
+          36.75
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          54
+        ],
+        "depths": [
+          38.0,
+          44.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          51
+        ],
+        "depths": [
+          36.0,
+          31.750224701,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          58
+        ],
+        "depths": [
+          33.959,
+          28.894000000000005,
+          40.169
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          57
+        ],
+        "depths": [
+          26.0,
+          28.0,
+          26.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          15
+        ],
+        "depths": [
+          20.0,
+          12.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          16
+        ],
+        "depths": [
+          20.0,
+          12.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          61
+        ],
+        "depths": [
+          20.0,
+          24.0,
+          34.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          52
+        ],
+        "depths": [
+          18.0,
+          20.0,
+          36.75
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          55
+        ],
+        "depths": [
+          19.91750308311,
+          17.689853705999994,
+          44.2303491
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          14
+        ],
+        "depths": [
+          40.0,
+          12.0,
+          80.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          5
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          6
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          7
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          8
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          10
+        ],
+        "depths": [
+          20.0,
+          12.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          12
+        ],
+        "depths": [
+          20.0,
+          12.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          60
+        ],
+        "depths": [
+          20.0,
+          24.0,
+          34.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          41
+        ],
+        "depths": [
+          44.2303491,
+          17.689853705999994,
+          19.91750308311
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          42
+        ],
+        "depths": [
+          44.2303491,
+          17.689853705999994,
+          19.91750308311
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          38
+        ],
+        "depths": [
+          36.75,
+          20.0,
+          18.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          39
+        ],
+        "depths": [
+          36.75,
+          20.0,
+          18.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          31
+        ],
+        "depths": [
+          30.0,
+          12.0,
+          40.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          32
+        ],
+        "depths": [
+          30.0,
+          28.0,
+          40.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          33
+        ],
+        "depths": [
+          30.0,
+          8.0,
+          40.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          44
+        ],
+        "depths": [
+          24.766,
+          39.92999999999999,
+          31.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          43
+        ],
+        "depths": [
+          23.0,
+          28.0,
+          26.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          37
+        ],
+        "depths": [
+          20.0,
+          31.750224701,
+          36.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          40
+        ],
+        "depths": [
+          20.0,
+          44.0,
+          38.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          23,
+          26
+        ],
+        "depths": [
+          20.0,
+          11.0,
+          36.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          23,
+          24
+        ],
+        "depths": [
+          18.75,
+          20.0,
+          16.75
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          23,
+          25
+        ],
+        "depths": [
+          18.75,
+          20.0,
+          16.75
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          26,
+          27
+        ],
+        "depths": [
+          16.044376575,
+          17.689853705999994,
+          11.188984758110001
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          26,
+          28
+        ],
+        "depths": [
+          16.044376575,
+          17.689853705999994,
+          11.188984758110001
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          24,
+          13
+        ],
+        "depths": [
+          8.0,
+          4.0,
+          18.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          25,
+          13
+        ],
+        "depths": [
+          8.0,
+          4.0,
+          18.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          27,
+          56
+        ],
+        "depths": [
+          5.914490849999993,
+          17.689853705999994,
+          5.914490849999996
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          28,
+          59
+        ],
+        "depths": [
+          18.185972524999997,
+          15.683819811999996,
+          19.91750308311
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          1,
+          2
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          2,
+          9
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          3,
+          4
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          4,
+          11
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          9,
+          13
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          9,
+          53
+        ],
+        "depths": [
+          18.0,
+          12.0,
+          8.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          9,
+          15
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          9,
+          52
+        ],
+        "depths": [
+          18.0,
+          12.0,
+          8.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          9,
+          14
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          11,
+          13
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          11,
+          16
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          11,
+          14
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          13,
+          59
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          34.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          13,
+          62
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          13,
+          53
+        ],
+        "depths": [
+          18.0,
+          4.0,
+          8.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          56,
+          54
+        ],
+        "depths": [
+          11.188984758110003,
+          17.689853705999994,
+          16.044376575
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          45,
+          46
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 4
+      },
+      {
+        "instances": [
+          45,
+          48
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          46,
+          47
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 4
+      },
+      {
+        "instances": [
+          47,
+          51
+        ],
+        "depths": [
+          36.0,
+          0.00022470100000049342,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          48,
+          49
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          49,
+          50
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          62,
+          63
+        ],
+        "depths": [
+          19.852813724,
+          4.0,
+          19.500014307999997
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          53,
+          51
+        ],
+        "depths": [
+          16.75,
+          20.0,
+          18.75
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          54,
+          51
+        ],
+        "depths": [
+          36.0,
+          11.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          54,
+          58
+        ],
+        "depths": [
+          33.959,
+          6.9339999999999975,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          54,
+          57
+        ],
+        "depths": [
+          26.0,
+          11.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          54,
+          55
+        ],
+        "depths": [
+          11.188984758110001,
+          17.689853705999994,
+          16.044376575
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          51,
+          52
+        ],
+        "depths": [
+          16.75,
+          20.0,
+          18.75
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          58,
+          57
+        ],
+        "depths": [
+          26.0,
+          23.933999999999997,
+          26.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          15,
+          61
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          15,
+          52
+        ],
+        "depths": [
+          18.0,
+          4.0,
+          8.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          61,
+          55
+        ],
+        "depths": [
+          12.188984758110001,
+          15.683819811999996,
+          18.185972524999997
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          14,
+          10
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          14,
+          12
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          14,
+          60
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          34.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          14,
+          38
+        ],
+        "depths": [
+          8.0,
+          4.0,
+          18.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          14,
+          39
+        ],
+        "depths": [
+          8.0,
+          4.0,
+          18.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          5,
+          6
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          6,
+          10
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          7,
+          8
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          8,
+          12
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          60,
+          41
+        ],
+        "depths": [
+          18.185972524999997,
+          15.683819811999996,
+          19.91750308311
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          41,
+          40
+        ],
+        "depths": [
+          16.044376575,
+          17.689853705999994,
+          11.188984758110001
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          42,
+          40
+        ],
+        "depths": [
+          16.044376575,
+          17.689853705999994,
+          11.188984758110001
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          38,
+          37
+        ],
+        "depths": [
+          18.75,
+          20.0,
+          16.75
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          39,
+          37
+        ],
+        "depths": [
+          18.75,
+          20.0,
+          16.75
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          31,
+          32
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 4
+      },
+      {
+        "instances": [
+          31,
+          34
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          32,
+          33
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 4
+      },
+      {
+        "instances": [
+          33,
+          37
+        ],
+        "depths": [
+          20.0,
+          0.00022470100000049342,
+          36.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          44,
+          43
+        ],
+        "depths": [
+          26.0,
+          28.0,
+          26.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          44,
+          40
+        ],
+        "depths": [
+          20.0,
+          13.331000000000003,
+          31.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          43,
+          40
+        ],
+        "depths": [
+          20.0,
+          11.0,
+          26.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          37,
+          40
+        ],
+        "depths": [
+          20.0,
+          11.0,
+          36.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          34,
+          35
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          35,
+          36
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          40.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 2
+      }
+    ],
+    "overlaps_truncated": false,
+    "diagnostics": [
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 18
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  }
+}

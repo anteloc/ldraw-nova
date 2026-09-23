@@ -31,6 +31,46 @@ Model/submodel search reuses the supplied `../ldraw-lib/scripts/ldraw-info.db` *
 
 `part` accepts a code with or without `.dat` and reports current part status/replacement, local coordinates, true expanded bounds, connector count, and a bounded connector list. Use a larger `--limit` if connectors are truncated. If `complete` is false, fix the missing library dependency before trusting its geometry. The generated index is a local symlink view of `parts`, `p`, and `LDConfig.ldr`; file size/mtime signatures automatically rebuild its titles as the library changes.
 
+## Jev part discovery
+
+Use the sibling `../jev-rerank` CLI when the request describes a part's purpose or appearance. From this repository root:
+
+```sh
+uv run --project ../jev-rerank jev-rerank \
+  --db "$LDRAW_LIB_DIR/scripts/ldraw-info.db" \
+  --table-field parts_descriptions.description --top 10 \
+  --query 'a wall decoration for a castle' --show --json
+```
+
+This requires `uv`, the sibling project, and `TYPESAFE_API_KEY` in the environment. `LDRAW_LIB_DIR` points to the library repository containing `scripts/ldraw-info.db`, usually `../ldraw-lib`; it differs from `LDRAW_DIR`, which points to the actual part library, usually `../ldraw-lib/ldraw`. `uv run --project ../jev-rerank` runs the sibling project's command; there is no `../jev-rerank/uv` executable in this setup. The source database is read-only; the reranker maintains its own local index and score cache.
+
+**Describe a single part in each query.** For example, `a wall decoration for a castle`, `a heraldic shield to hang above a castle gate`, or `a curved slope for the nose of a small spacecraft`. Query each intended role separately. The wording describes what one candidate should be; `--top 10` controls how many alternatives are returned. Do not ask the query to generate a model, list ten parts, or fill the entire model's BOM.
+
+Read `results` in their returned rank order:
+
+| JSON field | Use |
+|---|---|
+| `source.key.part` | Exact database part reference, including `.dat`; pass this to `ldraw-agent part`. |
+| `text` | Matched description, included by `--show`. |
+| `score` | Jev's 0–1 probability that the description matches the query; results are sorted descending. |
+| `source` / `path` | Source identity; `path` is a SQLite locator, not a part filename. |
+| `exhaustive` / `stats` | Search coverage, scored candidates, cache/API usage, and elapsed time. |
+
+Inspect candidates before putting them into a plan. The description table includes internal pattern segments, subparts, aliases, and sticker shortcuts as well as ordinary parts. Reject primitives/subparts as assembly placements, check status and replacements, and inspect a shortcut's physical meaning. Preserve the original ranks/scores when recording why a candidate was selected or rejected. A high score establishes neither geometric fit nor availability in a particular colour.
+
+For example, after selecting these references from the castle query:
+
+```sh
+./ldraw-agent part 4444p09.dat --limit 20
+./ldraw-agent part 3068bd09.dat --limit 20
+./ldraw-agent part-board 4444p09.dat 3068bd09.dat 3069bpt5.dat \
+  --colour 71 --outdir output/castle-decoration-shortlist
+```
+
+Open the board images, compare measured dimensions, and check origins/connectors before placement. A score ranks relevance from description text; it does not replace this review.
+
+With `--top 10`, the current reranker normally scores a BM25 shortlist of up to 500 field values. The ten results are therefore not an exhaustive search of the whole library. If suitable parts are missing, refine the single-part description or supplement it with category searches; see the sibling CLI's `--help` for larger candidate budgets. Progress goes to stderr, so stdout can be saved as JSON; preserve and check the command's exit status before consuming it. If the reranker is unavailable, report that and use the existing catalog/search tools without claiming Jev ranking.
+
 ## Study and extract complex references
 
 ```sh

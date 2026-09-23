@@ -30,7 +30,18 @@ The supplied resources are `../ldraw-lib/ldraw/` and `../ldraw-lib/models-annota
 
 Record a short design brief outside the assembly plan: subject/story, silhouette, dimensions, palette roles, primary focal feature, two supporting features, detail vocabulary, quiet surfaces, physical subassemblies and build order. State what will make this particular design attractive; do not equate part count with quality. For a building scene, separate the street/base, individual storeys, roofs, façade/window modules, interiors and landscaping. Allocate space and attachment surfaces before decoration. Keep a module checklist with local origin, envelope, anchors, dependencies and review status.
 
-Search and inspect real parts:
+For a part's intended role or visual character, start with Jev's ranked candidates:
+
+```sh
+uv run --project ../jev-rerank jev-rerank \
+  --db "$LDRAW_LIB_DIR/scripts/ldraw-info.db" \
+  --table-field parts_descriptions.description --top 10 \
+  --query 'a wall decoration for a castle' --show --json
+```
+
+Write each query as a description of **one suitable part**, including its role and model context. Use a separate query for each role; `--top 10` requests ten alternatives to that one part. Read each result's `source.key.part`, `text`, and `score`, then inspect promising references in the installed library. Discard internal subparts and primitives; inspect aliases/replacements and sticker shortcuts before choosing. Ranking measures semantic relevance, not fit or attachment. See [Jev part discovery](docs/agent/tooling.md#jev-part-discovery) for setup, result fields, and search coverage.
+
+Use exact part/category searches to refine the shortlist and inspect real geometry:
 
 ```sh
 ./ldraw-agent catalog categories

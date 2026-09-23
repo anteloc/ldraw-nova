@@ -1,0 +1,1334 @@
+{
+  "file": "output/cathedral/cathedral.mpd",
+  "section": "cathedral-clerestory.ldr",
+  "profile": "syntax",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "diagnostics": [
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 4
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 12,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -60.0,
+        -124.0,
+        -10.0
+      ],
+      "max": [
+        60.0,
+        0.0,
+        10.0
+      ]
+    },
+    "occurrence_count": 12,
+    "detail": "full",
+    "instance_offset": 0,
+    "instances": [
+      {
+        "index": 0,
+        "part": "3005.dat",
+        "description": "Brick 1 x 1",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -50.0,
+          -24.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -60.0,
+            -28.0,
+            -10.0
+          ],
+          "max": [
+            -40.0,
+            0.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2616,
+        "source_path": [
+          null,
+          2616
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 2,
+        "placement_path": [
+          0,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 1,
+        "part": "3005.dat",
+        "description": "Brick 1 x 1",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          50.0,
+          -24.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            40.0,
+            -28.0,
+            -10.0
+          ],
+          "max": [
+            60.0,
+            0.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2618,
+        "source_path": [
+          null,
+          2618
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 2,
+        "placement_path": [
+          0,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 2,
+        "part": "3005.dat",
+        "description": "Brick 1 x 1",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -50.0,
+          -48.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -60.0,
+            -52.0,
+            -10.0
+          ],
+          "max": [
+            -40.0,
+            -24.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2620,
+        "source_path": [
+          null,
+          2620
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 2,
+        "placement_path": [
+          0,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 3,
+        "part": "3005.dat",
+        "description": "Brick 1 x 1",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          50.0,
+          -48.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            40.0,
+            -52.0,
+            -10.0
+          ],
+          "max": [
+            60.0,
+            -24.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2622,
+        "source_path": [
+          null,
+          2622
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 2,
+        "placement_path": [
+          0,
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 4,
+        "part": "60592.dat",
+        "description": "Window 1 x 2 x 2 without Sill",
+        "colour": {
+          "code": 19,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -20.0,
+          -48.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -40.0,
+            -52.0,
+            -10.0
+          ],
+          "max": [
+            0.0,
+            0.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2624,
+        "source_path": [
+          null,
+          2624
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 7,
+        "placement_path": [
+          0,
+          4
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 5,
+        "part": "60601p01.dat",
+        "description": "Glass for Window 1 x 2 x 2 with Tan Gothic Ornament Pattern",
+        "colour": {
+          "code": 33,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -20.0,
+          -48.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -36.5,
+            -46.0,
+            -7.0
+          ],
+          "max": [
+            -3.5,
+            -7.0,
+            -3.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2626,
+        "source_path": [
+          null,
+          2626
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          0,
+          5
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 1,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 6,
+        "part": "60592.dat",
+        "description": "Window 1 x 2 x 2 without Sill",
+        "colour": {
+          "code": 19,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          20.0,
+          -48.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            0.0,
+            -52.0,
+            -10.0
+          ],
+          "max": [
+            40.0,
+            0.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2628,
+        "source_path": [
+          null,
+          2628
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 7,
+        "placement_path": [
+          0,
+          6
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 7,
+        "part": "60601p01.dat",
+        "description": "Glass for Window 1 x 2 x 2 with Tan Gothic Ornament Pattern",
+        "colour": {
+          "code": 33,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          20.0,
+          -48.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            3.5,
+            -46.0,
+            -7.0
+          ],
+          "max": [
+            36.5,
+            -7.0,
+            -3.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2630,
+        "source_path": [
+          null,
+          2630
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          0,
+          7
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 1,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 8,
+        "part": "13965.dat",
+        "description": "Arch 1 x 3 x 3 Pointed",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -50.0,
+          -120.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -60.0,
+            -124.0,
+            -10.0
+          ],
+          "max": [
+            0.0,
+            -48.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2632,
+        "source_path": [
+          null,
+          2632
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          8
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 9,
+        "part": "13965.dat",
+        "description": "Arch 1 x 3 x 3 Pointed",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          50.0,
+          -120.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            0.0,
+            -124.0,
+            -10.0
+          ],
+          "max": [
+            60.0,
+            -48.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2634,
+        "source_path": [
+          null,
+          2634
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 4,
+        "placement_path": [
+          0,
+          9
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 10,
+        "part": "3005.dat",
+        "description": "Brick 1 x 1",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -50.0,
+          -120.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -60.0,
+            -124.0,
+            -10.0
+          ],
+          "max": [
+            -40.0,
+            -96.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2636,
+        "source_path": [
+          null,
+          2636
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 2,
+        "placement_path": [
+          0,
+          10
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 11,
+        "part": "3005.dat",
+        "description": "Brick 1 x 1",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          50.0,
+          -120.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            40.0,
+            -124.0,
+            -10.0
+          ],
+          "max": [
+            60.0,
+            -96.0,
+            10.0
+          ]
+        },
+        "section": "cathedral-clerestory.ldr",
+        "line_number": 2638,
+        "source_path": [
+          null,
+          2638
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 2,
+        "placement_path": [
+          0,
+          11
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      }
+    ],
+    "instances_truncated": false,
+    "contacts_checked": true,
+    "contact_count": 8,
+    "contacts": [
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3005s01@R0/stud@R0/studC",
+          "s/3005s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          1,
+          3
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3005s01@R0/stud@R0/studC",
+          "s/3005s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          2,
+          8
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3005s01@R0/stud@R0/studC",
+          "snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 76.0
+        }
+      },
+      {
+        "instances": [
+          3,
+          9
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3005s01@R0/stud@R0/studC",
+          "snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 76.0
+        }
+      },
+      {
+        "instances": [
+          4,
+          5
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "generic",
+          "generic"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "snap_gen@L10:I0",
+          "s/60601s01@R0/snap_gen@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          6,
+          7
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "generic",
+          "generic"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "snap_gen@L10:I0",
+          "s/60601s01@R0/snap_gen@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          8,
+          10
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud@R13/studC",
+          "s/3005s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      },
+      {
+        "instances": [
+          9,
+          11
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud@R13/studC",
+          "s/3005s01@R0/snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 28.0
+        }
+      }
+    ],
+    "contacts_truncated": false,
+    "confirmed_components": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        8
+      ],
+      [
+        9
+      ],
+      [
+        10
+      ],
+      [
+        11
+      ]
+    ],
+    "optimistic_components": [
+      [
+        0,
+        2,
+        8,
+        10
+      ],
+      [
+        1,
+        3,
+        9,
+        11
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "optimistic_component_count": 4,
+    "confirmed_component_count": 10,
+    "components_truncated": false,
+    "overlap_candidate_count": 10,
+    "overlaps": [
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          2,
+          8
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          8,
+          10
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          8,
+          4
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          4,
+          5
+        ],
+        "depths": [
+          33.0,
+          39.0,
+          4.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          6,
+          9
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          6,
+          7
+        ],
+        "depths": [
+          33.0,
+          39.0,
+          4.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          9,
+          3
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          9,
+          11
+        ],
+        "depths": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          1,
+          3
+        ],
+        "depths": [
+          20.0,
+          4.0,
+          20.0
+        ],
+        "status": "stud_zone_overlap_review_connections",
+        "body_penetration": null,
+        "connection_count": 1
+      }
+    ],
+    "overlaps_truncated": false,
+    "diagnostics": [
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 4
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  }
+}
