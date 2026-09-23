@@ -1,0 +1,527 @@
+{
+  "scenario": "illustrative, unmeasured benefits; cold cache; no retry allowance",
+  "price_per_million_input": 0.042,
+  "engineer_hourly": 100,
+  "reviewer_hourly": 50,
+  "foundation_cost": 5600,
+  "foundation_monthly": 200,
+  "use_cases": [
+    {
+      "id": "U1",
+      "name": "Part selection",
+      "tokens_per_model": 240000,
+      "requests_per_model": 12,
+      "engineering_hours": [
+        24,
+        48
+      ],
+      "labeling_hours": [
+        8,
+        16
+      ],
+      "maintenance_hours_monthly": 1,
+      "gross_avoided_cost_per_model": 0.1,
+      "introduced_error_allowance_per_model": 0.01,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 0,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 0.01008,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 4200.0,
+      "incremental_monthly_cost": 100.0,
+      "marginal_benefit_per_model": 0.07992,
+      "standalone_break_even_models_monthly_12mo": 13972.305638972302,
+      "volumes": {
+        "100": {
+          "api_monthly": 1.008,
+          "standalone_net_monthly_before_setup": -292.008,
+          "standalone_net_year_one": -13304.096,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 10.08,
+          "standalone_net_monthly_before_setup": -220.07999999999998,
+          "standalone_net_year_one": -12440.96,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 100.8,
+          "standalone_net_monthly_before_setup": 499.20000000000005,
+          "standalone_net_year_one": -3809.5999999999995,
+          "standalone_payback_months": 19.631410256410255
+        }
+      }
+    },
+    {
+      "id": "U2",
+      "name": "Assembly selection",
+      "tokens_per_model": 150000,
+      "requests_per_model": 4,
+      "engineering_hours": [
+        48,
+        96
+      ],
+      "labeling_hours": [
+        16,
+        32
+      ],
+      "maintenance_hours_monthly": 2,
+      "gross_avoided_cost_per_model": 0.4,
+      "introduced_error_allowance_per_model": 0.01,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 0,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 0.0063,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 8400.0,
+      "incremental_monthly_cost": 200.0,
+      "marginal_benefit_per_model": 0.38370000000000004,
+      "standalone_break_even_models_monthly_12mo": 4083.050994700721,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.63,
+          "standalone_net_monthly_before_setup": -361.63,
+          "standalone_net_year_one": -18339.559999999998,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 6.3,
+          "standalone_net_monthly_before_setup": -16.299999999999955,
+          "standalone_net_year_one": -14195.599999999999,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 63.0,
+          "standalone_net_monthly_before_setup": 3437.0000000000005,
+          "standalone_net_year_one": 27244.000000000007,
+          "standalone_payback_months": 4.0733197556008145
+        }
+      }
+    },
+    {
+      "id": "U3",
+      "name": "Brief and handler selection",
+      "tokens_per_model": 6000,
+      "requests_per_model": 1,
+      "engineering_hours": [
+        24,
+        48
+      ],
+      "labeling_hours": [
+        4,
+        8
+      ],
+      "maintenance_hours_monthly": 0.5,
+      "gross_avoided_cost_per_model": 0.06,
+      "introduced_error_allowance_per_model": 0.01,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 0,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 0.000252,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 3900.0,
+      "incremental_monthly_cost": 50.0,
+      "marginal_benefit_per_model": 0.049747999999999994,
+      "standalone_break_even_models_monthly_12mo": 20938.865214011952,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.0252,
+          "standalone_net_monthly_before_setup": -245.0252,
+          "standalone_net_year_one": -12440.3024,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 0.252,
+          "standalone_net_monthly_before_setup": -200.252,
+          "standalone_net_year_one": -11903.024000000001,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 2.52,
+          "standalone_net_monthly_before_setup": 247.47999999999996,
+          "standalone_net_year_one": -6530.240000000001,
+          "standalone_payback_months": 38.38694035881688
+        }
+      }
+    },
+    {
+      "id": "U4",
+      "name": "Brief coverage verification",
+      "tokens_per_model": 18000,
+      "requests_per_model": 2,
+      "engineering_hours": [
+        24,
+        48
+      ],
+      "labeling_hours": [
+        8,
+        16
+      ],
+      "maintenance_hours_monthly": 1,
+      "gross_avoided_cost_per_model": 0.2,
+      "introduced_error_allowance_per_model": 0.01,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 0,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 0.0007559999999999999,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 4200.0,
+      "incremental_monthly_cost": 100.0,
+      "marginal_benefit_per_model": 0.189244,
+      "standalone_break_even_models_monthly_12mo": 5900.6714435684435,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.0756,
+          "standalone_net_monthly_before_setup": -281.0756,
+          "standalone_net_year_one": -13172.9072,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 0.7559999999999999,
+          "standalone_net_monthly_before_setup": -110.756,
+          "standalone_net_year_one": -11129.072,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 7.56,
+          "standalone_net_monthly_before_setup": 1592.44,
+          "standalone_net_year_one": 9309.279999999999,
+          "standalone_payback_months": 6.154078018638065
+        }
+      }
+    },
+    {
+      "id": "U5",
+      "name": "Context selection",
+      "tokens_per_model": 36000,
+      "requests_per_model": 4,
+      "engineering_hours": [
+        16,
+        32
+      ],
+      "labeling_hours": [
+        4,
+        8
+      ],
+      "maintenance_hours_monthly": 0.5,
+      "gross_avoided_cost_per_model": 0.02,
+      "introduced_error_allowance_per_model": 0.01,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 0,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 0.0015119999999999999,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 2700.0,
+      "incremental_monthly_cost": 50.0,
+      "marginal_benefit_per_model": 0.008488,
+      "standalone_break_even_models_monthly_12mo": 110940.93622368833,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.1512,
+          "standalone_net_monthly_before_setup": -249.1512,
+          "standalone_net_year_one": -11289.8144,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 1.5119999999999998,
+          "standalone_net_monthly_before_setup": -241.512,
+          "standalone_net_year_one": -11198.144,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 15.12,
+          "standalone_net_monthly_before_setup": -165.12,
+          "standalone_net_year_one": -10281.44,
+          "standalone_payback_months": null
+        }
+      }
+    },
+    {
+      "id": "U6",
+      "name": "Generator escalation",
+      "tokens_per_model": 18000,
+      "requests_per_model": 3,
+      "engineering_hours": [
+        64,
+        120
+      ],
+      "labeling_hours": [
+        16,
+        32
+      ],
+      "maintenance_hours_monthly": 3,
+      "gross_avoided_cost_per_model": 0.6,
+      "introduced_error_allowance_per_model": 0.05,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 0,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 0.0007559999999999999,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 10400.0,
+      "incremental_monthly_cost": 300.0,
+      "marginal_benefit_per_model": 0.549244,
+      "standalone_break_even_models_monthly_12mo": 3337.921458101196,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.0756,
+          "standalone_net_monthly_before_setup": -445.0756,
+          "standalone_net_year_one": -21340.9072,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 0.7559999999999999,
+          "standalone_net_monthly_before_setup": 49.243999999999915,
+          "standalone_net_year_one": -15409.072,
+          "standalone_payback_months": 324.9126797173265
+        },
+        "10000": {
+          "api_monthly": 7.56,
+          "standalone_net_monthly_before_setup": 4992.44,
+          "standalone_net_year_one": 43909.28,
+          "standalone_payback_months": 3.2048457267388293
+        }
+      }
+    },
+    {
+      "id": "U7",
+      "name": "Repair routing",
+      "tokens_per_model": 600,
+      "requests_per_model": 0.1,
+      "engineering_hours": [
+        24,
+        48
+      ],
+      "labeling_hours": [
+        8,
+        16
+      ],
+      "maintenance_hours_monthly": 1,
+      "gross_avoided_cost_per_model": 0.08,
+      "introduced_error_allowance_per_model": 0.01,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 0,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 2.52e-05,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 4200.0,
+      "incremental_monthly_cost": 100.0,
+      "marginal_benefit_per_model": 0.0699748,
+      "standalone_break_even_models_monthly_12mo": 15958.12587769692,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.00252,
+          "standalone_net_monthly_before_setup": -293.00252,
+          "standalone_net_year_one": -13316.03024,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 0.0252,
+          "standalone_net_monthly_before_setup": -230.02519999999998,
+          "standalone_net_year_one": -12560.3024,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 0.252,
+          "standalone_net_monthly_before_setup": 399.74800000000005,
+          "standalone_net_year_one": -5003.023999999999,
+          "standalone_payback_months": 24.51544473018001
+        }
+      }
+    },
+    {
+      "id": "U8",
+      "name": "Alternative design selection",
+      "tokens_per_model": 30000,
+      "requests_per_model": 3,
+      "engineering_hours": [
+        32,
+        64
+      ],
+      "labeling_hours": [
+        16,
+        32
+      ],
+      "maintenance_hours_monthly": 2,
+      "gross_avoided_cost_per_model": 0.5,
+      "introduced_error_allowance_per_model": 0.01,
+      "extra_generation_cost_per_model": 1,
+      "other_setup_cost": 0,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 0.00126,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 6000.0,
+      "incremental_monthly_cost": 200.0,
+      "marginal_benefit_per_model": -0.51126,
+      "standalone_break_even_models_monthly_12mo": null,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.126,
+          "standalone_net_monthly_before_setup": -451.126,
+          "standalone_net_year_one": -17013.512,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 1.26,
+          "standalone_net_monthly_before_setup": -911.26,
+          "standalone_net_year_one": -22535.12,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 12.6,
+          "standalone_net_monthly_before_setup": -5512.6,
+          "standalone_net_year_one": -77751.20000000001,
+          "standalone_payback_months": null
+        }
+      }
+    },
+    {
+      "id": "U9",
+      "name": "Offline semantic annotations",
+      "tokens_per_model": 0,
+      "requests_per_model": 0,
+      "engineering_hours": [
+        32,
+        64
+      ],
+      "labeling_hours": [
+        16,
+        32
+      ],
+      "maintenance_hours_monthly": 1,
+      "gross_avoided_cost_per_model": 0.03,
+      "introduced_error_allowance_per_model": 0.01,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 0.84,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 2000000,
+      "api_per_model": 0.0,
+      "fixed_api_monthly": 0.084,
+      "incremental_setup_cost": 6000.84,
+      "incremental_monthly_cost": 100.084,
+      "marginal_benefit_per_model": 0.019999999999999997,
+      "standalone_break_even_models_monthly_12mo": 63341.03333333335,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.084,
+          "standalone_net_monthly_before_setup": -298.084,
+          "standalone_net_year_one": -15177.848,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 0.084,
+          "standalone_net_monthly_before_setup": -280.084,
+          "standalone_net_year_one": -14961.848,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 0.084,
+          "standalone_net_monthly_before_setup": -100.08400000000003,
+          "standalone_net_year_one": -12801.848,
+          "standalone_payback_months": null
+        }
+      }
+    },
+    {
+      "id": "U10",
+      "name": "Learned preference model",
+      "tokens_per_model": 6000,
+      "requests_per_model": 1,
+      "engineering_hours": [
+        80,
+        160
+      ],
+      "labeling_hours": [
+        40,
+        100
+      ],
+      "maintenance_hours_monthly": 4,
+      "gross_avoided_cost_per_model": 0.15,
+      "introduced_error_allowance_per_model": 0.025,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 52.52,
+      "other_monthly_cost": 10,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 0.000252,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 15552.52,
+      "incremental_monthly_cost": 410.0,
+      "marginal_benefit_per_model": 0.124748,
+      "standalone_break_even_models_monthly_12mo": 19020.02436912816,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.0252,
+          "standalone_net_monthly_before_setup": -597.5252,
+          "standalone_net_year_one": -28322.8224,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 0.252,
+          "standalone_net_monthly_before_setup": -485.252,
+          "standalone_net_year_one": -26975.544,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 2.52,
+          "standalone_net_monthly_before_setup": 637.48,
+          "standalone_net_year_one": -13502.76,
+          "standalone_payback_months": 33.18146451653385
+        }
+      }
+    },
+    {
+      "id": "U11",
+      "name": "Delivery claim verification",
+      "tokens_per_model": 5000,
+      "requests_per_model": 1,
+      "engineering_hours": [
+        16,
+        32
+      ],
+      "labeling_hours": [
+        4,
+        8
+      ],
+      "maintenance_hours_monthly": 0.5,
+      "gross_avoided_cost_per_model": 0.01,
+      "introduced_error_allowance_per_model": 0.005,
+      "extra_generation_cost_per_model": 0,
+      "other_setup_cost": 0,
+      "other_monthly_cost": 0,
+      "fixed_monthly_input_tokens": 0,
+      "api_per_model": 0.00021,
+      "fixed_api_monthly": 0.0,
+      "incremental_setup_cost": 2700.0,
+      "incremental_monthly_cost": 50.0,
+      "marginal_benefit_per_model": 0.00479,
+      "standalone_break_even_models_monthly_12mo": 196590.1183020181,
+      "volumes": {
+        "100": {
+          "api_monthly": 0.021,
+          "standalone_net_monthly_before_setup": -249.521,
+          "standalone_net_year_one": -11294.252,
+          "standalone_payback_months": null
+        },
+        "1000": {
+          "api_monthly": 0.21000000000000002,
+          "standalone_net_monthly_before_setup": -245.21,
+          "standalone_net_year_one": -11242.52,
+          "standalone_payback_months": null
+        },
+        "10000": {
+          "api_monthly": 2.1,
+          "standalone_net_monthly_before_setup": -202.1,
+          "standalone_net_year_one": -10725.2,
+          "standalone_payback_months": null
+        }
+      }
+    }
+  ]
+}
