@@ -1,4 +1,4 @@
-"""Stud-built road vehicles: measured running gear and editable teaching plans.
+"""System vehicles: measured running gear and editable family-specific plans.
 
 X is width, -Z is forward, Y=0 is the road. Authoring helpers use X/Z studs
 and h upwards in LDU, exactly like Module. No complete part is scaled/mirrored.
@@ -6,8 +6,8 @@ and h upwards in LDU, exactly like Module. No complete part is scaled/mirrored.
 from __future__ import annotations
 
 from .architecture import Module, slab, line, lengths, WIDE_PLATES
-from .details import palettes
 from .common import jsonable
+from .vehicle_details import detail_module, vehicle_colours
 
 
 WHEEL_PACKS = {
@@ -28,6 +28,14 @@ DESIGNS = {
                         lesson='Short bonnet, upright cab and a taller quiet cargo box with a restrained belt line.'),
     'pickup': dict(title='Workshop pickup', palette='desert-utility', length=20, wheelbase=12,
                    lesson='Separate cab and open load bed, capped bed rails, contrasting bumpers and functional cargo space.'),
+    'tipper-truck': dict(title='Site tipper truck', palette='desert-utility', length=22, wheelbase=14,
+                        profile='road', lesson='Forward cab with moulded seats, mirrors and a dedicated tipper bucket carried on a System chassis.'),
+    'touring-motorcycle': dict(title='Touring motorcycle', palette='heritage-racing', length=10,
+                               profile='motorcycle', lesson='Dedicated motorcycle frame and vintage fairing, separate spoked wheels/tyres and a rear luggage rack.'),
+    'harbour-launch': dict(title='Harbour launch', palette='coastal-delivery', length=14,
+                           profile='watercraft', lesson='Purpose-made boat hull, open helm with a real seat and steering wheel, navigation lights and life ring.'),
+    'courier-jet': dict(title='Courier jet', palette='coastal-delivery', length=26,
+                       profile='aircraft', lesson='Matched aircraft nose/glass and tapered rear, swept wings, dedicated engine pods and an equipped cockpit.'),
 }
 
 
@@ -113,10 +121,12 @@ def vehicle_plan(name, palette=None):
         raise ValueError('Unknown vehicle; use vehicle list')
     design = DESIGNS[name]
     palette = palette or design['palette']
-    available = palettes()
-    if palette not in available or available[palette].get('family') != 'vehicle':
-        raise ValueError('Choose a vehicle palette: '+', '.join(k for k,v in available.items() if v.get('family') == 'vehicle'))
-    c = available[palette]['roles']
+    c = vehicle_colours(palette)
+    if design.get('profile') in {'motorcycle','watercraft','aircraft'}:
+        from .vehicle_families import family_model
+        plan=family_model(name,palette).plan()
+        plan['author']='ldraw-astra vehicle examples'
+        return plan
     length, wb = design['length'], design['wheelbase']
     half = length//2
     root = Module(name, design['title']+'; six-stud System body, front -Z, ground Y=0')
@@ -182,37 +192,58 @@ def vehicle_plan(name, palette=None):
             tiled_strip(cabin, x, -3, 6, 78, c['body'])
     else:
         # Six-wide windscreen, genuinely distinct from the tourer's low cabin.
-        cabin.add('4176', c['glass'], h=118, z=-3.5)
+        shift=-3 if name=='tipper-truck' else 0
+        cabin.add('4176', c['glass'], h=118, z=-3.5+shift)
+        # Local cab is one stud deeper than the original block-seat version;
+        # the moulded 4079 back projects 5 LDU past its two-stud floor.
         for x in [-2.5, 2.5]:
-            cabin.add('3005', c['roof'], x, 94, -.5)
-            cabin.add('3005', c['roof'], x, 118, -.5)
+            cabin.add('3005', c['roof'], x, 94, .5+shift)
+            cabin.add('3005', c['roof'], x, 118, .5+shift)
+            cabin.add(detail_module('wing-mirror',palette),c['body'],x,70,-2.5+shift,yaw=-90 if x>0 else 90)
         for x in [-1, 1]:
-            cabin.add('3022', c['wood'], x, 78, -1)
-            cabin.add('3004', c['wood'], x, 102, -.5)
-            cabin.add('3069b', c['wood'], x, 86, -1.5)
-        cabin.add('3829c01', c['chassis'], -1, 78, -2.5)
-        slab(cabin, -3, -4, 6, 4, 126, c['roof'])
-        smooth_deck(cabin, 6, -4, 4, 134, c['roof'])
-        for x in [-2.5,-1.5,-.5,.5,1.5,2.5]:
-            cabin.add('50950', c['body'], x, 94, -half+2.5)
-        smooth_deck(cabin, 6, -half+4, half-9, 78, c['body'])
+            cabin.add('4079', c['wood'], x, 78, -1+shift,id='driver-seat' if x<0 else 'passenger-seat')
+        cabin.add('3829c01', c['chassis'], -1, 78, -2.5+shift)
+        cabin.add('3069bp25',c['chassis'],1,78,-2.5+shift)
+        # Longitudinal roof plates span the open seating area; short strips
+        # with matching tile seams would leave the middle roof floating.
+        for x in [-2,0,2]:cabin.add('3020',c['roof'],x,126,-2+shift,yaw=90)
+        cabin.add('3666',c['roof'],h=126,z=.5+shift)
+        smooth_deck(cabin, 6, -4+shift, 4 if name=='tipper-truck' else 5, 134, c['roof'])
+        if name=='tipper-truck':
+            cabin.add('2431',c['roof'],h=134,z=-2.5)
+            for x in [-2,0,2]:cabin.add('3039',c['body'],x,94,-8.5)
+        else:
+            for x in [-2.5,-1.5,-.5,.5,1.5,2.5]:
+                cabin.add('50950', c['body'], x, 94, -half+2.5)
+        if name!='tipper-truck':smooth_deck(cabin, 6, -half+4, half-9, 78, c['body'])
         if name == 'delivery-van':
             for h in [94,118]:
                 for x in [-2.5, 2.5]:
-                    line(cabin, x, 0, half-1, h, c['body'] if h==94 else c['roof'], axis='z')
+                    line(cabin, x, 1, half-2, h, c['body'] if h==94 else c['roof'], axis='z')
                 line(cabin, -2, half-1.5, 4, h, c['body'] if h==94 else c['roof'])
-                line(cabin, -2, .5, 4, h, c['body'] if h==94 else c['roof'])
-            slab(cabin, -3, 0, 6, half-1, 126, c['roof'])
-            smooth_deck(cabin, 6, 0, half-1, 134, c['roof'])
+                line(cabin, -2, 1.5, 4, h, c['body'] if h==94 else c['roof'])
+            slab(cabin, -3, 1, 6, half-2, 126, c['roof'])
+            smooth_deck(cabin, 6, 1, half-2, 134, c['roof'])
+        elif name=='tipper-truck':
+            for h in [94,118]:line(cabin,-3,-1.5,6,h,c['body'])
+            cabin.add('4080',c['body'],h=78,z=4,id='tipper-bucket')
+            # Bucket is in its fixed transport pose on actual deck studs;
+            # no tipping hinge or hydraulic mechanism is claimed.
+            cabin.add('6141','@colours.Trans_Orange',-2.5,134,-2.5)
+            cabin.add('6141','@colours.Trans_Orange',2.5,134,-2.5)
         else:
             # Open bed: lower than cab, visible tiled floor and capped side rails.
-            line(cabin, -3, .5, 6, 94, c['body'])
-            line(cabin, -3, .5, 6, 118, c['body'])
+            line(cabin, -3, 1.5, 6, 94, c['body'])
+            line(cabin, -3, 1.5, 6, 118, c['body'])
             for x in [-2.5, 2.5]:
-                line(cabin, x, 1, half-2, 94, c['body'], axis='z')
-                tiled_strip(cabin, x, 1, half-2, 102, c['trim'])
+                line(cabin, x, 2, half-3, 94, c['body'], axis='z')
+                tiled_strip(cabin, x, 2, half-3, 102, c['trim'])
             line(cabin, -2, half-1.5, 4, 94, c['body'])
-            smooth_deck(cabin, 4, 1, half-3, 78, c['wood'])
+            # Pallet uses studs, so the chest replaces the corresponding bed tiles.
+            cabin.add(detail_module('cargo-chest',palette),c['wood'],.5,70,5)
+            smooth_deck(cabin,4,2,1,78,c['wood'])
+            smooth_deck(cabin,4,7,half-9,78,c['wood'])
+            for z in range(3,7):cabin.add('3070b',c['wood'],-1.5,78,z+.5)
             smooth_deck(cabin, 4, half-2, 1, 102, c['trim'])
     root.add(cabin, c['body'], id='cabin')
     plan = root.plan()
@@ -221,14 +252,40 @@ def vehicle_plan(name, palette=None):
 
 
 def design_brief(name, palette=None):
+    if name not in DESIGNS:
+        raise ValueError('Unknown vehicle; use vehicle list')
     d = DESIGNS[name]
-    return dict(subject=d['title'], construction='Stud-built System; fixed wheel pins; no Technic mechanisms',
-                axes='X width, -Z forward, negative Y up; road Y=0',
-                body_width_studs=6, body_length_studs=d['length'], wheelbase_studs=d['wheelbase'],
-                wheel_pack='touring', palette=palette or d['palette'], silhouette=d['lesson'],
+    profile=d.get('profile','road')
+    vehicle_colours(palette or d['palette'])
+    result=dict(subject=d['title'], construction='System and dedicated vehicle parts; no Technic mechanisms',
+                profile=profile, axes='X width, -Z forward, negative Y up; see model-specific datum in the guide',
+                body_length_studs=d['length'],
+                palette=palette or d['palette'], silhouette=d['lesson'],
                 focal_feature='Front light/grille identity and overall silhouette',
                 supporting_features=['Matched wheel arches and stance', 'Contrasting glazing and roof'],
                 quiet_surfaces=['Bonnet', 'Roof', 'Cargo sides or bed'],
                 review_views=['home','front','back','left','right','top','bottom'],
                 limitations=['Teaching starting point: adapt shapes and interfaces to the requested subject.',
-                             'Minifigure seating, rolling friction and retail part/colour availability require separate review.'])
+                             'Driver fit, dynamics, rolling friction and retail part/colour availability require separate review.'])
+    if profile=='road':result.update(body_width_studs=6,wheelbase_studs=d['wheelbase'],wheel_pack='touring',ground_y=0)
+    elif profile=='motorcycle':
+        result.update(ground_y=0, focal_feature='Vintage fairing and exposed spoked wheels',
+                      supporting_features=['Moulded frame, saddle and handlebars', 'Rear luggage rack'],
+                      quiet_surfaces=['Front fender', 'Fairing'],
+                      dedicated_parts=['50859b','85983','50862','50861'])
+    elif profile=='watercraft':
+        result.update(datum='Hull interior floor Y=0; not a waterline', focal_feature='Low open boat hull and glazed helm',
+                      supporting_features=['Seat, helm and instruments', 'Navigation lights and life ring'],
+                      quiet_surfaces=['Hull sides', 'Bow'],
+                      dedicated_parts=['2551','4079','3829c01','30340'])
+    else:
+        result.update(datum='Nose interior floor Y=0; in-flight display pose', focal_feature='Streamlined cockpit and swept wing silhouette',
+                      supporting_features=['Matched jet engine pods', 'T-tail and tapered fuselage'],
+                      quiet_surfaces=['Nose', 'Fuselage roof'],
+                      dedicated_parts=['87611','87612','87613','87616','30355','30356','4868b','4869','4867'])
+    if name in {'delivery-van','pickup','tipper-truck'}:
+        result['dedicated_parts']=['4079','3829c01','3069bp25','4176','98282']
+        if name=='pickup':result['dedicated_parts'].append('30150')
+        if name=='tipper-truck':result['dedicated_parts'].append('4080')
+    result['interior']='Display glazing; driver fit untested' if name=='grand-tourer' else 'Dedicated seat and controls; figure fit and headroom untested'
+    return result

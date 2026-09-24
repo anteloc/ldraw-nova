@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "author": "ldraw-astra vehicle examples",
+  "sections": [
+    {
+      "name": "harbour-launch.ldr",
+      "description": "Open harbour launch; hull floor datum Y=0, front -Z; no buoyancy claim",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "moulded-hull",
+            "ref": "2551.dat",
+            "colour": "@colours.Sand_Blue",
+            "at": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "id": "cockpit-deck",
+            "ref": "3035.dat",
+            "colour": "@colours.White",
+            "at": [
+              0,
+              -8,
+              20
+            ],
+            "yaw": 90
+          }
+        ],
+        [
+          {
+            "id": "windscreen",
+            "ref": "3823.dat",
+            "colour": "@colours.Trans_Black",
+            "at": [
+              0,
+              -56,
+              -30.0
+            ]
+          },
+          {
+            "id": "helmsman-seat",
+            "ref": "4079.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -16,
+              20
+            ]
+          },
+          {
+            "id": "helm",
+            "ref": "3829c01.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -16,
+              -10.0
+            ]
+          },
+          {
+            "id": "instruments",
+            "ref": "3069bp25.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -16,
+              -30.0
+            ]
+          },
+          {
+            "id": "navigation-lights",
+            "ref": "vehicle-navigation-lights-coastal-delivery.ldr",
+            "colour": "@colours.White",
+            "at": [
+              0,
+              -56,
+              -30.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "life-ring",
+            "ref": "30340.dat",
+            "colour": "@colours.Orange",
+            "at": [
+              10.0,
+              -16,
+              90.0
+            ]
+          },
+          {
+            "id": "bow-marker",
+            "ref": "6141.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              0,
+              -48,
+              -150.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "vehicle-navigation-lights-coastal-delivery.ldr",
+      "description": "Paired red port and green starboard lights on a slender four-stud crossbar.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "p0001",
+            "ref": "3710.dat",
+            "colour": "@colours.White",
+            "at": [
+              0,
+              -8,
+              0
+            ]
+          },
+          {
+            "id": "p0002",
+            "ref": "6141.dat",
+            "colour": "@colours.Trans_Red",
+            "at": [
+              -30.0,
+              -16,
+              0
+            ]
+          },
+          {
+            "id": "p0003",
+            "ref": "6141.dat",
+            "colour": "@colours.Trans_Green",
+            "at": [
+              30.0,
+              -16,
+              0
+            ]
+          },
+          {
+            "id": "p0004",
+            "ref": "3069b.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              0,
+              -16,
+              0
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}

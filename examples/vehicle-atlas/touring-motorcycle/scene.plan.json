@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "author": "ldraw-astra vehicle examples",
+  "sections": [
+    {
+      "name": "touring-motorcycle.ldr",
+      "description": "Vintage System motorcycle; front -Z, both tyres meet Y=0",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "rack": {
+          "at": [
+            0,
+            -72.414,
+            50.0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "frame-and-handlebars",
+            "ref": "50859b.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -22.914,
+              -10.0
+            ]
+          },
+          {
+            "id": "vintage-fairing",
+            "ref": "85983.dat",
+            "colour": "@colours.Dark_Green",
+            "at": [
+              0,
+              -64.414,
+              50.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "front-rim",
+            "ref": "50862.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              0,
+              -26.614,
+              -53.5
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "front-tyre",
+            "ref": "50861.dat",
+            "colour": 256,
+            "at": [
+              0,
+              -26.614,
+              -53.5
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "rear-rim",
+            "ref": "50862.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              0,
+              -26.614,
+              53.5
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "rear-tyre",
+            "ref": "50861.dat",
+            "colour": 256,
+            "at": [
+              0,
+              -26.614,
+              53.5
+            ],
+            "yaw": 90
+          }
+        ],
+        [
+          {
+            "id": "luggage-rack",
+            "ref": "3839b.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              0,
+              -72.414,
+              50.0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "rack-pad",
+            "ref": "3069b.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -80.414,
+              50.0
+            ],
+            "yaw": 90
+          }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "source_sha256": "e1fb9a9f8e64ee49fe803b22d5b55760fa6e29ccaf93aaba1a18abd4485ff62b",
+  "profile": "motorcycle",
+  "checks_passed": true,
+  "family_parts": {
+    "frame": [
+      0
+    ],
+    "fairing": [
+      1
+    ]
+  },
+  "physical_validity": "not_proven",
+  "ground_y": 0.0,
+  "diagnostics": [],
+  "wheel_count": 2,
+  "axle_count": 2,
+  "wheelbase_ldu": 107.0,
+  "wheels": [
+    {
+      "instance": 3,
+      "ref": "50861.dat",
+      "centre": [
+        0.0,
+        -26.614,
+        -53.5
+      ],
+      "radius_ldu": 26.614,
+      "width_ldu": 15.0,
+      "ground_error_ldu": 0.0
+    },
+    {
+      "instance": 5,
+      "ref": "50861.dat",
+      "centre": [
+        0.0,
+        -26.614,
+        53.5
+      ],
+      "radius_ldu": 26.614,
+      "width_ldu": 15.0,
+      "ground_error_ldu": 0.0
+    }
+  ],
+  "axles": [
+    {
+      "z_ldu": -53.5,
+      "instances": [
+        3
+      ]
+    },
+    {
+      "z_ldu": 53.5,
+      "instances": [
+        5
+      ]
+    }
+  ],
+  "unreviewed_wheels": [],
+  "wheel_space_candidates": [],
+  "truncated": false,
+  "coverage": {
+    "geometry_complete": true,
+    "occurrences": 8,
+    "supported_tyres": [
+      "50861"
+    ],
+    "clearance": "Circular wheel envelope versus upright curated rectangular bodies only"
+  },
+  "limitations": [
+    "Symmetric road vehicles or the supported two-wheel motorcycle frame in the documented frame only; no steering, suspension, dual wheels or spare-wheel classification.",
+    "Curved fenders, slopes and SNOT bodywork still require material/visual clearance review.",
+    "Rim alignment does not establish wheel-pin retention, clutch, strength or physical rolling freedom.",
+    "No aesthetic score or part/colour availability claim; use assembly validation and opened renders too."
+  ]
+}

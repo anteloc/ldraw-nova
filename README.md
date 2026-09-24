@@ -4,8 +4,8 @@ Generate modular MPD scenes with thousands of real part placements, inspect thei
 
 For **stud-built vehicles**, start with the [vehicle workflow](docs/agent/vehicles.md)
 and [vehicle atlas](examples/vehicle-atlas/README.md). The toolkit includes measured
-wheel packages, three editable body families, vehicle palettes and road-layout
-checks. Technic mechanisms are outside this workflow.
+wheel packages, seven editable designs spanning cars, trucks, motorcycles, boats
+and aircraft, dedicated fitting recipes, vehicle palettes and family-specific checks. Technic mechanisms are outside this workflow.
 
 ```sh
 ./ldraw-agent vehicle list

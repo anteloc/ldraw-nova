@@ -14,6 +14,7 @@ from ldraw_tools.examples import search_examples
 from ldraw_tools.geometry import analyze_geometry
 from ldraw_tools.vehicle_review import review_vehicle
 from ldraw_tools.vehicles import DESIGNS, WHEEL_PACKS, axle, vehicle_plan, wheel_report
+from ldraw_tools.vehicle_details import DETAILS, detail_plan
 
 
 def errors(diagnostics):
@@ -26,21 +27,27 @@ def test_vehicle_plans_resolve_without_body_collisions_or_wheel_intrusions(offic
     before = copy.deepcopy(plan)
     _, model, diagnostics = build_plan(plan, official)
     geometry = analyze_geometry(model, official, detail='full', output_limit=500)
-    report = review_vehicle(model, official)
+    profile = DESIGNS[name].get('profile','road')
+    report = review_vehicle(model, official, profile=profile)
     assert plan == before
     assert not errors(diagnostics+geometry['diagnostics']+report['diagnostics'])
     assert geometry['complete'] and geometry['contacts_checked']
-    assert report['wheel_count'] == 4 and report['axle_count'] == 2
-    assert report['wheelbase_ldu'] == DESIGNS[name]['wheelbase']*20
-    assert not report['wheel_space_candidates']
-    assert not report['unreviewed_wheels']
+    if profile in {'road','motorcycle'}:
+        assert report['wheel_count'] == (4 if profile=='road' else 2) and report['axle_count'] == 2
+        assert report['wheelbase_ldu'] == (DESIGNS[name]['wheelbase']*20 if profile=='road' else 107)
+        assert not report['wheel_space_candidates']
+        assert not report['unreviewed_wheels']
+    else:
+        assert report['coverage']['wheel_review']=='not_applicable'
+        assert all(report['family_parts'].values())
     assert report['physical_validity'] == 'not_proven'
     assert all(np.linalg.det(np.array(o.matrix.rows)) == pytest.approx(1) for o in model.iter_occurrences())
     # Wheel-pin and round lamp metadata is incomplete; the actual studded
     # structure must nevertheless be one connected group, with bonded seams.
     occurrences=list(model.iter_occurrences())
-    structural={i for i,o in enumerate(occurrences) if o.part_code not in {'6014b','6015','6141'}}
-    assert any(structural <= set(group) for group in geometry['optimistic_components'])
+    if profile!='motorcycle':  # Dedicated frame/fairing snap metadata is absent.
+        structural={i for i,o in enumerate(occurrences) if o.part_code not in {'6014b','6015','6141'}}
+        assert any(structural <= set(group) for group in geometry['optimistic_components'])
 
 
 @pytest.mark.parametrize('name', WHEEL_PACKS)
@@ -115,7 +122,9 @@ def test_no_wheels_is_not_a_successful_vehicle_review(official):
 def test_vehicle_palette_and_family_errors_are_explicit():
     with pytest.raises(ValueError, match='Unknown vehicle'):vehicle_plan('imaginary')
     with pytest.raises(ValueError, match='vehicle palette'):vehicle_plan('pickup','botanical-bookshop')
-    with pytest.raises(ValueError, match='scale/detail'):search_examples(family='vehicle',details=True)
+    with pytest.raises(ValueError, match='scale'):search_examples(family='vehicle',scale='microscale')
+    with pytest.raises(ValueError, match='Unknown vehicle detail'):detail_plan('imaginary')
+    with pytest.raises(ValueError, match='vehicle palette'):detail_plan('driver-cockpit','botanical-bookshop')
 
 
 def test_unknown_wheels_and_technic_parts_are_reported(official):
@@ -149,14 +158,78 @@ def test_saved_examples_are_reproducible_and_reports_match_current_revision(offi
     atlas=ROOT/'examples/vehicle-atlas'
     catalog=json.loads((atlas/'catalog.json').read_text())
     assert {row['key'] for row in catalog['examples']}==set(DESIGNS)
-    for name in DESIGNS:
-        folder=atlas/name
-        plan=vehicle_plan(name)
+    assert {row['key'] for row in catalog['details']}==set(DETAILS)
+    for name in [*DESIGNS,*DETAILS]:
+        is_detail=name in DETAILS
+        folder=atlas/'details'/name if is_detail else atlas/name
+        plan=detail_plan(name) if is_detail else vehicle_plan(name)
         assert json.loads((folder/'scene.plan.json').read_text())==plan
         text,_,ds=build_plan(plan,official)
         assert not errors(ds) and text.encode()==(folder/(name+'.mpd')).read_bytes()
         sha=hashlib.sha256(text.encode()).hexdigest()
-        for report in ['validation','vehicle-check','bom','bom-comparison','render-manifest']:
+        for report in ['validation','bom','bom-comparison','render-manifest','visual-review']+([] if is_detail else ['vehicle-check']):
             assert json.loads((folder/(report+'.json')).read_text())['source_sha256']==sha
     assert search_examples('pickup',family='vehicle')['total']==1
     assert search_examples(family='vehicle',limit=1)['truncated']
+    assert search_examples('cockpit',family='vehicle',details=True)['total']==2
+
+
+@pytest.mark.parametrize('name', DETAILS)
+def test_vehicle_fitting_interfaces_resolve_and_are_connected(official, name):
+    _,model,diagnostics=build_plan(detail_plan(name),official)
+    geometry=analyze_geometry(model,official,detail='full')
+    assert not errors(diagnostics+geometry['diagnostics'])
+    assert geometry['complete'] and geometry['contacts_checked']
+    assert geometry['optimistic_component_count']==(3 if name=='navigation-lights' else 1)
+    if name=='driver-cockpit':
+        refs={o.part_code for o in model.iter_occurrences()}
+        assert {'4079','3829c01','3069bp25'} <= refs
+    if name=='jet-engine-pod':
+        bounds=inspect_model(model,official).bounds
+        assert bounds.min.y==pytest.approx(-4)
+        assert bounds.max.y==pytest.approx(46)
+
+
+@pytest.mark.parametrize('name,part,delta,code', [
+    ('touring-motorcycle','85983.dat',[0,8,0],'vehicle.assembly_fit'),
+    ('touring-motorcycle','50861.dat',[20,0,0],'vehicle.motorcycle_wheel'),
+    ('courier-jet','87612.dat',[0,0,20],'vehicle.assembly_fit'),
+    ('courier-jet','30355.dat',[-20,0,0],'vehicle.family_symmetry'),
+    ('harbour-launch','2551.dat',None,'vehicle.family_part'),
+])
+def test_family_review_detects_missing_and_misaligned_dedicated_parts(official,name,part,delta,code):
+    plan=vehicle_plan(name)
+    for section in plan['sections']:
+        found=False
+        for step in section['steps']:
+            placement=next((p for p in step if p['ref']==part),None)
+            if placement:
+                if delta is None:step.remove(placement)
+                else:placement['at']=[a+b for a,b in zip(placement['at'],delta)]
+                found=True
+                break
+        if found:break
+    _,model,_=build_plan(plan,official)
+    report=review_vehicle(model,official,profile=DESIGNS[name]['profile'])
+    assert not report['checks_passed']
+    assert code in {d['code'] for d in report['diagnostics']}
+
+
+def test_cli_vehicle_details_and_profile_selection(official,tmp_path,monkeypatch):
+    from ldraw_tools import cli
+    monkeypatch.setattr(cli,'get_parts',lambda *a,**kw:official)
+    target=tmp_path/'cockpit.json'
+    args=cli.parser().parse_args(['vehicle','details','driver-cockpit','--output',str(target)])
+    result,status=cli.run(args)
+    assert status==0 and json.loads(target.read_text())==detail_plan('driver-cockpit')
+    assert result['recipe']['parts']==DETAILS['driver-cockpit']['parts']
+    with pytest.raises(ValueError,match='exists'):cli.run(args)
+    args.force=True
+    assert cli.run(args)[1]==0
+    text,_,_=build_plan(vehicle_plan('harbour-launch'),official)
+    boat=tmp_path/'boat.mpd';boat.write_text(text)
+    parsed=cli.parser().parse_args(['vehicle','check',str(boat),'--profile','watercraft'])
+    report,status=cli.run(parsed)
+    assert status==0 and report['profile']=='watercraft'
+    parsed.profile='road'
+    assert cli.run(parsed)[1]==1

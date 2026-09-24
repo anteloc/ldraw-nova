@@ -13,6 +13,8 @@ The supplied `offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides t
 ```sh
 ./ldraw-agent vehicle list
 ./ldraw-agent vehicle wheels touring
+./ldraw-agent vehicle details driver-cockpit --output output/cockpit.plan.json
+./ldraw-agent examples --family vehicle --details
 ./ldraw-agent vehicle plan pickup --palette desert-utility --output output/pickup.plan.json
 ./ldraw-agent examples --family vehicle --limit 3
 ./ldraw-agent vehicle check output/pickup.mpd --report output/pickup.vehicle.json
@@ -24,9 +26,15 @@ resolving parts before writing; use `--force` to replace either. Run normal
 `design palettes`; architectural detail recipes require architectural palettes.
 The building example search remains the default.
 
-`vehicle check` accepts `--section`, `--colour`, `--ground-y`, `--limit` and
-`--max-instances`. It checks the supported separate wheel/tyre pairs in the
-documented road frame. Diagnostics distinguish layout errors, unknown-wheel
+`vehicle details` lists six dedicated fitting recipes or exports a named recipe
+as a plan, using vehicle palettes and protecting existing files with `--force`.
+`examples --family vehicle --details` finds their built and rendered counterparts.
+
+`vehicle check` accepts `--profile road|motorcycle|watercraft|aircraft`, `--section`, `--colour`, `--ground-y`, `--limit` and
+`--max-instances`. The default road profile checks supported separate wheel/tyre
+pairs. Motorcycle checks use the dedicated frame and two centreline wheels;
+watercraft/aircraft profiles check their documented hull/cockpit or nose/wing/engine
+assemblies and mark road-wheel checks inapplicable. Diagnostics distinguish layout errors, unknown-wheel
 coverage and conservative wheel-space warnings. It does not replace assembly
 validation, material clearance inspection or visual review. Full usage and
 limitations are in the [vehicle guide](vehicles.md).

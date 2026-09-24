@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "author": "ldraw-astra vehicle detail recipes",
+  "sections": [
+    {
+      "name": "vehicle-pilot-cockpit-heritage-racing.ldr",
+      "description": "Moulded pilot seat, hinged control stick and printed instrument slope on a two-by-eight stud floor.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        },
+        "seat": {
+          "at": [
+            0,
+            -16,
+            40
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "floor",
+            "ref": "3034.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -8,
+              0
+            ],
+            "yaw": 90
+          },
+          {
+            "id": "seat",
+            "ref": "4079.dat",
+            "colour": "@colours.Reddish_Brown",
+            "at": [
+              0,
+              -16,
+              40
+            ]
+          }
+        ],
+        [
+          {
+            "id": "instruments",
+            "ref": "3039p34.dat",
+            "colour": "@colours.Black",
+            "at": [
+              0,
+              -32,
+              -50.0
+            ]
+          },
+          {
+            "id": "stick-base",
+            "ref": "4592.dat",
+            "colour": "@colours.Light_Bluish_Grey",
+            "at": [
+              -10.0,
+              -16,
+              -10.0
+            ]
+          },
+          {
+            "id": "control-stick",
+            "ref": "4593.dat",
+            "colour": "@colours.Black",
+            "at": [
+              -10.0,
+              -16,
+              -10.0
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}

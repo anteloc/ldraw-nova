@@ -31,16 +31,18 @@ The supplied resources are `../ldraw-lib/ldraw/` and `../ldraw-lib/models-annota
 
 Record a short design brief outside the assembly plan: subject/story, silhouette, dimensions, palette roles, primary focal feature, two supporting features, detail vocabulary, quiet surfaces, physical subassemblies and build order. State what will make this particular design attractive; do not equate part count with quality. For a building scene, separate the street/base, individual storeys, roofs, façade/window modules, interiors and landscaping. Allocate space and attachment surfaces before decoration. Keep a module checklist with local origin, envelope, anchors, dependencies and review status.
 
-For a vehicle, choose and inspect a compatible wheel package **before** fixing the body dimensions. Record wheel centres, track, wheelbase, front/rear overhangs, ground clearance, body width, cabin height and the bonnet/cab/deck or cab/load-bed silhouette. Use X for width, -Z for forward and Y=0 for the road. Separate running gear, bonded chassis, wheel wells, body, glazing/interior, roof and front/rear fascias. Reserve wheel space and actual attachments before skinning the body. Use ordinary wheel-pin plates and System construction; do not introduce Technic drivetrains or suspension. Boats/aircraft require their own hull/wing/landing-gear interfaces rather than the fixed road-wheel assumptions.
+For a vehicle, choose its family and inspect the defining parts **before** fixing the body dimensions: wheel package for road vehicles, frame/fairing for a motorcycle, hull for a boat, or nose/wing/engine interfaces for an aircraft. Record wheel centres, track, wheelbase, front/rear overhangs, ground clearance, body width, cabin height and the bonnet/cab/deck or cab/load-bed silhouette. Use X for width, -Z for forward and Y=0 for the road. Separate running gear, bonded chassis, wheel wells, body, glazing/interior, roof and front/rear fascias. Reserve wheel space and actual attachments before skinning the body. Use ordinary wheel-pin plates and System construction; do not introduce Technic drivetrains or suspension. Boats/aircraft require their own hull/wing/landing-gear interfaces rather than the fixed road-wheel assumptions.
 
 ```sh
 ./ldraw-agent vehicle list
 ./ldraw-agent vehicle wheels
+./ldraw-agent vehicle details
+./ldraw-agent examples --family vehicle --details
 ./ldraw-agent examples --family vehicle
 ./ldraw-agent vehicle plan grand-tourer --output output/vehicle-start.plan.json
 ```
 
-Adapt a relevant starting point to the requested subject and scale. Do not treat three templates as the limits of vehicle design, or call a colour swap a new body design. Establish the silhouette with wheels and main masses, then refine curves, glazing and functional details. A display cabin does not establish minifigure fit.
+Adapt a relevant starting point to the requested subject and scale. Do not treat the supplied examples as the limits of vehicle design, or call a colour swap a new body design. Establish the silhouette with wheels and main masses, then refine curves, glazing and functional details. Choose actual seats, steering wheels, instruments, glazing, cargo fittings and other dedicated vehicle parts before building substitutes from blocks. Reserve their measured envelopes and attachment surfaces; use `vehicle details NAME` for reusable fittings and inspect all replacements. A display cabin does not establish minifigure fit.
 
 For a part's intended role or visual character, start with Jev's ranked candidates:
 
@@ -119,7 +121,7 @@ Use one descriptive basename consistently. `build` writes only after selected as
 
 Work locally first: test one window/hinge/roof detail, then its containing module, then the full scene. A checked module can still collide with its neighbour after assembly.
 
-For a road vehicle, test a wheel pair and chassis first, then the fenders, cab and fascias. Run `vehicle check MODEL.mpd --report output/vehicle-check.json` alongside normal validation. This checks supported separate tyre/rim pairs, ground contact, transverse axes, axle symmetry and conservative wheel-space candidates; read its explicit coverage. Curved arches and wheel-pin retention still need inspection. Render `--views home front back right top bottom` and a roof-off cabin when interiors matter. Revise stance, bonnet/cabin/tail proportions, roof thickness, shoulder lines, surface seams and front/rear identity after opening the images. Do not apply building-specific façade or entrance review criteria to vehicles.
+Select `vehicle check --profile road|motorcycle|watercraft|aircraft` for the family. Non-road profiles check their documented dedicated assemblies and never imply successful car-wheel checks, buoyancy or flight. For a road vehicle, test a wheel pair and chassis first, then the fenders, cab and fascias. Run `vehicle check MODEL.mpd --report output/vehicle-check.json` alongside normal validation. This checks supported separate tyre/rim pairs, ground contact, transverse axes, axle symmetry and conservative wheel-space candidates; read its explicit coverage. Curved arches and wheel-pin retention still need inspection. Render `--views home front back right top bottom` and a roof-off cabin when interiors matter. Revise stance, bonnet/cabin/tail proportions, roof thickness, shoulder lines, surface seams and front/rear identity after opening the images. Do not apply building-specific façade or entrance review criteria to vehicles.
 
 ```sh
 ./ldraw-agent inspect output/my-model.mpd --section my-floor.ldr --colour 19 \

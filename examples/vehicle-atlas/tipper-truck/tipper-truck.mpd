@@ -1,0 +1,276 @@
+0 FILE tipper-truck.ldr
+0 Site tipper truck; six-stud System body, front -Z, ground Y=0
+0 Name: tipper-truck.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // front-axle: axle-touring.ldr
+1 0 0 0 -140 1 0 0 0 1 0 0 0 1 axle-touring.ldr
+0 // rear-axle: axle-touring.ldr
+1 0 0 0 140 1 0 0 0 1 0 0 0 1 axle-touring.ldr
+0 // chassis: tipper-truck-chassis.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 tipper-truck-chassis.ldr
+0 // body: tipper-truck-body.ldr
+1 484 0 0 0 1 0 0 0 1 0 0 0 1 tipper-truck-body.ldr
+0 // front-fascia: tipper-truck-front.ldr
+1 484 0 -38 -230 1 0 0 0 1 0 0 0 1 tipper-truck-front.ldr
+0 // rear-fascia: tipper-truck-rear.ldr
+1 484 0 -38 230 -1 0 0 0 1 0 0 0 -1 tipper-truck-rear.ldr
+0 // p0007: 69729.dat
+1 71 0 -78 -220 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0008: 69729.dat
+1 71 0 -78 220 1 0 0 0 1 0 0 0 1 69729.dat
+0 // cabin: tipper-truck-cabin.ldr
+1 484 0 0 0 1 0 0 0 1 0 0 0 1 tipper-truck-cabin.ldr
+0 NOFILE
+0 FILE axle-touring.ldr
+0 Fixed wheel-pin axle; separate rims and tyres; ground Y=0
+0 Name: axle-touring.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // holder: 6157.dat
+1 0 0 -30 0 1 0 0 0 1 0 0 0 1 6157.dat
+0 // left-rim: 6014b.dat
+1 71 -40 -25 0 0 0 1 0 1 0 -1 0 0 6014b.dat
+0 // left-tyre: 6015.dat
+1 256 -46 -25 0 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // right-rim: 6014b.dat
+1 71 40 -25 0 0 0 -1 0 1 0 1 0 0 6014b.dat
+0 // right-tyre: 6015.dat
+1 256 46 -25 0 0 0 -1 0 1 0 1 0 0 6015.dat
+0 NOFILE
+0 FILE tipper-truck-chassis.ldr
+0 Bonded narrow spine; reserved wheel wells; body deck at h=38
+0 Name: tipper-truck-chassis.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 3034.dat
+1 0 0 -30 -140 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0002: 3034.dat
+1 0 0 -30 20 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0003: 3795.dat
+1 0 0 -30 160 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // p0004: 3022.dat
+1 0 0 -38 -200 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // p0005: 3034.dat
+1 0 0 -38 -100 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0006: 3034.dat
+1 0 0 -38 60 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // p0007: 3020.dat
+1 0 0 -38 180 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // p0008: 3795.dat
+1 0 0 -46 -200 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0009: 3795.dat
+1 0 0 -46 -80 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0010: 3795.dat
+1 0 0 -46 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0011: 3795.dat
+1 0 0 -46 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0012: 3795.dat
+1 0 0 -46 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0013: 3795.dat
+1 0 0 -46 80 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0014: 3795.dat
+1 0 0 -46 200 1 0 0 0 1 0 0 0 1 3795.dat
+0 NOFILE
+0 FILE tipper-truck-body.ldr
+0 Shaped body with four reserved wheel wells and a continuous shoulder line
+0 Name: tipper-truck-body.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 98282.dat
+1 484 -20 -62 -140 0 0 1 0 1 0 -1 0 0 98282.dat
+0 // p0002: 98282.dat
+1 484 20 -62 -140 0 0 -1 0 1 0 1 0 0 98282.dat
+0 // p0003: 98282.dat
+1 484 -20 -62 140 0 0 1 0 1 0 -1 0 0 98282.dat
+0 // p0004: 98282.dat
+1 484 20 -62 140 0 0 -1 0 1 0 1 0 0 98282.dat
+0 // p0005: 3795.dat
+1 484 0 -54 -200 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0006: 3795.dat
+1 484 0 -62 -200 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0007: 3795.dat
+1 484 0 -54 -80 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0008: 3795.dat
+1 484 0 -54 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0009: 3795.dat
+1 484 0 -54 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0010: 3795.dat
+1 484 0 -54 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0011: 3795.dat
+1 484 0 -54 80 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0012: 3795.dat
+1 484 0 -62 -80 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0013: 3795.dat
+1 484 0 -62 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0014: 3795.dat
+1 484 0 -62 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0015: 3795.dat
+1 484 0 -62 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0016: 3795.dat
+1 484 0 -62 80 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0017: 3795.dat
+1 484 0 -54 200 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0018: 3795.dat
+1 484 0 -62 200 1 0 0 0 1 0 0 0 1 3795.dat
+0 // p0019: 3020.dat
+1 484 0 -70 -200 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0020: 3020.dat
+1 484 0 -70 -160 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0021: 3020.dat
+1 484 0 -70 -120 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0022: 3020.dat
+1 484 0 -70 -80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0023: 3020.dat
+1 484 0 -70 -40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0024: 3020.dat
+1 484 0 -70 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0025: 3020.dat
+1 484 0 -70 40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0026: 3020.dat
+1 484 0 -70 80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0027: 3020.dat
+1 484 0 -70 120 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0028: 3020.dat
+1 484 0 -70 160 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0029: 3020.dat
+1 484 0 -70 200 1 0 0 0 1 0 0 0 1 3020.dat
+0 // p0030: 3460.dat
+1 484 -50 -70 -140 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0031: 3460.dat
+1 484 -50 -70 20 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0032: 3666.dat
+1 484 -50 -70 160 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // p0033: 3460.dat
+1 484 50 -70 -140 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0034: 3460.dat
+1 484 50 -70 20 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // p0035: 3666.dat
+1 484 50 -70 160 0 0 1 0 1 0 -1 0 0 3666.dat
+0 NOFILE
+0 FILE tipper-truck-front.ldr
+0 Stud-mounted lamps and grille; reserve the projecting front envelope
+0 Name: tipper-truck-front.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 4070.dat
+1 484 -50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0002: 6141.dat
+1 47 -50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0003: 4070.dat
+1 484 -30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0004: 4070.dat
+1 484 -10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0005: 4070.dat
+1 484 10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0006: 4070.dat
+1 484 30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0007: 4070.dat
+1 484 50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0008: 6141.dat
+1 47 50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0009: 2412b.dat
+1 0 -20 -14 -14 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // p0010: 2412b.dat
+1 0 20 -14 -14 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // p0011: 3666.dat
+1 71 0 -32 0 1 0 0 0 1 0 0 0 1 3666.dat
+0 NOFILE
+0 FILE tipper-truck-rear.ldr
+0 Stud-mounted lamps and grille; reserve the projecting front envelope
+0 Name: tipper-truck-rear.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 4070.dat
+1 484 -50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0002: 6141.dat
+1 36 -50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0003: 4070.dat
+1 484 -30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0004: 4070.dat
+1 484 -10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0005: 4070.dat
+1 484 10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0006: 4070.dat
+1 484 30 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0007: 4070.dat
+1 484 50 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0008: 6141.dat
+1 36 50 -14 -14 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // p0009: 3069b.dat
+1 484 -20 -14 -14 1 0 0 0 0 -1 0 1 0 3069b.dat
+0 // p0010: 3069b.dat
+1 484 20 -14 -14 1 0 0 0 0 -1 0 1 0 3069b.dat
+0 // p0011: 3666.dat
+1 71 0 -32 0 1 0 0 0 1 0 0 0 1 3666.dat
+0 NOFILE
+0 FILE tipper-truck-cabin.ldr
+0 Glazing, supported roof and readable passenger/cargo volumes
+0 Name: tipper-truck-cabin.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 4176.dat
+1 10375 0 -118 -130 1 0 0 0 1 0 0 0 1 4176.dat
+0 // p0002: 3005.dat
+1 19 -50 -94 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // p0003: 3005.dat
+1 19 -50 -118 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // p0004: vehicle-wing-mirror-desert-utility.ldr
+1 484 -50 -70 -110 0 0 1 0 1 0 -1 0 0 vehicle-wing-mirror-desert-utility.ldr
+0 // p0005: 3005.dat
+1 19 50 -94 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // p0006: 3005.dat
+1 19 50 -118 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // p0007: vehicle-wing-mirror-desert-utility.ldr
+1 484 50 -70 -110 0 0 -1 0 1 0 1 0 0 vehicle-wing-mirror-desert-utility.ldr
+0 // driver-seat: 4079.dat
+1 70 -20 -78 -80 1 0 0 0 1 0 0 0 1 4079.dat
+0 // passenger-seat: 4079.dat
+1 70 20 -78 -80 1 0 0 0 1 0 0 0 1 4079.dat
+0 // p0010: 3829c01.dat
+1 0 -20 -78 -110 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 // p0011: 3069bp25.dat
+1 0 20 -78 -110 1 0 0 0 1 0 0 0 1 3069bp25.dat
+0 // p0012: 3020.dat
+1 19 -40 -126 -100 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // p0013: 3020.dat
+1 19 0 -126 -100 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // p0014: 3020.dat
+1 19 40 -126 -100 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // p0015: 3666.dat
+1 19 0 -126 -50 1 0 0 0 1 0 0 0 1 3666.dat
+0 // p0016: 69729.dat
+1 19 0 -134 -120 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0017: 69729.dat
+1 19 0 -134 -80 1 0 0 0 1 0 0 0 1 69729.dat
+0 // p0018: 2431.dat
+1 19 0 -134 -50 1 0 0 0 1 0 0 0 1 2431.dat
+0 // p0019: 3039.dat
+1 484 -40 -94 -170 1 0 0 0 1 0 0 0 1 3039.dat
+0 // p0020: 3039.dat
+1 484 0 -94 -170 1 0 0 0 1 0 0 0 1 3039.dat
+0 // p0021: 3039.dat
+1 484 40 -94 -170 1 0 0 0 1 0 0 0 1 3039.dat
+0 // p0022: 3009.dat
+1 484 0 -94 -30 1 0 0 0 1 0 0 0 1 3009.dat
+0 // p0023: 3009.dat
+1 484 0 -118 -30 1 0 0 0 1 0 0 0 1 3009.dat
+0 // tipper-bucket: 4080.dat
+1 484 0 -78 80 1 0 0 0 1 0 0 0 1 4080.dat
+0 // p0025: 6141.dat
+1 57 -50 -134 -50 1 0 0 0 1 0 0 0 1 6141.dat
+0 // p0026: 6141.dat
+1 57 50 -134 -50 1 0 0 0 1 0 0 0 1 6141.dat
+0 NOFILE
+0 FILE vehicle-wing-mirror-desert-utility.ldr
+0 Compact side mirror on a headlight-brick mount, with a real sideways tile attachment.
+0 Name: vehicle-wing-mirror-desert-utility.ldr
+0 Author: ldraw-astra vehicle examples
+0 !LDRAW_ORG Model
+0 // p0001: 3024.dat
+1 484 0 -8 0 1 0 0 0 1 0 0 0 1 3024.dat
+0 // p0002: 4070.dat
+1 484 0 -32 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // p0003: 3070b.dat
+1 71 0 -22 -14 1 0 0 0 0 -1 0 1 0 3070b.dat
+0 NOFILE

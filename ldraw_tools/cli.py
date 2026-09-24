@@ -58,24 +58,30 @@ def parser():
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
-    c = commands.add_parser("examples", help="Find relevant generated building or detail examples")
+    c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
     c.add_argument("--family", choices=["building", "vehicle"], default="building")
-    c = commands.add_parser("vehicle", help="System vehicle designs, measured wheel packs and road-vehicle review")
+    c = commands.add_parser("vehicle", help="System road, motorcycle, boat and aircraft designs, dedicated fittings and review")
     vehicle_commands = c.add_subparsers(dest="vehicle_command", required=True)
     vehicle_commands.add_parser("list", help="List editable vehicle starting points")
     v = vehicle_commands.add_parser("wheels", help="Inspect measured, matched wheel packs")
     v.add_argument("name", nargs="?")
+    v = vehicle_commands.add_parser("details", help="List or export dedicated vehicle fitting recipes")
+    v.add_argument("name", nargs="?")
+    v.add_argument("--palette", default="heritage-racing")
+    v.add_argument("--output", help="Write an editable detail JSON plan")
+    v.add_argument("--force", action="store_true")
     v = vehicle_commands.add_parser("plan", help="Export an editable vehicle plan and its design brief")
     v.add_argument("name")
     v.add_argument("--palette", help="Vehicle palette (default depends on design)")
     v.add_argument("--output", required=True)
     v.add_argument("--force", action="store_true")
-    v = vehicle_commands.add_parser("check", help="Check fixed-axle road vehicles: -Z front, X width, Y=0 ground")
+    v = vehicle_commands.add_parser("check", help="Review supported vehicle interfaces in a selected family profile")
     v.add_argument("file")
+    v.add_argument("--profile", choices=["road", "motorcycle", "watercraft", "aircraft"], default="road")
     v.add_argument("--ground-y", type=float, default=0)
     v.add_argument("--report")
     v.add_argument("--limit", type=positive, default=100)
@@ -220,6 +226,21 @@ def run(args):
             return DESIGNS, 0
         if args.vehicle_command == "wheels":
             return wheel_report(parts, args.name), 0
+        if args.vehicle_command == "details":
+            from .vehicle_details import DETAILS, detail_plan
+            if not args.name:
+                if args.output:raise ValueError('Choose a vehicle detail name to export')
+                return DETAILS, 0
+            plan = detail_plan(args.name, args.palette)
+            _, _, diagnostics = build_plan(plan, parts)
+            if any(d['severity']=='error' for d in diagnostics):
+                return dict(checks_passed=False, written=False, diagnostics=diagnostics), 1
+            if args.output:
+                target = Path(args.output)
+                if target.suffix.casefold() != '.json':raise ValueError('Plan output must end in .json')
+                if target.exists() and not args.force:raise ValueError('Detail plan exists; use --force')
+                atomic_write(target, dumps(plan)+'\n')
+            return dict(recipe=DETAILS[args.name], plan=plan, output=args.output, diagnostics=diagnostics), 0
         if args.vehicle_command == "plan":
             target = Path(args.output)
             if target.suffix.casefold() != '.json':
@@ -242,7 +263,7 @@ def run(args):
                                            colour=args.colour, instance_limit=args.max_instances)
         if model is None or any(d['severity']=='error' for d in diagnostics):
             return dict(checks_passed=False, diagnostics=diagnostics), 1
-        report = review_vehicle(model, parts, ground_y=args.ground_y, limit=args.limit,
+        report = review_vehicle(model, parts, profile=args.profile, ground_y=args.ground_y, limit=args.limit,
                                 instance_limit=args.max_instances)
         report['diagnostics'] = diagnostics+report['diagnostics']
         report.update(file=args.file, section=args.section)

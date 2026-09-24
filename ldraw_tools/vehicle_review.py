@@ -1,4 +1,4 @@
-"""Bounded review evidence for symmetric, fixed-axle System road vehicles."""
+"""Bounded, explicit review profiles for the taught System vehicle interfaces."""
 from __future__ import annotations
 
 import math
@@ -11,7 +11,73 @@ from .geometry import profiles, body_box
 from .vehicles import WHEEL_PACKS
 
 
-def review_vehicle(model, parts, *, ground_y=0.0, limit=100, instance_limit=100000):
+PROFILES = ('road', 'motorcycle', 'watercraft', 'aircraft')
+
+
+def family_evidence(inspection, profile, diagnostics):
+    """Check known dedicated assemblies; do not infer physical capability."""
+    items = inspection.occurrences
+    def find(code):
+        return [i for i in items if i.occurrence.part_code.casefold() == code]
+    def matched(source, target, offset=(0,0,0)):
+        origins = find(source)
+        for item in origins:
+            o = item.occurrence
+            matrix = np.asarray(o.matrix.rows)
+            at = np.array(jsonable(o.position)) + matrix @ np.array(offset)
+            matches = [i for i in find(target)
+                       if np.allclose(jsonable(i.occurrence.position), at, atol=.05, rtol=0)
+                       and np.allclose(i.occurrence.matrix.rows, matrix, atol=1e-5)]
+            if len(matches) != 1:
+                diagnostics.append(issue('vehicle.assembly_fit', 'Expected one matching dedicated part at the measured interface.',
+                                         instance=item.index, ref=source+'.dat', mate=target+'.dat', expected_position=at.tolist()))
+        return origins
+    def symmetric_pair(first, second):
+        left, right = find(first), find(second)
+        if first == second:
+            left = [i for i in left if i.occurrence.position.x < 0]
+            right = [i for i in right if i.occurrence.position.x > 0]
+        if len(left) != 1 or len(right) != 1:
+            diagnostics.append(issue('vehicle.family_pair', 'Expected one supported part on each side.', refs=[first,second]))
+            return
+        a,b = [np.array(jsonable(i.occurrence.position)) for i in (left[0],right[0])]
+        if a[0] >= 0 or b[0] <= 0 or not np.allclose(a*[-1,1,1], b, atol=.05, rtol=0):
+            diagnostics.append(issue('vehicle.family_symmetry', 'Dedicated left/right parts must share height and longitudinal station about X=0.', refs=[first,second]))
+    if profile == 'motorcycle':
+        required = {'frame':'50859b', 'fairing':'85983'}
+        matched('85983','50859b',(0,41.5,-60))
+        for frame in find('50859b'):
+            o = frame.occurrence
+            for z in [-43.5,63.5]:
+                at = np.array(jsonable(o.position)) + np.array(o.matrix.rows) @ [0,-3.7,z]
+                if not any(np.allclose(jsonable(w.occurrence.position),at,atol=.05,rtol=0) for w in find('50862')):
+                    diagnostics.append(issue('vehicle.motorcycle_axle', 'Wheel is missing from a measured frame axle.', instance=frame.index, expected_position=at.tolist()))
+    elif profile == 'watercraft':
+        required = {'hull':'2551', 'seat':'4079', 'helm':'3829c01'}
+    else:
+        required = {'nose':'87613', 'glazing':'87612', 'nose_floor':'87611',
+                    'rear':'87616', 'port_wing':'30355', 'starboard_wing':'30356',
+                    'engine_shell':'4868b', 'engine_core':'4869', 'pilot_seat':'4079'}
+        matched('87613','87612')
+        matched('87613','87611',(0,96,-20))
+        matched('4868b','4869')
+        symmetric_pair('30355','30356')
+        symmetric_pair('4868b','4868b')
+        for code, expected in [('30355',90),('30356',-90)]:
+            from .builder import rotation
+            for item in find(code):
+                if not np.allclose(item.occurrence.matrix.rows, rotation('y',expected).rows, atol=1e-5):
+                    diagnostics.append(issue('vehicle.wing_orientation', 'Supported swept wing must face across X with its broad root at the fuselage.', instance=item.index))
+    evidence = {role: [i.index for i in find(code)] for role,code in required.items()}
+    for role, indices in evidence.items():
+        if not indices:
+            diagnostics.append(issue('vehicle.family_part', 'Required part of this bounded review profile is missing; other designs need their own interface review.', role=role, ref=required[role]+'.dat'))
+    return evidence
+
+
+def review_vehicle(model, parts, *, profile='road', ground_y=0.0, limit=100, instance_limit=100000):
+    if profile not in PROFILES:
+        raise ValueError('Unknown vehicle review profile: '+str(profile))
     if not math.isfinite(ground_y):
         raise ValueError('Ground Y must be finite')
     if limit < 1 or instance_limit < 1:
@@ -26,7 +92,8 @@ def review_vehicle(model, parts, *, ground_y=0.0, limit=100, instance_limit=1000
     diagnostics = [d.to_dict() for d in inspection.diagnostics]
     if not inspection.complete:
         diagnostics.append(issue('vehicle.incomplete', 'Part geometry is incomplete.'))
-    tyre_packs = {p['tyre']: p for p in WHEEL_PACKS.values()}
+    tyre_packs = ({'50861':dict(rim='50862',tyre='50861',holder='50859b',tyre_offset=0)}
+                  if profile=='motorcycle' else {p['tyre']: p for p in WHEEL_PACKS.values()})
     wheels, unknown, intrusions = [], [], []
     regular = profiles()
     tolerance = .05  # Rounding/tessellation allowance in LDU, not mechanical clearance.
@@ -34,12 +101,14 @@ def review_vehicle(model, parts, *, ground_y=0.0, limit=100, instance_limit=1000
         o = item.occurrence
         code = o.part_code.casefold()
         description = parts.by_code.get(code, '')
-        if description.lstrip('~=').strip().casefold().startswith('technic '):
+        if 'technic' in description.casefold():
             diagnostics.append(issue('vehicle.technic_part', 'Technic part outside this System vehicle workflow.',
                                      instance=item.index, ref=o.reference))
+        if profile in {'watercraft','aircraft'}:
+            continue
         if code not in tyre_packs:
             if 'tyre' in description.casefold() or description.casefold().startswith('wheel '):
-                if code not in {p['rim'] for p in WHEEL_PACKS.values()}:
+                if code not in {p['rim'] for p in tyre_packs.values()}:
                     unknown.append(dict(instance=item.index, ref=o.reference))
             continue
         matrix = np.asarray(o.matrix.rows)
@@ -78,8 +147,8 @@ def review_vehicle(model, parts, *, ground_y=0.0, limit=100, instance_limit=1000
             co = other.occurrence
             if co.part_code.casefold() in {pack['tyre'], pack['rim'], pack['holder']}:
                 continue
-            profile = regular.get(co.part_code.casefold())
-            box = body_box(co, profile) if profile else None
+            body_profile = regular.get(co.part_code.casefold())
+            box = body_box(co, body_profile) if body_profile else None
             if box is None:
                 continue
             if min(box[1,0], centre[0]+width/2)-max(box[0,0], centre[0]-width/2) <= tolerance:
@@ -89,6 +158,18 @@ def review_vehicle(model, parts, *, ground_y=0.0, limit=100, instance_limit=1000
             if distance < radius-tolerance:
                 intrusions.append(dict(wheel=item.index, body=other.index, ref=co.reference,
                                        radial_intrusion_ldu=radius-distance))
+    evidence = family_evidence(inspection, profile, diagnostics) if profile!='road' else {}
+    if profile in {'watercraft','aircraft'}:
+        return dict(profile=profile, checks_passed=not any(d['severity']=='error' for d in diagnostics),
+                    physical_validity='not_proven', diagnostics=diagnostics,
+                    family_parts={k:v[:limit] for k,v in evidence.items()},
+                    truncated=any(len(v)>limit for v in evidence.values()),
+                    coverage=dict(geometry_complete=inspection.complete, occurrences=len(occurrences),
+                                  wheel_review='not_applicable',
+                                  interfaces='Known atlas hull/cockpit inventory' if profile=='watercraft' else 'Known atlas nose/glazing/core transforms and symmetric wing/engine positions'),
+                    limitations=['Profile covers the named atlas part families, not every boat or aircraft.',
+                                 'Run assembly geometry/contact checks and open renders; part presence and alignment alone do not prove attachment or clearance.',
+                                 'No buoyancy, seaworthiness, flight, balance, landing-gear, strength, minifigure fit or retail colour-availability claim.'])
     if not wheels:
         diagnostics.append(issue('vehicle.no_supported_wheels', 'No supported transverse tyres found; use vehicle wheels.'))
     if unknown:
@@ -107,6 +188,10 @@ def review_vehicle(model, parts, *, ground_y=0.0, limit=100, instance_limit=1000
     for a in axles:
         pair = a.pop('wheels')
         a['instances'] = [w['instance'] for w in pair]
+        if profile == 'motorcycle':
+            if len(pair)!=1 or abs(pair[0]['centre'][0])>tolerance:
+                diagnostics.append(issue('vehicle.motorcycle_wheel', 'Expected one centreline wheel at each motorcycle station.', z_ldu=a['z_ldu']))
+            continue
         if len(pair) != 2:
             diagnostics.append(issue('vehicle.axle_pair', 'Expected a left/right wheel pair at this axle station.',
                                      z_ldu=a['z_ldu'], instances=a['instances']))
@@ -121,12 +206,15 @@ def review_vehicle(model, parts, *, ground_y=0.0, limit=100, instance_limit=1000
                                      instances=a['instances']))
     if wheels and len(axles) < 2:
         diagnostics.append(issue('vehicle.axle_count', 'Whole road-vehicle review expects at least two axle stations.'))
+    if profile=='motorcycle' and len(wheels)!=2:
+        diagnostics.append(issue('vehicle.motorcycle_count', 'Supported motorcycle frame expects exactly two wheels.'))
     wheel_indices = {w['instance'] for w in wheels}
     for item in inspection.occurrences:
         if item.index not in wheel_indices and item.bounds and item.bounds.max.y > ground_y+tolerance:
             diagnostics.append(issue('vehicle.below_road', 'Non-tyre geometry extends below the road plane.',
                                      instance=item.index, ref=item.occurrence.reference))
-    return dict(checks_passed=not any(d['severity']=='error' for d in diagnostics),
+    return dict(profile=profile, checks_passed=not any(d['severity']=='error' for d in diagnostics),
+                family_parts={k:v[:limit] for k,v in evidence.items()},
                 physical_validity='not_proven', ground_y=ground_y, diagnostics=diagnostics,
                 wheel_count=len(wheels), axle_count=len(axles),
                 wheelbase_ldu=axles[-1]['z_ldu']-axles[0]['z_ldu'] if len(axles)>1 else None,
@@ -136,7 +224,7 @@ def review_vehicle(model, parts, *, ground_y=0.0, limit=100, instance_limit=1000
                 coverage=dict(geometry_complete=inspection.complete, occurrences=len(occurrences),
                               supported_tyres=sorted(tyre_packs),
                               clearance='Circular wheel envelope versus upright curated rectangular bodies only'),
-                limitations=['Symmetric road vehicles in the documented frame only; no steering, suspension, dual wheels or spare-wheel classification.',
+                limitations=['Symmetric road vehicles or the supported two-wheel motorcycle frame in the documented frame only; no steering, suspension, dual wheels or spare-wheel classification.',
                              'Curved fenders, slopes and SNOT bodywork still require material/visual clearance review.',
                              'Rim alignment does not establish wheel-pin retention, clutch, strength or physical rolling freedom.',
                              'No aesthetic score or part/colour availability claim; use assembly validation and opened renders too.'])
