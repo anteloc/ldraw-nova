@@ -1,75 +1,70 @@
 # Vehicle atlas visual and construction review
 
-Reviewed 2026-09-23. Opened **home, front, back, right, top and bottom** PNGs for
-all three final models. Each model's `visual-review.json` records the exact MPD
-hash and the viewed files. This is an image review, not an automated beauty score
-or physical assembly test.
+Reviewed 2026-09-24. Opened all six views (home, front, back, right, top and
+bottom) for seven complete vehicles and six fitting recipes, including six-view
+contact sheets of the final images. Each `visual-review.json` identifies the
+exact MPD hash. This is image and digital assembly review, not a physical build.
 
 | Model | Physical placements | Visual focus |
 |---|---:|---|
-| Grand tourer | 97 | Deep green long bonnet, short rounded tan roof, inset dark glazing and quiet rear deck |
-| Delivery van | 112 | Raked six-wide cab, pale cargo body over a restrained blue belt, visible seats and steering |
-| Workshop pickup | 114 | Separate pale cab roof, long open bed, dark capped rails and wood-colour floor |
+| Grand tourer | 97 | Long green bonnet, short rounded tan roof and inset glazing |
+| Delivery van | 122 | Pale cargo volume, blue belt, actual seats/controls and compact mirrors |
+| Workshop pickup | 129 | Separate cab and capped bed, real handled cargo chest on its pallet |
+| Site tipper truck | 113 | Forward cab, warning lamps and a purpose-made open tipper bucket |
+| Touring motorcycle | 8 | Vintage fairing, actual frame/handlebars, spoked wheels and luggage rack |
+| Harbour launch | 12 | Moulded hull, glazed helm, seat, lights and a visible life ring |
+| Courier jet | 46 | Matched streamlined nose, swept wings, closed windowed cabin, engines and T-tail |
 
-## Problems found and revisions made
+## Revisions made after inspection
 
-The first tourer render had an overlong flat roof with large eaves, a sharp step
-behind the curved bonnet and exposed stud rows interrupting the shoulders.
-Shortened the roof and glazing arrangement, added double-curved roof strips,
-raised the rear bonnet surface to meet the curves, and tiled the shoulders.
-The true side view then revealed an open slot under the curved roof; a plate
-at the measured raised underside socket plane fills and supports that space.
+Replaced the van and pickup's brick-built seats with 4079 seats and provided
+real steering controls, a printed dashboard and supported mirrors. Deepened
+the cab by one stud for the seat backs, moved the cargo boundaries and replaced
+short roof strips with longitudinal plates. The latter change removed a floating
+middle roof group found during connection review.
 
-The first tourer and van previews also showed a busy grid of small roof/deck
-tiles and conspicuous studded silver bumper caps. Replaced them with wider/longer
-tiles and continuous caps. The pickup uses the same surface treatment, with
-long dark tiles defining the bed rim and a deliberately quiet load floor.
-The van and pickup have brick-built seat cushions/backs and steering controls;
-their side apertures remain open as a simple town-model construction.
+The pickup chest occupies exposed stud space; the corresponding floor tiles
+were removed. Its three-wide bottom socket grid required a half-stud centre offset
+on the even-width truck bed. The tipper uses 4080 directly on the deck, with a
+forward cab and a fixed transport pose. No tipping motion is asserted.
 
-The first underbody construction used identical runs of short plates. A later
-connection review showed that whole body sections remained disconnected despite
-the plausible side view. Replaced the spine with long two-wide plates in
-staggered layers. All non-wheel/non-lamp structure now belongs to one evidenced
-connection group in each model. The regression suite explicitly requires this.
+The motorcycle follows the actual fairing/frame and rim/tyre shortcut offsets.
+Its symmetric wheel geometry uses proper rotations, avoiding the reflected
+matrix in a legacy shortcut. The launch's ring sits clear of the seat back and
+hull walls. Its hull floor is the datum, not an inferred waterline.
 
-The wheel/rim research also exposed the pinned library's wrong inferred rim axis
-for 6014a/b. The narrow query adapter correction restores rim/tyre contacts without
-changing part geometry or adding fictitious connectors. The ordinary headlight
-brick's recessed side stud was measured at Z=-6; the fascia plate face is at
-Z=-14 so its 8-LDU underside meets that actual plane.
+The first aircraft had undersized wings, no horizontal stabilizers and a boxy
+cabin roof. Replaced these with larger matched swept wings, a supported T-tail
+and shaped roof parts. Side views exposed openings at the moulded nose/rear
+interfaces; filled those pockets at their actual support heights. A long lower
+plate and a support brick bond the rear shell into the fuselage. Correcting the
+3039 roof slopes' off-centre origins joined their sockets to the window tops.
+The final side view has a continuous fuselage profile.
 
-## Final observations
+The detail previews expose real fitting geometry: the seat back projection,
+steering stand, instrument slope, upright control stick, recessed side-stud mirror,
+chest lattice, lamp crossbar and engine shell/core. These are compact building
+lessons. Minifigure knee room, hand reach, headroom and access remain untested.
 
-The three silhouettes remain distinct in side view. The coupe has a short low
-glazed volume, the van has a continuous cargo roof, and the pickup has an open
-bed below the cab. The top views show coherent body colours and deliberate large
-surfaces. Front/rear views show symmetric white headlights, red tail lamps,
-matching wheels and an organized grille/bumper treatment. Underbody views show
-the narrow spine and reserved wheel areas. No obvious floating body sections or
-body penetration through the wheels was visible in these views.
+## Evidence and limits
 
-These are compact construction lessons. Broad side/rear surfaces are deliberately
-quiet; specific commissions should add their own vehicle identity and details.
-The pickup's rear cab studs remain available for a later supported cab extension.
-No cargo, driver, opening doors, articulated steering or suspension is claimed.
+Every example passes assembly checks; complete vehicles pass their selected
+family profile. Python and LeoCAD BOMs match by reference, colour and quantity.
+Sources, reports and render manifests share hashes. Road/motorcycle checks find
+the expected tyres at the declared ground plane and no curated rectangular
+body intrusions into the tested wheel space. Boat/aircraft checks explicitly omit
+road-wheel tests and do not infer buoyancy or flight.
 
-## Evidence and remaining limits
+Road cars/van/pickup retain nine optimistic connection groups: the full studded
+structure, four rim/tyre pairs and four lamps. The tipper adds two lamp groups.
+The launch has one structural group plus three round lamps. The aircraft is one
+evidenced group. All structural parts in those models must share a group in the
+regression tests. Motorcycle frame/fairing/wheel metadata does not establish its
+snap connections: seven groups remain, with inspected official shortcut offsets
+providing placement evidence. Fitting recipes form one group except the two
+round navigation lamps, whose socket metadata is incomplete.
 
-All three final sources pass assembly validation and the vehicle layout check.
-The checks find four road-contact tyres, paired transverse axles, correct supported
-rim/tyre offsets, no below-road geometry and no curated rectangular body entering
-the tested wheel envelopes. Python and LeoCAD BOMs agree by reference, colour and
-quantity. The reports and render manifests carry the same SHA-256 as each MPD.
-
-Each geometry report retains **nine optimistic connection groups**: one complete
-studded body/chassis group, four rim/tyre pairs and four round lamp plates. The
-missing wheel-pin and hollow round-plate contacts are not suppressed. Wheel
-positions follow the inspected wheel-pin geometry and official rim/tyre shortcut;
-lamp sockets meet the inspected headlight-brick side stud. Those observations
-do not prove retention, clutch strength or free rolling.
-
-Curved fenders, slopes, glazing and SNOT interfaces still have general material
-collision limits. No physical build, full solid-intersection analysis, friction
-test, minifigure fit test or retail colour inventory check was performed.
-`physical_validity: not_proven` remains the correct status.
+No physical assembly, general solid-intersection analysis, rolling/friction,
+strength, balance, figure-fit or retail part/colour availability test was performed.
+Curved, hollow and sideways interfaces still need that review for a physical
+build. `physical_validity: not_proven` is retained throughout.
