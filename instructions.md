@@ -29,6 +29,8 @@ The supplied resources are `../ldraw-lib/ldraw/` and `../ldraw-lib/models-annota
 
 ## 2. Plan the model and study useful constructions
 
+Before using Jev, follow the [availability check](docs/agent/reference-discovery.md#check-jev-availability-before-searching): verify the CLI, credentials and a bounded live request. If Jev is unavailable or fails later (including missing/invalid credentials or a service outage), report the reason briefly and continue with `discover search models|submodels|parts ... --engine fts`, existing catalogs and examples. Identify the fallback as offline keyword ranking, and avoid repeatedly retrying the unavailable service.
+
 Use [reference discovery](docs/agent/reference-discovery.md) to expand the design vocabulary: inspect whole-model precedents for proportions and styling, submodels for useful constructions, and their actual parts for fittings. Start with `examples --family reference`, then `discover search models|submodels|parts` as needed. Render a small shortlist with `discover catalog`, open the relevant views, compare dimensions and parent context, and record which references you will copy, adapt or study. Preserve attribution and source checks; curated examples and high relevance scores do not establish fit in the new model.
 
 Record a short design brief outside the assembly plan: subject/story, silhouette, dimensions, palette roles, primary focal feature, two supporting features, detail vocabulary, quiet surfaces, physical subassemblies and build order. State what will make this particular design attractive; do not equate part count with quality. For a building scene, separate the street/base, individual storeys, roofs, façade/window modules, interiors and landscaping. Allocate space and attachment surfaces before decoration. Keep a module checklist with local origin, envelope, anchors, dependencies and review status.
@@ -46,7 +48,7 @@ For a vehicle, choose its family and inspect the defining parts **before** fixin
 
 Adapt a relevant starting point to the requested subject and scale. Do not treat the supplied examples as the limits of vehicle design, or call a colour swap a new body design. Establish the silhouette with wheels and main masses, then refine curves, glazing and functional details. Choose actual seats, steering wheels, instruments, glazing, cargo fittings and other dedicated vehicle parts before building substitutes from blocks. Reserve their measured envelopes and attachment surfaces; use `vehicle details NAME` for reusable fittings and inspect all replacements. A display cabin does not establish minifigure fit.
 
-For a part's intended role or visual character, start with Jev's ranked candidates:
+For a part's intended role or visual character, use Jev's ranked candidates when the availability check passes; otherwise use `discover search parts ... --engine fts`:
 
 ```sh
 uv run --project ../jev-rerank jev-rerank \

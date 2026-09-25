@@ -2,6 +2,29 @@
 
 Use whole models for proportions, palettes and a module checklist; use submodels for construction ideas and details. Compare the source images and measured contents before choosing a construction. The [reference atlas](../../examples/reference-atlas/README.md) contains a reproducible 220-reference catalog manifest, curated examples and selected parameterized recipes.
 
+## Check Jev availability before searching
+
+Before the first Jev search in a task, check that `uv`, the Jev project (`JEV_RERANK_PROJECT` or `../jev-rerank`) and a nonempty `TYPESAFE_API_KEY` are available. Check the key's presence without printing its value. If those prerequisites exist, verify authentication and service access with one bounded, uncached query against the configured source database:
+
+```sh
+uv run --project "${JEV_RERANK_PROJECT:-../jev-rerank}" jev-rerank \
+  --db "${LDRAW_LIB_DIR:-../ldraw-lib}/scripts/ldraw-info.db" \
+  --table-field PARTS_DESCRIPTIONS_JEV.full_description \
+  --query 'brick' --top 1 --candidates 1 --model jev-1.13.0 \
+  --no-score-cache --timeout 10 --retries 0 --json
+```
+
+Use the actual database path if your model sources are configured elsewhere. Require a successful exit, a nonempty result and a positive `stats.api_calls`; `--help` or a cached result alone does not verify the live service. The timeout applies to the API request, not local indexing or `uv` setup.
+
+If prerequisites are missing, the key is rejected, or the service/network fails, state the reason briefly and continue with **explicit offline FTS**. Apply the same fallback if Jev fails later in the task. Avoid repeatedly attempting an unavailable service; retry when configuration or availability changes. Local database/path errors need their own correction because FTS also requires the local resources.
+
+```sh
+./ldraw-agent discover search submodels 'street lamp' --engine fts \
+  --max-parts 150 --limit 8 --report output/lamps.json
+```
+
+Select `parts`, `models` or `submodels` and suitable keywords for the current role. Record that results use keyword/BM25 ranking, not Jev semantic ranking. Continue with the existing catalogs, examples, part lookup and visual review; generation, rendering and validation do not require TypeSafe. This is an agent-directed fallback: the CLI does not switch engines automatically.
+
 ## Find a few distinct constructions
 
 ```sh
