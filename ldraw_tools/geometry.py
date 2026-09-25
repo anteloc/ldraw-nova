@@ -59,7 +59,8 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
         occurrences.append(occ)
         if len(occurrences) > instance_limit:
             raise ValueError(f"Geometry budget exceeds {instance_limit} occurrences; inspect a submodel.")
-    inspection = inspect_model(model, parts, occurrences=occurrences)
+    from .technic import curate
+    inspection = curate(inspect_model(model, parts, occurrences=occurrences))
     problems = [d.to_dict() for d in inspection.diagnostics]
     from ldraw.lines import Line, OptionalLine, Triangle, Quadrilateral
     for section in [model, *model.submodels.values()]:
@@ -123,6 +124,10 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
             overlaps.append(overlap)
     contact_mode = "all" if contacts == "auto" and len(occurrences) <= 500 else "none" if contacts == "auto" else contacts
     contact_results = connection_contacts(inspection) if contact_mode == "all" else []
+    from .technic import managed
+    if contact_mode == 'all' and any(managed(f) for o in inspection.occurrences for f in o.connections):
+        from .technic_review import review_inspection
+        problems.extend(review_inspection(inspection, seating_only=True))
     mating_pairs = {}
     for contact in contact_results:
         pair = tuple(sorted((contact.first_occurrence.index, contact.second_occurrence.index)))

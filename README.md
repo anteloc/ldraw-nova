@@ -13,7 +13,7 @@ LDraw is a format for digital brick models. An `.mpd` file holds a model and its
 | [![Corner café with apartments and an outdoor terrace](examples/copper-bean/review/home.png)](examples/copper-bean/README.md) | [![Pagoda garden with cherry trees, a pond and a bridge](examples/sakura-garden/review/home.png)](examples/sakura-garden/README.md) | [![Green grand tourer with a cream roof](examples/vehicle-atlas/grand-tourer/home.png)](examples/vehicle-atlas/README.md) |
 | [The Copper Bean](examples/copper-bean/README.md) | [Sakura Garden](examples/sakura-garden/README.md) | [Vehicle examples](examples/vehicle-atlas/README.md) |
 
-Examples include buildings, street scenes, cars, trucks, motorcycles, boats and aircraft. The vehicle workflow focuses on ordinary stud-built construction; Technic mechanisms are outside its current scope.
+Examples include buildings, street scenes, cars, trucks, motorcycles, boats and aircraft. [Technic structures](examples/technic-atlas/README.md) add frames, chassis, towers and supports for stud-built bodies. This first Technic stage covers static assemblies; mechanisms remain a separate, later stage.
 
 ## From an idea to a model
 
@@ -113,6 +113,7 @@ Open `output/first-model.mpd` in LeoCAD and the PNGs in `output/first-model-revi
 | Ask an agent to generate a model | [Agent instructions](instructions.md) |
 | Improve shape, colour and detail | [Visual design guide](docs/agent/visual-design.md) |
 | Build vehicles | [Vehicle workflow](docs/agent/vehicles.md) and [examples](examples/vehicle-atlas/README.md) |
+| Build Technic structures | [Structural workflow](docs/agent/technic.md) and [examples](examples/technic-atlas/README.md) |
 | Find parts and reusable constructions | [Reference discovery](docs/agent/reference-discovery.md) and [reference atlas](examples/reference-atlas/README.md) |
 | Organize a large model | [Module workflow](docs/agent/complex-models.md) and [Copper Lane example](examples/modular-street/README.md) |
 | Understand connections and checks | [Geometry](docs/agent/geometry.md), [snapping](docs/agent/snapping.md) and [validation](docs/agent/validation.md) |

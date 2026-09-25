@@ -1,0 +1,53 @@
+{
+  "complete": true,
+  "connection_coverage": {
+    "complete": 36,
+    "partial": 0,
+    "none": 0
+  },
+  "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+  "physical_validity": "not_proven",
+  "bounds": {
+    "min": [
+      -90.0,
+      -230.0,
+      -70.0
+    ],
+    "max": [
+      90.0,
+      70.0,
+      70.0
+    ]
+  },
+  "occurrence_count": 36,
+  "detail": "summary",
+  "instance_offset": 0,
+  "instances": [],
+  "instances_truncated": true,
+  "contacts_checked": true,
+  "contact_count": 56,
+  "contacts": [],
+  "contacts_truncated": true,
+  "confirmed_components": null,
+  "optimistic_components": null,
+  "optimistic_component_count": 1,
+  "confirmed_component_count": 1,
+  "components_truncated": true,
+  "overlap_candidate_count": 56,
+  "overlaps": [],
+  "overlaps_truncated": true,
+  "diagnostics": [
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "limitations": [
+    "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+    "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+    "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+  ]
+}

@@ -1,6 +1,6 @@
 # Building complex models with small, verifiable modules
 
-Use this workflow for multi-building scenes, vehicles with mechanisms, articulated figures, and models with hundreds or thousands of placements. Complexity comes from composing inspected modules; a single enormous list of coordinates is difficult to repair. The original [Copper Lane generator](../../examples/modular-street/generate.py) and [modular plans](../../examples/modular-street/scene.plan.json) demonstrate a complete 1,655-placement, nineteen-section streetscape. Start with its [visual brief and review](../../examples/modular-street/visual-review.md): complexity should serve an attractive, readable design.
+Use this workflow for multi-building scenes, vehicles, structural frames, figures, and models with hundreds or thousands of placements. Follow the [Technic stage-1 boundary](technic.md) when using Technic structures; mechanisms need the user's later authorization. Complexity comes from composing inspected modules; a single enormous list of coordinates is difficult to repair. The original [Copper Lane generator](../../examples/modular-street/generate.py) and [modular plans](../../examples/modular-street/scene.plan.json) demonstrate a complete 1,655-placement, nineteen-section streetscape. Start with its [visual brief and review](../../examples/modular-street/visual-review.md): complexity should serve an attractive, readable design.
 
 ## 1. Study structure before geometry
 

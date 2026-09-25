@@ -19,7 +19,8 @@ Read:
 - [LDraw rules](docs/agent/ldraw-reference.md): records, coordinates, colours, MPD, BFC and headers.
 - [Geometry](docs/agent/geometry.md): origins, stacking, connectors and collision evidence.
 - [Visual design](docs/agent/visual-design.md): composition, category discovery, role-based palettes, reusable details and visual iteration.
-- For vehicles, [System vehicle workflow](docs/agent/vehicles.md) and [vehicle atlas](examples/vehicle-atlas/README.md): measured running gear, stance, body shaping, cab/cargo layouts and review. Keep Technic models and mechanisms outside the current vehicle scope.
+- For vehicles, [System vehicle workflow](docs/agent/vehicles.md) and [vehicle atlas](examples/vehicle-atlas/README.md): measured running gear, stance, body shaping, cab/cargo layouts and review.
+- For Technic structures or a Technic skeleton supporting a System body, [Technic structural workflow](docs/agent/technic.md) and [structural atlas](examples/technic-atlas/README.md). Stage 1 covers fixed assemblies, seating, bracing and mounts. Mechanisms require the user's explicit later authorization.
 - [Tool reference](docs/agent/tooling.md) and [validation guide](docs/agent/validation.md).
 - For complex work, [module workflow and Bookshop case study](docs/agent/complex-models.md), [measured reference inventory](docs/agent/resources/bookshop-study.json), and [Copper Lane example](examples/modular-street/README.md).
 

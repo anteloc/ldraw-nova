@@ -8,6 +8,20 @@ The supplied `offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides t
 
 ## Discover and inspect
 
+### Technic structures (stage 1)
+
+```sh
+./ldraw-agent technic list
+./ldraw-agent technic parts 2780
+./ldraw-agent technic plan frame-tower --levels 2 --output output/tower.plan.json
+./ldraw-agent build output/tower.plan.json --output output/tower.mpd
+./ldraw-agent technic check output/tower.mpd --contract output/tower.plan.structure.json
+./ldraw-agent examples --family technic
+./ldraw-agent discover search submodels 'braced frame' --construction technic-structure --engine fts
+```
+
+The [Technic workflow](technic.md) covers supported ports, seated pins, axle intervals, structural restraints and contracts. Normal geometry checks remain required. Generated contracts bind to the model revision; `technic check` returns exit 1 for failed checks and exit 2 for invalid inputs. Mechanisms need the user's later authorization. Use Jev only after its availability check; `fts` is the explicit offline alternative.
+
 ### System vehicles
 
 ```sh

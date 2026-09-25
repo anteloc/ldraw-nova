@@ -30,7 +30,8 @@ def inspect_connections(model, parts, instance_limit=100000):
         occurrences.append(occurrence)
         if len(occurrences) > instance_limit:
             raise ValueError(f'Connection budget exceeds {instance_limit} occurrences; select a section')
-    return inspect_model(model, parts, occurrences=occurrences)
+    from .technic import curate
+    return curate(inspect_model(model, parts, occurrences=occurrences))
 
 
 def occurrence_at(inspection, index):
@@ -149,7 +150,13 @@ def snap_report(model, parts, moving, fixed=None, *, limit=5, moving_depth=None,
         # assembly contacts and stationary-to-stationary contacts remain occupied.
         if (a in moving_indices) == (b in moving_indices):
             occupied.update(((a, contact.first.feature_id), (b, contact.second.feature_id)))
-    raw = query_frames(replace(inspection, occurrences=(subject, *targets)), snapping=True).snap_candidates(moving, fixed=fixed)
+    from itertools import chain
+    from .technic import managed, candidates as technic_candidates, conflicts as technic_conflicts
+    selection = replace(inspection, occurrences=(subject, *targets))
+    ordinary = replace(selection, occurrences=tuple(replace(o, connections=tuple(
+        f for f in o.connections if not managed(f))) for o in selection.occurrences))
+    raw = chain(query_frames(ordinary, snapping=True).snap_candidates(moving, fixed=fixed),
+                technic_candidates(selection, moving, fixed))
     candidates, rejected, seen = [], {}, set()
     checked, truncated = 0, False
     old_world = pose(subject.occurrence.position, subject.occurrence.matrix)
@@ -165,7 +172,7 @@ def snap_report(model, parts, moving, fixed=None, *, limit=5, moving_depth=None,
             continue
         if fixed_feature is not None and candidate.fixed.feature_id != fixed_feature:
             continue
-        if not allow_occupied and ((moving, candidate.moving.feature_id) in occupied or
+        if not allow_occupied and not managed(candidate.moving) and ((moving, candidate.moving.feature_id) in occupied or
                                   (candidate.fixed_occurrence.index, candidate.fixed.feature_id) in occupied):
             rejected['occupied_feature'] = rejected.get('occupied_feature', 0) + 1
             continue
@@ -183,6 +190,15 @@ def snap_report(model, parts, moving, fixed=None, *, limit=5, moving_depth=None,
         pairs = list(collision_pairs(transformed, regular, moving=moving_indices))
         blocked = [p for p in pairs if p['status'] == 'rectangular_body_overlap']
         new_contacts = connection_contacts(transformed)
+        from .technic_review import review_inspection
+        interface_errors = []
+        if managed(candidate.moving):
+            interface_errors = [d for d in review_inspection(transformed, seating_only=True)
+                                if moving_indices.intersection(d['instances'])]
+            blocked.extend(interface_errors)
+        for conflict in technic_conflicts(new_contacts):
+            if moving_indices.intersection(conflict['instances']):
+                blocked.append(dict(**conflict, status='technic_occupation_conflict'))
         # Query just the selected endpoints as well: strict stud queries choose
         # one best receptor when several authored/primitive IDs are colocated.
         endpoints = {moving: candidate.moving.feature_id, candidate.fixed_occurrence.index: candidate.fixed.feature_id}
@@ -206,7 +222,8 @@ def snap_report(model, parts, moving, fixed=None, *, limit=5, moving_depth=None,
                                         if f.feature_id == candidate.fixed.feature_id)),
             residual_before=jsonable(candidate.residual), contact_status=str(mating[0].status),
             collision=dict(status='blocked' if blocked else 'review_required' if review else 'no_collision_found',
-                           checked_pairs=len(pairs), body_overlap_count=len(blocked), review_count=len(review),
+                           checked_pairs=len(pairs), body_overlap_count=sum(p.get('status') == 'rectangular_body_overlap' for p in blocked),
+                           blocking_issue_count=len(blocked), interface_errors=interface_errors, review_count=len(review),
                            pairs=pairs[:50], pairs_truncated=len(pairs)>50),
             distance=float(np.linalg.norm(new_world[:3, 3]-old_world[:3, 3]))))
     candidates.sort(key=lambda c: (c['collision']['status']=='blocked', c['collision']['review_count'],
@@ -222,7 +239,8 @@ def snap_report(model, parts, moving, fixed=None, *, limit=5, moving_depth=None,
                 rejected=rejected, physical_validity='not_proven',
                 limitations=['Shadow metadata describes mating interfaces, not solid collision volumes.',
                              'General part envelope overlaps require review; contacts never waive body collisions.',
-                             'Occupied interfaces are conservatively excluded, including sliding interfaces; allow_occupied enables deliberate reuse.',
+                             'Reviewed Technic interfaces reserve engaged spans; conflicting occupation cannot be overridden.',
+                             'Other occupied interfaces are conservatively excluded; allow_occupied enables deliberate reuse.',
                              'Search preserves free roll; it does not enumerate all articulation or insertion paths.'])
 
 
@@ -239,7 +257,7 @@ def apply_snap(model, report, candidate=0):
         raise ValueError('Candidate index is outside the returned candidate list')
     chosen = report['candidates'][candidate]
     if chosen['collision']['status'] == 'blocked':
-        raise ValueError('Cannot apply a snap with a rectangular body collision')
+        raise ValueError('Cannot apply a snap with a body collision or structural interface error')
     result = copy.deepcopy(model)
     table = section_table(result)
     section = result

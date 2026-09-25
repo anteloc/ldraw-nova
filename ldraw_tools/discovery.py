@@ -225,7 +225,23 @@ def eligible(row, *, system=True):
     return True
 
 
-def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=60, system=True,
+def structural_candidate(row, inventory=None):
+    """Inspect the selected section, never exclude it just for its parent theme."""
+    from .technic import canonical, registry
+    from .technic_review import MECHANISMS
+    if row['kind'] == 'parts':
+        return canonical(row['part']) in registry()['parts']
+    text = row['description']
+    if MECHANISMS.search(text):
+        return False
+    if not re.search(r'\b(frame|chassis|structure|structural|support|mount|tower|truss|brace|bracing|skeleton)\b', text, re.I):
+        return False
+    if inventory is not None:
+        return not any(MECHANISMS.search(item.get('description', '')) for item in inventory['bom'])
+    return True
+
+
+def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=60, system=True, construction=None,
            max_parts=None, min_parts=2, max_technic_share=0.5, parent_cap=2, yes=None, no=None,
            jev_project=None, timeout=240):
     if kind not in FIELDS or not query.strip() or engine not in {'jev','fts'}:
@@ -236,11 +252,16 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
         raise ValueError('Invalid part/Technic limits')
     if (yes is None) != (no is None):
         raise ValueError('Supply both --yes and --no criteria')
+    if construction not in {None, 'system', 'all', 'technic-structure'}:
+        raise ValueError('Unknown construction mode')
+    if construction is not None:
+        system = construction == 'system'
     manifest = index.ensure()
-    allowed = {r['id']:r for r in index.rows(kind) if eligible(r, system=system)}
+    allowed = {r['id']:r for r in index.rows(kind) if eligible(r, system=system)
+               and (construction != 'technic-structure' or structural_candidate(r))}
     ranked, stats = [], {}
     if engine == 'jev':
-        snapshot = index.cache/'queries'/(digest([manifest['signature'], kind, system])+'.sqlite')
+        snapshot = index.cache/'queries'/(digest([manifest['signature'], kind, system, construction, sorted(allowed)])+'.sqlite')
         if not snapshot.exists():
             snapshot.parent.mkdir(parents=True, exist_ok=True)
             with NamedTemporaryFile(dir=snapshot.parent, suffix='.sqlite', delete=False) as f:
@@ -285,7 +306,8 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
             if kind != 'parts':
                 row['inventory'] = index.inventory(row)
                 inv = row['inventory']
-                reason = ('nonphysical_accounting' if not inv['physical_accounting_complete'] else
+                reason = ('mechanism_content' if construction == 'technic-structure' and not structural_candidate(row, inv) else
+                          'nonphysical_accounting' if not inv['physical_accounting_complete'] else
                           'too_few_parts' if inv['expanded_leaf_count'] < min_parts else
                           'too_many_parts' if max_parts is not None and inv['expanded_leaf_count'] > max_parts else
                           'technic_share' if system and inv['technic_share'] > max_technic_share else None)
@@ -301,11 +323,13 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
                 shapes[fingerprint] = row
                 parents[parent] += 1
             kept.append(row)
+            if construction == 'technic-structure':
+                row['structural_review'] = 'required: verify joint roles, parent support, restraint, seating and assembly order'
         except (OSError, ValueError, RecursionError) as exc:
             rejected.append(dict(id=row['id'], reason='inventory_failed', error=str(exc)))
     return dict(query=query, kind=kind, engine=engine, source_field=FIELDS[kind], index_signature=manifest['signature'],
                 results=kept[:limit], eligible_after_measurement=len(kept), rejected=rejected, stats=stats,
-                filters=dict(system=system,min_parts=min_parts,max_parts=max_parts,max_technic_share=max_technic_share,parent_cap=parent_cap),
+                filters=dict(system=system,construction=construction or ('system' if system else 'all'),min_parts=min_parts,max_parts=max_parts,max_technic_share=max_technic_share,parent_cap=parent_cap),
                 note='Scores describe textual relevance. Results still require geometry, scale and visual review; no hidden fallback or automatic import approval.')
 
 

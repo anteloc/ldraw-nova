@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Technic structural review contract v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version"],
+  "properties": {
+    "version": {"const": 1},
+    "model_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "require_rigid": {"type": "boolean"},
+    "required_joints": {
+      "type": "array", "maxItems": 10000,
+      "items": {"type": "object", "additionalProperties": false, "required": ["between"],
+        "properties": {
+          "between": {"type": "array", "items": {"$ref": "#/$defs/index"}, "minItems": 2, "maxItems": 2, "uniqueItems": true},
+          "minimum": {"type": "integer", "minimum": 1, "maximum": 100}
+        }}
+    },
+    "assembly": {
+      "type": "array", "maxItems": 10000,
+      "items": {"type": "object", "additionalProperties": false, "required": ["connector", "before"],
+        "properties": {
+          "connector": {"$ref": "#/$defs/index"},
+          "before": {"type": "array", "items": {"$ref": "#/$defs/index"}, "minItems": 1, "uniqueItems": true}
+        }}
+    }
+  },
+  "$defs": {"index": {"type": "integer", "minimum": 0}}
+}

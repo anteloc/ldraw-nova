@@ -63,7 +63,7 @@ def parser():
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
-    c.add_argument("--family", choices=["building", "vehicle", "reference"], default="building")
+    c.add_argument("--family", choices=["building", "vehicle", "reference", "technic"], default="building")
     c = commands.add_parser("discover", help="Find, measure and visually review parts, source models and submodels")
     discovery = c.add_subparsers(dest="discovery_command", required=True)
     d = discovery.add_parser("index", help="Build a local typed index from the three Jev fields and actual source headers")
@@ -76,6 +76,8 @@ def parser():
     d.add_argument("--pool", type=positive, default=60)
     d.add_argument("--candidates", type=int, default=500, help="Jev candidate budget; 0 scores all eligible records")
     d.add_argument("--all-families", action="store_true", help="Include Technic and other product families")
+    d.add_argument("--construction", choices=['system', 'all', 'technic-structure'],
+                   help="Construction scope; Technic structure filters the selected section and its BOM")
     d.add_argument("--min-parts", type=int, default=2)
     d.add_argument("--max-parts", type=positive)
     d.add_argument("--max-technic-share", type=float, default=0.5)
@@ -124,6 +126,24 @@ def parser():
     d.add_argument("--placement-notes", required=True)
     d.add_argument("--scale", choices=["minifigure","microscale","display","unknown"], default="unknown")
     d.add_argument("--force", action="store_true")
+    c = commands.add_parser('technic', help='Stage 1: reviewed structural parts, plans and joint/brace checks')
+    t = c.add_subparsers(dest='technic_command', required=True)
+    t.add_parser('list', help='List editable structural recipes')
+    d = t.add_parser('parts', help='Inspect reviewed nominal ports and geometry fingerprints')
+    d.add_argument('code', nargs='?')
+    d = t.add_parser('plan', help='Export a structural plan and required-joint contract')
+    d.add_argument('name')
+    d.add_argument('--levels', type=positive, default=2)
+    d.add_argument('--colour', type=int, default=71)
+    d.add_argument('--accent', type=int, default=14)
+    d.add_argument('--output', required=True)
+    d.add_argument('--force', action='store_true')
+    d = t.add_parser('check', help='Review seated joints, restraints, required mounts and assembly order')
+    d.add_argument('file')
+    d.add_argument('--contract')
+    d.add_argument('--report')
+    d.add_argument('--max-instances', type=positive, default=500)
+    scope_options(d)
     c = commands.add_parser("vehicle", help="System road, motorcycle, boat and aircraft designs, dedicated fittings and review")
     vehicle_commands = c.add_subparsers(dest="vehicle_command", required=True)
     vehicle_commands.add_parser("list", help="List editable vehicle starting points")
@@ -304,8 +324,10 @@ def run(args):
         if command == 'parts':
             return part_suggestions(json.loads(Path(args.results).read_text())['results'],limit=args.limit),0
         if command == 'search':
+            if args.all_families and args.construction not in {None, 'all'}:
+                raise ValueError('Choose --construction or --all-families, not conflicting scopes')
             return search(index,args.kind,args.query,engine=args.engine,limit=args.limit,pool=args.pool,candidates=args.candidates,
-                          system=not args.all_families,min_parts=args.min_parts,max_parts=args.max_parts,
+                          system=not args.all_families,construction=args.construction,min_parts=args.min_parts,max_parts=args.max_parts,
                           max_technic_share=args.max_technic_share,parent_cap=args.parent_cap,yes=args.yes,no=args.no),0
         index.ensure()
         if command == 'show':
@@ -326,6 +348,41 @@ def run(args):
         if command == 'example':
             return export_example(index,args.id,args.catalog,args.output,title=args.title,lesson=args.lesson,
                                   placement_notes=args.placement_notes,scale=args.scale,force=args.force),0
+    if args.command == 'technic':
+        from .technic import parts_report
+        from .technic_recipes import RECIPES, structure_plan
+        from .technic_review import review_structure
+        if args.technic_command == 'list':
+            return RECIPES, 0
+        if args.technic_command == 'parts':
+            report = parts_report(parts, args.code)
+            return report, 0 if all(p['geometry_matches'] for p in report['parts']) else 1
+        if args.technic_command == 'plan':
+            target = Path(args.output)
+            contract_path = target.with_suffix('.structure.json')
+            if not args.force and (target.exists() or contract_path.exists()):
+                raise ValueError('Output or structure contract exists; use --force')
+            plan, contract = structure_plan(args.name, levels=args.levels, colour=args.colour, accent=args.accent)
+            _, model, diagnostics = build_plan(plan, parts)
+            review = review_structure(model, parts, contract=contract)
+            diagnostics.extend(analyze_geometry(model, parts, detail='summary')['diagnostics'])
+            if any(d['severity']=='error' for d in diagnostics) or not review['checks_passed']:
+                return dict(written=False, diagnostics=diagnostics, structure=review), 1
+            import hashlib
+            contract['model_sha256'] = hashlib.sha256(model.to_ldraw().encode()).hexdigest()
+            atomic_write(target, dumps(plan)+'\n')
+            atomic_write(contract_path, dumps(contract)+'\n')
+            return dict(plan=str(target), contract=str(contract_path), scope='technic-structure',
+                        next='Build, validate, technic check with the contract, render and review insertion access.'), 0
+        source, _ = selected_source(args.file, args.section, args.colour)
+        model, diagnostics = validate_text(source, parts, assembly=True, instance_limit=args.max_instances)
+        contract = json.loads(Path(args.contract).read_text()) if args.contract else None
+        review = review_structure(model, parts, contract=contract, instance_limit=args.max_instances)
+        review['source_diagnostics'] = diagnostics
+        review['checks_passed'] &= not any(d['severity']=='error' for d in diagnostics)
+        if args.report:
+            atomic_write(Path(args.report), dumps(review)+'\n')
+        return review, 0 if review['checks_passed'] else 1
     if args.command == "vehicle":
         from .vehicles import DESIGNS, vehicle_plan, wheel_report, design_brief
         if args.vehicle_command == "list":

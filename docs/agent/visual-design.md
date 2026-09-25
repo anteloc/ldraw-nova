@@ -2,6 +2,8 @@
 
 Geometric correctness is a constraint, not the design brief. An attractive model needs a recognizable subject, clear proportions, a controlled palette, depth, and details that belong to its story. A thousand repetitive bricks do not substitute for these decisions. Make a visual revision after opening the first render; do not end at the first valid assembly.
 
+For [Technic structures](technic.md), choose the skeleton and body mounts together. Keep long members, bracing and repeated frames visually coherent; use a restrained palette and give exposed pins a clear purpose. A System body needs real, supported mounting interfaces. Review the bare skeleton and the covered model from the side and underside before adding surface detail. Stage 1 remains structural; mechanisms need the user's later authorization.
+
 For vehicles, use the [vehicle design workflow](vehicles.md) and its review criteria:
 stance, wheel/arch balance, bonnet/cabin/tail proportions, continuous body lines,
 glazing, clean surfaces and front/rear identity. `vehicle list`, `vehicle wheels`,

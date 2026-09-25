@@ -59,4 +59,7 @@ def query_frames(inspection, *, snapping=False):
 
 
 def connection_contacts(inspection):
-    return query_frames(inspection).connection_contacts()
+    from .technic import managed, contacts
+    ordinary = replace(inspection, occurrences=tuple(replace(o, connections=tuple(
+        f for f in o.connections if not managed(f))) for o in inspection.occurrences))
+    return (*query_frames(ordinary).connection_contacts(), *contacts(inspection))

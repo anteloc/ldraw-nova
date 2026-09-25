@@ -2,6 +2,8 @@
 
 The toolkit loads the supplied `offLibShadow/` automatically through pyldraw3. Agents can inspect connector IDs and occupancy, request checked placements, move a complete submodel through one of its leaf connectors, and store snaps in reproducible JSON plans.
 
+For [stage-1 Technic structures](technic.md), a geometry-fingerprinted registry supplies reviewed `technic:` ports in place of raw mechanical inferences. Pin grips, mixed connector ends, keyed axles and round-hole bearings use seating and occupied-span checks. Invalid seating blocks application. Existing stud/clip/wheel behavior remains available; unsupported Technic interfaces need review and curation.
+
 ## Configuration and coverage
 
 ```sh
@@ -35,6 +37,8 @@ Each distinct candidate includes:
 - Original moving/fixed features, `residual_before`, verified `contact_status`, and a bounded collision report against stationary parts.
 
 By default only the leaf moves. `--moving-depth 0` moves its outermost placement as a rigid submodel; depth 1 moves the next reference along its path, and so on. Choose a leaf containing the intended mating interface. All descendants of the selected ancestor move together, and all are checked against the stationary scene. Existing contacts within that submodel remain occupied. Fixed connectors used by stationary parts are excluded; cross-boundary contacts of the moving object can detach. `--allow-occupied` explicitly permits reuse, for example multiple clips on a long bar, and still runs collision checks.
+
+Reviewed Technic shafts reserve engaged intervals instead of their entire feature. Separate bushes or supports can share an axle when their intervals do not overlap. `--allow-occupied` cannot bypass conflicting occupation of a reviewed hole/span. Read `collision.interface_errors` as well as the ordinary body-overlap report. Thin layers sharing a pin grip must complete its retaining seat; move them as an assembled module when a single layer would leave an incomplete grip.
 
 Candidates are ordered by body-collision status, unresolved overlap count, contact confidence, then leaf translation distance. Free roll is preserved; the search does not enumerate every hinge angle, roll or sliding position. `--max-candidates` defaults to 100 distinct poses to check; `--limit` defaults to five returned candidates. Read `search_truncated`, `candidates_truncated`, `checked_candidates`, and rejection counts. Searches exceeding 100,000 feature pairs fail with a scoping suggestion. `--max-instances` bounds model expansion. No eligible verified candidates returns exit 1; invalid selectors return structured JSON and exit 2.
 
