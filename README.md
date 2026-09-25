@@ -1,58 +1,131 @@
-# LDraw generation tools
+# ldraw-astra
 
-Generate modular MPD scenes with thousands of real part placements, inspect their assemblies and connections, and check the result with Python and LeoCAD.
+**Give an AI agent a model idea. Get an editable brick model, a parts list and preview images.**
 
-For **stud-built vehicles**, start with the [vehicle workflow](docs/agent/vehicles.md)
-and [vehicle atlas](examples/vehicle-atlas/README.md). The toolkit includes measured
-wheel packages, seven editable designs spanning cars, trucks, motorcycles, boats
-and aircraft, dedicated fitting recipes, vehicle palettes and family-specific checks. Technic mechanisms are outside this workflow.
+ldraw-astra provides the tools, examples and instructions an agent needs to design models with real LDraw parts. It helps the agent find suitable pieces, build in sections, check its work and improve the result by looking at rendered images.
 
-```sh
-./ldraw-agent vehicle list
-./ldraw-agent vehicle plan grand-tourer --output output/tourer.plan.json
-./ldraw-agent build output/tourer.plan.json --output output/tourer.mpd --detail summary
-./ldraw-agent vehicle check output/tourer.mpd
-./ldraw-agent render output/tourer.mpd --outdir output/tourer-review --views home front back right top bottom
+LDraw is a format for digital brick models. An `.mpd` file holds a model and its smaller assemblies in one editable file.
+
+**Using an agent? Start it with [instructions.md](instructions.md) and your model request.** This README explains the project; that file guides the agent through the work.
+
+| Buildings | Gardens and landscapes | Vehicles |
+| --- | --- | --- |
+| [![Corner café with apartments and an outdoor terrace](examples/copper-bean/review/home.png)](examples/copper-bean/README.md) | [![Pagoda garden with cherry trees, a pond and a bridge](examples/sakura-garden/review/home.png)](examples/sakura-garden/README.md) | [![Green grand tourer with a cream roof](examples/vehicle-atlas/grand-tourer/home.png)](examples/vehicle-atlas/README.md) |
+| [The Copper Bean](examples/copper-bean/README.md) | [Sakura Garden](examples/sakura-garden/README.md) | [Vehicle examples](examples/vehicle-atlas/README.md) |
+
+Examples include buildings, street scenes, cars, trucks, motorcycles, boats and aircraft. The vehicle workflow focuses on ordinary stud-built construction; Technic mechanisms are outside its current scope.
+
+## From an idea to a model
+
+The agent makes the design choices. The tools help it build, measure, check and render those choices. The process includes two kinds of review: checking the construction and looking at the design.
+
+```mermaid
+flowchart TD
+    request["Describe your model"] --> plan["Plan the design"]
+    plan --> find["Find parts and examples"]
+    find --> build["Build in sections"]
+    build --> checks{"Checks pass?"}
+    checks -->|"No: fix the source"| build
+    checks -->|Yes| render["Look at rendered images"]
+    render --> review{"Does it look right?"}
+    review -->|"No: refine the design"| plan
+    review -->|Yes| deliver["Deliver the finished files"]
 ```
 
-For visual design, start with the [design guide](docs/agent/visual-design.md). The supplied categories now support descriptive refs and named colours directly in plans, bounded search with live dimension checks, role-based palettes, reusable architectural details, and LeoCAD part-selection boards.
+Review the shape, colours, details and fit to the brief. For a large model, check individual sections before the complete scene. Keep changes in the plan or Python generator so the model can be rebuilt.
 
-For a broader construction vocabulary, use [reference discovery](docs/agent/reference-discovery.md) and the [reference atlas](examples/reference-atlas/README.md). `discover search` connects Jev-ranked parts, submodels and whole models to stable source identities, measured contents, diverse shortlists and an offline image catalog. Curated references include editable placement plans; selected generators adapt useful constructions by brick courses and palette.
+The delivery includes the **model**, its **editable source**, a **parts list** (BOM), **check reports** and **reviewed images**. Passing checks provides useful evidence; physical strength, stability and every connection still require judgement. See [what validation covers](docs/agent/validation.md).
 
-For connector-based assembly, start with the [shadow and snapping guide](docs/agent/snapping.md). The supplied `offLibShadow/` loads automatically. Discover connector IDs with `connectors`, preview and apply checked part/submodel snaps with `snap`, or use `snap` placements in JSON plans. Try [shadow-snap.plan.json](examples/shadow-snap.plan.json).
+## Find better parts and building ideas
 
-For complex scenes, start with the [Bookshop case study and module workflow](docs/agent/complex-models.md), its [measured assembly inventory](docs/agent/resources/bookshop-study.json), and the original [Copper Lane generator](examples/modular-street/README.md). Plans support nested includes, attributed MPD assets, named attachment frames and regular repeats. Inspection supports selected sections and bounded reports; embedded DAT parts resolve without inflating physical BOM counts.
+The agent can learn from three levels of reference: a **whole model** for proportions, a **submodel** such as an engine or window for construction, and a **single part** such as a seat or windscreen for detail.
 
-Start an agent with [instructions.md](instructions.md). Read the [tool reference](docs/agent/tooling.md), [LDraw rules](docs/agent/ldraw-reference.md), and [geometry guide](docs/agent/geometry.md). The mandatory source is [docs/ldraw-specs.pdf](docs/ldraw-specs.pdf); the [source map](docs/agent/specification-map.md) links rules to its pages.
+Start with the [reference examples](examples/reference-atlas/README.md). When more options are needed, search the local collection:
 
-Requires Python 3.12+, Poppler's `pdftotext`, and the supplied LDraw library. LeoCAD is required for visual review. `mpd2glb.sh` is optional for Blender inspection. The setup uses a project virtual environment and caches; it does not change the official library or global application settings.
+```mermaid
+flowchart TD
+    need["Choose what to look for"] --> available{"Is Jev available?"}
+    available -->|Yes| semantic["Search by meaning"]
+    available -->|No| keywords["Search by keywords offline"]
+    semantic -->|"Search fails"| keywords
+    semantic -->|Results| compare["Compare images and sizes"]
+    keywords --> compare
+    compare --> adapt["Adapt the idea to your model"]
+```
+
+Optional semantic search uses Jev from TypeSafe to find descriptions that match an idea. Agents [check its availability first](docs/agent/reference-discovery.md#check-jev-availability-before-searching) and explicitly use `--engine fts` for offline keyword search when it is unavailable. Existing examples, building tools and rendering remain usable.
+
+Explore **21 inspected constructions** and **two adjustable recipes**, or generate an image catalog of **220 selected references**. The [reference discovery guide](docs/agent/reference-discovery.md) explains how.
+
+## Get started
+
+### 1. Set up the tools
+
+You need **Python 3.12+**, **Poppler** (`pdftotext`), **LeoCAD** and the **LDraw part library**. The rendering workflow has been tested on macOS. `uv` is recommended for installing the locked Python dependencies; `setup.sh` also supports a pip fallback.
+
+The default local resource layout is:
+
+```text
+workspace/
+├── ldraw-astra/                # this repository
+└── ldraw-lib/
+    ├── ldraw/                 # official LDraw part library
+    ├── models-annotated/      # reference models, for discovery
+    └── scripts/ldraw-info.db  # searchable descriptions, for discovery
+```
+
+Use `LDRAW_LIB_DIR` for a different library-repository location, or `LDRAW_DIR` and `MODELS_DIR` to set the part and model directories separately. Model discovery uses the annotated sources and database; building an included example needs the part library.
+
+From the repository root, run:
 
 ```sh
 ./setup.sh
-./ldraw-agent build examples/bridge.plan.json --output output/bridge.mpd --report output/bridge.build.json
-./ldraw-agent validate output/bridge.mpd --geometry --strict
-./check-model.sh output/bridge.mpd
-./ldraw-agent render output/bridge.mpd --outdir output/bridge-review
+```
+
+Setup installs Python packages in `.venv`, checks the environment and prepares local indexes. The [tool guide](docs/agent/tooling.md) covers configuration and individual commands.
+
+### 2. Give your agent a brief
+
+Use an agent that can read files and run commands in this repository. For example:
+
+> Read instructions.md and build a compact delivery van in dark blue with a cream roof. Include seats, a steering wheel and a cargo area. Save the model, editable source, checks, parts list and reviewed images under output/.
+
+Describe the subject, approximate size, style and details that matter to you. The agent follows [instructions.md](instructions.md) to plan, build, check and refine it.
+
+### 3. Or try a small example yourself
+
+This five-part bridge demonstrates the build, check and render loop:
+
+```sh
+./ldraw-agent build examples/bridge.plan.json --output output/first-model.mpd
+./ldraw-agent validate output/first-model.mpd --geometry --strict
+./ldraw-agent render output/first-model.mpd --outdir output/first-model-review
+./ldraw-agent compare-bom output/first-model.mpd \
+  --csv output/first-model-review/leocad-bom.csv
+```
+
+Open `output/first-model.mpd` in LeoCAD and the PNGs in `output/first-model-review/`. The last command compares the toolkit's parts list with LeoCAD's. Add `--force` to the build command when intentionally replacing a previous result.
+
+## Where to go next
+
+| I want to… | Read… |
+| --- | --- |
+| Ask an agent to generate a model | [Agent instructions](instructions.md) |
+| Improve shape, colour and detail | [Visual design guide](docs/agent/visual-design.md) |
+| Build vehicles | [Vehicle workflow](docs/agent/vehicles.md) and [examples](examples/vehicle-atlas/README.md) |
+| Find parts and reusable constructions | [Reference discovery](docs/agent/reference-discovery.md) and [reference atlas](examples/reference-atlas/README.md) |
+| Organize a large model | [Module workflow](docs/agent/complex-models.md) and [Copper Lane example](examples/modular-street/README.md) |
+| Understand connections and checks | [Geometry](docs/agent/geometry.md), [snapping](docs/agent/snapping.md) and [validation](docs/agent/validation.md) |
+| Look up a command or file-format rule | [Tool reference](docs/agent/tooling.md) and [LDraw rules](docs/agent/ldraw-reference.md) |
+
+## Development and credits
+
+To check a tooling change after setup:
+
+```sh
 .venv/bin/python -m pytest -q
 ```
 
-Open the PNGs for visual review. The checked source is also included as [examples/bridge.mpd](examples/bridge.mpd). The example intentionally demonstrates nested submodels, inherited colours, rotation, steps, and stud stacking with only five parts. Use `--force` to regenerate an existing example. For reproducible transitive dependencies, use `uv sync --locked --extra test`; `uv.lock` is included. `setup.sh` uses it when `uv` is installed, with pip as a fallback. On macOS, install Poppler with `brew install poppler` if needed.
+The toolkit builds on [pyldraw3](https://github.com/hbmartin/pyldraw3), NumPy, JSON Schema, SQLite, Poppler and LeoCAD. The [verification record](docs/agent/verification.md) documents tested behavior; the [LDraw specification](docs/ldraw-specs.pdf) supplies the file-format rules.
 
-Defaults resolve relative to this repository: `../ldraw-lib/ldraw` and `../ldraw-lib/models-annotated`. Override with `LDRAW_DIR`, `MODELS_DIR`, or the CLI's `--library` / `--models` options before the command.
-
-The implementation reuses [pyldraw3](https://github.com/hbmartin/pyldraw3) for parsing, writing, geometry expansion, BOMs, and connector inference; NumPy for matrix/geometry checks; JSON Schema for generation plans; the existing SQLite model index for retrieval; Poppler for the supplied PDF; and LeoCAD for renders. Local validation fills gaps needed by the documented assembly workflow. These are checks and review evidence, not a proof of physical buildability. See the explicit [coverage and repair guide](docs/agent/validation.md).
-
-## Detailed street example
-
-```sh
-.venv/bin/python examples/modular-street/generate.py
-./ldraw-agent build examples/modular-street/scene.plan.json --output output/copper-lane.mpd --detail summary
-./ldraw-agent render output/copper-lane.mpd --outdir output/copper-lane-review
-./ldraw-agent compare-bom output/copper-lane.mpd --csv output/copper-lane-review/leocad-bom.csv
-```
-
-The default scene has 1,655 placements across nineteen FILE blocks: a botanical bookshop and sand-green townhouse with arched flower windows, striped awnings, a gold BOOKS sign, a dormer, a stepped clock pediment, layered foliage and furnished removable floors. See the [before/after review](examples/modular-street/visual-review.md) and [design brief](examples/modular-street/design-brief.json).
-
-![Redesigned Copper Lane](examples/modular-street/preview.png)
-
-Read the [verification record](docs/agent/verification.md) for tested scope, contact/collision limits, and defects found in the annotated Bookshop reference. LeoCAD snapshots use a temporary library for embedded DAT definitions; original libraries and source models remain unchanged.
+See [LICENSE](LICENSE) for the project's GNU AGPL v3 license. Referenced models and bundled third-party resources retain their own authorship and license notices.
