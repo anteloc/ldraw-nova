@@ -282,7 +282,7 @@ def run(args):
         return search_models(args.query, root=args.models, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
     if args.command == "discover":
-        from .discovery import DiscoveryIndex, search, part_suggestions, confined
+        from .discovery import DiscoveryIndex, search, part_suggestions
         from .reference_catalog import prepare_reference, build_catalog, export_example, record_review
         index = DiscoveryIndex(parts,args.models)
         command = args.discovery_command

@@ -16,7 +16,7 @@ def search_examples(query='', *, limit=5, scale=None, details=False, family='bui
         if not all(t in text for t in terms):continue
         if scale and row.get('scale')!=scale:continue
         item={k:v for k,v in row.items() if k not in ['source_sha256']}
-        for key in ['model','plan','guide','preview']:
+        for key in ['model','plan','guide','preview','generator','visual_review']:
             if key in item:item[key]=str(path.parent/item[key])
         rows.append(item)
     return dict(total=len(rows),results=rows[:limit],truncated=len(rows)>limit,

@@ -62,11 +62,11 @@ Record a review only after opening the actual images:
 
 ```sh
 ./ldraw-agent discover review submodel-2bd03fab63ff8deee3a007d0 \
-  --catalog output/lamp-references --decision adapt \
-  --note 'Reviewed the seven views: the globe and tall moulded post suit this pavement; reserve the post base and check its connection to the scene.'
+  --catalog output/lamp-references --decision adapt --viewed-views home front right top \
+  --note 'The globe and tall moulded post suit this pavement; reserve the post base and check its connection to the scene.'
 ```
 
-Choose `reuse`, `adapt`, `technique` or `reject`. For a useful reference with passing assembly checks, a matching BOM, a contact inspection and a reuse/adapt review, `discover example` exports an editable plan and source copy with an authored lesson and placement guide. It does not certify buildability. Inspect remaining diagnostics and uncertain connections in the composed model.
+Choose `reuse`, `adapt`, `technique` or `reject`, and list only the views actually opened. For a useful reference with passing assembly and geometry checks, a matching BOM, a contact inspection and a reuse/adapt review, `discover example` exports an editable plan and source copy with an authored lesson and placement guide. Changed artifacts invalidate the review/export step. It does not certify buildability. Inspect remaining diagnostics and uncertain connections in the composed model.
 
 ```sh
 ./ldraw-agent discover example submodel-2bd03fab63ff8deee3a007d0 \

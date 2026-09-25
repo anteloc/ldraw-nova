@@ -1,5 +1,7 @@
 # Verification record
 
+The [reference-discovery implementation record](../reports/reference-discovery-implementation.md) documents the 2026-09-25 extension: live Jev searches across all three fields, a 220-reference visual library, 21 curated source examples and two adjustable recipes, with source and geometry checks kept separate from visual review.
+
 Base tooling verified on 2026-09-06, with the visual-design extension verified on 2026-09-07 in the supplied macOS workspace with Python 3.14.6, pyldraw3 1.7.0, NumPy 2.5.2, JSON Schema 4.26.0, Poppler, and the installed LeoCAD/semantic GLB converter.
 
 - Mandatory PDF: 171 pages, SHA-256 `7f24cb1a331c56248ee3d8b9b24bc422a77d4b3b5723ba0d82a3d1e9ea4cb08c`. Raw page extraction and search succeeded.

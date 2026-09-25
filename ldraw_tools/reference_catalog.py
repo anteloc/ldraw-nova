@@ -5,7 +5,6 @@ import html
 import hashlib
 import json
 import shutil
-import subprocess
 from collections import Counter
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from multiprocessing import get_context
@@ -117,9 +116,16 @@ def write_gallery(outdir, entries, failures=()):
     articles = []
     for entry in entries:
         card = entry['card']
-        ident = card['id']
+        directory = entry.get('gallery_directory',card['id'])
+        confined(outdir,directory)
+        ident = safe(directory,quote=True)
         role = entry.get('role','reference')
         title = entry.get('title') or card['description']
+        geometry = card.get('geometry')
+        contact_label = ('geometry inspection reports errors' if geometry and not _passed(geometry['diagnostics']) else
+                         'contacts inspected' if card['contacts_checked'] else 'contacts pending')
+        review = card.get('visual_review','pending')
+        review_label = ('Visual review: '+review['decision']+' ('+', '.join(review['views'])+')' if isinstance(review,dict) else 'Visual review pending')
         size = ' × '.join(f'{v:g}' for v in card['size_studs_plates_studs']) if card['size_studs_plates_studs'] else 'unknown'
         links = ' '.join(f'<a href="{ident}/renders/{view}.png">{view}</a>' for view in card['views'])
         keywords = ' '.join([title, role, card['model'], card.get('section') or '', card.get('parent_description') or '', *entry.get('tags',[])])
@@ -129,7 +135,8 @@ def write_gallery(outdir, entries, failures=()):
 <p class="context">In: {safe(card.get('parent_description') or card['model'])}</p>
 <p>{safe(entry.get('lesson','Compare the construction and source context before adapting it.'))}</p>
 <p class="facts">{card['inventory']['expanded_leaf_count']} placements · {safe(size)} studs/plates/studs</p>
-<p><strong>{'Assembly checks pass' if card['assembly_checks_passed'] else 'Assembly checks fail'}</strong> · {'BOM agrees' if card['bom_comparison']['matches'] else 'BOM differs'} · {'contacts checked' if card['contacts_checked'] else 'contacts pending'}</p>
+<p><strong>{'Assembly checks pass' if card['assembly_checks_passed'] else 'Assembly checks fail'}</strong> · {'BOM agrees' if card['bom_comparison']['matches'] else 'BOM differs'} · {contact_label}</p>
+<p>{safe(review_label)}</p>
 <p class="views">{links}</p><details><summary>Source and inspection</summary><p><code>{safe(card['model'])} / {safe(card.get('section') or card['parser_section'])}</code></p>
 <p><a href="{ident}/source.mpd">Extracted MPD</a> · <a href="{ident}/card.json">Measured card</a> · <a href="{ident}/extraction.json">Attribution and repairs</a></p>
 <p>{safe(entry.get('placement_notes','Origins and orientations are source-local. Inspect the parent placement and exposed connections.'))}</p></details></div></article>''')

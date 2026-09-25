@@ -87,7 +87,7 @@ def test_whitespace_source_section_resolves_without_losing_original_lines(parts,
 
 
 def test_reference_cache_is_content_checked_and_keeps_attribution(index,tmp_path,monkeypatch):
-    from ldraw_tools.reference_catalog import prepare_reference
+    from ldraw_tools.reference_catalog import prepare_reference, record_review, export_example
     row=next(r for r in index.rows('submodels') if r['model']=='a.mpd')
     calls=[]
     def fake_render(path,library,outdir,**kwargs):
@@ -108,6 +108,31 @@ def test_reference_cache_is_content_checked_and_keeps_attribution(index,tmp_path
     assert len(calls)==2
     prepare_reference(index,row,out,views=['home','top'],colour=4)
     assert len(calls)==3
+    identity=row['id'];card_path=out/identity/'card.json'
+    with pytest.raises(ValueError,match='actually inspected'):
+        record_review(index,identity,out,decision='adapt',note='Read the view',viewed_views=['back'])
+    review=record_review(index,identity,out,decision='adapt',note='Home view shows two separate brick bodies.',viewed_views=['home'])
+    assert review['visual_review']['views']==['home']
+    target=tmp_path/'example'
+    options=dict(title='Two bricks',lesson='Compare brick proportions',placement_notes='Add a shared support')
+    with pytest.raises(ValueError,match='contact inspection'):
+        export_example(index,identity,out,target,**options)
+    # Exercise export policy independently of connector-library availability.
+    card=json.loads(card_path.read_text());card['contacts_checked']=True
+    card['geometry']={'diagnostics':[{'severity':'error','code':'geometry.incomplete'}]}
+    card_path.write_text(json.dumps(card))
+    with pytest.raises(ValueError,match='geometry checks'):
+        export_example(index,identity,out,target,**options)
+    card['geometry']['diagnostics']=[];card_path.write_text(json.dumps(card))
+    result=export_example(index,identity,out,target,**options)
+    from ldraw_tools.builder import build_plan, load_plan
+    text,_,diagnostics=build_plan(load_plan(result['plan']),index.parts)
+    assert 'Tests' in text and not [d for d in diagnostics if d['severity']=='error']
+    (out/identity/'renders/home.png').write_bytes(b'changed image')
+    with pytest.raises(ValueError,match='artifacts changed'):
+        export_example(index,identity,out,target,force=True,**options)
+    with pytest.raises(ValueError,match='artifacts changed'):
+        record_review(index,identity,out,decision='adapt',note='Stale image',viewed_views=['home'])
 
 
 def test_content_filter_and_translation_invariant_diversity(index):
@@ -157,6 +182,32 @@ def test_ranked_model_search_has_total_and_pagination(tmp_path):
     assert second['results'][0]['model']!=first['results'][0]['model']
 
 
+def test_curated_atlas_has_rebuildable_attributed_plans_and_matching_boms(official):
+    from ldraw_tools.common import ROOT
+    from ldraw_tools.builder import load_plan, build_plan
+    from ldraw_tools.examples import search_examples
+    from ldraw_tools.external import compare_bom
+    atlas=ROOT/'examples/reference-atlas'
+    catalog=json.loads((atlas/'catalog.json').read_text())
+    references=[row for row in catalog['examples'] if 'reference_id' in row]
+    assert len(references)>=20
+    assert any(row['key']=='mini-truck-cab' for row in search_examples(family='reference',scale='microscale')['results'])
+    for row in references:
+        for key in ['model','plan','guide','preview']:assert (atlas/row[key]).is_file()
+        folder=(atlas/row['plan']).parent
+        card=json.loads((folder/'card.json').read_text())
+        assert card['visual_review']['decision'] in {'reuse','adapt'}
+        assert set(card['visual_review']['views'])<=set(card['views'])
+        assert card['source']['sha256']==row['source_sha256']
+        for name,sha in card['artifact_hashes'].items():
+            assert hashlib.sha256((folder/name).read_bytes()).hexdigest()==sha
+        text,model,diagnostics=build_plan(load_plan(folder/'scene.plan.json'),official)
+        assert not [d for d in diagnostics if d['severity']=='error']
+        assert compare_bom(model,official,folder/'renders/leocad-bom.csv')['matches']
+        for attribution in card['attribution']:
+            if attribution.get('author'):assert attribution['author'] in text
+
+
 @pytest.mark.parametrize('name',['arcade-bay','street-lantern'])
 def test_parameterized_recipes_change_real_brick_courses_and_remain_connected(official,name):
     from ldraw_tools.reference_recipes import recipe_plan
@@ -172,3 +223,19 @@ def test_parameterized_recipes_change_real_brick_courses_and_remain_connected(of
     assert reports[1]['bounds']['min'][1]==reports[0]['bounds']['min'][1]-120
     assert reports[1]['occurrence_count']>reports[0]['occurrence_count']
     with pytest.raises(ValueError):recipe_plan(name,height=0)
+
+
+def test_recipe_regeneration_clears_stale_previews_and_visual_review(official,tmp_path,monkeypatch):
+    from ldraw_tools.reference_recipes import generate_recipe
+    monkeypatch.setattr('ldraw_tools.common.get_parts',lambda:official)
+    monkeypatch.setattr('sys.argv',['generate.py','--height','2'])
+    assert generate_recipe('street-lantern',tmp_path)==0
+    (tmp_path/'renders').mkdir()
+    (tmp_path/'renders/home.png').write_bytes(b'old image')
+    (tmp_path/'visual-review.json').write_text('{"decision":"reuse"}')
+    (tmp_path/'render.json').write_text('{}')
+    monkeypatch.setattr('sys.argv',['generate.py','--height','7'])
+    assert generate_recipe('street-lantern',tmp_path)==0
+    assert not (tmp_path/'renders/home.png').exists()
+    assert not (tmp_path/'visual-review.json').exists()
+    assert not (tmp_path/'render.json').exists()

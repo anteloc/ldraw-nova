@@ -64,7 +64,7 @@ def source_id(kind, *, model=None, section=None, part=None):
 
 
 def record_id(row):
-    return source_id(row['kind'], **{k: row[k] for k in ['model', 'section', 'part'] if k in row})
+    return source_id(row.get('kind'), **{k: row[k] for k in ['model', 'section', 'part'] if k in row})
 
 
 def physical_candidate(part, parts):

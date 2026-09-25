@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "cache_key": "7bb2079c1a57bdfc46275ae2a0e6768bfd6cffda46a2b8ac6ed8e35719be4237",
+  "id": "submodel-8c004489e1f4ececee31c06d",
+  "kind": "submodels",
+  "model": "7893-1.mpd",
+  "section": "7893 - wheels.ldr",
+  "parser_section": "7893 - wheels.ldr",
+  "description": "A landing gear assembly of four wheels with tyres, wheel pins, and mounting plates.",
+  "parent_description": "A complete passenger airplane model combining a cockpit, cabin, passenger seats, service area, bar, stairs, wheels, engines, and a full crew of minifigures including pilot, steward, and passengers.",
+  "theme": "",
+  "source": {
+    "path": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/7893-1.mpd",
+    "sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
+    "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+    "start_line": 744
+  },
+  "source_root": "ref-8c004489e1f4ecec-00-7893---wheels.ldr",
+  "preview_colour": 7,
+  "inventory": {
+    "source_sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
+    "parser_section": "7893 - wheels.ldr",
+    "physical_placements": 14,
+    "expanded_leaf_count": 14,
+    "physical_accounting_complete": true,
+    "nonphysical_or_unresolved_leaves": [],
+    "raw_geometry_sections": [],
+    "bom": [
+      {
+        "part": "2780.dat",
+        "count": 1,
+        "description": "Technic Pin with Friction and Slots",
+        "physical_index_entry": true
+      },
+      {
+        "part": "3020.dat",
+        "count": 1,
+        "description": "Plate  2 x  4",
+        "physical_index_entry": true
+      },
+      {
+        "part": "3139.dat",
+        "count": 4,
+        "description": "~Moved to 3139b",
+        "physical_index_entry": true
+      },
+      {
+        "part": "32530.dat",
+        "count": 2,
+        "description": "Technic Tile  1 x  2 with Two Holes",
+        "physical_index_entry": true
+      },
+      {
+        "part": "4624.dat",
+        "count": 4,
+        "description": "Wheel Rim  6.4 x  8",
+        "physical_index_entry": true
+      },
+      {
+        "part": "4870.dat",
+        "count": 2,
+        "description": "Plate  2 x  2 with 2 Wheel Pins",
+        "physical_index_entry": true
+      }
+    ],
+    "technic_named_placements": 3,
+    "technic_share": 0.21428571428571427,
+    "legacy_parts": [
+      {
+        "part": "3139.dat",
+        "count": 4,
+        "description": "~Moved to 3139b",
+        "physical_index_entry": true
+      }
+    ],
+    "shape_fingerprint": "802e8ccfbbb5a8df9a19ec493c3f21cc3a03fc9be0518f05a899316eb8facb8a",
+    "recipe_fingerprint": "0327194fbef17f663270b1e4a81174e98a5019b7560335088465b4c88461ebc7",
+    "fingerprint_note": "Shape comparison ignores colour and global translation; rotations and mirrored geometry remain distinct.",
+    "parents": [
+      {
+        "section": "7893 - plane.ldr",
+        "at": [
+          -150.0,
+          127.0,
+          64.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "colour": 16
+      },
+      {
+        "section": "7893 - plane.ldr",
+        "at": [
+          170.0,
+          127.0,
+          64.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "colour": 16
+      }
+    ],
+    "dependencies": [
+      {
+        "section": "7893 - wheels.ldr",
+        "kind": "assembly",
+        "author": "Philippe Hurbain [Philo]",
+        "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+      }
+    ],
+    "reachable": true
+  },
+  "attribution": [
+    {
+      "section": "7893 - wheels.ldr",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    }
+  ],
+  "bounds": {
+    "min": [
+      -30.0,
+      -76.0,
+      -18.0
+    ],
+    "max": [
+      10.0,
+      18.0,
+      90.0
+    ]
+  },
+  "size_ldu": [
+    40.0,
+    94.0,
+    108.0
+  ],
+  "size_studs_plates_studs": [
+    2.0,
+    11.75,
+    5.4
+  ],
+  "mesh_complete": true,
+  "mesh_diagnostics": [],
+  "raw_assembly_checks_passed": true,
+  "raw_diagnostic_counts": {
+    "header.missing": 1,
+    "part.alias_or_internal": 4
+  },
+  "assembly_checks_passed": true,
+  "diagnostics": [
+    {
+      "code": "header.missing",
+      "severity": "warning",
+      "message": "Add a descriptive Name: header.",
+      "line_number": null,
+      "section": "preview-submodel-8c004489e1f4ececee31c06d.ldr"
+    },
+    {
+      "code": "part.alias_or_internal",
+      "severity": "warning",
+      "message": "Inspect this alias/internal part and prefer a current physical part.",
+      "line_number": 17,
+      "section": "ref-8c004489e1f4ecec-00-7893---wheels.ldr"
+    },
+    {
+      "code": "part.alias_or_internal",
+      "severity": "warning",
+      "message": "Inspect this alias/internal part and prefer a current physical part.",
+      "line_number": 33,
+      "section": "ref-8c004489e1f4ecec-00-7893---wheels.ldr"
+    },
+    {
+      "code": "part.alias_or_internal",
+      "severity": "warning",
+      "message": "Inspect this alias/internal part and prefer a current physical part.",
+      "line_number": 37,
+      "section": "ref-8c004489e1f4ecec-00-7893---wheels.ldr"
+    },
+    {
+      "code": "part.alias_or_internal",
+      "severity": "warning",
+      "message": "Inspect this alias/internal part and prefer a current physical part.",
+      "line_number": 41,
+      "section": "ref-8c004489e1f4ecec-00-7893---wheels.ldr"
+    }
+  ],
+  "repairs": [],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 10,
+      "partial": 4,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -30.0,
+        -76.0,
+        -18.0
+      ],
+      "max": [
+        10.0,
+        18.0,
+        90.0
+      ]
+    },
+    "occurrence_count": 14,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": true,
+    "contact_count": 30,
+    "contacts": [],
+    "contacts_truncated": true,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": 5,
+    "confirmed_component_count": 6,
+    "components_truncated": true,
+    "overlap_candidate_count": 19,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 5
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  },
+  "contacts_checked": true,
+  "bom_comparison": {
+    "matches": true,
+    "physical_placements": 14,
+    "leocad_placements": 14,
+    "differences": []
+  },
+  "views": [
+    "home",
+    "front",
+    "back",
+    "right",
+    "left",
+    "top",
+    "bottom"
+  ],
+  "artifacts": {
+    "source": "source.mpd",
+    "preview": "preview.mpd",
+    "manifest": "extraction.json"
+  },
+  "status": "reference",
+  "visual_review": {
+    "decision": "adapt",
+    "note": "Home and right show two wheel stations under a flat deck and a short upright mounting pair. The open space around the wheels keeps the module visually light.",
+    "views": [
+      "home",
+      "right"
+    ]
+  },
+  "physical_validity": "not_proven",
+  "limitations": [
+    "Bounds describe the source local axes, including protrusions; they are not connection frames.",
+    "Preview colour resolves inherited 16; extraction retains original colours and authorship.",
+    "Passing checks or matching a BOM does not prove connectivity, stability or fit in a new model."
+  ],
+  "artifact_hashes": {
+    "source.mpd": "116550dbc72acdd8b3929f5df036984ee3cfb509b330d8b5058c06c080d97202",
+    "preview.mpd": "28a268cf49a321cf74d494d4f2bcdfa86ad42cb6e4944b6d781331103dc091d8",
+    "extraction.json": "8d4a57515ad412f27e68c07b9caa0a08ba87fcd499550c74b9496b03e0dc665d",
+    "renders/leocad-bom.csv": "825ab1ab568c1cc553e2b32a0613ef320d73c4e969ce0b478dc7c01723616a10",
+    "renders/home.png": "f8355c92a45d3e0fe2d44ec5479ca788ae2c26b6f94f25f114b2c1fa83353df5",
+    "renders/front.png": "57bdb50a6d68b935eca4c5c4bb54b9f3955b25bafe73753f2a7006fdbcb9e617",
+    "renders/back.png": "eb98d3bdf18357853a40e7f03a1c23882fdfc4c346c202717d5e3a8037347248",
+    "renders/right.png": "d2443bb3972684e81e86cd6dc900fbaddb1b4acd8fd59b1f6c51f45182b097b0",
+    "renders/left.png": "b10ed8033351c467f881ad9d6d931ed64ea69b60f062c68e9e2b1ff1e7a07b14",
+    "renders/top.png": "8289a50dfe2244bab5793e2499ee4de00b20c321e1a263947e9d6df7708244aa",
+    "renders/bottom.png": "b5c95a3463e53f1021c2d7fea2de6dbc578db2a8edfd9c05914bf1240a05a37c"
+  }
+}

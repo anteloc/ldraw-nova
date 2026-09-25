@@ -74,8 +74,16 @@ def generate_recipe(name, destination):
     if not passed:
         print(dumps(report));return 1
     args.outdir.mkdir(parents=True,exist_ok=True)
+    model_path=args.outdir/(name+'.mpd')
+    previous=model_path.read_bytes() if model_path.is_file() else None
     atomic_write(args.outdir/'scene.plan.json',dumps(plan)+'\n')
-    atomic_write(args.outdir/(name+'.mpd'),text)
+    atomic_write(model_path,text)
+    if previous != model_path.read_bytes() or args.render:
+        # A previous review belongs to its source and rendered images. Keep no
+        # stale preview beside an edited recipe, even when --render is omitted.
+        for filename in ['visual-review.json','render.json','renders/leocad-bom.csv',
+                         *['renders/'+v+'.png' for v in ['home','front','right','top']]]:
+            (args.outdir/filename).unlink(missing_ok=True)
     atomic_write(args.outdir/'validation.json',dumps(report)+'\n')
     if args.render:
         from ldraw import inspect_model
