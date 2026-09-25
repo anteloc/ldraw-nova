@@ -2,6 +2,8 @@
 
 Prepared 2026-09-23. Workload: **automated production above 100 models/month**, with scenarios at 100, 1,000 and 10,000. Dollar amounts are USD.
 
+Follow-up: the [2026-09-24 assembly-discovery evaluation](jev-assembly-discovery-assessment.md) reports live Jev queries against the three `full_description` views, source audits and rendered assembly inspections. The discussion below retains its original scope and estimates.
+
 Your concern is justified. **The cathedral demonstrated a narrow retrieval use, not an improvement in model quality. TypeSafe's broader advantages were substantially underused, but using more features would not by itself produce a better cathedral.** The most promising extension is to select reusable assemblies with explicit evidence and check whether a generated design meets its brief. Better part retrieval is a smaller, useful experiment. Replacing geometry checks or visual review with Jev would make the process less trustworthy.
 
 For a fully automated workload, I recommend a bounded benchmark first, then assembly selection and brief coverage checks if they beat simpler baselines. A cheaper-generator/escalation workflow could eventually save more operating money, but needs stronger evaluation. I would defer learned aesthetic scoring and automatic feature discovery until there are enough independently reviewed builds.

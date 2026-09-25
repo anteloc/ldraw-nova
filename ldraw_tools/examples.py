@@ -5,7 +5,7 @@ from .common import ROOT
 
 
 def search_examples(query='', *, limit=5, scale=None, details=False, family='building'):
-    if family not in {'building','vehicle'}:raise ValueError('Unknown example family')
+    if family not in {'building','vehicle','reference'}:raise ValueError('Unknown example family')
     if family=='vehicle' and scale:raise ValueError('Vehicle examples do not use building scale filters')
     path=ROOT/f'examples/{family}-atlas/catalog.json'
     if not path.is_file():raise ValueError(f'{family.title()} atlas catalog missing')

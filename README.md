@@ -17,6 +17,8 @@ and aircraft, dedicated fitting recipes, vehicle palettes and family-specific ch
 
 For visual design, start with the [design guide](docs/agent/visual-design.md). The supplied categories now support descriptive refs and named colours directly in plans, bounded search with live dimension checks, role-based palettes, reusable architectural details, and LeoCAD part-selection boards.
 
+For a broader construction vocabulary, use [reference discovery](docs/agent/reference-discovery.md) and the [reference atlas](examples/reference-atlas/README.md). `discover search` connects Jev-ranked parts, submodels and whole models to stable source identities, measured contents, diverse shortlists and an offline image catalog. Curated references include editable placement plans; selected generators adapt useful constructions by brick courses and palette.
+
 For connector-based assembly, start with the [shadow and snapping guide](docs/agent/snapping.md). The supplied `offLibShadow/` loads automatically. Discover connector IDs with `connectors`, preview and apply checked part/submodel snaps with `snap`, or use `snap` placements in JSON plans. Try [shadow-snap.plan.json](examples/shadow-snap.plan.json).
 
 For complex scenes, start with the [Bookshop case study and module workflow](docs/agent/complex-models.md), its [measured assembly inventory](docs/agent/resources/bookshop-study.json), and the original [Copper Lane generator](examples/modular-street/README.md). Plans support nested includes, attributed MPD assets, named attachment frames and regular repeats. Inspection supports selected sections and bounded reports; embedded DAT parts resolve without inflating physical BOM counts.

@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "author": "Orion Pobursky [OrionP]; parameterized adaptation by ldraw-astra",
+  "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt",
+  "sections": [
+    {
+      "name": "recipe-arcade-bay.ldr",
+      "description": "Four-stud open arch with adjustable brick piers and a layered cornice.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "foot",
+            "ref": "3710.dat",
+            "colour": 19,
+            "at": [
+              0,
+              -8,
+              0
+            ]
+          },
+          {
+            "id": "left-pier",
+            "ref": "3005.dat",
+            "colour": 19,
+            "at": [
+              -30,
+              -32,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "right-pier",
+            "ref": "3005.dat",
+            "colour": 19,
+            "at": [
+              30,
+              -32,
+              0
+            ],
+            "repeat": {
+              "count": 3,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "arch",
+            "ref": "3659.dat",
+            "colour": 19,
+            "at": [
+              0,
+              -104,
+              0
+            ]
+          },
+          {
+            "id": "cornice-left",
+            "ref": "3004.dat",
+            "colour": 19,
+            "at": [
+              -20,
+              -128,
+              0
+            ]
+          },
+          {
+            "id": "cornice-masonry",
+            "ref": "98283.dat",
+            "colour": 19,
+            "at": [
+              20,
+              -128,
+              0
+            ],
+            "yaw": 180
+          },
+          {
+            "id": "cornice-round-0",
+            "ref": "85861.dat",
+            "colour": 28,
+            "at": [
+              -30,
+              -136,
+              0
+            ]
+          },
+          {
+            "id": "cornice-round-1",
+            "ref": "85861.dat",
+            "colour": 28,
+            "at": [
+              -10,
+              -136,
+              0
+            ]
+          },
+          {
+            "id": "cornice-round-2",
+            "ref": "85861.dat",
+            "colour": 28,
+            "at": [
+              10,
+              -136,
+              0
+            ]
+          },
+          {
+            "id": "cornice-round-3",
+            "ref": "85861.dat",
+            "colour": 28,
+            "at": [
+              30,
+              -136,
+              0
+            ]
+          },
+          {
+            "id": "cornice-cap",
+            "ref": "3010.dat",
+            "colour": 19,
+            "at": [
+              0,
+              -160,
+              0
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}

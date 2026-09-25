@@ -26,6 +26,8 @@ Use the current [Copper Lane brief](../../examples/modular-street/design-brief.j
 
 ## Find a shape before memorizing a number
 
+First consider whether the missing design idea is a whole-model precedent, a reusable construction or an individual part. Use [reference discovery](reference-discovery.md) for separate searches at those three levels and `examples --family reference` for curated sources. Open the candidate catalog, compare measured sizes and parent context, and select a few distinct constructions. A model can suggest proportions and palette; a submodel can reveal actual fittings and assembly techniques that a part-name search misses. Record whether each chosen source is copied, adapted or used only as inspiration.
+
 Start with [Jev part discovery](tooling.md#jev-part-discovery) when you know the role or visual character but not the part name. Describe one part, such as `a wall decoration for a castle`; the reranker returns ten scored alternatives for that role. Run separate queries for different roles, inspect the returned real references, and compare a curated shortlist visually. Keep the model's scale and style in the query, then verify actual dimensions and attachment geometry with the tools below.
 
 The supplied `categories/` tree has descriptive part symbols, colour definitions and dimension hints. The tooling reads those files as static metadata, preserving their notices; it does not import their optional `py4bricks` dependency or edit the generated files.

@@ -63,7 +63,67 @@ def parser():
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
-    c.add_argument("--family", choices=["building", "vehicle"], default="building")
+    c.add_argument("--family", choices=["building", "vehicle", "reference"], default="building")
+    c = commands.add_parser("discover", help="Find, measure and visually review parts, source models and submodels")
+    discovery = c.add_subparsers(dest="discovery_command", required=True)
+    d = discovery.add_parser("index", help="Build a local typed index from the three Jev fields and actual source headers")
+    d.add_argument("--refresh", action="store_true")
+    d = discovery.add_parser("search", help="Rank eligible references, inspect contents and diversify the shortlist")
+    d.add_argument("kind", choices=["parts", "models", "submodels"])
+    d.add_argument("query")
+    d.add_argument("--engine", choices=["jev", "fts"], default="jev")
+    d.add_argument("--limit", type=positive, default=10)
+    d.add_argument("--pool", type=positive, default=60)
+    d.add_argument("--candidates", type=int, default=500, help="Jev candidate budget; 0 scores all eligible records")
+    d.add_argument("--all-families", action="store_true", help="Include Technic and other product families")
+    d.add_argument("--min-parts", type=int, default=2)
+    d.add_argument("--max-parts", type=positive)
+    d.add_argument("--max-technic-share", type=float, default=0.5)
+    d.add_argument("--parent-cap", type=positive, default=2)
+    d.add_argument("--yes")
+    d.add_argument("--no")
+    d.add_argument("--report")
+    d = discovery.add_parser("show", help="Resolve a stable identity and inspect its dependencies and BOM")
+    d.add_argument("id")
+    d = discovery.add_parser("recipe", help="List or export selected parameterized construction recipes")
+    d.add_argument("name", nargs='?')
+    d.add_argument("--height", type=int)
+    d.add_argument("--colour", type=int)
+    d.add_argument("--accent", type=int)
+    d.add_argument("--output")
+    d.add_argument("--force", action="store_true")
+    d = discovery.add_parser("parts", help="Suggest actual parts from the constructions in a saved search report")
+    d.add_argument("results")
+    d.add_argument("--limit", type=positive, default=20)
+    d = discovery.add_parser("prepare", help="Extract, measure and render one reference card")
+    d.add_argument("id")
+    d.add_argument("--outdir", required=True)
+    d.add_argument("--views", nargs='+', default=["home","front","right","top"])
+    d.add_argument("--colour", type=int, default=7)
+    d.add_argument("--contacts", choices=["none","auto","all"], default="none")
+    d.add_argument("--refresh", action="store_true")
+    d = discovery.add_parser("catalog", help="Build a resumable visual catalog from a manifest or saved search")
+    d.add_argument("manifest")
+    d.add_argument("--outdir", required=True)
+    d.add_argument("--views", nargs='+', default=["home","front","right","top"])
+    d.add_argument("--contacts", choices=["none","auto","all"], default="none")
+    d.add_argument("--refresh", action="store_true")
+    d.add_argument("--jobs", type=int, choices=[1,2,3,4], default=1, help="Independent renderer processes; each owns separate CAD and geometry state")
+    d = discovery.add_parser("review", help="Record the agent's visual review after opening the rendered images")
+    d.add_argument("id")
+    d.add_argument("--catalog", required=True)
+    d.add_argument("--decision", choices=["reuse","adapt","technique","reject"], required=True)
+    d.add_argument("--note", required=True)
+    d.add_argument("--viewed-views", nargs='+', required=True, help="Only the rendered views you actually opened and inspected")
+    d = discovery.add_parser("example", help="Export a reviewed reference as an editable example with a placement guide")
+    d.add_argument("id")
+    d.add_argument("--catalog", required=True)
+    d.add_argument("--output", required=True)
+    d.add_argument("--title", required=True)
+    d.add_argument("--lesson", required=True)
+    d.add_argument("--placement-notes", required=True)
+    d.add_argument("--scale", choices=["minifigure","microscale","display","unknown"], default="unknown")
+    d.add_argument("--force", action="store_true")
     c = commands.add_parser("vehicle", help="System road, motorcycle, boat and aircraft designs, dedicated fittings and review")
     vehicle_commands = c.add_subparsers(dest="vehicle_command", required=True)
     vehicle_commands.add_parser("list", help="List editable vehicle starting points")
@@ -112,6 +172,7 @@ def parser():
     c.add_argument("kind", choices=["parts", "models", "submodels"])
     c.add_argument("query")
     c.add_argument("--limit", type=positive, default=10)
+    c.add_argument("--offset", type=int, default=0, help="Model/submodel FTS page offset")
     c = commands.add_parser("part", help="Inspect one real part's metadata, local bounds and connectors")
     c.add_argument("code")
     c.add_argument("--limit", type=positive, default=30, help="Connector output limit (total is always reported)")
@@ -218,8 +279,53 @@ def run(args):
     if args.command == "profiles":
         return json.loads((DATA / "rectangular-parts.json").read_text()), 0
     if args.command == "search" and args.kind != "parts":
-        return search_models(args.query, root=args.models, limit=args.limit, submodels=args.kind == "submodels"), 0
+        return search_models(args.query, root=args.models, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
+    if args.command == "discover":
+        from .discovery import DiscoveryIndex, search, part_suggestions, confined
+        from .reference_catalog import prepare_reference, build_catalog, export_example, record_review
+        index = DiscoveryIndex(parts,args.models)
+        command = args.discovery_command
+        if command == 'recipe':
+            from .reference_recipes import RECIPES,recipe_plan
+            if args.name is None:
+                if args.output:raise ValueError('Choose a recipe name to export')
+                return RECIPES,0
+            plan=recipe_plan(args.name,height=args.height,colour=args.colour,accent=args.accent)
+            _,_,diagnostics=build_plan(plan,parts)
+            if any(d['severity']=='error' for d in diagnostics):return dict(written=False,diagnostics=diagnostics),1
+            if args.output:
+                target=Path(args.output)
+                if target.exists() and not args.force:raise ValueError('Output exists; use --force')
+                atomic_write(target,dumps(plan)+'\n')
+            return dict(plan=plan,output=args.output,recipe=RECIPES[args.name],next='Build, inspect connections, render and review the adapted module.'),0
+        if command == 'index':
+            return index.ensure(force=args.refresh),0
+        if command == 'parts':
+            return part_suggestions(json.loads(Path(args.results).read_text())['results'],limit=args.limit),0
+        if command == 'search':
+            return search(index,args.kind,args.query,engine=args.engine,limit=args.limit,pool=args.pool,candidates=args.candidates,
+                          system=not args.all_families,min_parts=args.min_parts,max_parts=args.max_parts,
+                          max_technic_share=args.max_technic_share,parent_cap=args.parent_cap,yes=args.yes,no=args.no),0
+        index.ensure()
+        if command == 'show':
+            row=index.get(args.id)
+            return dict(row,inventory=index.inventory(row)),0
+        if command == 'prepare':
+            return prepare_reference(index,index.get(args.id),args.outdir,views=args.views,colour=args.colour,contacts=args.contacts,refresh=args.refresh),0
+        if command == 'catalog':
+            manifest=json.loads(Path(args.manifest).read_text())
+            if 'references' not in manifest and 'results' in manifest:
+                manifest=dict(title=manifest.get('query','Discovery shortlist'),references=[dict(id=r['id'],role=manifest.get('query','reference')) for r in manifest['results']])
+            report=build_catalog(index,manifest,args.outdir,views=args.views,contacts=args.contacts,refresh=args.refresh,
+                                 jobs=args.jobs,
+                                 progress=lambda value:print(json.dumps(value),file=sys.stderr,flush=True))
+            return report,1 if report['failures'] else 0
+        if command == 'review':
+            return record_review(index,args.id,args.catalog,decision=args.decision,note=args.note,viewed_views=args.viewed_views),0
+        if command == 'example':
+            return export_example(index,args.id,args.catalog,args.output,title=args.title,lesson=args.lesson,
+                                  placement_notes=args.placement_notes,scale=args.scale,force=args.force),0
     if args.command == "vehicle":
         from .vehicles import DESIGNS, vehicle_plan, wheel_report, design_brief
         if args.vehicle_command == "list":

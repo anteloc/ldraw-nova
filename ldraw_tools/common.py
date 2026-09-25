@@ -16,11 +16,13 @@ DATA = Path(__file__).parent / "data"
 
 
 def library_path(value=None):
-    return Path(value or os.environ.get("LDRAW_DIR", ROOT.parent / "ldraw-lib/ldraw")).expanduser().resolve()
+    base = Path(os.environ.get("LDRAW_LIB_DIR", ROOT.parent / "ldraw-lib"))
+    return Path(value or os.environ.get("LDRAW_DIR", base / "ldraw")).expanduser().resolve()
 
 
 def models_path(value=None):
-    return Path(value or os.environ.get("MODELS_DIR", ROOT.parent / "ldraw-lib/models-annotated")).expanduser().resolve()
+    base = Path(os.environ.get("LDRAW_LIB_DIR", ROOT.parent / "ldraw-lib"))
+    return Path(value or os.environ.get("MODELS_DIR", base / "models-annotated")).expanduser().resolve()
 
 
 def atomic_write(path, text):

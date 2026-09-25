@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "author": "ldraw-astra; lamp vocabulary from Marc Giraudet [Mad_Marc]",
+  "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt",
+  "sections": [
+    {
+      "name": "recipe-street-lantern.ldr",
+      "description": "Slender round-brick street lantern with a moulded transparent light and dish shade.",
+      "anchors": {
+        "base": {
+          "at": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "steps": [
+        [
+          {
+            "id": "base",
+            "ref": "3022.dat",
+            "colour": 0,
+            "at": [
+              0,
+              -8,
+              0
+            ]
+          },
+          {
+            "id": "centred-post-mount",
+            "ref": "87580.dat",
+            "colour": 0,
+            "at": [
+              0,
+              -16,
+              0
+            ]
+          },
+          {
+            "id": "post",
+            "ref": "3062b.dat",
+            "colour": 0,
+            "at": [
+              0,
+              -40,
+              0
+            ],
+            "repeat": {
+              "count": 6,
+              "step": [
+                0,
+                -24,
+                0
+              ]
+            }
+          },
+          {
+            "id": "collar",
+            "ref": "85861.dat",
+            "colour": 71,
+            "at": [
+              0,
+              -168,
+              0
+            ]
+          },
+          {
+            "id": "light",
+            "ref": "3062b.dat",
+            "colour": 46,
+            "at": [
+              0,
+              -192,
+              0
+            ]
+          },
+          {
+            "id": "shade",
+            "ref": "4740.dat",
+            "colour": 0,
+            "at": [
+              0,
+              -200,
+              0
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}

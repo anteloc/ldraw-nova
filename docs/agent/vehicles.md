@@ -59,6 +59,8 @@ vehicle arrangements and their opened-image review.
 
 ## Choose dedicated parts before building substitutes
 
+Search [model and submodel references](reference-discovery.md) as well as individual parts. Compare whole vehicles for silhouette, then query one cab, bogie, wing, engine or hull role at a time. `discover parts SAVED_SEARCH.json` exposes the actual fittings used in matched constructions. Inspect parent subject, dimensions, preview images and Technic content before reusing them; a spacecraft module may teach a technique without fitting a passenger aircraft directly.
+
 Use actual seats, steering wheels, windscreens, mudguards, motorcycle frames,
 boat hulls, aircraft shells, wings, engine housings, printed instruments and cargo
 containers where they suit the design. Do not fill every functional area with

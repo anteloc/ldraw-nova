@@ -66,6 +66,8 @@ Model/submodel search reuses the supplied `../ldraw-lib/scripts/ldraw-info.db` *
 
 ## Jev part discovery
 
+For the integrated parts/models/submodels workflow, use [reference discovery](reference-discovery.md): `discover index`, `discover search`, `discover show`, `discover parts`, `discover prepare`, `discover catalog`, `discover review`, `discover example` and `discover recipe`. It consumes the three `full_description` views through a typed local index, repairs single-section header descriptions locally, filters actual contents, diversifies results and supplies measured image cards. The direct sibling CLI below remains available, but its original-table key instructions do not apply to the synthetic row keys returned by the new views.
+
 Use the sibling `../jev-rerank` CLI when the request describes a part's purpose or appearance. From this repository root:
 
 ```sh

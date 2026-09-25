@@ -27,11 +27,21 @@ def section_table(model):
     return {normalized(s.name): s for s in [model, *model.submodels.values()]}
 
 
+def resolve_section(model, section=None):
+    """Match a source/header identity to the parser without guessing ambiguities."""
+    table = section_table(model)
+    wanted = normalized(section if section is not None else model.name)
+    if wanted in table:
+        return table[wanted]
+    matches = [s for k, s in table.items() if k.strip() == wanted.strip()]
+    if len(matches) != 1:
+        raise ValueError(f"{'Ambiguous' if matches else 'Unknown'} section {section!r}")
+    return matches[0]
+
+
 def dependency_closure(model, section=None):
     table = section_table(model)
-    start = normalized(section or model.name)
-    if start not in table:
-        raise ValueError(f"Unknown section {section!r}")
+    start = normalized(resolve_section(model, section).name)
     ordered, done = [], set()
 
     def visit(key, path):
@@ -114,12 +124,17 @@ def source_blocks(path):
     for number, line in enumerate(Path(path).read_text(encoding="utf-8-sig").splitlines(), 1):
         fields = line.split(None, 2)
         if fields[:2] == ["0", "FILE"] and len(fields) == 3:
-            active = normalized(fields[2])
+            active = normalized(fields[2].strip())
+            if active in result:
+                raise ValueError(f"Ambiguous FILE identity {fields[2]!r}")
             result[active] = []
         elif fields[:2] == ["0", "NOFILE"]:
             active = None
         elif active is not None:
             result[active].append((number, line))
+    if not result:
+        model = parse_source(path)
+        result[normalized(model.name)] = list(enumerate(Path(path).read_text(encoding="utf-8-sig").splitlines(), 1))
     return result
 
 
@@ -128,8 +143,6 @@ def selected_source(path, section, colour=None):
     model = parse_source(path)
     closure = dependency_closure(model, section)
     blocks = source_blocks(path)
-    if not blocks:
-        raise ValueError("Section selection requires MPD FILE blocks")
     lines, line_map = [], {}
     if colour is not None or is_part(closure[0]):
         wrapper = "astra-selection-root.ldr"
@@ -140,7 +153,7 @@ def selected_source(path, section, colour=None):
                       f"1 {7 if colour is None else colour} 0 0 0 1 0 0 0 1 0 0 0 1 {closure[0].name}"])
     for sub in closure:
         lines.append("0 FILE " + sub.name)
-        for original, line in blocks[normalized(sub.name)]:
+        for original, line in blocks[normalized(sub.name).strip()]:
             lines.append(line)
             line_map[len(lines)] = original
     lines.append("0 NOFILE")
@@ -154,8 +167,6 @@ def extract_section(path, section, *, namespace, repair_bfc=False, normalize_rot
     model = parse_source(path)
     closure = dependency_closure(model, section)
     blocks = source_blocks(path)
-    if not blocks:
-        raise ValueError("Extraction currently requires MPD FILE blocks")
     renames = {}
     for index, sub in enumerate(closure):
         stem = re.sub(r"[^A-Za-z0-9_-]+", "-", Path(sub.name.replace("\\", "/")).stem).strip("-")
@@ -164,7 +175,7 @@ def extract_section(path, section, *, namespace, repair_bfc=False, normalize_rot
     for sub in closure:
         new_name = renames[normalized(sub.name)]
         lines.append("0 FILE " + new_name)
-        content = list(blocks[normalized(sub.name)])
+        content = list(blocks[normalized(sub.name).strip()])
         if repair_bfc:
             i = 0
             while i < len(content):
@@ -193,7 +204,7 @@ def extract_section(path, section, *, namespace, repair_bfc=False, normalize_rot
                                             max_coefficient_change=float(np.max(np.abs(corrected-matrix)))))
                         tokens[5:14] = [f"{v:.9f}" for v in corrected.ravel()]
                         line = " ".join(tokens)
-                child = renames.get(normalized(tokens[14]))
+                child = renames.get(normalized(tokens[14]).strip())
                 if child:
                     line = " ".join(tokens[:14]) + " " + child
             lines.append(line)
@@ -201,7 +212,7 @@ def extract_section(path, section, *, namespace, repair_bfc=False, normalize_rot
     text = "\r\n".join(lines) + "\r\n"
     raw = Path(path).read_bytes()
     manifest = dict(source=str(Path(path).resolve()), source_sha256=hashlib.sha256(raw).hexdigest(),
-                    source_section=section, root=renames[normalized(section)],
+                    source_section=section, parser_section=closure[0].name, root=renames[normalized(closure[0].name)],
                     renames={s.name: renames[normalized(s.name)] for s in closure},
                     attribution=[dict(section=s.name, author=s.author, license=s.license) for s in closure],
                     changes=changes, output_sha256=hashlib.sha256(text.encode()).hexdigest(),
