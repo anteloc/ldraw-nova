@@ -25,4 +25,4 @@ Inspect all seven views, especially the bottom and the hidden face of each mount
 - Required mounting pairs: 40
 - Physical validity: **not proven**.
 
-Run `./ldraw-agent technic check /Users/captain/workspaces/workspace-ai/ldraw-astra/examples/technic-atlas/service-platform/service-platform.mpd --contract /Users/captain/workspaces/workspace-ai/ldraw-astra/examples/technic-atlas/service-platform/structure.json` from the repository root. Also run normal `validate --geometry`; a seating check cannot waive unrelated solid intersections.
+Run `./ldraw-agent technic check examples/technic-atlas/service-platform/service-platform.mpd --contract examples/technic-atlas/service-platform/structure.json` from the repository root. Also run normal `validate --geometry`; a seating check cannot waive unrelated solid intersections.

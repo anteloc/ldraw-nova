@@ -1,0 +1,4083 @@
+{
+  "file": "output/turntable-frame/turntable-frame.mpd",
+  "section": null,
+  "profile": "assembly",
+  "checks_passed": false,
+  "physical_validity": "not_proven",
+  "diagnostics": [
+    {
+      "code": "technic.invalid_seating",
+      "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+      "severity": "error",
+      "instances": [
+        23,
+        29
+      ],
+      "ports": [
+        [
+          "technic:grip-1",
+          "technic:hole-1"
+        ]
+      ]
+    },
+    {
+      "code": "technic.invalid_seating",
+      "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+      "severity": "error",
+      "instances": [
+        24,
+        29
+      ],
+      "ports": [
+        [
+          "technic:grip-1",
+          "technic:hole-5"
+        ]
+      ]
+    },
+    {
+      "code": "technic.invalid_seating",
+      "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+      "severity": "error",
+      "instances": [
+        30,
+        12
+      ],
+      "ports": [
+        [
+          "technic:grip-0",
+          "technic:hole-2"
+        ]
+      ]
+    },
+    {
+      "code": "technic.invalid_seating",
+      "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+      "severity": "error",
+      "instances": [
+        31,
+        12
+      ],
+      "ports": [
+        [
+          "technic:grip-0",
+          "technic:hole-8"
+        ]
+      ]
+    },
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 14
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 32,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -164.90946,
+        -49.000219312,
+        -70.0
+      ],
+      "max": [
+        164.90946,
+        56.90946,
+        50.0
+      ]
+    },
+    "occurrence_count": 32,
+    "detail": "full",
+    "instance_offset": 0,
+    "instances": [
+      {
+        "index": 0,
+        "part": "32525.dat",
+        "description": "Technic Beam 11",
+        "colour": {
+          "code": 71,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          20.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -109.0,
+            -9.0,
+            10.0
+          ],
+          "max": [
+            109.0,
+            9.0,
+            30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 7,
+        "source_path": [
+          7
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 11,
+        "placement_path": [
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 1,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -80.0,
+          0.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -88.0005308,
+            -7.801,
+            10.0
+          ],
+          "max": [
+            -71.9994692,
+            7.801,
+            50.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 9,
+        "source_path": [
+          9
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 2,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -40.0,
+          0.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -48.0005308,
+            -7.801,
+            10.0
+          ],
+          "max": [
+            -31.9994692,
+            7.801,
+            50.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 11,
+        "source_path": [
+          11
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 3,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          40.0,
+          0.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            31.9994692,
+            -7.801,
+            10.0
+          ],
+          "max": [
+            48.0005308,
+            7.801,
+            50.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 13,
+        "source_path": [
+          13
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 4,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          80.0,
+          0.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            71.9994692,
+            -7.801,
+            10.0
+          ],
+          "max": [
+            88.0005308,
+            7.801,
+            50.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 15,
+        "source_path": [
+          15
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          4
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 5,
+        "part": "87082.dat",
+        "description": "Technic Pin Long with Pin Hole Type 1",
+        "colour": {
+          "code": 71,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -9.0,
+            -10.0,
+            -30.0
+          ],
+          "max": [
+            9.0,
+            10.0,
+            30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 17,
+        "source_path": [
+          17
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 25,
+        "placement_path": [
+          5
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 6,
+        "part": "48989.dat",
+        "description": "Technic Cross Block 1 x 3 (Pin/Pin/Pin) with 4 Pins",
+        "colour": {
+          "code": 71,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -80.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -109.0,
+            -10.0,
+            -30.0
+          ],
+          "max": [
+            -51.0,
+            10.0,
+            30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 20,
+        "source_path": [
+          20
+        ],
+        "step": 2,
+        "body_profile": false,
+        "connector_count": 14,
+        "placement_path": [
+          6
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 8,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 7,
+        "part": "48989.dat",
+        "description": "Technic Cross Block 1 x 3 (Pin/Pin/Pin) with 4 Pins",
+        "colour": {
+          "code": 71,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          80.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            51.0,
+            -10.0,
+            -30.0
+          ],
+          "max": [
+            109.0,
+            10.0,
+            30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 22,
+        "source_path": [
+          22
+        ],
+        "step": 2,
+        "body_profile": false,
+        "connector_count": 14,
+        "placement_path": [
+          7
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 8,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 8,
+        "part": "6558.dat",
+        "description": "Technic Pin Long with Friction and Slot",
+        "colour": {
+          "code": 1,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -20.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -28.0005308,
+            -7.801,
+            -30.0
+          ],
+          "max": [
+            -11.9994692,
+            7.801,
+            30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 25,
+        "source_path": [
+          25
+        ],
+        "step": 3,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          8
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 9,
+        "part": "6558.dat",
+        "description": "Technic Pin Long with Friction and Slot",
+        "colour": {
+          "code": 1,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          20.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            11.9994692,
+            -7.801,
+            -30.0
+          ],
+          "max": [
+            28.0005308,
+            7.801,
+            30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 27,
+        "source_path": [
+          27
+        ],
+        "step": 3,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          9
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 10,
+        "part": "99009.dat",
+        "description": "Technic Turntable 28 Tooth Bottom",
+        "colour": {
+          "code": 71,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          -20.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -29.0,
+            -24.0,
+            -27.000656080000002
+          ],
+          "max": [
+            29.0,
+            9.0,
+            27.000656080000002
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 30,
+        "source_path": [
+          30
+        ],
+        "step": 4,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          10
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 11,
+        "part": "99010.dat",
+        "description": "Technic Turntable 28 Tooth Top",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          -20.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -36.802,
+            -49.000219312,
+            -36.802
+          ],
+          "max": [
+            36.802,
+            -10.0,
+            36.802
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 32,
+        "source_path": [
+          32
+        ],
+        "step": 4,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          11
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 12,
+        "part": "32525.dat",
+        "description": "Technic Beam 11",
+        "colour": {
+          "code": 71,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          -20.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -109.0,
+            -9.0,
+            -30.0
+          ],
+          "max": [
+            109.0,
+            9.0,
+            -10.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 35,
+        "source_path": [
+          35
+        ],
+        "step": 5,
+        "body_profile": false,
+        "connector_count": 11,
+        "placement_path": [
+          12
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 13,
+        "part": "6629.dat",
+        "description": "Technic Beam 4 x 6 Liftarm Bent 53.13",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          20.0,
+          0.0,
+          40.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            11.0,
+            -9.0004545,
+            30.0
+          ],
+          "max": [
+            164.90946,
+            56.90946,
+            50.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 38,
+        "source_path": [
+          38
+        ],
+        "step": 6,
+        "body_profile": false,
+        "connector_count": 77,
+        "placement_path": [
+          13
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 14,
+        "part": "6629.dat",
+        "description": "Technic Beam 4 x 6 Liftarm Bent 53.13",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -20.0,
+          0.0,
+          40.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -164.90946,
+            -9.0004545,
+            30.0
+          ],
+          "max": [
+            -11.0,
+            56.90946,
+            50.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 40,
+        "source_path": [
+          40
+        ],
+        "step": 6,
+        "body_profile": false,
+        "connector_count": 77,
+        "placement_path": [
+          14
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 15,
+        "part": "26287.dat",
+        "description": "Technic Axle Joiner 3L",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          156.0,
+          48.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            147.276,
+            39.275999999999996,
+            -30.0
+          ],
+          "max": [
+            164.724,
+            56.724000000000004,
+            30.0
+          ]
+        },
+        "section": "turntable-frame-axle-link.ldr",
+        "line_number": 78,
+        "source_path": [
+          43,
+          78
+        ],
+        "step": 7,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          15,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 16,
+        "part": "32062.dat",
+        "description": "Technic Axle 2 Notched",
+        "colour": {
+          "code": 4,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          156.0,
+          48.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            150.0,
+            42.0,
+            10.5
+          ],
+          "max": [
+            162.0,
+            54.0,
+            49.5
+          ]
+        },
+        "section": "turntable-frame-axle-link.ldr",
+        "line_number": 81,
+        "source_path": [
+          43,
+          81
+        ],
+        "step": 7,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          15,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 17,
+        "part": "32062.dat",
+        "description": "Technic Axle 2 Notched",
+        "colour": {
+          "code": 4,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          156.0,
+          48.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            150.0,
+            42.0,
+            -49.5
+          ],
+          "max": [
+            162.0,
+            54.0,
+            -10.5
+          ]
+        },
+        "section": "turntable-frame-axle-link.ldr",
+        "line_number": 83,
+        "source_path": [
+          43,
+          83
+        ],
+        "step": 7,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          15,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 18,
+        "part": "26287.dat",
+        "description": "Technic Axle Joiner 3L",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -156.0,
+          48.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -164.724,
+            39.275999999999996,
+            -30.0
+          ],
+          "max": [
+            -147.276,
+            56.724000000000004,
+            30.0
+          ]
+        },
+        "section": "turntable-frame-axle-link.ldr",
+        "line_number": 78,
+        "source_path": [
+          45,
+          78
+        ],
+        "step": 7,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          16,
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 19,
+        "part": "32062.dat",
+        "description": "Technic Axle 2 Notched",
+        "colour": {
+          "code": 4,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -156.0,
+          48.0,
+          30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -162.0,
+            42.0,
+            10.5
+          ],
+          "max": [
+            -150.0,
+            54.0,
+            49.5
+          ]
+        },
+        "section": "turntable-frame-axle-link.ldr",
+        "line_number": 81,
+        "source_path": [
+          45,
+          81
+        ],
+        "step": 7,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          16,
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 20,
+        "part": "32062.dat",
+        "description": "Technic Axle 2 Notched",
+        "colour": {
+          "code": 4,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -156.0,
+          48.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -162.0,
+            42.0,
+            -49.5
+          ],
+          "max": [
+            -150.0,
+            54.0,
+            -10.5
+          ]
+        },
+        "section": "turntable-frame-axle-link.ldr",
+        "line_number": 83,
+        "source_path": [
+          45,
+          83
+        ],
+        "step": 7,
+        "body_profile": false,
+        "connector_count": 1,
+        "placement_path": [
+          16,
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 21,
+        "part": "6558.dat",
+        "description": "Technic Pin Long with Friction and Slot",
+        "colour": {
+          "code": 1,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -80.0,
+          0.0,
+          -40.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -88.0005308,
+            -7.801,
+            -70.0
+          ],
+          "max": [
+            -71.9994692,
+            7.801,
+            -10.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 48,
+        "source_path": [
+          48
+        ],
+        "step": 8,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          17
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 22,
+        "part": "6558.dat",
+        "description": "Technic Pin Long with Friction and Slot",
+        "colour": {
+          "code": 1,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          80.0,
+          0.0,
+          -40.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            71.9994692,
+            -7.801,
+            -70.0
+          ],
+          "max": [
+            88.0005308,
+            7.801,
+            -10.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 50,
+        "source_path": [
+          50
+        ],
+        "step": 8,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          18
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 4,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 23,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -40.0,
+          0.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -48.0005308,
+            -7.801,
+            -50.0
+          ],
+          "max": [
+            -31.9994692,
+            7.801,
+            -10.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 52,
+        "source_path": [
+          52
+        ],
+        "step": 8,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          19
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 24,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          40.0,
+          0.0,
+          -30.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            31.9994692,
+            -7.801,
+            -50.0
+          ],
+          "max": [
+            48.0005308,
+            7.801,
+            -10.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 54,
+        "source_path": [
+          54
+        ],
+        "step": 8,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          20
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 25,
+        "part": "6629.dat",
+        "description": "Technic Beam 4 x 6 Liftarm Bent 53.13",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          20.0,
+          0.0,
+          -40.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            11.0,
+            -9.0004545,
+            -50.0
+          ],
+          "max": [
+            164.90946,
+            56.90946,
+            -30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 57,
+        "source_path": [
+          57
+        ],
+        "step": 9,
+        "body_profile": false,
+        "connector_count": 77,
+        "placement_path": [
+          21
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 26,
+        "part": "6629.dat",
+        "description": "Technic Beam 4 x 6 Liftarm Bent 53.13",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -20.0,
+          0.0,
+          -40.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -164.90946,
+            -9.0004545,
+            -50.0
+          ],
+          "max": [
+            -11.0,
+            56.90946,
+            -30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 59,
+        "source_path": [
+          59
+        ],
+        "step": 9,
+        "body_profile": false,
+        "connector_count": 77,
+        "placement_path": [
+          22
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 4,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 27,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          120.0,
+          0.0,
+          -50.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            111.9994692,
+            -7.801,
+            -70.0
+          ],
+          "max": [
+            128.0005308,
+            7.801,
+            -30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 61,
+        "source_path": [
+          61
+        ],
+        "step": 9,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          23
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 28,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -120.0,
+          0.0,
+          -50.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -128.0005308,
+            -7.801,
+            -70.0
+          ],
+          "max": [
+            -111.9994692,
+            7.801,
+            -30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 63,
+        "source_path": [
+          63
+        ],
+        "step": 9,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          24
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 29,
+        "part": "32524.dat",
+        "description": "Technic Beam 7",
+        "colour": {
+          "code": 71,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          -60.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -69.0,
+            -9.0,
+            -70.0
+          ],
+          "max": [
+            69.0,
+            9.0,
+            -50.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 66,
+        "source_path": [
+          66
+        ],
+        "step": 10,
+        "body_profile": false,
+        "connector_count": 7,
+        "placement_path": [
+          25
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 30,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          -60.0,
+          0.0,
+          -50.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -68.0005308,
+            -7.801,
+            -70.0
+          ],
+          "max": [
+            -51.9994692,
+            7.801,
+            -30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 68,
+        "source_path": [
+          68
+        ],
+        "step": 10,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          26
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 31,
+        "part": "2780.dat",
+        "description": "Technic Pin with Friction and Slots",
+        "colour": {
+          "code": 0,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          60.0,
+          0.0,
+          -50.0
+        ],
+        "matrix": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            -1.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            51.9994692,
+            -7.801,
+            -70.0
+          ],
+          "max": [
+            68.0005308,
+            7.801,
+            -30.0
+          ]
+        },
+        "section": "turntable-frame.ldr",
+        "line_number": 70,
+        "source_path": [
+          70
+        ],
+        "step": 10,
+        "body_profile": false,
+        "connector_count": 2,
+        "placement_path": [
+          27
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 5,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      }
+    ],
+    "instances_truncated": false,
+    "contacts_checked": true,
+    "contact_count": 31,
+    "contacts": [
+      {
+        "instances": [
+          6,
+          14
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "primitive",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          0.9,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R1/connect",
+          "beamhole@R8/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          6,
+          14
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R1/snap_cyl@L8:I0",
+          "beamhole@R8/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          6,
+          14
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "primitive",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          0.9,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R3/connect",
+          "connhole@R10/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          6,
+          14
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R3/snap_cyl@L8:I0",
+          "connhole@R10/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          6,
+          26
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "primitive",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          0.9,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R5/connect",
+          "beamhole@R8/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          6,
+          26
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R5/snap_cyl@L8:I0",
+          "beamhole@R8/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          6,
+          26
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "primitive",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          0.9,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R7/connect",
+          "connhole@R10/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          6,
+          26
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R7/snap_cyl@L8:I0",
+          "connhole@R10/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          7,
+          13
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "primitive",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          0.9,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R1/connect",
+          "connhole@R10/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          7,
+          13
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R1/snap_cyl@L8:I0",
+          "connhole@R10/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          7,
+          13
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "primitive",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          0.9,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R3/connect",
+          "beamhole@R8/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          7,
+          13
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R3/snap_cyl@L8:I0",
+          "beamhole@R8/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          7,
+          25
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "primitive",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          0.9,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R5/connect",
+          "connhole@R10/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          7,
+          25
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R5/snap_cyl@L8:I0",
+          "connhole@R10/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          7,
+          25
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "primitive",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          0.9,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R7/connect",
+          "beamhole@R8/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          7,
+          25
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "connect@R7/snap_cyl@L8:I0",
+          "beamhole@R8/connhole"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          10,
+          11
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "snap_cyl@L8:I0",
+          "snap_cyl@L9:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-1",
+          "technic:grip-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-3",
+          "technic:grip-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          0,
+          3
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-7",
+          "technic:grip-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          0,
+          4
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-9",
+          "technic:grip-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          0,
+          8
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-4",
+          "technic:grip-0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          0,
+          9
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-6",
+          "technic:grip-0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          8,
+          12
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:grip-2",
+          "technic:hole-4"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          9,
+          12
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin",
+          "pin_hole"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:grip-2",
+          "technic:hole-6"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          12,
+          21
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-1",
+          "technic:grip-0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          12,
+          22
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-9",
+          "technic:grip-0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          12,
+          23
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-3",
+          "technic:grip-0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          12,
+          24
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-7",
+          "technic:grip-0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          29,
+          30
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-0",
+          "technic:grip-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          29,
+          31
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "pin_hole",
+          "pin"
+        ],
+        "sources": [
+          "override",
+          "override"
+        ],
+        "confidence": [
+          1,
+          1
+        ],
+        "feature_ids": [
+          "technic:hole-6",
+          "technic:grip-1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      }
+    ],
+    "contacts_truncated": false,
+    "confirmed_components": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        12,
+        21,
+        22,
+        23,
+        24
+      ],
+      [
+        5
+      ],
+      [
+        6,
+        14,
+        26
+      ],
+      [
+        7,
+        13,
+        25
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        15
+      ],
+      [
+        16
+      ],
+      [
+        17
+      ],
+      [
+        18
+      ],
+      [
+        19
+      ],
+      [
+        20
+      ],
+      [
+        27
+      ],
+      [
+        28
+      ],
+      [
+        29,
+        30,
+        31
+      ]
+    ],
+    "optimistic_components": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        12,
+        21,
+        22,
+        23,
+        24
+      ],
+      [
+        5
+      ],
+      [
+        6,
+        14,
+        26
+      ],
+      [
+        7,
+        13,
+        25
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        15
+      ],
+      [
+        16
+      ],
+      [
+        17
+      ],
+      [
+        18
+      ],
+      [
+        19
+      ],
+      [
+        20
+      ],
+      [
+        27
+      ],
+      [
+        28
+      ],
+      [
+        29,
+        30,
+        31
+      ]
+    ],
+    "optimistic_component_count": 14,
+    "confirmed_component_count": 14,
+    "components_truncated": false,
+    "overlap_candidate_count": 50,
+    "overlaps": [
+      {
+        "instances": [
+          14,
+          19
+        ],
+        "depths": [
+          12.0,
+          12.0,
+          19.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          14,
+          1
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          14,
+          2
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          26,
+          20
+        ],
+        "depths": [
+          12.0,
+          12.0,
+          19.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          26,
+          28
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          26,
+          21
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          26,
+          30
+        ],
+        "depths": [
+          16.001061600000007,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          26,
+          23
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          18,
+          19
+        ],
+        "depths": [
+          12.0,
+          12.0,
+          19.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          18,
+          20
+        ],
+        "depths": [
+          12.0,
+          12.0,
+          19.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          6
+        ],
+        "depths": [
+          58.0,
+          18.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          0,
+          2
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          0,
+          10
+        ],
+        "depths": [
+          58.0,
+          18.0,
+          17.000656080000002
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          8
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          0,
+          5
+        ],
+        "depths": [
+          18.0,
+          18.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          9
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          0,
+          3
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          0,
+          7
+        ],
+        "depths": [
+          58.0,
+          18.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          0,
+          4
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          6,
+          12
+        ],
+        "depths": [
+          58.0,
+          18.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          6,
+          1
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          6,
+          21
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          12,
+          21
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          12,
+          23
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          12,
+          10
+        ],
+        "depths": [
+          58.0,
+          18.0,
+          17.000656080000002
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          12,
+          8
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          12,
+          5
+        ],
+        "depths": [
+          18.0,
+          18.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          12,
+          9
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          12,
+          24
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          12,
+          7
+        ],
+        "depths": [
+          58.0,
+          18.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          12,
+          22
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          29,
+          30
+        ],
+        "depths": [
+          16.001061600000007,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          29,
+          31
+        ],
+        "depths": [
+          16.001061600000007,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          11,
+          10
+        ],
+        "depths": [
+          58.0,
+          14.0,
+          54.001312160000005
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      },
+      {
+        "instances": [
+          10,
+          8
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          54.001312160000005
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          10,
+          5
+        ],
+        "depths": [
+          18.0,
+          19.0,
+          54.001312160000005
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          10,
+          9
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          54.001312160000005
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          13,
+          3
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          13,
+          4
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          13,
+          16
+        ],
+        "depths": [
+          12.0,
+          12.0,
+          19.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          25,
+          24
+        ],
+        "depths": [
+          16.0010616,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          25,
+          31
+        ],
+        "depths": [
+          16.001061600000007,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          25,
+          22
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          25,
+          27
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          25,
+          17
+        ],
+        "depths": [
+          12.0,
+          12.0,
+          19.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          7,
+          4
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          7,
+          22
+        ],
+        "depths": [
+          16.001061600000014,
+          15.602,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          15,
+          16
+        ],
+        "depths": [
+          12.0,
+          12.0,
+          19.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          15,
+          17
+        ],
+        "depths": [
+          12.0,
+          12.0,
+          19.5
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      }
+    ],
+    "overlaps_truncated": false,
+    "diagnostics": [
+      {
+        "code": "technic.invalid_seating",
+        "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+        "severity": "error",
+        "instances": [
+          23,
+          29
+        ],
+        "ports": [
+          [
+            "technic:grip-1",
+            "technic:hole-1"
+          ]
+        ]
+      },
+      {
+        "code": "technic.invalid_seating",
+        "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+        "severity": "error",
+        "instances": [
+          24,
+          29
+        ],
+        "ports": [
+          [
+            "technic:grip-1",
+            "technic:hole-5"
+          ]
+        ]
+      },
+      {
+        "code": "technic.invalid_seating",
+        "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+        "severity": "error",
+        "instances": [
+          30,
+          12
+        ],
+        "ports": [
+          [
+            "technic:grip-0",
+            "technic:hole-2"
+          ]
+        ]
+      },
+      {
+        "code": "technic.invalid_seating",
+        "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+        "severity": "error",
+        "instances": [
+          31,
+          12
+        ],
+        "ports": [
+          [
+            "technic:grip-0",
+            "technic:hole-8"
+          ]
+        ]
+      },
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 14
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  }
+}

@@ -241,6 +241,17 @@ def structural_candidate(row, inventory=None):
     return True
 
 
+def mechanism_candidate(row, inventory=None):
+    """Discovery vocabulary, not a verdict that an assembly works or is complete."""
+    vocabulary = re.compile(r'\b(gear|gears|gearbox|gearing|differential|crankshaft|crank|piston|rack|pinion|'
+                            r'turntable|winch|steering|linkage|actuator|suspension|mechanism|worm|cam|lever)\b', re.I)
+    if not vocabulary.search(row['description']):
+        return False
+    if inventory is not None:
+        return any(vocabulary.search(item.get('description', '')) for item in inventory['bom'])
+    return True
+
+
 def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=60, system=True, construction=None,
            max_parts=None, min_parts=2, max_technic_share=0.5, parent_cap=2, yes=None, no=None,
            jev_project=None, timeout=240):
@@ -252,13 +263,14 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
         raise ValueError('Invalid part/Technic limits')
     if (yes is None) != (no is None):
         raise ValueError('Supply both --yes and --no criteria')
-    if construction not in {None, 'system', 'all', 'technic-structure'}:
+    if construction not in {None, 'system', 'all', 'technic-structure', 'mechanism'}:
         raise ValueError('Unknown construction mode')
     if construction is not None:
         system = construction == 'system'
     manifest = index.ensure()
     allowed = {r['id']:r for r in index.rows(kind) if eligible(r, system=system)
-               and (construction != 'technic-structure' or structural_candidate(r))}
+               and (construction != 'technic-structure' or structural_candidate(r))
+               and (construction != 'mechanism' or mechanism_candidate(r))}
     ranked, stats = [], {}
     if engine == 'jev':
         snapshot = index.cache/'queries'/(digest([manifest['signature'], kind, system, construction, sorted(allowed)])+'.sqlite')
@@ -307,6 +319,7 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
                 row['inventory'] = index.inventory(row)
                 inv = row['inventory']
                 reason = ('mechanism_content' if construction == 'technic-structure' and not structural_candidate(row, inv) else
+                          'no_mechanism_parts_identified' if construction == 'mechanism' and not mechanism_candidate(row, inv) else
                           'nonphysical_accounting' if not inv['physical_accounting_complete'] else
                           'too_few_parts' if inv['expanded_leaf_count'] < min_parts else
                           'too_many_parts' if max_parts is not None and inv['expanded_leaf_count'] > max_parts else
@@ -325,6 +338,8 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
             kept.append(row)
             if construction == 'technic-structure':
                 row['structural_review'] = 'required: verify joint roles, parent support, restraint, seating and assembly order'
+            if construction == 'mechanism':
+                row['mechanism_study'] = 'inspect source steps, parts and parent context; analytical mechanism verification is deferred'
         except (OSError, ValueError, RecursionError) as exc:
             rejected.append(dict(id=row['id'], reason='inventory_failed', error=str(exc)))
     return dict(query=query, kind=kind, engine=engine, source_field=FIELDS[kind], index_signature=manifest['signature'],

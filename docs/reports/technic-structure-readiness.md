@@ -1,6 +1,6 @@
 # Technic structures: construction, compatibility and tooling readiness
 
-Research date: 2026-09-25. **Preparatory assessment; Technic generation has not been enabled.**
+Research date: 2026-09-25. **Historical preparatory assessment of the tooling before stage 1.** The [Stage 1 implementation record](technic-stage1-implementation.md) describes the structural support now available. The user subsequently authorized [Stage 2 construction from mechanism examples](technic-stage2-implementation.md), with analytical mechanism verification deferred. The observations and evidence below preserve the original research baseline.
 
 Technic support should begin with a small, verified vocabulary of structural joints and frames. The existing part library, renderer, discovery tools and assembly format provide a useful foundation. The current connection solver needs additional rules before an agent can rely on it to construct Technic structures.
 

@@ -1,6 +1,6 @@
 # Build Technic structures
 
-Stage 1 supports **static structural assemblies**: frames, chassis, supports, retained structural axles and mounts for System bodies. Working steering, suspension, transmissions, powered functions and other mechanisms belong to stage 2. **Only the user can authorize that later stage after judging these results.**
+Stage 1 supports **static structural assemblies**: frames, chassis, supports, retained structural axles and mounts for System bodies. Stage 2 is now authorized through the [mechanism workflow](mechanisms.md): study source assemblies and build pages, then reuse or adapt them. Analytical mechanism verification is deferred at the user's request. Keep this guide's fixed-member contracts scoped to the stationary structure.
 
 Use this guide with [instructions.md](../../instructions.md), the [Technic atlas](../../examples/technic-atlas/README.md) and the [research assessment](../reports/technic-structure-readiness.md). Keep the normal design, validation, BOM and visual review loop.
 

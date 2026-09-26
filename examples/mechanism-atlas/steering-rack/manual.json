@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "title": "Steering rack carriage",
+  "scope": "mechanism-construction-study",
+  "source": {
+    "model": "9393-1.mpd",
+    "section": "9393 - steering.ldr",
+    "sha256": "6f62ffdb2eb3fd4d2ff8d4a2faba218ae2a435db83151cdbe14b6b85e936f19a"
+  },
+  "source_root": "study-9733eaa539d2-00-9393---steering.ldr",
+  "preview_colour": 7,
+  "parents": [
+    {
+      "section": "9393 - vehicle.ldr",
+      "description": "Main structural chassis built from bent liftarms, long pins, and axles forming the vehicle frame with gear and towball articulation points.",
+      "at": [
+        0.0,
+        -20.0,
+        -140.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "colour": 0
+    }
+  ],
+  "sections": [
+    {
+      "name": "study-9733eaa539d2-00-9393---steering.ldr",
+      "original_name": "9393 - steering.ldr",
+      "description": "Rack-and-pinion steering assembly using a gear rack, beam, and cross blocks to link the steering column to the wheels.",
+      "directory": "manual/00",
+      "steps": [
+        {
+          "number": 1,
+          "added_placements": 3,
+          "parts": [
+            {
+              "ref": "32524.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Beam  7",
+              "source_section": null
+            },
+            {
+              "ref": "2780.dat",
+              "colour": 0,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Pin with Friction and Slots",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-001-home.png",
+            "top": "manual/00/step-001-top.png"
+          }
+        },
+        {
+          "number": 2,
+          "added_placements": 6,
+          "parts": [
+            {
+              "ref": "48989.dat",
+              "colour": 71,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Cross Block 1 x 3 (Pin/Pin/Pin) with 4 Pins",
+              "source_section": null
+            },
+            {
+              "ref": "87083.dat",
+              "colour": 72,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Axle  4 with Stop",
+              "source_section": null
+            },
+            {
+              "ref": "3713.dat",
+              "colour": 71,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Bush with Two Flanges",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-002-home.png",
+            "top": "manual/00/step-002-top.png"
+          }
+        },
+        {
+          "number": 3,
+          "added_placements": 1,
+          "parts": [
+            {
+              "ref": "87761.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Gear Rack  1 x  7 with Pegholes and Axleholes",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-003-home.png",
+            "top": "manual/00/step-003-top.png"
+          }
+        }
+      ]
+    }
+  ],
+  "physical_placements": 10,
+  "views": [
+    "home",
+    "top"
+  ],
+  "rendered": true,
+  "source_checks_passed": true,
+  "bom_matches": true,
+  "analytical_verification": "deferred",
+  "physical_validity": "not_proven",
+  "artifact_hashes": {
+    "source.mpd": "d84aa2d79ec31a5c60d2897d83f053e8316755e7b68a5710d69f3fad8a3cdeeb",
+    "extraction.json": "00af11422c2a8b774ad6b874ae25afdae68abc09eb37eb67f00861630bf77491",
+    "source-checks.json": "fa3825e54fe621b0d68dbe9629c48f9f2f7f1b6c1de367b4666fae841b3830b5",
+    "operation.json": "2482119f0f863bb6676686190e6cdf7a7328247a44259e0ab83fcfab8b59f825",
+    "bom.json": "4ab065d14a89a3968fce81f68a284d829686156a0c681ac5344570f162cd764e",
+    "scene.plan.json": "4b7d6b6552b20590fee9ed0e825894d0e6d9093f4343498dd1e1b454f234e0ad",
+    "manual/00/preview.mpd": "e8f4aa30e0a71eb72f49940a0e4602fca07282d382709689228e31dcae9ab85a",
+    "manual/00/step-001-home.png": "e7ef3243ffefb5ae423e5a420786cde5f50e5bdf72c418296942b3b5b374d2fd",
+    "manual/00/step-002-home.png": "8bd914bce8656f6aa444ecf415920f2742cbab2442c26472128dbed70647d334",
+    "manual/00/step-003-home.png": "33fa3aafd035815edb1eb8e1db4ea10c96c79ccedcb9cededcb5a990d9dbd43b",
+    "manual/00/step-001-top.png": "a500615735df7bc0b27618bb38ac0db82f06e319038dbe464a7a36b87184b88d",
+    "manual/00/step-002-top.png": "b1900254c7bcd265911ecf24cbb3516699989f9f24ed9efa2d81f59cd172b031",
+    "manual/00/step-003-top.png": "d2aed94b6a6a0467f5dbcfabe14396277957acc67ae0e25de56763fd0e7aafd2",
+    "renders/home.png": "49b7b8e81974ea428058a4237c89680fcdbca97a03d6c4197ce196ed62228d7c",
+    "renders/leocad-bom.csv": "a9e135bec36669f43487bc5309d03db5482ed3708e6f76bebe08811b0d3f1de8",
+    "bom-comparison.json": "64650daf3d0312fb41700eb498e286ec3c6ebb4ca3350207f4df47e3131715be"
+  }
+}

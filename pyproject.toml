@@ -19,7 +19,7 @@ ldraw-agent = "ldraw_tools.cli:main"
 include = ["ldraw_tools*"]
 
 [tool.setuptools.package-data]
-ldraw_tools = ["data/*.json"]
+ldraw_tools = ["data/*.json", "data/*.html"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

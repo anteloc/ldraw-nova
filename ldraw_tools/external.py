@@ -5,8 +5,65 @@ import subprocess
 import math
 import csv
 import hashlib
+import re
 from pathlib import Path
 from tempfile import TemporaryDirectory
+
+
+def view_camera(bounds, view):
+    """Frame the complete assembly with a stable margin in every build step."""
+    low, high = bounds.min, bounds.max
+    center = [(getattr(low, axis) + getattr(high, axis)) / 2 for axis in 'xyz']
+    radius = max(1.0, math.sqrt(sum((getattr(high, axis)-getattr(low, axis))**2 for axis in 'xyz')) / 2)
+    direction = {'home':(1,-1,-1), 'front':(0,0,-1), 'back':(0,0,1),
+                 'left':(-1,0,0), 'right':(1,0,0), 'top':(0,-1,0), 'bottom':(0,1,0)}[view]
+    distance = radius / math.sin(math.radians(15)) * 1.15
+    norm = math.sqrt(sum(v*v for v in direction))
+    camera = [c + v / norm * distance for c,v in zip(center,direction)]
+    up = (0,0,1) if view == 'top' else (0,0,-1) if view == 'bottom' else (0,-1,0)
+    return ['--fov', '30', '--camera-position-ldraw', *map(str, (*camera, *center, *up))]
+
+
+def render_steps(path, library, outdir, *, steps, views=("home", "back"), timeout=90, bounds=None):
+    """Render actual nonempty source steps, including a final unterminated step.
+
+    Uses the same LeoCAD switches as ldraw-render-steps.sh, with argument lists,
+    fresh output files and the embedded-DAT adapter used by normal rendering.
+    """
+    if not steps or steps != sorted(set(steps)) or any(n < 1 for n in steps):
+        raise ValueError('Step numbers must be distinct positive numbers in order')
+    if not views or len(set(views)) != len(views) or any(v not in
+            {'home', 'front', 'back', 'left', 'right', 'top', 'bottom'} for v in views):
+        raise ValueError('Choose distinct supported viewpoints')
+    outdir = Path(outdir).resolve()
+    outdir.mkdir(parents=True, exist_ok=True)
+    images = []
+    with TemporaryDirectory(prefix='.steps-', dir=outdir) as temp:
+        prepared, lib, _ = cad_source(path, library, temp)
+        for view in views:
+            target = Path(temp)/f'{view}.png'
+            camera = view_camera(bounds, view) if bounds is not None else ['--viewpoint',view]
+            result = subprocess.run(['leocad', '-l', str(lib), '-i', str(target),
+                '--from', str(min(steps)), '--to', str(max(steps)), *camera,
+                '-w', '1000', '-h', '750', '--aa-samples', '4', '--shading', 'full',
+                '--highlight', '--no-fade-steps', '--line-width', '1', str(prepared)],
+                capture_output=True, text=True, timeout=timeout)
+            if result.returncode:
+                raise ValueError(f'LeoCAD step rendering failed: {result.stdout}\n{result.stderr}')
+            found = {}
+            for candidate in Path(temp).glob(view+'*.png'):
+                match = re.fullmatch(re.escape(view)+r'(\d+)\.png', candidate.name)
+                if match:
+                    found[int(match[1])] = candidate
+                elif candidate == target and len(steps) == 1:
+                    found[steps[0]] = candidate
+            if any(n not in found for n in steps):
+                raise ValueError(f'LeoCAD did not render every requested {view} step')
+            for number in steps:
+                name = f'step-{number:03}-{view}.png'
+                found[number].replace(outdir/name)
+                images.append(dict(step=number, view=view, file=name))
+    return images
 
 
 def cad_source(path, library, temp):
@@ -164,17 +221,7 @@ def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90,
             if bounds is None:
                 command += ["--viewpoint", view]
             if bounds is not None:
-                # Frame a conservative bounding sphere, independent of saved viewport zoom.
-                low, high = bounds.min, bounds.max
-                center = [(getattr(low, axis) + getattr(high, axis)) / 2 for axis in "xyz"]
-                radius = max(1.0, math.sqrt(sum((getattr(high, axis)-getattr(low, axis))**2 for axis in "xyz")) / 2)
-                direction = {"home": (1,-1,-1), "front": (0,0,-1), "back": (0,0,1),
-                             "left": (-1,0,0), "right": (1,0,0), "top": (0,-1,0), "bottom": (0,1,0)}[view]
-                distance = radius / math.sin(math.radians(15)) * 1.15
-                norm = math.sqrt(sum(v*v for v in direction))
-                camera = [c + v / norm * distance for c,v in zip(center,direction)]
-                up = (0,0,1) if view == "top" else (0,0,-1) if view == "bottom" else (0,-1,0)
-                command += ["--fov", "30", "--camera-position-ldraw", *map(str, (*camera, *center, *up))]
+                command += view_camera(bounds, view)
             result = subprocess.run(command, capture_output=True, text=True, timeout=timeout)
             if result.returncode or not target.exists():
                 raise ValueError(f"LeoCAD render failed: {result.stdout}\n{result.stderr}")

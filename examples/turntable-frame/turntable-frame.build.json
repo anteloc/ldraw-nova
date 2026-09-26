@@ -1,0 +1,205 @@
+{
+  "profile": "assembly",
+  "checks_passed": false,
+  "physical_validity": "not_proven",
+  "output": "output/turntable-frame/turntable-frame.mpd",
+  "written": false,
+  "diagnostics": [
+    {
+      "code": "technic.invalid_seating",
+      "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+      "severity": "error",
+      "instances": [
+        23,
+        29
+      ],
+      "ports": [
+        [
+          "technic:grip-1",
+          "technic:hole-1"
+        ]
+      ]
+    },
+    {
+      "code": "technic.invalid_seating",
+      "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+      "severity": "error",
+      "instances": [
+        24,
+        29
+      ],
+      "ports": [
+        [
+          "technic:grip-1",
+          "technic:hole-5"
+        ]
+      ]
+    },
+    {
+      "code": "technic.invalid_seating",
+      "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+      "severity": "error",
+      "instances": [
+        30,
+        12
+      ],
+      "ports": [
+        [
+          "technic:grip-0",
+          "technic:hole-2"
+        ]
+      ]
+    },
+    {
+      "code": "technic.invalid_seating",
+      "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+      "severity": "error",
+      "instances": [
+        31,
+        12
+      ],
+      "ports": [
+        [
+          "technic:grip-0",
+          "technic:hole-8"
+        ]
+      ]
+    },
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 14
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 32,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -164.90946,
+        -49.000219312,
+        -70.0
+      ],
+      "max": [
+        164.90946,
+        56.90946,
+        50.0
+      ]
+    },
+    "occurrence_count": 32,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": true,
+    "contact_count": 31,
+    "contacts": [],
+    "contacts_truncated": true,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": 14,
+    "confirmed_component_count": 14,
+    "components_truncated": true,
+    "overlap_candidate_count": 50,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "technic.invalid_seating",
+        "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+        "severity": "error",
+        "instances": [
+          23,
+          29
+        ],
+        "ports": [
+          [
+            "technic:grip-1",
+            "technic:hole-1"
+          ]
+        ]
+      },
+      {
+        "code": "technic.invalid_seating",
+        "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+        "severity": "error",
+        "instances": [
+          24,
+          29
+        ],
+        "ports": [
+          [
+            "technic:grip-1",
+            "technic:hole-5"
+          ]
+        ]
+      },
+      {
+        "code": "technic.invalid_seating",
+        "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+        "severity": "error",
+        "instances": [
+          30,
+          12
+        ],
+        "ports": [
+          [
+            "technic:grip-0",
+            "technic:hole-2"
+          ]
+        ]
+      },
+      {
+        "code": "technic.invalid_seating",
+        "message": "Aligned interfaces fail seating, engagement, family or keyed-roll rules.",
+        "severity": "error",
+        "instances": [
+          31,
+          12
+        ],
+        "ports": [
+          [
+            "technic:grip-0",
+            "technic:hole-8"
+          ]
+        ]
+      },
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 14
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  }
+}

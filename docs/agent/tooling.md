@@ -1,5 +1,20 @@
 # Tool reference
 
+## Mechanism studies and reuse
+
+```sh
+./ldraw-agent mechanism list
+./ldraw-agent discover search submodels 'a small worm drive' --construction mechanism --engine fts
+./ldraw-agent mechanism prepare "$LDRAW_LIB_DIR/models-annotated/42042-1_Tower-Crane.mpd" \
+  --section '42042 - spoolwormgear.ldr' --outdir output/worm-study \
+  --views home top --normalize-rotations --repair-bfc-comments
+./ldraw-agent mechanism export worm-drive --outdir output/my-winch
+./ldraw-agent build output/my-winch/scene.plan.json --contacts none --output output/my-winch/my-winch.mpd
+```
+
+`prepare` creates source, provenance, normal source/geometry checks, per-section build pages, per-step parts, parent context, operation notes and a placement plan. It uses LeoCAD's step export with highlighted additions, a stable camera and embedded-DAT support. `--operation FILE` supplies the seven descriptive fields explained in the [mechanism guide](mechanisms.md). `--no-render` leaves rendering/BOM comparison pending. `review DIRECTORY --images ... --note ...` records only pages actually opened, binding all artifacts by hash. `export KEY_OR_DIRECTORY --outdir DIR` copies a current reviewed study with passing source checks and matching BOM. Analytical mechanism verification is deferred and is not an export prerequisite.
+
+
 Run commands from the repository root. `./setup.sh` installs the pinned Python tools into `.venv`, checks source paths, builds a local parts index, and extracts a PDF page to verify Poppler. It needs Python 3.12+ and `pdftotext`; LeoCAD must be available for rendering. `uv sync --locked --extra test` reproduces `uv.lock`. The pip fallback pins direct dependencies; transitive dependencies may differ.
 
 `./ldraw-agent --help` lists the executable interface. Global `--library`, `--models`, and repeatable `--shadow` options go **before** the command. Default directories are relative to this repository, not `$HOME`; `LDRAW_DIR` and `MODELS_DIR` override them. The local `.cache` directory can be deleted and rebuilt. No library download, database mutation, or global pyldraw configuration is needed.
@@ -20,7 +35,7 @@ The supplied `offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides t
 ./ldraw-agent discover search submodels 'braced frame' --construction technic-structure --engine fts
 ```
 
-The [Technic workflow](technic.md) covers supported ports, seated pins, axle intervals, structural restraints and contracts. Normal geometry checks remain required. Generated contracts bind to the model revision; `technic check` returns exit 1 for failed checks and exit 2 for invalid inputs. Mechanisms need the user's later authorization. Use Jev only after its availability check; `fts` is the explicit offline alternative.
+The [Technic workflow](technic.md) covers supported ports, seated pins, axle intervals, structural restraints and contracts. Normal geometry checks remain required. Generated contracts bind to the model revision; `technic check` returns exit 1 for failed checks and exit 2 for invalid inputs. Use the authorized [mechanism workflow](mechanisms.md) for moving assemblies; analytical mechanism verification is deferred. Use Jev only after its availability check; `fts` is the explicit offline alternative.
 
 ### System vehicles
 

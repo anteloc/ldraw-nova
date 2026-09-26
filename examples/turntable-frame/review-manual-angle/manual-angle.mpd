@@ -1,0 +1,90 @@
+0 FILE turntable-frame-manual-angle.ldr
+0 Preview wrapper: turntable-frame.ldr turned about Y to match the manual camera
+0 Name: turntable-frame-manual-angle.ldr
+0 Author: LDraw Astra agent
+1 16 0 0 0 0 0 -1 0 1 0 1 0 0 turntable-frame.ldr
+0 NOFILE
+0 FILE turntable-frame.ldr
+0 Technic turntable frame: twin 11L beams, 28T turntable, bent-arm legs (manual steps 31-40)
+0 Name: turntable-frame.ldr
+0 Author: LDraw Astra agent (reconstructed from supplied building-instruction pages, steps 31-40)
+0 !LDRAW_ORG Model
+0 // b1: rear 11L beam
+1 71 0 0 20 0 0 1 1 0 0 0 1 0 32525.dat
+0 // b1-pin-2: friction pin in rear beam hole 2, protruding rearwards for the rear bent arm
+1 0 -80 0 30 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // b1-pin-4: friction pin in rear beam hole 4, protruding rearwards for the rear bent arm
+1 0 -40 0 30 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // b1-pin-8: friction pin in rear beam hole 8, protruding rearwards for the rear bent arm
+1 0 40 0 30 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // b1-pin-10: friction pin in rear beam hole 10, protruding rearwards for the rear bent arm
+1 0 80 0 30 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // centre-pin: long pin with vertical centre hole joining hole 6 of both beams
+1 71 0 0 0 0 0 1 0 1 0 -1 0 0 87082.dat
+0 STEP
+0 // cross-left: cross block pinned into holes 1 and 3
+1 71 -80 0 0 0 1 0 -1 0 0 0 0 1 48989.dat
+0 // cross-right: cross block pinned into holes 9 and 11
+1 71 80 0 0 0 1 0 -1 0 0 0 0 1 48989.dat
+0 STEP
+0 // tt-pin-5: 3L pin in hole 5: rear beam, turntable lug, front beam
+1 1 -20 0 0 0 0 1 0 1 0 -1 0 0 6558.dat
+0 // tt-pin-7: 3L pin in hole 7: rear beam, turntable lug, front beam
+1 1 20 0 0 0 0 1 0 1 0 -1 0 0 6558.dat
+0 STEP
+0 // turntable-base: turntable 28T bottom; lugs sit on the blue pins
+1 71 0 -20 0 1 0 0 0 1 0 0 0 1 99009.dat
+0 // turntable-top: turntable 28T top, ears front and rear
+1 0 0 -20 0 0 0 1 0 1 0 -1 0 0 99010.dat
+0 STEP
+0 // b2: front 11L beam
+1 71 0 0 -20 0 0 1 1 0 0 0 1 0 32525.dat
+0 STEP
+0 // rear-bent-right: rear 4x6 bent arm on pins 8 and 10, leg down at the right
+1 0 20 0 40 0 0 1 1 0 0 0 1 0 6629.dat
+0 // rear-bent-left: rear 4x6 bent arm on pins 2 and 4, leg down at the left
+1 0 -20 0 40 0 0 -1 1 0 0 0 -1 0 6629.dat
+0 STEP
+0 // link-right: axle link bridging the right leg ends
+1 0 156 48 0 1 0 0 0 1 0 0 0 1 turntable-frame-axle-link.ldr
+0 // link-left: axle link bridging the left leg ends
+1 0 -156 48 0 1 0 0 0 1 0 0 0 1 turntable-frame-axle-link.ldr
+0 STEP
+0 // b2-long-2: 3L pin in front beam hole 2; 1L stays exposed ahead of the bent arm
+1 1 -80 0 -40 0 0 1 0 1 0 -1 0 0 6558.dat
+0 // b2-long-10: 3L pin in front beam hole 10; 1L stays exposed ahead of the bent arm
+1 1 80 0 -40 0 0 1 0 1 0 -1 0 0 6558.dat
+0 // b2-pin-4: friction pin in front beam hole 4 for the front bent arm
+1 0 -40 0 -30 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // b2-pin-8: friction pin in front beam hole 8 for the front bent arm
+1 0 40 0 -30 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // front-bent-right: front 4x6 bent arm on pins 8 and 10 and the right link axle
+1 0 20 0 -40 0 0 1 1 0 0 0 1 0 6629.dat
+0 // front-bent-left: front 4x6 bent arm on pins 2 and 4 and the left link axle
+1 0 -20 0 -40 0 0 -1 1 0 0 0 -1 0 6629.dat
+0 // bend-pin-right: forward-facing friction pin in the right front bend hole
+1 0 120 0 -50 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // bend-pin-left: forward-facing friction pin in the left front bend hole
+1 0 -120 0 -50 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // beam7: front 7L beam between the blue pin stubs
+1 71 0 0 -60 0 0 1 1 0 0 0 1 0 32524.dat
+0 // beam7-pin-left: friction pin: 7L beam hole 1 into the left front arm
+1 0 -60 0 -50 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // beam7-pin-right: friction pin: 7L beam hole 7 into the right front arm
+1 0 60 0 -50 0 0 1 0 1 0 -1 0 0 2780.dat
+0 NOFILE
+0 FILE turntable-frame-axle-link.ldr
+0 Leg-end link (manual step 37 sub-build): 3L axle joiner with a red 2L axle in each end
+0 Name: turntable-frame-axle-link.ldr
+0 Author: LDraw Astra agent (reconstructed from supplied building-instruction pages, steps 31-40)
+0 !LDRAW_ORG Model
+0 // joiner: 3L axle joiner; substitute for the manual's joiner with a centre pin hole
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 26287.dat
+0 STEP
+0 // axle-rear: rear 2L axle: 1L in the joiner, 1L in the rear leg
+1 4 0 0 30 0 0 1 0 1 0 -1 0 0 32062.dat
+0 // axle-front: front 2L axle: 1L in the joiner, 1L in the front leg
+1 4 0 0 -30 0 0 1 0 1 0 -1 0 0 32062.dat
+0 NOFILE

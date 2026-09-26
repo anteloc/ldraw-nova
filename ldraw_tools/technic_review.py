@@ -60,7 +60,7 @@ def review_inspection(inspection, *, contract=None, seating_only=False):
         issue('technic.unreviewed_parts', 'These Technic parts or geometry revisions lack reviewed structural interfaces.', unknown,
               'error' if contract.get('require_rigid') else 'warning')
     if mechanism_parts:
-        issue('technic.mechanism_scope', 'Mechanism parts require a later stage; their function is outside structural review.', mechanism_parts, 'error')
+        issue('technic.mechanism_scope', 'This check is for fixed structures. Use mechanism studies for moving assemblies; their function is outside structural review.', mechanism_parts, 'error')
     found = connection_contacts(inspection)
     joints, male_spans, shaft_contacts, member_links = [], defaultdict(list), defaultdict(list), defaultdict(list)
     tech = [c for c in found if managed(c.first) and managed(c.second)]

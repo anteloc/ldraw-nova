@@ -25,4 +25,4 @@ Inspect all seven views, especially the bottom and the hidden face of each mount
 - Required mounting pairs: 24
 - Physical validity: **not proven**.
 
-Run `./ldraw-agent technic check /Users/captain/workspaces/workspace-ai/ldraw-astra/examples/technic-atlas/box-chassis/box-chassis.mpd --contract /Users/captain/workspaces/workspace-ai/ldraw-astra/examples/technic-atlas/box-chassis/structure.json` from the repository root. Also run normal `validate --geometry`; a seating check cannot waive unrelated solid intersections.
+Run `./ldraw-agent technic check examples/technic-atlas/box-chassis/box-chassis.mpd --contract examples/technic-atlas/box-chassis/structure.json` from the repository root. Also run normal `validate --geometry`; a seating check cannot waive unrelated solid intersections.

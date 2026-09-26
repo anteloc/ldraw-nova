@@ -1,8 +1,8 @@
 # Design System vehicles
 
 Use this workflow for attractive System vehicles. For a Technic frame or a hybrid
-body, also follow the [Technic structural workflow](technic.md). Suspension,
-steering mechanisms, gears and drivetrains require the user's later stage-2 authorization. Ordinary
+body, also follow the [Technic structural workflow](technic.md). For steering,
+gearing, drivetrains or other mechanisms, follow the authorized [Stage 2 workflow](mechanisms.md); analytical mechanism verification is deferred. Ordinary
 wheel-pin plates, rims, tyres, brackets, clips and stud-built bodies are suitable.
 The executable starting set includes a coupe, van, pickup, tipper truck, motorcycle,
 harbour launch and courier aircraft. These use different construction systems:

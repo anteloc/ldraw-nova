@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "title": "Worm-drive support module",
+  "scope": "mechanism-construction-study",
+  "source": {
+    "model": "42042-1_Tower-Crane.mpd",
+    "section": "42042 - spoolwormgear.ldr",
+    "sha256": "418b1b235c01b58a199e34953b5ff55f459188c73f5a4d45c6e8ad62149dee27"
+  },
+  "source_root": "study-c65690ea3dc7-00-42042---spoolwormgear.ldr",
+  "preview_colour": 7,
+  "parents": [
+    {
+      "section": "42042 - tower.ldr",
+      "description": "Vertical crane tower built from stacked long beams and pinned segments with an internal 8-tooth gear and belt-wheel winch mechanism.",
+      "at": [
+        20.0,
+        -120.0,
+        -160.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "colour": 72
+    }
+  ],
+  "sections": [
+    {
+      "name": "study-c65690ea3dc7-00-42042---spoolwormgear.ldr",
+      "original_name": "42042 - spoolwormgear.ldr",
+      "description": "Worm gear winch mechanism using a worm gear, 8-tooth gear, axles, and bent liftarms to drive a spool.",
+      "directory": "manual/00",
+      "steps": [
+        {
+          "number": 1,
+          "added_placements": 3,
+          "parts": [
+            {
+              "ref": "32526.dat",
+              "colour": 1,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Beam  3 x  5 Bent 90",
+              "source_section": null
+            },
+            {
+              "ref": "2780.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Pin with Friction and Slots",
+              "source_section": null
+            },
+            {
+              "ref": "32524.dat",
+              "colour": 1,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Beam  7",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-001-home.png",
+            "top": "manual/00/step-001-top.png"
+          }
+        },
+        {
+          "number": 2,
+          "added_placements": 8,
+          "parts": [
+            {
+              "ref": "43093.dat",
+              "colour": 1,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Axle Pin with Friction",
+              "source_section": null
+            },
+            {
+              "ref": "6536.dat",
+              "colour": 71,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Cross Block 1 x 2 (Axle/Pin)",
+              "source_section": null
+            },
+            {
+              "ref": "15462.dat",
+              "colour": 28,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Axle  5 with Stop",
+              "source_section": null
+            },
+            {
+              "ref": "4716.dat",
+              "colour": 71,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Worm Gear 2L",
+              "source_section": null
+            },
+            {
+              "ref": "6587.dat",
+              "colour": 28,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Axle  3 with Stud",
+              "source_section": null
+            },
+            {
+              "ref": "32123a.dat",
+              "colour": 71,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Bush  1/2 Smooth with Axle Hole Reduced",
+              "source_section": null
+            },
+            {
+              "ref": "10928.dat",
+              "colour": 72,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Gear  8 Tooth Reinforced",
+              "source_section": null
+            },
+            {
+              "ref": "48989.dat",
+              "colour": 71,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Cross Block 1 x 3 (Pin/Pin/Pin) with 4 Pins",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-002-home.png",
+            "top": "manual/00/step-002-top.png"
+          }
+        },
+        {
+          "number": 3,
+          "added_placements": 3,
+          "parts": [
+            {
+              "ref": "11214.dat",
+              "colour": 72,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Axle Pin Long with Friction with  2L Pin",
+              "source_section": null
+            },
+            {
+              "ref": "11478.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Beam  5 x  0.5 Liftarm with Axle Holes at Both Ends",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-003-home.png",
+            "top": "manual/00/step-003-top.png"
+          }
+        }
+      ]
+    }
+  ],
+  "physical_placements": 14,
+  "views": [
+    "home",
+    "top"
+  ],
+  "rendered": true,
+  "source_checks_passed": true,
+  "bom_matches": true,
+  "analytical_verification": "deferred",
+  "physical_validity": "not_proven",
+  "artifact_hashes": {
+    "source.mpd": "413fb5e8a453cd2592be322704781052bafcc15ba8a0bf32b23e35af7d96e7eb",
+    "extraction.json": "95273f42f79fad6659921bf2bb496c78d82b5be6d836409883c2cff3d31ac2fa",
+    "source-checks.json": "b571f8cdc587cb1135e5e70f065f940c4ad4a11febe4a193bf2caab65fcd7dbf",
+    "operation.json": "992ed5baa4f2795d5dcfcb8b9724baa9c484f28a4c1b6d2d68b82d8e45d67507",
+    "bom.json": "7c4af54b10a96a06728daa71ee3f31e0a652400f72a0373ee211dafa829d8cb1",
+    "scene.plan.json": "50ce90850c560f15cee1942a3e4a4e2eee24117e83667982738ef2a725ab99b1",
+    "manual/00/preview.mpd": "2cdc8ec6eab42689714b9bdcb9d450bcd07e0789e509be1697d97684cbb877c1",
+    "manual/00/step-001-home.png": "5fe088b520e6b63a6c420237b628bfe3fe5daa0cdf6d60826720f4a88186f141",
+    "manual/00/step-002-home.png": "49133e54398c969b1f479b1bc4cea90e8182f214ef181a6b3980b9a76622aad3",
+    "manual/00/step-003-home.png": "ed4e62b26e65cfe5bd40d04142f43edd91d084509fd2efe72b055e8f8ff7ffd9",
+    "manual/00/step-001-top.png": "74e4075f70ef4c1826830a43f9ac69f721a6acecc329c8975201413d00618436",
+    "manual/00/step-002-top.png": "d2928efbadf95f78def56efe1e951f53a8d712f6e64ee64c92040eec9d392728",
+    "manual/00/step-003-top.png": "5b11c0f886cc1e0e257dfabbedb80d945196698de89c8a802d9abe11eced49b2",
+    "renders/home.png": "d78e096b0da1d1b41af927bf39fb85e12c5da0a6ceab1acc7c06a31eb01f2db6",
+    "renders/leocad-bom.csv": "50bb7f6e7aa5bc3c5433dc48a3354d00b23d5a063620c0067ab61e533e218778",
+    "bom-comparison.json": "d351cb0a68f68732ae301ed4d47b5ab0a4d8c91a889db3768822350763535865"
+  }
+}

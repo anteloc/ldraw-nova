@@ -63,7 +63,7 @@ def parser():
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
-    c.add_argument("--family", choices=["building", "vehicle", "reference", "technic"], default="building")
+    c.add_argument("--family", choices=["building", "vehicle", "reference", "technic", "mechanism"], default="building")
     c = commands.add_parser("discover", help="Find, measure and visually review parts, source models and submodels")
     discovery = c.add_subparsers(dest="discovery_command", required=True)
     d = discovery.add_parser("index", help="Build a local typed index from the three Jev fields and actual source headers")
@@ -76,7 +76,7 @@ def parser():
     d.add_argument("--pool", type=positive, default=60)
     d.add_argument("--candidates", type=int, default=500, help="Jev candidate budget; 0 scores all eligible records")
     d.add_argument("--all-families", action="store_true", help="Include Technic and other product families")
-    d.add_argument("--construction", choices=['system', 'all', 'technic-structure'],
+    d.add_argument("--construction", choices=['system', 'all', 'technic-structure', 'mechanism'],
                    help="Construction scope; Technic structure filters the selected section and its BOM")
     d.add_argument("--min-parts", type=int, default=2)
     d.add_argument("--max-parts", type=positive)
@@ -126,7 +126,31 @@ def parser():
     d.add_argument("--placement-notes", required=True)
     d.add_argument("--scale", choices=["minifigure","microscale","display","unknown"], default="unknown")
     d.add_argument("--force", action="store_true")
-    c = commands.add_parser('technic', help='Stage 1: reviewed structural parts, plans and joint/brace checks')
+    c = commands.add_parser('mechanism', help='Study and reuse mechanisms from source and build pages; no motion analysis')
+    m = c.add_subparsers(dest='mechanism_command', required=True)
+    m.add_parser('list', help='List the curated mechanism studies')
+    d = m.add_parser('prepare', help='Extract a source assembly and make attributed step manuals')
+    d.add_argument('file')
+    d.add_argument('--section', required=True)
+    d.add_argument('--outdir', required=True)
+    d.add_argument('--title')
+    d.add_argument('--operation', help='JSON notes: function, fixed, moving, input, output, parent_context, reuse_notes')
+    d.add_argument('--views', nargs='+', default=['home','back'])
+    d.add_argument('--colour', type=int, default=7)
+    d.add_argument('--no-render', action='store_true')
+    d.add_argument('--normalize-rotations', action='store_true')
+    d.add_argument('--repair-bfc-comments', action='store_true')
+    d.add_argument('--force', action='store_true')
+    d.add_argument('--max-instances', type=positive, default=2000)
+    d = m.add_parser('review', help='Record the build pages and final preview actually opened')
+    d.add_argument('directory')
+    d.add_argument('--images', nargs='+', required=True)
+    d.add_argument('--note', required=True)
+    d = m.add_parser('export', help='Copy a visually reviewed study and placement plan for adaptation')
+    d.add_argument('reference', help='Curated mechanism key or prepared study directory')
+    d.add_argument('--outdir', required=True)
+    d.add_argument('--force', action='store_true')
+    c = commands.add_parser('technic', help='Reviewed structural parts, plans and joint/brace checks for fixed structures')
     t = c.add_subparsers(dest='technic_command', required=True)
     t.add_parser('list', help='List editable structural recipes')
     d = t.add_parser('parts', help='Inspect reviewed nominal ports and geometry fingerprints')
@@ -301,6 +325,25 @@ def run(args):
     if args.command == "search" and args.kind != "parts":
         return search_models(args.query, root=args.models, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
+    if args.command == 'mechanism':
+        from .manuals import prepare_manual, review_manual, export_manual
+        if args.mechanism_command == 'list':
+            from .examples import search_examples
+            return search_examples(family='mechanism', limit=100), 0
+        if args.mechanism_command == 'prepare':
+            notes = json.loads(Path(args.operation).read_text()) if args.operation else None
+            report = prepare_manual(args.file, args.section, args.outdir, parts, title=args.title,
+                views=args.views, colour=args.colour, notes=notes, renders=not args.no_render,
+                normalize_rotations=args.normalize_rotations, repair_bfc=args.repair_bfc_comments,
+                force=args.force, max_instances=args.max_instances)
+            return report, 0 if report['source_checks_passed'] and report['bom_matches'] is not False else 1
+        if args.mechanism_command == 'review':
+            return review_manual(args.directory, images=args.images, note=args.note), 0
+        reference = Path(args.reference)
+        if not reference.is_dir():
+            from .discovery import confined
+            reference = confined(ROOT/'examples/mechanism-atlas', args.reference)
+        return export_manual(reference, args.outdir, force=args.force), 0
     if args.command == "discover":
         from .discovery import DiscoveryIndex, search, part_suggestions
         from .reference_catalog import prepare_reference, build_catalog, export_example, record_review

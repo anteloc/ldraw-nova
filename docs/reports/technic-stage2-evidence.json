@@ -1,0 +1,777 @@
+{
+  "version": 1,
+  "date": "2026-09-26",
+  "scope": "construction from studied mechanism examples",
+  "analytical_verification": "deferred",
+  "availability_probe": {
+    "documents": 28451,
+    "passages": 28451,
+    "updated": 0,
+    "skipped": 0,
+    "removed": 0,
+    "scored": 1,
+    "cache_hits": 0,
+    "api_calls": 1,
+    "input_tokens": 535,
+    "output_tokens": 22,
+    "elapsed_seconds": 0.8858411659894045
+  },
+  "live_queries": [
+    {
+      "query": "A compact crankshaft piston mechanism converting rotary motion into reciprocating movement using a connecting rod and slider",
+      "model": "jev-1.13.0",
+      "field": [
+        "SUBMODELS_DESCRIPTIONS_JEV.full_description"
+      ],
+      "stats": {
+        "documents": 28451,
+        "passages": 28451,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 150,
+        "cache_hits": 0,
+        "api_calls": 150,
+        "input_tokens": 81469,
+        "output_tokens": 3300,
+        "elapsed_seconds": 3.501338375004707
+      },
+      "raw_report": "output/mechanism-stage2/crank-search.json"
+    },
+    {
+      "query": "A small winch or worm gear mechanism with a worm driving a gear on a supported axle",
+      "model": "jev-1.13.0",
+      "field": [
+        "SUBMODELS_DESCRIPTIONS_JEV.full_description"
+      ],
+      "stats": {
+        "documents": 28451,
+        "passages": 28451,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 150,
+        "cache_hits": 0,
+        "api_calls": 150,
+        "input_tokens": 80890,
+        "output_tokens": 3300,
+        "elapsed_seconds": 3.1627599579805974
+      },
+      "raw_report": "output/mechanism-stage2/worm-search.json"
+    },
+    {
+      "query": "A compact rack and pinion steering assembly with a gear, sliding toothed rack and supporting frame",
+      "model": "jev-1.13.0",
+      "field": [
+        "SUBMODELS_DESCRIPTIONS_JEV.full_description"
+      ],
+      "stats": {
+        "documents": 28451,
+        "passages": 28451,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 150,
+        "cache_hits": 0,
+        "api_calls": 150,
+        "input_tokens": 80761,
+        "output_tokens": 3300,
+        "elapsed_seconds": 2.889073041995289
+      },
+      "raw_report": "output/mechanism-stage2/steering-search.json"
+    },
+    {
+      "query": "A compact differential mechanism with differential housing, internal bevel gears, output axles and supports",
+      "model": "jev-1.13.0",
+      "field": [
+        "SUBMODELS_DESCRIPTIONS_JEV.full_description"
+      ],
+      "stats": {
+        "documents": 28451,
+        "passages": 28451,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 150,
+        "cache_hits": 0,
+        "api_calls": 150,
+        "input_tokens": 80859,
+        "output_tokens": 3300,
+        "elapsed_seconds": 3.1249468340247404
+      },
+      "raw_report": "output/mechanism-stage2/differential-search.json"
+    },
+    {
+      "query": "A small geared turntable rotation mechanism with a gear driving a turntable and its mounting frame",
+      "model": "jev-1.13.0",
+      "field": [
+        "SUBMODELS_DESCRIPTIONS_JEV.full_description"
+      ],
+      "stats": {
+        "documents": 28451,
+        "passages": 28451,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 150,
+        "cache_hits": 0,
+        "api_calls": 150,
+        "input_tokens": 80867,
+        "output_tokens": 3300,
+        "elapsed_seconds": 2.8777587079966906
+      },
+      "raw_report": "output/mechanism-stage2/turntable-search.json"
+    }
+  ],
+  "gear_selection_note": "Retained from the preceding live Jev manual trial; exact source/rank/score in the gear-reduction selection.",
+  "examples": [
+    {
+      "key": "gear-reduction",
+      "source": {
+        "model": "42042-1.mpd",
+        "section": "42042 - gearbox4.ldr",
+        "sha256": "d53889036ecc71acb2d45de401e2b4d5e2875613a25a3c8959c2173c165c3b35"
+      },
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.93,
+        "text": "42042-1.mpd|42042 - gearbox4.ldr|Compound gear reduction unit with 12, 16, and 20-tooth gears on multiple joined axles and a white beam frame."
+      },
+      "source_unchanged": true,
+      "physical_placements": 35,
+      "steps": 5,
+      "views": [
+        "home",
+        "back",
+        "top"
+      ],
+      "opened_images": 16,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "source_changes": 0,
+      "diagnostic_codes": [
+        "coverage.collision_review",
+        "coverage.contacts_skipped",
+        "header.missing"
+      ],
+      "manual": "examples/mechanism-atlas/gear-reduction/manual.json",
+      "manual_sha256": "24003276cb91f8fa3ba0080bed830def24e202bc15ccdec642c3219f47177e25",
+      "review": "examples/mechanism-atlas/gear-reduction/visual-review.json"
+    },
+    {
+      "key": "worm-drive",
+      "source": {
+        "model": "42042-1_Tower-Crane.mpd",
+        "section": "42042 - spoolwormgear.ldr",
+        "sha256": "418b1b235c01b58a199e34953b5ff55f459188c73f5a4d45c6e8ad62149dee27"
+      },
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 5,
+        "score": 0.93,
+        "text": "42042-1_Tower-Crane.mpd|42042 - spoolwormgear.ldr|Worm gear winch mechanism using a worm gear, 8-tooth gear, axles, and bent liftarms to drive a spool."
+      },
+      "source_unchanged": true,
+      "physical_placements": 14,
+      "steps": 3,
+      "views": [
+        "home",
+        "top"
+      ],
+      "opened_images": 7,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "source_changes": 0,
+      "diagnostic_codes": [
+        "coverage.collision_review",
+        "coverage.contacts_skipped",
+        "header.missing"
+      ],
+      "manual": "examples/mechanism-atlas/worm-drive/manual.json",
+      "manual_sha256": "eddfddaeaa7b4faf0c4eef3e092dba8795e4c1ec3ee8c92aea565378cfdd9fb4",
+      "review": "examples/mechanism-atlas/worm-drive/visual-review.json"
+    },
+    {
+      "key": "steering-rack",
+      "source": {
+        "model": "9393-1.mpd",
+        "section": "9393 - steering.ldr",
+        "sha256": "6f62ffdb2eb3fd4d2ff8d4a2faba218ae2a435db83151cdbe14b6b85e936f19a"
+      },
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.92,
+        "text": "9393-1.mpd|9393 - steering.ldr|Rack-and-pinion steering assembly using a gear rack, beam, and cross blocks to link the steering column to the wheels."
+      },
+      "source_unchanged": true,
+      "physical_placements": 10,
+      "steps": 3,
+      "views": [
+        "home",
+        "top"
+      ],
+      "opened_images": 7,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "source_changes": 0,
+      "diagnostic_codes": [
+        "coverage.collision_review",
+        "coverage.contacts_skipped",
+        "header.missing"
+      ],
+      "manual": "examples/mechanism-atlas/steering-rack/manual.json",
+      "manual_sha256": "c7e6522b7e3a319300c2d4c8ce47cdb68b3778b13ea827cb4a09dbb594a3a6ac",
+      "review": "examples/mechanism-atlas/steering-rack/visual-review.json"
+    },
+    {
+      "key": "piston-crank",
+      "source": {
+        "model": "42048-1.mpd",
+        "section": "42048 - engine.ldr",
+        "sha256": "b1da23cd1ebfa574d233e0ee042828fb83cdbcb15a967e071a29b5e6738e390d"
+      },
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.89,
+        "text": "42048-1.mpd|42048 - engine.ldr|A single-cylinder Technic engine with cylinder head, crankshaft, connecting rod, piston, and a 12-tooth drive gear."
+      },
+      "source_unchanged": true,
+      "physical_placements": 19,
+      "steps": 4,
+      "views": [
+        "home",
+        "right"
+      ],
+      "opened_images": 9,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "source_changes": 13,
+      "diagnostic_codes": [
+        "coverage.collision_review",
+        "coverage.contacts_skipped",
+        "header.missing"
+      ],
+      "manual": "examples/mechanism-atlas/piston-crank/manual.json",
+      "manual_sha256": "548a3269d30e13c32c7efd9337d940d3eb3f0d69878d6e4683588245bebbe672",
+      "review": "examples/mechanism-atlas/piston-crank/visual-review.json"
+    },
+    {
+      "key": "differential",
+      "source": {
+        "model": "42083-1.mpd",
+        "section": "42083 - frontaxlediff.ldr",
+        "sha256": "72df8a1a852d6584eeba935320de411b9dc9dc23582177336341af68156469db"
+      },
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.92,
+        "text": "42083-1.mpd|42083 - frontaxlediff.ldr|Front axle differential unit with a 28-tooth bevel differential, 12-tooth bevel gears, and a 20-tooth bevel gear for drive distribution."
+      },
+      "source_unchanged": true,
+      "physical_placements": 29,
+      "steps": 4,
+      "views": [
+        "home",
+        "back"
+      ],
+      "opened_images": 9,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "source_changes": 0,
+      "diagnostic_codes": [
+        "coverage.collision_review",
+        "coverage.contacts_skipped",
+        "header.missing"
+      ],
+      "manual": "examples/mechanism-atlas/differential/manual.json",
+      "manual_sha256": "e84ce68a13f22c309ac2fccad556ec94f618c87c0a522cf621534bc27af3fbda",
+      "review": "examples/mechanism-atlas/differential/visual-review.json"
+    },
+    {
+      "key": "driven-turntable",
+      "source": {
+        "model": "42068-1.mpd",
+        "section": "42068 - turntable.ldr",
+        "sha256": "d9e5e14335324cebdf2204d998cc089ae15b4150193323813b4511d22d8c8239"
+      },
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.88,
+        "text": "42068-1.mpd|42068 - turntable.ldr|Rotating turntable mechanism using a 28-tooth turntable pair driven by a 12-tooth bevel gear on an open-center beam base."
+      },
+      "source_unchanged": true,
+      "physical_placements": 25,
+      "steps": 3,
+      "views": [
+        "home",
+        "bottom"
+      ],
+      "opened_images": 7,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "source_changes": 0,
+      "diagnostic_codes": [
+        "coverage.collision_review",
+        "coverage.contacts_skipped",
+        "header.missing"
+      ],
+      "manual": "examples/mechanism-atlas/driven-turntable/manual.json",
+      "manual_sha256": "4b93830afd5525bcad4a6572d68205ff3d436061b403cb5402ca3ff2ef965c50",
+      "review": "examples/mechanism-atlas/driven-turntable/visual-review.json"
+    }
+  ],
+  "totals": {
+    "studies": 6,
+    "physical_placements": 132,
+    "source_steps": 22,
+    "step_images": 49,
+    "final_previews": 6,
+    "opened_images": 55,
+    "matching_boms": 6
+  },
+  "automated_tests": {
+    "command": ".venv/bin/python -m pytest -q",
+    "passed": 206,
+    "elapsed_seconds": 80.78
+  },
+  "export_checks": [
+    {
+      "key": "gear-reduction",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "mechanism",
+            "export",
+            "gear-reduction",
+            "--outdir",
+            "output/mechanism-stage2/exports/gear-reduction"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/mechanism-stage2/exports/gear-reduction/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/mechanism-stage2/exports/gear-reduction/gear-reduction.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/gear-reduction/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/mechanism-stage2/exports/gear-reduction/gear-reduction.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/gear-reduction/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/mechanism-stage2/exports/gear-reduction/gear-reduction.mpd",
+            "--csv",
+            "output/mechanism-stage2/exports/gear-reduction/renders/leocad-bom.csv",
+            "--report",
+            "output/mechanism-stage2/exports/gear-reduction/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/mechanism-stage2/exports/gear-reduction/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "worm-drive",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "mechanism",
+            "export",
+            "worm-drive",
+            "--outdir",
+            "output/mechanism-stage2/exports/worm-drive"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/mechanism-stage2/exports/worm-drive/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/mechanism-stage2/exports/worm-drive/worm-drive.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/worm-drive/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/mechanism-stage2/exports/worm-drive/worm-drive.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/worm-drive/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/mechanism-stage2/exports/worm-drive/worm-drive.mpd",
+            "--csv",
+            "output/mechanism-stage2/exports/worm-drive/renders/leocad-bom.csv",
+            "--report",
+            "output/mechanism-stage2/exports/worm-drive/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/mechanism-stage2/exports/worm-drive/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "steering-rack",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "mechanism",
+            "export",
+            "steering-rack",
+            "--outdir",
+            "output/mechanism-stage2/exports/steering-rack"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/mechanism-stage2/exports/steering-rack/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/mechanism-stage2/exports/steering-rack/steering-rack.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/steering-rack/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/mechanism-stage2/exports/steering-rack/steering-rack.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/steering-rack/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/mechanism-stage2/exports/steering-rack/steering-rack.mpd",
+            "--csv",
+            "output/mechanism-stage2/exports/steering-rack/renders/leocad-bom.csv",
+            "--report",
+            "output/mechanism-stage2/exports/steering-rack/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/mechanism-stage2/exports/steering-rack/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "piston-crank",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "mechanism",
+            "export",
+            "piston-crank",
+            "--outdir",
+            "output/mechanism-stage2/exports/piston-crank"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/mechanism-stage2/exports/piston-crank/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/mechanism-stage2/exports/piston-crank/piston-crank.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/piston-crank/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/mechanism-stage2/exports/piston-crank/piston-crank.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/piston-crank/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/mechanism-stage2/exports/piston-crank/piston-crank.mpd",
+            "--csv",
+            "output/mechanism-stage2/exports/piston-crank/renders/leocad-bom.csv",
+            "--report",
+            "output/mechanism-stage2/exports/piston-crank/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/mechanism-stage2/exports/piston-crank/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "differential",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "mechanism",
+            "export",
+            "differential",
+            "--outdir",
+            "output/mechanism-stage2/exports/differential"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/mechanism-stage2/exports/differential/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/mechanism-stage2/exports/differential/differential.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/differential/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/mechanism-stage2/exports/differential/differential.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/differential/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/mechanism-stage2/exports/differential/differential.mpd",
+            "--csv",
+            "output/mechanism-stage2/exports/differential/renders/leocad-bom.csv",
+            "--report",
+            "output/mechanism-stage2/exports/differential/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/mechanism-stage2/exports/differential/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "driven-turntable",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "mechanism",
+            "export",
+            "driven-turntable",
+            "--outdir",
+            "output/mechanism-stage2/exports/driven-turntable"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/mechanism-stage2/exports/driven-turntable/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/mechanism-stage2/exports/driven-turntable/driven-turntable.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/driven-turntable/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/mechanism-stage2/exports/driven-turntable/driven-turntable.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/mechanism-stage2/exports/driven-turntable/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/mechanism-stage2/exports/driven-turntable/driven-turntable.mpd",
+            "--csv",
+            "output/mechanism-stage2/exports/driven-turntable/renders/leocad-bom.csv",
+            "--report",
+            "output/mechanism-stage2/exports/driven-turntable/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/mechanism-stage2/exports/driven-turntable/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    }
+  ],
+  "viewer_check": {
+    "method": "Node DOM harness; not a browser layout test",
+    "manuals": 6,
+    "step_view_selections": 49,
+    "next_previous": true,
+    "passed": true
+  },
+  "offline_search": {
+    "engine": "fts",
+    "query": "worm gear drive",
+    "stats": {
+      "eligible_records": 3386,
+      "shortlisted": 12,
+      "query_language": "token OR with BM25 ordering"
+    },
+    "results": [
+      {
+        "model": "42055-1.mpd",
+        "section": "42055 - towerbase3.ldr"
+      },
+      {
+        "model": "42042-1_Tower-Crane.mpd",
+        "section": "42042 - spoolwormgear.ldr"
+      },
+      {
+        "model": "8283-1_Front-End-Loader.mpd",
+        "section": "8283 - Sub27.ldr"
+      }
+    ]
+  },
+  "physical_validity": "not_proven"
+}

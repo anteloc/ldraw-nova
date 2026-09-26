@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "scope": "mechanism-construction-study",
+  "analytical_verification": "deferred",
+  "references": [
+    {
+      "key": "gear-reduction",
+      "model": "42042-1.mpd",
+      "section": "42042 - gearbox4.ldr",
+      "source_sha256": "d53889036ecc71acb2d45de401e2b4d5e2875613a25a3c8959c2173c165c3b35",
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.93,
+        "text": "42042-1.mpd|42042 - gearbox4.ldr|Compound gear reduction unit with 12, 16, and 20-tooth gears on multiple joined axles and a white beam frame."
+      },
+      "title": "Gear and axle module",
+      "category": "Gearing",
+      "views": [
+        "home",
+        "back",
+        "top"
+      ],
+      "lesson": "Study gear stacks, axle joiners and the supports that register them to the surrounding gearbox.",
+      "operation": {
+        "function": "A gear-and-axle module in the crawler crane transmission.",
+        "fixed": "White crossbeam and bent support beams, once mounted in the parent gearbox.",
+        "moving": "Geared shafts, inline axle links and the separate elevated clutch gear.",
+        "input": "An exposed shaft driven by the parent gearbox; the isolated section does not identify a unique complete power path.",
+        "output": "Gear and axle interfaces to the surrounding transmission.",
+        "parent_context": "42042 - gearbox.ldr supplies the rest of the multi-function gearbox and motor drive. The upper red clutch gear depends on that context.",
+        "reuse_notes": "Preserve gear positions, axle lengths, bushes and keyed orientations. Adapt the surrounding mounts and packaging first; retain the parent reference for exposed shafts."
+      }
+    },
+    {
+      "key": "worm-drive",
+      "model": "42042-1_Tower-Crane.mpd",
+      "section": "42042 - spoolwormgear.ldr",
+      "source_sha256": "418b1b235c01b58a199e34953b5ff55f459188c73f5a4d45c6e8ad62149dee27",
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 5,
+        "score": 0.93,
+        "text": "42042-1_Tower-Crane.mpd|42042 - spoolwormgear.ldr|Worm gear winch mechanism using a worm gear, 8-tooth gear, axles, and bent liftarms to drive a spool."
+      },
+      "title": "Worm-drive support module",
+      "category": "Worm drive",
+      "views": [
+        "home",
+        "top"
+      ],
+      "lesson": "Keep a worm shaft, its driven gear and retaining pieces together with their supporting layers.",
+      "operation": {
+        "function": "Worm-drive module for a tower-crane winding function.",
+        "fixed": "Liftarms and cross blocks provide the mounting structure.",
+        "moving": "Worm shaft and the separate axle carrying the eight-tooth gear.",
+        "input": "Axle carrying the worm gear, interpreted from the source arrangement.",
+        "output": "Eight-tooth gear axle; the winding drum and cable belong to the parent assembly.",
+        "parent_context": "42042 - tower.ldr supplies the surrounding tower and remaining winding assembly.",
+        "reuse_notes": "Preserve the worm/gear placement, bush stack and the thin-beam layer. Copy the support geometry as a unit before designing a new external mount; no load-holding claim is made."
+      }
+    },
+    {
+      "key": "steering-rack",
+      "model": "9393-1.mpd",
+      "section": "9393 - steering.ldr",
+      "source_sha256": "6f62ffdb2eb3fd4d2ff8d4a2faba218ae2a435db83151cdbe14b6b85e936f19a",
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.92,
+        "text": "9393-1.mpd|9393 - steering.ldr|Rack-and-pinion steering assembly using a gear rack, beam, and cross blocks to link the steering column to the wheels."
+      },
+      "title": "Steering rack carriage",
+      "category": "Rack steering",
+      "views": [
+        "home",
+        "top"
+      ],
+      "lesson": "A steering reference may contain the sliding rack and carrier while its driving pinion belongs to the parent.",
+      "operation": {
+        "function": "Rack carriage for the tractor steering system.",
+        "fixed": "Carrier beam and cross blocks provide the surrounding mounting arrangement.",
+        "moving": "Toothed rack and its associated steering connections; confirm the assembled relationships in the vehicle.",
+        "input": "Mating pinion supplied by 9393 - vehicle.ldr; no pinion is included in this extracted section.",
+        "output": "Lateral rack movement to the steering system, as interpreted from its intended role.",
+        "parent_context": "9393 - vehicle.ldr supplies the driving gear, vehicle mounts and the remaining wheel-steering connections.",
+        "reuse_notes": "Treat this as a rack carriage, not a complete steering system. Include the matching pinion and parent supports when adapting it. Preserve the toothed side, axle stops and intended sliding space."
+      }
+    },
+    {
+      "key": "piston-crank",
+      "model": "42048-1.mpd",
+      "section": "42048 - engine.ldr",
+      "source_sha256": "b1da23cd1ebfa574d233e0ee042828fb83cdbcb15a967e071a29b5e6738e390d",
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.89,
+        "text": "42048-1.mpd|42048 - engine.ldr|A single-cylinder Technic engine with cylinder head, crankshaft, connecting rod, piston, and a 12-tooth drive gear."
+      },
+      "title": "Single-cylinder piston and crank",
+      "category": "Crank and piston",
+      "views": [
+        "home",
+        "right"
+      ],
+      "lesson": "Use dedicated piston, connecting-rod, crankshaft and cylinder parts; read the source and per-step parts list for internals hidden within a grouped step.",
+      "operation": {
+        "function": "Display engine intended to turn shaft rotation into piston reciprocation.",
+        "fixed": "Cylinder and mounting cross blocks connect the engine to the chassis.",
+        "moving": "Crankshaft pieces, connecting rod and piston.",
+        "input": "External geared shaft connected to the parent kart drivetrain.",
+        "output": "Reciprocating piston visible at the cylinder opening; this is a display-engine role.",
+        "parent_context": "42048 - Race Kart.ldr supplies the surrounding drivetrain and chassis mounting. The extracted cylinder is an embedded DAT definition and must travel with the assembly.",
+        "reuse_notes": "Keep the crank, rod and piston together and preserve their phase in the source pose. Retain the embedded cylinder definition and inspect the internal steps before mounting the complete engine."
+      }
+    },
+    {
+      "key": "differential",
+      "model": "42083-1.mpd",
+      "section": "42083 - frontaxlediff.ldr",
+      "source_sha256": "72df8a1a852d6584eeba935320de411b9dc9dc23582177336341af68156469db",
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.92,
+        "text": "42083-1.mpd|42083 - frontaxlediff.ldr|Front axle differential unit with a 28-tooth bevel differential, 12-tooth bevel gears, and a 20-tooth bevel gear for drive distribution."
+      },
+      "title": "Differential in an axle frame",
+      "category": "Differential",
+      "views": [
+        "home",
+        "back"
+      ],
+      "lesson": "Inspect the internal bevel gear arrangement through the open carrier and source part list; preserve both axle outputs and their supports.",
+      "operation": {
+        "function": "Differential and drive gearing for the front axle of a car.",
+        "fixed": "Open rectangular frame and its beam mounts form the supporting structure.",
+        "moving": "Differential carrier, internal bevel gears, axle outputs and mating drive gears.",
+        "input": "Drive gear arrangement at the differential carrier, interpreted from source placement.",
+        "output": "Two axle shafts leading to the front-wheel drivetrain.",
+        "parent_context": "42083 - frontaxle.ldr supplies the surrounding axle, wheel connections and chassis context.",
+        "reuse_notes": "Retain the differential internals, axle insertion depths and surrounding frame. Place the complete axle module first and adapt its exterior supports; input/output behavior has not been analytically verified."
+      }
+    },
+    {
+      "key": "driven-turntable",
+      "model": "42068-1.mpd",
+      "section": "42068 - turntable.ldr",
+      "source_sha256": "d9e5e14335324cebdf2204d998cc089ae15b4150193323813b4511d22d8c8239",
+      "discovery": {
+        "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "model": "jev-1.13.0",
+        "rank": 1,
+        "score": 0.88,
+        "text": "42068-1.mpd|42068 - turntable.ldr|Rotating turntable mechanism using a 28-tooth turntable pair driven by a 12-tooth bevel gear on an open-center beam base."
+      },
+      "title": "Geared turntable mount",
+      "category": "Turntable",
+      "views": [
+        "home",
+        "bottom"
+      ],
+      "lesson": "Keep the two turntable halves, the driving gear and the base supports together while exposing the rotating attachment face.",
+      "operation": {
+        "function": "Geared rotating attachment in the rescue-vehicle assembly.",
+        "fixed": "Open-centre beam frame and the supported lower turntable half.",
+        "moving": "Driving gear shaft and the upper turntable half with its mounting ears.",
+        "input": "Axle carrying the twelve-tooth gear.",
+        "output": "Rotating upper turntable attachment face.",
+        "parent_context": "42068 - main.ldr supplies the external drive and attached structure.",
+        "reuse_notes": "Preserve the matching turntable halves and driving gear position. Attach the stationary base and moving upper assembly to different surrounding components; review their appearance in the intended pose."
+      }
+    }
+  ]
+}

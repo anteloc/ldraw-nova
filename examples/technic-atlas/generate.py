@@ -5,9 +5,11 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import shlex
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
 
 from ldraw_tools.builder import build_plan
 from ldraw_tools.common import atomic_write, dumps, get_parts, library_path, jsonable
@@ -24,6 +26,26 @@ ORDERS = {
     'frame-tower': 'Build each box cell from one side frame, the horizontal frames and the opposite side frame. Use the specified long pins where a bridge beam adds a third layer; their unused ends must face that beam. Bring neighboring cells to their final spacing, then fit the external bridge beams onto their projecting pins. The STEP constraints describe subassembly order; keep the cells supported during assembly.',
     'service-platform': 'Build the box chassis and fit its two rails. Insert the eight half pins from above, leaving their studs exposed. Press each deck plate onto its four mounts. Add the front deck tiles, equipment housing walls, roof, vents and lamps. The System grid is offset by 10 LDU in X/Z relative to the frame grid; preserve the supplied coordinates.',
 }
+
+
+def reviewed_images(folder, sha, manifest):
+    """Retain a manual review only for the exact model and seven image files."""
+    path = folder/'visual-review.json'
+    if not path.exists() or manifest.get('source_sha256') != sha:
+        return False
+    review = json.loads(path.read_text())
+    expected = {view+'.png' for view in VIEWS}
+    hashes = review.get('image_sha256', {})
+    return (review.get('status') == 'reviewed' and review.get('source_sha256') == sha
+            and set(manifest.get('images', [])) == expected and set(hashes) == expected
+            and all((folder/name).is_file()
+                    and hashlib.sha256((folder/name).read_bytes()).hexdigest() == digest
+                    for name, digest in hashes.items()))
+
+
+def command_path(path):
+    path = path.resolve()
+    return shlex.quote((path.relative_to(ROOT) if path.is_relative_to(ROOT) else path).as_posix())
 
 
 def generate(outdir, *, names=None, renders=False, levels=2, colour=71, accent=14):
@@ -83,7 +105,7 @@ Inspect all seven views, especially the bottom and the hidden face of each mount
 - Required mounting pairs: {len(contract['required_joints'])}
 - Physical validity: **not proven**.
 
-Run `./ldraw-agent technic check {path.as_posix()} --contract {folder.as_posix()}/structure.json` from the repository root. Also run normal `validate --geometry`; a seating check cannot waive unrelated solid intersections.
+Run `./ldraw-agent technic check {command_path(path)} --contract {command_path(folder/'structure.json')}` from the repository root. Also run normal `validate --geometry`; a seating check cannot waive unrelated solid intersections.
 ''')
         row = dict(key=name, title=RECIPES[name]['title'], category='Technic structure',
                    lesson=RECIPES[name]['lesson'], physical_placements=geometry['occurrence_count'],
@@ -106,6 +128,11 @@ Run `./ldraw-agent technic check {path.as_posix()} --contract {folder.as_posix()
             data = json.loads(manifest.read_text())
             if data.get('source_sha256') == sha and all((folder/view).exists() for view in data['images']):
                 row['preview'] = f'{name}/home.png'
+            reviewed = reviewed_images(folder, sha, data)
+            data['visual_review'] = 'reviewed' if reviewed else 'pending'
+            atomic_write(manifest, dumps(data)+'\n')
+            if reviewed:
+                row['visual_review'] = f'{name}/visual-review.json'
         rows[name] = row
         print(f'{name}: {geometry["occurrence_count"]} parts, {structure["joint_count"]} reviewed contacts; checks passed', flush=True)
     atomic_write(catalog_path, dumps(dict(version=1, scope='technic-structure', examples=list(rows.values()), details=[]))+'\n')
