@@ -12,6 +12,8 @@ Choose dedicated seats, controls, glazing, hulls, frames, wings and cargo fittin
 before surrounding bodywork; compare their footprints and native attachment planes.
 Architectural motifs below are examples for buildings, not a vehicle vocabulary.
 
+For [spaceships](spaceships.md), design the silhouette, scale and internal support together. Use dedicated canopies, controls, wedges, cylindrical engines and grille/bar/clip details. Concentrate machinery in service bays beside quiet armour; inspect wing thickness, engine spacing, underside and display mounts. Read [build pages](build-manuals.md) for useful hidden constructions before adapting them.
+
 ## Start with composition
 
 Write a short `design-brief.json` or Markdown brief outside the assembly plan. Record:

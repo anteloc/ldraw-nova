@@ -1,0 +1,298 @@
+{
+  "version": 1,
+  "references": [
+    {
+      "key": "b-wing",
+      "model": "75050-1.mpd",
+      "section": "75050 - Main.ldr",
+      "source_sha256": "09e942934e480c12f92ffc90533060c1ceaa789c7b99d92598ff925244473123",
+      "title": "B-wing starfighter",
+      "category": "starfighter",
+      "overview": true,
+      "use": "adapt",
+      "views": [
+        "home",
+        "front",
+        "back",
+        "top"
+      ],
+      "notes": {
+        "lesson": "Build a distinctive asymmetric starfighter around a narrow spine and separate wing masses.",
+        "construction": "Study cockpit mass, long blade, smaller side wings, engine block and detailed wing ends as separate design roles.",
+        "interfaces": "Preserve wing-root and engine attachments; the model is delivered in its source pose, with no claim of working articulation.",
+        "parent_context": "Full model includes the supplied parent assembly.",
+        "reuse_notes": "Adapt the silhouette and module interfaces deliberately; keep real canopy, engine and wing parts rather than replacing their forms with rectangular slabs."
+      },
+      "discovery": {
+        "id": "model-61a4c0107f0781f989e11098",
+        "source_field": "MODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "Complete B-Wing starfighter assembled from its wing, fuselage, and engine submodels.",
+        "retrieval_rank": 3,
+        "score": 0.93
+      },
+      "search": "fighters.json",
+      "catalog_group": "examples",
+      "position_repairs": [
+        {
+          "section": "75050 - B-Wing.ldr",
+          "part": "3020.dat",
+          "before": [
+            -60,
+            -124.539,
+            -51.555
+          ],
+          "after": [
+            -60,
+            -124.53918,
+            -51.55527
+          ]
+        },
+        {
+          "section": "75050 - B-Wing.ldr",
+          "part": "3068b.dat",
+          "before": [
+            -80,
+            -129.013,
+            -58.1873
+          ],
+          "after": [
+            -80,
+            -129.01318,
+            -58.18757
+          ]
+        },
+        {
+          "section": "75050 - B-Wing.ldr",
+          "part": "3020.dat",
+          "before": [
+            -60,
+            -30.7176,
+            51.0344
+          ],
+          "after": [
+            -60,
+            -30.717578,
+            51.034431
+          ]
+        }
+      ],
+      "repair_reason": "Resolve tiny rounded-coordinate body-envelope penetrations in the posed wing plate/tile stack; maximum displacement is under 0.00033 LDU. Part identity, colour and orientation are unchanged. Strict collision tolerances remain unchanged."
+    },
+    {
+      "key": "ucs-y-wing-study",
+      "model": "10134-1.mpd",
+      "section": "10134 - main.ldr",
+      "source_sha256": "96651048af88cde72f5bbf8b7c10defe695a9c4499c2c51d9bff52d9c40d8e4e",
+      "title": "UCS Y-wing: proportions and engine detailing",
+      "category": "starfighter",
+      "overview": true,
+      "use": "inspiration",
+      "views": [
+        "home",
+        "front",
+        "back",
+        "top"
+      ],
+      "notes": {
+        "lesson": "Use a long spine and paired nacelles to create an immediately readable heavy starfighter.",
+        "construction": "Study the rounded forward cockpit, exposed machinery, outriggers and repeated engine ribs against quieter hull surfaces.",
+        "interfaces": "Engine outriggers and display stand need their own support study before reuse.",
+        "parent_context": "This is a whole-set reference including its stand; source geometry diagnostics are retained.",
+        "reuse_notes": "Inspiration only: repair or rebuild selected modules before using them. The greebled machinery and curved/angled assemblies need more than a matching BOM."
+      },
+      "discovery": {
+        "id": "model-30fa8bd6eed51ae06f1ac256",
+        "source_field": "MODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "LEGO Star Wars Ultimate Collector Series Y-wing Attack Starfighter (set 10134-1): a Rebel starfighter with a long central fuselage, a tinted bubble cockpit with twin nose laser cannons and an R5-D4 astromech droid, two large ribbed engine nacelles on outrigger struts, and a dorsal sensor/ion-cannon turret, presented on a black display stand with a tiled info plaque",
+        "retrieval_rank": 1,
+        "score": 0.93
+      },
+      "search": "fighters.json",
+      "catalog_group": "examples"
+    },
+    {
+      "key": "star-destroyer-study",
+      "model": "75055-1.mpd",
+      "section": "75055 - Main.ldr",
+      "source_sha256": "4678bc51129737442a76081aa7c67ff79f31f9b164763bd2b0bdad5b2de97fc3",
+      "title": "Imperial Star Destroyer: layered wedge hull",
+      "category": "capital-ship",
+      "overview": true,
+      "use": "inspiration",
+      "views": [
+        "home",
+        "front",
+        "back",
+        "top"
+      ],
+      "notes": {
+        "lesson": "Layer a broad wedge hull, narrow edge trenches and smaller superstructure to establish capital-ship scale.",
+        "construction": "Compare upper and lower panel thickness, perimeter recesses, bridge silhouette and engine cluster.",
+        "interfaces": "Long hull panels require real hinge/brace interfaces and an internal frame; a visually aligned wedge does not establish an attachment.",
+        "parent_context": "This is the full source assembly; source transform and overlap errors remain visible.",
+        "reuse_notes": "Inspiration only: do not export it as a checked construction. Rebuild useful panel techniques with proper rigid placements and inspect the internal support structure."
+      },
+      "discovery": {
+        "id": "model-8395cbde2a507f2945aed79f",
+        "source_field": "MODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "Assembly of a large wedge-shaped Imperial Star Destroyer built from layered grey plates, angled wing sections, and click-lock hinge mechanisms.",
+        "retrieval_rank": 3,
+        "score": 0.91
+      },
+      "search": "large-ships.json",
+      "catalog_group": "examples"
+    },
+    {
+      "key": "x-wing-wing",
+      "model": "7191-1.mpd",
+      "section": "7191 - bottom-port-wing.ldr",
+      "source_sha256": "51454fee78072d22bcf9bdcd735901adea09d183a3c5072acce5e37fa510f9ca",
+      "title": "UCS X-wing lower port wing",
+      "category": "wing",
+      "overview": true,
+      "use": "adapt",
+      "views": [
+        "home",
+        "front",
+        "back",
+        "top"
+      ],
+      "notes": {
+        "lesson": "A long spacecraft wing can carry an engine pod and a slender tip feature while retaining a layered, readable silhouette.",
+        "construction": "Read the plate sandwich, local bracing, nacelle and tip assembly as linked submodels. Whole-section views are supplied; prepare its source sections separately for build pages.",
+        "interfaces": "Retain the source wing-root stack and inspect the exact mating parts before attaching it to a new spine.",
+        "parent_context": "7191-1.mpd supplies the other wings, central fuselage and wing articulation. This is one lower port wing, not a mirrored pair.",
+        "reuse_notes": "Use a real opposite-hand construction or rebuild it with matching left/right parts; never mirror physical part matrices. Keep the nacelle and long projecting details clear of neighbouring wings."
+      },
+      "discovery": {
+        "id": "submodel-0dd40dffd0c468f4551baed0",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "The lower port X-wing wing assembly built from wing panels, long plates, and grooved tiles forming the layered attack-wing surface.",
+        "retrieval_rank": 7,
+        "score": 0.85
+      },
+      "search": "wings.json",
+      "catalog_group": "details"
+    },
+    {
+      "key": "x-wing-nacelle",
+      "model": "7191-1.mpd",
+      "section": "7191 - nacelle-2.ldr",
+      "source_sha256": "51454fee78072d22bcf9bdcd735901adea09d183a3c5072acce5e37fa510f9ca",
+      "title": "UCS X-wing engine nacelle",
+      "category": "engine",
+      "overview": false,
+      "use": "adapt",
+      "views": [
+        "home",
+        "top"
+      ],
+      "notes": {
+        "lesson": "Use genuine cylinders and concentric round parts to give an engine a convincing layered profile.",
+        "construction": "A single source STEP group combines the cylindrical shell, red round inner pieces and axle core. Read the part list because there are no intermediate insertions in the source.",
+        "interfaces": "Keep the coaxial core and cylinder spacing; inspect its parent mounting shaft and the full pod envelope.",
+        "parent_context": "7191-1.mpd supplies the surrounding wing and fore/aft engine context.",
+        "reuse_notes": "Change external mounts and hull palette carefully while preserving the concentric stack and dedicated engine shapes."
+      },
+      "discovery": {
+        "id": "submodel-d826f794335b2a48347d1961",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "Cylindrical engine nacelle using Technic cylinders, round red bricks, and axle-connected structural components.",
+        "retrieval_rank": 1,
+        "score": 0.83
+      },
+      "search": "engines.json",
+      "catalog_group": "details"
+    },
+    {
+      "key": "canopy-cockpit",
+      "model": "6887-1.mpd",
+      "section": "6887 - Spaceship - Cockpit.ldr",
+      "source_sha256": "4cf7513c2f3eec5a425550c5633fe21240cc08c956435729b5395783e0a9a7f9",
+      "title": "Enclosed octagonal canopy cockpit",
+      "category": "cockpit",
+      "overview": false,
+      "use": "adapt",
+      "views": [
+        "home",
+        "top"
+      ],
+      "notes": {
+        "lesson": "Design the cockpit envelope around real canopy halves and hinges before closing the hull.",
+        "construction": "The cockpit combines two octagonal transparent canopy halves, hinge fingers, a glazed rear panel, side mounts and a pilot subassembly. Read the child pages for its layers and occupant.",
+        "interfaces": "Retain mating canopy hinges and the panel rim; inspect source mounting bricks and their exact orientation before attaching to a new fuselage.",
+        "parent_context": "6887-1.mpd (Allied Avenger) supplies the surrounding spacecraft and mating rear structure. The extraction includes its pilot and several legacy part aliases.",
+        "reuse_notes": "Use the enclosure and hinge vocabulary in a new cockpit. Preserve the clear opening and actual pilot envelope; any new seat, controls or canopy substitution needs its own fit review."
+      },
+      "discovery": {
+        "id": "submodel-1ce50467f7f1bf6d3bb44480",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "Spaceship - Cockpit",
+        "retrieval_rank": 7,
+        "score": 0.81
+      },
+      "search": "cockpits.json",
+      "catalog_group": "details"
+    },
+    {
+      "key": "y-wing-armour",
+      "model": "75181-1.mpd",
+      "section": "75181 - Y-Wing Starfighter - step254-261.ldr",
+      "source_sha256": "a780334a32c3082736055bd609730a7dd6817afc850420c83ccfec59a385f7bb",
+      "title": "UCS Y-wing contoured armour panel",
+      "category": "hull",
+      "overview": false,
+      "use": "adapt",
+      "views": [
+        "home",
+        "top"
+      ],
+      "notes": {
+        "lesson": "Combine sloped armour with a small raised vent cluster and a deliberate hinge edge.",
+        "construction": "Read the layered wedge plates, curved/sloped surface and concentrated grille details in successive steps.",
+        "interfaces": "Preserve the underlying plate bond and hinge mating face; measure the panel envelope before installing it over machinery.",
+        "parent_context": "75181-1.mpd supplies the rest of the Y-wing hull and the mating panel supports.",
+        "reuse_notes": "Adapt a matched set of panels, retaining clean outer surfaces beside a few dense service areas. Use actual left/right pieces for handed variants."
+      },
+      "discovery": {
+        "id": "submodel-e143429bf3587e712b6178db",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "Angled hull armor panel built from plates, slope bricks, raised grille plates, and a hinge tile forming a contoured body panel with greebled detailing.",
+        "retrieval_rank": 1,
+        "score": 0.93
+      },
+      "search": "wings.json",
+      "catalog_group": "details"
+    },
+    {
+      "key": "falcon-greebles",
+      "model": "10179-1.mpd",
+      "section": "10179 - subModel-43.ldr",
+      "source_sha256": "69efb0b373df38363e2095a3d5d7ef11eea0f22d315f36c917977d3230cd19e2",
+      "title": "Millennium Falcon service-bay details",
+      "category": "surface-detail",
+      "overview": false,
+      "use": "adapt",
+      "views": [
+        "home",
+        "top"
+      ],
+      "notes": {
+        "lesson": "Small familiar LEGO fittings can suggest machinery when arranged in a coherent recessed service bay.",
+        "construction": "Study the domes, control sticks, loudhailer, antenna and wing panel as a small directed composition.",
+        "interfaces": "Reserve the protruding antenna and bar envelope; attach the underlying plate to exposed studs, not through finished hull tiles.",
+        "parent_context": "10179-1.mpd supplies the surrounding hull recess. This is the right upper service cluster, not an entire Falcon panel.",
+        "reuse_notes": "Keep greebles grouped and lower than the main silhouette. Reuse their mounting logic; avoid covering every hull surface with unrelated decoration."
+      },
+      "discovery": {
+        "id": "submodel-24b235c067a2164b41c3b7a9",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "Upper hull greeble cluster (right): wing panel, domes, control sticks, loudhailer and antenna",
+        "retrieval_rank": 4,
+        "score": 0.87
+      },
+      "search": "wings.json",
+      "catalog_group": "details"
+    }
+  ]
+}

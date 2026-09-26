@@ -15,6 +15,8 @@ flowchart LR
     F --> G[Deliver the editable model]
 ```
 
+The same source-step method can grow every atlas. See the [general build-manual workflow](build-manuals.md) and `manual prepare` for buildings, vehicles, spaceships and other constructions without mechanism-specific operation fields.
+
 ## Choose the right construction
 
 ```sh

@@ -63,7 +63,7 @@ def parser():
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
-    c.add_argument("--family", choices=["building", "vehicle", "reference", "technic", "mechanism"], default="building")
+    c.add_argument("--family", choices=["building", "vehicle", "reference", "technic", "mechanism", "spaceship"], default="building")
     c = commands.add_parser("discover", help="Find, measure and visually review parts, source models and submodels")
     discovery = c.add_subparsers(dest="discovery_command", required=True)
     d = discovery.add_parser("index", help="Build a local typed index from the three Jev fields and actual source headers")
@@ -126,6 +126,42 @@ def parser():
     d.add_argument("--placement-notes", required=True)
     d.add_argument("--scale", choices=["minifigure","microscale","display","unknown"], default="unknown")
     d.add_argument("--force", action="store_true")
+    c = commands.add_parser('spaceship', help='Advanced spacecraft design briefs and reusable source constructions')
+    ships = c.add_subparsers(dest='spaceship_command', required=True)
+    ships.add_parser('list', help='List whole-ship construction and inspiration studies')
+    ships.add_parser('details', help='List reusable cockpit, wing, engine and hull studies')
+    d = ships.add_parser('brief', help='Start a spaceship design brief with module and visual-review guidance')
+    d.add_argument('archetype', choices=['starfighter','freighter','capital-ship'])
+    d.add_argument('--output')
+    d.add_argument('--force', action='store_true')
+    d = ships.add_parser('export', help='Export a reviewed spaceship construction with source and placement plan')
+    d.add_argument('name')
+    d.add_argument('--outdir', required=True)
+    d.add_argument('--force', action='store_true')
+    c = commands.add_parser('manual', help='Study any source submodel through build pages and export it for an atlas')
+    m = c.add_subparsers(dest='manual_command', required=True)
+    d = m.add_parser('prepare', help='Extract a source assembly and make attributed step manuals')
+    d.add_argument('file')
+    d.add_argument('--section', required=True)
+    d.add_argument('--outdir', required=True)
+    d.add_argument('--title')
+    d.add_argument('--notes', help='JSON study notes: lesson, construction, interfaces, parent_context, reuse_notes')
+    d.add_argument('--views', nargs='+', default=['home','back'])
+    d.add_argument('--colour', type=int, default=7)
+    d.add_argument('--no-render', action='store_true')
+    d.add_argument('--overview', action='store_true', help='Render completed-model views; keep source step data for selecting smaller studies')
+    d.add_argument('--normalize-rotations', action='store_true')
+    d.add_argument('--repair-bfc-comments', action='store_true')
+    d.add_argument('--force', action='store_true')
+    d.add_argument('--max-instances', type=positive, default=2000)
+    d = m.add_parser('review', help='Record the build pages and final preview actually opened')
+    d.add_argument('directory')
+    d.add_argument('--images', nargs='+', required=True)
+    d.add_argument('--note', required=True)
+    d = m.add_parser('export', help='Copy a visually reviewed study and placement plan for adaptation')
+    d.add_argument('reference', help='Prepared study directory')
+    d.add_argument('--outdir', required=True)
+    d.add_argument('--force', action='store_true')
     c = commands.add_parser('mechanism', help='Study and reuse mechanisms from source and build pages; no motion analysis')
     m = c.add_subparsers(dest='mechanism_command', required=True)
     m.add_parser('list', help='List the curated mechanism studies')
@@ -325,6 +361,32 @@ def run(args):
     if args.command == "search" and args.kind != "parts":
         return search_models(args.query, root=args.models, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
+    if args.command == 'spaceship':
+        from .spaceships import design_brief, export_spaceship
+        if args.spaceship_command in {'list','details'}:
+            from .examples import search_examples
+            return search_examples(family='spaceship', details=args.spaceship_command == 'details', limit=100), 0
+        if args.spaceship_command == 'brief':
+            brief = design_brief(args.archetype)
+            if args.output:
+                target = Path(args.output)
+                if target.exists() and not args.force:
+                    raise ValueError('Output exists; use --force')
+                atomic_write(target, dumps(brief)+'\n')
+            return brief, 0
+        return export_spaceship(args.name, args.outdir, force=args.force), 0
+    if args.command == 'manual':
+        from .manuals import prepare_manual, review_manual, export_manual
+        if args.manual_command == 'prepare':
+            notes = json.loads(Path(args.notes).read_text()) if args.notes else None
+            report = prepare_manual(args.file, args.section, args.outdir, parts, title=args.title,
+                views=args.views, colour=args.colour, notes=notes, renders=not args.no_render,
+                normalize_rotations=args.normalize_rotations, repair_bfc=args.repair_bfc_comments,
+                force=args.force, max_instances=args.max_instances, kind='construction', overview=args.overview)
+            return report, 0 if report['source_checks_passed'] and report['bom_matches'] is not False else 1
+        if args.manual_command == 'review':
+            return review_manual(args.directory, images=args.images, note=args.note), 0
+        return export_manual(args.reference, args.outdir, force=args.force), 0
     if args.command == 'mechanism':
         from .manuals import prepare_manual, review_manual, export_manual
         if args.mechanism_command == 'list':

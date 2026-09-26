@@ -1,5 +1,19 @@
 # Tool reference
 
+## Build manuals for any atlas
+
+```sh
+./ldraw-agent manual prepare FILE --section NAME --outdir output/study --views home top --notes NOTES.json
+./ldraw-agent manual review output/study --images IMAGE ... --note 'What was inspected and learned'
+./ldraw-agent manual export output/study --outdir output/my-example
+./ldraw-agent spaceship list
+./ldraw-agent spaceship details
+./ldraw-agent spaceship brief starfighter --output output/starfighter-brief.json
+./ldraw-agent spaceship export b-wing --outdir output/my-ship
+```
+
+`manual` shares the mechanism step renderer but uses construction notes: lesson, construction, interfaces, parent context and reuse notes. `--overview` renders completed-model views and retains source step data; `--no-render` leaves rendered evidence pending. Existing mechanism commands retain their operation-specific notes and review requirements. See [build manuals and atlas additions](build-manuals.md) and [spaceship design](spaceships.md).
+
 ## Mechanism studies and reuse
 
 ```sh

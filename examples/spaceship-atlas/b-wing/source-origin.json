@@ -1,0 +1,51 @@
+{
+  "model": "75050-1.mpd",
+  "section": "75050 - Main.ldr",
+  "sha256": "09e942934e480c12f92ffc90533060c1ceaa789c7b99d92598ff925244473123",
+  "prepared_sha256": "6ad1efb484d91597ab745437018444fbf47cfa65673285a464ecdf2dd51d80e2",
+  "position_repairs": [
+    {
+      "section": "75050 - B-Wing.ldr",
+      "part": "3020.dat",
+      "before": [
+        -60,
+        -124.539,
+        -51.555
+      ],
+      "after": [
+        -60,
+        -124.53918,
+        -51.55527
+      ]
+    },
+    {
+      "section": "75050 - B-Wing.ldr",
+      "part": "3068b.dat",
+      "before": [
+        -80,
+        -129.013,
+        -58.1873
+      ],
+      "after": [
+        -80,
+        -129.01318,
+        -58.18757
+      ]
+    },
+    {
+      "section": "75050 - B-Wing.ldr",
+      "part": "3020.dat",
+      "before": [
+        -60,
+        -30.7176,
+        51.0344
+      ],
+      "after": [
+        -60,
+        -30.717578,
+        51.034431
+      ]
+    }
+  ],
+  "reason": "Resolve tiny rounded-coordinate body-envelope penetrations in the posed wing plate/tile stack; maximum displacement is under 0.00033 LDU. Part identity, colour and orientation are unchanged. Strict collision tolerances remain unchanged."
+}

@@ -57,6 +57,10 @@ For the authorized Stage 2, use `--construction mechanism`. It selects mechanism
 
 For difficult roles, supply **both** `--yes` and `--no`, for example a criterion for a System aircraft engine pod and one rejecting car engines and spacecraft body slabs. Parent context is shown separately rather than silently added to the scored text. A semantic score is not an import approval.
 
+## Study the construction steps
+
+A completed snapshot can hide the useful construction. Follow the [build-manual workflow](build-manuals.md) to turn the returned exact model/section into consecutive pages with highlighted additions and per-step parts. Use `manual prepare` for any family and `mechanism prepare` for mechanism operation notes. Read the parent interfaces, record the actual pages opened and export reviewed constructions into the appropriate atlas. `--overview` provides completed-model views and source section metadata for choosing smaller studies. The [spaceship atlas](../../examples/spaceship-atlas/README.md) demonstrates both routes.
+
 ## Compare actual images and dimensions
 
 ```sh

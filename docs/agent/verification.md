@@ -1,5 +1,7 @@
 # Verification record
 
+The [spaceship and build-manual implementation record](../reports/spaceship-support-implementation.md) documents the 2026-09-26 extension: general source-step manuals, three spaceship design briefs, eight source studies, six checked reusable entries, 50 inspected images, eight matching rendered BOMs and **211 passing tests**. Two large sources remain explicitly inspiration-only with unresolved source errors.
+
 The [Technic stage-1 implementation record](../reports/technic-stage1-implementation.md) documents the 2026-09-26 structural extension: 34 reviewed part definitions, seating and structural contracts, four reproducible examples, 28 inspected views, matching LeoCAD BOMs and **199 passing tests**. The now-authorized Stage 2 is recorded separately below.
 
 The [Technic stage-2 implementation record](../reports/technic-stage2-implementation.md) documents construction from studied mechanism examples: six Jev-selected references, 22 source steps, 55 inspected images, six matching rendered BOMs, portable exports and **206 passing tests**. Analytical mechanism verification is deferred at the user's request; normal source, geometry, BOM and visual checks remain.

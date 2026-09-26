@@ -9,6 +9,8 @@ harbour launch and courier aircraft. These use different construction systems:
 wheel-pin chassis, a motorcycle frame, a moulded hull, or aircraft nose/wing/engine
 assemblies. Select the family before choosing dimensions or checks.
 
+For fictional spacecraft, use the [spaceship workflow](spaceships.md) and its atlas. It has its own silhouettes, module roles and review criteria; the road and aircraft checks here do not establish spacecraft fit or flight performance.
+
 ## Start with a silhouette and the defining parts
 
 Record the intended era, purpose, character and viewing scale before placing

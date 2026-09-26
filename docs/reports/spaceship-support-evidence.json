@@ -1,0 +1,1212 @@
+{
+  "version": 1,
+  "date": "2026-09-26",
+  "scope": "general source-step manuals and advanced spaceship generation support",
+  "availability_probe": {
+    "documents": 1821,
+    "passages": 1821,
+    "updated": 0,
+    "skipped": 0,
+    "removed": 0,
+    "scored": 1,
+    "cache_hits": 0,
+    "api_calls": 1,
+    "input_tokens": 526,
+    "output_tokens": 22,
+    "elapsed_seconds": 0.4400875410065055
+  },
+  "queries": [
+    {
+      "query": "spaceship engine thruster exhaust nacelle reactor with cylindrical housing",
+      "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+      "stats": {
+        "documents": 22713,
+        "passages": 22713,
+        "updated": 22713,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 160,
+        "cache_hits": 0,
+        "api_calls": 160,
+        "input_tokens": 85425,
+        "output_tokens": 3520,
+        "elapsed_seconds": 4.3520890419895295,
+        "exhaustive": false,
+        "command": [
+          "uv",
+          "run",
+          "--project",
+          "/Users/captain/workspaces/workspace-ai/jev-rerank",
+          "jev-rerank",
+          "--db",
+          "/Users/captain/workspaces/workspace-ai/ldraw-astra/.cache/discovery/2a28f6d841893e00/queries/d4082c226d85a911ffec0cf276508dd2bc5acbc679b1c34dd8ef0439d57b27eb.sqlite",
+          "--table-field",
+          "candidates.full_description",
+          "--query",
+          "spaceship engine thruster exhaust nacelle reactor with cylindrical housing",
+          "--top",
+          "20",
+          "--candidates",
+          "160",
+          "--model",
+          "jev-1.13.0",
+          "--json",
+          "--show"
+        ],
+        "eligible_records": 22713
+      },
+      "results": [
+        {
+          "model": "7191-1.mpd",
+          "section": "7191 - nacelle-2.ldr",
+          "id": "submodel-d826f794335b2a48347d1961"
+        },
+        {
+          "model": "10240-1.mpd",
+          "section": "10240 - subModel-62.ldr",
+          "id": "submodel-25715607f691c0d202230518"
+        },
+        {
+          "model": "7141-1.mpd",
+          "section": "7141 - Engine Left.ldr",
+          "id": "submodel-6205a88479631a2f4b8359d5"
+        },
+        {
+          "model": "10240-1.mpd",
+          "section": "10240 - subModel-58.ldr",
+          "id": "submodel-b6beab2749853684a2e9a2cc"
+        },
+        {
+          "model": "10019-1.mpd",
+          "section": "10019 - Rebel Blockade Runner - UCS - c2-1.ldr",
+          "id": "submodel-72340e20fad536f290f93133"
+        },
+        {
+          "model": "10019-1.mpd",
+          "section": "10019 - Rebel Blockade Runner - UCS - c5-1.ldr",
+          "id": "submodel-9b244a2befb459b3ffcb9a3a"
+        },
+        {
+          "model": "7150-1.mpd",
+          "section": "7150 - Y-Wing Fighter - Engine.ldr",
+          "id": "submodel-025871dfb161dd389a2b00de"
+        },
+        {
+          "model": "10262-1.mpd",
+          "section": "10262 - step70.ldr",
+          "id": "submodel-66f48b3bfe7db0254e753e71"
+        }
+      ]
+    },
+    {
+      "query": "Star Wars spaceship cockpit canopy pilot seat detailed control panel",
+      "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+      "stats": {
+        "documents": 22713,
+        "passages": 22713,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 160,
+        "cache_hits": 0,
+        "api_calls": 160,
+        "input_tokens": 84561,
+        "output_tokens": 3520,
+        "elapsed_seconds": 3.01967441700981,
+        "exhaustive": false,
+        "command": [
+          "uv",
+          "run",
+          "--project",
+          "/Users/captain/workspaces/workspace-ai/jev-rerank",
+          "jev-rerank",
+          "--db",
+          "/Users/captain/workspaces/workspace-ai/ldraw-astra/.cache/discovery/2a28f6d841893e00/queries/d4082c226d85a911ffec0cf276508dd2bc5acbc679b1c34dd8ef0439d57b27eb.sqlite",
+          "--table-field",
+          "candidates.full_description",
+          "--query",
+          "Star Wars spaceship cockpit canopy pilot seat detailed control panel",
+          "--top",
+          "20",
+          "--candidates",
+          "160",
+          "--model",
+          "jev-1.13.0",
+          "--json",
+          "--show"
+        ],
+        "eligible_records": 22713
+      },
+      "results": [
+        {
+          "model": "75075-1.mpd",
+          "section": "75075 - subModel-2.ldr",
+          "id": "submodel-4b6c811961e5113a64390a46"
+        },
+        {
+          "model": "10183-1.mpd",
+          "section": "10183 - 1 - control panel.ldr",
+          "id": "submodel-39ab8be5614d86cfb5489403"
+        },
+        {
+          "model": "6954-1.mpd",
+          "section": "6954 - Spaceship - Cockpit.ldr",
+          "id": "submodel-6b363b664f7a7ff2efb8d920"
+        },
+        {
+          "model": "6953-1.mpd",
+          "section": "6953 - Vehicle - Front + Minifig.ldr",
+          "id": "submodel-1ac4e19ef7e2299ccde65a6e"
+        },
+        {
+          "model": "6933-1.mpd",
+          "section": "6933 - Vehicle - Cockpit 2.ldr",
+          "id": "submodel-44e272e2f44ab317919f9570"
+        },
+        {
+          "model": "7893-1.mpd",
+          "section": "7893 - cabin.ldr",
+          "id": "submodel-bd5c74c71375de6aef6eb068"
+        },
+        {
+          "model": "6887-1.mpd",
+          "section": "6887 - Spaceship - Cockpit.ldr",
+          "id": "submodel-1ce50467f7f1bf6d3bb44480"
+        },
+        {
+          "model": "10212-1.mpd",
+          "section": "10212 - subModel-25.ldr",
+          "id": "submodel-e11bb586019fb7ef4042816e"
+        }
+      ]
+    },
+    {
+      "query": "Star Wars spaceship wing panel layered angular hull greebles",
+      "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+      "stats": {
+        "documents": 22713,
+        "passages": 22713,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 160,
+        "cache_hits": 0,
+        "api_calls": 160,
+        "input_tokens": 84996,
+        "output_tokens": 3520,
+        "elapsed_seconds": 3.1206727499957196,
+        "exhaustive": false,
+        "command": [
+          "uv",
+          "run",
+          "--project",
+          "/Users/captain/workspaces/workspace-ai/jev-rerank",
+          "jev-rerank",
+          "--db",
+          "/Users/captain/workspaces/workspace-ai/ldraw-astra/.cache/discovery/2a28f6d841893e00/queries/d4082c226d85a911ffec0cf276508dd2bc5acbc679b1c34dd8ef0439d57b27eb.sqlite",
+          "--table-field",
+          "candidates.full_description",
+          "--query",
+          "Star Wars spaceship wing panel layered angular hull greebles",
+          "--top",
+          "20",
+          "--candidates",
+          "160",
+          "--model",
+          "jev-1.13.0",
+          "--json",
+          "--show"
+        ],
+        "eligible_records": 22713
+      },
+      "results": [
+        {
+          "model": "75181-1.mpd",
+          "section": "75181 - Y-Wing Starfighter - step254-261.ldr",
+          "id": "submodel-e143429bf3587e712b6178db"
+        },
+        {
+          "model": "75181-1.mpd",
+          "section": "75181 - Y-Wing Starfighter - step28-36.ldr",
+          "id": "submodel-a7b2de51e6a470628cbbee94"
+        },
+        {
+          "model": "10179-1.mpd",
+          "section": "10179 - subModel-170.ldr",
+          "id": "submodel-fdfc60eeb27aff600d221be1"
+        },
+        {
+          "model": "10179-1.mpd",
+          "section": "10179 - subModel-43.ldr",
+          "id": "submodel-24b235c067a2164b41c3b7a9"
+        },
+        {
+          "model": "7191-1.mpd",
+          "section": "7191 - bottom-port-wing.ldr",
+          "id": "submodel-0dd40dffd0c468f4551baed0"
+        },
+        {
+          "model": "75060-1.mpd",
+          "section": "75060 - step109-27.ldr",
+          "id": "submodel-431937d806e865d2a2a35b48"
+        },
+        {
+          "model": "75060-1.mpd",
+          "section": "75060 - step110-27.ldr",
+          "id": "submodel-1b1fb14816a377c057d987d4"
+        },
+        {
+          "model": "30056-1.mpd",
+          "section": "30056 - Star Destroyer.ldr",
+          "id": "submodel-e621d3ea650f30b0670ad95e"
+        }
+      ]
+    },
+    {
+      "query": "advanced Star Wars spacecraft starfighter detailed wings cockpit engines",
+      "field": "MODELS_DESCRIPTIONS_JEV.full_description",
+      "stats": {
+        "documents": 1820,
+        "passages": 1820,
+        "updated": 1820,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 160,
+        "cache_hits": 0,
+        "api_calls": 160,
+        "input_tokens": 84477,
+        "output_tokens": 3520,
+        "elapsed_seconds": 3.0564854590047617,
+        "exhaustive": false,
+        "command": [
+          "uv",
+          "run",
+          "--project",
+          "/Users/captain/workspaces/workspace-ai/jev-rerank",
+          "jev-rerank",
+          "--db",
+          "/Users/captain/workspaces/workspace-ai/ldraw-astra/.cache/discovery/2a28f6d841893e00/queries/9eefdc543e73613b70ba225dfed685ae47837bfa5787d537db3a826b36d0ec07.sqlite",
+          "--table-field",
+          "candidates.full_description",
+          "--query",
+          "advanced Star Wars spacecraft starfighter detailed wings cockpit engines",
+          "--top",
+          "20",
+          "--candidates",
+          "160",
+          "--model",
+          "jev-1.13.0",
+          "--json",
+          "--show"
+        ],
+        "eligible_records": 1820
+      },
+      "results": [
+        {
+          "model": "10134-1.mpd",
+          "section": null,
+          "id": "model-30fa8bd6eed51ae06f1ac256"
+        },
+        {
+          "model": "75050-1.mpd",
+          "section": null,
+          "id": "model-61a4c0107f0781f989e11098"
+        },
+        {
+          "model": "7140-1.mpd",
+          "section": null,
+          "id": "model-8ccbed6e7c7ca59d536d4081"
+        },
+        {
+          "model": "8033-1.mpd",
+          "section": null,
+          "id": "model-f6c8e9b4a040719eccad61b1"
+        },
+        {
+          "model": "30051-1.mpd",
+          "section": null,
+          "id": "model-1f4b255041f4f076505b06c0"
+        },
+        {
+          "model": "6965-1.mpd",
+          "section": null,
+          "id": "model-4206e36cacc41e5a3df06d40"
+        },
+        {
+          "model": "8028-1.mpd",
+          "section": null,
+          "id": "model-56288da5a937ad5e4049a72d"
+        },
+        {
+          "model": "75181-1.mpd",
+          "section": null,
+          "id": "model-95e38fa86b31c935fa25e3d6"
+        }
+      ]
+    },
+    {
+      "query": "Star Wars spaceship freighter Millennium Falcon or Imperial star destroyer detailed hull",
+      "field": "MODELS_DESCRIPTIONS_JEV.full_description",
+      "stats": {
+        "documents": 1820,
+        "passages": 1820,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 160,
+        "cache_hits": 0,
+        "api_calls": 160,
+        "input_tokens": 85225,
+        "output_tokens": 3520,
+        "elapsed_seconds": 2.912679458007915,
+        "exhaustive": false,
+        "command": [
+          "uv",
+          "run",
+          "--project",
+          "/Users/captain/workspaces/workspace-ai/jev-rerank",
+          "jev-rerank",
+          "--db",
+          "/Users/captain/workspaces/workspace-ai/ldraw-astra/.cache/discovery/2a28f6d841893e00/queries/9eefdc543e73613b70ba225dfed685ae47837bfa5787d537db3a826b36d0ec07.sqlite",
+          "--table-field",
+          "candidates.full_description",
+          "--query",
+          "Star Wars spaceship freighter Millennium Falcon or Imperial star destroyer detailed hull",
+          "--top",
+          "20",
+          "--candidates",
+          "160",
+          "--model",
+          "jev-1.13.0",
+          "--json",
+          "--show"
+        ],
+        "eligible_records": 1820
+      },
+      "results": [
+        {
+          "model": "4492-1.mpd",
+          "section": null,
+          "id": "model-2cbc475dafcfe3d2a4e17572"
+        },
+        {
+          "model": "75055-1.mpd",
+          "section": null,
+          "id": "model-8395cbde2a507f2945aed79f"
+        },
+        {
+          "model": "30056-1.mpd",
+          "section": null,
+          "id": "model-eb212bf4db7a9b9e3042a891"
+        },
+        {
+          "model": "30277-1.mpd",
+          "section": null,
+          "id": "model-0c4dcb48b238afef36c2fe3d"
+        },
+        {
+          "model": "10019-1.mpd",
+          "section": null,
+          "id": "model-583b787a61bf62ca8764d1df"
+        },
+        {
+          "model": "4488-1.mpd",
+          "section": null,
+          "id": "model-0bfd0c87aafe7b70b031256f"
+        },
+        {
+          "model": "6986-1.mpd",
+          "section": null,
+          "id": "model-e6b17dff5044f72e3d777198"
+        },
+        {
+          "model": "5980-1.mpd",
+          "section": null,
+          "id": "model-88a060c4bd34078dcf185f41"
+        }
+      ]
+    },
+    {
+      "query": "Millennium Falcon freighter spaceship",
+      "field": "MODELS_DESCRIPTIONS_JEV.full_description",
+      "stats": {
+        "documents": 1820,
+        "passages": 1820,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 160,
+        "cache_hits": 0,
+        "api_calls": 160,
+        "input_tokens": 83972,
+        "output_tokens": 3520,
+        "elapsed_seconds": 3.0155758330074605,
+        "exhaustive": false,
+        "command": [
+          "uv",
+          "run",
+          "--project",
+          "/Users/captain/workspaces/workspace-ai/jev-rerank",
+          "jev-rerank",
+          "--db",
+          "/Users/captain/workspaces/workspace-ai/ldraw-astra/.cache/discovery/2a28f6d841893e00/queries/9eefdc543e73613b70ba225dfed685ae47837bfa5787d537db3a826b36d0ec07.sqlite",
+          "--table-field",
+          "candidates.full_description",
+          "--query",
+          "Millennium Falcon freighter spaceship",
+          "--top",
+          "24",
+          "--candidates",
+          "160",
+          "--model",
+          "jev-1.13.0",
+          "--json",
+          "--show"
+        ],
+        "eligible_records": 1820
+      },
+      "results": [
+        {
+          "model": "5980-1.mpd",
+          "section": null,
+          "id": "model-88a060c4bd34078dcf185f41"
+        },
+        {
+          "model": "6986-1.mpd",
+          "section": null,
+          "id": "model-e6b17dff5044f72e3d777198"
+        },
+        {
+          "model": "6954-1.mpd",
+          "section": null,
+          "id": "model-c60125325ae72b6fca8689df"
+        },
+        {
+          "model": "6973-1.mpd",
+          "section": null,
+          "id": "model-04e2c09b82ac25745c9a5193"
+        }
+      ]
+    },
+    {
+      "query": "starfighter cockpit canopy windscreen seat",
+      "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+      "stats": {
+        "documents": 22713,
+        "passages": 22713,
+        "updated": 0,
+        "skipped": 0,
+        "removed": 0,
+        "scored": 160,
+        "cache_hits": 0,
+        "api_calls": 160,
+        "input_tokens": 84514,
+        "output_tokens": 3520,
+        "elapsed_seconds": 3.172855458979029,
+        "exhaustive": false,
+        "command": [
+          "uv",
+          "run",
+          "--project",
+          "/Users/captain/workspaces/workspace-ai/jev-rerank",
+          "jev-rerank",
+          "--db",
+          "/Users/captain/workspaces/workspace-ai/ldraw-astra/.cache/discovery/2a28f6d841893e00/queries/d4082c226d85a911ffec0cf276508dd2bc5acbc679b1c34dd8ef0439d57b27eb.sqlite",
+          "--table-field",
+          "candidates.full_description",
+          "--query",
+          "starfighter cockpit canopy windscreen seat",
+          "--top",
+          "24",
+          "--candidates",
+          "160",
+          "--model",
+          "jev-1.13.0",
+          "--json",
+          "--show"
+        ],
+        "eligible_records": 22713
+      },
+      "results": [
+        {
+          "model": "42063-1.mpd",
+          "section": "42063 - windscreen.ldr",
+          "id": "submodel-e40039fe04bad4d6d3b2b552"
+        },
+        {
+          "model": "42131-1.mpd",
+          "section": "42131 - seat.ldr",
+          "id": "submodel-ddb58d1f7d11315c4c573042"
+        },
+        {
+          "model": "42053-1.mpd",
+          "section": "42053 - seat.ldr",
+          "id": "submodel-c2812bd4e3399178303ebdab"
+        },
+        {
+          "model": "5571-1.mpd",
+          "section": "5571 - Unit 27 Seat.ldr",
+          "id": "submodel-06621ef734949d3a6480cd51"
+        },
+        {
+          "model": "42032-1.mpd",
+          "section": "42032 - windscreen.ldr",
+          "id": "submodel-572e60d5ac665ac5d2706541"
+        },
+        {
+          "model": "6875-1.mpd",
+          "section": "6875 - Spaceship - Cockpit.ldr",
+          "id": "submodel-170018aa7c1746640fbf301b"
+        }
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "key": "b-wing",
+      "original": {
+        "model": "75050-1.mpd",
+        "section": "75050 - Main.ldr",
+        "sha256": "09e942934e480c12f92ffc90533060c1ceaa789c7b99d92598ff925244473123"
+      },
+      "original_unchanged": true,
+      "use": "adapt",
+      "physical_placements": 434,
+      "image_mode": "overview",
+      "rendered_source_steps": 0,
+      "viewed_images": 4,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "error_codes": [],
+      "position_repairs": [
+        {
+          "section": "75050 - B-Wing.ldr",
+          "part": "3020.dat",
+          "before": [
+            -60,
+            -124.539,
+            -51.555
+          ],
+          "after": [
+            -60,
+            -124.53918,
+            -51.55527
+          ]
+        },
+        {
+          "section": "75050 - B-Wing.ldr",
+          "part": "3068b.dat",
+          "before": [
+            -80,
+            -129.013,
+            -58.1873
+          ],
+          "after": [
+            -80,
+            -129.01318,
+            -58.18757
+          ]
+        },
+        {
+          "section": "75050 - B-Wing.ldr",
+          "part": "3020.dat",
+          "before": [
+            -60,
+            -30.7176,
+            51.0344
+          ],
+          "after": [
+            -60,
+            -30.717578,
+            51.034431
+          ]
+        }
+      ],
+      "manual": "examples/spaceship-atlas/b-wing/manual.json",
+      "manual_sha256": "0877d097c5ec3798e5ec86b4982198c63487bd54e970125fc07c517407dc0f7c"
+    },
+    {
+      "key": "ucs-y-wing-study",
+      "original": {
+        "model": "10134-1.mpd",
+        "section": "10134 - main.ldr",
+        "sha256": "96651048af88cde72f5bbf8b7c10defe695a9c4499c2c51d9bff52d9c40d8e4e"
+      },
+      "original_unchanged": true,
+      "use": "inspiration",
+      "physical_placements": 1493,
+      "image_mode": "overview",
+      "rendered_source_steps": 0,
+      "viewed_images": 4,
+      "source_checks_passed": false,
+      "bom_matches": true,
+      "error_codes": [
+        "assembly.body_overlap"
+      ],
+      "position_repairs": [],
+      "manual": "examples/spaceship-atlas/ucs-y-wing-study/manual.json",
+      "manual_sha256": "ca4f8edfff6479181401f49d2de1bf4bf5858323eab416ea395066fd3e12edb2"
+    },
+    {
+      "key": "star-destroyer-study",
+      "original": {
+        "model": "75055-1.mpd",
+        "section": "75055 - Main.ldr",
+        "sha256": "4678bc51129737442a76081aa7c67ff79f31f9b164763bd2b0bdad5b2de97fc3"
+      },
+      "original_unchanged": true,
+      "use": "inspiration",
+      "physical_placements": 1335,
+      "image_mode": "overview",
+      "rendered_source_steps": 0,
+      "viewed_images": 4,
+      "source_checks_passed": false,
+      "bom_matches": true,
+      "error_codes": [
+        "assembly.body_overlap",
+        "assembly.nonrigid"
+      ],
+      "position_repairs": [],
+      "manual": "examples/spaceship-atlas/star-destroyer-study/manual.json",
+      "manual_sha256": "8e0f5e7eea6563b0795ea475246131039481a334823c9276f5f50791ff439af3"
+    },
+    {
+      "key": "x-wing-wing",
+      "original": {
+        "model": "7191-1.mpd",
+        "section": "7191 - bottom-port-wing.ldr",
+        "sha256": "51454fee78072d22bcf9bdcd735901adea09d183a3c5072acce5e37fa510f9ca"
+      },
+      "original_unchanged": true,
+      "use": "adapt",
+      "physical_placements": 125,
+      "image_mode": "overview",
+      "rendered_source_steps": 0,
+      "viewed_images": 4,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "error_codes": [],
+      "position_repairs": [],
+      "manual": "examples/spaceship-atlas/x-wing-wing/manual.json",
+      "manual_sha256": "fc73be120e9afeecdcc2c8ef7d0ff06c7c5c7cc08dbe82d28a4767092590c46e"
+    },
+    {
+      "key": "x-wing-nacelle",
+      "original": {
+        "model": "7191-1.mpd",
+        "section": "7191 - nacelle-2.ldr",
+        "sha256": "51454fee78072d22bcf9bdcd735901adea09d183a3c5072acce5e37fa510f9ca"
+      },
+      "original_unchanged": true,
+      "use": "adapt",
+      "physical_placements": 41,
+      "image_mode": "steps",
+      "rendered_source_steps": 1,
+      "viewed_images": 3,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "error_codes": [],
+      "position_repairs": [],
+      "manual": "examples/spaceship-atlas/x-wing-nacelle/manual.json",
+      "manual_sha256": "cee7c4adbe5872aa69f0fd4be5c0f3d2cf7042c5fe8cd4f116f54ef34d45c851"
+    },
+    {
+      "key": "canopy-cockpit",
+      "original": {
+        "model": "6887-1.mpd",
+        "section": "6887 - Spaceship - Cockpit.ldr",
+        "sha256": "4cf7513c2f3eec5a425550c5633fe21240cc08c956435729b5395783e0a9a7f9"
+      },
+      "original_unchanged": true,
+      "use": "adapt",
+      "physical_placements": 49,
+      "image_mode": "steps",
+      "rendered_source_steps": 4,
+      "viewed_images": 9,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "error_codes": [],
+      "position_repairs": [],
+      "manual": "examples/spaceship-atlas/canopy-cockpit/manual.json",
+      "manual_sha256": "a696095d1d4e6baf2c5dd041c018368a98552f4212fcacac1f1910ac47bf8e9b"
+    },
+    {
+      "key": "y-wing-armour",
+      "original": {
+        "model": "75181-1.mpd",
+        "section": "75181 - Y-Wing Starfighter - step254-261.ldr",
+        "sha256": "a780334a32c3082736055bd609730a7dd6817afc850420c83ccfec59a385f7bb"
+      },
+      "original_unchanged": true,
+      "use": "adapt",
+      "physical_placements": 31,
+      "image_mode": "steps",
+      "rendered_source_steps": 7,
+      "viewed_images": 15,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "error_codes": [],
+      "position_repairs": [],
+      "manual": "examples/spaceship-atlas/y-wing-armour/manual.json",
+      "manual_sha256": "d33fc777b089f1cbdb708080d83039a4b5671b20954263675314c2d4ac1d9675"
+    },
+    {
+      "key": "falcon-greebles",
+      "original": {
+        "model": "10179-1.mpd",
+        "section": "10179 - subModel-43.ldr",
+        "sha256": "69efb0b373df38363e2095a3d5d7ef11eea0f22d315f36c917977d3230cd19e2"
+      },
+      "original_unchanged": true,
+      "use": "adapt",
+      "physical_placements": 15,
+      "image_mode": "steps",
+      "rendered_source_steps": 3,
+      "viewed_images": 7,
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "error_codes": [],
+      "position_repairs": [],
+      "manual": "examples/spaceship-atlas/falcon-greebles/manual.json",
+      "manual_sha256": "a8be59dcd735c4e582840ee8a7cdd22d4868606f40669d1ea394cdf46df09a89"
+    }
+  ],
+  "totals": {
+    "studies": 8,
+    "whole_models": 3,
+    "construction_studies": 5,
+    "reusable": 6,
+    "inspiration": 2,
+    "physical_placements": 3523,
+    "rendered_source_steps": 15,
+    "step_images": 30,
+    "final_and_overview_images": 20,
+    "viewed_images": 50,
+    "matching_boms": 8
+  },
+  "tests": {
+    "passed": 211,
+    "seconds": 159.63,
+    "command": ".venv/bin/python -m pytest -q"
+  },
+  "export_checks": [
+    {
+      "key": "b-wing",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "spaceship",
+            "export",
+            "b-wing",
+            "--outdir",
+            "output/spaceship-support/exports/b-wing"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/spaceship-support/exports/b-wing/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/spaceship-support/exports/b-wing/b-wing.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/b-wing/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/spaceship-support/exports/b-wing/b-wing.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/b-wing/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/spaceship-support/exports/b-wing/b-wing.mpd",
+            "--csv",
+            "output/spaceship-support/exports/b-wing/renders/leocad-bom.csv",
+            "--report",
+            "output/spaceship-support/exports/b-wing/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/spaceship-support/exports/b-wing/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "ucs-y-wing-study",
+      "inspiration_export_blocked": true
+    },
+    {
+      "key": "star-destroyer-study",
+      "inspiration_export_blocked": true
+    },
+    {
+      "key": "x-wing-wing",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "spaceship",
+            "export",
+            "x-wing-wing",
+            "--outdir",
+            "output/spaceship-support/exports/x-wing-wing"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/spaceship-support/exports/x-wing-wing/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/spaceship-support/exports/x-wing-wing/x-wing-wing.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/x-wing-wing/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/spaceship-support/exports/x-wing-wing/x-wing-wing.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/x-wing-wing/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/spaceship-support/exports/x-wing-wing/x-wing-wing.mpd",
+            "--csv",
+            "output/spaceship-support/exports/x-wing-wing/renders/leocad-bom.csv",
+            "--report",
+            "output/spaceship-support/exports/x-wing-wing/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/spaceship-support/exports/x-wing-wing/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "x-wing-nacelle",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "spaceship",
+            "export",
+            "x-wing-nacelle",
+            "--outdir",
+            "output/spaceship-support/exports/x-wing-nacelle"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/spaceship-support/exports/x-wing-nacelle/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/spaceship-support/exports/x-wing-nacelle/x-wing-nacelle.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/x-wing-nacelle/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/spaceship-support/exports/x-wing-nacelle/x-wing-nacelle.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/x-wing-nacelle/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/spaceship-support/exports/x-wing-nacelle/x-wing-nacelle.mpd",
+            "--csv",
+            "output/spaceship-support/exports/x-wing-nacelle/renders/leocad-bom.csv",
+            "--report",
+            "output/spaceship-support/exports/x-wing-nacelle/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/spaceship-support/exports/x-wing-nacelle/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "y-wing-armour",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "spaceship",
+            "export",
+            "y-wing-armour",
+            "--outdir",
+            "output/spaceship-support/exports/y-wing-armour"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/spaceship-support/exports/y-wing-armour/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/spaceship-support/exports/y-wing-armour/y-wing-armour.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/y-wing-armour/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/spaceship-support/exports/y-wing-armour/y-wing-armour.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/y-wing-armour/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/spaceship-support/exports/y-wing-armour/y-wing-armour.mpd",
+            "--csv",
+            "output/spaceship-support/exports/y-wing-armour/renders/leocad-bom.csv",
+            "--report",
+            "output/spaceship-support/exports/y-wing-armour/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/spaceship-support/exports/y-wing-armour/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "falcon-greebles",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "spaceship",
+            "export",
+            "falcon-greebles",
+            "--outdir",
+            "output/spaceship-support/exports/falcon-greebles"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/spaceship-support/exports/falcon-greebles/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/spaceship-support/exports/falcon-greebles/falcon-greebles.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/falcon-greebles/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/spaceship-support/exports/falcon-greebles/falcon-greebles.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/falcon-greebles/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/spaceship-support/exports/falcon-greebles/falcon-greebles.mpd",
+            "--csv",
+            "output/spaceship-support/exports/falcon-greebles/renders/leocad-bom.csv",
+            "--report",
+            "output/spaceship-support/exports/falcon-greebles/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/spaceship-support/exports/falcon-greebles/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    },
+    {
+      "key": "canopy-cockpit",
+      "checks": [
+        {
+          "command": [
+            "./ldraw-agent",
+            "spaceship",
+            "export",
+            "canopy-cockpit",
+            "--outdir",
+            "output/spaceship-support/exports/canopy-cockpit"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "build",
+            "output/spaceship-support/exports/canopy-cockpit/scene.plan.json",
+            "--contacts",
+            "none",
+            "--output",
+            "output/spaceship-support/exports/canopy-cockpit/canopy-cockpit.mpd",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/canopy-cockpit/build.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "validate",
+            "output/spaceship-support/exports/canopy-cockpit/canopy-cockpit.mpd",
+            "--geometry",
+            "--contacts",
+            "none",
+            "--detail",
+            "summary",
+            "--report",
+            "output/spaceship-support/exports/canopy-cockpit/validation.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "./ldraw-agent",
+            "compare-bom",
+            "output/spaceship-support/exports/canopy-cockpit/canopy-cockpit.mpd",
+            "--csv",
+            "output/spaceship-support/exports/canopy-cockpit/renders/leocad-bom.csv",
+            "--report",
+            "output/spaceship-support/exports/canopy-cockpit/rebuilt-bom.json"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            ".venv/bin/python",
+            "output/spaceship-support/exports/canopy-cockpit/generate.py"
+          ],
+          "exit_code": 0
+        }
+      ]
+    }
+  ],
+  "viewer_check": {
+    "method": "Node DOM harness and local path checks; not browser layout",
+    "step_view_selections": 30,
+    "overview_images": 16,
+    "child_callouts": 2,
+    "passed": true
+  },
+  "rejected_selection": {
+    "model": "75075-1.mpd",
+    "section": "75075 - subModel-2.ldr",
+    "reason": "Visual appearance and containing source did not justify its initial interpretation as a useful cockpit enclosure; replaced with a real canopy assembly from 6887-1.mpd."
+  },
+  "analytical_mechanism_verification": "deferred",
+  "physical_validity": "not_proven"
+}

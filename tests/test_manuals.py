@@ -149,3 +149,39 @@ def test_single_step_renderer_and_mechanism_discovery(tmp_path, parts, monkeypat
     assert not mechanism_candidate(row,{'bom':[{'description':'Brick 2 x 4'}]})
     assert not mechanism_candidate(dict(row,description='A static frame',parent_description='Gearbox'))
     with pytest.raises(ValueError):operation_notes({'function': {'not':'text'}})
+
+
+def test_general_construction_manual_has_its_own_notes_and_export(tmp_path, parts, monkeypatch):
+    source, _, _ = study_fixture(tmp_path, parts, monkeypatch)
+    folder = tmp_path/'construction'
+    notes = dict(lesson='Bond a plate across the support', construction='Two layers',
+                 interfaces='Inspect bottom sockets', parent_context='Standalone fixture', reuse_notes='Adapt the support')
+    manual = prepare_manual(source, 'main.ldr', folder, parts, colour=4, notes=notes, kind='construction')
+    assert manual['scope'] == 'construction-construction-study'
+    assert (folder/'study-notes.json').is_file() and not (folder/'operation.json').exists()
+    assert 'analytical_verification' not in manual
+    images=[p for s in manual['sections'] for step in s['steps'] for p in step['images'].values()]+manual['final_images']
+    review_manual(folder,images=images,note='Inspected the fixture steps')
+    export_manual(folder,tmp_path/'copied')
+    current_manual(tmp_path/'copied')
+    assert 'What this construction teaches' in (folder/'index.html').read_text()
+
+
+def test_overview_is_not_a_step_manual_and_requires_all_views(tmp_path, parts, monkeypatch):
+    source, _, _ = study_fixture(tmp_path, parts, monkeypatch)
+    def final_render(path, library, outdir, **kwargs):
+        outdir.mkdir(parents=True,exist_ok=True)
+        for view in kwargs['views']:(outdir/(view+'.png')).write_bytes(view.encode())
+        (outdir/'leocad-bom.csv').write_text('Part ID,Color Code,Quantity\n3001.dat,4,1\n3003.dat,4,1\n')
+    def no_steps(*args,**kwargs):raise AssertionError('Overview must not render steps')
+    monkeypatch.setattr('ldraw_tools.manuals.render',final_render)
+    monkeypatch.setattr('ldraw_tools.manuals.render_steps',no_steps)
+    folder=tmp_path/'overview'
+    manual=prepare_manual(source,'main.ldr',folder,parts,colour=4,kind='construction',overview=True,views=['home','top'])
+    assert manual['final_images']==['renders/home.png','renders/top.png']
+    assert all(not s['images'] for sec in manual['sections'] for s in sec['steps'])
+    assert 'not construction steps' in (folder/'index.html').read_text()
+    with pytest.raises(ValueError):review_manual(folder,images=['renders/home.png'],note='Incomplete')
+    review_manual(folder,images=manual['final_images'],note='Opened both completed-model views')
+    (folder/'renders/top.png').write_bytes(b'changed')
+    with pytest.raises(ValueError,match='changed'):current_manual(folder)

@@ -13,6 +13,18 @@ from .connectivity import metadata_summary, placement_path
 from .connection_adapter import connection_contacts
 
 
+def geometry_complete(inspection):
+    """Separate resolved solids from warnings about optional connector metadata.
+
+    pyldraw3's combined completeness flag also fails on connection warnings.
+    Keep those warnings visible without reporting missing solid geometry.
+    Unknown, geometry and error diagnostics still prevent completeness.
+    """
+    return not inspection.skipped_geometry and all(
+        d.to_dict()['code'].startswith('connection.') and d.to_dict()['severity'] == 'warning'
+        for d in inspection.diagnostics)
+
+
 def profiles():
     return json.loads((DATA / "rectangular-parts.json").read_text())["parts"]
 
@@ -66,7 +78,7 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
     for section in [model, *model.submodels.values()]:
         if any(isinstance(obj, (Line, OptionalLine, Triangle, Quadrilateral)) for obj in section.objects):
             problems.append(issue("coverage.raw_geometry", "Assembly bounds exclude custom model polygons/edges; inspect them with a geometry authoring tool.", section=section.name))
-    if not inspection.complete:
+    if not geometry_complete(inspection):
         problems.append(issue("geometry.incomplete", "Some library geometry could not be expanded; bounds and contacts are incomplete."))
     regular = profiles()
     bodies = {}
@@ -156,7 +168,7 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
         problems.append(issue("coverage.contacts_skipped", "Contacts were not computed. Select a subassembly or request --contacts all; no connectivity conclusion is available.", severity="warning"))
     if len(bodies) < len(occurrences):
         problems.append(issue("coverage.collision_review", "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.", severity="warning"))
-    return dict(complete=inspection.complete and not any(p["code"].startswith("coverage.") and p["severity"] == "error" for p in problems),
+    return dict(complete=geometry_complete(inspection) and not any(p["code"].startswith("coverage.") and p["severity"] == "error" for p in problems),
                 connection_coverage={coverage: sum(str(o.local.connection_metadata.coverage) == coverage
                     for o in inspection.occurrences if o.local.connection_metadata) for coverage in ('complete', 'partial', 'none')},
                 collision_method="AABB broad phase, oriented bounds separation, curated rectangular body SAT",
