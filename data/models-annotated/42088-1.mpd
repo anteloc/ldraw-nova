@@ -1,0 +1,932 @@
+0 FILE 42088 - Main.ldr
+0 Main assembly of an orange and blue Technic crane truck featuring chassis, cab, boom with worm-gear pivot, platform, rear bumper, and hood submodels.
+0 Name: 42088 - Main.ldr
+0 Author: Marc Belanger [MonsieurPoulet]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Technic
+0 !KEYWORDS Truck, Microscale, Construction
+0 !HISTORY 2019-12-03 [MonsieurPoulet] Initial creation
+
+
+
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=0] [GID=IMSbGByi1OE] [name=Group 1] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=1] [GID=ETiCN6EYY51] [name=Group 2] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=2] [GID=5bIli45QwYx] [name=Group 3] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=3] [GID=9JBOlkPTnBB] [name=Group 4] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=4] [GID=3NeI5cQ9zgj] [name=Group 5] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=7] [GID=1lk3idnk3Zd] [name=Group 8] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=8] [GID=EVhHqus81L8] [name=Group 6] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=9] [GID=EtIxgeO0pF] [name=Group 7] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=10] [GID=BOCPE6VgqC1] [name=Group 9] [center=0 0 0]
+
+0 // Technic Pin Long with Pin Hole Type 1 (light_bluish_grey)
+1 71 -25.882 0 -182.593 -0.707 0.707 0 0 0 1 0.707 0.707 0 87082.dat
+0 // Technic Beam  9 (black)
+1 0 44.829 0 -140.167 0 0.707 -0.707 1 0 0 0 -0.707 -0.707 40490.dat
+0 STEP
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 115.54 0 -97.739 0.707 0 -0.707 0 -1 0 -0.707 0 -0.707 32556.dat
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 16.545 0 -196.735 0.707 0 -0.707 0 -1 0 -0.707 0 -0.707 32556.dat
+0 STEP
+0 // Technic Pin  3L Double with Axlehole (light_bluish_grey)
+1 71 66.043 0 -90.669 0.707 -0.707 0 0 0 1 -0.707 -0.707 0 32138.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 44.829 0 -111.882 -0.707 0 -0.707 0 1 0 0.707 0 -0.707 6558.dat
+0 STEP
+0 // Technic Beam  9 (black)
+1 0 16.545 0 -111.882 0 0.707 -0.707 1 0 0 0 -0.707 -0.707 40490.dat
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 58.971 0 -41.172 -0.707 0 -0.707 0 1 0 0.707 0 -0.707 32556.dat
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 -40.024 0 -140.166 -0.707 0 -0.707 0 1 0 0.707 0 -0.707 32556.dat
+0 STEP
+1 1 51.899 -20 -133.096 -0.707 0 -0.707 0 1 0 0.707 0 -0.707 42088 - Chassis.ldr
+0 STEP
+1 36 -54.166 0 -210.877 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 42088 - Rear Bumper.ldr
+0 STEP
+0 !LDCAD GROUP_NXT [ids=0] [nrs=-1]
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (orange)
+1 25 94.326 -40 -5.816 -0.707 0 0.707 0 -1 0 0.707 0 0.707 42003.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=2]
+0 // Technic Pin with Friction and Slots (black)
+1 0 87.255 -40 -12.887 0.707 0.707 0 0 0 1 0.707 -0.707 0 2780.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=3]
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 101.397 -60 1.255 0.707 0.707 0 0 0 1 0.707 -0.707 0 4274.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=4]
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 107.054 -60 6.912 0.707 -0.707 0 0 0 1 -0.707 -0.707 0 6141.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=-1]
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (orange)
+1 25 150.895 -40 -62.384 -0.707 0 0.707 0 -1 0 0.707 0 0.707 42003.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=2]
+0 // Technic Pin with Friction and Slots (black)
+1 0 143.824 -40 -69.455 0.707 0.707 0 0 0 1 0.707 -0.707 0 2780.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=3]
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 157.966 -60 -55.313 0.707 0.707 0 0 0 1 0.707 -0.707 0 4274.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=4]
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 163.623 -60 -49.657 0.707 -0.707 0 0 0 1 -0.707 -0.707 0 6141.dat
+0 STEP
+1 4 122.611 -50 -62.385 -0.707 0.707 0 0 0 1 0.707 0.707 0 42088 - Hood.ldr
+0 STEP
+0 !LDCAD GROUP_NXT [ids=2] [nrs=-1]
+0 // Technic Axle  4 (black)
+1 0 122.611 0 -34.1 -0.707 0 0.707 0 -1 0 0.707 0 0.707 3705.dat
+0 !LDCAD GROUP_NXT [ids=2] [nrs=2]
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 133.218 0 -44.707 0.707 0 0.707 0 -1 0 0.707 0 -0.707 32123a.dat
+0 !LDCAD GROUP_NXT [ids=2] [nrs=3]
+0 // Technic Angle Connector #1 (black)
+1 0 157.966 0 -69.455 0.707 0 0.707 0 -1 0 0.707 0 -0.707 32013.dat
+0 !LDCAD GROUP_NXT [ids=2] [nrs=4]
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 165.038 0 -62.385 0.707 0 0.707 0 -1 0 0.707 0 -0.707 4274.dat
+0 !LDCAD GROUP_NXT [ids=2] [nrs=5]
+0 // Plate  1 x  1 Round (trans_orange)
+1 57 170.694 0 -56.727 0 -0.707 0.707 -1 0 0 0 -0.707 -0.707 6141.dat
+0 STEP
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 112.004 0 -23.493 -0.707 0 -0.707 0 -1 0 -0.707 0 0.707 32123a.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=3] [nrs=-1]
+0 // Technic Angle Connector #1 (black)
+1 0 87.256 0 1.255 0.707 0 -0.707 0 1 0 0.707 0 0.707 32013.dat
+0 !LDCAD GROUP_NXT [ids=3] [nrs=2]
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 94.327 0 8.326 0.707 0 -0.707 0 1 0 0.707 0 0.707 4274.dat
+0 !LDCAD GROUP_NXT [ids=3] [nrs=3]
+0 // Plate  1 x  1 Round (trans_orange)
+1 57 99.983 0 13.983 0 -0.707 -0.707 1 0 0 0 -0.707 0.707 6141.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=4] [nrs=-1]
+0 // Technic Angle Connector #2 (180 degree) (orange)
+1 25 66.043 -60 -90.669 0 0.707 -0.707 -1 0 0 0 0.707 0.707 32034.dat
+0 !LDCAD GROUP_NXT [ids=4] [nrs=2]
+0 // Technic Axle and Pin Connector Hub with 2 Axles at 90 Degrees (orange)
+1 25 37.759 -60 -62.384 0 -0.707 -0.707 -1 0 0 0 0.707 -0.707 10197.dat
+0 !LDCAD GROUP_NXT [ids=4] [nrs=3]
+0 // Technic Axle and Pin Connector Hub with 2 Axles at 90 Degrees (orange)
+1 25 94.327 -60 -118.953 0 0.707 -0.707 1 0 0 0 -0.707 -0.707 10197.dat
+0 !LDCAD GROUP_NXT [ids=4] [nrs=4]
+0 // Technic Pin Long with Stop Bush (orange)
+1 25 66.042 -60 -34.1 0.707 0 -0.707 0 1 0 0.707 0 0.707 32054.dat
+0 !LDCAD GROUP_NXT [ids=4] [nrs=5]
+0 // Technic Pin Long with Stop Bush (orange)
+1 25 122.611 -60 -90.668 0.707 0 -0.707 0 1 0 0.707 0 0.707 32054.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 66.043 -40 -90.669 0 0.707 -0.707 -1 0 0 0 0.707 0.707 32073.dat
+0 STEP
+1 25 94.327 -144 -34.1 -0.707 0 -0.707 0 1 0 0.707 0 -0.707 42088 - Cab.ldr
+0 STEP
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 94.326 -110 -90.669 0 -0.707 -0.707 -1 0 0 0 0.707 -0.707 4274.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 66.042 -110 -62.384 0 -0.707 -0.707 -1 0 0 0 0.707 -0.707 4274.dat
+0 // Cylinder Domed  1 x  1 x  1.667 with Bar (trans_orange)
+1 57 94.326 -99 -90.669 -0.707 0 -0.707 0 1 0 0.707 0 -0.707 58176.dat
+0 // Cylinder Domed  1 x  1 x  1.667 with Bar (trans_orange)
+1 57 66.042 -101 -62.384 -0.707 0 -0.707 0 1 0 0.707 0 -0.707 58176.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=8] [nrs=2]
+0 // Tyre 14/ 25 x 17 Shallow Staggered Treads with Middle Band (rubber_black)
+1 256 51.9 0 -34.1 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 89201.dat
+0 !LDCAD GROUP_NXT [ids=8] [nrs=-1]
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (black)
+1 0 51.9 0 -34.1 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 55981.dat
+0 !LDCAD GROUP_NXT [ids=10] [nrs=2]
+0 // Tyre 14/ 25 x 17 Shallow Staggered Treads with Middle Band (rubber_black)
+1 256 -47.095 0 -133.095 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 89201.dat
+0 !LDCAD GROUP_NXT [ids=10] [nrs=-1]
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (black)
+1 0 -47.095 0 -133.095 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 55981.dat
+0 !LDCAD GROUP_NXT [ids=9] [nrs=2]
+0 // Tyre 14/ 25 x 17 Shallow Staggered Treads with Middle Band (rubber_black)
+1 256 122.61 0 -104.81 -0.707 0 -0.707 0 -1 0 -0.707 0 0.707 89201.dat
+0 !LDCAD GROUP_NXT [ids=9] [nrs=-1]
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (black)
+1 0 122.61 0 -104.81 -0.707 0 -0.707 0 -1 0 -0.707 0 0.707 55981.dat
+0 !LDCAD GROUP_NXT [ids=7] [nrs=-1]
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (black)
+1 0 23.616 0 -203.806 -0.707 0 -0.707 0 -1 0 -0.707 0 0.707 55981.dat
+0 !LDCAD GROUP_NXT [ids=7] [nrs=2]
+0 // Tyre 14/ 25 x 17 Shallow Staggered Treads with Middle Band (rubber_black)
+1 256 23.616 0 -203.806 -0.707 0 -0.707 0 -1 0 -0.707 0 0.707 89201.dat
+0 STEP
+1 15 -21.168 -24 -172.948 -0.643 0 -0.766 0 1 0 0.766 0 -0.643 42088 - Boom Pivot.ldr
+
+
+
+
+0 STEP
+0 FILE 42088 - Chassis.ldr
+0 Orange and blue Technic chassis frame built from 13-stud beams, cross blocks, plates, and curved slope body panels.
+0 Name: 42088 - Chassis.ldr
+0 Author: Marc Belanger [MonsieurPoulet]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS Truck, Microscale, Construction
+0 !HISTORY 2019-12-03 [MonsieurPoulet] Initial creation
+
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=0] [GID=Lkf0C1LEd7m] [name=Group 1] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=1] [GID=G6OiPTT2S56] [name=Group 2] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=2] [GID=A7cKEOTZ8vJ] [name=Group 3] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=3] [GID=GOyFYSQp5UN] [name=Group 4] [center=0 0 0]
+
+0 // Technic Beam 13 (orange)
+1 25 0 0 0 0 -1 0 1 0 0 0 0 1 41239.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 -60 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 80 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 100 1 0 0 0 1 0 0 0 1 6558.dat
+0 STEP
+0 // Technic Pin Long with Pin Hole Type 1 (light_bluish_grey)
+1 71 20 0 40 1 0 0 0 1 0 0 0 1 87082.dat
+0 // Technic Cross Block 2 x 2 Split (Axle/Twin Pin) (orange)
+1 25 20 20 90 0 -1 0 0 0 1 -1 0 0 41678.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=0] [nrs=-1]
+0 // Technic Pin Long with Pin Hole Type 1 (light_bluish_grey)
+1 71 20 20 40 0 0 -1 0 1 0 1 0 0 87082.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=2]
+0 // Technic Axle Pin Long with Friction with  2L Axle (black)
+1 0 20 0 40 0 -1 0 -1 0 0 0 0 -1 18651.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=5]
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 20 0 20 -1 0 0 0 -1 0 0 0 1 4519.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=3]
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 20 0 20 1 0 0 0 1 0 0 0 1 6536.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=4]
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 20 0 60 1 0 0 0 1 0 0 0 1 6536.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=6]
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 20 0 60 -1 0 0 0 -1 0 0 0 1 4519.dat
+0 STEP
+0 // Technic Cross Block 2 x 2 Split (Axle/Twin Pin) (orange)
+1 25 20 -10 -40 0 -1 0 1 0 0 0 0 1 41678.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=1] [nrs=-1]
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 20 -20 -60 1 0 0 0 0.087 -0.996 0 0.996 0.087 32556.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=2]
+0 // Plate  1 x  2 with Offset Peghole on Underside (light_bluish_grey)
+1 71 0 -30.834 -69.09 0 0 1 0.996 0.087 0 -0.087 0.996 0 18677.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=3]
+0 // Plate  1 x  2 (blue)
+1 1 0 -50.06 -59.378 0 0 1 0.996 0.087 0 -0.087 0.996 0 3023.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=4]
+0 // Slope Brick Curved  2 x  1 (blue)
+1 1 0 -50.06 -59.378 -1 0 0 0 0.087 0.996 0 0.996 -0.087 11477.dat
+0 STEP
+0 // Technic Beam 13 (orange)
+1 25 40 0 0 0 -1 0 1 0 0 0 0 1 41239.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 50 0 -120 1 0 0 0 1 0 0 0 1 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -10 0 -120 -1 0 0 0 -1 0 0 0 1 43093.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=2] [nrs=-1]
+0 // Plate  1 x  2 with Offset Peghole on Underside (light_bluish_grey)
+1 71 40 -30.834 -69.09 0 0 1 0.996 0.087 0 -0.087 0.996 0 18677.dat
+0 !LDCAD GROUP_NXT [ids=2] [nrs=2]
+0 // Plate  1 x  2 (blue)
+1 1 40 -50.06 -59.378 0 0 1 0.996 0.087 0 -0.087 0.996 0 3023.dat
+0 !LDCAD GROUP_NXT [ids=2] [nrs=3]
+0 // Slope Brick Curved  2 x  1 (blue)
+1 1 40 -50.06 -59.378 -1 0 0 0 0.087 0.996 0 0.996 -0.087 11477.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=3] [nrs=-1]
+0 // Plate  1 x  3 (blue)
+1 1 20 -21.569 -77.932 1 0 0 0 0.087 -0.996 0 0.996 0.087 3623.dat
+0 !LDCAD GROUP_NXT [ids=3] [nrs=2]
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 20 -21.569 -77.932 1 0 0 0 0.087 -0.996 0 0.996 0.087 54200.dat
+0 !LDCAD GROUP_NXT [ids=3] [nrs=3]
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 0 -21.569 -77.932 1 0 0 0 0.087 -0.996 0 0.996 0.087 54200.dat
+0 !LDCAD GROUP_NXT [ids=3] [nrs=4]
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 40 -21.569 -77.932 1 0 0 0 0.087 -0.996 0 0.996 0.087 54200.dat
+
+
+
+
+0 STEP
+0 FILE 42088 - Rear Bumper.ldr
+0 Compact rear bumper assembly using an axle, angle connectors, bushes, and trans-red round lights.
+0 Name: 42088 - Rear Bumper.ldr
+0 Author: Marc Belanger [MonsieurPoulet]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS Truck, Microscale, Construction
+0 !HISTORY 2019-12-03 [MonsieurPoulet] Initial creation
+
+0 // Technic Axle  4 (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 3705.dat
+0 // Technic Angle Connector #1 (black)
+1 0 0 0 50 1 0 0 0 1 0 0 0 1 32013.dat
+0 STEP
+0 // Technic Connector (Axle) with Axle 1.5 (black)
+1 0 0 0 0 0 -1 0 0 0 1 -1 0 0 6553.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 0 0 15 1 0 0 0 1 0 0 0 1 32123a.dat
+0 STEP
+0 // Technic Angle Connector #1 (black)
+1 0 0 0 -50 1 0 0 0 -1 0 0 0 -1 32013.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 0 0 -15 1 0 0 0 1 0 0 0 1 32123a.dat
+0 STEP
+0 // Plate  1 x  1 Round (trans_red)
+1 36 10 0 -50 0 1 0 -1 0 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 10 0 50 0 1 0 -1 0 0 0 0 1 6141.dat
+
+
+
+
+0 STEP
+0 FILE 42088 - Hood.ldr
+0 Hood structure built from a bent orange liftarm, cross blocks, pins, and short notched axles.
+0 Name: 42088 - Hood.ldr
+0 Author: Marc Belanger [MonsieurPoulet]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS Truck, Microscale, Construction
+0 !HISTORY 2019-12-03 [MonsieurPoulet] Initial creation
+
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 20 -10 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 32291.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 20 10 1 0 0 0 1 0 0 0 1 6558.dat
+0 STEP
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (orange)
+1 25 20 20 50 0 -1 0 -1 0 0 0 0 -1 32140.dat
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (black)
+1 0 40 0 0 0 0 -1 0 1 0 1 0 0 32291.dat
+0 STEP
+0 // Technic Axle  2 Notched (red)
+1 4 40 0 0 0 0 -1 0 1 0 1 0 0 32062.dat
+0 // Technic Cross Block 2 x 2 Split (Axle/Twin Pin) (orange)
+1 25 40 0 0 0 0 -1 0 1 0 1 0 0 41678.dat
+0 STEP
+0 // Technic Axle  2 Notched (red)
+1 4 0 0 0 0 0 1 0 -1 0 1 0 0 32062.dat
+0 // Technic Cross Block 2 x 2 Split (Axle/Twin Pin) (orange)
+1 25 0 0 0 0 0 1 0 -1 0 1 0 0 41678.dat
+
+
+
+
+0 STEP
+0 FILE 42088 - Cab.ldr
+0 Orange and black Technic cab frame using angle connectors, cross blocks, an axle, and a short liftarm.
+0 Name: 42088 - Cab.ldr
+0 Author: Marc Belanger [MonsieurPoulet]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS Truck, Microscale, Construction
+0 !HISTORY 2019-12-03 [MonsieurPoulet] Initial creation
+
+0 // Technic Axle and Pin Connector Hub with 2 Axles at 90 Degrees (orange)
+1 25 -60 44 60 -1 0 0 0 -1 0 0 0 1 10197.dat
+0 // Technic Pin Long with Stop Bush (orange)
+1 25 -60 84 60 0 -1 0 1 0 0 0 0 1 32054.dat
+0 STEP
+0 // Technic Axle Pin Long with Friction with  2L Axle (black)
+1 0 -40 44 60 1 0 0 0 1 0 0 0 1 18651.dat
+0 // Technic Angle Connector #5 (112.5 degree) (orange)
+1 25 -60 44 20 1 0 0 0 -1 0 0 0 -1 32015.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 -40 44 40 1 0 0 0 0 1 0 -1 0 32184.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 -20 44 20 1 0 0 0 1 0 0 0 1 32073.dat
+0 STEP
+0 // Technic Connector (Axle/Bush) Type 1 (light_bluish_grey)
+1 71 -20 64 60 1 0 0 0 0 1 0 -1 0 32039.dat
+0 // Technic Beam  2 Liftarm (orange)
+1 25 -20 44 20 0 -1 0 1 0 0 0 0 1 60483.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 10 44 60 -1 0 0 0 -1 0 0 0 1 43093.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 0 44 40 1 0 0 0 0 1 0 -1 0 32184.dat
+0 STEP
+0 // Technic Angle Connector #5 (112.5 degree) (orange)
+1 25 20 44 20 1 0 0 0 -1 0 0 0 -1 32015.dat
+0 // Technic Axle and Pin Connector Hub with 2 Axles at 90 Degrees (orange)
+1 25 20 44 60 -1 0 0 0 -1 0 0 0 1 10197.dat
+0 // Technic Pin Long with Stop Bush (orange)
+1 25 20 84 60 0 -1 0 1 0 0 0 0 1 32054.dat
+0 STEP
+
+
+
+
+0 STEP
+0 FILE 42088 - Boom Pivot.ldr
+0 Boom pivot mechanism using bent liftarms, gears, a worm gear, bushes, and cross blocks for rotational articulation.
+0 Name: 42088 - Boom Pivot.ldr
+0 Author: Marc Belanger [MonsieurPoulet]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS Truck, Microscale, Construction
+0 !HISTORY 2019-12-03 [MonsieurPoulet] Initial creation
+
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=0] [GID=ATpTDuep0XR] [name=Group 2] [center=0 0 0]
+0 !LDCAD GROUP_DEF [topLevel=true] [LID=1] [GID=HZftkbaEfRV] [name=Group 3] [center=0 0 0]
+
+0 // Technic Axle  4 (black)
+1 0 0 -35 -20 -1 0 0 0 -1 0 0 0 1 3705.dat
+0 // Technic Beam  3 x  0.5 Liftarm (black)
+1 0 -35 -35 -20 0 -1 0 1 0 0 0 0 1 6632.dat
+0 // Technic Axle  4 (black)
+1 0 0 -35 20 -1 0 0 0 -1 0 0 0 1 3705.dat
+0 STEP
+0 // Technic Beam  3 x  5 x  0.5 Liftarm Bent 90 Quarter Ellipse (black)
+1 0 -25 -35 -20 0 -1 0 0 0 -1 1 0 0 32250.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 -15 -35 20 0 0 -1 1 0 0 0 -1 0 32123a.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 0 -35 20 -1 0 0 0 -1 0 0 0 1 6536.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 15 -35 20 0 0 -1 1 0 0 0 -1 0 32123a.dat
+0 STEP
+0 // Technic Axle  2 Notched (red)
+1 4 0 -75 -60 1 0 0 0 1 0 0 0 1 32062.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 -35 -60 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 (black)
+1 0 -15 -35 -60 0 1 0 -1 0 0 0 0 1 32056.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=0] [nrs=-1]
+0 // Technic Pin  3L Double with Axlehole (light_bluish_grey)
+1 71 0 -15 -40 0 -1 0 0 0 1 -1 0 0 32138.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=3]
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (black)
+1 0 0 -35 -20 1 0 0 0 1 0 0 0 1 32291.dat
+0 !LDCAD GROUP_NXT [ids=0] [nrs=2]
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (black)
+1 0 0 -35 -60 -1 0 0 0 1 0 0 0 -1 32291.dat
+0 STEP
+0 !LDCAD GROUP_NXT [ids=1] [nrs=-1]
+0 // Technic Axle  8 with Stop (dark_bluish_grey)
+1 72 0 -55 -12 0 -0.707 0.707 0 0.707 0.707 -1 0 0 55013.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=5]
+0 // Technic Worm Gear 2L with Axle Hole Two-toothed Sliding (light_bluish_grey)
+1 71 0 -55 -20 -0.707 -0.707 0 -0.707 0.707 0 0 0 -1 42088 - 32905.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=4]
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 0 -75 -60 1 0 0 0 1 0 0 0 1 6536.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=2]
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 0 -55 -85 -0.707 -0.707 0 0.707 -0.707 0 0 0 1 32123a.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=3]
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 0 -55 -75 -0.707 -0.707 0 0.707 -0.707 0 0 0 1 32123a.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 0 -55 -45 -0.707 -0.707 0 0.707 -0.707 0 0 0 1 32123a.dat
+0 !LDCAD GROUP_NXT [ids=1] [nrs=6]
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 0 -55 5 -0.707 -0.707 0 0.707 -0.707 0 0 0 1 32123a.dat
+0 STEP
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 (black)
+1 0 15 -35 -60 0 1 0 -1 0 0 0 0 1 32056.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 0 -55 35 0 1 0 1 0 0 0 0 -1 32123a.dat
+0 STEP
+1 15 0 -125 -71.962 1 0 0 0 0.866 0.5 0 -0.5 0.866 42088 - Boom.ldr
+0 STEP
+0 // Technic Beam  3 x  5 x  0.5 Liftarm Bent 90 Quarter Ellipse (black)
+1 0 25 -35 -20 0 -1 0 0 0 -1 1 0 0 32250.dat
+0 // Technic Beam  3 x  0.5 Liftarm (black)
+1 0 35 -35 -20 0 1 0 -1 0 0 0 0 1 6632.dat
+0 STEP
+0 // Technic Gear 12 Tooth Double Bevel (black)
+1 0 0 -55 50 0.707 -0.707 0 0.707 0.707 0 0 0 1 32270.dat
+0 STEP
+1 15 -21.651 -135 -195.346 0.866 0 0.5 0 1 0 -0.5 0 0.866 42088 - Platform.ldr
+
+
+
+
+0 STEP
+0 FILE 42088 - Boom.ldr
+0 Extendable white Technic boom arm made of 5- and 7-stud liftarms, a 24-tooth gear, and notched axles.
+0 Name: 42088 - Boom.ldr
+0 Author: Marc Belanger [MonsieurPoulet]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS Truck, Microscale, Construction
+0 !HISTORY 2019-12-03 [MonsieurPoulet] Initial creation
+
+0 // Technic Axle  2 Notched (red)
+1 4 0 0 -20 -1 0 0 0 -1 0 0 0 1 32062.dat
+0 // Technic Beam  5 x  0.5 Liftarm with Axle Holes at Both Ends (white)
+1 15 -15 0 20 0 -1 0 1 0 0 0 0 1 11478.dat
+0 STEP
+0 // Technic Beam  7 x  0.5 (white)
+1 15 -5 0 -60 0 -1 0 1 0 0 0 0 1 32065.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 0 0 0 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Axle  2 Notched (red)
+1 4 0 0 -100 -1 0 0 0 -1 0 0 0 1 32062.dat
+0 // Technic Beam  5 x  0.5 Liftarm with Axle Holes at Both Ends (white)
+1 15 -15 0 -140 0 -1 0 1 0 0 0 0 1 11478.dat
+0 // Technic Axle  2 Notched (red)
+1 4 0 0 -180 -1 0 0 0 -1 0 0 0 1 32062.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 0 0 -120 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Beam  7 x  0.5 (white)
+1 15 5 0 -60 0 -1 0 1 0 0 0 0 1 32065.dat
+0 STEP
+0 // Technic Axle  4 (black)
+1 0 0 0 60 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Gear 24 Tooth with Single Axle Hole (dark_bluish_grey)
+1 72 0 0 60 0 0 -1 0 1 0 1 0 0 3648b.dat
+0 // Technic Beam  5 x  0.5 Liftarm with Axle Holes at Both Ends (white)
+1 15 15 0 20 0 -1 0 1 0 0 0 0 1 11478.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 0 -10 -162.679 0 0 1 -0.866 0.5 0 -0.5 -0.866 0 6536.dat
+0 // Technic Beam  5 x  0.5 Liftarm with Axle Holes at Both Ends (white)
+1 15 15 0 -140 0 -1 0 1 0 0 0 0 1 11478.dat
+
+
+
+
+0 STEP
+0 FILE 42088 - Platform.ldr
+0 Work platform built from bent liftarms, cross blocks, axles, bushes, and a pin joiner.
+0 Name: 42088 - Platform.ldr
+0 Author: Marc Belanger [MonsieurPoulet]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS Truck, Microscale, Construction
+0 !HISTORY 2019-12-03 [MonsieurPoulet] Initial creation
+
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 Quarter Circle (black)
+1 0 0 0 0 0 -1 0 0 0 1 -1 0 0 32249.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 25 0 0 -1 0 0 0 -1 0 0 0 1 4519.dat
+0 STEP
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 10 0 0 0 0 -1 1 0 0 0 -1 0 32123a.dat
+0 // Technic Connector (Axle/Bush) Type 1 (light_bluish_grey)
+1 71 25 -20 0 1 0 0 0 0 -1 0 1 0 32039.dat
+0 STEP
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 25 0 -40 -1 0 0 0 -1 0 0 0 1 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 25 40 0 -1 0 0 0 -1 0 0 0 1 4519.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (light_bluish_grey)
+1 71 40 0 0 0 0 -1 1 0 0 0 -1 0 32123a.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 15 0 -40 1 0 0 0 1 0 0 0 1 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 15 40 0 1 0 0 0 0 1 0 -1 0 6536.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 35 0 -40 1 0 0 0 1 0 0 0 1 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 35 40 0 1 0 0 0 0 1 0 -1 0 6536.dat
+0 STEP
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 Quarter Circle (black)
+1 0 50 0 0 0 -1 0 0 0 1 -1 0 0 32249.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 25 -30 0 0 -1 0 1 0 0 0 0 1 43093.dat
+0 // Technic Pin Joiner Round with Slot (white)
+1 15 25 -50 0 0 0 -1 1 0 0 0 -1 0 62462.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 25 -70 0 0 -1 0 -1 0 0 0 0 -1 43093.dat
+
+
+0 STEP
+0 FILE 42088 - 32905.dat
+0 Detailed model of a Technic worm gear with reduced axlehole, composed of cylindrical and sliding axle-hole primitives.
+0 Name: 42088 - 32905.dat
+0 Author: Santeri Piippo [arezey]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 // Technic Axle Hole Two-toothed Sliding Side Edges (main_colour)
+1 16 0 0 -20 0 0 -1 1 0 0 0 -1 0 42088 - axl4hol2.dat
+0 // Technic Axle Hole Two-toothed Sliding (main_colour)
+1 16 0 0 18.5 0 0 -1 1 0 0 0 -38.5 0 42088 - axl4hole.dat
+0 // Technic Axle Hole Two-toothed Sliding Tooth Outer Edges (main_colour)
+1 16 0 0 18.5 0 0 -1 1 0 0 0 -1 0 42088 - axl4hol3.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 20 6 0 0 0 0 6 0 -6 0 4-4edge.dat
+0 BFC INVERTNEXT
+0 // Cylinder 1.0 (main_colour)
+1 16 0 0 20 6 0 0 0 0 6 0 -1.5 0 4-4cyli.dat
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 s\42088 - 4716s02.dat
+
+0 STEP
+0 FILE 42088 - axl4hol2.dat
+0 Primitive subpart representing the side edges of a sliding Technic axle hole using quarter-circle segments.
+0 Name: 42088 - axl4hol2.dat
+0 Author: Santeri Piippo [arezey]
+0 !LDRAW_ORG Unofficial_Primitive
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+2 24 2 0 -5.602 0 0 -6
+2 24 -2 0 5.602 0 0 6
+2 24 6 0 0 5.602 0 -2
+2 24 -6 0 0 -5.602 0 2
+0 // Circle 0.25 (main_colour)
+1 16 0 0 0 6 0 0 0 1 0 0 0 6 1-4edge.dat
+0 // Circle 0.25 (main_colour)
+1 16 0 0 0 -6 0 0 0 1 0 0 0 -6 1-4edge.dat
+
+0 STEP
+0 FILE 42088 - axl4hole.dat
+0 Primitive subpart modeling a sliding Technic axle hole using cylinders and axle-hole teeth.
+0 Name: 42088 - axl4hole.dat
+0 Author: Santeri Piippo [arezey]
+0 !LDRAW_ORG Unofficial_Primitive
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+5 24 -6 0 0 -6 1 0 -5.602 1 2 -5.543 1 -2.296
+0 BFC INVERTNEXT
+0 // Cylinder 0.25 (main_colour)
+1 16 0 0 0 0 0 6 0 1 0 6 0 0 1-4cyli.dat
+5 24 0 1 -6 0 0 -6 2 1 -5.602 -2.296 1 -5.543
+4 16 -6 1 0 -5.602 1 2 -5.602 0 2 -6 0 0
+5 24 6 0 0 6 1 0 5.602 1 -2 5.543 1 2.296
+0 // Technic Axle Hole Tooth (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 -1 axlehol6.dat
+5 24 0 1 6 0 0 6 -2 1 5.602 2.296 1 5.543
+0 BFC INVERTNEXT
+0 // Cylinder 0.25 (main_colour)
+1 16 0 0 0 0 0 -6 0 1 0 -6 0 0 1-4cyli.dat
+4 16 2 1 -5.602 0 1 -6 0 0 -6 2 0 -5.602
+4 16 6 1 0 5.602 1 -2 5.602 0 -2 6 0 0
+0 // Technic Axle Hole Tooth (main_colour)
+1 16 0 0 0 -1 0 0 0 1 0 0 0 1 axlehol6.dat
+4 16 -2 1 5.602 0 1 6 0 0 6 -2 0 5.602
+
+0 STEP
+0 FILE 42088 - axl4hol3.dat
+0 Primitive subpart defining the outer edges of the sliding axle hole teeth.
+0 Name: 42088 - axl4hol3.dat
+0 Author: Santeri Piippo [arezey]
+0 !LDRAW_ORG Unofficial_Primitive
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+2 24 -5.602 0 2 -5.543 0 2.296
+2 24 -5.543 0 2.296 -4.243 0 4.243
+2 24 -4.243 0 4.243 -2.296 0 5.543
+2 24 -2.296 0 5.543 -2 0 5.602
+2 24 5.602 0 -2 5.543 0 -2.296
+2 24 5.543 0 -2.296 4.243 0 -4.243
+2 24 4.243 0 -4.243 2.296 0 -5.543
+2 24 2.296 0 -5.543 2 0 -5.602
+
+0 STEP
+0 FILE s\42088 - 4716s02.dat
+0 Subpart forming the main body of a Technic worm gear.
+0 Name: s\42088 - 4716s02.dat
+0 Author: Santeri Piippo [arezey]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2019-02-24 [arezey] Subparted from s\4716s01.dat by Remco Braak
+0 !HISTORY 2019-03-02 [MagFors] Removed inner surfaces, subfiled end surface
+
+1 16 0 0 -20 1 0 0 0 1 0 0 0 1 s\42088 - 4716s03.dat
+1 16 0 0 20 0 -1 0 -1 0 0 0 0 -1 s\42088 - 4716s03.dat
+
+1 16 0 0 -20 0 1 0 1 0 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 -12 -1 0 0 0 -1 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 -12 0 1 0 1 0 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 -4 -1 0 0 0 -1 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 -4 0 1 0 1 0 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 4 -1 0 0 0 -1 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 4 0 1 0 1 0 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 12 -1 0 0 0 -1 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 12 0 1 0 1 0 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 20 -1 0 0 0 -1 0 0 0 1 s\42088 - 4716s01.dat
+
+1 16 0 0 -18 -1 0 0 0 1 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 -10 0 1 0 -1 0 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 -10 -1 0 0 0 1 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 -2 0 1 0 -1 0 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 -2 -1 0 0 0 1 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 6 0 1 0 -1 0 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 6 -1 0 0 0 1 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 14 0 1 0 -1 0 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 14 -1 0 0 0 1 0 0 0 -1 s\42088 - 4716s01.dat
+
+1 16 0 0 -16 1 0 0 0 1 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 -16 0 -1 0 -1 0 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 -8 1 0 0 0 1 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 -8 0 -1 0 -1 0 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 0 0 -1 0 -1 0 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 8 1 0 0 0 1 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 8 0 -1 0 -1 0 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 16 1 0 0 0 1 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 16 0 -1 0 -1 0 0 0 0 -1 s\42088 - 4716s01.dat
+
+1 16 0 0 -14 0 -1 0 1 0 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 -14 1 0 0 0 -1 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 -6 0 -1 0 1 0 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 -6 1 0 0 0 -1 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 2 0 -1 0 1 0 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 2 1 0 0 0 -1 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 10 0 -1 0 1 0 0 0 0 1 s\42088 - 4716s01.dat
+1 16 0 0 10 1 0 0 0 -1 0 0 0 -1 s\42088 - 4716s01.dat
+1 16 0 0 18 0 -1 0 1 0 0 0 0 1 s\42088 - 4716s01.dat
+
+1 16 0 0 -18 0 0 12.7 12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -16 -12.7 0 0 0 0 12.7 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -14 0 0 -12.7 -12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -12 12.7 0 0 0 0 -12.7 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -10 0 0 12.7 12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -8 -12.7 0 0 0 0 12.7 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -6 0 0 -12.7 -12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -4 12.7 0 0 0 0 -12.7 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -2 0 0 12.7 12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 0 -12.7 0 0 0 0 12.7 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 2 0 0 -12.7 -12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 4 12.7 0 0 0 0 -12.7 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 6 0 0 12.7 12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 8 -12.7 0 0 0 0 12.7 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 10 0 0 -12.7 -12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 12 12.7 0 0 0 0 -12.7 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 14 0 0 12.7 12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 16 -12.7 0 0 0 0 12.7 0 -2 0 42088 - 1-4cyloh.dat
+1 16 0 0 18 0 0 -12.7 -12.7 0 0 0 -2 0 42088 - 1-4cyloh.dat
+
+1 16 0 0 -18 -7 0 0 0 0 -7 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -16 0 0 7 -7 0 0 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -14 7 0 0 0 0 7 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -12 0 0 -7 7 0 0 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -10 -7 0 0 0 0 -7 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -8 0 0 7 -7 0 0 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -6 7 0 0 0 0 7 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -4 0 0 -7 7 0 0 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 -2 -7 0 0 0 0 -7 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 0 0 0 7 -7 0 0 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 2 7 0 0 0 0 7 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 4 0 0 -7 7 0 0 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 6 -7 0 0 0 0 -7 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 8 0 0 7 -7 0 0 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 10 7 0 0 0 0 7 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 12 0 0 -7 7 0 0 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 14 -7 0 0 0 0 -7 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 16 0 0 7 -7 0 0 0 2 0 42088 - 1-4cyloh.dat
+1 16 0 0 18 7 0 0 0 0 7 0 2 0 42088 - 1-4cyloh.dat
+
+0 STEP
+0 FILE s\42088 - 4716s03.dat
+0 Subpart modeling the end surface of a Technic worm gear using rings, discs, chords, and helical cylinders.
+0 Name: s\42088 - 4716s03.dat
+0 Author: Magnus Forsberg [MagFors]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+
+0 // Ring  6 x 0.25 (main_colour)
+1 16 0 0 0 0 0 -1 1 0 0 0 1 0 1-4ring6.dat
+0 // Disc Negative 0.75 (main_colour)
+1 16 0 0 0 -6 0 0 0 0 -6 0 1 0 3-4ndis.dat
+0 // Chord 0.25 (main_colour)
+1 16 0 0 0 0 0 12.7 -12.7 0 0 0 1 0 1-4chrd.dat
+4 16 10.4168 4.3148 0 12.7 0 0 6 0 0 6 6 0
+4 16 3.2241 7.7837 0 6.9651 6.9651 0 10.4168 4.3148 0 6 6 0
+4 16 0 7 0 3.2241 7.7837 0 6 6 0 0 6 0
+4 16 -7.7837 -3.2241 0 -7 0 0 -6 0 0 -6 -6 0
+4 16 -7.7837 -3.2241 0 -6 -6 0 -4.3148 -10.4168 0 -6.9651 -6.9651 0
+4 16 0 -12.7 0 -4.3148 -10.4168 0 -6 -6 0 0 -6 0
+3 16 6 -6 0 0 -12.7 0 0 -6 0
+3 16 12.7 0 0 6 -6 0 6 0 0
+3 16 0 -12.7 0 6 -6 0 12.7 0 0
+
+3 16 10.4168 4.3148 0 11.7333 4.8601 0.5 12.7 0 0
+3 16 10.4168 4.3148 0 6.9651 6.9651 0 8.9803 8.9803 1
+3 16 8.9803 8.9803 1 11.7333 4.8601 0.5 10.4168 4.3148 0
+3 16 6.9651 6.9651 0 3.2241 7.7837 0 4.8601 11.7333 1.5
+3 16 4.8601 11.7333 1.5 8.9803 8.9803 1 6.9651 6.9651 0
+3 16 3.2241 7.7837 0 0 7 0 0 12.7 2
+3 16 0 12.7 2 4.8601 11.7333 1.5 3.2241 7.7837 0
+5 24 10.4168 4.3148 0 11.7333 4.8601 0.5 12.7 0 0 8.9803 8.9803 1
+5 24 6.9651 6.9651 0 8.9803 8.9803 1 4.8601 11.7333 1.5 10.4168 4.3148 0
+5 24 3.2241 7.7837 0 4.8601 11.7333 1.5 0 12.7 2 6.9651 6.9651 0
+5 24 0 7 0 0 12.7 2 -4.8601 11.7333 2.5 3.2241 7.7837 0
+5 24 8.9803 8.9803 1 10.4168 4.3148 0 11.73 4.86 0.5 6.9651 6.9651 0
+5 24 4.8601 11.7333 1.5 6.9651 6.9651 0 8.9803 8.9803 1 3.2241 7.7837 0
+5 24 0 12.7 2 3.2241 7.7837 0 4.8601 11.7333 1.5 0 7 0
+
+3 16 -7 0 0 -7.7837 -3.2241 0 -6.4672 -2.6788 0.5
+3 16 -7.7837 -3.2241 0 -6.9651 -6.9651 0 -4.9498 -4.9498 1
+3 16 -4.9498 -4.9498 1 -6.4672 -2.6788 0.5 -7.7837 -3.2241 0
+3 16 -6.9651 -6.9651 0 -4.3148 -10.4168 0 -2.6788 -6.4672 1.5
+3 16 -2.6788 -6.4672 1.5 -4.9498 -4.9498 1 -6.9651 -6.9651 0
+3 16 -4.3148 -10.4168 0 0 -12.7 0 0 -7 2
+3 16 0 -7 2 -2.6788 -6.4672 1.5 -4.3148 -10.4168 0
+5 24 -4.3148 -10.4168 0 -2.6788 -6.4672 1.5 -6.9651 -6.9651 0 0 -7 2
+5 24 -6.9651 -6.9651 0 -4.9498 -4.9498 1 -2.6788 -6.4672 1.5 -7.7837 -3.2241 0
+5 24 -7.7837 -3.2241 0 -6.4672 -2.6788 0.5 -4.9498 -4.9498 1 -7 0 0
+5 24 -4.3148 -10.4168 0 0 -7 2 0 -12.7 0 -2.6788 -6.4672 1.5
+5 24 -6.9651 -6.9651 0 -2.6788 -6.4672 1.5 -4.3148 -10.4168 0 -4.9498 -4.9498 1
+5 24 -7.7837 -3.2241 0 -4.9498 -4.9498 1 -6.4672 -2.6788 0.5 -6.9651 -6.9651 0
+5 24 0 -12.7 0 0 -7 2 2.6788 -6.4672 2.5 -4.3148 -10.4168 0
+
+2 24 10.4168 4.3148 0 12.7 0 0
+2 24 6.9651 6.9651 0 10.4168 4.3148 0
+2 24 0 7 0 3.2241 7.7837 0
+2 24 3.2241 7.7837 0 6.9651 6.9651 0
+0 // Circle 0.25 (main_colour)
+1 16 0 0 0 0 0 -7 7 0 0 0 1 0 1-4edge.dat
+0 // Cylinder Helical 0.25 (main_colour)
+1 16 0 0 0 0 0 -7 7 0 0 0 2 0 1-4cylh.dat
+0 // Cylinder Helical Edge 0.25 (main_colour)
+1 16 0 0 0 0 0 -7 7 0 0 0 2 0 1-4edgh.dat
+2 24 -4.3148 -10.4168 0 0 -12.7 0
+2 24 -6.9651 -6.9651 0 -4.3148 -10.4168 0
+2 24 -7.7837 -3.2241 0 -6.9651 -6.9651 0
+2 24 -7 0 0 -7.7837 -3.2241 0
+0 // Circle 0.25 (main_colour)
+1 16 0 0 0 0 0 12.7 -12.7 0 0 0 1 0 1-4edge.dat
+0 // Cylinder Helical 0.25 (main_colour)
+1 16 0 0 0 0 0 12.7 -12.7 0 0 0 2 0 1-4cylh.dat
+0 // Cylinder Helical Edge 0.25 (main_colour)
+1 16 0 0 0 0 0 12.7 -12.7 0 0 0 2 0 1-4edgh.dat
+
+0 STEP
+0 FILE s\42088 - 4716s01.dat
+0 Subpart representing a single helical thread segment of a Technic worm gear.
+0 Name: s\42088 - 4716s01.dat
+0 Author: Remco Braak [remco1974]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !HISTORY 1997-09-29 [PTadmin] Official Update 1997-15
+0 !HISTORY 2007-07-08 [PTadmin] Header formatted for Contributor Agreement
+0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2008-07-07 [technog] BFC'd, corrected ends, added conditional lines (2003-12-26)
+0 !HISTORY 2008-07-08 [PTadmin] Moved from 4716b (2004-01-05)
+0 !HISTORY 2009-12-29 [PTadmin] Official Update 2009-03
+0 !HISTORY 2019-03-02 [MagFors] Removed inner surfaces, subfiled end surface
+
+3 16 0 7 -4 -2.6788 6.4672 -4 -2.6788 6.4672 -3.5
+3 16 0 7 -4 -2.6788 6.4672 -3.5 -4.8601 11.7333 -1.5
+3 16 -4.8601 11.7333 -1.5 0 12.7 -2 0 7 -4
+4 16 -4.8601 11.7333 -1.5 -4.8601 11.7333 0 0 12.7 0 0 12.7 -2
+4 16 -2.6788 6.4672 -4 -4.9498 4.9498 -4 -4.9498 4.9498 -3 -2.6788 6.4672 -3.5
+3 16 -2.6788 6.4672 -3.5 -4.9498 4.9498 -3 -8.9803 8.9803 -1
+3 16 -8.9803 8.9803 -1 -4.8601 11.7333 -1.5 -2.6788 6.4672 -3.5
+4 16 -8.9803 8.9803 0 -4.8601 11.7333 0 -4.8601 11.7333 -1.5 -8.9803 8.9803 -1
+4 16 -4.9498 4.9498 -4 -6.4672 2.6788 -4 -6.4672 2.6788 -2.5 -4.9498 4.9498 -3
+3 16 -4.9498 4.9498 -3 -6.4672 2.6788 -2.5 -11.7333 4.8601 -0.5
+3 16 -11.7333 4.8601 -0.5 -8.9803 8.9803 -1 -4.9498 4.9498 -3
+4 16 -8.9803 8.9803 0 -8.9803 8.9803 -1 -11.7333 4.8601 -0.5 -11.7333 4.8601 0
+4 16 -6.4672 2.6788 -4 -7 0 -4 -7 0 -2 -6.4672 2.6788 -2.5
+3 16 -6.4672 2.6788 -2.5 -7 0 -2 -12.7 0 0
+3 16 -12.7 0 0 -11.7333 4.8601 -0.5 -6.4672 2.6788 -2.5
+3 16 -11.7333 4.8601 0 -11.7333 4.8601 -0.5 -12.7 0 0
+2 24 0 7 -4 -2.6788 6.4672 -3.5
+2 24 0 12.7 -2 -4.8601 11.7333 -1.5
+2 24 -4.9498 4.9498 -3 -2.6788 6.4672 -3.5
+2 24 -4.8601 11.7333 -1.5 -8.9803 8.9803 -1
+2 24 -4.9498 4.9498 -3 -6.4672 2.6788 -2.5
+2 24 -8.9803 8.9803 -1 -11.7333 4.8601 -0.5
+2 24 -6.4672 2.6788 -2.5 -7 0 -2
+2 24 -11.7333 4.8601 -0.5 -12.7 0 0
+5 24 -4.8601 11.7333 -1.5 -2.6788 6.4672 -3.5 0 7 -4 -8.9803 8.9803 -1
+5 24 -8.9803 8.9803 -1 -4.9498 4.9498 -3 -2.6788 6.4672 -3.5 -11.7333 4.8601 -0.5
+5 24 -11.7333 4.8601 -0.5 -6.4672 2.6788 -2.5 -4.9498 4.9498 -3 -12.7 0 0
+5 24 -12.7 0 0 -7 0 -2 -11.7333 -4.8601 0.5 -6.4672 2.6788 -2.5
+5 24 -2.6788 6.4672 -3.5 -2.6788 6.4672 -4 0 7 -4 -4.9498 4.9498 -3
+5 24 -4.9498 4.9498 -3 -4.9498 4.9498 -4 -2.6788 6.4672 -3.5 -6.4672 2.6788 -2.5
+5 24 -6.4672 2.6788 -2.5 -6.4672 2.6788 -4 -4.9498 4.9498 -3 -7 0 -2
+5 24 0 12.7 -2 0 12.7 0 4.8601 11.7333 -2.5 -4.8601 11.7333 -1.5
+5 24 -4.8601 11.7333 -1.5 -4.8601 11.7333 0 0 12.7 -2 -8.9803 8.9803 -1
+5 24 -8.9803 8.9803 -1 -8.9803 8.9803 0 -4.8601 11.7333 -1.5 -11.7333 4.8601 -0.5
+5 24 -11.7333 4.8601 -0.5 -11.7333 4.8601 0 -8.9803 8.9803 -1 -12.7 0 0
+5 24 -7 0 -2 -7 0 -4 -6.4672 2.6788 -2.5 -6.4672 -2.6788 -1.5
+5 24 -4.8601 11.7333 -1.5 0 7 -4 0 12.7 -2 -2.6788 6.4672 -3.5
+5 24 -8.9803 8.9803 -1 -2.6788 6.4672 -3.5 -4.8601 11.7333 -1.5 -4.9498 4.9498 -3
+5 24 -11.7333 4.8601 -0.5 -4.9498 4.9498 -3 -8.9803 8.9803 -1 -6.4672 2.6788 -2.5
+5 24 -12.7 0 0 -6.4672 2.6788 -2.5 -11.7333 4.8601 -0.5 -7 0 -2
+0 // 5 24 0 12.7 -2 0 7 -4 2.6788 6.4672 -4.5 -4.8601 11.7333 -1.5
+
+0 STEP
+0 FILE 42088 - 1-4cyloh.dat
+0 Primitive subpart defining a quarter helical cylinder with edges for worm-gear geometry.
+0 Name: 42088 - 1-4cyloh.dat
+0 Author: Magnus Forsberg [MagFors]
+0 !LDRAW_ORG Unofficial_Primitive
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 42088 - 1-4cylih.dat
+0 // Cylinder Helical Edge 0.25 (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 1-4edgh.dat
+0 // Cylinder Helical Edge 0.25 (main_colour)
+1 16 0 -1 0 1 0 0 0 1 0 0 0 1 1-4edgh.dat
+
+0 STEP
+0 FILE 42088 - 1-4cylih.dat
+0 Primitive subpart defining a quarter helical cylinder without edges for worm-gear geometry.
+0 Name: 42088 - 1-4cylih.dat
+0 Author: Magnus Forsberg [MagFors]
+0 !LDRAW_ORG Unofficial_Primitive
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+4 16 0.9239 -0.75 0.3827 1 -1 0 1 0 0 0.9239 0.25 0.3827
+4 16 0.7071 -0.5 0.7071 0.9239 -0.75 0.3827 0.9239 0.25 0.3827 0.7071 0.5 0.7071
+4 16 0.3827 -0.25 0.9239 0.7071 -0.5 0.7071 0.7071 0.5 0.7071 0.3827 0.75 0.9239
+4 16 0 0 1 0.3827 -0.25 0.9239 0.3827 0.75 0.9239 0 1 1
+5 24 1 0 0 1 -1 0 0.9239 0.25 0.3827 1 -0.5 -1
+5 24 0.9239 0.25 0.3827 0.9239 -0.75 0.3827 1 0 0 0.7071 0.5 0.7071
+5 24 0.7071 0.5 0.7071 0.7071 -0.5 0.7071 0.9239 0.25 0.3827 0.3827 0.75 0.9239
+5 24 0.3827 0.75 0.9239 0.3827 -0.25 0.9239 0.7071 0.5 0.7071 0 1 1
+5 24 0 1 1 0 0 1 0.3827 0.75 0.9239 -1 1.5 1
+
+
+

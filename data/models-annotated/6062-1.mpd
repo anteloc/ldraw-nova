@@ -1,0 +1,691 @@
+0 FILE 6062 - main.ldr
+0 A castle siege scene featuring a stone building, a wheeled battering ram with sliding base, and six armored knights armed with spears, battleaxes, and bows.
+0 Name: 6062 - main.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 1 0 -8 0 1 0 0 0 1 0 0 0 1 6062 - Building.ldr
+1 4 20 -312 130 0 0 -1 0 1 0 1 0 0 6062 - MiniFig6.ldr
+1 4 -20 -168 250 0 0 -1 0 1 0 1 0 0 6062 - MiniFig4.ldr
+1 4 -20 -168 390 0 0 -1 0 1 0 1 0 0 6062 - MiniFig5.ldr
+1 6 190 -40 500 0 0 1 0 1 0 -1 0 0 6062 - Ram.ldr
+1 6 80 -176 510 0 0 1 0 1 0 -1 0 0 6062 - MiniFig1.ldr
+1 6 160 -176 510 0 0 1 0 1 0 -1 0 0 6062 - MiniFig2.ldr
+1 6 320 -176 510 0 0 1 0 1 0 -1 0 0 6062 - MiniFig3.ldr
+
+
+0 STEP
+0 FILE 6062 - Building.ldr
+0 A green-based grey stone castle building with hinged shutters, corner bricks, and a 45-degree sloped roof section.
+0 Name: 6062 - Building.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  3 (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  2 x  3 (green)
+1 2 10 0 50 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  6 x  6 (green)
+1 2 30 0 140 0 0 -1 0 1 0 1 0 0 3958.dat
+0 // Plate  1 x  2 (green)
+1 2 10 0 210 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x 10 (green)
+1 2 -10 0 320 0 0 1 0 1 0 -1 0 0 3832.dat
+0 // Plate  2 x  2 (green)
+1 2 10 0 440 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  2 x  3 (green)
+1 2 10 0 490 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  3 (green)
+1 2 0 0 540 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 -10 -24 -10 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 20 -24 70 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Slope Brick 45  2 x  2 (light_grey)
+1 7 60 -24 140 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -10 -24 370 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 -10 -24 550 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 0 -24 290 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Hinge Brick  1 x  4 Base (light_grey)
+1 7 -10 -24 200 -1 0 0 0 1 0 0 0 -1 3831.dat
+0 // Hinge Brick  1 x  4 Top (light_grey)
+1 7 -10 -24 200 1 0 0 0 1 0 0 0 1 3830.dat
+0 // Hinge Brick  1 x  4 Base (light_grey)
+1 7 -10 -24 460 -1 0 0 0 1 0 0 0 -1 3831.dat
+0 // Hinge Brick  1 x  4 Top (light_grey)
+1 7 -10 -24 460 1 0 0 0 1 0 0 0 1 3830.dat
+0 STEP
+0 // Brick  1 x  1 (light_grey)
+1 7 -20 -48 -10 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -20 -72 -10 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -20 -80 -10 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (light_grey)
+1 7 -20 -88 -10 0 0 1 0 1 0 -1 0 0 4085b.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -20 -96 -10 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -20 -120 -10 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -20 -48 550 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -20 -72 550 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -20 -80 550 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (light_grey)
+1 7 -20 -88 550 0 0 1 0 1 0 -1 0 0 4085b.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -20 -96 550 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -20 -120 550 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -20 -48 370 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 x  2 with Shutter Holder (light_grey)
+1 7 -20 -96 370 1 0 0 0 1 0 0 0 1 3581.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -20 -120 370 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -20 -144 370 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Door  1 x  4 x  6 Grooved (black)
+1 0 -20 -144 358 -1 0 0 0 1 0 0 0 -1 3644.dat
+0 // Panel Wall  3 x  3 x  6 Corner (light_grey)
+1 7 40 -144 110 1 0 0 0 1 0 0 0 1 2345.dat
+0 // Technic Pin (light_grey)
+1 7 -10 -14 -20 0 0 -1 0 1 0 1 0 0 3673.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 0 -48 190 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 0 -72 190 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 0 -96 190 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 0 -120 190 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 STEP
+0 // Minifig Battleaxe (brown)
+1 6 -40 -68 550 -1 0 0 0 1 0 0 0 -1 3848.dat
+0 // Minifig Battleaxe (brown)
+1 6 -40 -68 -10 1 0 0 0 1 0 0 0 1 3848.dat
+0 // Panel  2 x  5 x  6 Wall (light_grey)
+1 7 0 -144 30 0 0 -1 0 1 0 1 0 0 4444.dat
+0 // Panel Wall  3 x  3 x  6 Corner (light_grey)
+1 7 40 -144 170 0 0 -1 0 1 0 1 0 0 2345.dat
+0 // Panel  2 x  5 x  6 Wall with Dark Grey Scattered Stones Pattern (light_grey)
+1 7 0 -144 250 0 0 -1 0 1 0 1 0 0 4444p02.dat
+0 // Panel  2 x  5 x  6 Wall (light_grey)
+1 7 0 -144 410 0 0 -1 0 1 0 1 0 0 4444.dat
+0 // Panel  2 x  5 x  6 Wall with Dark Grey Stones Pattern (light_grey)
+1 7 0 -144 510 0 0 -1 0 1 0 1 0 0 4444p01.dat
+0 STEP
+0 // Brick  1 x  3 (black)
+1 0 0 -144 -10 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 20 -144 70 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Brick  2 x  4 (black)
+1 0 30 -144 140 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 -10 -144 200 -1 0 0 0 1 0 0 0 -1 3831.dat
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 -10 -144 200 1 0 0 0 1 0 0 0 1 3830.dat
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 -10 -144 460 -1 0 0 0 1 0 0 0 -1 3831.dat
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 -10 -144 460 1 0 0 0 1 0 0 0 1 3830.dat
+0 // Brick  1 x  3 (black)
+1 0 0 -144 550 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 STEP
+0 // Plate  1 x  3 (light_grey)
+1 7 -20 -144 30 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -20 -144 250 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -20 -144 410 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -20 -144 510 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 10 -144 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 10 -144 170 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_grey)
+1 7 0 -144 290 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_grey)
+1 7 0 -144 370 1 0 0 0 1 0 0 0 1 3665a.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 -20 -152 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 10 -152 10 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -20 -152 50 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 10 -152 60 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 -10 -152 140 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  2 x 10 (light_grey)
+1 7 10 -152 300 0 0 1 0 1 0 -1 0 0 3832.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -20 -152 240 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x 10 (light_grey)
+1 7 -20 -152 360 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 10 -152 430 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 10 -152 490 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 10 -152 540 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -20 -152 520 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Brick  1 x  1 (light_grey)
+1 7 20 -176 550 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 20 -176 500 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  6 (light_grey)
+1 7 20 -176 400 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 20 -176 330 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  6 (light_grey)
+1 7 20 -176 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 20 -168 190 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 20 -168 90 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 20 -176 70 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 20 -176 20 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 60 -168 140 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Brick  1 x  2 (light_grey)
+1 7 20 -200 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 20 -200 60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 20 -200 540 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 20 -200 480 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 20 -200 450 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 20 -200 400 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  3 (light_grey)
+1 7 20 -200 330 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 20 -200 260 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 20 -200 210 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Panel Wall  3 x  3 x  6 Corner (light_grey)
+1 7 40 -288 170 0 0 -1 0 1 0 1 0 0 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner with Dark Grey Stones Pattern (light_grey)
+1 7 40 -288 110 1 0 0 0 1 0 0 0 1 2345p02.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 60 -288 140 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 20 -288 90 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 20 -288 190 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 20 -288 140 0 0 1 0 1 0 -1 0 0 3010.dat
+0 STEP
+0 // Wing  4 x  4 Right (light_grey)
+1 7 50 -296 100 0 0 -1 0 1 0 1 0 0 3935.dat
+0 // Wing  4 x  4 Left (light_grey)
+1 7 50 -296 180 0 0 -1 0 1 0 1 0 0 3936.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 20 -296 70 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 20 -296 210 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 20 -320 70 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 20 -320 210 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 60 -320 90 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 60 -320 190 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 80 -320 140 0 0 1 0 1 0 -1 0 0 3010.dat
+0 STEP
+0 // Brick  1 x  1 (light_grey)
+1 7 20 -344 210 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 60 -344 190 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 20 -344 70 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 60 -344 90 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 80 -344 140 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Antenna  4H with Rounded Top (black)
+1 0 20 -352 70 0 0 1 0 1 0 -1 0 0 3957a.dat
+0 // Flag  4 x  1 with First Wave Left (white)
+1 15 20 -412 70 0.5 0 -0.866 0 1 0 0.866 0 0.5 4495a.dat
+0 // Flag  4 x  1 with First Wave Left (blue)
+1 1 20 -432 70 0.5 0 -0.866 0 1 0 0.866 0 0.5 4495a.dat
+
+
+0 STEP
+0 FILE 6062 - MiniFig2.ldr
+0 A blue-legged red-torso knight with a neck-protector helmet, armed with a spear and a triangular blue lion shield.
+0 Name: 6062 - MiniFig2.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 10 -32 1 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 10 -20 1 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 10 -20 1 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Torso with Castle Crossed Pikes Pattern (red)
+1 4 10 -64 1 1 0 0 0 1 0 0 0 1 973p42.dat
+0 // Minifig Arm Left (blue)
+1 1 25.551 -55 1 0.985 0.164 -0.043 -0.17 0.952 -0.252 0 0.255 0.967 3819.dat
+0 // Minifig Arm Right (blue)
+1 1 -5.551 -55 1 0.985 -0.122 -0.119 0.17 0.704 0.69 0 -0.7 0.714 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -11.598 -49.373 -19.275 0.985 -0.17 0.002 0.17 0.986 -0.01 0 0.01 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 34.011 -35.371 -3.738 0.972 0.194 -0.138 -0.22 0.511 -0.831 -0.09 0.837 0.539 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 10 -88 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3626ap01.dat
+0 // Minifig Helmet Castle with Neck Protector (dark_grey)
+1 8 10 -88 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3844.dat
+0 // Minifig Spear with Round End (brown)
+1 6 -2.546 -101.94 -43.342 0.984 -0.165 0.044 0.17 0.951 -0.256 0 0.26 0.965 4497.dat
+0 // Minifig Shield Triangular with Blue Lion on Yellow Pattern (light_grey)
+1 7 33.765 -30.288 -18.743 0.988 -0.01 0.153 -0.035 0.957 0.287 -0.149 -0.289 0.945 3846p4g.dat
+
+
+0 STEP
+0 FILE 6062 - MiniFig3.ldr
+0 A red-legged knight wearing a blue lion shield torso, chin-guard helmet, and carrying a bow with arrow quiver.
+0 Name: 6062 - MiniFig3.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 10 -32 1 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 10 -20 1 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 10 -20 1 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Torso with Lion Gold on Blue Shield Pattern (red)
+1 4 10 -64 1 1 0 0 0 1 0 0 0 1 973p4f.dat
+0 // Minifig Arm Left (blue)
+1 1 25.551 -55 1 0.985 0.122 0.119 -0.17 0.704 0.69 0 -0.7 0.714 3819.dat
+0 // Minifig Arm Right (blue)
+1 1 -5.551 -55 1 0.985 -0.148 0.084 0.17 0.858 -0.486 0 0.494 0.87 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -14.099 -34.858 1.728 0.985 -0.045 0.164 0.17 0.262 -0.95 0 0.964 0.266 3820.dat
+0 // Minifig Hand (yellow)
+1 14 31.598 -49.373 -19.275 0.963 0.272 0.01 -0.272 0.962 0.03 -0.002 -0.032 1 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 10 -91 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3626ap01.dat
+0 // Minifig Helmet Castle with Chin-Guard (light_grey)
+1 7 10 -91 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3896.dat
+0 // Minifig Arrow Quiver (brown)
+1 6 10 -64 1 -1 0 0 0 1 0 0 0 -1 4498.dat
+0 // Minifig Bow with Arrow (brown)
+1 6 32.202 -47.175 -28.374 0.082 0.265 -0.961 -0.248 0.939 0.238 0.966 0.219 0.142 4499.dat
+
+
+0 STEP
+0 FILE 6062 - MiniFig1.ldr
+0 A red-legged knight with crossed-pikes torso, neck-protector helmet, wielding a battleaxe and a yellow lion shield.
+0 Name: 6062 - MiniFig1.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 10 -32 1 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 10 -20 1 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 10 -20 1 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Torso with Castle Crossed Pikes Pattern (red)
+1 4 10 -64 1 1 0 0 0 1 0 0 0 1 973p42.dat
+0 // Minifig Arm Left (blue)
+1 1 25.551 -55 1 0.985 0.164 -0.043 -0.17 0.952 -0.252 0 0.255 0.967 3819.dat
+0 // Minifig Arm Right (blue)
+1 1 -5.551 -55 1 0.985 -0.122 -0.119 0.17 0.704 0.69 0 -0.7 0.714 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -11.598 -49.373 -19.275 0.985 -0.17 0.002 0.17 0.986 -0.01 0 0.01 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 34.011 -35.371 -3.738 0.972 0.194 -0.138 -0.22 0.511 -0.831 -0.09 0.837 0.539 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 10 -88 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3626ap01.dat
+0 // Minifig Helmet Castle with Neck Protector (dark_grey)
+1 8 10 -88 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3844.dat
+0 // Minifig Battleaxe (brown)
+1 6 -9.135 -63.919 -32.957 -0.453 -0.164 -0.874 -0.307 0.948 -0.02 0.834 0.259 -0.483 3848.dat
+0 // Minifig Shield Triangular with Yellow Lion on Blue Pattern (light_grey)
+1 7 33.765 -30.288 -18.743 0.988 -0.01 0.153 -0.035 0.957 0.287 -0.149 -0.289 0.945 3846p4h.dat
+
+
+0 STEP
+0 FILE 6062 - MiniFig5.ldr
+0 A Black Falcon knight in blue and black armor with a neck-protector helmet, armed with a spear and a blue-bordered falcon shield.
+0 Name: 6062 - MiniFig5.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 10 -32 1 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 10 -20 1 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 10 -20 1 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Torso with Black Falcon Pattern (blue)
+1 1 10 -64 1 1 0 0 0 1 0 0 0 1 973p43.dat
+0 // Minifig Arm Left (black)
+1 0 25.551 -55 1 0.985 0.164 -0.043 -0.17 0.952 -0.252 0 0.255 0.967 3819.dat
+0 // Minifig Arm Right (black)
+1 0 -5.551 -55 1 0.985 -0.122 -0.119 0.17 0.704 0.69 0 -0.7 0.714 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -11.598 -49.373 -19.275 0.985 -0.17 0.002 0.17 0.986 -0.01 0 0.01 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 34.011 -35.371 -3.738 0.972 0.194 -0.138 -0.22 0.511 -0.831 -0.09 0.837 0.539 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 10 -88 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3626ap01.dat
+0 // Minifig Helmet Castle with Neck Protector (black)
+1 0 10 -88 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3844.dat
+0 // Minifig Spear with Round End (brown)
+1 6 -3.879 -94.246 -41.241 -0.98 -0.163 -0.045 -0.171 0.944 0.255 0.001 0.258 -0.961 4497.dat
+0 // Minifig Shield Triangular with Black Falcon Blue Border Pattern (light_grey)
+1 7 35.295 -27.422 -9.285 0.988 -0.01 0.153 -0.035 0.957 0.287 -0.149 -0.289 0.945 3846p45.dat
+
+
+0 STEP
+0 FILE 6062 - MiniFig4.ldr
+0 A Black Falcon knight in blue and black armor with a chin-guard helmet, wielding a battleaxe and a yellow-bordered falcon shield.
+0 Name: 6062 - MiniFig4.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 10 -32 1 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 10 -20 1 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 10 -20 1 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Torso with Black Falcon Pattern (blue)
+1 1 10 -64 1 1 0 0 0 1 0 0 0 1 973p43.dat
+0 // Minifig Arm Left (black)
+1 0 25.551 -55 1 0.985 0.164 -0.043 -0.17 0.952 -0.252 0 0.255 0.967 3819.dat
+0 // Minifig Arm Right (black)
+1 0 -5.551 -55 1 0.985 -0.122 -0.119 0.17 0.704 0.69 0 -0.7 0.714 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -11.598 -49.373 -19.275 0.985 -0.17 0.002 0.17 0.986 -0.01 0 0.01 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 34.011 -35.371 -3.738 0.972 0.194 -0.138 -0.22 0.511 -0.831 -0.09 0.837 0.539 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 10 -88 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3626ap01.dat
+0 // Minifig Helmet Castle with Chin-Guard (black)
+1 0 10 -88 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3896.dat
+0 // Minifig Battleaxe (brown)
+1 6 -9.1 -64.05 -32.996 0.044 -0.161 -0.973 -0.253 0.928 -0.168 0.952 0.254 0.001 3848.dat
+0 // Minifig Shield Triangular with Black Falcon Yellow Border Pattern (light_grey)
+1 7 35.292 -27.418 -9.289 0.988 -0.01 0.153 -0.035 0.957 0.287 -0.149 -0.289 0.945 3846p46.dat
+
+
+0 STEP
+0 FILE 6062 - MiniFig6.ldr
+0 A Black Falcon archer knight in blue and black armor with a chin-guard helmet, carrying a bow with arrow quiver.
+0 Name: 6062 - MiniFig6.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 10 -32 1 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 10 -20 1 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 10 -20 1 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Torso with Black Falcon Pattern (blue)
+1 1 10 -64 1 1 0 0 0 1 0 0 0 1 973p43.dat
+0 // Minifig Arm Left (black)
+1 0 25.551 -55 1 0.985 0.122 0.119 -0.17 0.704 0.69 0 -0.7 0.714 3819.dat
+0 // Minifig Arm Right (black)
+1 0 -5.551 -55 1 0.985 -0.148 0.084 0.17 0.858 -0.486 0 0.494 0.87 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -14.099 -34.858 1.728 0.985 -0.045 0.164 0.17 0.262 -0.95 0 0.964 0.266 3820.dat
+0 // Minifig Hand (yellow)
+1 14 31.598 -49.373 -19.275 0.963 0.272 0.01 -0.272 0.962 0.03 -0.002 -0.032 1 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 10 -91 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3626ap01.dat
+0 // Minifig Helmet Castle with Chin-Guard (black)
+1 0 10 -91 1 0.986 0 -0.169 0 1 0 0.169 0 0.986 3896.dat
+0 // Minifig Arrow Quiver (brown)
+1 6 10 -64 1 -1 0 0 0 1 0 0 0 -1 4498.dat
+0 // Minifig Bow with Arrow (brown)
+1 6 32.202 -47.175 -28.374 0.082 0.265 -0.961 -0.248 0.939 0.238 0.966 0.219 0.142 4499.dat
+
+
+0 STEP
+0 FILE 6062 - Ram.ldr
+0 A black wheeled battering ram built from plates and arches with grey and black structural elements.
+0 Name: 6062 - Ram.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  2 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 0 0 160 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 -20 -8 0 -1 0 0 0 1 0 0 0 -1 4488.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 -20 -8 160 -1 0 0 0 1 0 0 0 -1 4488.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 20 -8 160 1 0 0 0 1 0 0 0 1 4488.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 20 -8 0 1 0 0 0 1 0 0 0 1 4488.dat
+0 STEP
+0 // Plate  1 x  4 (black)
+1 0 0 -16 -10 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -16 160 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x 10 (black)
+1 0 30 -16 100 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 -30 -16 100 0 0 -1 0 1 0 1 0 0 4477.dat
+0 STEP
+0 // Plate  1 x  4 (black)
+1 0 -30 -24 20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -24 -10 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Plate  1 x  4 (black)
+1 0 30 -24 20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 -30 -24 100 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 30 -24 100 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Plate  4 x  4 (black)
+1 0 0 -24 180 0 0 -1 0 1 0 1 0 0 3031.dat
+0 STEP
+1 0 0 0 100 1 0 0 0 1 0 0 0 1 6062 - Slider Bottom.ldr
+0 // Brick  1 x  4 (black)
+1 0 0 -48 190 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+0 // Brick  1 x  4 (black)
+1 0 0 -48 130 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Plate  1 x  8 (black)
+1 0 0 -56 130 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -64 130 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Plate  1 x 10 (black)
+1 0 0 -32 20 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -32 -100 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 0 -40 -80 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  8 (black)
+1 0 0 -40 40 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -48 -80 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 0 -64 110 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -72 120 0 0 -1 0 1 0 1 0 0 3023.dat
+0 STEP
+0 // Arch  1 x  5 x  4 (black)
+1 0 -30 -120 -10 1 0 0 0 1 0 0 0 1 2339.dat
+0 // Arch  1 x  5 x  4 (black)
+1 0 -30 -120 170 -1 0 0 0 1 0 0 0 -1 2339.dat
+0 // Arch  1 x  5 x  4 (black)
+1 0 30 -120 170 -1 0 0 0 1 0 0 0 -1 2339.dat
+0 // Arch  1 x  5 x  4 (black)
+1 0 30 -120 -10 1 0 0 0 1 0 0 0 1 2339.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -24 -80 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Arch  1 x  4 (black)
+1 0 0 -96 -10 1 0 0 0 1 0 0 0 1 3659.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -80 170 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  4 x  4 (black)
+1 0 0 -120 80 1 0 0 0 1 0 0 0 1 3031.dat
+0 STEP
+0 // Plate  1 x  4 (black)
+1 0 0 -104 150 1 0 0 0 1 0 0 0 1 3710.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -30 -120 0 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 0 -120 -10 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 30 -120 0 0 0 -1 0 1 0 1 0 0 3660.dat
+0 STEP
+0 // Plate  1 x  4 (black)
+1 0 0 -128 130 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  4 x  8 (black)
+1 0 0 -128 -40 0 0 1 0 1 0 -1 0 0 3035.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -30 -144 60 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -30 -144 110 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 30 -144 110 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 30 -144 60 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Brick  1 x  1 (black)
+1 0 -50 -144 10 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 -50 -144 -10 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 (black)
+1 0 50 -144 10 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 50 -144 -10 0 0 -1 0 1 0 1 0 0 4070.dat
+0 STEP
+0 // Arch  1 x  3 (black)
+1 0 -50 -168 30 0 0 -1 0 1 0 1 0 0 4490.dat
+0 // Arch  1 x  3 (black)
+1 0 -50 -168 90 0 0 -1 0 1 0 1 0 0 4490.dat
+0 // Arch  1 x  3 (black)
+1 0 50 -168 90 0 0 -1 0 1 0 1 0 0 4490.dat
+0 // Arch  1 x  3 (black)
+1 0 50 -168 30 0 0 -1 0 1 0 1 0 0 4490.dat
+0 // Plate  1 x  1 (black)
+1 0 -50 -152 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (black)
+1 0 -50 -160 -10 1 0 0 0 1 0 0 0 1 4085b.dat
+0 // Plate  1 x  1 (black)
+1 0 -50 -168 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (black)
+1 0 50 -152 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (black)
+1 0 50 -160 -10 1 0 0 0 1 0 0 0 1 4085b.dat
+0 // Plate  1 x  1 (black)
+1 0 50 -168 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Brick  1 x  1 (black)
+1 0 -50 -192 110 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -50 -192 60 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -50 -192 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 50 -192 110 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 50 -192 60 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 50 -192 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Fence Lattice  1 x  4 x  1 (black)
+1 0 -30 -152 -60 0 0 1 0 1 0 -1 0 0 3633.dat
+0 // Fence Lattice  1 x  4 x  1 (black)
+1 0 30 -152 -60 0 0 -1 0 1 0 1 0 0 3633.dat
+0 STEP
+0 // Antenna  4H with Rounded Top (black)
+1 0 50 -200 110 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Flag  4 x  1 with First Wave Left (yellow)
+1 14 50 -256 110 1 0 0 0 1 0 0 0 1 4495a.dat
+0 // Flag  4 x  1 with First Wave Left (red)
+1 4 50 -280 110 1 0 0 0 1 0 0 0 1 4495a.dat
+0 // Minifig Spear with Round End (brown)
+1 6 -50 -179 -30 -1 0 0 0 1 0 0 0 -1 4497.dat
+0 // Minifig Spear with Round End (brown)
+1 6 50 -179 -30 -1 0 0 0 1 0 0 0 -1 4497.dat
+0 // Minifig Shield Triangular with Blue Lion on Yellow Pattern (light_grey)
+1 7 64 -134 -10 0 0 -1 0 1 0 1 0 0 3846p4g.dat
+0 // Minifig Shield Triangular with Yellow Lion on Blue Pattern (light_grey)
+1 7 -64 -134 -10 0 0 1 0 1 0 -1 0 0 3846p4h.dat
+0 // Wheel  2.8 x 34 with  8 Spokes with Round Hole for Wheel Holding Pin (brown)
+1 6 50 -3 160 0 0 -1 0 1 0 1 0 0 4489a.dat
+0 // Wheel  2.8 x 34 with  8 Spokes with Round Hole for Wheel Holding Pin (brown)
+1 6 50 -3 0 0 0 -1 0 1 0 1 0 0 4489a.dat
+0 // Wheel  2.8 x 34 with  8 Spokes with Round Hole for Wheel Holding Pin (brown)
+1 6 -50 -3 0 0 0 1 0 1 0 -1 0 0 4489a.dat
+0 // Wheel  2.8 x 34 with  8 Spokes with Round Hole for Wheel Holding Pin (brown)
+1 6 -50 -3 160 0 0 1 0 1 0 -1 0 0 4489a.dat
+
+
+0 STEP
+0 FILE 6062 - Slider Bottom.ldr
+0 A flat black plate-based sliding base with grooved tiles and center-stud plates.
+0 Name: 6062 - Slider Bottom.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  4 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (black)
+1 0 -30 -8 0 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -8 0 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 30 -8 0 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 STEP
+0 // Plate  2 x  3 (black)
+1 0 0 -16 10 0 0 -1 0 1 0 1 0 0 3021.dat
+0 STEP
+0 // Plate  1 x  2 (black)
+1 0 0 -24 30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -24 10 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -24 -10 -1 0 0 0 1 0 0 0 -1 3794a.dat
+
+
+

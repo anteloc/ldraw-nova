@@ -1,0 +1,2669 @@
+0 FILE 8855 - Prop Plane.ldr
+0 A large Technic propeller plane with a geared engine, adjustable wings, pontoons, a tail assembly, and an articulated pilot figure.
+0 Name: 8855 - Prop Plane.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+0 !HISTORY 2019-03-09 [technicbasics] Import unofficial files, clean-up and OMRize file
+
+0 !HELP Some pieces needed scaling/skewing due to strain in physical model (marked with comments)
+
+0 !KEYWORDS float plane, pontoon plane, 1988
+
+0 !THEME Technic
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 -50 -197 -10 0 0 -1 0 1 0 1 0 0 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 50 -197 -10 0 0 -1 0 1 0 1 0 0 3703.dat
+0 // Technic Pin with Friction (black)
+1 0 40 -187 -150 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -40 -187 -150 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 60 -187 10 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -60 -187 10 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 -30 -197 -190 0 0 -1 0 1 0 1 0 0 3894.dat
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 30 -197 -190 0 0 -1 0 1 0 1 0 0 3894.dat
+0 // Technic Pin (light_grey)
+1 7 40 -187 -210 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Technic Pin (light_grey)
+1 7 -40 -187 -210 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Technic Axle Pin (light_grey)
+1 7 60 -187 -90 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Axle Pin (light_grey)
+1 7 -60 -187 -90 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -30 -205 -190 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 30 -205 -190 0 0 -1 0 1 0 1 0 0 3023.dat
+0 STEP
+0 // Plate  2 x  4 (yellow)
+1 14 0 -205 -230 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  6 (yellow)
+1 14 0 -205 -150 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  1 x  6 (yellow)
+1 14 0 -205 -40 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  2 x  2 Corner (yellow)
+1 14 -50 -205 20 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (yellow)
+1 14 50 -205 20 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 -50 -221 70 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Axle  6 (black)
+1 0 0 -211 70 1 0 0 0 0 1 0 -1 0 3706.dat
+0 // These two pieces scaled 0.975 in length to avoid overlap (why don't they fit?)
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -30.25 -211 70 0 0 -0.975 0 1 0 1 0 0 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -10.75 -211 70 0 0 0.975 0 1 0 -1 0 0 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 20 -211 70 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 0 -191.015 69.2357 -1 0 0 0 0.0382 0.9993 0 0.9993 -0.0382 4273a.dat
+0 // Technic Axle  2 (black)
+1 0 0 -181.022 68.8536 0 0 -1 0.9993 -0.0382 0 -0.0382 -0.9993 0 3704.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 0 -171.029 68.4715 0 -1 0 0.0382 0 -0.9993 0.9993 0 0.0382 3651.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 35 -211 70 0 0 -1 0 1 0 1 0 0 4265a.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 50 -221 70 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Plate  1 x  6 (yellow)
+1 14 0 -213 20 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  4 (yellow)
+1 14 0 -213 -40 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  3 (yellow)
+1 14 -50 -213 -20 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 50 -213 -20 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Brick  2 x  2 (yellow)
+1 14 0 -229 -230 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Brick  1 x  2 (yellow)
+1 14 30 -229 -210 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (yellow)
+1 14 -30 -229 -210 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 30 -229 -240 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 -30 -229 -240 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 30 -229 -180 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 -30 -229 -180 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 STEP
+1 7 0 -229 -250 1 0 0 0 1 0 0 0 1 8855 - Engine block.ldr
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 50 -237 10 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 -50 -237 10 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Pin with Friction (black)
+1 0 60 -227 10 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -60 -227 10 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Brick  1 x  4 with Holes (light_grey)
+1 7 0 -293 -320 1 0 0 0 1 0 0 0 1 3701.dat
+0 STEP
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 0 -237 20 -1 0 0 0 1 0 0 0 -1 3701.dat
+0 // Technic Axle Pin (light_grey)
+1 7 0 -227 30 0 -0.1951 -0.9808 0 0.9808 -0.1951 1 0 0 3749.dat
+0 // Technic Gear 16 Tooth (light_grey)
+1 7 0 -227 40 -0.9808 -0.1951 0 -0.1951 0.9808 0 0 0 -1 4019.dat
+0 // Technic Brick  1 x  8 with Holes (light_grey)
+1 7 -10 -247 -200 0 0 -1 -1 0 0 0 1 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (light_grey)
+1 7 10 -247 -200 0 0 -1 -1 0 0 0 1 0 3702.dat
+0 // Technic Axle  4 (black)
+1 0 0 -307 -190 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Axle  4 (black)
+1 0 0 -187 -190 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Plate  1 x  6 (yellow)
+1 14 0 -301 -220 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (yellow)
+1 14 0 -301 -320 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+1 7 0 -301 -220 1 0 0 0 1 0 0 0 1 8855 - Piston gear.ldr
+0 // Plate  1 x  2 (yellow)
+1 14 0 -245 20 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  2 Corner (yellow)
+1 14 50 -245 20 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (yellow)
+1 14 -50 -245 20 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 50 -245 60 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 -50 -245 60 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // These two pieces scaled 0.9833 in length due to strain in the physical model
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 50 -210.576 -265.387 0 0 -1 -0.5333 -0.8423 0 -0.8333 0.5391 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -50 -210.576 -265.387 0 0 -1 -0.5333 -0.8423 0 -0.8333 0.5391 0 3702.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 50 -325 -250 0 0 -1 0 1 0 1 0 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -50 -325 -250 0 0 -1 0 1 0 1 0 0 3702.dat
+0 // Technic Pin with Friction (black)
+1 0 60 -315 -190 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -60 -315 -190 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Plate  1 x  4 (yellow)
+1 14 0 -253 20 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 50 -253 30 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 -50 -253 30 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 0 -277 20 1 0 0 0 1 0 0 0 1 3894.dat
+0 STEP
+0 // These two pieces scaled 1.0268 in length due to strain in the physical model
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 70 -359.141 -145.801 0 0 -1 -0.5999 0.8116 0 0.8333 0.5842 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -70 -359.141 -145.801 0 0 -1 -0.5999 0.8116 0 0.8333 0.5842 0 3702.dat
+0 // Technic Brick  1 x 12 with Holes (yellow)
+1 14 70 -287 0 0 0 -1 -1 0 0 0 1 0 3895.dat
+0 // Technic Brick  1 x 12 with Holes (yellow)
+1 14 -70 -287 0 0 0 -1 -1 0 0 0 1 0 3895.dat
+0 // Technic Pin with Friction (black)
+1 0 80 -347 10 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 80 -387 10 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -80 -387 10 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -80 -347 10 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 80 -387 -90 1 0 0 0 0.8116 -0.5842 0 0.5842 0.8116 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -80 -387 -90 1 0 0 0 0.8116 -0.5842 0 0.5842 0.8116 4459.dat
+0 // Plate  2 x  2 (yellow)
+1 14 40 -333 -190 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  2 x  2 (yellow)
+1 14 -40 -333 -190 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  1 x  6 (yellow)
+1 14 0 -333 -220 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 90 -397 10 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 90 -357 10 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Plate  1 x  2 (yellow)
+1 14 90 -365 10 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x 10 (yellow)
+1 14 90 -373 10 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (yellow)
+1 14 -90 -373 10 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 -90 -397 10 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 -90 -357 10 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -90 -365 10 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 90 -397 -90 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 -90 -397 -90 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Plate  2 x  4 (yellow)
+1 14 0 -341 -210 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  1 x  4 (yellow)
+1 14 0 -341 -180 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 STEP
+1 7 1 -173 -100 1 0 0 0 1 0 0 0 1 8855 - Bottom gear.ldr
+0 STEP
+1 7 0 -157 -100 -1 0 0 0 -1 0 0 0 1 8855 - Bottom link.ldr
+0 STEP
+0 // Plate  2 x  6 (yellow)
+1 14 0 -173 -150 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  2 x  4 (yellow)
+1 14 -40 -173 -10 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  2 x  4 (yellow)
+1 14 40 -173 -10 0 0 -1 0 1 0 1 0 0 3020.dat
+1 7 0 -187 130 -1 0 0 0 0.25 -0.968 0 -0.968 -0.25 8855 - Bottom back connector.ldr
+0 STEP
+1 14 0 -0.35 0 1 0 0 0 1 0 0 0 1 8855 - Pontoons.ldr
+0 STEP
+1 7 0 -253 60 -1 0 0 0 1 0 0 0 -1 8855 - Triangle joint.ldr
+0 STEP
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 30 -264.826 246.804 0 0 -1 -0.4938 0.8696 0 0.8696 0.4938 0 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 -30 -264.826 246.804 0 0 -1 -0.4938 0.8696 0 0.8696 0.4938 0 3703.dat
+0 // Plate  1 x  3 (yellow)
+1 14 50 -285 40 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 -50 -285 40 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Technic Pin with Friction (black)
+1 0 40 -246.255 234.35 -1 0 0 0 0.8696 0.4938 0 0.4938 -0.8696 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -40 -246.255 234.35 -1 0 0 0 0.8696 0.4938 0 0.4938 -0.8696 4459.dat
+0 // Technic Axle  8 (black)
+1 0 0 -187 130 -1 0 0 0 0.9 0.4359 0 0.4359 -0.9 3707.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 70 -187 130 0 0 -1 -0.9 -0.4359 0 -0.4359 0.9 0 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -70 -187 130 0 0 1 0.9 -0.4359 0 0.4359 0.9 0 3713.dat
+0 STEP
+1 14 0 -304.251 233.331 1 0 0 0 1 0.007 0 -0.007 1 8855 - Tail.ldr
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 50 -286.361 243.916 0 0 -1 0.9999 0.0108 0 0.0108 -0.9999 0 3894.dat
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 -50 -286.361 243.916 0 0 -1 0.9999 0.0108 0 0.0108 -0.9999 0 3894.dat
+0 // Technic Axle 10 (black)
+1 0 0 -326.25 233.484 -1 0 0 0 0.9999 0.0108 0 0.0108 -0.9999 3737.dat
+0 STEP
+0 // Technic Seat  3 x  2 Base (black)
+1 0 40 -213 -40 1 0 0 0 1 0 0 0 1 2717.dat
+0 // Technic Pin with Friction (black)
+1 0 0 -235 -30 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Seat  3 x  2 Base (black)
+1 0 -40 -213 -40 1 0 0 0 1 0 0 0 1 2717.dat
+0 // Plate  1 x  6 (yellow)
+1 14 0 -333 -320 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Propeller  3 Blade 15 Diameter with Light Grey Technic Brick and Gear 24t (black)
+1 0 0 -325 -320 1 0 0 0 1 0 0 0 1 8855 - 2742c01.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 70 -365.253 186.807 0 0 -1 0.5062 0.8624 0 0.8624 -0.5062 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -70 -365.253 186.807 0 0 -1 0.5062 0.8624 0 0.8624 -0.5062 0 3702.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 90 -326.25 233.484 0 0 -1 0.9999 0.0108 0 0.0108 -0.9999 0 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -90 -326.25 233.484 0 0 1 -0.9999 0.0108 0 -0.0108 -0.9999 0 3713.dat
+0 STEP
+1 14 0 -365 10 1 0 0 0 1 0 0 0 1 8855 - Wings.ldr
+0 // Technic Steering Link  6L Type 1 (black)
+1 0 34.641 -287 100 -0.999 -0.0143 -0.0427 0.045 -0.3167 -0.9475 0.0001 -0.9483 0.3171 2739a.dat
+0 // Technic Steering Link  6L Type 1 (black)
+1 0 -34.641 -287 100 -0.999 0.0143 0.0427 -0.045 -0.3167 -0.9475 -0.0001 -0.9483 0.3171 2739a.dat
+1 1 105.5 -9.4 -219.5 0.259 0 -0.966 0 1 0 0.966 0 0.259 8855 - Pilot.ldr
+
+
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Engine block.ldr
+0 A light grey and red Technic engine block built from bricks, plates, and slope pieces forming the cylindrical engine housing.
+0 Name: 8855 - Engine block.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x  4 (light_grey)
+1 7 0 -8 -50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 30 -8 -20 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -30 -8 -20 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -8 20 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 30 -8 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -30 -8 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (light_grey)
+1 7 -30 -32 0 0 0 -1 0 1 0 1 0 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (light_grey)
+1 7 30 -32 0 0 0 -1 0 1 0 1 0 0 3702.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 0 -32 -50 1 0 0 0 1 0 0 0 1 3660.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 0 -32 20 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Technic Pin (light_grey)
+1 7 40 -22 -60 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Technic Pin (light_grey)
+1 7 -40 -22 -60 1 0 0 0 1 0 0 0 1 3673.dat
+0 STEP
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -40 -60 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 0 -40 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 30 -40 60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -30 -40 60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  6 (red)
+1 4 0 -40 10 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  2 x  2 Corner (red)
+1 4 30 -40 -30 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (red)
+1 4 -30 -40 -30 0 0 -1 0 1 0 1 0 0 2420.dat
+0 STEP
+0 // Brick  1 x  3 (light_grey)
+1 7 30 -64 50 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (light_grey)
+1 7 -30 -64 50 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Plate  1 x  4 (red)
+1 4 30 -48 -20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 -30 -48 -20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  6 (red)
+1 4 50 -48 20 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (red)
+1 4 -50 -48 20 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 0 -64 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 STEP
+0 // Plate  1 x  2 (red)
+1 4 40 -56 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 -40 -56 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 -50 -72 10 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 50 -72 10 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 30 -88 60 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 -30 -88 60 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -30 -96 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 30 -96 60 0 0 -1 0 1 0 1 0 0 3023.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Piston.ldr
+0 A small piston assembly consisting of a piston block mounted on connectors and a short axle.
+0 Name: 8855 - Piston.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  2 (black)
+1 0 0 0 30 0 0 -1 0 1 0 1 0 0 3704.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 0 0 20 0 -1 0 1 0 0 0 0 1 3651.dat
+0 STEP
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 0 0 40 -1 0 0 0 1 0 0 0 -1 3651.dat
+0 // Technic Piston  2 x  2 Block (light_grey)
+1 7 0 0 60 1 0 0 0 0 1 0 -1 0 3652.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Piston gear.ldr
+0 A compact gear mechanism linking a 24-tooth gear and axle to a Technic brick for piston actuation.
+0 Name: 8855 - Piston gear.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x  4 with Holes (light_grey)
+1 7 0 -24 0 1 0 0 0 1 0 0 0 1 3701.dat
+0 // Technic Axle Pin (light_grey)
+1 7 0 -14 -10 0 0 1 0 1 0 -1 0 0 3749.dat
+0 STEP
+0 // Technic Gear 24 Tooth with 3 Axleholes (light_grey)
+1 7 0 -14 -20 0 -1 0 -1 0 0 0 0 -1 3648a.dat
+0 STEP
+0 // Technic Axle  4 (black)
+1 0 0 -30 -50 0 0.7071 0.7071 0 0.7071 -0.7071 -1 0 0 3705.dat
+1 7 0 -30 -50 -1 0 0 0 0 1 0 1 0 8855 - Piston.ldr
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Bottom gear.ldr
+0 A drivetrain subassembly with belt wheels, axles, and toggle connectors transferring motion along the underside.
+0 Name: 8855 - Bottom gear.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  3 (black)
+1 0 -1 -14 -20 1 0 0 0 0 -1 0 1 0 4519.dat
+0 // Technic Axle  3 (black)
+1 0 -1 -14 20 1 0 0 0 0 -1 0 1 0 4519.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -25 -14 20 0 0 -1 -1 0 0 0 1 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -25 -14 -20 0 0 -1 -1 0 0 0 1 0 4265a.dat
+0 STEP
+0 // Technic Wedge Belt Wheel - Not Reinforced (light_grey)
+1 7 -16 -14 0 0 0 -1 -1 0 0 0 1 0 4185.dat
+0 // Technic Axle  2 (black)
+1 0 -1 -14 0 1 0 0 0 0 -1 0 1 0 3704.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 -1 6 0 1 0 0 0 0 1 0 -1 0 4273a.dat
+0 STEP
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 -1 -34 0 -1 0 0 0 0 -1 0 -1 0 4273a.dat
+0 // Technic Axle  4 (black)
+1 0 -1 -64 0 0 0 -1 1 0 0 0 -1 0 3705.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 -1 -14 -40 1 0 0 0 -1 0 0 0 -1 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 -1 -14 40 1 0 0 0 1 0 0 0 1 3651.dat
+0 STEP
+0 // Technic Wedge Belt Wheel - Not Reinforced (light_grey)
+1 7 14 -14 0 0 0 -1 -1 0 0 0 1 0 4185.dat
+0 STEP
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 23 -14 -20 0 0 1 1 0 0 0 1 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 23 -14 20 0 0 1 1 0 0 0 1 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 23 -14 -20 0 0 1 1 0 0 0 1 0 4265a.dat
+0 // Technic Axle Pin (light_grey)
+1 7 -1 -14 -50 0 0 1 0 -1 0 1 0 0 3749.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 -1 -24 -60 1 0 0 0 1 0 0 0 1 3700.dat
+1 14 -1 0 90 1 0 0 0 1 0 0 0 1 8855 - Bottom gear 2.ldr
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Bottom gear 2.ldr
+0 A secondary bottom gear train built around a 16-tooth gear on a long axle within Technic bricks.
+0 Name: 8855 - Bottom gear 2.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 0 -24 30 1 0 0 0 1 0 0 0 1 3701.dat
+0 // Technic Axle  6 (black)
+1 0 0 -14 0 0 0 -1 0 1 0 1 0 0 3706.dat
+0 // Plate  1 x  2 (yellow)
+1 14 0 -32 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Technic Gear 16 Tooth (light_grey)
+1 7 0 -14 50 1 0 0 0 1 0 0 0 1 4019.dat
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 0 -24 -30 1 0 0 0 1 0 0 0 1 3701.dat
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 -10 -54 10 0 1 0 -1 0 0 0 0 1 3894.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 0 -14 -10 0 1 0 1 0 0 0 0 -1 3713.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Bottom link.ldr
+0 A linkage subassembly using a steering link and towball connectors to connect the bottom structure.
+0 Name: 8855 - Bottom link.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Steering Link  6L Type 1 (black)
+1 0 0 -12 0 1 0 0 0 0.9935 -0.1136 0 0.1136 0.9935 2739a.dat
+0 // Technic Axle Towball (light_grey)
+1 7 0 0 0 0 -1 0 1 0 0 0 0 1 2736.dat
+0 // Technic Axle Towball (light_grey)
+1 7 0 -11.3613 99.8109 0 -1 0 0.9993 0 -0.0382 0.0382 0 0.9993 2736.dat
+0 STEP
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 0 -4.1314 120.102 0 -1 0 0.9993 0 -0.0382 0.0382 0 0.9993 4273a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 0.63 100.269 0 -1 0 -0.0382 0 -0.9993 0.9993 0 -0.0382 4265a.dat
+0 // Technic Axle  6 (black)
+1 0 0 -6.042 170.065 0 -1 0 -0.0382 0 -0.9993 0.9993 0 -0.0382 3706.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Bottom back connector.ldr
+0 A rear connector built from two-blade rotors, axles, and pin connectors joining the tail section.
+0 Name: 8855 - Bottom back connector.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Rotor  2 Blade with 2 Studs (black)
+1 0 -10 0 0 0 -1 0 0 0 -1 1 0 0 2711.dat
+0 // Technic Axle  3 (black)
+1 0 0 0 -40 1 0 0 0 0 -1 0 1 0 4519.dat
+0 // Technic Axle  3 (black)
+1 0 0 0 40 1 0 0 0 0 -1 0 1 0 4519.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -23 0 -40 0 0 -1 -1 0 0 0 1 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -23 0 40 0 0 -1 -1 0 0 0 1 0 4265a.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 0 19.1575 -34.2561 1 0 0 0 0.2872 0.9579 0 -0.9579 0.2872 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 0 -19.856 37.6042 1 0 0 0 -0.1198 -0.9928 0 0.9928 -0.1198 3651.dat
+0 STEP
+0 // Technic Rotor  2 Blade with 2 Studs (black)
+1 0 10 0 0 0 1 0 0 0 1 1 0 0 2711.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 23 0 -40 0 0 1 1 0 0 0 1 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 23 0 40 0 0 1 1 0 0 0 1 0 4265a.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Pontoons.ldr
+0 A pair of pontoon floats with sloped plating, axles, and rubber tyres mounted on yellow wheel rims.
+0 Name: 8855 - Pontoons.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x  4 (yellow)
+1 14 -189.34 -17 -140 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  3 (yellow)
+1 14 -189.34 -17 130 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  2 x  3 (yellow)
+1 14 -169.34 -17 -80 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 -169.34 -17 -40 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 -169.34 -17 0 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 -169.34 -17 40 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 -169.34 -17 80 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 169.34 -17 -80 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 169.34 -17 -40 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 169.34 -17 0 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 169.34 -17 40 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 169.34 -17 80 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  1 x  3 (yellow)
+1 14 149.34 -17 130 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  4 (yellow)
+1 14 149.34 -17 -140 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (yellow)
+1 14 -189.34 -41 -170 1 0 0 0 1 0 0 0 1 4287a.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (yellow)
+1 14 149.34 -41 -170 1 0 0 0 1 0 0 0 1 4287a.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 -189.34 -41 0 0 0 -1 0 1 0 1 0 0 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 149.34 -41 0 0 0 -1 0 1 0 1 0 0 3703.dat
+0 // Technic Pin with Friction (black)
+1 0 -179.34 -31 -40 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -179.34 -31 40 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 159.34 -31 -40 1 0 0 0 1 0 0 0 1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 159.34 -31 40 1 0 0 0 1 0 0 0 1 4459.dat
+0 STEP
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 -149.34 -41 0 0 0 -1 0 1 0 1 0 0 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 189.34 -41 0 0 0 -1 0 1 0 1 0 0 3703.dat
+0 // Plate  1 x  4 (yellow)
+1 14 -149.34 -17 -140 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 189.34 -17 -140 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (yellow)
+1 14 189.34 -41 -170 1 0 0 0 1 0 0 0 1 4287a.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (yellow)
+1 14 -149.34 -41 -170 1 0 0 0 1 0 0 0 1 4287a.dat
+0 // Plate  1 x  3 (yellow)
+1 14 -149.34 -17 130 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 189.34 -17 130 0 0 1 0 1 0 -1 0 0 3623.dat
+1 7 -169.34 -31 40 1 0 0 0 1 0 0 0 1 8855 - Pontoon joint 1.ldr
+1 7 169.34 -31 -40 -1 0 0 0 1 0 0 0 -1 8855 - Pontoon joint 1.ldr
+1 7 -169.34 -31 -40 -1 0 0 0 1 0 0 0 -1 8855 - Pontoon joint 2.ldr
+1 7 169.34 -31 40 1 0 0 0 1 0 0 0 1 8855 - Pontoon joint 2.ldr
+0 STEP
+0 // Plate  2 x  3 (yellow)
+1 14 -169.34 -49 -20 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 -169.34 -49 20 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 169.34 -49 -20 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 169.34 -49 20 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  1 x  4 (yellow)
+1 14 -149.34 -49 -140 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 -189.34 -49 -140 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 149.34 -49 -140 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 189.34 -49 -140 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  3 (yellow)
+1 14 -149.34 -49 130 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 -189.34 -49 130 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 149.34 -49 130 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 189.34 -49 130 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 169.34 -49 -90 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 -169.34 -49 -90 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 -169.34 -49 90 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 169.34 -49 90 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -149.34 -49 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -189.34 -49 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -189.34 -49 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -149.34 -49 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 149.34 -49 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 189.34 -49 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 149.34 -49 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 189.34 -49 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Technic Axle  4 (black)
+1 0 169.34 -31 -80 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Axle  4 (black)
+1 0 169.34 -31 80 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Axle  4 (black)
+1 0 -169.34 -31 80 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Axle  4 (black)
+1 0 -169.34 -31 -80 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -134.34 -31 -80 0 0 1 0 1 0 -1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -134.34 -31 80 0 0 1 0 1 0 -1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 204.34 -31 -80 0 0 1 0 1 0 -1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 204.34 -31 80 0 0 1 0 1 0 -1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 134.34 -31 -80 0 0 -1 0 1 0 1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 134.34 -31 80 0 0 -1 0 1 0 1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -204.34 -31 -80 0 0 -1 0 1 0 1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -204.34 -31 80 0 0 -1 0 1 0 1 0 0 4265a.dat
+0 // Technic Axle  6 (black)
+1 0 -129.893 -128.827 -50 0.5635 0.8261 0 -0.8261 0.5635 0 0 0 1 3706.dat
+0 // Technic Axle  6 (black)
+1 0 -129.893 -128.827 50 0.5635 0.8261 0 -0.8261 0.5635 0 0 0 1 3706.dat
+0 // Technic Axle  6 (black)
+1 0 129.893 -128.827 50 0.5635 -0.8261 0 0.8261 0.5635 0 0 0 1 3706.dat
+0 // Technic Axle  6 (black)
+1 0 129.893 -128.827 -50 0.5635 -0.8261 0 0.8261 0.5635 0 0 0 1 3706.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 101.717 -170.132 -50 0 -0.8261 0.5635 0 0.5635 0.8261 -1 0 0 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 101.717 -170.132 50 0 -0.8261 0.5635 0 0.5635 0.8261 -1 0 0 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 -101.717 -170.132 50 0 0.8261 -0.5635 0 0.5635 0.8261 1 0 0 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 -101.717 -170.132 -50 0 0.8261 -0.5635 0 0.5635 0.8261 1 0 0 3651.dat
+0 STEP
+1 7 0 -71 -89 -1 0 0 0 0 -1 0 -1 0 8855 - Pontoon joint 3.ldr
+1 7 0 -71 89 1 0 0 0 0 -1 0 1 0 8855 - Pontoon joint 3.ldr
+0 // Plate  2 x  3 (yellow)
+1 14 169.34 -49 -200 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 -169.34 -49 -200 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 169.34 -71 -93 -1 0 0 0 -1 0 0 0 1 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 169.34 -71 93 -1 0 0 0 1 0 0 0 -1 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -169.34 -71 93 -1 0 0 0 1 0 0 0 -1 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -169.34 -71 -94 -1 0 0 0 -1 0 0 0 1 4265a.dat
+0 STEP
+0 // Technic Axle 12 (black)
+1 0 90.45 -186.65 0 0 0 -1 0 1 0 1 0 0 3708.dat
+0 // Technic Axle 12 (black)
+1 0 -90.45 -186.65 0 0 0 -1 0 1 0 1 0 0 3708.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 70.45 -186.65 90 0 0 -1 0 -1 0 -1 0 0 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 -70.45 -186.65 90 0 0 1 0 1 0 -1 0 0 3651.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -90.45 -186.65 35 -1 0 0 0 1 0 0 0 -1 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 90.45 -186.65 35 -1 0 0 0 1 0 0 0 -1 4265a.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -90.45 -186.65 110 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 90.45 -186.65 110 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -90.45 -186.65 -35 1 0 0 0 1 0 0 0 1 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 90.45 -186.65 -35 1 0 0 0 1 0 0 0 1 4265a.dat
+0 STEP
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 -70.45 -186.65 -90 0 0 1 0 1 0 -1 0 0 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 70.45 -186.65 -90 0 0 -1 0 -1 0 -1 0 0 3651.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -90.45 -186.65 -110 1 0 0 0 1 0 0 0 1 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 90.45 -186.65 -110 1 0 0 0 1 0 0 0 1 3713.dat
+0 STEP
+0 // Wheel Rim  8 x 17.5 with Axlehole (yellow)
+1 14 169.34 -31 -140 0 0 -1 0 1 0 1 0 0 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (yellow)
+1 14 -170.66 -31 -140 0 0 -1 0 1 0 1 0 0 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (yellow)
+1 14 169.34 -31 140 0 0 -1 0 1 0 1 0 0 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (yellow)
+1 14 -170.66 -31 140 0 0 -1 0 1 0 1 0 0 3482.dat
+0 // Tyre  7/ 56 x 17 Offset Tread (rubber_black)
+1 256 169.34 -31 -140 0 0 -1 0 1 0 1 0 0 3483.dat
+0 // Tyre  7/ 56 x 17 Offset Tread (rubber_black)
+1 256 169.34 -31 140 0 0 -1 0 1 0 1 0 0 3483.dat
+0 // Tyre  7/ 56 x 17 Offset Tread (rubber_black)
+1 256 -170.66 -31 140 0 0 -1 0 1 0 1 0 0 3483.dat
+0 // Tyre  7/ 56 x 17 Offset Tread (rubber_black)
+1 256 -170.66 -31 -140 0 0 -1 0 1 0 1 0 0 3483.dat
+0 // Technic Axle  3 (black)
+1 0 169.34 -31 -140 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Axle  3 (black)
+1 0 169.34 -31 140 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Axle  3 (black)
+1 0 -170.66 -31 -140 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Axle  3 (black)
+1 0 -170.66 -31 140 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Axle  8 (black)
+1 0 0 -186.65 90 1 0 0 0 -1 0 0 0 -1 3707.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Pontoon joint 1.ldr
+0 A steering-arm linkage with toggle connector and bushing that articulates the pontoon assembly.
+0 Name: 8855 - Pontoon joint 1.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 // This piece skewed 0.025 due to strain in the physical model
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Steering Arm (light_grey)
+1 7 0 0 10 -1 0 0 0 0 -1 0 -1 -0.025 4261.dat
+0 // Technic Axle  3 (black)
+1 0 0 -40 31 0 1 0 0 0 -1 -1 0 0 4519.dat
+0 STEP
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 11.2705 -56.522 10 0 0.8261 0.5635 0 0.5635 -0.8261 -1 0 0 4273a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 -40 25 0 1 0 -1 0 0 0 0 1 4265a.dat
+0 STEP
+0 // Technic Steering Arm (light_grey)
+1 7 0 0 30 1 0 0 0 0 -1 0 1 0 4261.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Pontoon joint 2.ldr
+0 A steering-arm linkage with toggle connector and bushing that articulates the pontoon assembly.
+0 Name: 8855 - Pontoon joint 2.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 // This piece skewed 0.025 due to strain in the physical model
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Steering Arm (light_grey)
+1 7 0 0 10 -1 0 0 0 0 -1 0 -1 -0.025 4261.dat
+0 // Technic Axle  3 (black)
+1 0 0 -40 31 0 1 0 0 0 -1 -1 0 0 4519.dat
+0 STEP
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 -11.2705 -56.522 10 0 0.8261 -0.5635 0 -0.5635 -0.8261 -1 0 0 4273a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 -40 25 0 1 0 -1 0 0 0 0 1 4265a.dat
+0 STEP
+0 // Technic Steering Arm (light_grey)
+1 7 0 0 30 1 0 0 0 0 -1 0 1 0 4261.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Pontoon joint 3.ldr
+0 A rigid pontoon joint using Technic plates, pins, and axle connectors for secure mounting.
+0 Name: 8855 - Pontoon joint 3.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  3 (black)
+1 0 0 0 53.58 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 20 0 53.58 0 0 -1 -1 0 0 0 1 0 4273a.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 -20 0 53.58 0 0 1 -1 0 0 0 -1 0 4273a.dat
+0 STEP
+0 // Technic Pin with Friction (black)
+1 0 -40 -9 53.58 0 0 1 -1 0 0 0 -1 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 40 -9 53.58 0 0 1 -1 0 0 0 -1 0 4459.dat
+0 // Technic Plate  1 x  8 with Holes (black)
+1 0 -104.672 -7 26.7922 -0.9239 0 0.3827 0 1 0 -0.3827 0 -0.9239 4442.dat
+0 // Technic Plate  1 x  8 with Holes (black)
+1 0 104.672 -7 26.7922 0.9239 0 0.3827 0 1 0 -0.3827 0 0.9239 4442.dat
+0 STEP
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 -52.6135 -19 69.1009 0 0.776 -0.6307 -1 0 0 0 0.6307 0.776 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 52.6135 -19 69.1009 0 0.776 0.6307 -1 0 0 0 -0.6307 0.776 3651.dat
+0 // Technic Axle  3 (black)
+1 0 65.227 -19 84.6219 0.6307 0.776 0 0 0 1 0.776 -0.6307 0 4519.dat
+0 // Technic Axle  3 (black)
+1 0 -65.227 -19 84.6219 -0.6307 0.776 0 0 0 1 0.776 0.6307 0 4519.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 -77.8405 -19 100.143 0 -0.776 0.6307 -1 0 0 0 -0.6307 -0.776 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 77.8405 -19 100.143 0 -0.776 -0.6307 -1 0 0 0 0.6307 -0.776 3651.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Triangle joint.ldr
+0 A triangular joint subassembly combining a 16-tooth gear, a three-blade rotor, and towball connectors on a long axle.
+0 Name: 8855 - Triangle joint.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 0 -24 0 1 0 0 0 1 0 0 0 1 3894.dat
+0 // Technic Axle  6 (black)
+1 0 0 -14 10 0 0 -1 0 1 0 1 0 0 3706.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 -14 -15 -1 0 0 0 1 0 0 0 -1 4265a.dat
+0 // Technic Gear 16 Tooth (light_grey)
+1 7 0 -14 20 -1 0 0 0 1 0 0 0 -1 4019.dat
+0 STEP
+0 // Technic Rotor  3 Blade (light_grey)
+1 7 0 -14 -28 -1 0 0 0 0 1 0 1 0 2712.dat
+0 // Technic Axle Towball (light_grey)
+1 7 -34.641 -34 -28 0 -0.5 -0.866 0 0.866 -0.5 1 0 0 2736.dat
+0 // Technic Axle Towball (light_grey)
+1 7 34.641 -34 -28 0 -0.5 0.866 0 -0.866 -0.5 1 0 0 2736.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -34.641 -34 -17 -0.866 -0.5 0 -0.5 0.866 0 0 0 -1 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 34.641 -34 -17 0.866 -0.5 0 -0.5 -0.866 0 0 0 -1 4265a.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Tail.ldr
+0 An aircraft tail unit with left and right wing elements, sloped bricks, axles, and pin connectors forming the empennage.
+0 Name: 8855 - Tail.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 -30 6.4701 342.124 0 0 -1 -0.0725 0.9974 0 0.9974 0.0725 0 3701.dat
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 30 6.4701 342.124 0 0 -1 -0.0725 0.9974 0 0.9974 0.0725 0 3701.dat
+0 // Plate  1 x  4 (yellow)
+1 14 30 -1.5088 341.543 0 0 -1 -0.0725 0.9974 0 0.9974 0.0725 0 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 -30 -1.5088 341.543 0 0 -1 -0.0725 0.9974 0 0.9974 0.0725 0 3710.dat
+0 // Technic Pin  1/2 (light_grey)
+1 7 20 14.9929 362.796 -1 0 0 0 0.9974 0.0725 0 0.0725 -0.9974 4274.dat
+0 // Technic Pin  1/2 (light_grey)
+1 7 -20 14.9929 362.796 1 0 0 0 0.9974 -0.0725 0 0.0725 0.9974 4274.dat
+0 STEP
+0 // Wing  7 x 12 Right (yellow)
+1 14 -140 -10.2131 350.937 1 0 0 0 0.9974 -0.0725 0 0.0725 0.9974 3585.dat
+0 // Wing  7 x 12 Left (yellow)
+1 14 140 -10.2131 350.937 1 0 0 0 0.9974 -0.0725 0 0.0725 0.9974 3586.dat
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 30 -33.4245 339.222 0 0 -1 -0.0725 0.9974 0 0.9974 0.0725 0 3701.dat
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 -30 -33.4245 339.222 0 0 -1 -0.0725 0.9974 0 0.9974 0.0725 0 3701.dat
+0 // Technic Pin  1/2 (light_grey)
+1 7 20 -24.9017 359.895 -1 0 0 0 0.9974 0.0725 0 0.0725 -0.9974 4274.dat
+0 // Technic Pin  1/2 (light_grey)
+1 7 -20 -24.9017 359.895 1 0 0 0 0.9974 -0.0725 0 0.0725 0.9974 4274.dat
+0 // Technic Pin (light_grey)
+1 7 -20 -22 320 1 0 0 0 0.9974 -0.0725 0 0.0725 0.9974 3673.dat
+0 // Technic Pin (light_grey)
+1 7 20 -22 320 1 0 0 0 0.9974 -0.0725 0 0.0725 0.9974 3673.dat
+0 STEP
+0 // Plate  1 x  3 (yellow)
+1 14 12 -4.954 361.346 0 1 0 -0.997 0 -0.072 -0.072 0 0.997 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 -12 -4.954 361.346 0 -1 0 0.997 0 -0.072 0.072 0 0.997 3623.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 0 51.4206 85.2549 -1 0 0 0 -0.9902 -0.1397 0 -0.1397 0.9902 4273a.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 0 57.0083 45.6471 1 0 0 0 -0.9902 0.1397 0 -0.1397 -0.9902 4273a.dat
+0 // Technic Axle  8 (black)
+1 0 0 66.7867 -23.6666 0 0 -1 0.1397 -0.9902 0 -0.9902 -0.1397 0 3707.dat
+0 // Technic Axle 12 (black)
+1 0 0 36.0545 194.176 0 0 -1 0.1397 -0.9902 0 -0.9902 -0.1397 0 3708.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 0 20.6884 303.098 1 0 0 0 -0.9902 0.1397 0 -0.1397 -0.9902 3651.dat
+0 // Technic Axle  4 (black)
+1 0 0 17.8946 322.902 1 0 0 0 -0.9902 0.1397 0 -0.1397 -0.9902 3705.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -15 17.8946 322.902 0 0 -1 0.1397 -0.9902 0 -0.9902 -0.1397 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 15 17.8946 322.902 0 0 1 -0.1397 -0.9902 0 0.9902 -0.1397 0 4265a.dat
+0 // Technic Pin  1/2 (light_grey)
+1 7 10 54.2144 65.451 1 0 0 0 -0.9902 0.1397 0 -0.1397 -0.9902 4274.dat
+0 STEP
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 8855 - Tail body.ldr
+0 STEP
+0 // Slope Brick 33  3 x  1 (yellow)
+1 14 0 -64 250 1 0 0 0 1 0 0 0 1 4286.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (yellow)
+1 14 0 -64 330 -1 0 0 0 1 0 0 0 -1 4287a.dat
+0 // Brick  1 x  3 (yellow)
+1 14 0 -64 290 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 0 -88 270 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 0 -112 290 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 0 -136 310 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 0 -160 330 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 0 -184 350 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 0 -208 370 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Brick  1 x  3 (red)
+1 4 0 -88 310 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (yellow)
+1 14 0 -112 330 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (yellow)
+1 14 0 -136 350 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (yellow)
+1 14 0 -160 370 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  4 (yellow)
+1 14 0 -184 400 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  2 (yellow)
+1 14 0 -208 400 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 0 -88 360 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 0 -112 370 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 0 -136 390 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 0 -160 410 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Plate  1 x  4 (yellow)
+1 14 0 -216 400 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 0 -208 430 0 0 -1 0 1 0 1 0 0 3062b.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Tail body.ldr
+0 The tail boom built from long Technic bricks and plates pinned together with friction pins.
+0 Name: 8855 - Tail body.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 -10 -32 40 0 0 -1 0 1 0 1 0 0 3894.dat
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 10 -32 280 0 0 -1 0 1 0 1 0 0 3894.dat
+0 // Technic Brick  1 x 12 with Holes (yellow)
+1 14 -10 -32 220 0 0 -1 0 1 0 1 0 0 3895.dat
+0 // Technic Brick  1 x 12 with Holes (yellow)
+1 14 10 -32 100 0 0 -1 0 1 0 1 0 0 3895.dat
+0 // Technic Pin with Friction (black)
+1 0 0 -22 20 -1 0 0 0 1 0 0 0 -1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 0 -22 80 -1 0 0 0 1 0 0 0 -1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 0 -22 120 -1 0 0 0 1 0 0 0 -1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -20 -22 140 -1 0 0 0 1 0 0 0 -1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 20 -22 140 -1 0 0 0 1 0 0 0 -1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 0 -22 200 -1 0 0 0 1 0 0 0 -1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 0 -22 240 -1 0 0 0 1 0 0 0 -1 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 0 -22 300 -1 0 0 0 1 0 0 0 -1 4459.dat
+0 STEP
+0 // Plate  2 x  4 (yellow)
+1 14 0 -8 0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 30 -32 0 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 -30 -32 0 0 0 -1 0 1 0 1 0 0 3700.dat
+0 STEP
+0 // Plate  2 x  4 (yellow)
+1 14 0 -40 0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  2 x  3 (yellow)
+1 14 0 -40 170 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  6 (yellow)
+1 14 0 -40 80 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -40 210 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -40 230 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -40 250 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -40 270 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -40 290 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -40 310 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -40 330 -1 0 0 0 1 0 0 0 -1 3794a.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Wings.ldr
+0 The main wings constructed from wing-front and wing-back Technic bricks, long plates, gears, and translucent indicator lights.
+0 Name: 8855 - Wings.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 0 -32 -50 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 240 -32 -30 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 560 -32 -30 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 -240 -32 -30 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 -560 -32 -30 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 -240 -32 30 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 -560 -32 30 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 0 -32 50 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 240 -32 30 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x 16 with Holes (yellow)
+1 14 560 -32 30 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Technic Brick  1 x  6 with Holes (light_grey)
+1 7 400 -32 -10 1 0 0 0 1 0 0 0 1 3894.dat
+0 // Technic Brick  1 x  6 with Holes (light_grey)
+1 7 400 -32 10 1 0 0 0 1 0 0 0 1 3894.dat
+0 // Technic Brick  1 x  6 with Holes (light_grey)
+1 7 -400 -32 -10 1 0 0 0 1 0 0 0 1 3894.dat
+0 // Technic Brick  1 x  6 with Holes (light_grey)
+1 7 -400 -32 10 1 0 0 0 1 0 0 0 1 3894.dat
+0 // Technic Pin with Friction (black)
+1 0 -140 -22 -40 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -100 -22 -40 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 100 -22 -40 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 140 -22 -40 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -140 -22 40 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -100 -22 40 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 100 -22 40 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 140 -22 40 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 360 -22 -20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 380 -22 -20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 420 -22 -20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 440 -22 -20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 440 -22 20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 420 -22 20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 380 -22 20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 360 -22 20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -360 -22 20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -380 -22 20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -420 -22 20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -440 -22 20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -420 -22 -20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -440 -22 -20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -380 -22 -20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -360 -22 -20 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -400 -22 0 0 0 -1 0 1 0 1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 400 -22 0 0 0 -1 0 1 0 1 0 0 4459.dat
+0 STEP
+0 // Plate  1 x  8 (yellow)
+1 14 710 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 710 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 710 -32 80 0 0 -1 0 1 0 1 0 0 2744.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 470 -32 80 0 0 -1 0 1 0 1 0 0 2744.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 350 -32 80 0 0 -1 0 1 0 1 0 0 2744.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 230 -32 80 0 0 -1 0 1 0 1 0 0 2744.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 -230 -32 80 0 0 -1 0 1 0 1 0 0 2744.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 -350 -32 80 0 0 -1 0 1 0 1 0 0 2744.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 -470 -32 80 0 0 -1 0 1 0 1 0 0 2744.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 -710 -32 80 0 0 -1 0 1 0 1 0 0 2744.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 470 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 350 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 230 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 -230 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 -350 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 -470 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 -710 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Plate  1 x  8 (yellow)
+1 14 470 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 350 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 230 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 -230 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 -350 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 -470 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 -710 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 STEP
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 -590 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Technic Brick  1 x  4 x  1.667 Wing Front (yellow)
+1 14 590 -32 -80 0 0 1 0 1 0 -1 0 0 2743.dat
+0 // Plate  1 x  6 (yellow)
+1 14 590 -8 -20 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (yellow)
+1 14 -590 -8 -20 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  8 (yellow)
+1 14 470 -40 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 350 -40 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 230 -40 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 -230 -40 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 -350 -40 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 -470 -40 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Brick  1 x  2 without Centre Stud (trans_red)
+1 36 710 -32 0 0 0 1 0 1 0 -1 0 0 3065.dat
+0 // Brick  1 x  2 without Centre Stud (trans_green)
+1 34 -710 -32 0 0 0 1 0 1 0 -1 0 0 3065.dat
+0 STEP
+0 // Plate  2 x  3 (yellow)
+1 14 0 -8 70 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  1 x  6 (yellow)
+1 14 590 -40 -20 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (yellow)
+1 14 -590 -40 -20 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  8 (yellow)
+1 14 710 -40 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 -710 -40 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Technic Axle  3 (black)
+1 0 700 -22 60 -1 0 0 0 0.9645 -0.264 0 -0.264 -0.9645 4519.dat
+0 // Technic Axle  3 (black)
+1 0 -700 -22 60 -1 0 0 0 0.9645 -0.264 0 -0.264 -0.9645 4519.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 725 -22 60 0 0 1 -0.264 0.9645 0 -0.9645 -0.264 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 695 -22 60 0 0 1 -0.264 0.9645 0 -0.9645 -0.264 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -695 -22 60 0 0 -1 0.264 0.9645 0 0.9645 -0.264 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -725 -22 60 0 0 -1 0.264 0.9645 0 0.9645 -0.264 0 4265a.dat
+0 // Technic Axle 10 (black)
+1 0 410 -22 60 -1 0 0 0 0.9645 -0.264 0 -0.264 -0.9645 3737.dat
+0 // Technic Axle 10 (black)
+1 0 260 -22 80 -1 0 0 0 0.9921 -0.1252 0 -0.1252 -0.9921 3737.dat
+0 // Technic Axle 10 (black)
+1 0 -410 -22 60 -1 0 0 0 0.9645 -0.264 0 -0.264 -0.9645 3737.dat
+0 // Technic Axle 10 (black)
+1 0 -260 -22 80 -1 0 0 0 0.9921 -0.1252 0 -0.1252 -0.9921 3737.dat
+0 // Technic Bush  1/2 Type 2 (light_grey)
+1 7 -485 -22 60 0 0 1 -0.264 0.9645 0 -0.9645 -0.264 0 4265b.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 485 -22 60 0 0 -1 0.264 0.9645 0 0.9645 -0.264 0 4265a.dat
+0 // Technic Gear  8 Tooth (light_grey)
+1 7 332 -22 60 0 0 1 -0.264 0.9645 0 -0.9645 -0.264 0 3647.dat
+0 // Technic Gear  8 Tooth (light_grey)
+1 7 332 -22 80 0 0 1 -0.1252 0.9921 0 -0.9921 -0.1252 0 3647.dat
+0 // Technic Gear  8 Tooth (light_grey)
+1 7 -332 -22 60 0 0 1 -0.264 0.9645 0 -0.9645 -0.264 0 3647.dat
+0 // Technic Gear  8 Tooth (light_grey)
+1 7 -332 -22 80 0 0 1 -0.1252 0.9921 0 -0.9921 -0.1252 0 3647.dat
+0 STEP
+1 14 10 -8 80 -1 0 0 0 1 0 0 0 -1 8855 - Wing joint left.ldr
+1 14 -10 -8 80 -1 0 0 0 1 0 0 0 -1 8855 - Wing joint right.ldr
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 680 -22 60 0 0 1 -0.9645 -0.264 0 0.264 -0.9645 0 4273a.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 500 -22 60 0 0 -1 -0.9645 0.264 0 0.264 0.9645 0 4273a.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 -680 -22 60 0 0 -1 -0.9645 0.264 0 0.264 0.9645 0 4273a.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 -500 -22 60 0 0 1 -0.9645 -0.264 0 0.264 -0.9645 0 4273a.dat
+0 STEP
+1 14 590 -13.319 57.624 1 0 0 0 0.965 0.264 0 -0.264 0.965 8855 - Flap.ldr
+1 14 -590 -13.319 57.624 1 0 0 0 0.965 0.264 0 -0.264 0.965 8855 - Flap.ldr
+0 // Plate  2 x  3 (yellow)
+1 14 0 -40 70 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  1 x 10 (yellow)
+1 14 90 -40 0 0 0 1 0 1 0 -1 0 0 4477.dat
+0 // Plate  1 x 10 (yellow)
+1 14 -90 -40 0 0 0 1 0 1 0 -1 0 0 4477.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Wing joint left.ldr
+0 A left wing mounting joint using a universal joint, towball, and toggle connector to allow wing articulation.
+0 Name: 8855 - Wing joint left.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  6 (black)
+1 0 -50 -14 0 1 0 0 0 0.9921 -0.1252 0 0.1252 0.9921 3706.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 -20 -11.4968 -19.8427 -1 0 0 0 0.9921 0.1252 0 0.1252 -0.9921 4273a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -24 -14 0 0 0 1 0.1252 0.9921 0 -0.9921 0.1252 0 4265a.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -60 -14 0 0 0 -1 -0.1252 0.9921 0 0.9921 0.1252 0 3713.dat
+0 // Technic Axle Towball (light_grey)
+1 7 -20 -10.2452 -29.7641 0 0 -1 -0.1252 0.9921 0 0.9921 0.1252 0 2736.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 0 -24 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 -80 -24 -20 0 0 1 0 1 0 -1 0 0 2744.dat
+0 // Technic Universal Joint 4L End with Bush End (light_grey)
+1 7 -100 -14 0 0 0 1 -0.9921 0.1252 0 -0.1252 -0.9921 0 3712.dat
+0 // Technic Universal Joint Centre Type 1 (light_grey)
+1 7 -130 -14 0 0 0 1 -0.9921 0.1252 0 -0.1252 -0.9921 0 3326a.dat
+0 // Technic Universal Joint 4L End with Bush End (light_grey)
+1 7 -160 -14 0 0 0 -1 -0.1252 0.9921 0 0.9921 0.1252 0 3712.dat
+0 // Technic Pin with Friction (black)
+1 0 -70 -14 -40 1 0 0 0 1 0 0 0 1 4459.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Wing joint right.ldr
+0 A right wing mounting joint using a universal joint, towball, and toggle connector to allow wing articulation.
+0 Name: 8855 - Wing joint right.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  6 (black)
+1 0 50 -14 0 -1 0 0 0 -0.9921 -0.1252 0 -0.1252 0.9921 3706.dat
+0 // Technic Connector Toggle Joint Toothed With No Slots (light_grey)
+1 7 20 -11.4968 -19.8427 1 0 0 0 -0.9921 0.1252 0 -0.1252 -0.9921 4273a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 24 -14 0 0 0 -1 0.1252 -0.9921 0 -0.9921 -0.1252 0 4265a.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 60 -14 0 0 0 1 -0.1252 -0.9921 0 0.9921 -0.1252 0 3713.dat
+0 // Technic Axle Towball (light_grey)
+1 7 20 -10.2452 -29.7641 0 0 1 -0.1252 -0.9921 0 0.9921 -0.1252 0 2736.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 0 -24 0 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  6 x  1.667 Wing Back (yellow)
+1 14 80 -24 -20 0 0 1 0 1 0 -1 0 0 2744.dat
+0 // Technic Universal Joint 4L End with Bush End (light_grey)
+1 7 100 -14 0 0 0 -1 0.9921 0.1252 0 0.1252 -0.9921 0 3712.dat
+0 // Technic Universal Joint Centre Type 1 (light_grey)
+1 7 130 -14 0 0 0 -1 0.9921 0.1252 0 0.1252 -0.9921 0 3326a.dat
+0 // Technic Universal Joint 4L End with Bush End (light_grey)
+1 7 160 -14 0 0 0 1 -0.1252 -0.9921 0 0.9921 -0.1252 0 3712.dat
+0 // Technic Pin with Friction (black)
+1 0 70 -14 -40 -1 0 0 0 -1 0 0 0 1 4459.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Flap.ldr
+0 A hinged wing flap made from a large plate and a holed Technic plate joined by half pins.
+0 Name: 8855 - Flap.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  6 (yellow)
+1 14 0 -8 10 1 0 0 0 1 0 0 0 1 3795.dat
+0 STEP
+0 // Technic Plate  1 x  8 with Holes (light_grey)
+1 7 0 -16 0 1 0 0 0 1 0 0 0 1 4442.dat
+0 STEP
+0 // Plate  4 x 10 (yellow)
+1 14 0 -16 50 1 0 0 0 1 0 0 0 1 3030.dat
+0 // Technic Pin  1/2 (light_grey)
+1 7 70 -18 0 0 1 0 -1 0 0 0 0 1 4274.dat
+0 // Technic Pin  1/2 (light_grey)
+1 7 -70 -18 0 0 1 0 -1 0 0 0 0 1 4274.dat
+
+
+
+
+
+0 STEP
+0 FILE 8855 - Pilot.ldr
+0 An articulated Technic action figure pilot with torso, limbs, head, helmet, and visor.
+0 Name: 8855 - Pilot.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 !KEYWORDS float plane, pontoon plane, 1988
+0 !HISTORY 2012-12-15 [jellby] Initial creation
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Action Figure Body Connector (blue)
+1 1 0 -115.977 -0.8897 1 0 0 0 0.9986 -0.0523 0 0.0523 0.9986 2699.dat
+0 // Technic Action Figure Torso with White Zipper Pattern (red)
+1 4 0 -115.977 -0.8897 1 0 0 0 0.9986 -0.0523 0 0.0523 0.9986 2698p01.dat
+0 // Technic Action Figure Body Lower (blue)
+1 1 0 -115.977 -0.8897 1 0 0 0 0.9986 -0.0523 0 0.0523 0.9986 2710.dat
+0 // Technic Action Figure Leg Upper Left (blue)
+1 1 15 -99 0 0.9659 0.2588 0 0 0 1 0.2588 -0.9659 0 2703.dat
+0 // Technic Action Figure Leg Upper Right (blue)
+1 1 -15 -99 0 1 0 0 0 0.9659 0.2588 0 -0.2588 0.9659 2709.dat
+0 // Technic Action Figure Leg Lower (blue)
+1 1 -10 -60.363 -10.3528 1 0 0 0 1 0 0 0 1 2704.dat
+0 // Technic Action Figure Leg Lower (blue)
+1 1 20.5231 -99 -39.9311 0.9659 0 -0.2588 0 1 0 0.2588 0 0.9659 2704.dat
+0 // Technic Action Figure Foot (black)
+1 0 20.5231 -59 -39.9311 0.9659 0 -0.2588 0 1 0 0.2588 0 0.9659 2706.dat
+0 // Technic Action Figure Foot (black)
+1 0 -10 -20.363 -10.3528 1 0 0 0 0.9205 -0.3907 0 0.3907 0.9205 2706.dat
+0 // Technic Action Figure Head with Standard Grin Pattern (yellow)
+1 14 0 -169.903 -3.7159 0.866 0 0.5 0.0262 0.9986 -0.0453 -0.4993 0.0523 0.8648 2707p06.dat
+0 // Technic Action Figure Hair (black)
+1 0 0 -211.845 -5.914 1 0 0 0 0.9986 -0.0523 0 0.0523 0.9986 2708.dat
+0 // Technic Action Figure Arm Bearing (blue)
+1 1 26.2 -161.914 -3.2972 0 0 -1 0.951 0.309 0 0.309 -0.951 0 2701.dat
+0 // Technic Action Figure Arm Bearing Pin (blue)
+1 1 26.2 -161.914 -3.2972 0 0 -1 0.951 0.309 0 0.309 -0.951 0 2705.dat
+0 // Technic Action Figure Arm Segment (blue)
+1 1 26.2 -161.914 -3.2972 0 0 -1 0.951 0.309 0 0.309 -0.951 0 2700.dat
+0 // Technic Action Figure Arm Bearing (blue)
+1 1 57.2 -161.914 -3.2972 0 0 -1 0.951 0.309 0 0.309 -0.951 0 2701.dat
+0 // Technic Action Figure Arm Bearing Pin (blue)
+1 1 57.2 -161.914 -3.2972 0 0 -1 0.951 0.309 0 0.309 -0.951 0 2705.dat
+0 // Technic Action Figure Arm Segment (blue)
+1 1 57.2 -161.914 -3.2972 0.9659 0 -0.2588 0.2462 0.309 0.9186 0.08 -0.951 0.2985 2700.dat
+0 // Technic Action Figure Hand (yellow)
+1 14 66.1293 -193.607 -13.595 -0.8365 -0.483 -0.2588 -0.0587 -0.3906 0.9186 -0.5448 0.7836 0.2985 2702.dat
+0 // Technic Action Figure Arm Bearing (blue)
+1 1 -26.2 -161.914 -3.2972 0 0 1 -0.951 0.309 0 -0.309 -0.951 0 2701.dat
+0 // Technic Action Figure Arm Bearing Pin (blue)
+1 1 -26.2 -161.914 -3.2972 0 0 1 -0.951 0.309 0 -0.309 -0.951 0 2705.dat
+0 // Technic Action Figure Arm Segment (blue)
+1 1 -26.2 -161.914 -3.2972 -0.866 0 0.5 -0.4756 0.309 -0.8236 -0.1545 -0.951 -0.2676 2700.dat
+0 // Technic Action Figure Arm Bearing (blue)
+1 1 -41.7 -136.381 4.999 -0.433 -0.75 0.5 -0.5054 -0.2573 -0.8236 0.7464 -0.6093 -0.2676 2701.dat
+0 // Technic Action Figure Arm Bearing Pin (blue)
+1 1 -41.7 -136.381 4.999 -0.433 -0.75 0.5 -0.5054 -0.2573 -0.8236 0.7464 -0.6093 -0.2676 2705.dat
+0 // Technic Action Figure Arm Segment (blue)
+1 1 -41.7 -136.381 4.999 -0.6597 -0.75 0.0474 0.2251 -0.2573 -0.9398 0.717 -0.6093 0.3386 2700.dat
+0 // Technic Action Figure Hand (yellow)
+1 14 -43.3342 -103.959 -6.6807 0.9794 -0.1964 0.0474 0.1103 0.3235 -0.9398 0.1692 0.9256 0.3386 2702.dat
+0 // Technic Action Figure Helmet Visor (Needs Work) (trans_clear)
+1 47 0 -198.863 -5.2336 0.866 0 0.5 0.0262 0.9986 -0.0453 -0.4993 0.0523 0.8648 2716.dat
+0 // Technic Action Figure Helmet (Needs Work) (white)
+1 15 0 -198.863 -5.2336 0.866 0 0.5 0.0262 0.9986 -0.0453 -0.4993 0.0523 0.8648 8855 - 2715.dat
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 8855 - 2715.dat
+0 A Technic action figure helmet part with a patternable top surface and visor collision note.
+0 Name: 8855 - 2715.dat
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP Position over head: Y=-33, Z=1
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CCW
+
+0 !CATEGORY Figure
+
+0 // Needs Work: Collides with 2716 visor in up position
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 s\8855 - 2715s01.dat
+1 16 0 0 0 -1 0 0 0 1 0 0 0 1 s\8855 - 2715s01.dat
+0 // Top patternable area
+3 16 19.3 -11.6 -10 16.3 -22.3 0 15 -20.6 -10
+4 16 16.3 -22.3 0 19.3 -11.6 -10 20.6 -11.6 -3.4 20.6 -13 0
+3 16 15 -20.6 -10 15 -11.6 -17 19.3 -11.6 -10
+3 16 15 -20.6 -10 8.8 -20.6 -17 15 -11.6 -17
+3 16 8.8 -20.6 -17 8.8 -11.6 -21.9 15 -11.6 -17
+3 16 0 -22.3 -18.4 8.8 -11.6 -21.9 8.8 -20.6 -17
+3 16 0 -11.6 -24 8.8 -11.6 -21.9 0 -22.3 -18.4
+3 16 16.3 -22.3 0 19.3 -11.6 10 15 -20.6 10
+4 16 20.6 -13 0 20.6 -11.6 3.4 19.3 -11.6 10 16.3 -22.3 0
+3 16 15 -11.6 17 15 -20.6 10 19.3 -11.6 10
+3 16 8.8 -20.6 17 15 -20.6 10 15 -11.6 17
+3 16 8.8 -11.6 21.9 8.8 -20.6 17 15 -11.6 17
+3 16 8.8 -11.6 21.9 0 -22.3 18.4 8.8 -20.6 17
+3 16 0 -11.6 24 0 -22.3 18.4 8.8 -11.6 21.9
+3 16 -15 -20.6 -10 -16.3 -22.3 0 -19.3 -11.6 -10
+4 16 -20.6 -13 0 -20.6 -11.6 -3.4 -19.3 -11.6 -10 -16.3 -22.3 0
+3 16 -19.3 -11.6 -10 -15 -11.6 -17 -15 -20.6 -10
+3 16 -15 -11.6 -17 -8.8 -20.6 -17 -15 -20.6 -10
+3 16 -15 -11.6 -17 -8.8 -11.6 -21.9 -8.8 -20.6 -17
+3 16 -8.8 -20.6 -17 -8.8 -11.6 -21.9 0 -22.3 -18.4
+3 16 0 -22.3 -18.4 -8.8 -11.6 -21.9 0 -11.6 -24
+3 16 -15 -20.6 10 -19.3 -11.6 10 -16.3 -22.3 0
+4 16 -16.3 -22.3 0 -19.3 -11.6 10 -20.6 -11.6 3.4 -20.6 -13 0
+3 16 -19.3 -11.6 10 -15 -20.6 10 -15 -11.6 17
+3 16 -15 -11.6 17 -15 -20.6 10 -8.8 -20.6 17
+3 16 -15 -11.6 17 -8.8 -20.6 17 -8.8 -11.6 21.9
+3 16 -8.8 -20.6 17 0 -22.3 18.4 -8.8 -11.6 21.9
+3 16 -8.8 -11.6 21.9 0 -22.3 18.4 0 -11.6 24
+3 16 16.3 -22.3 0 8.8 -27.13 0 8.8 -25.17 -10
+3 16 16.3 -22.3 0 8.8 -25.17 -10 15 -20.6 -10
+3 16 8.8 -25.17 -10 8.8 -20.6 -17 15 -20.6 -10
+3 16 8.8 -20.6 -17 8.8 -25.17 -10 0 -22.3 -18.4
+3 16 8.8 -25.17 -10 0 -27.13 -10 0 -22.3 -18.4
+3 16 8.8 -27.13 0 0 -28.88 0 0 -27.13 -10
+3 16 8.8 -27.13 0 0 -27.13 -10 8.8 -25.17 -10
+3 16 16.3 -22.3 0 15 -20.6 10 8.8 -25.17 10
+3 16 16.3 -22.3 0 8.8 -25.17 10 8.8 -27.13 0
+3 16 8.8 -20.6 17 8.8 -25.17 10 15 -20.6 10
+3 16 0 -27.13 10 8.8 -25.17 10 0 -22.3 18.4
+3 16 8.8 -25.17 10 8.8 -20.6 17 0 -22.3 18.4
+3 16 8.8 -27.13 0 8.8 -25.17 10 0 -27.13 10
+3 16 8.8 -27.13 0 0 -27.13 10 0 -28.88 0
+3 16 -15 -20.6 -10 -8.8 -25.17 -10 -16.3 -22.3 0
+3 16 -8.8 -25.17 -10 -8.8 -27.13 0 -16.3 -22.3 0
+3 16 -15 -20.6 -10 -8.8 -20.6 -17 -8.8 -25.17 -10
+3 16 0 -22.3 -18.4 0 -27.13 -10 -8.8 -25.17 -10
+3 16 0 -22.3 -18.4 -8.8 -25.17 -10 -8.8 -20.6 -17
+3 16 0 -27.13 -10 0 -28.88 0 -8.8 -27.13 0
+3 16 -8.8 -25.17 -10 0 -27.13 -10 -8.8 -27.13 0
+3 16 -8.8 -27.13 0 -8.8 -25.17 10 -16.3 -22.3 0
+3 16 -8.8 -25.17 10 -15 -20.6 10 -16.3 -22.3 0
+3 16 -15 -20.6 10 -8.8 -25.17 10 -8.8 -20.6 17
+3 16 0 -22.3 18.4 -8.8 -20.6 17 -8.8 -25.17 10
+3 16 0 -22.3 18.4 -8.8 -25.17 10 0 -27.13 10
+3 16 0 -27.13 10 -8.8 -25.17 10 -8.8 -27.13 0
+3 16 0 -28.88 0 0 -27.13 10 -8.8 -27.13 0
+5 24 19.3 -11.6 -10 16.3 -22.3 0 15 -20.6 -10 20.6 -11.6 -3.4
+5 24 16.3 -22.3 0 15 -20.6 -10 19.3 -11.6 -10 8.8 -25.17 -10
+5 24 15 -20.6 -10 19.3 -11.6 -10 16.3 -22.3 0 15 -11.6 -17
+5 24 20.6 -13 0 16.3 -22.3 0 19.3 -11.6 -10 20.6 -11.6 3.4
+5 24 15 -20.6 -10 15 -11.6 -17 19.3 -11.6 -10 8.8 -20.6 -17
+5 24 15 -20.6 -10 8.8 -20.6 -17 15 -11.6 -17 8.8 -25.17 -10
+5 24 8.8 -20.6 -17 15 -11.6 -17 15 -20.6 -10 8.8 -11.6 -21.9
+5 24 8.8 -20.6 -17 8.8 -11.6 -21.9 15 -11.6 -17 0 -22.3 -18.4
+5 24 0 -22.3 -18.4 8.8 -11.6 -21.9 8.8 -20.6 -17 0 -11.6 -24
+5 24 8.8 -20.6 -17 0 -22.3 -18.4 8.8 -11.6 -21.9 8.8 -25.17 -10
+5 24 0 -22.3 -18.4 0 -11.6 -24 8.8 -11.6 -21.9 -8.8 -11.6 -21.9
+5 24 16.3 -22.3 0 19.3 -11.6 10 15 -20.6 10 20.6 -13 0
+5 24 19.3 -11.6 10 15 -20.6 10 16.3 -22.3 0 15 -11.6 17
+5 24 15 -20.6 10 16.3 -22.3 0 19.3 -11.6 10 8.8 -25.17 10
+5 24 15 -11.6 17 15 -20.6 10 19.3 -11.6 10 8.8 -20.6 17
+5 24 8.8 -20.6 17 15 -20.6 10 15 -11.6 17 8.8 -25.17 10
+5 24 15 -11.6 17 8.8 -20.6 17 15 -20.6 10 8.8 -11.6 21.9
+5 24 8.8 -11.6 21.9 8.8 -20.6 17 15 -11.6 17 0 -22.3 18.4
+5 24 8.8 -11.6 21.9 0 -22.3 18.4 8.8 -20.6 17 0 -11.6 24
+5 24 0 -22.3 18.4 8.8 -20.6 17 8.8 -11.6 21.9 8.8 -25.17 10
+5 24 0 -11.6 24 0 -22.3 18.4 8.8 -11.6 21.9 -8.8 -11.6 21.9
+5 24 -15 -20.6 -10 -16.3 -22.3 0 -19.3 -11.6 -10 -8.8 -25.17 -10
+5 24 -16.3 -22.3 0 -19.3 -11.6 -10 -15 -20.6 -10 -20.6 -13 0
+5 24 -19.3 -11.6 -10 -15 -20.6 -10 -16.3 -22.3 0 -15 -11.6 -17
+5 24 -16.3 -22.3 0 -20.6 -13 0 -20.6 -11.6 -3.4 -19.3 -11.6 10
+5 24 -15 -11.6 -17 -15 -20.6 -10 -19.3 -11.6 -10 -8.8 -20.6 -17
+5 24 -15 -11.6 -17 -8.8 -20.6 -17 -15 -20.6 -10 -8.8 -11.6 -21.9
+5 24 -8.8 -20.6 -17 -15 -20.6 -10 -15 -11.6 -17 -8.8 -25.17 -10
+5 24 -8.8 -11.6 -21.9 -8.8 -20.6 -17 -15 -11.6 -17 0 -22.3 -18.4
+5 24 -8.8 -11.6 -21.9 0 -22.3 -18.4 -8.8 -20.6 -17 0 -11.6 -24
+5 24 0 -22.3 -18.4 -8.8 -20.6 -17 -8.8 -11.6 -21.9 -8.8 -25.17 -10
+5 24 -15 -20.6 10 -19.3 -11.6 10 -16.3 -22.3 0 -15 -11.6 17
+5 24 -19.3 -11.6 10 -16.3 -22.3 0 -15 -20.6 10 -20.6 -11.6 3.4
+5 24 -16.3 -22.3 0 -15 -20.6 10 -19.3 -11.6 10 -8.8 -25.17 10
+5 24 -15 -20.6 10 -15 -11.6 17 -19.3 -11.6 10 -8.8 -20.6 17
+5 24 -15 -20.6 10 -8.8 -20.6 17 -15 -11.6 17 -8.8 -25.17 10
+5 24 -8.8 -20.6 17 -15 -11.6 17 -15 -20.6 10 -8.8 -11.6 21.9
+5 24 -8.8 -20.6 17 -8.8 -11.6 21.9 -15 -11.6 17 0 -22.3 18.4
+5 24 -8.8 -20.6 17 0 -22.3 18.4 -8.8 -11.6 21.9 -8.8 -25.17 10
+5 24 0 -22.3 18.4 -8.8 -11.6 21.9 -8.8 -20.6 17 0 -11.6 24
+5 24 16.3 -22.3 0 8.8 -27.13 0 8.8 -25.17 -10 8.8 -25.17 10
+5 24 8.8 -27.13 0 8.8 -25.17 -10 16.3 -22.3 0 0 -27.13 -10
+5 24 8.8 -25.17 -10 16.3 -22.3 0 8.8 -27.13 0 15 -20.6 -10
+5 24 8.8 -25.17 -10 15 -20.6 -10 16.3 -22.3 0 8.8 -20.6 -17
+5 24 8.8 -25.17 -10 8.8 -20.6 -17 15 -20.6 -10 0 -22.3 -18.4
+5 24 8.8 -25.17 -10 0 -22.3 -18.4 8.8 -20.6 -17 0 -27.13 -10
+5 24 8.8 -25.17 -10 0 -27.13 -10 0 -22.3 -18.4 8.8 -27.13 0
+5 24 0 -27.13 -10 0 -22.3 -18.4 8.8 -25.17 -10 -8.8 -25.17 -10
+5 24 8.8 -27.13 0 0 -28.88 0 0 -27.13 -10 0 -27.13 10
+5 24 0 -28.88 0 0 -27.13 -10 8.8 -27.13 0 -8.8 -27.13 0
+5 24 0 -27.13 -10 8.8 -27.13 0 0 -28.88 0 8.8 -25.17 -10
+5 24 15 -20.6 10 8.8 -25.17 10 16.3 -22.3 0 8.8 -20.6 17
+5 24 8.8 -25.17 10 16.3 -22.3 0 15 -20.6 10 8.8 -27.13 0
+5 24 8.8 -25.17 10 8.8 -27.13 0 16.3 -22.3 0 0 -27.13 10
+5 24 8.8 -20.6 17 8.8 -25.17 10 15 -20.6 10 0 -22.3 18.4
+5 24 0 -27.13 10 8.8 -25.17 10 0 -22.3 18.4 8.8 -27.13 0
+5 24 8.8 -25.17 10 0 -22.3 18.4 0 -27.13 10 8.8 -20.6 17
+5 24 0 -22.3 18.4 0 -27.13 10 8.8 -25.17 10 -8.8 -25.17 10
+5 24 0 -27.13 10 8.8 -27.13 0 8.8 -25.17 10 0 -28.88 0
+5 24 0 -27.13 10 0 -28.88 0 8.8 -27.13 0 -8.8 -27.13 0
+5 24 -15 -20.6 -10 -8.8 -25.17 -10 -16.3 -22.3 0 -8.8 -20.6 -17
+5 24 -8.8 -25.17 -10 -16.3 -22.3 0 -15 -20.6 -10 -8.8 -27.13 0
+5 24 -8.8 -25.17 -10 -8.8 -27.13 0 -16.3 -22.3 0 0 -27.13 -10
+5 24 -8.8 -27.13 0 -16.3 -22.3 0 -8.8 -25.17 -10 -8.8 -25.17 10
+5 24 -8.8 -20.6 -17 -8.8 -25.17 -10 -15 -20.6 -10 0 -22.3 -18.4
+5 24 0 -27.13 -10 -8.8 -25.17 -10 0 -22.3 -18.4 -8.8 -27.13 0
+5 24 -8.8 -25.17 -10 0 -22.3 -18.4 0 -27.13 -10 -8.8 -20.6 -17
+5 24 0 -28.88 0 -8.8 -27.13 0 0 -27.13 -10 0 -27.13 10
+5 24 -8.8 -27.13 0 0 -27.13 -10 0 -28.88 0 -8.8 -25.17 -10
+5 24 -8.8 -27.13 0 -8.8 -25.17 10 -16.3 -22.3 0 0 -27.13 10
+5 24 -8.8 -25.17 10 -16.3 -22.3 0 -8.8 -27.13 0 -15 -20.6 10
+5 24 -8.8 -25.17 10 -15 -20.6 10 -16.3 -22.3 0 -8.8 -20.6 17
+5 24 -8.8 -25.17 10 -8.8 -20.6 17 -15 -20.6 10 0 -22.3 18.4
+5 24 -8.8 -25.17 10 0 -22.3 18.4 -8.8 -20.6 17 0 -27.13 10
+5 24 -8.8 -25.17 10 0 -27.13 10 0 -22.3 18.4 -8.8 -27.13 0
+5 24 -8.8 -27.13 0 0 -27.13 10 -8.8 -25.17 10 0 -28.88 0
+
+
+0
+
+0 STEP
+0 FILE s\8855 - 2715s01.dat
+0 A subpart forming half of the action figure helmet without the top, built from cylindrical and torus primitives.
+0 Name: s\8855 - 2715s01.dat
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2018-03-23 [cwdee] Use t04ounit instead of duplicate r04o1000
+0 !HISTORY 2018-03-26 [cwdee] Revert to r04o1000
+
+2 24 18.5 16.8 2.5 17.1 14.5 9.6
+2 24 17.1 14.5 9.6 13.1 12.5 15.6
+2 24 7.1 11.1 19.6 13.1 12.5 15.6
+2 24 0 10.7 21 7.1 11.1 19.6
+2 24 17.1 20.9 -9.6 18.5 18.5 -2.5
+2 24 13.1 22.9 -15.6 17.1 20.9 -9.6
+2 24 7.1 24.2 -19.6 13.1 22.9 -15.6
+2 24 0 24.7 -21 7.1 24.2 -19.6
+2 24 18.5 18.5 -2.5 18.5 16.8 2.5
+2 24 20 14 11 16.3 11.8 17.6
+2 24 8.8 9.9 23.3 16.3 11.8 17.6
+2 24 0 9.2 25.4 8.8 9.9 23.3
+2 24 19.4 21.3 -11 21.2 19.1 -4.3
+2 24 21.2 19.1 -4.3 22.1 18 -1
+2 24 18.7 21.7 -12 19.2 21.4 -11.2
+2 24 19.2 21.4 -11.2 19.4 21.3 -11
+2 24 15 23.1 -16.2 18.7 21.7 -12
+2 24 12.7 23.7 -18 15 23.1 -16.2
+2 24 8.8 24.4 -20.3 12.7 23.7 -18
+2 24 4.6 24.7 -21.2 8.8 24.4 -20.3
+2 24 0 25 -22.1 4.6 24.7 -21.2
+2 24 21.2 15.2 7.4 21.1 14.7 9
+2 24 22.1 18 -1 21.2 15.2 7.4
+2 24 21.1 14.7 9 20 14 11
+3 16 8.8 9.9 23.3 7.1 11.1 19.6 0 10.7 21
+3 16 8.8 9.9 23.3 0 10.7 21 0 9.2 25.4
+3 16 13.1 12.5 15.6 7.1 11.1 19.6 8.8 9.9 23.3
+3 16 13.1 12.5 15.6 8.8 9.9 23.3 16.3 11.8 17.6
+4 16 13.1 12.5 15.6 16.3 11.8 17.6 20 14 11 17.1 14.5 9.6
+3 16 21.1 14.7 9 17.1 14.5 9.6 20 14 11
+3 16 21.2 15.2 7.4 17.1 14.5 9.6 21.1 14.7 9
+3 16 21.2 15.2 7.4 18.5 16.8 2.5 17.1 14.5 9.6
+3 16 22.1 18 -1 18.5 16.8 2.5 21.2 15.2 7.4
+4 16 18.5 16.8 2.5 22.1 18 -1 21.2 19.1 -4.3 18.5 18.5 -2.5
+3 16 17.1 20.9 -9.6 18.5 18.5 -2.5 21.2 19.1 -4.3
+3 16 17.1 20.9 -9.6 21.2 19.1 -4.3 19.4 21.3 -11
+3 16 19.2 21.4 -11.2 17.1 20.9 -9.6 19.4 21.3 -11
+3 16 18.7 21.7 -12 17.1 20.9 -9.6 19.2 21.4 -11.2
+4 16 13.1 22.9 -15.6 17.1 20.9 -9.6 18.7 21.7 -12 15 23.1 -16.2
+4 16 13.1 22.9 -15.6 15 23.1 -16.2 12.7 23.7 -18 7.1 24.2 -19.6
+3 16 8.8 24.4 -20.3 7.1 24.2 -19.6 12.7 23.7 -18
+3 16 4.6 24.7 -21.2 7.1 24.2 -19.6 8.8 24.4 -20.3
+3 16 0 24.7 -21 7.1 24.2 -19.6 4.6 24.7 -21.2
+3 16 0 24.7 -21 4.6 24.7 -21.2 0 25 -22.1
+2 24 15.7 17.7 -18.7 17.3 16.7 -16.4
+2 24 17.3 16.7 -16.4 20.6 14.3 -11
+2 24 8.8 19.8 -23.4 12.6 18.6 -20.8
+2 24 12.6 18.6 -20.8 15.7 17.7 -18.7
+2 24 0 20.6 -25.3 6.8 19.9 -23.8
+2 24 6.8 19.9 -23.8 8.8 19.8 -23.4
+2 24 0 -4.2 -25.2 3.6 -4.2 -24.3
+2 24 20.6 -5 -8 20.6 -4.7 -6.1
+2 24 20.6 -4.7 -6.1 20.6 -4.3 -5.7
+2 24 20.6 -4.9 -10 20.6 -5 -8
+2 24 20.6 -4.3 -5.7 20.6 -3.1 -4.5
+2 24 20.6 -3.1 -4.5 20.6 -0.4 -3.4
+2 24 20.6 -0.4 -3.4 20.6 1 -3.2
+2 24 15.7 -4.5 -17.8 17.6 -4.7 -14.6
+2 24 17.6 -4.7 -14.6 20.6 -4.9 -10
+2 24 8.8 -4.3 -23.1 11.4 -4.4 -21
+2 24 11.4 -4.4 -21 15.7 -4.5 -17.8
+2 24 3.6 -4.2 -24.3 8.8 -4.3 -23.1
+2 24 20.6 1 -3.2 20.6 3 -3
+4 16 3.6 -4.2 -24.3 0 -4.2 -25.2 0 -4.4 -21 7.1 -4.4 -19.6
+4 16 8.8 -4.3 -23.1 3.6 -4.2 -24.3 7.1 -4.4 -19.6 11.4 -4.4 -21
+3 16 13.1 -4.6 -15.6 11.4 -4.4 -21 7.1 -4.4 -19.6
+3 16 15.7 -4.5 -17.8 11.4 -4.4 -21 13.1 -4.6 -15.6
+3 16 17.6 -4.7 -14.6 15.7 -4.5 -17.8 13.1 -4.6 -15.6
+4 16 17.6 -4.7 -14.6 13.1 -4.6 -15.6 17.1 -4.9 -9.6 20.6 -4.9 -10
+4 16 20.6 -4.9 -10 17.1 -4.9 -9.6 17.4 -5 -8 20.6 -5 -8
+4 16 20.6 -4.7 -6.1 20.6 -5 -8 17.4 -5 -8 17.8 -4.7 -6.1
+4 16 20.6 -4.3 -5.7 20.6 -4.7 -6.1 17.8 -4.7 -6.1 18.1 -3.1 -4.5
+3 16 20.6 -3.1 -4.5 20.6 -4.3 -5.7 18.1 -3.1 -4.5
+4 16 20.6 -0.4 -3.4 20.6 -3.1 -4.5 18.1 -3.1 -4.5 18.3 -0.4 -3.4
+3 16 18.3 -0.4 -3.4 20.6 1 -3.2 20.6 -0.4 -3.4
+3 16 18.4 3 -3 20.6 1 -3.2 18.3 -0.4 -3.4
+3 16 20.6 3 -3 20.6 1 -3.2 18.4 3 -3
+4 16 20.6 6.5 -3.4 20.6 3 -3 18.4 3 -3 18.3 6.5 -3.4
+4 16 20.6 9.7 -4.5 20.6 6.5 -3.4 18.3 6.5 -3.4 18.1 9.7 -4.5
+4 16 17.8 11.9 -6.1 20.6 11.9 -6.1 20.6 9.7 -4.5 18.1 9.7 -4.5
+4 16 17.4 13 -8 20.6 13 -8 20.6 11.9 -6.1 17.8 11.9 -6.1
+4 16 20.6 14 -10.3 20.6 13 -8 17.4 13 -8 17.1 13.7 -9.6
+3 16 17.1 13.7 -9.6 20.6 14.2 -10.7 20.6 14 -10.3
+3 16 17.1 13.7 -9.6 17.3 16.7 -16.4 20.6 14.3 -11
+3 16 17.1 13.7 -9.6 20.6 14.3 -11 20.6 14.2 -10.7
+4 16 15.7 17.7 -18.7 17.3 16.7 -16.4 17.1 13.7 -9.6 13.1 16.3 -15.6
+4 16 12.6 18.6 -20.8 13.1 16.3 -15.6 7.1 18.1 -19.6 8.8 19.8 -23.4
+3 16 12.6 18.6 -20.8 15.7 17.7 -18.7 13.1 16.3 -15.6
+3 16 6.8 19.9 -23.8 8.8 19.8 -23.4 7.1 18.1 -19.6
+4 16 0 18.7 -21 0 20.6 -25.3 6.8 19.9 -23.8 7.1 18.1 -19.6
+2 24 20.6 3 -3 20.6 6.5 -3.4
+2 24 20.6 6.5 -3.4 20.6 9.7 -4.5
+2 24 20.6 14 -10.3 20.6 13 -8
+2 24 20.6 9.7 -4.5 20.6 11.9 -6.1
+2 24 20.6 13 -8 20.6 11.9 -6.1
+2 24 20.6 14.3 -11 20.6 14.2 -10.7
+2 24 20.6 14.2 -10.7 20.6 14 -10.3
+3 16 19.3 -11.6 10 16.3 1 18.4 15 -11.6 17
+3 16 21.2 1 10 16.3 1 18.4 19.3 -11.6 10
+3 16 16.3 1 18.4 8.8 1 24 8.8 -11.6 21.9
+3 16 16.3 1 18.4 8.8 -11.6 21.9 15 -11.6 17
+4 16 0 1 26 0 -11.6 24 8.8 -11.6 21.9 8.8 1 24
+3 16 20 14 11 21.2 14 9 21.1 14.7 9
+4 16 18.5 -11 -2.5 18.5 -11 2.5 18.5 16.8 2.5 18.5 18.5 -2.5
+4 16 18.5 -11 2.5 17.092 -11 9.58 17.1 14.5 9.6 18.5 16.8 2.5
+4 16 13.1 12.5 15.6 17.1 14.5 9.6 17.092 -11 9.58 13.081 -11 15.581
+4 16 7.1 11.1 19.6 13.1 12.5 15.6 13.081 -11 15.581 7.08 -11 19.592
+4 16 0 10.7 21 7.1 11.1 19.6 7.08 -11 19.592 0 -11 21
+3 16 18.3 -0.4 -3.4 18.5 -11 -2.5 18.4 3 -3
+3 16 17.4 -5 -8 17.1 -4.9 -9.6 17.092 -11 -9.58
+4 16 17.4 -5 -8 17.092 -11 -9.58 18.5 -11 -2.5 17.8 -4.7 -6.1
+3 16 18.5 -11 -2.5 18.3 -0.4 -3.4 18.1 -3.1 -4.5
+3 16 18.5 -11 -2.5 18.1 -3.1 -4.5 17.8 -4.7 -6.1
+3 16 18.5 18.5 -2.5 18.4 3 -3 18.5 -11 -2.5
+3 16 17.1 13.7 -9.6 17.3 20.6 -8.7 17.1 20.9 -9.6
+3 16 17.4 13 -8 17.3 20.6 -8.7 17.1 13.7 -9.6
+3 16 17.8 11.9 -6.1 17.3 20.6 -8.7 17.4 13 -8
+4 16 17.3 20.6 -8.7 17.8 11.9 -6.1 18.1 9.7 -4.5 18.5 18.5 -2.5
+3 16 18.5 18.5 -2.5 18.1 9.7 -4.5 18.3 6.5 -3.4
+3 16 18.3 6.5 -3.4 18.4 3 -3 18.5 18.5 -2.5
+4 16 13.081 -11 -15.581 17.092 -11 -9.58 17.1 -4.9 -9.6 13.1 -4.6 -15.6
+4 16 13.1 16.3 -15.6 17.1 13.7 -9.6 17.1 20.9 -9.6 13.1 22.9 -15.6
+4 16 7.08 -11 -19.592 13.081 -11 -15.581 13.1 -4.6 -15.6 7.1 -4.4 -19.6
+4 16 7.1 18.1 -19.6 13.1 16.3 -15.6 13.1 22.9 -15.6 7.1 24.2 -19.6
+4 16 7.1 -4.4 -19.6 0 -4.4 -21 0 -11 -21 7.08 -11 -19.592
+4 16 7.1 24.2 -19.6 0 24.7 -21 0 18.7 -21 7.1 18.1 -19.6
+4 16 20 14 11 16.3 11.8 17.6 16.3 1 18.4 21.2 1 10
+3 16 20 14 11 21.2 1 10 21.2 14 9
+4 16 8.8 1 24 16.3 1 18.4 16.3 11.8 17.6 8.8 9.9 23.3
+4 16 0 1 26 8.8 1 24 8.8 9.9 23.3 0 9.2 25.4
+3 16 19.3 -11.6 -10 17.6 -4.7 -14.6 20.6 -4.9 -10
+4 16 15.7 -4.5 -17.8 17.6 -4.7 -14.6 19.3 -11.6 -10 15 -11.6 -17
+3 16 11.4 -4.4 -21 15.7 -4.5 -17.8 15 -11.6 -17
+4 16 11.4 -4.4 -21 15 -11.6 -17 8.8 -11.6 -21.9 8.8 -4.3 -23.1
+4 16 8.8 -4.3 -23.1 8.8 -11.6 -21.9 0 -11.6 -24 3.6 -4.2 -24.3
+3 16 3.6 -4.2 -24.3 0 -11.6 -24 0 -4.2 -25.2
+3 16 21.2 19.1 -4.3 20.6 14.3 -11 19.4 21.3 -11
+3 16 15 21.7 -18 17.3 16.7 -16.4 15.7 17.7 -18.7
+3 16 18.7 21.7 -12 17.3 16.7 -16.4 15 21.7 -18
+3 16 17.3 16.7 -16.4 19.4 21.3 -11 20.6 14.3 -11
+3 16 19.2 21.4 -11.2 19.4 21.3 -11 17.3 16.7 -16.4
+3 16 19.2 21.4 -11.2 17.3 16.7 -16.4 18.7 21.7 -12
+3 16 12.6 18.6 -20.8 8.8 21.7 -22.9 15 21.7 -18
+3 16 12.6 18.6 -20.8 15 21.7 -18 15.7 17.7 -18.7
+3 16 8.8 21.7 -22.9 12.6 18.6 -20.8 8.8 19.8 -23.4
+3 16 6.8 19.9 -23.8 0 21.7 -25 8.8 21.7 -22.9
+3 16 6.8 19.9 -23.8 8.8 21.7 -22.9 8.8 19.8 -23.4
+3 16 0 21.7 -25 6.8 19.9 -23.8 0 20.6 -25.3
+3 16 18.7 21.7 -12 15 21.7 -18 15 23.1 -16.2
+3 16 15 23.1 -16.2 15 21.7 -18 12.7 23.7 -18
+3 16 8.8 21.7 -22.9 8.8 24.4 -20.3 12.7 23.7 -18
+3 16 8.8 21.7 -22.9 12.7 23.7 -18 15 21.7 -18
+3 16 4.6 24.7 -21.2 8.8 24.4 -20.3 8.8 21.7 -22.9
+3 16 4.6 24.7 -21.2 8.8 21.7 -22.9 0 21.7 -25
+3 16 4.6 24.7 -21.2 0 21.7 -25 0 25 -22.1
+3 16 21.2 15.2 7.4 21.1 14.7 9 21.2 14 9
+3 16 21.2 15.2 7.4 21.2 14 9 23 14 -1
+3 16 21.2 15.2 7.4 23 14 -1 22.1 18 -1
+3 16 21.5 1.2 8.6 21.2 14 9 21.2 1 10
+3 16 21.5 1.2 8.6 21.2 1 10 21.5 1 8.6
+4 16 23 9.8 -0.7 23 14 -1 21.2 14 9 22.2 7.7 4
+3 16 21.6 4.4 7.5 21.2 14 9 21.5 1.2 8.6
+3 16 21.9 6.6 5.9 21.2 14 9 21.6 4.4 7.5
+3 16 22.2 7.7 4 21.2 14 9 21.9 6.6 5.9
+3 16 21.2 1 10 21.2 -0.5 8.8 21.5 1 8.6
+3 16 21.2 -0.5 8.8 21.2 1 10 20.9 -2.3 9
+3 16 20.6 -4.9 8.7 19.3 -11.6 10 20.6 -11.6 3.4
+3 16 20.9 -2.3 9 21.2 1 10 19.3 -11.6 10
+3 16 20.9 -2.3 9 19.3 -11.6 10 20.6 -4.9 8.7
+3 16 22.8 10.2 -1.7 23 14 -1 23 9.8 -0.7
+3 16 22.7 10.4 -2.1 23 14 -1 22.8 10.2 -1.7
+3 16 22.5 11 -3.4 23 14 -1 22.7 10.4 -2.1
+3 16 19.3 -11.6 -10 20.6 -7.3 -6.5 20.6 -11.6 -3.4
+3 16 20.6 -6.8 -7.2 20.6 -7.3 -6.5 19.3 -11.6 -10
+3 16 20.6 -4.9 -10 20.6 -5 -8 19.3 -11.6 -10
+3 16 20.6 -6.8 -7.2 19.3 -11.6 -10 20.6 -5 -8
+3 16 23 14 -1 21.2 19.1 -4.3 22.1 18 -1
+3 16 20.6 14.3 -11 21.2 19.1 -4.3 23 14 -1
+3 16 21.8 12 -5.9 23 14 -1 22.5 11 -3.4
+3 16 23 14 -1 21.8 12 -5.9 20.6 14.3 -11
+3 16 20.9 -2.3 9 20.6 -4.9 8.7 20.6 -2.3 9
+4 16 20.9 -2.3 9 20.6 -2.3 9 20.6 -0.5 8.8 21.2 -0.5 8.8
+4 16 21.2 -0.5 8.8 20.6 -0.5 8.8 20.6 1 8.6 21.5 1 8.6
+4 16 21.5 1 8.6 20.6 1 8.6 20.6 1.2 8.6 21.5 1.2 8.6
+4 16 21.5 1.2 8.6 20.6 1.2 8.6 20.6 4.4 7.5 21.6 4.4 7.5
+4 16 21.6 4.4 7.5 20.6 4.4 7.5 20.6 6.6 5.9 21.9 6.6 5.9
+4 16 21.9 6.6 5.9 20.6 6.6 5.9 20.6 7.7 4 22.2 7.7 4
+4 16 22.2 7.7 4 20.6 7.7 4 20.6 9.8 -0.7 23 9.8 -0.7
+4 16 23 9.8 -0.7 20.6 9.8 -0.7 20.6 10.2 -1.7 22.8 10.2 -1.7
+4 16 22.8 10.2 -1.7 20.6 10.2 -1.7 20.6 10.4 -2.1 22.7 10.4 -2.1
+4 16 22.7 10.4 -2.1 20.6 10.4 -2.1 20.6 11 -3.4 22.5 11 -3.4
+4 16 22.5 11 -3.4 20.6 11 -3.4 20.6 12 -5.9 21.8 12 -5.9
+3 16 20.6 14.3 -11 21.8 12 -5.9 20.6 12 -5.9
+2 24 21.5 1 8.6 21.5 1.2 8.6
+2 24 22.2 7.7 4 23 9.8 -0.7
+2 24 21.5 1.2 8.6 21.6 4.4 7.5
+2 24 21.6 4.4 7.5 21.9 6.6 5.9
+2 24 21.9 6.6 5.9 22.2 7.7 4
+2 24 20.9 -2.3 9 21.2 -0.5 8.8
+2 24 21.2 -0.5 8.8 21.5 1 8.6
+2 24 20.6 -4.9 8.7 20.9 -2.3 9
+2 24 23 9.8 -0.7 22.8 10.2 -1.7
+2 24 22.8 10.2 -1.7 22.7 10.4 -2.1
+2 24 22.7 10.4 -2.1 22.5 11 -3.4
+2 24 22.5 11 -3.4 21.8 12 -5.9
+2 24 21.8 12 -5.9 20.6 14.3 -11
+2 24 20.6 1 8.6 20.6 1.2 8.6
+2 24 20.6 7.7 4 20.6 9.8 -0.7
+2 24 20.6 1.2 8.6 20.6 4.4 7.5
+2 24 20.6 4.4 7.5 20.6 6.6 5.9
+2 24 20.6 6.6 5.9 20.6 7.7 4
+2 24 20.6 -2.3 9 20.6 -0.5 8.8
+2 24 20.6 -0.5 8.8 20.6 1 8.6
+2 24 20.6 -4.9 8.7 20.6 -2.3 9
+2 24 20.6 9.8 -0.7 20.6 10.2 -1.7
+2 24 20.6 10.2 -1.7 20.6 10.4 -2.1
+2 24 20.6 10.4 -2.1 20.6 11 -3.4
+2 24 20.6 11 -3.4 20.6 12 -5.9
+2 24 20.6 12 -5.9 20.6 14.3 -11
+4 16 20.6 -7.3 -6.5 20.6 -6.8 -7.2 20.6 -5 -8 20.6 -4.7 -6.1
+4 16 20.6 -11.6 -3.4 20.6 -7.3 -6.5 20.6 -4.7 -6.1 20.6 -13 0
+4 16 20.6 -13 0 20.6 -4.7 -6.1 20.6 -4.3 -5.7 20.6 -11.6 3.4
+4 16 20.6 -11.6 3.4 20.6 -4.3 -5.7 20.6 -3.1 -4.5 20.6 -4.9 8.7
+4 16 20.6 -4.9 8.7 20.6 -3.1 -4.5 20.6 -0.4 -3.4 20.6 -2.3 9
+4 16 20.6 -0.5 8.8 20.6 -2.3 9 20.6 -0.4 -3.4 20.6 1 -3.2
+4 16 20.6 1 8.6 20.6 -0.5 8.8 20.6 1 -3.2 20.6 3 -3
+4 16 20.6 1.2 8.6 20.6 1 8.6 20.6 3 -3 20.6 6.5 -3.4
+4 16 20.6 4.4 7.5 20.6 1.2 8.6 20.6 6.5 -3.4 20.6 6.6 5.9
+4 16 20.6 6.6 5.9 20.6 6.5 -3.4 20.6 9.7 -4.5 20.6 7.7 4
+4 16 20.6 7.7 4 20.6 9.7 -4.5 20.6 11.9 -6.1 20.6 9.8 -0.7
+3 16 20.6 13 -8 20.6 9.8 -0.7 20.6 11.9 -6.1
+3 16 20.6 10.2 -1.7 20.6 9.8 -0.7 20.6 13 -8
+4 16 20.6 10.4 -2.1 20.6 10.2 -1.7 20.6 14 -10.3 20.6 13 -8
+4 16 20.6 11 -3.4 20.6 10.4 -2.1 20.6 14 -10.3 20.6 14.2 -10.7
+4 16 20.6 12 -5.9 20.6 11 -3.4 20.6 14.2 -10.7 20.6 14.3 -11
+0 BFC INVERTNEXT
+0 // Cylinder 0.25 (main_colour)
+1 16 9.25 -11 -2.5 9.25 0 0 0 0 -12.5 0 5 0 1-4cyli.dat
+0 BFC INVERTNEXT
+0 // Torus Outside  1 x 1.0000 x 0.25 (main_colour)
+1 16 0 -11 -2.5 9.25 0 0 0 -12.5 0 0 0 -9.25 r04o1000.dat
+0 BFC INVERTNEXT
+0 // Torus Outside  1 x 1.0000 x 0.25 (main_colour)
+1 16 0 -11 2.5 9.25 0 0 0 -12.5 0 0 0 9.25 r04o1000.dat
+0 // Disc 0.25 (main_colour)
+1 16 0 -23.5 2.5 9.25 0 0 0 -1 0 0 0 9.25 1-4disc.dat
+0 // Circle 0.25 (main_colour)
+1 16 0 -23.5 2.5 9.25 0 0 0 -1 0 0 0 9.25 1-4edge.dat
+0 // Disc 0.25 (main_colour)
+1 16 0 -23.5 -2.5 9.25 0 0 0 -1 0 0 0 -9.25 1-4disc.dat
+0 // Circle 0.25 (main_colour)
+1 16 0 -23.5 -2.5 9.25 0 0 0 1 0 0 0 -9.25 1-4edge.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 4.625 -23.5 0 4.625 0 0 0 -1 0 0 0 2.5 rect1.dat
+2 24 0 -4.4 -21 7.1 -4.4 -19.6
+2 24 7.1 -4.4 -19.6 13.1 -4.6 -15.6
+2 24 13.1 -4.6 -15.6 17.1 -4.9 -9.6
+2 24 17.1 -4.9 -9.6 17.4 -5 -8
+2 24 17.4 -5 -8 17.8 -4.7 -6.1
+2 24 17.8 -4.7 -6.1 18.1 -3.1 -4.5
+2 24 18.1 -3.1 -4.5 18.3 -0.4 -3.4
+2 24 18.3 -0.4 -3.4 18.4 3 -3
+2 24 18.4 3 -3 18.3 6.5 -3.4
+2 24 18.3 6.5 -3.4 18.1 9.7 -4.5
+2 24 18.1 9.7 -4.5 17.8 11.9 -6.1
+2 24 17.8 11.9 -6.1 17.4 13 -8
+2 24 17.4 13 -8 17.1 13.7 -9.6
+2 24 17.1 13.7 -9.6 13.1 16.3 -15.6
+2 24 13.1 16.3 -15.6 7.1 18.1 -19.6
+2 24 7.1 18.1 -19.6 0 18.7 -21
+5 24 8.8 9.9 23.3 7.1 11.1 19.6 0 10.7 21 13.1 12.5 15.6
+5 24 0 10.7 21 8.8 9.9 23.3 7.1 11.1 19.6 0 9.2 25.4
+5 24 8.8 9.9 23.3 13.1 12.5 15.6 7.1 11.1 19.6 16.3 11.8 17.6
+5 24 16.3 11.8 17.6 13.1 12.5 15.6 8.8 9.9 23.3 20 14 11
+5 24 20 14 11 17.1 14.5 9.6 13.1 12.5 15.6 21.1 14.7 9
+5 24 21.1 14.7 9 17.1 14.5 9.6 20 14 11 21.2 15.2 7.4
+5 24 21.2 15.2 7.4 17.1 14.5 9.6 21.1 14.7 9 18.5 16.8 2.5
+5 24 21.2 15.2 7.4 18.5 16.8 2.5 17.1 14.5 9.6 22.1 18 -1
+5 24 22.1 18 -1 18.5 16.8 2.5 21.2 15.2 7.4 21.2 19.1 -4.3
+5 24 21.2 19.1 -4.3 18.5 18.5 -2.5 18.5 16.8 2.5 17.1 20.9 -9.6
+5 24 21.2 19.1 -4.3 17.1 20.9 -9.6 18.5 18.5 -2.5 19.4 21.3 -11
+5 24 19.4 21.3 -11 17.1 20.9 -9.6 21.2 19.1 -4.3 19.2 21.4 -11.2
+5 24 19.2 21.4 -11.2 17.1 20.9 -9.6 19.4 21.3 -11 18.7 21.7 -12
+5 24 18.7 21.7 -12 17.1 20.9 -9.6 19.2 21.4 -11.2 13.1 22.9 -15.6
+5 24 12.7 23.7 -18 7.1 24.2 -19.6 13.1 22.9 -15.6 8.8 24.4 -20.3
+5 24 8.8 24.4 -20.3 7.1 24.2 -19.6 12.7 23.7 -18 4.6 24.7 -21.2
+5 24 4.6 24.7 -21.2 7.1 24.2 -19.6 8.8 24.4 -20.3 0 24.7 -21
+5 24 4.6 24.7 -21.2 0 24.7 -21 7.1 24.2 -19.6 0 25 -22.1
+5 24 7.1 -4.4 -19.6 3.6 -4.2 -24.3 0 -4.2 -25.2 8.8 -4.3 -23.1
+5 24 13.1 -4.6 -15.6 11.4 -4.4 -21 7.1 -4.4 -19.6 15.7 -4.5 -17.8
+5 24 13.1 -4.6 -15.6 15.7 -4.5 -17.8 11.4 -4.4 -21 17.6 -4.7 -14.6
+5 24 13.1 -4.6 -15.6 17.6 -4.7 -14.6 15.7 -4.5 -17.8 17.1 -4.9 -9.6
+5 24 17.1 -4.9 -9.6 20.6 -4.9 -10 17.6 -4.7 -14.6 17.4 -5 -8
+5 24 17.4 -5 -8 20.6 -5 -8 20.6 -4.9 -10 20.6 -4.7 -6.1
+5 24 17.8 -4.7 -6.1 20.6 -4.7 -6.1 20.6 -5 -8 20.6 -4.3 -5.7
+5 24 18.1 -3.1 -4.5 20.6 -3.1 -4.5 20.6 -4.3 -5.7 20.6 -0.4 -3.4
+5 24 18.3 -0.4 -3.4 20.6 -0.4 -3.4 20.6 -3.1 -4.5 20.6 1 -3.2
+5 24 18.3 -0.4 -3.4 20.6 1 -3.2 20.6 -0.4 -3.4 18.4 3 -3
+5 24 18.4 3 -3 20.6 1 -3.2 18.3 -0.4 -3.4 20.6 3 -3
+5 24 18.4 3 -3 20.6 3 -3 20.6 1 -3.2 20.6 6.5 -3.4
+5 24 18.3 6.5 -3.4 20.6 6.5 -3.4 20.6 3 -3 20.6 9.7 -4.5
+5 24 18.1 9.7 -4.5 20.6 9.7 -4.5 20.6 6.5 -3.4 17.8 11.9 -6.1
+5 24 17.8 11.9 -6.1 20.6 11.9 -6.1 20.6 9.7 -4.5 17.4 13 -8
+5 24 17.4 13 -8 20.6 13 -8 20.6 11.9 -6.1 20.6 14 -10.3
+5 24 17.1 13.7 -9.6 20.6 14 -10.3 20.6 13 -8 20.6 14.2 -10.7
+5 24 17.1 13.7 -9.6 20.6 14.2 -10.7 20.6 14 -10.3 20.6 14.3 -11
+5 24 17.1 13.7 -9.6 17.3 16.7 -16.4 20.6 14.3 -11 15.7 17.7 -18.7
+5 24 20.6 14.3 -11 17.1 13.7 -9.6 17.3 16.7 -16.4 20.6 14.2 -10.7
+5 24 13.1 16.3 -15.6 15.7 17.7 -18.7 17.3 16.7 -16.4 12.6 18.6 -20.8
+5 24 12.6 18.6 -20.8 13.1 16.3 -15.6 7.1 18.1 -19.6 15.7 17.7 -18.7
+5 24 7.1 18.1 -19.6 8.8 19.8 -23.4 12.6 18.6 -20.8 6.8 19.9 -23.8
+5 24 7.1 18.1 -19.6 6.8 19.9 -23.8 8.8 19.8 -23.4 0 18.7 -21
+5 24 19.3 -11.6 10 16.3 1 18.4 15 -11.6 17 21.2 1 10
+5 24 16.3 1 18.4 15 -11.6 17 19.3 -11.6 10 8.8 -11.6 21.9
+5 24 21.2 1 10 16.3 1 18.4 19.3 -11.6 10 20 14 11
+5 24 19.3 -11.6 10 21.2 1 10 16.3 1 18.4 20.9 -2.3 9
+5 24 16.3 1 18.4 8.8 1 24 8.8 -11.6 21.9 16.3 11.8 17.6
+5 24 8.8 1 24 8.8 -11.6 21.9 16.3 1 18.4 0 1 26
+5 24 8.8 -11.6 21.9 16.3 1 18.4 8.8 1 24 15 -11.6 17
+5 24 8.8 1 24 0 1 26 0 -11.6 24 8.8 9.9 23.3
+5 24 20 14 11 21.2 14 9 21.1 14.7 9 21.2 1 10
+5 24 21.2 14 9 21.1 14.7 9 20 14 11 21.2 15.2 7.4
+5 24 18.5 -11 2.5 18.5 16.8 2.5 18.5 -11 -2.5 17.092 -11 9.58
+5 24 18.5 18.5 -2.5 18.5 -11 -2.5 18.5 -11 2.5 18.4 3 -3
+5 24 17.092 -11 9.58 17.1 14.5 9.6 18.5 -11 2.5 13.1 12.5 15.6
+5 24 13.081 -11 15.581 13.1 12.5 15.6 17.1 14.5 9.6 7.1 11.1 19.6
+5 24 7.08 -11 19.592 7.1 11.1 19.6 13.1 12.5 15.6 0 10.7 21
+5 24 18.3 -0.4 -3.4 18.5 -11 -2.5 18.4 3 -3 18.1 -3.1 -4.5
+5 24 18.5 -11 -2.5 18.4 3 -3 18.3 -0.4 -3.4 18.5 18.5 -2.5
+5 24 17.1 -4.9 -9.6 17.092 -11 -9.58 17.4 -5 -8 13.081 -11 -15.581
+5 24 17.092 -11 -9.58 17.4 -5 -8 17.1 -4.9 -9.6 18.5 -11 -2.5
+5 24 18.5 -11 -2.5 17.8 -4.7 -6.1 17.4 -5 -8 18.1 -3.1 -4.5
+5 24 18.5 18.5 -2.5 18.4 3 -3 18.5 -11 -2.5 18.3 6.5 -3.4
+5 24 17.1 13.7 -9.6 17.3 20.6 -8.7 17.1 20.9 -9.6 17.4 13 -8
+5 24 17.1 20.9 -9.6 17.1 13.7 -9.6 17.3 20.6 -8.7 13.1 16.3 -15.6
+5 24 17.4 13 -8 17.3 20.6 -8.7 17.1 13.7 -9.6 17.8 11.9 -6.1
+5 24 17.8 11.9 -6.1 17.3 20.6 -8.7 17.4 13 -8 18.1 9.7 -4.5
+5 24 18.1 9.7 -4.5 18.5 18.5 -2.5 17.3 20.6 -8.7 18.3 6.5 -3.4
+5 24 18.3 6.5 -3.4 18.5 18.5 -2.5 18.1 9.7 -4.5 18.4 3 -3
+5 24 13.1 -4.6 -15.6 13.081 -11 -15.581 17.092 -11 -9.58 7.08 -11 -19.592
+5 24 13.1 22.9 -15.6 13.1 16.3 -15.6 17.1 13.7 -9.6 7.1 18.1 -19.6
+5 24 7.1 -4.4 -19.6 7.08 -11 -19.592 13.081 -11 -15.581 0 -4.4 -21
+5 24 7.1 24.2 -19.6 7.1 18.1 -19.6 13.1 16.3 -15.6 0 24.7 -21
+5 24 16.3 11.8 17.6 16.3 1 18.4 20 14 11 8.8 1 24
+5 24 21.2 1 10 20 14 11 16.3 11.8 17.6 21.2 14 9
+5 24 21.2 1 10 21.2 14 9 20 14 11 21.5 1.2 8.6
+5 24 8.8 9.9 23.3 8.8 1 24 16.3 1 18.4 0 1 26
+5 24 19.3 -11.6 -10 17.6 -4.7 -14.6 20.6 -4.9 -10 15.7 -4.5 -17.8
+5 24 20.6 -4.9 -10 19.3 -11.6 -10 17.6 -4.7 -14.6 20.6 -5 -8
+5 24 15 -11.6 -17 15.7 -4.5 -17.8 17.6 -4.7 -14.6 11.4 -4.4 -21
+5 24 15 -11.6 -17 11.4 -4.4 -21 15.7 -4.5 -17.8 8.8 -11.6 -21.9
+5 24 8.8 -11.6 -21.9 8.8 -4.3 -23.1 11.4 -4.4 -21 0 -11.6 -24
+5 24 0 -11.6 -24 3.6 -4.2 -24.3 8.8 -4.3 -23.1 0 -4.2 -25.2
+5 24 21.2 19.1 -4.3 20.6 14.3 -11 19.4 21.3 -11 23 14 -1
+5 24 20.6 14.3 -11 19.4 21.3 -11 21.2 19.1 -4.3 17.3 16.7 -16.4
+5 24 15 21.7 -18 17.3 16.7 -16.4 15.7 17.7 -18.7 18.7 21.7 -12
+5 24 15.7 17.7 -18.7 15 21.7 -18 17.3 16.7 -16.4 12.6 18.6 -20.8
+5 24 18.7 21.7 -12 17.3 16.7 -16.4 15 21.7 -18 19.2 21.4 -11.2
+5 24 15 21.7 -18 18.7 21.7 -12 17.3 16.7 -16.4 15 23.1 -16.2
+5 24 17.3 16.7 -16.4 19.4 21.3 -11 20.6 14.3 -11 19.2 21.4 -11.2
+5 24 17.3 16.7 -16.4 19.2 21.4 -11.2 19.4 21.3 -11 18.7 21.7 -12
+5 24 12.6 18.6 -20.8 8.8 21.7 -22.9 15 21.7 -18 8.8 19.8 -23.4
+5 24 8.8 21.7 -22.9 15 21.7 -18 12.6 18.6 -20.8 12.7 23.7 -18
+5 24 15 21.7 -18 12.6 18.6 -20.8 8.8 21.7 -22.9 15.7 17.7 -18.7
+5 24 8.8 19.8 -23.4 8.8 21.7 -22.9 12.6 18.6 -20.8 6.8 19.9 -23.8
+5 24 6.8 19.9 -23.8 0 21.7 -25 8.8 21.7 -22.9 0 20.6 -25.3
+5 24 0 21.7 -25 8.8 21.7 -22.9 6.8 19.9 -23.8 4.6 24.7 -21.2
+5 24 8.8 21.7 -22.9 6.8 19.9 -23.8 0 21.7 -25 8.8 19.8 -23.4
+5 24 15 21.7 -18 15 23.1 -16.2 18.7 21.7 -12 12.7 23.7 -18
+5 24 15 21.7 -18 12.7 23.7 -18 15 23.1 -16.2 8.8 21.7 -22.9
+5 24 8.8 21.7 -22.9 8.8 24.4 -20.3 12.7 23.7 -18 4.6 24.7 -21.2
+5 24 12.7 23.7 -18 8.8 21.7 -22.9 8.8 24.4 -20.3 15 21.7 -18
+5 24 8.8 21.7 -22.9 4.6 24.7 -21.2 8.8 24.4 -20.3 0 21.7 -25
+5 24 0 21.7 -25 4.6 24.7 -21.2 8.8 21.7 -22.9 0 25 -22.1
+5 24 21.2 14 9 21.2 15.2 7.4 21.1 14.7 9 23 14 -1
+5 24 21.2 14 9 23 14 -1 21.2 15.2 7.4 23 9.8 -0.7
+5 24 23 14 -1 21.2 15.2 7.4 21.2 14 9 22.1 18 -1
+5 24 23 14 -1 22.1 18 -1 21.2 15.2 7.4 21.2 19.1 -4.3
+5 24 21.5 1.2 8.6 21.2 14 9 21.2 1 10 21.6 4.4 7.5
+5 24 21.2 1 10 21.5 1.2 8.6 21.2 14 9 21.5 1 8.6
+5 24 21.2 1 10 21.5 1 8.6 21.5 1.2 8.6 21.2 -0.5 8.8
+5 24 23 9.8 -0.7 23 14 -1 21.2 14 9 22.8 10.2 -1.7
+5 24 21.2 14 9 22.2 7.7 4 23 9.8 -0.7 21.9 6.6 5.9
+5 24 21.6 4.4 7.5 21.2 14 9 21.5 1.2 8.6 21.9 6.6 5.9
+5 24 21.9 6.6 5.9 21.2 14 9 21.6 4.4 7.5 22.2 7.7 4
+5 24 21.2 1 10 21.2 -0.5 8.8 21.5 1 8.6 20.9 -2.3 9
+5 24 21.2 1 10 20.9 -2.3 9 21.2 -0.5 8.8 19.3 -11.6 10
+5 24 20.6 -4.9 8.7 19.3 -11.6 10 20.6 -11.6 3.4 20.9 -2.3 9
+5 24 20.6 -11.6 3.4 20.6 -4.9 8.7 19.3 -11.6 10 20.6 -4.3 -5.7
+5 24 19.3 -11.6 10 20.9 -2.3 9 21.2 1 10 20.6 -4.9 8.7
+5 24 22.8 10.2 -1.7 23 14 -1 23 9.8 -0.7 22.7 10.4 -2.1
+5 24 22.7 10.4 -2.1 23 14 -1 22.8 10.2 -1.7 22.5 11 -3.4
+5 24 22.5 11 -3.4 23 14 -1 22.7 10.4 -2.1 21.8 12 -5.9
+5 24 19.3 -11.6 -10 20.6 -7.3 -6.5 20.6 -11.6 -3.4 20.6 -6.8 -7.2
+5 24 20.6 -7.3 -6.5 20.6 -11.6 -3.4 19.3 -11.6 -10 20.6 -4.7 -6.1
+5 24 20.6 -6.8 -7.2 20.6 -7.3 -6.5 19.3 -11.6 -10 20.6 -5 -8
+5 24 19.3 -11.6 -10 20.6 -6.8 -7.2 20.6 -7.3 -6.5 20.6 -5 -8
+5 24 20.6 -5 -8 19.3 -11.6 -10 20.6 -4.9 -10 20.6 -6.8 -7.2
+5 24 20.6 -5 -8 20.6 -6.8 -7.2 19.3 -11.6 -10 20.6 -7.3 -6.5
+5 24 23 14 -1 21.2 19.1 -4.3 22.1 18 -1 20.6 14.3 -11
+5 24 23 14 -1 20.6 14.3 -11 21.2 19.1 -4.3 21.8 12 -5.9
+5 24 21.8 12 -5.9 23 14 -1 22.5 11 -3.4 20.6 14.3 -11
+5 24 20.6 -2.3 9 20.9 -2.3 9 20.6 -4.9 8.7 20.6 -0.5 8.8
+5 24 20.6 -0.5 8.8 21.2 -0.5 8.8 20.9 -2.3 9 20.6 1 8.6
+5 24 20.6 1 8.6 21.5 1 8.6 21.2 -0.5 8.8 20.6 1.2 8.6
+5 24 20.6 1.2 8.6 21.5 1.2 8.6 21.5 1 8.6 20.6 4.4 7.5
+5 24 20.6 4.4 7.5 21.6 4.4 7.5 21.5 1.2 8.6 20.6 6.6 5.9
+5 24 20.6 6.6 5.9 21.9 6.6 5.9 21.6 4.4 7.5 20.6 7.7 4
+5 24 20.6 7.7 4 22.2 7.7 4 21.9 6.6 5.9 20.6 9.8 -0.7
+5 24 20.6 9.8 -0.7 23 9.8 -0.7 22.2 7.7 4 20.6 10.2 -1.7
+5 24 20.6 10.2 -1.7 22.8 10.2 -1.7 23 9.8 -0.7 20.6 10.4 -2.1
+5 24 20.6 10.4 -2.1 22.7 10.4 -2.1 22.8 10.2 -1.7 20.6 11 -3.4
+5 24 20.6 11 -3.4 22.5 11 -3.4 22.7 10.4 -2.1 20.6 12 -5.9
+5 24 20.6 12 -5.9 21.8 12 -5.9 22.5 11 -3.4 20.6 14.3 -11
+5 24 19.3 -11.6 -10 20.6 -11.6 -3.4 16.3 -22.3 0 20.6 -7.3 -6.5
+5 24 20.6 -11.6 -3.4 20.6 -13 0 16.3 -22.3 0 20.6 -7.3 -6.5
+5 24 15 -11.6 -17 19.3 -11.6 -10 15 -20.6 -10 15.7 -4.5 -17.8
+5 24 8.8 -11.6 -21.9 15 -11.6 -17 8.8 -20.6 -17 11.4 -4.4 -21
+5 24 0 -11.6 -24 8.8 -11.6 -21.9 0 -22.3 -18.4 8.8 -4.3 -23.1
+5 24 20.6 -13 0 20.6 -11.6 3.4 19.3 -11.6 10 20.6 -4.7 -6.1
+5 24 20.6 -11.6 3.4 19.3 -11.6 10 20.6 -13 0 20.6 -4.9 8.7
+5 24 19.3 -11.6 10 15 -11.6 17 15 -20.6 10 16.3 1 18.4
+5 24 15 -11.6 17 8.8 -11.6 21.9 8.8 -20.6 17 16.3 1 18.4
+5 24 8.8 -11.6 21.9 0 -11.6 24 0 -22.3 18.4 0 1 26
+5 24 0 10.7 21 0 9.2 25.4 8.8 9.9 23.3 -8.8 9.9 23.3
+5 24 0 25 -22.1 0 24.7 -21 4.6 24.7 -21.2 -4.6 24.7 -21.2
+5 24 0 -4.2 -25.2 0 -4.4 -21 3.6 -4.2 -24.3 -3.6 -4.2 -24.3
+5 24 0 18.7 -21 0 20.6 -25.3 6.8 19.9 -23.8 -6.8 19.9 -23.8
+5 24 0 1 26 0 -11.6 24 8.8 -11.6 21.9 -8.8 -11.6 21.9
+5 24 0 -11 21 0 10.7 21 7.1 11.1 19.6 -7.08 -11 19.592
+5 24 0 -4.4 -21 0 -11 -21 7.1 -4.4 -19.6 -7.1 -4.4 -19.6
+5 24 0 24.7 -21 0 18.7 -21 7.1 24.2 -19.6 -7.1 24.2 -19.6
+5 24 0 9.2 25.4 0 1 26 8.8 1 24 -8.8 9.9 23.3
+5 24 0 -11.6 -24 0 -4.2 -25.2 3.6 -4.2 -24.3 -3.6 -4.2 -24.3
+5 24 0 20.6 -25.3 0 21.7 -25 6.8 19.9 -23.8 -6.8 19.9 -23.8
+5 24 0 21.7 -25 0 25 -22.1 4.6 24.7 -21.2 -4.6 24.7 -21.2
+0 // Cylinder Closed 1.0 (main_colour)
+1 16 23 0 0 0 -2.4 0 2 0 0 0 0 2 4-4cylc.dat
+
+
+
+
+
+
+
+0 STEP
+0 FILE 8855 - 2742c01.dat
+0 A propeller assembly combining a 3-blade propeller with a 24-tooth gear shaft on a Technic brick.
+0 Name: 8855 - 2742c01.dat
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Unofficial_Shortcut
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !KEYWORDS Set 8855, Set 5113
+
+0 // Technic Brick  1 x  4 with Holes (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3701.dat
+0 // ~Technic Gear 24 Tooth with Peghole and Shaft (light_grey)
+1 7 0 10 20 -1 0 0 0 1 0 0 0 -1 8855 - 2740.dat
+0 // ~Propeller  3 Blade 15 Diameter (main_colour)
+1 16 0 10 -8 1 0 0 0 1 0 0 0 1 2742.dat
+
+
+0 STEP
+0 FILE 8855 - 2740.dat
+0 A detailed geometric subpart modeling a 24-tooth gear with peghole and shaft using ring, cylinder, and disc primitives.
+0 Name: 8855 - 2740.dat
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+
+0 // Teeth
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 s\2740s01.dat
+
+0 // non shaft side
+
+0 BFC INVERTNEXT
+1 16 0 0 -4.75 1.56 0 0 0 0 -1.56 0 5.5 0 48\4-4con15.dat
+
+4 16 -1.5 -8.75 -4.75 -1.5 24.96 -4.75 1.5 24.96 -4.75 1.5 -8.75 -4.75
+4 16 24.96 -1.5 -4.75 -24.96 -1.5 -4.75 -24.96 1.5 -4.75 24.96 1.5 -4.75
+
+4 16 -7.000357 4.879037 -4.75 -18.710046 16.588725 -4.75 -16.588725 18.710045 -4.75 -4.879037 7.000357 -4.75
+4 16 -8.662058 -10.78338 -4.75 -16.588725 -18.710045 -4.75 -18.710046 -16.588725 -4.75 -7.000357 -4.879037 -4.75
+4 16 7.000357 -4.879037 -4.75 18.710046 -16.588725 -4.75 16.588725 -18.710045 -4.75 8.662058 -10.78338 -4.75
+4 16 4.879037 7.000357 -4.75 16.588725 18.710046 -4.75 18.710045 16.588725 -4.75 7.000357 4.879037 -4.75
+
+4 16 1.5 -8.75 -4.75 7.000357 -4.879037 -4.75 8.662058 -10.78338 -4.75 7.390562 -12.05487 -4.75
+4 16 -7.390562 -12.05487 -4.75 -8.662058 -10.78338 -4.75 -7.000357 -4.879037 -4.75 -1.5 -8.75 -4.75
+
+0 // Ring  3 x 1.0 (main_colour)
+1 16 0 0 -4.75 1.875 0 0 0 0 -1.875 0 1 0 4-4ring3.dat
+0 // Ring  6 x 1.0 (main_colour)
+1 16 0 0 -4.75 1.25 0 0 0 0 -1.25 0 1 0 4-4ring6.dat
+
+4 16 -2 8.35221 0.75 -2 24.96 0.75 -1.5 24.96 -4.75 -1.5 8.451657 -4.75
+2 24 -1.5 24.86115 -4.75 -2 23.2682 0.75
+2 24 -1.5 24.86115 -4.75 -1.5 8.451657 -4.75
+2 24 -1.5 8.451657 -4.75 -2 8.35221 0.75
+2 24 -2 8.35221 0.75 -2 23.2682 0.75
+4 16 1.5 8.451657 -4.75 1.5 24.96 -4.75 2 24.96 0.75 2 8.35221 0.75
+2 24 1.5 24.86115 -4.75 2 23.2682 0.75
+2 24 1.5 24.86115 -4.75 1.5 8.451657 -4.75
+2 24 1.5 8.451657 -4.75 2 8.35221 0.75
+2 24 2 8.35221 0.75 2 23.2682 0.75
+4 16 -7.320117 4.491691 0.75 -19.063599 16.235171 0.75 -18.710046 16.588725 -4.75 -7.036884 4.915564 -4.75
+2 24 -18.640148 16.518827 -4.75 -17.867316 15.038888 0.75
+2 24 -18.640148 16.518827 -4.75 -7.036884 4.915564 -4.75
+2 24 -7.036884 4.915564 -4.75 -7.320117 4.491691 0.75
+2 24 -7.320117 4.491691 0.75 -17.867316 15.038888 0.75
+4 16 -4.915564 7.036884 -4.75 -16.588725 18.710045 -4.75 -16.235171 19.063599 0.75 -4.491691 7.320118 0.75
+2 24 -16.518828 18.640148 -4.75 -15.038889 17.867316 0.75
+2 24 -16.518828 18.640148 -4.75 -4.915564 7.036884 -4.75
+2 24 -4.915564 7.036884 -4.75 -4.491691 7.320118 0.75
+2 24 -4.491691 7.320118 0.75 -15.038889 17.867316 0.75
+4 16 -8.35221 -2 0.75 -24.96 -2 0.75 -24.96 -1.5 -4.75 -8.451657 -1.5 -4.75
+2 24 -24.86115 -1.5 -4.75 -23.2682 -2 0.75
+2 24 -24.86115 -1.5 -4.75 -8.451657 -1.5 -4.75
+2 24 -8.451657 -1.5 -4.75 -8.35221 -2 0.75
+2 24 -8.35221 -2 0.75 -23.2682 -2 0.75
+4 16 -8.451657 1.5 -4.75 -24.96 1.5 -4.75 -24.96 2 0.75 -8.35221 2 0.75
+2 24 -24.86115 1.5 -4.75 -23.2682 2 0.75
+2 24 -24.86115 1.5 -4.75 -8.451657 1.5 -4.75
+2 24 -8.451657 1.5 -4.75 -8.35221 2 0.75
+2 24 -8.35221 2 0.75 -23.2682 2 0.75
+4 16 -8.662058 -10.78338 -4.75 -8.308505 -11.13693 0.75 -16.23517 -19.0636 0.75 -16.58873 -18.71005 -4.75
+2 24 -16.518827 -18.640148 -4.75 -15.038888 -17.867316 0.75
+2 24 -16.58873 -18.71005 -4.75 -8.662058 -10.78338 -4.75
+2 24 -8.308505 -11.13693 0.75 -8.662058 -10.78338 -4.75
+2 24 -15.038888 -17.867316 0.75 -8.308505 -11.13693 0.75
+4 16 -7.036884 -4.915564 -4.75 -18.710045 -16.588725 -4.75 -19.063599 -16.235171 0.75 -7.320118 -4.491691 0.75
+2 24 -18.640148 -16.518828 -4.75 -17.867316 -15.038889 0.75
+2 24 -18.640148 -16.518828 -4.75 -7.036884 -4.915564 -4.75
+2 24 -7.036884 -4.915564 -4.75 -7.320118 -4.491691 0.75
+2 24 -7.320118 -4.491691 0.75 -17.867316 -15.038889 0.75
+4 16 8.451657 -1.5 -4.75 24.96 -1.5 -4.75 24.96 -2 0.75 8.35221 -2 0.75
+2 24 24.86115 -1.5 -4.75 23.2682 -2 0.75
+2 24 24.86115 -1.5 -4.75 8.451657 -1.5 -4.75
+2 24 8.451657 -1.5 -4.75 8.35221 -2 0.75
+2 24 8.35221 -2 0.75 23.2682 -2 0.75
+4 16 8.35221 2 0.75 24.96 2 0.75 24.96 1.5 -4.75 8.451657 1.5 -4.75
+2 24 24.86115 1.5 -4.75 23.2682 2 0.75
+2 24 24.86115 1.5 -4.75 8.451657 1.5 -4.75
+2 24 8.451657 1.5 -4.75 8.35221 2 0.75
+2 24 8.35221 2 0.75 23.2682 2 0.75
+4 16 16.58873 -18.71005 -4.75 16.23517 -19.0636 0.75 8.308505 -11.13693 0.75 8.662058 -10.78338 -4.75
+2 24 16.518827 -18.640148 -4.75 15.038888 -17.867316 0.75
+2 24 16.58873 -18.71005 -4.75 8.662058 -10.78338 -4.75
+2 24 8.308505 -11.13693 0.75 8.662058 -10.78338 -4.75
+2 24 15.038888 -17.867316 0.75 8.308505 -11.13693 0.75
+4 16 7.320118 -4.491691 0.75 19.063599 -16.235171 0.75 18.710045 -16.588725 -4.75 7.036884 -4.915564 -4.75
+2 24 18.640148 -16.518828 -4.75 17.867316 -15.038889 0.75
+2 24 18.640148 -16.518828 -4.75 7.036884 -4.915564 -4.75
+2 24 7.036884 -4.915564 -4.75 7.320118 -4.491691 0.75
+2 24 7.320118 -4.491691 0.75 17.867316 -15.038889 0.75
+4 16 7.036884 4.915564 -4.75 18.710046 16.588725 -4.75 19.063599 16.235171 0.75 7.320117 4.491691 0.75
+2 24 18.640148 16.518827 -4.75 17.867316 15.038888 0.75
+2 24 18.640148 16.518827 -4.75 7.036884 4.915564 -4.75
+2 24 7.036884 4.915564 -4.75 7.320117 4.491691 0.75
+2 24 7.320117 4.491691 0.75 17.867316 15.038888 0.75
+4 16 4.491691 7.320118 0.75 16.235171 19.063599 0.75 16.588725 18.710045 -4.75 4.915564 7.036884 -4.75
+2 24 16.518828 18.640148 -4.75 15.038889 17.867316 0.75
+2 24 16.518828 18.640148 -4.75 4.915564 7.036884 -4.75
+2 24 4.915564 7.036884 -4.75 4.491691 7.320118 0.75
+2 24 4.491691 7.320118 0.75 15.038889 17.867316 0.75
+
+0 // Circle 1.0 (main_colour)
+1 16 0 0 0.75 8.75 0 0 0 0 -8.75 0 1 0 4-4edge.dat
+4 16 3.348625 8.084125 0.75 3.348625 8.084125 -4.75 1.5 8.451657 -4.75 2 8.35221 0.75
+2 24 3.348625 8.084125 -4.75 1.5 8.451657 -4.75
+4 16 -2 8.35221 0.75 -1.5 8.451657 -4.75 -3.348625 8.084125 -4.75 -3.348625 8.084125 0.75
+2 24 -3.348625 8.084125 -4.75 -1.5 8.451657 -4.75
+4 16 -8.084125 3.348625 0.75 -8.084125 3.348625 -4.75 -8.451657 1.5 -4.75 -8.35221 2 0.75
+2 24 -8.084125 3.348625 -4.75 -8.451657 1.5 -4.75
+4 16 -8.35221 -2 0.75 -8.451657 -1.5 -4.75 -8.084125 -3.348625 -4.75 -8.084125 -3.348625 0.75
+2 24 -8.084125 -3.348625 -4.75 -8.451657 -1.5 -4.75
+4 16 8.084125 -3.348625 0.75 8.084125 -3.348625 -4.75 8.451657 -1.5 -4.75 8.35221 -2 0.75
+2 24 8.084125 -3.348625 -4.75 8.451657 -1.5 -4.75
+4 16 8.35221 2 0.75 8.451657 1.5 -4.75 8.084125 3.348625 -4.75 8.084125 3.348625 0.75
+2 24 8.084125 3.348625 -4.75 8.451657 1.5 -4.75
+4 16 -3.348505 8.084175 0.75 -3.348505 8.084175 -4.75 -4.915564 7.036884 -4.75 -4.491691 7.320118 0.75
+2 24 -3.348505 8.084175 -4.75 -4.915564 7.036884 -4.75
+4 16 -7.320117 4.491691 0.75 -7.036884 4.915564 -4.75 -8.084175 3.348504 -4.75 -8.084175 3.348504 0.75
+2 24 -8.084175 3.348504 -4.75 -7.036884 4.915564 -4.75
+4 16 -8.084175 -3.348505 0.75 -8.084175 -3.348505 -4.75 -7.036884 -4.915564 -4.75 -7.320118 -4.491691 0.75
+2 24 -8.084175 -3.348505 -4.75 -7.036884 -4.915564 -4.75
+4 16 7.320117 -4.491691 0.75 7.036884 -4.915564 -4.75 8.084175 -3.348504 -4.75 8.084175 -3.348504 0.75
+2 24 8.084175 -3.348504 -4.75 7.036884 -4.915564 -4.75
+4 16 8.084175 3.348505 0.75 8.084175 3.348505 -4.75 7.036884 4.915564 -4.75 7.320118 4.491691 0.75
+2 24 8.084175 3.348505 -4.75 7.036884 4.915564 -4.75
+4 16 4.491691 7.320117 0.75 4.915564 7.036884 -4.75 3.348504 8.084175 -4.75 3.348504 8.084175 0.75
+2 24 3.348504 8.084175 -4.75 4.915564 7.036884 -4.75
+
+5 24 8.084125 3.348625 -4.75 8.084125 3.348625 0.75 8.75 0 -4.75 6.187125 6.187125 -4.75
+5 24 3.348625 8.084125 -4.75 3.348625 8.084125 0.75 6.187125 6.187125 -4.75 0 8.75 -4.75
+5 24 8.084125 -3.348625 -4.75 8.084125 -3.348625 0.75 6.187125 -6.187125 -4.75 8.75 0 -4.75
+5 24 -3.348625 8.084125 -4.75 -3.348625 8.084125 0.75 0 8.75 -4.75 -6.187125 6.187125 -4.75
+5 24 -8.084125 -3.348625 -4.75 -8.084125 -3.348625 0.75 -8.75 0 -4.75 -6.187125 -6.187125 -4.75
+5 24 -8.084125 3.348625 -4.75 -8.084125 3.348625 0.75 -6.187125 6.187125 -4.75 -8.75 0 -4.75
+
+0 // Ring  1 x 0.375 (main_colour)
+1 16 0 0 0.75 0 0 8 8 0 0 0 1 0 3-8ring1.dat
+0 // Ring  2 x 0.375 (main_colour)
+1 16 0 0 0.75 0 0 8 8 0 0 0 1 0 3-8ring2.dat
+0 // Ring  1 x 0.375 (main_colour)
+1 16 0 0 0.75 0 0 -8 8 0 0 0 1 0 3-8ring1.dat
+0 // Ring  2 x 0.375 (main_colour)
+1 16 0 0 0.75 0 0 -8 8 0 0 0 1 0 3-8ring2.dat
+
+1 16 0 0 0.75 0 0 23.4 23.4 0 0 0 1 0 48\4-4edge.dat
+
+2 24 16.518828 18.640148 -4.75 15.194356 19.800845 -4.75
+1 16 0 0 -4.75 3.257934 0 24.746464 24.746464 0 -3.257934 0 1 0 48\1-12edge.dat
+2 24 1.5 24.86115 -4.75 3.25728 24.745344 -4.75
+2 24 24.86115 1.499999 -4.75 24.745344 3.257279 -4.75
+1 16 0 0 -4.75 19.802099 0 15.194685 15.194685 0 -19.802099 0 1 0 48\1-12edge.dat
+2 24 18.640148 16.518827 -4.75 19.800846 15.194356 -4.75
+2 24 24.86115 -1.499999 -4.75 24.745344 -3.257279 -4.75
+1 16 0 0 -4.75 19.802099 0 15.194685 -15.194685 0 19.802099 0 1 0 48\1-12edge.dat
+2 24 18.640148 -16.518827 -4.75 19.800846 -15.194356 -4.75
+
+2 24 -16.518828 18.640148 -4.75 -15.194356 19.800845 -4.75
+1 16 0 0 -4.75 -3.257934 0 -24.746464 24.746464 0 -3.257934 0 1 0 48\1-12edge.dat
+2 24 -1.5 24.86115 -4.75 -3.25728 24.745344 -4.75
+2 24 -24.86115 1.499999 -4.75 -24.745344 3.257279 -4.75
+1 16 0 0 -4.75 -19.802099 0 -15.194685 15.194685 0 -19.802099 0 1 0 48\1-12edge.dat
+2 24 -18.640148 16.518827 -4.75 -19.800846 15.194356 -4.75
+2 24 -24.86115 -1.499999 -4.75 -24.745344 -3.257279 -4.75
+1 16 0 0 -4.75 -19.802099 0 -15.194685 -15.194685 0 19.802099 0 1 0 48\1-12edge.dat
+2 24 -18.640148 -16.518827 -4.75 -19.800846 -15.194356 -4.75
+
+2 24 -16.518828 -18.640148 -4.75 -15.194356 -19.800845 -4.75
+1 16 0 0 -4.75 15.194685 0 -19.802099 -19.802099 0 -15.194685 0 1 0 48\5-24edge.dat
+2 24 16.518828 -18.640148 -4.75 15.194356 -19.800845 -4.75
+
+2 24 1.5 1.5 4.25 1.5 1.5 -4.75
+0 BFC INVERTNEXT
+0 // Box with  2 Faces without  7 Edges (main_colour)
+1 16 1.826343 3.3484685 -0.25 0 -0.3263435 0 0 0.0648935 1.9133625 -4.5 0 0 box2-7.dat
+5 24 2.152687 5.196938 4.25 2.152687 5.196938 -4.75 0 5.625 4.25 4.305375 4.305375 4.25
+0 BFC INVERTNEXT
+0 // Cylinder Open 0.125 (main_colour)
+1 16 0 0 -4.75 2.152594 0 5.196822 5.196822 0 -2.152594 0 9 0 1-8cylo.dat
+5 24 5.196938 2.152687 4.25 5.196938 2.152687 -4.75 5.625 0 4.25 4.305375 4.305375 4.25
+0 BFC INVERTNEXT
+0 // Box with  2 Faces without  7 Edges (main_colour)
+1 16 3.3484685 1.826343 -0.25 0 0.0648935 1.9133625 0 -0.3263435 0 -4.5 0 0 box2-7.dat
+2 24 -1.5 1.5 4.25 -1.5 1.5 -4.75
+0 BFC INVERTNEXT
+0 // Box with  2 Faces without  7 Edges (main_colour)
+1 16 -3.348468 1.826343 -0.25 0 -0.064894 -1.913363 0 -0.326344 0 -4.5 0 0 box2-7.dat
+5 24 -5.196938 2.152687 4.25 -5.196938 2.152687 -4.75 -5.625 0 4.25 -4.305375 4.305375 4.25
+0 BFC INVERTNEXT
+0 // Cylinder Open 0.125 (main_colour)
+1 16 0 0 -4.75 -5.196822 0 2.152594 2.152594 0 5.196822 0 9 0 1-8cylo.dat
+5 24 -2.152687 5.196938 4.25 -2.152687 5.196938 -4.75 0 5.625 4.25 -4.305375 4.305375 4.25
+0 BFC INVERTNEXT
+0 // Box with  2 Faces without  7 Edges (main_colour)
+1 16 -1.826343 3.348469 -0.25 0 0.326344 0 0 0.064893 1.913363 -4.5 0 0 box2-7.dat
+2 24 -1.5 -1.5 4.25 -1.5 -1.5 -4.75
+0 BFC INVERTNEXT
+0 // Box with  2 Faces without  7 Edges (main_colour)
+1 16 -1.826343 -3.348468 -0.25 0 0.326344 0 0 -0.064894 -1.913363 -4.5 0 0 box2-7.dat
+5 24 -2.152687 -5.196938 4.25 -2.152687 -5.196938 -4.75 0 -5.625 4.25 -4.305375 -4.305375 4.25
+0 BFC INVERTNEXT
+0 // Cylinder Open 0.125 (main_colour)
+1 16 0 0 -4.75 -2.152594 0 -5.196822 -5.196822 0 2.152594 0 9 0 1-8cylo.dat
+5 24 -5.196938 -2.152687 4.25 -5.196938 -2.152687 -4.75 -5.625 0 4.25 -4.305375 -4.305375 4.25
+0 BFC INVERTNEXT
+0 // Box with  2 Faces without  7 Edges (main_colour)
+1 16 -3.348469 -1.826343 -0.25 0 -0.064893 -1.913363 0 0.326344 0 -4.5 0 0 box2-7.dat
+2 24 1.5 -1.5 4.25 1.5 -1.5 -4.75
+0 BFC INVERTNEXT
+0 // Box with  2 Faces without  7 Edges (main_colour)
+1 16 3.348468 -1.826343 -0.25 0 0.064894 1.913363 0 0.326344 0 -4.5 0 0 box2-7.dat
+5 24 5.196938 -2.152687 4.25 5.196938 -2.152687 -4.75 5.625 0 4.25 4.305375 -4.305375 4.25
+0 BFC INVERTNEXT
+0 // Cylinder Open 0.125 (main_colour)
+1 16 0 0 -4.75 5.196822 0 -2.152594 -2.152594 0 -5.196822 0 9 0 1-8cylo.dat
+5 24 2.152687 -5.196938 4.25 2.152687 -5.196938 -4.75 0 -5.625 4.25 4.305375 -4.305375 4.25
+0 BFC INVERTNEXT
+0 // Box with  2 Faces without  7 Edges (main_colour)
+1 16 1.826343 -3.348469 -0.25 0 -0.326344 0 0 -0.064893 -1.913363 -4.5 0 0 box2-7.dat
+
+0 // Disc 1.0 (main_colour)
+1 16 0 0 4.25 0 0 5.625 5.625 0 0 0 1 0 4-4disc.dat
+
+0 BFC INVERTNEXT
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 -16 -8 0 0 -6 -6 0 0 0 16 0 4-4cylo.dat
+
+0 // Ring  3 x 1.0 (main_colour)
+1 16 0 -16 -8 2 0 0 0 0 -2 0 1 0 4-4ring3.dat
+0 // ~Ring 16 x 1.0 (Obsolete) (main_colour)
+1 16 0 -16 -8 0.5 0 0 0 0 -0.5 0 1 0 4-4rin16.dat
+0 // Ring  3 x 1.0 (main_colour)
+1 16 0 -16 8 2 0 0 0 0 -2 0 -1 0 4-4ring3.dat
+0 // ~Ring 16 x 1.0 (Obsolete) (main_colour)
+1 16 0 -16 8 0.5 0 0 0 0 -0.5 0 -1 0 4-4rin16.dat
+
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 -16 -8 0 0 -8.5 -8.5 0 0 0 16 0 4-4cylo.dat
+
+
+4 16 8.662058 -10.78338 -4.75 8.308505 -11.13693 0.75 7.390562 -12.05487 0.75 7.390562 -12.05487 -4.75
+2 24 8.308505 -11.13693 0.75 7.390562 -12.05487 0.75
+2 24 7.390562 -12.05487 0.75 7.390562 -12.05487 -4.75
+2 24 7.390562 -12.05487 -4.75 8.662058 -10.78338 -4.75
+4 16 -7.390562 -12.05487 -4.75 -7.390562 -12.05487 0.75 -8.308505 -11.13693 0.75 -8.662058 -10.78338 -4.75
+2 24 -8.308505 -11.13693 0.75 -7.390562 -12.05487 0.75
+2 24 -7.390562 -12.05487 0.75 -7.390562 -12.05487 -4.75
+2 24 -7.390562 -12.05487 -4.75 -8.662058 -10.78338 -4.75
+
+4 16 -8.308505 -11.13693 0.75 -7.390562 -12.05487 0.75 -4.5 -23.25 0.75 -16.23517 -19.0636 0.75
+4 16 16.23517 -19.0636 0.75 4.5 -23.25 0.75 7.390562 -12.05487 0.75 8.308505 -11.13693 0.75
+0 // Circle 0.75 (main_colour)
+1 16 0 -16 0.75 6.010408 0 6.010407 6.010407 0 -6.010408 0 1 0 3-4edge.dat
+
+0 // Circle 0.25 (main_colour)
+1 16 0 -16 -4.75 -6.010407 0 6.010408 6.010408 0 6.010407 0 1 0 1-4edge.dat
+2 24 7.390562 -12.05487 -4.75 6.010408 -9.989593 -4.75
+2 24 -7.390562 -12.05487 -4.75 -6.010408 -9.989593 -4.75
+
+0 // Box with 3 Faces without 10 Parallel Edges (main_colour)
+1 16 0 -23.8 -0.75 0 0 3.5 -1 0 0 0 -2 0 box3u10p.dat
+2 24 0.806866 -24.3395 -2.75 0 -24.5 -3.128205
+2 24 -0.806866 -24.3395 -2.75 0 -24.5 -3.128205
+2 24 -3.5 -24.12 -2.75 -3.5 -23.688 -1.25303
+2 24 -3.5 -23.688 -1.25303 -3.5 -23.688 -2.75
+2 24 -3.33132 -24.1535 -2.75 -3.5 -24.12 -2.75
+2 24 -3.5 -23.688 -2.75 -3.25295 -23.8531 -2.75
+2 24 3.33132 -24.1535 -2.75 3.18325 -24.183 -2.75
+2 24 3.18325 -24.183 -2.75 0.806866 -24.3395 -2.75
+2 24 0.806866 -24.3395 -2.75 3.25295 -23.8531 -2.75
+2 24 3.5 -23.688 -2.75 3.5 -23.688 -1.25303
+2 24 3.5 -23.688 -1.25303 3.5 -24.12 -2.75
+2 24 3.5 -24.12 -2.75 3.33132 -24.1535 -2.75
+2 24 3.25295 -23.8531 -2.75 3.5 -23.688 -2.75
+2 24 -3.25295 -23.8531 -2.75 -0.806866 -24.3395 -2.75
+2 24 -0.806866 -24.3395 -2.75 -3.18325 -24.183 -2.75
+2 24 -3.18325 -24.183 -2.75 -3.33132 -24.1535 -2.75
+2 24 -3.5 -23.688 -1.25303 -4.730918 -22.86541 0.75
+2 24 3.5 -23.688 -1.25303 4.730918 -22.86541 0.75
+
+0 // shaft side
+
+1 16 0 0 4.75 0 0 24.96 24.96 0 0 0 -1 0 48\4-4aring.dat
+0 // Chord 0.125 (main_colour)
+1 16 0 0 4.75 0 0 -24.96 -24.96 0 0 0 -1 0 1-8chrd.dat
+0 // Chord 0.125 (main_colour)
+1 16 0 0 4.75 0 0 24.96 -24.96 0 0 0 -1 0 1-8chrd.dat
+
+0 // Disc 0.75 (main_colour)
+1 16 0 0 4.75 -17.649385 0 -17.649385 -17.649385 0 17.649385 0 -1 0 3-4disc.dat
+
+4 16 -8 -18 4.75 -17.649216 -17.649216 4.75 0 -24.96 4.75 0 -23.5 4.75
+4 16 -4 -9.5 4.75 0 0 4.75 -17.649216 -17.649216 4.75 -8 -18 4.75
+4 16 8 -18 4.75 17.649216 -17.649216 4.75 0 0 4.75 4 -9.5 4.75
+4 16 0 -23.5 4.75 0 -24.96 4.75 17.649216 -17.649216 4.75 8 -18 4.75
+
+0 // Cylinder Open 0.875 (main_colour)
+1 16 0 0 4.75 -3.635493 0 -8.776856 -8.776856 0 3.635493 0 4.5 0 7-8cylo.dat
+
+0 // Circle 1.0 (main_colour)
+1 16 0 -16 4.75 0 0 8.5 8.5 0 0 0 1 0 4-4edge.dat
+
+0 // Rectangle with 2 Adjacent Edges (main_colour)
+1 16 -0.628614 -9.125 7 -0.628614 0 0 -0.125 1 0 0 0 2.25 rect2a.dat
+0 // Rectangle with 2 Adjacent Edges (main_colour)
+1 16 0.628614 -9.125 7 0 0 0.628614 0 1 -0.125 2.25 0 0 rect2a.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 -2.446439 -9.013525 7 0 0 -1.189211 0 1 0.236475 2.25 0 0 rect1.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 2.446439 -9.013525 7 0 0 -1.189211 0 1 -0.236475 2.25 0 0 rect1.dat
+2 24 3.915787 -8.589831 4.75 3.915787 -8.589831 8
+2 24 3.63565 -8.77705 8 3.915787 -8.589831 8
+2 24 -3.915787 -8.589831 4.75 -3.915787 -8.589831 8
+2 24 -3.915787 -8.589831 8 -3.63565 -8.77705 8
+2 24 -3.63565 -8.77705 8 -1.257227 -9.25 8
+2 24 1.257227 -9.25 8 3.63565 -8.77705 8
+2 24 -1.257227 -9.25 8 0 -9 8
+2 24 0 -9 8 1.257227 -9.25 8
+5 24 0 -9 4.75 0 -9 9.25 2.6789 -9.5327 4.75 -2.6789 -9.5327 4.75
+5 24 3.63565 -8.77705 9.25 3.63565 -8.77705 4.75 6.71745 -6.71745 4.75 1.25723 -9.25 9.25
+5 24 -3.63565 -8.77705 4.75 -3.63565 -8.77705 9.25 -6.71745 -6.71745 9.25 -1.25723 -9.25 4.75
+
+0 // Disc 0.875 (main_colour)
+1 16 0 0 9.25 -3.635493 0 -8.776856 -8.776856 0 3.635493 0 -1 0 7-8disc.dat
+4 16 -3.63565 -8.77705 9.25 -1.257227 -9.25 9.25 0 -9 9.25 0 0 9.25
+4 16 0 0 9.25 0 -9 9.25 1.257227 -9.25 9.25 3.63565 -8.77705 9.25
+
+0 // Cylinder Closed 1.0 (main_colour)
+1 16 0 0 36.75 0 0 6 6 0 0 0 -27.5 0 4-4cylc.dat
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 0 61.75 0 0 4.5 4.5 0 0 0 -25 0 4-4cylo.dat
+0 // Cone  8 x 1.0 (main_colour)
+1 16 0 0 61.75 0 0 0.5 0.5 0 0 0 3 0 4-4con8.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 64.75 0 0 4 4 0 0 0 1 0 4-4edge.dat
+0 // Disc 1.0 (main_colour)
+1 16 0 0 64.75 0 0 4 4 0 0 0 -1 0 4-4disc.dat
+
+0 // shaft ribs
+
+0 // ~Ring 18 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 38.75 0 0 0.25 0.25 0 0 0 1 0 4-4rin18.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 38.75 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 38.75 0 0 4.75 4.75 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 39.25 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Cone 18 x 1.0 (main_colour)
+1 16 0 0 38.75 0 0 0.25 0.25 0 0 0 0.5 0 4-4con18.dat
+
+0 // ~Ring 18 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 41.25 0 0 0.25 0.25 0 0 0 1 0 4-4rin18.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 41.25 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 41.25 0 0 4.75 4.75 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 41.75 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Cone 18 x 1.0 (main_colour)
+1 16 0 0 41.25 0 0 0.25 0.25 0 0 0 0.5 0 4-4con18.dat
+
+0 // ~Ring 18 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 43.75 0 0 0.25 0.25 0 0 0 1 0 4-4rin18.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 43.75 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 43.75 0 0 4.75 4.75 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 44.25 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Cone 18 x 1.0 (main_colour)
+1 16 0 0 43.75 0 0 0.25 0.25 0 0 0 0.5 0 4-4con18.dat
+
+0 // ~Ring 18 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 46.25 0 0 0.25 0.25 0 0 0 1 0 4-4rin18.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 46.25 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 46.25 0 0 4.75 4.75 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 46.75 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Cone 18 x 1.0 (main_colour)
+1 16 0 0 46.25 0 0 0.25 0.25 0 0 0 0.5 0 4-4con18.dat
+
+0 // ~Ring 18 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 48.75 0 0 0.25 0.25 0 0 0 1 0 4-4rin18.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 48.75 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 48.75 0 0 4.75 4.75 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 49.25 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Cone 18 x 1.0 (main_colour)
+1 16 0 0 48.75 0 0 0.25 0.25 0 0 0 0.5 0 4-4con18.dat
+
+0 // ~Ring 18 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 51.25 0 0 0.25 0.25 0 0 0 1 0 4-4rin18.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 51.25 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 51.25 0 0 4.75 4.75 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 51.75 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Cone 18 x 1.0 (main_colour)
+1 16 0 0 51.25 0 0 0.25 0.25 0 0 0 0.5 0 4-4con18.dat
+
+0 // ~Ring 18 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 53.75 0 0 0.25 0.25 0 0 0 1 0 4-4rin18.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 53.75 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 53.75 0 0 4.75 4.75 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 54.25 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Cone 18 x 1.0 (main_colour)
+1 16 0 0 53.75 0 0 0.25 0.25 0 0 0 0.5 0 4-4con18.dat
+
+0 // ~Ring 18 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 56.25 0 0 0.25 0.25 0 0 0 1 0 4-4rin18.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 56.25 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 56.25 0 0 4.75 4.75 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 56.75 0 0 4.5 4.5 0 0 0 1 0 4-4edge.dat
+0 // Cone 18 x 1.0 (main_colour)
+1 16 0 0 56.25 0 0 0.25 0.25 0 0 0 0.5 0 4-4con18.dat
+
+

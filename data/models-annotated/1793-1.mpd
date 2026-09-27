@@ -1,0 +1,1215 @@
+0 FILE 1793 - Space Station Zenon.ldr
+0 A large modular space station built on a 32x32 baseplate with a vehicle, cockpit, turntable-mounted structures, cranes, antennae, and rock walls.
+0 Name: 1793 - Space Station Zenon.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 1793 - Base.ldr
+1 0 446.941 -12 50.407 0.980785 0 0.19509 0 1 0 -0.19509 0 0.980785 1793 - Cockpit.ldr
+1 0 -70 -44 -444 -0.707107 0 -0.707107 0 1 0 0.707107 0 -0.707107 1793 - Vehicle + Minifig.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Vehicle.ldr
+0 A wheeled rover built from plates, brackets, sloped panels, and four treaded wheels.
+0 Name: 1793 - Vehicle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Plate  2 x 10 (blue)
+1 1 0 0 0 0 0 1 0 1 0 -1 0 0 3832.dat
+0 // Plate  2 x  2 with Holes (black)
+1 0 0 8 -60 1 0 0 0 1 0 0 0 1 2817.dat
+0 // Technic Pin (light_grey)
+1 7 -20 18 -60 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Technic Pin (light_grey)
+1 7 20 18 -60 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 -30 18 -60 0 0 1 1 0 0 0 1 0 6118.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 30 18 -60 0 0 -1 1 0 0 0 -1 0 6118.dat
+0 // Plate  2 x  2 with Holes (black)
+1 0 0 8 60 1 0 0 0 1 0 0 0 1 2817.dat
+0 // Technic Pin (light_grey)
+1 7 -20 18 60 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Technic Pin (light_grey)
+1 7 20 18 60 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 -30 18 60 0 0 1 1 0 0 0 1 0 6118.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 30 18 60 0 0 -1 1 0 0 0 -1 0 6118.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 0 -8 -50 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 0 -8 20 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (light_grey)
+1 7 0 -8 -90 1 0 0 0 1 0 0 0 1 2436a.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 0 -24 70 1 0 0 0 1 0 0 0 1 3039.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 0 -24 90 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (black)
+1 0 0 -32 80 1 0 0 0 1 0 0 0 1 4859.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 0 -40 80 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -48 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (black)
+1 0 0 -48 70 1 0 0 0 1 0 0 0 1 2436a.dat
+0 // Slope Brick 45  2 x  2 with Gauge Pattern (black)
+1 0 0 -32 -90 -1 0 0 0 1 0 0 0 -1 3039pc1.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 0 -38 32 -1 0 0 0 0 1 0 1 0 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -30 -38 32 0 0 1 1 0 0 0 1 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 30 -38 32 0 0 -1 -1 0 0 0 1 0 3665.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 0 -38 24 -1 0 0 0 0 1 0 1 0 3666.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -28 16 -1 0 0 0 0 1 0 1 0 3022.dat
+0 // Panel  3 x  2 x  5 & 2/3 (trans_dark_blue)
+1 33 -40 2 -112 -1 0 0 0 0 1 0 1 0 2448.dat
+0 // Panel  3 x  2 x  5 & 2/3 (trans_dark_blue)
+1 33 40 2 -112 -1 0 0 0 0 1 0 1 0 2448.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -38 8 -1 0 0 0 0 1 0 1 0 3710.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 0 -56 90 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 0 -56 70 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 30 2 -136 0 0 -1 -1 0 0 0 1 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -30 2 -136 0 0 1 1 0 0 0 1 0 3040b.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 -10 2 -128 0 0 1 1 0 0 0 1 0 4589.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 10 2 -128 0 0 1 1 0 0 0 1 0 4589.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 0 -64 80 0 0 -1 0 1 0 1 0 0 4275b.dat
+1 0 0 -60 110 1 0 0 0 0.8192 0.5736 0 -0.5736 0.8192 1793 - Vehicle - Antenna.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Vehicle - Antenna.ldr
+0 A long hinged antenna mast tipped with cones and neon-green whip antennas.
+0 Name: 1793 - Vehicle - Antenna.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Plate  1 x  6 with 2 and 3 Fingers On Sides (light_grey)
+1 7 0 -4 20 -1 0 0 0 1 0 0 0 -1 4507.dat
+0 // Plate  1 x  1 Round (black)
+1 0 -50 -12 20 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 50 -12 20 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 -50 -36 20 1 0 0 0 1 0 0 0 1 4589.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 50 -36 20 1 0 0 0 1 0 0 0 1 4589.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 -30 -12 20 1 0 0 0 1 0 0 0 1 2569.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 30 -12 20 1 0 0 0 1 0 0 0 1 2569.dat
+
+
+
+0 STEP
+0 FILE 1793 - Vehicle + Minifig.ldr
+0 The rover assembled with a minifig included.
+0 Name: 1793 - Vehicle + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 1793 - Vehicle.ldr
+1 0 0 -61 -32 1 0 0 0 1 0 0 0 1 1793 - Minifig 3.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Cockpit.ldr
+0 An angled cockpit module with large blue wing panels, jet engine plates, sloped surfaces, and a gauge display.
+0 Name: 1793 - Cockpit.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Plate  4 x  8 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3035.dat
+0 // Plate  1 x  8 (black)
+1 0 30 8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (black)
+1 0 -30 8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -8 60 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -30 -8 20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 30 -8 20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Wing  8 x  8 with  3 x  4 Cutout (blue)
+1 1 0 -8 -60 1 0 0 0 1 0 0 0 1 6104.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 -50 -16 10 1 0 0 0 1 0 0 0 1 2555.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 50 -16 10 1 0 0 0 1 0 0 0 1 2555.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -30 -24 70 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 30 -24 70 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 -30 -32 10 1 0 0 0 1 0 0 0 1 4286.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 30 -32 10 1 0 0 0 1 0 0 0 1 4286.dat
+0 // Brick  2 x  4 (light_grey)
+1 7 0 -32 40 1 0 0 0 1 0 0 0 1 3001.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -30 -32 -70 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 30 -32 -70 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 0 -32 90 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Slope Brick 45  2 x  2 with Gauge Pattern (black)
+1 0 0 -32 -90 -1 0 0 0 1 0 0 0 -1 3039pc1.dat
+0 // Plate  1 x  2 with Jet Engine with Axle Hole (blue)
+1 1 -30 -32 80 0 0 -1 0 1 0 1 0 0 3475b.dat
+0 // Plate  1 x  2 with Jet Engine with Axle Hole (blue)
+1 1 30 -32 80 0 0 1 0 1 0 -1 0 0 3475b.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -40 80 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  4 (black)
+1 0 30 -40 40 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 -30 -40 40 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 -30 -40 90 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 30 -40 90 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Plate  1 x  2 (blue)
+1 1 -30 -48 80 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 30 -48 80 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Slope Brick 45  2 x  2 (light_grey)
+1 7 0 -64 90 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (black)
+1 0 0 -32 -110 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 -10 -40 -100 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 10 -40 -100 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Plate  1 x  2 with Jet Engine with Axle Hole (black)
+1 0 -30 -56 80 0 0 -1 0 1 0 1 0 0 3475b.dat
+0 // Plate  1 x  2 with Jet Engine with Axle Hole (black)
+1 0 30 -56 80 0 0 1 0 1 0 -1 0 0 3475b.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 0 -64 70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 0 -64 50 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 0 -88 50 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 0 -88 70 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (blue)
+1 1 0 -40 -140 -1 0 0 0 1 0 0 0 -1 4859.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 50 -22 20 1 0 0 0 0 -1 0 1 0 2569.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 -50 -22 20 1 0 0 0 0 -1 0 1 0 2569.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -96 70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (black)
+1 0 0 -96 50 1 0 0 0 1 0 0 0 1 4315.dat
+0 // Windscreen 10 x  4 x  2.333 Canopy (trans_dark_blue)
+1 33 0 -92 36 1 0 0 0 1 0 0 0 1 2507.dat
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (light_grey)
+1 7 0 -104 60 1 0 0 0 1 0 0 0 1 4859.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base.ldr
+0 The main station foundation on a 32x32 baseplate featuring turntables, sloped structures, corners, and hinged connections.
+0 Name: 1793 - Base.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Baseplate 32 x 32 (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3811.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 -240 -8 -160 -1 0 0 0 1 0 0 0 -1 3680.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (black)
+1 0 -270 -72 -70 0 0 1 0 1 0 -1 0 0 4460a.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -140 -24 -70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  2 x  2 (black)
+1 0 -100 -24 -60 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 -100 -24 -20 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 -60 -24 -20 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -50 -24 20 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  2 x  2 (blue)
+1 1 -140 -24 20 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // Brick  2 x  2 (blue)
+1 1 -180 -24 60 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // Brick  1 x  1 (black)
+1 0 -210 -24 70 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -190 -24 90 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (black)
+1 0 -50 -72 150 -1 0 0 0 1 0 0 0 -1 4460a.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 40 -8 120 0 0 -1 0 1 0 1 0 0 3680.dat
+0 // Slope Brick 75  2 x  2 x  3 with Hollow Studs (light_grey)
+1 7 -270 -72 0 0 0 1 0 1 0 -1 0 0 3684.dat
+0 // Slope Brick 75  2 x  2 x  3 with Hollow Studs (light_grey)
+1 7 -120 -72 150 -1 0 0 0 1 0 0 0 -1 3684.dat
+0 // Slope Brick 75  2 x  2 x  3 Double Convex (blue)
+1 1 -210 -72 90 -1 0 0 0 1 0 0 0 -1 3685.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 -190 -48 70 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 -170 -48 50 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 -150 -48 30 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 -120 -48 0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 190 -8 140 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 290 -8 140 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 240 -8 100 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 250 -16 180 0 0 -1 0 1 0 1 0 0 4531.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 230 -16 180 0 0 -1 0 1 0 1 0 0 4531.dat
+0 // Brick  1 x  1 (black)
+1 0 -190 -72 90 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -210 -72 70 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Plate  2 x  2 (blue)
+1 1 -180 -56 60 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 -140 -56 20 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Brick  2 x  3 (black)
+1 0 -120 -48 -50 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // Brick  2 x  3 (black)
+1 0 -70 -48 0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -150 -48 -70 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -50 -48 30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Panel  1 x  4 x  3 with Hollow Studs (black)
+1 0 -210 -72 20 0 0 -1 0 1 0 1 0 0 4215b.dat
+0 // Panel  1 x  4 x  3 with Hollow Studs (black)
+1 0 -140 -72 90 1 0 0 0 1 0 0 0 1 4215b.dat
+0 // Panel  1 x  4 x  3 with Hollow Studs (light_grey)
+1 7 -200 -72 -70 -1 0 0 0 1 0 0 0 -1 4215b.dat
+0 // Panel  1 x  4 x  3 with Hollow Studs (light_grey)
+1 7 -50 -72 80 0 0 1 0 1 0 -1 0 0 4215b.dat
+0 // Brick  2 x  4 (black)
+1 0 -140 -72 -40 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Brick  2 x  4 (black)
+1 0 -80 -72 20 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // Tile  1 x  4 with Groove (light_grey)
+1 7 -240 -80 10 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Tile  1 x  4 with Groove (light_grey)
+1 7 -210 -80 60 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (light_grey)
+1 7 -130 -80 120 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Tile  1 x  1 with Groove (light_grey)
+1 7 -150 -80 90 0 0 -1 0 1 0 1 0 0 3070b.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 -180 -80 90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Brick  1 x  2 (black)
+1 0 240 -24 150 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Tile  1 x  2 with Blue Screen, Red and Silver Panel Pattern (black)
+1 0 240 -32 150 -1 0 0 0 1 0 0 0 -1 3069bp28.dat
+0 // Tile  1 x  8 (black)
+1 0 -200 -80 -10 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (black)
+1 0 -200 -80 -70 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (black)
+1 0 -50 -80 80 0 0 -1 0 1 0 1 0 0 4162.dat
+0 // Tile  1 x  8 (black)
+1 0 -110 -80 80 0 0 -1 0 1 0 1 0 0 4162.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 -140 -80 -40 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 -80 -80 20 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Turntable  4 x  4 Base (black)
+1 0 -160 -80 40 0 0 -1 0 1 0 1 0 0 3403.dat
+1 0 240 -12 210 1 0 0 0 1 0 0 0 1 1793 - Base - Box.ldr
+1 0 40 -8 120 -0.342 0 -0.9397 0 1 0 0.9397 0 -0.342 1793 - Base - Hinge 1.ldr
+1 0 -240 -8 -160 0.342 0 -0.9397 0 1 0 0.9397 0 0.342 1793 - Base - Hinge 2.ldr
+1 0 -160 -80 40 0.9659 0 -0.2588 0 1 0 0.2588 0 0.9659 1793 - Base - Turntable.ldr
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 -280 -16 -90 -1 0 0 0 1 0 0 0 -1 4531.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 -280 -16 -230 -1 0 0 0 1 0 0 0 -1 4531.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 -30 -16 160 0 0 -1 0 1 0 1 0 0 4531.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 110 -16 160 0 0 -1 0 1 0 1 0 0 4531.dat
+1 0 -310 -12 -90 0.6428 0.766 0 -0.766 0.6428 0 0 0 1 1793 - Base - Wall 1.ldr
+1 0 110 -12 190 0 0 1 0 1 0 -1 0 0 1793 - Base - Wall 2.ldr
+0 // Panel  1 x  2 x  3 with Solid Studs (black)
+1 0 270 -72 -240 0 0 -1 0 1 0 1 0 0 2362a.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (black)
+1 0 240 -72 -270 1 0 0 0 1 0 0 0 1 2362a.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (black)
+1 0 210 -72 -240 0 0 1 0 1 0 -1 0 0 2362a.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (black)
+1 0 240 -72 -210 -1 0 0 0 1 0 0 0 -1 2362a.dat
+0 // Slope Brick 75  2 x  2 x  3 Double Convex (blue)
+1 1 210 -72 -270 0 0 1 0 1 0 -1 0 0 3685.dat
+0 // Slope Brick 75  2 x  2 x  3 Double Convex (blue)
+1 1 270 -72 -270 1 0 0 0 1 0 0 0 1 3685.dat
+0 // Slope Brick 75  2 x  2 x  3 Double Convex (blue)
+1 1 270 -72 -210 0 0 -1 0 1 0 1 0 0 3685.dat
+0 // Slope Brick 75  2 x  2 x  3 Double Convex (blue)
+1 1 210 -72 -210 -1 0 0 0 1 0 0 0 -1 3685.dat
+0 // Turntable  4 x  4 Base (black)
+1 0 240 -96 -240 0 0 -1 0 1 0 1 0 0 3403.dat
+1 0 240 -96 -240 -0.608734 0 0.793337 0 1 0 -0.793337 0 -0.608734 1793 - Base - Crane.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Base - Box.ldr
+0 A hinged sloped box assembly with a towball joint, toothed cone, and neon-green antenna.
+0 Name: 1793 - Base - Box.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (blue)
+1 1 -10 -4 -30 0 0 -1 0 1 0 1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (blue)
+1 1 10 -4 -30 0 0 -1 0 1 0 1 0 0 4275b.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 0 -28 -40 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -28 -70 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 30 -20 -70 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 -30 -20 -70 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -36 -70 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 0 -28 -100 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Plate  2 x  2 with Towball (blue)
+1 1 0 -4 -110 1 0 0 0 1 0 0 0 1 3731.dat
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (light_grey)
+1 7 0 -84 -70 1 0 0 0 1 0 0 0 1 3942b.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 0 -92 -70 1 0 0 0 1 0 0 0 1 2569.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Hinge 1.ldr
+0 The first hinge subassembly for the base, combining support and top components.
+0 Name: 1793 - Base - Hinge 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 1793 - Base - Hinge 1 - Support.ldr
+1 0 0 -46 0 0 0.342 -0.9397 0 0.9397 0.342 1 0 0 1793 - Base - Hinge 1 - Top.ldr
+
+
+0 STEP
+0 FILE 1793 - Base - Hinge 1 - Support.ldr
+0 A turntable-based support structure with studs and a hinge base for mounting the top section.
+0 Name: 1793 - Base - Hinge 1 - Support.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 0 -8 10 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 0 -8 -10 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 0 -32 10 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 0 -32 -10 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Hinge  1 x  2 Base (black)
+1 0 0 -56 0 0 0 1 0 1 0 -1 0 0 3937.dat
+
+
+0 STEP
+0 FILE 1793 - Base - Hinge 1 - Top.ldr
+0 A hinged top section with a towball, sensor dishes, and a finned round brick.
+0 Name: 1793 - Base - Hinge 1 - Top.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 0 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Plate  1 x  4 with Towball (black)
+1 0 0 -18 0 1 0 0 0 1 0 0 0 1 3184.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (light_grey)
+1 7 0 -34 10 -1 0 0 0 1 0 0 0 -1 4590.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 -10 -42 10 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 30 -42 0 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 30 -50 0 -1 0 0 0 1 0 0 0 -1 4740.dat
+0 // Brick  1 x  1 Round with Fins (black)
+1 0 -10 -66 10 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 4588.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 -10 -90 10 -1 0 0 0 1 0 0 0 -1 4589.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Hinge 2.ldr
+0 The second hinge subassembly for the base, combining support and top components.
+0 Name: 1793 - Base - Hinge 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 1793 - Base - Hinge 1 - Support.ldr
+1 0 0 -46 0 1 0 0 0 0.9659 0.2588 0 -0.2588 0.9659 1793 - Base - Hinge 2 - Top.ldr
+
+
+0 STEP
+0 FILE 1793 - Base - Hinge 2 - Top.ldr
+0 A hinged top section with a towball, neon-green cones, and a finned round brick.
+0 Name: 1793 - Base - Hinge 2 - Top.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Plate  1 x  4 with Towball (black)
+1 0 0 -18 0 1 0 0 0 1 0 0 0 1 3184.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (light_grey)
+1 7 0 -34 10 -1 0 0 0 1 0 0 0 -1 4590.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 -10 -42 10 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 30 -42 0 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 30 -66 0 -1 0 0 0 1 0 0 0 -1 4589.dat
+0 // Brick  1 x  1 Round with Fins (black)
+1 0 -10 -66 10 -0.7071 0 0.7071 0 1 0 -0.7071 0 -0.7071 4588.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 -10 -90 10 -1 0 0 0 1 0 0 0 -1 4589.dat
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 0 -10 0 -1 0 0 0 1 0 0 0 -1 3938.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Turntable.ldr
+0 A large rotating turntable platform on a 10x10 plate with sloped armor, a transparent corner panel, and neon-green accents.
+0 Name: 1793 - Base - Turntable.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Turntable  4 x  4 Top (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3404.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 10 -8 -10 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate 10 x 10 without Corner (light_grey)
+1 7 -20 -8 20 -1 0 0 0 1 0 0 0 -1 2401.dat
+0 // Brick  1 x  4 (black)
+1 0 -110 -32 -80 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 80 -32 110 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 -60 -8 -100 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 100 -8 60 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 -10 -16 -80 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 80 -16 10 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Slope Brick 45  2 x  3 (black)
+1 0 -90 -32 -90 0 0 -1 0 1 0 1 0 0 3038.dat
+0 // Slope Brick 45  2 x  3 (black)
+1 0 90 -32 90 1 0 0 0 1 0 0 0 1 3038.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 -110 -104 -90 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 90 -104 110 -1 0 0 0 1 0 0 0 -1 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 -90 -104 -90 -1 0 0 0 1 0 0 0 -1 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 90 -104 90 0 0 1 0 1 0 -1 0 0 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 -110 -104 -110 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 110 -104 110 -1 0 0 0 1 0 0 0 -1 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 -90 -104 -110 0 0 -1 0 1 0 1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 110 -104 90 1 0 0 0 1 0 0 0 1 2449.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 20 -16 -20 1 0 0 0 1 0 0 0 1 3680.dat
+0 // Plate  2 x  4 (black)
+1 0 -100 -112 -100 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (black)
+1 0 100 -112 100 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 -110 -184 -90 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 -90 -184 -90 0 0 -1 0 1 0 1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 -110 -184 -110 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 -90 -184 -110 0 0 -1 0 1 0 1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 90 -184 110 -1 0 0 0 1 0 0 0 -1 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 90 -184 90 1 0 0 0 1 0 0 0 1 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 110 -184 110 -1 0 0 0 1 0 0 0 -1 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 110 -184 90 1 0 0 0 1 0 0 0 1 2449.dat
+0 // Plate  2 x  4 (black)
+1 0 -100 -192 -100 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (black)
+1 0 100 -192 100 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 -120 -200 -100 0 0 1 0 1 0 -1 0 0 3680.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 90 -216 110 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 90 -240 110 -1 0 0 0 1 0 0 0 -1 4589.dat
+0 // Panel 10 x 10 x 12 Corner (trans_dark_blue)
+1 33 50 -296 -50 -1 0 0 0 1 0 0 0 -1 2409.dat
+1 0 20 -16 -20 0.591327 0 0.806432 0 1 0 -0.806432 0 0.591327 1793 - Base - Turntable - Seat.ldr
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 70 -320 -50 -1 0 0 0 1 0 0 0 -1 4589.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 70 -328 -50 -1 0 0 0 1 0 0 0 -1 3957a.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 50 -304 -70 -1 0 0 0 1 0 0 0 -1 2569.dat
+1 0 -120 -200 -100 0.6428 0 0.766 0 1 0 -0.766 0 0.6428 1793 - Base - Turntable - Antenna.ldr
+0 // Cone  1 x  1 (black)
+1 0 70 -320 -70 -1 0 0 0 1 0 0 0 -1 4589.dat
+0 // Cone  1 x  1 (light_grey)
+1 7 70 -344 -70 -1 0 0 0 1 0 0 0 -1 4589.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 70 -352 -70 -1 0 0 0 1 0 0 0 -1 2569.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Turntable - Seat.ldr
+0 A small turntable-mounted seat base with hinged finger tiles.
+0 Name: 1793 - Base - Turntable - Seat.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 -10 -16 0 0 0 -1 0 1 0 1 0 0 4531.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 10 -16 0 0 0 -1 0 1 0 1 0 0 4531.dat
+1 0 0 -12 30 1 0 0 0 0.9659 0.2588 0 -0.2588 0.9659 1793 - Base - Turntable - Seat - Seat + Minifig.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Base - Turntable - Seat - Seat.ldr
+0 A hinged command seat with a Spyrius droid-patterned backrest and control plates.
+0 Name: 1793 - Base - Turntable - Seat - Seat.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (blue)
+1 1 -10 -4 -30 0 0 -1 0 1 0 1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (blue)
+1 1 10 -4 -30 0 0 -1 0 1 0 1 0 0 4275b.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -12 -50 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Slope Brick 45  2 x  2 with Spyrius Droid Image Pattern (black)
+1 0 0 -36 -80 -1 0 0 0 1 0 0 0 -1 3039pc7.dat
+0 // Bracket  2 x  3 -  2 x  2 (black)
+1 0 0 -20 -20 1 0 0 0 1 0 0 0 1 4598.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -28 -40 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 0 -28 -20 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (light_grey)
+1 7 0 -50 18 1 0 0 0 0 -1 0 1 0 4590.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 -30 -60 34 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 30 -60 34 1 0 0 0 0 -1 0 1 0 6141.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Turntable - Seat - Seat + Minifig.ldr
+0 The turntable command seat assembled with a minifig included.
+0 Name: 1793 - Base - Turntable - Seat - Seat + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 1793 - Base - Turntable - Seat - Seat.ldr
+1 0 0 -81 -22 1 0 0 0 1 0 0 0 1 1793 - Minifig 1.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Base - Turntable - Antenna.ldr
+0 A turntable-mounted hinged antenna unit topped with a neon-green cone.
+0 Name: 1793 - Base - Turntable - Antenna.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 10 -8 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (light_grey)
+1 7 -10 -8 0 0 0 1 0 1 0 -1 0 0 4276b.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -16 0 0 0 1 0 1 0 -1 0 0 3022.dat
+1 0 -10 -4 -30 1 0 0 0 0.9659 0.2588 0 -0.2588 0.9659 1793 - Base - Turntable - Antenna - 1.ldr
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 10 -40 -10 1 0 0 0 1 0 0 0 1 4589.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Turntable - Antenna - 1.ldr
+0 A hinged bar element forming one segment of the multi-jointed antenna array.
+0 Name: 1793 - Base - Turntable - Antenna - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Bar  2.5 with  2 and  3 Fingers on Ends (black)
+1 0 0 -30 0 1 0 0 0 0 -1 0 1 0 2923.dat
+1 0 0 -60 -8 -1 0 0 0 -0.9063 0.4226 0 0.4226 0.9063 1793 - Base - Turntable - Antenna - 2.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Base - Turntable - Antenna - 2.ldr
+0 A hinged bar element forming the second segment of the multi-jointed antenna array.
+0 Name: 1793 - Base - Turntable - Antenna - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Bar  2.5 with  2 and  3 Fingers on Ends (black)
+1 0 0 -30 0 1 0 0 0 0 -1 0 1 0 2923.dat
+1 0 0 -60 -8 -1 0 0 0 -0.9397 0.342 0 0.342 0.9397 1793 - Base - Turntable - Antenna - 3.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Base - Turntable - Antenna - 3.ldr
+0 A hinged bar element forming the third segment of the multi-jointed antenna array.
+0 Name: 1793 - Base - Turntable - Antenna - 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Bar  2.5 with  2 and  3 Fingers on Ends (black)
+1 0 0 -30 0 1 0 0 0 0 -1 0 1 0 2923.dat
+1 0 0 -60 -8 1 0 0 0 -0.6428 -0.766 0 0.766 -0.6428 1793 - Base - Turntable - Antenna - 4.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Base - Turntable - Antenna - 4.ldr
+0 The terminal segment of the antenna array ending with inverted dishes and a black cone.
+0 Name: 1793 - Base - Turntable - Antenna - 4.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Bar  2 with 3 Fingers and Top Stud (black)
+1 0 0 -36 0 0 0 1 0 1 0 -1 0 0 2433.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 0 -44 0 0 0 1 0 1 0 -1 0 0 4740.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 0 -52 0 0 0 1 0 1 0 -1 0 0 4740.dat
+0 // Cone  1 x  1 (black)
+1 0 0 -76 0 0 0 1 0 1 0 -1 0 0 4589.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Wall 1.ldr
+0 A hinged rock wall panel with triangular rock sections and inverted slope detailing.
+0 Name: 1793 - Base - Wall 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (light_grey)
+1 7 30 -4 0 -1 0 0 0 1 0 0 0 -1 4275b.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 40 -28 0 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Panel  3 x  8 x  7 Rock Triangular (dark_grey)
+1 8 40 -172 -70 0 0 1 0 1 0 -1 0 0 6083.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 40 -28 -140 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (light_grey)
+1 7 30 -4 -140 -1 0 0 0 1 0 0 0 -1 4275b.dat
+0 // Brick  1 x  2 (black)
+1 0 50 -76 0 1 0 0 0 1 0 0 0 1 3004.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Wall 2.ldr
+0 A hinged rock wall panel with triangular rock sections and inverted slope detailing.
+0 Name: 1793 - Base - Wall 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (light_grey)
+1 7 30 -4 0 -1 0 0 0 1 0 0 0 -1 4275b.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 40 -28 0 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Panel  3 x  8 x  7 Rock Triangular (dark_grey)
+1 8 40 -172 -70 0 0 1 0 1 0 -1 0 0 6083.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 40 -28 -140 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (light_grey)
+1 7 30 -4 -140 -1 0 0 0 1 0 0 0 -1 4275b.dat
+0 // Brick  1 x  2 (black)
+1 0 50 -76 -140 1 0 0 0 1 0 0 0 1 3004.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Crane.ldr
+0 A turntable-mounted articulated crane arm with sloped blue panels, hinge plates, and neon-green cone tips.
+0 Name: 1793 - Base - Crane.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Turntable  4 x  4 Top (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3404.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 -40 -8 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 0 -8 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 0 -8 -30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (black)
+1 0 -50 -16 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Slope Brick 33  3 x  2 (blue)
+1 1 10 -32 0 0 0 1 0 1 0 -1 0 0 3298.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 30 -32 20 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 30 -32 -20 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 10 -32 -30 0 0 1 0 1 0 -1 0 0 4286.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 10 -32 30 0 0 1 0 1 0 -1 0 0 4286.dat
+0 // Plate  3 x  6 without Corners (black)
+1 0 -90 -16 0 0 0 1 0 1 0 -1 0 0 2419.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 30 -56 30 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 30 -56 -30 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 30 -56 0 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Hinge Plate  2 x  5 Base with Large Hole (blue)
+1 1 -130 -22 0 0 0 -1 0 1 0 1 0 0 3149e.dat
+0 // ~Hinge Plate  2 x  5 Pivot (red)
+1 4 -130 -22 0 0 0 -1 0 1 0 1 0 0 313.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_grey)
+1 7 50 -56 30 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_grey)
+1 7 50 -56 -30 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 50 -80 30 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 50 -80 -30 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 70 -80 30 0 0 1 0 1 0 -1 0 0 4589.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 70 -80 -30 0 0 1 0 1 0 -1 0 0 4589.dat
+0 // Brick  1 x  2 with Pin (light_grey)
+1 7 60 -104 30 1 0 0 0 1 0 0 0 1 2458.dat
+0 // Brick  1 x  2 with Pin (light_grey)
+1 7 60 -104 -30 -1 0 0 0 1 0 0 0 -1 2458.dat
+1 0 -130 -22 0 0 0.342 -0.9397 0 0.9397 0.342 1 0 0 1793 - Base - Crane - 1.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Base - Crane - 1.ldr
+0 The upper articulated segment of the crane arm with hinge plates and a sensor light.
+0 Name: 1793 - Base - Crane - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Plate  2 x  5 Top with Large Hole (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 314e.dat
+0 // Hinge Plate  2 x  4 - Female (black)
+1 0 0 -18 -50 1 0 0 0 1 0 0 0 1 3597.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -26 -20 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 0 -34 -20 1 0 0 0 1 0 0 0 1 6141.dat
+1 0 0 -22 -74 -1 0 0 0 0.5676 0.8233 0 0.8233 -0.5676 1793 - Base - Crane - 2.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Base - Crane - 2.ldr
+0 Crane base section with hinge plates, inverted dishes forming a rotating platform, and neon green cone accents.
+0 Name: 1793 - Base - Crane - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Plate  2 x  4 with Digger Bucket Holder (black)
+1 0 0 -4 -56 -1 0 0 0 1 0 0 0 -1 3315.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -12 -86 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x 10 (light_grey)
+1 7 0 -12 -26 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Hinge Plate  2 x  5 Base with Large Hole (blue)
+1 1 0 -18 -106 -1 0 0 0 1 0 0 0 -1 3149e.dat
+0 // ~Hinge Plate  2 x  5 Pivot (red)
+1 4 0 -18 -106 -1 0 0 0 1 0 0 0 -1 313.dat
+1 0 0 -18 -106 0 0 -1 -0.3684 0.9296 0 0.9296 0.3684 0 1793 - Base - Crane - 3 + Minifig.ldr
+0 // Dish  6 x  6 Inverted Webbed Type 2 (black)
+1 0 80 -4 -36 0 0 -1 0 1 0 1 0 0 4285b.dat
+0 // Dish  6 x  6 Inverted Webbed Type 2 (black)
+1 0 -80 -4 -36 0 0 -1 0 1 0 1 0 0 4285b.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 80 -12 -46 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -80 -12 -46 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Dish  2 x  2 Inverted (light_grey)
+1 7 -80 4 -36 1 0 0 0 1 0 0 0 1 4740.dat
+0 // Dish  2 x  2 Inverted (light_grey)
+1 7 80 4 -36 1 0 0 0 1 0 0 0 1 4740.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 -80 12 -36 1 0 0 0 1 0 0 0 1 4589.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 80 12 -36 1 0 0 0 1 0 0 0 1 4589.dat
+
+
+
+0 STEP
+0 FILE 1793 - Base - Crane - 3.ldr
+0 Crane control cabin section with hinged panels, a patterned control screen, blue brackets, and neon cone details.
+0 Name: 1793 - Base - Crane - 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge Plate  2 x  5 Top with Large Hole (blue)
+1 1 0 0 0 0 0 -1 0 1 0 1 0 0 314e.dat
+0 // Bracket  8 x  2 x  1 & 1/3 (blue)
+1 1 130 -18 0 0 0 -1 0 1 0 1 0 0 4732.dat
+0 // Plate  2 x  2 with Holes (black)
+1 0 210 -10 0 0 0 -1 0 1 0 1 0 0 2817.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 220 -18 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (black)
+1 0 20 -18 0 0 0 1 0 1 0 -1 0 0 4596.dat
+0 // Plate  2 x  3 (black)
+1 0 40 -26 0 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  2 (black)
+1 0 210 -26 0 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 -50 -16 0 0 -1 0 -1 0 0 0 0 -1 6141.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 -58 -16 0 0 -1 0 -1 0 0 0 0 -1 4589.dat
+0 // Plate  2 x  6 (black)
+1 0 90 -26 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  1 x  2 (blue)
+1 1 100 -34 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Tile  1 x  4 with Groove (light_grey)
+1 7 90 -34 30 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Tile  1 x  4 with Groove (light_grey)
+1 7 90 -34 -30 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Tile  1 x  2 with Blue Screen, Red and Silver Panel Pattern (black)
+1 0 100 -42 0 0 0 -1 0 1 0 1 0 0 3069bp28.dat
+0 // Panel  1 x  2 x  1 with Square Corners (blue)
+1 1 90 -50 -50 1 0 0 0 1 0 0 0 1 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (blue)
+1 1 90 -50 50 -1 0 0 0 1 0 0 0 -1 4865a.dat
+0 // Hinge  1 x  2 Base (black)
+1 0 220 -50 0 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Plate  1 x  2 (black)
+1 0 160 -2 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 140 -2 0 0 0 1 0 1 0 -1 0 0 3069b.dat
+1 0 220 -40 0 0 0.980785 0.19509 0 0.19509 -0.980785 -1 0 0 1793 - Base - Crane - 4.ldr
+
+
+
+0 STEP
+0 FILE 1793 - Base - Crane - 3 + Minifig.ldr
+0 Crane control cabin section with an included minifigure operator.
+0 Name: 1793 - Base - Crane - 3 + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 1793 - Base - Crane - 3.ldr
+1 0 158 -55 0 0 0 1 0 1 0 -1 0 0 1793 - Minifig 2.ldr
+
+
+0 STEP
+0 FILE 1793 - Base - Crane - 4.ldr
+0 Crane canopy section built from a large translucent dark-blue panel mounted on a hinge with neon green cones.
+0 Name: 1793 - Base - Crane - 4.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 0 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Panel  3 x  2 x  6 (trans_dark_blue)
+1 33 0 -146 0 -1 0 0 0 1 0 0 0 -1 2466.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 -10 -170 0 -1 0 0 0 1 0 0 0 -1 4589.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 10 -170 0 -1 0 0 0 1 0 0 0 -1 4589.dat
+
+
+
+0 STEP
+0 FILE 1793 - Minifig 1.ldr
+0 Unitron space minifigure with silver sunglasses head, airtanks, and light-grey limbs.
+0 Name: 1793 - Minifig 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 -25.636 13.851 0.857167 0 -0.515038 0.100479 0.980785 0.167225 0.505142 -0.19509 0.840697 1793 - Minifig 1 - Helmet.ldr
+0 // Minifig Head with Silver Sunglasses and Red Headset Pattern (yellow)
+1 14 0 -25.636 13.851 0.857167 0 -0.515038 0.100479 0.980785 0.167225 0.505142 -0.19509 0.840697 3626bp68.dat
+0 // Minifig Airtanks (blue)
+1 1 0 0.845 8.584 1 0 0 0 0.980785 0.19509 0 -0.19509 0.980785 3838.dat
+0 // Minifig Torso with Unitron Pattern (dark_grey)
+1 8 0 0.845 8.584 1 0 0 0 0.980785 0.19509 0 -0.19509 0.980785 973p64.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32.231 2.341 1 0 0 0 0.980785 0.19509 0 -0.19509 0.980785 3815.dat
+0 // Minifig Arm Right (light_grey)
+1 7 -15.552 9.673 6.828 0.985 -0.0691452 -0.155303 0.166733 0.214714 0.961902 -0.0331654 -0.974152 0.223371 3818.dat
+0 // Minifig Arm Left (light_grey)
+1 7 15.552 9.673 6.828 0.985 0.126335 0.113752 -0.166733 0.587392 0.79141 0.0331654 -0.799079 0.600283 3819.dat
+0 // Minifig Hand (blue)
+1 1 -20.368 2.906 -13.581 0.985 -0.158685 -0.0609134 0.166733 0.831868 0.528263 -0.0331654 -0.530802 0.846649 3820.dat
+0 // Minifig Hand (blue)
+1 1 21.87 11.657 -14.187 0.985 0.169741 -0.00889577 -0.166733 0.974813 0.144241 0.0331654 -0.140549 0.989349 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (light_grey)
+1 7 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (light_grey)
+1 7 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+
+0 STEP
+0 FILE 1793 - Minifig 1 - Helmet.ldr
+0 Unitron-patterned space helmet with a translucent dark-blue visor.
+0 Name: 1793 - Minifig 1 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // ~Minifig Helmet Standard with Black, Blue and Silver Unitron Pattern (Obsolete) (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2446p51.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+
+
+0 STEP
+0 FILE 1793 - Minifig 2.ldr
+0 Unitron space minifigure with red-haired headset head, airtanks, and light-grey limbs.
+0 Name: 1793 - Minifig 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 -27 0 0.848048 0 0.529919 0 1 0 -0.529919 0 0.848048 1793 - Minifig 2 - Helmet.ldr
+0 // Minifig Head with Headset Over Fabuland Red Hair and Eyebrows Pattern (yellow)
+1 14 0 -27 0 0.848048 0 0.529919 0 1 0 -0.529919 0 0.848048 3626bp69.dat
+0 // Minifig Airtanks (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Unitron Pattern (dark_grey)
+1 8 0 0 0 1 0 0 0 1 0 0 0 1 973p64.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (light_grey)
+1 7 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Arm Left (light_grey)
+1 7 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Hand (blue)
+1 1 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // Minifig Hand (blue)
+1 1 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (light_grey)
+1 7 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (light_grey)
+1 7 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+
+0 STEP
+0 FILE 1793 - Minifig 2 - Helmet.ldr
+0 Standard space helmet with a translucent dark-blue visor.
+0 Name: 1793 - Minifig 2 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // ~Minifig Helmet Standard (Obsolete) (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 1.904 4.596 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 2447.dat
+
+
+
+0 STEP
+0 FILE 1793 - Minifig 3.ldr
+0 Unitron space minifigure with red-haired headset head, airtanks, and light-grey limbs.
+0 Name: 1793 - Minifig 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 -27 0 0.882948 0 0.469472 0 1 0 -0.469472 0 0.882948 1793 - Minifig 3 - Helmet.ldr
+0 // Minifig Head with Headset Over Fabuland Red Hair and Eyebrows Pattern (yellow)
+1 14 0 -27 0 0.882948 0 0.469472 0 1 0 -0.469472 0 0.882948 3626bp69.dat
+0 // Minifig Airtanks (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Unitron Pattern (dark_grey)
+1 8 0 0 0 1 0 0 0 1 0 0 0 1 973p64.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (light_grey)
+1 7 -15.552 9 0 0.985 -0.157621 -0.0636831 0.17 0.913276 0.368987 0 -0.374607 0.927184 3818.dat
+0 // Minifig Arm Left (light_grey)
+1 7 15.552 9 0 0.985 0.0382417 0.165643 -0.17 0.221577 0.959755 0 -0.97437 0.224951 3819.dat
+0 // Minifig Hand (blue)
+1 1 -22.9739 21.4417 -16.5975 0.985 -0.156462 0.0664143 0.17 0.90656 -0.384812 0 0.390672 0.920366 3820.dat
+0 // Minifig Hand (blue)
+1 1 19.6819 2.36738 -20.6019 0.985 0.144146 0.0900727 -0.17 0.835201 0.521892 0 -0.529839 0.84792 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (light_grey)
+1 7 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (light_grey)
+1 7 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+
+0 STEP
+0 FILE 1793 - Minifig 3 - Helmet.ldr
+0 Standard space helmet with a translucent dark-blue visor.
+0 Name: 1793 - Minifig 3 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 // ~Minifig Helmet Standard (Obsolete) (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+

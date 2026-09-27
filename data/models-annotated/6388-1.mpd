@@ -1,0 +1,924 @@
+0 FILE 6388 - main.ldr
+0 A scene composition placing a red bicycle alongside a building, two cars, a trailer, a boat, and four minifigures on a green baseplate.
+0 main
+0 Name: 6388 - main.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+1 16 0 8 0 1 0 0 0 1 0 0 0 1 6388 - building.ldr
+1 15 -360 -32 -300 -0.5 0 -0.866 0 1 0 0.866 0 -0.5 6388 - car 1.ldr
+1 4 0 -24 -360 0.5 0 0.866 0 1 0 -0.866 0 0.5 6388 - car 2.ldr
+1 4 -499.999 -24 -0.003 0 0 1 0 1 0 -1 0 0 6388 - trailer.ldr
+1 4 -340 -64 60 1 0 0 0 1 0 0 0 1 6388 - boat.ldr
+0 // Minifig Bicycle (Complete) (red)
+1 4 -350 -48 -110 1 0 0 0 1 0 0 0 1 4719c01.dat
+1 15 40 0 -130 1 0 0 0 1 0 0 0 1 6388 - minifig 1.ldr
+1 15 120 0 -70 1 0 0 0 1 0 0 0 1 6388 - minifig 2.ldr
+1 15 -290 0 -260 0 0 -1 0 1 0 1 0 0 6388 - minifig 4.ldr
+1 15 -369.999 0 -20 0 0 -1 0 1 0 1 0 0 6388 - minifig 3.ldr
+0 NOFILE
+0 STEP
+0 FILE 6388 - building.ldr
+0 A two-story red and white building with cupboard, panels, and trans-colored round plates on a green 16x32 baseplate.
+
+
+0 building
+0 Name: 6388 - building.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Baseplate 16 x 32 with Square Corners (green)
+1 2 20 -8 0 1 0 0 0 1 0 0 0 1 3857.dat
+0 // Brick  1 x  6 (white)
+1 15 -220 -32 150 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  8 (white)
+1 15 -80 -32 150 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  6 (white)
+1 15 -290 -32 100 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  2 x  4 (black)
+1 0 -180 -32 20 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // Brick  1 x  8 (red)
+1 4 270 -32 80 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Brick  1 x  2 (red)
+1 4 240 -32 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  2 x  2 Round with Axlehole (white)
+1 15 240 -16 100 1 0 0 0 1 0 0 0 1 4032a.dat
+0 STEP
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -190 -40 30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 -170 -40 10 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -170 -48 10 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 -190 -48 30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Brick  1 x  3 (red)
+1 4 -30 -32 30 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Container Cupboard  2 x  3 x  2 with Solid Studs (white)
+1 15 120 -56 110 0 0 -1 0 1 0 1 0 0 4532.dat
+0 // Container Cupboard  2 x  3 x  2 Door (red)
+1 4 135 -52 85 1 0 0 0 1 0 0 0 1 4533.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (white)
+1 15 120 -56 70 1 0 0 0 1 0 0 0 1 4864b.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (white)
+1 15 120 -56 50 -1 0 0 0 1 0 0 0 -1 4864b.dat
+0 // Brick  1 x  2 (red)
+1 4 120 -32 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 0 -32 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 (white)
+1 15 -290 -40 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 STEP
+0 // Brick  1 x  8 (white)
+1 15 -220 -56 150 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  2 (red)
+1 4 120 -56 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (red)
+1 4 -10 -56 30 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  3 (white)
+1 15 -110 -56 150 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  3 (white)
+1 15 -290 -56 110 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  4 (white)
+1 15 -40 -56 150 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  3 (red)
+1 4 250 -56 30 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  6 (red)
+1 4 270 -56 100 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  1 (red)
+1 4 -30 -56 50 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -30 -56 10 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 270 -56 10 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (white)
+1 15 -290 -48 50 0 0 -1 0 1 0 1 0 0 4085b.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (white)
+1 15 -290 -48 70 0 0 -1 0 1 0 1 0 0 4085b.dat
+0 // Plate  2 x  3 (white)
+1 15 120 -64 70 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  2 x  2 (white)
+1 15 120 -64 120 0 0 -1 0 1 0 1 0 0 3022.dat
+0 STEP
+0 // Plate  1 x  2 (white)
+1 15 -290 -56 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Brick  1 x  1 (red)
+1 4 -10 -80 150 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -190 -80 150 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  2 (red)
+1 4 0 -80 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 240 -80 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Slope Brick 45  2 x  3 (yellow)
+1 14 -30 -80 30 0 0 1 0 1 0 -1 0 0 3038.dat
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 270 -80 80 0 0 -1 0 1 0 1 0 0 4445.dat
+0 // Tap  1 x  1 with Hole in Spout (blue)
+1 1 130 -88 50 1 0 0 0 1 0 0 0 1 4599a.dat
+0 // Tap  1 x  1 with Hole in Spout (red)
+1 4 110 -88 50 1 0 0 0 1 0 0 0 1 4599a.dat
+0 // Panel  1 x  2 x  3 with Hollow Studs (white)
+1 15 240 -80 150 1 0 0 0 1 0 0 0 1 2362b.dat
+0 // Panel  1 x  2 x  3 with Hollow Studs (white)
+1 15 240 -80 130 -1 0 0 0 1 0 0 0 -1 2362b.dat
+0 // Container Box  2 x  2 x  2 with Hollow Studs (white)
+1 15 240 -64 100 0 0 1 0 1 0 -1 0 0 4345b.dat
+0 // Container Box  2 x  2 x  2 Door with Slot (white)
+1 15 240 -64 100 0 0 1 0 1 0 -1 0 0 4346.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (black)
+1 0 -150 -80 20 0 0 1 0 1 0 -1 0 0 4864b.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (black)
+1 0 -210 -80 20 0 0 -1 0 1 0 1 0 0 4864b.dat
+0 // Plate  1 x  2 (white)
+1 15 120 -72 110 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  1 (white)
+1 15 130 -80 110 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 STEP
+0 // Brick  1 x  1 (red)
+1 4 -190 -104 150 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -10 -104 150 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 10 -104 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 230 -104 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  2 (red)
+1 4 120 -104 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 120 -80 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Slope Brick 45  2 x  3 (yellow)
+1 14 -10 -104 30 0 0 1 0 1 0 -1 0 0 3038.dat
+0 // Slope Brick 45  2 x  2 (yellow)
+1 14 250 -104 20 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (yellow)
+1 14 250 -104 140 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_clear)
+1 47 130 -104 110 0 0 1 0 1 0 -1 0 0 3062b.dat
+0 // Minifig Saucepan (black)
+1 0 240 -88 100 0 0 -1 0 1 0 1 0 0 4529.dat
+0 // Technic Brick  1 x  2 with Hole (red)
+1 4 120 -128 30 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 STEP
+0 // Brick  1 x  2 with Black Grille Pattern (white)
+1 15 230 -104 140 0 0 1 0 1 0 -1 0 0 3004p06.dat
+0 // Tile  1 x  2 Grille with Groove (white)
+1 15 120 -112 110 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 120 -118 20 -1 0 0 0 0 -1 0 -1 0 4740.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 120 -118 41 1 0 0 0 0 -1 0 1 0 4740.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 120 -118 49 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 120 -118 12 -1 0 0 0 0 -1 0 -1 0 6141.dat
+0 // Minifig Frypan (black)
+1 0 240 -88 100 0 0 -1 0 -1 0 -1 0 0 4528.dat
+0 STEP
+0 // Slope Brick 45  3 x  4 Double / 33 (black)
+1 0 -180 -104 50 1 0 0 0 1 0 0 0 1 4861.dat
+0 // Slope Brick 45  2 x  2 (yellow)
+1 14 230 -128 20 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (yellow)
+1 14 230 -128 140 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (yellow)
+1 14 10 -128 20 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Brick  1 x  1 (red)
+1 4 -10 -128 50 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -190 -128 150 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Slope Brick 45  3 x  1 Inverted Double without Inner Stopper Rings (red)
+1 4 -10 -128 150 0 0 1 0 1 0 -1 0 0 2341.dat
+0 // Window  1 x  4 x  5 with Hollow Studs (white)
+1 15 180 -128 30 1 0 0 0 1 0 0 0 1 2493b.dat
+0 // Glass for Window  1 x  4 x  5 (trans_clear)
+1 47 180 -128 30 1 0 0 0 1 0 0 0 1 2494.dat
+0 // Door  1 x  4 x  5 with 4 Panes and Reinforced Hinge (white)
+1 15 90 -128 30 0 0 -1 0 1 0 1 0 0 3861.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -180 -128 50 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Window  4 x  4 x  3 Roof (white)
+1 15 210 -152 80 0 0 -1 0 1 0 1 0 0 4447.dat
+0 // Glass for Window  4 x  4 x  3 Roof (trans_clear)
+1 47 210 -152 80 0 0 -1 0 1 0 1 0 0 4448.dat
+0 // Slope Brick 45  2 x  2 (yellow)
+1 14 210 -152 20 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (yellow)
+1 14 210 -152 140 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 30 -152 80 0 0 1 0 1 0 -1 0 0 4445.dat
+0 // Brick  1 x  8 (red)
+1 4 120 -152 30 1 0 0 0 1 0 0 0 1 3008.dat
+0 STEP
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 50 -176 80 0 0 1 0 1 0 -1 0 0 4445.dat
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 190 -176 80 0 0 -1 0 1 0 1 0 0 4445.dat
+0 // Brick  1 x  2 (red)
+1 4 160 -176 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 80 -176 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Plate  6 x 10 (red)
+1 4 -100 -136 100 -1 0 0 0 1 0 0 0 -1 3033.dat
+0 STEP
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 70 -200 80 0 0 1 0 1 0 -1 0 0 4445.dat
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 170 -200 80 0 0 -1 0 1 0 1 0 0 4445.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -200 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Window  1 x  2 x  2 Classic with Short Sill (Complete) (white)
+1 15 120 -200 30 1 0 0 0 1 0 0 0 1 3081cc01.dat
+0 // Brick  1 x  1 (red)
+1 4 150 -200 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -232 50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -160 50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -184 50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -208 50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 -180 -240 50 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Brick  1 x  2 (red)
+1 4 120 -224 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 90 -224 80 0 0 1 0 1 0 -1 0 0 4445.dat
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 150 -224 80 0 0 -1 0 1 0 1 0 0 4445.dat
+0 // Plate  2 x  2 Round with Axlehole (white)
+1 15 -200 -16 -140 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (white)
+1 15 -200 -16 -80 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (white)
+1 15 -40 -16 -80 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (white)
+1 15 -40 -16 -140 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Brick  2 x  2 (white)
+1 15 -120 -32 -100 0 0 -1 0 1 0 1 0 0 3003.dat
+0 STEP
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 110 -248 80 0 0 1 0 1 0 -1 0 0 4445.dat
+0 // Minifig Seat  2 x  2 (white)
+1 15 -40 -24 -80 0 0 1 0 1 0 -1 0 0 4079.dat
+0 // Plate  4 x  4 (white)
+1 15 -120 -40 -100 0 0 -1 0 1 0 1 0 0 3031.dat
+0 // Minifig Seat  2 x  2 (white)
+1 15 -200 -24 -80 0 0 -1 0 1 0 1 0 0 4079.dat
+0 // Minifig Seat  2 x  2 (white)
+1 15 -200 -24 -140 0 0 -1 0 1 0 1 0 0 4079.dat
+0 // Minifig Seat  2 x  2 (white)
+1 15 -40 -24 -140 0 0 1 0 1 0 -1 0 0 4079.dat
+0 // Antenna  4H with Rounded Top (red)
+1 4 -120 -48 -100 0 0 1 0 1 0 -1 0 0 3957a.dat
+0 // Dish  4 x  4 Inverted with Red Stripes Pattern (white)
+1 15 -120 -136 -100 0 0 1 0 1 0 -1 0 0 3960p06.dat
+0 // Slope Brick 45  2 x  8 (yellow)
+1 14 130 -248 80 0 0 -1 0 1 0 1 0 0 4445.dat
+0 // Slope Brick 33  2 x  2 Double (black)
+1 0 -180 -264 50 0 0 -1 0 1 0 1 0 0 3300.dat
+0 STEP
+0 // Slope Brick 45  2 x  4 Double (yellow)
+1 14 120 -272 120 0 0 -1 0 1 0 1 0 0 3041.dat
+0 // Slope Brick 45  2 x  4 Double (yellow)
+1 14 120 -272 40 0 0 -1 0 1 0 1 0 0 3041.dat
+0 // Container  2 x  2 Rubbish Bin (dark_grey)
+1 8 -240 -56 120 -1 0 0 0 1 0 0 0 -1 2439.dat
+0 // Dish  2 x  2 Inverted (dark_grey)
+1 8 -240 -64 120 -1 0 0 0 1 0 0 0 -1 4740.dat
+0 // Minifig Shovel (dark_grey)
+1 8 -270 -64 50 0 0 -1 0 -1 0 -1 0 0 3837.dat
+0 // Minifig Pushbroom (brown)
+1 6 -270 -16 70 0 0 1 0 -1 0 1 0 0 3836.dat
+0 // Plant Tree Pyramidal  4 x  4 x  6.667 Type 1 (green)
+1 2 300 -16 -50 1 0 0 0 1 0 0 0 1 3471.dat
+0 // Plant Tree Pyramidal  3 x  3 x  4 (green)
+1 2 260 -16 -110 1 0 0 0 1 0 0 0 1 2435.dat
+0 // Plant Flower Stem Green with Three Flowers with 6 Petals Centre Upwards (white)
+1 15 10 -21 -10 1 0 0 0 1 0 0 0 1 3741ac01.dat
+0 // Plant Flower Stem Green with Three Flowers with 6 Petals Centre Upwards (white)
+1 15 230 -21 -10 1 0 0 0 1 0 0 0 1 3741ac01.dat
+0 // Plant Flower Stem Green with Three Flowers with 6 Petals Centre Upwards (red)
+1 4 -270 -21 -110 1 0 0 0 1 0 0 0 1 3741ac01.dat
+0 // Plant Flower Stem Green with Three Flowers with 6 Petals Centre Upwards (red)
+1 4 -270 -21 -50 1 0 0 0 1 0 0 0 1 3741ac01.dat
+0 NOFILE
+0 STEP
+0 FILE 6388 - car 1.ldr
+0 A blue car built on a 4x5 car base with plates, brackets, grille tiles, and towball socket.
+
+
+0 car 1
+0 Name: 6388 - car 1.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  2 x 10 (black)
+1 0 0 0 30 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Plate  1 x  4 (blue)
+1 1 10 -8 30 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  2 (blue)
+1 1 50 -8 30 0 0 -1 0 1 0 1 0 0 3023.dat
+0 STEP
+0 // Car Base  4 x  5 (blue)
+1 1 -60 -16 30 0 0 1 0 1 0 -1 0 0 4211.dat
+0 // Car Base  4 x  5 (blue)
+1 1 80 -16 30 0 0 -1 0 1 0 1 0 0 4211.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 130 -8 30 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 130 -8 60 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 130 -8 0 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 -90 -16 60 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 -90 -16 0 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 50 -16 0 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 50 -16 60 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  4 (blue)
+1 1 0 -16 0 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (blue)
+1 1 0 -16 60 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // Plate  2 x  4 (blue)
+1 1 120 -16 30 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (blue)
+1 1 -90 -16 30 0 0 1 0 1 0 -1 0 0 2436a.dat
+0 STEP
+0 // Plate  1 x  2 (main_colour)
+1 16 120 0 0 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 120 0 60 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 -90 0 0 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 -90 0 60 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 -30 0 60 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 -30 0 0 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 20 0 0 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 20 0 60 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  2 x  2 with Towball Socket (black)
+1 0 120 0 30 0 0 -1 0 1 0 1 0 0 3730.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 80 8 30 0 0 -1 0 1 0 1 0 0 4600.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 -60 8 30 0 0 -1 0 1 0 1 0 0 4600.dat
+0 // Plate  1 x  1 (trans_clear)
+1 47 -109.999 -6 62 0 1 0 0 0 -1 -1 0 0 3024.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -110 -6 32 0 1 0 0 0 -1 -1 0 0 2412b.dat
+0 // Plate  1 x  1 (trans_clear)
+1 47 -110.001 -6 2 0 1 0 0 0 -1 -1 0 0 3024.dat
+0 STEP
+0 // Plate  2 x  2 Corner (main_colour)
+1 16 -90 -24 60 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (main_colour)
+1 16 -90 -24 0 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 120 -24 30 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 0 -24 60 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  8 (main_colour)
+1 16 60 -24 0 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 40 -24 60 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  4 with Groove (main_colour)
+1 16 100 -24 60 1 0 0 0 1 0 0 0 1 2431.dat
+0 STEP
+0 // Plate  1 x  1 (main_colour)
+1 16 -70 -32 60 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 -70 -32 0 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -90 -32 30 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 80 -32 0 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 10 -32 0 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 130 -32 20 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 0 -32 60 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  6 (main_colour)
+1 16 80 -32 60 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  2 x  3 (red)
+1 4 90 -32 30 1 0 0 0 1 0 0 0 1 3021.dat
+0 STEP
+0 // Hinge Plate  1 x  4 Base (main_colour)
+1 16 140 -40 50 1 0 0 0 1 0 0 0 1 2429.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 120 -40 10 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Hinge Plate  1 x  4 Top (main_colour)
+1 16 140 -40 50 -1 0 0 0 1 0 0 0 -1 2430.dat
+0 // Minifig Seat  2 x  2 (red)
+1 4 -40 -16 30 0 0 1 0 1 0 -1 0 0 4079.dat
+0 // Car Steering Stand and Wheel (Complete) (red)
+1 4 -70 -24 30 0 0 1 0 1 0 -1 0 0 3829c01.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 -90 -40 30 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 -80 -40 60 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 -80 -40 0 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Panel  1 x  2 x  1 with Square Corners (main_colour)
+1 16 -40 -40 60 1 0 0 0 1 0 0 0 1 4865a.dat
+0 // Minifig Seat  2 x  2 (red)
+1 4 40 -16 30 0 0 -1 0 1 0 1 0 0 4079.dat
+0 // Tap  1 x  1 with Hole in Spout (yellow)
+1 14 110 -64 20 0 0 -1 0 1 0 1 0 0 4599a.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 120 -64 60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 120 -64 0 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Panel  1 x  2 x  1 with Square Corners (main_colour)
+1 16 -40 -40 0 -1 0 0 0 1 0 0 0 -1 4865a.dat
+0 STEP
+0 // Brick  1 x  2 (main_colour)
+1 16 120 -88 60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 120 -88 0 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Window  1 x  2 x  2 Plane (main_colour)
+1 16 130 -88 30 0 0 -1 0 1 0 1 0 0 2377.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_clear)
+1 47 130 -88 30 0 0 -1 0 1 0 1 0 0 4862.dat
+0 STEP
+0 // Hinge Plate  1 x  4 Base (main_colour)
+1 16 140 -96 50 1 0 0 0 1 0 0 0 1 2429.dat
+0 // Hinge Plate  1 x  4 Top (main_colour)
+1 16 140 -96 50 -1 0 0 0 1 0 0 0 -1 2430.dat
+0 // Plate  2 x  2 Corner (main_colour)
+1 16 130 -96 0 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Panel  1 x  2 x  3 with Hollow Studs (main_colour)
+1 16 0 -104 0 -1 0 0 0 1 0 0 0 -1 2362b.dat
+0 // Panel  1 x  2 x  3 with Hollow Studs (main_colour)
+1 16 0 -104 60 1 0 0 0 1 0 0 0 1 2362b.dat
+0 STEP
+0 // Train Window  1 x  4 x  3 (main_colour)
+1 16 60 -104 60 -1 0 0 0 1 0 0 0 -1 4033.dat
+0 // Train Window  1 x  4 x  3 (main_colour)
+1 16 60 -104 0 1 0 0 0 1 0 0 0 1 4033.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_clear)
+1 47 60 -70 66 1 0 0 0 1 0 0 0 1 3855b.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_clear)
+1 47 60 -70 -4 1 0 0 0 1 0 0 0 1 3855b.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 110 -104 0 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (main_colour)
+1 16 130 -104 0 0 0 -1 0 1 0 1 0 0 4085a.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 130 -104 30 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 120 -104 60 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 0 -112 60 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  3 (blue)
+1 1 110 -112 0 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (blue)
+1 1 70 -112 0 -1 0 0 0 1 0 0 0 -1 4081b.dat
+0 // Plate  1 x  4 (blue)
+1 1 20 -112 0 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  6 (blue)
+1 1 80 -112 60 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  1 x  2 (blue)
+1 1 130 -112 30 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Brick  1 x  1 Round with Hollow Stud (red)
+1 4 110 -120 40 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Windscreen  2 x  4 x  2 (trans_clear)
+1 47 -70 -88 30 0 0 1 0 1 0 -1 0 0 3823.dat
+0 STEP
+0 // Windscreen  3 x  4 x  1.333 (main_colour)
+1 16 -50 -120 30 0 0 1 0 1 0 -1 0 0 2437.dat
+0 // Tile  1 x  4 with Groove (main_colour)
+1 16 -10 -120 30 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (main_colour)
+1 16 60 -120 60 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 110 -120 0 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 120 -120 60 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 130 -120 20 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Hinge Tile  1 x  4 (main_colour)
+1 16 10 -120 30 0 0 1 0 1 0 -1 0 0 4625.dat
+0 // Hinge Tile  1 x  4 (main_colour)
+1 16 60 -120 0 -1 0 0 0 1 0 0 0 -1 4625.dat
+0 STEP
+0 // Hinge Car Roof  4 x  4 Sunroof without Ledges (main_colour)
+1 16 60 -128 30 -1 0 0 0 1 0 0 0 -1 2349a.dat
+0 // Hinge Car Roof  4 x  4 (main_colour)
+1 16 -20 -128 30 0 0 1 0 1 0 -1 0 0 4213.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 120 -128 60 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  3 (main_colour)
+1 16 120 -128 20 0 0 -1 0 1 0 1 0 0 3021.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 110 -136 30 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // ~Hinge Control Stick and Base (Complete) (Obsolete) (main_colour)
+1 16 -30 -136 20 0 0 1 0 1 0 -1 0 0 4592c01.dat
+0 // Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges (trans_clear)
+1 47 60 -124 15 1 0 0 0 1 0 0 0 1 2348a.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 80 13 60 -1 0 0 0 1 0 0 0 -1 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 80 13 60 -1 0 0 0 1 0 0 0 -1 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 80 13 0 1 0 0 0 1 0 0 0 1 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 80 13 0 1 0 0 0 1 0 0 0 1 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -60 13 0 1 0 0 0 1 0 0 0 1 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -60 13 0 1 0 0 0 1 0 0 0 1 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -60 13 60 -1 0 0 0 1 0 0 0 -1 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -60 13 60 -1 0 0 0 1 0 0 0 -1 3641.dat
+0 NOFILE
+0 STEP
+0 FILE 6388 - car 2.ldr
+0 A four-wheeled car with mudguards, doors, windscreens, and steering wheel on a 7x4 black car base.
+
+
+0 car 2
+0 Name: 6388 - car 2.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Car Base  7 x  4 x  0.667 (black)
+1 0 -40 0 -10 1 0 0 0 1 0 0 0 1 2441.dat
+0 STEP
+0 // Plate  1 x  3 (white)
+1 15 -10 0 -10 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (white)
+1 15 -70 0 -10 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 -40 -8 40 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 -40 -8 -60 0 0 1 0 1 0 -1 0 0 3022.dat
+0 STEP
+0 // Car Steering Stand and Wheel (Complete) (main_colour)
+1 16 -40 0 10 -1 0 0 0 1 0 0 0 -1 3829c01.dat
+0 // Car Mudguard  2 x  4 (main_colour)
+1 16 -40 -24 40 -1 0 0 0 1 0 0 0 -1 3788.dat
+0 // Car Mudguard  2 x  4 (main_colour)
+1 16 -40 -24 -60 -1 0 0 0 1 0 0 0 -1 3788.dat
+0 STEP
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (main_colour)
+1 16 -40 -24 50 -1 0 0 0 1 0 0 0 -1 2436a.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (main_colour)
+1 16 -40 -24 -70 1 0 0 0 1 0 0 0 1 2436a.dat
+0 // Door  1 x  3 x  1 Left (main_colour)
+1 16 -70 -24 10 -1 0 0 0 1 0 0 0 -1 3822.dat
+0 // Door  1 x  3 x  1 Right (main_colour)
+1 16 -10 -24 10 -1 0 0 0 1 0 0 0 -1 3821.dat
+0 STEP
+0 // Plate  1 x  1 (trans_red)
+1 36 -70 -14 -92 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Plate  1 x  1 (trans_clear)
+1 47 -10 -14 72 -1 0 0 0 0 -1 0 -1 0 3024.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -40 -14 72 -1 0 0 0 0 -1 0 -1 0 2412b.dat
+0 // Plate  1 x  1 (trans_clear)
+1 47 -70 -14 72 -1 0 0 0 0 -1 0 -1 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -10 -14 -93 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Windscreen  2 x  4 x  2 (trans_clear)
+1 47 -40 -72 10 -1 0 0 0 1 0 0 0 -1 3823.dat
+0 // Windscreen  2 x  4 x  2 Vertical (trans_clear)
+1 47 -40 -72 -50 1 0 0 0 1 0 0 0 1 4594.dat
+0 STEP
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -10 5 40 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -10 5 40 0 0 -1 0 1 0 1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -10 5 -60 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -10 5 -60 0 0 -1 0 1 0 1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -70 5 -60 0 0 1 0 1 0 -1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -70 5 -60 0 0 1 0 1 0 -1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -70 5 40 0 0 1 0 1 0 -1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -70 5 40 0 0 1 0 1 0 -1 0 0 4624.dat
+0 // Hinge Car Roof  4 x  4 (white)
+1 15 -40 -80 -40 1 0 0 0 1 0 0 0 1 4213.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (white)
+1 15 -40 -80 10 1 0 0 0 1 0 0 0 1 4315.dat
+0 NOFILE
+0 STEP
+0 FILE 6388 - trailer.ldr
+0 A blue and white wheeled trailer with hinge plates, towball, console tile, and wing elements.
+
+
+0 trailer
+0 Name: 6388 - trailer.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (blue)
+1 1 -10 0 60 1 0 0 0 1 0 0 0 1 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (blue)
+1 1 -10 0 40 1 0 0 0 1 0 0 0 1 4276b.dat
+0 // Plate  2 x  4 (blue)
+1 1 -70 0 50 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 -130 0 50 0 0 -1 0 1 0 1 0 0 4600.dat
+0 // Stretcher Wheels (white)
+1 15 20 4 50 0 0 1 0 1 0 -1 0 0 4715.dat
+0 STEP
+0 // Plate  2 x  2 with Towball (blue)
+1 1 10 -8 50 0 0 -1 0 1 0 1 0 0 3731.dat
+0 // Plate  2 x  2 (blue)
+1 1 -30 -8 50 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 -110 -8 50 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  2 x  4 (blue)
+1 1 -170 -8 50 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (blue)
+1 1 -70 -8 50 0 0 -1 0 1 0 1 0 0 4859.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -190 -16 60 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -190 -16 40 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 (white)
+1 15 -160 -16 50 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  2 x  6 (white)
+1 15 -50 -16 50 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Tile  1 x  2 with Console (white)
+1 15 20 -16 50 0 0 1 0 1 0 -1 0 0 2342.dat
+0 // Car Mudguard  2 x  4 without Studs (white)
+1 15 -130 -24 50 0 0 -1 0 1 0 1 0 0 3787.dat
+0 STEP
+0 // ~Hinge Control Stick and Base (Complete) (Obsolete) (black)
+1 0 14.451 -58.981 50 0 0.259 -0.966 0 0.966 0.259 1 0 0 4592c01.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -190 -24 50 0 0 -1 0 1 0 1 0 0 3794a.dat
+0 // Plate  1 x  1 Round (black)
+1 0 20 -40 68 1 0 0 0 0 1 0 -1 0 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 21 -40 31 -1 0 0 0 0 1 0 1 0 6141.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -80 -24 50 0 0 -1 0 1 0 1 0 0 3794a.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Light Type 1 (blue)
+1 1 -160 0 60 -1 0 0 0 1 0 0 0 -1 4081a.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (blue)
+1 1 -160 0 40 1 0 0 0 1 0 0 0 1 4081a.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -130 6 20 1 0 0 0 1 0 0 0 1 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -130 6 80 1 0 0 0 1 0 0 0 1 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -130 6 20 1 0 0 0 1 0 0 0 1 4624.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -130 6 80 -1 0 0 0 1 0 0 0 -1 4624.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -171 2 20 0 1 0 0 0 1 1 0 0 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -171 2 80 0 1 0 0 0 1 1 0 0 6141.dat
+0 NOFILE
+0 STEP
+0 FILE 6388 - boat.ldr
+0 A small boat with inverted wedge and slope hull sections, steering wheel, and wing detail pieces.
+
+
+0 boat
+0 Name: 6388 - boat.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Wedge  4 x  4 Triple Inverted without Ribs between Studs (main_colour)
+1 16 -110 0 20 1 0 0 0 1 0 0 0 1 4855.dat
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (main_colour)
+1 16 -110 0 50 0 0 1 0 1 0 -1 0 0 4871.dat
+0 // Slope Brick 45  4 x  4 Double Inverted with Open Centre (main_colour)
+1 16 -110 0 110 0 0 1 0 1 0 -1 0 0 4854.dat
+0 STEP
+0 // Plate  2 x  2 (white)
+1 15 -110 8 30 0 0 1 0 1 0 -1 0 0 3022.dat
+0 STEP
+0 // Hinge  1 x  2 Base (white)
+1 15 -110 -8 140 1 0 0 0 1 0 0 0 1 3937.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 -110 -8 140 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -110 -8 100 -1 0 0 0 1 0 0 0 -1 4865a.dat
+0 // Car Steering Stand and Wheel (Complete) (white)
+1 15 -110 0 40 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 STEP
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (white)
+1 15 -110 -8 -30 1 0 0 0 1 0 0 0 1 4859.dat
+0 // Plate  1 x  6 (white)
+1 15 -80 -8 70 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (white)
+1 15 -140 -8 70 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  1 (white)
+1 15 -80 -8 140 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (white)
+1 15 -140 -8 140 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Brick  2 x  2 (white)
+1 15 -110 -16 10 0 0 1 0 1 0 -1 0 0 3003.dat
+0 STEP
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (main_colour)
+1 16 -110 -16 -30 1 0 0 0 1 0 0 0 1 4859.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -80 -16 50 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -140 -16 50 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 -80 -16 120 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 -140 -16 120 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -110 -16 140 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Windscreen  3 x  4 x  1.333 with 6 Studs on Top (trans_medium_blue)
+1 41 -110 -48 40 1 0 0 0 1 0 0 0 1 4866.dat
+0 // Plate  1 x  3 (white)
+1 15 -110 -24 160 0 0 1 0 1 0 -1 0 0 3623.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 -110 -32 170 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Brick  1 x  1 Round with Hollow Stud (white)
+1 15 -110 -16 180 0 0 1 0 1 0 -1 0 0 3062b.dat
+0 STEP
+0 // Plate  1 x  2 (white)
+1 15 -110 -40 170 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (light_grey)
+1 7 -110 8 180 -1 0 0 0 1 0 0 0 -1 4081a.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (white)
+1 15 -110 -48 170 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 NOFILE
+0 STEP
+0 FILE 6388 - minifig 1.ldr
+0 A minifigure with red legs, vertically striped red/blue torso, standard grin head, and short black hair.
+
+
+0 minifig 1
+0 Name: 6388 - minifig 1.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 -0.008 -28 1.997 1 0 0.002 0 1 0 -0.002 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 -0.008 -28 1.997 1 0 0.002 0 1 0 -0.002 0 1 3817.dat
+0 // Minifig Hand (yellow)
+1 14 -23.471 -45.97 -7.88 0.985 -0.12 0.122 0.171 0.694 -0.699 -0.001 0.709 0.705 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.524 -45.959 -8.093 0.985 0.121 -0.121 -0.171 0.694 -0.699 -0.001 0.709 0.705 3820.dat
+0 // Minifig Arm Right (red)
+1 4 -15.357 -63.961 1.984 0.985 -0.171 0.001 0.171 0.985 0 -0.001 0 1 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.35 -63.949 2.01 0.985 0.171 0.001 -0.171 0.985 0 -0.001 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 -0.008 -40 1.997 1 0 0.002 0 1 0 -0.002 0 1 3815.dat
+0 // Minifig Torso with Vertical Striped Red/Blue Pattern (white)
+1 15 -0.008 -72 1.997 1 0 0.002 0 1 0 -0.002 0 1 973p01.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 -0.008 -96 1.997 1 0 0.002 0 1 0 -0.002 0 1 3626bp01.dat
+0 // Minifig Hair Male (black)
+1 0 -0.008 -96 1.997 1 0 0.002 0 1 0 -0.002 0 1 3901.dat
+0 NOFILE
+0 STEP
+0 FILE 6388 - minifig 2.ldr
+0 A minifigure with white legs, horizontally red-striped torso, standard grin head, and shoulder-length black hair.
+
+
+0 minifig 2
+0 Name: 6388 - minifig 2.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 -0.008 -28 1.997 1 0 0.002 0 1 0 -0.002 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 -0.008 -28 1.997 1 0 0.002 0 1 0 -0.002 0 1 3817.dat
+0 // Minifig Hand (yellow)
+1 14 -23.471 -45.97 -7.88 0.985 -0.12 0.122 0.171 0.694 -0.699 -0.001 0.709 0.705 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.524 -45.959 -8.093 0.985 0.121 -0.121 -0.171 0.694 -0.699 -0.001 0.709 0.705 3820.dat
+0 // Minifig Arm Right (red)
+1 4 -15.357 -63.961 1.984 0.985 -0.171 0.001 0.171 0.985 0 -0.001 0 1 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.35 -63.949 2.01 0.985 0.171 0.001 -0.171 0.985 0 -0.001 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (white)
+1 15 -0.008 -40 1.997 1 0 0.002 0 1 0 -0.002 0 1 3815.dat
+0 // Minifig Torso with Red Horizontal Stripes Pattern (white)
+1 15 -0.008 -72 1.997 1 0 0.002 0 1 0 -0.002 0 1 973p1e.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 -0.008 -96 1.997 1 0 0.002 0 1 0 -0.002 0 1 3626bp01.dat
+0 // Minifig Hair Shoulder Length (black)
+1 0 -0.008 -96 1.997 1 0 0.002 0 1 0 -0.002 0 1 4530.dat
+0 NOFILE
+0 STEP
+0 FILE 6388 - minifig 3.ldr
+0 A minifigure with white legs and arms, red necklace and blue undershirt torso, standard grin head, and shoulder-length black hair.
+
+
+0 minifig 3
+0 Name: 6388 - minifig 3.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 -0.008 -28 1.997 1 0 0.002 0 1 0 -0.002 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 -0.008 -28 1.997 1 0 0.002 0 1 0 -0.002 0 1 3817.dat
+0 // Minifig Hand (yellow)
+1 14 -23.471 -45.97 -7.88 0.985 -0.12 0.122 0.171 0.694 -0.699 -0.001 0.709 0.705 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.524 -45.959 -8.093 0.985 0.121 -0.121 -0.171 0.694 -0.699 -0.001 0.709 0.705 3820.dat
+0 // Minifig Arm Right (white)
+1 15 -15.357 -63.961 1.984 0.985 -0.171 0.001 0.171 0.985 0 -0.001 0 1 3818.dat
+0 // Minifig Arm Left (white)
+1 15 15.35 -63.949 2.01 0.985 0.171 0.001 -0.171 0.985 0 -0.001 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (white)
+1 15 -0.008 -40 1.997 1 0 0.002 0 1 0 -0.002 0 1 3815.dat
+0 // Minifig Torso with Red Necklace and Blue Undershirt Pattern (white)
+1 15 -0.008 -72 1.997 1 0 0.002 0 1 0 -0.002 0 1 973p71.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 -0.008 -96 1.997 1 0 0.002 0 1 0 -0.002 0 1 3626bp01.dat
+0 // Minifig Hair Shoulder Length (black)
+1 0 -0.008 -96 1.997 1 0 0.002 0 1 0 -0.002 0 1 4530.dat
+0 NOFILE
+0 STEP
+0 FILE 6388 - minifig 4.ldr
+0 A minifigure with blue legs, horizontally blue-striped torso, standard grin head, and short black hair.
+
+
+0 minifig 4
+0 Name: 6388 - minifig 4.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 -0.008 -28 1.997 1 0 0.002 0 1 0 -0.002 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 -0.008 -28 1.997 1 0 0.002 0 1 0 -0.002 0 1 3817.dat
+0 // Minifig Hand (yellow)
+1 14 -23.471 -45.97 -7.88 0.985 -0.12 0.122 0.171 0.694 -0.699 -0.001 0.709 0.705 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.524 -45.959 -8.093 0.985 0.121 -0.121 -0.171 0.694 -0.699 -0.001 0.709 0.705 3820.dat
+0 // Minifig Arm Right (white)
+1 15 -15.357 -63.961 1.984 0.985 -0.171 0.001 0.171 0.985 0 -0.001 0 1 3818.dat
+0 // Minifig Arm Left (white)
+1 15 15.35 -63.949 2.01 0.985 0.171 0.001 -0.171 0.985 0 -0.001 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 -0.008 -40 1.997 1 0 0.002 0 1 0 -0.002 0 1 3815.dat
+0 // Minifig Torso with Blue Horizontal Stripes Pattern (white)
+1 15 -0.008 -72 1.997 1 0 0.002 0 1 0 -0.002 0 1 973p1d.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 -0.008 -96 1.997 1 0 0.002 0 1 0 -0.002 0 1 3626bp01.dat
+0 // Minifig Hair Male (black)
+1 0 -0.008 -96 1.997 1 0 0.002 0 1 0 -0.002 0 1 3901.dat
+0 NOFILE

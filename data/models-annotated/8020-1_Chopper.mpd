@@ -1,0 +1,152 @@
+0 FILE 8020 - Main.ldr
+0 Main assembly of the Chopper model that incorporates the windmill submodel to form the complete build.
+0 Name: 8020 - Main.ldr
+0 Author: Michal Oravec [Bloodybeast]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 8020 - Windmill.ldr
+
+
+
+0 STEP
+0 FILE 8020 - Windmill.ldr
+0 Mechanical windmill assembly built from technic bricks, gears, and axles forming a rotating gear-driven rotor structure.
+0 Name: 8020 - Windmill.ldr
+0 Author: Michal Oravec [Bloodybeast]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HISTORY 2019-02-09 [technicbasics] OMRize file
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 20 -4 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -80 -4 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Plate  1 x  6 (yellow)
+1 14 -30 20 70 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Brick  1 x  2 (yellow)
+1 14 -50 -4 70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (yellow)
+1 14 -10 -4 70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -80 20 -40 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 20 20 -40 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Technic Axle  6 (black)
+1 0 -30 6 -20 1 0 0 0 0.9336 -0.3584 0 0.3584 0.9336 3706.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -60 6 -20 0 0 -1 0 1 0 1 0 0 3713.dat
+0 // Technic Gear  8 Tooth Reinforced (light_grey)
+1 7 0 6 -20 0 0 -1 -0.3584 0.9336 0 0.9336 0.3584 0 10928.dat
+0 // Technic Gear 24 Tooth Crown Type 1 (light_grey)
+1 7 -42 6 -20 0 0 1 0.3584 0.9336 0 -0.9336 0.3584 0 3650a.dat
+0 STEP
+0 // Plate  1 x  6 (yellow)
+1 14 -30 20 -70 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 -30 -4 -70 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Axle  4 (black)
+1 0 -30 6 -80 0 -0.7071 0.7071 0 -0.7071 -0.7071 1 0 0 3705.dat
+0 // Technic Gear  8 Tooth Reinforced (light_grey)
+1 7 -30 6 -50 0.7071 -0.7071 0 0.7071 0.7071 0 0 0 1 10928.dat
+0 // Technic Gear 24 Tooth with 3 Axleholes (light_grey)
+1 7 0 6 20 0 0 1 0 1 0 -1 0 0 3648a.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 40 6 20 0 0 -1 0 1 0 1 0 0 3713.dat
+0 // Technic Axle  4 (black)
+1 0 30 6 20 1 0 0 0 1 0 0 0 1 3705.dat
+0 STEP
+0 // Plate  1 x  2 (yellow)
+1 14 20 28 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -80 28 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 20 36 -60 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 -80 36 -60 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Plate  1 x  6 (yellow)
+1 14 -30 -12 -70 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (yellow)
+1 14 -30 -12 70 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Technic Steering Arm (light_grey)
+1 7 50 46 20 0 1 0 0 0 -1 -1 0 0 4261.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 60 196 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -120 196 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Technic Brick  1 x 12 with Holes (black)
+1 0 40 106 -70 0 0 1 1 0 0 0 1 0 3895.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 30 6 -60 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (light_grey)
+1 7 30 46 -60 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -90 6 -60 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Technic Brick  1 x 12 with Holes (black)
+1 0 -100 106 -70 0 0 1 1 0 0 0 1 0 3895.dat
+0 // Technic Pin with Friction and Slots (light_grey)
+1 7 -90 46 -60 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Plate  1 x  2 (yellow)
+1 14 40 206 -46 0 0 1 1 0 0 0 1 0 3023.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 40 206 -30 0 0 1 1 0 0 0 1 0 3700.dat
+0 // Plate  1 x  2 (yellow)
+1 14 40 206 -38 0 0 1 1 0 0 0 1 0 3023.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 -100 206 -30 0 0 1 1 0 0 0 1 0 3700.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -100 206 -46 0 0 1 1 0 0 0 1 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -100 206 -38 0 0 1 1 0 0 0 1 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 60 220 -60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -120 220 -60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Technic Pin with Friction and Slots (light_grey)
+1 7 50 206 -20 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 50 206 -60 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -110 206 -60 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (light_grey)
+1 7 -110 206 -20 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -30 196 70 1 0 0 0 1 0 0 0 1 3702.dat
+0 // Plate  1 x  4 (yellow)
+1 14 30 220 70 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 30 188 70 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 -90 188 70 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 -90 220 70 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 -30 6 -110 -0.7071 0 0.7071 -0.7071 0 -0.7071 0 -1 0 3709b.dat
+0 // Plate  2 x  6 (yellow)
+1 14 -86.5685 62.5685 -110 0.7071 0 0.7071 -0.7071 0 0.7071 0 -1 0 3795.dat
+0 // Plate  2 x  6 (yellow)
+1 14 26.5685 -50.5685 -110 0.7071 0 0.7071 -0.7071 0 0.7071 0 -1 0 3795.dat
+0 // Plate  2 x  6 (yellow)
+1 14 26.5685 62.5685 -102 -0.7071 0 0.7071 -0.7071 0 -0.7071 0 -1 0 3795.dat
+0 // Plate  2 x  6 (yellow)
+1 14 -86.5685 -50.5685 -102 -0.7071 0 0.7071 -0.7071 0 -0.7071 0 -1 0 3795.dat
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 -30 6 -102 -0.7071 0 -0.7071 0.7071 0 -0.7071 0 -1 0 3709b.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -30 6 -90 0.7071 -0.7071 0 -0.7071 -0.7071 0 0 0 -1 3713.dat
+
+
+
+
+
+
+
+
+

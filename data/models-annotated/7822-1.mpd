@@ -1,0 +1,950 @@
+0 FILE 7822 - main.ldr
+0 A train station set combining platforms, track sections, a signal light, a station building, and three minifigures.
+0 main
+0 Name: 7822 - main.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+1 4 90 0 110 1 0 0 0 1 0 0 0 1 7822 - station.ldr
+1 7 -50 -56 30 1 0 0 0 1 0 0 0 1 7822 - minifig 2.ldr
+1 7 -210 -48 40 1 0 0 0 1 0 0 0 1 7822 - minifig 1.ldr
+1 7 300 -344 -309.999 0 0 1 0 1 0 -1 0 0 7822 - minifig 3.ldr
+0 NOFILE
+0 STEP
+0 FILE 7822 - station.ldr
+0 A track section with rail plates, sleepers, slotted rails, tiles, and lattice fences forming a fenced rail line.
+0 !LEOCAD MODEL CURRENT_STEP15
+
+
+0 station
+0 Name: 7822 - station.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  6 x 24 (light_grey)
+1 7 219.999 -8 -239.999 0 0 -1 0 1 0 1 0 0 3026.dat
+0 // Plate  6 x 24 (light_grey)
+1 7 -580.001 -8 -239.999 0 0 -1 0 1 0 1 0 0 3026.dat
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 7822 - station - building.ldr
+0 STEP
+0 // Train Track Sleeper Plate  2 x  8 without Cable Grooves (dark_grey)
+1 8 -500.001 -8 -240.001 0 0 -1 0 1 0 1 0 0 767.dat
+0 // Train Track Sleeper Plate  2 x  8 without Cable Grooves (dark_grey)
+1 8 -660.001 -8 -240.001 0 0 -1 0 1 0 1 0 0 767.dat
+0 // Train Track Rail Slotted Straight (dark_grey)
+1 8 -660 -24 -290 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (dark_grey)
+1 8 -660 -24 -190 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Sleeper Plate  2 x  8 without Cable Grooves (dark_grey)
+1 8 -820.001 -8 -240.001 0 0 -1 0 1 0 1 0 0 767.dat
+0 // Train Track Sleeper Plate  2 x  8 without Cable Grooves (dark_grey)
+1 8 -180.001 -8 -240.001 0 0 -1 0 1 0 1 0 0 767.dat
+0 // Train Track Sleeper Plate  2 x  8 without Cable Grooves (dark_grey)
+1 8 -340.001 -8 -240.001 0 0 -1 0 1 0 1 0 0 767.dat
+0 // Train Track Rail Slotted Straight (dark_grey)
+1 8 -340 -24 -290 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (dark_grey)
+1 8 -340 -24 -190 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Sleeper Plate  2 x  8 without Cable Grooves (dark_grey)
+1 8 139.999 -8 -240.001 0 0 -1 0 1 0 1 0 0 767.dat
+0 // Train Track Sleeper Plate  2 x  8 without Cable Grooves (dark_grey)
+1 8 -20.001 -8 -240.001 0 0 -1 0 1 0 1 0 0 767.dat
+0 // Train Track Rail Slotted Straight (dark_grey)
+1 8 -20 -24 -290 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (dark_grey)
+1 8 -20 -24 -190 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Sleeper Plate  2 x  8 without Cable Grooves (dark_grey)
+1 8 459.999 -8 -240.001 0 0 -1 0 1 0 1 0 0 767.dat
+0 // Train Track Sleeper Plate  2 x  8 without Cable Grooves (dark_grey)
+1 8 299.999 -8 -240.001 0 0 -1 0 1 0 1 0 0 767.dat
+0 // Train Track Rail Slotted Straight (dark_grey)
+1 8 300 -24 -290 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (dark_grey)
+1 8 300 -24 -190 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 -580.001 -16 -259.999 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 -580.001 -16 -219.999 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 -580.001 -16 -319.999 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 -580.001 -16 -159.999 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 219.999 -16 -259.999 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 219.999 -16 -219.999 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 219.999 -16 -319.999 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 219.999 -16 -159.999 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 7822 - station - platform.ldr
+0 STEP
+0 // Plate  6 x 24 (light_grey)
+1 7 259.983 -344 -240.001 0 0 1 0 1 0 -1 0 0 3026.dat
+0 STEP
+0 // Brick  1 x  1 (main_colour)
+1 16 209.977 -368 -10.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 309.977 -368 -10.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 309.977 -368 -110.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 209.977 -368 -470.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 309.977 -368 -470.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 309.977 -368 -370.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 209.977 -392 -10.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 309.977 -392 -10.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 309.977 -392 -110.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 209.977 -392 -470.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 309.977 -392 -470.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 309.977 -392 -370.002 0 0 1 0 1 0 -1 0 0 3005.dat
+0 STEP
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 309.978 -392 -59.999 0 0 1 0 1 0 -1 0 0 3185.dat
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 309.978 -392 -159.999 0 0 1 0 1 0 -1 0 0 3185.dat
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 309.978 -392 -239.999 0 0 1 0 1 0 -1 0 0 3185.dat
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 309.978 -392 -319.999 0 0 1 0 1 0 -1 0 0 3185.dat
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 309.978 -392 -419.999 0 0 1 0 1 0 -1 0 0 3185.dat
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 209.978 -392 -159.999 0 0 1 0 1 0 -1 0 0 3185.dat
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 209.978 -392 -239.999 0 0 1 0 1 0 -1 0 0 3185.dat
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 209.978 -392 -319.999 0 0 1 0 1 0 -1 0 0 3185.dat
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 259.978 -392 -469.999 -1 0 0 0 1 0 0 0 -1 3185.dat
+0 // Fence Lattice  1 x  4 x  2 (main_colour)
+1 16 259.978 -392 -9.999 -1 0 0 0 1 0 0 0 -1 3185.dat
+0 STEP
+0 STEP
+0 STEP
+0 STEP
+0 STEP
+0 STEP
+0 STEP
+0 STEP
+0 NOFILE
+0 STEP
+0 FILE 7822 - station - building.ldr
+0 A large multi-story station building constructed from plates and bricks of various sizes with ladder elements.
+
+
+0 station - building
+0 Name: 7822 - station - building.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  6 x 24 (light_grey)
+1 7 60 -56 60 1 0 0 0 1 0 0 0 1 3026.dat
+0 // Plate  6 x 24 (light_grey)
+1 7 60 -56 -60 1 0 0 0 1 0 0 0 1 3026.dat
+0 // Plate  6 x 24 (light_grey)
+1 7 -420 -56 60 1 0 0 0 1 0 0 0 1 3026.dat
+0 // Plate  6 x 24 (light_grey)
+1 7 -420 -56 -60 1 0 0 0 1 0 0 0 1 3026.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 260 -48 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -620 -48 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -48 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -400 -48 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 40 -48 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  2 (black)
+1 0 40 -48 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 260 -48 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 -180 -48 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 -620 -48 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 -400 -48 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 40 -48 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -400 -48 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -640 -48 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -48 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  2 (black)
+1 0 -180 -48 120 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  1 x  2 (black)
+1 0 -290 -48 120 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -240 -56 130 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -120 -56 130 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Brick  1 x  2 (black)
+1 0 -70 -48 120 0 0 -1 0 1 0 1 0 0 3004.dat
+0 STEP
+0 // Plate  1 x  1 (black)
+1 0 -290 -24 110 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -24 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -640 -24 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -400 -24 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 40 -24 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  2 (black)
+1 0 -400 -24 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Plate  2 x  2 (black)
+1 0 -620 -24 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Brick  2 x  2 (black)
+1 0 -180 -24 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 40 -24 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  1 x  2 (black)
+1 0 40 -24 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -400 -24 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -24 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 (black)
+1 0 -620 -24 -110 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  2 (black)
+1 0 260 -24 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (black)
+1 0 260 -24 -110 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 (black)
+1 0 -70 -24 110 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  2 (black)
+1 0 -180 -24 110 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Plate  1 x  2 (black)
+1 0 260 -16 -110 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  2 (black)
+1 0 260 -16 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (black)
+1 0 -620 -16 -110 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  2 (black)
+1 0 -620 -16 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 -240 -24 140 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 -120 -24 140 1 0 0 0 1 0 0 0 1 3795.dat
+0 STEP
+0 // Plate  1 x  3 (black)
+1 0 -290 -16 130 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  2 x  3 (black)
+1 0 -180 -16 130 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  1 x  2 (black)
+1 0 -620 -8 10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  3 (black)
+1 0 -70 -16 130 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  2 (black)
+1 0 260 -8 10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  3 (black)
+1 0 -290 -8 130 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  2 x  3 (black)
+1 0 -180 -8 130 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  1 x  3 (black)
+1 0 -70 -8 130 0 0 -1 0 1 0 1 0 0 3623.dat
+0 STEP
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 220 -64 -110 1 0 0 0 1 0 0 0 1 4175.dat
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 -580 -64 -110 1 0 0 0 1 0 0 0 1 4175.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 -480 -80 90 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 -450.001 -80 40.004 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -650 -80 39.994 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 -600 -80 90 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -370 -80 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -320 -80 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 -310.001 -80 40.004 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -320 -80 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -440 -80 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -50 -80 39.994 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 79.997 -80 89.999 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -10 -80 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -80 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 290 -80 39.994 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 270 -80 90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 49.999 -80 -89.999 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 49.999 -80 -29.999 0 0 -1 0 1 0 1 0 0 3665.dat
+0 STEP
+0 // Brick  2 x  8 (black)
+1 0 -560 -80 40 1 0 0 0 1 0 0 0 1 3007.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 270 -104 -30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 290.006 -104 19.994 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -104 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 0.008 -104 89.995 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -640 -104 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 100 -104 90 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -449.995 -104 39.999 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 -540 -104 90 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -650 -104 50 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -650 -104 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -310 -104 39.994 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -380.003 -104 89.999 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 -330 -104 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 -430 -104 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -50 -104 50 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -50 -104 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 60 -88 -59.999 0 0 -1 0 1 0 1 0 0 3795.dat
+0 STEP
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 -560 -88 40 1 0 0 0 1 0 0 0 1 4079.dat
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 -500 -88 40 1 0 0 0 1 0 0 0 1 4079.dat
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 -620 -88 40 1 0 0 0 1 0 0 0 1 4079.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 -459.995 -112 59.999 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 -459.995 -112 19.999 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 -299.995 -112 59.999 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 -299.995 -112 19.999 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 290.003 -128 80.024 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 100 -128 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -128 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 69.999 -112 -90 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 69.999 -112 -30 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Bar  1 x  4 x  2 with Studs (black)
+1 0 -209.995 -104 60.001 0 0 1 0 1 0 -1 0 0 4083.dat
+0 STEP
+0 // Plate  2 x  6 (light_grey)
+1 7 80 -120 -60 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 -650 -128 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -49.995 -128 40.001 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -450 -128 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -320 -128 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -440 -128 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -500 -128 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -630 -128 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -320 -128 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -20 -128 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 x  2 with Shutter Holder (main_colour)
+1 16 270.003 -152 90.024 -1 0 0 0 1 0 0 0 -1 3581.dat
+0 // Brick  1 x  1 x  2 with Shutter Holder (main_colour)
+1 16 130.003 -152 90.024 -1 0 0 0 1 0 0 0 -1 3581.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 89.999 -144 -30 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 89.999 -144 -90 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 289.981 -152 80.024 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 99.977 -152 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -50 -152 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -50 -152 50 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 -650.023 -152 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -490.023 -152 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -320.023 -152 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -440.023 -152 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -440.023 -152 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -630.023 -152 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -320.023 -152 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -30.023 -152 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 279.977 -152 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Plate  2 x  6 (light_grey)
+1 7 100 -152 -60 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 279.977 -176 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -320.023 -176 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -20 -176 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -500 -176 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -450 -176 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -49.995 -176 40.001 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -630.023 -176 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -440.023 -176 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -320.023 -176 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 -650.023 -176 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 279.98 -176 90.024 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Window  1 x  4 x  3 (yellow)
+1 14 -560.003 -176 90.004 -1 0 0 0 1 0 0 0 -1 3853.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 -594.003 -173 95.001 0 0 -1 0 1 0 1 0 0 3854.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 -526.003 -173 95.003 0 0 1 0 1 0 -1 0 0 3854.dat
+0 // Window  1 x  4 x  3 (yellow)
+1 14 -650 -176 40 0 0 1 0 1 0 -1 0 0 3853.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 -654.998 -173 6 -1 0 0 0 1 0 0 0 -1 3854.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 -654.998 -173 74 1 0 0 0 1 0 0 0 1 3854.dat
+0 // Window  1 x  4 x  3 (yellow)
+1 14 -380.003 -176 90.004 -1 0 0 0 1 0 0 0 -1 3853.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 -414.003 -173 95.001 0 0 -1 0 1 0 1 0 0 3854.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 -346.003 -173 95.003 0 0 1 0 1 0 -1 0 0 3854.dat
+0 // Window  1 x  4 x  3 (yellow)
+1 14 39.997 -176 90.004 -1 0 0 0 1 0 0 0 -1 3853.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 5.997 -173 95.001 0 0 -1 0 1 0 1 0 0 3854.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 73.997 -173 95.003 0 0 1 0 1 0 -1 0 0 3854.dat
+0 // Window  1 x  4 x  3 (yellow)
+1 14 290.336 -176 19.999 0 0 -1 0 1 0 1 0 0 3853.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 295.332 -173 54 1 0 0 0 1 0 0 0 1 3854.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 295.336 -173 -14 -1 0 0 0 1 0 0 0 -1 3854.dat
+0 // Door  1 x  4 x  5 with 4 Panes and Reinforced Hinge (white)
+1 15 -350 -176 -10 0 0 -1 0 1 0 1 0 0 3861.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 110 -176 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 289.977 -176 70 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Door  1 x  4 x  6 Grooved (white)
+1 15 270.329 -200 99.998 0 0 -1 0 1 0 1 0 0 3644.dat
+0 // Door  1 x  4 x  6 Grooved (white)
+1 15 130.329 -200 99.998 0 0 1 0 1 0 -1 0 0 3644.dat
+0 STEP
+0 // Brick  1 x  6 (main_colour)
+1 16 290.006 -200 19.994 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -200 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -379.993 -200 89.975 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -609.995 -200 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -649.995 -200 39.994 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 60 -200 90 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -40 -200 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -50.002 -200 10 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -50.005 -200 60 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -379.993 -200 -10.025 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -519.993 -200 89.975 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Arch  1 x  6 (main_colour)
+1 16 -309.991 -200 39.977 0 0 1 0 1 0 -1 0 0 3455.dat
+0 // Arch  1 x  6 (main_colour)
+1 16 -449.991 -200 39.977 0 0 1 0 1 0 -1 0 0 3455.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 109.999 -176 -90 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 109.999 -176 -30 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 269.977 -184 -30 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Plate  2 x  6 (light_grey)
+1 7 120 -184 -60 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Brick  1 x  6 (black)
+1 0 -599.993 -224 89.971 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  8 (black)
+1 0 -460.02 -224 90 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  6 (black)
+1 0 -50.006 -224 40.01 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  4 (black)
+1 0 -650.016 -224 39.994 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 -450.016 -224 39.994 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 -310.016 -224 39.994 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  6 (black)
+1 0 -599.993 -224 -10.029 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  8 (black)
+1 0 -460.02 -224 -10 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  4 (black)
+1 0 -340.016 -224 89.994 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 -340.016 -224 -10.006 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Plate  1 x  8 (main_colour)
+1 16 40 -208 90 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  8 (main_colour)
+1 16 200 -208 90 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 290.001 -208 60 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 290.007 -208 -10.006 0 0 1 0 1 0 -1 0 0 3623.dat
+0 STEP
+0 // Brick  1 x  8 (main_colour)
+1 16 200 -208 -30 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 129.999 -208 -90 0 0 -1 0 1 0 1 0 0 3665.dat
+0 STEP
+0 // Plate  1 x  2 (main_colour)
+1 16 280 -216 -30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  6 x 24 (light_grey)
+1 7 -240.013 -232 -20.002 -1 0 0 0 1 0 0 0 -1 3026.dat
+0 // Plate  6 x 10 (light_grey)
+1 7 -580.016 -232 39.98 -1 0 0 0 1 0 0 0 -1 3033.dat
+0 // Plate  6 x 24 (light_grey)
+1 7 -240.013 -232 99.998 -1 0 0 0 1 0 0 0 -1 3026.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 140 -216 -60.001 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 149.999 -240 -30.001 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 149.999 -240 -90.001 0 0 -1 0 1 0 1 0 0 3665.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 169.999 -272 -90.002 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 169.999 -272 -30.002 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 160 -248 -60.002 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -400.01 -256 39.989 -1 0 0 0 1 0 0 0 -1 3941.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 -189.997 -256 -50 0 0 1 0 1 0 -1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 -170.001 -256 -50.002 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  1 x  6 without Centre Studs with White "STATION" Pattern (trans_red)
+1 36 -180.015 -256 130.001 -1 0 0 0 1 0 0 0 -1 3067p10.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 209.999 -336 -90.004 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 209.999 -336 -30.004 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 200 -312 -60.004 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 180 -280 -60.003 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 189.999 -304 -30.003 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 189.999 -304 -90.003 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 279.977 -336 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 279.977 -312 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -288 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -264 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -240 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Brick  1 x  4 (main_colour)
+1 16 -180.001 -280 -50.002 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (main_colour)
+1 16 -190.001 -304 -50.002 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (main_colour)
+1 16 -170.001 -304 -50.002 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 NOFILE
+0 STEP
+0 FILE 7822 - station - platform.ldr
+0 A train platform with inverted slopes, seating, ladder access, and yellow accents for benches and details.
+
+
+0 station - platform
+0 Name: 7822 - station - platform.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  6 x 24 (light_grey)
+1 7 60 -56 -420 1 0 0 0 1 0 0 0 1 3026.dat
+0 // Plate  6 x 24 (light_grey)
+1 7 -420 -56 -420 1 0 0 0 1 0 0 0 1 3026.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 260 -48 -370 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -620 -48 -370 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -48 -370 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -400 -48 -370 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 40 -48 -370 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 260 -48 -470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -620 -48 -470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -48 -470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -400 -48 -470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 40 -48 -470 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Plate  1 x  2 (black)
+1 0 -620 -16 -470 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 260 -16 -470 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 260 -24 -470 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 -620 -24 -470 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -24 -470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -400 -24 -470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 40 -24 -470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 (black)
+1 0 -620 -16 -370 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 260 -16 -370 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 260 -24 -370 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 -620 -24 -370 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Brick  1 x  2 (black)
+1 0 -180 -24 -370 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -400 -24 -370 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 40 -24 -370 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 -580 -64 -370.021 -1 0 0 0 1 0 0 0 -1 4175.dat
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 220 -64 -369.979 -1 0 0 0 1 0 0 0 -1 4175.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -80 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 49.999 -80 -449.999 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 49.999 -80 -389.999 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  2 x  8 (black)
+1 0 -220 -80 -440 1 0 0 0 1 0 0 0 1 3007.dat
+0 STEP
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -104 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 60 -88 -419.999 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 -220 -88 -440 -1 0 0 0 1 0 0 0 -1 4079.dat
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 -160 -88 -440 -1 0 0 0 1 0 0 0 -1 4079.dat
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 -280 -88 -440 -1 0 0 0 1 0 0 0 -1 4079.dat
+0 // Bar  1 x  4 x  2 with Studs (black)
+1 0 -420 -104 -430 1 0 0 0 1 0 0 0 1 4083.dat
+0 // Brick  1 x  4 (yellow)
+1 14 -420 -128 -430 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 69.999 -112 -450 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 69.999 -112 -390 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  1 x  4 (yellow)
+1 14 -420 -152 -430 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+0 // Plate  2 x  6 (light_grey)
+1 7 80 -120 -420 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -128 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  4 (yellow)
+1 14 -420 -176 -430 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 89.999 -144 -390 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 89.999 -144 -450 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 279.977 -152 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Plate  2 x  6 (light_grey)
+1 7 100 -152 -420 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 279.977 -176 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Plate  1 x  2 (main_colour)
+1 16 279.977 -184 -450 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 109.999 -176 -450 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 109.999 -176 -390 0 0 -1 0 1 0 1 0 0 3665.dat
+0 STEP
+0 // Plate  2 x  6 (light_grey)
+1 7 120 -184 -420.001 0 0 -1 0 1 0 1 0 0 3795.dat
+0 STEP
+0 // Brick  1 x  8 (main_colour)
+1 16 200 -208 -450 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 129.999 -208 -390 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 289.977 -208 -450 1 0 0 0 1 0 0 0 1 3005.dat
+1 7 -610 -56 -420 1 0 0 0 1 0 0 0 1 7822 - platform - light.ldr
+1 7 -70 -56 -420 1 0 0 0 1 0 0 0 1 7822 - platform - light.ldr
+0 STEP
+0 // Plate  1 x  2 (main_colour)
+1 16 280 -216 -450 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 140 -216 -420.001 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 149.999 -240 -390.001 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 149.999 -240 -450.001 0 0 -1 0 1 0 1 0 0 3665.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 169.999 -272 -450.002 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 169.999 -272 -390.002 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 160 -248 -420.002 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 209.999 -336 -450.005 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 209.999 -336 -390.005 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 200 -312 -420.004 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 180 -280 -420.003 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 189.999 -304 -390.004 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 189.999 -304 -450.004 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 279.977 -336 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 279.977 -312 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -288 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -264 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 280 -240 -450 1 0 0 0 1 0 0 0 1 3004.dat
+0 NOFILE
+0 STEP
+0 FILE 7822 - platform - light.ldr
+0 A train signal assembly with a signal stand, mast, and inverted dishes on a technic axle.
+
+
+0 platform - light
+0 Name: 7822 - platform - light.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Train Signal Stand (main_colour)
+1 16 0 -8 0 1 0 0 0 1 0 0 0 1 4169.dat
+0 STEP
+0 // Train Signal Mast (main_colour)
+1 16 0 -173 3.998 0 0 1 -1 0 0 0 -1 0 4168.dat
+0 STEP
+0 // Technic Bush with Two Flanges (main_colour)
+1 16 0 -283.002 15.009 1 0 0 0 1 0 0 0 1 3713.dat
+0 // Technic Bush with Two Flanges (main_colour)
+1 16 0 -283.003 -14.991 1 0 0 0 1 0 0 0 1 3713.dat
+0 !LEOCAD PIECE HIDDEN
+0 // Technic Axle  6 (black)
+1 0 0 -283.002 -0.991 0 0 1 0 1 0 -1 0 0 3706.dat
+0 STEP
+0 // Technic Connector (Pin/Bush) with 2 Studs (main_colour)
+1 16 0 -283.007 -54.991 0 -1 0 1 0 0 0 0 1 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (main_colour)
+1 16 0 -283.007 55.009 0 -1 0 -1 0 0 0 0 -1 3651.dat
+0 STEP
+0 // Dish  4 x  4 Inverted (main_colour)
+1 16 0.002 -273.009 -74.992 0 0 1 0 1 0 -1 0 0 3960.dat
+0 // Dish  4 x  4 Inverted (main_colour)
+1 16 0.002 -273.009 75.008 0 0 1 0 1 0 -1 0 0 3960.dat
+0 NOFILE
+0 STEP
+0 FILE 7822 - minifig 1.ldr
+0 A blue-shirted male minifigure carrying a pushbroom for sweeping duties.
+
+
+0 minifig 1
+0 Name: 7822 - minifig 1.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Minifig Hair Male (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 3901.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso with Patch Pocket Pattern (blue)
+1 1 0 -72 0 1 0 0 0 1 0 0 0 1 973p26.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (blue)
+1 1 15.5 -64 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.5 -64 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 23.658 -46.127 -10 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -23.658 -46.127 -10 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Pushbroom (brown)
+1 6 -29.67 -11.289 11.215 0.985 0.12 -0.12 0.17 -0.697 0.697 0 -0.707 -0.707 3836.dat
+0 NOFILE
+0 STEP
+0 FILE 7822 - minifig 2.ldr
+0 A minifigure in a suit and tie wearing a red police hat and holding a signal accessory.
+
+
+0 minifig 2
+0 Name: 7822 - minifig 2.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 1.888 -28 9.462 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 1.888 -28 9.462 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Signal Holder with Green Circle on White Sticker (light_grey)
+1 7 -18.882 -62.85 -34.478 -0.986 -0.12 0.12 -0.169 0.696 -0.697 0 -0.707 -0.707 3900d01.dat
+0 // Minifig Hand (yellow)
+1 14 -21.772 -46.13 -0.538 0.99 -0.12 0.12 0.17 0.7 -0.7 0 0.71 0.71 3820.dat
+0 // Minifig Hand (yellow)
+1 14 25.548 -46.13 -0.538 0.99 0.12 -0.12 -0.17 0.7 -0.7 0 0.71 0.71 3820.dat
+0 // Minifig Arm Right (blue)
+1 1 -13.612 -64 9.462 0.99 -0.17 0 0.17 0.99 0 0 0 1 3818.dat
+0 // Minifig Arm Left (blue)
+1 1 17.388 -64 9.462 0.99 0.17 0 -0.17 0.99 0 0 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 1.888 -40 9.462 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Torso with Suit and Tie Pattern (blue)
+1 1 1.888 -72 9.462 1 0 0 0 1 0 0 0 1 973p18.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 1.888 -96 9.462 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Police Hat (red)
+1 4 1.888 -96 9.462 1 0 0 0 1 0 0 0 1 3624.dat
+0 NOFILE
+0 STEP
+0 FILE 7822 - minifig 3.ldr
+0 A red-shirted female minifigure with pigtails holding a white tile accessory.
+
+
+0 minifig 3
+0 Name: 7822 - minifig 3.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Minifig Hair Female with Pigtails (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 3625.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso (red)
+1 4 0 -72 0 1 0 0 0 1 0 0 0 1 973.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (red)
+1 4 15.5 -64 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (red)
+1 4 -15.5 -64 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 23.658 -46.127 -10 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -23.658 -46.127 -10 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 28.827 -33.816 -25.274 -0.107 -0.994 -0.006 -0.62 0.062 0.782 -0.777 0.088 -0.623 3069b.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 NOFILE

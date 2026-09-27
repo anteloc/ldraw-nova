@@ -4,17 +4,17 @@ Use whole models for proportions, palettes and a module checklist; use submodels
 
 ## Check Jev availability before searching
 
-Before the first Jev search in a task, check that `uv`, the Jev project (`JEV_RERANK_PROJECT` or `../jev-rerank`) and a nonempty `TYPESAFE_API_KEY` are available. Check the key's presence without printing its value. If those prerequisites exist, verify authentication and service access with one bounded, uncached query against the configured source database:
+Before the first Jev search in a task, check that the global `jev-rerank` executable is on `PATH`, `data/ldraw-info.db` exists and `TYPESAFE_API_KEY` is nonempty. Check the key's presence without printing its value. If those prerequisites exist, verify authentication and service access with one bounded, uncached query from the repository root:
 
 ```sh
-uv run --project "${JEV_RERANK_PROJECT:-../jev-rerank}" jev-rerank \
-  --db "${LDRAW_LIB_DIR:-../ldraw-lib}/scripts/ldraw-info.db" \
+jev-rerank \
+  --db "data/ldraw-info.db" \
   --table-field PARTS_DESCRIPTIONS_JEV.full_description \
   --query 'brick' --top 1 --candidates 1 --model jev-1.13.0 \
   --no-score-cache --timeout 10 --retries 0 --json
 ```
 
-Use the actual database path if your model sources are configured elsewhere. Require a successful exit, a nonempty result and a positive `stats.api_calls`; `--help` or a cached result alone does not verify the live service. The timeout applies to the API request, not local indexing or `uv` setup.
+Require a successful exit, a nonempty result and a positive `stats.api_calls`; `--help` or a cached result alone does not verify the live service. The timeout applies to the API request, not local indexing.
 
 If prerequisites are missing, the key is rejected, or the service/network fails, state the reason briefly and continue with **explicit offline FTS**. Apply the same fallback if Jev fails later in the task. Avoid repeatedly attempting an unavailable service; retry when configuration or availability changes. Local database/path errors need their own correction because FTS also requires the local resources.
 
@@ -39,9 +39,9 @@ Select `parts`, `models` or `submodels` and suitable keywords for the current ro
 ./ldraw-agent examples --family reference --limit 8
 ```
 
-`discover search` defaults to the sibling Jev CLI and `jev-1.13.0`. It needs `uv`, `../jev-rerank` (or `JEV_RERANK_PROJECT`) and that tool's configured credentials. Use `--engine fts` for an explicit offline BM25 search. There is no silent fallback. Natural-language FTS queries use token OR; the older `search models|submodels` commands retain their raw FTS5 syntax, now ranked and paginated with `--offset`.
+`discover search` invokes the global `jev-rerank` CLI with model `jev-1.13.0` and its configured credentials. Use `--engine fts` for an explicit offline BM25 search. There is no silent fallback. Natural-language FTS queries use token OR; the older `search models|submodels` commands retain their raw FTS5 syntax, now ranked and paginated with `--offset`.
 
-The source is the three `*_DESCRIPTIONS_JEV.full_description` fields. A local index resolves their pipe-prefixed identifiers, corrects descriptions against source headers and classifies records. The supplied database and source files remain untouched. `LDRAW_LIB_DIR` selects the library repository; `LDRAW_DIR`/`--library` and `MODELS_DIR`/`--models` override its part and model directories independently.
+The source is the three `*_DESCRIPTIONS_JEV.full_description` fields in `data/ldraw-info.db`, with annotated sources in `data/models-annotated/`. A local index resolves their pipe-prefixed identifiers, corrects descriptions against source headers and classifies records. The supplied database and source files remain untouched. Only the parts library is configured externally: `--library`, then `LDRAW_DIR`, then `LDRAWDIR`.
 
 Jev searches an eligible local snapshot with a real primary key. Each result returns a stable `id`, exact `model`/`section` or `part`, original indexed text, corrected source text, original field name, source hash, parent description and retrieval score/rank. This avoids persisting Jev's unstable view row numbers. Case/whitespace normalization must resolve unambiguously; paths must remain under the configured roots.
 

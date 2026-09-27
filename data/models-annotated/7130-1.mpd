@@ -1,0 +1,714 @@
+0 FILE 7130 - Snowspeeder.ldr
+0 Snowspeeder
+0 Name: 7130 - Snowspeeder.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Star Wars
+0 !KEYWORDS Episode V, Hoth, AT-AT, Luke Skywalker, Dack Ralter
+0 !HISTORY 2012-04-17 [TK-949] Creation
+
+1 16 430 0 -90 0 0 -1 0 1 0 1 0 0 7130 - Laser Cannon.ldr
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 7130 - Ship.ldr
+1 16 208.787 -64 198.787 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 7130 - Minifig - Hoth Rebel Soldier.ldr
+1 16 256.36 -64 274.143 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 7130 - Minifig - Dack Ralter.ldr
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 7130 - Minifig - Luke Skywalker.ldr
+
+
+0 STEP
+0 FILE 7130 - Laser Cannon.ldr
+0 Laser Cannon
+0 Name: 7130 - Laser Cannon.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  4 x  4 (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 3031.dat
+0 STEP
+0 // Brick  2 x  2 (light_grey)
+1 7 0 -24 20 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 0 -48 20 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 (light_grey)
+1 7 0 -72 10 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 STEP
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 -10 -72 -10 0 0 1 0 1 0 -1 0 0 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 10 -72 -10 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 STEP
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 0 -80 0 1 0 0 0 1 0 0 0 1 3680.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 -80 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Plate  2 x  2 (dark_grey)
+1 8 0 -88 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Hinge  1 x  2 Base (white)
+1 15 0 -112 10 -1 0 0 0 1 0 0 0 -1 3937.dat
+0 // Hinge  2 x  2 Top (black)
+1 0 0 -110.106 16.004 -1 0 0 0 0.80696 -0.590606 0 -0.590606 -0.80696 6134.dat
+0 STEP
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 0 -111.688 -20.018 1 0 0 0 -0.590606 0.80696 0 -0.80696 -0.590606 3956.dat
+0 STEP
+0 // Tile  2 x  2 Round with Cross Underside Stud (white)
+1 15 0 -128.925 17.383 1 0 0 0 0.80696 0.590606 0 -0.590606 0.80696 4150.dat
+0 STEP
+0 // Dish  6 x  6 Inverted Webbed Type 2 (white)
+1 15 0 -116.41 -26.473 1 0 0 0 -0.590606 0.80696 0 -0.80696 -0.590606 4285b.dat
+0 // Dish  2 x  2 Inverted (dark_grey)
+1 8 0 -121.136 -32.928 1 0 0 0 -0.590606 0.80696 0 -0.80696 -0.590606 4740.dat
+0 // Bar  6.6L with Stop (white)
+1 15 0 -125.92 -39.466 1 0 0 0 0.590606 -0.80696 0 0.80696 0.590606 4095.dat
+
+0 STEP
+0 FILE 7130 - Ship.ldr
+0 Ship
+0 Name: 7130 - Ship.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  6 x 16 (tan)
+1 19 0 0 0 0 0 -1 0 1 0 1 0 0 3027.dat
+0 // Plate  1 x  6 (tan)
+1 19 0 0 170 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 with SW AT-AT Pattern (dark_grey)
+1 8 0 -24 170 1 0 0 0 1 0 0 0 1 3039ps2.dat
+0 STEP
+0 // Brick  1 x  2 with Grille (dark_grey)
+1 8 -40 -24 170 -1 0 0 0 1 0 0 0 -1 2877.dat
+0 // Brick  1 x  2 with Grille (dark_grey)
+1 8 40 -24 170 -1 0 0 0 1 0 0 0 -1 2877.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 0 -8 130 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -8 110 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Brick  2 x  3 (dark_grey)
+1 8 -40 -24 130 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // Brick  2 x  3 (dark_grey)
+1 8 40 -24 130 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // Slope Brick 45  2 x  2 (dark_grey)
+1 8 0 -24 70 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 STEP
+0 // Brick  2 x  2 (light_grey)
+1 7 -40 -24 80 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 40 -24 80 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+1 7 0 -8 40 1 0 0 0 1 0 0 0 1 7130 - Wing Angle Base 1.ldr
+0 STEP
+0 // Slope Brick 33  3 x  2 (black)
+1 0 0 -24 10 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 0 -8 -50 1 0 0 0 1 0 0 0 1 3069b.dat
+0 STEP
+0 // Brick  2 x  4 (light_grey)
+1 7 -40 -24 -20 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Brick  2 x  4 (light_grey)
+1 7 40 -24 -20 0 0 -1 0 1 0 1 0 0 3001.dat
+0 STEP
+1 7 0 -8 -80 1 0 0 0 1 0 0 0 1 7130 - Wing Angle Base 2.ldr
+0 STEP
+0 // Brick  2 x  6 (light_grey)
+1 7 0 -24 -120 1 0 0 0 1 0 0 0 1 2456.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -20 -24 -150 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 20 -24 -150 1 0 0 0 1 0 0 0 1 3660.dat
+0 STEP
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (light_grey)
+1 7 -50 -24 -150 1 0 0 0 1 0 0 0 1 4287.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (light_grey)
+1 7 50 -24 -150 1 0 0 0 1 0 0 0 1 4287.dat
+0 STEP
+0 // Hinge  1 x  2 Base (dark_grey)
+1 8 -20 -48 170 -1 0 0 0 1 0 0 0 -1 3937.dat
+0 // Hinge  1 x  2 Base (dark_grey)
+1 8 20 -48 170 -1 0 0 0 1 0 0 0 -1 3937.dat
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 -20 -48 170 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 20 -48 170 1 0 0 0 1 0 0 0 1 3938.dat
+0 STEP
+0 // Brick  1 x  3 (light_grey)
+1 7 -50 -48 150 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (light_grey)
+1 7 50 -48 150 0 0 -1 0 1 0 1 0 0 3622.dat
+0 STEP
+0 // Panel  1 x  2 x  1 with Square Corners (light_grey)
+1 7 30 -48 120 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (light_grey)
+1 7 -30 -48 120 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Plate  1 x  1 (black)
+1 0 -30 -32 90 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (black)
+1 0 30 -32 90 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (dark_grey)
+1 8 -30 -56 90 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (dark_grey)
+1 8 30 -56 90 1 0 0 0 1 0 0 0 1 3062b.dat
+0 STEP
+0 // Brick  1 x  2 with Grille (dark_grey)
+1 8 0 -48 70 -1 0 0 0 1 0 0 0 -1 2877.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 -30 -48 70 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 30 -48 70 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 -30 -48 40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -48 40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Tile  1 x  1 with Groove (tan)
+1 19 -30 -64 90 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  1 with Groove (tan)
+1 19 30 -64 90 1 0 0 0 1 0 0 0 1 3070b.dat
+0 STEP
+0 // Brick  1 x  2 with Grille (dark_grey)
+1 8 0 -48 10 1 0 0 0 1 0 0 0 1 2877.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (light_grey)
+1 7 -50 -72 100 0 0 1 0 1 0 -1 0 0 4864b.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (light_grey)
+1 7 50 -72 100 0 0 -1 0 1 0 1 0 0 4864b.dat
+0 // Slope Brick 33  3 x  1 (dark_grey)
+1 8 -50 -72 130 -1 0 0 0 1 0 0 0 -1 4286.dat
+0 // Slope Brick 33  3 x  1 (dark_grey)
+1 8 50 -72 130 -1 0 0 0 1 0 0 0 -1 4286.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 (dark_grey)
+1 8 -30 -48 0 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (dark_grey)
+1 8 30 -48 0 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Plate  2 x  2 (dark_grey)
+1 8 -40 -32 -40 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (dark_grey)
+1 8 40 -32 -40 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (light_grey)
+1 7 30 -56 -30 0 0 1 0 1 0 -1 0 0 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (light_grey)
+1 7 30 -56 -90 -1 0 0 0 1 0 0 0 -1 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (light_grey)
+1 7 -30 -56 -90 0 0 -1 0 1 0 1 0 0 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (light_grey)
+1 7 -30 -56 -30 1 0 0 0 1 0 0 0 1 6231.dat
+0 // Panel  1 x  2 x  1 with Square Corners (light_grey)
+1 7 30 -56 -60 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (light_grey)
+1 7 -30 -56 -60 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Plate  2 x  4 (dark_grey)
+1 8 0 -32 -140 0 0 -1 0 1 0 1 0 0 3020.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 with SW AT-AT Pattern (dark_grey)
+1 8 0 -56 -110 -1 0 0 0 1 0 0 0 -1 3039ps2.dat
+0 // Slope Brick 18  4 x  2 with Orange and Grey Rectangles Pattern (light_grey)
+1 7 0 -56 -130 1 0 0 0 1 0 0 0 1 30363ps1.dat
+0 STEP
+0 // Slope Brick 45  2 x  3 (light_grey)
+1 7 -30 -48 -130 0 0 1 0 1 0 -1 0 0 3038.dat
+0 // Slope Brick 45  2 x  3 (light_grey)
+1 7 30 -48 -130 0 0 -1 0 1 0 1 0 0 3038.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -30 -56 -10 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 30 -56 -10 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Tile  1 x  2 with SW Computer Pattern (light_grey)
+1 7 30 -56 -120 0 0 1 0 1 0 -1 0 0 3069bps1.dat
+0 // Tile  1 x  2 with SW Computer Pattern (light_grey)
+1 7 -30 -56 -120 0 0 -1 0 1 0 1 0 0 3069bps1.dat
+0 // Slope Brick 45  2 x  2 Double Convex (light_grey)
+1 7 30 -48 -170 1 0 0 0 1 0 0 0 1 3045.dat
+0 // Slope Brick 45  2 x  2 Double Convex (light_grey)
+1 7 -30.001 -48 -170.001 0 0 1 0 1 0 -1 0 0 3045.dat
+0 STEP
+0 // Hinge Brick  1 x  2 Locking with Single Finger On End (dark_grey)
+1 8 20 -72 70 1 0 0 0 1 0 0 0 1 30364.dat
+0 // Hinge Brick  1 x  2 Locking with Single Finger On End (dark_grey)
+1 8 20 -72 10 1 0 0 0 1 0 0 0 1 30364.dat
+0 // Hinge Brick  1 x  2 Locking with Single Finger On End (dark_grey)
+1 8 -20 -72 10 -1 0 0 0 1 0 0 0 -1 30364.dat
+0 // Hinge Brick  1 x  2 Locking with Single Finger On End (dark_grey)
+1 8 -20 -72 70 -1 0 0 0 1 0 0 0 -1 30364.dat
+0 // Brick  1 x  2 with Grille (dark_grey)
+1 8 -30 -72 40 0 0 1 0 1 0 -1 0 0 2877.dat
+0 // Brick  1 x  2 with Grille (dark_grey)
+1 8 30 -72 40 0 0 -1 0 1 0 1 0 0 2877.dat
+0 STEP
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 -50 -80 70 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 50 -80 70 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -80 70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 50 -80 120 0 0 -1 0 1 0 1 0 0 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 -50 -80 120 0 0 -1 0 1 0 1 0 0 3794a.dat
+0 STEP
+0 // Plate  1 x  3 (tan)
+1 19 30 -80 30 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (tan)
+1 19 -30 -80 30 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 0 -80 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 0 -104 70 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+1 7 -20 -56 150 1 0 0 0 1 0 0 0 1 7130 - Rear Cockpit.ldr
+0 STEP
+0 // Hinge Brick  1 x  2 Locking with Single Finger On End (dark_grey)
+1 8 30 -104 40 0 0 1 0 1 0 -1 0 0 30364.dat
+0 // Hinge Brick  1 x  2 Locking with Single Finger On End (dark_grey)
+1 8 -30 -104 40 0 0 1 0 1 0 -1 0 0 30364.dat
+0 // Windscreen  4 x  7 x  1.667 with SW LightGrey/DarkGrey Pattern (trans_brown)
+1 40 0 -94.2 9.8 1 0 0 0 1 0 0 0 1 30372p79.dat
+0 STEP
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 -30 -112 70 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 30 -112 70 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 STEP
+1 8 110.42 -24.134 -80 0.93358 -0.358368 0 0.358368 0.93358 0 0 0 1 7130 - Wing Left.ldr
+0 STEP
+1 8 -110.448 -24.143 -80 0.93358 0.358368 0 -0.358368 0.93358 0 0 0 1 7130 - Wing Right.ldr
+0 STEP
+1 8 0 -24.143 40 1 0 0 0 1 0 0 0 1 7130 - Container.ldr
+
+0 STEP
+0 FILE 7130 - Wing Angle Base 1.ldr
+0 Wing Angle Base 1
+0 Name: 7130 - Wing Angle Base 1.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x 12 (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 2445.dat
+0 STEP
+0 // Tile  2 x  2 with Groove (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Plate  1 x  2 (black)
+1 0 -30 -8 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 30 -8 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 -30 -16 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 30 -16 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Slope Brick 18  4 x  2 (dark_grey)
+1 8 -50 -24 0 0 0 1 0 1 0 -1 0 0 30363.dat
+0 // Slope Brick 18  4 x  2 (dark_grey)
+1 8 50 -24 0 0 0 -1 0 1 0 1 0 0 30363.dat
+
+
+0 STEP
+0 FILE 7130 - Wing Angle Base 2.ldr
+0 Wing Angle Base 2
+0 Name: 7130 - Wing Angle Base 2.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x 12 (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 2445.dat
+0 STEP
+0 // Brick  2 x  2 Corner (black)
+1 0 -30 -24 -10 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 30 -24 -10 0 0 -1 0 1 0 1 0 0 2357.dat
+0 STEP
+0 // Slope Brick 18  4 x  2 (dark_grey)
+1 8 -50 -24 0 0 0 1 0 1 0 -1 0 0 30363.dat
+0 // Slope Brick 18  4 x  2 (dark_grey)
+1 8 50 -24 0 0 0 -1 0 1 0 1 0 0 30363.dat
+
+
+0 STEP
+0 FILE 7130 - Rear Cockpit.ldr
+0 Rear Cockpit
+0 Name: 7130 - Rear Cockpit.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  3 (light_grey)
+1 7 0 0 0 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 40 0 0 0 0 -1 0 1 0 1 0 0 3021.dat
+0 STEP
+0 // Plate  2 x  4 (dark_grey)
+1 8 20 -8 -10 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  4 (dark_grey)
+1 8 20 -8 20 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // Plate  2 x  2 (light_grey)
+1 7 20 -16 10 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 20 -24 10 1 0 0 0 1 0 0 0 1 3680.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 20 -24 10 1 0 0 0 1 0 0 0 1 3679.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 20 -32 20 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 20 -32 0 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Windscreen  3 x  4 x  1.333 (trans_brown)
+1 40 20 -40 -40 -1 0 0 0 1 0 0 0 -1 2437.dat
+0 STEP
+0 // Plate  2 x  4 (light_grey)
+1 7 20 -48 -50 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 20 -48 10 -1 0 0 0 1 0 0 0 -1 4595.dat
+
+
+0 STEP
+0 FILE 7130 - Wing Left.ldr
+0 Wing Left
+0 Name: 7130 - Wing Left.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Wing  6 x 12 Left (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 30355.dat
+0 // Plate  4 x  6 (light_grey)
+1 7 0 0 160 1 0 0 0 1 0 0 0 1 3032.dat
+0 STEP
+0 // Brick  2 x  3 (dark_grey)
+1 8 -30 -24 120 1 0 0 0 1 0 0 0 1 3002.dat
+0 STEP
+0 // Hinge Brick  1 x  2 Locking with Dual Finger On End (light_grey)
+1 7 -40 -24 90 -1 0 0 0 1 0 0 0 -1 30365.dat
+0 // Hinge Brick  1 x  2 Locking with Dual Finger On End (light_grey)
+1 7 -40 -24 150 -1 0 0 0 1 0 0 0 -1 30365.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 10 -24 120 0 0 -1 0 1 0 1 0 0 3298.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (dark_grey)
+1 8 -10 -24 150 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Plate  2 x  2 (tan)
+1 19 0 -8 80 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Slope Brick 33  3 x  1 (orange)
+1 25 10 -24 150 0 0 -1 0 1 0 1 0 0 4286.dat
+0 // Brick  2 x  2 with Curved Top and  2 Studs on Top (dark_grey)
+1 8 0 -32 80 0 0 1 0 1 0 -1 0 0 30165.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -50 -8 0 0 0 -1 0 1 0 1 0 0 4162.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (orange)
+1 25 -50 -8 -100 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 -10 -24 50 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 10 -24 50 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 0 -8 30 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 0 -8 10 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (dark_grey)
+1 8 -50 -32 120 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -30 -32 110 0 0 -1 0 1 0 1 0 0 3623.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 0 -32 50 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 0 -32 110 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (orange)
+1 25 10 -32 140 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // Plate  1 x  1 (black)
+1 0 -10 -32 130 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+1 0 -20 -32 150 -1 0 0 0 1 0 0 0 -1 7130 - Wing Left Rear End.ldr
+0 STEP
+0 // Tile  2 x  2 with SW Light Grey Rebel Mechanical Pattern (tan)
+1 19 -20 -40 140 1 0 0 0 1 0 0 0 1 3068bps1.dat
+0 // Tile  1 x  4 with Groove (dark_grey)
+1 8 0 -40 80 0 0 -1 0 1 0 1 0 0 2431.dat
+0 STEP
+0 // Bar  1 x  8 with Brick  1 x  2 Curved Top End (dark_grey)
+1 8 0 -32 20 1 0 0 0 1 0 0 0 1 30359a.dat
+
+
+0 STEP
+0 FILE 7130 - Wing Left Rear End.ldr
+0 Wing Left Rear End
+0 Name: 7130 - Wing Left Rear End.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (tan)
+1 19 0 0 0 1 0 0 0 1 0 0 0 1 2436a.dat
+0 // Plate  1 x  2 with Handle (orange)
+1 25 0 10 -22 -1 0 0 0 0 1 0 1 0 2540.dat
+0 STEP
+0 // Plate  1 x  1 Round (dark_grey)
+1 8 -30 10 -22 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (dark_grey)
+1 8 30 10 -22 1 0 0 0 0 -1 0 1 0 6141.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 0 10 -30 1 0 0 0 0 -1 0 1 0 3710.dat
+0 // Flag  2 x  2 (light_grey)
+1 7 20 -10 -20 0 -1 0 0 0 -1 1 0 0 2335.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (orange)
+1 25 0 10 -38 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (dark_grey)
+1 8 -30 10 -54 1 0 0 0 0 -1 0 1 0 3062b.dat
+
+0 STEP
+0 FILE 7130 - Wing Right.ldr
+0 Wing Right
+0 Name: 7130 - Wing Right.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Wing  6 x 12 Right (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 30356.dat
+0 // Plate  4 x  6 (light_grey)
+1 7 0 0 160 1 0 0 0 1 0 0 0 1 3032.dat
+0 STEP
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 -10 -24 120 0 0 1 0 1 0 -1 0 0 3298.dat
+0 STEP
+0 // Brick  2 x  3 (dark_grey)
+1 8 30 -24 120 1 0 0 0 1 0 0 0 1 3002.dat
+0 // Slope Brick 33  3 x  1 (orange)
+1 25 -10 -24 150 0 0 1 0 1 0 -1 0 0 4286.dat
+0 STEP
+0 // Plate  2 x  2 (tan)
+1 19 0 -8 80 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Tile  1 x  2 Grille with Groove (dark_grey)
+1 8 -30 -8 80 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (dark_grey)
+1 8 10 -24 150 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  2 x  2 with Curved Top and  2 Studs on Top (dark_grey)
+1 8 0 -32 80 0 0 -1 0 1 0 1 0 0 30165.dat
+0 STEP
+0 // Hinge Brick  1 x  2 Locking with Dual Finger On End (light_grey)
+1 7 40 -24 90 1 0 0 0 1 0 0 0 1 30365.dat
+0 // Hinge Brick  1 x  2 Locking with Dual Finger On End (light_grey)
+1 7 40 -24 150 1 0 0 0 1 0 0 0 1 30365.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 -10 -24 50 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 10 -24 50 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 STEP
+0 // Tile  1 x  8 (light_grey)
+1 7 50 -8 0 0 0 -1 0 1 0 1 0 0 4162.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 0 -8 30 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 0 -8 10 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (orange)
+1 25 50 -8 -100 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (orange)
+1 25 -10 -32 140 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // Plate  1 x  1 (black)
+1 0 10 -32 130 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 0 -32 110 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (dark_grey)
+1 8 0 -32 50 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Plate  1 x  3 (light_grey)
+1 7 30 -32 110 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Tile  1 x  4 with Groove (dark_grey)
+1 8 50 -32 120 0 0 -1 0 1 0 1 0 0 2431.dat
+0 STEP
+1 8 20 -32 150 -1 0 0 0 1 0 0 0 -1 7130 - Wing Right Rear End.ldr
+0 STEP
+0 // Tile  2 x  2 with SW Light Grey Rebel Mechanical Pattern (tan)
+1 19 20 -40 140 -1 0 0 0 1 0 0 0 -1 3068bps1.dat
+0 // Tile  1 x  4 with Groove (dark_grey)
+1 8 0 -40 80 0 0 -1 0 1 0 1 0 0 2431.dat
+0 STEP
+0 // Bar  1 x  8 with Brick  1 x  2 Curved Top End (dark_grey)
+1 8 0 -32 20 1 0 0 0 1 0 0 0 1 30359a.dat
+
+
+0 STEP
+0 FILE 7130 - Wing Right Rear End.ldr
+0 Wing Right Rear End
+0 Name: 7130 - Wing Right Rear End.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (tan)
+1 19 0 0 0 1 0 0 0 1 0 0 0 1 2436a.dat
+0 // Plate  1 x  2 with Handle (orange)
+1 25 0 10 -22 -1 0 0 0 0 1 0 1 0 2540.dat
+0 STEP
+0 // Plate  1 x  1 Round (dark_grey)
+1 8 -30 10 -22 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (dark_grey)
+1 8 30 10 -22 1 0 0 0 0 -1 0 1 0 6141.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 0 10 -30 1 0 0 0 0 -1 0 1 0 3710.dat
+0 // Flag  2 x  2 (light_grey)
+1 7 20 -10 -20 0 -1 0 0 0 -1 1 0 0 2335.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (orange)
+1 25 0 10 -38 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (dark_grey)
+1 8 30 10 -54 1 0 0 0 0 -1 0 1 0 3062b.dat
+
+0 STEP
+0 FILE 7130 - Container.ldr
+0 Container
+0 Name: 7130 - Container.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  2 (dark_grey)
+1 8 0 0 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Panel  1 x  2 x  2 with Hollow Studs (light_grey)
+1 7 -10 -48 0 0 0 -1 0 1 0 1 0 0 4864b.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (light_grey)
+1 7 10 -48 0 0 0 1 0 1 0 -1 0 0 4864b.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (orange)
+1 25 0 -56 10 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+0 // Tile  1 x  2 with Handle (black)
+1 0 0 -80 -10 1 0 0 0 1 0 0 0 1 2432.dat
+0 // Minifig Lightsaber Hilt with Slight Sloping Fingers with Bottom Ring (chrome_silver)
+1 383 0 -37.042 14.561 1 0 0 0 0.601815 0.798636 0 -0.798636 0.601815 577b.dat
+
+0 STEP
+0 FILE 7130 - Minifig - Hoth Rebel Soldier.ldr
+0 Minifig - Hoth Rebel Soldier
+0 Name: 7130 - Minifig - Hoth Rebel Soldier.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Leg Right (Obsolete) (light_grey)
+1 7 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (light_grey)
+1 7 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Hips (Obsolete) (white)
+1 15 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 STEP
+0 // Minifig Torso with SW Hoth Trooper Pattern (tan)
+1 19 0 0 0 1 0 0 0 1 0 0 0 1 973psh.dat
+0 // Minifig Arm Right (light_grey)
+1 7 -15.552 9 0 0.985 -0.17 0 0.152795 0.885312 0.438371 -0.0745231 -0.431796 0.898794 3818.dat
+0 // Minifig Arm Left (light_grey)
+1 7 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Hand (white)
+1 15 -23.863 20.29 -16.992 0.985 -0.12019 0.12019 0.152795 0.935844 -0.315987 -0.0745231 0.330168 0.940727 3820.dat
+0 // Minifig Hand (white)
+1 15 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+0 // Minifig Backpack Non-Opening (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 2524.dat
+0 STEP
+0 // Minifig Head with Brown Hair over Eye and Black Eyebrows Pattern (yellow)
+1 14 0 -26 0 1 0 0 0 1 0 0 0 1 3626bp7a.dat
+0 STEP
+0 // ~Minifig Cap Aviator (Obsolete) (white)
+1 15 0 -26 0 1 0 0 0 1 0 0 0 1 30171.dat
+0 STEP
+0 // ~Minifig Helmet Visor Standard (Obsolete) (brown)
+1 6 0 -22.517 4.666 1 0 0 0 0.694658 0.71934 0 -0.71934 0.694658 2447.dat
+0 STEP
+0 // Minifig Camera with Side Sight (black)
+1 0 -23.828 7.419 -45.452 0.0765695 -0.0905522 -0.992503 -0.526585 0.84148 -0.117394 0.845792 0.531642 0.0167625 4360.dat
+0 // Minifig Tool Binoculars Space (dark_grey)
+1 8 26.277 36.274 -21.067 -0.28833 -0.954731 -0.0622946 -0.80792 0.277877 -0.518832 0.513085 -0.0989597 -0.851976 30304.dat
+
+
+0 STEP
+0 FILE 7130 - Minifig - Luke Skywalker.ldr
+0 Minifig - Luke Skywalker
+0 Name: 7130 - Minifig - Luke Skywalker.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Leg Left (Obsolete) (orange)
+1 25 0 -17 -52 1 0 0 0 0 1 0 -1 0 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (orange)
+1 25 0 -17 -52 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Hips (Obsolete) (dark_grey)
+1 8 0 -27.269 -45.764 1 0 0 0 0.857167 0.515038 0 -0.515038 0.857167 3815.dat
+0 STEP
+0 // Minifig Torso with SW Rebel Pilot Pattern (orange)
+1 25 0 -54.701 -29.283 1 0 0 0 0.857167 0.515038 0 -0.515038 0.857167 973ps1.dat
+0 // Minifig Arm Right (orange)
+1 25 -15.552 -46.986 -33.917 0.985 -0.17 0 0.0636828 0.368987 0.927184 -0.157621 -0.913277 0.374606 3818.dat
+0 // Minifig Arm Left (orange)
+1 25 15.552 -46.986 -33.917 0.985 0.17 0 -0.0636828 0.368987 0.927184 0.157621 -0.913277 0.374606 3819.dat
+0 // Minifig Hand (black)
+1 0 -23.863 -49.967 -54.101 0.985 -0.12019 0.12019 0.0636828 0.916393 0.394645 -0.157621 -0.38084 0.910533 3820.dat
+0 // Minifig Hand (black)
+1 0 23.863 -49.967 -54.101 0.985 0.12019 -0.12019 -0.0636828 0.916393 0.394645 0.157621 -0.38084 0.910533 3820.dat
+0 STEP
+0 // Minifig Head with SW Small Black Eyebrows Pattern (yellow)
+1 14 0 -75.271 -16.921 1 0 0 0 0.857167 0.515038 0 -0.515038 0.857167 3626bps3.dat
+0 STEP
+0 // Minifig Helmet Star Wars Rebel Pilot with Red Rebel Logo Pattern (white)
+1 15 0 -75.271 -16.921 1 0 0 0 0.857167 0.515038 0 -0.515038 0.857167 30370ps2.dat
+
+
+0 STEP
+0 FILE 7130 - Minifig - Dack Ralter.ldr
+0 Minifig - Dack Ralter
+0 Name: 7130 - Minifig - Dack Ralter.ldr
+0 Author: Daniel Goerner [TK-949]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Leg Left (Obsolete) (orange)
+1 25 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (orange)
+1 25 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Hips (Obsolete) (dark_grey)
+1 8 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 STEP
+0 // Minifig Torso with SW Rebel Pilot Pattern (orange)
+1 25 0 0 0 1 0 0 0 1 0 0 0 1 973ps1.dat
+0 // Minifig Arm Right (orange)
+1 25 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Arm Left (orange)
+1 25 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Hand (black)
+1 0 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // Minifig Hand (black)
+1 0 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -24 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 STEP
+0 // Minifig Helmet Star Wars Rebel Pilot with Blue Rebel Logo Pattern (white)
+1 15 0 -24 0 1 0 0 0 1 0 0 0 1 30370ps3.dat
+
+

@@ -1,0 +1,1173 @@
+0 FILE 6571 - main.ldr
+0 Fire station scene featuring a fire department building with two response vehicles, a helicopter, and a crew of three firefighters and a civilian.
+0 Name: 6571 - main.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 6571 - FD building.ldr
+1 4 -119.99 -24 -79.997 0 0 -1 0 1 0 1 0 0 6571 - FD car 1.ldr
+1 4 -264.019 -40 -87.68 0.866 0 -0.5 0 1 0 0.5 0 0.866 6571 - FD car 2.ldr
+1 4 -220 -208 220 0 0 -1 0 1 0 1 0 0 6571 - FD helicopter.ldr
+1 7 170 0 -70 1 0 0 0 1 0 0 0 1 6571 - woman.ldr
+1 7 -410 0 -60 1 0 0 0 1 0 0 0 1 6571 - fireman 1.ldr
+1 7 -210 0 -220 0.5 0 0.866 0 1 0 -0.866 0 0.5 6571 - fireman 2.ldr
+1 7 58.66 0 -215 0.866 0 0.5 0 1 0 -0.5 0 0.866 6571 - fireman 3.ldr
+
+0 STEP
+0 FILE 6571 - FD building.ldr
+0 Red-and-white fire station built on a 32x32 road baseplate with tall brick walls, a roll-up door, and small detail pieces like a radio, tap, and light elements.
+0 Name: 6571 - FD building.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Baseplate 32 x 32 Road 9-Stud 3-Lane with Centre and Right Numbered Pattern (green)
+1 2 -110 0 0 1 0 0 0 1 0 0 0 1 6100p01.dat
+0 // Brick  1 x  2 (red)
+1 4 180 -24 300 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -400 -24 300 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -210 -24 310 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Plate  1 x  1 (red)
+1 4 180 -8 190 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 -20 -8 170 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x 10 (red)
+1 4 90 -8 170 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Bar  1 x  4 x  2 with Studs (black)
+1 0 180 -48 240 0 0 1 0 1 0 -1 0 0 4083.dat
+0 // Bar  1 x  4 x  2 with Studs (black)
+1 0 -20 -48 240 0 0 1 0 1 0 -1 0 0 4083.dat
+0 // Brick  1 x  2 (red)
+1 4 -10 -24 310 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 STEP
+0 // Plate  1 x  2 (red)
+1 4 -210 -32 310 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 -210 -40 310 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (red)
+1 4 -200 -48 310 0 0 -1 0 1 0 1 0 0 4085a.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (red)
+1 4 -220 -48 310 0 0 1 0 1 0 -1 0 0 4085a.dat
+0 // Brick  1 x  2 (red)
+1 4 -400 -48 300 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // ~Brick  1 x  2 x  5 (Obsolete) (red)
+1 4 -400 -168 300 0 0 1 0 1 0 -1 0 0 2454.dat
+0 // ~Brick  1 x  2 x  5 (Obsolete) (red)
+1 4 -210 -168 310 1 0 0 0 1 0 0 0 1 2454.dat
+0 // ~Brick  1 x  2 x  5 (Obsolete) (red)
+1 4 -10 -144 310 1 0 0 0 1 0 0 0 1 2454.dat
+0 // ~Brick  1 x  2 x  5 (Obsolete) (red)
+1 4 180 -144 300 0 0 -1 0 1 0 1 0 0 2454.dat
+0 // ~Brick  1 x  2 x  5 (Obsolete) (red)
+1 4 180 -128 180 0 0 -1 0 1 0 1 0 0 2454.dat
+0 // ~Brick  1 x  2 x  5 (Obsolete) (red)
+1 4 -10 -128 170 1 0 0 0 1 0 0 0 1 2454.dat
+0 // Brick  1 x  4 (white)
+1 15 50 -128 170 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (white)
+1 15 50 -104 170 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (white)
+1 15 50 -80 170 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (white)
+1 15 50 -56 170 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (white)
+1 15 50 -32 170 1 0 0 0 1 0 0 0 1 3010.dat
+0 // ~Door  1 x  4 x  5 Right with Smoke Glass (Obsolete) (white)
+1 15 160 -128 170 0 0 -1 0 1 0 1 0 0 73435.dat
+0 // Tile  1 x  1 without Groove (black)
+1 0 100 -70 159 0 0 -1 -1 0 0 0 1 0 3070a.dat
+0 STEP
+0 // Bar  1 x  8 x  2 (black)
+1 0 -350 -48 -290 1 0 0 0 1 0 0 0 1 2486.dat
+0 // Bar  1 x  8 x  2 (black)
+1 0 130 -48 -290 1 0 0 0 1 0 0 0 1 2486.dat
+0 // Minifig Radio with Long Handle (black)
+1 0 -180 -48 310 -1 0 0 0 1 0 0 0 -1 3962b.dat
+0 // Tap  1 x  1 with Hole in Spout (yellow)
+1 14 -240 -56 310 -1 0 0 0 1 0 0 0 -1 4599a.dat
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 -240 -32 310 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Bar  1 x  8 x  2 (black)
+1 0 -400 -46 179 0 0 1 0 1 0 -1 0 0 2486.dat
+0 // Plate  1 x 10 (red)
+1 4 90 -136 170 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  1 x  1 (red)
+1 4 -20 -136 170 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 180 -136 190 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Brick  1 x  2 (red)
+1 4 -20 -24 120 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -20 -48 120 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // ~Brick  1 x  2 x  5 (Obsolete) (red)
+1 4 -20 -168 120 0 0 1 0 1 0 -1 0 0 2454.dat
+0 // Plate  1 x  2 (red)
+1 4 -10 -144 170 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 180 -144 180 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  8 (white)
+1 15 90 -144 170 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -400 -24 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -400 -48 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -400 -72 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -400 -96 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -400 -120 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -400 -144 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -400 -168 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -220 -24 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -220 -48 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -220 -72 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -220 -96 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -220 -120 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -220 -144 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -220 -168 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 STEP
+0 // Brick  1 x  2 with Groove (red)
+1 4 -20 -24 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -20 -48 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -20 -72 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -20 -96 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -20 -120 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -20 -144 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -200 -168 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -200 -144 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -200 -120 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -200 -96 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -200 -72 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -200 -48 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  8 (red)
+1 4 180 -168 240 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 0 -168 240 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  1 (red)
+1 4 -20 -168 310 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -20 -168 170 0 0 -1 0 1 0 1 0 0 3005.dat
+0 STEP
+0 // Brick  1 x  6 (red)
+1 4 180 -192 260 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 0 -192 260 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x 14 with Groove (red)
+1 4 -20 -192 180 0 0 1 0 1 0 -1 0 0 4217.dat
+0 // Brick  1 x 14 with Groove (red)
+1 4 -200 -192 180 0 0 -1 0 1 0 1 0 0 4217.dat
+0 // Brick  1 x 14 with Groove (red)
+1 4 -220 -192 180 0 0 1 0 1 0 -1 0 0 4217.dat
+0 // Brick  1 x 14 with Groove (red)
+1 4 -400 -192 180 0 0 -1 0 1 0 1 0 0 4217.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -200 -24 60 0 0 -1 0 1 0 1 0 0 4216.dat
+0 // Brick  1 x  2 with Groove (red)
+1 4 -20 -168 60 0 0 1 0 1 0 -1 0 0 4216.dat
+0 // ~Roller Door with Handle (Obsolete) (white)
+1 15 -110 -24 60 1 0 0 0 1 0 0 0 1 4219a.dat
+0 // ~Roller Door Normal (Obsolete) (white)
+1 15 -110 -44 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -110 -64 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -110 -84 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -110 -104 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -110 -124 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -110 -144 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -110 -164 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -110 -181 68 1 0 0 0 0.866025 0.5 0 -0.5 0.866025 4218a.dat
+0 // ~Roller Door with Handle (Obsolete) (white)
+1 15 -310 -24 60 1 0 0 0 1 0 0 0 1 4219a.dat
+0 // ~Roller Door Normal (Obsolete) (white)
+1 15 -310 -44 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -310 -64 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -310 -84 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -310 -104 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -310 -124 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -310 -144 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -310 -164 60 1 0 0 0 1 0 0 0 1 4218a.dat
+0 // ~Roller Door Normal (Obsolete) (trans_medium_blue)
+1 41 -310 -181 68 1 0 0 0 0.866025 0.5 0 -0.5 0.866025 4218a.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 180 -192 190 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 0 -192 190 1 0 0 0 1 0 0 0 1 3040b.dat
+0 STEP
+0 // Plate  6 x 10 (red)
+1 4 -310 -200 220 -1 0 0 0 1 0 0 0 -1 3033.dat
+0 // Plate  6 x 10 (red)
+1 4 -310 -200 100 -1 0 0 0 1 0 0 0 -1 3033.dat
+0 // Plate  6 x 10 (red)
+1 4 -110 -200 100 -1 0 0 0 1 0 0 0 -1 3033.dat
+0 // Plate  6 x 10 (red)
+1 4 -110 -200 220 -1 0 0 0 1 0 0 0 -1 3033.dat
+0 // Plate  2 x 10 (red)
+1 4 -310 -200 300 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  2 x 10 (red)
+1 4 -110 -200 300 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 180 -216 210 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 0 -216 210 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Brick  2 x  2 Corner (red)
+1 4 0 -216 250 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (red)
+1 4 180 -216 250 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Brick  1 x  3 (red)
+1 4 0 -216 290 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  3 (red)
+1 4 180 -216 290 0 0 1 0 1 0 -1 0 0 3622.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -330 -208 150 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -90 -208 150 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 -180 -208 220 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 -240 -208 220 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  4 with Groove (white)
+1 15 -240 -208 160 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (white)
+1 15 -180 -208 160 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 -210 -208 180 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 -210 -208 50 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Window  4 x  4 x  3 Roof with Centre Bar with Fixed Transparent Light Blue Glass (white)
+1 15 50 -216 230 1 0 0 0 1 0 0 0 1 6159c01.dat
+0 // Window  4 x  4 x  3 Roof with Centre Bar with Fixed Transparent Light Blue Glass (white)
+1 15 130 -216 230 1 0 0 0 1 0 0 0 1 6159c01.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (black)
+1 0 -210 -216 50 1 0 0 0 1 0 0 0 1 6019.dat
+0 // Plate  2 x  2 Corner (red)
+1 4 0 -224 230 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (red)
+1 4 180 -224 230 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  1 x  6 (red)
+1 4 90 -224 230 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  4 x 10 (red)
+1 4 90 -224 280 -1 0 0 0 1 0 0 0 -1 3030.dat
+0 // Brick  2 x  2 Round without Reinforcement (yellow)
+1 14 90 -248 280 -1 0 0 0 1 0 0 0 -1 3941.dat
+0 // Brick  1 x  6 (red)
+1 4 0 -248 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 0 -272 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 0 -296 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 0 -320 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Plate  1 x  6 (red)
+1 4 180 -304 260 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  2 with Ladder (black)
+1 0 180 -312 260 0 0 -1 0 1 0 1 0 0 4175.dat
+0 // Brick  1 x  6 (red)
+1 4 180 -248 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 180 -272 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 180 -296 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Plate  1 x  2 with Handle (black)
+1 0 -210 -230.627 14.343 -1 0 0 0 0.707 -0.707 0 -0.707 -0.707 2540.dat
+0 STEP
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 -200 -234.869995 18.385 -1 0 0 0 0.707107 -0.707107 0 -0.707107 -0.707107 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 -220 -234.869995 18.385 -1 0 0 0 0.707107 -0.707107 0 -0.707107 -0.707107 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 -220 -226.384003 9.899 -1 0 0 0 0.707107 -0.707107 0 -0.707107 -0.707107 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 -200 -226.384003 9.899 -1 0 0 0 0.707107 -0.707107 0 -0.707107 -0.707107 6141.dat
+0 // Plate  2 x  2 (black)
+1 0 90 -256 280 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Minifig Seat  2 x  2 (black)
+1 0 130 -232 280 0 0 1 0 1 0 -1 0 0 4079.dat
+0 // Plate  1 x  2 (red)
+1 4 180 -312 300 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 180 -312 220 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  6 (red)
+1 4 180 -320 260 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Minifig Seat  2 x  2 (black)
+1 0 50 -232 280 0 0 -1 0 1 0 1 0 0 4079.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -40 -208 70 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -380 -208 70 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 STEP
+0 // Brick  1 x  6 (red)
+1 4 0 -344 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 0 -368 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 180 -344 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 180 -368 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Window  1 x  4 x  6 with Fixed Transparent Light Blue Glass (white)
+1 15 50 -368 230 1 0 0 0 1 0 0 0 1 6160.dat
+0 // Window  1 x  4 x  6 with Fixed Transparent Light Blue Glass (white)
+1 15 130 -368 230 1 0 0 0 1 0 0 0 1 6160.dat
+0 // Flag  4 x  1 with First Wave Left (yellow)
+1 14 -380 -288 70 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 4495a.dat
+0 // Flag  4 x  1 with First Wave Left (yellow)
+1 14 -40.588001 -288 70 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 4495a.dat
+0 STEP
+0 // Turntable  2 x  2 Plate with Light Grey Top (black)
+1 0 90 -384 280 0 0 1 0 1 0 -1 0 0 3680c01.dat
+0 // Plate  6 x 10 (red)
+1 4 90.569 -376 260.274 1 0 0 0 1 0 0 0 1 3033.dat
+0 // Brick  1 x 10 (red)
+1 4 90 -400 210 1 0 0 0 1 0 0 0 1 6111.dat
+0 // Brick  1 x  1 (red)
+1 4 0 -400 310 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 180 -400 310 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Minifig Seat  2 x  2 (black)
+1 0 90 -392 280 1 0 0 0 1 0 0 0 1 4079.dat
+0 // Slope Brick 45  2 x  2 with Computer Screen Pattern (black)
+1 0 50 -424 210 -1 0 0 0 1 0 0 0 -1 3039p23.dat
+0 // Slope Brick 45  2 x  2 with Computer Panel Pattern (black)
+1 0 130 -424 210 -1 0 0 0 1 0 0 0 -1 3039p34.dat
+0 // Brick  1 x  1 x  5 with Hollow Stud (red)
+1 4 0 -520 310 -1 0 0 0 1 0 0 0 -1 2453.dat
+0 // Brick  1 x  1 x  5 with Hollow Stud (red)
+1 4 180 -520 310 -1 0 0 0 1 0 0 0 -1 2453.dat
+0 // Brick  1 x  1 x  5 with Hollow Stud (red)
+1 4 0 -520 210 -1 0 0 0 1 0 0 0 -1 2453.dat
+0 // Brick  1 x  1 x  5 with Hollow Stud (red)
+1 4 180 -520 210 -1 0 0 0 1 0 0 0 -1 2453.dat
+0 STEP
+0 // Window  1 x  4 x  6 with Fixed Transparent Light Blue Glass (white)
+1 15 0 -520 260 0 0 1 0 1 0 -1 0 0 6160.dat
+0 // Window  1 x  4 x  6 with Fixed Transparent Light Blue Glass (white)
+1 15 180 -520 260 0 0 -1 0 1 0 1 0 0 6160.dat
+0 // Windscreen  3 x  4 x  4 Inverted (trans_medium_blue)
+1 41 50 -496 210 1 0 0 0 1 0 0 0 1 4872.dat
+0 // Windscreen  3 x  4 x  4 Inverted (trans_medium_blue)
+1 41 130 -496 210 1 0 0 0 1 0 0 0 1 4872.dat
+0 STEP
+0 // Slope Brick 33  3 x  2 (red)
+1 4 30 -520 210 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Slope Brick 33  3 x  2 (red)
+1 4 150 -520 210 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Slope Brick 33  3 x  4 (red)
+1 4 90 -520 210 1 0 0 0 1 0 0 0 1 3297.dat
+0 STEP
+0 // Plate  6 x 10 (black)
+1 0 90 -528 260 1 0 0 0 1 0 0 0 1 3033.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 90 -536 210 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Antenna  4H with Rounded Top (white)
+1 15 40 -536 250 1 0 0 0 1 0 0 0 1 3957a.dat
+0 // Antenna  8H Whip (white)
+1 15 140 -536 250 1 0 0 0 1 0 0 0 1 2569.dat
+0 STEP
+0 // Brick  2 x  1 with Positioning Rockets (white)
+1 15 90 -544 190 1 0 0 0 1 0 0 0 1 3963.dat
+0 // Plant Flower Stem Green with Three Flowers with 6 Petals Centre Upwards (yellow)
+1 14 160 -13 -250 1 0 0 0 1 0 0 0 1 3741ac01.dat
+0 // Plant Flower Stem Green with Three Flowers with 6 Petals Centre Upwards (yellow)
+1 14 -360 -13 -250 1 0 0 0 1 0 0 0 1 3741ac01.dat
+
+0 STEP
+0 FILE 6571 - FD car 1.ldr
+0 White response car assembled from plates and a 4x5 car base with wheel pins, red light tiles, and clip attachments for accessories.
+0 Name: 6571 - FD car 1.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  2 x 12 (black)
+1 0 -75 0 -10 1 0 0 0 1 0 0 0 1 2445.dat
+0 STEP
+0 // Plate  2 x  2 (white)
+1 15 25 -8 -10 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (white)
+1 15 -15 -8 -10 0 0 1 0 1 0 -1 0 0 4600.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (white)
+1 15 -175 -8 -10 0 0 1 0 1 0 -1 0 0 4600.dat
+0 // Plate  4 x  4 (white)
+1 15 -95 -8 -10 0 0 1 0 1 0 -1 0 0 3031.dat
+0 STEP
+0 // Plate  2 x 12 (black)
+1 0 -95 -16 -10 -1 0 0 0 1 0 0 0 -1 2445.dat
+0 // Plate  1 x  4 (white)
+1 15 35 -16 -10 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (white)
+1 15 35 -24 0 0 0 -1 0 1 0 1 0 0 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (white)
+1 15 35 -24 -20 0 0 -1 0 1 0 1 0 0 4085c.dat
+0 // Plate  2 x  4 (white)
+1 15 -15 -24 -10 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  3 (white)
+1 15 -165 -24 -10 1 0 0 0 1 0 0 0 1 3021.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 -95 -24 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 35 -24 20 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 35 -24 -40 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (white)
+1 15 -205 -24 -10 0 0 1 0 1 0 -1 0 0 2436a.dat
+0 STEP
+0 // Plate  1 x  2 (black)
+1 0 -95 -32 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  2 (black)
+1 0 -195 -32 -10 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  1 x  4 (white)
+1 15 -227 -14 -10 0 1 0 0 0 -1 -1 0 0 3710.dat
+0 // Plate  2 x  2 (black)
+1 0 5 -32 -10 0 0 1 0 1 0 -1 0 0 3022.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 -105 -40 0 -1 0 0 0 1 0 0 0 -1 4085a.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 -85 -40 0 -1 0 0 0 1 0 0 0 -1 4085a.dat
+0 // Car Base  4 x  5 (white)
+1 15 -15 -40 -10 0 0 1 0 1 0 -1 0 0 4211.dat
+0 // Tile  1 x  2 Grille without Groove (red)
+1 4 -236 -14 -10 0 1 0 0 0 -1 -1 0 0 2412a.dat
+0 // Tile  1 x  1 without Groove (trans_yellow)
+1 46 -236 -14 20 0 1 0 0 0 -1 -1 0 0 3070a.dat
+0 // Tile  1 x  1 without Groove (trans_yellow)
+1 46 -236 -14 -40 0 1 0 0 0 -1 -1 0 0 3070a.dat
+0 // Car Base  4 x  5 (white)
+1 15 -175 -40 -10 0 0 -1 0 1 0 1 0 0 4211.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -85 -64 0 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -105 -64 0 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 -225 -40 20 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 -225 -40 -40 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  2 (white)
+1 15 25 -40 20 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 25 -40 -40 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  4 (white)
+1 15 -145 -40 -10 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 -45 -40 -10 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  2 x  2 Corner (white)
+1 15 -205 -40 -20 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (white)
+1 15 -205 -40 0 0 0 -1 0 1 0 1 0 0 2420.dat
+0 STEP
+0 // Plate  1 x  2 (black)
+1 0 -95 -72 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Tile  1 x  2 with Telemetry Computer Pattern (white)
+1 15 -95 -54 12 -1 0 0 0 0 -1 0 -1 0 3069bp52.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 -15 -40 -10 0 0 -1 0 1 0 1 0 0 3956.dat
+0 // Plate  1 x  4 (red)
+1 4 -225 -48 -10 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 -175 -48 20 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 -175 -48 -40 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Brick  1 x  1 with Handle (red)
+1 4 35 -64 20 0 0 -1 0 1 0 1 0 0 2921.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 15 -64 20 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 15 -64 -40 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 35 -64 -40 1 0 0 0 1 0 0 0 1 4070.dat
+0 STEP
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (black)
+1 0 -95 -80 0 1 0 0 0 1 0 0 0 1 2436a.dat
+0 // Car Steering Stand and Wheel (Complete) (red)
+1 4 -205 -48 -10 0 0 1 0 1 0 -1 0 0 3829c01.dat
+0 // Minifig Radio with Short Handle (black)
+1 0 55 -20 -20 0 0 -1 0 1 0 1 0 0 3962a.dat
+0 // Tile  1 x  2 with Telemetry Computer Pattern (white)
+1 15 25 -54 -56 1 0 0 0 0 -1 0 1 0 3069bp52.dat
+0 // Hinge Control Stick (black)
+1 0 15 -54 37 1 0 0 0 1 0 0 0 1 4593.dat
+0 // Hinge Control Stick Base (black)
+1 0 15 -54 35 1 0 0 0 0 1 0 -1 0 4592.dat
+0 // Hose Reel  2 x  2 Holder (red)
+1 4 36 -59 -10 0 -1 0 0 0 -1 1 0 0 2584.dat
+0 // Hose Reel  2 x  2 (black)
+1 0 44 -59 -10 0 -1 0 0 0 -1 1 0 0 2585.dat
+0 // Plate  1 x  2 (black)
+1 0 -145 -48 -10 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 -95 -104 0 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 with Grille (red)
+1 4 -225 -72 10 0 0 1 0 1 0 -1 0 0 2877.dat
+0 // Brick  1 x  2 with Grille (red)
+1 4 -225 -72 -30 0 0 1 0 1 0 -1 0 0 2877.dat
+0 // Brick  1 x  2 with Grille (red)
+1 4 25 -88 -35 -1 0 0 0 1 0 0 0 -1 2877.dat
+0 // Brick  1 x  2 with Grille (red)
+1 4 25 -88 20 1 0 0 0 1 0 0 0 1 2877.dat
+0 // Container Cupboard  2 x  3 x  2 with Solid Studs (red)
+1 4 -25 -88 -30 1 0 0 0 1 0 0 0 1 4532.dat
+0 // Brick  1 x  4 (red)
+1 4 -145 -72 -10 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Container Cupboard  2 x  3 x  2 Door (light_grey)
+1 7 -50 -84 -45 0 0 1 0 1 0 -1 0 0 4533.dat
+0 // Container Cupboard  2 x  3 x  2 with Solid Studs (red)
+1 4 -25 -88 10 -1 0 0 0 1 0 0 0 -1 4532.dat
+0 // Container Cupboard  2 x  3 x  2 Door (light_grey)
+1 7 0 -84 25 0 0 -1 0 1 0 1 0 0 4533.dat
+0 // Tile  1 x  1 with Black "1" Pattern (yellow)
+1 14 -125 -70 -22 1 0 0 0 0 -1 0 1 0 3070bp01.dat
+0 // Tile  1 x  1 with Black "2" Pattern (yellow)
+1 14 -65 -70 -22 1 0 0 0 0 -1 0 1 0 3070bp02.dat
+0 STEP
+0 // Hinge Control Stick (black)
+1 0 -85 -70 -25 1 0 0 0 -1 0 0 0 -1 4593.dat
+0 // Hinge Control Stick Base (black)
+1 0 -85 -70 -23 1 0 0 0 0 -1 0 1 0 4592.dat
+0 // Hinge Control Stick (black)
+1 0 -105 -70 -25 1 0 0 0 -1 0 0 0 -1 4593.dat
+0 // Hinge Control Stick Base (black)
+1 0 -105 -70 -23 1 0 0 0 0 -1 0 1 0 4592.dat
+0 // Panel  1 x  2 x  1 with Square Corners (red)
+1 4 -45 -112 -10 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Door  1 x  3 x  1 Left (red)
+1 4 -205 -72 -40 0 0 1 0 1 0 -1 0 0 3822.dat
+0 // Door  1 x  3 x  1 Right (red)
+1 4 -205 -72 20 0 0 1 0 1 0 -1 0 0 3821.dat
+0 STEP
+0 // Windscreen  2 x  4 x  2 (trans_medium_blue)
+1 41 -205 -120 -10 0 0 1 0 1 0 -1 0 0 3823.dat
+0 // Window  1 x  4 x  4 (red)
+1 4 -95 -104 -40 -1 0 0 0 1 0 0 0 -1 6154.dat
+0 // Door  1 x  4 x  4 Lift (light_grey)
+1 7 -95 -96 -45 1 0 0 0 1 0 0 0 1 6155.dat
+0 // Door  1 x  4 x  4 Lift (light_grey)
+1 7 -95 -96 25 -1 0 0 0 1 0 0 0 -1 6155.dat
+0 // Window  1 x  4 x  4 (red)
+1 4 -95 -104 20 1 0 0 0 1 0 0 0 1 6154.dat
+0 // Turntable  4 x  4 (Complete) (red)
+1 4 5 -112 -10 1 0 0 0 1 0 0 0 1 3403c01.dat
+0 // Tile  1 x  1 without Groove (trans_dark_blue)
+1 33 15 -120 20 1 0 0 0 1 0 0 0 1 3070a.dat
+0 // Tile  1 x  1 without Groove (trans_dark_blue)
+1 33 15 -120 -40 1 0 0 0 1 0 0 0 1 3070a.dat
+0 STEP
+0 // Hinge Plate  2 x  5 with Large Hole (Complete) (red)
+1 4 75 -116 -10 0 0 1 0 1 0 -1 0 0 3149ec01.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -25 -120 -10 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Plate  4 x  4 (red)
+1 4 -95 -112 -10 0 0 1 0 1 0 -1 0 0 3031.dat
+0 // Hinge Car Roof Holder  1 x  4 x  2 (red)
+1 4 -145 -120 -10 0 0 1 0 1 0 -1 0 0 4214.dat
+0 // Hinge Car Roof  4 x  4 (red)
+1 4 -175 -128 -10 0 0 1 0 1 0 -1 0 0 4213.dat
+0 STEP
+0 // Tile  1 x  1 without Groove (trans_dark_blue)
+1 33 -205 -136 20 1 0 0 0 1 0 0 0 1 3070a.dat
+0 // Tile  1 x  1 without Groove (trans_dark_blue)
+1 33 -205 -136 -40 1 0 0 0 1 0 0 0 1 3070a.dat
+0 // Tile  1 x  2 Grille with Groove (white)
+1 15 -205 -136 -10 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // ~Ladder  2.5 x 14 (Obsolete) (white)
+1 15 -55 -128 -10 -1 0 0 0 1 0 0 0 -1 4207.dat
+0 // ~Ladder  2.5 x 14 (Obsolete) (white)
+1 15 -55 -136 -10 -1 0 0 0 1 0 0 0 -1 4207.dat
+0 // Wheel Rim 12 x 11 with Round Hole (white)
+1 15 -175 -4 -40 1 0 0 0 1 0 0 0 1 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 -175 -4 -45 1 0 0 0 1 0 0 0 1 6015.dat
+0 // Wheel Rim 12 x 11 with Round Hole (white)
+1 15 -15 -4 -40 1 0 0 0 1 0 0 0 1 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 -15 -4 -45 1 0 0 0 1 0 0 0 1 6015.dat
+0 // Wheel Rim 12 x 11 with Round Hole (white)
+1 15 -15 -4 20 -1 0 0 0 1 0 0 0 -1 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 -15 -4 25.001 -1 0 0 0 1 0 0 0 -1 6015.dat
+0 // Wheel Rim 12 x 11 with Round Hole (white)
+1 15 -175 -4 20 -1 0 0 0 1 0 0 0 -1 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 -175 -4 25.001 -1 0 0 0 1 0 0 0 -1 6015.dat
+
+0 STEP
+0 FILE 6571 - FD car 2.ldr
+0 Compact white-and-red vehicle on a 4x10 car base featuring mudguards, translucent light bar tiles, and a radio antenna.
+0 Name: 6571 - FD car 2.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Car Base  4 x 10 x  0.667 with  2 x  2 Center Open (white)
+1 15 -25 0 5 1 0 0 0 1 0 0 0 1 4212b.dat
+0 STEP
+0 // Plate  2 x  3 (red)
+1 4 -25 8 75 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  3 (red)
+1 4 -25 8 -65 0 0 1 0 1 0 -1 0 0 3021.dat
+0 STEP
+0 // Plate  2 x  3 (black)
+1 0 -25 16 75 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 5 8 95 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 -55 8 95 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -55 8 -85 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 5 8 -85 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  4 (red)
+1 4 -55 8 5 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 5 8 5 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Plate  2 x  2 with 2 Wheel Pins Extended without Wishbones (black)
+1 0 -25 16 65 -1 0 0 0 1 0 0 0 -1 6157.dat
+0 // Plate  2 x  2 with 2 Wheel Pins Extended without Wishbones (black)
+1 0 -25 8 -55 -1 0 0 0 1 0 0 0 -1 6157.dat
+0 STEP
+0 // Car Mudguard  3 x  4 (red)
+1 4 -25 -24 -45 1 0 0 0 1 0 0 0 1 2513.dat
+0 // Car Mudguard  2 x  4 (red)
+1 4 -25 -16 65 1 0 0 0 1 0 0 0 1 3788.dat
+0 // Plate  1 x  1 (white)
+1 15 -35 -8 95 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (white)
+1 15 -15 -8 95 -1 0 0 0 1 0 0 0 -1 6019.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 5 -8 95 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -55 -8 95 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 STEP
+0 // Minifig Radio with Long Handle (black)
+1 0 -14 -8 115 0 1 0 -1 0 0 0 0 1 3962b.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 5 -16 95 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -55 -16 95 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -25 -16 95 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -25 -16 75 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (red)
+1 4 -25 -24 35 -1 0 0 0 1 0 0 0 -1 4865a.dat
+0 // Car Steering Stand and Wheel (Complete) (red)
+1 4 -25 -8 -25 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 STEP
+0 // Brick  1 x  1 (red)
+1 4 -55 -24 35 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 5 -24 35 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Door  1 x  3 x  1 Left (red)
+1 4 5 -24 -25 1 0 0 0 1 0 0 0 1 3822.dat
+0 // Door  1 x  3 x  1 Right (red)
+1 4 -55 -24 -25 1 0 0 0 1 0 0 0 1 3821.dat
+0 // Plate  1 x  3 (red)
+1 4 -55 -24 75 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (red)
+1 4 5 -24 75 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -65 21 65 0 0 1 0 1 0 -1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -65 21 65 0 0 1 0 1 0 -1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 15 21 65 0 0 -1 0 1 0 1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 15 21 65 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -65 13 -55 0 0 1 0 1 0 -1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -65 13 -55 0 0 1 0 1 0 -1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 15 13 -55 0 0 -1 0 1 0 1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 15 13 -55 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (white)
+1 15 -25 -32 85 0 0 -1 0 1 0 1 0 0 4531.dat
+0 STEP
+0 // Hinge Bar  2.5 with  2 and  3 Fingers on Ends (black)
+1 0 -25 -42.891998 88.402 -1 0 0 0 0.866025 -0.5 0 -0.5 -0.866025 2923.dat
+0 // Windscreen  3 x  4 x  1.333 (trans_medium_blue)
+1 41 -25 -56 -25 1 0 0 0 1 0 0 0 1 2437.dat
+0 STEP
+0 // Train Pantograph Shoe with Three Finger Hinge (black)
+1 0 -25 -87.602997 65.632004 -1 0 0 0 1 0 0 0 -1 2922a.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (white)
+1 15 -44 -103 56 1 0 0 0 0 -1 0 1 0 6019.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (white)
+1 15 -6 -103 56 1 0 0 0 0 -1 0 1 0 6019.dat
+0 STEP
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 -6 -103 64 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 -44 -103 64 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Tile  1 x  1 without Groove (trans_dark_blue)
+1 33 -44 -103 48 1 0 0 0 0 -1 0 1 0 3070a.dat
+0 // Tile  1 x  1 without Groove (trans_dark_blue)
+1 33 -6 -103 48 1 0 0 0 0 -1 0 1 0 3070a.dat
+
+0 STEP
+0 FILE 6571 - FD helicopter.ldr
+0 Red-and-black rescue helicopter with sloped nose pieces, hinged rotor assemblies, landing bars, and translucent indicator lights.
+0 Name: 6571 - FD helicopter.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  1 x  8 (black)
+1 0 -30 -4 40 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  8 (black)
+1 0 -30 -4 -60 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Bar  1 x  6 with Studs Closed (black)
+1 0 -80 -28 -10 0 0 1 0 1 0 -1 0 0 6140.dat
+0 // Bar  1 x  6 with Studs Closed (black)
+1 0 0 -28 -10 0 0 1 0 1 0 -1 0 0 6140.dat
+0 STEP
+0 // Plate  2 x  6 (black)
+1 0 -50 -36 -10 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  1 x  1 Round (black)
+1 0 0 -36 20 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 0 -36 -40 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -80 -36 -40 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (trans_green)
+1 34 -80 -36 20 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 STEP
+0 // Plate  4 x  6 (red)
+1 4 -30 -44 -10 -1 0 0 0 1 0 0 0 -1 3032.dat
+0 // Plate  1 x  2 with Handle (black)
+1 0 20 -52 -10 0 0 -1 0 1 0 1 0 0 2540.dat
+0 STEP
+0 // Slope Brick 33  3 x  1 (red)
+1 4 -40 -68 20 0 0 1 0 1 0 -1 0 0 4286.dat
+0 // Slope Brick 33  3 x  1 (red)
+1 4 -40 -68 -40 0 0 1 0 1 0 -1 0 0 4286.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (red)
+1 4 20 -60 0 -1 0 0 0 1 0 0 0 -1 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (red)
+1 4 20 -60 -20 1 0 0 0 1 0 0 0 1 4081b.dat
+0 STEP
+0 // Hinge  1 x  2 Top (red)
+1 4 -10 -68 20 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Hinge  1 x  2 Top (red)
+1 4 -10 -68 -40 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Hinge  1 x  2 Base (red)
+1 4 -10 -68 20 1 0 0 0 1 0 0 0 1 3937.dat
+0 // Hinge  1 x  2 Base (red)
+1 4 -10 -68 -40 1 0 0 0 1 0 0 0 1 3937.dat
+0 STEP
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (light_grey)
+1 7 -10 -76 -40 1 0 0 0 1 0 0 0 1 4596.dat
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (light_grey)
+1 7 -10 -76 20 -1 0 0 0 1 0 0 0 -1 4596.dat
+0 // Hinge Control Stick Base (white)
+1 15 -100 -44 -20 0 0 -1 0 1 0 1 0 0 4592.dat
+0 // Hinge Control Stick (white)
+1 15 -100 -44 -20 0 -0.259 -0.966 0 0.966 -0.259 1 0 0 4593.dat
+0 // Hinge Control Stick Base (white)
+1 15 -100 -44 0 0 0 -1 0 1 0 1 0 0 4592.dat
+0 // Hinge Control Stick (white)
+1 15 -100 -44 0 0 -0.259 -0.966 0 0.966 -0.259 1 0 0 4593.dat
+0 // Brick  1 x  1 (white)
+1 15 -40 -92 -40 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 -40 -92 20 1 0 0 0 1 0 0 0 1 3005.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 20 -84 -10 0 0 -1 0 1 0 1 0 0 3660.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (red)
+1 4 30 -108 -20 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (red)
+1 4 30 -108 0 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Brick  1 x  1 (red)
+1 4 -40 -116 -40 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -40 -116 20 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Tap  1 x  1 with Hole in Spout (yellow)
+1 14 -6 -74 100 0 -1 0 -1 0 0 0 0 -1 4599a.dat
+0 // Tap  1 x  1 with Hole in Spout (yellow)
+1 14 -6 -74 -120 0 -1 0 1 0 0 0 0 1 4599a.dat
+0 STEP
+0 // Technic Axle Pin (light_grey)
+1 7 30 -100 10 0 0 -1 0 1 0 1 0 0 3749.dat
+0 // Technic Axle Pin (light_grey)
+1 7 30 -100 -30 0 0 1 0 1 0 -1 0 0 3749.dat
+0 // Plate  2 x  3 (red)
+1 4 40 -116 -10 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Panel  1 x  2 x  3 with Hollow Studs (white)
+1 15 -40 -116 -10 0 0 1 0 1 0 -1 0 0 2362b.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (yellow)
+1 14 30 -100 -55 0 0 1 1 0 0 0 1 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (yellow)
+1 14 30 -100 33 0 0 -1 1 0 0 0 -1 0 3941.dat
+0 // Plate  2 x  4 (red)
+1 4 -10 -124 -10 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (red)
+1 4 40 -124 -10 0 0 -1 0 1 0 1 0 0 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (red)
+1 4 60 -124 -10 0 0 -1 0 1 0 1 0 0 3794a.dat
+0 // Plate  1 x  1 (trans_green)
+1 34 -40 -124 20 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -40 -124 -40 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Plate  1 x 10 (red)
+1 4 130 -132 -10 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Plate  1 x  4 (red)
+1 4 -40 -132 -10 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  2 x  3 (white)
+1 15 0 -132 -10 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Tile  2 x  2 Round with Cross Underside Stud (yellow)
+1 14 30 -100 40 0 0 -1 1 0 0 0 -1 0 4150.dat
+0 // Tile  2 x  2 Round with Cross Underside Stud (yellow)
+1 14 30 -100 -63 0 0 1 1 0 0 0 1 0 4150.dat
+0 STEP
+0 // Hinge Plate  1 x  4 with Car Roof Holder (red)
+1 4 -40 -140 -10 0 0 1 0 1 0 -1 0 0 4315.dat
+0 // Plate  1 x  2 (red)
+1 4 -20 -140 -10 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  3 x  2 with Hole (red)
+1 4 10 -140 -10 0 0 -1 0 1 0 1 0 0 3176.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (red)
+1 4 210 -140 -20 0 0 1 0 1 0 -1 0 0 4488.dat
+0 // Plate  1 x  1 (red)
+1 4 180 -140 -10 0 0 1 0 1 0 -1 0 0 3024.dat
+0 STEP
+0 // Windscreen  4 x  4 x  3.667 Helicopter (trans_medium_blue)
+1 41 -55 -136 -10 0 0 1 0 1 0 -1 0 0 2483.dat
+0 // Tile  2 x  2 with Pin (red)
+1 4 -10 -148 -10 0 0 1 0 1 0 -1 0 0 2460.dat
+0 // Slope Brick 33  3 x  1 (white)
+1 15 220 -164 -10 0 0 1 0 1 0 -1 0 0 4286.dat
+0 STEP
+0 // Propeller  4 Blade  5 Diameter (black)
+1 0 -10 -173 -10 0 0 1 0 1 0 -1 0 0 2479.dat
+0 // Propeller  3 Blade  4 Diameter (black)
+1 0 210 -135 -47 -1 0 0 0 0 1 0 1 0 2421.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (white)
+1 15 -10 -181 -40 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 -10 -181 20 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  8 (white)
+1 15 80 -181 -10 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (white)
+1 15 -100 -181 -10 -1 0 0 0 1 0 0 0 -1 4162.dat
+1 14 24 -58 -100 0 -1 0 1 0 0 0 0 1 6571 - FD helicopter - flexHose.ldr
+1 14 24 -81.5 75.5 0 -1 0 -0.921 0 0.391 -0.391 0 -0.921 6571 - FD helicopter - flexHose.ldr
+
+0 STEP
+0 FILE 6571 - FD helicopter - flexHose.ldr
+0 Flexible black hose assembly composed of segmented links and end fittings for the helicopter's detailing.
+0 Name: 6571 - FD helicopter - flexHose.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 !LDCAD CONTENT [type=path] [addFallBack=default] [looped=false] [displayKind=mm] [curveStep=0] [displayLenCor=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-16 8 -20 1 0 0 0 1 0 0 0 1] [prevCPDist=25] [nextCPDist=50] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=0 -22 60 1 0 0 0 -1 0 0 0 -1] [prevCPDist=50] [nextCPDist=25] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=1 0 0 0 1 0 0 0 1] [donPart=754.dat] [donYSize=100%] [donCen=absCen] [donCenYOfs=0] [donFinScale=none] [donPlace=refsStat] [donYAlign=0] [donInline=false] [segSize=50%] [segSizeTol=5%] [segsCnt=0] [segsGrp=0] [segsMaxMerge=1] [segsMrgAng=0] [segsMrgRollAng=0] [segsEdgeDelKind=keepFirstLeft]
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=1 0 0 0 1 0 0 0 1] [donPart=756.dat] [donYSize=100%] [donCen=absCen] [donCenYOfs=0] [donFinScale=none] [donPlace=refsStat] [donYAlign=0] [donInline=false] [segSize=60%] [segSizeTol=5%] [segsCnt=1] [segsGrp=0] [segsMaxMerge=1] [segsMrgAng=0] [segsMrgRollAng=0] [segsEdgeDelKind=keepFirstLeft]
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=1 0 0 0 -1 0 0 0 -1] [donPart=754.dat] [donYSize=100%] [donCen=absCen] [donCenYOfs=0] [donFinScale=none] [donPlace=refsStat] [donYAlign=0] [donInline=false] [segSize=50%] [segSizeTol=5%] [segsCnt=0] [segsGrp=0] [segsMaxMerge=1] [segsMrgAng=0] [segsMrgRollAng=0] [segsEdgeDelKind=keepFirstLeft]
+0 !LDCAD PATH_CAP [group=start] [color=16] [posOri=-16 12 -20 1 0 0 0 1 0 0 0 1] [part=752.dat] [extraLen=0mm] [inlineRef=false]
+0 !LDCAD PATH_CAP [group=end] [color=16] [posOri=0 -18 60 1 0 0 0 1 0 0 0 1] [part=752.dat] [extraLen=0mm] [inlineRef=false]
+0 !LDCAD PATH_CAP [group=start] [color=16] [posOri=-16 12 -20 1 0 0 0 -1 0 0 0 -1] [part=755.dat] [extraLen=0mm] [inlineRef=false]
+0 !LDCAD PATH_CAP [group=end] [color=16] [posOri=0 -18 60 1 0 0 0 -1 0 0 0 -1] [part=755.dat] [extraLen=0mm] [inlineRef=false]
+0 !LDCAD GENERATED [generator=LDCad 1.6 Beta 2a]
+0 //This is the fallback LDraw content for above PATH configuration.
+0 // Do not edit, any changes will be lost upon regeneration.
+0 // The path is approx 51.06 mm (127.65) and exists out of 50 segments.
+0 //Some general hints about the document.
+0 BFC CERTIFY CCW
+0 //Start cap reference(s)
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 -16 12 -20 1 0 0 0 1 0 0 0 1 752.DAT
+0 // ~Hose Flexible Segment End Section (main_colour)
+1 16 -16 12 -20 1 0 0 0 -1 0 0 0 -1 755.DAT
+0 //End cap reference(s)
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 0 -18 60 1 0 0 0 1 0 0 0 1 752.DAT
+0 // ~Hose Flexible Segment End Section (main_colour)
+1 16 0 -18 60 1 0 0 0 -1 0 0 0 -1 755.DAT
+0 //Segments
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -15.989285 6.244166 -19.946424 0.999981 -0.0061 0 0.006097 0.999516 0.030498 -0.000186 -0.030498 0.999535 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -15.955682 3.737457 -19.77841 0.999864 -0.016502 0 0.016446 0.996454 0.08252 -0.001362 -0.082509 0.996589 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -15.896341 1.243328 -19.481707 0.999644 -0.026675 0 0.026436 0.990707 0.133422 -0.003559 -0.133375 0.991059 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -15.811609 -1.23164 -19.058044 0.999325 -0.036749 0 0.036122 0.982287 0.183867 -0.006757 -0.183743 0.982951 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -15.700095 -3.678816 -18.500475 0.998864 -0.047654 0 0.046278 0.970029 0.23854 -0.011367 -0.238269 0.971133 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -15.563336 -6.09257 -17.816679 0.998355 -0.057331 0 0.054917 0.956318 0.287125 -0.016461 -0.286653 0.957893 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -15.401757 -8.465925 -17.008785 0.997733 -0.067296 0 0.063353 0.939283 0.337243 -0.022695 -0.336479 0.941418 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -15.217632 -10.796492 -16.08816 0.99712 -0.075836 0 0.070138 0.922211 0.380273 -0.028838 -0.379178 0.924874 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -15.011269 -13.078161 -15.056344 0.996397 -0.084811 0 0.076747 0.901656 0.425589 -0.036095 -0.424056 0.904917 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -14.783796 -15.307092 -13.918979 0.995669 -0.092965 0 0.082212 0.880509 0.466845 -0.0434 -0.464823 0.884339 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -14.535701 -17.478024 -12.678507 0.994867 -0.101192 0 0.087128 0.856601 0.508569 -0.051463 -0.505959 0.861021 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -14.269713 -19.593445 -11.348567 0.994169 -0.107832 0 0.090597 0.835273 0.54232 -0.058479 -0.539158 0.840172 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -13.986075 -21.648298 -9.930375 0.993363 -0.115017 0 0.093783 0.809967 0.578929 -0.066587 -0.575087 0.815378 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -13.685536 -23.639782 -8.42768 0.992586 -0.121544 0 0.0961 0.784796 0.612258 -0.074416 -0.607719 0.790658 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -13.368782 -25.564798 -6.843912 0.991779 -0.127963 0 0.097774 0.757802 0.645118 -0.082551 -0.639814 0.764083 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -13.037972 -27.427549 -5.189858 0.991089 -0.133198 0 0.098643 0.733972 0.671979 -0.089506 -0.665991 0.740571 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -12.693418 -29.224285 -3.46709 0.990325 -0.138765 0 0.099016 0.706649 0.700602 -0.097219 -0.693824 0.713552 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -12.335176 -30.950037 -1.675882 0.989555 -0.144157 0 0.09877 0.678001 0.728395 -0.105004 -0.720787 0.685157 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -11.964708 -32.607403 0.176458 0.988868 -0.148796 0 0.09802 0.651422 0.752357 -0.111948 -0.743982 0.658756 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -11.583089 -34.197636 2.084553 0.988203 -0.153147 0 0.096806 0.624657 0.774875 -0.11867 -0.765735 0.632114 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -11.190095 -35.713985 4.049525 0.987479 -0.157749 0 0.094912 0.594133 0.798748 -0.126002 -0.788747 0.601666 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -10.786661 -37.157505 6.066694 0.986839 -0.161705 0 0.092714 0.565805 0.81931 -0.132487 -0.808527 0.573351 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -10.373347 -38.52639 8.133267 0.986189 -0.165625 0 0.089937 0.535516 0.839722 -0.139079 -0.828125 0.543016 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -9.950311 -39.815662 10.248447 0.985535 -0.169472 0 0.086539 0.50325 0.859797 -0.145711 -0.84736 0.510637 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -9.51868 -41.028728 12.406599 0.984973 -0.172709 0 0.083073 0.473773 0.87672 -0.151417 -0.863545 0.481001 754.DAT
+0 // ~Hose Flexible Segment Center Section (main_colour)
+1 16 -9.110131 -42.045811 14.449345 0.984059 -0.177842 0 0.076178 0.421518 0.903615 -0.160701 -0.88921 0.428347 756.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -8.338409 -43.823792 18.307953 0.983192 0.182573 0 0.067808 -0.365158 -0.928473 -0.169515 0.912867 -0.3714 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -7.877384 -44.712234 20.613081 0.982667 0.185381 0 0.061561 -0.326321 -0.943252 -0.174861 0.926903 -0.332077 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -7.456516 -45.430771 22.717421 0.982191 0.187883 0 0.054844 -0.286706 -0.956447 -0.1797 0.939414 -0.291905 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -7.029734 -46.05143 24.85133 0.981799 0.189921 0 0.048237 -0.249365 -0.967208 -0.183693 0.949604 -0.253987 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -6.550806 -46.642368 27.24597 0.981381 0.192069 0 0.039554 -0.202103 -0.978565 -0.187952 0.960346 -0.205937 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -6.066748 -47.111404 29.666262 0.981026 0.193876 0 0.029787 -0.150725 -0.988127 -0.191574 0.969378 -0.15364 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -5.578494 -47.447132 32.107533 0.980753 0.195251 0 0.018678 -0.093822 -0.995414 -0.194356 0.976255 -0.095663 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -5.087249 -47.636169 34.563755 0.980601 0.196015 0 0.006404 -0.032038 -0.999466 -0.195911 0.980077 -0.032671 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -4.594719 -47.660751 37.026405 0.980615 0.195944 0 -0.008371 0.041894 -0.999087 -0.195765 0.97972 0.042722 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -4.103162 -47.501858 39.484192 0.98083 0.194865 0 -0.022407 0.112785 -0.993367 -0.193572 0.974324 0.11499 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -3.6156 -47.152271 41.922001 0.981367 0.192141 0 -0.039221 0.200324 -0.978944 -0.188095 0.960704 0.204127 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -3.136456 -46.57732 44.317722 0.982287 0.187384 0 -0.056289 0.295075 -0.953814 -0.178729 0.936919 0.300396 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -2.671014 -45.762356 46.644932 0.983598 0.180375 0 -0.071986 0.392544 -0.916912 -0.165388 0.901873 0.39909 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -2.225706 -44.696728 48.871471 0.985429 0.170086 0 -0.085927 0.497834 -0.863005 -0.146785 0.85043 0.505195 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -1.80845 -43.36932 50.957752 0.98761 0.15693 0 -0.095299 0.599745 -0.794496 -0.124681 0.784652 0.607269 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -1.426874 -41.788303 52.865627 0.990107 0.140315 0 -0.09901 0.698646 -0.708584 -0.099425 0.701574 0.705626 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -1.088493 -39.969219 54.557537 0.992559 0.121764 0 -0.096167 0.783907 -0.613385 -0.074688 0.608821 0.789784 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -0.797921 -37.946293 56.010399 0.994827 0.101583 0 -0.087346 0.855396 -0.510557 -0.051864 0.507916 0.859844 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -0.556748 -35.759884 57.216259 0.99654 0.083112 0 -0.075541 0.905759 -0.417005 -0.034658 0.415562 0.908904 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -0.362516 -33.454811 58.18742 0.997956 0.063899 0 -0.060535 0.945432 -0.320147 -0.020457 0.319493 0.947368 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -0.21558 -31.059084 58.9221 0.998946 0.045901 0 -0.044673 0.972224 -0.229748 -0.010546 0.229506 0.97325 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -0.111369 -28.604778 59.443157 0.999513 0.031191 0 -0.030809 0.987271 -0.156032 -0.004867 0.155956 0.987752 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -0.043975 -26.117056 59.780125 0.999861 0.016671 0 -0.016613 0.99638 -0.083369 -0.00139 0.083357 0.996519 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -0.010448 -23.683205 59.947762 0.999981 0.006204 0 -0.006201 0.9995 -0.031021 -0.000192 0.03102 0.999519 754.DAT
+0 STEP
+0 FILE 6571 - woman.ldr
+0 Civilian minifigure woman with a black ponytail hairstyle and a white shirt with pockets over blue legs.
+0 Name: 6571 - woman.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Minifig Hair Ponytail (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 6093a.dat
+0 // Minifig Head with Standard Woman Pattern (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626bp02.dat
+0 // Minifig Torso with Plain Shirt with Pockets Pattern (white)
+1 15 0 -72 0 1 0 0 0 1 0 0 0 1 973p7g.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (white)
+1 15 15.5 -64 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (white)
+1 15 -15.5 -64 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 23.658 -46.127 -10 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -23.658 -46.127 -10 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+
+0 STEP
+0 FILE 6571 - fireman 1.ldr
+0 Firefighter minifigure wearing a white helmet with clear visor and black modern firefighter turnout gear.
+0 Name: 6571 - fireman 1.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Helmet Standard (Obsolete) (white)
+1 15 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_light_blue)
+1 43 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 2447.dat
+0 // Minifig Head with Standard Grin and Eyebrows Pattern (yellow)
+1 14 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 3626bp05.dat
+0 // Minifig Torso with Modern Firefighter Type 1 Pattern (black)
+1 0 0 -72.022 1.818 1 0 0 0 1 0 0 0 1 973p77.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40.022 1.818 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (black)
+1 0 15.5 -64.022 1.818 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (black)
+1 0 -15.5 -64.022 1.818 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 23.658 -46.149 -8.182 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -23.658 -46.149 -8.182 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 -28.022 1.818 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 -28.022 1.818 1 0 0 0 1 0 0 0 1 3816.dat
+
+0 STEP
+0 FILE 6571 - fireman 2.ldr
+0 Firefighter minifigure with a white fire helmet bearing a fire logo shield and black modern firefighter gear.
+0 Name: 6571 - fireman 2.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Minifig Fire Helmet with Fire Logo Shield Pattern (white)
+1 15 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 3834p01.dat
+0 // Minifig Head with Standard Grin and Eyebrows Pattern (yellow)
+1 14 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 3626bp05.dat
+0 // Minifig Torso with Modern Firefighter Type 2 Pattern (black)
+1 0 0 -72.022 1.818 1 0 0 0 1 0 0 0 1 973p78.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40.022 1.818 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (black)
+1 0 15.5 -64.022 1.818 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (black)
+1 0 -15.5 -64.022 1.818 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 23.658 -46.149 -8.182 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -23.658 -46.149 -8.182 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 -28.022 1.818 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 -28.022 1.818 1 0 0 0 1 0 0 0 1 3816.dat
+
+0 STEP
+0 FILE 6571 - fireman 3.ldr
+0 Firefighter minifigure in light grey gear with an air gauge torso print, plain white helmet, and a moustached face.
+0 Name: 6571 - fireman 3.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Minifig Fire Helmet (white)
+1 15 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 3834.dat
+0 // Minifig Head with Standard Grin and Pointed Moustache Pattern (yellow)
+1 14 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 3626bp03.dat
+0 // Minifig Torso with Air Gauge and Pocket Pattern (light_grey)
+1 7 0 -72.022 1.818 1 0 0 0 1 0 0 0 1 973p29.dat
+0 // ~Minifig Hips (Obsolete) (light_grey)
+1 7 0 -40.022 1.818 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (light_grey)
+1 7 15.5 -64.022 1.818 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (light_grey)
+1 7 -15.5 -64.022 1.818 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (black)
+1 0 23.658 -46.149 -8.182 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (black)
+1 0 -23.658 -46.149 -8.182 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (light_grey)
+1 7 0 -28.022 1.818 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (light_grey)
+1 7 0 -28.022 1.818 1 0 0 0 1 0 0 0 1 3816.dat
+

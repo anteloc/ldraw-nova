@@ -5,7 +5,7 @@ Use this workflow for multi-building scenes, vehicles, [advanced spaceships](spa
 ## 1. Study structure before geometry
 
 ```sh
-./ldraw-agent study ../ldraw-lib/models-annotated/10270-1.mpd --report output/bookshop-study.json
+./ldraw-agent study data/models-annotated/10270-1.mpd --report output/bookshop-study.json
 ```
 
 `study --detail full` reports the FILE hierarchy, direct versus expanded physical counts, reuse counts, reachability, local steps, authors/licences, frequently used parts, BOM, source hash, and validation findings. The default `study` summary limits section/diagnostic rows to 30 (`--limit`); use full detail when saving a complete inventory. It is an **informational** command: exit 0 does not mean `source_checks_passed` is true. A `.dat` definition is a physical-part boundary for scene traversal; its primitives contribute geometry, not separate BOM pieces. A library shortcut can still represent several manufactured elements.
@@ -33,7 +33,7 @@ This annotated Bookshop has 18 comments between `BFC INVERTNEXT` and its target 
 Create a dependency-closed copy of a useful module:
 
 ```sh
-./ldraw-agent extract ../ldraw-lib/models-annotated/10270-1.mpd \
+./ldraw-agent extract data/models-annotated/10270-1.mpd \
   --section '10270 - Pendulum_Clock.ldr' --namespace ref-clock \
   --output output/assets/clock.mpd
 ```
@@ -43,7 +43,7 @@ Read the returned `root`; use that exact reference when importing the asset. The
 For a review copy of the entire Bookshop:
 
 ```sh
-./ldraw-agent extract ../ldraw-lib/models-annotated/10270-1.mpd \
+./ldraw-agent extract data/models-annotated/10270-1.mpd \
   --section '10270 - Complete.ldr' --namespace bookshop \
   --repair-bfc-comments --normalize-rotations \
   --output output/bookshop-reference.mpd
@@ -120,7 +120,7 @@ Default contact mode is `auto`: compute contacts through 500 physical placements
 
 `--detail summary` suppresses instance/contact/pair lists while retaining totals, errors and coverage. `--detail full --limit 30 --offset 60` shows physical occurrences 60–89. Limits truncate report detail, not validation checks. Scope changes restart occurrence indices; section/source-line paths identify the original source. The default physical expansion budget is 100,000 (`--max-instances`).
 
-The LeoCAD adapter materializes embedded DAT definitions and their library dependencies in a temporary library, restoring original embedded names in the CSV. The supplied LeoCAD otherwise omits these placements. `compare-bom` checks actual `(reference, colour, quantity)` equality and returns 1 on differences. Images still need to be opened and reviewed; use semantic GLB/Blender inspection for uncertain material intersections.
+The LeoCAD adapter materializes embedded DAT definitions and their library dependencies in a temporary library, restoring original embedded names in the CSV. The supplied LeoCAD otherwise omits these placements. `compare-bom` checks actual `(reference, colour, quantity)` equality and returns 1 on differences. Images still need to be opened and reviewed; inspect uncertain interfaces in close views and [step sequences](build-manuals.md#inspect-a-model-during-construction), and record unresolved material intersections.
 
 ## Example scope
 

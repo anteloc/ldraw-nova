@@ -1,0 +1,1308 @@
+0 FILE 8272 - main.ldr
+0 Main assembly of a Technic bulldozer combining drivetrain, tracks, blade, and body submodels into a motorized tracked vehicle.
+0 Name: 8272 - main.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HISTORY 2019-03-04 [technicbasics] OMRize file
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 8272 - a-1.ldr
+
+
+
+
+
+0 STEP
+0 FILE 8272 - a-1.ldr
+0 Core chassis frame built from long liftarms, cross blocks, axles, and a worm gear assembly forming the main structural and drivetrain base.
+0 Name: 8272 - a-1.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 90 1 "Custom" 
+0 ROTATION CONFIG 1 0
+0 // Technic Beam  4 x  0.5 Liftarm (light_bluish_grey)
+1 71 -15 0 0 0 -1 0 1 0 0 0 0 1 32449.dat
+0 // Technic Pin  3/4 (dark_bluish_grey)
+1 72 -20 0 10 1 0 0 0 0 1 0 -1 0 32002.dat
+0 STEP
+0 // Technic Axle  4 (black)
+1 0 0 0 30 1 0 0 0 0 1 0 -1 0 3705.dat
+0 // Technic Axle  6 (black)
+1 0 0 0 -30 1 0 0 0 0 1 0 -1 0 3706.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 0 -20 -30 1 0 0 0 1 0 0 0 1 32184.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 0 -20 30 1 0 0 0 1 0 0 0 1 32184.dat
+0 STEP
+0 // Technic Axle  4 (black)
+1 0 0 -40 30 1 0 0 0 0 1 0 -1 0 3705.dat
+0 // Technic Beam  4 x  0.5 Liftarm (light_bluish_grey)
+1 71 15 0 0 0 -1 0 1 0 0 0 0 1 32449.dat
+0 // Technic Pin  3/4 (dark_bluish_grey)
+1 72 20 0 10 -1 0 0 0 0 1 0 1 0 32002.dat
+0 STEP
+0 // Technic Beam  5 x  3 x  0.5 Liftarm Triangle (light_bluish_grey)
+1 71 -15 -80 30 0 1 0 -1 0 0 0 0 1 2905.dat
+0 // Technic Axle  2 Notched (red)
+1 4 0 -120 30 1 0 0 0 1 0 0 0 1 32062.dat
+0 STEP
+0 // Technic Beam  3 x  0.5 Liftarm (black)
+1 0 -5 -120 10 0 -1 0 1 0 0 0 0 1 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (black)
+1 0 5 -120 10 0 -1 0 1 0 0 0 0 1 6632.dat
+0 STEP
+0 // Technic Beam  5 x  3 x  0.5 Liftarm Triangle (light_bluish_grey)
+1 71 15 -80 30 0 1 0 -1 0 0 0 0 1 2905.dat
+0 STEP
+1 0 0 -20 40 1 0 0 0 1 0 0 0 1 8272 - a-1a.ldr
+0 // Technic Worm Gear 2L (black)
+1 0 0 -20 0 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 4716.dat
+0 STEP
+0 // Technic Axle  6 (black)
+1 0 0 -40 -30 1 0 0 0 0 -1 0 1 0 3706.dat
+1 71 -25 -90 -30 1 0 0 0 1 0 0 0 1 8272 - a-1b.ldr
+0 STEP
+0 // Technic Beam 13 (black)
+1 0 30 0 90 0 1 0 1 0 0 0 0 -1 41239.dat
+0 // Technic Beam 13 (black)
+1 0 30 -40 90 0 1 0 1 0 0 0 0 -1 41239.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 50 -20 -30 -1 0 0 0 1 0 0 0 -1 32184.dat
+0 // Technic Cross Block 1 x 3 (Pin/Pin/Pin) with 4 Pins (light_bluish_grey)
+1 71 50 -20 210 0 0 -1 0 1 0 1 0 0 48989.dat
+0 STEP
+0 ROTSTEP 0 180 0 REL
+1 0 0 -60 130 1 0 0 0 0 -1 0 1 0 8272 - a-1c.ldr
+0 STEP
+1 0 0 -20 220 -1 0 0 0 1 0 0 0 -1 8272 - a-1d.ldr
+0 STEP
+1 0 0 -80 70 -1 0 0 0 1 0 0 0 -1 8272 - a-1e.ldr
+0 // Technic Wedge Belt Wheel - Not Reinforced (light_bluish_grey)
+1 71 -25 -80 70 0 0 1 0 1 0 -1 0 0 4185.dat
+0 STEP
+0 ROTSTEP 0 270 0 REL
+1 71 0 -40 -10 -1 0 0 0 0.707 -0.707 0 -0.707 -0.707 8272 - a-1f.ldr
+0 STEP
+0 ROTSTEP 0 180 0 REL
+0 // Technic Beam 13 (black)
+1 0 -30 0 90 0 1 0 1 0 0 0 0 -1 41239.dat
+0 // Technic Beam 13 (black)
+1 0 -30 -40 90 0 1 0 1 0 0 0 0 -1 41239.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 -50 -20 -30 -1 0 0 0 1 0 0 0 -1 32184.dat
+0 // Technic Cross Block 1 x 3 (Pin/Pin/Pin) with 4 Pins (light_bluish_grey)
+1 71 -50 -20 210 0 0 -1 0 1 0 1 0 0 48989.dat
+0 STEP
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 -50 -40 -10 0 0 1 -0.707107 0.707107 0 -0.707107 -0.707107 0 3713.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 -70 -40 -10 0 0 1 -0.707107 0.707107 0 -0.707107 -0.707107 0 3713.dat
+1 71 0 -40 225 1 0 0 0 -1 0 0 0 -1 8272 - a-1g.ldr
+0 STEP
+1 71 -20 -100 10 0 0 1 0 1 0 -1 0 0 8272 - a-1h.ldr
+0 STEP
+1 71 -30 -140 130 -1 0 0 0 1 0 0 0 -1 8272 - a-1i.ldr
+0 STEP
+1 71 -25 -60 210 -1 0 0 0 1 0 0 0 -1 8272 - a-1j.ldr
+0 STEP
+1 71 -45 -140 170 1 0 0 0 1 0 0 0 1 8272 - a-1k.ldr
+0 STEP
+1 71 -80 -130 230 1 0 0 0 1 0 0 0 1 8272 - a-1l.ldr
+0 STEP
+0 ROTSTEP END
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -10 -140 90 1 0 0 0 0 1 0 -1 0 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 10 -140 90 1 0 0 0 0 1 0 -1 0 6536.dat
+1 0 20 -100 10 1 0 0 0 1 0 0 0 1 8272 - a-1m.ldr
+0 STEP
+1 0 30 -140 130 -1 0 0 0 1 0 0 0 -1 8272 - a-1n.ldr
+0 STEP
+0 ROTSTEP 0 90 0 REL
+1 0 -10 -80 190 0 0 -1 0 1 0 1 0 0 8272 - a-1o.ldr
+0 STEP
+1 0 -50 -120 170 0 0 -1 0 1 0 1 0 0 8272 - a-1p.ldr
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 (red)
+1 4 25 -60 210 0 -1 0 -1 0 0 0 0 -1 32056.dat
+0 STEP
+0 // Technic Beam  3 x  5 x  0.5 Liftarm Bent 90 Quarter Ellipse (black)
+1 0 35 -100 170 0 -1 0 0 0 -1 1 0 0 32250.dat
+0 // Technic Beam  3 x  5 x  0.5 Liftarm Bent 90 Quarter Ellipse (black)
+1 0 45 -140 170 0 -1 0 -1 0 0 0 0 -1 32250.dat
+0 STEP
+1 0 80 -130 230 -1 0 0 0 1 0 0 0 -1 8272 - a-1q.ldr
+0 STEP
+1 0 60 -100 270 0 0 -1 0 1 0 1 0 0 8272 - a-1r.ldr
+0 STEP
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -5 -100 270 0 0 -1 0 1 0 1 0 0 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -15 -100 270 0 0 -1 0 1 0 1 0 0 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -25 -100 270 0 0 -1 0 1 0 1 0 0 32123b.dat
+0 STEP
+1 71 -60 -100 270 0 0 -1 0 1 0 1 0 0 8272 - a-1s.ldr
+0 STEP
+1 71 70 -20 210 0 0 -1 -0.107 0.994 0 0.994 0.107 0 8272 - a-1t.ldr
+1 71 -70 -20 210 0 0 1 0.107 0.994 0 -0.994 0.107 0 8272 - a-1u.ldr
+0 STEP
+0 // Technic Steering Link  6L Type 2 (dark_bluish_grey)
+1 72 98.803 -100 286.075 0 -0.996118 -0.08803 0.57101 -0.0722676 0.817756 -0.820943 -0.050266 0.568793 32005.dat
+0 // Technic Steering Link  6L Type 2 (dark_bluish_grey)
+1 72 -98.803 -100 286.075 0 0.996118 0.08803 -0.57101 -0.0722676 0.817756 0.820943 -0.050266 0.568793 32005.dat
+0 STEP
+1 72 -90 -40 -10 1 0 0 0 1 0 0 0 1 8272 - a-1v.ldr
+1 72 70 -40 -10 1 0 0 0 1 0 0 0 1 8272 - a-1w.ldr
+0 STEP
+1 72 50 0 90 1 0 0 0 -1 0 0 0 -1 8272 - a-1x.ldr
+1 72 -50 0 90 -1 0 0 0 1 0 0 0 -1 8272 - a-1x.ldr
+0 STEP
+1 72 -60 -120 -40 1 0 0 0 1 0 0 0 1 8272 - a-1y.ldr
+1 72 60 -120 -40 -1 0 0 0 -1 0 0 0 1 8272 - a-1y.ldr
+1 72 0 -20 -45 -1 0 0 0 -1 0 0 0 1 8272 - a-1z.ldr
+0 STEP
+1 72 150 1.716 -29.988 1 0 0 0 1 -0.014 0 0.014 1 8272 - a-1a'.ldr
+1 72 -150 1.716 -29.988 -1 0 0 0 -1 -0.014 0 -0.014 1 8272 - a-1a'.ldr
+0 STEP
+1 72 140 -45.419 -230.682 1 0 0 0 1 -0.014 0 0.014 1 8272 - a-1b'.ldr
+0 STEP
+1 72 -140 -45.419 -230.682 1 0 0 0 1 -0.014 0 0.014 1 8272 - a-1c'.ldr
+0 STEP
+0 // Technic Beam  9 (red)
+1 4 170 -36.425 -159.832 0 -1 0 0.873132 0 0.487483 -0.487483 0 0.873132 40490.dat
+0 // Technic Beam  9 (red)
+1 4 -170 -36.425 -159.832 0 -1 0 0.873132 0 0.487483 -0.487483 0 0.873132 40490.dat
+0 STEP
+0 MLCAD BTG Technic Flexible Axle 12L(')
+1 4 -80 -95.423 -229.611 0 -1 0 1 0 0.004 -0.004 0 1 8272 - LS40.dat
+0 MLCAD BTG Technic Flexible Axle 12L(')
+1 4 -80 -95.423 -229.611 0 160 0 1 0 0.004 -0.004 0 1 8272 - LS41.dat
+0 MLCAD BTG Technic Flexible Axle 12L(')
+1 4 80 -95.423 -229.611 0 1 0 1 0 0.004 -0.004 0 1 8272 - LS40.dat
+0 GROUP 3 Technic Flexible Axle 12L(')
+0 MLCAD BTG Technic Flexible Axle 12L('')
+1 4 -80 4.576 -229.967 0 -1 0 1 0 -0.014 0.014 0 1 8272 - LS40.dat
+0 MLCAD BTG Technic Flexible Axle 12L('')
+1 4 -80 4.576 -229.967 0 160 0 1 0 -0.014 0.014 0 1 8272 - LS41.dat
+0 MLCAD BTG Technic Flexible Axle 12L('')
+1 4 80 4.576 -229.967 0 1 0 1 0 -0.014 0.014 0 1 8272 - LS40.dat
+0 GROUP 3 Technic Flexible Axle 12L('')
+0
+
+
+0 STEP
+0 FILE 8272 - a-1a.ldr
+0 Axle and bushing subassembly with an angle connector used as a stabilizing cross-shaft.
+0 Name: 8272 - a-1a.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  8 (black)
+1 0 0 0 0 0 -0.707107 0.707107 0 0.707107 0.707107 -1 0 0 3707.dat
+0 // Technic Angle Connector #2 (180 degree) (black)
+1 0 0 0 90 -0.707107 0.707107 0 0.707107 0.707107 0 0 0 -1 32034.dat
+0 STEP
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 0 50 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 3713.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 0 30 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 3713.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 0 10 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 3713.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1b.ldr
+0 Reinforcing liftarm framework using triangular beams and multiple axles to form a structural brace.
+0 Name: 8272 - a-1b.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  4 x  0.5 Liftarm (light_bluish_grey)
+1 71 0 0 0 0 -1 0 0 0 1 -1 0 0 32449.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 26 30 0 -1 0 0 0 0 1 0 1 0 4519.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 25 -30 0 -1 0 0 0 0 1 0 1 0 32073.dat
+0 STEP
+0 // Technic Beam  6 x  0.5 (light_bluish_grey)
+1 71 10 0 0 0 1 0 0 0 1 1 0 0 32063.dat
+0 STEP
+0 // Technic Beam  5 x  3 x  0.5 Liftarm Triangle (light_bluish_grey)
+1 71 20 -10 0 0 1 0 -1 0 0 0 0 1 2905.dat
+0 // Technic Beam  5 x  3 x  0.5 Liftarm Triangle (light_bluish_grey)
+1 71 30 -10 0 0 1 0 -1 0 0 0 0 1 2905.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 25 -10 0 -1 0 0 0 0 -1 0 -1 0 6558.dat
+0 STEP
+0 // Technic Beam  6 x  0.5 (light_bluish_grey)
+1 71 40 0 0 0 1 0 0 0 1 1 0 0 32063.dat
+0 STEP
+0 // Technic Beam  4 x  0.5 Liftarm (light_bluish_grey)
+1 71 50 0 0 0 -1 0 0 0 1 -1 0 0 32449.dat
+0 // Technic Axle  4 (black)
+1 0 25 -50 0 -1 0 0 0 0 1 0 1 0 3705.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1c.ldr
+0 Parallel liftarm beam assembly joined by axles and bushes forming a stiff cross-brace.
+0 Name: 8272 - a-1c.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 -5 0 0 0 -1 0 0 0 1 -1 0 0 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 5 0 0 0 -1 0 0 0 1 -1 0 0 6632.dat
+0 // Technic Axle  4 (black)
+1 0 0 0 0 -1 0 0 0 0 1 0 1 0 3705.dat
+0 STEP
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 15 0 0 0 0 -1 -1 0 0 0 1 0 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -15 0 0 0 0 -1 -1 0 0 0 1 0 32123b.dat
+0 // Technic Axle  4 (black)
+1 0 0 40 0 -1 0 0 0 0 1 0 1 0 3705.dat
+0 STEP
+0 // Technic Beam  4 x  0.5 Liftarm (light_bluish_grey)
+1 71 -15 40 -30 0 1 0 -1 0 0 0 0 1 32449.dat
+0 // Technic Axle  4 (black)
+1 0 0 40 -60 -1 0 0 0 0 1 0 1 0 3705.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 0 40 -40 -1 0 0 0 0 1 0 1 0 32184.dat
+0 // Technic Axle  4 (black)
+1 0 0 40 -20 -1 0 0 0 0 1 0 1 0 3705.dat
+0 STEP
+0 // Technic Beam  4 x  0.5 Liftarm (light_bluish_grey)
+1 71 15 40 -30 0 1 0 -1 0 0 0 0 1 32449.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1d.ldr
+0 Simple axle and bushing combination serving as a rotating shaft component.
+0 Name: 8272 - a-1d.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  8 (black)
+1 0 0 0 0 0 0.707107 0.707107 0 0.707107 -0.707107 -1 0 0 3707.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 0 -70 0.707107 0.707107 0 -0.707107 0.707107 0 0 0 1 3713.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1e.ldr
+0 Wedge belt wheel mounted on a short axle forming a pulley or drive wheel.
+0 Name: 8272 - a-1e.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Wedge Belt Wheel - Not Reinforced (light_bluish_grey)
+1 71 -25 0 0 0 0 1 0 1 0 -1 0 0 4185.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1f.ldr
+0 Long drive axle fitted with an 8-tooth gear and spacing bushes for power transmission.
+0 Name: 8272 - a-1f.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Axle 10 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3737.dat
+0 // Technic Gear  8 Tooth (light_bluish_grey)
+1 71 0 0 0 0 0 1 0 1 0 -1 0 0 3647.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -15 0 0 0 0 1 0 1 0 -1 0 0 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 15 0 0 0 0 1 0 1 0 -1 0 0 32123b.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1g.ldr
+0 Pair of long liftarms joined by friction pins forming an extendable structural beam.
+0 Name: 8272 - a-1g.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  6 x  0.5 (light_bluish_grey)
+1 71 0 0 0 0 0 -1 1 0 0 0 -1 0 32063.dat
+0 // Technic Beam  6 x  0.5 (light_bluish_grey)
+1 71 0 0 -10 0 0 -1 1 0 0 0 -1 0 32063.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -50 0 5 0 -1 0 0 0 -1 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 50 0 5 0 -1 0 0 0 -1 1 0 0 2780.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1h.ldr
+0 Red fairing panel mounted on a cross block and pin assembly forming a body panel mount.
+0 Name: 8272 - a-1h.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (red)
+1 4 0 0 0 0 0 1 0 1 0 -1 0 0 42003.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 -20 20 0 0 1 0 1 0 -1 0 0 4519.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 10 0 0 -1 0 0 0 0 -1 0 -1 0 2780.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 10 20 0 1 0 0 0 0 -1 0 1 0 43093.dat
+0 STEP
+0 // Technic Panel Fairing 6# (red)
+1 4 10 -30 0 0 0 -1 0 -1 0 -1 0 0 32528.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1i.ldr
+0 Bent double liftarm with angle connector and pin forming a red structural support arm.
+0 Name: 8272 - a-1i.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  3 x  3.8 x  7 Liftarm Bent 45 Double (red)
+1 4 0 0 0 0 1 0 1 0 0 0 0 -1 32009.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -10 60 0 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 STEP
+0 // Technic Angle Connector #1 (red)
+1 4 -20 60 0 -1 0 0 0 0 1 0 1 0 32013.dat
+0 STEP
+0 // Technic Axle  3 with Stud (dark_bluish_grey)
+1 72 -20 20 0 0 0 -1 -1 0 0 0 1 0 6587.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1j.ldr
+0 Bent 90-degree liftarm on an axle with bushes forming an angled mounting bracket.
+0 Name: 8272 - a-1j.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 (red)
+1 4 0 0 0 0 -1 0 0 0 -1 1 0 0 32056.dat
+0 // Technic Axle  4 (black)
+1 0 -25 -40 0 1 0 0 0 0 -1 0 1 0 3705.dat
+0 STEP
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -10 -40 0 0 0 1 1 0 0 0 1 0 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -20 -40 0 0 0 1 1 0 0 0 1 0 32123b.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1k.ldr
+0 Pair of quarter-ellipse bent liftarms on axles forming a curved structural linkage.
+0 Name: 8272 - a-1k.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  3 x  5 x  0.5 Liftarm Bent 90 Quarter Ellipse (black)
+1 0 0 0 0 0 -1 0 -1 0 0 0 0 -1 32250.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 45 -40 0 1 0 0 0 -1 0 0 0 -1 32073.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 45 0 -80 1 0 0 0 -1 0 0 0 -1 32073.dat
+0 // Technic Beam  3 x  5 x  0.5 Liftarm Bent 90 Quarter Ellipse (black)
+1 0 10 40 0 0 -1 0 0 0 -1 1 0 0 32250.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1l.ldr
+0 Bulldozer blade tooth segment with a red fairing panel, cross blocks, and connector forming part of the blade assembly.
+0 Name: 8272 - a-1l.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Connector (Axle/Bush) Type 1 (black)
+1 0 10 20 0 1 0 0 0 0 1 0 -1 0 32039.dat
+0 // Technic Axle  2 Notched (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 32062.dat
+0 STEP
+0 // Technic Tooth  1 x  3 with Axlehole with Rounded Bottom Cavity (trans_red)
+1 36 -10 0 0 0 1 0 0 0 -1 -1 0 0 41669.dat
+0 // Technic Axle  2 Notched (red)
+1 4 10 30 0 0 -1 0 1 0 0 0 0 1 32062.dat
+0 STEP
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (black)
+1 0 10 40 0 0 1 0 -1 0 0 0 0 1 32291.dat
+0 STEP
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 30 30 -20 0 1 0 0 0 -1 -1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 30 50 -20 0 1 0 0 0 -1 -1 0 0 6558.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (red)
+1 4 30 50 -20 1 0 0 0 -1 0 0 0 -1 42003.dat
+0 // Technic Axle  3 with Stud (dark_bluish_grey)
+1 72 48 70 -20 -1 0 0 0 -1 0 0 0 1 6587.dat
+0 STEP
+0 // Technic Beam  3 x  0.5 Liftarm (red)
+1 4 45 70 -60 0 1 0 -1 0 0 0 0 1 6632.dat
+0 STEP
+0 // Technic Panel Fairing #8 (red)
+1 4 30 80 -50 -1 0 0 0 1 0 0 0 -1 32535.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1m.ldr
+0 Red fairing panel mounted on a cross block and pin assembly forming a side body panel.
+0 Name: 8272 - a-1m.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (red)
+1 4 0 0 0 -1 0 0 0 1 0 0 0 -1 42003.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 0 0 -10 0 -1 0 0 0 -1 1 0 0 2780.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 0 20 -10 0 1 0 0 0 -1 -1 0 0 43093.dat
+0 STEP
+0 // Technic Panel Fairing #5 (red)
+1 4 0 -30 -10 -1 0 0 0 -1 0 0 0 1 32527.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1n.ldr
+0 Bent double liftarm assembly with connectors and a round silver plate forming a detailed structural arm.
+0 Name: 8272 - a-1n.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  3 x  3.8 x  7 Liftarm Bent 45 Double (red)
+1 4 0 0 0 0 1 0 1 0 0 0 0 -1 32009.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 10 60 0 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 STEP
+0 // Technic Angle Connector #1 (red)
+1 4 20 60 0 -1 0 0 0 0 1 0 1 0 32013.dat
+0 // Technic Pin  3L Double with Axlehole (black)
+1 0 20 0 90 -1 0 0 0 0 1 0 1 0 32138.dat
+0 STEP
+0 // Technic Axle  3 with Stud (dark_bluish_grey)
+1 72 20 -21 90 0 0 -1 -1 0 0 0 1 0 6587.dat
+0 // Plate  1 x  1 Round (metallic_silver)
+1 80 20 -59 90 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (red)
+1 4 40 0 100 0 0 1 -1 0 0 0 -1 0 42003.dat
+0 STEP
+0 // Technic Axle  3 with Stud (dark_bluish_grey)
+1 72 20 20 0 0 0 -1 -1 0 0 0 1 0 6587.dat
+1 72 40 -10 120 1 0 0 0 1 0 0 0 1 8272 - a-1na.ldr
+0
+
+
+0 STEP
+0 FILE 8272 - a-1na.ldr
+0 Ribbed hose assembly made of pearl-silver end and mid segments forming a flexible pneumatic-style conduit.
+0 Name: 8272 - a-1na.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  2 Notched (red)
+1 4 0 0 0 0 -1 0 1 0 0 0 0 1 32062.dat
+0 // Technic Pin Long with Stop Bush (red)
+1 4 0 -30 0 0 0 1 -1 0 0 0 -1 0 32054.dat
+0 STEP
+0 MLCAD BTG Technic Ribbed Hose
+0 // ~Technic Ribbed Hose End Segment (pearl_silver)
+1 179 0 -24.5 0 0 0 -1 0 1 0 1 0 0 79.dat
+0 MLCAD BTG Technic Ribbed Hose
+0 // ~Technic Ribbed Hose Mid Segment (pearl_silver)
+1 179 0 -30.0048 0 0 0 -1 0 -1 0 1 0 0 80.dat
+0 MLCAD BTG Technic Ribbed Hose
+0 // ~Technic Ribbed Hose Mid Segment (pearl_silver)
+1 179 0 -35.5096 0 0 0 -1 0 -1 0 1 0 0 80.dat
+0 MLCAD BTG Technic Ribbed Hose
+0 // ~Technic Ribbed Hose Mid Segment (pearl_silver)
+1 179 0 -41.0142 0 0 0 -1 0 -1 0 1 0 0 80.dat
+0 MLCAD BTG Technic Ribbed Hose
+0 // ~Technic Ribbed Hose Mid Segment (pearl_silver)
+1 179 0 -46.5159 0 0 0 -1 0 -1 0 1 0 0 80.dat
+0 MLCAD BTG Technic Ribbed Hose
+0 // ~Technic Ribbed Hose Mid Segment (pearl_silver)
+1 179 0 -52.0168 0 0 0 -1 0 -1 0 1 0 0 80.dat
+0 MLCAD BTG Technic Ribbed Hose
+0 // ~Technic Ribbed Hose End Segment (pearl_silver)
+1 179 0 -57.5219 0 0 0 -1 0 -1 0 1 0 0 79.dat
+0 GROUP 7 Technic Ribbed Hose
+0
+
+
+0 STEP
+0 FILE 8272 - a-1o.ldr
+0 Liftarm and bush assembly with bent beams forming an articulated red linkage support.
+0 Name: 8272 - a-1o.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  3 (dark_bluish_grey)
+1 72 0 0 0 0 0 1 1 0 0 0 1 0 32523.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 0 -10 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -20 0 -10 0 -1 0 0 0 1 -1 0 0 43093.dat
+0 STEP
+0 // Technic Beam  3 x  0.5 Liftarm (red)
+1 4 -20 -40 -15 -1 0 0 0 0 1 0 1 0 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (red)
+1 4 -20 -40 -25 -1 0 0 0 0 1 0 1 0 6632.dat
+0 STEP
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (red)
+1 4 80 -20 -20 0 0 -1 1 0 0 0 -1 0 32140.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 -20 -40 0 0 -1 0 0 0 -1 1 0 0 32073.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -20 -40 -35 1 0 0 0 -1 0 0 0 -1 32123b.dat
+0 STEP
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -20 -40 -5 1 0 0 0 -1 0 0 0 -1 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -20 -40 5 1 0 0 0 -1 0 0 0 -1 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -20 -40 15 1 0 0 0 -1 0 0 0 -1 32123b.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1p.ldr
+0 Connector and notched axle with bushes forming a small drivetrain or linkage coupling.
+0 Name: 8272 - a-1p.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Connector (Axle/Bush) Type 1 (black)
+1 0 0 0 0 0 1 0 1 0 0 0 0 -1 32039.dat
+0 // Technic Axle  2 Notched (red)
+1 4 0 -10 20 0 0 -1 1 0 0 0 -1 0 32062.dat
+0 STEP
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 0 -15 20 -1 0 0 0 0 -1 0 -1 0 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 0 -25 20 -1 0 0 0 0 -1 0 -1 0 32123b.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1q.ldr
+0 Bulldozer blade tooth segment with a red fairing panel, cross blocks, and connector forming part of the blade assembly.
+0 Name: 8272 - a-1q.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Connector (Axle/Bush) Type 1 (black)
+1 0 10 20 0 1 0 0 0 0 1 0 -1 0 32039.dat
+0 // Technic Axle  2 Notched (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 32062.dat
+0 STEP
+0 // Technic Tooth  1 x  3 with Axlehole with Rounded Bottom Cavity (trans_red)
+1 36 -10 0 0 0 1 0 0 0 -1 -1 0 0 41669.dat
+0 // Technic Axle  2 Notched (red)
+1 4 10 30 0 0 -1 0 1 0 0 0 0 1 32062.dat
+0 STEP
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (black)
+1 0 10 40 0 0 1 0 -1 0 0 0 0 1 32291.dat
+0 STEP
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 30 30 20 0 -1 0 0 0 -1 1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 30 50 20 0 -1 0 0 0 -1 1 0 0 6558.dat
+0 STEP
+1 0 0 0 40 1 0 0 0 1 0 0 0 1 8272 - a-1qa.ldr
+0 STEP
+0 // Technic Panel Fairing #7 (red)
+1 4 30 80 50 1 0 0 0 1 0 0 0 1 32534.dat
+0 STEP
+0 // Technic Beam  3 x  0.5 Liftarm (red)
+1 4 45 70 20 0 1 0 -1 0 0 0 0 1 6632.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1qa.ldr
+0 Red cross block mounted on a studded axle forming a small connection node.
+0 Name: 8272 - a-1qa.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (red)
+1 4 30 50 -20 1 0 0 0 -1 0 0 0 -1 42003.dat
+0 // Technic Axle  3 with Stud (dark_bluish_grey)
+1 72 48 70 -20 -1 0 0 0 -1 0 0 0 1 6587.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1r.ldr
+0 Angled connector and towball on a short axle forming part of a steering or suspension linkage.
+0 Name: 8272 - a-1r.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG -3 0
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 0 0 60 0 0 1 0 1 0 -1 0 0 32073.dat
+0 // Technic Angle Connector #3 (157.5 degree) (black)
+1 0 0 0 0 0 -1 0 -1 0 0 0 0 -1 32016.dat
+0 STEP
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 0 0 35 0 -1 0 -1 0 0 0 0 -1 32123b.dat
+0 // Technic Axle Towball (light_bluish_grey)
+1 71 11.481 0 -27.716 -0.382683 0 -0.92388 0 1 0 0.92388 0 -0.382683 2736.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1s.ldr
+0 Angle connector with towball forming a jointed linkage end.
+0 Name: 8272 - a-1s.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Angle Connector #3 (157.5 degree) (black)
+1 0 0 0 0 0 -1 0 1 0 0 0 0 1 32016.dat
+0 // Technic Axle Towball (light_bluish_grey)
+1 71 11.481 0 27.716 -0.382683 0 -0.92388 0 -1 0 -0.92388 0 0.382683 2736.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1t.ldr
+0 Bent liftarm with a bucket tooth and towball pin forming part of the track or blade articulation.
+0 Name: 8272 - a-1t.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  3 x  7 Liftarm Bent 53.13 (light_bluish_grey)
+1 71 0 0 0 0 0 1 1 0 0 0 1 0 32271.dat
+0 // Technic Axle  2 Notched (red)
+1 4 144 32 -10 0 -0.799999 -0.600001 0 0.600001 -0.799999 1 0 0 32062.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 0 0 10 0 -1 0 0 0 1 -1 0 0 43093.dat
+0 // Technic Tooth  1 x  3 with Axlehole with Rounded Bottom Cavity (pearl_light_grey)
+1 135 144 32 -20 0.600001 0 0.799999 0.799999 0 -0.600001 0 1 0 41669.dat
+0 // Technic Pin Towball with Friction (black)
+1 0 132 16 -10 0 -0.778572 -0.627555 0 0.627555 -0.778572 1 0 0 6628.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1u.ldr
+0 Bent liftarm with a bucket tooth and towball pin forming part of the track or blade articulation.
+0 Name: 8272 - a-1u.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  3 x  7 Liftarm Bent 53.13 (light_bluish_grey)
+1 71 0 0 0 0 0 -1 1 0 0 0 -1 0 32271.dat
+0 // Technic Axle  2 Notched (red)
+1 4 -144 32 -10 0 0.799999 0.600001 0 0.600001 -0.799999 -1 0 0 32062.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 0 0 10 0 -1 0 0 0 1 -1 0 0 43093.dat
+0 // Technic Pin Towball with Friction (black)
+1 0 -132 16 -10 0 0.799999 -0.600001 0 0.600001 0.799999 1 0 0 6628.dat
+0 // Technic Tooth  1 x  3 with Axlehole with Rounded Bottom Cavity (pearl_light_grey)
+1 135 -144 32 -20 0.600001 0 -0.799999 -0.799999 0 -0.600001 0 1 0 41669.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1v.ldr
+0 Red bent liftarm with a shock absorber assembly for suspension support.
+0 Name: 8272 - a-1v.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (red)
+1 4 0 0 0 0 1 0 0.707107 0 -0.707107 -0.707107 0 -0.707107 32140.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 -20 -28.284 -56.569 -1 0 0 0 -0.707107 0.707107 0 0.707107 0.707107 6558.dat
+0 STEP
+0 // Technic Shock Absorber  6.5L Extra Stiff (Complete) (yellow)
+1 14 -20 -28.284 -56.569 0 0 1 -0.758241 0.651975 0 -0.651975 -0.758241 0 76537.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1w.ldr
+0 Red bent liftarm with a shock absorber assembly for suspension support.
+0 Name: 8272 - a-1w.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (red)
+1 4 0 0 0 0 1 0 0.707107 0 -0.707107 -0.707107 0 -0.707107 32140.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 20 -28.284 -56.569 1 0 0 0 -0.707107 -0.707107 0 0.707107 -0.707107 6558.dat
+0 STEP
+0 // Technic Shock Absorber  6.5L Extra Stiff (Complete) (yellow)
+1 14 20 -28.284 -56.569 0 0 1 -0.758241 0.651975 0 -0.651975 -0.758241 0 76537.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1x.ldr
+0 Track assembly with two sprocket wheels connected by 14 chain tread links on a beam frame.
+0 Name: 8272 - a-1x.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  5 (dark_bluish_grey)
+1 72 0 0 0 0 -1 0 1 0 0 0 0 1 32316.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 0 0 -40 -1 0 0 0 0 1 0 1 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 0 0 40 -1 0 0 0 0 1 0 1 0 6558.dat
+0 STEP
+0 // Technic Beam  7 (black)
+1 0 20 0 0 0 -1 0 -1 0 0 0 0 -1 32524.dat
+0 // Technic Axle Pin (blue)
+1 1 30 0 -20 1 0 0 0 0 -1 0 1 0 3749.dat
+0 // Technic Axle Pin (blue)
+1 1 30 0 20 1 0 0 0 0 -1 0 1 0 3749.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (red)
+1 4 60 0 20 1 0 0 0 0 -1 0 1 0 32054.dat
+0 // Technic Pin Long with Stop Bush (red)
+1 4 60 0 -20 1 0 0 0 0 -1 0 1 0 32054.dat
+0 STEP
+0 // Technic Beam  7 (black)
+1 0 60 0 0 0 -1 0 -1 0 0 0 0 -1 32524.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 80 0 0 1 0 0 0 0 1 0 -1 0 6558.dat
+0 STEP
+0 // Technic Beam  3 (dark_bluish_grey)
+1 72 80 0 0 0 1 0 1 0 0 0 0 -1 32523.dat
+0 STEP
+0 // Technic Sprocket Wheel 25.4 (black)
+1 0 40 0 -60 0 0 1 -1 0 0 0 -1 0 57520.dat
+0 // Technic Sprocket Wheel 25.4 (black)
+1 0 40 0 60 0 0 1 -1 0 0 0 -1 0 57520.dat
+1 0 75 0 -60 1 0 0 0 1 0 0 0 1 8272 - a-1xa.ldr
+1 0 75 0 60 1 0 0 0 1 0 0 0 1 8272 - a-1xa.ldr
+0 STEP
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 25.981 -75 1 0 0 0 -1 0 0 0 -1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 25.981 -45 1 0 0 0 -1 0 0 0 -1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 25.981 -15 1 0 0 0 -1 0 0 0 -1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 25.981 15 1 0 0 0 -1 0 0 0 -1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 25.981 45 1 0 0 0 -1 0 0 0 -1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 25.981 75 1 0 0 0 -0.5 0.866025 0 -0.866025 -0.5 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 0 90 1 0 0 0 0.5 0.866025 0 -0.866025 0.5 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 -25.981 75 1 0 0 0 1 0 0 0 1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 -25.981 45 1 0 0 0 1 0 0 0 1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 -25.981 15 1 0 0 0 1 0 0 0 1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 -25.981 -15 1 0 0 0 1 0 0 0 1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 -25.981 -45 1 0 0 0 1 0 0 0 1 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 -25.981 -75 1 0 0 0 0.5 -0.866025 0 0.866025 0.5 57518.dat
+0 // Technic Chain Tread 5 Wide (dark_bluish_grey)
+1 72 40 0 -90 1 0 0 0 -0.5 -0.866025 0 0.866025 -0.5 57518.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1xa.ldr
+0 Small pulley wheel mounted on a studded axle.
+0 Name: 8272 - a-1xa.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Wedge Belt Wheel - Not Reinforced (light_bluish_grey)
+1 71 0 0 0 0 0 -1 0 1 0 1 0 0 4185.dat
+0 // Technic Axle  3 with Stud (dark_bluish_grey)
+1 72 -23 0 0 1 0 0 0 1 0 0 0 1 6587.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1y.ldr
+0 Blue tooth element mounted on an axle connector.
+0 Name: 8272 - a-1y.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  2 Notched (red)
+1 4 0 0 0 0 0 1 0 1 0 -1 0 0 32062.dat
+0 // Technic Connector (Axle/Bush) Type 1 (black)
+1 0 20 0 10 0 0 1 0 1 0 -1 0 0 32039.dat
+0 STEP
+0 // Technic Tooth  1 x  3 with Axlehole with Rounded Bottom Cavity (trans_medium_blue)
+1 41 0 0 -10 0 0 -1 -1 0 0 0 1 0 41669.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1z.ldr
+0 Pair of thin liftarm beams joined with friction pins.
+0 Name: 8272 - a-1z.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  6 x  0.5 (light_bluish_grey)
+1 71 0 0 0 0 0 -1 1 0 0 0 -1 0 32063.dat
+0 // Technic Beam  6 x  0.5 (light_bluish_grey)
+1 71 0 0 -10 0 0 -1 1 0 0 0 -1 0 32063.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -50 0 5 0 -1 0 0 0 -1 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 50 0 5 0 -1 0 0 0 -1 1 0 0 2780.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1a'.ldr
+0 Long structural beam frame combining 13-stud and 7-stud liftarms.
+0 Name: 8272 - a-1a'.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam 13 (black)
+1 0 0 0 0 0 -1 0 1 0 0 0 0 1 41239.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 -20 0 -120 -1 0 0 0 0 1 0 1 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 0 0 -60 -1 0 0 0 0 1 0 1 0 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -10 0 -40 -1 0 0 0 0 1 0 1 0 2780.dat
+0 STEP
+0 // Technic Beam  7 (black)
+1 0 -20 0 -100 0 -1 0 -1 0 0 0 0 -1 32524.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 -20 0 -160 -1 0 0 0 0 1 0 1 0 6558.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1b'.ldr
+0 Red body panel fairing mounted on a cross block with stop pins.
+0 Name: 8272 - a-1b'.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER -10 50 0 1 "Custom" 
+0 ROTATION CONFIG 1 1
+0 // Technic Panel Fairing #23 (red)
+1 4 0 0.008 0.893 0 0 -1 0.0178571 0.999841 0 0.999841 -0.0178571 0 44353.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 10 -29.987 1.429 -1 0 0 0 -0.0178571 -0.999841 0 -0.999841 0.0178571 6558.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (red)
+1 4 -10 -29.987 1.429 0 0 -1 -0.0178571 -0.999841 0 -0.999841 0.0178571 0 42003.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (red)
+1 4 -10 -49.984 1.786 1 0 0 0 0.0178571 -0.999841 0 0.999841 0.0178571 32054.dat
+0 // Technic Pin Long with Stop Bush (red)
+1 4 -10 50 0 1 0 0 0 0 -1 0 1 0 32054.dat
+0 STEP
+1 4 10 50 60 1 0 0 0 1 0 0 0 1 8272 - a-1b'a.ldr
+0
+
+
+0 STEP
+0 FILE 8272 - a-1b'a.ldr
+0 Red bent liftarm connector with a friction axle pin.
+0 Name: 8272 - a-1b'a.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (red)
+1 4 0 0 0 0 -1 0 -1 0 0 0 0 -1 32140.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -10 0 0 1 0 0 0 0 -1 0 1 0 43093.dat
+0
+
+
+0 STEP
+0 FILE 8272 - a-1c'.ldr
+0 Red body panel fairing mounted on a cross block with stop pins.
+0 Name: 8272 - a-1c'.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 10 50 0 1 "Custom" 
+0 ROTATION CONFIG 1 0
+0 // Technic Panel Fairing #22 (red)
+1 4 0 0.008 0.893 0 0 1 -0.0178571 0.999841 0 -0.999841 -0.0178571 0 44352.dat
+0 // Technic Pin Long with Friction and Slot (black)
+1 0 -10 -29.987 1.429 1 0 0 0 0.0178571 -0.999841 0 0.999841 0.0178571 6558.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (red)
+1 4 10 -29.987 1.429 0 0 1 0.0178571 -0.999841 0 0.999841 0.0178571 0 42003.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (red)
+1 4 10 -49.984 1.786 -1 0 0 0 -0.0178571 -0.999841 0 -0.999841 0.0178571 32054.dat
+0 // Technic Pin Long with Stop Bush (red)
+1 4 10 50 0 -1 0 0 0 0 -1 0 -1 0 32054.dat
+0 STEP
+1 4 -10 50 60 1 0 0 0 1 0 0 0 1 8272 - a-1c'a.ldr
+0
+
+
+0 STEP
+0 FILE 8272 - a-1c'a.ldr
+0 Red bent liftarm connector with a friction axle pin.
+0 Name: 8272 - a-1c'a.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (red)
+1 4 0 0 0 0 -1 0 -1 0 0 0 0 -1 32140.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 10 0 0 -1 0 0 0 0 -1 0 -1 0 43093.dat
+0 
+0 
+0
+0
+
+
+0 STEP
+0 FILE 8272 - LS40.dat
+0 Attribution file crediting Steve Bliss and Chris Dee.
+0 Name: 8272 - LS40.dat
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CW
+
+0 !KEYWORDS LSynth
+
+0 !HISTORY 2007-04-29 [Holly-Wood] Initial version
+
+0 // Based on work of Steve Bliss and Chris Dee
+0 Skinny tip
+1 16 0 20 0 -1 0 0 0 -5 0 0 0 1 stud3a.dat
+
+0 Mixed Cylinder & Cross-axle end section
+1 16 0 16 0 0 1 0 1 0 0 0 0 -1 s\8272 - faxle1.dat
+1 16 0 12 0 0 1 0 1 0 0 0 0 -1 s\8272 - faxle2.dat
+1 16 0 8 0 0 1 0 1 0 0 0 0 -1 s\8272 - faxle3.dat
+1 16 0 4 0 0 1 0 1 0 0 0 0 -1 s\8272 - faxle4.dat
+1 16 0 0 0 0 1 0 1 0 0 0 0 -1 s\8272 - faxle5.dat
+0 
+
+
+0 STEP
+0 FILE 8272 - LS41.dat
+0 Axle end and perimeter geometry primitive.
+0 Name: 8272 - LS41.dat
+0 Author: Kevin Clague [kclague]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !KEYWORDS LSynth
+
+0 !HISTORY 2006-11-25 [kclague] Place holder part, can be replaced as needed
+0 !HISTORY 2007-04-03 [Holly-Wood] Fixed header, minor fixes
+0 !HISTORY 2013-06-27 [MMR1988] Updated with primitives
+
+0 // Technic Axle End Surface (main_colour)
+1 16 0 1 0 1 0 0 0 -1 0 0 0 1 axleend.dat
+0 // Technic Axle End Surface (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 axleend.dat
+0 // Technic Axle Perimeter (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 axlehol8.dat
+
+
+0 STEP
+0 FILE s\8272 - faxle1.dat
+0 Technic axle geometry primitive with circular cross-section and tooth edges.
+0 Name: s\8272 - faxle1.dat
+0 Author: Steve Bliss [sbliss]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP See flexible axle parts for usage information
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2000-05-07 [PTadmin] Official Update 2000-01
+0 !HISTORY 2004-12-17 [cwdee] Inserted axlehol9 and BFCd
+0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+0 !HISTORY 2007-09-14 [PTadmin] Header formatted for Contributor Agreement
+0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2017-08-08 [MagFors] Minor clean-up
+
+0 // Circle 1.0 (main_colour)
+1 16 4 0 0 0 1 0 4 0 0 0 0 4 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 4 0 0 0 1 0 6 0 0 0 0 6 4-4edge.dat
+0 // Ring  2 x 1.0 (main_colour)
+1 16 4 0 0 0 -1 0 2 0 0 0 0 2 4-4ring2.dat
+0 // Technic Axle Hole Tooth Outer Edges (main_colour)
+1 16 0.4 0 0 0 1 0 1 0 0 0 0 1 axlehol3.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0.4 0 0 0 3.6 0 6 0 0 0 0 6 4-4cyli.dat
+0 // Technic Axle Base Surface (main_colour)
+1 16 0.4 0 0 0 1 0 -1 0 0 0 0 1 axleho10.dat
+0 // Technic Axle Inner Edges (main_colour)
+1 16 0.4 0 0 0 1 0 -1 0 0 0 0 1 axlehol9.dat
+0 // Technic Axle Perimeter (main_colour)
+1 16 0.4 0 0 0 -0.4 0 -1 0 0 0 0 1 axlehol8.dat
+
+
+0 STEP
+0 FILE s\8272 - faxle2.dat
+0 Technic axle geometry primitive with circular cross-section and tooth edges.
+0 Name: s\8272 - faxle2.dat
+0 Author: Steve Bliss [sbliss]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP See flexible axle parts for usage information
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2000-05-07 [PTadmin] Official Update 2000-01
+0 !HISTORY 2004-12-17 [cwdee] Inserted axlehol9 and BFCd
+0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+0 !HISTORY 2007-09-14 [PTadmin] Header formatted for Contributor Agreement
+0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2017-08-08 [MagFors] Minor clean-up
+
+0 // Technic Axle Hole Tooth Outer Edges (main_colour)
+1 16 0.8 0 0 0 1 0 1 0 0 0 0 1 axlehol3.dat
+0 // Technic Axle Base Surface (main_colour)
+1 16 0.8 0 0 0 -1 0 1 0 0 0 0 1 axleho10.dat
+0 // Technic Axle Inner Edges (main_colour)
+1 16 0.8 0 0 0 -1 0 1 0 0 0 0 1 axlehol9.dat
+0 // Technic Axle Perimeter (main_colour)
+1 16 0.8 0 0 0 3.2 0 1 0 0 0 0 1 axlehol8.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 0 0 0 0.8 0 6 0 0 0 0 6 4-4cyli.dat
+
+
+0 STEP
+0 FILE s\8272 - faxle3.dat
+0 Technic axle geometry primitive with circular cross-section and tooth edges.
+0 Name: s\8272 - faxle3.dat
+0 Author: Steve Bliss [sbliss]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP See flexible axle parts for usage information
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2000-05-07 [PTadmin] Official Update 2000-01
+0 !HISTORY 2004-12-17 [cwdee] Inserted axlehol9 and BFCd
+0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+0 !HISTORY 2007-09-14 [PTadmin] Header formatted for Contributor Agreement
+0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2017-08-08 [MagFors] Minor clean-up
+
+0 // Technic Axle Hole Tooth Outer Edges (main_colour)
+1 16 1.2 0 0 0 1 0 1 0 0 0 0 1 axlehol3.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 1.2 0 0 0 2.8 0 6 0 0 0 0 6 4-4cyli.dat
+0 // Technic Axle Base Surface (main_colour)
+1 16 1.2 0 0 0 1 0 -1 0 0 0 0 1 axleho10.dat
+0 // Technic Axle Inner Edges (main_colour)
+1 16 1.2 0 0 0 1 0 -1 0 0 0 0 1 axlehol9.dat
+0 // Technic Axle Perimeter (main_colour)
+1 16 1.2 0 0 0 -1.2 0 -1 0 0 0 0 1 axlehol8.dat
+
+
+0 STEP
+0 FILE s\8272 - faxle4.dat
+0 Technic axle geometry primitive with circular cross-section and tooth edges.
+0 Name: s\8272 - faxle4.dat
+0 Author: Steve Bliss [sbliss]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP See flexible axle parts for usage information
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2000-05-07 [PTadmin] Official Update 2000-01
+0 !HISTORY 2004-12-17 [cwdee] Inserted axlehol9 and BFCd
+0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+0 !HISTORY 2007-09-14 [PTadmin] Header formatted for Contributor Agreement
+0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2017-08-08 [MagFors] Minor clean-up
+
+0 // Technic Axle Hole Tooth Outer Edges (main_colour)
+1 16 1.6 0 0 0 1 0 1 0 0 0 0 1 axlehol3.dat
+0 // Technic Axle Base Surface (main_colour)
+1 16 1.6 0 0 0 -1 0 1 0 0 0 0 1 axleho10.dat
+0 // Technic Axle Inner Edges (main_colour)
+1 16 1.6 0 0 0 1 0 1 0 0 0 0 1 axlehol9.dat
+0 // Technic Axle Perimeter (main_colour)
+1 16 1.6 0 0 0 2.4 0 1 0 0 0 0 1 axlehol8.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 0 0 0 1.6 0 6 0 0 0 0 6 4-4cyli.dat
+
+
+0 STEP
+0 FILE s\8272 - faxle5.dat
+0 Technic axle geometry primitive with circular cross-section and tooth edges.
+0 Name: s\8272 - faxle5.dat
+0 Author: Steve Bliss [sbliss]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP See flexible axle parts for usage information
+0 BFC CERTIFY CCW
+
+0 !HISTORY 2000-05-07 [PTadmin] Official Update 2000-01
+0 !HISTORY 2004-12-17 [cwdee] Inserted axlehol9 and BFCd
+0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01
+0 !HISTORY 2007-09-14 [PTadmin] Header formatted for Contributor Agreement
+0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2017-08-08 [MagFors] Minor clean-up
+
+0 // Cylinder 1.0 (main_colour)
+1 16 2 0 0 0 2 0 6 0 0 0 0 6 4-4cyli.dat
+0 // Technic Axle Hole Tooth Outer Edges (main_colour)
+1 16 2 0 0 0 1 0 1 0 0 0 0 1 axlehol3.dat
+0 // Technic Axle Base Surface (main_colour)
+1 16 2 0 0 0 1 0 -1 0 0 0 0 1 axleho10.dat
+0 // Technic Axle Inner Edges (main_colour)
+1 16 2 0 0 0 1 0 -1 0 0 0 0 1 axlehol9.dat
+0 // Technic Axle Perimeter (main_colour)
+1 16 2 0 0 0 -2 0 -1 0 0 0 0 1 axlehol8.dat
+
+
+
+
+
+

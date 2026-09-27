@@ -22,13 +22,13 @@ Follow the [Jev availability check](reference-discovery.md#check-jev-availabilit
 
 Keep the **exact returned model filename and submodel section name**, original source hash, query and result identity. They are different identifiers. A name such as `75181 - Y-Wing Starfighter - step254-261.ldr` is a FILE section inside `75181-1.mpd`, not necessarily a separate disk file.
 
-Read sources from `$LDRAW_LIB_DIR/models-annotated` or the configured `MODELS_DIR`. Inspect the section's physical BOM and parent placements. Skip empty sections, embedded part definitions and unresolved primitive-based pseudo-parts. Keep the original library files unchanged.
+Read sources from `data/models-annotated/`. Inspect the section's physical BOM and parent placements. Skip empty sections, embedded part definitions and unresolved primitive-based pseudo-parts. Keep the original library files unchanged.
 
 ## 2. Prepare build pages
 
 ```sh
 ./ldraw-agent manual prepare \
-  "$LDRAW_LIB_DIR/models-annotated/75181-1.mpd" \
+  "data/models-annotated/75181-1.mpd" \
   --section '75181 - Y-Wing Starfighter - step254-261.ldr' \
   --outdir output/armour-study --views home top \
   --title 'Contoured spacecraft armour' \
@@ -50,19 +50,41 @@ For mechanism-specific operation notes, use `mechanism prepare` and the [mechani
 
 ### Using the installed shell script directly
 
-First run `ldraw-render-steps.sh` with no arguments and read its current help. This installed script is external to the repository. For the version used here:
+First run the globally available `ldraw-render-steps.sh` with no arguments and read its current help. It works on reference models and your own unfinished MPDs. For the version used here:
 
 ```sh
 mkdir -p output/direct-armour-steps
 ldraw-render-steps.sh \
-  --libpath "$LDRAW_LIB_DIR/ldraw" \
+  --libpath "${LDRAW_DIR:-$LDRAWDIR}" \
   --submodel '75181 - Y-Wing Starfighter - step254-261.ldr' \
   --from 1 --to 7 --viewpoint home --highlight \
   --image output/direct-armour-steps/armour.png \
-  "$LDRAW_LIB_DIR/models-annotated/75181-1.mpd"
+  "data/models-annotated/75181-1.mpd"
 ```
 
 Choose the actual last source step; do not merely count STEP separators, which can miss an unterminated final group. The script produces numbered images. Repeat with another viewpoint and basename as needed. Use `manual prepare` for the catalog workflow: it also supplies provenance, part lists, stable framing, embedded-part handling, freshness checks and review records.
+
+### Inspect a model during construction
+
+Use step images while building, before a model is ready for an atlas. Select the unfinished FILE section, render its current steps from home, front, side and top views, and follow each addition. This can reveal the first step with a misplaced part, a hidden gap, missing support, uneven armour or an awkward silhouette.
+
+For example, after checking that `hull.ldr` has four source steps:
+
+```sh
+mkdir -p output/my-ship/step-review
+for view in home front right top; do
+  ldraw-render-steps.sh \
+    --libpath "${LDRAW_DIR:-$LDRAWDIR}" \
+    --submodel 'hull.ldr' --from 1 --to 4 \
+    --viewpoint "$view" --highlight \
+    --image "output/my-ship/step-review/hull-$view.png" \
+    output/my-ship/my-ship.mpd
+done
+```
+
+Use the actual section name and supported step range for your source. Open the numbered images and compare the same step across views. Fix the responsible placement in the plan or generator, rebuild, then render the affected sequence and finished model again. Inspect its parent too: a submodel can look correct alone and interfere with surrounding parts.
+
+Step images show only the steps authored in the source; they do not create a build order for a one-step submodel or prove physical fit. If the shell script omits a final group or embedded part, use `manual prepare` for the integrated handling described above.
 
 ## 3. Read the pages as a manual
 

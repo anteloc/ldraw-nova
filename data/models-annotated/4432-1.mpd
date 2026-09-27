@@ -1,0 +1,693 @@
+0 FILE 4432 - Garbage Truck - Main Model.ldr
+0 Complete garbage truck model with a waste container chassis, green cab with roof and mirrors, six wheels, a side-mounted refuse container with door and lift mechanism.
+0 Name: 4432 - Garbage Truck - Main Model.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 4432 - Garbage Truck - Chassis.ldr
+0 STEP
+1 16 -60 -48 0 -1 0 0 0 1 0 0 0 -1 4432 - Garbage Truck - Container Complete.ldr
+0 STEP
+0 // Container  2 x  2 Rubbish Bin with  4 Cover Holders (dark_bluish_grey)
+1 72 -280 -72 0 0 0 1 0 1 0 -1 0 0 92926.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Chassis.ldr
+0 Long structural base built from interconnected plates, wheel pins, bricks and a hinge plate forming the truck's load-bearing frame.
+0 Name: 4432 - Garbage Truck - Chassis.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x 16 (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 4282.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 -140 -8 20 0 0 -1 0 1 0 1 0 0 4488.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 -140 -8 -20 0 0 1 0 1 0 -1 0 0 4488.dat
+0 STEP
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (dark_bluish_grey)
+1 72 -100 -24 0 1 0 0 0 1 0 0 0 1 4871.dat
+0 STEP
+0 // Plate  2 x  6 (blue)
+1 1 -20 -8 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  1 x  2 (yellow)
+1 14 50 -8 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 80 -8 20 0 0 -1 0 1 0 1 0 0 4488.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 80 -8 -20 0 0 1 0 1 0 -1 0 0 4488.dat
+0 // Plate  4 x  6 without Corners (dark_bluish_grey)
+1 72 140 -8 0 0 0 1 0 1 0 -1 0 0 32059.dat
+0 STEP
+0 // Plate  1 x  2 with Door Rail (white)
+1 15 160 0 50 -1 0 0 0 1 0 0 0 -1 32028.dat
+0 // Plate  1 x  2 with Door Rail (white)
+1 15 160 0 -50 1 0 0 0 1 0 0 0 1 32028.dat
+0 STEP
+0 // Plate  2 x 16 (light_bluish_grey)
+1 71 0 -16 0 1 0 0 0 1 0 0 0 1 4282.dat
+0 // Brick  1 x  4 with Studs on Side (light_bluish_grey)
+1 71 170 -32 0 0 0 -1 0 1 0 1 0 0 30414.dat
+0 STEP
+0 // Brick  1 x  2 without Centre Stud (trans_brown)
+1 40 160 -32 50 1 0 0 0 1 0 0 0 1 3065.dat
+0 // Brick  1 x  2 without Centre Stud (trans_brown)
+1 40 160 -32 -50 1 0 0 0 1 0 0 0 1 3065.dat
+0 STEP
+0 // Brick  1 x  2 (white)
+1 15 130 -32 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 130 -32 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 110 -32 30 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 110 -32 -30 1 0 0 0 1 0 0 0 1 3062b.dat
+0 STEP
+0 // Plate  1 x  2 (yellow)
+1 14 -100 -32 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -100 -32 -30 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Hinge Plate  2 x  4.5 Base with Technic Pin Hole and  3 Holes (light_bluish_grey)
+1 71 -120 -24 0 0 0 -1 0 1 0 1 0 0 98285.dat
+0 // Plate  2 x 10 (green)
+1 2 20 -24 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 STEP
+0 // Tile  1 x  6 (white)
+1 15 -80 -32 10 1 0 0 0 1 0 0 0 1 6636.dat
+0 // Tile  1 x  6 (white)
+1 15 -80 -32 -10 1 0 0 0 1 0 0 0 1 6636.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 -160 -30 0 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Hinge Plate  2 x  4.5 Top with Technic Pin Hole and  3 Holes (light_bluish_grey)
+1 71 -120 -40 0 0 0 -1 0 1 0 1 0 0 98286.dat
+0 STEP
+0 // Car Mudguard  4 x  2.5 x  2 (dark_bluish_grey)
+1 72 -140 -32 40 -1 0 0 0 1 0 0 0 -1 50745.dat
+0 // Car Mudguard  4 x  2.5 x  2 (dark_bluish_grey)
+1 72 80 -32 40 -1 0 0 0 1 0 0 0 -1 50745.dat
+0 // Car Mudguard  4 x  2.5 x  2 (dark_bluish_grey)
+1 72 -140 -32 -40 1 0 0 0 1 0 0 0 1 50745.dat
+0 // Car Mudguard  4 x  2.5 x  2 (dark_bluish_grey)
+1 72 80 -32 -40 1 0 0 0 1 0 0 0 1 50745.dat
+0 STEP
+0 // Plate  2 x  4 (red)
+1 4 60 -32 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // Tile  1 x  2 with Handle (yellow)
+1 14 70 -64 20 0 0 1 0 1 0 -1 0 0 2432.dat
+0 // Tile  1 x  2 with Handle (yellow)
+1 14 70 -64 -20 0 0 1 0 1 0 -1 0 0 2432.dat
+0 STEP
+0 // Plate  1 x  6 (white)
+1 15 120 -40 50 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (white)
+1 15 120 -40 -50 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+0 // Bracket  1 x  2 -  2 x  4 (light_bluish_grey)
+1 71 0 -32 10 -1 0 0 0 1 0 0 0 -1 93274.dat
+0 // Bracket  1 x  2 -  2 x  4 (light_bluish_grey)
+1 71 0 -32 -10 1 0 0 0 1 0 0 0 1 93274.dat
+0 STEP
+0 // Tile  2 x  4 (light_bluish_grey)
+1 71 20 -40 0 1 0 0 0 1 0 0 0 1 87079.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (bright_green)
+1 10 -120 -40 30 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Tile  1 x  4 with Groove (bright_green)
+1 10 -120 -40 -30 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -140 -40 50 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -140 -40 -50 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+1 16 196 -22 0 0 -1 0 0 0 1 -1 0 0 4432 - Garbage Truck - Front.ldr
+0 STEP
+0 // Plate  2 x  2 (white)
+1 15 180 -40 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Hinge Plate  1 x  2 Locking with Groove with Single Finger on End Vertical (white)
+1 15 190 -40 40 0 0 -1 0 1 0 1 0 0 44301.dat
+0 // Hinge Plate  1 x  2 Locking with Groove with Single Finger on End Vertical (white)
+1 15 190 -40 -40 0 0 1 0 1 0 -1 0 0 44301.dat
+0 STEP
+0 // Plate  2 x  2 Corner (blue)
+1 1 90 -40 30 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 90 -40 -30 1 0 0 0 1 0 0 0 1 2420.dat
+0 STEP
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 140 -24 0 0 0 -1 0 1 0 1 0 0 4079.dat
+0 // Car Steering Stand and Wheel (Complete) (yellow)
+1 14 170 -48 0 0 0 -1 0 1 0 1 0 0 3829c01.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 80 -48 50 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 80 -48 -50 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Holes (tan)
+1 19 100 -64 30 1 0 0 0 1 0 0 0 1 32000.dat
+0 // Technic Brick  1 x  2 with Holes (tan)
+1 19 100 -64 -30 1 0 0 0 1 0 0 0 1 32000.dat
+0 STEP
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (black)
+1 0 110 -112 30 0 0 1 0 1 0 -1 0 0 60481.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (black)
+1 0 110 -112 -30 0 0 1 0 1 0 -1 0 0 60481.dat
+0 STEP
+0 // Panel  1 x  2 x  3 Reinforced with Hollow Studs (bright_green)
+1 10 120 -112 50 1 0 0 0 1 0 0 0 1 87544.dat
+0 // Panel  1 x  2 x  3 Reinforced with Hollow Studs (bright_green)
+1 10 120 -112 -50 -1 0 0 0 1 0 0 0 -1 87544.dat
+0 // Panel  1 x  2 x  3 Reinforced with Hollow Studs (trans_brown)
+1 40 160 -112 50 1 0 0 0 1 0 0 0 1 87544.dat
+0 // Panel  1 x  2 x  3 Reinforced with Hollow Studs (trans_brown)
+1 40 160 -112 -50 -1 0 0 0 1 0 0 0 -1 87544.dat
+0 STEP
+0 // Windscreen  1 x  6 x  3 (trans_brown)
+1 40 190 -112 0 0 0 -1 0 1 0 1 0 0 64453.dat
+0 // Tile  1 x  6 (white)
+1 15 110 -120 0 0 0 1 0 1 0 -1 0 0 6636.dat
+0 STEP
+0 // Plate  1 x  4 with Two Studs (white)
+1 15 160 -120 50 1 0 0 0 1 0 0 0 1 92593.dat
+0 // Plate  1 x  4 with Two Studs (white)
+1 15 160 -120 -50 1 0 0 0 1 0 0 0 1 92593.dat
+0 STEP
+1 16 120 -128 0 0 0 -1 0 1 0 1 0 0 4432 - Garbage Truck - Roof.ldr
+0 STEP
+1 16 190 -68 72 0 0 -1 1 0 0 0 -1 0 4432 - Garbage Truck - Rear Mirror Left.ldr
+1 16 190 -68 -72 0 0 1 1 0 0 0 1 0 4432 - Garbage Truck - Rear Mirror Right.ldr
+0 STEP
+1 16 -20 -12 48 -1 0 0 0 0 -1 0 -1 0 4432 - Garbage Truck - Side Part.ldr
+1 16 -20 -12 -48 -1 0 0 0 0 1 0 1 0 4432 - Garbage Truck - Side Part.ldr
+0 STEP
+0 // Exhaust Pipe with Pin (light_bluish_grey)
+1 71 90 -54 30 1 0 0 0 1 0 0 0 1 40620.dat
+0 STEP
+1 16 -140 -3 50 -1 0 0 0 1 0 0 0 -1 4432 - Garbage Truck - Wheel.ldr
+1 16 80 -3 50 -1 0 0 0 1 0 0 0 -1 4432 - Garbage Truck - Wheel.ldr
+1 16 -140 -3 -50 1 0 0 0 1 0 0 0 1 4432 - Garbage Truck - Wheel.ldr
+1 16 80 -3 -50 1 0 0 0 1 0 0 0 1 4432 - Garbage Truck - Wheel.ldr
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Front.ldr
+0 Green and white cab front assembly with sloped corners, grooved tiles and clear trans panels forming the windshield and hood.
+0 Name: 4432 - Garbage Truck - Front.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  6 x  0.667 with Four Studs On Side and Four Raised (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 87609.dat
+0 STEP
+0 // Plate  1 x  2 (yellow)
+1 14 -20 0 20 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 20 0 20 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // =Slope Brick 31  1 x  1 x  0.667 (bright_green)
+1 10 -50 8 20 0 0 1 0 1 0 -1 0 0 50746.dat
+0 // =Slope Brick 31  1 x  1 x  0.667 (bright_green)
+1 10 50 8 20 0 0 -1 0 1 0 1 0 0 50746.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (bright_green)
+1 10 0 -8 20 1 0 0 0 1 0 0 0 1 2431.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (white)
+1 15 0 -8 0 1 0 0 0 1 0 0 0 1 2431.dat
+0 // =Slope Brick 31  1 x  1 x  0.667 (trans_clear)
+1 47 -50 8 0 0 0 1 0 1 0 -1 0 0 50746.dat
+0 // =Slope Brick 31  1 x  1 x  0.667 (trans_clear)
+1 47 50 8 0 0 0 -1 0 1 0 1 0 0 50746.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Roof.ldr
+0 Curved green roof section with a red plate, black grille tiles and trans-orange tiles forming the cab roof with vents and lights.
+0 Name: 4432 - Garbage Truck - Roof.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  4 (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // Slope Brick 45  4 x  6 x  0.667 Double Curved (bright_green)
+1 10 0 -8 -10 1 0 0 0 1 0 0 0 1 52031.dat
+0 STEP
+0 // Plate  1 x  6 (light_bluish_grey)
+1 71 0 -8 10 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -10 -16 0 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 10 -16 0 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Tile  1 x  2 with Groove (trans_orange)
+1 57 -40 -16 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (trans_orange)
+1 57 40 -16 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 STEP
+0 // Plate  1 x  1 (light_bluish_grey)
+1 71 -50 0 10 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (light_bluish_grey)
+1 71 50 0 10 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Plate  1 x  2 with Door Rail (white)
+1 15 -20 8 -70 1 0 0 0 1 0 0 0 1 32028.dat
+0 // Plate  1 x  2 with Door Rail (white)
+1 15 20 8 -70 1 0 0 0 1 0 0 0 1 32028.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Rear Mirror Left.ldr
+0 Left side mirror made of a white locking hinge plate and a black sloped brick.
+0 Name: 4432 - Garbage Truck - Rear Mirror Left.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Hinge Plate  1 x  2 Locking with Dual Finger on End Vertical with Groove on Short Side (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 44302.dat
+0 STEP
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 85984.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Rear Mirror Right.ldr
+0 Right side mirror made of a white locking hinge plate and a black sloped brick.
+0 Name: 4432 - Garbage Truck - Rear Mirror Right.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Hinge Plate  1 x  2 Locking with Dual Finger on End Vertical with Groove on Short Side (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 44302.dat
+0 STEP
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 0 0 0 -1 0 0 0 1 0 0 0 -1 85984.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Side Part.ldr
+0 Dark grey side panel with a light grey tile and black grille tiles forming a vented truck body section.
+0 Name: 4432 - Garbage Truck - Side Part.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Brick  2 x  6 (dark_bluish_grey)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 2456.dat
+0 STEP
+0 // Tile  2 x  4 (light_bluish_grey)
+1 71 20 -8 0 1 0 0 0 1 0 0 0 1 87079.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -40 -8 10 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -40 -8 -10 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Wheel.ldr
+0 Single wheel assembly consisting of a light grey rim and a black wide rubber tyre.
+0 Name: 4432 - Garbage Truck - Wheel.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Wheel Rim 12 x 11 with Round Hole (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 6014.dat
+0 STEP
+0 // Tyre 12/ 40 x 11 Wide with Centre Band (rubber_black)
+1 256 0 0 -6 1 0 0 0 1 0 0 0 1 87697.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Container Complete.ldr
+0 Composite refuse container submodel combining the container body, side walls, door and trash can lift assembly.
+0 Name: 4432 - Garbage Truck - Container Complete.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 4432 - Garbage Truck - Container.ldr
+0 STEP
+1 16 160 40 0 0 0 -1 0 1 0 1 0 0 4432 - Garbage Truck - Container Door.ldr
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Container.ldr
+0 Large green refuse container with plates, bricks, sloped panels, an arch, red window and lightsaber bars forming the bin body.
+0 Name: 4432 - Garbage Truck - Container.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  6 x 12 (bright_green)
+1 10 0 0 0 1 0 0 0 1 0 0 0 1 3028.dat
+0 STEP
+0 // Brick  1 x  2 (bright_green)
+1 10 100 -24 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (bright_green)
+1 10 100 -24 -50 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (bright_green)
+1 10 90 -96 50 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (bright_green)
+1 10 90 -96 -50 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 STEP
+0 // Brick  1 x  1 x  3 with Two Clips Vertical and Solid Stud (white)
+1 15 70 -72 50 -1 0 0 0 1 0 0 0 -1 60583.dat
+0 // Brick  1 x  1 x  3 with Two Clips Vertical and Solid Stud (white)
+1 15 70 -72 -50 1 0 0 0 1 0 0 0 1 60583.dat
+0 // Bar  4L Lightsaber Blade (light_bluish_grey)
+1 71 70 -76 70 1 0 0 0 1 0 0 0 1 30374.dat
+0 // Bar  4L Lightsaber Blade (light_bluish_grey)
+1 71 70 -76 -70 1 0 0 0 1 0 0 0 1 30374.dat
+0 STEP
+0 // Arch  1 x  6 Raised (white)
+1 15 70 -96 0 0 0 1 0 1 0 -1 0 0 92950.dat
+0 STEP
+0 // Plate  1 x  8 with Door Rail (white)
+1 15 -20 -8 50 -1 0 0 0 1 0 0 0 -1 4510.dat
+0 // Plate  1 x  8 with Door Rail (white)
+1 15 -20 -8 -50 1 0 0 0 1 0 0 0 1 4510.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (white)
+1 15 -110 -8 0 0 0 1 0 1 0 -1 0 0 2431.dat
+0 STEP
+0 // Tile  1 x  8 (white)
+1 15 -20 -16 50 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Tile  1 x  8 (white)
+1 15 -20 -16 -50 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Window  1 x  4 x  4 (red)
+1 4 50 -92 0 0 0 -1 0 1 0 1 0 0 6154.dat
+0 STEP
+0 // Brick  2 x  4 (light_bluish_grey)
+1 71 -80 -24 0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Brick  2 x  4 (light_bluish_grey)
+1 71 -80 -48 0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Brick  2 x  4 (light_bluish_grey)
+1 71 -80 -72 0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 STEP
+0 // Brick  1 x  2 with Studs on Sides (black)
+1 0 -80 -96 30 1 0 0 0 1 0 0 0 1 52107.dat
+0 // Brick  1 x  2 with Studs on Sides (black)
+1 0 -80 -96 -30 1 0 0 0 1 0 0 0 1 52107.dat
+0 STEP
+0 // Brick  1 x  2 (bright_green)
+1 10 -120 -24 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (bright_green)
+1 10 -120 -24 -50 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Panel  1 x  2 x  3 Reinforced with Hollow Studs (bright_green)
+1 10 -120 -96 50 1 0 0 0 1 0 0 0 1 87544.dat
+0 // Panel  1 x  2 x  3 Reinforced with Hollow Studs (bright_green)
+1 10 -120 -96 -50 -1 0 0 0 1 0 0 0 -1 87544.dat
+0 STEP
+0 // Plate  6 x 12 (bright_green)
+1 10 -20 -104 0 -1 0 0 0 1 0 0 0 -1 3028.dat
+0 STEP
+0 // Plate  1 x  2 with Single Clip on Top (white)
+1 15 80 -112 30 1 0 0 0 1 0 0 0 1 92280.dat
+0 // Plate  1 x  2 with Single Clip on Top (white)
+1 15 80 -112 -30 1 0 0 0 1 0 0 0 1 92280.dat
+0 STEP
+0 // Slope Brick Curved  3 x  1 (white)
+1 15 50 -128 30 0 0 1 0 1 0 -1 0 0 50950.dat
+0 // Slope Brick Curved  3 x  1 (white)
+1 15 50 -128 -30 0 0 1 0 1 0 -1 0 0 50950.dat
+0 STEP
+1 16 -20 -56 48 1 0 0 0 0 1 0 -1 0 4432 - Garbage Truck - Container Side Wall.ldr
+1 16 -20 -56 -48 1 0 0 0 0 -1 0 1 0 4432 - Garbage Truck - Container Side Wall.ldr
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Container Side Wall.ldr
+0 Black plate side wall reinforced with four curved white slope bricks forming the container's rounded side.
+0 Name: 4432 - Garbage Truck - Container Side Wall.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  4 x  8 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3035.dat
+0 STEP
+0 // Slope Brick Curved  2 x  4 with Underside Studs (white)
+1 15 -40 0 20 -1 0 0 0 1 0 0 0 -1 88930.dat
+0 // Slope Brick Curved  2 x  4 with Underside Studs (white)
+1 15 40 0 20 -1 0 0 0 1 0 0 0 -1 88930.dat
+0 // Slope Brick Curved  2 x  4 with Underside Studs (white)
+1 15 -40 0 -20 1 0 0 0 1 0 0 0 1 88930.dat
+0 // Slope Brick Curved  2 x  4 with Underside Studs (white)
+1 15 40 0 -20 1 0 0 0 1 0 0 0 1 88930.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Container Door.ldr
+0 White door assembly with a black door frame, handles, clips, headlight bricks and trans-orange tiles forming a latched rear container door.
+0 Name: 4432 - Garbage Truck - Container Door.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  4 x  6 with 12 Studs on Three Edges (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 6180.dat
+0 // Brick  1 x  1 (white)
+1 15 -50 -24 30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 50 -24 30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Door  1 x  4 x  6 Frame (black)
+1 0 0 -144 30 -1 0 0 0 1 0 0 0 -1 60596.dat
+0 STEP
+0 // Brick  2 x  2 (white)
+1 15 -40 -24 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (white)
+1 15 40 -24 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (white)
+1 15 -50 -24 -30 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (white)
+1 15 50 -24 -30 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -50 -14 -44 0 0 1 1 0 0 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 50 -14 -44 0 0 1 1 0 0 0 1 0 6141.dat
+0 STEP
+0 // Brick  1 x  2 with Clip Vertical (Thick U-Clip) with Centre Notch (white)
+1 15 -50 -48 20 0 0 1 0 1 0 -1 0 0 30237.dat
+0 // Brick  1 x  2 with Clip Vertical (Thick U-Clip) with Centre Notch (white)
+1 15 -50 -48 -20 0 0 1 0 1 0 -1 0 0 30237.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (dark_bluish_grey)
+1 72 -30 -48 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (dark_bluish_grey)
+1 72 30 -48 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (dark_bluish_grey)
+1 72 50 -48 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 STEP
+0 // Brick  1 x  1 (white)
+1 15 50 -48 30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 50 -48 -30 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+1 16 -10 -48 0 0 0 -1 0 1 0 1 0 0 4432 - Garbage Truck - Trash Can Lift.ldr
+1 16 30 -38 0 1 0 0 0 1 0 0 0 1 4432 - Garbage Truck - Trash Can Lift Lever.ldr
+0 STEP
+0 // Brick  1 x  4 (white)
+1 15 -50 -72 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (white)
+1 15 50 -72 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 STEP
+0 // Tail  4 x  1 x  3 (white)
+1 15 -50 -144 40 1 0 0 0 1 0 0 0 1 2340.dat
+0 // Tail  4 x  1 x  3 (white)
+1 15 50 -144 40 1 0 0 0 1 0 0 0 1 2340.dat
+0 STEP
+0 // Plate  2 x  6 x  0.667 with Four Studs On Side and Four Raised (white)
+1 15 0 -160 30 1 0 0 0 1 0 0 0 1 87609.dat
+0 STEP
+0 // Plate  1 x  2 with Handle Type 2 (light_bluish_grey)
+1 71 -20 -160 50 -1 0 0 0 1 0 0 0 -1 48336.dat
+0 // Plate  1 x  2 with Handle Type 2 (light_bluish_grey)
+1 71 20 -160 50 -1 0 0 0 1 0 0 0 -1 48336.dat
+0 STEP
+0 // =Slope Brick 31  1 x  1 x  0.667 (trans_orange)
+1 57 -50 -152 50 0 0 1 0 1 0 -1 0 0 50746.dat
+0 // =Slope Brick 31  1 x  1 x  0.667 (trans_orange)
+1 57 -50 -152 30 0 0 1 0 1 0 -1 0 0 50746.dat
+0 // =Slope Brick 31  1 x  1 x  0.667 (trans_orange)
+1 57 50 -152 50 0 0 -1 0 1 0 1 0 0 50746.dat
+0 // =Slope Brick 31  1 x  1 x  0.667 (trans_orange)
+1 57 50 -152 30 0 0 -1 0 1 0 1 0 0 50746.dat
+0 // Tile  1 x  2 with Groove (trans_orange)
+1 57 -30 -168 40 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (trans_orange)
+1 57 -10 -168 40 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (trans_orange)
+1 57 10 -168 40 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (trans_orange)
+1 57 30 -168 40 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (white)
+1 15 0 -154 12 1 0 0 0 0 -1 0 1 0 2431.dat
+0 STEP
+0 // Minifig Shovel (dark_bluish_grey)
+1 72 -70 -44 20 0 0 -1 0 1 0 1 0 0 3837.dat
+0 // Minifig Pushbroom (reddish_brown)
+1 70 -70 0 -20 0 0 -1 0 -1 0 -1 0 0 3836.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Trash Can Lift.ldr
+0 Lifting mechanism built from a black bracket, red technic bricks with axleholes, a plate with hole and a sloped brick for tilting bins.
+0 Name: 4432 - Garbage Truck - Trash Can Lift.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x  2 with Reduced Axlehole (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 32064b.dat
+0 // Technic Brick  1 x  2 with Reduced Axlehole (red)
+1 4 0 0 -20 1 0 0 0 1 0 0 0 1 32064b.dat
+0 STEP
+0 // Bracket  5 x  2 x  2.333 with Inside Rib (black)
+1 0 -30 -8 -10 0 0 1 0 1 0 -1 0 0 6087.dat
+0 STEP
+0 // Plate  3 x  2 with Hole (light_bluish_grey)
+1 71 -60 48 -10 0 0 1 0 1 0 -1 0 0 3176.dat
+0 // Plate  2 x  2 with Groove with 1 Centre Stud (light_bluish_grey)
+1 71 -60 32 -10 1 0 0 0 1 0 0 0 1 87580.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 (dark_bluish_grey)
+1 72 -10 -32 -10 0 0 1 0 1 0 -1 0 0 3039.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+0 STEP
+0 FILE 4432 - Garbage Truck - Trash Can Lift Lever.ldr
+0 Operating lever made of a dark tan technic axle with stud and a black steering wheel used as a hand grip.
+0 Name: 4432 - Garbage Truck - Trash Can Lift Lever.ldr
+0 Author: Steffen Altenburg [SteffenA]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Town
+0 !HISTORY 2012-09-27 [SteffenA] Initial creation
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 0 0 0 1 0 0 0 1 0 0 0 1 6587.dat
+0 STEP
+0 // Car Steering Wheel 2L (black)
+1 0 38 0 0 0 -1 0 1 0 0 0 0 1 30663.dat
+0 STEP
+0 WRITE EOF
+
+
+
+
+
+
+

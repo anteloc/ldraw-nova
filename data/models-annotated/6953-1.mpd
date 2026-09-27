@@ -1,0 +1,784 @@
+0 FILE 6953 - Cosmic Laser Launcher.ldr
+0 A Futuron-themed space launch complex featuring a large wheeled vehicle, a command base with control consoles, a tall rocket with deployable wings and door, and three astronaut minifigures.
+0 Name: 6953 - Cosmic Laser Launcher.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6953 - Base + Minifigs.ldr
+1 0 440 -20 -40 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 6953 - Vehicle.ldr
+
+
+0 STEP
+0 FILE 6953 - Vehicle.ldr
+0 An articulated multi-section transport vehicle composed of a front cockpit module and a rear cargo section, both equipped with wheeled chassis.
+0 Name: 6953 - Vehicle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6953 - Vehicle - Front + Minifig.ldr
+1 0 0 -8 60 0.92388 0 -0.382683 0 1 0 0.382683 0 0.92388 6953 - Vehicle - Back.ldr
+
+
+0 STEP
+0 FILE 6953 - Vehicle - Front.ldr
+0 A two-wheeled front cockpit module with a hinged articulation joint, built on white plates with a trans-red dish detail.
+0 Name: 6953 - Vehicle - Front.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x  2 with White Wheels (Complete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 122c02.dat
+0 // Plate  2 x  2 (white)
+1 15 0 -8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Hinge Plate  2 x  4 with Articulated Joint - Female (black)
+1 0 0 -16 0 -1 0 0 0 1 0 0 0 -1 3640.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -24 30 -1 0 0 0 1 0 0 0 -1 3023.dat
+1 0 0 -24 -30 -1 0 0 0 1 0 0 0 -1 6953 - Vehicle - Front - Command.ldr
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 -38 -40 -1 0 0 0 0 -1 0 -1 0 6141.dat
+0 // Dish  2 x  2 Inverted (trans_red)
+1 36 0 -38 -48 -1 0 0 0 0 -1 0 -1 0 4740.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 30 6 0 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 -30 6 0 0 0 1 0 1 0 -1 0 0 3641.dat
+
+0 STEP
+0 FILE 6953 - Vehicle - Front - Command.ldr
+0 A small control console for the front vehicle section featuring a patterned button tile and a console tile.
+0 Name: 6953 - Vehicle - Front - Command.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Tile  1 x  2 with Console (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 2342.dat
+0 // Tile  1 x  1 with Red & Black Buttons Pattern (white)
+1 15 0 -39.71 -8.266 0 0 1 0.372567 0.928005 0 -0.928005 0.372567 0 3070bp06.dat
+
+
+0 STEP
+0 FILE 6953 - Vehicle - Front + Minifig.ldr
+0 The front vehicle cockpit module fitted with a pilot minifigure and its command console.
+0 Name: 6953 - Vehicle - Front + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6953 - Vehicle - Front.ldr
+1 0 0 -69 8 1 0 0 0 1 0 0 0 1 6953 - Minifig 1.ldr
+
+
+0 STEP
+0 FILE 6953 - Vehicle - Back.ldr
+0 A four-wheeled rear vehicle section with a large base plate, sloped panels, and a male hinge joint connecting to the front module.
+0 Name: 6953 - Vehicle - Back.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x  8 (white)
+1 15 0 0 120 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Plate  2 x  2 with White Wheels (Complete) (black)
+1 0 0 8 60 -1 0 0 0 1 0 0 0 -1 122c02.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 30 14 60 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 -30 14 60 0 0 1 0 1 0 -1 0 0 3641.dat
+0 // Plate  2 x  2 with White Wheels (Complete) (black)
+1 0 0 8 180 -1 0 0 0 1 0 0 0 -1 122c02.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 30 14 180 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 -30 14 180 0 0 1 0 1 0 -1 0 0 3641.dat
+0 // Hinge Plate  2 x  4 with Articulated Joint - Male (black)
+1 0 0 -8 60 1 0 0 0 1 0 0 0 1 3639.dat
+0 // Plate  2 x  6 (black)
+1 0 0 -8 160 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  2 x  2 (white)
+1 15 0 -16 200 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  2 x  2 (white)
+1 15 0 -16 80 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  4 x  6 (white)
+1 15 0 -16 140 -1 0 0 0 1 0 0 0 -1 3032.dat
+0 // Slope Brick 45  2 x  2 (white)
+1 15 0 -32 50 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Slope Brick 45  2 x  1 (white)
+1 15 50 -40 150 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (white)
+1 15 -50 -40 150 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Brick  1 x  1 (white)
+1 15 -50 -40 110 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 50 -40 110 -1 0 0 0 1 0 0 0 -1 3005.dat
+
+
+0 STEP
+0 FILE 6953 - Base.ldr
+0 A large 32x32 baseplate foundation with inclined stanchions, roof windows, grilled bricks, and sloped panels forming the launch complex structure.
+0 Name: 6953 - Base.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Baseplate 32 x 32 (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3811.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 -240 -120 -100 0 0 1 0 1 0 -1 0 0 4476.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 -240 -120 100 0 0 1 0 1 0 -1 0 0 4476.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 -100 -120 -200 1 0 0 0 1 0 0 0 1 4476.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 -100 -120 200 -1 0 0 0 1 0 0 0 -1 4476.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 -210 -8 0 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 -110 -8 0 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Tile  1 x  1 with Groove (trans_red)
+1 36 310 -8 -70 0 0 -1 0 1 0 1 0 0 3070b.dat
+0 // Tile  1 x  1 with Groove (trans_red)
+1 36 310 -8 70 0 0 -1 0 1 0 1 0 0 3070b.dat
+0 // Tile  1 x  8 (white)
+1 15 220 -8 70 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Tile  1 x  8 (white)
+1 15 220 -8 -70 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Slope Brick 45  2 x  4 (white)
+1 15 150 -24 -120 0 0 -1 0 1 0 1 0 0 3037.dat
+0 // Slope Brick 45  2 x  4 (white)
+1 15 150 -24 120 0 0 -1 0 1 0 1 0 0 3037.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 20 -120 -140 -1 0 0 0 1 0 0 0 -1 4476.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 20 -120 140 1 0 0 0 1 0 0 0 1 4476.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 20 -120 200 -1 0 0 0 1 0 0 0 -1 4476.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 20 -120 -200 1 0 0 0 1 0 0 0 1 4476.dat
+0 // Brick  1 x  4 with White Grille Pattern (black)
+1 0 150 -48 120 0 0 -1 0 1 0 1 0 0 3010p05.dat
+0 // Brick  1 x  4 with White Grille Pattern (black)
+1 0 150 -48 -120 0 0 -1 0 1 0 1 0 0 3010p05.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 -110 -144 -200 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 -110 -144 200 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // Brick  2 x  2 (white)
+1 15 -240 -144 100 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Brick  2 x  2 (white)
+1 15 -240 -144 -100 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Window  4 x  4 x  3 Roof (white)
+1 15 90 -120 -120 0 0 -1 0 1 0 1 0 0 4447.dat
+0 // Glass for Window  4 x  4 x  3 Roof (black)
+1 0 90 -120 -120 0 0 -1 0 1 0 1 0 0 4448.dat
+0 // Window  4 x  4 x  3 Roof (white)
+1 15 90 -120 120 0 0 -1 0 1 0 1 0 0 4447.dat
+0 // Glass for Window  4 x  4 x  3 Roof (black)
+1 0 90 -120 120 0 0 -1 0 1 0 1 0 0 4448.dat
+0 // Plate 10 x 10 without Corner (white)
+1 15 0 -128 -180 1 0 0 0 1 0 0 0 1 2401.dat
+0 // Plate 10 x 10 without Corner (white)
+1 15 0 -128 180 0 0 -1 0 1 0 1 0 0 2401.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (white)
+1 15 -90 -152 170 1 0 0 0 1 0 0 0 1 4287.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (white)
+1 15 -90 -152 -170 -1 0 0 0 1 0 0 0 -1 4287.dat
+0 // Brick  1 x  3 (white)
+1 15 -90 -152 210 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (white)
+1 15 -90 -152 -210 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Slope Brick 45  2 x  1 (white)
+1 15 -90 -152 250 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (white)
+1 15 -90 -152 -250 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 20 -136 -160 1 0 0 0 1 0 0 0 1 3680.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 20 -136 160 1 0 0 0 1 0 0 0 1 3680.dat
+1 0 20 -136 -160 -0.382683 0 -0.92388 0 1 0 0.92388 0 -0.382683 6953 - Base - Command 1.ldr
+1 0 20 -136 160 0.382683 0 -0.92388 0 1 0 0.92388 0 0.382683 6953 - Base - Command 2.ldr
+0 // Slope Brick 33  3 x  1 (white)
+1 15 -70 -152 -210 0 0 -1 0 1 0 1 0 0 4286.dat
+0 // Slope Brick 33  3 x  1 (white)
+1 15 -70 -152 210 0 0 -1 0 1 0 1 0 0 4286.dat
+0 // Plate 10 x 10 without Corner (white)
+1 15 -200 -152 -140 0 0 1 0 1 0 -1 0 0 2401.dat
+0 // Plate 10 x 10 without Corner (white)
+1 15 -200 -152 140 -1 0 0 0 1 0 0 0 -1 2401.dat
+0 // Plate  1 x  3 (white)
+1 15 -230 -160 -50 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (white)
+1 15 -230 -160 50 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  2 x  8 (white)
+1 15 -260 -160 0 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Brick  1 x  2 (white)
+1 15 -270 -184 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Slope Brick 45  2 x  2 (white)
+1 15 -240 -176 150 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Plate  2 x  4 (white)
+1 15 -100 -160 -160 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  2 x  4 (white)
+1 15 -100 -160 160 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Rack Winder  2 x  4 x  2 without Axle (white)
+1 15 -240 -208 0 0 0 -1 0 1 0 1 0 0 2426c01.dat
+1 0 -240 -190 0 0 0 -1 0 1 0 1 0 0 u9068.dat
+0 // Technic Axle  8 (black)
+1 0 -240 -190 100 0 0 -1 0 1 0 1 0 0 3707.dat
+0 // Technic Brick  1 x  2 with Hole (white)
+1 15 -240 -200 150 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -240 -190 184 1 0 0 0 0 1 0 -1 0 3941.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -80 -176 210 -1 0 0 0 1 0 0 0 -1 3937.dat
+0 // Hinge  1 x  2 Base (black)
+1 0 -120 -176 210 -1 0 0 0 1 0 0 0 -1 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -160 -176 210 -1 0 0 0 1 0 0 0 -1 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -160 -176 -210 1 0 0 0 1 0 0 0 1 3937.dat
+0 // Hinge  1 x  2 Base (black)
+1 0 -120 -176 -210 1 0 0 0 1 0 0 0 1 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -80 -176 -210 1 0 0 0 1 0 0 0 1 3937.dat
+0 // Plate  1 x  8 (white)
+1 15 -190 -160 0 0 0 -1 0 1 0 1 0 0 3460.dat
+1 0 -120 -166 0 1 0 0 0 1 0 0 0 1 6953 - Base - Structure.ldr
+0 // Panel  3 x  2 x  5 & 2/3 (trans_dark_blue)
+1 33 0 -264 -170 1 0 0 0 1 0 0 0 1 2448.dat
+0 // Panel  3 x  2 x  5 & 2/3 (trans_dark_blue)
+1 33 0 -264 -150 -1 0 0 0 1 0 0 0 -1 2448.dat
+0 // Panel  3 x  2 x  5 & 2/3 (trans_dark_blue)
+1 33 0 -264 150 1 0 0 0 1 0 0 0 1 2448.dat
+0 // Panel  3 x  2 x  5 & 2/3 (trans_dark_blue)
+1 33 0 -264 170 -1 0 0 0 1 0 0 0 -1 2448.dat
+0 // Tile  2 x  2 with Black Grille Pattern (white)
+1 15 0 -272 160 0 0 -1 0 1 0 1 0 0 3068bp07.dat
+0 // Tile  2 x  2 with Black Grille Pattern (white)
+1 15 0 -272 -160 0 0 -1 0 1 0 1 0 0 3068bp07.dat
+
+
+0 STEP
+0 FILE 6953 - Base - Command 1.ldr
+0 A rotating control station on a turntable featuring a button-and-lamp control panel slope and a control stick.
+0 Name: 6953 - Base - Command 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 0 -24 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Slope Brick 45  2 x  2 with 12 Buttons and  3 Red Lamps on Black Panel Pattern (white)
+1 15 0 -48 10 1 0 0 0 1 0 0 0 1 3039p32.dat
+0 // Hinge Control Stick Base (white)
+1 15 -10 -56 10 1 0 0 0 1 0 0 0 1 4592.dat
+0 // Hinge Control Stick (black)
+1 0 -10 -56 10 1 0 0 0 0.92388 -0.382683 0 0.382683 0.92388 4593.dat
+
+
+0 STEP
+0 FILE 6953 - Base - Command 2.ldr
+0 A rotating control station on a turntable featuring a button-and-lamp control panel slope and a control stick.
+0 Name: 6953 - Base - Command 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 0 -24 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Slope Brick 45  2 x  2 with 12 Buttons and  3 Red Lamps on Black Panel Pattern (white)
+1 15 0 -48 10 1 0 0 0 1 0 0 0 1 3039p32.dat
+0 // Hinge Control Stick Base (white)
+1 15 10 -56 10 1 0 0 0 1 0 0 0 1 4592.dat
+0 // Hinge Control Stick (black)
+1 0 10 -56 10 1 0 0 0 0.92388 -0.382683 0 0.382683 0.92388 4593.dat
+
+
+0 STEP
+0 FILE 6953 - Base - Structure.ldr
+0 The structural framework of the base, composed of multiple sub-sections including support plates, a turntable assembly, and hinged side panels with Futuron-patterned detailing.
+0 Name: 6953 - Base - Structure.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 210 1 0 0 0 0.939693 0.34202 0 -0.34202 0.939693 6953 - Base - Structure - 3.ldr
+1 0 0 0 -210 1 0 0 0 0.939693 -0.34202 0 0.34202 0.939693 6953 - Base - Structure - 4.ldr
+1 0 -76 -312.537 164.129 0 1 0 0.766044 0 -0.642788 -0.642788 0 -0.766044 6953 - Base - Structure - 2.ldr
+1 0 -76 -312.538 -164.128 0 1 0 0.766044 0 0.642788 0.642788 0 -0.766044 6953 - Base - Structure - 2.ldr
+1 0 -32 -189.971 61.282 1 0 0 0 1 0 0 0 1 6953 - Base - Structure - 1 + Rocket.ldr
+
+0 STEP
+0 FILE 6953 - Base - Structure - 1.ldr
+0 A structural support frame built from white plates with a gear rack, rounded corner bricks, and turntable tops forming the central base assembly.
+0 Name: 6953 - Base - Structure - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x  6 (white)
+1 15 0 268 -60 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Bracket  2 x  2 -  1 x  4 (white)
+1 15 -40 260 -60 0 0 1 0 1 0 -1 0 0 2422.dat
+0 // Plate  2 x  4 (white)
+1 15 20 260 -60 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  2 (white)
+1 15 20 252 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 20 252 -90 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  6 (white)
+1 15 0 252 -60 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Rack  1 x 20 (black)
+1 0 -82 60 -60 0 1 0 1 0 0 0 0 -1 2428.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 30 228 -70 1 0 0 0 1 0 0 0 1 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 10 228 -70 0 0 1 0 1 0 -1 0 0 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 10 228 -50 -1 0 0 0 1 0 0 0 -1 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 30 228 -50 0 0 -1 0 1 0 1 0 0 3063b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 50 220 -60 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 20 220 -90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 -10 220 -60 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 20 220 -30 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Plate  1 x  3 (white)
+1 15 -68 150 -60 0 1 0 1 0 0 0 0 -1 3623.dat
+0 // Plate  1 x  6 (white)
+1 15 -60 180 -60 0 1 0 1 0 0 0 0 -1 3666.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -68 -10 -60 0 1 0 0 0 -1 -1 0 0 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -68 10 -60 0 1 0 0 0 -1 -1 0 0 3794a.dat
+0 // Plate  2 x  8 (white)
+1 15 -60 0 -60 0 1 0 0 0 -1 -1 0 0 3034.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 -52 0 -120 0 1 0 0 0 -1 -1 0 0 3679.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 -52 0 0 0 1 0 0 0 -1 -1 0 0 3679.dat
+
+0 STEP
+0 FILE 6953 - Base - Structure - 1 + Rocket.ldr
+0 The central base structure with the rocket mounted on its turntable-supported launch platform.
+0 Name: 6953 - Base - Structure - 1 + Rocket.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6953 - Base - Structure - 1.ldr
+1 0 20 140 -60 0 0 -1 0 1 0 1 0 0 6953 - Base - Rocket.ldr
+
+0 STEP
+0 FILE 6953 - Base - Structure - 2.ldr
+0 A long plate with a turntable base and top providing a rotating mounting point within the base structure.
+0 Name: 6953 - Base - Structure - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x 10 (white)
+1 15 80 0 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 8 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 160 -8 0 1 0 0 0 1 0 0 0 1 3680.dat
+
+0 STEP
+0 FILE 6953 - Base - Structure - 3.ldr
+0 A hinged side panel with a large Futuron-patterned trans-dark-blue panel, antennas, and trans-red accents that can pivot outward.
+0 Name: 6953 - Base - Structure - 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Hinge  1 x  2 Top (white)
+1 15 40 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 -40 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Panel 10 x  6 x 11 with Futuron Stripes Pattern (trans_dark_blue)
+1 33 0 -274 -160 -1 0 0 0 1 0 0 0 -1 2408p04.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -50 -298 -150 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 -60 -288 -150 0 1 0 0 0 -1 -1 0 0 3938.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 -68 -278 -150 0 1 0 0 0 -1 -1 0 0 3680.dat
+0 // Plate  1 x  4 (white)
+1 15 -30 -282 -170 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 30 -282 -170 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -30 -274 -200 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 30 -274 -200 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -298 -160 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (white)
+1 15 0 -314 -160 0 0 -1 0 1 0 1 0 0 4595.dat
+0 // Antenna  4H with Rounded Top (white)
+1 15 -10 -322 -160 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Antenna  4H with Rounded Top (white)
+1 15 10 -322 -160 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Dish  2 x  2 Inverted (trans_red)
+1 36 36 -304 -160 0 1 0 0 0 1 1 0 0 4740.dat
+
+0 STEP
+0 FILE 6953 - Base - Structure - 4.ldr
+0 A hinged side panel with a large Futuron-patterned trans-dark-blue panel, antennas, and trans-red accents that can pivot outward.
+0 Name: 6953 - Base - Structure - 4.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Hinge  1 x  2 Top (white)
+1 15 -40 -10 0 -1 0 0 0 1 0 0 0 -1 3938.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 0 -1 0 0 0 1 0 0 0 -1 3938.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 40 -10 0 -1 0 0 0 1 0 0 0 -1 3938.dat
+0 // Panel 10 x  6 x 11 with Futuron Stripes Pattern (trans_dark_blue)
+1 33 0 -274 160 1 0 0 0 1 0 0 0 1 2408p04.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -50 -298 150 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 -60 -288 150 0 1 0 0 0 -1 -1 0 0 3938.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 -68 -278 150 0 1 0 0 0 -1 -1 0 0 3680.dat
+0 // Plate  1 x  4 (white)
+1 15 30 -282 170 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 -30 -282 170 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 30 -274 200 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -30 -274 200 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -298 160 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (white)
+1 15 0 -314 160 0 0 -1 0 1 0 1 0 0 4595.dat
+0 // Antenna  4H with Rounded Top (white)
+1 15 10 -322 160 0 0 1 0 1 0 -1 0 0 3957a.dat
+0 // Antenna  4H with Rounded Top (white)
+1 15 -10 -322 160 0 0 1 0 1 0 -1 0 0 3957a.dat
+0 // Dish  2 x  2 Inverted (trans_red)
+1 36 36 -304 160 0 1 0 0 0 1 1 0 0 4740.dat
+
+0 STEP
+0 FILE 6953 - Base - Rocket.ldr
+0 A tall space rocket with conical nose cones, panel body sections, finned details, trans-red accents, and hinged mounting points for deployable wings and a door.
+0 Name: 6953 - Base - Rocket.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  4 x  4 (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Brick  1 x  4 (black)
+1 0 0 -24 30 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  3 (black)
+1 0 -30 -24 -10 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  3 (black)
+1 0 30 -24 -10 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (white)
+1 15 0 -96 30 1 0 0 0 1 0 0 0 1 2362a.dat
+0 // Panel  1 x  4 x  3 (white)
+1 15 30 -96 0 0 0 1 0 1 0 -1 0 0 4215a.dat
+0 // Panel  1 x  4 x  3 (white)
+1 15 -30 -96 0 0 0 -1 0 1 0 1 0 0 4215a.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -104 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (black)
+1 0 -30 -104 0 0 0 1 0 1 0 -1 0 0 2436a.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (black)
+1 0 30 -104 0 0 0 -1 0 1 0 1 0 0 2436a.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (black)
+1 0 0 -104 -30 1 0 0 0 1 0 0 0 1 4315.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 60 -94 20 0 -1 0 0 0 1 -1 0 0 4531.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 -60 -94 20 0 1 0 0 0 -1 -1 0 0 4531.dat
+0 // Cone  4 x  4 x  2 with Axlehole (white)
+1 15 0 -152 0 1 0 0 0 1 0 0 0 1 3943b.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 0 8 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Cone  4 x  4 x  2 with Axlehole (white)
+1 15 0 32 0 1 0 0 0 1 0 0 0 1 3943b.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 0 80 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Brick  1 x  1 Round with Fins (white)
+1 15 0 -176 0 1 0 0 0 1 0 0 0 1 4588.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 0 -184 0 1 0 0 0 1 0 0 0 1 4740.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 -192 0 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 0 -200 0 1 0 0 0 1 0 0 0 1 4740.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 0 -224 0 1 0 0 0 1 0 0 0 1 4589.dat
+1 0 0 -100 -44 1 0 0 0 0 -1 0 1 0 6953 - Base - Rocket - Door.ldr
+1 0 56 -94 -10 0.984808 -0.173648 0 0 0 -1 0.173648 0.984808 0 6953 - Base - Rocket - Wing 1.ldr
+1 0 -56 -94 -10 0.984808 0.173648 0 0 0 -1 -0.173648 0.984808 0 6953 - Base - Rocket - Wing 2.ldr
+
+0 STEP
+0 FILE 6953 - Base - Rocket - Door.ldr
+0 A hinged sunroof-style door panel with a trans-dark-blue window and a yellow arrow pattern tile.
+0 Name: 6953 - Base - Rocket - Door.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Hinge Car Roof  4 x  4 Sunroof without Ledges (white)
+1 15 0 -4 -36 1 0 0 0 1 0 0 0 1 2349a.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -4 -86 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Tile  2 x  2 with Yellow Arrow with Black Border Pattern (white)
+1 15 0 -12 -76 -1 0 0 0 1 0 0 0 -1 3068bp08.dat
+0 // Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges (trans_dark_blue)
+1 33 0 0 -19 -1 0 0 0 1 0 0 0 -1 2348a.dat
+
+
+0 STEP
+0 FILE 6953 - Base - Rocket - Wing 1.ldr
+0 A deployable trans-dark-blue wing panel attached via a hinged plate to the rocket body.
+0 Name: 6953 - Base - Rocket - Wing 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 30 -4 0 -1 0 0 0 1 0 0 0 -1 4275b.dat
+0 // Plate  3 x  6 without Corners (trans_dark_blue)
+1 33 40 -12 -10 0 0 -1 0 1 0 1 0 0 2419.dat
+
+
+0 STEP
+0 FILE 6953 - Base - Rocket - Wing 2.ldr
+0 A deployable trans-dark-blue wing panel attached via a hinged plate to the rocket body.
+0 Name: 6953 - Base - Rocket - Wing 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 -30 -4 0 1 0 0 0 1 0 0 0 1 4275b.dat
+0 // Plate  3 x  6 without Corners (trans_dark_blue)
+1 33 -40 -12 -10 0 0 1 0 1 0 -1 0 0 2419.dat
+
+
+0 STEP
+0 FILE 6953 - Base + Minifigs.ldr
+0 The complete launch base with the structural frame, rocket, command stations, and astronaut minifigures assembled together.
+0 Name: 6953 - Base + Minifigs.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6953 - Base.ldr
+1 0 60 -200 -110 1 0 0 0 1 0 0 0 1 6953 - Minifig 2.ldr
+1 0 -110 -232 140 0 0 -1 0 1 0 1 0 0 6953 - Minifig 3.ldr
+
+
+0 STEP
+0 FILE 6953 - Minifig 1.ldr
+0 A red Futuron astronaut minifigure with airtanks, a standard grin, and a red torso with the Futuron pattern.
+0 Name: 6953 - Minifig 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -27 0 0.87462 0 -0.48481 0 1 0 0.48481 0 0.87462 6953 - Minifig 1 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.87462 0 -0.48481 0 1 0 0.48481 0 0.87462 3626bp01.dat
+0 // Minifig Airtanks (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Red Futuron Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p6d.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 9 0 0.985 -0.00593291 -0.169896 0.17 0.034376 0.9844 0 -0.999391 0.0348995 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Hand (red)
+1 4 -19.0318 -1.39906 -19.1098 0.985 -0.124311 -0.115922 0.17 0.720275 0.671667 0 -0.681895 0.731243 3820.dat
+0 // Minifig Hand (red)
+1 4 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+0 STEP
+0 FILE 6953 - Minifig 1 - Helmet.ldr
+0 A red standard space helmet with a trans-dark-blue visor for an astronaut minifigure.
+0 Name: 6953 - Minifig 1 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+
+0 STEP
+0 FILE 6953 - Minifig 2.ldr
+0 A yellow Futuron astronaut minifigure with airtanks, a yellow torso with the Futuron pattern, and a handheld radio.
+0 Name: 6953 - Minifig 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -27 0 0.92388 0 -0.382683 0 1 0 0.382683 0 0.92388 6953 - Minifig 2 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.92388 0 -0.382683 0 1 0 0.382683 0 0.92388 3626bp01.dat
+0 // Minifig Airtanks (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Yellow Futuron Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p6e.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (yellow)
+1 14 -15.552 9 0 0.985 -0.0771784 -0.151471 0.17 0.447181 0.877641 0 -0.891007 0.45399 3818.dat
+0 // Minifig Arm Left (yellow)
+1 14 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.5586 7.44742 -21.4018 0.985 -0.161655 -0.052525 0.17 0.936649 0.304336 0 -0.30897 0.950913 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // Minifig Radio with Short Handle (black)
+1 0 -19.9164 3.7262 -29.8904 -0.0118287 -0.169517 -0.985 0.0685366 0.982199 -0.17 0.997156 -0.0695803 0 3962a.dat
+0 // ~Minifig Leg Right (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+
+
+0 STEP
+0 FILE 6953 - Minifig 2 - Helmet.ldr
+0 A yellow standard space helmet with a trans-dark-blue visor for an astronaut minifigure.
+0 Name: 6953 - Minifig 2 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 1.904 4.596 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 2447.dat
+
+
+0 STEP
+0 FILE 6953 - Minifig 3.ldr
+0 A red Futuron astronaut minifigure with airtanks, a red torso with the Futuron pattern, and a handheld spanner and screwdriver tool.
+0 Name: 6953 - Minifig 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -21.596 -27.17 0.913545 0 0.406737 0.155651 0.92388 -0.349599 -0.375776 0.382683 0.844006 6953 - Minifig 3 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -21.596 -27.17 0.913545 0 0.406737 0.155651 0.92388 -0.349599 -0.375776 0.382683 0.844006 3626bp01.dat
+0 // Minifig Airtanks (red)
+1 4 0 3.349 -16.838 1 0 0 0 0.92388 -0.382683 0 0.382683 0.92388 3838.dat
+0 // Minifig Torso with Red Futuron Pattern (white)
+1 15 0 3.349 -16.838 1 0 0 0 0.92388 -0.382683 0 0.382683 0.92388 973p6d.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 32.913 -4.592 1 0 0 0 0.92388 -0.382683 0 0.382683 0.92388 3815.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 11.664 -13.394 0.985 -0.150101 -0.0798102 0.15706 0.98316 0.0893397 0.0650562 -0.100914 0.992701 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 11.664 -13.394 0.985 0.151471 0.0771784 -0.15706 0.98457 0.0721676 -0.0650562 -0.0835737 0.994311 3819.dat
+0 // Minifig Hand (red)
+1 4 -22.666 28.371 -25.871 0.985 -0.162547 0.0496957 0.15706 0.758257 -0.631931 0.0650562 0.630494 0.773186 3820.dat
+0 // Minifig Hand (red)
+1 4 22.719 28.574 -25.563 0.985 0.161655 -0.052525 -0.15706 0.747113 -0.645068 -0.0650562 0.643891 0.762065 3820.dat
+0 // Minifig Tool Spanner/Screwdriver (black)
+1 0 21.175 26.419 -43.747 -0.988635 0.144094 -0.0306429 0.0575991 0.568593 0.819647 0.135668 0.808994 -0.571104 4006.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+
+
+0 STEP
+0 FILE 6953 - Minifig 3 - Helmet.ldr
+0 A red standard minifig helmet with a translucent dark blue visor.
+0 Name: 6953 - Minifig 3 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 1.904 4.596 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 2447.dat
+
+

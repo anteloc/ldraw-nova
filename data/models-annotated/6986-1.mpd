@@ -1,0 +1,1733 @@
+0 FILE 6986 - Mission Commander.ldr
+0 Large multi-configuration space vehicle composed of a winged spaceship with cockpit and container modules, plus detachable rover vehicle, escape pod, and holding cell submodels.
+0 Name: 6986 - Mission Commander.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6986 - Spaceship + Pod.ldr
+1 0 230 16 -580 -0.5 0 -0.866 0 1 0 0.866 0 -0.5 6986 - Vehicle + Minifig.ldr
+1 0 250 38 -270 0.9659 0 -0.2588 0 1 0 0.2588 0 0.9659 6986 - Pod + Minifig.ldr
+1 0 410 -26 -110 0.991414 0 -0.130534 0 1 0 0.130534 0 0.991414 6986 - Minifig 3.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Pod.ldr
+0 Small compact escape pod built from a bracket base, slopes, and inverted dishes forming a rounded capsule with control sticks.
+0 Name: 6986 - Pod.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Bracket  2 x  3 -  2 x  2 (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 4598.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (black)
+1 0 0 -10 38 -1 0 0 0 0 1 0 1 0 4590.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (black)
+1 0 0 -30 38 -1 0 0 0 0 1 0 1 0 4590.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -20 46 -1 0 0 0 0 1 0 1 0 4032a.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 30 0 14 -1 0 0 0 0 1 0 1 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -30 0 14 -1 0 0 0 0 1 0 1 0 3040b.dat
+0 // Hinge Control Stick (black)
+1 0 30 0 6 1 0 0 0 0.7071 -0.7071 0 0.7071 0.7071 4593.dat
+0 // Hinge Control Stick (black)
+1 0 -30 0 6 1 0 0 0 0.7071 -0.7071 0 0.7071 0.7071 4593.dat
+0 // Hinge Control Stick Base (black)
+1 0 30 0 6 1 0 0 0 0 -1 0 1 0 4592.dat
+0 // Hinge Control Stick Base (black)
+1 0 -30 0 6 1 0 0 0 0 -1 0 1 0 4592.dat
+0 // Dish  2 x  2 Inverted (blue)
+1 1 -30 -20 54 1 0 0 0 0 -1 0 1 0 4740.dat
+0 // Dish  2 x  2 Inverted (blue)
+1 1 30 -20 54 1 0 0 0 0 -1 0 1 0 4740.dat
+
+
+
+0 STEP
+0 FILE 6986 - Pod + Minifig.ldr
+0 Assembly combining the escape pod with an accompanying minifigure.
+0 Name: 6986 - Pod + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6986 - Pod.ldr
+1 0 0 -53 -2 1 0 0 0 1 0 0 0 1 6986 - Minifig 1.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Vehicle.ldr
+0 Compact wheeled rover with mudguard, wheel-pin plates, and hinged control elements on a blue and black chassis.
+0 Name: 6986 - Vehicle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  2 x 10 (blue)
+1 1 0 0 0 0 0 1 0 1 0 -1 0 0 3832.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 0 8 -60 1 0 0 0 1 0 0 0 1 4600.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 0 8 40 1 0 0 0 1 0 0 0 1 4600.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -8 80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -8 10 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -8 -20 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 0 -8 -90 1 0 0 0 1 0 0 0 1 3839b.dat
+0 // Car Mudguard  2 x  4 (black)
+1 0 0 -16 -60 1 0 0 0 1 0 0 0 1 3788.dat
+0 // Plate  1 x  2 (blue)
+1 1 0 -16 70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  6 (blue)
+1 1 -30 -16 40 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (blue)
+1 1 30 -16 40 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -30 -16 -30 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 30 -16 -30 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Bracket  2 x  3 -  2 x  2 (blue)
+1 1 0 -16 -70 1 0 0 0 1 0 0 0 1 4598.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (black)
+1 0 0 -46 -32 -1 0 0 0 0 1 0 1 0 4590.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -24 70 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 0 -24 90 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 0 -24 10 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Hinge Control Stick (black)
+1 0 -30 -24 -50 -1 0 0 0 0.5 0.866 0 0.866 -0.5 4593.dat
+0 // Hinge Control Stick (black)
+1 0 30 -24 -50 -1 0 0 0 0.7071 0.7071 0 0.7071 -0.7071 4593.dat
+0 // Hinge Control Stick Base (black)
+1 0 -30 -24 -50 -1 0 0 0 1 0 0 0 -1 4592.dat
+0 // Hinge Control Stick Base (black)
+1 0 30 -24 -50 -1 0 0 0 1 0 0 0 -1 4592.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 30 13 -60 0 0 -1 0 1 0 -1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 30 13 -60 0 0 -1 0 1 0 -1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 30 13 40 0 0 -1 0 1 0 -1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 30 13 40 0 0 -1 0 1 0 -1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -30 13 40 0 0 1 0 1 0 1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 -30 13 40 0 0 1 0 1 0 1 0 0 3641.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -30 13 -60 0 0 1 0 1 0 1 0 0 4624.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 -30 13 -60 0 0 1 0 1 0 1 0 0 3641.dat
+
+
+
+0 STEP
+0 FILE 6986 - Vehicle + Minifig.ldr
+0 Assembly combining the rover vehicle with an accompanying minifigure.
+0 Name: 6986 - Vehicle + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6986 - Vehicle.ldr
+1 0 0 -69 -72 1 0 0 0 1 0 0 0 1 6986 - Minifig 2.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Jail.ldr
+0 Detention cell module with window panels, patterned Space Police side panels, and an inverted slope roof.
+0 Name: 6986 - Jail.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Slope Brick 45  4 x  4 Double Inverted with Open Centre (blue)
+1 1 0 0 0 0 0 1 0 1 0 -1 0 0 4854.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 0 8 0 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (black)
+1 0 0 24 -30 1 0 0 0 1 0 0 0 1 4590.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (black)
+1 0 0 24 30 -1 0 0 0 1 0 0 0 -1 4590.dat
+0 // Brick  1 x  2 (blue)
+1 1 0 -8 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 0 -8 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 -30 -8 0 0 0 1 0 1 0 -1 0 0 4623.dat
+0 // Plate  1 x  1 (black)
+1 0 -30 -8 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (black)
+1 0 -30 -8 -30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 30 -8 0 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Train Window  1 x  4 x  3 (blue)
+1 1 -30 -80 0 0 0 1 0 1 0 -1 0 0 4033.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_red)
+1 36 -29.5 -80 0 0 0 1 0 1 0 -1 0 0 3855.dat
+0 // Panel  1 x  2 x  3 with Space Police I Left Pattern (black)
+1 0 0 -80 30 1 0 0 0 1 0 0 0 1 2362ap53.dat
+0 // Panel  1 x  2 x  3 with Space Police I Right Pattern (black)
+1 0 0 -80 -30 -1 0 0 0 1 0 0 0 -1 2362ap54.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 -30 -88 0 0 0 1 0 1 0 -1 0 0 4623.dat
+0 // Plate  1 x  3 (black)
+1 0 -10 -88 30 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 -10 -88 -30 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Hinge Tile  1 x  4 (blue)
+1 1 -30 -96 0 0 0 -1 0 1 0 1 0 0 4625.dat
+0 // Tile  1 x  2 with Groove (blue)
+1 1 0 -96 30 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (blue)
+1 1 0 -96 -30 1 0 0 0 1 0 0 0 1 3069b.dat
+1 0 -36 -100 0 1 0 0 0 1 0 0 0 1 6986 - Jail - Door.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Jail - Door.ldr
+0 Hinged barred door for the jail module, built from a 45-degree slope with vertical bar and antenna rods.
+0 Name: 6986 - Jail - Door.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Slope Brick 45  4 x  4 Double with Hinge (blue)
+1 1 36 -20 0 0 0 -1 0 1 0 1 0 0 4857.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 36 -28 0 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Plate  1 x  2 (blue)
+1 1 36 -12 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 36 -4 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 36 -12 30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 36 -4 30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Bar  1 x  6 with Studs Open (black)
+1 0 66 4 0 0 0 1 0 1 0 -1 0 0 4873.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 66 28 50 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 66 28 -50 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Antenna  4H with Rounded Top (trans_red)
+1 36 66 84 30 0 0 1 0 1 0 -1 0 0 3957a.dat
+0 // Antenna  4H with Rounded Top (trans_red)
+1 36 66 84 10 0 0 1 0 1 0 -1 0 0 3957a.dat
+0 // Antenna  4H with Rounded Top (trans_red)
+1 36 66 84 -10 0 0 1 0 1 0 -1 0 0 3957a.dat
+0 // Antenna  4H with Rounded Top (trans_red)
+1 36 66 84 -30 0 0 1 0 1 0 -1 0 0 3957a.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship.ldr
+0 Main hull of a large spaceship with long plates, large wings, and sloped surfaces forming the central fuselage.
+0 Name: 6986 - Spaceship.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  2 x 16 (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 4282.dat
+0 // Plate  1 x  2 (blue)
+1 1 -30 -8 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 30 -8 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Tile  1 x  2 with Groove (blue)
+1 1 -50 -8 0 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (blue)
+1 1 50 -8 0 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Plate  1 x  4 (blue)
+1 1 -30 -16 20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (blue)
+1 1 30 -16 20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  2 (black)
+1 0 -150 -8 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 150 -8 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 100 -8 10 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 -100 -8 10 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  6 (black)
+1 0 130 -8 20 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 -130 -8 20 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  4 (blue)
+1 1 0 -24 50 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Brick  1 x  2 (black)
+1 0 -100 -24 -10 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 100 -24 -10 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 70 -24 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -70 -24 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Plate  1 x 10 (blue)
+1 1 30 -24 -60 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (blue)
+1 1 -30 -24 -60 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  3 x  6 without Corners (blue)
+1 1 140 -16 30 -1 0 0 0 1 0 0 0 -1 2419.dat
+0 // Plate  3 x  6 without Corners (blue)
+1 1 -140 -16 30 -1 0 0 0 1 0 0 0 -1 2419.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 130 -32 70 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -130 -32 70 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // Plate  1 x  2 (black)
+1 0 -100 -24 10 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 100 -24 10 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Wing  7 x 12 Left (black)
+1 0 -170 -16 -120 0 0 1 0 1 0 -1 0 0 3586.dat
+0 // Wing  7 x 12 Right (black)
+1 0 170 -16 -120 0 0 -1 0 1 0 1 0 0 3585.dat
+1 0 0 -32 0 1 0 0 0 1 0 0 0 1 6986 - Spaceship - 1.ldr
+0 // Plate  1 x  4 (black)
+1 0 0 -32 -30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  2 x  4 (blue)
+1 1 0 -32 40 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 -260 -32 140 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Wing 1.ldr
+1 0 260 -32 140 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Wing 2.ldr
+0 // Plate  2 x  2 (blue)
+1 1 160 -8 -100 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 -160 -8 -100 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  6 (blue)
+1 1 -230 -16 60 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (blue)
+1 1 230 -16 60 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  1 (blue)
+1 1 250 -16 110 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 -250 -16 110 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Hinge Plate  1 x  4 Base (blue)
+1 1 -260 -16 140 -1 0 0 0 1 0 0 0 -1 2429.dat
+0 // Hinge Plate  1 x  4 Top (blue)
+1 1 260 -16 140 -1 0 0 0 1 0 0 0 -1 2430.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 160 0 -100 -1 0 0 0 1 0 0 0 -1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -160 0 -100 -1 0 0 0 1 0 0 0 -1 3940.dat
+0 // Plate  2 x  2 (blue)
+1 1 240 -8 120 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 -240 -8 120 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 240 0 120 -1 0 0 0 1 0 0 0 -1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -240 0 120 -1 0 0 0 1 0 0 0 -1 3940.dat
+0 // Plate  1 x  4 (black)
+1 0 230 -8 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 -230 -8 0 0 0 1 0 1 0 -1 0 0 3710.dat
+1 0 0 32 -340 1 0 0 0 1 0 0 0 1 6986 - Spaceship - 2.ldr
+0 // Plate  1 x  6 (black)
+1 0 -50 0 -440 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 50 0 -440 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (blue)
+1 1 -10 -40 -290 0 0 1 0 1 0 -1 0 0 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (blue)
+1 1 10 -40 -290 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 // Plate  1 x  2 (blue)
+1 1 0 -32 -230 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 0 -40 -230 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 (blue)
+1 1 -150 -24 -70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 150 -24 -70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  3 (blue)
+1 1 -130 -24 -90 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (blue)
+1 1 130 -24 -90 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -130 -24 -130 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 130 -24 -130 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  6 (blue)
+1 1 -130 -40 40 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (blue)
+1 1 130 -40 40 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 0 -40 -30 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 0 -40 0 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -20 -80 40 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 20 -80 40 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Plate  1 x  4 (black)
+1 0 -310 -40 80 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 310 -40 80 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -310 -40 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 310 -40 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Brick  1 x  4 (black)
+1 0 -50 -24 -420 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 50 -24 -420 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Tile  1 x  2 with Handle (black)
+1 0 -50 -32 -480 0 0 -1 0 1 0 1 0 0 2432.dat
+0 // Tile  1 x  2 with Handle (black)
+1 0 50 -32 -480 0 0 1 0 1 0 -1 0 0 2432.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -48 -290 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -48 -230 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Brick  1 x  2 (black)
+1 0 -30 -48 -160 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -48 -160 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Slope Brick 33  3 x  2 with Space Police I Pattern (black)
+1 0 -140 -48 -30 1 0 0 0 1 0 0 0 1 3298p53.dat
+0 // Slope Brick 33  3 x  2 with Space Police I Pattern (black)
+1 0 140 -48 -30 1 0 0 0 1 0 0 0 1 3298p53.dat
+0 // Tile  1 x  2 Grille without Groove (blue)
+1 1 -310 -48 100 0 0 -1 0 1 0 1 0 0 2412a.dat
+0 // Tile  1 x  2 Grille without Groove (blue)
+1 1 310 -48 100 0 0 -1 0 1 0 1 0 0 2412a.dat
+0 // Brick  2 x  2 with Pin (black)
+1 0 0 -104 40 0 0 -1 0 1 0 1 0 0 4730.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 -130 -64 80 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 -130 -64 40 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 130 -64 40 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 130 -64 80 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -104 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -30 -104 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Rack Winder  2 x  4 x  2 without Axle (black)
+1 0 0 -96 -160 -1 0 0 0 1 0 0 0 -1 2426c01.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 -50 -32 -420 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 50 -32 -420 0 0 1 0 1 0 -1 0 0 2431.dat
+1 0 0 -52 -310 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Cockpit.ldr
+0 // Panel  3 x  2 x  6 (trans_red)
+1 36 50 -104 -360 0 0 -1 0 1 0 1 0 0 2466.dat
+0 // Panel  3 x  2 x  6 (trans_red)
+1 36 50 -104 -320 0 0 -1 0 1 0 1 0 0 2466.dat
+0 // Panel  3 x  2 x  6 (trans_red)
+1 36 50 -104 -280 0 0 -1 0 1 0 1 0 0 2466.dat
+0 // Panel  3 x  2 x  6 (trans_red)
+1 36 -50 -104 -280 0 0 1 0 1 0 -1 0 0 2466.dat
+0 // Panel  3 x  2 x  6 (trans_red)
+1 36 -50 -104 -320 0 0 1 0 1 0 -1 0 0 2466.dat
+0 // Panel  3 x  2 x  6 (trans_red)
+1 36 -50 -104 -360 0 0 1 0 1 0 -1 0 0 2466.dat
+0 // Plate  2 x  6 (black)
+1 0 0 -112 -340 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (black)
+1 0 30 -96 -220 0 0 -1 0 1 0 1 0 0 2362a.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (black)
+1 0 -30 -96 -220 0 0 1 0 1 0 -1 0 0 2362a.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (black)
+1 0 30 -104 -20 0 0 -1 0 1 0 1 0 0 2362a.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (black)
+1 0 -30 -104 -20 0 0 1 0 1 0 -1 0 0 2362a.dat
+1 0 0 -78 -160 -1 0 0 0 1 0 0 0 -1 u9068.dat
+0 // Brick  2 x  2 Round Reinforced (black)
+1 0 64 -78 -160 0 -1 0 -1 0 0 0 0 -1 6143.dat
+1 0 130 -54 60 0 -1 0 1 0 0 0 0 1 6986 - Spaceship - Glass 2.ldr
+1 0 -130 -54 60 0 1 0 -1 0 0 0 0 1 6986 - Spaceship - Glass 1.ldr
+0 // Plate  1 x  6 (black)
+1 0 -30 -104 -200 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 30 -104 -200 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Panel  3 x  2 x  6 (blue)
+1 1 30 -104 -80 0 0 -1 0 1 0 1 0 0 2466.dat
+0 // Panel  3 x  2 x  6 (blue)
+1 1 -30 -104 -80 0 0 1 0 1 0 -1 0 0 2466.dat
+0 // Plate  1 x  1 (black)
+1 0 -50 -112 -370 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (black)
+1 0 50 -112 -370 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  2 (black)
+1 0 -50 -112 -300 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 50 -112 -300 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  3 x  6 without Corners (black)
+1 0 0 -112 -250 -1 0 0 0 1 0 0 0 -1 2419.dat
+0 // Plate  1 x 10 (blue)
+1 1 -30 -112 -120 0 0 1 0 1 0 -1 0 0 4477.dat
+0 // Plate  1 x 10 (blue)
+1 1 30 -112 -120 0 0 1 0 1 0 -1 0 0 4477.dat
+0 // Plate  1 x  4 (blue)
+1 1 0 -112 50 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  3 x  3 without Corner (blue)
+1 1 50 -112 10 1 0 0 0 1 0 0 0 1 2450.dat
+0 // Plate  3 x  3 without Corner (blue)
+1 1 -50 -112 10 0 0 1 0 1 0 -1 0 0 2450.dat
+
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (blue)
+1 1 30 -120 -340 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (blue)
+1 1 -30 -120 -340 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Plate  1 x  6 (black)
+1 0 -50 -120 -320 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 50 -120 -320 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  8 (black)
+1 0 -30 -120 -200 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (black)
+1 0 30 -120 -200 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -30 -120 -110 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 30 -120 -110 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Tile  1 x  2 Grille without Groove (black)
+1 0 -30 -120 -80 0 0 1 0 1 0 -1 0 0 2412a.dat
+0 // Tile  1 x  2 Grille without Groove (black)
+1 0 30 -120 -80 0 0 1 0 1 0 -1 0 0 2412a.dat
+0 // Plate  1 x  6 (black)
+1 0 -30 -120 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 30 -120 0 0 0 1 0 1 0 -1 0 0 3666.dat
+1 0 0 32 180 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Container + Jails.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - 1.ldr
+0 Base platform subassembly using large plates and hinges forming the structural foundation of the spaceship.
+0 Name: 6986 - Spaceship - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  2 x 16 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4282.dat
+0 // Plate 10 x 10 without Corner (black)
+1 0 220 8 40 1 0 0 0 1 0 0 0 1 2401.dat
+0 // Plate 10 x 10 without Corner (black)
+1 0 -220 8 40 0 0 1 0 1 0 -1 0 0 2401.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 -220 0 10 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 -220 0 30 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 220 0 10 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 220 0 30 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Hinge Plate  1 x  4 Base (blue)
+1 1 -260 0 140 -1 0 0 0 1 0 0 0 -1 2429.dat
+0 // Hinge Plate  1 x  4 Top (blue)
+1 1 260 0 140 -1 0 0 0 1 0 0 0 -1 2430.dat
+0 // Plate  1 x  6 (black)
+1 0 310 0 80 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 -310 0 80 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  2 (black)
+1 0 -130 0 40 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 130 0 40 0 0 1 0 1 0 -1 0 0 3023.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - 2.ldr
+0 Internal support module with large plates and round support bricks reinforcing the spaceship body.
+0 Name: 6986 - Spaceship - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  6 x 12 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3028.dat
+0 // Plate  4 x 12 (black)
+1 0 0 0 240 0 0 1 0 1 0 -1 0 0 3029.dat
+0 // Plate  1 x  4 (blue)
+1 1 0 8 350 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  2 x  6 (blue)
+1 1 0 8 120 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  1 x  3 (blue)
+1 1 30 8 -110 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (blue)
+1 1 -30 8 -110 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Brick  2 x  4 (blue)
+1 1 0 -24 340 1 0 0 0 1 0 0 0 1 3001.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 0 -48 120 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 20 -48 180 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -20 -48 180 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 0 -8 -90 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Plate  4 x  4 (blue)
+1 1 0 -56 140 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Brick  1 x  3 (blue)
+1 1 -50 -24 -70 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  3 (blue)
+1 1 50 -24 -70 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (blue)
+1 1 -50 -24 -110 1 0 0 0 1 0 0 0 1 4287.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (blue)
+1 1 50 -24 -110 1 0 0 0 1 0 0 0 1 4287.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Wing 1.ldr
+0 Left wing assembly with large wing elements, hinge plates, and a round reinforced mounting point.
+0 Name: 6986 - Spaceship - Wing 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Hinge Plate  1 x  4 Top (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 2430.dat
+0 // Wing  4 x  8 Left (black)
+1 0 20 8 80 -1 0 0 0 1 0 0 0 -1 3933.dat
+0 // Plate  1 x  4 (black)
+1 0 30 0 60 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Wing  4 x  4 Left (black)
+1 0 80 0 120 0 0 -1 0 1 0 1 0 0 3936.dat
+0 // Hinge Plate  1 x  4 Top (blue)
+1 1 0 16 0 1 0 0 0 1 0 0 0 1 2430.dat
+0 // Brick  2 x  2 Round Reinforced (blue)
+1 1 80 8 100 1 0 0 0 1 0 0 0 1 6143.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 80 32 100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 40 -8 90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 30 -24 60 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 30 -24 20 0 0 1 0 1 0 -1 0 0 3937.dat
+1 0 30 -14 0 0 1 0 -1 0 0 0 0 1 6986 - Spaceship - Wing 1 - Laser.ldr
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Wing 1 - Laser.ldr
+0 Left wing-mounted laser cannon with jet engine plate, trans-red dish, and antenna barrel.
+0 Name: 6986 - Spaceship - Wing 1 - Laser.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Tail  4 x  1 x  3 (black)
+1 0 0 -82 0 -1 0 0 0 1 0 0 0 -1 2340.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 20 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 60 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Brick  1 x  2 (blue)
+1 1 0 -106 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  1 x  2 with Jet Engine with Axle Hole (black)
+1 0 0 -114 0 0 0 -1 0 1 0 1 0 0 3475b.dat
+0 // Plate  1 x  1 Round (black)
+1 0 0 -122 10 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Dish  2 x  2 Inverted (trans_red)
+1 36 0 -130 10 0 0 -1 0 1 0 1 0 0 4740.dat
+0 // Brick  1 x  1 Round with Hollow Stud (black)
+1 0 -30 -110 -40 0 0 -1 1 0 0 0 -1 0 3062b.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -30 -110 -108 0 0 -1 1 0 0 0 -1 0 3957a.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -30 -110 -116 0 0 -1 1 0 0 0 -1 0 6141.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Wing 2.ldr
+0 Right wing assembly mirroring the left, with wing elements, hinge plates, and a round mounting point.
+0 Name: 6986 - Spaceship - Wing 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Hinge Plate  1 x  4 Base (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 2429.dat
+0 // Wing  4 x  8 Right (black)
+1 0 -20 8 80 -1 0 0 0 1 0 0 0 -1 3934.dat
+0 // Plate  1 x  4 (black)
+1 0 -30 0 60 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Wing  4 x  4 Right (black)
+1 0 -80 0 120 0 0 1 0 1 0 -1 0 0 3935.dat
+0 // Brick  2 x  2 Round Reinforced (blue)
+1 1 -80 8 100 0 0 1 0 1 0 -1 0 0 6143.dat
+0 // Hinge Plate  1 x  4 Base (blue)
+1 1 0 16 0 1 0 0 0 1 0 0 0 1 2429.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -80 32 100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 -40 -8 90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 -30 -24 60 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 -30 -24 20 0 0 -1 0 1 0 1 0 0 3937.dat
+1 0 -30 -14 0 0 -1 0 1 0 0 0 0 1 6986 - Spaceship - Wing 2 - Laser.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Wing 2 - Laser.ldr
+0 Right wing-mounted laser cannon with jet engine plate, trans-red dish, and antenna barrel.
+0 Name: 6986 - Spaceship - Wing 2 - Laser.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Tail  4 x  1 x  3 (black)
+1 0 0 -82 0 -1 0 0 0 1 0 0 0 -1 2340.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 20 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 60 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Brick  1 x  2 (blue)
+1 1 0 -106 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  1 x  2 with Jet Engine with Axle Hole (black)
+1 0 0 -114 0 0 0 1 0 1 0 -1 0 0 3475b.dat
+0 // Plate  1 x  1 Round (black)
+1 0 0 -122 10 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Dish  2 x  2 Inverted (trans_red)
+1 36 0 -130 10 0 0 -1 0 1 0 1 0 0 4740.dat
+0 // Brick  1 x  1 Round with Hollow Stud (black)
+1 0 30 -110 -40 0 0 1 -1 0 0 0 -1 0 3062b.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 30 -110 -108 0 0 1 -1 0 0 0 -1 0 3957a.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 30 -110 -116 0 0 1 -1 0 0 0 -1 0 6141.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Cockpit.ldr
+0 Cockpit assembly for the spaceship, composed of several layered hinge and slope substructures.
+0 Name: 6986 - Spaceship - Cockpit.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Cockpit - 1.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Cockpit - 2.ldr
+1 0 0 -16 -60 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Cockpit - 3.ldr
+1 0 -26 26 -280 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Cockpit - 4.ldr
+1 0 26 26 -280 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Cockpit - 4.ldr
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Cockpit - 1.ldr
+0 Forward cockpit frame with hinge plates and a long rack forming the nose structure.
+0 Name: 6986 - Spaceship - Cockpit - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  1 x  1 (blue)
+1 1 0 -4 400 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x 10 (blue)
+1 1 0 -4 290 0 0 1 0 1 0 -1 0 0 4477.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (blue)
+1 1 0 -4 170 0 0 1 0 1 0 -1 0 0 4276b.dat
+0 // Hinge Plate  1 x  6 with 2 and 3 Fingers On Ends (blue)
+1 1 0 -4 70 0 0 1 0 1 0 -1 0 0 4504.dat
+0 // Plate  1 x  3 (black)
+1 0 0 4 380 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Rack  1 x 20 (black)
+1 0 0 -18 210 0 0 1 0 1 0 -1 0 0 2428.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Cockpit - 2.ldr
+0 Cockpit hinge substructure with finger hinge plates and an inverted slope forming angled panels.
+0 Name: 6986 - Spaceship - Cockpit - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  1 x  2 (black)
+1 0 0 28 -40 1 0 0 0 1 0 0 0 1 3023.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 0 4 -40 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Plate  1 x  2 (blue)
+1 1 0 -4 -40 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers On Side (blue)
+1 1 0 -4 -20 -1 0 0 0 1 0 0 0 -1 2452.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -12 -30 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (blue)
+1 1 -10 -20 -30 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (blue)
+1 1 10 -20 -30 0 0 1 0 1 0 -1 0 0 4275b.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Cockpit - 3.ldr
+0 Large cockpit superstructure with cutout wing, wedge, brackets, and long bricks forming the command section.
+0 Name: 6986 - Spaceship - Cockpit - 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  2 x  6 (black)
+1 0 0 4 -30 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Wing  8 x  8 with  4 x  4 Cutout (blue)
+1 1 0 4 -190 1 0 0 0 1 0 0 0 1 4475.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -4 -230 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (black)
+1 0 -30 -4 -210 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 30 -4 -210 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  8 (black)
+1 0 -50 -4 -90 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // Plate  1 x  8 (black)
+1 0 50 -4 -90 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (blue)
+1 1 -10 -4 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (blue)
+1 1 10 -4 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (blue)
+1 1 50 4 -70 0 0 -1 0 1 0 1 0 0 2436a.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (blue)
+1 1 -50 4 -70 0 0 1 0 1 0 -1 0 0 2436a.dat
+0 // Brick  1 x  6 (black)
+1 0 50 12 -70 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (black)
+1 0 -50 12 -70 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Wedge  6 x  4 Inverted (black)
+1 0 0 12 -180 -1 0 0 0 1 0 0 0 -1 4856.dat
+0 // Plate  2 x  2 (blue)
+1 1 0 36 -150 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  1 x  2 with Handles Type 2 (blue)
+1 1 0 36 -180 1 0 0 0 1 0 0 0 1 3839b.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (black)
+1 0 0 44 -140 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Brick  1 x  1 Round with Hollow Stud (black)
+1 0 26 42 -196 1 0 0 0 0 1 0 -1 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (black)
+1 0 -26 42 -196 1 0 0 0 0 1 0 -1 0 3062b.dat
+0 // Plate  2 x  6 (blue)
+1 1 0 -12 -30 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Brick  2 x  2 (blue)
+1 1 0 -36 -30 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 -30 -36 -30 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 30 -36 -30 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Plate  2 x  4 (blue)
+1 1 0 -44 -30 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -52 -30 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 -30 -52 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 30 -52 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+1 0 -72 34 -70 0 1 0 -1 0 0 0 0 1 6986 - Spaceship - Cockpit - 3 - 1.ldr
+1 0 72 34 -70 0 -1 0 1 0 0 0 0 1 6986 - Spaceship - Cockpit - 3 - 2.ldr
+0 // Plate  1 x  4 (black)
+1 0 0 -60 -20 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (black)
+1 0 0 -60 -40 1 0 0 0 1 0 0 0 1 4315.dat
+0 // Windscreen 10 x  4 x  2.333 Canopy (trans_red)
+1 36 0 -56 -54 1 0 0 0 1 0 0 0 1 2507.dat
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Glass 1.ldr
+0 Left canopy section of transparent trans-red panels and corner convex glass with hinged mounting.
+0 Name: 6986 - Spaceship - Glass 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  1 x  4 (blue)
+1 1 0 -18 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 -20 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 20 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Panel  3 x  2 x  6 (trans_red)
+1 36 0 -154 0 0 0 -1 0 1 0 1 0 0 2466.dat
+0 // Panel  3 x  3 x  6 Corner Convex (trans_red)
+1 36 0 -154 -30 1 0 0 0 1 0 0 0 1 2468.dat
+0 // Plate  1 x  3 (black)
+1 0 0 -162 -10 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Tile  1 x  2 with Handle (black)
+1 0 0 -194 -20 0 0 -1 0 1 0 1 0 0 2432.dat
+
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Glass 2.ldr
+0 Right canopy section of transparent trans-red panels and corner convex glass with hinged mounting.
+0 Name: 6986 - Spaceship - Glass 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  1 x  4 (blue)
+1 1 0 -18 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 -20 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 20 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Panel  3 x  2 x  6 (trans_red)
+1 36 0 -154 0 0 0 1 0 1 0 -1 0 0 2466.dat
+0 // Panel  3 x  3 x  6 Corner Convex (trans_red)
+1 36 0 -154 -30 0 0 1 0 1 0 -1 0 0 2468.dat
+0 // Plate  1 x  3 (black)
+1 0 0 -162 -10 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Tile  1 x  2 with Handle (black)
+1 0 0 -194 -20 0 0 1 0 1 0 -1 0 0 2432.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Cockpit - 3 - 1.ldr
+0 Left flexible hose assembly with a long segmented rubber hose, tail piece, and antenna detail.
+0 Name: 6986 - Spaceship - Cockpit - 3 - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  3 x  6 without Corners (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 2419.dat
+0 // Tail  4 x  1 x  3 (black)
+1 0 0 -72 40 1 0 0 0 1 0 0 0 1 2340.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 0 -88 40 1 0 0 0 1 0 0 0 1 4595.dat
+0 // Antenna  4H with Rounded Top (blue)
+1 1 0 -78 -68 1 0 0 0 0 1 0 -1 0 3957a.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 -78 -76 1 0 0 0 0 1 0 -1 0 6141.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 0 -78 78 1 0 0 0 0 1 0 -1 0 752.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 0 -78 78 -1 0 0 0 0 1 0 1 0 755.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 20 -18 50 1 0 0 0 1 0 0 0 1 752.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 20 -18 50 -1 0 0 0 -1 0 0 0 1 755.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.0004 -77.9938 84.9599 -0.9996 0.002 -0.0275 0.0275 0.03 -0.9992 0.0011 0.9995 0.0301 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.0053 -77.9188 87.4602 -0.9993 0.0047 -0.0372 0.0374 0.0653 -0.9972 0.0023 0.9979 0.0655 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.0171 -77.7548 89.9656 -0.9989 0.0081 -0.0469 0.0475 0.1024 -0.9936 0.0032 0.9947 0.1026 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.0373 -77.4989 92.4523 -0.9983 0.0122 -0.0563 0.0575 0.1415 -0.9883 0.0041 0.9899 0.1419 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.068 -77.144 94.9366 -0.9977 0.0174 -0.0656 0.0677 0.1832 -0.9807 0.005 0.9829 0.184 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.1117 -76.6825 97.4129 -0.9969 0.0238 -0.0746 0.078 0.2281 -0.9705 0.0061 0.9734 0.2292 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.1713 -76.1111 99.8515 -0.996 0.0317 -0.083 0.0886 0.2766 -0.9569 0.0073 0.9605 0.2783 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.2501 -75.4234 102.24 -0.995 0.0417 -0.0907 0.0994 0.3302 -0.9387 0.0092 0.943 0.3327 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.3546 -74.5958 104.603 -0.9937 0.0547 -0.0974 0.111 0.3909 -0.9137 0.0119 0.9188 0.3945 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.4921 -73.6124 106.915 -0.9922 0.0717 -0.1022 0.1239 0.4608 -0.8788 0.0159 0.8846 0.4661 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.672 -72.4566 109.134 -0.9901 0.0948 -0.1039 0.1389 0.5429 -0.8282 0.0221 0.8344 0.5507 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0.9086 -71.1012 111.217 -0.9869 0.1269 -0.0993 0.1581 0.6418 -0.7504 0.0315 0.7563 0.6535 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 1.2275 -69.4887 113.117 -0.9815 0.1728 -0.0822 0.186 0.7598 -0.623 0.0452 0.6268 0.7779 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 1.6583 -67.5947 114.68 -0.9711 0.2355 -0.0387 0.2306 0.8838 -0.4072 0.0617 0.4043 0.9125 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 2.2482 -65.381 115.693 -0.952 0.3024 0.0474 0.2983 0.9512 -0.0784 0.0688 0.0605 0.9958 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 3.0001 -63.0161 115.843 -0.9272 0.339 0.1593 0.3713 0.8877 0.2722 0.0491 -0.3115 0.949 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 3.8423 -60.8105 115.07 -0.9067 0.3388 0.2511 0.4215 0.7438 0.5187 0.011 -0.5762 0.8172 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 4.6958 -58.9368 113.618 -0.8941 0.3243 0.3088 0.447 0.6052 0.6587 -0.0267 -0.727 0.6861 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 5.5068 -57.4233 111.8 -0.8872 0.3087 0.3429 0.4578 0.4962 0.7377 -0.0576 -0.8114 0.5816 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 6.2786 -56.1826 109.771 -0.8837 0.2952 0.3632 0.4607 0.4121 0.786 -0.0823 -0.862 0.5002 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 7.0192 -55.1486 107.609 -0.8823 0.2839 0.3754 0.4594 0.3462 0.818 -0.1023 -0.8942 0.4359 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 7.7281 -54.2844 105.376 -0.8822 0.2746 0.3825 0.4556 0.293 0.8406 -0.1188 -0.9158 0.3836 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 8.4188 -53.5474 103.073 -0.8831 0.2668 0.386 0.4502 0.2493 0.8574 -0.1325 -0.9309 0.3403 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 9.0868 -52.9231 100.742 -0.8858 0.261 0.3837 0.4426 0.2265 0.8676 -0.1395 -0.9384 0.3162 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 9.742 -52.3544 98.3864 -0.8896 0.2559 0.3783 0.4339 0.2151 0.8749 -0.1425 -0.9425 0.3024 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 10.3809 -51.8172 96.0334 -0.8936 0.2507 0.3724 0.4251 0.2056 0.8815 -0.1444 -0.946 0.2903 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 11.0097 -51.3016 93.6608 -0.8977 0.2454 0.3659 0.4159 0.198 0.8876 -0.1454 -0.949 0.2798 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 11.6281 -50.8025 91.2696 -0.9021 0.2401 0.3587 0.4064 0.1928 0.8931 -0.1452 -0.9514 0.2715 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 12.2297 -50.3194 88.8855 -0.9065 0.2347 0.3509 0.3968 0.1901 0.898 -0.144 -0.9533 0.2655 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 12.8144 -49.8457 86.5104 -0.9112 0.2292 0.3424 0.3869 0.1903 0.9022 -0.1416 -0.9546 0.2621 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 13.388 -49.3693 84.1213 -0.916 0.2236 0.3331 0.3768 0.1939 0.9058 -0.138 -0.9552 0.2618 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 13.95 -48.882 81.7206 -0.921 0.2179 0.323 0.3662 0.2011 0.9085 -0.133 -0.955 0.265 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 14.494 -48.3798 79.3364 -0.9262 0.212 0.3119 0.3552 0.2129 0.9102 -0.1266 -0.9538 0.2725 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 15.0304 -47.8412 76.9228 -0.9316 0.2059 0.2997 0.3437 0.2297 0.9106 -0.1187 -0.9512 0.2847 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 15.5416 -47.271 74.5613 -0.9371 0.1995 0.2864 0.3316 0.2524 0.9091 -0.1091 -0.9468 0.3026 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 16.0424 -46.6374 72.1843 -0.9429 0.1926 0.2717 0.3184 0.2822 0.905 -0.0976 -0.9398 0.3275 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 16.5253 -45.9297 69.8278 -0.9489 0.1851 0.2556 0.3041 0.3203 0.8972 -0.0842 -0.9291 0.3602 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 16.9879 -45.1291 67.506 -0.9551 0.1767 0.2377 0.2881 0.3679 0.8841 -0.0687 -0.9129 0.4023 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 17.4315 -44.2051 65.2132 -0.9615 0.167 0.2181 0.2698 0.4263 0.8634 -0.0512 -0.889 0.455 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 17.8519 -43.1315 62.9747 -0.968 0.1557 0.1967 0.2488 0.4954 0.8323 -0.0321 -0.8546 0.5183 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 18.2403 -41.8954 60.8425 -0.9744 0.1424 0.174 0.2245 0.5741 0.7874 -0.0122 -0.8063 0.5914 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 18.5996 -40.4467 58.8083 -0.9804 0.127 0.1505 0.1967 0.6584 0.7265 0.0068 -0.7419 0.6705 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 18.9144 -38.8139 56.9685 -0.9858 0.1097 0.1275 0.1665 0.7422 0.6492 0.0234 -0.6612 0.7499 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.1911 -36.941 55.3001 -0.9902 0.0913 0.1058 0.1351 0.8184 0.5585 0.0356 -0.5674 0.8227 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.4197 -34.891 53.879 -0.9936 0.0731 0.0865 0.105 0.8805 0.4622 0.0424 -0.4683 0.8826 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.6023 -32.6921 52.7097 -0.996 0.0563 0.0698 0.0781 0.927 0.3667 0.0441 -0.3707 0.9277 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.7441 -30.356 51.7755 -0.9976 0.0415 0.0553 0.0553 0.9589 0.2784 0.0414 -0.2808 0.9589 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.8474 -27.9702 51.077 -0.9987 0.0291 0.0426 0.037 0.9791 0.2001 0.0359 -0.2014 0.9789 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.9199 -25.5237 50.5739 -0.9993 0.0186 0.031 0.0226 0.991 0.1316 0.0283 -0.1322 0.9908 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.967 -23.0237 50.2404 -0.9997 0.0101 0.0202 0.0115 0.9973 0.0729 0.0194 -0.0731 0.9971 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.9922 -20.5249 50.0573 -0.9999 0.0031 0.01 0.0033 0.9997 0.0227 0.0099 -0.0227 0.9997 756.dat
+0 GROUP 53 Hose
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Cockpit - 3 - 2.ldr
+0 Right flexible hose assembly with a long segmented rubber hose, tail piece, and antenna detail.
+0 Name: 6986 - Spaceship - Cockpit - 3 - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  3 x  6 without Corners (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 2419.dat
+0 // Tail  4 x  1 x  3 (black)
+1 0 0 -72 40 1 0 0 0 1 0 0 0 1 2340.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 0 -88 40 1 0 0 0 1 0 0 0 1 4595.dat
+0 // Antenna  4H with Rounded Top (blue)
+1 1 0 -78 -68 1 0 0 0 0 1 0 -1 0 3957a.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 -78 -76 1 0 0 0 0 1 0 -1 0 6141.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 0 -78 78 1 0 0 0 0 1 0 -1 0 752.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 0 -78 78 1 0 0 0 0 1 0 1 0 755.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 -20 -18 50 1 0 0 0 1 0 0 0 1 752.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 -20 -18 50 1 0 0 0 -1 0 0 0 1 755.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -77.994 84.96 0.9996 -0.002 0.0275 0.0275 0.03 -0.9992 0.0011 0.9995 0.0301 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.005 -77.919 87.46 0.9993 -0.0047 0.0372 0.0374 0.0653 -0.9972 0.0023 0.9979 0.0655 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.017 -77.755 89.966 0.9989 -0.0081 0.0469 0.0475 0.1024 -0.9936 0.0032 0.9947 0.1026 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.037 -77.499 92.452 0.9983 -0.0122 0.0563 0.0575 0.1415 -0.9883 0.0041 0.9899 0.1419 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.068 -77.144 94.937 0.9977 -0.0174 0.0656 0.0677 0.1832 -0.9807 0.005 0.9829 0.184 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.112 -76.683 97.413 0.9969 -0.0238 0.0746 0.078 0.2281 -0.9705 0.0061 0.9734 0.2292 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.171 -76.111 99.852 0.996 -0.0317 0.083 0.0886 0.2766 -0.9569 0.0073 0.9605 0.2783 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.25 -75.423 102.24 0.995 -0.0417 0.0907 0.0994 0.3302 -0.9387 0.0092 0.943 0.3327 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.355 -74.596 104.603 0.9937 -0.0547 0.0974 0.111 0.3909 -0.9137 0.0119 0.9188 0.3945 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.492 -73.612 106.915 0.9922 -0.0717 0.1022 0.1239 0.4608 -0.8788 0.0159 0.8846 0.4661 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.672 -72.457 109.134 0.9901 -0.0948 0.1039 0.1389 0.5429 -0.8282 0.0221 0.8344 0.5507 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -0.909 -71.101 111.217 0.9869 -0.1269 0.0993 0.1581 0.6418 -0.7504 0.0315 0.7563 0.6535 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -1.228 -69.489 113.117 0.9815 -0.1728 0.0822 0.186 0.7598 -0.623 0.0452 0.6268 0.7779 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -1.658 -67.595 114.68 0.9711 -0.2355 0.0387 0.2306 0.8838 -0.4072 0.0617 0.4043 0.9125 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -2.248 -65.381 115.693 0.952 -0.3024 -0.0474 0.2983 0.9512 -0.0784 0.0688 0.0605 0.9958 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -3 -63.016 115.843 0.9272 -0.339 -0.1593 0.3713 0.8877 0.2722 0.0491 -0.3115 0.949 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -3.842 -60.811 115.07 0.9067 -0.3388 -0.2511 0.4215 0.7438 0.5187 0.011 -0.5762 0.8172 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -4.696 -58.937 113.618 0.8941 -0.3243 -0.3088 0.447 0.6052 0.6587 -0.0267 -0.727 0.6861 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -5.507 -57.423 111.8 0.8872 -0.3087 -0.3429 0.4578 0.4962 0.7377 -0.0576 -0.8114 0.5816 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -6.279 -56.183 109.771 0.8837 -0.2952 -0.3632 0.4607 0.4121 0.786 -0.0823 -0.862 0.5002 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -7.019 -55.149 107.609 0.8823 -0.2839 -0.3754 0.4594 0.3462 0.818 -0.1023 -0.8942 0.4359 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -7.728 -54.284 105.376 0.8822 -0.2746 -0.3825 0.4556 0.293 0.8406 -0.1188 -0.9158 0.3836 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -8.419 -53.547 103.073 0.8831 -0.2668 -0.386 0.4502 0.2493 0.8574 -0.1325 -0.9309 0.3403 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -9.087 -52.923 100.742 0.8858 -0.261 -0.3837 0.4426 0.2265 0.8676 -0.1395 -0.9384 0.3162 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -9.742 -52.354 98.386 0.8896 -0.2559 -0.3783 0.4339 0.2151 0.8749 -0.1425 -0.9425 0.3024 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -10.381 -51.817 96.033 0.8936 -0.2507 -0.3724 0.4251 0.2056 0.8815 -0.1444 -0.946 0.2903 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -11.01 -51.302 93.661 0.8977 -0.2454 -0.3659 0.4159 0.198 0.8876 -0.1454 -0.949 0.2798 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -11.628 -50.803 91.27 0.9021 -0.2401 -0.3587 0.4064 0.1928 0.8931 -0.1452 -0.9514 0.2715 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -12.23 -50.319 88.886 0.9065 -0.2347 -0.3509 0.3968 0.1901 0.898 -0.144 -0.9533 0.2655 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -12.814 -49.846 86.51 0.9112 -0.2292 -0.3424 0.3869 0.1903 0.9022 -0.1416 -0.9546 0.2621 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -13.388 -49.369 84.121 0.916 -0.2236 -0.3331 0.3768 0.1939 0.9058 -0.138 -0.9552 0.2618 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -13.95 -48.882 81.721 0.921 -0.2179 -0.323 0.3662 0.2011 0.9085 -0.133 -0.955 0.265 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -14.494 -48.38 79.336 0.9262 -0.212 -0.3119 0.3552 0.2129 0.9102 -0.1266 -0.9538 0.2725 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -15.03 -47.841 76.923 0.9316 -0.2059 -0.2997 0.3437 0.2297 0.9106 -0.1187 -0.9512 0.2847 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -15.542 -47.271 74.561 0.9371 -0.1995 -0.2864 0.3316 0.2524 0.9091 -0.1091 -0.9468 0.3026 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -16.042 -46.637 72.184 0.9429 -0.1926 -0.2717 0.3184 0.2822 0.905 -0.0976 -0.9398 0.3275 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -16.525 -45.93 69.828 0.9489 -0.1851 -0.2556 0.3041 0.3203 0.8972 -0.0842 -0.9291 0.3602 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -16.988 -45.129 67.506 0.9551 -0.1767 -0.2377 0.2881 0.3679 0.8841 -0.0687 -0.9129 0.4023 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -17.432 -44.205 65.213 0.9615 -0.167 -0.2181 0.2698 0.4263 0.8634 -0.0512 -0.889 0.455 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -17.852 -43.132 62.975 0.968 -0.1557 -0.1967 0.2488 0.4954 0.8323 -0.0321 -0.8546 0.5183 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -18.24 -41.895 60.843 0.9744 -0.1424 -0.174 0.2245 0.5741 0.7874 -0.0122 -0.8063 0.5914 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -18.6 -40.447 58.808 0.9804 -0.127 -0.1505 0.1967 0.6584 0.7265 0.0068 -0.7419 0.6705 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -18.914 -38.814 56.969 0.9858 -0.1097 -0.1275 0.1665 0.7422 0.6492 0.0234 -0.6612 0.7499 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.191 -36.941 55.3 0.9902 -0.0913 -0.1058 0.1351 0.8184 0.5585 0.0356 -0.5674 0.8227 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.42 -34.891 53.879 0.9936 -0.0731 -0.0865 0.105 0.8805 0.4622 0.0424 -0.4683 0.8826 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.602 -32.692 52.71 0.996 -0.0563 -0.0698 0.0781 0.927 0.3667 0.0441 -0.3707 0.9277 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.744 -30.356 51.776 0.9976 -0.0415 -0.0553 0.0553 0.9589 0.2784 0.0414 -0.2808 0.9589 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.847 -27.97 51.077 0.9987 -0.0291 -0.0426 0.037 0.9791 0.2001 0.0359 -0.2014 0.9789 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.92 -25.524 50.574 0.9993 -0.0186 -0.031 0.0226 0.991 0.1316 0.0283 -0.1322 0.9908 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.967 -23.024 50.24 0.9997 -0.0101 -0.0202 0.0115 0.9973 0.0729 0.0194 -0.0731 0.9971 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.992 -20.525 50.057 0.9999 -0.0031 -0.01 0.0033 0.9997 0.0227 0.0099 -0.0227 0.9997 756.dat
+0 GROUP 53 Hose
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Cockpit - 4.ldr
+0 Small sensor or antenna detail with inverted dish, cone, and antenna elements.
+0 !CATEGORY Spaceship
+0 Name: 6986 - Spaceship - Cockpit - 4.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Dish  2 x  2 Inverted (black)
+1 0 0 0 0 1 0 0 0 0 1 0 -1 0 4740.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 0 0 -84 1 0 0 0 0 1 0 -1 0 3957a.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 0 0 -92 1 0 0 0 0 1 0 -1 0 4589.dat
+0 // Plate  1 x  1 Round (black)
+1 0 0 0 -116 1 0 0 0 0 1 0 -1 0 6141.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Container.ldr
+0 Cargo container module with large plates and concave/convex corner panels forming a boxy storage bay.
+0 Name: 6986 - Spaceship - Container.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Plate  4 x 12 (black)
+1 0 -40 0 0 0 0 1 0 1 0 -1 0 0 3029.dat
+0 // Plate  4 x 12 (black)
+1 0 40 0 0 0 0 1 0 1 0 -1 0 0 3029.dat
+0 // Plate  1 x  4 (blue)
+1 1 0 8 -110 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  3 x  2 with Hole (black)
+1 0 0 8 100 -1 0 0 0 1 0 0 0 -1 3176.dat
+0 // Plate  2 x 12 (blue)
+1 1 0 8 0 -1 0 0 0 1 0 0 0 -1 2445.dat
+0 // Plate  2 x  6 (blue)
+1 1 0 -8 0 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  4 x  4 (black)
+1 0 120 0 0 -1 0 0 0 1 0 0 0 -1 3031.dat
+0 // Plate  4 x  4 (black)
+1 0 -120 0 0 -1 0 0 0 1 0 0 0 -1 3031.dat
+0 // Plate  1 x  1 (blue)
+1 1 -150 -8 30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 -150 -8 -30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 150 -8 30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 150 -8 -30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 -150 -16 0 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 150 -16 0 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Plate  3 x  2 with Hole (black)
+1 0 40 -16 0 0 0 -1 0 1 0 1 0 0 3176.dat
+0 // Plate  3 x  2 with Hole (black)
+1 0 -40 -16 0 0 0 1 0 1 0 -1 0 0 3176.dat
+0 // Panel  4 x  4 x  6 Corner Concave (blue)
+1 1 -70 -136 -30 0 0 1 0 1 0 -1 0 0 2467.dat
+0 // Panel  4 x  4 x  6 Corner Concave (blue)
+1 1 -70 -136 30 -1 0 0 0 1 0 0 0 -1 2467.dat
+0 // Panel  3 x  3 x  6 Corner Convex (black)
+1 0 -70 -136 -110 0 0 1 0 1 0 -1 0 0 2468.dat
+0 // Panel  3 x  3 x  6 Corner Convex (black)
+1 0 -70 -136 110 -1 0 0 0 1 0 0 0 -1 2468.dat
+1 0 0 -24 -100 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Container - 1.ldr
+0 // Panel  4 x  4 x  6 Corner Concave (blue)
+1 1 70 -136 -30 1 0 0 0 1 0 0 0 1 2467.dat
+0 // Panel  4 x  4 x  6 Corner Concave (blue)
+1 1 70 -136 30 0 0 -1 0 1 0 1 0 0 2467.dat
+0 // Panel  3 x  3 x  6 Corner Convex (black)
+1 0 70 -136 -110 1 0 0 0 1 0 0 0 1 2468.dat
+0 // Panel  3 x  3 x  6 Corner Convex (black)
+1 0 70 -136 110 0 0 -1 0 1 0 1 0 0 2468.dat
+0 // Plate  1 x  6 (black)
+1 0 -70 -144 0 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 70 -144 0 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -144 -110 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  2 x  3 (black)
+1 0 -60 -144 -90 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  3 (black)
+1 0 60 -144 -90 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  1 x  3 (black)
+1 0 110 -144 -30 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 -110 -144 -30 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -130 -144 30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 130 -144 30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Tile  1 x  2 Grille without Groove (black)
+1 0 -100 -144 30 -1 0 0 0 1 0 0 0 -1 2412a.dat
+0 // Tile  1 x  2 Grille without Groove (black)
+1 0 100 -144 30 -1 0 0 0 1 0 0 0 -1 2412a.dat
+0 // Plate  1 x  2 (black)
+1 0 -70 -144 100 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 70 -144 100 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Tile  1 x  8 (black)
+1 0 0 -144 70 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (black)
+1 0 0 -144 -90 -1 0 0 0 1 0 0 0 -1 4315.dat
+1 0 0 -140 -76 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Container - 2.ldr
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Container - 1.ldr
+0 Internal frame of the cargo container with bricks, panels, technic beam, and round support mounts.
+0 Name: 6986 - Spaceship - Container - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Brick  2 x  4 (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // Plate  2 x  4 (blue)
+1 1 0 -8 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  6 (black)
+1 0 0 -16 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Brick  1 x  2 (black)
+1 0 -30 -40 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -40 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Plate  1 x  6 (black)
+1 0 50 -24 -40 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  4 (black)
+1 0 50 -32 -20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  2 (black)
+1 0 50 -40 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 50 -32 -80 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Plate  1 x  6 (black)
+1 0 -50 -24 -40 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  4 (black)
+1 0 -50 -32 -20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  2 (black)
+1 0 -50 -40 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 -50 -32 -80 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (blue)
+1 1 -10 -88 0 0 0 -1 0 1 0 1 0 0 2362a.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (blue)
+1 1 10 -88 0 0 0 1 0 1 0 -1 0 0 2362a.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 40 -88 0 0 0 1 0 1 0 -1 0 0 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -40 -88 0 0 0 1 0 1 0 -1 0 0 3940.dat
+0 // Technic Brick  1 x  6 with Holes (black)
+1 0 0 -112 -10 1 0 0 0 1 0 0 0 1 3894.dat
+0 // Brick  1 x  6 (black)
+1 0 0 -112 10 1 0 0 0 1 0 0 0 1 3009.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Container - 2.ldr
+0 Blue cargo container module built from panels and plates with hinged panels for opening access.
+0 Name: 6986 - Spaceship - Container - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Hinge Car Roof  4 x  4 (black)
+1 0 0 -4 36 -1 0 0 0 1 0 0 0 -1 4213.dat
+0 // Plate  4 x 10 (blue)
+1 1 0 -12 116 0 0 -1 0 1 0 1 0 0 3030.dat
+0 // Plate  1 x  4 (blue)
+1 1 0 -4 186 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Panel  3 x  2 x  6 (blue)
+1 1 20 -4 206 -1 0 0 0 1 0 0 0 -1 2466.dat
+0 // Panel  3 x  2 x  6 (blue)
+1 1 -20 -4 206 -1 0 0 0 1 0 0 0 -1 2466.dat
+0 // Plate  2 x  4 (blue)
+1 1 0 4 196 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  1 x  4 (black)
+1 0 0 132 206 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  2 (blue)
+1 1 0 140 206 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -20 136 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 0 -44 126 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers On Side (blue)
+1 1 0 -52 126 1 0 0 0 1 0 0 0 1 2452.dat
+1 0 0 -48 106 1 0 0 0 -0.1045 0.9945 0 -0.9945 -0.1045 6986 - Spaceship - Container - 2 - Radar.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Container - 2 - Radar.ldr
+0 Hinged radar assembly mount with a swiveling top piece.
+0 Name: 6986 - Spaceship - Container - 2 - Radar.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 0 -4 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Hinge  1 x  2 Top (blue)
+1 1 0 4 -30 0 0 -1 0 1 0 1 0 0 3938.dat
+1 0 0 14 -30 0.9659 -0.2588 0 -0.2588 -0.9659 0 0 0 -1 6986 - Spaceship - Container - 2 - Radar - Radar.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Container - 2 - Radar - Radar.ldr
+0 Single large black radar blade panel mounted on a hinge.
+0 Name: 6986 - Spaceship - Container - 2 - Radar - Radar.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // Hinge  6 x  3 Radar/Blade/Spoiler/Panel (black)
+1 0 0 -10 0 1 0 0 0 1 0 0 0 1 2440.dat
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship - Container + Jails.ldr
+0 Assembly grouping the cargo container and jail pod substructures of the spaceship.
+0 Name: 6986 - Spaceship - Container + Jails.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6986 - Spaceship - Container.ldr
+1 0 168 -56 0 0 1 0 -1 0 0 0 0 1 6986 - Jail.ldr
+1 0 -168 -56 0 0 -1 0 -1 0 0 0 0 -1 6986 - Jail.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Spaceship + Pod.ldr
+0 Assembly combining the main spaceship body with its detachable pod module.
+0 Name: 6986 - Spaceship + Pod.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6986 - Spaceship.ldr
+1 0 220 -40 20 1 0 0 0 1 0 0 0 1 6986 - Pod.ldr
+
+
+
+0 STEP
+0 FILE 6986 - Minifig 1.ldr
+0 White-suited Futuron minifigure with air tanks, standard grin head, and white legs.
+0 Name: 6986 - Minifig 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+1 0 0 -27 0 0.857167 0 -0.515038 0 1 0 0.515038 0 0.857167 6986 - Minifig 1 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.857167 0 -0.515038 0 1 0 0.515038 0 0.857167 3626bp01.dat
+0 // Minifig Airtanks (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Black Futuron Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p6b.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 9 0 0.985 -0.0950628 -0.140936 0.17 0.550805 0.816602 0 -0.829038 0.559193 3818.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 9 0 0.985 0.11594 0.12433 -0.17 0.671768 0.720383 0 -0.731354 0.681998 3819.dat
+0 // Minifig Hand (white)
+1 15 -21.0029 10.0215 -21.325 0.985 -0.166851 -0.0324326 0.17 0.966757 0.187918 0 -0.19078 0.981479 3820.dat
+0 // Minifig Hand (white)
+1 15 21.5659 13.284 -20.7598 0.985 0.169871 0.00593202 -0.17 0.984251 0.0343708 0 -0.0348942 0.99924 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+
+0 STEP
+0 FILE 6986 - Minifig 1 - Helmet.ldr
+0 White standard helmet with a translucent red visor for Minifig 1.
+0 Name: 6986 - Minifig 1 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // ~Minifig Helmet Standard (Obsolete) (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_red)
+1 36 0 1.904 4.596 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 2447.dat
+
+
+
+0 STEP
+0 FILE 6986 - Minifig 2.ldr
+0 White-suited Futuron minifigure with air tanks, standard grin head, and white legs.
+0 Name: 6986 - Minifig 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+1 0 0 -27 0 0.857167 0 0.515038 0 1 0 -0.515038 0 0.857167 6986 - Minifig 2 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.857167 0 0.515038 0 1 0 -0.515038 0 0.857167 3626bp01.dat
+0 // Minifig Airtanks (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Black Futuron Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p6b.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 9 0 0.985 -0.137533 -0.0999235 0.17 0.796882 0.578968 0 -0.587785 0.809017 3818.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 9 0 0.985 0 0.17 -0.17 0 0.985 0 -1 0 3819.dat
+0 // Minifig Hand (white)
+1 15 -22.2229 17.0908 -19.3773 0.985 -0.167882 0.0265898 0.17 0.972726 -0.154065 0 0.156411 0.987539 3820.dat
+0 // Minifig Hand (white)
+1 15 18.9194 -2.05018 -18.761 0.985 0.12019 0.12019 -0.17 0.696395 0.696395 0 -0.707 0.707 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+
+0 STEP
+0 FILE 6986 - Minifig 2 - Helmet.ldr
+0 White standard helmet with a translucent red visor for Minifig 2.
+0 Name: 6986 - Minifig 2 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // ~Minifig Helmet Standard (Obsolete) (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_red)
+1 36 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+
+
+0 STEP
+0 FILE 6986 - Minifig 3.ldr
+0 Black-suited Blacktron minifigure with air tanks, standard grin head, and black legs.
+0 Name: 6986 - Minifig 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+1 0 0 -27 0 0.97437 0 -0.224951 0 1 0 0.224951 0 0.97437 6986 - Minifig 3 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.97437 0 -0.224951 0 1 0 0.224951 0 0.97437 3626bp01.dat
+0 // Minifig Airtanks (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Blacktron I Pattern (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 973p52.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 9 0 0.985 -0.167417 -0.0295202 0.17 0.970036 0.171043 0 -0.173648 0.984808 3818.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 9 0 0.985 0.163414 -0.0468584 -0.17 0.946843 -0.271503 0 0.275637 0.961262 3819.dat
+0 // Minifig Hand (black)
+1 0 -23.5102 24.5495 -13.422 0.985 -0.139235 0.0974933 0.17 0.806743 -0.564887 0 0.57349 0.819028 3820.dat
+0 // Minifig Hand (black)
+1 0 24.2234 28.6819 -4.74995 0.985 0.0824052 -0.148663 -0.17 0.477465 -0.86137 0 0.874488 0.484736 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 44 0 1 0 0 0 0.970296 -0.241922 0 0.241922 0.970296 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 44 0 1 0 0 0 0.97437 0.224951 0 -0.224951 0.97437 3817.dat
+
+
+
+0 STEP
+0 FILE 6986 - Minifig 3 - Helmet.ldr
+0 Black standard helmet with a black visor for Minifig 3.
+0 Name: 6986 - Minifig 3 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police I
+
+0 // ~Minifig Helmet Standard (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+

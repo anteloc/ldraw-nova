@@ -1,0 +1,186 @@
+0 FILE 6822 - Main Model.ldr
+0 A Classic Space grabber ship combining a jet-engine propulsion module, a multi-piece articulated grab arm assembly, and a red space-suited minifigure pilot.
+0 Name: 6822 - Main Model.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6822 - Space Grab.ldr
+1 0 0 0 -20 1 0 0 0 1 0 0 0 1 6822 - Minifig.ldr
+
+
+0 STEP
+0 FILE 6822 - Space Grab.ldr
+0 A compact space craft body built from plates and jet engines, featuring rocket thrusters, a steering wheel, an antenna, and an arm holder mechanism for the grab assembly.
+0 Name: 6822 - Space Grab.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+0 // Plate  2 x  6 (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 STEP
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (light_grey)
+1 7 -20 8 40 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (light_grey)
+1 7 20 8 40 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (light_grey)
+1 7 -20 8 -40 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (light_grey)
+1 7 20 8 -40 1 0 0 0 1 0 0 0 1 4229.dat
+0 ROTSTEP 0 0 180 REL
+0 // Plate  1 x  1 (light_grey)
+1 7 -30 0 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 30 0 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (light_grey)
+1 7 -30 0 -50 0 0 1 0 1 0 -1 0 0 4081a.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (light_grey)
+1 7 30 0 -50 0 0 -1 0 1 0 1 0 0 4081a.dat
+0 ROTSTEP END
+0 // Plate  1 x  1 (trans_red)
+1 36 -30 -8 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 30 -8 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 0 -8 -50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -50 2 -60 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 50 2 -60 1 0 0 0 0 -1 0 1 0 3024.dat
+0 STEP
+0 // ~Brick  2 x  2 Arm Holder Lower Part (light_grey)
+1 7 0 -24 40 1 0 0 0 1 0 0 0 1 792.dat
+0 // ~Brick  2 x  2 Arm Holder Upper Part with Hole (light_grey)
+1 7 0 -24 40 1 0 0 0 1 0 0 0 1 793.dat
+1 7 0 -14 74 -1 0 0 0 1 0 0 0 -1 6822 - Grab Holder with 4 Arm Pieces and Pin.ldr
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 0 -16 -50 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 STEP
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 -30 -32 50 0 0 1 0 1 0 -1 0 0 3963.dat
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 30 -32 50 0 0 -1 0 1 0 1 0 0 3963.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -32 30 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 0 -40 30 1 0 0 0 1 0 0 0 1 3957a.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (black)
+1 0 0 -30.141 161.515 1 0 0 0 0.707107 -0.707107 0 0.707107 0.707107 3794b.dat
+
+
+0 STEP
+0 FILE 6822 - Grab Holder.ldr
+0 The grab claw assembly consisting of an arm jaw holder base and two opposing grab jaws that form the pincer tip.
+0 Name: 6822 - Grab Holder.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+0 // ~Arm Piece with Grab Jaw Holder (Obsolete) (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 4220.dat
+0 // Arm Piece Grab Jaw (light_grey)
+1 7 0 0.5 -0.866 -1 0 0 0 -0.913545 -0.406737 0 -0.406737 0.913545 4221.dat
+0 // Arm Piece Grab Jaw (light_grey)
+1 7 0 0.5 -0.866 1 0 0 0 0.866025 -0.5 0 0.5 0.866025 4221.dat
+
+
+0 STEP
+0 FILE 6822 - Grab Holder with 1 Arm Piece.ldr
+0 A single articulated arm segment with two and three aligned fingers used to extend the grab arm by one unit.
+0 Name: 6822 - Grab Holder with 1 Arm Piece.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+0 // Arm Piece with 2 and 3 Fingers Aligned (light_grey)
+1 7 0 0 12 0 -1 0 1 0 0 0 0 1 3612.dat
+1 7 0 10 -17.321 1 0 0 0 0.866025 -0.5 0 0.5 0.866025 6822 - Grab Holder.ldr
+
+
+0 STEP
+0 FILE 6822 - Grab Holder with 2 Arm Pieces.ldr
+0 A single articulated arm segment with two and three aligned fingers representing a two-section extension of the grab arm.
+0 Name: 6822 - Grab Holder with 2 Arm Pieces.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+0 // Arm Piece with 2 and 3 Fingers Aligned (light_grey)
+1 7 0 0 12 0 -1 0 1 0 0 0 0 1 3612.dat
+1 7 0 16.97 -16.97 1 0 0 0 0.707107 -0.707107 0 0.707107 0.707107 6822 - Grab Holder with 1 Arm Piece.ldr
+
+
+0 STEP
+0 FILE 6822 - Grab Holder with 3 Arm Pieces.ldr
+0 A single articulated arm segment with two and three aligned fingers representing a three-section extension of the grab arm.
+0 Name: 6822 - Grab Holder with 3 Arm Pieces.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Space / Classic Space
+0 Unofficial Model
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Arm Piece with 2 and 3 Fingers Aligned (light_grey)
+1 7 0 0 12 0 -1 0 1 0 0 0 0 1 3612.dat
+1 0 0 12 -20.784 1 0 0 0 0.866025 -0.5 0 0.5 0.866025 6822 - Grab Holder with 2 Arm Pieces.ldr
+
+
+0 STEP
+0 FILE 6822 - Grab Holder with 4 Arm Pieces and Pin.ldr
+0 An articulated arm segment ending with a pin and two fingers, serving as the jointed base that connects the extended grab arm to the holder.
+0 Name: 6822 - Grab Holder with 4 Arm Pieces and Pin.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+0 // Arm Piece with Pin and 2 Fingers (light_grey)
+1 7 0 0 12 0 -1 0 -1 0 0 0 0 -1 6048.dat
+1 7 0 -24 0 1 0 0 0 0 1 0 -1 0 6822 - Grab Holder with 3 Arm Pieces.ldr
+
+
+0 STEP
+0 FILE 6822 - Minifig.ldr
+0 A red Classic Space minifigure equipped with a helmet, airtanks, radio, and standard grin-pattern head ready to pilot the craft.
+0 Name: 6822 - Minifig.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (red)
+1 4 0 -80 8 0.766045 0 -0.642788 0 1 0 0.642788 0 0.766045 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -80 8 0.766045 0 -0.642788 0 1 0 0.642788 0 0.766045 3626bp01.dat
+0 // Minifig Airtanks (red)
+1 4 0 -53 8 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Classic Space Pattern (red)
+1 4 0 -53 8 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 -21 8 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 -44 8 0.985 -0.085 -0.147224 0.17 0.4925 0.853035 0 -0.866025 0.5 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 -44 8 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Hand (red)
+1 4 -20.749 -44.448 -13.408 0.990231 -0.134888 -0.017002 0.133718 0.945617 0.294717 -0.0237926 -0.294309 0.955245 3820.dat
+0 // Minifig Hand (red)
+1 4 23.8634 -26.4044 -2.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 -9 8 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 -9 8 1 0 0 0 0 1 0 -1 0 3817.dat
+0 // Minifig Radio with Short Handle (black)
+1 0 -20.874 -49.315 -22.392 -0.179925 -0.156979 -0.971074 -0.0140308 0.987494 -0.157034 0.98358 -0.0146294 -0.179878 3962a.dat
+
+
+
+

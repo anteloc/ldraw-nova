@@ -1,0 +1,101 @@
+0 FILE 603 - main.ldr
+0 A small assembly combining a black 1x2 brick with a sidecar, two wheels, and a minifig driver to form a simple motorcycle with sidecar.
+0 Name: 603 - main.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 603 - sidecar.ldr
+1 1 60 0 120 1 0 0 0 1 0 0 0 1 603 - minifig.ldr
+0 // Brick  1 x  2 (black)
+1 0 70 16 65 1 0 0 0 1 0 0 0 1 3004.dat
+
+0 STEP
+0 FILE 603 - sidecar.ldr
+0 A sidecar built from blue and yellow plates, an inverted slope, lattice fences, and light grey plates forming an open cargo compartment.
+0 Name: 603 - sidecar.ldr
+0 Author: Stefan Frenz
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+
+0 // Plate  2 x  2 (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  4 (blue)
+1 1 -20 0 40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (blue)
+1 1 -20 0 80 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // Plate  2 x  6 (yellow)
+1 14 0 -8 40 0 0 -1 0 1 0 1 0 0 3795.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 0 8 50 1 0 0 0 1 0 0 0 1 3660.dat
+1 1 0 8 80 1 0 0 0 1 0 0 0 1 603 - wheel.ldr
+1 1 -40 8 80 1 0 0 0 1 0 0 0 1 603 - wheel.ldr
+1 1 0 8 0 1 0 0 0 1 0 0 0 1 603 - wheel.ldr
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -16 10 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -16 60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Fence Lattice  1 x  4 x  1 (yellow)
+1 14 -30 -24 60 0 0 -1 0 1 0 1 0 0 3633.dat
+0 // Fence Lattice  1 x  4 x  1 (yellow)
+1 14 -50 -24 60 0 0 1 0 1 0 -1 0 0 3633.dat
+0 STEP
+0 // Plate  1 x  1 (light_grey)
+1 7 0 -24 10 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 0 -32 10 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 0 -40 10 1 0 0 0 1 0 0 0 1 3024.dat
+
+
+0 STEP
+0 FILE 603 - wheel.ldr
+0 A single wheel assembly consisting of a blue wheel-clipped plate, a red wheel centre with stub axles, and a black offset-tread tyre.
+0 Name: 603 - wheel.ldr
+0 Author: Stefan Frenz
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+
+0 // Plate  2 x  2 with 2 Wheel Clips Perpendicular (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 8.dat
+0 // Wheel Centre with Stub Axles (red)
+1 4 0 22 0 1 0 0 0 1 0 0 0 1 3464.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 0 22 0 0 0 -1 0 1 0 1 0 0 3641.dat
+
+0 STEP
+0 FILE 603 - minifig.ldr
+0 A classic minifig figure with red torso and arms, yellow hands and head, black legs, and a blue helmet.
+0 Name: 603 - minifig.ldr
+0 Author: Stefan Frenz
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips and Legs (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3815c01.dat
+0 // Minifig Torso (red)
+1 4 0 -32 0 1 0 0 0 1 0 0 0 1 973.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 -23 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 -23 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -23.688 -5.24 -9.884 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.688 -5.24 -9.884 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -56 0 0.997 0 -0.071 0 1 0 0.071 0 0.997 3626ap01.dat
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (blue)
+1 1 0 -56 0 0.997 0 -0.071 0 1 0 0.071 0 0.997 3842a.dat
+

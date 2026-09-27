@@ -101,6 +101,6 @@ metadata or to an intentionally separate object.
 ## Limits
 
 Contacts, overlaps and connector graphs are evidence, not a buildability proof.
-No Blender/GLB material-intersection pass was run on this model. Retail
+No detailed material-intersection pass was run on this model. Retail
 availability of any part in any of these colours is not claimed, and this is an
 original design, not a recreation of any set.

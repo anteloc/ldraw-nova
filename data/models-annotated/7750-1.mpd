@@ -1,0 +1,1523 @@
+0 FILE 7750 - main.ldr
+0 A 12V electric train set featuring a locomotive with motorized trailer bogie, four wheel cases with train couplings, two minifigures, and flexible pneumatic hoses.
+0 Name: 7750 - main.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CCW
+1 0 0 0 -444 1 0 0 0 1 0 0 0 1 7750 - locomotive.ldr
+1 0 0 0 4 1 0 0 0 1 0 0 0 1 7750 - trailer.ldr
+1 1 0 -156 -289 1 0 0 0 1 0 0 0 1 7750 - minifig 1.ldr
+1 1 20 -220 91 1 0 0 0 1 0 0 0 1 7750 - minifig 2.ldr
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - locomotive.ldr
+0 The main locomotive body built from technic bricks, plates, and axles with an electric light prism and stud connectors.
+0 Name: 7750 - locomotive.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CW
+1 4 0 -76 -120 1 0 0 0 1 0 0 0 1 7750 - wheelcase A.ldr
+1 4 0 -76 160 -1 0 0 0 1 0 0 0 -1 7750 - wheelcase B.ldr
+0 // Plate  2 x  8 (red)
+1 4 -40 -84 -160 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  2 x  8 (main_colour)
+1 16 -40 -84 160 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  2 x  8 (main_colour)
+1 16 40 -84 160 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  2 x  8 (red)
+1 4 40 -84 -160 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Technic Plate  2 x  8 with Holes (main_colour)
+1 16 0 -84 -160 0 0 -1 0 1 0 1 0 0 3738.dat
+0 // Technic Plate  2 x  8 with Holes (main_colour)
+1 16 0 -84 160 0 0 -1 0 1 0 1 0 0 3738.dat
+0 // Plate  4 x  4 (main_colour)
+1 16 0 -92 80 0 0 -1 0 1 0 1 0 0 3031.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 -10 -116 100 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 10 -116 100 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Pin (light_grey)
+1 7 20 -106 100 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Technic Pin (light_grey)
+1 7 -20 -106 100 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Plate  6 x  8 (red)
+1 4 0 -84 0 0 0 -1 0 1 0 1 0 0 3036.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 -30 -125 106.181 1 0 0 0 0.309 -0.951 0 1 0.309 3651.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (light_grey)
+1 7 30 -125 106.181 1 0 0 0 0.309 -0.951 0 1 0.309 3651.dat
+0 // Technic Axle  2 (main_colour)
+1 16 30 -134.532 109.27 0 0 -1 -0.951 0.309 0 0.309 1 0 3704.dat
+0 // Technic Axle  2 (main_colour)
+1 16 -30 -134.532 109.27 0 0 -1 -0.951 0.309 0 0.309 1 0 3704.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -30 -144 112.361 -1 0 0 0 0.309 1 0 1 -0.309 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 30 -144 112.361 -1 0 0 0 0.309 1 0 1 -0.309 3713.dat
+0 // Electric Light Prism  1 x  6 Holder (Complete) (main_colour)
+1 16 0 -108 -210 1 0 0 0 1 0 0 0 1 4170c01.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -50 -108 -100 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 50 -108 -100 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  2 x  4 (main_colour)
+1 16 0 -108 -40 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // Plate  2 x  4 (main_colour)
+1 16 0 -92 -80 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 -50 -98 -228 0 0 1 1 0 0 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 50 -98 -228 0 0 1 1 0 0 0 1 0 6141.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 -30 -108 -160 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 30 -108 -160 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 -50 -108 40 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 -50 -132 -60 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 50 -132 -60 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 -50 -132 60 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 50 -132 60 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 50 -108 40 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -50 -108 220 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 50 -108 220 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 0 -108 230 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Electric Lightbrick  2 x  2 Type 2 12V with Clear Diffusor (white)
+1 15 0 -108 -180 1 0 0 0 1 0 0 0 1 266bc01.dat
+0 // Electric Plug (Type 4) Single with Cable End (light_grey)
+1 7 0 -95.5 -157 -1 0 0 0 -1 0 0 0 1 765c02.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 -20 -116 -200 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 20 -116 -200 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 0 -116 -170 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -40 -132 -150 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -30 -132 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 30 -132 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 with Cable Cutout (main_colour)
+1 16 0 -140 90 1 0 0 0 1 0 0 0 1 3134.dat
+0 // Brick  1 x  2 with Cable Cutout (main_colour)
+1 16 0 -132 230 1 0 0 0 1 0 0 0 1 3134.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -40 -132 230 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 40 -132 230 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 10 -140 -170 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (main_colour)
+1 16 -10 -140 -170 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Plate  2 x  6 (main_colour)
+1 16 -40 -140 -100 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  2 x  6 (main_colour)
+1 16 0 -140 220 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 -40 -164 -90 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 40 -164 -90 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 40 -164 -10 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 30 -164 -40 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 -30 -164 -40 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 -30 -164 -70 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 30 -164 -70 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (main_colour)
+1 16 -30 -148 210 1 0 0 0 1 0 0 0 1 4085a.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (main_colour)
+1 16 30 -148 210 1 0 0 0 1 0 0 0 1 4085a.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 -50 -148 210 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 50 -148 210 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  2 x  6 (main_colour)
+1 16 0 -156 220 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  4 x  6 (main_colour)
+1 16 0 -172 -40 0 0 -1 0 1 0 1 0 0 3032.dat
+0 // Plate  2 x  3 (main_colour)
+1 16 -20 -172 50 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  2 x  3 (main_colour)
+1 16 20 -172 50 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 0 -162 -220 0 0 -1 1 0 0 0 -1 0 6141.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 -40 -164 -10 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 -40 -148 230 -1 0 0 0 1 0 0 0 -1 4175.dat
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 40 -148 230 -1 0 0 0 1 0 0 0 -1 4175.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 0 -148 220 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Plate  4 x  4 (main_colour)
+1 16 0 -148 -140 0 0 -1 0 1 0 1 0 0 3031.dat
+0 // Slope Brick 45  2 x  2 (main_colour)
+1 16 0 -164 70 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (main_colour)
+1 16 -10 -140 -200 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (main_colour)
+1 16 10 -140 -200 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Plate  2 x  4 (main_colour)
+1 16 0 -148 -200 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -30 -172 -120 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Hinge Brick  1 x  4 Base (main_colour)
+1 16 -40 -172 -180 0 0 1 0 1 0 -1 0 0 3831.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 30 -172 -200 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 0 -172 -210 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Slope Brick 45  2 x  2 (main_colour)
+1 16 -10 -196 -200 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (main_colour)
+1 16 10 -196 -200 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  4 (main_colour)
+1 16 10 -196 -140 0 0 -1 0 1 0 1 0 0 3037.dat
+0 // Slope Brick 45  2 x  4 (main_colour)
+1 16 -10 -196 -140 0 0 1 0 1 0 -1 0 0 3037.dat
+0 // Slope Brick 45  2 x  4 (main_colour)
+1 16 -10 -196 -60 0 0 1 0 1 0 -1 0 0 3037.dat
+0 // Slope Brick 45  2 x  4 (main_colour)
+1 16 -10 -196 20 0 0 1 0 1 0 -1 0 0 3037.dat
+0 // Slope Brick 45  2 x  4 (main_colour)
+1 16 10 -196 -60 0 0 -1 0 1 0 1 0 0 3037.dat
+0 // Slope Brick 45  2 x  4 (main_colour)
+1 16 10 -196 20 0 0 -1 0 1 0 1 0 0 3037.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 0 -196 70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Slope Brick 45  2 x  2 (main_colour)
+1 16 -10 -180 220 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (main_colour)
+1 16 10 -180 220 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Train Door  1 x  4 x  5 Left with TransClear Glass (main_colour)
+1 16 50 -204 130 1 0 0 0 1 0 0 0 1 4181c01.dat
+0 // Train Door  1 x  4 x  5 Right with TransClear Glass (main_colour)
+1 16 -50 -204 130 1 0 0 0 1 0 0 0 1 4182c01.dat
+0 // Window  1 x  2 x  2 Classic with Short Sill (Complete) (main_colour)
+1 16 50 -204 100 0 0 -1 0 1 0 1 0 0 3081cc01.dat
+0 // Window  1 x  2 x  2 Classic with Short Sill (Complete) (main_colour)
+1 16 -50 -204 100 0 0 1 0 1 0 -1 0 0 3081cc01.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 0 -204 60 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 0 -204 0 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 0 -204 -60 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Plate  1 x  2 with Handles Type 1 (main_colour)
+1 16 0 -204 -190 -1 0 0 0 1 0 0 0 -1 3839a.dat
+0 // Plate  1 x  2 with Handles Type 1 (main_colour)
+1 16 0 -204 -130 -1 0 0 0 1 0 0 0 -1 3839a.dat
+0 // Brick  2 x  2 (main_colour)
+1 16 0 -204 220 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // Window  1 x  1 x  2 Classic with Short Sill (Complete) (main_colour)
+1 16 -50 -204 70 1 0 0 0 1 0 0 0 1 29cc01.dat
+0 // Window  1 x  1 x  2 Classic with Short Sill (Complete) (main_colour)
+1 16 -50 -204 210 -1 0 0 0 1 0 0 0 -1 29cc01.dat
+0 // Window  1 x  1 x  2 Classic with Short Sill (Complete) (main_colour)
+1 16 50 -204 210 -1 0 0 0 1 0 0 0 -1 29cc01.dat
+0 // Tile  1 x  8 (main_colour)
+1 16 -50 -212 140 0 0 -1 0 1 0 1 0 0 4162.dat
+0 // Tile  1 x  8 (main_colour)
+1 16 50 -212 140 0 0 -1 0 1 0 1 0 0 4162.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (main_colour)
+1 16 0 -212 -190 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (main_colour)
+1 16 0 -212 -130 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Brick  2 x  2 Round without Reinforcement (main_colour)
+1 16 0 -228 -60 0 0 -1 0 1 0 1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (main_colour)
+1 16 0 -228 0 0 0 -1 0 1 0 1 0 0 3941.dat
+0 // Window  1 x  1 x  2 Classic with Short Sill (Complete) (main_colour)
+1 16 50 -204 70 1 0 0 0 1 0 0 0 1 29cc01.dat
+0 // Plate  2 x  6 (main_colour)
+1 16 40 -140 -100 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  6 x  6 (main_colour)
+1 16 0 -140 20 0 0 -1 0 1 0 1 0 0 3958.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 -50 -140 100 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 50 -140 100 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 -50 -132 110 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 -50 -132 210 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 50 -132 210 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (main_colour)
+1 16 50 -132 110 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 40 -132 -150 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Hinge Brick  1 x  4 Top (main_colour)
+1 16 -40 -172 -180 0 0 1 0 1 0 -1 0 0 3830.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 30 -172 -140 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 -50 -148 90 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 50 -148 90 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 -50 -156 90 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (main_colour)
+1 16 50 -156 90 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Technic Brick  1 x  4 with Holes (main_colour)
+1 16 -30 -164 40 0 0 -1 0 1 0 1 0 0 3701.dat
+0 // Technic Brick  1 x  4 with Holes (main_colour)
+1 16 30 -164 40 0 0 -1 0 1 0 1 0 0 3701.dat
+0 // Brick  1 x  1 Round with Hollow Stud (main_colour)
+1 16 0 -236 -190 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Plate  4 x  8 (main_colour)
+1 16 0 -212 140 0 0 -1 0 1 0 1 0 0 3035.dat
+0 // Slope Brick 33  3 x  4 (main_colour)
+1 16 10 -236 100 0 0 -1 0 1 0 1 0 0 3297.dat
+0 // Slope Brick 33  3 x  4 (main_colour)
+1 16 10 -236 180 0 0 -1 0 1 0 1 0 0 3297.dat
+0 // Slope Brick 33  3 x  4 (main_colour)
+1 16 -10 -236 180 0 0 1 0 1 0 -1 0 0 3297.dat
+0 // Slope Brick 33  3 x  4 (main_colour)
+1 16 -10 -236 100 0 0 1 0 1 0 -1 0 0 3297.dat
+0 // Plate  2 x  6 (red)
+1 4 0 -68 -220 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  1 x  6 (red)
+1 4 0 -76 -230 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  1 x  4 (red)
+1 4 0 -76 -210 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Train Steam Cylinder  2 x  2 x  1.667 Curved - Interior Smooth (main_colour)
+1 16 50 -76 -200 0 0 -1 0 1 0 1 0 0 947a.dat
+0 // Train Steam Cylinder  2 x  2 x  1.667 Curved - Interior Smooth (main_colour)
+1 16 -50 -76 -200 0 0 1 0 1 0 -1 0 0 947a.dat
+0 // Sticker  2.4 x  2 with White German Railways Logo and "7750" (main_colour)
+1 16 -60 -110 160 0 1 0 0 0 -1 -1 0 0 191925a.dat
+0 // Sticker  2.4 x  2 with White German Railways Logo and "7750" (main_colour)
+1 16 60 -110 160 0 -1 0 0 0 -1 1 0 0 191925a.dat
+0 // Sticker  0.8 x  2 with White "7750" (main_colour)
+1 16 -60 -94 -140 0 1 0 0 0 -1 -1 0 0 191925b.dat
+0 // Sticker  0.8 x  2 with White "7750" (main_colour)
+1 16 60 -96 -140 0 -1 0 0 0 -1 1 0 0 191925b.dat
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 7750 - hose 1.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 7750 - hose 2.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 7750 - hose 3.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 7750 - hose 4.ldr
+
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - trailer.ldr
+0 A powered trailer unit with a 12V electric train motor, weighted bricks, buffer beams, and sloped ends.
+0 Name: 7750 - trailer.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CW
+0 // Electric Train Motor 12V with 2-Hole Sockets (Complete) (red)
+1 4 0 -68 0 -1 0 0 0 1 0 0 0 -1 501ac01.dat
+0 // Electric Plug (Type 4) Single with Cable End (light_grey)
+1 7 0 -59 -90 1 0 0 0 0 -1 0 1 0 765c02.dat
+0 // Electric Plug (Type 4) Single with Cable End (light_grey)
+1 7 0 -83 37 -1 0 0 0 1 0 0 0 -1 765c02.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -20 -44 -110 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 20 -44 -110 1 0 0 0 1 0 0 0 1 3660.dat
+0 // Plate  2 x  4 (red)
+1 4 0 -52 -120 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Train Buffer Beam (red)
+1 4 0 -60 -120 1 0 0 0 1 0 0 0 1 4022.dat
+0 // Train Buffer Beam (red)
+1 4 0 -60 80 -1 0 0 0 1 0 0 0 -1 4022.dat
+0 // Plate  1 x  2 (red)
+1 4 -30 -60 80 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 30 -60 80 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  4 (red)
+1 4 -30 -60 -100 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  2 x  6 (red)
+1 4 0 -68 -120 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  1 x  4 (red)
+1 4 30 -60 -100 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  2 x  6 (red)
+1 4 0 -68 80 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  2 x  2 (red)
+1 4 -40 -68 -80 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Plate  2 x  2 (red)
+1 4 40 -68 -80 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Plate  1 x  6 (red)
+1 4 -50 -68 0 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (red)
+1 4 50 -68 0 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 -50 -92 0 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 50 -92 0 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 50 -116 0 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 50 -140 0 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -50 -140 0 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  2 x  6 x  2 Weight with Plate Bottom (main_colour)
+1 16 0 -140 -80 -1 0 0 0 1 0 0 0 -1 73090b.dat
+0 // Brick  2 x  6 x  2 Weight with Plate Bottom (main_colour)
+1 16 0 -140 80 -1 0 0 0 1 0 0 0 -1 73090b.dat
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 -40 -148 -90 1 0 0 0 1 0 0 0 1 4175.dat
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 40 -148 -90 1 0 0 0 1 0 0 0 1 4175.dat
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 -40 -148 90 -1 0 0 0 1 0 0 0 -1 4175.dat
+0 // Plate  1 x  2 with Ladder (main_colour)
+1 16 40 -148 90 -1 0 0 0 1 0 0 0 -1 4175.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 0 -148 -90 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  3 (main_colour)
+1 16 0 -148 70 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  2 x  8 (main_colour)
+1 16 -40 -148 0 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  2 x  8 (main_colour)
+1 16 40 -148 0 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  1 x  6 (main_colour)
+1 16 -30 -156 -20 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (main_colour)
+1 16 30 -156 -20 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 0 -156 -90 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 0 -156 50 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 0 -180 -90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -30 -180 -40 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 30 -180 -40 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Slope Brick 45  2 x  1 (main_colour)
+1 16 -30 -180 30 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (main_colour)
+1 16 30 -180 30 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Plate  1 x  2 with Ladder (red)
+1 4 50 -76 -120 0 0 -1 0 1 0 1 0 0 4175.dat
+0 // Plate  1 x  2 with Ladder (red)
+1 4 -50 -76 -120 0 0 1 0 1 0 -1 0 0 4175.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -50 -82 108 0 0 -1 1 0 0 0 -1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 50 -82 108 0 0 -1 1 0 0 0 -1 0 6141.dat
+0 // Brick  1 x  6 (main_colour)
+1 16 -50 -116 0 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 -40 -92 -90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (main_colour)
+1 16 40 -92 -90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Electric Light Prism  1 x  6 Holder (Complete) (main_colour)
+1 16 0 -92 90 -1 0 0 0 1 0 0 0 -1 4170c01.dat
+0 // Train Coupling Type 1 with Magnet in Coupled Position (black)
+1 0 0 -44 -150 1 0 0 0 1 0 0 0 1 4023c01.dat
+0 // Train Coupling Type 1 with Magnet in Coupled Position (black)
+1 0 0 -44 110 -1 0 0 0 1 0 0 0 -1 4023c01.dat
+0 // Electric Lightbrick  2 x  2 Type 1 12V (Complete) (white)
+1 15 0 -92 60 -1 0 0 0 1 0 0 0 -1 266ac01.dat
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - wheelcase A.ldr
+0 A train bogie wheel assembly with large train wheels, a buffer beam, bogie plate, and a magnetic coupling in uncoupled position.
+0 Name: 7750 - wheelcase A.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CW
+0 // Brick  1 x  8 (main_colour)
+1 16 30 8 40 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  8 (main_colour)
+1 16 -30 8 40 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  2 x  4 (main_colour)
+1 16 0 8 80 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Brick  2 x  4 (main_colour)
+1 16 0 32 40 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 0 32 110 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 0 32 -30 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  2 x  4 Black with Train Wheels Large (Complete) (main_colour)
+1 16 0 32 0 -1 0 0 0 1 0 0 0 -1 4180c01.dat
+0 // Brick  2 x  4 Black with Train Wheels Large (Complete) (main_colour)
+1 16 0 32 80 -1 0 0 0 1 0 0 0 -1 4180c01.dat
+0 // Plate  2 x  8 (main_colour)
+1 16 0 24 -40 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  2 x  4 (main_colour)
+1 16 0 16 0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  2 x  4 (main_colour)
+1 16 0 8 0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 0 16 -60 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 0 32 -50 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Train Buffer Beam (main_colour)
+1 16 0 16 -100 1 0 0 0 1 0 0 0 1 4022.dat
+0 // Brick  1 x  1 Round with Hollow Stud (main_colour)
+1 16 -30 8 -50 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (main_colour)
+1 16 30 8 -50 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 -20 0 100 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 20 0 100 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 -20 0 70 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 20 0 70 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Train Bogie Plate with Long Pin (main_colour)
+1 16 0 0 0 0 0 -1 0 1 0 1 0 0 4092a.dat
+0 // Train Coupling Type 1 with Magnet in Uncoupled Position (black)
+1 0 0 32 -130 1 0 0 0 1 0 0 0 1 4023c02.dat
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - wheelcase B.ldr
+0 A train bogie wheel assembly with large train wheels, a buffer beam, bogie plate, and a magnetic coupling in coupled position.
+0 Name: 7750 - wheelcase B.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CW
+0 // Train Bogie Plate with Long Pin (main_colour)
+1 16 0 0 0 0 0 1 0 1 0 -1 0 0 4092a.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 0 8 -20 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 -30 8 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 30 8 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 -30 8 70 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  3 (main_colour)
+1 16 30 8 70 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  2 x  4 (main_colour)
+1 16 0 8 40 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 20 0 70 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 -20 0 70 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 20 0 100 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (main_colour)
+1 16 -20 0 100 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Train Buffer Beam (main_colour)
+1 16 0 16 -20 1 0 0 0 1 0 0 0 1 4022.dat
+0 // Plate  2 x  2 (main_colour)
+1 16 0 24 -20 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (main_colour)
+1 16 -10 8 110 -1 0 0 0 1 0 0 0 -1 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (main_colour)
+1 16 10 8 110 0 0 -1 0 1 0 1 0 0 3063b.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 0 8 100 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 0 32 -30 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 0 32 110 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  2 x  4 Black with Train Wheels Large (Complete) (main_colour)
+1 16 0 32 80 1 0 0 0 1 0 0 0 1 4180c01.dat
+0 // Brick  2 x  4 Black with Train Wheels Large (Complete) (main_colour)
+1 16 0 32 0 1 0 0 0 1 0 0 0 1 4180c01.dat
+0 // Brick  2 x  4 (main_colour)
+1 16 0 32 40 1 0 0 0 1 0 0 0 1 3001.dat
+0 // Train Coupling Type 1 with Magnet in Coupled Position (black)
+1 0 0 32 -50 1 0 0 0 1 0 0 0 1 4023c01.dat
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - minifig 1.ldr
+0 A minifigure wearing a red police hat with a patch-pocket torso.
+0 Name: 7750 - minifig 1.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Minifig Police Hat (red)
+1 4 0 -24 0 0.914 0 -0.407 0 1 0 0.407 0 0.914 3624.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -24 0 0.914 0 -0.407 0 1 0 0.407 0 0.914 3626bp01.dat
+0 // Minifig Torso with Patch Pocket Pattern (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 973p26.dat
+0 // ~Minifig Hips (Obsolete) (main_colour)
+1 16 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (main_colour)
+1 16 -15.552 9 0 1 -0.122 -0.118 0.17 0.709 0.684 0 -0.695 0.719 3818.dat
+0 // Minifig Arm Left (main_colour)
+1 16 15.552 9 0 1 0.132 0.107 -0.17 0.765 0.62 0 -0.629 0.777 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -21.749 14.347 -20.457 1 -0.289 0 0.289 1 0 0 0 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 22 16.079 -19.828 1 0.237 0 -0.238 1 -0.103 0 0.104 1 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (main_colour)
+1 16 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (main_colour)
+1 16 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - minifig 2.ldr
+0 A minifigure wearing a red construction helmet and carrying a shovel.
+0 Name: 7750 - minifig 2.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Minifig Construction Helmet (red)
+1 4 0 -24 0 0.819 0 -0.574 0 1 0 0.574 0 0.819 3833.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -24 0 0.819 0 -0.574 0 1 0 0.574 0 0.819 3626bp01.dat
+0 // Minifig Torso with Patch Pocket Pattern (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 973p26.dat
+0 // ~Minifig Hips (Obsolete) (main_colour)
+1 16 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (main_colour)
+1 16 -15.552 9 0 1 -0.149 -0.082 0.17 0.862 0.478 0 -0.485 0.875 3818.dat
+0 // Minifig Arm Left (main_colour)
+1 16 15.552 9 0 1 0.151 -0.077 -0.17 0.878 -0.447 0 0.454 0.891 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -22.613 19.35 -18.122 -0.998 0 0 0 -0.962 -0.271 0 -0.271 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 24.312 29.197 -0.679 1 0 -0.162 -0.143 0.318 -0.937 0.083 0.947 0.309 3820.dat
+0 // Minifig Shovel (light_grey)
+1 7 -23.053 17.777 -26.404 -0.998 0 0 0 -0.999 0 0 0 1 3837.dat
+0 // ~Minifig Leg Right (Obsolete) (main_colour)
+1 16 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (main_colour)
+1 16 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - hose 1.ldr
+0 A flexible pneumatic hose segment.
+0 Name: 7750 - hose 1.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 256 26 -200 -154 1 0 0 0 0 1 0 -1 0 7750 - LS22.dat
+1 256 26 -200 -154 0.9998 0.0479 -0.0001 -0.0001 0.0257 0.9999 -0.0212 2.2583 -0.0114 7750 - LS23.dat
+1 256 26.0225 -199.988 -152.939 0.9978 0.1395 0.0145 -0.0168 0.0757 0.9992 -0.0644 2.1412 -0.0363 7750 - LS23.dat
+1 256 26.0834 -199.955 -152.004 0.9937 0.2208 0.0261 -0.0327 0.1212 0.9977 -0.107 2.0146 -0.0629 7750 - LS23.dat
+1 256 26.1731 -199.906 -151.186 0.9878 0.293 0.0347 -0.048 0.1626 0.9953 -0.1483 1.8986 -0.0906 7750 - LS23.dat
+1 256 26.2842 -199.844 -150.466 0.9801 0.362 0.0407 -0.0627 0.2032 0.9921 -0.1882 1.8177 -0.119 7750 - LS23.dat
+1 256 26.4114 -199.773 -149.827 0.9707 0.4306 0.044 -0.0774 0.2443 0.988 -0.2274 1.7552 -0.1483 7750 - LS23.dat
+1 256 26.5575 -199.69 -149.232 0.9598 0.4871 0.0455 -0.0925 0.2793 0.983 -0.2652 1.6656 -0.1781 7750 - LS23.dat
+1 256 26.7102 -199.602 -148.709 0.9473 0.5608 0.0444 -0.1074 0.3249 0.9771 -0.3018 1.6445 -0.2082 7750 - LS23.dat
+1 256 26.8811 -199.503 -148.208 0.9331 0.6089 0.0415 -0.1232 0.3565 0.9701 -0.3377 1.5524 -0.2391 7750 - LS23.dat
+1 256 27.0618 -199.397 -147.748 0.918 0.6563 0.0369 -0.1392 0.3882 0.9623 -0.3713 1.4769 -0.2694 7750 - LS23.dat
+1 256 27.2449 -199.289 -147.336 0.9017 0.7311 0.0303 -0.1553 0.4369 0.9536 -0.4035 1.4654 -0.2994 7750 - LS23.dat
+1 256 27.4462 -199.169 -146.932 0.8838 0.796 0.0217 -0.1725 0.4808 0.9437 -0.4349 1.4267 -0.3301 7750 - LS23.dat
+1 256 27.6611 -199.039 -146.547 0.8646 0.8484 0.0113 -0.1905 0.5181 0.9325 -0.465 1.3651 -0.3609 7750 - LS23.dat
+1 256 27.8912 -198.899 -146.177 0.8446 0.8904 -0.0005 -0.209 0.5498 0.9203 -0.4929 1.2926 -0.3911 7750 - LS23.dat
+1 256 28.1278 -198.752 -145.833 0.824 0.9387 -0.014 -0.2278 0.5863 0.9071 -0.5188 1.2333 -0.4206 7750 - LS23.dat
+1 256 28.3831 -198.593 -145.498 0.8029 0.9732 -0.0287 -0.2472 0.615 0.8929 -0.5425 1.1601 -0.4493 7750 - LS23.dat
+1 256 28.6452 -198.427 -145.185 0.7815 1.0527 -0.0448 -0.2667 0.6734 0.8777 -0.564 1.1402 -0.477 7750 - LS23.dat
+1 256 28.9311 -198.244 -144.876 0.7591 1.1187 -0.0629 -0.2872 0.7253 0.8608 -0.5842 1.097 -0.505 7750 - LS23.dat
+1 256 29.2541 -198.035 -144.559 0.7365 1.1463 -0.0821 -0.3086 0.7538 0.8425 -0.6019 1.0163 -0.5324 7750 - LS23.dat
+1 256 29.5891 -197.815 -144.262 0.7144 1.2275 -0.1024 -0.3299 0.8195 0.8232 -0.6171 0.9829 -0.5585 7750 - LS23.dat
+1 256 29.9622 -197.566 -143.963 0.6921 1.3025 -0.1244 -0.352 0.8846 0.8018 -0.6302 0.9363 -0.5845 7750 - LS23.dat
+1 256 30.3881 -197.276 -143.657 0.6705 1.351 -0.1475 -0.3746 0.9353 0.7786 -0.6404 0.8674 -0.6099 7750 - LS23.dat
+1 256 30.8537 -196.954 -143.358 0.6502 1.42 -0.1715 -0.3971 1.0043 0.7538 -0.6477 0.8098 -0.6343 7750 - LS23.dat
+1 256 31.3876 -196.576 -143.054 0.632 1.5067 -0.1959 -0.4194 1.0922 0.7271 -0.6516 0.7584 -0.658 7750 - LS23.dat
+1 256 31.986 -196.143 -142.752 0.6162 1.7044 -0.2218 -0.4413 1.2732 0.6975 -0.6524 0.7485 -0.6814 7750 - LS23.dat
+1 256 32.7415 -195.578 -142.421 0.6042 1.9071 -0.2492 -0.4631 1.4819 0.663 -0.6484 0.7186 -0.7059 7750 - LS23.dat
+1 256 33.7077 -194.827 -142.056 0.6004 2.1374 -0.2759 -0.4823 1.7517 0.6237 -0.6379 0.6875 -0.7313 7750 - LS23.dat
+1 256 34.9403 -193.817 -141.66 0.6113 2.465 -0.2983 -0.4935 2.1785 0.5803 -0.6186 0.698 -0.7578 7750 - LS23.dat
+1 256 36.551 -192.394 -141.204 0.6424 2.4074 -0.3056 -0.492 2.3429 0.5387 -0.5876 0.6704 -0.7851 7750 - LS23.dat
+1 256 38.1166 -190.87 -140.768 0.684 2.0119 -0.2968 -0.4769 2.1625 0.5094 -0.552 0.6244 -0.8078 7750 - LS23.dat
+1 256 39.3184 -189.578 -140.395 0.7244 1.6979 -0.2809 -0.4535 2.0012 0.4937 -0.5193 0.6209 -0.823 7750 - LS23.dat
+1 256 40.2586 -188.47 -140.051 0.761 1.4551 -0.2622 -0.4267 1.8688 0.4869 -0.4888 0.6341 -0.8332 7750 - LS23.dat
+1 256 40.995 -187.524 -139.73 0.7942 1.3207 -0.2427 -0.3973 1.8448 0.4863 -0.4598 0.6869 -0.8394 7750 - LS23.dat
+1 256 41.6398 -186.624 -139.395 0.8245 1.14 -0.222 -0.3673 1.7321 0.4897 -0.4304 0.7059 -0.8432 7750 - LS23.dat
+1 256 42.1633 -185.828 -139.071 0.8513 1.0342 -0.202 -0.3372 1.7085 0.4965 -0.4019 0.7572 -0.8442 7750 - LS23.dat
+1 256 42.6177 -185.078 -138.738 0.8758 0.9459 -0.1819 -0.3066 1.7056 0.5059 -0.3729 0.8193 -0.8432 7750 - LS23.dat
+1 256 43.0228 -184.347 -138.387 0.898 0.8524 -0.1618 -0.2758 1.6876 0.5176 -0.3428 0.8755 -0.8402 7750 - LS23.dat
+1 256 43.3782 -183.644 -138.022 0.918 0.7693 -0.1419 -0.2451 1.6842 0.5312 -0.3119 0.9404 -0.8353 7750 - LS23.dat
+1 256 43.6935 -182.953 -137.637 0.9357 0.6846 -0.1224 -0.2147 1.6748 0.5466 -0.2799 1.0038 -0.8284 7750 - LS23.dat
+1 256 43.9726 -182.271 -137.227 0.9512 0.5951 -0.1032 -0.1851 1.6475 0.5632 -0.247 1.0569 -0.8198 7750 - LS23.dat
+1 256 44.2142 -181.602 -136.798 0.9643 0.5093 -0.0848 -0.1567 1.6216 0.5809 -0.2134 1.1104 -0.8095 7750 - LS23.dat
+1 256 44.4217 -180.941 -136.346 0.9752 0.4312 -0.067 -0.1296 1.615 0.5995 -0.1794 1.1776 -0.7976 7750 - LS23.dat
+1 256 44.5964 -180.287 -135.869 0.9841 0.3571 -0.0499 -0.1033 1.6331 0.619 -0.1443 1.2671 -0.7838 7750 - LS23.dat
+1 256 44.7459 -179.603 -135.338 0.991 0.2718 -0.0329 -0.0786 1.6069 0.6393 -0.1079 1.3256 -0.7682 7750 - LS23.dat
+1 256 44.86 -178.929 -134.782 0.9959 0.2295 -0.0169 -0.0554 1.9426 0.6602 -0.071 1.7029 -0.7509 7750 - LS23.dat
+1 256 44.9439 -178.218 -134.159 0.9994 0.0894 -0.0004 -0.0239 1.9411 0.6893 -0.0233 1.8468 -0.7245 7750 - LS23.dat
+1 256 45 -177 -133 0.9999 -0.0749 0.0001 0.0097 3.9751 0.6927 0.0095 3.818 -0.7212 7750 - LS23.dat
+1 256 44.9416 -173.901 -130.024 0.9989 -0.2643 0.0122 0.0257 4.3762 0.6639 0.0391 3.8817 -0.7477 7750 - LS23.dat
+1 256 44.7331 -170.448 -126.961 0.9959 -0.5524 0.0259 0.0495 4.9095 0.6415 0.0751 4.0894 -0.7667 7750 - LS23.dat
+1 256 44.2692 -166.325 -123.526 0.991 -0.7099 0.0388 0.073 4.1958 0.6471 0.1125 3.5298 -0.7614 7750 - LS23.dat
+1 256 43.7136 -163.041 -120.764 0.987 -0.5547 0.0434 0.084 2.6137 0.6805 0.1367 2.3984 -0.7315 7750 - LS23.dat
+1 256 43.3489 -161.323 -119.187 0.9853 -0.4764 0.0413 0.0864 1.9886 0.7168 0.1474 2.0195 -0.6961 7750 - LS23.dat
+1 256 43.0745 -160.177 -118.024 0.9847 -0.4335 0.0369 0.0851 1.665 0.7513 0.1521 1.874 -0.659 7750 - LS23.dat
+1 256 42.8485 -159.309 -117.047 0.9848 -0.4095 0.0315 0.0819 1.4733 0.7838 0.1535 1.8411 -0.6202 7750 - LS23.dat
+1 256 42.6487 -158.59 -116.148 0.9853 -0.3851 0.0258 0.0773 1.3112 0.8144 0.1524 1.8247 -0.5798 7750 - LS23.dat
+1 256 42.4685 -157.977 -115.295 0.9862 -0.363 0.0201 0.0719 1.1781 0.8424 0.1493 1.8299 -0.5384 7750 - LS23.dat
+1 256 42.3059 -157.449 -114.474 0.9873 -0.3497 0.0144 0.066 1.0868 0.8684 0.1444 1.8938 -0.4957 7750 - LS23.dat
+1 256 42.1489 -156.961 -113.625 0.9886 -0.3286 0.0092 0.0597 0.9806 0.8921 0.138 1.9294 -0.4518 7750 - LS23.dat
+1 256 42.004 -156.529 -112.774 0.9901 -0.3161 0.0044 0.0532 0.9077 0.9135 0.1301 2.0346 -0.4069 7750 - LS23.dat
+1 256 41.8606 -156.117 -111.851 0.9916 -0.2921 0.0002 0.0465 0.8078 0.9326 0.1207 2.088 -0.3608 7750 - LS23.dat
+1 256 41.7255 -155.743 -110.885 0.9931 -0.2712 -0.0032 0.0399 0.7234 0.9492 0.1101 2.1846 -0.3147 7750 - LS23.dat
+1 256 41.5957 -155.397 -109.839 0.9946 -0.2524 -0.0058 0.0333 0.6495 0.9633 0.0981 2.3378 -0.2683 7750 - LS23.dat
+1 256 41.4703 -155.074 -108.678 0.9961 -0.2312 -0.0074 0.0267 0.5733 0.9753 0.0846 2.5411 -0.2207 7750 - LS23.dat
+1 256 41.3466 -154.768 -107.318 0.9974 -0.1981 -0.0078 0.0201 0.473 0.9848 0.0698 2.695 -0.1734 7750 - LS23.dat
+1 256 41.2352 -154.502 -105.803 0.9985 -0.1684 -0.0068 0.0137 0.3866 0.9919 0.0536 3.0359 -0.1267 7750 - LS23.dat
+1 256 41.1329 -154.267 -103.958 0.9993 -0.1325 -0.0043 0.0071 0.2918 0.9968 0.0358 3.6355 -0.0802 7750 - LS23.dat
+1 256 41.0508 -154.086 -101.705 0.9999 -0.0601 0.0002 0.0002 0.1265 0.9996 0.0129 4.6597 -0.0271 7750 - LS23.dat
+1 256 41 -153.979 -97.766 0.9993 1.035 0 0 0 1 -0.0384 26.9089 0 7750 - LS23.dat
+1 256 42 -153.979 -71.766 1 0.0066 0 0 0 1 -0.0068 0.9749 0 7750 - LS23.dat
+1 256 42.0045 -153.979 -71.1025 0.9998 0.0184 0 0 0 1 -0.0198 0.9326 0 7750 - LS23.dat
+1 256 42.0173 -153.979 -70.4569 0.9995 0.0282 0 0 0 1 -0.0317 0.8876 0 7750 - LS23.dat
+1 256 42.0371 -153.979 -69.8338 0.9991 0.0363 0 0 0 1 -0.0427 0.8483 0 7750 - LS23.dat
+1 256 42.063 -153.979 -69.2286 0.9986 0.0427 0 0 0 1 -0.0529 0.8062 0 7750 - LS23.dat
+1 256 42.0938 -153.979 -68.6458 0.9981 0.0484 0 0 0 1 -0.0622 0.7761 0 7750 - LS23.dat
+1 256 42.1293 -153.979 -68.0763 0.9975 0.0526 0 0 0 1 -0.0708 0.7416 0 7750 - LS23.dat
+1 256 42.1684 -153.979 -67.5246 0.9969 0.0563 0 0 0 1 -0.0787 0.7131 0 7750 - LS23.dat
+1 256 42.2109 -153.979 -66.9862 0.9963 0.0587 0 0 0 1 -0.086 0.6806 0 7750 - LS23.dat
+1 256 42.2559 -153.979 -66.4654 0.9957 0.0608 0 0 0 1 -0.0926 0.6543 0 7750 - LS23.dat
+1 256 42.3031 -153.979 -65.9579 0.9951 0.0624 0 0 0 1 -0.0987 0.6292 0 7750 - LS23.dat
+1 256 42.3521 -153.979 -65.4634 0.9945 0.064 0 0 0 1 -0.1043 0.6096 0 7750 - LS23.dat
+1 256 42.4031 -153.979 -64.9773 0.994 0.0645 0 0 0 1 -0.1095 0.5856 0 7750 - LS23.dat
+1 256 42.4552 -153.979 -64.5043 0.9935 0.0651 0 0 0 1 -0.1142 0.5668 0 7750 - LS23.dat
+1 256 42.5086 -153.979 -64.0397 0.993 0.0649 0 0 0 1 -0.1184 0.544 0 7750 - LS23.dat
+1 256 42.5625 -153.979 -63.5881 0.9925 0.0649 0 0 0 1 -0.1223 0.5271 0 7750 - LS23.dat
+1 256 42.6171 -153.979 -63.1449 0.9921 0.0647 0 0 0 1 -0.1257 0.5102 0 7750 - LS23.dat
+1 256 42.6723 -153.979 -62.71 0.9917 0.0641 0 0 0 1 -0.1289 0.4928 0 7750 - LS23.dat
+1 256 42.7277 -153.979 -62.2834 0.9913 0.0634 0 0 0 1 -0.1317 0.4769 0 7750 - LS23.dat
+1 256 42.7832 -153.979 -61.8652 0.991 0.063 0 0 0 1 -0.1341 0.4658 0 7750 - LS23.dat
+1 256 42.8393 -153.979 -61.4506 0.9907 0.0617 0 0 0 1 -0.1362 0.4489 0 7750 - LS23.dat
+1 256 42.8952 -153.979 -61.0444 0.9904 0.0603 0 0 0 1 -0.138 0.4328 0 7750 - LS23.dat
+1 256 42.9506 -153.979 -60.6464 0.9902 0.0596 0 0 0 1 -0.1395 0.4227 0 7750 - LS23.dat
+1 256 43.0061 -153.979 -60.2522 0.9901 0.0579 0 0 0 1 -0.1407 0.4077 0 7750 - LS23.dat
+1 256 43.061 -153.979 -59.8662 0.9899 0.0567 0 0 0 1 -0.1417 0.3965 0 7750 - LS23.dat
+1 256 43.1156 -153.979 -59.4839 0.9898 0.0545 0 0 0 1 -0.1424 0.3787 0 7750 - LS23.dat
+1 256 43.17 -153.979 -59.1052 0.9898 0.0552 0 0 0 1 -0.1427 0.3832 0 7750 - LS23.dat
+1 256 43.224 -153.979 -58.7302 0.9897 0.0553 0 0 0 1 -0.143 0.383 0 7750 - LS23.dat
+1 256 43.2775 -153.979 -58.3588 0.9898 0.0551 0 0 0 1 -0.1427 0.3819 0 7750 - LS23.dat
+1 256 43.3304 -153.979 -57.991 0.9898 0.0554 0 0 0 1 -0.1422 0.3858 0 7750 - LS23.dat
+1 256 43.3825 -153.979 -57.6269 0.99 0.0555 0 0 0 1 -0.1414 0.3888 0 7750 - LS23.dat
+1 256 43.4338 -153.979 -57.2665 0.9901 0.0553 0 0 0 1 -0.1402 0.3905 0 7750 - LS23.dat
+1 256 43.4841 -153.979 -56.9098 0.9903 0.0553 0 0 0 1 -0.1388 0.3948 0 7750 - LS23.dat
+1 256 43.5335 -153.979 -56.5568 0.9906 0.0552 0 0 0 1 -0.1371 0.3992 0 7750 - LS23.dat
+1 256 43.5816 -153.979 -56.2075 0.9908 0.0555 0 0 0 1 -0.1351 0.4072 0 7750 - LS23.dat
+1 256 43.6292 -153.979 -55.8572 0.9912 0.0549 0 0 0 1 -0.1327 0.4102 0 7750 - LS23.dat
+1 256 43.6755 -153.979 -55.5106 0.9915 0.0544 0 0 0 1 -0.13 0.4153 0 7750 - LS23.dat
+1 256 43.7203 -153.979 -55.1679 0.9919 0.0544 0 0 0 1 -0.1269 0.4251 0 7750 - LS23.dat
+1 256 43.7641 -153.979 -54.8241 0.9923 0.0536 0 0 0 1 -0.1236 0.4303 0 7750 - LS23.dat
+1 256 43.8063 -153.979 -54.4842 0.9928 0.0532 0 0 0 1 -0.1198 0.4413 0 7750 - LS23.dat
+1 256 43.8473 -153.979 -54.1434 0.9933 0.0526 0 0 0 1 -0.1156 0.4523 0 7750 - LS23.dat
+1 256 43.8869 -153.979 -53.8015 0.9938 0.0512 0 0 0 1 -0.111 0.4589 0 7750 - LS23.dat
+1 256 43.9245 -153.979 -53.4637 0.9944 0.0502 0 0 0 1 -0.106 0.4716 0 7750 - LS23.dat
+1 256 43.9604 -153.979 -53.1249 0.9949 0.049 0 0 0 1 -0.1004 0.4852 0 7750 - LS23.dat
+1 256 43.9945 -153.979 -52.7853 0.9955 0.0474 0 0 0 1 -0.0944 0.4997 0 7750 - LS23.dat
+1 256 44.0267 -153.979 -52.445 0.9961 0.0452 0 0 0 1 -0.0877 0.5133 0 7750 - LS23.dat
+1 256 44.0565 -153.979 -52.1038 0.9968 0.0423 0 0 0 1 -0.0805 0.5229 0 7750 - LS23.dat
+1 256 44.0836 -153.979 -51.767 0.9973 0.0395 0 0 0 1 -0.0728 0.541 0 7750 - LS23.dat
+1 256 44.1081 -153.979 -51.4297 0.9979 0.0364 0 0 0 1 -0.0643 0.5655 0 7750 - LS23.dat
+1 256 44.13 -153.979 -51.0868 0.9985 0.0323 0 0 0 1 -0.055 0.5857 0 7750 - LS23.dat
+1 256 44.1487 -153.979 -50.7436 0.999 0.0272 0 0 0 1 -0.0449 0.6062 0 7750 - LS23.dat
+1 256 44.164 -153.979 -50.4 0.9994 0.0214 0 0 0 1 -0.0339 0.6287 0 7750 - LS23.dat
+1 256 44.1755 -153.979 -50.0564 0.9998 0.0144 0 0 0 1 -0.0221 0.6542 0 7750 - LS23.dat
+1 256 44.183 -153.979 -49.7129 1 0.0063 0 0 0 1 -0.0091 0.6877 0 7750 - LS23.dat
+1 256 44.186 -153.979 -49.3645 1 -0.0036 0 0 0 1 0.005 0.7177 0 7750 - LS23.dat
+1 256 44.1841 -153.979 -49.0166 0.9998 -0.0155 0 0 0 1 0.0204 0.7583 0 7750 - LS23.dat
+1 256 44.1767 -153.979 -48.6645 0.9993 -0.0299 0 0 0 1 0.0373 0.7993 0 7750 - LS23.dat
+1 256 44.1633 -153.979 -48.3084 0.9984 -0.0468 0 0 0 1 0.0558 0.8376 0 7750 - LS23.dat
+1 256 44.1433 -153.979 -47.9536 0.9971 -0.0676 0 0 0 1 0.0759 0.8875 0 7750 - LS23.dat
+1 256 44.1159 -153.979 -47.5957 0.9952 -0.0926 0 0 0 1 0.098 0.9409 0 7750 - LS23.dat
+1 256 44.0802 -153.979 -47.2351 0.9925 -0.1228 0 0 0 1 0.1221 0.998 0 7750 - LS23.dat
+1 256 44.0354 -153.979 -46.8724 0.9889 -0.1597 0 0 0 1 0.1485 1.0636 0 7750 - LS23.dat
+1 256 43.9806 -153.979 -46.5083 0.9841 -0.2053 0 0 0 1 0.1776 1.1375 0 7750 - LS23.dat
+1 256 43.9137 -153.979 -46.1387 0.9778 -0.2592 0 0 0 1 0.2095 1.2097 0 7750 - LS23.dat
+1 256 43.8344 -153.979 -45.7695 0.9697 -0.3248 0 0 0 1 0.2444 1.2887 0 7750 - LS23.dat
+1 256 43.7404 -153.979 -45.3969 0.9593 -0.4012 0 0 0 1 0.2824 1.3631 0 7750 - LS23.dat
+1 256 43.6313 -153.979 -45.0269 0.9462 -0.4944 0 0 0 1 0.3235 1.4462 0 7750 - LS23.dat
+1 256 43.5044 -153.979 -44.6563 0.9299 -0.586 0 0 0 1 0.3679 1.4811 0 7750 - LS23.dat
+1 256 43.358 -153.979 -44.2868 0.9104 -0.6558 0 0 0 1 0.4138 1.4429 0 7750 - LS23.dat
+1 256 43.2025 -153.979 -43.945 0.8884 -0.7194 0 0 0 1 0.4591 1.3919 0 7750 - LS23.dat
+1 256 43.0376 -153.979 -43.6264 0.8641 -0.7793 0 0 0 1 0.5033 1.3381 0 7750 - LS23.dat
+1 256 42.8674 -153.979 -43.3343 0.8377 -0.841 0 0 0 1 0.5462 1.2898 0 7750 - LS23.dat
+1 256 42.6861 -153.979 -43.0566 0.8091 -0.8939 0 0 0 1 0.5877 1.2307 0 7750 - LS23.dat
+1 256 42.4999 -153.979 -42.8005 0.7786 -0.9606 0 0 0 1 0.6275 1.1918 0 7750 - LS23.dat
+1 256 42.3018 -153.979 -42.5549 0.7458 -1.0208 0 0 0 1 0.6662 1.1429 0 7750 - LS23.dat
+1 256 42.0918 -153.979 -42.3201 0.7111 -1.0779 0 0 0 1 0.7031 1.0901 0 7750 - LS23.dat
+1 256 41.8704 -153.979 -42.0964 0.6744 -1.1346 0 0 0 1 0.7383 1.0364 0 7750 - LS23.dat
+1 256 41.6345 -153.979 -41.8811 0.6361 -1.1814 0 0 0 1 0.7716 0.974 0 7750 - LS23.dat
+1 256 41.3841 -153.979 -41.6748 0.5965 -1.2298 0 0 0 1 0.8026 0.914 0 7750 - LS23.dat
+1 256 41.1194 -153.979 -41.4782 0.5556 -1.293 0 0 0 1 0.8315 0.864 0 7750 - LS23.dat
+1 256 40.8329 -153.979 -41.287 0.5129 -1.3595 0 0 0 1 0.8584 0.8123 0 7750 - LS23.dat
+1 256 40.5201 -153.979 -41.1003 0.4686 -1.4215 0 0 0 1 0.8834 0.7541 0 7750 - LS23.dat
+1 256 40.1763 -153.979 -40.9181 0.4231 -1.472 0 0 0 1 0.9061 0.6874 0 7750 - LS23.dat
+1 256 39.8009 -153.979 -40.743 0.3769 -1.5253 0 0 0 1 0.9263 0.6206 0 7750 - LS23.dat
+1 256 39.389 -153.979 -40.5756 0.33 -1.5861 0 0 0 1 0.944 0.5545 0 7750 - LS23.dat
+1 256 38.9317 -153.979 -40.416 0.2826 -1.6056 0 0 0 1 0.9592 0.473 0 7750 - LS23.dat
+1 256 38.4198 -153.979 -40.2654 0.2367 -1.5452 0 0 0 1 0.9716 0.3764 0 7750 - LS23.dat
+1 256 37.8901 -153.979 -40.1366 0.1942 -1.4934 0 0 0 1 0.981 0.2956 0 7750 - LS23.dat
+1 256 37.3403 -153.979 -40.028 0.1547 -1.4466 0 0 0 1 0.988 0.2265 0 7750 - LS23.dat
+1 256 36.7681 -153.979 -39.9387 0.1181 -1.4011 0 0 0 1 0.993 0.1667 0 7750 - LS23.dat
+1 256 36.1757 -153.979 -39.8685 0.0844 -1.3618 0 0 0 1 0.9964 0.1153 0 7750 - LS23.dat
+1 256 35.5607 -153.979 -39.8167 0.0532 -1.4552 0 0 0 1 0.9986 0.0775 0 7750 - LS23.dat
+1 256 34.9258 -153.979 -39.7832 0.019 -1.3707 0 0 0 1 0.9998 0.026 0 7750 - LS23.dat
+1 256 34 -153.979 -39.766 0 -20 0 0 0 1 1 0 0 7750 - LS23.dat
+
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - hose 2.ldr
+0 A flexible pneumatic hose segment.
+0 Name: 7750 - hose 2.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 256 26 -200 -94 1 0 0 0 0 1 0 -1 0 7750 - LS22.dat
+1 256 26 -200 -94 0.9998 0.0602 -0.0001 -0.0001 0.0251 1 -0.022 2.735 -0.0092 7750 - LS23.dat
+1 256 26.0338 -199.986 -92.4635 0.9976 0.1777 0.0163 -0.0183 0.0757 0.9994 -0.0673 2.6126 -0.0301 7750 - LS23.dat
+1 256 26.1289 -199.945 -91.0656 0.993 0.2767 0.0301 -0.036 0.1205 0.9981 -0.1122 2.4104 -0.0534 7750 - LS23.dat
+1 256 26.2683 -199.885 -89.8517 0.9865 0.3664 0.0407 -0.0524 0.1631 0.9961 -0.1554 2.2706 -0.0781 7750 - LS23.dat
+1 256 26.4422 -199.807 -88.7741 0.9779 0.4535 0.0484 -0.0684 0.2064 0.9934 -0.1975 2.1739 -0.1044 7750 - LS23.dat
+1 256 26.6482 -199.714 -87.7867 0.9675 0.5304 0.0537 -0.0842 0.2465 0.9898 -0.2384 2.065 -0.1319 7750 - LS23.dat
+1 256 26.8779 -199.607 -86.8923 0.9554 0.605 0.0565 -0.1 0.2873 0.9854 -0.2779 1.9769 -0.1605 7750 - LS23.dat
+1 256 27.1312 -199.487 -86.0647 0.9418 0.6698 0.0572 -0.116 0.3247 0.9802 -0.3156 1.8792 -0.1898 7750 - LS23.dat
+1 256 27.4022 -199.355 -85.3043 0.9268 0.7362 0.0556 -0.1321 0.3644 0.974 -0.3515 1.8044 -0.2194 7750 - LS23.dat
+1 256 27.6915 -199.212 -84.5952 0.9106 0.8032 0.052 -0.1485 0.4061 0.9669 -0.3856 1.7406 -0.2496 7750 - LS23.dat
+1 256 28.0023 -199.055 -83.9218 0.8933 0.8639 0.0465 -0.1654 0.4462 0.9588 -0.4178 1.6705 -0.2802 7750 - LS23.dat
+1 256 28.3318 -198.885 -83.2847 0.8752 0.9364 0.0391 -0.1827 0.4944 0.9496 -0.448 1.6277 -0.3109 7750 - LS23.dat
+1 256 28.6829 -198.699 -82.6744 0.8559 1.0198 0.0295 -0.2006 0.551 0.9391 -0.4766 1.5996 -0.3423 7750 - LS23.dat
+1 256 29.0718 -198.489 -82.0644 0.836 1.0784 0.0181 -0.2194 0.5971 0.9272 -0.503 1.5317 -0.3742 7750 - LS23.dat
+1 256 29.4836 -198.261 -81.4795 0.8157 1.1517 0.0049 -0.2385 0.6542 0.9139 -0.527 1.4866 -0.406 7750 - LS23.dat
+1 256 29.9329 -198.006 -80.8995 0.7955 1.2205 -0.0101 -0.2581 0.7128 0.899 -0.5483 1.4352 -0.4379 7750 - LS23.dat
+1 256 30.4197 -197.722 -80.3271 0.7755 1.3006 -0.0269 -0.2781 0.7826 0.8824 -0.5668 1.3956 -0.4698 7750 - LS23.dat
+1 256 30.9576 -197.398 -79.7498 0.7564 1.3783 -0.0453 -0.2985 0.8573 0.8638 -0.5821 1.3514 -0.5018 7750 - LS23.dat
+1 256 31.5543 -197.027 -79.1648 0.7387 1.4788 -0.0651 -0.3188 0.9544 0.8431 -0.5938 1.3272 -0.5337 7750 - LS23.dat
+1 256 32.2206 -196.597 -78.5668 0.7232 1.627 -0.087 -0.339 1.0967 0.8196 -0.6017 1.3375 -0.5663 7750 - LS23.dat
+1 256 33.0135 -196.062 -77.915 0.7112 1.7506 -0.11 -0.3587 1.243 0.7926 -0.6046 1.3218 -0.5997 7750 - LS23.dat
+1 256 33.9318 -195.41 -77.2216 0.7054 1.9271 -0.1333 -0.376 1.4584 0.7623 -0.6009 1.3496 -0.6334 7750 - LS23.dat
+1 256 35.0196 -194.587 -76.4598 0.709 2.1396 -0.1556 -0.3883 1.7572 0.7281 -0.5887 1.4178 -0.6676 7750 - LS23.dat
+1 256 36.3459 -193.498 -75.581 0.7253 2.1217 -0.1708 -0.3927 1.9236 0.6929 -0.5654 1.3857 -0.7005 7750 - LS23.dat
+1 256 37.68 -192.288 -74.7097 0.7522 2.0111 -0.1764 -0.3861 2.0326 0.6627 -0.5339 1.3633 -0.7278 7750 - LS23.dat
+1 256 38.9237 -191.031 -73.8666 0.784 1.743 -0.173 -0.3707 1.968 0.6399 -0.4979 1.2791 -0.7488 7750 - LS23.dat
+1 256 39.9516 -189.871 -73.1122 0.8153 1.5173 -0.1641 -0.3497 1.9072 0.6248 -0.4616 1.2349 -0.7633 7750 - LS23.dat
+1 256 40.8005 -188.804 -72.4214 0.8447 1.3508 -0.1522 -0.3251 1.8893 0.6158 -0.4252 1.2389 -0.7731 7750 - LS23.dat
+1 256 41.534 -187.778 -71.7485 0.8717 1.1826 -0.138 -0.2986 1.8436 0.6112 -0.3886 1.2363 -0.7794 7750 - LS23.dat
+1 256 42.1516 -186.815 -71.103 0.896 1.0677 -0.1229 -0.2708 1.8628 0.6103 -0.3519 1.2851 -0.7826 7750 - LS23.dat
+1 256 42.699 -185.86 -70.4441 0.918 0.9446 -0.1065 -0.2421 1.8605 0.6125 -0.3142 1.3263 -0.7833 7750 - LS23.dat
+1 256 43.1797 -184.913 -69.7691 0.9372 0.8188 -0.0896 -0.2135 1.8393 0.6172 -0.2759 1.3583 -0.7817 7750 - LS23.dat
+1 256 43.5915 -183.988 -69.0859 0.9536 0.7119 -0.0725 -0.1851 1.8498 0.6241 -0.2373 1.4175 -0.778 7750 - LS23.dat
+1 256 43.9509 -183.054 -68.3703 0.9675 0.6021 -0.0552 -0.1574 1.8489 0.6329 -0.1981 1.4722 -0.7723 7750 - LS23.dat
+1 256 44.2565 -182.116 -67.6231 0.9787 0.4987 -0.0378 -0.1305 1.8657 0.6434 -0.1583 1.5452 -0.7646 7750 - LS23.dat
+1 256 44.512 -181.16 -66.8316 0.9875 0.587 -0.0205 -0.1047 2.8122 0.6554 -0.1176 2.4254 -0.755 7750 - LS23.dat
+1 256 44.7194 -180.166 -65.9745 0.9979 0.3553 -0.001 -0.0463 4.0083 0.6848 -0.0449 3.7658 -0.7288 7750 - LS23.dat
+1 256 45 -177 -63 1 0 0 0 7.0718 0.712 0 7.1713 -0.7022 7750 - LS23.dat
+1 256 45 -170.995 -56.9103 1 0 0 0 1.9867 0.755 0 2.2877 -0.6557 7750 - LS23.dat
+1 256 45 -169.818 -55.5555 1 0 0 0 1.4729 0.7878 0 1.8838 -0.6159 7750 - LS23.dat
+1 256 45 -169.097 -54.6334 1 0 0 0 1.2852 0.8181 0 1.8284 -0.5751 7750 - LS23.dat
+1 256 45 -168.527 -53.8219 1 0 0 0 1.1203 0.8468 0 1.7835 -0.5319 7750 - LS23.dat
+1 256 45 -168.078 -53.1074 1 0 0 0 1.0238 0.8736 0 1.838 -0.4866 7750 - LS23.dat
+1 256 45 -167.68 -52.3936 1 0 0 0 0.8986 0.8984 0 1.8386 -0.4391 7750 - LS23.dat
+1 256 45 -167.342 -51.7008 1 0 0 0 0.7762 0.9205 0 1.8285 -0.3907 7750 - LS23.dat
+1 256 45 -167.041 -50.9918 1 0 0 0 0.6575 0.9391 0 1.7972 -0.3436 7750 - LS23.dat
+1 256 45 -166.791 -50.3101 1 0 0 0 0.6056 0.955 0 1.9495 -0.2967 7750 - LS23.dat
+1 256 45 -166.55 -49.5326 1 0 0 0 0.5437 0.9689 0 2.1287 -0.2475 7750 - LS23.dat
+1 256 45 -166.321 -48.6352 1 0 0 0 0.4715 0.9806 0 2.3613 -0.1958 7750 - LS23.dat
+1 256 45 -166.097 -47.5137 1 0 0 0 0.38 0.9896 0 2.6135 -0.1439 7750 - LS23.dat
+1 256 45 -165.9 -46.1648 1 0 0 0 0.3213 0.9959 0 3.5166 -0.091 7750 - LS23.dat
+1 256 45 -165.717 -44.1603 1 0 0 0 0.1497 0.9996 0 5.3837 -0.0278 7750 - LS23.dat
+1 256 45 -165.586 -39.444 1 -0.015 0.0001 0.0001 0.0436 0.9998 0.0074 2.0296 -0.0215 7750 - LS23.dat
+1 256 44.9939 -165.568 -38.6181 0.9997 -0.0509 0.0008 0.0008 0.1476 0.9976 0.0237 2.1379 -0.0689 7750 - LS23.dat
+1 256 44.9737 -165.51 -37.7687 0.9991 -0.0837 0.0025 0.0025 0.2427 0.9928 0.0412 2.0149 -0.1195 7750 - LS23.dat
+1 256 44.9429 -165.42 -37.0271 0.9983 -0.1121 0.005 0.005 0.3252 0.9855 0.0584 1.8875 -0.1695 7750 - LS23.dat
+1 256 44.9032 -165.305 -36.3587 0.9972 -0.1329 0.0082 0.0082 0.3855 0.9761 0.0749 1.7267 -0.2173 7750 - LS23.dat
+1 256 44.8597 -165.179 -35.7927 0.9958 -0.1611 0.0121 0.0121 0.4674 0.9648 0.0906 1.7088 -0.2627 7750 - LS23.dat
+1 256 44.8101 -165.035 -35.2664 0.9942 -0.1913 0.0169 0.0169 0.5552 0.9509 0.1065 1.698 -0.309 7750 - LS23.dat
+1 256 44.7512 -164.864 -34.7444 0.9922 -0.2066 0.0225 0.0225 0.5996 0.9346 0.1223 1.5659 -0.3549 7750 - LS23.dat
+1 256 44.6888 -164.683 -34.271 0.9902 -0.2273 0.0285 0.0285 0.6595 0.9172 0.137 1.5054 -0.3975 7750 - LS23.dat
+1 256 44.6249 -164.498 -33.8481 0.9878 -0.2647 0.0353 0.0353 0.7682 0.8975 0.1515 1.5468 -0.4397 7750 - LS23.dat
+1 256 44.5484 -164.275 -33.4007 0.9851 -0.2888 0.0431 0.0431 0.8381 0.8749 0.1662 1.4943 -0.4824 7750 - LS23.dat
+1 256 44.4648 -164.033 -32.9685 0.9822 -0.3215 0.0515 0.0515 0.9329 0.8504 0.1804 1.4837 -0.5236 7750 - LS23.dat
+1 256 44.3723 -163.765 -32.5417 0.979 -0.3537 0.0609 0.0609 1.0264 0.8232 0.1945 1.4587 -0.5645 7750 - LS23.dat
+1 256 44.2626 -163.446 -32.0892 0.9756 -0.3734 0.0709 0.0709 1.0836 0.7943 0.2079 1.3828 -0.6033 7750 - LS23.dat
+1 256 44.1465 -163.109 -31.6593 0.972 -0.4172 0.0813 0.0813 1.2105 0.764 0.2206 1.3918 -0.6401 7750 - LS23.dat
+1 256 44.0043 -162.697 -31.1848 0.9681 -0.4609 0.0925 0.0925 1.3375 0.7317 0.2327 1.3859 -0.6754 7750 - LS23.dat
+1 256 43.8357 -162.207 -30.6778 0.9641 -0.5609 0.1043 0.1043 1.6276 0.6974 0.2444 1.5183 -0.709 7750 - LS23.dat
+1 256 43.6023 -161.53 -30.0461 0.9595 -0.5229 0.1175 0.1175 1.5174 0.659 0.256 1.2634 -0.7429 7750 - LS23.dat
+1 256 43.1329 -160.168 -28.912 0.9588 -1.0909 0.1196 0.1196 3.1657 0.6529 0.2578 2.589 -0.7479 7750 - LS23.dat
+1 256 42.4144 -158.083 -27.2068 0.9637 -0.5267 0.1053 0.1053 1.5283 0.6945 0.2453 1.4133 -0.7118 7750 - LS23.dat
+1 256 42.1863 -157.421 -26.5948 0.9677 -0.4572 0.0938 0.0938 1.3266 0.7279 0.2341 1.3583 -0.6793 7750 - LS23.dat
+1 256 42.0138 -156.921 -26.0822 0.9714 -0.4124 0.0828 0.0828 1.1967 0.7596 0.2223 1.3562 -0.6451 7750 - LS23.dat
+1 256 41.8748 -156.517 -25.625 0.9751 -0.3801 0.0724 0.0724 1.1031 0.79 0.2098 1.3861 -0.6088 7750 - LS23.dat
+1 256 41.7517 -156.16 -25.1762 0.9784 -0.3455 0.0626 0.0626 1.0024 0.8185 0.1968 1.3988 -0.5711 7750 - LS23.dat
+1 256 41.6489 -155.862 -24.7598 0.9816 -0.323 0.0533 0.0533 0.9374 0.8453 0.1832 1.4579 -0.5317 7750 - LS23.dat
+1 256 41.5516 -155.58 -24.3206 0.9846 -0.2871 0.0448 0.0448 0.833 0.8701 0.1691 1.4506 -0.4908 7750 - LS23.dat
+1 256 41.4693 -155.341 -23.9052 0.9872 -0.267 0.037 0.037 0.7749 0.8926 0.1549 1.5169 -0.4494 7750 - LS23.dat
+1 256 41.3922 -155.117 -23.4667 0.9897 -0.2387 0.0299 0.0299 0.6925 0.9132 0.14 1.5388 -0.4064 7750 - LS23.dat
+1 256 41.3224 -154.915 -23.0172 0.9919 -0.2164 0.0236 0.0236 0.6278 0.9315 0.1251 1.5974 -0.3629 7750 - LS23.dat
+1 256 41.2602 -154.734 -22.558 0.9938 -0.1936 0.0179 0.0179 0.5618 0.9481 0.1095 1.666 -0.3176 7750 - LS23.dat
+1 256 41.2002 -154.56 -22.0411 0.9955 -0.161 0.013 0.013 0.4672 0.9622 0.0937 1.6453 -0.2719 7750 - LS23.dat
+1 256 41.1504 -154.415 -21.5324 0.9969 -0.1406 0.009 0.009 0.4081 0.9739 0.0782 1.7468 -0.2268 7750 - LS23.dat
+1 256 41.1052 -154.284 -20.971 0.9981 -0.1179 0.0056 0.0056 0.342 0.9837 0.062 1.8673 -0.1798 7750 - LS23.dat
+1 256 41.0653 -154.168 -20.3389 0.999 -0.1248 0.003 0.003 0.3621 0.9914 0.0451 2.7392 -0.1309 7750 - LS23.dat
+1 256 41.0325 -154.073 -19.6198 0.9998 -0.0531 0.0004 0.0004 0.154 0.9987 0.0175 3.0221 -0.0509 7750 - LS23.dat
+1 256 41 -153.979 -17.766 0.9998 0.1055 0 0 0 1 -0.0222 4.7412 0 7750 - LS23.dat
+1 256 41.0775 -153.979 -14.2842 0.9972 0.1906 0 0 0 1 -0.0747 2.544 0 7750 - LS23.dat
+1 256 41.2653 -153.979 -11.7762 0.9973 0.8622 0 0 0 1 -0.0732 11.7415 0 7750 - LS23.dat
+1 256 42 -153.979 -1.766 1 0.0027 0 0 0 1 -0.0042 0.6579 0 7750 - LS23.dat
+1 256 42.0019 -153.979 -1.2963 0.9999 0.0075 0 0 0 1 -0.012 0.625 0 7750 - LS23.dat
+1 256 42.0074 -153.979 -0.8423 0.9998 0.0114 0 0 0 1 -0.0191 0.5966 0 7750 - LS23.dat
+1 256 42.0158 -153.979 -0.4007 0.9997 0.0145 0 0 0 1 -0.0256 0.566 0 7750 - LS23.dat
+1 256 42.0267 -153.979 0.0252 0.9995 0.017 0 0 0 1 -0.0314 0.5396 0 7750 - LS23.dat
+1 256 42.0397 -153.979 0.4386 0.9993 0.0189 0 0 0 1 -0.0367 0.5151 0 7750 - LS23.dat
+1 256 42.0544 -153.979 0.8396 0.9991 0.0205 0 0 0 1 -0.0414 0.4935 0 7750 - LS23.dat
+1 256 42.0707 -153.979 1.2314 0.999 0.0215 0 0 0 1 -0.0456 0.4697 0 7750 - LS23.dat
+1 256 42.088 -153.979 1.6107 0.9988 0.0223 0 0 0 1 -0.0494 0.4504 0 7750 - LS23.dat
+1 256 42.1063 -153.979 1.9809 0.9986 0.0228 0 0 0 1 -0.0527 0.4312 0 7750 - LS23.dat
+1 256 42.1254 -153.979 2.3419 0.9985 0.023 0 0 0 1 -0.0556 0.412 0 7750 - LS23.dat
+1 256 42.145 -153.979 2.6937 0.9983 0.023 0 0 0 1 -0.0582 0.3943 0 7750 - LS23.dat
+1 256 42.165 -153.979 3.0363 0.9982 0.0229 0 0 0 1 -0.0603 0.3797 0 7750 - LS23.dat
+1 256 42.1854 -153.979 3.373 0.9981 0.0226 0 0 0 1 -0.0621 0.3635 0 7750 - LS23.dat
+1 256 42.2058 -153.979 3.7005 0.998 0.0222 0 0 0 1 -0.0636 0.349 0 7750 - LS23.dat
+1 256 42.2263 -153.979 4.0221 0.9979 0.0218 0 0 0 1 -0.0647 0.3359 0 7750 - LS23.dat
+1 256 42.2468 -153.979 4.3377 0.9978 0.0214 0 0 0 1 -0.0656 0.3262 0 7750 - LS23.dat
+1 256 42.2672 -153.979 4.6473 0.9978 0.0209 0 0 0 1 -0.0662 0.3154 0 7750 - LS23.dat
+1 256 42.2873 -153.979 4.951 0.9978 0.0203 0 0 0 1 -0.0662 0.306 0 7750 - LS23.dat
+1 256 42.3071 -153.979 5.2487 0.9978 0.0203 0 0 0 1 -0.0662 0.3067 0 7750 - LS23.dat
+1 256 42.3267 -153.979 5.5438 0.9978 0.0203 0 0 0 1 -0.0662 0.3056 0 7750 - LS23.dat
+1 256 42.3458 -153.979 5.8328 0.9978 0.02 0 0 0 1 -0.0657 0.3032 0 7750 - LS23.dat
+1 256 42.3643 -153.979 6.1157 0.9979 0.0201 0 0 0 1 -0.0648 0.3101 0 7750 - LS23.dat
+1 256 42.3824 -153.979 6.396 0.998 0.02 0 0 0 1 -0.0635 0.3136 0 7750 - LS23.dat
+1 256 42.4 -153.979 6.6736 0.9981 0.0196 0 0 0 1 -0.0621 0.3152 0 7750 - LS23.dat
+1 256 42.4168 -153.979 6.945 0.9982 0.0191 0 0 0 1 -0.0603 0.3169 0 7750 - LS23.dat
+1 256 42.4329 -153.979 7.2136 0.9983 0.0187 0 0 0 1 -0.0582 0.3207 0 7750 - LS23.dat
+1 256 42.4484 -153.979 7.4795 0.9984 0.0182 0 0 0 1 -0.056 0.3255 0 7750 - LS23.dat
+1 256 42.463 -153.979 7.7425 0.9986 0.0176 0 0 0 1 -0.0534 0.33 0 7750 - LS23.dat
+1 256 42.4768 -153.979 8.0028 0.9987 0.0169 0 0 0 1 -0.0505 0.3341 0 7750 - LS23.dat
+1 256 42.4897 -153.979 8.2602 0.9989 0.0161 0 0 0 1 -0.0473 0.3393 0 7750 - LS23.dat
+1 256 42.5017 -153.979 8.5147 0.999 0.0152 0 0 0 1 -0.0437 0.3472 0 7750 - LS23.dat
+1 256 42.5127 -153.979 8.7697 0.9992 0.0141 0 0 0 1 -0.0398 0.3535 0 7750 - LS23.dat
+1 256 42.5227 -153.979 9.0218 0.9994 0.0128 0 0 0 1 -0.0356 0.3583 0 7750 - LS23.dat
+1 256 42.5315 -153.979 9.2709 0.9995 0.0114 0 0 0 1 -0.031 0.3684 0 7750 - LS23.dat
+1 256 42.5391 -153.979 9.5204 0.9997 0.0098 0 0 0 1 -0.0261 0.374 0 7750 - LS23.dat
+1 256 42.5455 -153.979 9.767 0.9998 0.008 0 0 0 1 -0.0208 0.3845 0 7750 - LS23.dat
+1 256 42.5505 -153.979 10.0139 0.9999 0.0059 0 0 0 1 -0.015 0.3911 0 7750 - LS23.dat
+1 256 42.5541 -153.979 10.2577 1 0.0036 0 0 0 1 -0.0089 0.4022 0 7750 - LS23.dat
+1 256 42.5562 -153.979 10.5018 1 0.0009 0 0 0 1 -0.0023 0.4095 0 7750 - LS23.dat
+1 256 42.5567 -153.979 10.7426 1 -0.002 0 0 0 1 0.0047 0.4219 0 7750 - LS23.dat
+1 256 42.5554 -153.979 10.9837 0.9999 -0.0053 0 0 0 1 0.0123 0.4357 0 7750 - LS23.dat
+1 256 42.5524 -153.979 11.2249 0.9998 -0.0092 0 0 0 1 0.0203 0.4499 0 7750 - LS23.dat
+1 256 42.5474 -153.979 11.4663 0.9996 -0.0135 0 0 0 1 0.029 0.465 0 7750 - LS23.dat
+1 256 42.5403 -153.979 11.7077 0.9993 -0.0184 0 0 0 1 0.0383 0.4806 0 7750 - LS23.dat
+1 256 42.531 -153.979 11.949 0.9988 -0.024 0 0 0 1 0.0483 0.4969 0 7750 - LS23.dat
+1 256 42.5192 -153.979 12.1902 0.9983 -0.0304 0 0 0 1 0.059 0.5148 0 7750 - LS23.dat
+1 256 42.5049 -153.979 12.4312 0.9975 -0.0376 0 0 0 1 0.0704 0.5331 0 7750 - LS23.dat
+1 256 42.4878 -153.979 12.6719 0.9966 -0.0457 0 0 0 1 0.0826 0.5522 0 7750 - LS23.dat
+1 256 42.4679 -153.979 12.9121 0.9954 -0.0552 0 0 0 1 0.0955 0.5749 0 7750 - LS23.dat
+1 256 42.4448 -153.979 13.1518 0.994 -0.0665 0 0 0 1 0.1095 0.6034 0 7750 - LS23.dat
+1 256 42.418 -153.979 13.3942 0.9922 -0.0785 0 0 0 1 0.1245 0.6254 0 7750 - LS23.dat
+1 256 42.3876 -153.979 13.6358 0.9901 -0.0926 0 0 0 1 0.1405 0.6525 0 7750 - LS23.dat
+1 256 42.3534 -153.979 13.8763 0.9875 -0.1097 0 0 0 1 0.1576 0.6874 0 7750 - LS23.dat
+1 256 42.3145 -153.979 14.1191 0.9844 -0.129 0 0 0 1 0.1761 0.721 0 7750 - LS23.dat
+1 256 42.2707 -153.979 14.3637 0.9806 -0.1503 0 0 0 1 0.196 0.7521 0 7750 - LS23.dat
+1 256 42.2221 -153.979 14.6066 0.9761 -0.1763 0 0 0 1 0.2171 0.7925 0 7750 - LS23.dat
+1 256 42.1676 -153.979 14.8509 0.9708 -0.206 0 0 0 1 0.2399 0.8335 0 7750 - LS23.dat
+1 256 42.1069 -153.979 15.0962 0.9644 -0.24 0 0 0 1 0.2643 0.8757 0 7750 - LS23.dat
+1 256 42.0395 -153.979 15.3421 0.9569 -0.2792 0 0 0 1 0.2905 0.9196 0 7750 - LS23.dat
+1 256 41.9647 -153.979 15.5881 0.948 -0.3235 0 0 0 1 0.3184 0.963 0 7750 - LS23.dat
+1 256 41.8821 -153.979 15.8338 0.9374 -0.3733 0 0 0 1 0.3481 1.0052 0 7750 - LS23.dat
+1 256 41.7911 -153.979 16.0787 0.9251 -0.4313 0 0 0 1 0.3796 1.0511 0 7750 - LS23.dat
+1 256 41.6911 -153.979 16.3221 0.9107 -0.4975 0 0 0 1 0.413 1.097 0 7750 - LS23.dat
+1 256 41.5802 -153.979 16.5663 0.8939 -0.5694 0 0 0 1 0.4482 1.1355 0 7750 - LS23.dat
+1 256 41.4591 -153.979 16.8077 0.8745 -0.6491 0 0 0 1 0.4851 1.17 0 7750 - LS23.dat
+1 256 41.3255 -153.979 17.0484 0.8521 -0.7327 0 0 0 1 0.5234 1.193 0 7750 - LS23.dat
+1 256 41.1804 -153.979 17.2845 0.8267 -0.8219 0 0 0 1 0.5627 1.2077 0 7750 - LS23.dat
+1 256 41.0214 -153.979 17.5179 0.7981 -0.8983 0 0 0 1 0.6026 1.1898 0 7750 - LS23.dat
+1 256 40.8498 -153.979 17.745 0.7668 -0.9526 0 0 0 1 0.6419 1.138 0 7750 - LS23.dat
+1 256 40.6696 -153.979 17.9601 0.7336 -1.0048 0 0 0 1 0.6796 1.0848 0 7750 - LS23.dat
+1 256 40.4835 -153.979 18.1609 0.6986 -1.0689 0 0 0 1 0.7155 1.0436 0 7750 - LS23.dat
+1 256 40.2854 -153.979 18.3542 0.6614 -1.1141 0 0 0 1 0.75 0.9824 0 7750 - LS23.dat
+1 256 40.0751 -153.979 18.5395 0.6229 -1.1594 0 0 0 1 0.7823 0.9232 0 7750 - LS23.dat
+1 256 39.858 -153.979 18.7123 0.5829 -1.2219 0 0 0 1 0.8126 0.8764 0 7750 - LS23.dat
+1 256 39.6214 -153.979 18.8819 0.5411 -1.2683 0 0 0 1 0.841 0.816 0 7750 - LS23.dat
+1 256 39.3703 -153.979 19.0434 0.498 -1.3226 0 0 0 1 0.8672 0.7595 0 7750 - LS23.dat
+1 256 39.0989 -153.979 19.1991 0.4535 -1.36 0 0 0 1 0.8912 0.6921 0 7750 - LS23.dat
+1 256 38.8041 -153.979 19.349 0.4086 -1.3628 0 0 0 1 0.9127 0.6101 0 7750 - LS23.dat
+1 256 38.4917 -153.979 19.4887 0.3644 -1.3454 0 0 0 1 0.9313 0.5264 0 7750 - LS23.dat
+1 256 38.1652 -153.979 19.6163 0.3215 -1.3186 0 0 0 1 0.9469 0.4477 0 7750 - LS23.dat
+1 256 37.8254 -153.979 19.7316 0.2804 -1.2883 0 0 0 1 0.9599 0.3764 0 7750 - LS23.dat
+1 256 37.4733 -153.979 19.8343 0.2412 -1.259 0 0 0 1 0.9705 0.3129 0 7750 - LS23.dat
+1 256 37.1066 -153.979 19.9254 0.2038 -1.2248 0 0 0 1 0.979 0.255 0 7750 - LS23.dat
+1 256 36.7262 -153.979 20.0045 0.1685 -1.1905 0 0 0 1 0.9857 0.2036 0 7750 - LS23.dat
+1 256 36.3333 -153.979 20.0715 0.1352 -1.1599 0 0 0 1 0.9908 0.1583 0 7750 - LS23.dat
+1 256 35.9255 -153.979 20.127 0.1038 -1.1271 0 0 0 1 0.9946 0.1176 0 7750 - LS23.dat
+1 256 35.5043 -153.979 20.1709 0.0743 -1.5147 0 0 0 1 0.9972 0.1129 0 7750 - LS23.dat
+1 256 35.0707 -153.979 20.203 0.0292 -1.6696 0 0 0 1 0.9996 0.0488 0 7750 - LS23.dat
+1 256 34 -153.979 20.234 0 -20 0 0 0 1 1 0 0 7750 - LS23.dat
+
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - hose 3.ldr
+0 A flexible pneumatic hose segment.
+0 Name: 7750 - hose 3.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 256 -26 -200 -154 1 0 0 0 0 1 0 -1 0 7750 - LS22.dat
+1 256 -26 -200 -154 0.9998 -0.0479 0.0001 0.0001 0.0257 0.9999 0.0212 2.2583 -0.0114 7750 - LS23.dat
+1 256 -26.0225 -199.988 -152.939 0.9978 -0.1395 -0.0145 0.0168 0.0757 0.9992 0.0644 2.1412 -0.0363 7750 - LS23.dat
+1 256 -26.0834 -199.955 -152.004 0.9937 -0.2208 -0.0261 0.0327 0.1212 0.9977 0.107 2.0146 -0.0629 7750 - LS23.dat
+1 256 -26.1731 -199.906 -151.186 0.9878 -0.293 -0.0347 0.048 0.1626 0.9953 0.1483 1.8986 -0.0906 7750 - LS23.dat
+1 256 -26.2842 -199.844 -150.466 0.9801 -0.362 -0.0407 0.0627 0.2032 0.9921 0.1882 1.8177 -0.119 7750 - LS23.dat
+1 256 -26.4114 -199.773 -149.827 0.9707 -0.4306 -0.044 0.0774 0.2443 0.988 0.2274 1.7552 -0.1483 7750 - LS23.dat
+1 256 -26.5575 -199.69 -149.232 0.9598 -0.4871 -0.0455 0.0925 0.2793 0.983 0.2652 1.6656 -0.1781 7750 - LS23.dat
+1 256 -26.7102 -199.602 -148.709 0.9473 -0.5608 -0.0444 0.1074 0.3249 0.9771 0.3018 1.6445 -0.2082 7750 - LS23.dat
+1 256 -26.8811 -199.503 -148.208 0.9331 -0.6089 -0.0415 0.1232 0.3565 0.9701 0.3377 1.5524 -0.2391 7750 - LS23.dat
+1 256 -27.0618 -199.397 -147.748 0.918 -0.6563 -0.0369 0.1392 0.3882 0.9623 0.3713 1.4769 -0.2694 7750 - LS23.dat
+1 256 -27.2449 -199.289 -147.336 0.9017 -0.7311 -0.0303 0.1553 0.4369 0.9536 0.4035 1.4654 -0.2994 7750 - LS23.dat
+1 256 -27.4462 -199.169 -146.932 0.8838 -0.796 -0.0217 0.1725 0.4808 0.9437 0.4349 1.4267 -0.3301 7750 - LS23.dat
+1 256 -27.6611 -199.039 -146.547 0.8646 -0.8484 -0.0113 0.1905 0.5181 0.9325 0.465 1.3651 -0.3609 7750 - LS23.dat
+1 256 -27.8912 -198.899 -146.177 0.8446 -0.8904 0.0005 0.209 0.5498 0.9203 0.4929 1.2926 -0.3911 7750 - LS23.dat
+1 256 -28.1278 -198.752 -145.833 0.824 -0.9387 0.014 0.2278 0.5863 0.9071 0.5188 1.2333 -0.4206 7750 - LS23.dat
+1 256 -28.3831 -198.593 -145.498 0.8029 -0.9732 0.0287 0.2472 0.615 0.8929 0.5425 1.1601 -0.4493 7750 - LS23.dat
+1 256 -28.6452 -198.427 -145.185 0.7815 -1.0527 0.0448 0.2667 0.6734 0.8777 0.564 1.1402 -0.477 7750 - LS23.dat
+1 256 -28.9311 -198.244 -144.876 0.7591 -1.1187 0.0629 0.2872 0.7253 0.8608 0.5842 1.097 -0.505 7750 - LS23.dat
+1 256 -29.2541 -198.035 -144.559 0.7365 -1.1463 0.0821 0.3086 0.7538 0.8425 0.6019 1.0163 -0.5324 7750 - LS23.dat
+1 256 -29.5891 -197.815 -144.262 0.7144 -1.2275 0.1024 0.3299 0.8195 0.8232 0.6171 0.9829 -0.5585 7750 - LS23.dat
+1 256 -29.9622 -197.566 -143.963 0.6921 -1.3025 0.1244 0.352 0.8846 0.8018 0.6302 0.9363 -0.5845 7750 - LS23.dat
+1 256 -30.3881 -197.276 -143.657 0.6705 -1.351 0.1475 0.3746 0.9353 0.7786 0.6404 0.8674 -0.6099 7750 - LS23.dat
+1 256 -30.8537 -196.954 -143.358 0.6502 -1.42 0.1715 0.3971 1.0043 0.7538 0.6477 0.8098 -0.6343 7750 - LS23.dat
+1 256 -31.3876 -196.576 -143.054 0.632 -1.5067 0.1959 0.4194 1.0922 0.7271 0.6516 0.7584 -0.658 7750 - LS23.dat
+1 256 -31.986 -196.143 -142.752 0.6162 -1.7044 0.2218 0.4413 1.2732 0.6975 0.6524 0.7485 -0.6814 7750 - LS23.dat
+1 256 -32.7415 -195.578 -142.421 0.6042 -1.9071 0.2492 0.4631 1.4819 0.663 0.6484 0.7186 -0.7059 7750 - LS23.dat
+1 256 -33.7077 -194.827 -142.056 0.6004 -2.1374 0.2759 0.4823 1.7517 0.6237 0.6379 0.6875 -0.7313 7750 - LS23.dat
+1 256 -34.9403 -193.817 -141.66 0.6113 -2.465 0.2983 0.4935 2.1785 0.5803 0.6186 0.698 -0.7578 7750 - LS23.dat
+1 256 -36.551 -192.394 -141.204 0.6424 -2.4074 0.3056 0.492 2.3429 0.5387 0.5876 0.6704 -0.7851 7750 - LS23.dat
+1 256 -38.1166 -190.87 -140.768 0.684 -2.0119 0.2968 0.4769 2.1625 0.5094 0.552 0.6244 -0.8078 7750 - LS23.dat
+1 256 -39.3184 -189.578 -140.395 0.7244 -1.6979 0.2809 0.4535 2.0012 0.4937 0.5193 0.6209 -0.823 7750 - LS23.dat
+1 256 -40.2586 -188.47 -140.051 0.761 -1.4551 0.2622 0.4267 1.8688 0.4869 0.4888 0.6341 -0.8332 7750 - LS23.dat
+1 256 -40.995 -187.524 -139.73 0.7942 -1.3207 0.2427 0.3973 1.8448 0.4863 0.4598 0.6869 -0.8394 7750 - LS23.dat
+1 256 -41.6398 -186.624 -139.395 0.8245 -1.14 0.222 0.3673 1.7321 0.4897 0.4304 0.7059 -0.8432 7750 - LS23.dat
+1 256 -42.1633 -185.828 -139.071 0.8513 -1.0342 0.202 0.3372 1.7085 0.4965 0.4019 0.7572 -0.8442 7750 - LS23.dat
+1 256 -42.6177 -185.078 -138.738 0.8758 -0.9459 0.1819 0.3066 1.7056 0.5059 0.3729 0.8193 -0.8432 7750 - LS23.dat
+1 256 -43.0228 -184.347 -138.387 0.898 -0.8524 0.1618 0.2758 1.6876 0.5176 0.3428 0.8755 -0.8402 7750 - LS23.dat
+1 256 -43.3782 -183.644 -138.022 0.918 -0.7693 0.1419 0.2451 1.6842 0.5312 0.3119 0.9404 -0.8353 7750 - LS23.dat
+1 256 -43.6935 -182.953 -137.637 0.9357 -0.6846 0.1224 0.2147 1.6748 0.5466 0.2799 1.0038 -0.8284 7750 - LS23.dat
+1 256 -43.9726 -182.271 -137.227 0.9512 -0.5951 0.1032 0.1851 1.6475 0.5632 0.247 1.0569 -0.8198 7750 - LS23.dat
+1 256 -44.2142 -181.602 -136.798 0.9643 -0.5093 0.0848 0.1567 1.6216 0.5809 0.2134 1.1104 -0.8095 7750 - LS23.dat
+1 256 -44.4217 -180.941 -136.346 0.9752 -0.4312 0.067 0.1296 1.615 0.5995 0.1794 1.1776 -0.7976 7750 - LS23.dat
+1 256 -44.5964 -180.287 -135.869 0.9841 -0.3571 0.0499 0.1033 1.6331 0.619 0.1443 1.2671 -0.7838 7750 - LS23.dat
+1 256 -44.7459 -179.603 -135.338 0.991 -0.2718 0.0329 0.0786 1.6069 0.6393 0.1079 1.3256 -0.7682 7750 - LS23.dat
+1 256 -44.86 -178.929 -134.782 0.9959 -0.2295 0.0169 0.0554 1.9426 0.6602 0.071 1.7029 -0.7509 7750 - LS23.dat
+1 256 -44.9439 -178.218 -134.159 0.9994 -0.0894 0.0004 0.0239 1.9411 0.6893 0.0233 1.8468 -0.7245 7750 - LS23.dat
+1 256 -45 -177 -133 0.9999 0.0749 -0.0001 -0.0097 3.9751 0.6927 -0.0095 3.818 -0.7212 7750 - LS23.dat
+1 256 -44.9416 -173.901 -130.024 0.9989 0.2643 -0.0122 -0.0257 4.3762 0.6639 -0.0391 3.8817 -0.7477 7750 - LS23.dat
+1 256 -44.7331 -170.448 -126.961 0.9959 0.5524 -0.0259 -0.0495 4.9095 0.6415 -0.0751 4.0894 -0.7667 7750 - LS23.dat
+1 256 -44.2692 -166.325 -123.526 0.991 0.7099 -0.0388 -0.073 4.1958 0.6471 -0.1125 3.5298 -0.7614 7750 - LS23.dat
+1 256 -43.7136 -163.041 -120.764 0.987 0.5547 -0.0434 -0.084 2.6137 0.6805 -0.1367 2.3984 -0.7315 7750 - LS23.dat
+1 256 -43.3489 -161.323 -119.187 0.9853 0.4764 -0.0413 -0.0864 1.9886 0.7168 -0.1474 2.0195 -0.6961 7750 - LS23.dat
+1 256 -43.0745 -160.177 -118.024 0.9847 0.4335 -0.0369 -0.0851 1.665 0.7513 -0.1521 1.874 -0.659 7750 - LS23.dat
+1 256 -42.8485 -159.309 -117.047 0.9848 0.4095 -0.0315 -0.0819 1.4733 0.7838 -0.1535 1.8411 -0.6202 7750 - LS23.dat
+1 256 -42.6487 -158.59 -116.148 0.9853 0.3851 -0.0258 -0.0773 1.3112 0.8144 -0.1524 1.8247 -0.5798 7750 - LS23.dat
+1 256 -42.4685 -157.977 -115.295 0.9862 0.363 -0.0201 -0.0719 1.1781 0.8424 -0.1493 1.8299 -0.5384 7750 - LS23.dat
+1 256 -42.3059 -157.449 -114.474 0.9873 0.3497 -0.0144 -0.066 1.0868 0.8684 -0.1444 1.8938 -0.4957 7750 - LS23.dat
+1 256 -42.1489 -156.961 -113.625 0.9886 0.3286 -0.0092 -0.0597 0.9806 0.8921 -0.138 1.9294 -0.4518 7750 - LS23.dat
+1 256 -42.004 -156.529 -112.774 0.9901 0.3161 -0.0044 -0.0532 0.9077 0.9135 -0.1301 2.0346 -0.4069 7750 - LS23.dat
+1 256 -41.8606 -156.117 -111.851 0.9916 0.2921 -0.0002 -0.0465 0.8078 0.9326 -0.1207 2.088 -0.3608 7750 - LS23.dat
+1 256 -41.7255 -155.743 -110.885 0.9931 0.2712 0.0032 -0.0399 0.7234 0.9492 -0.1101 2.1846 -0.3147 7750 - LS23.dat
+1 256 -41.5957 -155.397 -109.839 0.9946 0.2524 0.0058 -0.0333 0.6495 0.9633 -0.0981 2.3378 -0.2683 7750 - LS23.dat
+1 256 -41.4703 -155.074 -108.678 0.9961 0.2312 0.0074 -0.0267 0.5733 0.9753 -0.0846 2.5411 -0.2207 7750 - LS23.dat
+1 256 -41.3466 -154.768 -107.318 0.9974 0.1981 0.0078 -0.0201 0.473 0.9848 -0.0698 2.695 -0.1734 7750 - LS23.dat
+1 256 -41.2352 -154.502 -105.803 0.9985 0.1684 0.0068 -0.0137 0.3866 0.9919 -0.0536 3.0359 -0.1267 7750 - LS23.dat
+1 256 -41.1329 -154.267 -103.958 0.9993 0.1325 0.0043 -0.0071 0.2918 0.9968 -0.0358 3.6355 -0.0802 7750 - LS23.dat
+1 256 -41.0508 -154.086 -101.705 0.9999 0.0601 -0.0002 -0.0002 0.1265 0.9996 -0.0129 4.6597 -0.0271 7750 - LS23.dat
+1 256 -41 -153.979 -97.766 0.9993 -1.035 0 0 0 1 0.0384 26.9089 0 7750 - LS23.dat
+1 256 -42 -153.979 -71.766 1 -0.0066 0 0 0 1 0.0068 0.9749 0 7750 - LS23.dat
+1 256 -42.0045 -153.979 -71.1025 0.9998 -0.0184 0 0 0 1 0.0198 0.9326 0 7750 - LS23.dat
+1 256 -42.0173 -153.979 -70.4569 0.9995 -0.0282 0 0 0 1 0.0317 0.8876 0 7750 - LS23.dat
+1 256 -42.0371 -153.979 -69.8338 0.9991 -0.0363 0 0 0 1 0.0427 0.8483 0 7750 - LS23.dat
+1 256 -42.063 -153.979 -69.2286 0.9986 -0.0427 0 0 0 1 0.0529 0.8062 0 7750 - LS23.dat
+1 256 -42.0938 -153.979 -68.6458 0.9981 -0.0484 0 0 0 1 0.0622 0.7761 0 7750 - LS23.dat
+1 256 -42.1293 -153.979 -68.0763 0.9975 -0.0526 0 0 0 1 0.0708 0.7416 0 7750 - LS23.dat
+1 256 -42.1684 -153.979 -67.5246 0.9969 -0.0563 0 0 0 1 0.0787 0.7131 0 7750 - LS23.dat
+1 256 -42.2109 -153.979 -66.9862 0.9963 -0.0587 0 0 0 1 0.086 0.6806 0 7750 - LS23.dat
+1 256 -42.2559 -153.979 -66.4654 0.9957 -0.0608 0 0 0 1 0.0926 0.6543 0 7750 - LS23.dat
+1 256 -42.3031 -153.979 -65.9579 0.9951 -0.0624 0 0 0 1 0.0987 0.6292 0 7750 - LS23.dat
+1 256 -42.3521 -153.979 -65.4634 0.9945 -0.064 0 0 0 1 0.1043 0.6096 0 7750 - LS23.dat
+1 256 -42.4031 -153.979 -64.9773 0.994 -0.0645 0 0 0 1 0.1095 0.5856 0 7750 - LS23.dat
+1 256 -42.4552 -153.979 -64.5043 0.9935 -0.0651 0 0 0 1 0.1142 0.5668 0 7750 - LS23.dat
+1 256 -42.5086 -153.979 -64.0397 0.993 -0.0649 0 0 0 1 0.1184 0.544 0 7750 - LS23.dat
+1 256 -42.5625 -153.979 -63.5881 0.9925 -0.0649 0 0 0 1 0.1223 0.5271 0 7750 - LS23.dat
+1 256 -42.6171 -153.979 -63.1449 0.9921 -0.0647 0 0 0 1 0.1257 0.5102 0 7750 - LS23.dat
+1 256 -42.6723 -153.979 -62.71 0.9917 -0.0641 0 0 0 1 0.1289 0.4928 0 7750 - LS23.dat
+1 256 -42.7277 -153.979 -62.2834 0.9913 -0.0634 0 0 0 1 0.1317 0.4769 0 7750 - LS23.dat
+1 256 -42.7832 -153.979 -61.8652 0.991 -0.063 0 0 0 1 0.1341 0.4658 0 7750 - LS23.dat
+1 256 -42.8393 -153.979 -61.4506 0.9907 -0.0617 0 0 0 1 0.1362 0.4489 0 7750 - LS23.dat
+1 256 -42.8952 -153.979 -61.0444 0.9904 -0.0603 0 0 0 1 0.138 0.4328 0 7750 - LS23.dat
+1 256 -42.9506 -153.979 -60.6464 0.9902 -0.0596 0 0 0 1 0.1395 0.4227 0 7750 - LS23.dat
+1 256 -43.0061 -153.979 -60.2522 0.9901 -0.0579 0 0 0 1 0.1407 0.4077 0 7750 - LS23.dat
+1 256 -43.061 -153.979 -59.8662 0.9899 -0.0567 0 0 0 1 0.1417 0.3965 0 7750 - LS23.dat
+1 256 -43.1156 -153.979 -59.4839 0.9898 -0.0545 0 0 0 1 0.1424 0.3787 0 7750 - LS23.dat
+1 256 -43.17 -153.979 -59.1052 0.9898 -0.0552 0 0 0 1 0.1427 0.3832 0 7750 - LS23.dat
+1 256 -43.224 -153.979 -58.7302 0.9897 -0.0553 0 0 0 1 0.143 0.383 0 7750 - LS23.dat
+1 256 -43.2775 -153.979 -58.3588 0.9898 -0.0551 0 0 0 1 0.1427 0.3819 0 7750 - LS23.dat
+1 256 -43.3304 -153.979 -57.991 0.9898 -0.0554 0 0 0 1 0.1422 0.3858 0 7750 - LS23.dat
+1 256 -43.3825 -153.979 -57.6269 0.99 -0.0555 0 0 0 1 0.1414 0.3888 0 7750 - LS23.dat
+1 256 -43.4338 -153.979 -57.2665 0.9901 -0.0553 0 0 0 1 0.1402 0.3905 0 7750 - LS23.dat
+1 256 -43.4841 -153.979 -56.9098 0.9903 -0.0553 0 0 0 1 0.1388 0.3948 0 7750 - LS23.dat
+1 256 -43.5335 -153.979 -56.5568 0.9906 -0.0552 0 0 0 1 0.1371 0.3992 0 7750 - LS23.dat
+1 256 -43.5816 -153.979 -56.2075 0.9908 -0.0555 0 0 0 1 0.1351 0.4072 0 7750 - LS23.dat
+1 256 -43.6292 -153.979 -55.8572 0.9912 -0.0549 0 0 0 1 0.1327 0.4102 0 7750 - LS23.dat
+1 256 -43.6755 -153.979 -55.5106 0.9915 -0.0544 0 0 0 1 0.13 0.4153 0 7750 - LS23.dat
+1 256 -43.7203 -153.979 -55.1679 0.9919 -0.0544 0 0 0 1 0.1269 0.4251 0 7750 - LS23.dat
+1 256 -43.7641 -153.979 -54.8241 0.9923 -0.0536 0 0 0 1 0.1236 0.4303 0 7750 - LS23.dat
+1 256 -43.8063 -153.979 -54.4842 0.9928 -0.0532 0 0 0 1 0.1198 0.4413 0 7750 - LS23.dat
+1 256 -43.8473 -153.979 -54.1434 0.9933 -0.0526 0 0 0 1 0.1156 0.4523 0 7750 - LS23.dat
+1 256 -43.8869 -153.979 -53.8015 0.9938 -0.0512 0 0 0 1 0.111 0.4589 0 7750 - LS23.dat
+1 256 -43.9245 -153.979 -53.4637 0.9944 -0.0502 0 0 0 1 0.106 0.4716 0 7750 - LS23.dat
+1 256 -43.9604 -153.979 -53.1249 0.9949 -0.049 0 0 0 1 0.1004 0.4852 0 7750 - LS23.dat
+1 256 -43.9945 -153.979 -52.7853 0.9955 -0.0474 0 0 0 1 0.0944 0.4997 0 7750 - LS23.dat
+1 256 -44.0267 -153.979 -52.445 0.9961 -0.0452 0 0 0 1 0.0877 0.5133 0 7750 - LS23.dat
+1 256 -44.0565 -153.979 -52.1038 0.9968 -0.0423 0 0 0 1 0.0805 0.5229 0 7750 - LS23.dat
+1 256 -44.0836 -153.979 -51.767 0.9973 -0.0395 0 0 0 1 0.0728 0.541 0 7750 - LS23.dat
+1 256 -44.1081 -153.979 -51.4297 0.9979 -0.0364 0 0 0 1 0.0643 0.5655 0 7750 - LS23.dat
+1 256 -44.13 -153.979 -51.0868 0.9985 -0.0323 0 0 0 1 0.055 0.5857 0 7750 - LS23.dat
+1 256 -44.1487 -153.979 -50.7436 0.999 -0.0272 0 0 0 1 0.0449 0.6062 0 7750 - LS23.dat
+1 256 -44.164 -153.979 -50.4 0.9994 -0.0214 0 0 0 1 0.0339 0.6287 0 7750 - LS23.dat
+1 256 -44.1755 -153.979 -50.0564 0.9998 -0.0144 0 0 0 1 0.0221 0.6542 0 7750 - LS23.dat
+1 256 -44.183 -153.979 -49.7129 1 -0.0063 0 0 0 1 0.0091 0.6877 0 7750 - LS23.dat
+1 256 -44.186 -153.979 -49.3645 1 0.0036 0 0 0 1 -0.005 0.7177 0 7750 - LS23.dat
+1 256 -44.1841 -153.979 -49.0166 0.9998 0.0155 0 0 0 1 -0.0204 0.7583 0 7750 - LS23.dat
+1 256 -44.1767 -153.979 -48.6645 0.9993 0.0299 0 0 0 1 -0.0373 0.7993 0 7750 - LS23.dat
+1 256 -44.1633 -153.979 -48.3084 0.9984 0.0468 0 0 0 1 -0.0558 0.8376 0 7750 - LS23.dat
+1 256 -44.1433 -153.979 -47.9536 0.9971 0.0676 0 0 0 1 -0.0759 0.8875 0 7750 - LS23.dat
+1 256 -44.1159 -153.979 -47.5957 0.9952 0.0926 0 0 0 1 -0.098 0.9409 0 7750 - LS23.dat
+1 256 -44.0802 -153.979 -47.2351 0.9925 0.1228 0 0 0 1 -0.1221 0.998 0 7750 - LS23.dat
+1 256 -44.0354 -153.979 -46.8724 0.9889 0.1597 0 0 0 1 -0.1485 1.0636 0 7750 - LS23.dat
+1 256 -43.9806 -153.979 -46.5083 0.9841 0.2053 0 0 0 1 -0.1776 1.1375 0 7750 - LS23.dat
+1 256 -43.9137 -153.979 -46.1387 0.9778 0.2592 0 0 0 1 -0.2095 1.2097 0 7750 - LS23.dat
+1 256 -43.8344 -153.979 -45.7695 0.9697 0.3248 0 0 0 1 -0.2444 1.2887 0 7750 - LS23.dat
+1 256 -43.7404 -153.979 -45.3969 0.9593 0.4012 0 0 0 1 -0.2824 1.3631 0 7750 - LS23.dat
+1 256 -43.6313 -153.979 -45.0269 0.9462 0.4944 0 0 0 1 -0.3235 1.4462 0 7750 - LS23.dat
+1 256 -43.5044 -153.979 -44.6563 0.9299 0.586 0 0 0 1 -0.3679 1.4811 0 7750 - LS23.dat
+1 256 -43.358 -153.979 -44.2868 0.9104 0.6558 0 0 0 1 -0.4138 1.4429 0 7750 - LS23.dat
+1 256 -43.2025 -153.979 -43.945 0.8884 0.7194 0 0 0 1 -0.4591 1.3919 0 7750 - LS23.dat
+1 256 -43.0376 -153.979 -43.6264 0.8641 0.7793 0 0 0 1 -0.5033 1.3381 0 7750 - LS23.dat
+1 256 -42.8674 -153.979 -43.3343 0.8377 0.841 0 0 0 1 -0.5462 1.2898 0 7750 - LS23.dat
+1 256 -42.6861 -153.979 -43.0566 0.8091 0.8939 0 0 0 1 -0.5877 1.2307 0 7750 - LS23.dat
+1 256 -42.4999 -153.979 -42.8005 0.7786 0.9606 0 0 0 1 -0.6275 1.1918 0 7750 - LS23.dat
+1 256 -42.3018 -153.979 -42.5549 0.7458 1.0208 0 0 0 1 -0.6662 1.1429 0 7750 - LS23.dat
+1 256 -42.0918 -153.979 -42.3201 0.7111 1.0779 0 0 0 1 -0.7031 1.0901 0 7750 - LS23.dat
+1 256 -41.8704 -153.979 -42.0964 0.6744 1.1346 0 0 0 1 -0.7383 1.0364 0 7750 - LS23.dat
+1 256 -41.6345 -153.979 -41.8811 0.6361 1.1814 0 0 0 1 -0.7716 0.974 0 7750 - LS23.dat
+1 256 -41.3841 -153.979 -41.6748 0.5965 1.2298 0 0 0 1 -0.8026 0.914 0 7750 - LS23.dat
+1 256 -41.1194 -153.979 -41.4782 0.5556 1.293 0 0 0 1 -0.8315 0.864 0 7750 - LS23.dat
+1 256 -40.8329 -153.979 -41.287 0.5129 1.3595 0 0 0 1 -0.8584 0.8123 0 7750 - LS23.dat
+1 256 -40.5201 -153.979 -41.1003 0.4686 1.4215 0 0 0 1 -0.8834 0.7541 0 7750 - LS23.dat
+1 256 -40.1763 -153.979 -40.9181 0.4231 1.472 0 0 0 1 -0.9061 0.6874 0 7750 - LS23.dat
+1 256 -39.8009 -153.979 -40.743 0.3769 1.5253 0 0 0 1 -0.9263 0.6206 0 7750 - LS23.dat
+1 256 -39.389 -153.979 -40.5756 0.33 1.5861 0 0 0 1 -0.944 0.5545 0 7750 - LS23.dat
+1 256 -38.9317 -153.979 -40.416 0.2826 1.6056 0 0 0 1 -0.9592 0.473 0 7750 - LS23.dat
+1 256 -38.4198 -153.979 -40.2654 0.2367 1.5452 0 0 0 1 -0.9716 0.3764 0 7750 - LS23.dat
+1 256 -37.8901 -153.979 -40.1366 0.1942 1.4934 0 0 0 1 -0.981 0.2956 0 7750 - LS23.dat
+1 256 -37.3403 -153.979 -40.028 0.1547 1.4466 0 0 0 1 -0.988 0.2265 0 7750 - LS23.dat
+1 256 -36.7681 -153.979 -39.9387 0.1181 1.4011 0 0 0 1 -0.993 0.1667 0 7750 - LS23.dat
+1 256 -36.1757 -153.979 -39.8685 0.0844 1.3618 0 0 0 1 -0.9964 0.1153 0 7750 - LS23.dat
+1 256 -35.5607 -153.979 -39.8167 0.0532 1.4552 0 0 0 1 -0.9986 0.0775 0 7750 - LS23.dat
+1 256 -34.9258 -153.979 -39.7832 0.019 1.3707 0 0 0 1 -0.9998 0.026 0 7750 - LS23.dat
+1 256 -34 -153.979 -39.766 0 20 0 0 0 1 -1 0 0 7750 - LS23.dat
+
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - hose 4.ldr
+0 A flexible pneumatic hose segment.
+0 Name: 7750 - hose 4.ldr
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-14 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Steffen
+0 !HISTORY 2018-12-17 [technicbasics] generate new pneumatic hoses
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 256 -26 -200 -94 1 0 0 0 0 1 0 -1 0 7750 - LS22.dat
+1 256 -26 -200 -94 0.9998 -0.0602 0.0001 0.0001 0.0251 1 0.022 2.735 -0.0092 7750 - LS23.dat
+1 256 -26.0338 -199.986 -92.4635 0.9976 -0.1777 -0.0163 0.0183 0.0757 0.9994 0.0673 2.6126 -0.0301 7750 - LS23.dat
+1 256 -26.1289 -199.945 -91.0656 0.993 -0.2767 -0.0301 0.036 0.1205 0.9981 0.1122 2.4104 -0.0534 7750 - LS23.dat
+1 256 -26.2683 -199.885 -89.8517 0.9865 -0.3664 -0.0407 0.0524 0.1631 0.9961 0.1554 2.2706 -0.0781 7750 - LS23.dat
+1 256 -26.4422 -199.807 -88.7741 0.9779 -0.4535 -0.0484 0.0684 0.2064 0.9934 0.1975 2.1739 -0.1044 7750 - LS23.dat
+1 256 -26.6482 -199.714 -87.7867 0.9675 -0.5304 -0.0537 0.0842 0.2465 0.9898 0.2384 2.065 -0.1319 7750 - LS23.dat
+1 256 -26.8779 -199.607 -86.8923 0.9554 -0.605 -0.0565 0.1 0.2873 0.9854 0.2779 1.9769 -0.1605 7750 - LS23.dat
+1 256 -27.1312 -199.487 -86.0647 0.9418 -0.6698 -0.0572 0.116 0.3247 0.9802 0.3156 1.8792 -0.1898 7750 - LS23.dat
+1 256 -27.4022 -199.355 -85.3043 0.9268 -0.7362 -0.0556 0.1321 0.3644 0.974 0.3515 1.8044 -0.2194 7750 - LS23.dat
+1 256 -27.6915 -199.212 -84.5952 0.9106 -0.8032 -0.052 0.1485 0.4061 0.9669 0.3856 1.7406 -0.2496 7750 - LS23.dat
+1 256 -28.0023 -199.055 -83.9218 0.8933 -0.8639 -0.0465 0.1654 0.4462 0.9588 0.4178 1.6705 -0.2802 7750 - LS23.dat
+1 256 -28.3318 -198.885 -83.2847 0.8752 -0.9364 -0.0391 0.1827 0.4944 0.9496 0.448 1.6277 -0.3109 7750 - LS23.dat
+1 256 -28.6829 -198.699 -82.6744 0.8559 -1.0198 -0.0295 0.2006 0.551 0.9391 0.4766 1.5996 -0.3423 7750 - LS23.dat
+1 256 -29.0718 -198.489 -82.0644 0.836 -1.0784 -0.0181 0.2194 0.5971 0.9272 0.503 1.5317 -0.3742 7750 - LS23.dat
+1 256 -29.4836 -198.261 -81.4795 0.8157 -1.1517 -0.0049 0.2385 0.6542 0.9139 0.527 1.4866 -0.406 7750 - LS23.dat
+1 256 -29.9329 -198.006 -80.8995 0.7955 -1.2205 0.0101 0.2581 0.7128 0.899 0.5483 1.4352 -0.4379 7750 - LS23.dat
+1 256 -30.4197 -197.722 -80.3271 0.7755 -1.3006 0.0269 0.2781 0.7826 0.8824 0.5668 1.3956 -0.4698 7750 - LS23.dat
+1 256 -30.9576 -197.398 -79.7498 0.7564 -1.3783 0.0453 0.2985 0.8573 0.8638 0.5821 1.3514 -0.5018 7750 - LS23.dat
+1 256 -31.5543 -197.027 -79.1648 0.7387 -1.4788 0.0651 0.3188 0.9544 0.8431 0.5938 1.3272 -0.5337 7750 - LS23.dat
+1 256 -32.2206 -196.597 -78.5668 0.7232 -1.627 0.087 0.339 1.0967 0.8196 0.6017 1.3375 -0.5663 7750 - LS23.dat
+1 256 -33.0135 -196.062 -77.915 0.7112 -1.7506 0.11 0.3587 1.243 0.7926 0.6046 1.3218 -0.5997 7750 - LS23.dat
+1 256 -33.9318 -195.41 -77.2216 0.7054 -1.9271 0.1333 0.376 1.4584 0.7623 0.6009 1.3496 -0.6334 7750 - LS23.dat
+1 256 -35.0196 -194.587 -76.4598 0.709 -2.1396 0.1556 0.3883 1.7572 0.7281 0.5887 1.4178 -0.6676 7750 - LS23.dat
+1 256 -36.3459 -193.498 -75.581 0.7253 -2.1217 0.1708 0.3927 1.9236 0.6929 0.5654 1.3857 -0.7005 7750 - LS23.dat
+1 256 -37.68 -192.288 -74.7097 0.7522 -2.0111 0.1764 0.3861 2.0326 0.6627 0.5339 1.3633 -0.7278 7750 - LS23.dat
+1 256 -38.9237 -191.031 -73.8666 0.784 -1.743 0.173 0.3707 1.968 0.6399 0.4979 1.2791 -0.7488 7750 - LS23.dat
+1 256 -39.9516 -189.871 -73.1122 0.8153 -1.5173 0.1641 0.3497 1.9072 0.6248 0.4616 1.2349 -0.7633 7750 - LS23.dat
+1 256 -40.8005 -188.804 -72.4214 0.8447 -1.3508 0.1522 0.3251 1.8893 0.6158 0.4252 1.2389 -0.7731 7750 - LS23.dat
+1 256 -41.534 -187.778 -71.7485 0.8717 -1.1826 0.138 0.2986 1.8436 0.6112 0.3886 1.2363 -0.7794 7750 - LS23.dat
+1 256 -42.1516 -186.815 -71.103 0.896 -1.0677 0.1229 0.2708 1.8628 0.6103 0.3519 1.2851 -0.7826 7750 - LS23.dat
+1 256 -42.699 -185.86 -70.4441 0.918 -0.9446 0.1065 0.2421 1.8605 0.6125 0.3142 1.3263 -0.7833 7750 - LS23.dat
+1 256 -43.1797 -184.913 -69.7691 0.9372 -0.8188 0.0896 0.2135 1.8393 0.6172 0.2759 1.3583 -0.7817 7750 - LS23.dat
+1 256 -43.5915 -183.988 -69.0859 0.9536 -0.7119 0.0725 0.1851 1.8498 0.6241 0.2373 1.4175 -0.778 7750 - LS23.dat
+1 256 -43.9509 -183.054 -68.3703 0.9675 -0.6021 0.0552 0.1574 1.8489 0.6329 0.1981 1.4722 -0.7723 7750 - LS23.dat
+1 256 -44.2565 -182.116 -67.6231 0.9787 -0.4987 0.0378 0.1305 1.8657 0.6434 0.1583 1.5452 -0.7646 7750 - LS23.dat
+1 256 -44.512 -181.16 -66.8316 0.9875 -0.587 0.0205 0.1047 2.8122 0.6554 0.1176 2.4254 -0.755 7750 - LS23.dat
+1 256 -44.7194 -180.166 -65.9745 0.9979 -0.3553 0.001 0.0463 4.0083 0.6848 0.0449 3.7658 -0.7288 7750 - LS23.dat
+1 256 -45 -177 -63 1 0 0 0 7.0718 0.712 0 7.1713 -0.7022 7750 - LS23.dat
+1 256 -45 -170.995 -56.9103 1 0 0 0 1.9867 0.755 0 2.2877 -0.6557 7750 - LS23.dat
+1 256 -45 -169.818 -55.5555 1 0 0 0 1.4729 0.7878 0 1.8838 -0.6159 7750 - LS23.dat
+1 256 -45 -169.097 -54.6334 1 0 0 0 1.2852 0.8181 0 1.8284 -0.5751 7750 - LS23.dat
+1 256 -45 -168.527 -53.8219 1 0 0 0 1.1203 0.8468 0 1.7835 -0.5319 7750 - LS23.dat
+1 256 -45 -168.078 -53.1074 1 0 0 0 1.0238 0.8736 0 1.838 -0.4866 7750 - LS23.dat
+1 256 -45 -167.68 -52.3936 1 0 0 0 0.8986 0.8984 0 1.8386 -0.4391 7750 - LS23.dat
+1 256 -45 -167.342 -51.7008 1 0 0 0 0.7762 0.9205 0 1.8285 -0.3907 7750 - LS23.dat
+1 256 -45 -167.041 -50.9918 1 0 0 0 0.6575 0.9391 0 1.7972 -0.3436 7750 - LS23.dat
+1 256 -45 -166.791 -50.3101 1 0 0 0 0.6056 0.955 0 1.9495 -0.2967 7750 - LS23.dat
+1 256 -45 -166.55 -49.5326 1 0 0 0 0.5437 0.9689 0 2.1287 -0.2475 7750 - LS23.dat
+1 256 -45 -166.321 -48.6352 1 0 0 0 0.4715 0.9806 0 2.3613 -0.1958 7750 - LS23.dat
+1 256 -45 -166.097 -47.5137 1 0 0 0 0.38 0.9896 0 2.6135 -0.1439 7750 - LS23.dat
+1 256 -45 -165.9 -46.1648 1 0 0 0 0.3213 0.9959 0 3.5166 -0.091 7750 - LS23.dat
+1 256 -45 -165.717 -44.1603 1 0 0 0 0.1497 0.9996 0 5.3837 -0.0278 7750 - LS23.dat
+1 256 -45 -165.586 -39.444 1 0.015 -0.0001 -0.0001 0.0436 0.9998 -0.0074 2.0296 -0.0215 7750 - LS23.dat
+1 256 -44.9939 -165.568 -38.6181 0.9997 0.0509 -0.0008 -0.0008 0.1476 0.9976 -0.0237 2.1379 -0.0689 7750 - LS23.dat
+1 256 -44.9737 -165.51 -37.7687 0.9991 0.0837 -0.0025 -0.0025 0.2427 0.9928 -0.0412 2.0149 -0.1195 7750 - LS23.dat
+1 256 -44.9429 -165.42 -37.0271 0.9983 0.1121 -0.005 -0.005 0.3252 0.9855 -0.0584 1.8875 -0.1695 7750 - LS23.dat
+1 256 -44.9032 -165.305 -36.3587 0.9972 0.1329 -0.0082 -0.0082 0.3855 0.9761 -0.0749 1.7267 -0.2173 7750 - LS23.dat
+1 256 -44.8597 -165.179 -35.7927 0.9958 0.1611 -0.0121 -0.0121 0.4674 0.9648 -0.0906 1.7088 -0.2627 7750 - LS23.dat
+1 256 -44.8101 -165.035 -35.2664 0.9942 0.1913 -0.0169 -0.0169 0.5552 0.9509 -0.1065 1.698 -0.309 7750 - LS23.dat
+1 256 -44.7512 -164.864 -34.7444 0.9922 0.2066 -0.0225 -0.0225 0.5996 0.9346 -0.1223 1.5659 -0.3549 7750 - LS23.dat
+1 256 -44.6888 -164.683 -34.271 0.9902 0.2273 -0.0285 -0.0285 0.6595 0.9172 -0.137 1.5054 -0.3975 7750 - LS23.dat
+1 256 -44.6249 -164.498 -33.8481 0.9878 0.2647 -0.0353 -0.0353 0.7682 0.8975 -0.1515 1.5468 -0.4397 7750 - LS23.dat
+1 256 -44.5484 -164.275 -33.4007 0.9851 0.2888 -0.0431 -0.0431 0.8381 0.8749 -0.1662 1.4943 -0.4824 7750 - LS23.dat
+1 256 -44.4648 -164.033 -32.9685 0.9822 0.3215 -0.0515 -0.0515 0.9329 0.8504 -0.1804 1.4837 -0.5236 7750 - LS23.dat
+1 256 -44.3723 -163.765 -32.5417 0.979 0.3537 -0.0609 -0.0609 1.0264 0.8232 -0.1945 1.4587 -0.5645 7750 - LS23.dat
+1 256 -44.2626 -163.446 -32.0892 0.9756 0.3734 -0.0709 -0.0709 1.0836 0.7943 -0.2079 1.3828 -0.6033 7750 - LS23.dat
+1 256 -44.1465 -163.109 -31.6593 0.972 0.4172 -0.0813 -0.0813 1.2105 0.764 -0.2206 1.3918 -0.6401 7750 - LS23.dat
+1 256 -44.0043 -162.697 -31.1848 0.9681 0.4609 -0.0925 -0.0925 1.3375 0.7317 -0.2327 1.3859 -0.6754 7750 - LS23.dat
+1 256 -43.8357 -162.207 -30.6778 0.9641 0.5609 -0.1043 -0.1043 1.6276 0.6974 -0.2444 1.5183 -0.709 7750 - LS23.dat
+1 256 -43.6023 -161.53 -30.0461 0.9595 0.5229 -0.1175 -0.1175 1.5174 0.659 -0.256 1.2634 -0.7429 7750 - LS23.dat
+1 256 -43.1329 -160.168 -28.912 0.9588 1.0909 -0.1196 -0.1196 3.1657 0.6529 -0.2578 2.589 -0.7479 7750 - LS23.dat
+1 256 -42.4144 -158.083 -27.2068 0.9637 0.5267 -0.1053 -0.1053 1.5283 0.6945 -0.2453 1.4133 -0.7118 7750 - LS23.dat
+1 256 -42.1863 -157.421 -26.5948 0.9677 0.4572 -0.0938 -0.0938 1.3266 0.7279 -0.2341 1.3583 -0.6793 7750 - LS23.dat
+1 256 -42.0138 -156.921 -26.0822 0.9714 0.4124 -0.0828 -0.0828 1.1967 0.7596 -0.2223 1.3562 -0.6451 7750 - LS23.dat
+1 256 -41.8748 -156.517 -25.625 0.9751 0.3801 -0.0724 -0.0724 1.1031 0.79 -0.2098 1.3861 -0.6088 7750 - LS23.dat
+1 256 -41.7517 -156.16 -25.1762 0.9784 0.3455 -0.0626 -0.0626 1.0024 0.8185 -0.1968 1.3988 -0.5711 7750 - LS23.dat
+1 256 -41.6489 -155.862 -24.7598 0.9816 0.323 -0.0533 -0.0533 0.9374 0.8453 -0.1832 1.4579 -0.5317 7750 - LS23.dat
+1 256 -41.5516 -155.58 -24.3206 0.9846 0.2871 -0.0448 -0.0448 0.833 0.8701 -0.1691 1.4506 -0.4908 7750 - LS23.dat
+1 256 -41.4693 -155.341 -23.9052 0.9872 0.267 -0.037 -0.037 0.7749 0.8926 -0.1549 1.5169 -0.4494 7750 - LS23.dat
+1 256 -41.3922 -155.117 -23.4667 0.9897 0.2387 -0.0299 -0.0299 0.6925 0.9132 -0.14 1.5388 -0.4064 7750 - LS23.dat
+1 256 -41.3224 -154.915 -23.0172 0.9919 0.2164 -0.0236 -0.0236 0.6278 0.9315 -0.1251 1.5974 -0.3629 7750 - LS23.dat
+1 256 -41.2602 -154.734 -22.558 0.9938 0.1936 -0.0179 -0.0179 0.5618 0.9481 -0.1095 1.666 -0.3176 7750 - LS23.dat
+1 256 -41.2002 -154.56 -22.0411 0.9955 0.161 -0.013 -0.013 0.4672 0.9622 -0.0937 1.6453 -0.2719 7750 - LS23.dat
+1 256 -41.1504 -154.415 -21.5324 0.9969 0.1406 -0.009 -0.009 0.4081 0.9739 -0.0782 1.7468 -0.2268 7750 - LS23.dat
+1 256 -41.1052 -154.284 -20.971 0.9981 0.1179 -0.0056 -0.0056 0.342 0.9837 -0.062 1.8673 -0.1798 7750 - LS23.dat
+1 256 -41.0653 -154.168 -20.3389 0.999 0.1248 -0.003 -0.003 0.3621 0.9914 -0.0451 2.7392 -0.1309 7750 - LS23.dat
+1 256 -41.0325 -154.073 -19.6198 0.9998 0.0531 -0.0004 -0.0004 0.154 0.9987 -0.0175 3.0221 -0.0509 7750 - LS23.dat
+1 256 -41 -153.979 -17.766 0.9998 -0.1055 0 0 0 1 0.0222 4.7412 0 7750 - LS23.dat
+1 256 -41.0775 -153.979 -14.2842 0.9972 -0.1906 0 0 0 1 0.0747 2.544 0 7750 - LS23.dat
+1 256 -41.2653 -153.979 -11.7762 0.9973 -0.8622 0 0 0 1 0.0732 11.7415 0 7750 - LS23.dat
+1 256 -42 -153.979 -1.766 1 -0.0027 0 0 0 1 0.0042 0.6579 0 7750 - LS23.dat
+1 256 -42.0019 -153.979 -1.2963 0.9999 -0.0075 0 0 0 1 0.012 0.625 0 7750 - LS23.dat
+1 256 -42.0074 -153.979 -0.8423 0.9998 -0.0114 0 0 0 1 0.0191 0.5966 0 7750 - LS23.dat
+1 256 -42.0158 -153.979 -0.4007 0.9997 -0.0145 0 0 0 1 0.0256 0.566 0 7750 - LS23.dat
+1 256 -42.0267 -153.979 0.0252 0.9995 -0.017 0 0 0 1 0.0314 0.5396 0 7750 - LS23.dat
+1 256 -42.0397 -153.979 0.4386 0.9993 -0.0189 0 0 0 1 0.0367 0.5151 0 7750 - LS23.dat
+1 256 -42.0544 -153.979 0.8396 0.9991 -0.0205 0 0 0 1 0.0414 0.4935 0 7750 - LS23.dat
+1 256 -42.0707 -153.979 1.2314 0.999 -0.0215 0 0 0 1 0.0456 0.4697 0 7750 - LS23.dat
+1 256 -42.088 -153.979 1.6107 0.9988 -0.0223 0 0 0 1 0.0494 0.4504 0 7750 - LS23.dat
+1 256 -42.1063 -153.979 1.9809 0.9986 -0.0228 0 0 0 1 0.0527 0.4312 0 7750 - LS23.dat
+1 256 -42.1254 -153.979 2.3419 0.9985 -0.023 0 0 0 1 0.0556 0.412 0 7750 - LS23.dat
+1 256 -42.145 -153.979 2.6937 0.9983 -0.023 0 0 0 1 0.0582 0.3943 0 7750 - LS23.dat
+1 256 -42.165 -153.979 3.0363 0.9982 -0.0229 0 0 0 1 0.0603 0.3797 0 7750 - LS23.dat
+1 256 -42.1854 -153.979 3.373 0.9981 -0.0226 0 0 0 1 0.0621 0.3635 0 7750 - LS23.dat
+1 256 -42.2058 -153.979 3.7005 0.998 -0.0222 0 0 0 1 0.0636 0.349 0 7750 - LS23.dat
+1 256 -42.2263 -153.979 4.0221 0.9979 -0.0218 0 0 0 1 0.0647 0.3359 0 7750 - LS23.dat
+1 256 -42.2468 -153.979 4.3377 0.9978 -0.0214 0 0 0 1 0.0656 0.3262 0 7750 - LS23.dat
+1 256 -42.2672 -153.979 4.6473 0.9978 -0.0209 0 0 0 1 0.0662 0.3154 0 7750 - LS23.dat
+1 256 -42.2873 -153.979 4.951 0.9978 -0.0203 0 0 0 1 0.0662 0.306 0 7750 - LS23.dat
+1 256 -42.3071 -153.979 5.2487 0.9978 -0.0203 0 0 0 1 0.0662 0.3067 0 7750 - LS23.dat
+1 256 -42.3267 -153.979 5.5438 0.9978 -0.0203 0 0 0 1 0.0662 0.3056 0 7750 - LS23.dat
+1 256 -42.3458 -153.979 5.8328 0.9978 -0.02 0 0 0 1 0.0657 0.3032 0 7750 - LS23.dat
+1 256 -42.3643 -153.979 6.1157 0.9979 -0.0201 0 0 0 1 0.0648 0.3101 0 7750 - LS23.dat
+1 256 -42.3824 -153.979 6.396 0.998 -0.02 0 0 0 1 0.0635 0.3136 0 7750 - LS23.dat
+1 256 -42.4 -153.979 6.6736 0.9981 -0.0196 0 0 0 1 0.0621 0.3152 0 7750 - LS23.dat
+1 256 -42.4168 -153.979 6.945 0.9982 -0.0191 0 0 0 1 0.0603 0.3169 0 7750 - LS23.dat
+1 256 -42.4329 -153.979 7.2136 0.9983 -0.0187 0 0 0 1 0.0582 0.3207 0 7750 - LS23.dat
+1 256 -42.4484 -153.979 7.4795 0.9984 -0.0182 0 0 0 1 0.056 0.3255 0 7750 - LS23.dat
+1 256 -42.463 -153.979 7.7425 0.9986 -0.0176 0 0 0 1 0.0534 0.33 0 7750 - LS23.dat
+1 256 -42.4768 -153.979 8.0028 0.9987 -0.0169 0 0 0 1 0.0505 0.3341 0 7750 - LS23.dat
+1 256 -42.4897 -153.979 8.2602 0.9989 -0.0161 0 0 0 1 0.0473 0.3393 0 7750 - LS23.dat
+1 256 -42.5017 -153.979 8.5147 0.999 -0.0152 0 0 0 1 0.0437 0.3472 0 7750 - LS23.dat
+1 256 -42.5127 -153.979 8.7697 0.9992 -0.0141 0 0 0 1 0.0398 0.3535 0 7750 - LS23.dat
+1 256 -42.5227 -153.979 9.0218 0.9994 -0.0128 0 0 0 1 0.0356 0.3583 0 7750 - LS23.dat
+1 256 -42.5315 -153.979 9.2709 0.9995 -0.0114 0 0 0 1 0.031 0.3684 0 7750 - LS23.dat
+1 256 -42.5391 -153.979 9.5204 0.9997 -0.0098 0 0 0 1 0.0261 0.374 0 7750 - LS23.dat
+1 256 -42.5455 -153.979 9.767 0.9998 -0.008 0 0 0 1 0.0208 0.3845 0 7750 - LS23.dat
+1 256 -42.5505 -153.979 10.0139 0.9999 -0.0059 0 0 0 1 0.015 0.3911 0 7750 - LS23.dat
+1 256 -42.5541 -153.979 10.2577 1 -0.0036 0 0 0 1 0.0089 0.4022 0 7750 - LS23.dat
+1 256 -42.5562 -153.979 10.5018 1 -0.0009 0 0 0 1 0.0023 0.4095 0 7750 - LS23.dat
+1 256 -42.5567 -153.979 10.7426 1 0.002 0 0 0 1 -0.0047 0.4219 0 7750 - LS23.dat
+1 256 -42.5554 -153.979 10.9837 0.9999 0.0053 0 0 0 1 -0.0123 0.4357 0 7750 - LS23.dat
+1 256 -42.5524 -153.979 11.2249 0.9998 0.0092 0 0 0 1 -0.0203 0.4499 0 7750 - LS23.dat
+1 256 -42.5474 -153.979 11.4663 0.9996 0.0135 0 0 0 1 -0.029 0.465 0 7750 - LS23.dat
+1 256 -42.5403 -153.979 11.7077 0.9993 0.0184 0 0 0 1 -0.0383 0.4806 0 7750 - LS23.dat
+1 256 -42.531 -153.979 11.949 0.9988 0.024 0 0 0 1 -0.0483 0.4969 0 7750 - LS23.dat
+1 256 -42.5192 -153.979 12.1902 0.9983 0.0304 0 0 0 1 -0.059 0.5148 0 7750 - LS23.dat
+1 256 -42.5049 -153.979 12.4312 0.9975 0.0376 0 0 0 1 -0.0704 0.5331 0 7750 - LS23.dat
+1 256 -42.4878 -153.979 12.6719 0.9966 0.0457 0 0 0 1 -0.0826 0.5522 0 7750 - LS23.dat
+1 256 -42.4679 -153.979 12.9121 0.9954 0.0552 0 0 0 1 -0.0955 0.5749 0 7750 - LS23.dat
+1 256 -42.4448 -153.979 13.1518 0.994 0.0665 0 0 0 1 -0.1095 0.6034 0 7750 - LS23.dat
+1 256 -42.418 -153.979 13.3942 0.9922 0.0785 0 0 0 1 -0.1245 0.6254 0 7750 - LS23.dat
+1 256 -42.3876 -153.979 13.6358 0.9901 0.0926 0 0 0 1 -0.1405 0.6525 0 7750 - LS23.dat
+1 256 -42.3534 -153.979 13.8763 0.9875 0.1097 0 0 0 1 -0.1576 0.6874 0 7750 - LS23.dat
+1 256 -42.3145 -153.979 14.1191 0.9844 0.129 0 0 0 1 -0.1761 0.721 0 7750 - LS23.dat
+1 256 -42.2707 -153.979 14.3637 0.9806 0.1503 0 0 0 1 -0.196 0.7521 0 7750 - LS23.dat
+1 256 -42.2221 -153.979 14.6066 0.9761 0.1763 0 0 0 1 -0.2171 0.7925 0 7750 - LS23.dat
+1 256 -42.1676 -153.979 14.8509 0.9708 0.206 0 0 0 1 -0.2399 0.8335 0 7750 - LS23.dat
+1 256 -42.1069 -153.979 15.0962 0.9644 0.24 0 0 0 1 -0.2643 0.8757 0 7750 - LS23.dat
+1 256 -42.0395 -153.979 15.3421 0.9569 0.2792 0 0 0 1 -0.2905 0.9196 0 7750 - LS23.dat
+1 256 -41.9647 -153.979 15.5881 0.948 0.3235 0 0 0 1 -0.3184 0.963 0 7750 - LS23.dat
+1 256 -41.8821 -153.979 15.8338 0.9374 0.3733 0 0 0 1 -0.3481 1.0052 0 7750 - LS23.dat
+1 256 -41.7911 -153.979 16.0787 0.9251 0.4313 0 0 0 1 -0.3796 1.0511 0 7750 - LS23.dat
+1 256 -41.6911 -153.979 16.3221 0.9107 0.4975 0 0 0 1 -0.413 1.097 0 7750 - LS23.dat
+1 256 -41.5802 -153.979 16.5663 0.8939 0.5694 0 0 0 1 -0.4482 1.1355 0 7750 - LS23.dat
+1 256 -41.4591 -153.979 16.8077 0.8745 0.6491 0 0 0 1 -0.4851 1.17 0 7750 - LS23.dat
+1 256 -41.3255 -153.979 17.0484 0.8521 0.7327 0 0 0 1 -0.5234 1.193 0 7750 - LS23.dat
+1 256 -41.1804 -153.979 17.2845 0.8267 0.8219 0 0 0 1 -0.5627 1.2077 0 7750 - LS23.dat
+1 256 -41.0214 -153.979 17.5179 0.7981 0.8983 0 0 0 1 -0.6026 1.1898 0 7750 - LS23.dat
+1 256 -40.8498 -153.979 17.745 0.7668 0.9526 0 0 0 1 -0.6419 1.138 0 7750 - LS23.dat
+1 256 -40.6696 -153.979 17.9601 0.7336 1.0048 0 0 0 1 -0.6796 1.0848 0 7750 - LS23.dat
+1 256 -40.4835 -153.979 18.1609 0.6986 1.0689 0 0 0 1 -0.7155 1.0436 0 7750 - LS23.dat
+1 256 -40.2854 -153.979 18.3542 0.6614 1.1141 0 0 0 1 -0.75 0.9824 0 7750 - LS23.dat
+1 256 -40.0751 -153.979 18.5395 0.6229 1.1594 0 0 0 1 -0.7823 0.9232 0 7750 - LS23.dat
+1 256 -39.858 -153.979 18.7123 0.5829 1.2219 0 0 0 1 -0.8126 0.8764 0 7750 - LS23.dat
+1 256 -39.6214 -153.979 18.8819 0.5411 1.2683 0 0 0 1 -0.841 0.816 0 7750 - LS23.dat
+1 256 -39.3703 -153.979 19.0434 0.498 1.3226 0 0 0 1 -0.8672 0.7595 0 7750 - LS23.dat
+1 256 -39.0989 -153.979 19.1991 0.4535 1.36 0 0 0 1 -0.8912 0.6921 0 7750 - LS23.dat
+1 256 -38.8041 -153.979 19.349 0.4086 1.3628 0 0 0 1 -0.9127 0.6101 0 7750 - LS23.dat
+1 256 -38.4917 -153.979 19.4887 0.3644 1.3454 0 0 0 1 -0.9313 0.5264 0 7750 - LS23.dat
+1 256 -38.1652 -153.979 19.6163 0.3215 1.3186 0 0 0 1 -0.9469 0.4477 0 7750 - LS23.dat
+1 256 -37.8254 -153.979 19.7316 0.2804 1.2883 0 0 0 1 -0.9599 0.3764 0 7750 - LS23.dat
+1 256 -37.4733 -153.979 19.8343 0.2412 1.259 0 0 0 1 -0.9705 0.3129 0 7750 - LS23.dat
+1 256 -37.1066 -153.979 19.9254 0.2038 1.2248 0 0 0 1 -0.979 0.255 0 7750 - LS23.dat
+1 256 -36.7262 -153.979 20.0045 0.1685 1.1905 0 0 0 1 -0.9857 0.2036 0 7750 - LS23.dat
+1 256 -36.3333 -153.979 20.0715 0.1352 1.1599 0 0 0 1 -0.9908 0.1583 0 7750 - LS23.dat
+1 256 -35.9255 -153.979 20.127 0.1038 1.1271 0 0 0 1 -0.9946 0.1176 0 7750 - LS23.dat
+1 256 -35.5043 -153.979 20.1709 0.0743 1.5147 0 0 0 1 -0.9972 0.1129 0 7750 - LS23.dat
+1 256 -35.0707 -153.979 20.203 0.0292 1.6696 0 0 0 1 -0.9996 0.0488 0 7750 - LS23.dat
+1 256 -34 -153.979 20.234 0 20 0 0 0 1 -1 0 0 7750 - LS23.dat
+
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 7750 - LS22.dat
+0 An LSynth beveled end piece for a technic pneumatic hose.
+0 Name: 7750 - LS22.dat
+0 Author: Fredrik Gl�ckner [fredrigl]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CW
+0 !KEYWORDS LSynth
+0 !HISTORY 2003-11-30 [Steffen] BFCed
+0 !HISTORY 2011-06-05 [Holly-Wood] Added edges, closed top, rearranged
+0 !HISTORY 2013-06-27 [MMR1988] Reduced code by simplifying
+0 // Circle 1.0 (main_colour)
+1 16 0 0 0 3 0 0 0 1 0 0 0 3 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 0 5 0 0 0 1 0 0 0 5 4-4edge.dat
+0 // Ring  2 x 1.0 (main_colour)
+1 16 0 16 0 -2 0 0 0 -1 0 0 0 2 4-4ring2.dat
+0 BFC INVERTNEXT
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 2 0 4 0 0 0 14 0 0 0 4 4-4cylo.dat
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 2 0 6 0 0 0 14 0 0 0 6 4-4cylo.dat
+0 BFC INVERTNEXT
+0 // Cone  3 x 1.0 (main_colour)
+1 16 0 2 0 1 0 0 0 -2 0 0 0 1 4-4con3.dat
+0 // Cone  5 x 1.0 (main_colour)
+1 16 0 2 0 1 0 0 0 -2 0 0 0 1 4-4con5.DAT
+0 // Ring  3 x 1.0 (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 4-4ring3.dat
+0 // Ring  4 x 1.0 (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 4-4ring4.dat
+
+
+
+
+
+0 STEP
+0 FILE 7750 - LS23.dat
+0 An LSynth beveled cross section piece for a technic pneumatic hose.
+0 Name: 7750 - LS23.dat
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 BFC CERTIFY CW
+0 !KEYWORDS LSynth
+0 !HISTORY 2011-06-05 [Holly-Wood] Initial version
+0 // Cylinder 1.0 (main_colour)
+1 16 0 0 0 5 0 0 0 1 0 0 0 5 4-4cyli.dat
+0 BFC INVERTNEXT
+0 // Cylinder 1.0 (main_colour)
+1 16 0 0 0 3 0 0 0 1 0 0 0 3 4-4cyli.dat
+0 // Ring  3 x 1.0 (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 4-4ring3.dat
+0 // Ring  4 x 1.0 (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 4-4ring4.dat
+0 // Ring  3 x 1.0 (main_colour)
+1 16 0 1 0 1 0 0 0 -1 0 0 0 1 4-4ring3.dat
+0 // Ring  4 x 1.0 (main_colour)
+1 16 0 1 0 1 0 0 0 -1 0 0 0 1 4-4ring4.dat
+
+
+
+
+
+
+
+
+
+
+
+

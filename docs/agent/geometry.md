@@ -56,13 +56,15 @@ Use actual matching wheel/rim/tyre assemblies from inspected official shortcuts 
 
 `confirmed_components` and `optimistic_components` describe the connector algorithm's evidence. “Confirmed” is a library inference status, not a promise of real-world fit. Multiple groups can mean floating parts, missing connector metadata, or deliberately separate objects (e.g. a figure beside a vehicle). Document which explanation you verified. One connected group also does not prove that the model is strong or stable.
 
-The report always says `physical_validity: not_proven`. Visually inspect home/top/front views and any obscured connection. For difficult geometry:
+The report always says `physical_validity: not_proven`. Visually inspect home/top/front views and any obscured connection. For difficult geometry, render the selected submodel and inspect its construction steps from several viewpoints with the global `ldraw-render-steps.sh`; see [construction review](build-manuals.md#inspect-a-model-during-construction). Compare suspect regions with the actual part geometry and connector metadata. Record unresolved physical checks and simplify unverified construction where practical.
+
+For a semantic GLB export:
 
 ```sh
 ./prepare-glb.sh --file output/my-model.mpd output/my-model.glb
 ```
 
-Use Blender MCP to import into a new collection without deleting the user's scene. Inspect named part instances and custom properties, world transforms, bounds, and suspect contact regions. GLB coordinates/units may differ from LDraw: establish the conversion using a known 20-LDU spacing before comparing numbers. Draco compression/tessellation and surface-only intersections have tolerances; coplanar contact and intended socket engagement are not automatically collisions. Inspect material intersections and connector clearance, including containment. Keep all fixes in the source plan/MPD and regenerate the GLB. Missing Blender access is not a successful geometry check: record any remaining uncertainty and simplify unverified construction where practical.
+This invokes the global `mpd2glb.sh` and preserves semantic annotations for downstream viewing. Conversion is not an additional geometry or physical-fit check. Keep all fixes in the source plan/MPD and regenerate derived exports after changes.
 
 ## Module interfaces and large scenes
 

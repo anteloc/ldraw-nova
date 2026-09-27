@@ -19,7 +19,7 @@
 ```sh
 ./ldraw-agent mechanism list
 ./ldraw-agent discover search submodels 'a small worm drive' --construction mechanism --engine fts
-./ldraw-agent mechanism prepare "$LDRAW_LIB_DIR/models-annotated/42042-1_Tower-Crane.mpd" \
+./ldraw-agent mechanism prepare "data/models-annotated/42042-1_Tower-Crane.mpd" \
   --section '42042 - spoolwormgear.ldr' --outdir output/worm-study \
   --views home top --normalize-rotations --repair-bfc-comments
 ./ldraw-agent mechanism export worm-drive --outdir output/my-winch
@@ -31,9 +31,9 @@
 
 Run commands from the repository root. `./setup.sh` installs the pinned Python tools into `.venv`, checks source paths, builds a local parts index, and extracts a PDF page to verify Poppler. It needs Python 3.12+ and `pdftotext`; LeoCAD must be available for rendering. `uv sync --locked --extra test` reproduces `uv.lock`. The pip fallback pins direct dependencies; transitive dependencies may differ.
 
-`./ldraw-agent --help` lists the executable interface. Global `--library`, `--models`, and repeatable `--shadow` options go **before** the command. Default directories are relative to this repository, not `$HOME`; `LDRAW_DIR` and `MODELS_DIR` override them. The local `.cache` directory can be deleted and rebuilt. No library download, database mutation, or global pyldraw configuration is needed.
+`./ldraw-agent --help` lists the executable interface. Global `--library` and repeatable `--shadow` options go **before** the command. Parts resolve from `--library`, then `LDRAW_DIR`, then `LDRAWDIR` (empty variables are treated as unset). Reference models and descriptions always reside in `data/models-annotated/` and `data/ldraw-info.db`, resolved relative to this repository even when invoked from elsewhere. The local `.cache` directory can be deleted and rebuilt. No library download, database mutation, or global pyldraw configuration is needed.
 
-The supplied `offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides the default; explicit `--shadow` paths replace defaults, and `--no-shadow` disables external shadows. `doctor` reports selected sources. See the [shadow and snapping guide](snapping.md) for coverage, connector discovery, candidate application and the pyldraw3 1.7 adapters.
+The supplied `data/offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides the default; explicit `--shadow` paths replace defaults, and `--no-shadow` disables external shadows. `doctor` reports selected sources. See the [shadow and snapping guide](snapping.md) for coverage, connector discovery, candidate application and the pyldraw3 1.7 adapters.
 
 ## Discover and inspect
 
@@ -97,13 +97,13 @@ limitations are in the [vehicle guide](vehicles.md).
 ./ldraw-agent spec 'INVERTNEXT' --limit 4
 ./ldraw-agent search models 'car' --limit 5
 ./ldraw-agent search submodels 'wheel OR steering' --limit 5
-./ldraw-agent sections '../ldraw-lib/models-annotated/106-1.mpd'
-./ldraw-agent sections '../ldraw-lib/models-annotated/106-1.mpd' --section '106 - car.ldr'
+./ldraw-agent sections 'data/models-annotated/106-1.mpd'
+./ldraw-agent sections 'data/models-annotated/106-1.mpd' --section '106 - car.ldr'
 ```
 
 Part search uses case-insensitive plain AND terms over actual filenames/descriptions; whitespace within terms is not significant. Numeric dimensions are search hints, not a geometry API. Exact codes rank first; aliases/internal parts rank later. There is no fixed hardcoded palette: `colours` reads `LDConfig.ldr`.
 
-Model/submodel search reuses the supplied `../ldraw-lib/scripts/ldraw-info.db` **read-only**, with parameterized SQLite FTS5 queries: `wheel`, `wheel OR steering`, `"exact phrase"`, `hing*`. Reports identify the database, modification time, and whether each source exists. Read the actual annotated source before using a result. If the database is absent, a header scan uses simple AND terms instead; it reports this different query language explicitly. `sections` returns original source line numbers, descriptions, or a selected full block; it never strips attribution or packs dependencies for you.
+Model/submodel search reuses the supplied `data/ldraw-info.db` **read-only**, with parameterized SQLite FTS5 queries: `wheel`, `wheel OR steering`, `"exact phrase"`, `hing*`. Reports identify the database, modification time, and whether each source exists. Read the actual annotated source before using a result. If the database is absent, a header scan uses simple AND terms instead; it reports this different query language explicitly. `sections` returns original source line numbers, descriptions, or a selected full block; it never strips attribution or packs dependencies for you.
 
 `part` accepts a code with or without `.dat` and reports current part status/replacement, local coordinates, true expanded bounds, connector count, and a bounded connector list. Use a larger `--limit` if connectors are truncated. If `complete` is false, fix the missing library dependency before trusting its geometry. The generated index is a local symlink view of `parts`, `p`, and `LDConfig.ldr`; file size/mtime signatures automatically rebuild its titles as the library changes.
 
@@ -111,18 +111,18 @@ Model/submodel search reuses the supplied `../ldraw-lib/scripts/ldraw-info.db` *
 
 First follow the [Jev availability check](reference-discovery.md#check-jev-availability-before-searching). Missing tooling/credentials, rejected API keys and service/network failures should lead the agent to `discover search parts|models|submodels ... --engine fts`. State the fallback and continue using local resources; the CLI does not switch engines automatically.
 
-For the integrated parts/models/submodels workflow, use [reference discovery](reference-discovery.md): `discover index`, `discover search`, `discover show`, `discover parts`, `discover prepare`, `discover catalog`, `discover review`, `discover example` and `discover recipe`. It consumes the three `full_description` views through a typed local index, repairs single-section header descriptions locally, filters actual contents, diversifies results and supplies measured image cards. The direct sibling CLI below remains available, but its original-table key instructions do not apply to the synthetic row keys returned by the new views.
+For the integrated parts/models/submodels workflow, use [reference discovery](reference-discovery.md): `discover index`, `discover search`, `discover show`, `discover parts`, `discover prepare`, `discover catalog`, `discover review`, `discover example` and `discover recipe`. It consumes the three `full_description` views through a typed local index, repairs single-section header descriptions locally, filters actual contents, diversifies results and supplies measured image cards. The global CLI below also supports direct queries, but its original-table key instructions do not apply to the synthetic row keys returned by the new views.
 
-Use the sibling `../jev-rerank` CLI when the request describes a part's purpose or appearance. From this repository root:
+Use the global `jev-rerank` CLI when the request describes a part's purpose or appearance. From this repository root:
 
 ```sh
-uv run --project ../jev-rerank jev-rerank \
-  --db "$LDRAW_LIB_DIR/scripts/ldraw-info.db" \
+jev-rerank \
+  --db "data/ldraw-info.db" \
   --table-field parts_descriptions.description --top 10 \
   --query 'a wall decoration for a castle' --show --json
 ```
 
-This requires `uv`, the sibling project, and `TYPESAFE_API_KEY` in the environment. `LDRAW_LIB_DIR` points to the library repository containing `scripts/ldraw-info.db`, usually `../ldraw-lib`; it differs from `LDRAW_DIR`, which points to the actual part library, usually `../ldraw-lib/ldraw`. `uv run --project ../jev-rerank` runs the sibling project's command; there is no `../jev-rerank/uv` executable in this setup. The source database is read-only; the reranker maintains its own local index and score cache.
+This requires `jev-rerank` on `PATH` and `TYPESAFE_API_KEY` in the environment. No Jev source checkout or `uv run` is needed. The source database is `data/ldraw-info.db` and stays read-only; the reranker maintains its own local index and score cache.
 
 **Describe a single part in each query.** For example, `a wall decoration for a castle`, `a heraldic shield to hang above a castle gate`, or `a curved slope for the nose of a small spacecraft`. Query each intended role separately. The wording describes what one candidate should be; `--top 10` controls how many alternatives are returned. Do not ask the query to generate a model, list ten parts, or fill the entire model's BOM.
 
@@ -149,13 +149,13 @@ For example, after selecting these references from the castle query:
 
 Open the board images, compare measured dimensions, and check origins/connectors before placement. A score ranks relevance from description text; it does not replace this review.
 
-With `--top 10`, the current reranker normally scores a BM25 shortlist of up to 500 field values. The ten results are therefore not an exhaustive search of the whole library. If suitable parts are missing, refine the single-part description or supplement it with category searches; see the sibling CLI's `--help` for larger candidate budgets. Progress goes to stderr, so stdout can be saved as JSON; preserve and check the command's exit status before consuming it. If the reranker is unavailable, report that and use the existing catalog/search tools without claiming Jev ranking.
+With `--top 10`, the current reranker normally scores a BM25 shortlist of up to 500 field values. The ten results are therefore not an exhaustive search of the whole library. If suitable parts are missing, refine the single-part description or supplement it with category searches; see `jev-rerank --help` for larger candidate budgets. Progress goes to stderr, so stdout can be saved as JSON; preserve and check the command's exit status before consuming it. If the reranker is unavailable, report that and use the existing catalog/search tools without claiming Jev ranking.
 
 ## Study and extract complex references
 
 ```sh
-./ldraw-agent study ../ldraw-lib/models-annotated/10270-1.mpd --report output/bookshop-study.json
-./ldraw-agent extract ../ldraw-lib/models-annotated/10270-1.mpd --section '10270 - Pendulum_Clock.ldr' --namespace ref-clock --output output/assets/clock.mpd
+./ldraw-agent study data/models-annotated/10270-1.mpd --report output/bookshop-study.json
+./ldraw-agent extract data/models-annotated/10270-1.mpd --section '10270 - Pendulum_Clock.ldr' --namespace ref-clock --output output/assets/clock.mpd
 ```
 
 `study` inventories hierarchy, physical counts, reuse/reachability and source diagnostics. Its default summary limits section/diagnostic rows to 30 (`--limit`); `--detail full` includes complete section metadata and BOM. It returns 0 for a completed inventory even if `source_checks_passed` is false. `extract` copies only a dependency closure, namespaces every embedded reference, preserves raw geometry and author/licence headers, and writes an adjacent attribution/change manifest. Read the returned `root` for the new reference name. It writes review copies even with diagnostics (exit 1 on syntax errors); successful extraction is not a successful assembly build. Existing output or manifest requires `--force`, and source overwrite is prohibited.
@@ -210,7 +210,9 @@ For loops, procedural repetition, or matrix composition, use the [Python example
 
 `render` saves `home.png`, `top.png`, `front.png`, and `leocad-bom.csv`. Override `--views` with any of `home front back left right top bottom`. Supported assemblies use cameras framed from their resolved bounds; other inputs use LeoCAD's preset view framing. Outputs are rendered to unique temporary files first, so stale files cannot count as a successful export. Existing destination images are replaced on successful export. Open the images and inspect them; merely producing a PNG is not visual review. For MPDs with embedded DAT geometry, the adapter writes a temporary dependency library and model view for LeoCAD, then restores original embedded names in the CSV. The originals and installed library remain unchanged. This avoids the supplied LeoCAD omitting embedded parts. Compare the Python BOM with LeoCAD using `compare-bom`. Commands use explicit library paths and per-process timeouts (`--timeout`, default 90 seconds).
 
-`prepare-glb.sh` also retains `--part 3001.dat` and `--model 106-1.mpd`; outputs default to `parts-glb` or `models-glb`. `--file` accepts newly generated local models without copying them into OMR. It invokes the existing semantic converter with real part descriptions and an optional default-colour preview mapping. It does not import into Blender or alter the MPD. See [geometry.md](geometry.md) for Blender review.
+`prepare-glb.sh` also retains `--part 3001.dat` and `--model 106-1.mpd`; outputs default to `parts-glb` or `models-glb`. `--model` reads `data/models-annotated/`; `--part` uses `LDRAW_DIR` or its fallback `LDRAWDIR`. `--file` accepts newly generated local models without copying them into OMR. It invokes the global `mpd2glb.sh` with real part descriptions and an optional default-colour preview mapping. GLB is a derived export; the MPD remains authoritative.
+
+The global `ldraw-render-steps.sh` is also useful during construction. Read its current help with no arguments, select a submodel and step range, then render several viewpoints to expose misplaced parts, concealed gaps or awkward layering. Open the images, fix the source plan/generator and render again. The [build-page guide](build-manuals.md#inspect-a-model-during-construction) covers this review loop and the richer `manual prepare` workflow for atlas studies. All rendering calls use the `leocad` CLI on `PATH`.
 
 ## Automation contract
 

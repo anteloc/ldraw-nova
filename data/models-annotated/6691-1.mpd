@@ -1,0 +1,273 @@
+0 FILE 6691 - main.ldr
+0 An assembly that builds a Red Cross rescue helicopter composed of red and white structural plates, sloped panels, windows, and a landing wheel.
+0 Name: 6691 - main.ldr
+0 Author: Victor Di Rienzo [tatubias]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-05-30 [tatubias] Original upload for OMR
+0 !HISTORY 2021-08-18 [RainbowDolphin] Corrected minifig torsos
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6691 - Red Cross Helicopter.ldr
+
+
+0
+0 STEP
+0 FILE 6691 - Red Cross Helicopter.ldr
+0 A Red Cross rescue helicopter built from red and white plates, sloped bricks, windows with shutters, a door, and a steering wheel landing skid.
+0 Name: 6691 - Red Cross Helicopter.ldr
+0 Author: Victor Di Rienzo [tatubias]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  4 x 12 (red)
+1 4 0 0 0 0 0 -1 0 1 0 1 0 0 3029.dat
+0 // Plate  1 x  4 (red)
+1 4 0 0 -130 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 STEP
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -8 80 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -8 40 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -8 0 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -8 -40 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 0 -8 -70 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Plate  1 x  4 (red)
+1 4 -30 -8 -100 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 30 -8 -100 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Fence Lattice  1 x  4 x  1 (red)
+1 4 -30 -24 -20 0 0 1 0 1 0 -1 0 0 3633.dat
+0 // Plate  1 x  4 (red)
+1 4 -30 -16 -100 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 30 -16 -100 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (red)
+1 4 -20 -16 -150 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (red)
+1 4 20 -16 -150 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Brick  1 x  2 (red)
+1 4 0 -24 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Plate  1 x  6 (red)
+1 4 -30 -24 -120 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (red)
+1 4 30 -24 -120 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  4 (red)
+1 4 0 -24 -190 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Car Steering Stand and Wheel (Complete) (white)
+1 15 0 -24 -150 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 // Window  1 x  4 x  3 (red)
+1 4 0 -72 110 -1 0 0 0 1 0 0 0 -1 3853.dat
+0 // Window  1 x  2 x  3 Shutter (white)
+1 15 -40 -72 122 0 0 -1 0 1 0 1 0 0 3856.dat
+0 // Window  1 x  2 x  3 Shutter (white)
+1 15 40 -72 122 -0.966 0 0.259 0 1 0 -0.259 0 -0.966 3856.dat
+0 // Brick  1 x  3 (white)
+1 15 -10 -48 -90 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  2 (white)
+1 15 30 -48 -80 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Slope Brick 45  2 x  4 (white)
+1 15 0 -48 -170 1 0 0 0 1 0 0 0 1 3037.dat
+0 // Door  1 x  3 x  1 Right (white)
+1 15 -30 -52 -150 1 0 0 0 1 0 0 0 1 3821.dat
+0 // Door  1 x  3 x  1 Left (white)
+1 15 30 -48 -150 0.866 0 0.5 0 1 0 -0.5 0 0.866 3822.dat
+0 // Panel  1 x  4 x  3 with Red Cross and Stripe Pattern (white)
+1 15 30 -72 -20 0 0 1 0 1 0 -1 0 0 4215ap02.dat
+0 // Panel  1 x  4 x  3 with Red Stripe Pattern (white)
+1 15 30 -72 60 0 0 1 0 1 0 -1 0 0 4215ap03.dat
+0 // Panel  1 x  4 x  3 with Red Stripe Pattern (white)
+1 15 -30 -72 60 0 0 -1 0 1 0 1 0 0 4215ap03.dat
+0 // Brick  1 x  1 (white)
+1 15 30 -72 -70 0 0 -1 0 1 0 1 0 0 3005.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (white)
+1 15 -30 -96 90 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (white)
+1 15 30 -96 90 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Brick  1 x  3 (white)
+1 15 -30 -96 50 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  2 x  8 (white)
+1 15 0 -96 160 0 0 -1 0 1 0 1 0 0 3007.dat
+0 // Plate  2 x 10 (white)
+1 15 0 -104 200 0 0 -1 0 1 0 1 0 0 3832.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (white)
+1 15 0 -96 250 -1 0 0 0 1 0 0 0 -1 3747a.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 0 -112 290 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 0 -112 270 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 0 -112 250 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 0 -112 190 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 STEP
+0 // Plate  1 x  1 (trans_red)
+1 36 0 -120 190 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 0 -136 270 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 0 -136 290 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (red)
+1 4 0 -160 290 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -144 320 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  2 x  2 with Helicopter Tail Rotor Holder (red)
+1 4 10 -152 320 -1 0 0 0 1 0 0 0 -1 3481.dat
+0 // Propeller  4 Blade  5 Diameter with Rotor Holder (light_grey)
+1 7 -20 -160 320 0 1 0 1 0 0 0 0 -1 3461.dat
+0 // Plate  2 x  3 (white)
+1 15 20 -104 70 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 0 -184 310 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Brick  1 x  1 (red)
+1 4 0 -184 330 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Windscreen  2 x  4 x  2 (trans_clear)
+1 47 0 -96 -150 1 0 0 0 1 0 0 0 1 3823.dat
+0 STEP
+0 // Brick  1 x  8 (white)
+1 15 30 -96 0 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Plate  2 x  3 (white)
+1 15 -20 -104 70 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 30 -160 320 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Hinge Car Roof Holder  1 x  4 x  2 (white)
+1 15 0 -96 -90 1 0 0 0 1 0 0 0 1 4214.dat
+0 // Hinge Car Roof  4 x  4 (white)
+1 15 0 -104 -120 1 0 0 0 1 0 0 0 1 4213.dat
+0 // Plate  4 x  6 (white)
+1 15 0 -104 -20 0 0 -1 0 1 0 1 0 0 3032.dat
+0 // Plate  2 x  6 (red)
+1 4 0 -104 0 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Slope Brick 33  3 x  2 (red)
+1 4 0 -128 10 -1 0 0 0 1 0 0 0 -1 3298.dat
+0 // Plate  2 x  3 (red)
+1 4 0 -112 -30 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  1 x  2 with Jet Engine and Smooth Hole (black)
+1 0 10 -120 -20 0 0 1 0 1 0 -1 0 0 3475a.dat
+0 // Plate  1 x  2 with Jet Engine and Smooth Hole (black)
+1 0 -10 -120 -20 0 0 -1 0 1 0 1 0 0 3475a.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -120 -50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  3 with Rotor Holder (red)
+1 4 0 -128 -30 0 0 1 0 1 0 -1 0 0 3462.dat
+0 STEP
+0 // Brick  1 x  6 (black)
+1 0 -50 32 -20 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -50 32 50 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -50 32 -90 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -50 24 20 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -50 24 -80 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 50 24 -80 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Brick  1 x  6 (black)
+1 0 50 32 -20 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 50 32 50 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 50 32 -90 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 50 24 20 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 0 16 -70 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 0 16 30 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 0 8 -70 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 0 8 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 0 -112 -130 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 0 -120 -130 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Propeller  4 Blade  5 Diameter with Rotor Holder (light_grey)
+1 7 0 -128 -30 0.5 0 -0.866 0 1 0 0.866 0 0.5 3461.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -35 -156 -90.622 0.5 0 -0.866 0 1 0 0.866 0 0.5 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -55 -148 -125.263 0.5 0 -0.866 0 1 0 0.866 0 0.5 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -95 -156 -194.545 0.5 0 -0.866 0 1 0 0.866 0 0.5 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 164.545 -156 -125 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 95.263 -148 -85 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 60.622 -156 -65 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -164.545 -156 65 0.866 0 0.5 0 1 0 -0.5 0 0.866 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -95.263 -148 25 0.866 0 0.5 0 1 0 -0.5 0 0.866 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -60.622 -156 5 0.866 0 0.5 0 1 0 -0.5 0 0.866 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 55 -148 65.263 -0.5 0 0.866 0 1 0 -0.866 0 -0.5 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 35 -156 30.622 -0.5 0 0.866 0 1 0 -0.866 0 -0.5 3666.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 95 -156 134.545 -0.5 0 0.866 0 1 0 -0.866 0 -0.5 3666.dat
+0 STEP
+0 // Plate  2 x  6 (light_grey)
+1 7 120 28 200 -0.5 0 -0.866 0 1 0 0.866 0 -0.5 3795.dat
+0 // Plate  1 x  2 with Handles Type 1 (light_grey)
+1 7 95 20 243.301 -0.866 0 0.5 0 1 0 -0.5 0 -0.866 3839a.dat
+0 // Plate  1 x  2 with Handles Type 1 (light_grey)
+1 7 145 20 156.699 0.866 0 -0.5 0 1 0 0.5 0 0.866 3839a.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 110 20 217.321 0.866 0 -0.5 0 1 0 0.5 0 0.866 3068b.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 130 20 182.679 0.866 0 -0.5 0 1 0 0.5 0 0.866 3068b.dat
+0 // ~Minifig Hips and Legs (Obsolete) (white)
+1 15 80 16 269.282 0.866 0 -0.5 0 1 0 0.5 0 0.866 3815c01.dat
+0 // Minifig Torso with Red Cross Pattern (white)
+1 15 80 -16 269.282 0.866 0 -0.5 0 1 0 0.5 0 0.866 973p24.dat
+0 // Minifig Arm Left (white)
+1 15 93.468 -7 277.058 0.896 -0.099 -0.433 -0.147 0.853 -0.5 0.419 0.512 0.75 3819.dat
+0 // Minifig Arm Right (white)
+1 15 66.532 -7 261.506 0.811 -0.393 -0.433 0.147 0.853 -0.5 0.566 0.342 0.75 3818.dat
+0 // Minifig Hand (yellow)
+1 14 100.354 13.322 281.403 0.718 -0.655 -0.236 -0.055 0.285 -0.957 0.694 0.7 0.169 3820.dat
+0 // Minifig Hand (yellow)
+1 14 59.326 13.322 257.716 0.749 -0.662 -0.028 0.171 0.234 -0.957 0.64 0.712 0.289 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 80 -40 269.282 0.978 0 -0.208 0 1 0 0.208 0 0.978 3626ap01.dat
+0 // Minifig Helmet Classic with Thick Chin Guard and Visor Dimples (red)
+1 4 80 -40 269.282 0.978 0 -0.208 0 1 0 0.208 0 0.978 3842b.dat
+0 // ~Minifig Hips and Legs (Obsolete) (white)
+1 15 157.5 16 135.048 0.866 0 -0.5 0 1 0 0.5 0 0.866 3815c01.dat
+0 // Minifig Torso with Red Cross Pattern (white)
+1 15 157.5 -16 135.048 0.866 0 -0.5 0 1 0 0.5 0 0.866 973p24.dat
+0 // Minifig Arm Left (white)
+1 15 170.968 -7 142.824 0.896 -0.099 -0.433 -0.147 0.853 -0.5 0.419 0.512 0.75 3819.dat
+0 // Minifig Arm Right (white)
+1 15 144.032 -7 127.272 0.793 -0.496 -0.354 0.12 0.697 -0.707 0.597 0.519 0.612 3818.dat
+0 // Minifig Hand (yellow)
+1 14 177.854 13.322 147.169 0.718 -0.655 -0.236 -0.055 0.285 -0.957 0.694 0.7 0.169 3820.dat
+0 // Minifig Hand (yellow)
+1 14 134.201 12.547 128.027 0.73 -0.676 0.1 0.119 -0.019 -0.993 0.673 0.737 0.066 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 157.5 -40 135.048 0.309 0 -0.951 0 1 0 0.951 0 0.309 3626ap01.dat
+0 // Minifig Helmet Classic with Thick Chin Guard and Visor Dimples (red)
+1 4 157.5 -40 135.048 0.309 0 -0.951 0 1 0 0.951 0 0.309 3842b.dat
+
+
+
+
+
+0
+0

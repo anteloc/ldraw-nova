@@ -1,6 +1,6 @@
 # Jev discovery of parts, models and reusable assemblies
 
-Evaluated 2026-09-24 against the installed description database and `$LDRAW_LIB_DIR/models-annotated`. This is the empirical follow-up to the [earlier TypeSafe assessment](typesafe-jev-ldraw-assessment.md). The building recreation remains paused.
+Evaluated 2026-09-24 against the installed description database and `data/models-annotated`. This is the empirical follow-up to the [earlier TypeSafe assessment](typesafe-jev-ldraw-assessment.md). The building recreation remains paused.
 
 **The strongest improvement is a discovery workflow that connects whole models, useful subassemblies and their constituent parts.** The new fields make that connection easier, and the source corpus contains useful construction techniques beyond the current procedural recipes. However, a high-ranking section is often a partial shell, a construction step, a different scale, or a part definition. Source inspection must sit between retrieval and reuse.
 
@@ -151,20 +151,20 @@ For semantic decisions, keep subject relevance, functional completeness, scale/s
 Use model search for precedent, submodel search for a construction role, and part search for individual fittings. Query each level independently:
 
 ```sh
-uv run --project ../jev-rerank jev-rerank \
-  --db "$LDRAW_LIB_DIR/scripts/ldraw-info.db" \
+jev-rerank \
+  --db "data/ldraw-info.db" \
   --table-field MODELS_DESCRIPTIONS_JEV.full_description \
   --query 'a System city bus with a passenger cabin, seats and doors' \
   --top 10 --candidates 500 --model jev-1.13.0 --show --json
 
-uv run --project ../jev-rerank jev-rerank \
-  --db "$LDRAW_LIB_DIR/scripts/ldraw-info.db" \
+jev-rerank \
+  --db "data/ldraw-info.db" \
   --table-field SUBMODELS_DESCRIPTIONS_JEV.full_description \
   --query 'a train bogie with paired wheels beneath a passenger carriage' \
   --top 10 --candidates 500 --model jev-1.13.0 --show --json
 
-uv run --project ../jev-rerank jev-rerank \
-  --db "$LDRAW_LIB_DIR/scripts/ldraw-info.db" \
+jev-rerank \
+  --db "data/ldraw-info.db" \
   --table-field PARTS_DESCRIPTIONS_JEV.full_description \
   --query 'a moulded seat for a minifigure vehicle cabin' \
   --top 10 --candidates 500 --model jev-1.13.0 --show --json
@@ -173,9 +173,9 @@ uv run --project ../jev-rerank jev-rerank \
 For example, the retrieved small boat can already be inspected without new tooling:
 
 ```sh
-./ldraw-agent sections "$LDRAW_LIB_DIR/models-annotated/2882-1.mpd" \
+./ldraw-agent sections "data/models-annotated/2882-1.mpd" \
   --section '2882 - boat.ldr'
-./ldraw-agent extract "$LDRAW_LIB_DIR/models-annotated/2882-1.mpd" \
+./ldraw-agent extract "data/models-annotated/2882-1.mpd" \
   --section '2882 - boat.ldr' --namespace ref-boat \
   --output output/boat-study/boat.mpd
 ./ldraw-agent inspect output/boat-study/boat.mpd --detail summary --contacts none

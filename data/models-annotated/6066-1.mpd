@@ -1,0 +1,701 @@
+0 FILE 6066 - main.ldr
+0 A forestman hideout scene featuring a treasure chest with gold goblets, guarded by rock and tree fortifications, multiple archer minifigures, a horse, and gated entrances.
+0 Name: 6066 - main.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6066 - Building rock side.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6066 - Building tree side.ldr
+1 0 80 -56 -300 1 0 0 0 1 0 0 0 1 6066 - Horse.ldr
+1 0 -200 -232 -90 1 0 0 0 1 0 0 0 1 6066 - Minifig 1.ldr
+1 0 200 -72 -150 1 0 0 0 1 0 0 0 1 6066 - Minifig 2.ldr
+1 0 80 -72 -350 1 0 0 0 1 0 0 0 1 6066 - Minifig 3.ldr
+1 0 -200 -72 -290 1 0 0 0 1 0 0 0 1 6066 - Minifig 4.ldr
+1 0 80 -392 -70 1 0 0 0 1 0 0 0 1 6066 - Minifig 4.ldr
+1 0 -80 -72 -310 1 0 0 0 1 0 0 0 1 6066 - Minifig 5.ldr
+0 // Container Treasure Chest without Slots (brown)
+1 6 260 -32 -300 1 0 0 0 1 0 0 0 1 4738b.dat
+0 // Container Treasure Chest with Slots Lid (brown)
+1 6 260 -48 -270 1 0 0 0 0 1 0 -1 0 4739a.dat
+0 // Minifig Goblet (yellow)
+1 14 240 -40 -340 1 0 0 0 1 0 0 0 1 2343.dat
+0 // Minifig Goblet (yellow)
+1 14 260 -40 -340 1 0 0 0 1 0 0 0 1 2343.dat
+
+
+
+
+
+0 STEP
+0 FILE 6066 - Building rock side.ldr
+0 A grey rocky fortress wall built on a 16x16 green baseplate using assorted bricks, slopes, hinges, and tiles to form a hinged stone structure.
+0 Name: 6066 - Building rock side.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Baseplate 16 x 16 (green)
+1 2 -160 0 -160 1 0 0 0 1 0 0 0 1 3867.dat
+0 // Brick  1 x  8 (light_grey)
+1 7 -220 -24 -10 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  2 x  3 (light_grey)
+1 7 -240 -24 -50 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Tile  1 x  4 with Groove (light_grey)
+1 7 -230 -8 -120 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Hinge Brick  1 x  4 Top (light_grey)
+1 7 0 -24 0 -1 0 0 0 1 0 0 0 -1 3830.dat
+0 STEP
+0 // Brick  1 x  8 (light_grey)
+1 7 -210 -24 -160 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  8 (light_grey)
+1 7 -30 -24 -160 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -10 -24 -30 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -120 -8 -230 1 0 0 0 1 0 0 0 1 4162.dat
+0 STEP
+0 // Brick  2 x  2 (light_grey)
+1 7 -240 -48 -20 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  1 x  3 (light_grey)
+1 7 -170 -48 -10 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  6 (light_grey)
+1 7 -30 -48 -160 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 -210 -48 -200 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 -210 -48 -170 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 -10 -96 -10 1 0 0 0 1 0 0 0 1 4460a.dat
+0 STEP
+0 // Brick  1 x  1 (light_grey)
+1 7 -230 -72 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -190 -72 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -150 -72 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -210 -72 -180 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 -30 -72 -160 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -30 -56 -110 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (light_grey)
+1 7 -30 -64 -110 0 0 1 0 1 0 -1 0 0 4085b.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -30 -72 -110 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Brick  1 x  1 (light_grey)
+1 7 -190 -96 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -150 -96 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -210 -96 -170 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 -30 -96 -140 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Minifig Battleaxe (brown)
+1 6 -50 -72 -110 1 0 0 0 1 0 0 0 1 3848.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_grey)
+1 7 -210 -120 -170 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Arch  1 x  3 (light_grey)
+1 7 -170 -120 -10 1 0 0 0 1 0 0 0 1 4490.dat
+0 // Brick  1 x  3 (light_grey)
+1 7 -30 -120 -130 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -10 -120 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Panel  2 x  5 x  6 Wall with Dark Grey Scattered Stones Pattern (light_grey)
+1 7 -210 -144 -50 0 0 1 0 1 0 -1 0 0 4444p02.dat
+0 // Panel  2 x  5 x  6 Wall with Dark Grey Scattered Stones Pattern (light_grey)
+1 7 -30 -144 -50 0 0 -1 0 1 0 1 0 0 4444p02.dat
+0 STEP
+0 // Brick  1 x  4 (light_grey)
+1 7 -210 -144 -120 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 -180 -144 -10 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  3 (light_grey)
+1 7 -30 -144 -110 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Hinge Brick  1 x  4 Top (light_grey)
+1 7 0 -144 0 -1 0 0 0 1 0 0 0 -1 3830.dat
+0 STEP
+0 // Plate  4 x  8 (light_grey)
+1 7 -120 -144 -60 1 0 0 0 1 0 0 0 1 3035.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 -10 -168 -10 1 0 0 0 1 0 0 0 1 3062b.dat
+1 7 -230 -38 -200 0 0 1 0 1 0 -1 0 0 6066 - Side door.ldr
+0 STEP
+0 // Plate  2 x 10 (light_grey)
+1 7 -120 -152 -20 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -210 -152 -70 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -30 -152 -70 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -120 -152 -60 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Hinge Plate  1 x  4 with Car Roof Holder (light_grey)
+1 7 -160 -152 -90 1 0 0 0 1 0 0 0 1 4315.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (light_grey)
+1 7 -80 -152 -90 1 0 0 0 1 0 0 0 1 4315.dat
+1 7 -120 -148 -104 1 0 0 0 0.743145 -0.669131 0 0.669131 0.743145 6066 - Front door.ldr
+0 STEP
+0 // Plate  2 x  3 (light_grey)
+1 7 -120 -160 -70 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  2 Corner (light_grey)
+1 7 -210 -160 -90 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (light_grey)
+1 7 -30 -160 -90 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -100 -160 -30 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 STEP
+0 // Plant Tree Pyramidal  3 x  3 x  4 (green)
+1 2 -280 -8 -280 1 0 0 0 1 0 0 0 1 2435.dat
+
+
+
+
+0 STEP
+0 FILE 6066 - Building tree side.ldr
+0 A black and grey tree-covered fortress section on an 8x16 green baseplate, constructed with arches, bricks, slopes, and hinges forming dense foliage and stonework.
+0 Name: 6066 - Building tree side.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Baseplate  8 x 16 (green)
+1 2 160 0 -80 1 0 0 0 1 0 0 0 1 3865.dat
+0 // Hinge Brick  1 x  4 Base (light_grey)
+1 7 0 -24 0 -1 0 0 0 1 0 0 0 -1 3831.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 170 -24 -20 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 10 -24 -30 1 0 0 0 1 0 0 0 1 4070.dat
+0 STEP
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 10 -96 -10 1 0 0 0 1 0 0 0 1 4460a.dat
+0 // Brick  1 x  3 (light_grey)
+1 7 30 -24 -50 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 80 -24 -110 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 170 -24 -60 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Brick  1 x  2 (black)
+1 0 120 -24 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Brick  1 x  3 (light_grey)
+1 7 30 -48 -30 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  3 (black)
+1 0 170 -48 -30 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 100 -48 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  3 (light_grey)
+1 7 270 -24 -20 1 0 0 0 1 0 0 0 1 3002.dat
+0 STEP
+0 // Brick  1 x  3 (light_grey)
+1 7 30 -72 -30 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  3 (black)
+1 0 170 -72 -30 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 90 -72 -110 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Brick  1 x  1 (light_grey)
+1 7 10 -120 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 30 -96 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 30 -96 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 90 -96 -110 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 170 -96 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 170 -96 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Arch  1 x  3 (light_grey)
+1 7 30 -120 -30 0 0 1 0 1 0 -1 0 0 4490.dat
+0 // Arch  1 x  3 (light_grey)
+1 7 170 -120 -30 0 0 1 0 1 0 -1 0 0 4490.dat
+0 // Arch  1 x  5 x  4 (black)
+1 0 110 -144 -110 -1 0 0 0 1 0 0 0 -1 2339.dat
+0 STEP
+0 // Hinge Brick  1 x  4 Base (light_grey)
+1 7 0 -144 0 -1 0 0 0 1 0 0 0 -1 3831.dat
+0 // Brick  1 x  2 (black)
+1 0 100 -120 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 10 -168 -10 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 30 -144 -30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 50 -144 -90 0 0 1 0 1 0 -1 0 0 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 150 -144 -90 1 0 0 0 1 0 0 0 1 2345.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 170 -144 -20 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Brick  1 x  8 (light_grey)
+1 7 100 -144 -70 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 30 -152 -20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 170 -152 -20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Plate  2 x  8 (light_grey)
+1 7 100 -160 -20 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Brick  2 x  4 (light_grey)
+1 7 100 -144 -100 1 0 0 0 1 0 0 0 1 3001.dat
+0 STEP
+0 // Brick  1 x  4 (light_grey)
+1 7 100 -168 -90 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Plate  4 x  8 (light_grey)
+1 7 100 -168 0 1 0 0 0 1 0 0 0 1 3035.dat
+0 STEP
+0 // Brick  1 x  1 (black)
+1 0 30 -192 -30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 170 -192 -30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 30 -192 30 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 170 -192 30 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 100 -192 30 -1 0 0 0 1 0 0 0 -1 3660a.dat
+0 STEP
+0 // Arch  1 x  5 x  4 (black)
+1 0 30 -216 -50 0 0 -1 0 1 0 1 0 0 2339.dat
+0 // Arch  1 x  5 x  4 (black)
+1 0 170 -216 -50 0 0 1 0 1 0 -1 0 0 2339.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 110 -192 -90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 110 -216 -90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Arch  1 x  4 (black)
+1 0 60 -216 50 1 0 0 0 1 0 0 0 1 3659.dat
+0 // Arch  1 x  4 (black)
+1 0 140 -216 50 1 0 0 0 1 0 0 0 1 3659.dat
+0 // Arch  1 x  4 (black)
+1 0 30 -216 0 0 0 1 0 1 0 -1 0 0 3659.dat
+0 // Arch  1 x  4 (black)
+1 0 170 -216 0 0 0 1 0 1 0 -1 0 0 3659.dat
+0 STEP
+0 // Arch  1 x  5 x  4 (black)
+1 0 90 -264 -90 -1 0 0 0 1 0 0 0 -1 2339.dat
+0 // Brick  1 x  2 (black)
+1 0 100 -240 -90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 100 -264 -90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -240 -20 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 170 -240 -20 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 100 -240 50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 30 -240 50 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 170 -240 50 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 STEP
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 50 -288 -70 0 0 1 0 1 0 -1 0 0 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 150 -288 -70 1 0 0 0 1 0 0 0 1 2345.dat
+0 STEP
+0 // Brick  1 x  3 (black)
+1 0 90 -288 -90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 100 -288 -70 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  6 (black)
+1 0 100 -288 -50 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Arch  1 x  5 x  4 (black)
+1 0 170 -336 -30 1 0 0 0 1 0 0 0 1 2339.dat
+0 STEP
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 150 -312 -30 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 70 -312 -50 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Brick  2 x  3 (black)
+1 0 100 -312 -70 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 130 -312 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Arch  1 x  5 x  4 (black)
+1 0 30 -360 -50 0 0 -1 0 1 0 1 0 0 2339.dat
+0 // Arch  1 x  5 x  4 (black)
+1 0 170 -360 -50 0 0 1 0 1 0 -1 0 0 2339.dat
+0 // Plate  2 x  2 Corner (light_grey)
+1 7 90 -320 -70 0 0 -1 0 1 0 1 0 0 2420.dat
+0 STEP
+0 // Arch  1 x  5 x  4 (black)
+1 0 130 -360 -90 -1 0 0 0 1 0 0 0 -1 2339.dat
+0 // Brick  1 x  3 (black)
+1 0 170 -336 -30 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (black)
+1 0 170 -344 -30 0 0 1 0 1 0 -1 0 0 4085b.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 150 -336 -50 0 0 1 0 1 0 -1 0 0 4286.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 30 -336 -50 0 0 -1 0 1 0 1 0 0 4286.dat
+0 // Plant Leaves  6 x  5 (green)
+1 2 -50 -216 -50 0 0 1 0 1 0 -1 0 0 2417.dat
+0 // Plant Leaves  6 x  5 (green)
+1 2 110 -144 -190 1 0 0 0 1 0 0 0 1 2417.dat
+0 // Plant Leaves  6 x  5 (green)
+1 2 90 -264 -170 1 0 0 0 1 0 0 0 1 2417.dat
+0 // Plant Leaves  6 x  5 (green)
+1 2 250 -216 -50 0 0 -1 0 1 0 1 0 0 2417.dat
+0 STEP
+0 // Plate  1 x  3 (black)
+1 0 -30 -224 -50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 90 -272 -150 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 110 -152 -170 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 230 -224 -50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 130 -336 -90 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 130 -360 -110 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 10 -360 -50 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 190 -360 -50 0 0 1 0 1 0 -1 0 0 4286.dat
+0 STEP
+0 // Plant Leaves  6 x  5 (green)
+1 2 -50 -360 -50 0 0 1 0 1 0 -1 0 0 2417.dat
+0 // Plant Leaves  6 x  5 (green)
+1 2 130 -360 -170 1 0 0 0 1 0 0 0 1 2417.dat
+0 // Plant Leaves  6 x  5 (green)
+1 2 250 -360 -50 0 0 -1 0 1 0 1 0 0 2417.dat
+0 // Plant Leaves  6 x  5 (green)
+1 2 170 -336 50 -1 0 0 0 1 0 0 0 -1 2417.dat
+0 STEP
+0 // Plate  1 x  4 (black)
+1 0 -20 -368 -50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 220 -368 -50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 130 -368 -140 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 170 -344 20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Antenna  4H with Rounded Top (black)
+1 0 150 -320 -30 1 0 0 0 1 0 0 0 1 3957a.dat
+0 // Flag  4 x  1 with First Wave Left (red)
+1 4 150 -400 -30 1 0 0 0 1 0 0 0 1 4495a.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 290 -32 0 0 0 -1 0 1 0 1 0 0 4623.dat
+0 // Plant Tree Pyramidal  3 x  3 x  4 (green)
+1 2 260 -8 -120 1 0 0 0 1 0 0 0 1 2435.dat
+
+
+
+
+
+0 STEP
+0 FILE 6066 - Side door.ldr
+0 A black-brick side doorway assembly with plates, sloped bricks, and a pin brick forming an angular entrance gate.
+0 Name: 6066 - Side door.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x  4 (black)
+1 0 -40 22 0 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // Plate  1 x  6 (black)
+1 0 -40 14 0 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+0 // Brick  1 x  4 (black)
+1 0 -60 -10 0 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  2 x  2 with Pin (black)
+1 0 0 -10 -10 0 0 -1 0 1 0 1 0 0 4730.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 10 -34 -10 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  6 (black)
+1 0 -60 -34 0 1 0 0 0 1 0 0 0 1 3009.dat
+0 STEP
+0 // Brick  2 x  3 (black)
+1 0 -90 -58 -10 1 0 0 0 1 0 0 0 1 3002.dat
+0 // Brick  1 x  4 (black)
+1 0 -20 -58 0 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 -60 -82 0 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -90 -82 0 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -30 -82 0 0 0 -1 0 1 0 1 0 0 3040b.dat
+
+
+
+
+0 STEP
+0 FILE 6066 - Front door.ldr
+0 A grey-plated front gateway with hinged car-roof pieces, supporting bricks, and green plant leaves forming a vine-covered arched entrance.
+0 Name: 6066 - Front door.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  6 x  8 (light_grey)
+1 7 0 4 -96 1 0 0 0 1 0 0 0 1 3036.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 0 4 -176 1 0 0 0 1 0 0 0 1 3034.dat
+0 STEP
+0 // Plate  2 x  6 (light_grey)
+1 7 -60 -4 -136 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 60 -4 -136 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Hinge Car Roof  4 x  4 (light_grey)
+1 7 -40 -4 -36 1 0 0 0 1 0 0 0 1 4213.dat
+0 // Hinge Car Roof  4 x  4 (light_grey)
+1 7 40 -4 -36 1 0 0 0 1 0 0 0 1 4213.dat
+0 STEP
+0 // Brick  2 x  4 (light_grey)
+1 7 0 -20 -136 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Brick  2 x  3 (light_grey)
+1 7 40 -28 -86 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Brick  2 x  3 (light_grey)
+1 7 -10 -28 -56 1 0 0 0 1 0 0 0 1 3002.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 -60 -28 -76 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Plant Leaves  4 x  3 (green)
+1 2 -50 -12 -186 -1 0 0 0 1 0 0 0 -1 2423.dat
+0 // Plant Leaves  4 x  3 (green)
+1 2 10 -28 -166 -1 0 0 0 1 0 0 0 -1 2423.dat
+0 // Plant Leaves  4 x  3 (green)
+1 2 -50 -36 -66 0 0 -1 0 1 0 1 0 0 2423.dat
+
+
+
+
+
+0 STEP
+0 FILE 6066 - Horse.ldr
+0 A saddled brown horse with red tack and saddle, carrying a dark grey shortsword.
+0 Name: 6066 - Horse.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Animal Horse (Complete) with Red Tack Pattern (brown)
+1 6 0 0 0 0 0 1 0 1 0 -1 0 0 4493c03.dat
+0 // Animal Horse Saddle with One Clip (red)
+1 4 0 -8 0 0 0 1 0 1 0 -1 0 0 4491a.dat
+0 // Minifig Sword Shortsword (dark_grey)
+1 8 18 -8 30 0 0 -1 0 -1 0 -1 0 0 3847.dat
+
+
+
+
+0 STEP
+0 FILE 6066 - Minifig 1.ldr
+0 A forestman archer minifigure wearing a green cap with yellow plume, carrying a bow with arrow and a quiver.
+0 Name: 6066 - Minifig 1.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Minifig Forestman Cap (green)
+1 2 0 -27 0 1 0 0 0 1 0 0 0 1 4506.dat
+0 // Minifig Plume Small (yellow)
+1 14 -12 -31 5 1 0 0 0 1 0 0 0 1 87693.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Arrow Quiver (brown)
+1 6 0 0 0 -1 0 0 0 1 0 0 0 -1 4498.dat
+0 // Minifig Torso with Forestman and Purse Pattern (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 973p46.dat
+0 // Minifig Hips (green)
+1 2 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 // ~Minifig Leg Right (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 // ~Minifig Leg Left (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 // Minifig Arm Right (green)
+1 2 -15.552 9 0 0.985 -0.0636831 -0.157621 0.17 0.368987 0.913276 0 -0.927184 0.374607 3818.dat
+0 // Minifig Arm Left (green)
+1 2 15.552 9 0 0.985 0.085 0.147224 -0.17 0.4925 0.853035 0 -0.866025 0.5 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.2419 5.61265 -21.2612 -0.274476 0.958837 -0.0664143 -0.893468 -0.229057 0.384812 0.354069 0.165105 0.920366 3820.dat
+0 // Minifig Hand (yellow)
+1 14 20.7492 8.55162 -21.408 0.985 0.164183 0.0439926 -0.17 0.951293 0.254898 0 -0.25878 0.96578 3820.dat
+0 // Minifig Bow with Arrow (brown)
+1 6 20.5232 7.24197 -30.1173 -0.082919 0.169903 -0.981508 0.03179 0.98444 0.167868 0.995628 -0.0172978 -0.0871062 4499.dat
+
+
+
+
+0 STEP
+0 FILE 6066 - Minifig 2.ldr
+0 A forestman archer minifigure wearing a brown cap with red plume, red arms, carrying a bow with arrow and a quiver.
+0 Name: 6066 - Minifig 2.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Minifig Forestman Cap (brown)
+1 6 0 -27 0 1 0 0 0 1 0 0 0 1 4506.dat
+0 // Minifig Plume Small (red)
+1 4 -12 -31 5 1 0 0 0 1 0 0 0 1 87693.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Arrow Quiver (brown)
+1 6 0 0 0 -1 0 0 0 1 0 0 0 -1 4498.dat
+0 // Minifig Torso with Forestman Red Collar Pattern (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 973p48.dat
+0 // Minifig Hips (green)
+1 2 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 // ~Minifig Leg Right (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 // ~Minifig Leg Left (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 9 0 0.985 -0.0636831 -0.157621 0.17 0.368987 0.913276 0 -0.927184 0.374607 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 9 0 0.985 0.085 0.147224 -0.17 0.4925 0.853035 0 -0.866025 0.5 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.2419 5.61265 -21.2612 -0.274476 0.958837 -0.0664143 -0.893468 -0.229057 0.384812 0.354069 0.165105 0.920366 3820.dat
+0 // Minifig Hand (yellow)
+1 14 20.7492 8.55162 -21.408 0.985 0.164183 0.0439926 -0.17 0.951293 0.254898 0 -0.25878 0.96578 3820.dat
+0 // Minifig Bow with Arrow (brown)
+1 6 20.5232 7.24197 -30.1173 -0.082919 0.169903 -0.981508 0.03179 0.98444 0.167868 0.995628 -0.0172978 -0.0871062 4499.dat
+
+
+
+
+0 STEP
+0 FILE 6066 - Minifig 3.ldr
+0 A forestman archer minifigure wearing a green cap with red plume, red arms, carrying a bow with arrow and a quiver.
+0 Name: 6066 - Minifig 3.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Minifig Forestman Cap (green)
+1 2 0 -27 0 1 0 0 0 1 0 0 0 1 4506.dat
+0 // Minifig Plume Small (red)
+1 4 -12 -31 5 1 0 0 0 1 0 0 0 1 87693.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Arrow Quiver (brown)
+1 6 0 0 0 -1 0 0 0 1 0 0 0 -1 4498.dat
+0 // Minifig Torso with Forestman Red Collar Pattern (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 973p48.dat
+0 // Minifig Hips (green)
+1 2 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 // ~Minifig Leg Right (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 // ~Minifig Leg Left (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 9 0 0.985 -0.0636831 -0.157621 0.17 0.368987 0.913276 0 -0.927184 0.374607 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 9 0 0.985 0.085 0.147224 -0.17 0.4925 0.853035 0 -0.866025 0.5 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.2419 5.61265 -21.2612 -0.274476 0.958837 -0.0664143 -0.893468 -0.229057 0.384812 0.354069 0.165105 0.920366 3820.dat
+0 // Minifig Hand (yellow)
+1 14 20.7492 8.55162 -21.408 0.985 0.164183 0.0439926 -0.17 0.951293 0.254898 0 -0.25878 0.96578 3820.dat
+0 // Minifig Bow with Arrow (brown)
+1 6 20.5232 7.24197 -30.1173 -0.082919 0.169903 -0.981508 0.03179 0.98444 0.167868 0.995628 -0.0172978 -0.0871062 4499.dat
+
+
+
+
+0 STEP
+0 FILE 6066 - Minifig 4.ldr
+0 A forestman archer minifigure wearing a brown cap with blue plume, blue arms, carrying a bow with arrow and a quiver.
+0 Name: 6066 - Minifig 4.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Minifig Forestman Cap (brown)
+1 6 0 -27 0 1 0 0 0 1 0 0 0 1 4506.dat
+0 // Minifig Plume Small (blue)
+1 1 -12 -31 5 1 0 0 0 1 0 0 0 1 87693.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Arrow Quiver (brown)
+1 6 0 0 0 -1 0 0 0 1 0 0 0 -1 4498.dat
+0 // Minifig Torso with Forestman Blue Collar Pattern (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 973p49.dat
+0 // Minifig Hips (green)
+1 2 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 // ~Minifig Leg Right (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 // ~Minifig Leg Left (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.552 9 0 0.985 -0.0636831 -0.157621 0.17 0.368987 0.913276 0 -0.927184 0.374607 3818.dat
+0 // Minifig Arm Left (blue)
+1 1 15.552 9 0 0.985 0.085 0.147224 -0.17 0.4925 0.853035 0 -0.866025 0.5 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.2419 5.61265 -21.2612 -0.274476 0.958837 -0.0664143 -0.893468 -0.229057 0.384812 0.354069 0.165105 0.920366 3820.dat
+0 // Minifig Hand (yellow)
+1 14 20.7492 8.55162 -21.408 0.985 0.164183 0.0439926 -0.17 0.951293 0.254898 0 -0.25878 0.96578 3820.dat
+0 // Minifig Bow with Arrow (brown)
+1 6 20.5232 7.24197 -30.1173 -0.082919 0.169903 -0.981508 0.03179 0.98444 0.167868 0.995628 -0.0172978 -0.0871062 4499.dat
+
+
+
+
+0 STEP
+0 FILE 6066 - Minifig 5.ldr
+0 A forestman spearman minifigure wearing a green cap with black plume, black arms with brown epaulettes, carrying a spear.
+0 Name: 6066 - Minifig 5.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Minifig Forestman Cap (green)
+1 2 0 -27 0 1 0 0 0 1 0 0 0 1 4506.dat
+0 // Minifig Plume Small (black)
+1 0 -12 -31 5 1 0 0 0 1 0 0 0 1 87693.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Epaulette (brown)
+1 6 0 -2 0 1 0 0 0 1 0 0 0 1 2526.dat
+0 // Minifig Torso with Forestman Black Collar Pattern (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 973p50.dat
+0 // Minifig Hips (green)
+1 2 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 9 0 0.985 -0.085 -0.147224 0.17 0.4925 0.853035 0 -0.866025 0.5 3818.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.7492 8.55162 -21.408 0.985 -0.164183 -0.0439926 0.17 0.951293 0.254898 0 -0.25878 0.96578 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // Minifig Spear with Round End (brown)
+1 6 -13.5571 -33.1201 -29.4081 0.985 -0.169903 -0.00294063 0.17 0.98444 0.0170383 0 -0.0172978 0.999431 4497.dat
+0 // ~Minifig Leg Right (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 // ~Minifig Leg Left (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+
+
+
+
+
+
+
+

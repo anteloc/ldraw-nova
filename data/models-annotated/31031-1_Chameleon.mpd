@@ -1,0 +1,424 @@
+0 FILE 31031 - Main.ldr
+0 Complete chameleon model composed of articulated body, head with eyes, four hinged legs, coiled tail, and side detail submodels.
+0 Name: 31031 - Main.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+1 0 0 9.861 5.857 1 0 0 0 1 0 0 0 1 31031 - Cameleon.ldr
+
+
+0 STEP
+0 FILE 31031 - Cameleon.ldr
+0 Main chameleon torso built from green and lime plates, wing elements, and ball-and-socket hinge joints connecting the limbs.
+0 Name: 31031 - Cameleon.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x  4 (green)
+1 2 0 0 0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 STEP
+0 // Brick  1 x  1 (green)
+1 2 -10 -24 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (green)
+1 2 10 -24 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 STEP
+0 // Technic Brick  1 x  1 with Hole (black)
+1 0 10 -24 10 0 0 -1 0 1 0 1 0 0 6541.dat
+0 // Technic Brick  1 x  1 with Hole (black)
+1 0 -10 -24 10 0 0 -1 0 1 0 1 0 0 6541.dat
+0 // Hinge Arm Locking with Single Finger and Friction Pin (black)
+1 0 30 -14 10 0 0 -1 -0.5 0.866 0 0.866 0.5 0 41532.dat
+0 // Hinge Arm Locking with Single Finger and Friction Pin (black)
+1 0 -30 -14 10 0 0 1 0.5 0.866 0 -0.866 0.5 0 41532.dat
+0 STEP
+0 // Brick  1 x  1 with Stud on 1 Side (lime)
+1 27 10 -24 -10 0 0 -1 0 1 0 1 0 0 87087.dat
+0 // Brick  1 x  1 with Stud on 1 Side (lime)
+1 27 -10 -24 -10 0 0 1 0 1 0 -1 0 0 87087.dat
+0 STEP
+0 // Brick  1 x  2 (bright_light_orange)
+1 191 -10 -24 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (bright_light_orange)
+1 191 10 -24 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Plate  2 x  4 (green)
+1 2 0 0 -80 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Brick  1 x  1 with Stud on 1 Side (lime)
+1 27 10 -24 -70 0 0 -1 0 1 0 1 0 0 87087.dat
+0 // Brick  1 x  1 with Stud on 1 Side (lime)
+1 27 -10 -24 -70 0 0 1 0 1 0 -1 0 0 87087.dat
+0 STEP
+0 // Plate  1 x  2 with Ball Joint-8 on Side (dark_bluish_grey)
+1 72 0 -8 -110 1 0 0 0 1 0 0 0 1 14417.dat
+0 // Plate  1 x  2 (green)
+1 2 0 -8 -90 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Plate  1 x  2 with Socket Joint-8 with Friction Centre (light_bluish_grey)
+1 71 10 -16 -100 0 0 -1 0 1 0 1 0 0 14704.dat
+0 // Plate  1 x  2 with Socket Joint-8 with Friction Centre (light_bluish_grey)
+1 71 -10 -16 -100 0 0 1 0 1 0 -1 0 0 14704.dat
+0 STEP
+0 // Hinge Plate  1 x  4 Base (green)
+1 2 0 -24 -120 0 0 1 0 1 0 -1 0 0 2429.dat
+0 // Hinge Plate  1 x  4 Top (green)
+1 2 0 -24 -120 0 0 -1 0 1 0 1 0 0 2430.dat
+0 STEP
+1 27 28 -14 -40 0 -1 0 0 0 -1 1 0 0 31031 - Side.ldr
+1 27 -28 -14 -40 0 1 0 0 0 -1 -1 0 0 31031 - Side.ldr
+0 STEP
+0 // Wing  3 x  4 with  1 x  2 Cutout with Stud Notches (dark_green)
+1 288 0 -32 -100 1 0 0 0 1 0 0 0 1 48183.dat
+0 // Plate  1 x  1 (white)
+1 15 -10 -32 -70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (white)
+1 15 10 -32 -70 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Plate  2 x  4 (green)
+1 2 0 -32 -40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  2 (green)
+1 2 0 -32 -10 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Wing  3 x  4 with  1 x  2 Cutout with Stud Notches (dark_green)
+1 288 0 -32 20 -1 0 0 0 1 0 0 0 -1 48183.dat
+0 STEP
+0 // Wing  2 x  3 Right (red)
+1 4 -20 -40 -70 1 0 0 0 1 0 0 0 1 43722.dat
+0 // Wing  2 x  3 Left (red)
+1 4 20 -40 -70 1 0 0 0 1 0 0 0 1 43723.dat
+0 // Plate  1 x  2 (green)
+1 2 0 -40 -110 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Wing  2 x  3 Left (red)
+1 4 -20 -40 -10 -1 0 0 0 1 0 0 0 -1 43723.dat
+0 // Wing  2 x  3 Right (red)
+1 4 20 -40 -10 -1 0 0 0 1 0 0 0 -1 43722.dat
+0 // Hinge Plate  1 x  2 Locking 9-Position with Dual Finger on Side (black)
+1 0 0 -40 30 -1 0 0 0 1 0 0 0 -1 60471.dat
+0 STEP
+0 // Slope Brick Curved  2 x  2 x   2/3 Triple with Two Top Studs (lime)
+1 27 10 -56 -20 0 0 -1 0 1 0 1 0 0 47457.dat
+0 // Slope Brick Curved  2 x  2 x   2/3 Triple with Two Top Studs (lime)
+1 27 -10 -56 -20 0 0 1 0 1 0 -1 0 0 47457.dat
+0 // Wing  2 x  4 (black)
+1 0 0 -48 20 -1 0 0 0 1 0 0 0 -1 51739.dat
+0 STEP
+0 // Plate  2 x  2 (black)
+1 0 0 -48 -60 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  1 x  2 (green)
+1 2 0 -64 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+0 // Wedge  4 x  4 Triple with Stud Notches (dark_green)
+1 288 0 -64 -50 1 0 0 0 1 0 0 0 1 48933.dat
+0 STEP
+0 // Slope Brick Curved  3 x  1 (green)
+1 2 -10 -72 10 -1 0 0 0 1 0 0 0 -1 50950.dat
+0 // Slope Brick Curved  3 x  1 (green)
+1 2 10 -72 10 -1 0 0 0 1 0 0 0 -1 50950.dat
+0 STEP
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 0 -64 -30 1 0 0 0 1 0 0 0 1 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 0 -64 -50 1 0 0 0 1 0 0 0 1 85984.dat
+0 STEP
+1 0 0 40 -60 1 0 0 0 1 0 0 0 1 31031 - Body.ldr
+0 STEP
+1 1 0 -32 80 1 0 0 0 1 0 0 0 1 31031 - Tail.ldr
+0 STEP
+1 27 44 8.321 11.34 0 -1 0 0.866 0 -0.5 0.5 0 0.866 31031 - Rear leg LH.ldr
+0 STEP
+1 27 50 8 -96 1 0 0 0 0 -1 0 1 0 31031 - Front leg LH.ldr
+0 STEP
+1 2 40 64 -122 1 0 0 0 1 0 0 0 1 31031 - Left hand.ldr
+1 2 78 58.158 17.019 0 0 -1 -0.5 0.866 0 0.866 0.5 0 31031 - Left hand.ldr
+0 STEP
+1 2 -44 8.321 11.34 0 1 0 -0.866 0 -0.5 -0.5 0 0.866 31031 - Rear leg RH.ldr
+0 STEP
+1 2 -50 8 -96 1 0 0 0 0 -1 0 1 0 31031 - Front leg RH.ldr
+0 STEP
+1 2 -78 58.158 17.019 -1 0 0 0 0.866 0.5 0 0.5 -0.866 31031 - Right hand.ldr
+1 2 -40 64 -122 0 0 1 0 1 0 -1 0 0 31031 - Right hand.ldr
+0 STEP
+1 27 0 8 -180 1 0 0 0 1 0 0 0 1 31031 - Head.ldr
+
+
+0 STEP
+0 FILE 31031 - Side.ldr
+0 Small side detail assembly of a green plate topped with a lime curved slope.
+0 Name: 31031 - Side.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  4 (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // Slope Brick Curved  4 x  1 Double (lime)
+1 27 0 0 0 0 0 1 0 1 0 -1 0 0 93273.dat
+
+
+0 STEP
+0 FILE 31031 - Body.ldr
+0 Central body section using inverted slopes, technic bricks with holes, and a locking hinge plate for articulation.
+0 Name: 31031 - Body.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x  4 (white)
+1 15 0 0 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (green)
+1 2 0 -24 30 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (white)
+1 15 0 -24 10 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (white)
+1 15 0 -24 -10 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 -10 -24 -30 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 10 -24 -30 1 0 0 0 1 0 0 0 1 3665a.dat
+0 STEP
+0 // Plate  1 x  3 (lime)
+1 27 -10 -32 -10 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (lime)
+1 27 10 -32 -10 0 0 1 0 1 0 -1 0 0 3623.dat
+0 STEP
+0 // Plate  1 x  3 (lime)
+1 27 -10 -32 50 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (lime)
+1 27 10 -32 50 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Hinge Plate  1 x  2 Locking 9-Position with Dual Finger on Side (black)
+1 0 0 -32 -50 1 0 0 0 1 0 0 0 1 60471.dat
+
+
+0 STEP
+0 FILE 31031 - Tail.ldr
+0 Segmented tail made of blue handle plates, red clip plates, and a vertical locking hinge for curling movement.
+0 Name: 31031 - Tail.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  2 with Handle on End (blue)
+1 1 0 0 0 0 0 -1 0 1 0 1 0 0 60478.dat
+0 STEP
+0 // Hinge Plate  1 x  2 Locking with Groove with Single Finger on End Vertical (dark_bluish_grey)
+1 72 0 -8 0 0 0 1 0 1 0 -1 0 0 44301.dat
+0 STEP
+0 // Plate  1 x  2 with Groove with 1 Centre Stud, without Understud (red)
+1 4 0 -16 0 0 0 1 0 1 0 -1 0 0 15573.dat
+0 STEP
+0 // Plate  1 x  2 with Clip Horizontal on End (Thick C-Clip) (red)
+1 4 0 15.268 56.981 0 0 1 -0.5 0.866 0 -0.866 -0.5 0 63868.dat
+0 // Plate  1 x  2 with Handle on End (blue)
+1 1 0 22.196 52.981 0 0 -1 0.5 0.866 0 0.866 -0.5 0 60478.dat
+0 // Plate  1 x  2 with Clip Horizontal on End (Thick C-Clip) (red)
+1 4 0 63.909 94.694 0 0 1 -0.866 0.5 0 -0.5 -0.866 0 63868.dat
+0 // Plate  1 x  2 with Handle on End (blue)
+1 1 0 67.909 87.765 0 0 -1 0.866 0.5 0 0.5 -0.866 0 60478.dat
+
+
+0 STEP
+0 FILE 31031 - Rear leg LH.ldr
+0 Left rear leg combining lime plates, a corner plate, a lime wing element, and locking hinge joints for posing.
+0 Name: 31031 - Rear leg LH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  3 (lime)
+1 27 0 0 0 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Hinge Plate  1 x  2 Locking 9-Position with Dual Finger on Side (black)
+1 0 0 -8 10 0 0 1 0 1 0 -1 0 0 60471.dat
+0 STEP
+0 // Plate  2 x  2 Corner (green)
+1 2 20 -8 -20 0 0 -1 0 1 0 1 0 0 2420.dat
+0 STEP
+0 // Plate  1 x  3 (lime)
+1 27 0 -16 0 0 0 -1 0 1 0 1 0 0 3623.dat
+0 STEP
+0 // Hinge Plate  1 x  2 Locking with Groove with Single Finger On Side Vertical (yellow)
+1 14 20 -16 -10 0 0 -1 0 1 0 1 0 0 44567.dat
+0 STEP
+0 // Wing  2 x  3 Right (lime)
+1 27 10 -24 0 -1 0 0 0 1 0 0 0 -1 43722.dat
+
+
+0 STEP
+0 FILE 31031 - Front leg LH.ldr
+0 Left front leg with a ball-joint plate, locking hinge, lime curved slope, and green and lime plates.
+0 Name: 31031 - Front leg LH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  4 (green)
+1 2 0 0 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Plate  1 x  2 with Ball Joint-8 on Side (dark_bluish_grey)
+1 72 0 -8 20 0 0 1 0 1 0 -1 0 0 14417.dat
+0 // Hinge Plate  1 x  2 Locking with Groove with Single Finger on End Vertical (dark_bluish_grey)
+1 72 0 -8 -20 0 0 1 0 1 0 -1 0 0 44301.dat
+0 STEP
+0 // Plate  1 x  3 (lime)
+1 27 0 -16 -10 0 0 1 0 1 0 -1 0 0 3623.dat
+0 STEP
+0 // Slope Brick Curved  2 x  1 (lime)
+1 27 0 -8 20 -1 0 0 0 1 0 0 0 -1 11477.dat
+
+
+0 STEP
+0 FILE 31031 - Left hand.ldr
+0 Left foot/hand built from two green corner plates, a locking hinge plate, and a small dark bluish grey plate.
+0 Name: 31031 - Left hand.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x  2 Corner (green)
+1 2 0 0 0 0 0 1 0 1 0 -1 0 0 2420.dat
+0 STEP
+0 // Hinge Plate  1 x  2 Locking 9-Position with Dual Finger on Side (black)
+1 0 10 -8 0 -1 0 0 0 1 0 0 0 -1 60471.dat
+0 STEP
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 0 -8 -20 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 STEP
+0 // Plate  2 x  2 Corner (green)
+1 2 0 -16 0 0 0 1 0 1 0 -1 0 0 2420.dat
+
+
+0 STEP
+0 FILE 31031 - Rear leg RH.ldr
+0 Right rear leg mirroring the left, using lime plates, a corner plate, a lime wing element, and locking hinge joints.
+0 Name: 31031 - Rear leg RH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  3 (lime)
+1 27 0 0 0 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Hinge Plate  1 x  2 Locking 9-Position with Dual Finger on Side (black)
+1 0 0 -8 10 0 0 -1 0 1 0 1 0 0 60471.dat
+0 STEP
+0 // Plate  2 x  2 Corner (green)
+1 2 -20 -8 -20 1 0 0 0 1 0 0 0 1 2420.dat
+0 STEP
+0 // Plate  1 x  3 (lime)
+1 27 0 -16 0 0 0 -1 0 1 0 1 0 0 3623.dat
+0 STEP
+0 // Hinge Plate  1 x  2 Locking with Groove with Single Finger On Side Vertical (yellow)
+1 14 -20 -16 -10 0 0 1 0 1 0 -1 0 0 44567.dat
+0 STEP
+0 // Wing  2 x  3 Left (lime)
+1 27 -10 -24 0 -1 0 0 0 1 0 0 0 -1 43723.dat
+
+
+0 STEP
+0 FILE 31031 - Front leg RH.ldr
+0 Right front leg with a ball-joint plate, locking hinge, lime curved slope, and green and lime plates.
+0 Name: 31031 - Front leg RH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  4 (green)
+1 2 0 0 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+0 // Plate  1 x  2 with Ball Joint-8 on Side (dark_bluish_grey)
+1 72 0 -8 20 0 0 -1 0 1 0 1 0 0 14417.dat
+0 // Hinge Plate  1 x  2 Locking with Groove with Single Finger on End Vertical (dark_bluish_grey)
+1 72 0 -8 -20 0 0 1 0 1 0 -1 0 0 44301.dat
+0 STEP
+0 // Plate  1 x  3 (lime)
+1 27 0 -16 -10 0 0 1 0 1 0 -1 0 0 3623.dat
+0 STEP
+0 // Slope Brick Curved  2 x  1 (lime)
+1 27 0 -8 20 -1 0 0 0 1 0 0 0 -1 11477.dat
+0 STEP
+
+
+0 STEP
+0 FILE 31031 - Right hand.ldr
+0 Right foot/hand built from two green corner plates, a locking hinge plate, and a small dark bluish grey plate.
+0 Name: 31031 - Right hand.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x  2 Corner (green)
+1 2 0 0 0 0 0 1 0 1 0 -1 0 0 2420.dat
+0 STEP
+0 // Hinge Plate  1 x  2 Locking 9-Position with Dual Finger on Side (black)
+1 0 0 -8 -10 0 0 1 0 1 0 -1 0 0 60471.dat
+0 STEP
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 20 -8 0 0 0 1 0 1 0 -1 0 0 3024.dat
+0 STEP
+0 // Plate  2 x  2 Corner (green)
+1 2 0 -16 0 0 0 1 0 1 0 -1 0 0 2420.dat
+
+
+0 STEP
+0 FILE 31031 - Head.ldr
+0 Chameleon head featuring round eye tiles, curved slopes and arches, convex red slopes, and a socket joint for neck articulation.
+0 Name: 31031 - Head.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (dark_blue)
+1 272 0 0 0 1 0 0 0 1 0 0 0 1 4871.dat
+0 STEP
+0 // Plate  2 x  2 (black)
+1 0 0 8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Plate  1 x  2 (green)
+1 2 -10 0 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (green)
+1 2 10 0 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Plate  2 x  4 (green)
+1 2 0 -8 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Plate  1 x  2 with Socket Joint-8 with Friction Centre (light_bluish_grey)
+1 71 0 -16 30 -1 0 0 0 1 0 0 0 -1 14704.dat
+0 STEP
+0 // Plate  3 x  2 with Hole (red)
+1 4 0 -16 -20 1 0 0 0 1 0 0 0 1 3176.dat
+0 // Brick  1 x  1 with Stud on 1 Side (lime)
+1 27 10 -32 10 0 0 -1 0 1 0 1 0 0 87087.dat
+0 // Brick  1 x  1 with Stud on 1 Side (lime)
+1 27 -10 -32 10 0 0 1 0 1 0 -1 0 0 87087.dat
+0 STEP
+0 // Brick  1 x  1 (green)
+1 2 10 -40 30 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (green)
+1 2 -10 -40 30 0 0 1 0 1 0 -1 0 0 3005.dat
+0 STEP
+0 // Brick  2 x  1 x  1.333 with Curved Top (lime)
+1 27 -10 -48 10 1 0 0 0 1 0 0 0 1 6091.dat
+0 // Brick  2 x  1 x  1.333 with Curved Top (lime)
+1 27 10 -48 10 1 0 0 0 1 0 0 0 1 6091.dat
+0 STEP
+0 // Hinge Plate  1 x  4 Base (green)
+1 2 0 -48 40 0 0 -1 0 1 0 1 0 0 2429.dat
+0 // Hinge Plate  1 x  4 Top (green)
+1 2 0 -48 40 0 0 1 0 1 0 -1 0 0 2430.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 Double Convex (red)
+1 4 -44 -8.34 6.34 0 1 0 -0.5 0 0.866 0.866 0 0.5 3045.dat
+0 // Slope Brick 45  2 x  2 Double Convex (red)
+1 4 44 -8.34 6.34 0 -1 0 -0.866 0 0.5 -0.5 0 -0.866 3045.dat
+0 // Tile  1 x  1 Round with Eye Pattern (white)
+1 15 -52 -8.34 6.34 0 1 0 -0.866 0 -0.5 -0.5 0 0.866 98138p07.dat
+0 // Tile  1 x  1 Round with Eye Pattern (white)
+1 15 52 -8.34 6.34 0 -1 0 0.866 0 -0.5 0.5 0 0.866 98138p07.dat
+0 STEP
+0 // Plate  1 x  2 (green)
+1 2 0 -56 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Arch  1 x  3 x  2 with Curved Top (green)
+1 2 -10 -64 10 1 0 0 0 1 0 0 0 1 6005.dat
+0 // Arch  1 x  3 x  2 with Curved Top (green)
+1 2 10 -64 10 1 0 0 0 1 0 0 0 1 6005.dat
+0 STEP
+0 // Slope Brick Curved  3 x  1 (green)
+1 2 -10 -80 30 1 0 0 0 1 0 0 0 1 50950.dat
+0 // Slope Brick Curved  3 x  1 (green)
+1 2 10 -80 30 1 0 0 0 1 0 0 0 1 50950.dat
+
+
+

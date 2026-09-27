@@ -6,7 +6,7 @@ import sqlite3
 import subprocess
 from pathlib import Path
 
-from .common import ROOT, CACHE, atomic_write, models_path
+from .common import ROOT, CACHE, atomic_write, database_path, models_path
 
 
 def spec_pages(pdf=None):
@@ -43,11 +43,11 @@ def search_spec(query=None, page=None, limit=8):
     return dict(source=source["source"], sha256=source["sha256"], page_count=len(source["pages"]), results=results)
 
 
-def search_models(query, *, root=None, limit=10, submodels=False, offset=0):
+def search_models(query, *, root=None, database=None, limit=10, submodels=False, offset=0):
     if limit < 1 or offset < 0:
         raise ValueError("Limit must be positive and offset nonnegative")
     root = models_path(root)
-    db = root.parent / "scripts/ldraw-info.db"
+    db = database_path(database)
     if db.exists():
         with sqlite3.connect(db.as_uri() + "?mode=ro", uri=True) as con:
             con.row_factory = sqlite3.Row

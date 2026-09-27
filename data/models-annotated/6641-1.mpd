@@ -1,0 +1,214 @@
+0 FILE 6641 - main.ldr
+0 A small LEGO set consisting of a blue and red car accompanied by a truck driver minifig.
+0 Name: 6641 - main.ldr
+0 Author: Victor Di Rienzo [tatubias]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-05-05 [tatubias] Original upload for OMR
+0 !HISTORY 2022-01-20 [RainbowDolphin] Corrected misplaced parts and colours, split minifig submodel
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 6641 - Car.ldr
+1 0 110 4 0 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 6641 - Minifig.ldr
+
+
+0
+
+0 STEP
+0 FILE 6641 - Car.ldr
+0 A compact car built from a black chassis base, blue mudguards and body panels, red doors and plates, with a steering wheel and transparent red lights.
+0 Name: 6641 - Car.ldr
+0 Author: Victor Di Rienzo [tatubias]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Car Base  4 x 10 x  0.667 with  2 x  2 Center Open (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 4212b.dat
+0 // Car Steering Stand and Wheel (Complete) (white)
+1 15 -30 -8 0 0 0 1 0 1 0 -1 0 0 3829c01.dat
+0 STEP
+0 // Plate  1 x  1 (trans_red)
+1 36 90 -8 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 90 -8 -30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 30 -8 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 30 -8 -30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 60 -8 0 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Car Mudguard  2 x  4 (blue)
+1 1 -60 -16 0 0 0 1 0 1 0 -1 0 0 3788.dat
+0 STEP
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -24 0 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 90 -24 0 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Plate  1 x  2 (blue)
+1 1 -50 -16 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Plate  1 x  4 (red)
+1 4 60 -16 -30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 60 -16 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 -50 -24 -30 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 -50 -24 30 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (red)
+1 4 60 -24 30 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (red)
+1 4 60 -24 -30 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Cone  1 x  1 (light_grey)
+1 7 -70 -32 10 1 0 0 0 1 0 0 0 1 4589.dat
+0 // Cone  1 x  1 (light_grey)
+1 7 -70 -32 -10 1 0 0 0 1 0 0 0 1 4589.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (blue)
+1 1 -90 -24 10 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (blue)
+1 1 -90 -24 -10 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Door  1 x  3 x  1 Right (red)
+1 4 -30 -24 30 0 0 1 0 1 0 -1 0 0 3821.dat
+0 // Door  1 x  3 x  1 Left (red)
+1 4 -30 -24 -30 0 0 1 0 1 0 -1 0 0 3822.dat
+0 // Plate  1 x  1 (red)
+1 4 30 -24 30 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 30 -24 -30 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Tile  1 x  1 with Groove (red)
+1 4 90 -24 30 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  1 with Groove (red)
+1 4 90 -24 -30 1 0 0 0 1 0 0 0 1 3070b.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (blue)
+1 1 -90 -24 30 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (blue)
+1 1 -90 -24 -30 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Tile  1 x  2 Grille without Groove (light_grey)
+1 7 -104 -14 0 0 1 0 0 0 -1 -1 0 0 2412a.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -104 -14 30 0 1 0 0 0 -1 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -104 -14 -30 0 1 0 0 0 -1 -1 0 0 3024.dat
+0 // Windscreen  2 x  4 x  2 (trans_light_blue)
+1 43 -30 -72 0 0 0 1 0 1 0 -1 0 0 3823.dat
+0 // Plate  1 x  1 Round (black)
+1 0 60 -32 30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 60 -32 -30 1 0 0 0 1 0 0 0 1 6141.dat
+0 STEP
+0 // Hinge Car Roof Holder  1 x  4 x  2 (white)
+1 15 30 -72 0 0 0 1 0 1 0 -1 0 0 4214.dat
+0 // Hinge Car Roof  4 x  4 Sunroof without Ledges (white)
+1 15 0 -80 0 0 0 1 0 1 0 -1 0 0 2349a.dat
+0 // Glass for Hinge Car Roof  4 x  4 Sunroof without Ridges (trans_light_blue)
+1 43 -17 -76 0 0 0 1 0 1 0 -1 0 0 2348a.dat
+0 STEP
+0 // Brick  1 x  2 (yellow)
+1 14 50 8 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 -50 8 -10 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 -50 8 10 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Plate  1 x  2 (black)
+1 0 0 8 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 0 8 -30 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 70 8 10 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 70 8 -10 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -70 8 -10 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -70 8 10 0 0 1 0 1 0 -1 0 0 4070.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 -60 32 -10 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 -60 32 10 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 60 32 -10 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 60 32 10 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Tile  1 x  2 with Handle (light_grey)
+1 7 -108 18 0 0 1 0 0 0 -1 -1 0 0 2432.dat
+0 STEP
+0 // Bar  1 x  4 x  2 with Studs (black)
+1 0 60 -80 0 0 0 1 0 1 0 -1 0 0 4083.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 60 -88 10 -1 0 0 0 1 0 0 0 -1 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 60 -88 -10 1 0 0 0 1 0 0 0 1 4081b.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 48 -86 -30 0 1 0 1 0 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 48 -86 30 0 1 0 1 0 0 0 0 -1 6141.dat
+0 // Hinge Control Stick (light_grey)
+1 7 60 -96 -10 0 -0.259 -0.966 0 0.966 -0.259 1 0 0 4593.dat
+0 // Hinge Control Stick Base (black)
+1 0 60 -96 -10 0 0 -1 0 1 0 1 0 0 4592.dat
+0 // Hinge Control Stick Base (black)
+1 0 60 -96 10 0 0 -1 0 1 0 1 0 0 4592.dat
+0 // Hinge Control Stick (light_grey)
+1 7 60 -96 10 0 -0.259 -0.966 0 0.966 -0.259 1 0 0 4593.dat
+0 // Technic Axle  6 (black)
+1 0 -60 42 0 0 0 1 0 1 0 -1 0 0 3706.dat
+0 // Technic Axle  6 (black)
+1 0 60 42 0 0 0 1 0 1 0 -1 0 0 3706.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole with Black Tyre  7/ 56 x 17 Offset Tread (white)
+1 15 -60 42 -30 1 0 0 0 1 0 0 0 1 3482c01.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole with Black Tyre  7/ 56 x 17 Offset Tread (white)
+1 15 -60 42 30 1 0 0 0 1 0 0 0 1 3482c01.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole with Black Tyre  7/ 56 x 17 Offset Tread (white)
+1 15 -60 42 -50 1 0 0 0 1 0 0 0 1 3482c01.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole with Black Tyre  7/ 56 x 17 Offset Tread (white)
+1 15 -60 42 50 1 0 0 0 1 0 0 0 1 3482c01.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole with Black Tyre  7/ 56 x 17 Offset Tread (white)
+1 15 60 42 -30 1 0 0 0 1 0 0 0 1 3482c01.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole with Black Tyre  7/ 56 x 17 Offset Tread (white)
+1 15 60 42 30 1 0 0 0 1 0 0 0 1 3482c01.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole with Black Tyre  7/ 56 x 17 Offset Tread (white)
+1 15 60 42 -50 1 0 0 0 1 0 0 0 1 3482c01.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole with Black Tyre  7/ 56 x 17 Offset Tread (white)
+1 15 60 42 50 1 0 0 0 1 0 0 0 1 3482c01.dat
+0
+
+0 STEP
+0 FILE 6641 - Minifig.ldr
+0 A truck driver minifig wearing blue legs, a white torso with red truck pattern, a red cap, and a standard grinning yellow head.
+0 Name: 6641 - Minifig.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // ~Minifig Hips and Legs (Standing) (Obsolete) (blue)
+1 1 0 32 0 1 0 0 0 1 0 0 0 1 73200-f1.dat
+0 // Minifig Torso with Red Truck Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p1t.dat
+0 // Minifig Arm Right (yellow)
+1 14 -15.553 9 0 0.985707 -0.169706 0 0.17 0.985 0 0 0 0.999849 3818.dat
+0 // Minifig Arm Left (yellow)
+1 14 15.553 9 0 0.985707 0.169706 0 -0.17 0.985 0 0 0 0.999849 3819.dat
+0 // Minifig Hand (yellow)
+1 14 23.688 26.76 -9.882 0.985707 0.120208 -0.120208 -0.17 0.697 -0.697 0 0.707107 0.707107 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -23.689 26.76 -9.883 0.985707 0.120208 0.120208 -0.002 0.717 -0.697 -0.169706 0.685894 0.707107 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -24 0 0.985707 0 0.168291 0 1 0 -0.168291 0 0.985707 3626ap01.dat
+0 // ~Minifig Cap with Long Flat Peak (Obsolete) (red)
+1 4 0 -24 0 0.985707 0 0.168291 0 1 0 -0.168291 0 0.985707 4485.dat
+
+
+
+
+
+

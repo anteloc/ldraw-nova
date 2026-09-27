@@ -1,0 +1,393 @@
+0 FILE 6667 - main.ldr
+0 A complete construction vehicle set featuring a car, flexible hose, towed trailer, and a construction worker minifigure.
+0 main
+0 Name: 6667 - main.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+1 14 -10 -56 0 1 0 0 0 1 0 0 0 1 6667 - car.ldr
+1 14 -40 -32 -80 0 0 1 0 1 0 -1 0 0 6667 - trailer.ldr
+1 0 -170 0 -270 -0.866 0 0.5 0 1 0 -0.5 0 -0.866 6667 - minifig.ldr
+
+
+0 NOFILE
+0 STEP
+0 FILE 6667 - car.ldr
+0 A wheeled vehicle built on a car base with mudguards, wheel pins, headlights, and a rear towball socket for hitching a trailer.
+0 car
+0 Name: 6667 - car.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Car Base  4 x 10 x  0.667 with  2 x  2 Center Closed (main_colour)
+1 16 -30 0 10 1 0 0 0 1 0 0 0 1 4212a.dat
+0 // Plate  2 x  2 (black)
+1 0 -30 8 70 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 -30 8 -50 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (black)
+1 0 -60 8 10 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 0 8 10 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 -30.002 16 60.769 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 with Handle (light_grey)
+1 7 -30.003 16 80.769 -1 0 0 0 1 0 0 0 -1 2540.dat
+0 // Plate  2 x  2 with Towball Socket (light_grey)
+1 7 -29.997 16 -49.231 1 0 0 0 1 0 0 0 1 3730.dat
+0 STEP
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 -29.997 24 -49.231 1 0 0 0 1 0 0 0 1 4600.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 -30.003 24 70.769 1 0 0 0 1 0 0 0 1 4600.dat
+0 STEP
+0 // Plate  1 x  1 (trans_yellow)
+1 46 0 -8 100 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -60 -8 100 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 0 -16 100 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -60 -16 100 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 -10 -8 -80 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (main_colour)
+1 16 -50 -8 -80 -1 0 0 0 1 0 0 0 -1 4276b.dat
+0 STEP
+0 // Car Mudguard  2 x  4 (main_colour)
+1 16 -30 -16 -50 -1 0 0 0 1 0 0 0 -1 3788.dat
+0 // Car Mudguard  2 x  4 (main_colour)
+1 16 -30 -16 70 -1 0 0 0 1 0 0 0 -1 3788.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 0 -16 -80 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 -60 -16 -80 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 -30 -24 100 -1 0 0 0 1 0 0 0 -1 2877.dat
+0 // Hinge Bar  2 with 3 Fingers and Top Stud (black)
+1 0 -80.001 -40.001 -80 -1 0 0 0 1 0 0 0 -1 2433.dat
+0 STEP
+0 // Tile  1 x  1 with Clip (light_grey)
+1 7 -80 -46 -80 0 0 -1 0 1 0 1 0 0 2555.dat
+0 // Plate  2 x  2 (red)
+1 4 -30 -16 70 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x  2 (red)
+1 4 -30 -16 -50 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (main_colour)
+1 16 -30 -16 -80 1 0 0 0 1 0 0 0 1 2436a.dat
+0 STEP
+0 // Brick  1 x  4 (main_colour)
+1 16 -30 -24 -20 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -30 -24 80 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -30 -24 60 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (light_grey)
+1 7 -30 -24 -40 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (light_grey)
+1 7 -30 -24 -60 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Car Steering Stand and Wheel (Complete) (red)
+1 4 -30 -8 40 -1 0 0 0 1 0 0 0 -1 3829c01.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (black)
+1 0 -30 -32 -60 1 0 0 0 1 0 0 0 1 4085c.dat
+0 // Plate  1 x  1 (black)
+1 0 -30 -32 -40 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 0 -24 90 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 -60 -24 90 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Door  1 x  3 x  1 Left (main_colour)
+1 16 -60 -24 40 -1 0 0 0 1 0 0 0 -1 3822.dat
+0 // Door  1 x  3 x  1 Right (main_colour)
+1 16 0 -24 40 -1 0 0 0 1 0 0 0 -1 3821.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 -30 -56 -50 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Hinge Car Roof Holder  1 x  4 x  2 (main_colour)
+1 16 -30 -72 -20 -1 0 0 0 1 0 0 0 -1 4214.dat
+0 // Windscreen  2 x  4 x  2 (trans_medium_blue)
+1 41 -30 -72 40 -1 0 0 0 1 0 0 0 -1 3823.dat
+0 // Hinge Car Roof  4 x  4 Sunroof without Ledges (main_colour)
+1 16 -30 -80 10 -1 0 0 0 1 0 0 0 -1 2349a.dat
+0 // Glass for Hinge Car Roof  4 x  4 Sunroof with Ridges (trans_medium_blue)
+1 41 -30 -76 25 -1 0 0 0 1 0 0 0 -1 2348b.dat
+0 STEP
+0 // Brick  1 x  1 (light_grey)
+1 7 -30 -80 -40 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Antenna  4H with Rounded Top (red)
+1 4 0 -24 -80 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 -30 -88 -50 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -30 -80 -60 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Technic Axle  4 (black)
+1 0 -30 -46 -50 1 0 0 0 1 0 0 0 1 3705.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 -45 -46 -50 0 -1 0 1 0 0 0 0 1 3941.dat
+0 // Brick  1 x  1 Round with Hollow Stud (red)
+1 4 0 -112 -80 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 0 -120 -80 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Wheel Rim 12 x 11 with Round Hole (main_colour)
+1 16 4.997 29 70.771 0 0 -1 0 1 0 1 0 0 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 9.997 29 70.771 0 0 -1 0 1 0 1 0 0 6015.dat
+0 // Wheel Rim 12 x 11 with Round Hole (main_colour)
+1 16 5.003 29 -49.229 0 0 -1 0 1 0 1 0 0 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 10.003 29 -49.229 0 0 -1 0 1 0 1 0 0 6015.dat
+0 // Wheel Rim 12 x 11 with Round Hole (main_colour)
+1 16 -64.997 29 -49.233 0 0 1 0 1 0 -1 0 0 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 -69.997 29 -49.233 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // Wheel Rim 12 x 11 with Round Hole (main_colour)
+1 16 -65.003 29 70.767 0 0 1 0 1 0 -1 0 0 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 -70.003 29 70.767 0 0 1 0 1 0 -1 0 0 6015.dat
+0 STEP
+0 // Dish  2 x  2 with Rim (light_grey)
+1 7 -69 -46 -50 0 -1 0 1 0 0 0 0 1 2654.dat
+0 // Dish  2 x  2 with Rim (light_grey)
+1 7 8 -46 -50 0 1 0 1 0 0 0 0 -1 2654.dat
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 -16 -46 -50 0 1 0 1 0 0 0 0 -1 3941.dat
+0 // Minifig Tool Hose Nozzle with Handle (light_grey)
+1 7 -30 -40 -80 0 0 -1 0 1 0 1 0 0 4210a.dat
+1 16 -59.996 -7 -94.004 1 0 0 0 0 -1 0 1 0 6667 - car - flexHose.ldr
+0 // Dish  2 x  2 Inverted (light_grey)
+1 7 -108 -50.999 -82 0 -1 0 0 0 -1 1 0 0 4740.dat
+
+
+0 NOFILE
+0 STEP
+0 FILE 6667 - car - flexHose.ldr
+0 A flexible hose assembly made of interlocking segment links with end connectors.
+0 car - flexHose
+0 Name: 6667 - car - flexHose.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 !LDCAD CONTENT [type=path] [addFallBack=default] [looped=false] [displayKind=mm] [curveStep=0] [displayLenCor=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=0 -22 0 1 0 0 0 1 0 0 0 1] [prevCPDist=25] [nextCPDist=50] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-26 12 44 0 1 0 1 0 0 0 0 -1] [prevCPDist=50] [nextCPDist=25] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=1 0 0 0 1 0 0 0 1] [donPart=754.dat] [donYSize=100%] [donCen=absCen] [donCenYOfs=0] [donFinScale=none] [donPlace=refsStat] [donYAlign=0] [donInline=false] [segSize=50%] [segSizeTol=5%] [segsCnt=0] [segsGrp=0] [segsMaxMerge=1] [segsMrgAng=0] [segsMrgRollAng=0] [segsEdgeDelKind=keepFirstLeft]
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=1 0 0 0 1 0 0 0 1] [donPart=756.dat] [donYSize=100%] [donCen=absCen] [donCenYOfs=0] [donFinScale=none] [donPlace=refsStat] [donYAlign=0] [donInline=false] [segSize=60%] [segSizeTol=5%] [segsCnt=1] [segsGrp=0] [segsMaxMerge=1] [segsMrgAng=0] [segsMrgRollAng=0] [segsEdgeDelKind=keepFirstLeft]
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=1 0 0 0 -1 0 0 0 -1] [donPart=754.dat] [donYSize=100%] [donCen=absCen] [donCenYOfs=0] [donFinScale=none] [donPlace=refsStat] [donYAlign=0] [donInline=false] [segSize=50%] [segSizeTol=5%] [segsCnt=0] [segsGrp=0] [segsMaxMerge=1] [segsMrgAng=0] [segsMrgRollAng=0] [segsEdgeDelKind=keepFirstLeft]
+0 !LDCAD PATH_CAP [group=start] [color=16] [posOri=0 -18 0 1 0 0 0 1 0 0 0 1] [part=752.dat] [extraLen=0mm] [inlineRef=false]
+0 !LDCAD PATH_CAP [group=end] [color=16] [posOri=-30 12 44 0 -1 0 1 0 0 0 0 1] [part=752.dat] [extraLen=0mm] [inlineRef=false]
+0 !LDCAD PATH_CAP [group=start] [color=16] [posOri=0 -18 0 1 0 0 0 -1 0 0 0 -1] [part=755.dat] [extraLen=0mm] [inlineRef=false]
+0 !LDCAD PATH_CAP [group=end] [color=16] [posOri=-30 12 44 0 1 0 1 0 0 0 0 -1] [part=755.dat] [extraLen=0mm] [inlineRef=false]
+0 !LDCAD GENERATED [generator=LDCad 1.6 Beta 2a]
+0 //This is the fallback LDraw content for above PATH configuration.
+0 // Do not edit, any changes will be lost upon regeneration.
+0 // The path is approx 40.12 mm (100.29) and exists out of 39 segments.
+0 //Some general hints about the document.
+0 BFC CERTIFY CCW
+0 //Start cap reference(s)
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 0 -18 0 1 0 0 0 1 0 0 0 1 752.DAT
+0 // ~Hose Flexible Segment End Section (main_colour)
+1 16 0 -18 0 1 0 0 0 -1 0 0 0 -1 755.DAT
+0 //End cap reference(s)
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 -30 12 44 0 -1 0 1 0 0 0 0 1 752.DAT
+0 // ~Hose Flexible Segment End Section (main_colour)
+1 16 -30 12 44 0 1 0 1 0 0 0 0 -1 755.DAT
+0 //Segments
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 0.016958 -23.761835 0.031534 0.999954 -0.009623 0 0.009622 0.999794 0.017895 -0.000172 -0.017895 0.99984 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 0.075389 -26.282578 0.141966 0.999578 -0.028997 -0.001411 0.029031 0.998069 0.054913 -0.000184 -0.05493 0.99849 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 0.194032 -28.792553 0.370996 0.998482 -0.054793 -0.005595 0.055078 0.992831 0.106078 -0.000258 -0.106226 0.994342 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 0.398561 -31.27256 0.777661 0.995609 -0.092406 -0.014977 0.093582 0.978402 0.184316 -0.002379 -0.184908 0.982753 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 0.723865 -33.676781 1.449257 0.988896 -0.144806 -0.033394 0.148125 0.942409 0.299875 -0.011953 -0.301491 0.953394 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 1.234802 -35.855873 2.562232 0.970922 -0.228379 -0.071788 0.233067 0.833253 0.501367 -0.054684 -0.503519 0.862252 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 1.986987 -37.363827 4.333755 0.93227 -0.332275 -0.143061 0.303631 0.503686 0.80877 -0.196676 -0.797429 0.57046 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 2.84335 -37.686226 6.56569 0.914079 -0.348269 -0.207769 0.2106 -0.030171 0.977107 -0.346565 -0.936909 0.045767 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 3.607731 -36.99572 8.81385 0.930037 -0.28643 -0.230194 0.110372 -0.379769 0.918474 -0.350499 -0.879621 -0.321585 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 4.222503 -35.737988 10.896743 0.94371 -0.225671 -0.241836 0.08126 -0.550544 0.830842 -0.320638 -0.803725 -0.501216 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 4.70848 -34.192684 12.826212 0.950238 -0.178357 -0.255413 0.085412 -0.639302 0.764197 -0.299586 -0.747985 -0.592256 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 5.087015 -32.480827 14.639062 0.952769 -0.137731 -0.270667 0.101663 -0.695182 0.711608 -0.286173 -0.705515 -0.648346 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 5.374239 -30.662937 16.364992 0.951911 -0.103446 -0.288383 0.123825 -0.731071 0.670971 -0.280238 -0.674414 -0.683105 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 5.577854 -28.770596 18.022024 0.94913 -0.070814 -0.30682 0.148853 -0.75774 0.635353 -0.277482 -0.648703 -0.708652 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 5.700381 -26.822325 19.621582 0.944633 -0.038906 -0.325815 0.176019 -0.777907 0.603222 -0.276923 -0.627173 -0.727989 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 5.745023 -24.832458 21.173538 0.938324 -0.008507 -0.345651 0.204347 -0.792773 0.574242 -0.278908 -0.609458 -0.742139 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 5.714967 -22.811804 22.685726 0.930358 0.020735 -0.366066 0.233247 -0.803799 0.547268 -0.282896 -0.594539 -0.752657 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 5.602775 -20.766052 24.159708 0.921532 0.054699 -0.38443 0.26449 -0.81327 0.518302 -0.284295 -0.57931 -0.763922 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 5.411761 -18.702869 25.60103 0.910741 0.084741 -0.40419 0.294659 -0.819086 0.492214 -0.289356 -0.567377 -0.770945 754.DAT
+0 // ~Hose Flexible Segment Center Section (main_colour)
+1 16 5.168743 -16.988008 26.760752 0.899806 0.134874 -0.414919 0.334229 -0.824367 0.456848 -0.280429 -0.549752 -0.786849 756.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 4.578447 -13.619777 28.993868 0.872596 -0.186478 0.451445 0.388475 0.825213 -0.410012 -0.29608 0.53315 0.79252 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 4.076816 -11.538561 30.330341 0.857121 -0.227049 0.462377 0.422795 0.822849 -0.37969 -0.294259 0.520931 0.801276 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 3.470909 -9.465398 31.635653 0.840261 -0.27007 0.470132 0.457933 0.817743 -0.348701 -0.290273 0.508289 0.810792 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 2.752513 -7.407862 32.907898 0.821666 -0.318203 0.472876 0.495356 0.809057 -0.316305 -0.281934 0.494139 0.822399 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 1.910472 -5.375307 34.143482 0.801017 -0.369215 0.471224 0.533992 0.796492 -0.283642 -0.270601 0.478832 0.835162 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 0.938365 -3.37767 35.339355 0.778107 -0.422026 0.465235 0.573244 0.779902 -0.251284 -0.256789 0.462219 0.848771 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -0.173999 -1.427784 36.490044 0.750346 -0.483994 0.450256 0.61787 0.755619 -0.217434 -0.234985 0.44135 0.866021 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -1.439581 0.458033 37.587681 0.720073 -0.541936 0.43336 0.659914 0.727889 -0.186258 -0.214498 0.420099 0.881764 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -2.857604 2.265946 38.627365 0.681846 -0.608 0.406721 0.707327 0.689751 -0.1547 -0.186478 0.393166 0.900359 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -4.443537 3.970389 39.595711 0.635479 -0.675739 0.373555 0.75629 0.642213 -0.124851 -0.155535 0.361856 0.919167 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -6.196184 5.550557 40.483501 0.583818 -0.738115 0.338144 0.801954 0.589222 -0.098425 -0.126593 0.328639 0.935933 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -8.107447 6.986825 41.282303 0.519442 -0.802082 0.294693 0.849227 0.522837 -0.073858 -0.094836 0.288626 0.952733 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -10.17124 8.254503 41.980453 0.453181 -0.854786 0.252918 0.88873 0.455265 -0.05378 -0.069175 0.249148 0.965992 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -12.364039 9.345217 42.576 0.378208 -0.902168 0.207488 0.924599 0.379171 -0.036702 -0.045562 0.205724 0.977549 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -14.669729 10.241964 43.061554 0.299908 -0.940086 0.162152 0.95359 0.300212 -0.023218 -0.026853 0.16159 0.986493 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -17.063042 10.941947 43.437683 0.224395 -0.967077 0.120035 0.974398 0.224434 -0.013367 -0.014013 0.119961 0.99268 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -19.517485 11.453492 43.710712 0.152405 -0.985003 0.080879 0.988301 0.152376 -0.006572 -0.005851 0.080934 0.996702 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -22.011669 11.784388 43.886276 0.081947 -0.995699 0.043219 0.996636 0.081926 -0.002279 -0.001271 0.04326 0.999063 754.DAT
+0 // ~Hose Flexible Segment Link Section (main_colour)
+1 16 -24.383369 11.948432 43.972862 0.031881 -0.999351 0.016771 0.999492 0.031878 -0.000431 -0.000104 0.016776 0.999859 754.DAT
+0 NOFILE
+0 STEP
+0 FILE 6667 - trailer.ldr
+0 A towable trailer with wheels, mudguard, telemetry computer, hose nozzle, and grille details for transporting equipment.
+0 trailer
+0 Name: 6667 - trailer.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  2 x  4 (black)
+1 0 122 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  2 with 3L Extension and Towball (main_colour)
+1 16 92 -8 0 0 0 1 0 1 0 -1 0 0 2508.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 152 -8 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 122 8 0 0 0 -1 0 1 0 1 0 0 4600.dat
+0 STEP
+0 // Technic Pin (light_grey)
+1 7 142 -22 0 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Car Mudguard  2 x  4 without Studs (main_colour)
+1 16 122 -16 0 0 0 1 0 1 0 -1 0 0 3787.dat
+0 // Technic Brick  1 x  2 with Hole (main_colour)
+1 16 152 -32 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 STEP
+0 // Brick  2 x  2 (main_colour)
+1 16 102 -32 0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 STEP
+0 // Plate  2 x  3 (black)
+1 0 132 -40 0 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (black)
+1 0 92 -40 -10 0 0 1 0 1 0 -1 0 0 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (black)
+1 0 92 -40 10 0 0 1 0 1 0 -1 0 0 4085c.dat
+0 STEP
+0 // Plate  1 x  2 (main_colour)
+1 16 92 -48 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Tile  1 x  2 with Telemetry Computer Pattern (white)
+1 15 152 -48 0 0 0 -1 0 1 0 1 0 0 3069bp52.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (main_colour)
+1 16 122 -48 -10 1 0 0 0 1 0 0 0 1 2436a.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (main_colour)
+1 16 122 -48 10 -1 0 0 0 1 0 0 0 -1 2436a.dat
+0 // Minifig Tool Hose Nozzle with Handle (light_grey)
+1 7 72 -48 9 0 -1 0 0 0 1 -1 0 0 4210a.dat
+0 // Minifig Tool Holder (black)
+1 0 64 -78 9 0 1 0 0 0 1 1 0 0 2516.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 102 -38 32 -1 0 0 0 0 -1 0 -1 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 142 -38 32 -1 0 0 0 0 -1 0 -1 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 142 -38 -32 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 102 -38 -32 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // Plate  1 x  1 Round (black)
+1 0 112 -56 -10 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Wheel Rim  6.4 x  8 (main_colour)
+1 16 122 12 -30 1 0 0 0 1 0 0 0 1 4624.dat
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (black)
+1 0 122 12 -30 0 0 1 0 1 0 -1 0 0 3139.dat
+0 // Wheel Rim  6.4 x  8 (main_colour)
+1 16 122 12 30 -1 0 0 0 1 0 0 0 -1 4624.dat
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (black)
+1 0 122 12 30 0 0 -1 0 1 0 1 0 0 3139.dat
+
+
+0 NOFILE
+0 STEP
+0 FILE 6667 - minifig.ldr
+0 A construction worker minifig wearing a red helmet and red dungarees, equipped with a shovel.
+0 minifig
+0 Name: 6667 - minifig.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso with Red Dungarees Pattern (white)
+1 15 0 -72 0 1 0 0 0 1 0 0 0 1 973p1c.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (white)
+1 15 15.5 -64 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (white)
+1 15 -15.5 -64 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 23.658 -46.127 -10 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -23.658 -46.127 -10 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Construction Helmet (red)
+1 4 0 -96 0 1 0 0 0 1 0 0 0 1 3833.dat
+0 // Minifig Shovel (black)
+1 0 24.861 -39.159 -17.071 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3837.dat
+
+0 NOFILE

@@ -1,0 +1,222 @@
+0 FILE 6870 - Main Model.ldr
+0 A classic space vehicle transporter set featuring a wheeled tractor unit, a trailer with a launch ramp, a small spacecraft, and a red space minifigure.
+0 Name: 6870 - Main Model.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+
+1 0 0 0 0 0.819152 0 0.573576 0 1 0 -0.573576 0 0.819152 6870 - Traktor.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6870 - Trailer.ldr
+1 0 0 -6 190 1 0 0 0 0.965926 0.258819 0 -0.258819 0.965926 6870 - Trailer - Launch Ramp.ldr
+1 0 0 -59.51 152.574 1 0 0 0 0.965926 0.258819 0 -0.258819 0.965926 6870 - Spacecraft.ldr
+1 0 0 -50.123 191.47 1 0 0 0 0.965926 0.258819 0 -0.258819 0.965926 6870 - Minifig.ldr
+
+0 STEP
+0 FILE 6870 - Traktor.ldr
+0 A light grey wheeled tractor tug with steering, positioning rockets, an antenna, and a hinged articulation joint for towing.
+0 Name: 6870 - Traktor.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+
+0 // Hinge Plate  2 x  4 with Articulated Joint - Female (light_grey)
+1 7 0 0 -60 -1 0 0 0 1 0 0 0 -1 3640.dat
+0 STEP
+0 // Plate  2 x  2 with Red Wheels (Complete) (light_grey)
+1 7 0 8 -60 1 0 0 0 1 0 0 0 1 122c01.dat
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 -30 14 -60 0 0 1 0 1 0 -1 0 0 4084.dat
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 30 14 -60 0 0 -1 0 1 0 1 0 0 4084.dat
+0 ROTSTEP 0 0 180 REL
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -8 -60 0 0 1 0 1 0 -1 0 0 3020.dat
+0 ROTSTEP END
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -16 -60 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Plate  4 x  4 (light_grey)
+1 7 0 -24 -60 0 0 1 0 1 0 -1 0 0 3031.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -32 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -40 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 with Ladder (light_grey)
+1 7 0 -32 -90 1 0 0 0 1 0 0 0 1 4175.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (light_grey)
+1 7 -30 -32 -90 0 0 1 0 1 0 -1 0 0 4081a.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (light_grey)
+1 7 30 -32 -90 0 0 -1 0 1 0 1 0 0 4081a.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -50 -30 -100 0 0 -1 -1 0 0 0 1 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 50 -30 -100 0 0 -1 -1 0 0 0 1 0 3024.dat
+0 STEP
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 0 -40 -90 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 // Brick  2 x  1 with Positioning Rockets (light_grey)
+1 7 -30 -48 -30 0 0 1 0 1 0 -1 0 0 3963.dat
+0 // Brick  2 x  1 with Positioning Rockets (light_grey)
+1 7 30 -48 -30 0 0 -1 0 1 0 1 0 0 3963.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 -30 -56 -30 0 0 -1 0 1 0 1 0 0 3957a.dat
+
+0 STEP
+0 FILE 6870 - Trailer.ldr
+0 A light grey articulated trailer with red-wheeled axle pairs and a hinged pivot for connecting to and tilting the load bed.
+0 Name: 6870 - Trailer.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+
+0 // Hinge Plate  2 x  9 Base with Small Hole (light_grey)
+1 7 0 -6 190 1 0 0 0 1 0 0 0 1 3324d.dat
+0 // ~Hinge Plate  2 x  5 Pivot (red)
+1 4 0 -6 190 1 0 0 0 1 0 0 0 1 313.dat
+0 STEP
+0 // Plate  2 x  4 (light_grey)
+1 7 0 0 140 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Hinge Plate  2 x  4 with Articulated Joint - Male (light_grey)
+1 7 0 0 60 1 0 0 0 1 0 0 0 1 3639.dat
+0 ROTSTEP 0 0 180 REL
+0 // Plate  2 x  2 with Red Wheels (Complete) (light_grey)
+1 7 0 8 160 1 0 0 0 1 0 0 0 1 122c01.dat
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 -30 14 160 0 0 1 0 1 0 -1 0 0 4084.dat
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 30 14 160 0 0 -1 0 1 0 1 0 0 4084.dat
+0 // Plate  2 x  2 with Red Wheels (Complete) (light_grey)
+1 7 0 8 100 1 0 0 0 1 0 0 0 1 122c01.dat
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 -30 14 100 0 0 1 0 1 0 -1 0 0 4084.dat
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 30 14 100 0 0 -1 0 1 0 1 0 0 4084.dat
+0 ROTSTEP END
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -16 80 0 0 1 0 1 0 -1 0 0 3068b.dat
+
+0 STEP
+0 FILE 6870 - Trailer - Launch Ramp.ldr
+0 A hinged light grey launch ramp section using a long plate and tiles that can be raised to deploy the carried spacecraft.
+0 Name: 6870 - Trailer - Launch Ramp.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+
+0 // Hinge Plate  2 x  5 Top with Large Hole (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 314e.dat
+0 STEP
+0 // Plate  2 x  8 (light_grey)
+1 7 0 -18 -50 0 0 1 0 1 0 -1 0 0 3034.dat
+0 STEP
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 0 -26 10 -1 0 0 0 1 0 0 0 -1 3956.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -26 -30 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -26 -70 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -26 -110 0 0 1 0 1 0 -1 0 0 3068b.dat
+
+0 STEP
+0 FILE 6870 - Spacecraft.ldr
+0 A white classic space spacecraft with large wings, angled nose slopes, rockets, thrusters, and the Classic Space logo pattern on its hull.
+0 Name: 6870 - Spacecraft.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+
+0 // Wing  4 x  8 Left (white)
+1 15 40 0 0 1 0 0 0 1 0 0 0 1 3933.dat
+0 // Wing  4 x  8 Right (white)
+1 15 -40 0 0 1 0 0 0 1 0 0 0 1 3934.dat
+0 STEP
+0 // Plate  2 x  8 (white)
+1 15 0 8 -20 0 0 1 0 1 0 -1 0 0 3034.dat
+0 ROTSTEP 0 0 180 ABS
+0 // Brick  1 x  3 (white)
+1 15 -30 8 50 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  3 (white)
+1 15 30 8 50 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 -30 8 10 1 0 0 0 1 0 0 0 1 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 30 8 10 1 0 0 0 1 0 0 0 1 3665.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Light Type 1 (white)
+1 15 -50 -8 70 0 0 1 0 1 0 -1 0 0 4081a.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -70 -6 80 0 0 1 1 0 0 0 1 0 3957a.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (white)
+1 15 50 -8 70 0 0 -1 0 1 0 1 0 0 4081a.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 70 -6 80 0 0 1 1 0 0 0 1 0 3957a.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (white)
+1 15 -10 0 -90 0 0 1 0 1 0 -1 0 0 4081a.dat
+0 // Plate  1 x  1 (trans_green)
+1 34 -30 2 -100 0 0 1 1 0 0 0 1 0 3024.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (white)
+1 15 10 0 -90 0 0 -1 0 1 0 1 0 0 4081a.dat
+0 // Plate  1 x  1 (trans_green)
+1 34 30 2 -100 0 0 1 1 0 0 0 1 0 3024.dat
+0 ROTSTEP END
+0 // Slope Brick 45  2 x  1 (white)
+1 15 -50 -24 50 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (white)
+1 15 50 -24 50 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Car Steering Stand and Wheel (Complete) (white)
+1 15 0 -8 10 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 STEP
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 -50 -32 70 -1 0 0 0 1 0 0 0 -1 3963.dat
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 50 -32 70 -1 0 0 0 1 0 0 0 -1 3963.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 -50 -40 50 -1 0 0 0 1 0 0 0 -1 3957a.dat
+0 // Slope Brick 33  3 x  2 with Classic Space Logo Pattern (white)
+1 15 0 -24 -10 1 0 0 0 1 0 0 0 1 3298p90.dat
+
+0 STEP
+0 FILE 6870 - Minifig.ldr
+0 A red classic space minifigure with helmet, airtanks, and classic space torso pattern.
+0 Name: 6870 - Minifig.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (red)
+1 4 0 -80 8 0.891007 0 -0.45399 0 1 0 0.45399 0 0.891007 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -80 8 0.891007 0 -0.45399 0 1 0 0.45399 0 0.891007 3626bp01.dat
+0 // Minifig Airtanks (red)
+1 4 0 -53 8 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Classic Space Pattern (red)
+1 4 0 -53 8 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 -21 8 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 -44 8 0.985 -0.120208 -0.120208 0.17 0.6965 0.6965 0 -0.707107 0.707107 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 -44 8 0.985 0.120208 0.120208 -0.154072 0.93008 0.332407 -0.0718451 -0.346503 0.93521 3819.dat
+0 // Minifig Hand (red)
+1 4 -21.6886 -39.0055 -12.5641 0.985 -0.169974 0 0.17 0.984851 0 0 0 0.999849 3820.dat
+0 // Minifig Hand (red)
+1 4 21.689 -30.782 -8.527 0.985 0.169974 0 -0.154072 0.892578 -0.422554 -0.0718451 0.416216 0.906171 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 -9 8 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 -9 8 1 0 0 0 0 1 0 -1 0 3817.dat
+

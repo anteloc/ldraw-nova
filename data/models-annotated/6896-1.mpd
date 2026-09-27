@@ -1,0 +1,365 @@
+0 FILE 6896 - Celestial Forager.ldr
+0 A red and black MTron space vehicle featuring a front cab with MTron logo and computer console, a wheeled back section with articulated joint, a rotating turntable with dish antenna, a magnet-equipped crane, and a cargo box, crewed by a minifig with airtanks and helmet.
+0 Name: 6896 - Celestial Forager.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6896 - Vehicle.ldr
+
+
+0 STEP
+0 FILE 6896 - Vehicle.ldr
+0 A complete red and black MTron vehicle assembled from front and back sections with a turntable and crane.
+0 Name: 6896 - Vehicle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6896 - Vehicle - Front + Minifig.ldr
+1 1 -15.307 0 156.955 0.92388 0 -0.382683 0 1 0 0.382683 0 0.92388 6896 - Vehicle - Back + Crane.ldr
+1 0 18.433 -80 35.5 0.887494 0 0.460819 0 1 0 -0.460819 0 0.887494 6896 - Vehicle - Turn Table 1.ldr
+1 0 27.649 -72 53.25 0.923879 0 -0.382684 0 1 0 0.382684 0 0.923879 6896 - Vehicle - Turn Table 2.ldr
+
+0 STEP
+0 FILE 6896 - Vehicle - Front.ldr
+0 The front cab of the vehicle, built with black plates and red slopes featuring the MTron logo, a computer display tile, and an articulated female hinge joint for connection.
+0 Name: 6896 - Vehicle - Front.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Plate  2 x  8 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  2 x  8 (black)
+1 0 0 -8 0 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Hinge Plate  2 x  4 with Articulated Joint - Female (black)
+1 0 0 -16 60 -1 0 0 0 1 0 0 0 -1 3640.dat
+0 // Wedge  2 x  3 with Brick  2 x  4 Side Studs and Plate  2 x  2 with MTron Logo Pattern (red)
+1 4 0 -24 -100 1 0 0 0 1 0 0 0 1 2336p68.dat
+0 // Plate  2 x  8 (black)
+1 0 0 -24 0 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -24 90 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -24 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -30 -24 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (black)
+1 0 0 -32 -40 -1 0 0 0 1 0 0 0 -1 4859.dat
+0 // Slope Brick 45  2 x  2 (red)
+1 4 -10 -48 0 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (red)
+1 4 10 -48 0 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (red)
+1 4 0 -56 -30 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Plate  2 x  2 (red)
+1 4 0 -56 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -64 -20 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (black)
+1 0 0 -64 10 1 0 0 0 1 0 0 0 1 4590.dat
+0 // Turntable  2 x  2 Plate Base (red)
+1 4 0 -72 0 1 0 0 0 1 0 0 0 1 3680.dat
+0 // Tile  1 x  2 with Groove (red)
+1 4 0 -32 90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Minifig Tool Holder (black)
+1 0 -40 -21.071 -122.929 0 1 0 0.707107 0 0.707107 0.707107 0 -0.707107 2516.dat
+0 // Minifig Tool Holder (black)
+1 0 40 -21.071 -122.929 0 -1 0 -0.707107 0 0.707107 -0.707107 0 -0.707107 2516.dat
+0 // Tile  1 x  1 with Computer Display Pattern (white)
+1 15 32 -40.87 -103.13 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 3070bpc2.dat
+0 // Tile  1 x  1 with Red & Black Buttons Pattern (white)
+1 15 -32 -40.87 -103.13 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 3070bp06.dat
+0 // Brick  2 x  2 with Pin (red)
+1 4 60 8 0 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 80 18 0 0 0 -1 0 1 0 1 0 0 2593.dat
+0 // Brick  2 x  2 with Pin (red)
+1 4 -60 8 0 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 -80 18 0 0 0 1 0 1 0 -1 0 0 2593.dat
+
+
+
+0 STEP
+0 FILE 6896 - Vehicle - Front + Minifig.ldr
+0 The front cab assembly combined with the driver minifig.
+0 Name: 6896 - Vehicle - Front + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6896 - Vehicle - Front.ldr
+1 0 0 -77 -72 1 0 0 0 1 0 0 0 1 6896 - Minifig.ldr
+
+
+
+0 STEP
+0 FILE 6896 - Vehicle - Back.ldr
+0 The rear section of the vehicle featuring two black treaded wheels, red plates, a male articulated hinge joint, an antenna, and a Technic brick with pins for attachment.
+0 Name: 6896 - Vehicle - Back.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Plate  2 x  8 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Hinge Plate  2 x  4 with Articulated Joint - Male (black)
+1 0 0 -16 20 1 0 0 0 1 0 0 0 1 3639.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -24 20 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -24 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -30 -24 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -32 40 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -32 0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  6 x  8 (red)
+1 4 0 -40 0 0 0 -1 0 1 0 1 0 0 3036.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 50 -48 -40 0 0 -1 0 1 0 1 0 0 4623.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 50 -48 60 0 0 -1 0 1 0 1 0 0 4623.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 -50 -48 60 0 0 1 0 1 0 -1 0 0 4623.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 -50 -48 -40 0 0 1 0 1 0 -1 0 0 4623.dat
+0 // Technic Brick  1 x  2 with Hole (red)
+1 4 0 -64 -70 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Slope Brick 45  2 x  2 Double Convex (red)
+1 4 30 -64 -70 1 0 0 0 1 0 0 0 1 3045.dat
+0 // Slope Brick 45  2 x  2 Double Convex (red)
+1 4 -30 -64 -70 0 0 1 0 1 0 -1 0 0 3045.dat
+0 // Brick  2 x  2 with Pin (red)
+1 4 60 8 0 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 80 18 0 0 0 -1 0 1 0 1 0 0 2593.dat
+0 // Brick  2 x  2 with Pin (red)
+1 4 -60 8 0 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 -80 18 0 0 0 1 0 1 0 -1 0 0 2593.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (black)
+1 0 -50 -56 -30 -1 0 0 0 1 0 0 0 -1 4085b.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 -50 -48 -10 -1 0 0 0 1 0 0 0 -1 2569.dat
+1 0 0 -54 -90 0 0 1 0 1 0 -1 0 0 6896 - Vehicle - Back - Axle.ldr
+0 // Brick  1 x  1 with Headlight (black)
+1 0 10 -64 -30 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 -10 -64 -30 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  2 (black)
+1 0 0 -64 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Tile  1 x  2 with Groove (red)
+1 4 0 -54 -44 1 0 0 0 0 -1 0 1 0 3069b.dat
+0 // ~Magnet Holder Tile  2 x  2 with Short Arms (Obsolete) (black)
+1 0 0 -72 -20 1 0 0 0 1 0 0 0 1 2609a.dat
+0 // ~Magnet Cylindrical in Casing (Complete) (Obsolete) (black)
+1 0 0 -78.5 -20 1 0 0 0 0 -1 0 1 0 2959c01.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 0 -72 -70 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Hinge Plate  2 x  4 - Female (black)
+1 0 0 -48 40 -1 0 0 0 1 0 0 0 -1 3597.dat
+0 // Bar  1 x  8 x  2 (black)
+1 0 72 -52 10 0 0 1 0 -1 0 1 0 0 2486.dat
+0 // Bar  1 x  8 x  2 (black)
+1 0 -72 -52 10 0 0 1 0 -1 0 1 0 0 2486.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 -72 -100 -40 0 0 1 0 -1 0 1 0 0 4740.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 -72 -100 60 0 0 1 0 -1 0 1 0 0 4740.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 72 -100 -40 0 0 1 0 -1 0 1 0 0 4740.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 72 -100 60 0 0 1 0 -1 0 1 0 0 4740.dat
+
+0 STEP
+0 FILE 6896 - Vehicle - Back - Axle.ldr
+0 A Technic axle with a half bushing used to mount the rear wheels.
+0 Name: 6896 - Vehicle - Back - Axle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Technic Axle  4 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -35 0 0 0 0 1 0 1 0 -1 0 0 4265a.dat
+
+
+0 STEP
+0 FILE 6896 - Vehicle - Back + Crane.ldr
+0 The rear vehicle section combined with the turntable and crane assembly.
+0 Name: 6896 - Vehicle - Back + Crane.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6896 - Vehicle - Back.ldr
+1 0 0 -102.495 39.466 1 0 0 0 0.5 0.866025 0 -0.866025 0.5 6896 - Vehicle - Crane.ldr
+
+
+
+0 STEP
+0 FILE 6896 - Vehicle - Turn Table 1.ldr
+0 A rotating turntable assembly built from a red 2x6 plate with two grey turntable tops, a round brick, and a large inverted webbed dish.
+0 Name: 6896 - Vehicle - Turn Table 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Plate  2 x  6 (red)
+1 4 0 0 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 8 -40 0 0 1 0 1 0 -1 0 0 3679.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 8 20 0 0 1 0 1 0 -1 0 0 3679.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -8 -20 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Dish  6 x  6 Inverted Webbed Type 1 (black)
+1 0 0 -16 -20 0 0 1 0 1 0 -1 0 0 4285a.dat
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 0 -40 -20 0 0 1 0 1 0 -1 0 0 3941.dat
+
+0 STEP
+0 FILE 6896 - Vehicle - Turn Table 2.ldr
+0 A turntable base plate with a holed 2x2 plate used as a mounting interface.
+0 Name: 6896 - Vehicle - Turn Table 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Turntable  2 x  2 Plate Base (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 3680.dat
+0 // Plate  2 x  2 with Holes (black)
+1 0 0 8 0 0 0 1 0 1 0 -1 0 0 2817.dat
+
+0 STEP
+0 FILE 6896 - Vehicle - Crane.ldr
+0 A magnet-equipped crane assembly featuring an inclined stanchion, a digger bucket hinge, and two magnet holders with cylindrical magnets for grabbing cargo.
+0 Name: 6896 - Vehicle - Crane.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Hinge Plate  2 x  4 with Digger Bucket Holder (black)
+1 0 0 0 0 -1 0 0 0 1 0 0 0 -1 3315.dat
+0 // Plate  2 x  2 with Pin Type 1 (black)
+1 0 0 8 -20 -1 0 0 0 1 0 0 0 -1 2476a.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 0 -120 -40 -1 0 0 0 1 0 0 0 -1 4476.dat
+0 // Brick  2 x  2 with Pin (red)
+1 4 0 -144 -40 0 0 -1 0 1 0 1 0 0 4730.dat
+0 // ~Magnet Holder  2 x  3 (Obsolete) (red)
+1 4 0 -144 -10 -1 0 0 0 1 0 0 0 -1 2607.dat
+0 // ~Magnet Holder  2 x  3 (Obsolete) (red)
+1 4 0 26 -30 1 0 0 0 0 -1 0 1 0 2607.dat
+0 // ~Magnet Cylindrical in Casing (Complete) (Obsolete) (black)
+1 0 0 52.5 -21 1 0 0 0 -0.866025 -0.5 0 0.5 -0.866025 2959c01.dat
+0 // ~Magnet Cylindrical in Casing (Complete) (Obsolete) (black)
+1 0 0 -135 16.5 1 0 0 0 -0.866025 -0.5 0 0.5 -0.866025 2959c01.dat
+1 0 0 -119.748 42.913 1 0 0 0 0.5 -0.866025 0 0.866025 0.5 6896 - Vehicle - Box.ldr
+
+
+
+0 STEP
+0 FILE 6896 - Vehicle - Box.ldr
+0 A red MTron cargo container box with a door slot, transparent neon green accents, and a magnet for crane attachment.
+0 Name: 6896 - Vehicle - Box.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Container Box  2 x  2 x  2 with Solid Studs (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 4345a.dat
+0 // Container Box  2 x  2 x  2 Door with Slot and MTron Pattern (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 4346p68.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 6 32 6 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 -6 32 -10 1 0 0 0 1 0 0 0 1 6141.dat
+0 // ~Magnet Holder Tile  2 x  2 with Short Arms (Obsolete) (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 2609a.dat
+0 // ~Magnet Cylindrical in Casing (Complete) (Obsolete) (black)
+1 0 0 -14.5 0 1 0 0 0 0 -1 0 1 0 2959c01.dat
+
+
+
+0 STEP
+0 FILE 6896 - Minifig.ldr
+0 An MTron astronaut minifig wearing a red torso with logo, black airtanks with radio, and white arms and legs.
+0 Name: 6896 - Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+1 0 0 -27 0 0.798636 0 0.601815 0 1 0 -0.601815 0 0.798636 6896 - Minifig - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.798636 0 0.601815 0 1 0 -0.601815 0 0.798636 3626bp01.dat
+0 // Minifig Airtanks (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with MTron Logo Pattern (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 973p68.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (white)
+1 15 15.552 9 0 0.985 -0.00593291 0.169896 -0.17 -0.034376 0.9844 0 -0.999391 -0.0348995 3819.dat
+0 // Minifig Hand (black)
+1 0 18.8092 -2.68892 -18.3894 0.985 0.115922 0.124311 -0.17 0.671667 0.720275 0 -0.731243 0.681895 3820.dat
+0 // Minifig Radio with Short Handle (black)
+1 0 17.5479 -9.99722 -23.9821 0.0925288 0.142528 -0.985 0.536123 0.825823 0.17 0.838399 -0.544287 0 3962a.dat
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+0 // Minifig Arm Right (white)
+1 15 -15.552 9 0 0.985 -0.132115 -0.106984 0.17 0.765489 0.619881 0 -0.62932 0.777146 3818.dat
+0 // Minifig Hand (black)
+1 0 -22.0484 16.0795 -19.8276 0.992497 -0.117261 0.0177672 0.118506 0.987011 -0.102945 -0.00546977 0.104369 0.994372 3820.dat
+
+
+0 STEP
+0 FILE 6896 - Minifig - Helmet.ldr
+0 A black space helmet with a transparent neon green visor.
+0 Name: 6896 - Minifig - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // ~Minifig Helmet Standard (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_neon_green)
+1 42 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+
+

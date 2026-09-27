@@ -1,0 +1,672 @@
+0 FILE 8828 - main.ldr
+0 Main assembly of a Technic grader vehicle, integrating chassis, steering, gearing, and blade submodels.
+0 Name: 8828 - main.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 8828 - Grader.ldr
+
+
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Grader.ldr
+0 Core grader chassis frame built from Technic bricks, plates, and an axle forming the structural base.
+0 Name: 8828 - Grader.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Brick  1 x  8 with Holes (black)
+1 0 0 0 -10 1 0 0 0 1 0 0 0 1 3702.dat
+0 // Technic Brick  1 x  8 with Holes (black)
+1 0 0 0 10 1 0 0 0 1 0 0 0 1 3702.dat
+0 // Technic Pin (light_grey)
+1 7 -60 10 0 0 0 1 0 1 0 -1 0 0 3673.dat
+0 STEP
+0 // Plate  2 x  2 Round with Axlehole (yellow)
+1 14 -80 24 0 0 0 1 0 1 0 -1 0 0 4032a.dat
+0 // Plate  1 x  2 (black)
+1 0 70 24 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Technic Plate  1 x  6 with Holes (light_grey)
+1 7 -50 24 0 0 0 1 0 1 0 -1 0 0 4262.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 -90 0 10 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 -90 0 -10 0 0 1 0 1 0 -1 0 0 3665a.dat
+1 14 -50 0 50 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-3.ldr
+0 STEP
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 -80 -8 0 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Plate  1 x  2 (yellow)
+1 14 60 -8 10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 60 -8 -10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 0 -8 0 1 0 0 0 1 0 0 0 1 3709b.dat
+1 14 -50 0 -50 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-4.ldr
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 70 -16 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 50 -16 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Technic Plate  1 x  6 with Holes (light_grey)
+1 7 -50 -8 0 0 0 1 0 1 0 -1 0 0 4262.dat
+1 7 -110 -24 0 0 0 1 0 1 0 -1 0 0 8828 - Substep_Step-5.ldr
+0 STEP
+1 7 -90 -16 0 -1 0 0 0 1 0 0 0 -1 8828 - Substep_Step-6_1.ldr
+1 7 -50 -16 0 -1 0 0 0 1 0 0 0 -1 8828 - Substep_Step-6_2.ldr
+1 7 60 -30 0 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-6_3.ldr
+0 STEP
+0 // Plate  1 x  2 (black)
+1 0 70 -48 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 50 -48 0 0 0 1 0 1 0 -1 0 0 3023.dat
+1 0 -60 -38 0 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-7.ldr
+0 STEP
+0 // Plate  1 x  4 (yellow)
+1 14 -110 -56 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 -50 -56 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 80 -56 0 0 0 1 0 1 0 -1 0 0 3709b.dat
+0 // Plate  1 x  4 (yellow)
+1 14 50 -56 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Technic Brick  1 x  4 with Holes (black)
+1 0 -80 -80 10 -1 0 0 0 1 0 0 0 -1 3701.dat
+0 // Technic Brick  1 x  4 with Holes (black)
+1 0 -80 -80 -10 -1 0 0 0 1 0 0 0 -1 3701.dat
+1 0 340 -40 0 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-9.ldr
+0 STEP
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 -80 -80 -30 -1 0 0 0 1 0 0 0 -1 3701.dat
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 -80 -80 30 -1 0 0 0 1 0 0 0 -1 3701.dat
+1 14 50 -70 0 0 0 1 0 1 0 -1 0 0 8828 - Substep_Step-10.ldr
+0 STEP
+1 14 109.128 1.358 -30 0 -0.906 0.423 0 0.423 0.906 -1 0 0 8828 - Substep_Step-11.ldr
+0 // Plate  1 x  4 (yellow)
+1 14 -80 -88 -30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 -80 -88 30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  2 (yellow)
+1 14 -110 -88 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+1 14 -20 -88 0 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-12.ldr
+0 // Technic Brick  1 x 12 with Holes (yellow)
+1 14 160 -80 -30 1 0 0 0 1 0 0 0 1 3895.dat
+0 // Technic Pin (light_grey)
+1 7 60 -70 -40 0 0 1 0 1 0 -1 0 0 3673.dat
+0 STEP
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 -80 -96 -20 1 0 0 0 1 0 0 0 1 3709b.dat
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 -80 -96 20 1 0 0 0 1 0 0 0 1 3709b.dat
+1 14 70 -88 0 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-13.ldr
+0 STEP
+0 // Technic Axle  8 (black)
+1 0 60 10 0 0 0 -1 0 1 0 1 0 0 3707.dat
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 -90 -120 0 0 0 -1 0 1 0 1 0 0 3701.dat
+1 14 0 -120 30 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-14.ldr
+0 STEP
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (yellow)
+1 14 -30 -192 -30 0 0 1 0 1 0 -1 0 0 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (yellow)
+1 14 -30 -192 30 0 0 1 0 1 0 -1 0 0 4460a.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 70 -50 -50 0 -1 0 -1 0 0 0 0 -1 3702.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 70 -50 50 0 -1 0 -1 0 0 0 0 -1 3702.dat
+0 STEP
+1 14 60 10 65 0 1 0 -1 0 0 0 0 1 8828 - Substep_Step-16_3.ldr
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 60 10 -65 0 -1 0 -1 0 0 0 0 -1 4265a.dat
+0 // Technic Axle  6 (black)
+1 0 123.87 18.173 0 0 0 1 0 1 0 -1 0 0 3706.dat
+1 0 0 -192 0 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-16_1.ldr
+1 0 29.992 -109.295 40.122 1 -0.012 0 0.012 1 0 0 0 1 8828 - Substep_Step-16_2.ldr
+0 // Wheel Rim 20 x 30 Smooth with 6 Pinholes (yellow)
+1 14 -50 10 -90.5 1 0 0 0 1 0 0 0 1 4266.dat
+0 // Tyre 20/ 46 x 30 Off Road (rubber_black)
+1 256 -50 10 -90.5 1 0 0 0 1 0 0 0 1 2857.dat
+0 // Wheel Rim 20 x 30 Smooth with 6 Pinholes (yellow)
+1 14 -50 10 90.5 -1 0 0 0 1 0 0 0 -1 4266.dat
+0 // Tyre 20/ 46 x 30 Off Road (rubber_black)
+1 256 -50 10 90.5 -1 0 0 0 1 0 0 0 -1 2857.dat
+0 // Wheel Rim 20 x 30 Smooth with 6 Pinholes (yellow)
+1 14 360 10 100.5 -1 0 0 0 1 0 0 0 -1 4266.dat
+0 // Tyre 20/ 46 x 30 Off Road (rubber_black)
+1 256 360 10 100.5 -1 0 0 0 1 0 0 0 -1 2857.dat
+0 // Wheel Rim 20 x 30 Smooth with 6 Pinholes (yellow)
+1 14 360 10 -80.5 1 0 0 0 1 0 0 0 1 4266.dat
+0 // Tyre 20/ 46 x 30 Off Road (rubber_black)
+1 256 360 10 -80.5 1 0 0 0 1 0 0 0 1 2857.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 123.87 18.173 -50 -1 0 0 0 -1 0 0 0 1 3713.dat
+0 STEP
+1 7 -20 -240 0 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-17_1.ldr
+1 7 40 -200 0 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-17_3.ldr
+1 7 129.015 34.019 50 -0.913 0.407 0 -0.407 -0.913 0 0 0 1 8828 - Substep_Step-17_2.ldr
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-3.ldr
+0 Front steering linkage assembly using a steering arm, axle, and bushings.
+0 Name: 8828 - Substep_Step-3.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Steering Arm (light_grey)
+1 7 0 0 0 0 0 -1 0 1 0 1 0 0 4261.dat
+0 STEP
+0 // Technic Axle  4 (black)
+1 0 0 10 20 0 0 1 0 1 0 -1 0 0 3705.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 0 10 20 1 0 0 0 1 0 0 0 1 3713.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 10 -15 -1 0 0 0 1 0 0 0 -1 4265a.dat
+0 // Technic Axle Pin (light_grey)
+1 7 -40 0 0 0 0 1 1 0 0 0 1 0 3749.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-4.ldr
+0 Second steering arm assembly with axle pin, axle, and bushings mirroring the front steering.
+0 Name: 8828 - Substep_Step-4.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Steering Arm (light_grey)
+1 7 0 0 0 0 0 -1 0 1 0 1 0 0 4261.dat
+0 STEP
+0 // Technic Axle Pin (light_grey)
+1 7 -40 0 0 0 0 1 1 0 0 0 1 0 3749.dat
+0 // Technic Axle  4 (black)
+1 0 0 10 -20 0 0 -1 0 1 0 1 0 0 3705.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 0 10 -20 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 10 15 1 0 0 0 1 0 0 0 1 4265a.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-5.ldr
+0 Front grille detail made of headlight bricks and grille tiles.
+0 Name: 8828 - Substep_Step-5.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Brick  1 x  1 with Headlight (black)
+1 0 -10 0 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 10 0 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 STEP
+0 // Tile  1 x  2 Grille without Groove (black)
+1 0 0 10 -14 1 0 0 0 0 -1 0 1 0 2412a.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 -10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 10 -24 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 STEP
+0 // Tile  1 x  2 Grille without Groove (black)
+1 0 0 -14 -14 1 0 0 0 0 -1 0 1 0 2412a.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-6_1.ldr
+0 Technic plate with gear rack for steering mechanism.
+0 Name: 8828 - Substep_Step-6_1.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Plate  1 x  6 with Holes (light_grey)
+1 7 0 0 0 0 0 -1 0 1 0 1 0 0 4262.dat
+0 // Technic Gear Rack  1 x  4 (light_grey)
+1 7 0 -8 0 0 0 -1 0 1 0 1 0 0 3743.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-6_2.ldr
+0 Pair of small light grey plates as connectors or spacers.
+0 Name: 8828 - Substep_Step-6_2.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  1 x  2 (light_grey)
+1 7 0 0 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -8 0 0 0 -1 0 1 0 1 0 0 3023.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-6_3.ldr
+0 Rotor blade assembly on an axle with Technic bricks for a rotating element.
+0 Name: 8828 - Substep_Step-6_3.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Axle  6 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3706.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 0 -10 -10 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 0 -10 10 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 STEP
+0 // Technic Rotor  2 Blade with 2 Studs (black)
+1 0 31.933 24.086 -28 -0.798 0 -0.602 -0.602 0 0.798 0 1 0 2711.dat
+0 // Technic Rotor  2 Blade with 2 Studs (black)
+1 0 31.933 24.086 28 0.798 0 -0.602 0.602 0 0.798 0 -1 0 2711.dat
+0 STEP
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 0 -33 1 0 0 0 1 0 0 0 1 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 0 33 -1 0 0 0 1 0 0 0 -1 4265a.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-7.ldr
+0 Gear train with 8-tooth and bevel gears on a short axle for power transfer.
+0 Name: 8828 - Substep_Step-7.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Axle  3 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Gear  8 Tooth (light_grey)
+1 7 -20 0 0 0 0 1 0 1 0 -1 0 0 3647.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -5 0 0 0 0 -1 0 1 0 1 0 0 4265a.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 10 -10 0 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Gear 14 Tooth Bevel (light_grey)
+1 7 23 0 0 0 0 -1 0 1 0 1 0 0 4143.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-9.ldr
+0 Extended Technic frame section using long bricks and plates joined with friction pins.
+0 Name: 8828 - Substep_Step-9.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 0 0 -10 1 0 0 0 1 0 0 0 1 3701.dat
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 0 0 10 1 0 0 0 1 0 0 0 1 3701.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 -20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 0 -8 0 -1 0 0 0 1 0 0 0 -1 3709b.dat
+0 STEP
+0 // Plate  1 x  4 (yellow)
+1 14 0 -16 -10 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 0 -16 10 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -40 -40 -10 -1 0 0 0 1 0 0 0 -1 3702.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -40 -40 10 -1 0 0 0 1 0 0 0 -1 3702.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 -30 -20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 -30 20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -100 -30 -20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -100 -30 20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -80 -30 -20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -80 -30 20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 30 10 -30 0 -1 0 -1 0 0 0 0 -1 3894.dat
+0 // Technic Brick  1 x  6 with Holes (yellow)
+1 14 30 10 30 0 -1 0 -1 0 0 0 0 -1 3894.dat
+0 STEP
+1 14 6 50 0 0 -1 0 -1 0 0 0 0 -1 8828 - Substep_Step-9_Substep_Step-6.ldr
+0 STEP
+0 // Technic Plate  2 x  8 with Holes (yellow)
+1 14 38 50 0 0 -1 0 0 0 -1 1 0 0 3738.dat
+0 // Technic Brick  1 x 12 with Holes (yellow)
+1 14 -180 -40 30 1 0 0 0 1 0 0 0 1 3895.dat
+0 // Technic Pin (light_grey)
+1 7 -280 -30 40 0 0 1 0 1 0 -1 0 0 3673.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-9_Substep_Step-6.ldr
+0 Technic plate with axle-pinned bricks forming a sub-frame connector.
+0 Name: 8828 - Substep_Step-9_Substep_Step-6.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Plate  2 x  8 with Holes (yellow)
+1 14 0 0 0 0 0 1 0 1 0 -1 0 0 3738.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 0 -24 70 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 0 -24 -70 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Technic Axle Pin (light_grey)
+1 7 0 -14 80 0 0 -1 0 1 0 1 0 0 3749.dat
+0 // Technic Axle Pin (light_grey)
+1 7 0 -14 -80 0 0 1 0 1 0 -1 0 0 3749.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-10.ldr
+0 Bevel and crown gear assembly on an axle for redirecting rotational drive.
+0 Name: 8828 - Substep_Step-10.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Axle  6 (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 3706.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 0 -10 0 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 0 -10 40 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 0 -15 -1 0 0 0 1 0 0 0 -1 4265a.dat
+0 // Technic Gear 14 Tooth Bevel (light_grey)
+1 7 0 0 53 -1 0 0 0 1 0 0 0 -1 4143.dat
+0 STEP
+0 // Technic Gear 24 Tooth Crown Type 3 (light_grey)
+1 7 0 0 -28 -1 0 0 0 1 0 0 0 -1 3650c.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 0 -45 1 0 0 0 1 0 0 0 1 4265a.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-11.ldr
+0 Excavator bucket mounted on an axle with a bevel gear acting as the grader blade.
+0 Name: 8828 - Substep_Step-11.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Excavator Bucket 10 x  8 (black)
+1 0 -30 -6.255 21.47 -1 0 0 0 0.844 0.537 0 0.537 -0.844 2951.dat
+1 7 -20 -40 0 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-11_Substep_Step-1.ldr
+1 7 -40 -40 0 -1 0 0 0 -1 0 0 0 1 8828 - Substep_Step-11_Substep_Step-1.ldr
+0 STEP
+0 // Technic Axle  4 (black)
+1 0 -30 -40.3 -60 -1 0 0 0 1 0 0 0 -1 3705.dat
+0 // Technic Gear 14 Tooth Bevel (light_grey)
+1 7 -13 -40.3 -60 0 0 1 0 1 0 -1 0 0 4143.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-11_Substep_Step-1.ldr
+0 Liftarm with axle pin forming a support arm for the bucket mechanism.
+0 Name: 8828 - Substep_Step-11_Substep_Step-1.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Beam  4 x  0.5 Liftarm with Boss (black)
+1 0 0 0 0 0 -1 0 -1 0 0.005 -0.005 0 -1 2825.dat
+0 // Technic Axle Pin (light_grey)
+1 7 10 0 0 -1 0 0 0 1 0 0 0 -1 3749.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-12.ldr
+0 Long axle with bevel gear and bushed plate for extended drive linkage.
+0 Name: 8828 - Substep_Step-12.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Axle 12 (black)
+1 0 0 -32 0 0 0 -1 1 0 0 0 -1 0 3708.dat
+0 // Technic Gear 14 Tooth Bevel (light_grey)
+1 7 0 33 0 1 0 0 0 0 -1 0 1 0 4143.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 0 18 0 -1 0 0 0 0 1 0 1 0 3713.dat
+0 STEP
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 -20 0 0 1 0 0 0 1 0 0 0 1 3709b.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-13.ldr
+0 Yellow plate decking forming a platform or cover section.
+0 Name: 8828 - Substep_Step-13.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  1 x  4 (yellow)
+1 14 -20 0 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (yellow)
+1 14 20 0 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+0 // Plate  1 x  3 (yellow)
+1 14 0 -8 30 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 0 -8 -30 1 0 0 0 1 0 0 0 1 3623.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-14.ldr
+0 Worm gear assembly on an axle with bushings for reduction drive.
+0 Name: 8828 - Substep_Step-14.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 3702.dat
+0 // Technic Axle  6 (black)
+1 0 20 10 -20 0 0 1 0 1 0 -1 0 0 3706.dat
+0 // Technic Worm Gear 2L (black)
+1 0 20 10 -30 1 0 0 0 -1 0 0 0 -1 4716.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 20 10 20 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 60 10 10 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 0 0 -60 1 0 0 0 1 0 0 0 1 3702.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 20 10 -75 -1 0 0 0 1 0 0 0 -1 4265a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 60 10 -70 0 0 1 0 1 0 -1 0 0 2780.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-16_1.ldr
+0 Two Technic plates with holes serving as structural supports.
+0 Name: 8828 - Substep_Step-16_1.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 3709b.dat
+0 // Technic Plate  2 x  4 with Holes (yellow)
+1 14 -20 -8 0 0 0 1 0 1 0 -1 0 0 3709b.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-16_2.ldr
+0 Engine crankshaft center on a short axle representing the engine.
+0 Name: 8828 - Substep_Step-16_2.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Engine Crankshaft Centre (light_grey)
+1 7 0 -0.705 29.878 1 0.012 0 -0.012 1 0 0 0 1 2854.dat
+0 // Technic Axle  2 (black)
+1 0 10 -0.825 49.877 0 0.012 1 0 1 -0.012 -1 0 0 3704.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-16_3.ldr
+0 Single half-bush as a spacing component.
+0 Name: 8828 - Substep_Step-16_3.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 4265a.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-17_1.ldr
+0 Round translucent brick on a round tile forming a light or headlamp element.
+0 Name: 8828 - Substep_Step-17_1.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Brick  2 x  2 Round without Reinforcement (trans_yellow)
+1 46 0 0 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Tile  2 x  2 Round with Cross Underside Stud (yellow)
+1 14 0 -8 0 1 0 0 0 1 0 0 0 1 4150.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-17_2.ldr
+0 Single flanged bush serving as a collar or spacer.
+0 Name: 8828 - Substep_Step-17_2.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 11.153 12.375 0 -0.913 0.407 0 0.407 0.913 0 0 0 -1 3713.dat
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-17_3.ldr
+0 Large yellow base plates forming the rear bodywork or cab floor.
+0 Name: 8828 - Substep_Step-17_3.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  4 x  4 (yellow)
+1 14 0 0 0 0 0 1 0 1 0 -1 0 0 3031.dat
+0 STEP
+0 // Plate  4 x  6 (yellow)
+1 14 0 -8 0 0 0 1 0 1 0 -1 0 0 3032.dat
+0 STEP
+1 14 -20 0 -50 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-17_3_Substep_Step-3.ldr
+1 14 -20 0 50 1 0 0 0 1 0 0 0 1 8828 - Substep_Step-17_3_Substep_Step-3.ldr
+
+
+
+
+
+0 STEP
+0 FILE 8828 - Substep_Step-17_3_Substep_Step-3.ldr
+0 Hinge plates forming an articulated joint for bodywork panels.
+0 Name: 8828 - Substep_Step-17_3_Substep_Step-3.ldr
+0 Author: Max Martin Richter [MMR1988]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 4276b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (yellow)
+1 14 41.922 31.818 0 -0.269 -0.963 0 -0.963 0.269 0 0 0 -1 4275b.dat
+0 STEP
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (yellow)
+1 14 49.627 29.666 0 0.269 -0.963 0 0.963 0.269 0 0 0 1 4275b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (yellow)
+1 14 58 90 0 0 -1 0 -1 0 0 0 0 -1 4276b.dat
+
+
+
+
+
+

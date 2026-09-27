@@ -34,7 +34,7 @@ First consider whether the missing design idea is a whole-model precedent, a reu
 
 Start with [Jev part discovery](tooling.md#jev-part-discovery) when you know the role or visual character but not the part name. Describe one part, such as `a wall decoration for a castle`; the reranker returns ten scored alternatives for that role. Run separate queries for different roles, inspect the returned real references, and compare a curated shortlist visually. Keep the model's scale and style in the query, then verify actual dimensions and attachment geometry with the tools below.
 
-The supplied `categories/` tree has descriptive part symbols, colour definitions and dimension hints. The tooling reads those files as static metadata, preserving their notices; it does not import their optional `py4bricks` dependency or edit the generated files.
+The supplied `data/categories/` tree has descriptive part symbols, colour definitions and dimension hints. The tooling reads those files as static metadata, preserving their notices; it does not import their optional `py4bricks` dependency or edit the generated files.
 
 ```sh
 ./ldraw-agent catalog categories
@@ -68,7 +68,7 @@ JSON placements accept category symbols and colour names directly:
  "colour":"@colours.Tan", "at":[0,-128,0]}
 ```
 
-The editable plan retains these symbols. `build` resolves them to current library filenames and numeric LDraw colours, then runs the usual validation. Misspelled symbols and absent files fail explicitly. Numeric refs/colours remain supported and work even without `categories/`; use `LDRAW_CATEGORIES` to point to another source tree. Current `LDConfig.ldr` supplies rendering colour data, including transparency; the generated category colour snapshot is not substituted for it.
+The editable plan retains these symbols. `build` resolves them to current library filenames and numeric LDraw colours, then runs the usual validation. Misspelled symbols and absent files fail explicitly. Numeric refs/colours remain supported and work even without `data/categories/`; use `LDRAW_CATEGORIES` to point to another source tree. Current `LDConfig.ldr` supplies rendering colour data, including transparency; the generated category colour snapshot is not substituted for it.
 
 ## Reuse a detail, then adapt its role
 

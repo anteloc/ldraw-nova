@@ -1,0 +1,867 @@
+0 FILE 733-1 - main.ldr
+0 A LEGO factory scene combining a red brick building, a blue tipper truck, and a blue crane for a construction playset.
+0 Name: 733-1 - main.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 733-1 - Building.ldr
+1 0 0 -56 -400 1 0 0 0 1 0 0 0 1 733-1 - Truck.ldr
+1 0 0 -360 -60 1 0 0 0 1 0 0 0 1 733-1 - Crane base.ldr
+1 0 0 -360 -60 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 733-1 - Crane.ldr
+
+
+
+
+0 STEP
+0 FILE 733-1 - Truck.ldr
+0 A blue chassis built from plates and hinge components forming the wheeled base of a tipper truck.
+0 Name: 733-1 - Truck.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  4 x 12 (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3029.dat
+0 // Plate  1 x  2 (blue)
+1 1 -130 0 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Plate  1 x  6 (blue)
+1 1 -90 -8 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  2 x  4 (red)
+1 4 -140 -8 20 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (red)
+1 4 -140 -8 -20 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Hinge Plate  2 x  9 Base with Small Hole (light_grey)
+1 7 150 -6 0 0 0 1 0 1 0 -1 0 0 3324d.dat
+0 // ~Hinge Plate  2 x  5 Pivot (red)
+1 4 150 -6 0 0 0 1 0 1 0 -1 0 0 313.dat
+1 4 150 -6 0 1 0 0 0 1 0 0 0 1 733-1 - Tipper.ldr
+0 STEP
+0 // Plate  2 x  4 (blue)
+1 1 -140 8 -20 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (blue)
+1 1 -140 8 20 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 80 8 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Plate  1 x  6 (blue)
+1 1 130 0 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 130 8 -50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 130 8 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -180 16 -40 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 -180 16 20 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  4 (blue)
+1 1 -170 24 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (blue)
+1 1 -170 32 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 -120 16 -30 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 -120 16 30 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 80 16 -30 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 80 16 30 1 0 0 0 1 0 0 0 1 3700.dat
+0 STEP
+0 // Plate  1 x  1 (blue)
+1 1 -150 -8 -50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 -150 -8 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  2 x  6 (blue)
+1 1 -140 -16 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  2 x  3 (blue)
+1 1 -100 -16 30 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  3 (blue)
+1 1 -100 -16 -30 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Tile  1 x  1 with Groove (blue)
+1 1 -10 -16 10 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  1 with Groove (blue)
+1 1 -10 -16 -10 1 0 0 0 1 0 0 0 1 3070b.dat
+0 STEP
+0 // Brick  1 x  1 (blue)
+1 1 -170 -16 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (blue)
+1 1 -170 -16 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  4 (blue)
+1 1 -110 -40 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  6 (blue)
+1 1 -90 -40 0 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Plate  2 x  4 (blue)
+1 1 -160 -24 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  2 (red)
+1 4 -150 -32 -20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 -150 -32 20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Plate  2 x  4 (blue)
+1 1 -160 -40 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 -170 -40 -50 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 -170 -40 50 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  3 (blue)
+1 1 -90 -64 30 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  3 (blue)
+1 1 -90 -64 -30 0 0 1 0 1 0 -1 0 0 3622.dat
+0 STEP
+0 // Brick  1 x  2 (blue)
+1 1 -170 -64 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 -170 -64 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  6 (blue)
+1 1 -90 -88 0 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 -170 -64 0 0 0 -1 0 1 0 1 0 0 3660a.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -184 -30 -50 0 1 0 0 0 1 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -184 -30 50 0 1 0 0 0 1 1 0 0 3024.dat
+0 // Door  1 x  3 x  2 Left (blue)
+1 1 -150 -64 -50 0 0 1 0 1 0 -1 0 0 3189.dat
+0 // Door  1 x  3 x  2 Right (blue)
+1 1 -150 -64 50 0 0 1 0 1 0 -1 0 0 3188.dat
+0 STEP
+0 // Slope Brick 65  2 x  2 x  2 without Centre Tube (trans_clear)
+1 47 -150 -112 40 0 0 1 0 1 0 -1 0 0 3678a.dat
+0 // Slope Brick 65  2 x  2 x  2 without Centre Tube (trans_clear)
+1 47 -150 -112 0 0 0 1 0 1 0 -1 0 0 3678a.dat
+0 // Slope Brick 65  2 x  2 x  2 without Centre Tube (trans_clear)
+1 47 -150 -112 -40 0 0 1 0 1 0 -1 0 0 3678a.dat
+0 // Brick  1 x  4 (trans_clear)
+1 47 -90 -112 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  1 (blue)
+1 1 -90 -112 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (blue)
+1 1 -90 -112 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Plate  4 x  6 (blue)
+1 1 -120 -120 0 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // Technic Axle  6 (black)
+1 0 -120 26 0 0 0 1 0 1 0 -1 0 0 3706.dat
+0 // Technic Axle  6 (black)
+1 0 80 26 0 0 0 1 0 1 0 -1 0 0 3706.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (light_grey)
+1 7 -120 26 -50 1 0 0 0 1 0 0 0 1 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (light_grey)
+1 7 80 26 -50 1 0 0 0 1 0 0 0 1 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (light_grey)
+1 7 80 26 50 1 0 0 0 1 0 0 0 1 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (light_grey)
+1 7 -120 26 50 1 0 0 0 1 0 0 0 1 3482.dat
+0 // Tyre  7/ 56 x 17 Offset Tread (rubber_black)
+1 256 -120 26 -50 1 0 0 0 1 0 0 0 1 3483.dat
+0 // Tyre  7/ 56 x 17 Offset Tread (rubber_black)
+1 256 80 26 -50 1 0 0 0 1 0 0 0 1 3483.dat
+0 // Tyre  7/ 56 x 17 Offset Tread (rubber_black)
+1 256 80 26 50 1 0 0 0 1 0 0 0 1 3483.dat
+0 // Tyre  7/ 56 x 17 Offset Tread (rubber_black)
+1 256 -120 26 50 1 0 0 0 1 0 0 0 1 3483.dat
+0 // Plate  2 x  2 (blue)
+1 1 -30 -36 10 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 10 -36 -10 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 70 -36 10 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 110 -36 -10 1 0 0 0 1 0 0 0 1 3022.dat
+
+
+
+
+
+0 STEP
+0 FILE 733-1 - Tipper.ldr
+0 A red tipping bed constructed from large plates and long bricks attached via a hinge.
+0 Name: 733-1 - Tipper.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Hinge Plate  2 x  5 Top (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 314d.dat
+0 // Plate  4 x  6 (red)
+1 4 -30 -18 0 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // Plate  6 x  8 (red)
+1 4 -150 -18 0 1 0 0 0 1 0 0 0 1 3036.dat
+0 // Brick  1 x  4 (red)
+1 4 -220 -42 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (red)
+1 4 -190 -42 50 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (red)
+1 4 -190 -42 -50 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  8 (red)
+1 4 -70 -42 50 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 -70 -42 -50 1 0 0 0 1 0 0 0 1 3008.dat
+
+
+
+
+
+0 STEP
+0 FILE 733-1 - Building.ldr
+0 A red brick factory building with windows, doors, shutters, and a green baseplate foundation.
+0 Name: 733-1 - Building.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Baseplate 32 x 32 (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 3811.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -24 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (red)
+1 4 260 -24 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (red)
+1 4 210 -24 -110 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  6 (red)
+1 4 290 -24 -60 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 90 -24 -60 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 -290 -24 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  2 x  3 (red)
+1 4 -100 -24 -170 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Brick  2 x  4 (red)
+1 4 -100 -24 -100 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 -100 -24 -20 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 -100 -24 60 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 -100 -48 60 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 -100 -48 -20 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -48 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (red)
+1 4 290 -48 -20 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  3 (red)
+1 4 290 -48 -70 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  4 (red)
+1 4 -110 -48 -160 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (red)
+1 4 -90 -48 -160 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  6 (red)
+1 4 -290 -48 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 90 -48 -60 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 240 -48 -110 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  2 x  3 (red)
+1 4 -100 -48 -90 0 0 1 0 1 0 -1 0 0 3002.dat
+0 STEP
+0 // Brick  1 x  1 (red)
+1 4 90 -72 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -72 -110 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -72 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 x  2 with Shutter Holder (red)
+1 4 290 -96 -10 -1 0 0 0 1 0 0 0 -1 3581.dat
+0 // Brick  1 x  2 (red)
+1 4 280 -72 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (red)
+1 4 -290 -72 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Technic Plate  2 x  8 with Holes (red)
+1 4 -100 -56 0 0 0 1 0 1 0 -1 0 0 3738.dat
+0 STEP
+0 // Brick  1 x  2 (red)
+1 4 -100 -72 -190 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -72 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -96 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -96 -110 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -96 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -290 -96 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -96 -190 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -96 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 280 -96 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (red)
+1 4 -290 -120 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 x  2 with Shutter Holder (red)
+1 4 -290 -120 -90 -1 0 0 0 1 0 0 0 -1 3581.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 -100 -80 -20 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 -100 -80 20 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Minifig Torch (light_grey)
+1 7 -100 -80 60 1 0 0 0 0 -1 0 1 0 3959.dat
+0 STEP
+0 // Brick  1 x  1 (red)
+1 4 90 -120 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -120 -110 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 90 -120 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 290 -120 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (red)
+1 4 280 -120 -110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -120 -190 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -120 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (red)
+1 4 -290 -144 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -290 -144 -90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Door  1 x  4 x  5 with 4 Panes and Reinforced Hinge (white)
+1 15 170 -120 -110 0 0 -1 0 1 0 1 0 0 3861c.dat
+0 // Window  1 x  4 x  3 (blue)
+1 1 220 -120 -110 1 0 0 0 1 0 0 0 1 3853.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 254 -116 -116 0 0 1 0 1 0 -1 0 0 3854.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 186 -116 -116 0 0 -1 0 1 0 1 0 0 3854.dat
+0 // Window  1 x  4 x  3 (blue)
+1 1 290 -120 -60 0 0 -1 0 1 0 1 0 0 3853.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 296 -116 -26 1 0 0 0 1 0 0 0 1 3854.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 296 -116 -94 -1 0 0 0 1 0 0 0 -1 3854.dat
+0 // Window  1 x  4 x  3 (blue)
+1 1 90 -120 -60 0 0 1 0 1 0 -1 0 0 3853.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 84 -116 -94 -1 0 0 0 1 0 0 0 -1 3854.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 84 -116 -26 1 0 0 0 1 0 0 0 1 3854.dat
+0 // Window  1 x  4 x  3 (blue)
+1 1 -290 -144 -140 0 0 1 0 1 0 -1 0 0 3853.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 -296 -140 -174 -1 0 0 0 1 0 0 0 -1 3854.dat
+0 // Window  1 x  2 x  3 Pane (white)
+1 15 -296 -140 -106 1 0 0 0 1 0 0 0 1 3854.dat
+0 STEP
+0 // Brick  1 x  2 (red)
+1 4 -100 -144 -190 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -144 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (red)
+1 4 90 -144 -50 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  4 (red)
+1 4 260 -144 -110 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (red)
+1 4 290 -144 -60 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  6 (red)
+1 4 160 -144 -110 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 90 -144 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 -290 -168 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Plate  1 x  2 (red)
+1 4 100 -128 -10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 280 -128 -10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  3 (red)
+1 4 270 -136 -10 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (red)
+1 4 110 -144 -10 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  8 (red)
+1 4 160 -136 -10 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  8 (red)
+1 4 220 -144 -10 1 0 0 0 1 0 0 0 1 3460.dat
+0 STEP
+0 // Brick  1 x  3 (red)
+1 4 90 -168 -170 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  4 (red)
+1 4 290 -168 -60 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  6 (red)
+1 4 90 -168 -80 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 -90 -168 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 -110 -168 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Slope Brick 45  2 x  3 (blue)
+1 1 290 -168 -110 1 0 0 0 1 0 0 0 1 3038.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 220 -168 -110 1 0 0 0 1 0 0 0 1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 140 -168 -110 1 0 0 0 1 0 0 0 1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 280 -168 -10 -1 0 0 0 1 0 0 0 -1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 200 -168 -10 -1 0 0 0 1 0 0 0 -1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 120 -168 -10 -1 0 0 0 1 0 0 0 -1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 280 -192 -90 1 0 0 0 1 0 0 0 1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 200 -192 -90 1 0 0 0 1 0 0 0 1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 240 -192 -30 -1 0 0 0 1 0 0 0 -1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 160 -192 -30 -1 0 0 0 1 0 0 0 -1 3037.dat
+0 // Slope Brick 45  2 x  3 (blue)
+1 1 130 -192 -90 1 0 0 0 1 0 0 0 1 3038.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 300 -192 -30 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 100 -192 -30 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -90 -192 -180 0 0 -1 0 1 0 1 0 0 3660a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -90 -192 -100 0 0 -1 0 1 0 1 0 0 3660a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -110 -192 -100 0 0 1 0 1 0 -1 0 0 3660a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -110 -192 -180 0 0 1 0 1 0 -1 0 0 3660a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 90 -192 -190 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 90 -192 -90 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 -290 -192 -190 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 -290 -192 -90 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Hinge Brick  1 x  4 Base (red)
+1 4 80 -192 -140 0 0 1 0 1 0 -1 0 0 3831.dat
+0 // Hinge Brick  1 x  4 Top (red)
+1 4 80 -192 -140 0 0 1 0 1 0 -1 0 0 3830.dat
+0 // Brick  1 x  2 (red)
+1 4 -290 -192 -120 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -290 -192 -160 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  2 x  2 (red)
+1 4 100 -192 -60 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Brick  2 x  2 (red)
+1 4 280 -192 -60 0 0 1 0 1 0 -1 0 0 3003.dat
+0 STEP
+0 // Brick  1 x  2 (red)
+1 4 -100 -216 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -216 -190 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (red)
+1 4 90 -216 -90 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  4 (red)
+1 4 90 -216 -160 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  8 (red)
+1 4 0 -216 -190 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 -200 -216 -190 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  2 x  4 (red)
+1 4 -100 -216 -140 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Plate  1 x  8 (red)
+1 4 0 -200 -90 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  8 (red)
+1 4 -200 -200 -90 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  6 (red)
+1 4 0 -208 -90 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (red)
+1 4 -200 -208 -90 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  1 (red)
+1 4 50 -216 -90 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 -50 -216 -90 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 -150 -216 -90 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 -250 -216 -90 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Tile  1 x  2 with Groove (red)
+1 4 0 -216 -90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (red)
+1 4 -200 -216 -90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 30 -232 -90 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 -30 -232 -90 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 -170 -232 -90 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 -230 -232 -90 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  3 (blue)
+1 1 290 -216 -70 1 0 0 0 1 0 0 0 1 3038.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 220 -216 -70 1 0 0 0 1 0 0 0 1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 140 -216 -70 1 0 0 0 1 0 0 0 1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 280 -216 -50 -1 0 0 0 1 0 0 0 -1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 200 -216 -50 -1 0 0 0 1 0 0 0 -1 3037.dat
+0 // Slope Brick 45  2 x  4 (blue)
+1 1 120 -216 -50 -1 0 0 0 1 0 0 0 -1 3037.dat
+0 STEP
+0 // Brick  1 x  8 (red)
+1 4 -290 -216 -120 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Slope Brick 45  2 x  1 Double (blue)
+1 1 310 -240 -60 1 0 0 0 1 0 0 0 1 3044b.dat
+0 // Slope Brick 45  2 x  4 Double (blue)
+1 1 240 -240 -60 1 0 0 0 1 0 0 0 1 3041.dat
+0 // Slope Brick 45  2 x  4 Double (blue)
+1 1 140 -240 -60 1 0 0 0 1 0 0 0 1 3041.dat
+0 // Brick  1 x  2 (red)
+1 4 -290 -240 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 290 -240 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 190 -240 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 90 -240 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  4 (red)
+1 4 0 -240 -190 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (red)
+1 4 -200 -240 -190 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  6 (red)
+1 4 50 -240 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 -50 -240 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 -150 -240 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 -250 -240 -140 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Plate  1 x  4 (red)
+1 4 -200 -240 -90 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 0 -240 -90 1 0 0 0 1 0 0 0 1 3710.dat
+1 4 0 -224 -100 1 0 0 0 1 0 0 0 1 733-1 - Hopper.ldr
+1 4 -200 -224 -100 1 0 0 0 1 0 0 0 1 733-1 - Hopper.ldr
+0 STEP
+0 // Brick  1 x  2 (blue)
+1 1 -290 -264 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 290 -264 -60 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 190 -264 -60 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 90 -264 -60 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Slope Brick 45  2 x  1 (blue)
+1 1 -210 -264 -190 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (blue)
+1 1 -190 -264 -190 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (blue)
+1 1 -10 -264 -190 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (blue)
+1 1 10 -264 -190 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 50 -264 -140 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 -150 -264 -140 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 0 -264 -90 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 -200 -264 -90 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 -50 -264 -140 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 -250 -264 -140 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Slope Brick 45  2 x  2 Double Concave (blue)
+1 1 -50 -264 -190 0 0 -1 0 1 0 1 0 0 3046.dat
+0 // Slope Brick 45  2 x  2 Double Concave (blue)
+1 1 -250 -264 -190 0 0 -1 0 1 0 1 0 0 3046.dat
+0 // Slope Brick 45  2 x  2 Double Concave (blue)
+1 1 50 -264 -190 -1 0 0 0 1 0 0 0 -1 3046.dat
+0 // Slope Brick 45  2 x  2 Double Concave (blue)
+1 1 -150 -264 -190 -1 0 0 0 1 0 0 0 -1 3046.dat
+0 // Slope Brick 45  2 x  2 Double Concave (blue)
+1 1 50 -264 -90 0 0 1 0 1 0 -1 0 0 3046.dat
+0 // Slope Brick 45  2 x  2 Double Concave (blue)
+1 1 -150 -264 -90 0 0 1 0 1 0 -1 0 0 3046.dat
+0 // Slope Brick 45  2 x  2 Double Concave (blue)
+1 1 -50 -264 -90 1 0 0 0 1 0 0 0 1 3046.dat
+0 // Slope Brick 45  2 x  2 Double Concave (blue)
+1 1 -250 -264 -90 1 0 0 0 1 0 0 0 1 3046.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 290 -288 -70 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 190 -288 -70 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 90 -288 -70 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 -290 -288 -70 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 290 -288 -50 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 190 -288 -50 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 90 -288 -50 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 -290 -288 -50 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Brick  1 x  4 (blue)
+1 1 0 -288 -90 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (blue)
+1 1 -200 -288 -90 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  6 (blue)
+1 1 0 -288 -190 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  6 (blue)
+1 1 -200 -288 -190 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  8 (blue)
+1 1 50 -288 -100 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Brick  1 x  8 (blue)
+1 1 -50 -288 -100 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Brick  1 x  8 (blue)
+1 1 -150 -288 -100 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Brick  1 x  8 (blue)
+1 1 -250 -288 -100 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Plate  1 x  2 (blue)
+1 1 190 -296 -60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 90 -296 -60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Brick  1 x  2 (red)
+1 4 290 -312 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -290 -312 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  8 (red)
+1 4 240 -312 -90 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 240 -312 -30 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 80 -312 -90 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 80 -312 -30 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 -80 -312 -90 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 -80 -312 -30 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 -240 -312 -90 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 -240 -312 -30 1 0 0 0 1 0 0 0 1 3008.dat
+0 STEP
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 160 -328 -90 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 160 -328 -30 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 -160 -328 -90 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 -160 -328 -30 1 0 0 0 1 0 0 0 1 3228b.dat
+
+
+
+
+
+0 STEP
+0 FILE 733-1 - Hopper.ldr
+0 A small red and blue sloped container made from plates, tiles, and an inverted slope.
+0 Name: 733-1 - Hopper.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  6 (red)
+1 4 0 0 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  1 x  4 (blue)
+1 1 0 -8 -50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Tile  1 x  2 with Groove (blue)
+1 1 0 -8 -30 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (blue)
+1 1 0 -8 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (red)
+1 4 0 -8 -10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 0 -24 30 -1 0 0 0 1 0 0 0 -1 3660a.dat
+
+
+
+
+
+
+0 STEP
+0 FILE 733-1 - Crane.ldr
+0 A blue crane structure with winches, technic bricks, slope elements, and a transparent windowed cab.
+0 Name: 733-1 - Crane.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  6 x  8 (blue)
+1 1 20 -16 0 1 0 0 0 1 0 0 0 1 3036.dat
+0 // Brick  2 x  4 (blue)
+1 1 120 -40 0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // Brick  1 x  2 (blue)
+1 1 -50 -40 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 -20 -40 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (blue)
+1 1 -50 -40 30 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 70 -40 -20 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 70 -40 20 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Door  1 x  3 x  1 Right (blue)
+1 1 10 -40 -50 0 0 -1 0 1 0 1 0 0 3821.dat
+0 STEP
+0 // Brick  1 x  2 (blue)
+1 1 80 -40 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 80 -40 -50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (blue)
+1 1 140 -40 -30 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  6 (blue)
+1 1 140 -40 30 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  4 (blue)
+1 1 -20 -64 -50 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Slope Brick 33  3 x  2 (blue)
+1 1 -50 -64 -20 0 0 -1 0 1 0 1 0 0 3298.dat
+0 // Slope Brick 33  3 x  2 (blue)
+1 1 -50 -64 20 0 0 -1 0 1 0 1 0 0 3298.dat
+0 STEP
+0 // Plate  1 x  3 (blue)
+1 1 -30 -48 50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  2 (blue)
+1 1 -40 -56 50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 -10 -56 50 -1 0 0 0 1 0 0 0 -1 4085a.dat
+0 // Plate  1 x  3 (blue)
+1 1 -30 -64 50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Brick  2 x  2 (blue)
+1 1 80 -64 -40 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Winch  2 x  4 x  2 with Light Grey Drum (blue)
+1 1 40 -64 -20 0 0 1 0 1 0 -1 0 0 73037.dat
+0 STEP
+0 // Winch  2 x  4 x  2 with Light Grey Drum (blue)
+1 1 80 -88 20 0 0 -1 0 1 0 1 0 0 73037.dat
+0 // Brick  2 x  2 (blue)
+1 1 80 -88 -40 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  1 x  2 (trans_clear)
+1 47 -20 -88 -50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (trans_clear)
+1 47 -20 -88 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (trans_clear)
+1 47 -50 -88 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (trans_clear)
+1 47 -50 -88 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Brick  2 x  3 (blue)
+1 1 80 -112 -30 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Brick  2 x  3 (blue)
+1 1 80 -112 30 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Slope Brick 33  3 x  6 (trans_clear)
+1 47 -10 -112 0 0 0 1 0 1 0 -1 0 0 3939.dat
+0 STEP
+0 // Plate  2 x  6 (blue)
+1 1 40 -120 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  2 x  6 (blue)
+1 1 40 -120 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  2 x  6 (blue)
+1 1 40 -120 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 STEP
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -8 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 40 -8 0 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Slope Brick 33  3 x  2 Inverted with Ribs between Studs (blue)
+1 1 150 -16 -20 0 0 -1 0 1 0 1 0 0 3747b.dat
+0 // Slope Brick 33  3 x  2 Inverted with Ribs between Studs (blue)
+1 1 150 -16 20 0 0 -1 0 1 0 1 0 0 3747b.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 120 -16 -30 -1 0 0 0 1 0 0 0 -1 3660a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 120 -16 30 1 0 0 0 1 0 0 0 1 3660a.dat
+0 // Hinge Plate  2 x  4 - Female (light_grey)
+1 7 -60 -8 0 0 0 1 0 1 0 -1 0 0 3597.dat
+0 STEP
+0 // Turntable  4 x  4 Top (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3404.dat
+0 STEP
+1 0 -84 -12 0 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 733-1 - Crane arm.ldr
+0 STEP
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 90 -128 -50 1 0 0 0 1 0 0 0 1 3957a.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_yellow)
+1 46 -10 -144 -50 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_yellow)
+1 46 -10 -144 50 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 40 -128 0 0 0 -1 0 1 0 1 0 0 3956.dat
+0 // Crane Grab Jaws (Complete) (yellow)
+1 14 -410 -256 0 0 0 -1 0 1 0 1 0 0 3492c01.dat
+0 // Brick  1 x  2 (blue)
+1 1 60 -148 10 0 -1 0 1 0 0 0 0 1 3004.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 60 -148 -10 0 -1 0 1 0 0 0 0 1 3700.dat
+0 // Technic Axle Pin (light_grey)
+1 7 50 -148 -20 0 -1 0 0 0 1 -1 0 0 3749.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (light_grey)
+1 7 50 -148 -30 1 0 0 0 1 0 0 0 1 3482.dat
+
+
+
+
+
+0 STEP
+0 FILE 733-1 - Crane base.ldr
+0 A blue rotating crane base with a turntable, support plates, and inverted slope feet.
+0 Name: 733-1 - Crane base.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Turntable  4 x  4 Base (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3403.dat
+0 // Plate  1 x  8 (blue)
+1 1 0 24 30 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Plate  1 x  8 (blue)
+1 1 0 24 -30 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 30 24 0 0 0 1 0 1 0 -1 0 0 3660a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 -30 24 0 0 0 -1 0 1 0 1 0 0 3660a.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 0 48 0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 30 56 0 0 0 1 0 1 0 -1 0 0 3660a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 -30 56 0 0 0 -1 0 1 0 1 0 0 3660a.dat
+
+
+
+
+
+0 STEP
+0 FILE 733-1 - Crane arm.ldr
+0 A grey crane boom arm built from long plates, towball sockets, and hinge brackets.
+0 Name: 733-1 - Crane arm.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Hinge Plate  2 x  4 with Digger Bucket Holder (light_grey)
+1 7 -56 -4 0 0 0 -1 0 1 0 1 0 0 3315.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 -176 -4 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 -336 -4 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 -96 -12 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 -256 -12 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  1 x  2 with Handles Type 2 (light_grey)
+1 7 -346 -12 0 0 0 -1 0 1 0 1 0 0 3839b.dat
+0 // Plate  2 x  5 with Towball Socket (light_grey)
+1 7 -396 -12 0 1 0 0 0 1 0 0 0 1 3491.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 -176 -20 0 0 0 -1 0 1 0 1 0 0 3956.dat
+
+
+
+
+
+
+
+

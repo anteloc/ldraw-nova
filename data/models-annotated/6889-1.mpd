@@ -1,0 +1,679 @@
+0 FILE 6889 - Recon Robot.ldr
+0 A Spyrius-themed recon robot built from a wheeled base, hinged robotic arms, a turntable-mounted sensor head, and a uniformed minifigure pilot.
+0 Name: 6889 - Recon Robot.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6889 - Robot.ldr
+1 0 -111 -56 -158 -0.55557 0 -0.83147 0 1 0 0.83147 0 -0.55557 6889 - Minifig.ldr
+
+
+
+0 STEP
+0 FILE 6889 - Robot.ldr
+0 The assembled robot structure, referencing the wheeled base, mid-body torso, dual hinged arms, and rotating head.
+0 Name: 6889 - Robot.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6889 - Robot - Wheels.ldr
+1 0 -30 -160 20 1 0 0 0 1 0 0 0 1 6889 - Robot - Middle.ldr
+1 0 0 -264 20 0.9659 0 -0.2588 0 1 0 0.2588 0 0.9659 6889 - Robot - Head.ldr
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Wheels.ldr
+0 A wheeled chassis base built from black plates, bricks with pins, slope panels, and red hinge plates forming the rolling platform.
+0 Name: 6889 - Robot - Wheels.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Plate  2 x  8 (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Brick  1 x  2 with Pin (black)
+1 0 -10 -24 60 0 0 1 0 1 0 -1 0 0 2458.dat
+0 // Brick  1 x  2 with Pin (black)
+1 0 10 -24 60 0 0 -1 0 1 0 1 0 0 2458.dat
+0 // Brick  1 x  2 with Pin (black)
+1 0 -10 -24 0 0 0 1 0 1 0 -1 0 0 2458.dat
+0 // Brick  1 x  2 with Pin (black)
+1 0 10 -24 0 0 0 -1 0 1 0 1 0 0 2458.dat
+0 // Brick  1 x  2 with Pin (black)
+1 0 -10 -24 -60 0 0 1 0 1 0 -1 0 0 2458.dat
+0 // Brick  1 x  2 with Pin (black)
+1 0 10 -24 -60 0 0 -1 0 1 0 1 0 0 2458.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -32 70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  8 (black)
+1 0 0 -32 -20 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  2 x  4 (red)
+1 4 0 -40 40 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -48 60 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -48 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -48 10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  4 x  4 (black)
+1 0 0 -56 40 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -30 -80 50 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 30 -80 50 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Panel  1 x  2 x  2 with Solid Studs (black)
+1 0 0 -104 10 -1 0 0 0 1 0 0 0 -1 4864a.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 -30 -104 50 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 30 -104 50 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Panel  1 x  2 x  2 with Solid Studs (black)
+1 0 30 -104 20 0 0 -1 0 1 0 1 0 0 4864a.dat
+0 // Panel  1 x  2 x  2 with Solid Studs (black)
+1 0 -30 -104 20 0 0 1 0 1 0 -1 0 0 4864a.dat
+0 // Plate  1 x  4 (red)
+1 4 0 -112 10 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Minifig Torch (black)
+1 0 48 -94 50 0 -1 0 1 0 0 0 0 1 3959.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 48 -94 26 0 0 -1 1 0 0 0 -1 0 6141.dat
+0 // Minifig Torch (black)
+1 0 -48 -94 50 0 1 0 -1 0 0 0 0 1 3959.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 -48 -94 26 0 0 1 -1 0 0 0 -1 0 6141.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (red)
+1 4 -30 -112 40 0 0 -1 0 1 0 1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (red)
+1 4 30 -112 40 0 0 -1 0 1 0 1 0 0 4275b.dat
+1 0 0 -108 70 1 0 0 0 0.4384 0.8988 0 -0.8988 0.4384 6889 - Robot - Wheels - Door.ldr
+0 // Plate  2 x  4 (black)
+1 0 0 -120 20 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -120 50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Brick  2 x  2 Round Reinforced (red)
+1 4 -20 -144 40 1 0 0 0 1 0 0 0 1 6143.dat
+0 // Brick  2 x  2 Round Reinforced (red)
+1 4 20 -144 40 1 0 0 0 1 0 0 0 1 6143.dat
+0 // Brick  1 x  2 (black)
+1 0 0 -144 10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Tail  4 x  1 x  3 (black)
+1 0 -10 -104 -20 1 0 0 0 1 0 0 0 1 2340.dat
+0 // Tail  4 x  1 x  3 (black)
+1 0 10 -104 -20 1 0 0 0 1 0 0 0 1 2340.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -152 50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 -10 -152 30 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 10 -152 30 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Container Box  2 x  2 x  2 with Hollow Studs (black)
+1 0 0 -152 -20 1 0 0 0 1 0 0 0 1 4345b.dat
+0 // Container Box  2 x  2 x  2 Door with Slot and Spyrius Pattern (black)
+1 0 0 -152 -20 1 0 0 0 1 0 0 0 1 4346p61.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 30 -14 -60 0 0 -1 0 1 0 1 0 0 6118.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 -30 -14 -60 0 0 1 0 -1 0 1 0 0 6118.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 30 -14 0 0 0 -1 0 1 0 1 0 0 6118.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 -30 -14 0 0 0 1 0 -1 0 1 0 0 6118.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 30 -14 60 0 0 -1 0 1 0 1 0 0 6118.dat
+0 // Wheel 23 x 24 with Tread on Sidewall (black)
+1 0 -30 -14 60 0 0 1 0 -1 0 1 0 0 6118.dat
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Wheels - Door.ldr
+0 A small hinged door or access panel made from a red plate, black grille tiles, and hinged finger plates.
+0 Name: 6889 - Robot - Wheels - Door.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Plate  2 x  4 (red)
+1 4 0 4 30 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 0 -4 40 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 0 -4 20 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 -30 -4 30 0 0 1 0 1 0 -1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 30 -4 30 0 0 1 0 1 0 -1 0 0 4276b.dat
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Middle.ldr
+0 The central torso section using cut-corner plates, inverted slopes, a Spyrius droid-patterned slope, red grille tiles, and a turntable base.
+0 Name: 6889 - Robot - Middle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Plate  3 x  6 without Corners (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 2419.dat
+0 // Plate  3 x  6 without Corners (black)
+1 0 60 0 0 0 0 -1 0 1 0 1 0 0 2419.dat
+0 // Plate  1 x  2 (red)
+1 4 30 -8 -30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Slope Brick 45  2 x  2 with Spyrius Droid Image Pattern (black)
+1 0 30 -24 -10 -1 0 0 0 1 0 0 0 -1 3039pc7.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 -20 -72 10 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 -20 -72 -10 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 80 -72 -10 0 0 -1 0 1 0 1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 80 -72 10 0 0 -1 0 1 0 1 0 0 2449.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (trans_red)
+1 36 30 -80 -30 -1 0 0 0 1 0 0 0 -1 2362a.dat
+0 // Plate  1 x  8 (red)
+1 4 30 -80 10 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Plate  3 x  3 without Corner (red)
+1 4 -20 -80 -30 0 0 1 0 1 0 -1 0 0 2450.dat
+0 // Plate  3 x  3 without Corner (red)
+1 4 80 -80 -30 1 0 0 0 1 0 0 0 1 2450.dat
+0 // Plate  2 x  3 (black)
+1 0 10 -88 -10 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  3 (black)
+1 0 50 -88 -10 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 60 -72 -30 1 0 0 0 1 0 0 0 1 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (black)
+1 0 0 -72 -30 1 0 0 0 1 0 0 0 1 2449.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 90 -88 10 1 0 0 0 1 0 0 0 1 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 90 -88 -10 1 0 0 0 1 0 0 0 1 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 -30 -88 -10 -1 0 0 0 1 0 0 0 -1 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 -30 -88 10 -1 0 0 0 1 0 0 0 -1 4275b.dat
+0 // Tile  1 x  2 Grille with Groove (red)
+1 4 -40 -96 0 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (red)
+1 4 100 -96 0 0 0 -1 0 1 0 1 0 0 2412b.dat
+1 0 -60 -84 -10 0.5 0.866 0 -0.866 0.5 0 0 0 1 6889 - Robot - Middle - Arm 1.ldr
+1 0 120 -84 0 0.7071 -0.7071 0 0.7071 0.7071 0 0 0 1 6889 - Robot - Middle - Arm 2.ldr
+0 // Plate  3 x  6 without Corners (black)
+1 0 30 -96 -10 1 0 0 0 1 0 0 0 1 2419.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 30 -104 0 1 0 0 0 1 0 0 0 1 3680.dat
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Middle - Arm 1.ldr
+0 The left robotic arm shoulder joint using round axlehole plates, hinge plates, and a connecting plate.
+0 Name: 6889 - Robot - Middle - Arm 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 -30 -4 20 1 0 0 0 1 0 0 0 1 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 -30 -4 0 1 0 0 0 1 0 0 0 1 4276b.dat
+0 // Plate  2 x  2 Round with Axlehole (red)
+1 4 -50 4 10 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 -60 -4 10 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 -80 -4 10 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Plate  2 x  4 (black)
+1 0 -50 -12 10 -1 0 0 0 1 0 0 0 -1 3020.dat
+1 0 -70 0 -20 1 0 0 0 0.9659 -0.2588 0 0.2588 0.9659 6889 - Robot - Middle - Arm 1 - 1.ldr
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Middle - Arm 1 - 1.ldr
+0 A forearm segment with handle plate, side hinge, and a Spyrius machinery-patterned tile.
+0 Name: 6889 - Robot - Middle - Arm 1 - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 -10 -4 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 10 -4 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 0 -12 -20 1 0 0 0 1 0 0 0 1 3839b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers On Side (black)
+1 0 0 -12 -40 1 0 0 0 1 0 0 0 1 2452.dat
+0 // Tile  2 x  2 with Spyrius Machinery Pattern (black)
+1 0 0 -20 -30 -1 0 0 0 1 0 0 0 -1 3068bp51.dat
+1 0 0 -8 -60 1 0 0 0 0.9659 -0.2588 0 0.2588 0.9659 6889 - Robot - Middle - Arm 1 - 2.ldr
+
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Middle - Arm 1 - 2.ldr
+0 A short articulated arm segment composed of three linked hinge plates.
+0 Name: 6889 - Robot - Middle - Arm 1 - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 0 -4 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 0 -12 -30 0 0 1 0 1 0 -1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 0 4 -30 0 0 1 0 1 0 -1 0 0 4276b.dat
+1 0 0 8 -60 -1 0 0 0 0.9659 0.2588 0 0.2588 -0.9659 6889 - Robot - Middle - Arm 1 - 3.ldr
+1 0 0 -8 -60 1 0 0 0 -0.9659 -0.2588 0 0.2588 -0.9659 6889 - Robot - Middle - Arm 1 - 3.ldr
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Middle - Arm 1 - 3.ldr
+0 A single hinge bar connector linking two finger joints at the arm extremity.
+0 Name: 6889 - Robot - Middle - Arm 1 - 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Hinge Bar  2.5 with  2 and  3 Fingers on Ends (black)
+1 0 0 0 30 1 0 0 0 1 0 0 0 1 2923.dat
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Middle - Arm 2.ldr
+0 The right robotic arm shoulder joint mirroring the left, using round axlehole plates and hinge plates.
+0 Name: 6889 - Robot - Middle - Arm 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 30 -4 10 -1 0 0 0 1 0 0 0 -1 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 30 -4 -10 -1 0 0 0 1 0 0 0 -1 4276b.dat
+0 // Plate  2 x  2 Round with Axlehole (red)
+1 4 50 4 0 -1 0 0 0 1 0 0 0 -1 4032a.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 60 -4 0 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 80 -4 0 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Plate  2 x  4 (black)
+1 0 50 -12 0 -1 0 0 0 1 0 0 0 -1 3020.dat
+1 0 70 0 -30 1 0 0 0 0.9659 -0.2588 0 0.2588 0.9659 6889 - Robot - Middle - Arm 2 - 1.ldr
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Middle - Arm 2 - 1.ldr
+0 A forearm segment with handle plate, side hinge, and a Spyrius machinery-patterned tile.
+0 Name: 6889 - Robot - Middle - Arm 2 - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 -10 -4 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 10 -4 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 0 -12 -20 1 0 0 0 1 0 0 0 1 3839b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers On Side (black)
+1 0 0 -12 -40 1 0 0 0 1 0 0 0 1 2452.dat
+0 // Tile  2 x  2 with Spyrius Machinery Pattern (black)
+1 0 0 -20 -30 -1 0 0 0 1 0 0 0 -1 3068bp51.dat
+1 0 0 -8 -60 1 0 0 0 0.9659 -0.2588 0 0.2588 0.9659 6889 - Robot - Middle - Arm 2 - 2.ldr
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Middle - Arm 2 - 2.ldr
+0 A short articulated arm segment composed of three linked hinge plates.
+0 Name: 6889 - Robot - Middle - Arm 2 - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 0 -4 -30 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 0 -12 -30 0 0 1 0 1 0 -1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (black)
+1 0 0 4 -30 0 0 1 0 1 0 -1 0 0 4276b.dat
+1 0 0 8 -60 -1 0 0 0 0.9659 0.2588 0 0.2588 -0.9659 6889 - Robot - Middle - Arm 1 - 3.ldr
+1 0 0 -8 -60 1 0 0 0 -0.866 -0.5 0 0.5 -0.866 6889 - Robot - Middle - Arm 1 - 3.ldr
+
+
+
+0 STEP
+0 FILE 6889 - Robot - Head.ldr
+0 A rotating sensor head built on a turntable, featuring a side-stud brick, grille tiles, neon green round lights, control sticks, and flexible rubber hose antennae.
+0 Name: 6889 - Robot - Head.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Brick  2 x  4 x  2 with Studs on Sides (black)
+1 0 0 -56 0 1 0 0 0 1 0 0 0 1 2434.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -26 28 -1 0 0 0 0 -1 0 -1 0 3794a.dat
+0 // Plate  1 x  2 with Ladder (black)
+1 0 30 -64 0 0 0 -1 0 1 0 1 0 0 4175.dat
+0 // Plate  1 x  2 with Ladder (black)
+1 0 -30 -64 0 0 0 1 0 1 0 -1 0 0 4175.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -64 10 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -64 -10 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 0 -72 10 -1 0 0 0 1 0 0 0 -1 2555.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 0 -72 -10 -1 0 0 0 1 0 0 0 -1 2555.dat
+0 // Hinge Control Stick Base (red)
+1 4 30 -72 -10 -1 0 0 0 1 0 0 0 -1 4592.dat
+0 // Hinge Control Stick Base (red)
+1 4 -30 -72 -10 -1 0 0 0 1 0 0 0 -1 4592.dat
+0 // Hinge Control Stick (black)
+1 0 30 -72 -10 -1 0 0 0 0.7071 -0.7071 0 -0.7071 -0.7071 4593.dat
+0 // Hinge Control Stick (black)
+1 0 -30 -72 -10 -1 0 0 0 0.7071 -0.7071 0 -0.7071 -0.7071 4593.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 0 -26 -44 -1 0 0 0 0 1 0 1 0 3039.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 30 -46 -28 -1 0 0 0 0 1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 -30 -46 -28 -1 0 0 0 0 1 0 1 0 6141.dat
+0 // Brick  1 x  1 Round with Hollow Stud (black)
+1 0 -30 -26 -44 -1 0 0 0 0 1 0 1 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (black)
+1 0 30 -26 -44 -1 0 0 0 0 1 0 1 0 3062b.dat
+0 // Tile  1 x  2 Grille with Groove (red)
+1 4 -20 -26 -52 -1 0 0 0 0 1 0 1 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (red)
+1 4 20 -26 -52 -1 0 0 0 0 1 0 1 0 2412b.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 0 -26 46 1 0 0 0 0 1 0 -1 0 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 0 -78 -19 1 0 0 0 0 1 0 -1 0 752.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 0 -26 46 1 0 0 0 0 -1 0 1 0 755.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 0 -78 -19 1 0 0 0 0 -1 0 1 0 755.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -26.3562 52.939 1 0 0 0 -0.1433 0.9897 0 0.9897 0.1433 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -26.7426 55.6067 1 0 0 0 -0.2152 0.9766 0 0.9766 0.2152 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -27.3209 58.231 1 0 0 0 -0.3056 0.9521 0 0.9521 0.3056 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -28.1383 60.7772 1 0 0 0 -0.4185 0.9082 0 0.9082 0.4185 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -29.2638 63.2201 1 0 0 0 -0.5531 0.8331 0 0.8331 0.5531 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -30.7532 65.4632 1 0 0 0 -0.6968 0.7173 0 0.7173 0.6968 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -32.6155 67.3802 1 0 0 0 -0.8255 0.5644 0 0.5644 0.8255 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -34.8321 68.8956 1 0 0 0 -0.9179 0.3969 0 0.3969 0.9179 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -37.2969 69.9614 1 0 0 0 -0.9702 0.2422 0 0.2422 0.9702 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -39.9001 70.6111 1 0 0 0 -0.9935 0.1139 0 0.1139 0.9935 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -42.5688 70.9171 1 0 0 0 -0.9999 0.0127 0 0.0127 0.9999 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -45.2511 70.9511 1 0 0 0 -0.9978 -0.0663 0 -0.0663 0.9978 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -47.9321 70.773 1 0 0 0 -0.9917 -0.1282 0 -0.1282 0.9917 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -50.5947 70.4288 1 0 0 0 -0.9841 -0.1777 0 -0.1777 0.9841 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -53.2377 69.9515 1 0 0 0 -0.9656 -0.2599 0 -0.2599 0.9656 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -55.8331 69.253 1 0 0 0 -0.9288 -0.3706 0 -0.3706 0.9288 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -58.327 68.258 1 0 0 0 -0.8784 -0.478 0 -0.478 0.8784 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -60.6849 66.9748 1 0 0 0 -0.8169 -0.5768 0 -0.5768 0.8169 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -62.8801 65.4248 1 0 0 0 -0.7486 -0.6631 0 -0.6631 0.7486 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -64.8964 63.6387 1 0 0 0 -0.678 -0.7351 0 -0.7351 0.678 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -66.7129 61.6691 1 0 0 0 -0.6087 -0.7934 0 -0.7934 0.6087 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -68.3484 59.5373 1 0 0 0 -0.5428 -0.8398 0 -0.8398 0.5428 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -69.8101 57.276 1 0 0 0 -0.4817 -0.8763 0 -0.8763 0.4817 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -71.1086 54.9137 1 0 0 0 -0.4259 -0.9048 0 -0.9048 0.4259 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -72.2474 52.4946 1 0 0 0 -0.3752 -0.9269 0 -0.9269 0.3752 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -73.2583 49.9975 1 0 0 0 -0.329 -0.9443 0 -0.9443 0.329 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -74.1433 47.4569 1 0 0 0 -0.287 -0.9579 0 -0.9579 0.287 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -74.9141 44.8844 1 0 0 0 -0.2487 -0.9686 0 -0.9686 0.2487 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -75.5808 42.2882 1 0 0 0 -0.2135 -0.9769 0 -0.9769 0.2135 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -76.1567 39.6528 1 0 0 0 -0.181 -0.9835 0 -0.9835 0.181 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -76.6401 37.0257 1 0 0 0 -0.1508 -0.9886 0 -0.9886 0.1508 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -77.0457 34.3665 1 0 0 0 -0.1224 -0.9925 0 -0.9925 0.1224 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -77.3747 31.6989 1 0 0 0 -0.0955 -0.9954 0 -0.9954 0.0955 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -77.6313 29.0243 1 0 0 0 -0.0698 -0.9976 0 -0.9976 0.0698 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -77.8189 26.3438 1 0 0 0 -0.045 -0.999 0 -0.999 0.045 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -77.94 23.6585 1 0 0 0 -0.0208 -0.9998 0 -0.9998 0.0208 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -77.9958 20.97 1 0 0 0 -0.0016 -1 0 -1 0.0016 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 18.2948 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 15.6021 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 12.9156 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 10.2267 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 7.5393 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 4.8467 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 2.1714 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 -0.521 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 -3.2102 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 -5.8992 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 -8.5886 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 -11.2753 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 0 -78 -13.957 1 0 0 0 0 -1 0 -1 0 756.dat
+0 GROUP 52 Hose
+
+
+
+0 STEP
+0 FILE 6889 - Minifig.ldr
+0 A Spyrius minifigure with a moustached head, airtanks, blue patterned torso, black arms, and red hips.
+0 Name: 6889 - Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+1 0 0 -26.73 6.188 0.882948 0 0.469472 -0.040917 0.996195 0.076954 -0.467685 -0.087156 0.879588 6889 - Minifig - Helmet.ldr
+0 // Minifig Head with Thin Moustache, Stubble and Sideburns Pattern (yellow)
+1 14 0 -26.73 6.188 0.882948 0 0.469472 -0.0409171 0.996195 0.076954 -0.467685 -0.0871557 0.879588 3626bp67.dat
+0 // Minifig Airtanks (black)
+1 0 0 0.167 3.835 1 0 0 0 0.996195 0.0871557 0 -0.0871557 0.996195 3838.dat
+0 // Minifig Torso with Spyrius Pattern (blue)
+1 1 0 0.167 3.835 1 0 0 0 0.996195 0.0871557 0 -0.0871557 0.996195 973p66.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 32.046 1.046 1 0 0 0 0.996195 0.0871557 0 -0.0871557 0.996195 3815.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 9.134 3.05 0.985 -0.169586 0.0118586 0.169353 0.984941 0.0184948 -0.0148165 -0.0161483 0.999756 3818.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 9.134 3.05 0.985 0.150101 0.0798102 -0.169353 0.825477 0.537624 0.0148165 -0.543485 0.839284 3819.dat
+1 0 -23.978 26.54 -7.493 0.967948 -0.213863 0.128281 0.242581 0.687841 -0.683278 0.057955 0.69315 0.718245 6889 - Minifig - Hand.ldr
+0 // Minifig Hand (red)
+1 4 22.666 18.19 -15.731 0.985 0.162547 -0.0496957 -0.169353 0.963712 -0.203512 0.0148165 0.20913 0.977618 3820.dat
+1 0 21.22 8.51 -30.243 0.979447 0.145644 0.136279 -0.068143 0.885551 -0.457684 -0.187497 0.43944 0.878005 6889 - Minifig - Torch.ldr
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+
+
+
+0 STEP
+0 FILE 6889 - Minifig - Helmet.ldr
+0 A Spyrius-patterned helmet with a trans-neon-green visor.
+0 Name: 6889 - Minifig - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // ~Minifig Helmet Standard with Blue and Silver Spyrius Pattern (Obsolete) (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 2446p50.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_neon_green)
+1 42 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+
+
+0 STEP
+0 FILE 6889 - Minifig - Torch.ldr
+0 A handheld black torch fitted with a trans-neon-green round light element.
+0 Name: 6889 - Minifig - Torch.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Minifig Torch (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3959.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 0 0 -24 1 0 0 0 0 1 0 -1 0 6141.dat
+
+
+
+0 STEP
+0 FILE 6889 - Minifig - Hand.ldr
+0 A minifig hand gripping a patterned control tile with a blue screen and silver panel.
+0 Name: 6889 - Minifig - Hand.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Spyrius
+
+0 // Minifig Hand (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 3820.dat
+0 // Tile  1 x  2 with Blue Screen, Red and Silver Panel Pattern (black)
+1 0 -2.5 0 -18.9 -0.0485918 0.984808 0.166711 0.96005 0 0.279829 0.275578 0.173648 -0.945465 3069bp28.dat
+

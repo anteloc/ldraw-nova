@@ -1,0 +1,285 @@
+0 FILE 6556 - main.ldr
+0 A diving-themed scene combining a red car, a wheeled trailer, an inflatable boat, two minifigures (a diver and a civilian), and a diver flag on a pole.
+0 main
+0 Name: 6556 - main.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+1 15 -30 -40 100 1 0 0 0 1 0 0 0 1 6556 - car.ldr
+1 15 27.21 2.895 100.857 0 0 -1 0 1 0 1 0 0 6556 - trailer.ldr
+1 14 220 0 -110 0.5 0 0.866 0 1 0 -0.866 0 0.5 6556 - boat.ldr
+1 15 195.624 0 -244.385 -0.5 0 0.866 0 1 0 -0.866 0 -0.5 6556 - flag.ldr
+1 15 -90 0 -50 1 0 0 0 1 0 0 0 1 6556 - minifig 1.ldr
+1 15 73.302 0 -84.998 -0.5 0 0.866 0 1 0 -0.866 0 -0.5 6556 - minifig 2.ldr
+
+0 NOFILE
+0 STEP
+0 FILE 6556 - car.ldr
+0 A red wheeled vehicle built on car bases with a steering wheel, doors, slope panels, and light bars with colored lenses.
+0 !LEOCAD MODEL CURRENT_STEP11
+0 car
+0 Name: 6556 - car.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  2 x  8 (black)
+1 0 -30 0 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 10 -8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -70 -8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Car Base  4 x  5 (red)
+1 4 -90 -16 0 0 0 1 0 1 0 -1 0 0 4211.dat
+0 // Car Base  4 x  5 (red)
+1 4 30 -16 0 0 0 -1 0 1 0 1 0 0 4211.dat
+0 STEP
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -120 -16 -30 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -120 -16 30 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 60 -16 30 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 60 -16 -30 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 60 -16 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 -20 -16 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -30 -16 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -30 -16 -30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (main_colour)
+1 16 -120 -16 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Plate  2 x  2 (light_grey)
+1 7 -90 8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 with Towball Socket (light_grey)
+1 7 30 8 0 0 0 -1 0 1 0 1 0 0 3730.dat
+0 STEP
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 30 16 0 0 0 -1 0 1 0 1 0 0 4600.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 -90 16 0 0 0 -1 0 1 0 1 0 0 4600.dat
+0 STEP
+0 // Car Steering Stand and Wheel (Complete) (blue)
+1 1 -80 -16 0 0 0 1 0 1 0 -1 0 0 3829c01.dat
+0 // Brick  1 x  4 (main_colour)
+1 16 -20 -40 0 0 0 -1 0 1 0 1 0 0 3010.dat
+0 STEP
+0 // Door  1 x  3 x  1 Left (main_colour)
+1 16 -80 -40 -30 0 0 1 0 1 0 -1 0 0 3822.dat
+0 // Door  1 x  3 x  1 Right (main_colour)
+1 16 -80 -40 30 0 0 1 0 1 0 -1 0 0 3821.dat
+0 // Slope Brick 45  2 x  4 (main_colour)
+1 16 -100 -40 0 0 0 1 0 1 0 -1 0 0 3037.dat
+0 // Panel  1 x  4 x  3 (main_colour)
+1 16 30 -88 30 1 0 0 0 1 0 0 0 1 4215a.dat
+0 // Panel  1 x  4 x  3 (main_colour)
+1 16 30 -88 -30 -1 0 0 0 1 0 0 0 -1 4215a.dat
+0 STEP
+0 // Windscreen  2 x  4 x  2 (trans_medium_blue)
+1 41 -80 -88 0 0 0 1 0 1 0 -1 0 0 3823.dat
+0 // Hinge Car Roof Holder  1 x  4 x  2 (main_colour)
+1 16 -20 -88 0 0 0 1 0 1 0 -1 0 0 4214.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 40 -96 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  2 x  4 (main_colour)
+1 16 10 -96 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Hinge Car Roof  4 x  4 Sunroof without Ledges (main_colour)
+1 16 -50 -96 0 0 0 1 0 1 0 -1 0 0 2349a.dat
+0 // Glass for Hinge Car Roof  4 x  4 Sunroof with Ridges (trans_medium_blue)
+1 41 -65 -92 0 0 0 1 0 1 0 -1 0 0 2348b.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (main_colour)
+1 16 60 -96 0 0 0 -1 0 1 0 1 0 0 4315.dat
+0 // Hinge Car Roof  4 x  4 Sunroof without Ledges (main_colour)
+1 16 78 -56 0 0 -1 0 0 0 -1 1 0 0 2349a.dat
+0 // Glass for Hinge Car Roof  4 x  4 Sunroof with Ridges (trans_medium_blue)
+1 41 75 -40 0 0 -1 0 0 0 -1 1 0 0 2348b.dat
+0 STEP
+0 // Wheel Rim 12 x 11 with Round Hole (main_colour)
+1 16 30 13 27 -1 0 0 0 1 0 0 0 -1 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 30 13 32 1 0 0 0 1 0 0 0 1 6015.dat
+0 // Wheel Rim 12 x 11 with Round Hole (main_colour)
+1 16 -90 13 27 -1 0 0 0 1 0 0 0 -1 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 -90 13 32 1 0 0 0 1 0 0 0 1 6015.dat
+0 // Wheel Rim 12 x 11 with Round Hole (main_colour)
+1 16 -90 13 -27 1 0 0 0 1 0 0 0 1 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 -90 13 -32 -1 0 0 0 1 0 0 0 -1 6015.dat
+0 // Wheel Rim 12 x 11 with Round Hole (main_colour)
+1 16 30 13 -27 1 0 0 0 1 0 0 0 1 6014.dat
+0 // Tyre 12/ 40 x 11 Wide (black)
+1 0 30 13 -32 -1 0 0 0 1 0 0 0 -1 6015.dat
+0 STEP
+
+0 NOFILE
+0 STEP
+0 FILE 6556 - trailer.ldr
+0 A small red wheeled trailer with a large wing-shaped bed and a towball hitch for hauling cargo.
+0 trailer
+0 Name: 6556 - trailer.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Wing  4 x  9 (red)
+1 4 0 -32 -190 -1 0 0 0 1 0 0 0 -1 2413.dat
+0 STEP
+0 // Plate  1 x  2 with 3L Extension and Towball (black)
+1 0 -0.005 -32 -90 -1 0 0 0 1 0 0 0 -1 2508.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -40 -250 1 0 0 0 1 0 0 0 1 3069b.dat
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 -0.002 -40 -120 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 -0.002 -24 -120 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  4 with 2 Wheel Pins (black)
+1 0 0.001 -24 -210 -1 0 0 0 1 0 0 0 -1 2926.dat
+0 STEP
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (black)
+1 0 -50 -19 -210 1 0 0 0 1 0 0 0 1 3139.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 -49.999 -20 -210.003 0 0 1 0 1 0 -1 0 0 4624.dat
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (black)
+1 0 50.001 -19 -210.003 -1 0 0 0 1 0 0 0 -1 3139.dat
+0 // Wheel Rim  6.4 x  8 (white)
+1 15 50 -20 -210 0 0 -1 0 1 0 1 0 0 4624.dat
+
+0 NOFILE
+0 STEP
+0 FILE 6556 - boat.ldr
+0 A small inflatable boat featuring a control stick steering assembly and a clip-mounted outboard hinge.
+0 boat
+0 Name: 6556 - boat.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Boat Inflatable 12 x  6 x  1.333 Lower (Needs Work) (main_colour)
+1 16 0 -8 0 1 0 0 0 1 0 0 0 1 30086.dat
+0 // ~Boat Inflatable 12 x  6 x  1.333 Upper (Needs Work) (main_colour)
+1 16 0 -32 0 1 0 0 0 1 0 0 0 1 30087.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -40 70 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (blue)
+1 1 0 -48 70 -1 0 0 0 1 0 0 0 -1 4085c.dat
+0 // Hinge Bar  2 with 3 Fingers and Top Stud (black)
+1 0 -0.001 -56 90.001 0 0 -1 0 1 0 1 0 0 2433.dat
+0 // Hinge Control Stick Base (blue)
+1 1 0 -56 70 -1 0 0 0 1 0 0 0 -1 4592.dat
+0 // Plate  1 x  1 Round (light_grey)
+1 7 -0.001 -64 90.001 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Hinge Control Stick (light_grey)
+1 7 0 -56 70 -1 0 0 0 0.866 0.5 0 0.5 -0.866 4593.dat
+
+0 NOFILE
+0 STEP
+0 FILE 6556 - minifig 1.ldr
+0 A diver minifigure wearing a black helmet with a dark blue visor mask, blue scuba tank, and blue swim flippers.
+0 minifig 1
+0 Name: 6556 - minifig 1.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Helmet Standard (Obsolete) (black)
+1 0 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Diver Mask (Obsolete) (trans_dark_blue)
+1 33 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 30090.dat
+0 // Minifig Head with Solid Stud (yellow)
+1 14 0 -96.022 1.818 1 0 0 0 1 0 0 0 1 3626a.dat
+0 // Minifig Torso (blue)
+1 1 0 -72.022 1.818 1 0 0 0 1 0 0 0 1 973.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 -40.022 1.818 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (blue)
+1 1 15.5 -64.022 1.818 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.5 -64.022 1.818 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (black)
+1 0 23.658 -46.149 -8.182 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (black)
+1 0 -23.658 -46.149 -8.182 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 -28.022 1.818 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 -28.022 1.818 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Flipper Thin (blue)
+1 1 -10 0 0 0.985 0 0.174 0 1 0 -0.174 0 0.985 2599.dat
+0 // Minifig Flipper Thin (blue)
+1 1 10 0 0 0.985 0 -0.174 0 1 0 0.174 0 0.985 2599.dat
+0 // Minifig Scuba Tank (white)
+1 15 0 -72.022 1.818 1 0 0 0 1 0 0 0 1 30091.dat
+
+0 NOFILE
+0 STEP
+0 FILE 6556 - minifig 2.ldr
+0 A civilian minifigure wearing a blue cap with a flat peak, a white torso, and blue legs with yellow arms.
+0 minifig 2
+0 Name: 6556 - minifig 2.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Cap with Long Flat Peak (Obsolete) (blue)
+1 1 2.26 -96 3.37 1 0 0 0 1 0 0 0 1 4485.dat
+0 // Minifig Head with Standard Grin and Sunglasses Pattern (yellow)
+1 14 2.26 -96 3.37 1 0 0 0 1 0 0 0 1 3626bp04.dat
+0 // Minifig Torso (white)
+1 15 2.26 -72 3.37 1 0 0 0 1 0 0 0 1 973.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 2.26 -40 3.37 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (yellow)
+1 14 17.76 -64 3.37 0.99 0.17 0 -0.17 0.99 0 0 0 1 3819.dat
+0 // Minifig Arm Right (yellow)
+1 14 -13.24 -64 3.37 0.99 -0.17 0 0.17 0.99 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 25.92 -46.13 -6.63 0.99 0.12 -0.12 -0.17 0.7 -0.7 0 0.71 0.71 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -21.4 -46.13 -6.63 0.99 -0.12 0.12 0.17 0.7 -0.7 0 0.71 0.71 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 2.26 -28 3.37 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 2.26 -28 3.37 1 0 0 0 1 0 0 0 1 3816.dat
+
+0 NOFILE
+0 STEP
+0 FILE 6556 - flag.ldr
+0 A white diver-patterned flag mounted on a pole with a round red base plate.
+0 flag
+0 Name: 6556 - flag.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  2 x  2 Round with Axlehole (red)
+1 4 0 -8 0 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Antenna  4H with Rounded Top (white)
+1 15 0 -16 0 1 0 0 0 1 0 0 0 1 3957a.dat
+0 // Flag  2 x  2 with Diver Pattern (white)
+1 15 0 -96 0 1 0 0 0 1 0 0 0 1 2335p01.dat
+
+0 NOFILE

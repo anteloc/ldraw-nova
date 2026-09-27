@@ -12,7 +12,7 @@ Run from this repository's root:
 ./ldraw-agent doctor
 ```
 
-Run `./setup.sh` if needed. It installs pinned Python packages in `.venv` and prepares local indexes. Use **LeoCAD for snapshots on this Mac**, including embedded unofficial parts; the render adapter supplies those parts through an isolated temporary library. Use `./prepare-glb.sh --file MODEL.mpd MODEL.glb` when semantic GLB/Blender inspection is needed.
+Run `./setup.sh` if needed. It installs pinned Python packages in `.venv` and prepares local indexes. Use the globally available **`leocad` CLI** for snapshots, including embedded unofficial parts; the render adapter supplies those parts through an isolated temporary library. Use `./prepare-glb.sh --file MODEL.mpd MODEL.glb` for semantic GLB export through the global `mpd2glb.sh` executable.
 
 Read:
 
@@ -28,7 +28,7 @@ Read:
 
 The language authority is the mandatory [docs/ldraw-specs.pdf](docs/ldraw-specs.pdf). Use `./ldraw-agent spec --page 65` or `./ldraw-agent spec 'INVERTNEXT'`; the [source map](docs/agent/specification-map.md) identifies relevant pages. Distinguish official part-authoring rules from personal model rules.
 
-The supplied resources are `../ldraw-lib/ldraw/` and `../ldraw-lib/models-annotated/`. Override with `LDRAW_DIR` / `MODELS_DIR` or global `--library` / `--models` before the command. Keep the official library and OMR originals unchanged. Put new work under `output/`.
+Resolve the parts library through `LDRAW_DIR`, falling back to `LDRAWDIR` if unset or empty, or pass global `--library` before the command. Reference models and their database are always `data/models-annotated/` and `data/ldraw-info.db`. Part catalogs and connector metadata are under `data/categories/` and `data/offLibShadow/`. Keep these resources unchanged. Put new work under `output/`.
 
 ## 2. Plan the model and study useful constructions
 
@@ -58,8 +58,8 @@ Adapt a relevant starting point to the requested subject and scale. Do not treat
 For a part's intended role or visual character, use Jev's ranked candidates when the availability check passes; otherwise use `discover search parts ... --engine fts`:
 
 ```sh
-uv run --project ../jev-rerank jev-rerank \
-  --db "$LDRAW_LIB_DIR/scripts/ldraw-info.db" \
+jev-rerank \
+  --db "data/ldraw-info.db" \
   --table-field parts_descriptions.description --top 10 \
   --query 'a wall decoration for a castle' --show --json
 ```
@@ -86,8 +86,8 @@ Study references in small sections:
 
 ```sh
 ./ldraw-agent search submodels 'window OR balcony' --limit 5
-./ldraw-agent study ../ldraw-lib/models-annotated/10270-1.mpd --report output/reference-study.json
-./ldraw-agent sections ../ldraw-lib/models-annotated/10270-1.mpd --section '10270 - Pendulum_Clock.ldr'
+./ldraw-agent study data/models-annotated/10270-1.mpd --report output/reference-study.json
+./ldraw-agent sections data/models-annotated/10270-1.mpd --section '10270 - Pendulum_Clock.ldr'
 ```
 
 Read `source_checks_passed`, reachability and physical counts. An annotation can describe empty or unreferenced modules. Embedded `.dat` parts count as physical leaves; their studs/primitives are geometry, not separate BOM pieces. OMR examples can contain real source errors and rounded transforms.
@@ -158,9 +158,9 @@ Repair every error, rebuild and rerun affected checks. Explain each remaining wa
 
 Open the first whole-model PNGs and perform a visual design pass before final delivery. Check thumbnail silhouette, proportions, focal hierarchy, palette balance, depth/shadows, useful variation, quiet versus detailed areas, exposed side/rear walls, and readable entrances. Improve specific weaknesses and render again. Do not add random ornament everywhere or stop because geometry passes. Record the viewed images, problems found and revisions in a short visual-review document.
 
-Open the final PNGs. Inspect silhouette, palette, orientation, support, openings, missing parts, intersections and overhangs. Review individual floors/interiors and obscured rear/side interfaces. Compare Python and LeoCAD BOMs by reference, colour and quantity using `compare-bom`; do not reconcile a mismatch by discarding parts. The macOS adapter handles embedded DAT definitions without modifying the source library.
+Open the final PNGs. Inspect silhouette, palette, orientation, support, openings, missing parts, intersections and overhangs. Review individual floors/interiors and obscured rear/side interfaces. Compare Python and LeoCAD BOMs by reference, colour and quantity using `compare-bom`; do not reconcile a mismatch by discarding parts. The LeoCAD adapter handles embedded DAT definitions without modifying the source library.
 
-For uncertain static material intersections, convert the selected model to semantic GLB and inspect it through available Blender tools. Confirm the LDraw/Blender axis and unit conversion using a known 20-LDU distance. Record any physical checks that remain unperformed. Do not claim visual review unless the images were opened, or buildability merely because a renderer succeeded.
+Inspect uncertain interfaces with close LeoCAD views and the global `ldraw-render-steps.sh` tool. Render the unfinished submodel step by step from multiple views to locate a misplaced part, hidden gap or weak support; see [construction review](docs/agent/build-manuals.md#inspect-a-model-during-construction). Fix the generator or plan and regenerate. Record any physical checks that remain unperformed. Do not claim visual review unless the images were opened, or buildability merely because a renderer succeeded.
 
 ## 5. Deliver the exact final revision
 

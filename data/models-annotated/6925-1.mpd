@@ -1,0 +1,611 @@
+0 FILE 6925 - Interplanetary Rover.ldr
+0 A Futuron-themed interplanetary rover featuring an articulated front-and-back vehicle, a detector array with dish, a small pod craft, two minifig astronauts, and two droids.
+0 Name: 6925 - Interplanetary Rover.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6925 - Vehicle.ldr
+1 0 -290 13 280 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 6925 - Pod + Minifig.ldr
+1 0 -228 13 73.706 0.382683 0 0.92388 0 1 0 -0.92388 0 0.382683 6925 - Droid 2.ldr
+
+
+0 STEP
+0 FILE 6925 - Droid 1.ldr
+0 A small black droid built from an inverted dish, side-stud bricks, and round elements with two trans-yellow light accents.
+0 Name: 6925 - Droid 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Dish  2 x  2 Inverted (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4740.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 0 -36 10 -1 0 0 0 0 -1 0 -1 0 4595.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 0 -64 0 1 0 0 0 1 0 0 0 1 4081b.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 12 -62 -20 0 -1 0 1 0 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 -12 -62 -20 0 1 0 1 0 0 0 0 -1 6141.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (black)
+1 0 26 -46 0 0 -1 0 0 0 -1 1 0 0 4735.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (black)
+1 0 -26 -46 0 0 1 0 0 0 -1 -1 0 0 4735.dat
+
+
+0 STEP
+0 FILE 6925 - Droid 2.ldr
+0 A small black droid built from an inverted dish, side-stud bricks, and round elements with two trans-yellow light accents.
+0 Name: 6925 - Droid 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Dish  2 x  2 Inverted (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4740.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 0 -36 10 -1 0 0 0 0 -1 0 -1 0 4595.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 0 -64 0 1 0 0 0 1 0 0 0 1 4081b.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 12 -62 -20 0 -1 0 1 0 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_yellow)
+1 46 -12 -62 -20 0 1 0 1 0 0 0 0 -1 6141.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (black)
+1 0 26 -46 0 0 -1 0 0.707107 0 -0.707107 0.707107 0 0.707107 4735.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (black)
+1 0 -26 -46 0 0 1 0 -0.382683 0 -0.92388 -0.92388 0 0.382683 4735.dat
+
+
+0 STEP
+0 FILE 6925 - Vehicle.ldr
+0 An assembly referencing the front and rear sections of the rover vehicle.
+0 Name: 6925 - Vehicle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6925 - Vehicle - Front + Minifig + Droid.ldr
+1 0 0 0 160 0.92388 0 -0.382683 0 1 0 0.382683 0 0.92388 6925 - Vehicle - Back.ldr
+
+
+0 STEP
+0 FILE 6925 - Vehicle - Front.ldr
+0 The front half of the rover built from black and white plates, bricks, and slopes with a hinged articulation joint and headlights.
+0 Name: 6925 - Vehicle - Front.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x  6 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Brick  2 x  2 (black)
+1 0 0 -24 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 with Pin (black)
+1 0 40 -24 0 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Brick  2 x  2 with Pin (black)
+1 0 -40 -24 0 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 -30 -48 -10 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 30 -48 -10 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 0 -48 10 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Brick  2 x  4 (black)
+1 0 0 -72 0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // Brick  2 x  4 (black)
+1 0 0 -72 60 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Plate  1 x  2 (black)
+1 0 -30 -80 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 30 -80 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Hinge Plate  2 x  4 with Articulated Joint - Female (black)
+1 0 0 -80 100 -1 0 0 0 1 0 0 0 -1 3640.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -80 20 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  6 x 12 (white)
+1 15 0 -88 20 0 0 -1 0 1 0 1 0 0 3028.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 0 -80 -70 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Brick  1 x  1 with Headlight (white)
+1 15 50 -80 -70 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Bar  1 x  8 x  2 (white)
+1 15 0 -70 -80 -1 0 0 0 0 -1 0 -1 0 2486.dat
+0 // Brick  1 x  1 with Headlight (white)
+1 15 -50 -80 -70 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Plate  1 x  6 (black)
+1 0 0 -56 -70 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  3 x  6 without Corners (white)
+1 15 70 -96 40 0 0 -1 0 1 0 1 0 0 2419.dat
+0 // Plate  3 x  6 without Corners (white)
+1 15 -70 -96 40 0 0 1 0 1 0 -1 0 0 2419.dat
+0 // Brick  2 x  2 Corner (white)
+1 15 -10 -112 30 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (white)
+1 15 10 -112 30 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Tile  1 x  2 with Computer Pattern (white)
+1 15 30 -96 -60 0 0 1 0 1 0 -1 0 0 3069bp25.dat
+0 // Tile  1 x  2 with Computer Pattern (white)
+1 15 -30 -96 -60 0 0 1 0 1 0 -1 0 0 3069bp25.dat
+0 // Plate  1 x  1 (white)
+1 15 30 -120 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (white)
+1 15 -30 -120 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (white)
+1 15 90 -104 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (white)
+1 15 -90 -104 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (white)
+1 15 90 -120 30 0 0 -1 0 1 0 1 0 0 4735.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (white)
+1 15 -90 -120 30 0 0 1 0 1 0 -1 0 0 4735.dat
+0 // Brick  1 x  2 (white)
+1 15 60 -120 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -60 -120 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 0 -120 40 -1 0 0 0 1 0 0 0 -1 3956.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (white)
+1 15 10 -140 76 0 0 -1 1 0 0 0 -1 0 4623.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (white)
+1 15 -10 -140 76 0 0 1 -1 0 0 0 -1 0 4623.dat
+0 // Plate  2 x  2 (white)
+1 15 0 -140 84 0 0 1 -1 0 0 0 -1 0 3022.dat
+0 // Plate  1 x 10 (white)
+1 15 0 -128 30 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -152 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -160 30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Tail  4 x  1 x  3 (white)
+1 15 50 -160 -20 1 0 0 0 1 0 0 0 1 2340.dat
+0 // Tail  4 x  1 x  3 (white)
+1 15 -50 -160 -20 1 0 0 0 1 0 0 0 1 2340.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 50 -184 -30 0 0 1 0 1 0 -1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 -50 -184 -30 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  3 x  3 Facet (white)
+1 15 30 -184 10 0 0 -1 0 1 0 1 0 0 2462.dat
+0 // Brick  3 x  3 Facet (white)
+1 15 -30 -184 10 -1 0 0 0 1 0 0 0 -1 2462.dat
+0 // Plate  2 x  6 (white)
+1 15 0 -192 -20 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -200 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -208 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (white)
+1 15 10 -208 -10 -1 0 0 0 1 0 0 0 -1 4735.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (white)
+1 15 -10 -208 -10 -1 0 0 0 1 0 0 0 -1 4735.dat
+0 // Plate  2 x  2 (white)
+1 15 0 -216 -20 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Slope Brick 45  2 x  1 (white)
+1 15 30 -216 -30 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (white)
+1 15 -30 -216 -30 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Hinge Control Stick Base (white)
+1 15 50 -200 -30 -1 0 0 0 1 0 0 0 -1 4592.dat
+0 // Hinge Control Stick (black)
+1 0 50 -200 -30 -1 0 0 0 0.707107 -0.707107 0 -0.707107 -0.707107 4593.dat
+0 // Hinge Control Stick Base (white)
+1 15 -50 -200 -30 -1 0 0 0 1 0 0 0 -1 4592.dat
+0 // Hinge Control Stick (black)
+1 0 -50 -200 -30 -1 0 0 0 0.707107 -0.707107 0 -0.707107 -0.707107 4593.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 10 -192 30 -1 0 0 0 1 0 0 0 -1 3957a.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -10 -192 30 -1 0 0 0 1 0 0 0 -1 3957a.dat
+0 // Hinge Tile  1 x  4 (white)
+1 15 0 -96 -90 1 0 0 0 1 0 0 0 1 4625.dat
+0 // Windscreen  6 x  4 x  2 Canopy (trans_dark_blue)
+1 33 0 -100 -84 -1 0 0 0 0 1 0 1 0 4474.dat
+1 0 130 -136 30 0 0 -1 0 1 0 1 0 0 6925 - Vehicle - Detector.ldr
+1 0 -130 -136 30 0 0 -1 0 1 0 1 0 0 6925 - Vehicle - Detector.ldr
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 50 -70 -128 -1 0 0 0 0 -1 0 -1 0 3794a.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 60 -70 -136 -1 0 0 0 0 -1 0 -1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 40 -70 -136 -1 0 0 0 0 -1 0 -1 0 6141.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 -50 -70 -128 -1 0 0 0 0 -1 0 -1 0 3794a.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 -40 -70 -136 -1 0 0 0 0 -1 0 -1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 -60 -70 -136 -1 0 0 0 0 -1 0 -1 0 6141.dat
+1 0 70 -14 0 0 0 -1 0 1 0 1 0 0 6925 - Vehicle - Wheels.ldr
+1 0 -70 -14 0 0 0 1 0 1 0 -1 0 0 6925 - Vehicle - Wheels.ldr
+
+
+0 STEP
+0 FILE 6925 - Vehicle - Front + Minifig + Droid.ldr
+0 The front rover section accompanied by an astronaut minifigure and a droid.
+0 Name: 6925 - Vehicle - Front + Minifig + Droid.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6925 - Vehicle - Front.ldr
+1 0 -32 -114 92 -1 0 0 0 1 0 0 0 -1 6925 - Droid 1.ldr
+1 0 0 -141 -32 1 0 0 0 1 0 0 0 1 6925 - Minifig 1.ldr
+
+
+0 STEP
+0 FILE 6925 - Vehicle - Detector.ldr
+0 A metal detector accessory mounted with a single trans-red indicator light.
+0 Name: 6925 - Vehicle - Detector.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Metal Detector (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4479.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 36 8 0 0 -1 0 1 0 0 0 0 1 6141.dat
+1 0 -61.456 1.657 0 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 6925 - Vehicle - Detector - Dish.ldr
+
+0 STEP
+0 FILE 6925 - Vehicle - Detector - Dish.ldr
+0 A dual inverted dish array consisting of a large white dish and a smaller black dish.
+0 Name: 6925 - Vehicle - Detector - Dish.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Dish  4 x  4 Inverted (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 3960.dat
+0 // Dish  2 x  2 Inverted (black)
+1 0 0 16 0 1 0 0 0 1 0 0 0 1 4740.dat
+
+
+0 STEP
+0 FILE 6925 - Vehicle - Wheels.ldr
+0 A wheel assembly with two white rimmed tyres mounted on a Technic beam using axle pins.
+0 Name: 6925 - Vehicle - Wheels.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Technic Brick  1 x  6 with Holes (white)
+1 15 0 -10 0 1 0 0 0 1 0 0 0 1 3894.dat
+0 // Technic Axle Pin (light_grey)
+1 7 40 0 -10 0 0 1 0 1 0 -1 0 0 3749.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (white)
+1 15 40 0 -20 -1 0 0 0 1 0 0 0 -1 3482.dat
+0 // Tyre 12/ 50 x 16 Offset Tread (rubber_black)
+1 256 40 0 -20 1 0 0 0 1 0 0 0 1 2346.dat
+0 // Technic Axle Pin (light_grey)
+1 7 -40 0 -10 0 0 1 0 1 0 -1 0 0 3749.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (white)
+1 15 -40 0 -20 -1 0 0 0 1 0 0 0 -1 3482.dat
+0 // Tyre 12/ 50 x 16 Offset Tread (rubber_black)
+1 256 -40 0 -20 1 0 0 0 1 0 0 0 1 2346.dat
+
+
+0 STEP
+0 FILE 6925 - Vehicle - Back.ldr
+0 The rear half of the rover built from black and white plates, bricks, and slopes with a male hinge joint for articulation.
+0 Name: 6925 - Vehicle - Back.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x  6 (black)
+1 0 0 0 160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Brick  2 x  2 (black)
+1 0 0 -24 160 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 with Pin (black)
+1 0 40 -24 160 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Brick  2 x  2 with Pin (black)
+1 0 -40 -24 160 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 30 -48 170 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 -30 -48 170 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 0 -48 150 1 0 0 0 1 0 0 0 1 3660.dat
+0 // Brick  2 x  4 (black)
+1 0 0 -72 160 1 0 0 0 1 0 0 0 1 3001.dat
+0 // Brick  2 x  4 (black)
+1 0 0 -72 100 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Plate  1 x  2 (black)
+1 0 -30 -80 160 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 30 -80 160 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -80 140 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Hinge Plate  2 x  4 with Articulated Joint - Male (black)
+1 0 0 -80 60 1 0 0 0 1 0 0 0 1 3639.dat
+0 // Plate  6 x 12 (white)
+1 15 0 -88 140 0 0 1 0 1 0 -1 0 0 3028.dat
+0 // Plate  3 x  6 without Corners (white)
+1 15 70 -96 140 0 0 -1 0 1 0 1 0 0 2419.dat
+0 // Plate  3 x  6 without Corners (white)
+1 15 -70 -96 140 0 0 1 0 1 0 -1 0 0 2419.dat
+0 // Plate  1 x  6 (white)
+1 15 0 -96 210 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  1 (white)
+1 15 50 -96 70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (white)
+1 15 -50 -96 70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (white)
+1 15 90 -104 150 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (white)
+1 15 -90 -104 150 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -96 230 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -96 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -104 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 0 -96 160 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (white)
+1 15 90 -120 150 0 0 -1 0 1 0 1 0 0 4735.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (white)
+1 15 -90 -120 150 0 0 1 0 1 0 -1 0 0 4735.dat
+0 // Brick  2 x  2 Corner (white)
+1 15 50 -120 150 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (white)
+1 15 -50 -120 150 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Brick  1 x  2 (white)
+1 15 50 -120 180 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -50 -120 180 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -120 230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (white)
+1 15 0 -120 210 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Slope Brick 33  3 x  1 (white)
+1 15 50 -120 110 1 0 0 0 1 0 0 0 1 4286.dat
+0 // Slope Brick 33  3 x  1 (white)
+1 15 -50 -120 110 1 0 0 0 1 0 0 0 1 4286.dat
+0 // Plate  1 x  2 (white)
+1 15 80 -128 150 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 -80 -128 150 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  2 (white)
+1 15 0 -128 220 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Brick  1 x  1 (white)
+1 15 -30 -144 210 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 30 -144 210 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  6 (white)
+1 15 50 -144 160 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (white)
+1 15 -50 -144 160 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Plate  2 x  2 (white)
+1 15 0 -136 220 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 -10 -144 220 0 0 -1 0 1 0 1 0 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 10 -144 220 0 0 -1 0 1 0 1 0 0 4276b.dat
+1 0 0 -140 250 1 0 0 0 0 -1 0 1 0 6925 - Vehicle - Back - Container.ldr
+1 0 70 -14 160 0 0 -1 0 1 0 1 0 0 6925 - Vehicle - Wheels.ldr
+1 0 -70 -14 160 0 0 1 0 1 0 -1 0 0 6925 - Vehicle - Wheels.ldr
+1 0 130 -136 150 0 0 1 0 1 0 -1 0 0 6925 - Vehicle - Detector.ldr
+1 0 -130 -136 150 0 0 1 0 1 0 -1 0 0 6925 - Vehicle - Detector.ldr
+
+0 STEP
+0 FILE 6925 - Vehicle - Back - Container.ldr
+0 A rear storage container with hinged panels, corner walls, slopes, and a printed down-arrow indicator pattern.
+0 Name: 6925 - Vehicle - Back - Container.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 -10 -4 30 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 10 -4 30 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Plate  3 x  6 without Corners (white)
+1 15 0 4 40 -1 0 0 0 1 0 0 0 -1 2419.dat
+0 // Plate  1 x  1 Round (white)
+1 15 50 -4 20 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (white)
+1 15 -50 -4 20 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -4 60 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Brick  2 x  2 (black)
+1 0 0 -28 30 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // Brick  3 x  3 Facet (black)
+1 0 30 -28 40 0 0 -1 0 1 0 1 0 0 2462.dat
+0 // Brick  3 x  3 Facet (black)
+1 0 -30 -28 40 -1 0 0 0 1 0 0 0 -1 2462.dat
+0 // Brick  1 x  2 with Yellow Down Arrow and Black Border Pattern (white)
+1 15 0 -52 60 -1 0 0 0 1 0 0 0 -1 3004p03.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 50 -52 20 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 -50 -52 20 0 0 1 0 1 0 -1 0 0 3665.dat
+0 // Panel Wall  3 x  3 x  6 Corner (white)
+1 15 30 -172 40 0 0 -1 0 1 0 1 0 0 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner (white)
+1 15 -30 -172 40 -1 0 0 0 1 0 0 0 -1 2345.dat
+0 // Slope Brick 45  2 x  2 (white)
+1 15 0 -172 40 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Plate  1 x  6 (white)
+1 15 0 -156 20 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 70 -60 20 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 -70 -60 20 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  3 x  6 without Corners (white)
+1 15 0 -164 0 1 0 0 0 1 0 0 0 1 2419.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -172 20 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -180 30 1 0 0 0 1 0 0 0 1 4032a.dat
+
+
+0 STEP
+0 FILE 6925 - Pod.ldr
+0 A small white pod craft with handle plates, loudhailer thrusters, control sticks, and trans-red lights.
+0 Name: 6925 - Pod.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x  4 (white)
+1 15 0 0 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 0 -8 -30 1 0 0 0 1 0 0 0 1 3839b.dat
+0 // Bracket  2 x  3 -  2 x  2 (black)
+1 0 0 -8 10 1 0 0 0 1 0 0 0 1 4598.dat
+0 // Minifig Loudhailer (white)
+1 15 30 -14 30 0 -1 0 1 0 0 0 0 1 4349.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 30 -14 8 0 0 -1 1 0 0 0 -1 0 6141.dat
+0 // Minifig Loudhailer (white)
+1 15 -30 -14 30 0 1 0 -1 0 0 0 0 1 4349.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -30 -14 8 0 0 1 -1 0 0 0 -1 0 6141.dat
+0 // Hinge Control Stick Base (white)
+1 15 10 -16 -30 0.92388 0 0.382683 0 1 0 -0.382683 0 0.92388 4592.dat
+0 // Hinge Control Stick (white)
+1 15 10 -16 -30 0.92388 -0.0664523 0.37687 0 0.984808 0.173648 -0.382683 -0.16043 0.909844 4593.dat
+0 // Hinge Control Stick Base (white)
+1 15 -10 -16 -30 0.92388 0 -0.382683 0 1 0 0.382683 0 0.92388 4592.dat
+0 // Hinge Control Stick (white)
+1 15 -10 -16 -30 0.92388 0.0664523 -0.37687 0 0.984808 0.173648 0.382683 -0.16043 0.909844 4593.dat
+
+
+0 STEP
+0 FILE 6925 - Pod + Minifig.ldr
+0 The small pod craft with an accompanying astronaut minifigure.
+0 Name: 6925 - Pod + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6925 - Pod.ldr
+1 0 0 -61 8 1 0 0 0 1 0 0 0 1 6925 - Minifig 2.ldr
+
+
+0 STEP
+0 FILE 6925 - Minifig 1.ldr
+0 A Futuron astronaut minifigure wearing a white torso with yellow Futuron pattern, airtanks, and yellow limbs.
+0 Name: 6925 - Minifig 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -27 0 0.866025 0 0.5 0 1 0 -0.5 0 0.866025 6925 - Minifig 1 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.866025 0 0.5 0 1 0 -0.5 0 0.866025 3626bp01.dat
+0 // Minifig Airtanks (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Yellow Futuron Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p6e.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (yellow)
+1 14 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Arm Left (yellow)
+1 14 15.552 9 0 0.985 -0.0177698 0.169069 -0.17 -0.102961 0.979604 0 -0.994522 -0.104528 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 18.5957 -3.92614 -17.5794 0.985 0.106968 0.132095 -0.17 0.619787 0.765373 0 -0.777029 0.629225 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+0 STEP
+0 FILE 6925 - Minifig 1 - Helmet.ldr
+0 A standard yellow astronaut helmet with a trans-dark-blue visor.
+0 Name: 6925 - Minifig 1 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 1.904 4.596 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 2447.dat
+
+
+0 STEP
+0 FILE 6925 - Minifig 2.ldr
+0 A Futuron astronaut minifigure wearing a white torso with yellow Futuron pattern, airtanks, and yellow limbs.
+0 Name: 6925 - Minifig 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -27 0 0.694658 0 0.71934 0 1 0 -0.71934 0 0.694658 6925 - Minifig 2 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.694658 0 0.71934 0 1 0 -0.71934 0 0.694658 3626bp01.dat
+0 // Minifig Airtanks (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Yellow Futuron Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p6e.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (yellow)
+1 14 15.552 9 0 0.985 0.0468584 0.163414 -0.17 0.271503 0.946843 0 -0.961262 0.275637 3819.dat
+0 // Minifig Hand (yellow)
+1 14 19.8665 3.4373 -20.8791 0.985 0.148663 0.0824052 -0.17 0.86137 0.477465 0 -0.484736 0.874488 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+0 // Minifig Arm Right (yellow)
+1 14 -15.552 9 0 0.985 -0.156486 -0.0664243 0.17 0.906697 0.38487 0 -0.390731 0.920505 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -22.9243 21.1543 -16.831 0.985 -0.157597 0.0636735 0.17 0.913138 -0.368932 0 0.37455 0.927044 3820.dat
+
+
+0 STEP
+0 FILE 6925 - Minifig 2 - Helmet.ldr
+0 A standard yellow astronaut helmet with a trans-dark-blue visor.
+0 Name: 6925 - Minifig 2 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+

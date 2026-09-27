@@ -1,0 +1,404 @@
+0 FILE 1211-2 - main.ldr
+0 Alternate-model house built from white slotted bricks and a 1x6 brick with internal ribs, incorporating door, window, and wheel-style submodel parts.
+0 Name: 1211-2 - main.ldr
+0 Author: N. W. Perry [Plastikean]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !KEYWORDS slotted bricks, windows, doors, 4 x 8
+0 !KEYWORDS System i leg, town plan, set 211
+
+0 !THEME Town
+0 // Release year: 1955
+0 // No. of pieces: 22
+0 // Four small sets, nos. 1210-1213, were released in 1955. Along with set no.
+0 // 1236, these sets were the first to contain a selection of parts intended to
+0 // build a specific model. They were also the first to have enclosed printed
+0 // building instructions.
+0 // The sets of this era were sold under the "System in play" concept, centered
+0 // around the Town Plan building base layout. This is the original version of
+0 // set 1211, with slotted bricks and windows and doors with tabs.
+0 // This is the alternate model for the set. The main model is a similar house,
+0 // which is essentially the reverse of this model.
+1 15 0 -8 0 1 0 0 0 1 0 0 0 1 u8202.dat
+0 STEP
+0 // Brick  1 x  1 (white)
+1 15 -70 -32 30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  6 without Centre Studs with Internal Ribs (white)
+1 15 0 -32 30 1 0 0 0 1 0 0 0 1 3067b.dat
+0 // Brick  1 x  1 (white)
+1 15 70 -32 30 1 0 0 0 1 0 0 0 1 3005.dat
+1 15 60 -32 0 -1 0 0 0 1 0 0 0 -1 u8002b.dat
+1 15 20 -32 -10 -1 0 0 0 1 0 0 0 -1 u8001b.dat
+0 // Brick  1 x  1 (white)
+1 15 -10 -32 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // * The door is shifted -2 in Z
+0 // * This allows the tabs to clear the next two courses of bricks.
+1 4 -40 -80 -12 1 0 0 0 1 0 0 0 1 1211-2 - u8012.dat
+1 15 -70 -32 0 0 0 -1 0 1 0 1 0 0 u8001b.dat
+0 STEP
+1 4 -30 -80 30 -1 0 0 0 1 0 0 0 -1 1211-2 - u8020.dat
+1 4 30 -80 30 -1 0 0 0 1 0 0 0 -1 1211-2 - u8020.dat
+1 15 70 -56 20 0 0 1 0 1 0 -1 0 0 u8001b.dat
+1 1 70 -56 -10 1 0 0 0 1 0 0 0 1 u9026.dat
+0 // * The window is shifted -2 in Z
+1 4 20 -80 -12 1 0 0 0 1 0 0 0 1 1211-2 - u8021.dat
+1 1 -70 -56 -10 1 0 0 0 1 0 0 0 1 u9026.dat
+1 15 -70 -56 20 0 0 -1 0 1 0 1 0 0 u8001b.dat
+0 STEP
+1 15 70 -80 20 0 0 1 0 1 0 -1 0 0 u8001b.dat
+1 1 70 -80 -10 1 0 0 0 1 0 0 0 1 u9026.dat
+1 1 -70 -80 -10 1 0 0 0 1 0 0 0 1 u9026.dat
+1 15 -70 -80 20 0 0 -1 0 1 0 1 0 0 u8001b.dat
+0 STEP
+1 15 0 -88 0 1 0 0 0 1 0 0 0 1 u8202.dat
+
+
+0 STEP
+0 FILE 1211-2 - u8012.dat
+0 Detailed cylindrical assembly of boxes, discs, and circles forming a wheel-like component.
+0 Name: 1211-2 - u8012.dat
+0 Author: J.C. Tchang [tchang]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CW
+
+0 !CATEGORY Door
+0 !KEYWORDS Automatic Binding Brick, Lego Mursten
+
+0 !HISTORY 2013-03-16 [cwdee] Corrected overlap on top surface
+0 !HISTORY 2014-06-21 [PTadmin] Official Update 2014-01
+0 !HISTORY 2021-05-10 [Plastikean] Subfiled tabs in a more accurate shape
+
+0 BFC INVERTNEXT
+0 // Box with 4 Faces (2 Parallel Pairs) and All Edges (main_colour)
+1 16 0 30.5 -10 15 0 0 0 0 22.5 0 4 0 box4.dat
+0 // Box with 4 Faces (2 Parallel Pairs) and All Edges (main_colour)
+1 16 0 30.5 -10 18 0 0 0 0 25.5 0 3 0 box4.dat
+4 16 18 5 -10 15 8 -10 -15 8 -10 -18 5 -10
+4 16 15 53 -10 18 56 -10 -18 56 -10 -15 53 -10
+4 16 18 56 -10 15 53 -10 15 8 -10 18 5 -10
+4 16 -18 5 -10 -15 8 -10 -15 53 -10 -18 56 -10
+0 
+0 // Box with 3 Faces and 4 Parallel Edges (main_colour)
+1 16 0 60.5 -7 16.5 0 0 0 0 1.5 0 -3 0 box3u8p.dat
+0 // Cylinder 0.5 (main_colour)
+1 16 16.5 60.5 -7 0 0 1.5 -1.5 0 0 0 -3 0 2-4cyli.dat
+0 // Disc 0.5 (main_colour)
+1 16 16.5 60.5 -10 0 0 1.5 1.5 0 0 0 1 0 2-4disc.dat
+0 // Circle 0.5 (main_colour)
+1 16 16.5 60.5 -10 0 0 1.5 -1.5 0 0 0 -1 0 2-4edge.dat
+0 // Circle 0.5 (main_colour)
+1 16 16.5 60.5 -7 0 0 1.5 -1.5 0 0 0 -1 0 2-4edge.dat
+0 // Cylinder 0.5 (main_colour)
+1 16 -16.5 60.5 -7 0 0 -1.5 -1.5 0 0 0 -3 0 2-4cyli.dat
+0 // Disc 0.5 (main_colour)
+1 16 -16.5 60.5 -10 0 0 -1.5 1.5 0 0 0 1 0 2-4disc.dat
+0 // Circle 0.5 (main_colour)
+1 16 -16.5 60.5 -10 0 0 -1.5 -1.5 0 0 0 -1 0 2-4edge.dat
+0 // Circle 0.5 (main_colour)
+1 16 -16.5 60.5 -7 0 0 -1.5 -1.5 0 0 0 -1 0 2-4edge.dat
+0 
+0 // Box with 4 Faces (2 Parallel Pairs) without Bottom Edges (main_colour)
+1 16 0 1.5 -10 20 0 0 0 0 -1.5 0 3 0 box4o4a.dat
+4 16 20 0 -10 20 3 -10 -20 3 -10 -20 0 -10
+0 // Box with 4 Faces (2 Parallel Pairs) without Bottom Edges (main_colour)
+1 16 0 69.5 -10 20 0 0 0 0 -2.5 0 3 0 box4o4a.dat
+4 16 20 67 -10 20 72 -10 -20 72 -10 -20 67 -10
+0 
+0 // Rectangle with 3 Edges (main_colour)
+1 16 0 61.5 -7 -20 0 0 0 0 5.5 0 1 0 rect3.dat
+2 24 20 3 -7 -20 3 -7
+4 16 20 3 -7 18 5 -7 -18 5 -7 -20 3 -7
+2 24 -20 3 -7 -20 56 -7
+4 16 -18 56 -7 -20 56 -7 -20 3 -7 -18 5 -7
+2 24 20 3 -7 20 56 -7
+4 16 18 5 -7 20 3 -7 20 56 -7 18 56 -7
+4 16 -20 72 -6 -20 72 -7 20 72 -7 20 72 -6
+0 
+4 16 -16 53 -6 -16 72 -6 16 72 -6 16 53 -6
+4 16 15 53 -6 16 53 -6 16 4 -6 15 8 -6
+4 16 -15 8 -6 -16 4 -6 -16 53 -6 -15 53 -6
+4 16 -16 4 -6 -15 8 -6 15 8 -6 16 4 -6
+2 24 -16 72 -6 16 72 -6
+2 24 -16 72 -6 -16 4 -6
+2 24 16 72 -6 16 4 -6
+0 
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -20 36 1.5 0 1 0 36 0 0 0 0 8.5 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 20 36 1.5 0 -1 0 36 0 0 0 0 8.5 rect3.dat
+0 
+0 // Box with 2 Faces without 11 Edges (main_colour)
+1 16 18 38 2 0 -2 0 0 0 34 -8 0 0 box2-11.dat
+0 // Box with 2 Faces without 11 Edges (main_colour)
+1 16 -18 38 2 0 2 0 0 0 34 8 0 0 box2-11.dat
+0 // Rectangle (main_colour)
+1 16 0 4 2 16 0 0 0 -1 0 0 0 -8 rect.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 0 0 1.5 0 0 -20 0 1 0 8.5 0 0 rect1.dat
+0 
+2 24 16 29 10 16 4 10
+2 24 16 47 10 16 43 10
+2 24 -16 22 10 -16 18 10
+2 24 -16 54 10 -16 50 10
+2 24 -16 72 10 -16 68 10
+2 24 -16 72 10 -20 72 10
+4 16 16 4 10 20 0 10 -16 0 10 -16 4 10
+4 16 16 25 10 20 25 10 20 0 10 16 4 10
+0 // Rectangle with 2 Adjacent Edges (main_colour)
+1 16 18 59.5 10 -2 0 0 0 0 12.5 0 -1 0 rect2a.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 -18 36 10 2 0 0 0 0 14 0 -1 0 rect1.dat
+0 
+0 // Chord 0.25 (main_colour)
+1 16 10 40.5 -7 2.12 0 -2.12 2.12 0 2.12 0 -1 0 1-4chrd.dat
+0 // Chord 0.25 (main_colour)
+1 16 10 40.5 -7 -2.12 0 2.12 -2.12 0 -2.12 0 -1 0 1-4chrd.dat
+4 16 7.5 39 -7 12.5 39 -7 12.12 38.38 -7 7.88 38.38 -7
+4 16 12.5 42 -7 7.5 42 -7 7.88 42.62 -7 12.12 42.62 -7
+4 16 12.5 42 -7 12.5 39 -7 7.5 39 -7 7.5 42 -7
+0 // Circle 0.25 (main_colour)
+1 16 10 40.5 -7 2.12 0 -2.12 2.12 0 2.12 0 -1 0 1-4edge.dat
+0 // Circle 0.25 (main_colour)
+1 16 10 40.5 -7 -2.12 0 2.12 -2.12 0 -2.12 0 -1 0 1-4edge.dat
+0 
+0 // Chord 0.25 (main_colour)
+1 16 10 40.5 -9 2.12 0 -2.12 2.12 0 2.12 0 1 0 1-4chrd.dat
+0 // Chord 0.25 (main_colour)
+1 16 10 40.5 -9 -2.12 0 2.12 -2.12 0 -2.12 0 1 0 1-4chrd.dat
+4 16 7.88 38.38 -9 12.12 38.38 -9 12.5 39 -9 7.5 39 -9
+4 16 12.12 42.62 -9 7.88 42.62 -9 7.5 42 -9 12.5 42 -9
+4 16 7.5 42 -9 7.5 39 -9 12.5 39 -9 12.5 42 -9
+0 // Circle 0.25 (main_colour)
+1 16 10 40.5 -9 2.12 0 -2.12 2.12 0 2.12 0 -1 0 1-4edge.dat
+0 // Circle 0.25 (main_colour)
+1 16 10 40.5 -9 -2.12 0 2.12 -2.12 0 -2.12 0 -1 0 1-4edge.dat
+0 
+0 // Cylinder 0.25 (main_colour)
+1 16 10 40.5 -9 2.12 0 -2.12 2.12 0 2.12 0 2 0 1-4cyli.dat
+0 // Cylinder 0.25 (main_colour)
+1 16 10 40.5 -9 -2.12 0 2.12 -2.12 0 -2.12 0 2 0 1-4cyli.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 12.31 42.31 -8 0 0 0.19 0 -1 -0.31 1 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 7.69 42.31 -8 0 0 -0.19 0 -1 -0.31 1 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 12.31 38.69 -8 0 0 0.19 0 1 0.31 1 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 7.69 38.69 -8 0 0 -0.19 0 1 0.31 1 0 0 rect3.dat
+5 24 12.12 42.62 -7 12.12 42.62 -9 11.1473 43.27 -7 12.77 41.6473 -7
+5 24 7.88 42.62 -7 7.88 42.62 -9 7.23 41.6473 -7 8.8527 43.27 -7
+5 24 7.88 38.38 -7 7.88 38.38 -9 8.8527 37.73 -7 7.23 39.3527 -7
+5 24 12.12 38.38 -7 12.12 38.38 -9 12.77 39.3527 -7 11.1473 37.73 -7
+0 
+0 // Box with 4 Faces (2 Parallel Pairs) without Bottom Edges (main_colour)
+1 16 15 40.5 -8 0 -2.5 0 0 0 1.5 -1 0 0 box4o4a.dat
+0 // Box with 4 Faces (2 Parallel Pairs) without Bottom Edges (main_colour)
+1 16 -15 40.5 -8 0 22.5 0 0 0 1.5 1 0 0 box4o4a.dat
+
+1 16 20 36 10 1 0 0 0 1 0 0 0 1 s\1211-2 - u8012s01.dat
+1 16 -20 11 10 -1 0 0 0 1 0 0 0 1 s\1211-2 - u8012s01.dat
+1 16 -20 61 10 -1 0 0 0 1 0 0 0 1 s\1211-2 - u8012s01.dat
+
+
+0 STEP
+0 FILE 1211-2 - u8020.dat
+0 Boxy rectangular part assembled from boxes and rectangles forming a small window or panel element.
+0 Name: 1211-2 - u8020.dat
+0 Author: J.C. Tchang [tchang]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CW
+
+0 !CATEGORY Window
+0 !KEYWORDS Automatic Binding Brick
+
+0 !HISTORY 2019-09-09 [PTadmin] Official Update 2019-02
+0 !HISTORY 2021-05-10 [Plastikean] Subfiled tabs in a more accurate shape
+
+0 BFC INVERTNEXT
+0 // Box with 4 Faces (2 Parallel Pairs) and All Edges (main_colour)
+1 16 0 23 -10 25 0 0 0 0 16 0 4 0 box4.dat
+0 // Box with 4 Faces (2 Parallel Pairs) and All Edges (main_colour)
+1 16 0 23 -10 27 0 0 0 0 18 0 3 0 box4.dat
+4 16 27 5 -10 25 7 -10 -25 7 -10 -27 5 -10
+4 16 25 39 -10 27 41 -10 -27 41 -10 -25 39 -10
+4 16 27 41 -10 25 39 -10 25 7 -10 27 5 -10
+4 16 -27 5 -10 -25 7 -10 -25 39 -10 -27 41 -10
+
+0 // Box with 4 Faces (2 Parallel Pairs) without Bottom Edges (main_colour)
+1 16 0 1 -10 30 0 0 0 0 -1 0 3 0 box4o4a.dat
+4 16 30 0 -10 30 2 -10 -30 2 -10 -30 0 -10
+
+0 // Rectangle with 3 Edges (main_colour)
+1 16 0 41.5 -7 -30 0 0 0 0 0.5 0 1 0 rect3.dat
+2 24 30 2 -7 -30 2 -7
+4 16 30 2 -7 27 5 -7 -27 5 -7 -30 2 -7
+2 24 -30 2 -7 -30 42 -7
+4 16 -27 41 -7 -30 41 -7 -30 2 -7 -27 5 -7
+2 24 30 2 -7 30 42 -7
+4 16 27 5 -7 30 2 -7 30 41 -7 27 41 -7
+4 16 -30 48 -6 -30 48 -7 30 48 -7 30 48 -6
+
+4 16 -26 39 -6 -26 48 -6 26 48 -6 26 39 -6
+4 16 25 39 -6 26 39 -6 26 4 -6 25 7 -6
+4 16 -25 7 -6 -26 4 -6 -26 39 -6 -25 39 -6
+4 16 -26 4 -6 -25 7 -6 25 7 -6 26 4 -6
+2 24 -26 48 -6 26 48 -6
+2 24 -26 48 -6 -26 4 -6
+2 24 26 48 -6 26 4 -6
+
+0 // Rectangle with 3 Edges (main_colour)
+1 16 0 48 -9.7 30 0 0 0 -1 0 0 0 -2.75 rect3.dat
+4 16 -30 48 -12.5 -30 42 -7 30 42 -7 30 48 -12.5
+3 16 -30 48 -12.5 -30 48 -7 -30 42 -7
+3 16 30 42 -7 30 48 -7 30 48 -12.5
+2 24 -30 48 -12.5 -30 42 -7
+2 24 30 48 -12.5 30 42 -7
+
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -30 24 1.5 0 1 0 24 0 0 0 0 8.5 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 30 24 1.5 0 -1 0 24 0 0 0 0 8.5 rect3.dat
+
+0 // Box with 2 Faces without 11 Edges (main_colour)
+1 16 28 26 2 0 -2 0 0 0 22 -8 0 0 box2-11.dat
+0 // Box with 2 Faces without 11 Edges (main_colour)
+1 16 -28 26 2 0 2 0 0 0 22 8 0 0 box2-11.dat
+0 // Rectangle (main_colour)
+1 16 0 4 2 26 0 0 0 -1 0 0 0 -8 rect.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 0 0 1.5 0 0 -30 0 1 0 8.5 0 0 rect1.dat
+
+2 24 -26 22 10 -26 18 10
+2 24 26 30 10 26 4 10
+2 24 26 48 10 26 44 10
+2 24 26 48 10 30 48 10
+4 16 26 26 10 30 26 10 30 0 10 26 4 10
+0 // Rectangle with 2 Adjacent Edges (main_colour)
+1 16 -28 35 10 0 0 2 13 0 0 0 -1 0 rect2a.dat
+4 16 26 4 10 30 0 10 -26 0 10 -26 4 10
+
+1 16 30 37 10 1 0 0 0 1 0 0 0 1 s\1211-2 - u8012s01.dat
+1 16 -30 11 10 -1 0 0 0 1 0 0 0 1 s\1211-2 - u8012s01.dat
+
+
+0 STEP
+0 FILE 1211-2 - u8021.dat
+0 Boxy rectangular part assembled from boxes and rectangles forming a small window or panel element.
+0 Name: 1211-2 - u8021.dat
+0 Author: J.C. Tchang [tchang]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CW
+
+0 !CATEGORY Window
+0 !KEYWORDS Automatic Binding Brick
+
+0 !HISTORY 2019-09-09 [PTadmin] Official Update 2019-02
+0 !HISTORY 2021-05-10 [Plastikean] Subfiled tabs in a more accurate shape
+
+0 BFC INVERTNEXT
+0 // Box with 4 Faces (2 Parallel Pairs) and All Edges (main_colour)
+1 16 0 23 -10 35 0 0 0 0 16 0 4 0 box4.dat
+0 // Box with 4 Faces (2 Parallel Pairs) and All Edges (main_colour)
+1 16 0 23 -10 37 0 0 0 0 18 0 3 0 box4.dat
+4 16 37 5 -10 35 7 -10 -35 7 -10 -37 5 -10
+4 16 35 39 -10 37 41 -10 -37 41 -10 -35 39 -10
+4 16 37 41 -10 35 39 -10 35 7 -10 37 5 -10
+4 16 -37 5 -10 -35 7 -10 -35 39 -10 -37 41 -10
+
+0 // Box with 4 Faces (2 Parallel Pairs) without Bottom Edges (main_colour)
+1 16 0 1 -10 40 0 0 0 0 -1 0 3 0 box4o4a.dat
+4 16 40 0 -10 40 2 -10 -40 2 -10 -40 0 -10
+
+0 // Rectangle with 3 Edges (main_colour)
+1 16 0 41.5 -7 -40 0 0 0 0 0.5 0 1 0 rect3.dat
+2 24 40 2 -7 -40 2 -7
+4 16 40 2 -7 37 5 -7 -37 5 -7 -40 2 -7
+2 24 -40 2 -7 -40 42 -7
+4 16 -37 41 -7 -40 41 -7 -40 2 -7 -37 5 -7
+2 24 40 2 -7 40 42 -7
+4 16 37 5 -7 40 2 -7 40 41 -7 37 41 -7
+4 16 -40 48 -6 -40 48 -7 40 48 -7 40 48 -6
+
+4 16 -36 39 -6 -36 48 -6 36 48 -6 36 39 -6
+4 16 35 39 -6 36 39 -6 36 4 -6 35 7 -6
+4 16 -35 7 -6 -36 4 -6 -36 39 -6 -35 39 -6
+4 16 -36 4 -6 -35 7 -6 35 7 -6 36 4 -6
+2 24 -36 48 -6 36 48 -6
+2 24 -36 48 -6 -36 4 -6
+2 24 36 48 -6 36 4 -6
+
+0 // Rectangle with 3 Edges (main_colour)
+1 16 0 48 -9.7 40 0 0 0 -1 0 0 0 -2.75 rect3.dat
+4 16 -40 48 -12.5 -40 42 -7 40 42 -7 40 48 -12.5
+3 16 -40 48 -12.5 -40 48 -7 -40 42 -7
+3 16 40 42 -7 40 48 -7 40 48 -12.5
+2 24 -40 48 -12.5 -40 42 -7
+2 24 40 48 -12.5 40 42 -7
+
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -40 24 1.5 0 1 0 24 0 0 0 0 8.5 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 40 24 1.5 0 -1 0 24 0 0 0 0 8.5 rect3.dat
+
+0 // Box with 2 Faces without 11 Edges (main_colour)
+1 16 38 26 2 0 -2 0 0 0 22 -8 0 0 box2-11.dat
+0 // Box with 2 Faces without 11 Edges (main_colour)
+1 16 -38 26 2 0 2 0 0 0 22 8 0 0 box2-11.dat
+0 // Rectangle (main_colour)
+1 16 0 4 2 36 0 0 0 -1 0 0 0 -8 rect.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 0 0 1.5 0 0 -40 0 1 0 8.5 0 0 rect1.dat
+
+2 24 -36 22 10 -36 18 10
+2 24 36 30 10 36 4 10
+2 24 36 48 10 36 44 10
+2 24 36 48 10 40 48 10
+4 16 36 26 10 40 26 10 40 0 10 36 4 10
+0 // Rectangle with 2 Adjacent Edges (main_colour)
+1 16 -38 35 10 0 0 2 13 0 0 0 -1 0 rect2a.dat
+4 16 36 4 10 40 0 10 -36 0 10 -36 4 10
+
+1 16 40 37 10 1 0 0 0 1 0 0 0 1 s\1211-2 - u8012s01.dat
+1 16 -40 11 10 -1 0 0 0 1 0 0 0 1 s\1211-2 - u8012s01.dat
+
+
+0 STEP
+0 FILE s\1211-2 - u8012s01.dat
+0 Sub-assembly of an open box with cylinders, chords, and negative discs forming a detailed round mechanical detail.
+0 Name: s\1211-2 - u8012s01.dat
+0 Author: N. W. Perry [Plastikean]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 // Box with 3 Faces without 10 Parallel Edges (main_colour)
+1 16 0 0 0 0 0 4 7 0 0 0 2 0 box3u10p.dat
+4 16 4 7 0 4 -7 0 0 -11 0 0 11 0
+2 24 4 7 0 4 -7 0
+0 // Cylinder Open 0.5 (main_colour)
+1 16 0 -7 0 4 0 0 0 0 -4 0 2 0 2-4cylo.dat
+0 // Chord 0.5 (main_colour)
+1 16 0 -7 2 -4 0 0 0 0 -4 0 -1 0 2-4chrd.dat
+0 // Chord 0.25 (main_colour)
+1 16 0 -7 0 4 0 0 0 0 -4 0 1 0 1-4chrd.dat
+0 // Disc Negative 0.25 (main_colour)
+1 16 0 -7 0 -4 0 0 0 0 -4 0 -1 0 1-4ndis.dat
+0 // Cylinder Open 0.5 (main_colour)
+1 16 0 7 0 4 0 0 0 0 4 0 2 0 2-4cylo.dat
+0 // Chord 0.5 (main_colour)
+1 16 0 7 2 -4 0 0 0 0 4 0 -1 0 2-4chrd.dat
+0 // Chord 0.25 (main_colour)
+1 16 0 7 0 4 0 0 0 0 4 0 1 0 1-4chrd.dat
+0 // Disc Negative 0.25 (main_colour)
+1 16 0 7 0 -4 0 0 0 0 4 0 -1 0 1-4ndis.dat
+
+
+

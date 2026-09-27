@@ -1,0 +1,508 @@
+0 FILE 7866 - main.ldr 
+0 A 12V train level crossing scene combining a road baseplate with track infrastructure, a crossing building with barriers, signal lights, and a minifigure worker.
+0 Name: 7866 - main.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 7866 - level crossing.ldr
+1 7 250 -160 300 1 0 0 0 1 0 0 0 1 7866 - minifig.ldr
+1 7 390 0 -440 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 7866 - control.ldr
+0 NOFILE
+
+
+0 STEP
+0 FILE 7866 - level crossing.ldr 
+0 A road-and-track baseplate level crossing assembly with train rails, sleeper plates, electric actuators, warning signs, and light bricks for the crossing mechanism.
+0 Name: 7866 - level crossing.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Baseplate 32 x 32 Road 9-Stud Straight with Road Pattern (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 606p01.dat
+0 // Train Signal Stand (light_grey)
+1 7 -189.998 -8 300 -1 0 0 0 1 0 0 0 -1 4169.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -170 -8 240 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -280 -8 270 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -280 -8 210 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Train Signal Stand (light_grey)
+1 7 189.996 -8 -299.998 1 0 0 0 1 0 0 0 1 4169.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 170.002 -8 -239.997 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 280 -8 -270.003 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 280.003 -8 -210.003 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Baseplate  8 x 16 (light_grey)
+1 7 480 0 240 1 0 0 0 1 0 0 0 1 3865.dat
+0 STEP
+0 // Electric Train 12V Level Crossing Sign with Red/White Pattern (black)
+1 0 189.999 -131 -301 0 0 -1 1 0 0 0 -1 0 512p01.dat
+0 // Electric Lightbrick  2 x  2 Type 2 12V with Red Diffusor (black)
+1 0 190 -131 -276 1 0 0 0 0 1 0 -1 0 266bc02.dat
+0 // Electric Train 12V Level Crossing Sign with Red/White Pattern (black)
+1 0 -190.001 -131 301 0 0 1 1 0 0 0 1 0 512p01.dat
+0 // Electric Lightbrick  2 x  2 Type 2 12V with Red Diffusor (black)
+1 0 -190 -131 276 -1 0 0 0 0 1 0 1 0 266bc02.dat
+0 // Electric Plug (Type 4) Twin with Centre Plastic Pin (Complete) (black)
+1 0 189.999 -111 -288 1 0 0 0 0 1 0 -1 0 766c01.dat
+0 // Electric Plug (Type 4) Twin with Centre Plastic Pin (Complete) (black)
+1 0 -190.001 -111 288 -1 0 0 0 0 1 0 1 0 766c01.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -169.999 -24 190 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 170 -24 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -159.999 -8 80 0 0 1 0 1 0 -1 0 0 4166.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -159.999 -8 -80 0 0 1 0 1 0 -1 0 0 4166.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 180.001 -8 80 0 0 1 0 1 0 -1 0 0 4166.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 180.001 -8 -80 0 0 1 0 1 0 -1 0 0 4166.dat
+1 16 380 0 280 1 0 0 0 1 0 0 0 1 7866 - level crossing - building.ldr
+0 STEP
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 320.001 -8 -79.999 0 0 1 0 1 0 -1 0 0 4166.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 320.001 -8 80.001 0 0 1 0 1 0 -1 0 0 4166.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 0.001 -8 -80 0 0 1 0 1 0 -1 0 0 4166.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 0.001 -8 80 0 0 1 0 1 0 -1 0 0 4166.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -319.999 -8 -80.001 0 0 1 0 1 0 -1 0 0 4166.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -319.999 -8 79.999 0 0 1 0 1 0 -1 0 0 4166.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 160 -24 130 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 -160 -24 -130 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train 12V Actuator  4 x  8 x  1.667 Electric (Complete) (light_grey)
+1 7 -240 -48 240.001 -1 0 0 0 1 0 0 0 -1 70026.dat
+0 // Train 12V Actuator  4 x  8 x  1.667 Electric (Complete) (light_grey)
+1 7 240 -48 -239.999 1 0 0 0 1 0 0 0 1 70026.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 -160 -24 -30 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 -160 -24 30 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 -160 -24 130 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 160 -24 -130 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 160 -24 -30 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 160 -24 30 1 0 0 0 1 0 0 0 1 3228b.dat
+0 // Brick  1 x  2 (black)
+1 0 -170 -24 -200 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -170 -48 -200 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 170 -24 200 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 170 -48 200 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Electric Plug (Type 4) Twin with Centre Plastic Pin (Complete) (red)
+1 4 -320 -32 240 0 0 -1 0 1 0 1 0 0 766c01.dat
+0 // Electric Plug (Type 4) Twin with Centre Plastic Pin (Complete) (red)
+1 4 320 -32 -240.001 0 0 1 0 1 0 -1 0 0 766c01.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 -0.001 -16 110 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -0.001 -16 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -0.001 -16 -50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -0.001 -16 -110 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 0.003 -16 0 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -140.001 -16 110 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -140.001 -16 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -140.001 -16 -50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -140.001 -16 -110 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -139.997 -16 0 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 159.999 -16 110 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 159.999 -16 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 159.999 -16 -50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 159.999 -16 -110 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 160.003 -16 0 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  1 x  2 (black)
+1 0 -170 -56 -200 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 -170 -64 -200 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 170 -56 200 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 170 -64 200 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Technic Gear 14 Tooth Bevel (light_grey)
+1 7 200 -60 -239.001 1 0 0 0 0 1 0 -1 0 4143.dat
+0 // Plate  1 x  4 (black)
+1 0 199.997 -56 -210.003 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 199.997 -64 -210.003 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Technic Gear 14 Tooth Bevel (light_grey)
+1 7 -200.005 -60 239.397 -1 0 0 0 0 1 0 1 0 4143.dat
+0 // Plate  1 x  4 (black)
+1 0 -200 -56 210.399 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 -200 -64 210.399 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (black)
+1 0 -170 -72 -200 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 170 -72 200 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Technic Brick  1 x  4 with Holes (black)
+1 0 199.997 -88 -210.003 1 0 0 0 1 0 0 0 1 3701.dat
+0 // Technic Brick  1 x  4 with Holes (black)
+1 0 -200 -88 210.399 -1 0 0 0 1 0 0 0 -1 3701.dat
+0 // Slope Brick 10  6 x  8 (light_grey)
+1 7 80 -24 -200 1 0 0 0 1 0 0 0 1 4515.dat
+0 // Slope Brick 10  6 x  8 (light_grey)
+1 7 -80 -24 -200 1 0 0 0 1 0 0 0 1 4515.dat
+0 // Slope Brick 10  6 x  8 (light_grey)
+1 7 80.01 -24 200.001 -1 0 0 0 1 0 0 0 -1 4515.dat
+0 // Slope Brick 10  6 x  8 (light_grey)
+1 7 -79.99 -24 200.001 -1 0 0 0 1 0 0 0 -1 4515.dat
+0 // Train Track 12V Straight Insert Type 3 (light_grey)
+1 7 -160 -24 -80 1 0 0 0 1 0 0 0 1 3240b.dat
+0 // Train Track 12V Straight Insert Type 3 (light_grey)
+1 7 160 -24 -80 1 0 0 0 1 0 0 0 1 3240b.dat
+0 // Train Track 12V Straight Insert Type 3 (light_grey)
+1 7 -160 -24 80 1 0 0 0 1 0 0 0 1 3240b.dat
+0 // Train Track 12V Straight Insert Type 3 (light_grey)
+1 7 160 -24 80 1 0 0 0 1 0 0 0 1 3240b.dat
+0 STEP
+1 16 -200.003 -78 200.396 -0.259 0.966 0 0.966 0.259 0 0 0 -1 7866 - level crossing - barrier.ldr
+1 16 200 -78 -200 0.259 -0.966 0 0.966 0.259 0 0 0 1 7866 - level crossing - barrier.ldr
+0 // Electric Plug (Type 4) Twin with Centre Plastic Pin (Complete) (red)
+1 4 190.004 -104 -280.004 1 0 0 0 1 0 0 0 1 766c01.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 79.999 -24 -49.996 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 79.999 -24 -109.996 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 79.999 -24 110.004 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 79.999 -24 50.004 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 79.999 -24 10.004 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 79.999 -24 -9.996 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -80.001 -24 -49.996 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -80.001 -24 -109.996 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -80.001 -24 110.004 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -80.001 -24 50.004 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -80.001 -24 10.004 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -80.001 -24 -9.996 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 STEP
+0 STEP
+0 STEP
+0 STEP
+0 NOFILE
+
+
+0 STEP
+0 FILE 7866 - level crossing - building.ldr 
+0 A small red, black, and grey trackside building with windows, a computer-panel desk, an inclined roof, and a turntable plate.
+0 Name: 7866 - level crossing - building.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -230.001 -24 20 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Brick  1 x  2 (black)
+1 0 -149.999 -24 20.001 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -210.001 -48 19.999 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Brick  1 x  2 (black)
+1 0 -149.999 -48 20.001 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -230 -32 20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -190.001 -72 19.999 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Brick  1 x  2 (black)
+1 0 -149.999 -72 20.001 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -210 -56 19.999 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 -60.001 -120 -20.004 1 0 0 0 1 0 0 0 1 4476.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 99.999 -120 -20.004 1 0 0 0 1 0 0 0 1 4476.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 -60.001 -120 59.996 1 0 0 0 1 0 0 0 1 4476.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 99.999 -120 59.996 1 0 0 0 1 0 0 0 1 4476.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 -190 -80 20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Brick  2 x  2 (black)
+1 0 -160.001 -96 19.999 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // Plate  6 x 10 (red)
+1 4 19.999 -128 19.996 1 0 0 0 1 0 0 0 1 3033.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 -170 -104 19.998 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -150.001 -120 19.998 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Plate  1 x  4 (red)
+1 4 -70.001 -136 19.996 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Brick  1 x  1 (red)
+1 4 -70.001 -152 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 -70.006 -152 -30.004 1 0 0 0 1 0 0 0 1 3665.dat
+0 // Brick  1 x  1 (red)
+1 4 109.999 -152 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 109.994 -152 -30.004 1 0 0 0 1 0 0 0 1 3665.dat
+0 // Train Window  1 x  4 x  3 (white)
+1 15 109.999 -200 19.999 0 0 -1 0 1 0 1 0 0 4033.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_clear)
+1 47 112.999 -166 19.999 0 0 -1 0 1 0 1 0 0 3855b.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -130.001 -144 19.998 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -150 -128 19.998 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 -70.001 -144 19.996 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 89.999 -152 19.998 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Turntable  2 x  2 Plate with Light Grey Top (black)
+1 0 19.999 -136 19.996 1 0 0 0 1 0 0 0 1 3680c01.dat
+0 STEP
+0 // Plate  4 x  4 (light_grey)
+1 7 -100.001 -152 19.997 0 0 -1 0 1 0 1 0 0 3031.dat
+0 // Slope Brick 45  2 x  2 with Computer Panel Pattern (light_grey)
+1 7 90.001 -176 -0.004 0 0 1 0 1 0 -1 0 0 3039p34.dat
+0 // Slope Brick 45  2 x  2 with Computer Screen Pattern (light_grey)
+1 7 89.998 -176 39.998 0 0 1 0 1 0 -1 0 0 3039p23.dat
+0 STEP
+0 // Plate  1 x  6 (red)
+1 4 -70.001 -160 19.996 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Minifig Seat  2 x  2 (light_grey)
+1 7 19.999 -144 19.996 1 0 0 0 1 0 0 0 1 4079.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 109.992 -176 -50.004 1 0 0 0 1 0 0 0 1 3665.dat
+0 // Brick  1 x  1 (red)
+1 4 109.999 -176 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 -70.008 -176 -50.004 1 0 0 0 1 0 0 0 1 3665.dat
+0 // Brick  1 x  1 (red)
+1 4 -70.001 -184 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 109.999 -176 -30.004 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Plate  1 x  1 (red)
+1 4 -70.002 -168 -30.004 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 -70.002 -176 -30.004 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Brick  1 x  1 (red)
+1 4 -70.001 -208 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 -70.011 -200 -70.004 1 0 0 0 1 0 0 0 1 3665.dat
+0 // Brick  1 x  1 (red)
+1 4 109.999 -200 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 109.989 -200 -70.004 1 0 0 0 1 0 0 0 1 3665.dat
+0 // Brick  1 x  2 (red)
+1 4 -70.008 -200 -40.004 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 109.992 -200 -40.004 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Window  4 x  4 x  3 Roof (white)
+1 15 -19.995 -200 -90.006 -1 0 0 0 1 0 0 0 -1 4447.dat
+0 // Window  4 x  4 x  3 Roof (white)
+1 15 60.005 -200 -90.006 -1 0 0 0 1 0 0 0 -1 4447.dat
+0 // Glass for Window  4 x  4 x  3 Roof (trans_clear)
+1 47 -19.995 -200 -90.006 -1 0 0 0 1 0 0 0 -1 4448.dat
+0 // Glass for Window  4 x  4 x  3 Roof (trans_clear)
+1 47 60.005 -200 -90.006 -1 0 0 0 1 0 0 0 -1 4448.dat
+0 STEP
+0 // Plate  1 x  3 (red)
+1 4 -70.009 -208 -50.004 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  4 (red)
+1 4 80.005 -208 -90.005 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  6 (red)
+1 4 -19.995 -208 -90.01 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  1 x  8 (red)
+1 4 110.001 -208 -0.001 0 0 -1 0 1 0 1 0 0 3460.dat
+0 STEP
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_clear)
+1 47 112.999 -246 19.999 0 0 -1 0 1 0 1 0 0 3855b.dat
+0 // Train Window  1 x  4 x  3 (white)
+1 15 109.999 -280 19.999 0 0 -1 0 1 0 1 0 0 4033.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_clear)
+1 47 112.999 -246 -60.001 0 0 -1 0 1 0 1 0 0 3855b.dat
+0 // Train Window  1 x  4 x  3 (white)
+1 15 109.999 -280 -60.001 0 0 -1 0 1 0 1 0 0 4033.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_clear)
+1 47 59.997 -246 -93.001 1 0 0 0 1 0 0 0 1 3855b.dat
+0 // Train Window  1 x  4 x  3 (white)
+1 15 59.997 -280 -90.001 1 0 0 0 1 0 0 0 1 4033.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_clear)
+1 47 -20.003 -246 -93.001 1 0 0 0 1 0 0 0 1 3855b.dat
+0 // Train Window  1 x  4 x  3 (white)
+1 15 -20.003 -280 -90.001 1 0 0 0 1 0 0 0 1 4033.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_clear)
+1 47 -73.007 -246 -60.002 0 0 1 0 1 0 -1 0 0 3855b.dat
+0 // Train Window  1 x  4 x  3 (white)
+1 15 -70.007 -280 -60.001 0 0 1 0 1 0 -1 0 0 4033.dat
+0 // Brick  1 x  1 (red)
+1 4 109.999 -256 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -70.001 -256 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -70.001 -232 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 109.999 -232 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 109.999 -152 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 109.999 -280 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -70.001 -280 69.996 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Door  1 x  4 x  5 Left with Trans Clear Glass (white)
+1 15 -70.001 -280 49.996 -1 0 0 0 1 0 0 0 -1 4343c01.dat
+0 STEP
+0 // Plate  2 x 10 (red)
+1 4 -59.999 -288 -0.004 0 0 1 0 1 0 -1 0 0 3832.dat
+0 // Plate  2 x 10 (red)
+1 4 100.001 -288 -0.004 0 0 1 0 1 0 -1 0 0 3832.dat
+0 // Plate  2 x  6 (red)
+1 4 20.005 -288 -79.999 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 STEP
+0 // Plate  2 x  6 (red)
+1 4 20.005 -288 80.001 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  4 x  8 (black)
+1 0 20.007 -296 40.001 -1 0 0 0 1 0 0 0 -1 3035.dat
+0 // Plate  4 x  8 (black)
+1 0 20.007 -296 -39.999 -1 0 0 0 1 0 0 0 -1 3035.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (red)
+1 4 -69.999 -312 69.996 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 -69.999 -312 -70.004 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Brick  1 x  6 (red)
+1 4 -69.999 -312 -0.004 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 110.005 -312 -70.004 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 109.997 -312 69.996 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Brick  1 x  6 (red)
+1 4 110.002 -312 -0.004 0 0 -1 0 1 0 1 0 0 3009.dat
+0 STEP
+0 STEP
+0 STEP
+0 NOFILE
+
+
+0 STEP
+0 FILE 7866 - level crossing - barrier.ldr 
+0 A single level crossing gate assembly consisting of a red-striped barrier gate, counterweight, bevel gear, and axle.
+0 Name: 7866 - level crossing - barrier.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Technic Gear 14 Tooth Bevel (light_grey)
+1 7 0 0 -24.005 1 0 0 0 1 0 0 0 1 4143.dat
+0 // Technic Axle  3 (black)
+1 0 -0.004 0 -4.007 0 0 1 0 1 0 -1 0 0 4519.dat
+0 STEP
+0 // Train Level Crossing Gate Counterweight Type 2 (black)
+1 0 -0.006 0 11.993 0 0 1 0 1 0 -1 0 0 70163.dat
+0 // Train Level Crossing Gate Type 2 with Red Stripes Pattern (white)
+1 15 -0.005 -0.001 0.993 0 0 1 0 -1 0 1 0 0 4512p01.dat
+0 STEP
+0 STEP
+0 STEP
+0 STEP
+0 STEP
+0 NOFILE
+
+
+0 STEP
+0 FILE 7866 - minifig.ldr 
+0 A blue-bodied minifigure with a red police hat and standard grin head.
+0 Name: 7866 - minifig.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso with Patch Pocket Pattern (blue)
+1 1 0 -72 0 1 0 0 0 1 0 0 0 1 973p26.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (blue)
+1 1 15.5 -64 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.5 -64 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 23.658 -46.127 -10 0.985 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -23.658 -46.127 -10 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Police Hat (red)
+1 4 0 -96 0 1 0 0 0 1 0 0 0 1 3624.dat
+0 NOFILE
+
+
+0 STEP
+0 FILE 7866 - control.ldr 
+0 A 12V electric control component consisting of a flashing-light unit with two electric plugs.
+0 Name: 7866 - control.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Electric Train 12V Flashing-Light Unit (light_grey)
+1 7 -40 -40 -140 1 0 0 0 1 0 0 0 1 990.dat
+0 // Electric Plug (Type 4) Twin with Centre Plastic Pin (Complete) (light_grey)
+1 7 -39.998 -22 -180 -1 0 0 0 1 0 0 0 -1 766c01.dat
+1 7 0 -48 0 -1 0 0 0 1 0 0 0 -1 u9005c01.dat
+0 // Electric Plug (Type 4) Twin with Centre Plastic Pin (Complete) (light_grey)
+1 7 20.002 -22 -100 -1 0 0 0 1 0 0 0 -1 766c01.dat
+0 NOFILE
+
+

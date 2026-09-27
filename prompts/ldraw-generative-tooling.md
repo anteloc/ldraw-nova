@@ -7,9 +7,11 @@ At the end, rewrite the `./instructions.md`, in order to become a **high-quality
 ## Resources
 
 - `./docs/ldraw-specs.pdf` (MANDATORY): the **full LDraw language specification**.
-- `../ldraw-lib/models-annotated/`: annotated Official Model Repository (OMR) models, in `.mpd` format.
-- `../ldraw-lib/ldraw/`: official LDraw library.
-- `../ldraw-lib/ldraw/parts/`: library parts, in `.dat` format.
+- `data/models-annotated/`: annotated Official Model Repository (OMR) models, in `.mpd` format.
+- `data/ldraw-info.db`: searchable part, model and submodel descriptions.
+- `data/categories/`: descriptive part and colour catalog.
+- `data/offLibShadow/`: connector metadata.
+- `LDRAW_DIR`, falling back to `LDRAWDIR` when unset or empty: official LDraw parts library; `.dat` parts are under its `parts/` directory.
 
 ## Tooling
 
@@ -18,7 +20,9 @@ You are free to **install** any required **python packages** and **extra tooling
 Currently available tooling:
 
 - `leocad`: a CLI tool for several operations to be performed on a model or part, like e.g. get its BOM or render an image for the model. Run `leocad --help` for options.
-    * `leocad -l ../ldraw-lib/ldraw -csv parts-bom.csv <model-or-part.ext>`: provides a parts BOM for the given model or part, see `./106-1-bom-example.csv`
-    * `leocad -l ../ldraw-lib/ldraw -i rendered-model.png --viewpoint home <model-or-part.ext>`: renders the given viewpoint for the model or part, see `./106-1-rendered-example.png`
+    * `leocad -l "${LDRAW_DIR:-$LDRAWDIR}" -csv parts-bom.csv <model-or-part.ext>`: provides a parts BOM for the given model or part.
+    * `leocad -l "${LDRAW_DIR:-$LDRAWDIR}" -i rendered-model.png --viewpoint home <model-or-part.ext>`: renders the given viewpoint for the model or part.
     * Use the other options at your discretion.
-- `./prepare-glb.sh`: Convert a `.mpd`, `.dat` or `.ldr` model or part file to a `.glb` model with **semantic annotations**. Use it if in need of **deeply inspecting**, via **Blender MCP**, any model or part.
+- `jev-rerank`: globally available semantic search CLI. Query `data/ldraw-info.db`; check service availability and use the [FTS fallback](../docs/agent/reference-discovery.md#check-jev-availability-before-searching) when unavailable.
+- `mpd2glb.sh`: globally available semantic GLB converter. The repository's `./prepare-glb.sh` wraps it to export `.mpd`, `.dat` or `.ldr` sources with part descriptions.
+- `ldraw-render-steps.sh`: globally available step renderer. Read its help with no arguments. Use consecutive images from different views to study reference constructions, inspect unfinished submodels, detect defects and improve their design. See the [build-page workflow](../docs/agent/build-manuals.md).

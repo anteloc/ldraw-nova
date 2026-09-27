@@ -1,0 +1,82 @@
+0 FILE 6965 - TIE Interceptor - Mini.mpd
+0 A mini-scale TIE Interceptor featuring a spherical cockpit body with patterned hatch, clear canopy dish, and angular paneled wings armed with laser cannons.
+0 Name: 6965 - TIE Interceptor - Mini.mpd
+0 Author: Evert-Jan Boer [ejboer]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HISTORY 2018-12-08 [technicbasics] OMRize File
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6965 - Part 1.ldr
+1 0 -40 10 12 0 -1 0 1 0 0 0 0 1 6965 - Part 2.ldr
+1 0 40 10 12 0 1 0 -1 0 0 0 0 1 6965 - Part 2.ldr
+0
+0 STEP
+0 FILE 6965 - Part 1.ldr
+0 The central cockpit assembly built around a four-sided stud brick with a sand blue patterned hatch, inverted dish canopy, and bar-mounted support plates.
+0 Name: 6965 - Part 1.ldr
+0 Author: Evert-Jan Boer [ejboer]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Brick  1 x  1 with Studs on Four Sides (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4733.dat
+0 // Tile  1 x  1 with SW Hatch Pattern (sand_blue)
+1 379 -0 -8 0 1 0 0 0 1 0 0 0 1 3070bps3.dat
+0 STEP
+0 // Dish  2 x  2 Inverted (sand_blue)
+1 379 0 10 18 1 0 0 0 0 1 0 -1 0 4740.dat
+0 // Dish  2 x  2 Inverted (trans_clear)
+1 47 0 10 -18 -1 0 0 0 0 1 0 1 0 4740.dat
+0 STEP
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 24 10 22 0 1 0 -1 0 0 0 0 1 4623.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 -24 10 22 0 -1 0 1 0 0 0 0 1 4623.dat
+0 
+0
+0 STEP
+0 FILE 6965 - Part 2.ldr
+0 The wing and weapons assembly consisting of paired left and right dagger-shaped wings mounted on an inverted slope frame, with clipped tiles, cones, and lightsaber-blade laser cannons.
+0 Name: 6965 - Part 2.ldr
+0 Author: Evert-Jan Boer [ejboer]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 4871.dat
+0 // Cone  1 x  1 (black)
+1 0 -10 -8 10 0 0 1 0 1 0 -1 0 0 4589.dat
+0 // Cone  1 x  1 (black)
+1 0 10 -8 10 0 0 1 0 1 0 -1 0 0 4589.dat
+0 STEP
+0 // Tile  1 x  1 with Clip (black)
+1 0 -10 8 -10 -1 0 0 0 1 0 0 0 -1 2555.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 10 8 -10 -1 0 0 0 1 0 0 0 -1 2555.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (black)
+1 0 -30 -8 0 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 30 -8 0 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Bar  4L Lightsaber Blade (dark_bluish_grey)
+1 72 -10 2 0 -0.707107 0 -0.707107 0.707107 0 -0.707107 0 -1 0 30374.dat
+0 // Bar  4L Lightsaber Blade (dark_bluish_grey)
+1 72 10 2 0 0.707107 0 -0.707107 0.707107 0 0.707107 0 -1 0 30374.dat
+0 STEP
+0 // Wing  2 x  4 Right (black)
+1 0 -26.97 4.828 -60 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 41769.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 -14.243 6.242 -30 0.707107 -0.707107 0 0.707107 0.707107 0 0 0 1 2555.dat
+0 STEP
+0 // Wing  2 x  4 Left (black)
+1 0 26.97 4.828 -60 0.707107 0.707107 0 -0.707107 0.707107 0 0 0 1 41770.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 14.243 6.242 -30 0.707107 0.707107 0 -0.707107 0.707107 0 0 0 1 2555.dat
+0 
+0
+0

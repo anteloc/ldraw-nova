@@ -1,0 +1,510 @@
+0 FILE 6043 - Dragon Defender.ldr
+0 A castle-themed dragon defender model featuring a trebuchet siege weapon with a dragon head, firing arm, trigger mechanism, two boulder configurations, two armed minifigures (swordsman and halberdier), and assorted weapons including a flagpole and spear.
+0 Name: 6043 - Dragon Defender.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 !THEME Castle / Dragon Knights
+0 !KEYWORDS Dragon Masters, Fantasy, Medieval, Siege Weapon, Trebuchet, Catapult
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 6043 - Trebuchet Base.ldr
+1 16 90 -59 -110 0 -1 0 0 0 1 -1 0 0 6043 - Flagpole.ldr
+1 25 -90 -120 -110 1 0 0 0 1 0 0 0 1 6043 - Spear.ldr
+1 16 -131 -28 -280 0 0 -1 0 1 0 1 0 0 6043 - Swordsman.ldr
+1 16 60.261 -28 -212.481 .93969 0 -.34202 0 1 0 .34202 0 .93969 6043 - Halberdier.ldr
+
+0 // Loaded Position
+1 16 0 -149.56 -98.508 1 0 0 0 1 0 0 0 1 6043 - Dragon Head.ldr
+1 16 -50 -134.041 -38.802 0 0 -1 .682 .73135 0 .73135 -.682 0 6043 - Liftarm Small.ldr
+1 16 50 -134.041 -38.802 0 0 1 -.682 .73135 0 -.73135 -.682 0 6043 - Liftarm Small.ldr
+1 16 0 -96.324 100.039 1 0 0 0 .73135 .682 0 -.682 .73136 6043 - Liftarm Large.ldr
+1 16 0 -86.53 119.833 1 0 0 0 .57358 -.81915 0 .81915 .57358 6043 - Trigger.ldr
+1 16 145.937 -24 157.472 -.34202 0 -.93969 0 1 0 .93969 0 -.34202 6043 - Boulders Ready.ldr
+
+0 // Launched Position
+0 16 0 -38.431 -96.568 1 0 0 0 1 0 0 0 1 6043 - Dragon Head.ldr
+0 16 -50 -78.816 -18.385 0 0 -1 -.7071 .7071 0 .7071 .7071 0 6043 - Liftarm Small.ldr
+0 16 50 -78.816 -18.385 0 0 1 .7071 .7071 0 -.7071 .7071 0 6043 - Liftarm Small.ldr
+0 16 0 -262.581 72.126 1 0 0 0 .7071 -.7071 0 .7071 .7071 6043 - Liftarm Large.ldr
+0 16 0 -71 130 1 0 0 0 1 0 0 0 1 6043 - Trigger.ldr
+0 16 145.937 -24 157.472 -.342 0 -.9397 0 1 0 .9397 0 -.342 6043 - Boulders Launched.ldr
+
+0 STEP
+0 FILE 6043 - Trebuchet Base.ldr
+0 A sturdy blue and black wheeled base built from plates, bricks, and slopes forming the supporting platform of the trebuchet siege engine.
+0 Name: 6043 - Trebuchet Base.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Plate  2 x  6 (black)
+1 0 0 -39 0 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  1 x 10 (black)
+1 0 70 -39 0 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 -70 -39 0 0 0 -1 0 1 0 1 0 0 4477.dat
+0 STEP
+0 // Plate  2 x 10 (blue)
+1 1 0 -47 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 STEP
+0 // Plate  2 x  2 (blue)
+1 1 0 -47 -40 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 0 -47 40 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 80 -47 -80 1 0 0 0 1 0 0 0 1 4488.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 -80 -47 -80 -1 0 0 0 1 0 0 0 -1 4488.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 80 -47 80 1 0 0 0 1 0 0 0 1 4488.dat
+0 // Plate  2 x  2 with 1 Wheel Pin (black)
+1 0 -80 -47 80 -1 0 0 0 1 0 0 0 -1 4488.dat
+0 STEP
+0 // Plate  2 x  6 (blue)
+1 1 0 -55 0 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  1 x 10 (black)
+1 0 -70 -55 0 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 70 -55 0 0 0 -1 0 1 0 1 0 0 4477.dat
+0 STEP
+0 // Plate  2 x  2 (black)
+1 0 40 -55 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 -40 -55 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 90 -55 0 0 0 -1 0 1 0 1 0 0 3839b.dat
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 -90 -55 0 0 0 1 0 1 0 -1 0 0 3839b.dat
+0 // Plate  1 x  1 (blue)
+1 1 90 -55 -70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 -90 -55 -70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 90 -55 70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 -90 -55 70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (black)
+1 0 90 -55 -90 1 0 0 0 1 0 0 0 1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (black)
+1 0 -90 -55 -90 1 0 0 0 1 0 0 0 1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (black)
+1 0 90 -55 90 -1 0 0 0 1 0 0 0 -1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (black)
+1 0 -90 -55 90 -1 0 0 0 1 0 0 0 -1 4085c.dat
+0 STEP
+0 // Plate  2 x 10 (blue)
+1 1 0 -63 80 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Plate  2 x  2 (blue)
+1 1 80 -63 -80 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 -80 -63 -80 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  3 (blue)
+1 1 70 -63 0 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  2 x  3 (blue)
+1 1 -70 -63 0 1 0 0 0 1 0 0 0 1 3021.dat
+0 STEP
+0 // Plate  1 x  2 with Handle (black)
+1 0 0 -71 90 -1 0 0 0 1 0 0 0 -1 2540.dat
+0 // Brick  1 x  2 (blue)
+1 1 -30 -79 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 -30 -103 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 30 -79 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 30 -103 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 -30 -127 0 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 30 -127 0 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Slope Brick 75  2 x  2 x  3 with Hollow Studs (blue)
+1 1 0 -127 30 -1 0 0 0 1 0 0 0 -1 3684.dat
+0 // Slope Brick 75  2 x  2 x  3 with Hollow Studs (blue)
+1 1 0 -127 -30 1 0 0 0 1 0 0 0 1 3684.dat
+0 STEP
+0 // Brick  2 x  4 (blue)
+1 1 0 -151 0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // Brick  1 x  2 (blue)
+1 1 0 -151 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 0 -151 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 0 -175 10 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Slope Brick 45  2 x  2 (blue)
+1 1 0 -175 -10 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 -30 -175 0 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 30 -175 0 0 0 -1 0 1 0 1 0 0 3700.dat
+0 STEP
+0 // Plate  2 x  4 (blue)
+1 1 0 -183 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // Wheel  2.8 x 34 with  8 Spokes with Round Hole for Wheel Holding Pin (brown)
+1 6 -110 -42 80 0 0 1 0 1 0 -1 0 0 4489a.dat
+0 // Wheel  2.8 x 34 with  8 Spokes with Round Hole for Wheel Holding Pin (brown)
+1 6 110 -42 80 0 0 -1 0 1 0 1 0 0 4489a.dat
+0 // Wheel  2.8 x 34 with  8 Spokes with Round Hole for Wheel Holding Pin (brown)
+1 6 -110 -42 -80 0 0 1 0 1 0 -1 0 0 4489a.dat
+0 // Wheel  2.8 x 34 with  8 Spokes with Round Hole for Wheel Holding Pin (brown)
+1 6 110 -42 -80 0 0 -1 0 1 0 1 0 0 4489a.dat
+
+0 STEP
+0 FILE 6043 - Dragon Head.ldr
+0 A sculpted black dragon head built from plates, bricks, and slopes with red accents, white round studs for eyes, and yellow headlight bricks for decorative detail.
+0 Name: 6043 - Dragon Head.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Plate  2 x  4 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  2 (black)
+1 0 -30 0 40 0 0 -1 0 1 0 1 0 0 3023b.dat
+0 // Plate  1 x  2 (black)
+1 0 30 0 40 0 0 1 0 1 0 -1 0 0 3023b.dat
+0 STEP
+0 // Plate  2 x  2 (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  4 (black)
+1 0 -30 -8 20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 30 -8 20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+0 // Brick  1 x  4 (black)
+1 0 0 -32 10 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 -30 -32 40 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 30 -32 40 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (black)
+1 0 -20 -32 -10 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (black)
+1 0 20 -32 -10 1 0 0 0 1 0 0 0 1 3747a.dat
+0 STEP
+0 // Plate  2 x  6 (red)
+1 4 0 -40 -40 0 0 -1 0 1 0 1 0 0 3795.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 -30 -56 40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -56 40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -48 10 1 0 0 0 1 0 0 0 1 3023b.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -30 -56 10 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 30 -56 10 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Plate  1 x  1 Round (white)
+1 15 -30 -40 -50 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (white)
+1 15 30 -40 -50 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -56 10 1 0 0 0 1 0 0 0 1 3023b.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 -30 -80 40 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 30 -80 40 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (black)
+1 0 -30 -80 10 1 0 0 0 1 0 0 0 1 4287.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (black)
+1 0 30 -80 10 1 0 0 0 1 0 0 0 1 4287.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -30 -104 10 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 30 -104 10 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -30 -128 10 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 30 -128 10 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Panel  1 x  2 x  3 with Solid Studs (black)
+1 0 0 -128 10 -1 0 0 0 1 0 0 0 -1 2362a.dat
+0 STEP
+0 // Plate  4 x  4 (black)
+1 0 0 -88 -40 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Plate  2 x  3 (red)
+1 4 0 -80 -30 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -80 -80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  1 Round (white)
+1 15 30 -72 -90 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (white)
+1 15 -30 -72 -90 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -88 -90 1 0 0 0 1 0 0 0 1 3023b.dat
+0 // Slope Brick 45  1 x  2 Triple (black)
+1 0 -30 -112 -20 0 0 1 0 1 0 -1 0 0 3048b.dat
+0 // Slope Brick 45  1 x  2 Triple (black)
+1 0 30 -112 -20 0 0 -1 0 1 0 1 0 0 3048b.dat
+0 // Slope Brick 33  3 x  2 (black)
+1 0 0 -112 -10 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -96 -80 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 -30 -104 -90 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 30 -104 -90 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -10 -136 -10 0 0 1 0 1 0 -1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 10 -136 -10 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -104 -70 1 0 0 0 1 0 0 0 1 3023b.dat
+0 // Minifig Flame with Pegs (trans_neon_orange)
+1 38 -30 -94 -102 0 1 0 1 0 0 0 0 -1 6126a.dat
+0 // Minifig Flame with Pegs (trans_neon_orange)
+1 38 30 -94 -102 0 1 0 1 0 0 0 0 -1 6126a.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -136 10 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // Plate  2 x  2 (black)
+1 0 0 -144 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -152 10 1 0 0 0 1 0 0 0 1 3023b.dat
+0 STEP
+0 // Plate  2 x  2 Corner (black)
+1 0 -44 -118 30 0 1 0 0 0 -1 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 44 -118 30 0 -1 0 -1 0 0 0 0 -1 2420.dat
+0 STEP
+0 // Plate  1 x  2 (black)
+1 0 -52 -145.071 22.929 0 1 0 .7071 0 .7071 .7071 0 -.7071 3023b.dat
+0 // Plate  1 x  2 (black)
+1 0 52 -145.071 22.929 0 -1 0 .7071 0 -.7071 .7071 0 .7071 3023b.dat
+
+0 STEP
+0 FILE 6043 - Liftarm Large.ldr
+0 A red firing arm assembly composed of plates, bricks with pins, hinges, dragon wings, and black excavator buckets serving as counterweights for the trebuchet.
+0 Name: 6043 - Liftarm Large.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Plate  1 x  6 (red)
+1 4 50 8 -40 0 0 1 0 1 0 -1 0 0 3666.dat
+0 STEP
+0 // Plate  1 x 10 (red)
+1 4 50 0 -120 0 0 1 0 1 0 -1 0 0 4477.dat
+0 STEP
+0 // Brick  1 x  2 with Pin (red)
+1 4 50 8 -120 0 0 1 0 1 0 -1 0 0 2458.dat
+0 // Brick  1 x  2 with Pin (red)
+1 4 50 8 -200 0 0 1 0 1 0 -1 0 0 2458.dat
+0 STEP
+0 // Tile  1 x  1 with Clip (red)
+1 4 50 -8 -150 -1 0 0 0 1 0 0 0 -1 2555.dat
+0 STEP
+0 // Plate  1 x  6 (red)
+1 4 -50 8 -40 0 0 1 0 1 0 -1 0 0 3666.dat
+0 STEP
+0 // Plate  1 x 10 (red)
+1 4 -50 0 -120 0 0 1 0 1 0 -1 0 0 4477.dat
+0 STEP
+0 // Brick  1 x  2 with Pin (red)
+1 4 -50 8 -120 0 0 -1 0 1 0 1 0 0 2458.dat
+0 // Brick  1 x  2 with Pin (red)
+1 4 -50 8 -200 0 0 -1 0 1 0 1 0 0 2458.dat
+0 STEP
+0 // Tile  1 x  1 with Clip (red)
+1 4 -50 -8 -150 1 0 0 0 1 0 0 0 1 2555.dat
+0 STEP
+0 // Plate  2 x  6 (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Brick  1 x  1 (red)
+1 4 -50 -24 10 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 50 -24 10 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 -50 -24 -10 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 50 -24 -10 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (red)
+1 4 -50 -32 0 0 0 -1 0 1 0 1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (red)
+1 4 50 -32 0 0 0 -1 0 1 0 1 0 0 4275b.dat
+0 // Excavator Bucket  2 x  3 (black)
+1 0 -50 -38.072 63.445 0 0 -1 -.5 .866 0 .866 .5 0 4626.dat
+0 // Excavator Bucket  2 x  3 (black)
+1 0 50 -38.072 63.445 0 0 -1 -.5 .866 0 .866 .5 0 4626.dat
+0 // Animal Dragon Wing (red)
+1 4 -50 -14 -150 -.7071 .7071 0 -.7071 -.7071 0 0 0 1 6133.dat
+0 // Animal Dragon Wing (red)
+1 4 50 -14 -150 .7071 .7071 0 -.7071 .7071 0 0 0 1 6133.dat
+
+0 STEP
+0 FILE 6043 - Liftarm Small.ldr
+0 A small red liftarm made of a plate and two bricks with pins extending the trebuchet's throwing arm.
+0 Name: 6043 - Liftarm Small.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Plate  1 x  6 (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Brick  1 x  2 with Pin (red)
+1 4 -40 -24 0 1 0 0 0 1 0 0 0 1 2458.dat
+0 // Brick  1 x  2 with Pin (red)
+1 4 40 -24 0 1 0 0 0 1 0 0 0 1 2458.dat
+
+0 STEP
+0 FILE 6043 - Trigger.ldr
+0 A simple blue release mechanism made of a clip plate and a round brick for triggering the trebuchet's launch.
+0 Name: 6043 - Trigger.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 6019.dat
+0 // Brick  1 x  1 Round with Hollow Stud (blue)
+1 1 0 8 0 1 0 0 0 1 0 0 0 1 3062b.dat
+
+0 STEP
+0 FILE 6043 - Flagpole.ldr
+0 A decorative banner setup consisting of a lance mounted with a dragon-patterned shield and two fluttering flags in yellow and red.
+0 Name: 6043 - Flagpole.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Minifig Lance (dark_grey)
+1 8 0 0 0 1 0 0 0 1 0 0 0 1 3849.dat
+0 // Minifig Shield Ovoid with Green Dragon Pattern (light_grey)
+1 7 0 0 -52 -.342023 0 -.939692 -.939692 0 .342023 0 1 0 2586p4b.dat
+0 // Flag  4 x  1 with First Wave Left (yellow)
+1 14 0 0 -118 .5 0 -.866024 -.866024 0 -.5 0 1 0 4495a.dat
+0 // Flag  4 x  1 with First Wave Left (red)
+1 4 0 0 -142 .5 0 -.866025 -.866025 0 -.5 0 1 0 4495a.dat
+
+0 STEP
+0 FILE 6043 - Spear.ldr
+0 A single brown minifigure spear used as a handheld weapon.
+0 Name: 6043 - Spear.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Minifig Spear with Round End (brown)
+1 6 0 0 0 1 0 0 0 1 0 0 0 1 4497.dat
+
+0 STEP
+0 FILE 6043 - Swordsman.ldr
+0 An armored castle minifigure swordsman wearing black legs, a red dragon-patterned torso, a dragon crown helmet with yellow wing plumes, and holding a sword.
+0 Name: 6043 - Swordsman.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Lower Part
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 -12 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Upper Part
+0 // Minifig Torso with Dragon Standing Pattern (red)
+1 4 0 -44 0 1 0 0 0 1 0 0 0 1 973pf7.dat
+0 // Minifig Arm Left (blue)
+1 1 15.472 -35.124 0 .98533 .1097 .13074 -.17067 .63336 .75481 0 -.76605 .64279 3819.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.575 -35.093 0 .9855 -.16392 .04392 .1697 .95192 -.25506 0 .25882 .96593 3818.dat
+0 // Minifig Hand (yellow)
+1 14 21.175 -31.492 -20.983 .00064 .99989 .01488 -.99631 -.00063 .08588 .08589 -.01488 .9962 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -24.033 -15.432 -4.259 .98561 .08362 .14697 .08362 .5144 -.85346 -.14697 .85346 .5 3820.dat
+0 // Head
+0 // Minifig Head with Moustache Wavy, Goatee and Bushy Eyebrows Pattern (yellow)
+1 14 0 -68 0 .98481 0 -.17365 0 1 0 .17365 0 .98481 3626bp4l.dat
+0 // Helmet
+0 // Minifig Helmet Castle with Dragon Crown Top (black)
+1 0 0 -68 0 .98481 0 -.17365 0 1 0 .17365 0 .98481 6122.dat
+0 // Minifig Plume Dragon Wing Left (yellow)
+1 14 18.833 -64.6 2.61 .12279 -.98481 -.12279 .70711 0 .70711 -.69637 -.17365 .69637 87685.dat
+0 // Minifig Plume Dragon Wing Right (yellow)
+1 14 -18.59 -64.6 -3.989 -.12279 .98481 -.12279 -.70711 0 .70711 .69637 .17365 .69637 87686.dat
+0 // Minifig Plume Dragon (yellow)
+1 14 -1.563 -90 8.863 .98481 0 -.17365 0 1 0 .17365 0 .98481 87687.dat
+0 // Weapons
+0 // Minifig Shield Ovoid with Green Dragon Pattern (light_grey)
+1 7 20.847 -32.366 -35.124 .97235 -.02068 -.23262 .02068 .99978 -.00244 .23262 -.00244 .97257 2586p4b.dat
+0 // Minifig Sword Shortsword (dark_grey)
+1 8 -26.783 -9.994 -19.607 .99229 .11745 .03968 .00438 .28669 -.95801 -.12389 .9508 .28397 3847.dat
+
+0 STEP
+0 FILE 6043 - Halberdier.ldr
+0 A castle minifigure halberdier wearing grey legs, a red dragon head-patterned torso, a neck-protector helmet, and armed with a halberd polearm.
+0 Name: 6043 - Halberdier.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Lower Part
+0 // ~Minifig Leg Right (Obsolete) (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -12 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Upper Part
+0 // Minifig Torso with Dragon Head Pattern (red)
+1 4 0 -44 0 1 0 0 0 1 0 0 0 1 973p4b.dat
+0 // Minifig Arm Left (blue)
+1 1 15.472 -35.124 0 .98533 .16808 .02964 -.17067 .97036 .1711 0 -.17365 .98481 3819.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.575 -35.093 0 .9855 -.13 -.10908 .1697 .75493 .63347 0 -.64279 .76604 3818.dat
+0 // Minifig Hand (yellow)
+1 14 23.296 -19.252 -13.147 .99473 -.03041 -.09789 -.03041 .82442 -.56516 .09789 .56516 .81915 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -21.936 -27.616 -19.49 .99855 -.0517 .01479 .05278 .99491 -.08589 -.01028 .08655 .9962 3820.dat
+0 // Head
+0 // Minifig Head with Black Bushy Moustache and Hair Pattern (yellow)
+1 14 0 -68 0 .98481 0 .17365 0 1 0 -.17365 0 .98481 3626bp4m.dat
+0 // Helmet
+0 // Minifig Helmet Castle with Neck Protector (black)
+1 0 0 -68 0 .98481 0 .17365 0 1 0 -.17365 0 .98481 3844.dat
+0 // Weapon
+0 // Minifig Polearm Halberd (dark_grey)
+1 8 -21.437 -39.885 -34.086 .86111 -.04642 .50629 .20564 .94253 -.26334 -.46497 .33088 .82117 6123.dat
+
+0 STEP
+0 FILE 6043 - Boulders Ready.ldr
+0 A set of four light grey 1x1 bricks representing ammunition loaded and ready for the trebuchet.
+0 Name: 6043 - Boulders Ready.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Brick  1 x  1 (light_grey)
+1 7 59.168 -58.489 92.266 -.32139 -.34202 .88302 -.93969 0 -.34202 .11698 -.93969 -.32139 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 0 -1.97276 -19.748 1 0 0 0 .93969 .34202 0 -.34202 .93969 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -30 14 20 0 1 0 -1 0 0 0 0 1 3005.dat
+
+0 STEP
+0 FILE 6043 - Boulders Launched.ldr
+0 A set of four light grey 1x1 bricks representing boulders in their launched position after firing.
+0 Name: 6043 - Boulders Launched.ldr
+0 Author: Chris Böhnke [KnightOfTarenta]
+0 !LDRAW_ORG Unofficial_Model
+0 !LICENSE Licenced under CC BY 4.0 : see CAreadme.txt
+
+0 // Brick  1 x  1 (light_grey)
+1 7 -105.70939 -370.342 145.08744 .192021 -.945658 -.262494 .7947 .3068 -.5238 .575853 -.107997 .810336 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -171.40371 -395.466 273.1405 -.028026 .804288 .593617 -.8886 -.292 .3537 .45779 -.517576 .722872 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -30.00032 14 19.99909 0 1 0 -1 0 0 0 0 1 3005.dat

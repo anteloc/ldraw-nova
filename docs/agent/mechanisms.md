@@ -39,11 +39,11 @@ If Jev is unavailable, use the same command with `--engine fts` and state that i
 
 ## Turn a source into build pages
 
-Keep the exact returned model filename and section name. Use the annotated models under `$LDRAW_LIB_DIR/models-annotated`, or the configured `MODELS_DIR`. For example:
+Keep the exact returned model filename and section name. Use the annotated models under `data/models-annotated/`. For example:
 
 ```sh
 ./ldraw-agent mechanism prepare \
-  "$LDRAW_LIB_DIR/models-annotated/42042-1_Tower-Crane.mpd" \
+  "data/models-annotated/42042-1_Tower-Crane.mpd" \
   --section '42042 - spoolwormgear.ldr' \
   --title 'Worm-drive support module' --outdir output/my-worm-study \
   --views home top --normalize-rotations --repair-bfc-comments

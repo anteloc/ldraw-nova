@@ -1,0 +1,2152 @@
+0 FILE 6085 - main.ldr
+0 Complete castle set featuring a fortified castle structure, working drawbridge with ropes, Saracen portcullis, multiple armed knights with shields and weapons, and four horses with lances and dragon banners.
+0 Name: 6085 - main.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6085 - Castle.ldr
+1 0 69 -144 -260 0 0 -1 0 1 0 1 0 0 6085 - MiniFig01-02.ldr
+1 0 9 -176 220 0 0 -1 0 1 0 1 0 0 6085 - MiniFig01-02.ldr
+1 0 349 -256 -200 0 0 -1 0 1 0 1 0 0 6085 - MiniFig03-04.ldr
+1 0 349 -256 200 0 0 -1 0 1 0 1 0 0 6085 - MiniFig03-04.ldr
+1 0 409 -440 60 0 0 -1 0 1 0 1 0 0 6085 - MiniFig05-08.ldr
+1 0 409 -440 -60 0 0 -1 0 1 0 1 0 0 6085 - MiniFig05-08.ldr
+1 0 -111 -304 280 0 0 -1 0 1 0 1 0 0 6085 - MiniFig05-08.ldr
+1 0 -111 -304 -280 0 0 -1 0 1 0 1 0 0 6085 - MiniFig05-08.ldr
+1 0 504 -65 -300 0 0 -1 0 1 0 1 0 0 6085 - MiniFig09.ldr
+1 0 504 -65 -180 0 0 -1 0 1 0 1 0 0 6085 - MiniFig10.ldr
+1 0 504 -65 180 0 0 -1 0 1 0 1 0 0 6085 - MiniFig11.ldr
+1 0 504 -65 300 0 0 -1 0 1 0 1 0 0 6085 - MiniFig12.ldr
+1 1 505 -1 -300 0 0 -1 0 1 0 1 0 0 6085 - Horse3.ldr
+1 1 505 -1 -180 0 0 -1 0 1 0 1 0 0 6085 - Horse1.ldr
+1 1 505 -1 180 0 0 -1 0 1 0 1 0 0 6085 - Horse2.ldr
+1 1 505 -1 300 0 0 -1 0 1 0 1 0 0 6085 - Horse4.ldr
+
+
+0 STEP
+0 FILE 6085 - Castle.ldr
+0 Large fortified castle built from grey and black bricks on green baseplates, with corner towers, slopes, hinges, and tall wall sections.
+0 Name: 6085 - Castle.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Baseplate 16 x 16 (green)
+1 2 0 0 -160 1 0 0 0 1 0 0 0 1 3867.dat
+0 // Baseplate 16 x 16 (green)
+1 2 0 0 160 1 0 0 0 1 0 0 0 1 3867.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -120 -24 -270 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -100 -24 -290 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 0 -24 -290 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -110 -24 -180 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -110 -24 -80 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -90 -24 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 -110 -24 -30 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 -120 -24 -10 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Technic Pin (light_grey)
+1 7 -120 -14 0 0 0 -1 0 1 0 1 0 0 3673.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 -120 -24 10 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 -110 -24 30 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Brick  1 x  2 (black)
+1 0 -90 -24 60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -110 -24 80 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -110 -24 180 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -120 -24 270 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -100 -24 290 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 0 -24 290 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 90 -24 310 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 90 -24 -310 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 10 -8 270 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 -90 -24 130 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 -10 -24 130 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 160 -24 -320 1 0 0 0 1 0 0 0 1 3831.dat
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 160 -24 -320 1 0 0 0 1 0 0 0 1 3830.dat
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 160 -24 320 -1 0 0 0 1 0 0 0 -1 3830.dat
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 160 -24 320 -1 0 0 0 1 0 0 0 -1 3831.dat
+0 STEP
+0 // Brick  1 x  4 (black)
+1 0 120 -48 -310 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 120 -72 -310 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 120 -48 310 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 120 -72 310 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  1 (black)
+1 0 150 -96 -310 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 150 -96 310 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 100 -96 -310 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 100 -96 310 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // ~Brick  1 x  2 x  5 (Obsolete) (light_grey)
+1 7 0 -120 -310 -1 0 0 0 1 0 0 0 -1 2454.dat
+0 // ~Brick  1 x  2 x  5 (Obsolete) (light_grey)
+1 7 0 -120 310 -1 0 0 0 1 0 0 0 -1 2454.dat
+0 // Brick  1 x  1 x  5 with Hollow Stud (black)
+1 0 -130 -120 -290 -1 0 0 0 1 0 0 0 -1 2453a.dat
+0 // Brick  1 x  1 x  5 with Hollow Stud (black)
+1 0 -130 -120 290 -1 0 0 0 1 0 0 0 -1 2453a.dat
+0 // =Slope Brick 75  2 x  2 x  3 (black)
+1 0 -110 -96 -60 0 0 -1 0 1 0 1 0 0 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 -110 -96 -20 0 0 1 0 1 0 -1 0 0 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 -110 -96 20 0 0 1 0 1 0 -1 0 0 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (black)
+1 0 -110 -96 60 0 0 -1 0 1 0 1 0 0 30499.dat
+0 STEP
+0 // Arch  1 x  3 (black)
+1 0 130 -120 -310 -1 0 0 0 1 0 0 0 -1 4490.dat
+0 // Arch  1 x  3 (black)
+1 0 130 -120 310 -1 0 0 0 1 0 0 0 -1 4490.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 90 -120 310 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 90 -120 -310 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 x  5 with Hollow Stud (black)
+1 0 10 -128 270 -1 0 0 0 1 0 0 0 -1 2453a.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 -110 -96 -290 1 0 0 0 1 0 0 0 1 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 -130 -96 -270 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 -130 -96 270 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (light_grey)
+1 7 -110 -96 290 -1 0 0 0 1 0 0 0 -1 2449.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -140 -120 -270 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -140 -120 270 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -110 -120 -300 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -110 -120 300 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 -50 -144 130 1 0 0 0 1 0 0 0 1 4444.dat
+0 // Brick  1 x  3 (black)
+1 0 -110 -120 -50 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (black)
+1 0 -110 -120 50 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -110 -120 -10 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -110 -120 10 0 0 -1 0 1 0 1 0 0 3005.dat
+0 STEP
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 -50 -144 -290 1 0 0 0 1 0 0 0 1 4444.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 50 -144 -290 1 0 0 0 1 0 0 0 1 4444.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 -110 -144 -230 0 0 1 0 1 0 -1 0 0 4444.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 -110 -144 -130 0 0 1 0 1 0 -1 0 0 4444.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 -110 -144 130 0 0 1 0 1 0 -1 0 0 4444.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 -110 -144 230 0 0 1 0 1 0 -1 0 0 4444.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 -50 -144 290 -1 0 0 0 1 0 0 0 -1 4444.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 50 -144 290 -1 0 0 0 1 0 0 0 -1 4444.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 10 -136 270 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Brick  1 x  3 (black)
+1 0 -110 -144 70 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -110 -144 180 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  2 x  3 (light_grey)
+1 7 -110 -144 280 1 0 0 0 1 0 0 0 1 3002.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 0 -144 300 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 90 -144 310 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 -10 -144 130 0 0 -1 0 1 0 1 0 0 3665b.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -110 -144 20 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -110 -144 -20 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Brick  1 x  3 (black)
+1 0 -110 -144 -70 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -110 -144 -180 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  2 x  3 (light_grey)
+1 7 -110 -144 -280 1 0 0 0 1 0 0 0 1 3002.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 0 -144 -300 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 90 -144 -310 1 0 0 0 1 0 0 0 1 2357.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 -110 -144 -310 1 0 0 0 1 0 0 0 1 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 -150 -144 -270 0 0 1 0 1 0 -1 0 0 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 -150 -144 270 0 0 1 0 1 0 -1 0 0 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 -110 -144 310 -1 0 0 0 1 0 0 0 -1 3665b.dat
+0 // Minifig Torch (light_grey)
+1 7 90 -110 -330 -1 0 0 0 0 1 0 1 0 3959.dat
+0 // Minifig Torch (light_grey)
+1 7 90 -110 330 1 0 0 0 0 1 0 -1 0 3959.dat
+0 // Plate  1 x 10 (light_grey)
+1 7 20 -144 -270 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Plate  1 x 10 (light_grey)
+1 7 -90 -144 -160 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (light_grey)
+1 7 -90 -144 160 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (light_grey)
+1 7 20 -144 270 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 STEP
+0 // Plate  2 x  3 (light_grey)
+1 7 -30 -152 -300 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  3 x  6 without Corners (light_grey)
+1 7 -120 -152 -310 1 0 0 0 1 0 0 0 1 2419.dat
+0 // Plate  3 x  6 without Corners (light_grey)
+1 7 -120 -152 -250 -1 0 0 0 1 0 0 0 -1 2419.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -110 -152 -210 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -100 -152 -140 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -100 -152 -60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -100 -152 60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -110 -152 140 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -110 -152 210 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  3 x  6 without Corners (light_grey)
+1 7 -120 -152 250 1 0 0 0 1 0 0 0 1 2419.dat
+0 // Plate  3 x  6 without Corners (light_grey)
+1 7 -120 -152 310 -1 0 0 0 1 0 0 0 -1 2419.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 -30 -152 300 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 STEP
+0 // Brick  2 x  2 Corner (black)
+1 0 -50 -176 -290 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Brick  1 x  2 (black)
+1 0 -120 -176 -330 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -170 -176 -280 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 -110 -176 -230 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (light_grey)
+1 7 -100 -168 -180 0 0 -1 0 1 0 1 0 0 4871.dat
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (light_grey)
+1 7 -100 -168 -100 0 0 -1 0 1 0 1 0 0 4871.dat
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (light_grey)
+1 7 -100 -168 -20 0 0 -1 0 1 0 1 0 0 4871.dat
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (light_grey)
+1 7 -100 -168 20 0 0 -1 0 1 0 1 0 0 4871.dat
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (light_grey)
+1 7 -100 -168 100 0 0 -1 0 1 0 1 0 0 4871.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -110 -168 180 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 -110 -176 230 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Brick  1 x  2 (black)
+1 0 -170 -176 280 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -120 -176 330 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 -50 -176 290 0 0 -1 0 1 0 1 0 0 2357.dat
+0 STEP
+0 // Plate  1 x  2 (black)
+1 0 -120 -176 190 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 (black)
+1 0 -130 -176 -190 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Brick  1 x  1 (black)
+1 0 -110 -176 -190 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 -150 -296 310 -1 0 0 0 1 0 0 0 -1 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 -150 -296 -310 0 0 1 0 1 0 -1 0 0 2345.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 -20 -168 270 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 -90 -168 180 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  6 (light_grey)
+1 7 -40 -168 130 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 STEP
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 -150 -296 250 0 0 1 0 1 0 -1 0 0 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 -90 -296 310 0 0 -1 0 1 0 1 0 0 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 -150 -296 -250 -1 0 0 0 1 0 0 0 -1 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner with Light Grey Stones Pattern (black)
+1 0 -90 -296 -310 1 0 0 0 1 0 0 0 1 2345p03.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 -110 -200 -190 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Arch  1 x  4 (black)
+1 0 -130 -192 -140 0 0 1 0 1 0 -1 0 0 3659.dat
+0 // Arch  1 x  4 (black)
+1 0 -130 -192 -60 0 0 1 0 1 0 -1 0 0 3659.dat
+0 // Brick  1 x  1 (black)
+1 0 -130 -192 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -130 -192 10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Arch  1 x  4 (black)
+1 0 -130 -192 60 0 0 1 0 1 0 -1 0 0 3659.dat
+0 // Arch  1 x  4 (black)
+1 0 -130 -192 140 0 0 1 0 1 0 -1 0 0 3659.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 -110 -200 190 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -70 -176 60 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x 10 (light_grey)
+1 7 -70 -176 -100 0 0 1 0 1 0 -1 0 0 4477.dat
+0 // Door  2 x  6 x  7 Frame (black)
+1 0 0 -168 200 0 0 -1 0 1 0 1 0 0 4071.dat
+0 // Door  6 x  7 Barred (dark_grey)
+1 8 14 -84 249 1 0 0 0 1 0 0 0 1 4611.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -130 -296 -240 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -80 -296 -290 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 -130 -296 -290 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Brick  1 x  2 (black)
+1 0 -170 -296 -280 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -120 -296 -330 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -130 -296 240 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 -130 -296 290 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -80 -296 290 1 0 0 0 1 0 0 0 1 3660.dat
+0 // Brick  1 x  2 (black)
+1 0 -120 -296 330 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -170 -296 280 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -130 -216 -160 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -130 -216 -100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -130 -216 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -130 -216 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -130 -216 100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -130 -216 160 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  6 x  8 (black)
+1 0 -40 -176 200 0 0 1 0 1 0 -1 0 0 3036.dat
+0 STEP
+0 // Plate  3 x  6 without Corners (light_grey)
+1 7 -120 -304 -310 1 0 0 0 1 0 0 0 1 2419.dat
+0 // Plate  3 x  6 without Corners (light_grey)
+1 7 -120 -304 -250 -1 0 0 0 1 0 0 0 -1 2419.dat
+0 // Plate  3 x  6 without Corners (light_grey)
+1 7 -120 -304 250 1 0 0 0 1 0 0 0 1 2419.dat
+0 // Plate  3 x  6 without Corners (light_grey)
+1 7 -120 -304 310 -1 0 0 0 1 0 0 0 -1 2419.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -70 -328 -280 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -120 -328 -330 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -170 -328 -280 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -120 -328 -230 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -170 -328 280 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -120 -328 230 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -70 -328 280 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 -120 -328 330 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 -150 -328 -310 0 0 1 0 1 0 -1 0 0 3676.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 -150 -328 -250 -1 0 0 0 1 0 0 0 -1 3676.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 -90 -328 -310 1 0 0 0 1 0 0 0 1 3676.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 -150 -328 250 0 0 1 0 1 0 -1 0 0 3676.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 -150 -328 310 -1 0 0 0 1 0 0 0 -1 3676.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 -90 -328 310 0 0 -1 0 1 0 1 0 0 3676.dat
+0 STEP
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -150 -352 -210 1 0 0 0 1 0 0 0 1 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -190 -352 -250 1 0 0 0 1 0 0 0 1 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -190 -352 -310 0 0 -1 0 1 0 1 0 0 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -150 -352 -350 0 0 -1 0 1 0 1 0 0 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -90 -352 -350 -1 0 0 0 1 0 0 0 -1 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -50 -352 -310 -1 0 0 0 1 0 0 0 -1 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -150 -352 210 0 0 -1 0 1 0 1 0 0 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -190 -352 250 0 0 -1 0 1 0 1 0 0 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -190 -352 310 1 0 0 0 1 0 0 0 1 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -150 -352 350 1 0 0 0 1 0 0 0 1 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -90 -352 350 0 0 1 0 1 0 -1 0 0 3063b.dat
+0 // Brick  2 x  2 Corner Round with Stud Notch (black)
+1 0 -50 -352 310 0 0 1 0 1 0 -1 0 0 3063b.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -110 -352 -210 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -50 -352 -270 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -50 -352 270 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -110 -352 210 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -352 -230 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -352 -330 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -70 -352 -330 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -352 230 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -352 330 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -70 -352 330 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 -120 -376 -210 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -376 -230 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -376 -330 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -190 -376 -280 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 -70 -376 -330 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -120 -376 -350 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -50 -376 -280 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -120 -376 210 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -50 -376 280 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 -70 -376 330 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -120 -376 350 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -376 330 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -190 -376 280 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -376 230 0 0 -1 0 1 0 1 0 0 3005.dat
+0 STEP
+0 // Baseplate 16 x 32 with Square Corners (green)
+1 2 320 0 0 0 0 -1 0 1 0 1 0 0 3857.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 210 -24 -310 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 210 -24 310 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 240 -24 -250 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 320 -24 -250 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 240 -24 250 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 320 -24 250 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  8 (black)
+1 0 240 -24 -230 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (black)
+1 0 240 -24 230 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  2 (black)
+1 0 340 -24 -230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 340 -24 230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  4 (black)
+1 0 390 -24 -160 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 390 -24 160 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 390 -24 -100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 410 -24 -160 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 390 -24 100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 410 -24 160 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 200 -24 -210 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -24 -210 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 200 -24 210 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -24 210 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 340 -24 -100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 340 -24 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 190 -96 -310 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 190 -96 310 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 240 -96 230 -1 0 0 0 1 0 0 0 -1 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 320 -96 230 -1 0 0 0 1 0 0 0 -1 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 340 -96 90 -1 0 0 0 1 0 0 0 -1 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 340 -96 -90 1 0 0 0 1 0 0 0 1 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (black)
+1 0 200 -96 -230 -1 0 0 0 1 0 0 0 -1 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (black)
+1 0 280 -96 -230 -1 0 0 0 1 0 0 0 -1 30499.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 420 -24 -90 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Minifig Lance (brown)
+1 6 420 -14 57 -1 0 0 0 -1 0 0 0 1 3849.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 440 -16 -70 0 0 1 0 1 0 -1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 440 -16 70 0 0 1 0 1 0 -1 0 0 4081b.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 420 -24 90 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 STEP
+0 // =Slope Brick 75  2 x  2 x  3 (black)
+1 0 200 -96 230 1 0 0 0 1 0 0 0 1 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (black)
+1 0 280 -96 230 1 0 0 0 1 0 0 0 1 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 240 -96 -230 1 0 0 0 1 0 0 0 1 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 320 -96 -230 1 0 0 0 1 0 0 0 1 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 390 -96 -160 0 0 -1 0 1 0 1 0 0 30499.dat
+0 // =Slope Brick 75  2 x  2 x  3 (light_grey)
+1 7 390 -96 160 0 0 -1 0 1 0 1 0 0 30499.dat
+0 // Brick  1 x  3 (black)
+1 0 390 -48 -110 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 390 -72 -100 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 390 -72 -130 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  3 (black)
+1 0 390 -96 -110 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (black)
+1 0 390 -48 110 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 390 -72 100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 390 -72 130 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  3 (black)
+1 0 390 -96 110 0 0 1 0 1 0 -1 0 0 3622.dat
+0 STEP
+0 // Brick  1 x  3 (black)
+1 0 210 -120 -230 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  2 (black)
+1 0 260 -120 -230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  3 (black)
+1 0 210 -120 230 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  2 (black)
+1 0 260 -120 230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 340 -104 -90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 350 -112 -90 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (light_grey)
+1 7 330 -112 -90 0 0 1 0 1 0 -1 0 0 4085b.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 340 -120 -90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 340 -104 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 350 -112 90 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (light_grey)
+1 7 330 -112 90 0 0 1 0 1 0 -1 0 0 4085b.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 340 -120 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 410 -96 -90 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (light_grey)
+1 7 410 -96 90 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 190 -120 -310 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 190 -120 310 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 170 -144 -270 0 0 -1 0 1 0 1 0 0 4444.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 170 -144 270 0 0 -1 0 1 0 1 0 0 4444.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 370 -144 -210 1 0 0 0 1 0 0 0 1 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 370 -144 210 0 0 -1 0 1 0 1 0 0 2345.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 390 -120 -90 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 390 -120 90 1 0 0 0 1 0 0 0 1 2357.dat
+0 STEP
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 160 -144 -320 1 0 0 0 1 0 0 0 1 3831.dat
+0 // Hinge Brick  1 x  4 Top (light_grey)
+1 7 160 -144 -320 1 0 0 0 1 0 0 0 1 3830.dat
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 160 -144 320 -1 0 0 0 1 0 0 0 -1 3830.dat
+0 // Hinge Brick  1 x  4 Base (light_grey)
+1 7 160 -144 320 -1 0 0 0 1 0 0 0 -1 3831.dat
+0 // Brick  1 x  1 (black)
+1 0 170 -144 -230 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 170 -144 230 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 190 -144 230 -1 0 0 0 1 0 0 0 -1 3665b.dat
+0 // Brick  1 x  2 (black)
+1 0 220 -144 230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 250 -144 230 -1 0 0 0 1 0 0 0 -1 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 190 -144 -230 1 0 0 0 1 0 0 0 1 3665b.dat
+0 // Brick  1 x  2 (black)
+1 0 220 -144 -230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 250 -144 -230 1 0 0 0 1 0 0 0 1 3665b.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 340 -144 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 340 -144 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Minifig Battleaxe (brown)
+1 6 310 -92 90 1 0 0 0 1 0 0 0 1 3848.dat
+0 // Minifig Spear with Round End (brown)
+1 6 310 -119 -90 0 0 -1 0 1 0 1 0 0 4497.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 390 -144 -90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 410 -144 -90 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 390 -144 90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 410 -144 90 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Plate  2 x  2 Corner (light_grey)
+1 7 150 -144 -270 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (light_grey)
+1 7 150 -144 270 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 STEP
+0 // Plate  2 x  8 (light_grey)
+1 7 80 -152 -300 -1 0 0 0 1 0 0 0 -1 3034.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 80 -152 300 -1 0 0 0 1 0 0 0 -1 3034.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 180 -152 -280 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 180 -152 280 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 180 -152 -230 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 180 -152 230 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 230 -152 -240 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 230 -152 240 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 340 -168 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 400 -168 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 340 -168 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 400 -168 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Brick  1 x  6 (black)
+1 0 20 -176 -310 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  4 (black)
+1 0 120 -176 -310 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  1 (black)
+1 0 170 -176 -310 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  3 (black)
+1 0 190 -176 -290 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  4 (black)
+1 0 220 -176 -250 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  1 (black)
+1 0 250 -176 -230 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  6 (black)
+1 0 20 -176 310 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  4 (black)
+1 0 120 -176 310 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  1 (black)
+1 0 170 -176 310 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  3 (black)
+1 0 190 -176 290 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  4 (black)
+1 0 220 -176 250 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  1 (black)
+1 0 250 -176 230 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 330 -192 -90 0 0 1 0 1 0 -1 0 0 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 330 -192 90 0 0 1 0 1 0 -1 0 0 3665b.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 320 -216 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 320 -216 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 -40 -200 -310 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 20 -200 -310 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 80 -200 -310 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 130 -200 -310 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 180 -200 -310 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 190 -200 -250 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  1 x  2 (black)
+1 0 250 -200 -240 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -40 -200 310 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 20 -200 310 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 80 -200 310 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 130 -200 310 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 180 -200 310 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 190 -200 250 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Brick  1 x  2 (black)
+1 0 250 -200 240 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Arch  1 x  5 x  4 (light_grey)
+1 7 350 -264 -90 1 0 0 0 1 0 0 0 1 2339.dat
+0 // Arch  1 x  5 x  4 (light_grey)
+1 7 350 -264 90 -1 0 0 0 1 0 0 0 -1 2339.dat
+0 STEP
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 310 -240 -230 1 0 0 0 1 0 0 0 1 4444.dat
+0 // Panel  2 x  5 x  6 Wall with Light Grey Scattered Stones Pattern (black)
+1 0 390 -240 -150 0 0 -1 0 1 0 1 0 0 4444p05.dat
+0 // Panel  2 x  5 x  6 Wall with Light Grey Window Stones Pattern (black)
+1 0 390 -240 150 0 0 -1 0 1 0 1 0 0 4444p04.dat
+0 // Panel  2 x  5 x  6 Wall (black)
+1 0 310 -240 230 -1 0 0 0 1 0 0 0 -1 4444.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 390 -192 -90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 390 -216 -90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 390 -192 90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 390 -216 90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 350 -264 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 350 -240 -230 1 0 0 0 1 0 0 0 1 3676.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 390 -240 -190 1 0 0 0 1 0 0 0 1 3676.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 310 -240 -90 0 0 1 0 1 0 -1 0 0 3676.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 340 -240 -90 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 340 -240 90 -1 0 0 0 1 0 0 0 -1 3747a.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 310 -240 90 -1 0 0 0 1 0 0 0 -1 3676.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 390 -240 190 0 0 -1 0 1 0 1 0 0 3676.dat
+0 // Slope Brick 45  2 x  2 Inverted Double Convex (light_grey)
+1 7 350 -240 230 0 0 -1 0 1 0 1 0 0 3676.dat
+0 // Arch  1 x  5 x  4 (light_grey)
+1 7 410 -264 -90 1 0 0 0 1 0 0 0 1 2339.dat
+0 // Arch  1 x  5 x  4 (light_grey)
+1 7 410 -264 90 -1 0 0 0 1 0 0 0 -1 2339.dat
+0 STEP
+0 // Brick  2 x  2 Corner (black)
+1 0 390 -240 -90 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 390 -240 90 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Plate  2 x  4 (black)
+1 0 420 -264 0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 320 -240 -210 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 370 -240 -160 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 370 -240 160 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 320 -240 210 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 350 -264 -80 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 350 -264 80 0 0 -1 0 1 0 1 0 0 3004.dat
+0 STEP
+0 // Plate  4 x  8 (light_grey)
+1 7 320 -248 -180 0 0 -1 0 1 0 1 0 0 3035.dat
+0 // Plate  4 x  8 (light_grey)
+1 7 320 -248 180 0 0 -1 0 1 0 1 0 0 3035.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 410 -264 -80 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 410 -264 80 0 0 -1 0 1 0 1 0 0 3660.dat
+0 STEP
+0 // Plate  2 x  3 (light_grey)
+1 7 390 -248 -180 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 390 -248 -140 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 390 -248 140 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 390 -248 180 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  3 x  3 without Corner (light_grey)
+1 7 390 -248 -230 1 0 0 0 1 0 0 0 1 2450.dat
+0 // Plate  3 x  3 without Corner (light_grey)
+1 7 390 -248 230 0 0 -1 0 1 0 1 0 0 2450.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 360 -256 -180 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 360 -256 180 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 410 -272 0 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (black)
+1 0 390 -264 -110 0 0 -1 0 1 0 1 0 0 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (black)
+1 0 390 -264 110 0 0 -1 0 1 0 1 0 0 3665b.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 390 -264 -90 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 390 -264 90 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 320 -264 90 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 320 -264 -90 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 290 -264 90 1 0 0 0 1 0 0 0 1 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 290 -264 -90 -1 0 0 0 1 0 0 0 -1 3665b.dat
+0 STEP
+0 // Brick  1 x  4 (black)
+1 0 320 -272 -250 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  3 x  3 Facet (black)
+1 0 390 -272 -230 1 0 0 0 1 0 0 0 1 2462.dat
+0 // Brick  1 x  4 (black)
+1 0 410 -272 -160 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  2 (black)
+1 0 380 -272 -130 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Arch  1 x  3 (black)
+1 0 430 -288 -50 0 0 1 0 1 0 -1 0 0 4490.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 430 -288 0 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Arch  1 x  3 (black)
+1 0 430 -288 50 0 0 1 0 1 0 -1 0 0 4490.dat
+0 // Brick  1 x  2 (black)
+1 0 380 -272 130 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  4 (black)
+1 0 410 -272 160 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  3 x  3 Facet (black)
+1 0 390 -272 230 0 0 -1 0 1 0 1 0 0 2462.dat
+0 // Brick  1 x  4 (black)
+1 0 320 -272 250 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Plate  4 x  8 (light_grey)
+1 7 320 -272 0 0 0 -1 0 1 0 1 0 0 3035.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (black)
+1 0 290 -320 -130 -1 0 0 0 1 0 0 0 -1 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (black)
+1 0 290 -320 130 1 0 0 0 1 0 0 0 1 4460a.dat
+0 STEP
+0 // Plate  1 x  3 (black)
+1 0 390 -280 -130 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 390 -288 -130 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 390 -280 130 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 390 -288 130 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Brick  1 x  2 (black)
+1 0 390 -288 -100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 390 -288 100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 410 -288 -90 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 410 -288 90 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Brick  1 x  4 (black)
+1 0 430 -312 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Plate  1 x  1 (black)
+1 0 290 -328 -130 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (black)
+1 0 290 -328 130 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (black)
+1 0 290 -336 -130 1 0 0 0 1 0 0 0 1 4085b.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (black)
+1 0 290 -336 130 -1 0 0 0 1 0 0 0 -1 4085b.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 300 -296 -250 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 360 -296 -250 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 410 -296 -200 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 410 -296 -150 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 410 -296 150 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 410 -296 200 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 360 -296 250 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 300 -296 250 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Arch  1 x  5 x  4 (black)
+1 0 290 -432 -130 1 0 0 0 1 0 0 0 1 2339.dat
+0 // Arch  1 x  5 x  4 (black)
+1 0 290 -432 130 -1 0 0 0 1 0 0 0 -1 2339.dat
+0 // Minifig Sword Shortsword (light_grey)
+1 7 290 -324 -150 0 0 1 0 -1 0 1 0 0 3847.dat
+0 // Minifig Battleaxe (brown)
+1 6 290 -316 150 0 0 -1 0 1 0 1 0 0 3848.dat
+0 // Brick  1 x  3 (black)
+1 0 430 -312 -70 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (black)
+1 0 430 -312 70 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 450 -312 -10 1 0 0 0 1 0 0 0 1 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 450 -312 10 -1 0 0 0 1 0 0 0 -1 3665b.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 430 -336 -30 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 430 -336 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 430 -336 30 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Brick  1 x  1 (black)
+1 0 430 -336 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 430 -336 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 430 -336 -70 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 430 -336 70 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  2 (black)
+1 0 380 -312 -130 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 370 -336 -130 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 370 -360 -130 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 370 -384 -130 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (black)
+1 0 370 -408 -130 0 0 1 0 1 0 -1 0 0 3665b.dat
+0 // Brick  1 x  2 (black)
+1 0 380 -312 130 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 370 -336 130 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 370 -360 130 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 370 -384 130 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (black)
+1 0 370 -408 130 0 0 1 0 1 0 -1 0 0 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (black)
+1 0 290 -408 -130 0 0 -1 0 1 0 1 0 0 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (black)
+1 0 290 -408 130 0 0 -1 0 1 0 1 0 0 3665b.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 290 -432 -110 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 290 -432 110 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Plate  1 x  8 (black)
+1 0 290 -432 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 STEP
+0 // Plate  1 x  3 (black)
+1 0 430 -344 -50 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 430 -344 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  3 (black)
+1 0 430 -344 50 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 430 -352 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  1 (black)
+1 0 430 -352 -70 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (black)
+1 0 430 -352 70 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 430 -360 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 430 -384 -70 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 430 -408 -70 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 430 -384 -30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 430 -408 -30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 430 -384 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 430 -408 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 430 -384 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 430 -408 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 430 -384 70 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 430 -408 70 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 290 -432 -130 1 0 0 0 1 0 0 0 1 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 290 -432 130 -1 0 0 0 1 0 0 0 -1 3665b.dat
+0 // Brick  1 x  3 (black)
+1 0 330 -432 -130 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  3 (black)
+1 0 330 -432 130 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 410 -432 -110 1 0 0 0 1 0 0 0 1 2345.dat
+0 // Panel Wall  3 x  3 x  6 Corner (black)
+1 0 410 -432 110 0 0 -1 0 1 0 1 0 0 2345.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 430 -432 -90 0 0 -1 0 1 0 1 0 0 3665b.dat
+0 // Arch  1 x  3 (light_grey)
+1 7 430 -432 -50 0 0 1 0 1 0 -1 0 0 4490.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 430 -432 0 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Arch  1 x  3 (light_grey)
+1 7 430 -432 50 0 0 1 0 1 0 -1 0 0 4490.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (light_grey)
+1 7 430 -432 90 0 0 -1 0 1 0 1 0 0 3665b.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 390 -432 -90 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (light_grey)
+1 7 390 -432 90 1 0 0 0 1 0 0 0 1 2357.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 380 -432 -130 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_grey)
+1 7 380 -432 130 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Plate  2 x 16 (black)
+1 0 300 -440 0 0 0 1 0 1 0 -1 0 0 4282.dat
+0 // Plate  2 x 16 (black)
+1 0 340 -440 0 0 0 1 0 1 0 -1 0 0 4282.dat
+0 // Hinge  1 x  2 Base (black)
+1 0 450 -336 0 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 455 -334.66 0 0 -0.5 -0.866 0 0.866 -0.5 1 0 0 3938.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 459 -341.588 0 0 -0.5 -0.866 0 0.866 -0.5 1 0 0 3794a.dat
+1 0 370 -390 0 0 -1 0 1 0 0 0 0 1 6085 - Sarrasin.ldr
+1 0 380 -428 0 0 -1 0 -1 0 0 0 0 -1 6085 - Sarrasin Rope.ldr
+0 STEP
+0 // Plate  2 x  3 (light_grey)
+1 7 330 -448 0 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 340 -472 0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 340 -480 10 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 340 -480 -10 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  3 x  2 with Hole (light_grey)
+1 7 350 -488 0 0 0 -1 0 1 0 1 0 0 3176.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 340 -512 0 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Minifig Torch (light_grey)
+1 7 269 -422 110 0 1 0 0 0 1 1 0 0 3959.dat
+0 // Minifig Torch (light_grey)
+1 7 269 -422 -110 0 1 0 0 0 1 1 0 0 3959.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 340 -464 110 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 340 -488 110 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 // Technic Axle Pin (light_grey)
+1 7 340 -478 120 0 0 -1 0 1 0 1 0 0 3749.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 340 -478 125 -1 0 0 0 1 0 0 0 -1 4265a.dat
+0 // Technic Wedge Belt Wheel - Not Reinforced (brown)
+1 6 340 -478 135 -1 0 0 0 1 0 0 0 -1 4185a.dat
+0 // Plate  1 x  2 (black)
+1 0 370 -440 -140 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 370 -440 140 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Wing  4 x  4 Left (black)
+1 0 420 -440 -120 1 0 0 0 1 0 0 0 1 3936.dat
+0 // Wing  4 x  4 Right (black)
+1 0 420 -440 120 -1 0 0 0 1 0 0 0 -1 3935.dat
+0 // Plate  2 x  8 (black)
+1 0 420 -440 0 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Plate  1 x 10 (black)
+1 0 450 -440 0 0 0 1 0 1 0 -1 0 0 4477.dat
+1 0 346 -487 125 1 0 0 0 -1 0 0 0 -1 6085 - Drawbridge Rope.ldr
+0 STEP
+1 0 550 -24 0 1 0 0 0 1 0 0 0 1 6085 - Drawbridge.ldr
+0 // Brick  1 x  6 (black)
+1 0 340 -464 -150 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  3 x  3 Facet (black)
+1 0 430 -464 -110 1 0 0 0 1 0 0 0 1 2462.dat
+0 // Brick  1 x  8 (black)
+1 0 450 -464 0 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Brick  3 x  3 Facet (black)
+1 0 430 -464 110 0 0 -1 0 1 0 1 0 0 2462.dat
+0 // Brick  1 x  6 (black)
+1 0 340 -464 150 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 290 -272 -180 0 0 1 0 1 0 -1 0 0 3700.dat
+0 STEP
+0 // Plate  1 x  1 (black)
+1 0 290 -472 -150 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (black)
+1 0 290 -480 -150 1 0 0 0 1 0 0 0 1 4085b.dat
+0 // Plate  1 x  1 (black)
+1 0 290 -488 -150 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Brick  1 x  2 (black)
+1 0 340 -488 -150 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 390 -488 -150 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 430 -488 -110 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  2 (black)
+1 0 450 -488 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 450 -488 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 450 -488 60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 430 -488 110 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  1 (black)
+1 0 390 -488 150 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 340 -488 150 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  1 (black)
+1 0 290 -472 150 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (black)
+1 0 290 -480 150 -1 0 0 0 1 0 0 0 -1 4085b.dat
+0 // Plate  1 x  1 (black)
+1 0 290 -488 150 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 -170 -384 -330 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Flag  4 x  1 with First Wave Left (red)
+1 4 -170 -462 -330 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 4495a.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 -170 -384 330 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Flag  4 x  1 with First Wave Left (red)
+1 4 -170 -462 330 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 4495a.dat
+0 // Minifig Lance (dark_grey)
+1 8 290 -484 -170 0 1 0 0 0 1 1 0 0 3849.dat
+0 // Minifig Lance (dark_grey)
+1 8 290 -485 170 0 1 0 0 0 1 1 0 0 3849.dat
+0 // Flag  4 x  1 with First Wave Left (blue)
+1 1 290 -600 -170 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 4495a.dat
+0 // Flag  4 x  1 with First Wave Left (red)
+1 4 290 -624 -170 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 4495a.dat
+0 // Flag  4 x  1 with First Wave Left (blue)
+1 1 290 -601 170 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 4495a.dat
+0 // Flag  4 x  1 with First Wave Left (red)
+1 4 290 -625 170 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 4495a.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 463 -348.517 0 0 -0.5 -0.866 0 0.866 -0.5 1 0 0 3957a.dat
+0 // Flag  2 x  2 with Red Square and Yellowed Winged Dragon Pattern (blue)
+1 1 505 -421.263 0 0 -0.5 0.866 0 0.866 0.5 -1 0 0 2335p41.dat
+0 // Minifig Shield Triangular with Blue Dragon Pattern (light_grey)
+1 7 444 -326 -70 0 0 -1 0 1 0 1 0 0 3846p4c.dat
+0 // Minifig Shield Triangular with Blue Dragon Pattern (light_grey)
+1 7 444 -326 70 0 0 -1 0 1 0 1 0 0 3846p4c.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 440 -134 90 0 -1 0 0 0 -1 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 440 -134 -90 0 -1 0 0 0 -1 1 0 0 3005.dat
+
+
+0 STEP
+0 FILE 6085 - Sarrasin.ldr
+0 Black portcullis gate assembly made of long plates forming a barred lattice door.
+0 Name: 6085 - Sarrasin.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  1 x 10 (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x  6 (black)
+1 0 -20 0 0 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x 10 (black)
+1 0 40 0 0 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 80 0 0 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 160 0 0 0 0 -1 0 1 0 1 0 0 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 120 0 0 0 0 -1 0 1 0 1 0 0 4477.dat
+0 STEP
+0 // Plate  1 x 10 (black)
+1 0 90 -8 -70 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 90 -8 -30 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 90 -8 30 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 90 -8 70 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  1 x  2 (black)
+1 0 -10 -8 -50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 -10 -8 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  3 x  2 with Hole (black)
+1 0 -10 -8 0 0 0 1 0 1 0 -1 0 0 3176.dat
+
+
+0 STEP
+0 FILE 6085 - Drawbridge.ldr
+0 Drawbridge platform constructed from large grey and black plates with clip attachments for ropes.
+0 Name: 6085 - Drawbridge.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  4 x 12 (black)
+1 0 0 0 -40 1 0 0 0 1 0 0 0 1 3029.dat
+0 // Plate  4 x 12 (black)
+1 0 0 0 40 1 0 0 0 1 0 0 0 1 3029.dat
+0 STEP
+0 // Plate  2 x  8 (black)
+1 0 120 8 0 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 30 8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 -30 8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 -90 8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -110 8 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 130 0 70 0 0 -1 0 1 0 1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 130 0 -70 0 0 -1 0 1 0 1 0 0 4081b.dat
+
+
+0 STEP
+0 FILE 6085 - Sarrasin Rope.ldr
+0 Flexible rope assembly made of linked cylinder segments used to raise the portcullis.
+0 Name: 6085 - Sarrasin Rope.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !KEYWORDS flexible, string, rope
+
+0 !LDCAD CONTENT [type=path] [addFallBack=default] [looped=false] [displayKind=mm] [curveStep=0] [displayLenCor=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=16 2 0 -1 0 0 0 -1 0 0 0 1] [prevCPDist=25] [nextCPDist=25] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=11 0 0 0 -1 0 1 0 0 0 0 1] [prevCPDist=22.5] [nextCPDist=39.5] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=76 40 0 -1 0 0 0 -1 0 0 0 1] [prevCPDist=45] [nextCPDist=84.5] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-28 110 80 0 0.866025 0.5 -1 0 0 0 -0.5 0.866025] [prevCPDist=25] [nextCPDist=25] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-164 100 180 1 0 0 0 1 0 0 0 1] [prevCPDist=18.5] [nextCPDist=21.5] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-154 78 180 0 -1 0 1 0 0 0 0 1] [prevCPDist=8] [nextCPDist=4] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-161 105 179 0 1 0 -1 0 0 0 0 1] [prevCPDist=13.5] [nextCPDist=25] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=1 0 0 0 1 0 0 0 1] [donPart=6085 - ldcLQRopeSeg.dat] [donYSize=400%] [donCen=absCen] [donCenYOfs=0] [donFinScale=segMerge] [donPlace=refsStat] [donYAlign=0] [donInline=true] [segSize=75%] [segSizeTol=5%] [segsCnt=0] [segsGrp=0] [segsMaxMerge=0] [segsMrgAng=0] [segsMrgRollAng=0] [segsEdgeDelKind=keepFirstLeft]
+
+0 !LDCAD GENERATED [generator=LDCad 1.6d]
+0 //This is the fallback LDraw content for above PATH configuration.
+0 // Do not edit, any changes will be lost upon regeneration.
+0 // The path is approx 213.10 mm (532.75) and exists out of 123 segments.
+
+0 //Some general hints about the document.
+0 UNOFFICIAL PART
+0 BFC CERTIFY CCW
+
+0 //Some of this content has been generated from other LDraw files, many thanks to all involved.
+0 // Credits for "6085 - ldcLQRopeSeg.dat":
+0 // Author: LDCad
+
+0 //Segments
+0 // Cylinder 1.0 (main_colour)
+1 16 15.777127 5.731837 0 -1.497332 0.238044 0 -0.089424 -3.985864 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 15.039977 8.883872 0 -1.464697 0.861198 0 -0.323518 -3.898989 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 13.46864 11.443265 0 -1.314062 1.92555 0 -0.723353 -3.498004 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 10.759813 12.821902 0 -0.788143 3.397366 0 -1.276256 -2.098019 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 7.729038 12.272127 0 0.118831 3.980417 0 -1.495286 0.316326 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 5.187954 10.613961 0 0.73022 3.487881 0 -1.310259 1.943828 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 3.194021 8.362653 0 1.074004 2.787481 0 -1.047147 2.858973 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 2.050649 5.578032 0 1.354616 1.714893 0 -0.644218 3.605956 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 2.585826 2.582424 0 1.493731 -0.364685 0 0.136998 3.976278 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 5.107475 0.760617 0 1.010778 -2.950269 0 1.1083 2.690667 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 8.067561 0.105617 0 0.431028 -3.824563 0 1.436738 1.147387 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 11.060232 -0.047473 0 0.128199 -3.978356 0 1.494512 0.341262 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 34.973391 -0.148703 0 0.008865 -24.943294 0 1.499974 0.147411 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 37.934036 -0.078542 0 -0.028818 -3.992229 0 1.499723 -0.076714 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 40.917647 0.040415 0 -0.055295 -3.990252 0 1.49898 -0.147193 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 43.897679 0.229573 0 -0.089293 -3.985885 0 1.49734 -0.237695 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 46.86994 0.517101 0 -0.136487 -3.976402 0 1.493778 -0.363324 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 49.829413 0.915469 0 -0.190948 -3.960481 0 1.487797 -0.508299 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 52.764109 1.469036 0 -0.265529 -3.929907 0 1.476311 -0.706832 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 55.658113 2.207137 0 -0.355637 -3.879116 0 1.457231 -0.946699 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 58.485799 3.169486 0 -0.46508 -3.796189 0 1.426079 -1.238033 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 61.209553 4.396675 0 -0.594794 -3.665631 0 1.377033 -1.583329 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 63.777909 5.923932 0 -0.74261 -3.469294 0 1.303277 -1.976811 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 66.124736 7.775167 0 -0.903343 -3.187679 0 1.197485 -2.404679 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 68.215057 9.911127 0 -1.049143 -2.853783 0 1.072054 -2.792794 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 70.006674 12.30336 0 -1.180445 -2.46366 0 0.9255 -3.142317 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 71.496262 14.894193 0 -1.28469 -2.061222 0 0.77432 -3.419816 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 72.703569 17.627371 0 -1.36082 -1.679724 0 0.631006 -3.622472 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 73.673243 20.452774 0 -1.411337 -1.352449 0 0.508062 -3.756948 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 74.430805 23.341997 0 -1.445942 -1.062298 0 0.399064 -3.849065 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.004584 26.273054 0 -1.468813 -0.809994 0 0.304283 -3.909947 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.424847 29.229783 0 -1.483091 -0.597856 0 0.224591 -3.947955 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.71908 32.201516 0 -1.49156 -0.422996 0 0.158903 -3.970498 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.903285 35.18202 0 -1.49652 -0.271839 0 0.102119 -3.983702 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.991348 38.16685 0 -1.499078 -0.140003 0 0.052594 -3.990511 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.993401 41.152889 0.007653 -1.499976 -0.022555 -0.000044 0.008473 -3.992893 -0.003289 -0.000025 -0.008757 1.499996 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.930348 44.137747 0.057174 -1.499776 0.068899 0.001556 -0.025903 -3.991951 -0.021739 0.00118 -0.057933 1.499842 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.796317 47.118681 0.166836 -1.4987 0.163322 0.011556 -0.061705 -3.987379 -0.049851 0.0095 -0.133853 1.499127 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.578584 50.091396 0.34504 -1.496315 0.272737 0.023296 -0.103592 -3.97738 -0.082459 0.017573 -0.223248 1.497551 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.277288 53.051919 0.591517 -1.492589 0.384157 0.036758 -0.146737 -3.961998 -0.115035 0.025405 -0.314281 1.495131 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 74.887814 55.995332 0.909948 -1.487223 0.50114 0.052215 -0.192577 -3.940144 -0.148491 0.032887 -0.409757 1.491719 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 74.409093 58.916654 1.301119 -1.48016 0.620173 0.069635 -0.239845 -3.911819 -0.18165 0.040007 -0.506792 1.487331 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 73.823746 61.805614 1.779089 -1.469832 0.759376 0.090648 -0.295748 -3.870732 -0.219501 0.046129 -0.620131 1.481081 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 73.153848 64.66365 2.32579 -1.459156 0.876236 0.111863 -0.343675 -3.829432 -0.249827 0.052458 -0.715151 1.474813 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 72.362783 67.470054 2.970858 -1.442342 1.031783 0.139345 -0.407978 -3.764461 -0.289322 0.05661 -0.841451 1.465222 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 71.469391 70.224807 3.698843 -1.424167 1.171354 0.167694 -0.466993 -3.696008 -0.322706 0.060555 -0.954584 1.455246 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 70.464303 72.915119 4.517181 -1.401589 1.319313 0.199786 -0.530637 -3.612348 -0.356272 0.063027 -1.074305 1.443314 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 69.36151 75.541117 5.414398 -1.377813 1.452484 0.232181 -0.589372 -3.526654 -0.384032 0.065371 -1.181856 1.431297 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 68.142249 78.080715 6.405456 -1.3466 1.605007 0.270433 -0.65761 -3.415446 -0.413927 0.064938 -1.304783 1.416168 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 66.816196 80.530247 7.482315 -1.312291 1.749229 0.309984 -0.723777 -3.296294 -0.439079 0.063549 -1.420712 1.4004 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 65.394118 82.88897 8.636108 -1.276418 1.879984 0.349267 -0.78545 -3.175249 -0.458539 0.06185 -1.525526 1.38483 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 63.8703 85.140791 9.871157 -1.234215 2.015272 0.391887 -0.850515 -3.035408 -0.475793 0.057773 -1.633632 1.367496 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 62.255463 87.285774 11.178603 -1.189983 2.138922 0.433952 -0.911656 -2.892884 -0.487723 0.053136 -1.732054 1.350486 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 60.558504 89.324032 12.551088 -1.144412 2.250717 0.474807 -0.968503 -2.750133 -0.494644 0.048205 -1.820665 1.334124 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 58.7781 91.242541 13.989315 -1.093145 2.362275 0.517235 -1.026328 -2.592405 -0.498235 0.041051 -1.908631 1.316902 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 56.927397 93.048894 15.482547 -1.04252 2.458881 0.556705 -1.077947 -2.441345 -0.496917 0.034373 -1.984319 1.301212 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 55.020733 94.757527 17.019277 -0.99602 2.536898 0.591363 -1.121189 -2.307749 -0.491291 0.029643 -2.045048 1.287992 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 53.046533 96.337673 18.608078 -0.938256 2.625335 0.630092 -1.170159 -2.141331 -0.48337 0.020092 -2.113314 1.272532 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 51.023086 97.813499 20.234363 -0.886524 2.694469 0.662959 -1.209917 -1.997936 -0.471997 0.013215 -2.166072 1.260042 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 48.955919 99.188319 21.893533 -0.836127 2.754559 0.692909 -1.245329 -1.861712 -0.458297 0.00691 -2.211383 1.248936 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 46.849698 100.465183 23.581662 -0.786337 2.807865 0.72046 -1.27737 -1.729914 -0.442728 0.000805 -2.251016 1.238923 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 44.705789 101.638914 25.297212 -0.734083 2.858598 0.746955 -1.308082 -1.592814 -0.42531 -0.006519 -2.288043 1.229296 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 42.532761 102.725103 27.033428 -0.686836 2.899263 0.769437 -1.333461 -1.472859 -0.407121 -0.01179 -2.317055 1.221564 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 40.333258 103.725088 28.787968 -0.640436 2.93542 0.78984 -1.356303 -1.356899 -0.388092 -0.0169 -2.342203 1.214717 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 37.920749 104.706514 30.708647 -0.5902 2.971437 0.80972 -1.378799 -1.230719 -0.367644 -0.024015 -2.366363 1.20797 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 35.486408 105.602463 32.643147 -0.54304 3.00163 0.826825 -1.397928 -1.114701 -0.347053 -0.030069 -2.385674 1.202462 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 33.223091 106.357529 34.438478 -0.50456 3.02315 0.840032 -1.412219 -1.024909 -0.327717 -0.032502 -2.39873 1.198727 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 30.941568 107.029436 36.243993 -0.459717 3.04704 0.853481 -1.427304 -0.916776 -0.30691 -0.038246 -2.412229 1.194728 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 28.650092 107.651697 38.054513 -0.42702 3.061859 0.86293 -1.437412 -0.844354 -0.28851 -0.038758 -2.41989 1.192524 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 26.34316 108.191783 39.872051 -0.383351 3.081628 0.87344 -1.449493 -0.739856 -0.267808 -0.044845 -2.428983 1.189698 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 24.027493 108.681024 41.692683 -0.350454 3.094485 0.880813 -1.457751 -0.666596 -0.249512 -0.046323 -2.433842 1.188239 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 21.703579 109.119208 43.515725 -0.319148 3.105812 0.887064 -1.464885 -0.597609 -0.23176 -0.047505 -2.437329 1.187183 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 17.027522 109.827148 47.168077 -0.272179 5.464409 0.894024 -1.474007 -0.844617 -0.210745 -0.056755 -4.269673 1.185878 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 12.328429 110.346855 50.816631 -0.215028 5.494688 0.901013 -1.483331 -0.626505 -0.177854 -0.059085 -4.268389 1.185978 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 7.607331 110.697063 54.456969 -0.162405 5.520751 0.904683 -1.489924 -0.426663 -0.147426 -0.061253 -4.259404 1.187356 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 2.865352 110.888888 58.081982 -0.113454 5.545253 0.905237 -1.494347 -0.240235 -0.11944 -0.063679 -4.242134 1.190076 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -1.895305 110.953559 61.686885 -0.072403 5.567292 0.903212 -1.496879 -0.088536 -0.094832 -0.064128 -4.219084 1.193824 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -6.67844 110.895381 65.262051 -0.033859 5.593232 0.898076 -1.498199 0.055802 -0.072507 -0.065226 -4.185199 1.199251 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -13.906656 110.636133 70.552672 0.002618 8.045937 0.887266 -1.498503 0.277498 -0.052438 -0.066954 -5.896127 1.208308 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -21.232398 110.246098 75.692918 0.035554 8.154815 0.863787 -1.498348 0.42604 -0.029209 -0.060749 -5.735494 1.225977 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -23.711401 110.11981 77.339886 0.046147 3.314277 0.835307 -1.4986 0.16946 -0.012095 -0.045489 -2.220502 1.24584 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -26.226627 110.022055 78.946236 0.038799 3.356446 0.811582 -1.499105 0.136316 -0.007891 -0.034339 -2.15858 1.261457 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -28.793701 109.995892 80.47162 0.013763 3.421964 0.772857 -1.499878 0.049611 -0.004289 -0.013278 -2.057056 1.285563 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -31.336547 110.042014 82.036136 -0.014663 3.403718 0.784129 -1.499902 -0.045618 -0.000104 0.00887 -2.0872 1.278727 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -36.323322 110.191234 85.325012 -0.027942 5.839976 0.822706 -1.499566 -0.167103 0.003757 0.02282 -3.830144 1.254249 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -46.140601 110.564915 92.129517 -0.030584 10.663918 0.853509 -1.499221 -0.401736 0.013394 0.037444 -7.374872 1.233427 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -67.941084 111.371075 107.852199 -0.014263 22.654461 0.877617 -1.498843 -0.838038 0.038006 0.057147 -16.325808 1.215872 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -91.952632 111.90857 125.59834 0.045028 24.873391 0.890416 -1.495516 -0.563199 0.112631 0.106791 -18.375015 1.201862 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -108.683494 111.897712 138.108281 0.134571 17.581759 0.88793 -1.48308 0.001137 0.224664 0.179901 -13.142212 1.1879 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -120.607139 111.590297 147.075514 0.213432 12.757695 0.876151 -1.465975 0.317746 0.31627 0.235298 -9.592501 1.175727 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -127.746498 111.235032 152.462346 0.276183 7.960391 0.861342 -1.448831 0.385284 0.384101 0.27315 -6.005177 1.166429 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -135.077363 110.682634 158.006337 0.326089 7.945738 0.846829 -1.434927 0.587458 0.428002 0.290946 -6.008208 1.161763 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -140.017212 110.173746 161.748726 0.377652 5.550285 0.828933 -1.418675 0.565264 0.471837 0.307799 -4.204529 1.157687 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -144.747975 109.540314 165.337842 0.423455 5.535482 0.811174 -1.404078 0.727257 0.504164 0.315041 -4.199141 1.15664 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -147.102357 109.147762 167.126109 0.469049 3.15395 0.791332 -1.387831 0.509611 0.535981 0.322363 -2.395135 1.156079 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -149.453065 108.70222 168.912654 0.500834 3.145062 0.776711 -1.376514 0.583376 0.554239 0.323068 -2.389986 1.157385 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -151.793578 108.183053 170.692734 0.539483 3.132154 0.757963 -1.362201 0.678279 0.574008 0.321508 -2.381875 1.160175 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -154.119224 107.570846 172.462789 0.586074 3.113327 0.733935 -1.343826 0.798454 0.595116 0.317252 -2.369271 1.164979 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -156.423088 106.842631 174.217507 0.641673 3.085739 0.70323 -1.319958 0.948562 0.617036 0.309784 -2.349941 1.17249 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -158.684124 105.927712 175.941068 0.723235 3.032902 0.654852 -1.281102 1.183938 0.641068 0.292763 -2.311617 1.187519 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -160.866194 104.748495 177.605796 0.832982 2.935514 0.583154 -1.21919 1.52067 0.661243 0.26404 -2.239219 1.213544 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -162.861705 103.125235 179.129591 1.001203 2.709698 0.459802 -1.097265 2.078781 0.660438 0.208807 -2.068813 1.265861 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -164.136043 100.572063 180.103909 1.313639 1.858584 0.192028 -0.719796 3.235951 0.504147 0.079041 -1.420587 1.399629 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -164.010673 97.503908 180.013581 1.499171 0.132094 0.004926 -0.049737 3.989339 0.04015 -0.003594 -0.107253 1.499454 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -163.856513 91.52845 179.999992 1.499662 -0.14831 0.000001 0.031845 6.984358 -0.000022 0 0.000104 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -163.670731 88.551644 180 1.497619 -0.224913 0 0.084491 3.986627 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -163.34568 85.583104 180 1.492286 -0.404435 0 0.15193 3.972431 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -162.741392 82.657684 180 1.473299 -0.75004 0 0.281761 3.92189 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -161.493153 79.938182 180 1.384087 -1.539125 0 0.578189 3.684409 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -158.992024 78.226782 180 0.943129 -3.104951 0 1.166408 2.510589 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -155.965738 77.956653 180 0.258077 -3.933423 0 1.477632 0.686995 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -152.98376 78.148725 179.994212 -0.045149 -3.991151 0.002495 1.49932 -0.120186 -0.000041 0.000116 0.006636 1.499998 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -151.67419 81.089727 179.885566 -1.277491 -2.091648 0.024785 0.78614 -3.398962 0.040275 0 0.125886 1.499254 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -151.123662 84.034672 179.776494 -1.45761 -0.941946 0.012735 0.354081 -3.877614 0.052426 0 0.143615 1.499029 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -150.844666 87.008387 179.666356 -1.490193 -0.455544 0.006297 0.171246 -3.964177 0.054794 0 0.146821 1.498986 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -150.820899 89.993671 179.55579 -1.499592 -0.09301 0.001294 0.034964 -3.989148 0.055487 0 0.147746 1.498973 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -151.06998 92.968716 179.445603 -1.496521 0.271627 -0.00377 -0.102109 -3.980987 0.05526 0 0.147444 1.498977 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -151.617085 95.903828 179.336895 -1.478997 0.665419 -0.009129 -0.250138 -3.934433 0.053975 0 0.14572 1.499001 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -152.545333 98.742749 179.23175 -1.435364 1.158773 -0.015428 -0.435579 -3.81851 0.050839 0 0.141426 1.499059 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -153.97012 101.370462 179.134427 -1.338866 1.799425 -0.022347 -0.676342 -3.562084 0.044237 0 0.131929 1.499181 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -156.035394 103.540393 179.05406 -1.128959 2.628079 -0.027521 -0.987649 -3.004098 0.031458 0 0.111263 1.499418 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -158.75131 104.833812 179.006155 -0.722265 3.499041 -0.023442 -1.314661 -1.922347 0.012879 0 0.071198 1.499762 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -161.624922 105.095591 178.99646 -0.226809 3.946994 -0.008304 -1.482753 -0.603751 0.00127 0 0.022361 1.499976 4-4cyli.dat
+
+
+0 STEP
+0 FILE 6085 - Drawbridge Rope.ldr
+0 Long rope assembly of connected cylinder segments used to operate the drawbridge.
+0 Name: 6085 - Drawbridge Rope.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !KEYWORDS flexible, string, rope
+
+0 !LDCAD CONTENT [type=path] [addFallBack=default] [looped=false] [displayKind=mm] [curveStep=0] [displayLenCor=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-5 0 0 0 -1 0 1 0 0 0 0 1] [prevCPDist=25] [nextCPDist=10.5] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-6 -17 0 0 1 0 -1 0 0 0 0 1] [prevCPDist=12.5] [nextCPDist=13.5] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-6 0 0 0 -1 0 1 0 0 0 0 1] [prevCPDist=10] [nextCPDist=18.5] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=92 -8 15 0 -1 0 1 0 0 0 0 1] [prevCPDist=25] [nextCPDist=25] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=354 -465 48 0 0 -1 1 0 0 0 -1 0] [prevCPDist=28] [nextCPDist=25] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=354 -465 202 0 0 -1 1 0 0 0 -1 0] [prevCPDist=25] [nextCPDist=25] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=92 -9 234 0 1 0 1 0 0 0 0 -1] [prevCPDist=25] [nextCPDist=24] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=72 -9 242 0 0 -1 1 0 0 0 -1 0] [prevCPDist=6.5] [nextCPDist=17.5] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=97 -11 235 0 0 1 1 0 0 0 1 0] [prevCPDist=18.5] [nextCPDist=25] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=1 0 0 0 1 0 0 0 1] [donPart=6085 - ldcLQRopeSeg.dat] [donYSize=400%] [donCen=absCen] [donCenYOfs=0] [donFinScale=segMerge] [donPlace=refsStat] [donYAlign=0] [donInline=true] [segSize=75%] [segSizeTol=5%] [segsCnt=0] [segsGrp=0] [segsMaxMerge=0] [segsMrgAng=0] [segsMrgRollAng=0] [segsEdgeDelKind=keepFirstLeft]
+
+0 !LDCAD GENERATED [generator=LDCad 1.6d]
+0 //This is the fallback LDraw content for above PATH configuration.
+0 // Do not edit, any changes will be lost upon regeneration.
+0 // The path is approx 575.33 mm (1438.34) and exists out of 114 segments.
+
+0 //Some general hints about the document.
+0 UNOFFICIAL PART
+0 BFC CERTIFY CCW
+
+0 //Some of this content has been generated from other LDraw files, many thanks to all involved.
+0 // Credits for "6085 - ldcLQRopeSeg.dat":
+0 // Author: LDCad
+
+0 //Segments
+0 // Cylinder 1.0 (main_colour)
+1 16 -1.555823 -0.601932 0 0.258238 -3.943023 0 1.477604 0.689114 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0.916422 -2.35381 0 0.789474 -3.403527 0 1.275434 2.106732 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 2.528527 -4.921748 0 1.216711 -2.341035 0 0.877277 3.246824 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 3.193881 -7.87329 0 1.442165 -1.100775 0 0.412503 3.848455 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 2.904547 -10.882102 0 1.498612 0.172127 0 -0.064503 3.999085 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 1.624608 -13.622412 0 1.392167 1.490252 0 -0.558455 3.715032 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.578862 -15.699093 0 1.09336 2.740362 0 -1.02692 2.917658 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -3.393406 -16.819548 0 0.63971 3.620522 0 -1.35675 1.707083 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -6.405603 -17.060909 0 0.195933 3.968493 0 -1.487148 0.522852 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -9.390021 -16.642439 0 -0.151154 3.982413 0 -1.492365 -0.403357 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -12.128575 -15.372846 0 -0.566318 3.706546 0 -1.388987 -1.511235 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -14.115981 -13.081541 0 -1.066305 2.815256 0 -1.054986 -2.845461 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -14.937911 -10.157114 0 -1.411651 1.35345 0 -0.50719 -3.767026 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -14.660545 -7.141096 0 -1.499323 -0.120281 0 0.045074 -4.00098 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -13.505419 -4.350146 0 -1.413557 -1.33921 0 0.501854 -3.772112 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -11.582642 -2.021283 0 -1.202416 -2.393053 0 0.89677 -3.208677 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -8.996968 -0.453389 0 -0.846045 -3.30532 0 1.238631 -2.257692 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -6.022636 0.103105 0 -0.361395 -3.884876 0 1.455814 -0.964391 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -3.01246 -0.044176 0.088778 0.010738 -4.0014 -0.038007 1.499962 0.028647 0.000272 0 -0.101424 1.499518 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.021139 -0.186729 0.350117 0.062553 -3.98704 -0.117287 1.498693 0.166924 0.00245 0.00245 -0.312984 1.495406 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 2.958823 -0.371676 0.696893 0.088073 -3.971509 -0.165137 1.497404 0.235025 0.004867 0.004867 -0.440671 1.490874 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 5.928915 -0.588652 1.103722 0.105413 -3.957904 -0.197649 1.496275 0.281297 0.006984 0.006984 -0.527431 1.486905 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 11.844755 -1.086815 2.037777 0.122891 -6.898593 -0.23042 1.494927 0.573947 0.009511 0.009511 -1.076151 1.482166 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 20.679456 -1.931778 3.622085 0.139665 -9.810504 -0.261872 1.493433 0.93188 0.012313 0.012313 -1.747274 1.476913 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 61.782201 -6.13559 11.504231 0.149795 -42.058788 -0.280865 1.492434 4.298009 0.014186 0.014186 -8.058767 1.473402 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 70.662249 -6.911295 12.958678 0.129892 -9.837457 -0.243548 1.494328 0.866674 0.010636 0.010636 -1.625014 1.480058 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 76.598885 -7.359383 13.798842 0.113171 -6.914953 -0.212196 1.495703 0.528552 0.008057 0.008057 -0.991035 1.484893 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 82.55968 -7.724741 14.483889 0.092854 -6.9447 -0.174102 1.497113 0.433666 0.005412 0.005412 -0.813124 1.489852 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 85.55287 -7.860481 14.738403 0.071285 -3.982325 -0.13366 1.498302 0.190226 0.003184 0.003184 -0.356674 1.49403 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 88.551323 -7.958542 14.922266 0.052121 -3.991862 -0.097726 1.499093 0.139085 0.0017 0.0017 -0.260785 1.496812 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 91.555571 -8.003156 15.005918 0.026516 -3.999963 -0.049717 1.499766 0.070758 0.00044 0.00044 -0.132672 1.499176 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 94.444204 -8.786432 15.010859 0.341568 -3.89755 -0.00926 1.460592 0.911483 0.001068 0.001068 -0.024709 1.499971 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 96.731625 -10.772067 15.032986 0.901755 -3.198539 -0.012461 1.198665 2.406412 0.00151 0.006284 -0.028995 1.499947 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 98.863257 -12.891605 15.059789 1.036464 -2.89316 -0.017242 1.084257 2.765994 0.000821 0.011321 -0.034772 1.499901 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 100.853716 -15.144117 15.08956 1.111874 -2.686151 -0.021974 1.006711 2.967388 -0.000197 0.016422 -0.038965 1.499839 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 102.777306 -17.453298 15.120997 1.146619 -2.579777 -0.02598 0.966866 3.060285 -0.001583 0.020883 -0.041458 1.499774 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 104.647047 -19.806211 15.153908 1.170171 -2.503021 -0.029921 0.938116 3.123349 -0.003094 0.025282 -0.043496 1.499698 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 108.257231 -24.610178 15.223822 1.196525 -4.221783 -0.034723 0.904103 5.589997 -0.004471 0.030401 -0.081091 1.499591 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 111.751209 -29.500915 15.298291 1.218063 -4.083598 -0.042634 0.874521 5.691649 -0.00784 0.039208 -0.086357 1.499373 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 116.83695 -36.943791 15.417696 1.236453 -5.65586 -0.051369 0.847827 8.255977 -0.011209 0.048709 -0.132079 1.499078 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 123.42945 -46.994139 15.589143 1.252002 -7.144284 -0.064174 0.823742 10.872674 -0.016667 0.062778 -0.185023 1.498534 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 134.616883 -64.803946 15.920837 1.267182 -11.719994 -0.082672 0.798366 18.638154 -0.02415 0.082831 -0.346442 1.497525 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 153.180752 -95.710998 16.577088 1.280451 -19.073949 -0.116538 0.772098 31.736552 -0.03835 0.119621 -0.672752 1.494974 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 184.64367 -150.393543 17.993427 1.287533 -31.946958 -0.18068 0.745956 55.505209 -0.065515 0.189228 -1.435684 1.487637 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 232.698229 -237.085683 21.021571 1.274642 -48.509911 -0.311108 0.718219 87.497884 -0.121465 0.330832 -3.05257 1.462347 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 275.520145 -316.339119 25.001748 1.202161 -43.260198 -0.545214 0.67903 80.054172 -0.225473 0.586282 -4.014266 1.379095 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 299.402291 -361.138536 28.100721 1.088928 -24.44127 -0.7537 0.636585 45.842654 -0.315028 0.811785 -3.163355 1.258051 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 316.107508 -392.701293 30.937119 1.007698 -17.271955 -0.863209 0.61613 32.628788 -0.351815 0.924623 -2.91867 1.175201 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 325.870117 -411.229489 33.014598 0.942794 -10.21566 -0.936405 0.607957 19.386011 -0.369322 0.995755 -2.163782 1.112091 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 331.427146 -421.80345 34.408586 0.899295 -6.013078 -0.980159 0.608292 11.44052 -0.374711 1.035012 -1.499155 1.071858 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 336.959768 -432.352459 36.033885 0.864191 -5.988789 -1.013159 0.615667 11.417809 -0.371862 1.060249 -1.748746 1.041742 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 339.71641 -437.616437 36.96005 0.830653 -3.21229 -1.042567 0.623579 6.133322 -0.369537 1.082204 -1.068477 1.013162 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 342.460484 -442.862475 38.000699 0.803086 -3.19917 -1.065758 0.635497 6.115479 -0.362728 1.095992 -1.201797 0.991255 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 345.189639 -448.085779 39.184673 0.770957 -3.182169 -1.091506 0.651767 6.089759 -0.35358 1.109425 -1.366285 0.966227 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 346.546616 -450.685243 39.850059 0.740229 -1.808172 -1.114868 0.668234 3.463291 -0.34511 1.120502 -0.870886 0.942321 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 347.894589 -453.269212 40.584596 0.712518 -1.797143 -1.135241 0.68687 3.444589 -0.33465 1.127177 -0.963015 0.921541 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 349.23013 -455.83122 41.41296 0.677761 -1.781408 -1.159741 0.712473 3.416914 -0.32067 1.132705 -1.083328 0.89564 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 350.548833 -458.36266 42.354491 0.636817 -1.760016 -1.187208 0.745119 3.378209 -0.303608 1.135457 -1.22978 0.865077 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 351.836208 -460.835995 43.476659 0.5763 -1.721467 -1.225448 0.798586 3.30687 -0.27679 1.131433 -1.457213 0.819551 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 353.043802 -463.158547 44.956648 0.465685 -1.62566 -1.289192 0.909427 3.126042 -0.225054 1.098217 -1.899317 0.733031 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 353.989807 -464.98006 47.156853 0.257425 -1.319357 -1.392583 1.152633 2.539802 -0.124839 0.924754 -2.798394 0.543257 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 354.031449 -465.060596 50.248103 0.007313 -0.24331 -1.497208 1.489673 0.468808 -0.003423 0.175562 -3.967787 0.091406 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 354.000001 -465.000001 200.441311 0 -0.000187 -1.5 1.5 0.000361 0 0.000004 -151.1394 0.000002 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 353.812619 -464.639707 203.467593 0.004195 0.215509 -1.497819 1.491935 -0.414376 -0.004195 -0.155283 -3.975445 -0.08076 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 352.651336 -462.409202 205.286092 0.279225 1.368831 -1.381634 1.12247 -2.629215 -0.138949 -0.955037 -2.689951 -0.567258 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 351.378355 -459.96704 206.480966 0.494251 1.65967 -1.272361 0.875663 -3.184484 -0.243169 -1.113073 -1.768296 -0.756284 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 350.055702 -457.432388 207.416957 0.607332 1.747736 -1.205071 0.765765 -3.349823 -0.296318 -1.137872 -1.321521 -0.842615 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 348.716864 -454.868602 208.235598 0.661075 1.778236 -1.170011 0.720386 -3.405636 -0.319837 -1.137551 -1.123312 -0.882485 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 347.365655 -452.282971 208.958728 0.700048 1.796623 -1.143087 0.690588 -3.43837 -0.335976 -1.132705 -0.985936 -0.911302 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 346.005676 -449.682366 209.60774 0.730828 1.8092 -1.12082 0.669104 -3.46002 -0.34802 -1.12614 -0.881684 -0.934155 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 343.269176 -444.454588 210.747569 0.764423 3.188242 -1.095283 0.646749 -6.091282 -0.361503 -1.116858 -1.345171 -0.958995 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 340.516949 -439.203097 211.737562 0.798343 3.20618 -1.068353 0.629035 -6.118272 -0.37172 -1.103161 -1.16844 -0.985112 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 336.371482 -431.303776 213.03761 0.828447 4.601066 -1.043144 0.615378 -8.768137 -0.379993 -1.08857 -1.455098 -1.00869 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 330.820579 -420.745572 214.524401 0.861522 6.007238 -1.01398 0.604478 -11.427037 -0.386176 -1.068824 -1.620491 -1.035719 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 322.459663 -404.881835 216.404623 0.897025 8.817275 -0.980633 0.597066 -16.730753 -0.389793 -1.043483 -1.993367 -1.06603 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 308.457562 -378.416152 218.954889 0.939603 14.456709 -0.93739 0.594471 -27.326657 -0.389075 -1.006852 -2.643245 -1.1045 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 285.912177 -336.069034 222.140544 0.995553 22.996107 -0.874193 0.601451 -43.196441 -0.37796 -0.94717 -3.258846 -1.15885 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 243.306203 -257.029465 226.49043 1.071813 43.166045 -0.771929 0.624233 -80.083836 -0.3478 -0.843534 -4.416016 -1.238209 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 191.144742 -162.599978 230.167979 1.183119 52.715108 -0.570034 0.677845 -95.446922 -0.261618 -0.625105 -3.72731 -1.362578 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 156.773475 -102.629014 231.944693 1.26093 34.821785 -0.322937 0.732915 -60.771455 -0.141759 -0.35056 -1.804169 -1.457949 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 136.714918 -69.093303 232.783438 1.273901 20.538729 -0.187183 0.766556 -34.355783 -0.074644 -0.198918 -0.861179 -1.486402 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 125.568159 -51.244911 233.185843 1.266806 11.65366 -0.122406 0.793241 -18.678144 -0.042594 -0.126374 -0.42218 -1.49439 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 117.359928 -38.656445 233.450836 1.253829 8.736836 -0.090501 0.818338 -13.417668 -0.027342 -0.090745 -0.283114 -1.497018 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 112.275497 -31.208239 233.599586 1.237959 5.63259 -0.069381 0.844372 -8.271265 -0.017235 -0.067039 -0.165678 -1.498295 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 108.790657 -26.309586 233.69404 1.222369 4.05153 -0.057179 0.86774 -5.714105 -0.011555 -0.053321 -0.110508 -1.498865 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 105.203718 -21.486803 233.784293 1.20424 4.170584 -0.04882 0.893235 -5.627892 -0.00805 -0.044011 -0.105593 -1.499184 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 103.34576 -19.122781 233.827231 1.182435 2.460495 -0.041038 0.922284 -3.156732 -0.004623 -0.035206 -0.05761 -1.499431 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 101.430816 -16.806422 233.868465 1.159488 2.537559 -0.036531 0.951142 -3.095166 -0.003158 -0.03025 -0.055299 -1.499552 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 99.447933 -14.548028 233.907899 1.131548 2.626244 -0.032211 0.984354 -3.020324 -0.001734 -0.025443 -0.052916 -1.499653 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 97.369046 -12.377686 233.94497 1.090046 2.748752 -0.027711 1.030234 -2.909327 -0.000468 -0.020463 -0.049882 -1.499744 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 95.097713 -10.408597 233.977558 0.998344 2.986874 -0.021982 1.119421 -2.664382 0.000319 -0.014394 -0.044342 -1.499839 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 92.484697 -8.919774 234.001386 0.781096 3.417046 -0.014474 1.280562 -2.084462 0.000453 -0.007151 -0.033604 -1.49993 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 89.420529 -8.969529 234.005293 0.09134 3.995349 -0.003496 1.497216 -0.243743 0.000002 -0.000211 -0.009312 -1.499996 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 83.412906 -8.999997 234.093838 0.000009 7.00491 -0.020676 1.5 -0.000042 0 0 -0.096564 -1.499857 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 80.408395 -9 234.217049 0 4.00003 -0.055677 1.5 0 0 0 -0.148574 -1.498966 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 77.411519 -9 234.447756 0 3.992651 -0.106683 1.5 0 0 0 -0.284687 -1.496201 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 74.445307 -9 234.936661 0 3.957691 -0.22453 1.5 0 0 0 -0.599164 -1.4831 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 71.807724 -9 236.382232 0 3.600854 -0.655114 1.5 0 0 0 -1.748189 -1.34938 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 71.722145 -9 239.580696 0 0.639878 -1.48071 1.5 0 0 0 -3.951312 -0.239787 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 72.033346 -9 242.551993 0 -0.258404 -1.496871 1.5 0 0 0 -3.994439 0.096834 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 72.346374 -9.027725 245.538252 0.000745 -0.394673 -1.492691 1.499953 0.031694 -0.000428 0.011861 -3.983157 0.1479 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 73.436474 -9.114918 248.346842 0.012729 -1.303459 -1.418185 1.499491 0.104277 0 0.036945 -3.783178 0.488623 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 75.39402 -9.271522 250.645831 0.044216 -2.428322 -1.191625 1.498232 0.194266 0 0.057833 -3.176134 0.91106 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 78.069059 -9.485525 252.055888 0.08745 -3.413075 -0.778769 1.496506 0.273046 0 0.053123 -2.073325 1.281998 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 81.049689 -9.723975 252.521473 0.114431 -3.902848 -0.312821 1.49543 0.312228 0 0.024401 -0.832227 1.467018 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 84.040239 -9.963219 252.173464 0.119038 -3.980394 0.104571 1.495246 0.318432 0 -0.008319 0.278167 1.496351 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 86.890619 -10.19125 251.221678 0.110094 -3.828388 0.423876 1.495603 0.306271 0 -0.032433 1.127809 1.438864 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 89.504676 -10.400374 249.738797 0.093834 -3.535159 0.697282 1.496251 0.282813 0 -0.049266 1.856065 1.32808 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 91.82317 -10.585854 247.826778 0.074698 -3.154954 0.920122 1.497015 0.252396 0 -0.058018 2.450484 1.184641 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 93.781422 -10.742514 245.545384 0.054226 -2.688809 1.109865 1.497833 0.215105 0 -0.059643 2.957422 1.009059 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 95.302458 -10.864197 242.948522 0.033757 -2.122048 1.271415 1.49865 0.169764 0 -0.053922 3.38975 0.79593 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 96.362617 -10.949009 240.131326 0.017184 -1.5144 1.388396 1.499313 0.121152 0 -0.042022 3.703272 0.567765 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 96.929422 -10.994354 237.174462 0.005592 -0.863982 1.464631 1.499776 0.069119 0 -0.025291 3.907822 0.323816 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 97.044621 -11.00357 234.334441 0.000537 -0.267753 1.49664 1.499979 0.02142 0 -0.008009 3.993765 0.100339 4-4cyli.dat
+
+
+0 STEP
+0 FILE 6085 - MiniFig01-02.ldr
+0 Red-armored knight with chainmail torso, neck-protector helmet, triangular dragon shield, and spear.
+0 Name: 6085 - MiniFig01-02.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Torso with Castle Chainmail Pattern (red)
+1 4 0 -72 0 1 0 0 0 1 0 0 0 1 973p41.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 -63 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 -63 0 0.985 -0.121 -0.119 0.17 0.704 0.689 0 -0.699 0.715 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -21.599 -57.357 -20.27 0.997 0.082 0.002 -0.082 0.997 -0.011 -0.003 0.011 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.688 -45.24 -9.884 0.985 -0.12 -0.12 0.002 0.717 -0.697 0.17 0.686 0.707 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626ap01.dat
+0 // Minifig Helmet Castle with Neck Protector (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 3844.dat
+0 // Minifig Spear with Round End (brown)
+1 6 -25.105 -99.439 -41.385 0.995 0.08 -0.064 -0.093 0.962 -0.256 0.041 0.261 0.965 4497.dat
+0 // Minifig Shield Triangular with Blue Dragon Pattern (light_grey)
+1 7 26.366 -43.874 -25.44 0.988 0.041 -0.146 0.041 0.853 0.52 0.146 -0.52 0.842 3846p4c.dat
+
+
+0 STEP
+0 FILE 6085 - MiniFig03-04.ldr
+0 Red-armored knight with chainmail torso, neck-protector helmet, triangular dragon shield, and battleaxe.
+0 Name: 6085 - MiniFig03-04.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Torso with Castle Chainmail Pattern (red)
+1 4 0 -72 0 1 0 0 0 1 0 0 0 1 973p41.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 -63 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 -63 0 0.985 -0.121 -0.119 0.17 0.704 0.689 0 -0.699 0.715 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -21.599 -57.357 -20.27 0.942 0.337 0.002 -0.337 0.942 -0.011 -0.005 0.01 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.688 -45.24 -9.884 0.985 -0.12 -0.12 0.002 0.717 -0.697 0.17 0.686 0.707 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626ap01.dat
+0 // Minifig Helmet Castle with Neck Protector (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 3844.dat
+0 // Minifig Battleaxe (brown)
+1 6 -25.486 -68.019 -33.029 -0.125 0.327 -0.937 -0.231 0.909 0.348 0.965 0.26 -0.039 3848.dat
+0 // Minifig Shield Triangular with Blue Dragon Pattern (light_grey)
+1 7 26.366 -43.874 -25.44 0.988 0.041 -0.146 0.041 0.853 0.52 0.146 -0.52 0.842 3846p4c.dat
+
+
+0 STEP
+0 FILE 6085 - MiniFig05-08.ldr
+0 Blue-armored archer knight with chainmail torso, chin-guard helmet, bow with arrow, and quiver.
+0 Name: 6085 - MiniFig05-08.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Torso with Castle Chainmail Pattern (blue)
+1 1 0 -72 0 1 0 0 0 1 0 0 0 1 973p41.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 -63 0 0.985 0.121 0.119 -0.17 0.704 0.69 0 -0.7 0.714 3819.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 -63 0 0.985 -0.121 -0.119 0.17 0.704 0.689 0 -0.699 0.715 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -21.599 -57.357 -20.27 0.254 -0.967 0.002 0.967 0.253 -0.011 0.01 0.005 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 21.596 -57.372 -20.275 0.982 0.189 -0.002 -0.189 0.982 -0.01 0 0.01 1 3820.dat
+0 // Minifig Arrow Quiver (brown)
+1 6 0 -72 0 -1 0 0 0 1 0 0 0 -1 4498.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -99 0 1 0 0 0 1 0 0 0 1 3626ap01.dat
+0 // Minifig Helmet Castle with Chin-Guard (dark_grey)
+1 8 0 -99 0 1 0 0 0 1 0 0 0 1 3896.dat
+0 // Minifig Bow with Arrow (brown)
+1 6 22.278 -53.813 -29.007 -0.056 0.182 -0.982 -0.254 0.948 0.191 0.965 0.26 -0.007 4499.dat
+
+
+0 STEP
+0 FILE 6085 - MiniFig09.ldr
+0 Blue knight commander with breastplate, face-grille helmet, plumed crest, dragon shield, and shortsword.
+0 Name: 6085 - MiniFig09.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Torso with Castle Breastplate Pattern (blue)
+1 1 0 -72 0 1 0 0 0 1 0 0 0 1 973p40.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 -63 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 -63 0 0.985 -0.121 -0.119 0.17 0.704 0.689 0 -0.699 0.715 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -21.599 -57.357 -20.27 0.997 0.082 0.002 -0.082 0.997 -0.011 -0.003 0.011 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.688 -45.24 -9.884 0.985 -0.12 -0.12 0.002 0.717 -0.697 0.17 0.686 0.707 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626ap01.dat
+0 // Minifig Helmet Castle with Fixed Face Grille (dark_grey)
+1 8 0 -96 0 1 0 0 0 1 0 0 0 1 4503.dat
+0 // Minifig Shield Triangular with Blue Dragon Pattern (light_grey)
+1 7 26.366 -43.874 -25.44 0.988 0.041 -0.146 0.041 0.853 0.52 0.146 -0.52 0.842 3846p4c.dat
+0 // Minifig Sword Shortsword (light_grey)
+1 7 -22.445 -67.21 -32.654 -0.011 0.08 -0.997 -0.261 0.962 0.08 0.965 0.261 0.011 3847.dat
+0 // Minifig Plume Triple (yellow)
+1 14 0 -108 7 1 0 0 0 1 0 0 0 1 87692.dat
+
+
+0 STEP
+0 FILE 6085 - MiniFig10.ldr
+0 Red knight commander with breastplate, face-grille helmet, plumed crest, dragon shield, and shortsword.
+0 Name: 6085 - MiniFig10.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Torso with Castle Breastplate Pattern (red)
+1 4 0 -72 0 1 0 0 0 1 0 0 0 1 973p40.dat
+0 // Minifig Arm Left (blue)
+1 1 15.552 -63 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.552 -63 0 0.985 -0.121 -0.119 0.17 0.704 0.689 0 -0.699 0.715 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -21.599 -57.357 -20.27 0.997 0.082 0.002 -0.082 0.997 -0.011 -0.003 0.011 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.688 -45.24 -9.884 0.985 -0.12 -0.12 0.002 0.717 -0.697 0.17 0.686 0.707 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626ap01.dat
+0 // Minifig Helmet Castle with Fixed Face Grille (dark_grey)
+1 8 0 -96 0 1 0 0 0 1 0 0 0 1 4503.dat
+0 // Minifig Shield Triangular with Blue Dragon Pattern (light_grey)
+1 7 26.366 -43.874 -25.44 0.988 0.041 -0.146 0.041 0.853 0.52 0.146 -0.52 0.842 3846p4c.dat
+0 // Minifig Sword Shortsword (light_grey)
+1 7 -22.445 -67.21 -32.654 -0.011 0.08 -0.997 -0.261 0.962 0.08 0.965 0.261 0.011 3847.dat
+0 // Minifig Plume Triple (yellow)
+1 14 0 -108 7 1 0 0 0 1 0 0 0 1 87692.dat
+
+
+0 STEP
+0 FILE 6085 - MiniFig11.ldr
+0 Blue knight with breastplate armor, face-grille helmet, red plume, dragon shield, and shortsword.
+0 Name: 6085 - MiniFig11.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Torso with Castle Breastplate Pattern (blue)
+1 1 0 -72 0 1 0 0 0 1 0 0 0 1 973p40.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 -63 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 -63 0 0.985 -0.121 -0.119 0.17 0.704 0.689 0 -0.699 0.715 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -21.599 -57.357 -20.27 0.997 0.082 0.002 -0.082 0.997 -0.011 -0.003 0.011 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.688 -45.24 -9.884 0.985 -0.12 -0.12 0.002 0.717 -0.697 0.17 0.686 0.707 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626ap01.dat
+0 // Minifig Helmet Castle with Fixed Face Grille (dark_grey)
+1 8 0 -96 0 1 0 0 0 1 0 0 0 1 4503.dat
+0 // Minifig Shield Triangular with Blue Dragon Pattern (light_grey)
+1 7 26.366 -43.874 -25.44 0.988 0.041 -0.146 0.041 0.853 0.52 0.146 -0.52 0.842 3846p4c.dat
+0 // Minifig Sword Shortsword (light_grey)
+1 7 -22.445 -67.21 -32.654 -0.011 0.08 -0.997 -0.261 0.962 0.08 0.965 0.261 0.011 3847.dat
+0 // Minifig Plume Triple (red)
+1 4 0 -108 7 1 0 0 0 1 0 0 0 1 87692.dat
+
+
+0 STEP
+0 FILE 6085 - MiniFig12.ldr
+0 Black knight in full breastplate armor with face-grille helmet, red plume, dragon shield, and shortsword.
+0 Name: 6085 - MiniFig12.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Torso with Castle Breastplate Pattern (black)
+1 0 0 -72 0 1 0 0 0 1 0 0 0 1 973p40.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 -63 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 -63 0 0.985 -0.121 -0.119 0.17 0.704 0.689 0 -0.699 0.715 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -21.599 -57.357 -20.27 0.997 0.082 0.002 -0.082 0.997 -0.011 -0.003 0.011 1 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.688 -45.24 -9.884 0.985 -0.12 -0.12 0.002 0.717 -0.697 0.17 0.686 0.707 3820.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626ap01.dat
+0 // Minifig Helmet Castle with Fixed Face Grille (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 4503.dat
+0 // Minifig Shield Triangular with Blue Dragon Pattern (light_grey)
+1 7 26.366 -43.874 -25.44 0.988 0.041 -0.146 0.041 0.853 0.52 0.146 -0.52 0.842 3846p4c.dat
+0 // Minifig Sword Shortsword (light_grey)
+1 7 -22.445 -67.21 -32.654 -0.011 0.08 -0.997 -0.261 0.962 0.08 0.965 0.261 0.011 3847.dat
+0 // Minifig Plume Triple (red)
+1 4 0 -108 7 1 0 0 0 1 0 0 0 1 87692.dat
+
+
+0 STEP
+0 FILE 6085 - Horse1.ldr
+0 Brown horse with red saddle and tack, carrying a lance with a red wave banner.
+0 Name: 6085 - Horse1.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Animal Horse (Complete) with Red Tack Pattern (brown)
+1 6 0 -56 0 1 0 0 0 1 0 0 0 1 4493c03.dat
+0 // Animal Horse Saddle with One Clip (red)
+1 4 0 -64 0 1 0 0 0 1 0 0 0 1 4491a.dat
+0 // Minifig Lance (dark_grey)
+1 8 -31 -84 17.5 -1 0 0 0 0 1 0 1 0 3849.dat
+0 // Flag  4 x  1 with First Wave Left (red)
+1 4 -31 -224 17.5 1 0 0 0 1 0 0 0 1 4495a.dat
+
+
+0 STEP
+0 FILE 6085 - Horse2.ldr
+0 Brown horse with blue saddle and tack, carrying a lance with a blue wave banner.
+0 Name: 6085 - Horse2.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Animal Horse (Complete) with Red Tack Pattern (brown)
+1 6 0 -56 0 1 0 0 0 1 0 0 0 1 4493c03.dat
+0 // Animal Horse Saddle with One Clip (blue)
+1 1 0 -64 0 1 0 0 0 1 0 0 0 1 4491a.dat
+0 // Minifig Lance (dark_grey)
+1 8 -31 -84 17.5 -1 0 0 0 0 1 0 1 0 3849.dat
+0 // Flag  4 x  1 with First Wave Left (blue)
+1 1 -31 -224 17.5 1 0 0 0 1 0 0 0 1 4495a.dat
+
+
+0 STEP
+0 FILE 6085 - Horse3.ldr
+0 White horse with red barding bearing blue dragons, carrying a lance with a red wave banner.
+0 Name: 6085 - Horse3.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Animal Horse  (Complete) with Brown/Black Tack Pattern (white)
+1 15 0 -56 0 1 0 0 0 1 0 0 0 1 4493c02.dat
+0 // Animal Horse Barding with Blue Dragons Pattern (red)
+1 4 0 -64 0 1 0 0 0 1 0 0 0 1 2490p42.dat
+0 // Minifig Lance (dark_grey)
+1 8 -31 -84 17.5 -1 0 0 0 0 1 0 1 0 3849.dat
+0 // Flag  4 x  1 with First Wave Left (red)
+1 4 -31 -224 17.5 1 0 0 0 1 0 0 0 1 4495a.dat
+
+
+0 STEP
+0 FILE 6085 - Horse4.ldr
+0 Black horse with blue barding bearing black dragons, carrying a lance with a blue wave banner.
+0 Name: 6085 - Horse4.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Animal Horse (Complete) with Brown/White Tack Pattern (black)
+1 0 0 -56 0 1 0 0 0 1 0 0 0 1 4493c01.dat
+0 // Animal Horse Barding with Black Dragons Pattern (blue)
+1 1 0 -64 0 1 0 0 0 1 0 0 0 1 2490p41.dat
+0 // Minifig Lance (dark_grey)
+1 8 -31 -84 17.5 -1 0 0 0 0 1 0 1 0 3849.dat
+0 // Flag  4 x  1 with First Wave Left (blue)
+1 1 -31 -224 17.5 1 0 0 0 1 0 0 0 1 4495a.dat
+
+
+0 STEP
+0 FILE 6085 - ldcLQRopeSeg.dat
+0 Single cylindrical segment unit used as the building block for flexible rope assemblies.
+0 Name: 6085 - ldcLQRopeSeg.dat
+0 Author: LDCad
+0 !LDRAW_ORG Unofficial_Primitive
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !CATEGORY LDCad donor
+
+0 // Cylinder 1.0 (main_colour)
+1 16 0 0 0 1.5 0 0 0 1 0 0 0 1.5 4-4cyli.dat
+
+
+
+

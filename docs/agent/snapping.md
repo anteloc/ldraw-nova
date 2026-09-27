@@ -1,6 +1,6 @@
 # Shadow connections and snapping
 
-The toolkit loads the supplied `offLibShadow/` automatically through pyldraw3. Agents can inspect connector IDs and occupancy, request checked placements, move a complete submodel through one of its leaf connectors, and store snaps in reproducible JSON plans.
+The toolkit loads the supplied `data/offLibShadow/` automatically through pyldraw3. Agents can inspect connector IDs and occupancy, request checked placements, move a complete submodel through one of its leaf connectors, and store snaps in reproducible JSON plans.
 
 For [stage-1 Technic structures](technic.md), a geometry-fingerprinted registry supplies reviewed `technic:` ports in place of raw mechanical inferences. Pin grips, mixed connector ends, keyed axles and round-hole bearings use seating and occupied-span checks. Invalid seating blocks application. Existing stud/clip/wheel behavior remains available; unsupported Technic interfaces need review and curation.
 
@@ -10,10 +10,10 @@ For [stage-1 Technic structures](technic.md), a geometry-fingerprinted registry 
 ./ldraw-agent doctor
 ./ldraw-agent part 3001 --limit 40
 ./ldraw-agent --no-shadow part 3001
-./ldraw-agent --shadow ./offLibShadow --shadow ./my-shadow part 3001
+./ldraw-agent --shadow ./data/offLibShadow --shadow ./my-shadow part 3001
 ```
 
-`get_parts()` uses `LDRAW_SHADOW` (paths separated by the platform path separator) when set, otherwise the repository's `offLibShadow/` if present. Explicit repeated `--shadow` arguments replace those defaults and preserve registration order; later sources can clear or replace earlier features. `--no-shadow` or Python `get_parts(shadows=[])` disables external shadows. Inline part metadata remains active. Directories, ZIPs and CSLs are supported; an explicit missing or invalid path fails. `doctor.shadow_sources` lists the selected paths. The original library and shadow files are read only.
+`get_parts()` uses `LDRAW_SHADOW` (paths separated by the platform path separator) when set, otherwise the repository's `data/offLibShadow/` if present. Explicit repeated `--shadow` arguments replace those defaults and preserve registration order; later sources can clear or replace earlier features. `--no-shadow` or Python `get_parts(shadows=[])` disables external shadows. Inline part metadata remains active. Directories, ZIPs and CSLs are supported; an explicit missing or invalid path fails. `doctor.shadow_sources` lists the selected paths. The original library and shadow files are read only.
 
 `part.connection_metadata` and each inspection instance's `connection_metadata` expose coverage, source and record counts, and parsing diagnostics. `complete` means metadata was consumed without reported gaps, including an intentional clear-to-empty result. It does not mean every physical connection has been modeled. `partial` and `none` distinguish weaker evidence; unsupported or invalid commands remain visible. Geometry completeness and connection coverage are separate fields.
 
@@ -89,7 +89,7 @@ A snap's aggregate status is `blocked`, `review_required`, or `no_collision_foun
 
 ## pyldraw3 1.7 compatibility notes and sources
 
-The [API reference](https://hbmartin.github.io/pyldraw3/api/), [local README](../pyldraw3-README.md), [LDCad shadow guide](../LDCad-Shadow-library.pdf), and [LDCad meta reference](../LDCad-metas.pdf) describe metadata loading, profiles, source precedence, contacts and rigid snapping. The supplied shadow's [license](../../offLibShadow/LICENSE.md) remains with its source files.
+The [API reference](https://hbmartin.github.io/pyldraw3/api/), [local README](../pyldraw3-README.md), [LDCad shadow guide](../LDCad-Shadow-library.pdf), and [LDCad meta reference](../LDCad-metas.pdf) describe metadata loading, profiles, source precedence, contacts and rigid snapping. The supplied shadow's [license](../../data/offLibShadow/LICENSE.md) remains with its source files.
 
 The installed version's generic snap solver aligns connector axes, while its strict stud contact check expects opposing axes. LDCad female cylinders point inward; inferred primitive sockets point outward. `connection_adapter.py` adapts temporary query frames for these two calls, retaining the original reported frames and IDs. Regression tests include ordinary and sideways stacking.
 

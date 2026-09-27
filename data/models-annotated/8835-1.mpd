@@ -1,0 +1,658 @@
+0 FILE 8835 - main.ldr
+0 Complete forklift truck assembly composed of a Technic car chassis, steerable front wheels, a lifting fork with chain mechanism, and tilting mast pillars.
+0 Name: 8835 - main.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 8835 - Car.ldr
+
+
+
+0
+0 STEP
+0 FILE 8835 - Car.ldr
+0 Light grey Technic chassis built from long beams and plates with gears, axles, and bushings forming the drivetrain and steering base.
+0 Name: 8835 - Car.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x 12 with Holes (light_grey)
+1 7 0 0 30 1 0 0 0 1 0 0 0 1 3895.dat
+0 // Technic Brick  1 x 12 with Holes (light_grey)
+1 7 0 0 -30 1 0 0 0 1 0 0 0 1 3895.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 -120 24 0 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Technic Plate  1 x  8 with Holes (light_grey)
+1 7 50 24 0 0 0 1 0 1 0 -1 0 0 4442.dat
+0 // Technic Pin (light_grey)
+1 7 -60 10 -40 0 0 1 0 1 0 -1 0 0 3673.dat
+0 // Technic Pin (light_grey)
+1 7 -60 10 40 0 0 1 0 1 0 -1 0 0 3673.dat
+0 STEP
+0 // Technic Brick  1 x  6 with Holes (light_grey)
+1 7 -130 0 0 0 0 1 0 1 0 -1 0 0 3894.dat
+0 // Tile  1 x  4 with Groove (light_grey)
+1 7 90 -8 0 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Technic Axle Pin (light_grey)
+1 7 -140 10 0 -1 0 0 0 1 0 0 0 -1 3749.dat
+1 7 50 0 -70 0 0 1 0 1 0 -1 0 0 8835 - Steering axle left.ldr
+1 7 50 0 70 0 0 1 0 1 0 -1 0 0 8835 - Steering axle right.ldr
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (light_grey)
+1 7 -160 0 70 1 0 0 0 1 0 0 0 1 3702.dat
+0 // Brick  1 x  4 (light_grey)
+1 7 10 -24 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (red)
+1 4 110 -24 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Technic Plate  1 x  8 with Holes (light_grey)
+1 7 50 -8 0 0 0 1 0 1 0 -1 0 0 4442.dat
+0 // Technic Gear 16 Tooth (light_grey)
+1 7 -150 10 0 0 0 1 0 1 0 -1 0 0 4019.dat
+0 STEP
+0 // Technic Axle 12 (black)
+1 0 -180 10 0 0 0 1 0 1 0 -1 0 0 3708.dat
+0 // Technic Gear 24 Tooth Crown Type 1 (light_grey)
+1 7 -180 10 -22 1 0 0 0 1 0 0 0 1 3650a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -180 10 -35 1 0 0 0 1 0 0 0 1 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -180 10 -55 1 0 0 0 1 0 0 0 1 4265a.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -90 -8 70 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+1 7 -220 10 0 0 1 0 1 0 0 0 0 -1 8835 - Lift.ldr
+0 // Technic Brick  1 x  8 with Holes (light_grey)
+1 7 -160 0 -70 1 0 0 0 1 0 0 0 1 3702.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -90 -8 -70 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Plate  2 x  8 (light_grey)
+1 7 -120 -8 0 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 10 -48 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (red)
+1 4 110 -48 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 10 -56 0 0 0 1 0 1 0 -1 0 0 3023b.dat
+0 // Plate  1 x  2 (red)
+1 4 110 -56 0 0 0 1 0 1 0 -1 0 0 3023b.dat
+0 // Technic Axle 10 (black)
+1 0 -100 10 0 0 0 1 0 1 0 -1 0 0 3737.dat
+0 // Technic Axle  8 (black)
+1 0 60 -38 0 1 0 0 0 1 0 0 0 1 3707.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 130 -38 0 0 0 -1 0 1 0 1 0 0 3713.dat
+0 // Technic Gear  8 Tooth (light_grey)
+1 7 90 -38 0 0 0 -1 0 1 0 1 0 0 3647.dat
+0 // Technic Gear 14 Tooth Bevel (light_grey)
+1 7 -3 -38 0 0 0 1 0 1 0 -1 0 0 4143.dat
+0 STEP
+0 // Plate  1 x  3 (red)
+1 4 -110 -16 70 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (red)
+1 4 -110 -16 -70 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 -110 -16 0 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -100 10 90 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -100 10 -90 1 0 0 0 1 0 0 0 1 3713.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_grey)
+1 7 10 -48 30 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 110 -48 30 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_grey)
+1 7 10 -48 -30 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 110 -48 -30 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Plate  1 x  6 (red)
+1 4 60 -56 30 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (red)
+1 4 60 -56 -30 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  3 x  6 without Corners (red)
+1 4 60 -56 70 -1 0 0 0 1 0 0 0 -1 2419.dat
+0 // Plate  3 x  6 without Corners (red)
+1 4 60 -56 -70 1 0 0 0 1 0 0 0 1 2419.dat
+0 // Plate  2 x  2 Corner (red)
+1 4 90 -64 30 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (red)
+1 4 90 -64 -30 0 0 1 0 1 0 -1 0 0 2420.dat
+0 STEP
+0 // Brick  1 x  2 (red)
+1 4 -120 -40 70 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -120 -40 -70 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 -130 -40 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 -110 -40 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  8 with Holes (red)
+1 4 -90 -40 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Technic Plate  2 x  8 with Holes (red)
+1 4 40 -64 0 1 0 0 0 1 0 0 0 1 3738.dat
+0 // Technic Axle  6 (black)
+1 0 -100 -30 0 1 0 0 0 1 0 0 0 1 3706.dat
+0 // Technic Gear 16 Tooth (light_grey)
+1 7 -150 -30 0 0 0 1 0 1 0 -1 0 0 4019.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -75 -30 0 0 0 1 0 1 0 -1 0 0 4265a.dat
+0 // Technic Gear 24 Tooth with 3 Axleholes (light_grey)
+1 7 -60 -30 0 0 0 1 0 1 0 -1 0 0 3648a.dat
+0 // Technic Axle 10 (black)
+1 0 -20 -148 0 0 0 1 1 0 0 0 1 0 3737.dat
+0 // Technic Gear 14 Tooth Bevel (light_grey)
+1 7 -20 -56 0 1 0 0 0 0 -1 0 1 0 4143.dat
+0 STEP
+0 // Plate  1 x  3 (red)
+1 4 -110 -48 70 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (red)
+1 4 -110 -48 -70 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Technic Brick  1 x  6 with Holes (red)
+1 4 20 -80 30 1 0 0 0 1 0 0 0 1 3894.dat
+0 // Technic Brick  1 x  6 with Holes (red)
+1 4 20 -80 -30 1 0 0 0 1 0 0 0 1 3894.dat
+0 // Slope Brick 45  2 x  4 (red)
+1 4 90 -88 0 0 0 -1 0 1 0 1 0 0 3037.dat
+0 // Technic Pin (light_grey)
+1 7 -20 -70 40 0 0 1 0 1 0 -1 0 0 3673.dat
+0 // Technic Pin (light_grey)
+1 7 -20 -70 -40 0 0 1 0 1 0 -1 0 0 3673.dat
+0 STEP
+0 // Plate  2 x  3 (red)
+1 4 -130 -56 80 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  2 x  3 (red)
+1 4 -130 -56 -80 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  1 x  1 (red)
+1 4 -90 -56 70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 -90 -56 -70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Technic Plate  2 x  4 with Holes (red)
+1 4 -20 -88 0 0 0 1 0 1 0 -1 0 0 3709b.dat
+0 // Plate  4 x  4 (red)
+1 4 40 -88 0 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Technic Brick  1 x  6 with Holes (red)
+1 4 -50 -30 50 0 -1 0 1 0 0 0 0 1 3894.dat
+0 // Plate  1 x  2 (red)
+1 4 -42 -70 50 0 -1 0 1 0 0 0 0 1 3023b.dat
+0 // Plate  1 x  2 (red)
+1 4 -34 -70 50 0 -1 0 1 0 0 0 0 1 3023b.dat
+0 // Technic Brick  1 x  8 with Holes (white)
+1 15 -10 -130 50 0 -1 0 1 0 0 0 0 1 3702.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (red)
+1 4 -60 -80 70 1 0 0 0 1 0 0 0 1 3702.dat
+0 // Technic Brick  1 x  4 with Holes (white)
+1 15 -40 -200 30 1 0 0 0 1 0 0 0 1 3701.dat
+0 // Technic Brick  1 x  4 with Holes (white)
+1 15 -40 -200 -30 1 0 0 0 1 0 0 0 1 3701.dat
+0 // Technic Plate  2 x  4 with Holes (white)
+1 15 -20 -176 0 0 0 1 0 1 0 -1 0 0 3709b.dat
+0 // Technic Pin with Friction (black)
+1 0 -120 -70 60 0 0 1 0 1 0 -1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -20 -190 40 0 0 1 0 1 0 -1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -20 -190 -40 0 0 1 0 1 0 -1 0 0 4459.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (red)
+1 4 -130 -70 50 0 1 0 -1 0 0 0 0 1 3700.dat
+0 // Technic Plate  2 x  4 with Holes (white)
+1 15 -20 -208 0 0 0 1 0 1 0 -1 0 0 3709b.dat
+0 // Technic Brick  1 x  6 with Holes (red)
+1 4 -50 -30 -50 0 -1 0 1 0 0 0 0 1 3894.dat
+0 // Plate  1 x  2 (red)
+1 4 -42 -70 -50 0 -1 0 1 0 0 0 0 1 3023b.dat
+0 // Plate  1 x  2 (red)
+1 4 -34 -70 -50 0 -1 0 1 0 0 0 0 1 3023b.dat
+0 // Technic Brick  1 x  8 with Holes (white)
+1 15 -10 -130 -50 0 -1 0 1 0 0 0 0 1 3702.dat
+0 // Technic Axle 10 (black)
+1 0 -60 -70 20 0 0 1 0 1 0 -1 0 0 3737.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -60 -70 30 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -60 -70 -30 1 0 0 0 1 0 0 0 1 3713.dat
+0 // Technic Worm Gear 2L (black)
+1 0 -60 -70 0 1 0 0 0 1 0 0 0 1 4716.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (red)
+1 4 -130 -70 -50 0 1 0 -1 0 0 0 0 1 3700.dat
+1 4 -120 -70 -70 0 -0.866025 0.5 0 0.5 0.866025 -1 0 0 8835 - Tilt lever.ldr
+0 // Technic Brick  1 x  8 with Holes (red)
+1 4 -60 -80 -70 1 0 0 0 1 0 0 0 1 3702.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -60 -70 90 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 // Technic Pulley Wheel 5D (light_grey)
+1 7 -60 -70 110 -1 0 0 0 1 0 0 0 -1 3736.dat
+0 // Technic Pin (light_grey)
+1 7 -30 -70 120 0 0 -1 0 1 0 1 0 0 3673.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -20 -219 0 1 0 0 0 0 -1 0 1 0 4265a.dat
+0 STEP
+0 // Technic Axle 10 (black)
+1 0 0 -70 0 0 0 1 0 1 0 -1 0 0 3737.dat
+0 // Brick  2 x  2 Round without Reinforcement (trans_yellow)
+1 46 -20 -248 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 -138 -70 50 0 1 0 -1 0 0 0 0 1 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 -138 -70 -50 0 1 0 -1 0 0 0 0 1 4276b.dat
+1 15 -110 -196 0 0.241922 0.970296 0 -0.970296 0.241922 0 0 0 1 8835 - Front pillar.ldr
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 -80 -200 50 -1 0 0 0 1 0 0 0 -1 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 -80 -200 -50 -1 0 0 0 1 0 0 0 -1 4276b.dat
+0 STEP
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 0 -70 90 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 0 -70 -90 1 0 0 0 1 0 0 0 1 3713.dat
+0 // Plate  4 x  6 (white)
+1 15 -80 -208 0 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // Tile  2 x  2 Round with Cross Underside Stud (white)
+1 15 -20 -256 0 0 0 1 0 1 0 -1 0 0 4150.dat
+0 STEP
+0 // Wheel Rim 12.7 x 30 Stepped with Tyre 12.7/ 51 x 30 (white)
+1 15 -180 10 90 -1 0 0 0 1 0 0 0 -1 2695c01.dat
+0 // Wheel Rim 12.7 x 30 Stepped with Tyre 12.7/ 51 x 30 (white)
+1 15 -180 10 -90 1 0 0 0 1 0 0 0 1 2695c01.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -180 10 105 1 0 0 0 1 0 0 0 1 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 -180 10 -105 -1 0 0 0 1 0 0 0 -1 4265a.dat
+
+
+
+0
+0 STEP
+0 FILE 8835 - Steering axle left.ldr
+0 Left front steering assembly combining a steering arm, pins, and a white rubber-tyred wheel.
+0 Name: 8835 - Steering axle left.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Steering Arm (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 4261.dat
+0 // Technic Pin (light_grey)
+1 7 10 10 0 1 0 0 0 1 0 0 0 1 3673.dat
+0 STEP
+0 // Technic Axle Pin (light_grey)
+1 7 0 0 40 0 -1 0 1 0 0 0 0 1 3749.dat
+0 STEP
+1 7 0 -16 40 1 0 0 0 1 0 0 0 1 8835 - Steering rack.ldr
+0 STEP
+0 // Wheel Rim 12.7 x 30 Stepped with Tyre 12.7/ 51 x 30 (white)
+1 15 20 10 0 0 0 -1 0 1 0 1 0 0 2695c01.dat
+
+
+
+0
+0 STEP
+0 FILE 8835 - Steering axle right.ldr
+0 Right front steering assembly combining a steering arm, pins, and a white rubber-tyred wheel.
+0 Name: 8835 - Steering axle right.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Steering Arm (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 4261.dat
+0 // Technic Pin (light_grey)
+1 7 -10 10 0 1 0 0 0 1 0 0 0 1 3673.dat
+0 STEP
+0 // Technic Axle Pin (light_grey)
+1 7 0 0 40 0 -1 0 1 0 0 0 0 1 3749.dat
+0 STEP
+0 // Wheel Rim 12.7 x 30 Stepped with Tyre 12.7/ 51 x 30 (white)
+1 15 -20 10 0 0 0 1 0 1 0 -1 0 0 2695c01.dat
+
+
+
+0
+0 STEP
+0 FILE 8835 - Steering rack.ldr
+0 Steering rack made of a Technic plate with holes and a gear rack for translating rotation into linear motion.
+0 Name: 8835 - Steering rack.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Plate  1 x  8 with Holes (light_grey)
+1 7 -70 0 0 1 0 0 0 1 0 0 0 1 4442.dat
+0 // Technic Gear Rack  1 x  4 (light_grey)
+1 7 -70 -8 0 1 0 0 0 1 0 0 0 1 3743.dat
+
+
+
+0
+0 STEP
+0 FILE 8835 - Fork.ldr
+0 Red and grey forklift fork assembly with chain tread, liftarm bricks, and two red forklift forks for load handling.
+0 Name: 8835 - Fork.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x  8 (red)
+1 4 -18 21 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  1 (red)
+1 4 2 21 70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 2 21 -70 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Technic Brick  1 x  4 with Holes (light_grey)
+1 7 -18 -3 0 0 0 1 0 1 0 -1 0 0 3701.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 -8 -3 60 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 -8 -3 -60 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 2 -11 60 0 0 1 0 1 0 -1 0 0 3023b.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 2 -11 -60 0 0 1 0 1 0 -1 0 0 3023b.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (light_grey)
+1 7 -18 -27 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 STEP
+0 // Technic Axle Pin (light_grey)
+1 7 -8 7 20 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Axle Pin (light_grey)
+1 7 -8 7 -20 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Axle Pin (light_grey)
+1 7 -8 -17 20 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Axle Pin (light_grey)
+1 7 -8 -17 -20 1 0 0 0 1 0 0 0 1 3749.dat
+0 STEP
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 3 -17 20 0 0 1 0 1 0 -1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 3 -17 -20 0 0 1 0 1 0 -1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 3 7 20 0 0 1 0 1 0 -1 0 0 4265a.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 3 7 -20 0 0 1 0 1 0 -1 0 0 4265a.dat
+0 STEP
+0 // Technic Chain Tread 2.5 Wide (black)
+1 0 0 0 0 0 1 0 0 0 -1 -1 0 0 3873.dat
+0 STEP
+0 // Plate  1 x  1 (light_grey)
+1 7 2 -19 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 2 -19 -50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 32 -19 70 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 32 -19 -70 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  2 x  2 Corner (light_grey)
+1 7 2 -27 70 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (light_grey)
+1 7 62 -27 70 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (light_grey)
+1 7 2 -27 -70 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (light_grey)
+1 7 62 -27 -70 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Technic Brick  1 x  4 with Holes (red)
+1 4 12 -51 70 -1 0 0 0 1 0 0 0 -1 3701.dat
+0 // Technic Brick  1 x  4 with Holes (red)
+1 4 12 -51 -70 -1 0 0 0 1 0 0 0 -1 3701.dat
+0 // Technic Forklift Fork (red)
+1 4 -8 29 70 0 0 1 0 1 0 -1 0 0 2823.dat
+0 // Technic Forklift Fork (red)
+1 4 -8 29 -70 0 0 1 0 1 0 -1 0 0 2823.dat
+0 // Technic Pin with Friction (black)
+1 0 -8 39 80 0 0 1 0 1 0 -1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -8 39 -80 0 0 1 0 1 0 -1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -8 -41 80 0 0 1 0 1 0 -1 0 0 4459.dat
+0 // Technic Pin with Friction (black)
+1 0 -8 -41 -80 0 0 1 0 1 0 -1 0 0 4459.dat
+0 STEP
+0 // Technic Brick  1 x  6 with Holes (red)
+1 4 -18 -1 90 0 1 0 -1 0 0 0 0 1 3894.dat
+0 // Technic Brick  1 x  6 with Holes (red)
+1 4 -18 -1 -90 0 1 0 -1 0 0 0 0 1 3894.dat
+
+
+
+0
+0 STEP
+0 FILE 8835 - Lift.ldr
+0 Vertical lift mechanism using long Technic beams, axles, gears, and tiles to raise the fork assembly.
+0 Name: 8835 - Lift.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Brick  1 x 16 with Holes (light_grey)
+1 7 -140 -10 -50 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -290 -18 -50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -140 -18 -50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -18 -50 1 0 0 0 1 0 0 0 1 3023b.dat
+0 STEP
+0 // Tile  1 x  8 (light_grey)
+1 7 -220 -26 -50 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -60 -26 -50 1 0 0 0 1 0 0 0 1 4162.dat
+1 7 -122 -38 0 0 1 0 1 0 0 0 0 -1 8835 - Fork.ldr
+0 STEP
+0 // Technic Axle  6 (black)
+1 0 -280 0 0 0 0 1 0 1 0 -1 0 0 3706.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -280 0 30 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 -280 0 -30 1 0 0 0 1 0 0 0 1 3713.dat
+0 // Technic Gear 16 Tooth (light_grey)
+1 7 -280 0 0 1 0 0 0 1 0 0 0 1 4019.dat
+0 // Technic Axle  8 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3707.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 0 0 -30 1 0 0 0 1 0 0 0 1 3713.dat
+0 // Technic Gear 16 Tooth (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 4019.dat
+0 // Technic Gear  8 Tooth (light_grey)
+1 7 0 0 20 1 0 0 0 1 0 0 0 1 3647.dat
+0 // Technic Bush  1/2 Type 1 (light_grey)
+1 7 0 0 35 -1 0 0 0 1 0 0 0 -1 4265a.dat
+1 7 -280 0 0 0 -1 0 0 0 1 -1 0 0 8835 - Chain.ldr
+0 STEP
+0 // Technic Brick  1 x 16 with Holes (light_grey)
+1 7 -140 -10 50 1 0 0 0 1 0 0 0 1 3703.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -290 -18 50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -140 -18 50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -18 50 1 0 0 0 1 0 0 0 1 3023b.dat
+0 // Technic Pin with Friction (black)
+1 0 -100 0 40 0 0 1 0 1 0 -1 0 0 4459.dat
+1 0 -100 0 22 0 0 1 1 0 0 0 1 0 8835 - Tilt link.ldr
+0 // Tile  1 x  8 (light_grey)
+1 7 -220 -26 50 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Tile  1 x  8 (light_grey)
+1 7 -60 -26 50 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -310 -26 0 0 0 1 0 1 0 -1 0 0 3666.dat
+
+
+
+0
+0 STEP
+0 FILE 8835 - Chain link.ldr
+0 Single black Technic chain link used as a building element for lifting chains.
+0 Name: 8835 - Chain link.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Chain Link (black)
+1 0 0 -16 0 -1 0 0 0 0 1 0 1 0 3711.dat
+
+
+
+0
+0 STEP
+0 FILE 8835 - Chain.ldr
+0 Chain assembly made of connected chain links for the lifting mechanism.
+0 Name: 8835 - Chain.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 -286 -22 1 0 0 0 0.991445 0.130526 0 -0.130526 0.991445 8835 - Chain group 1.ldr
+1 7 0 -286 -22 1 0 0 0 0.866025 0.5 0 -0.5 0.866025 8835 - Chain link.ldr
+1 7 0 -299.856 -14 1 0 0 0 0.258819 0.965926 0 -0.965926 0.258819 8835 - Chain link.ldr
+1 7 0 -303.998 1.455 1 0 0 0 -0.422618 0.906308 0 -0.906308 -0.422618 8835 - Chain link.ldr
+1 7 0 -297.234 15.957 1 0 0 0 -0.939693 0.34202 0 -0.34202 -0.939693 8835 - Chain link.ldr
+1 7 0 -282.2 21.43 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -26.2 21.5 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -10.2 21.5 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 5.8 21.5 1 0 0 0 -0.866025 -0.5 0 0.5 -0.866025 8835 - Chain link.ldr
+1 7 0 19.656 13.5 1 0 0 0 -0.258819 -0.965926 0 0.965926 -0.258819 8835 - Chain link.ldr
+1 7 0 23.798 -1.955 1 0 0 0 0.422618 -0.906308 0 0.906308 0.422618 8835 - Chain link.ldr
+1 7 0 17.034 -16.457 1 0 0 0 0.939693 -0.34202 0 0.34202 0.939693 8835 - Chain link.ldr
+1 7 0 -266.199 21.427 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -250.203 21.429 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -234.203 21.432 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -218.2 21.43 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -202.199 21.427 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -186.203 21.429 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -170.203 21.432 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -154.2 21.43 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -138.199 21.427 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -122.203 21.429 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -106.203 21.432 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -90.2 21.43 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -74.199 21.427 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -58.203 21.429 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 -42.203 21.432 1 0 0 0 -1 0 0 0 -1 8835 - Chain link.ldr
+1 7 0 2 -22 1 0 0 0 0.993572 -0.113203 0 0.113203 0.993572 8835 - Chain group 2.ldr
+
+
+
+0
+0 STEP
+0 FILE 8835 - Chain group 1.ldr
+0 Group of chain links forming part of the lifting chain system.
+0 Name: 8835 - Chain group 1.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 7 0 128 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 112 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 96 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 80 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 64 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 48 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 32 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 16 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+
+
+
+0
+0 STEP
+0 FILE 8835 - Chain group 2.ldr
+0 Group of chain links forming part of the lifting chain system.
+0 Name: 8835 - Chain group 2.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 -16 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 -32 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 -48 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 -64 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 -80 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 -96 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 -112 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+1 7 0 -128 0 1 0 0 0 1 0 0 0 1 8835 - Chain link.ldr
+
+
+
+0
+0 STEP
+0 FILE 8835 - Tilt link.ldr
+0 Black Technic plate with holes serving as a connecting link for the mast tilt mechanism.
+0 Name: 8835 - Tilt link.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Plate  1 x  6 with Holes (black)
+1 0 50 0 0 1 0 0 0 1 0 0 0 1 4262.dat
+
+
+
+
+
+0
+0 STEP
+0 FILE 8835 - Tilt lever.ldr
+0 Tilt lever assembly using an axle, belt wheel, and liftarm to control the mast tilt angle.
+0 Name: 8835 - Tilt lever.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  4 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Wedge Belt Wheel - Not Reinforced (light_grey)
+1 7 -35 0 0 0 0 1 0 1 0 -1 0 0 4185a.dat
+0 // Technic Beam  4 x  0.5 Liftarm with Boss (light_grey)
+1 7 20 0 0 0 1 0 1 0 0 0 0 -1 2825.dat
+0 // Technic Pin  1/2 (light_grey)
+1 7 -40 -10 -17.3 1 0 0 0 1 0 0 0 1 4274.dat
+
+
+
+0
+0 STEP
+0 FILE 8835 - Front pillar.ldr
+0 White front mast pillar built from plates and hinge plates forming the vertical guide structure.
+0 Name: 8835 - Front pillar.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x  4 (white)
+1 15 -50 4 50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 -50 4 -50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 -30 -4 50 1 0 0 0 1 0 0 0 1 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 -30 -4 -50 1 0 0 0 1 0 0 0 1 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 -70 -4 50 -1 0 0 0 1 0 0 0 -1 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 -70 -4 -50 -1 0 0 0 1 0 0 0 -1 4275b.dat
+
+
+
+
+
+0
+0

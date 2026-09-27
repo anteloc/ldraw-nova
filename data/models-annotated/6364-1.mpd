@@ -1,0 +1,379 @@
+0 FILE 6364 - main.ldr 
+0 A complete scene combining a service station building, a red car, and two minifigs (a female paramedic and a male mechanic).
+0 Name: 6364 - main.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+1 15 -40 0 -130 0.866 0 -0.5 0 1 0 0.5 0 0.866 6364 - car.ldr
+1 15 -160 0 10 1 0 0 0 1 0 0 0 1 6364 - minifig 1.ldr
+1 14 126.257 0 112.778 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 6364 - building.ldr
+1 4 210.001 0 -144.641 0.5 0 0.866 0 1 0 -0.866 0 0.5 6364 - minifig 2.ldr
+0 NOFILE
+
+
+0 STEP
+0 FILE 6364 - building.ldr 
+0 A two-story service station structure built on a large grey baseplate with black and white brick walls, blue accents including seats and slopes, and turntables for vehicle access.
+0 Name: 6364 - building.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Baseplate  8 x 24 (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3497.dat
+0 // Brick  1 x  6 (black)
+1 0 -209.999 -24 -20.006 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (black)
+1 0 -159.999 -24 49.994 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  2 (black)
+1 0 -80 -24 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -70 -24 19.999 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 30 -24 10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  4 (black)
+1 0 80 -24 10 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 130 -24 -20 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  1 (black)
+1 0 130 -24 -70 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  3 (blue)
+1 1 30 -24 -30 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 -140 -24 30 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 -140 -24 -70 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Turntable  2 x  2 Plate with Light Grey Top (black)
+1 0 -80 -8 -40 1 0 0 0 1 0 0 0 1 3680c01.dat
+0 // Turntable  2 x  2 Plate with Light Grey Top (black)
+1 0 80 -8 -40 1 0 0 0 1 0 0 0 1 3680c01.dat
+0 STEP
+0 // Brick  1 x  6 (white)
+1 15 -210 -48 -0.006 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (white)
+1 15 -139.999 -48 49.995 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  3 (white)
+1 15 -70 -48 29.999 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  6 (white)
+1 15 80 -48 10 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  4 (white)
+1 15 130 -48 -40 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  1 (white)
+1 15 -209.998 -48 -70.006 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Plate  1 x  3 (blue)
+1 1 30 -32 -30 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  2 x  6 (white)
+1 15 -140.004 -32 -20 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Minifig Seat  2 x  2 (blue)
+1 1 80 -16 -40 -0.5 0 0.866 0 1 0 -0.866 0 -0.5 4079.dat
+0 // Minifig Seat  2 x  2 (blue)
+1 1 -80 -16 -40 0.5 0 0.866 0 1 0 -0.866 0 0.5 4079.dat
+0 STEP
+0 // Brick  1 x  1 (white)
+1 15 30 -72 10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 130.001 -72 -70 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  2 (white)
+1 15 -79.999 -72 49.999 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -199.999 -72 49.992 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -209.998 -72 -60.006 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -70 -72 19.999 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 29.999 -40 -10 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 30 -40 -30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 30 -40 -50 1 0 0 0 1 0 0 0 1 4085a.dat
+0 // Brick  1 x  4 (white)
+1 15 130 -72 -20 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 -140.007 -40 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 STEP
+0 // Brick  1 x  4 (white)
+1 15 130 -96 -40 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  2 (white)
+1 15 -209.998 -96 -60.006 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -199.999 -96 49.992 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  1 (white)
+1 15 129.999 -96 10 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 30 -96 10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  3 (white)
+1 15 -70 -96 29.999 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  1 (white)
+1 15 -90 -96 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Plate  2 x  3 (blue)
+1 1 40 -48 -30 0 0 1 0 1 0 -1 0 0 3021.dat
+0 STEP
+0 // Brick  1 x  4 (white)
+1 15 130 -120 -20 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  2 (white)
+1 15 -70 -120 19.999 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -209.998 -120 -60.006 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -199.999 -120 49.992 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -79.999 -120 49.999 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  1 (white)
+1 15 130.001 -120 -70 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 30 -120 10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Window  1 x  4 x  3 (red)
+1 4 -210.001 -120 0 0 0 1 0 1 0 -1 0 0 3853.dat
+0 // Glass for Window  1 x  4 x  3 with Handle (trans_clear)
+1 47 -212.001 -86 0 0 0 1 0 1 0 -1 0 0 3855a.dat
+0 // Sticker  3.5 x  3.5 with White/Clear Stripes (trans_clear)
+1 47 -214.003 -82 0 0 1 0 0 0 -1 -1 0 0 821410a.dat
+0 // Window  1 x  4 x  3 (red)
+1 4 -139.998 -120 50.004 -1 0 0 0 1 0 0 0 -1 3853.dat
+0 // Glass for Window  1 x  4 x  3 with Handle (trans_clear)
+1 47 -139.998 -86 52.004 -1 0 0 0 1 0 0 0 -1 3855a.dat
+0 // Sticker  3.5 x  3.5 with White/Clear Stripes (trans_clear)
+1 47 -139.998 -82 54.005 -1 0 0 0 0 -1 0 -1 0 821410a.dat
+0 // Window  1 x  4 x  3 (red)
+1 4 80.002 -120 10.004 -1 0 0 0 1 0 0 0 -1 3853.dat
+0 // Glass for Window  1 x  4 x  3 with Handle (trans_clear)
+1 47 80.002 -86 12.004 -1 0 0 0 1 0 0 0 -1 3855a.dat
+0 // Door  1 x  4 x  5 with 4 Panes and Reinforced Hinge (red)
+1 4 -50.001 -120 9.999 0 0 1 0 1 0 -1 0 0 3861.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 30.001 -56 -40.001 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 STEP
+0 // Brick  1 x  1 (white)
+1 15 -209.998 -144 -70.006 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Plate  1 x  2 (white)
+1 15 -70.001 -128 39.999 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  1 (white)
+1 15 -70.001 -136 49.999 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  3 (white)
+1 15 110.002 -128 10.005 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  4 (white)
+1 15 130 -128 -40 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  8 (white)
+1 15 0 -128 10 1 0 0 0 1 0 0 0 1 3460.dat
+0 STEP
+0 // Plate  6 x 12 (red)
+1 4 40 -136 -20 1 0 0 0 1 0 0 0 1 3028.dat
+0 // Brick  1 x  6 (white)
+1 15 -139.998 -144 50.004 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  6 (white)
+1 15 -210.001 -144 0 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 80 -160 -20 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // Plate  1 x  3 (white)
+1 15 -69.999 -144 -50.001 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  4 (white)
+1 15 -70 -144 19.999 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  2 x  2 (white)
+1 15 80 -168 -20 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Plate  2 x  2 (white)
+1 15 80 -200 -20 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Brick  2 x  2 (white)
+1 15 80 -192 -20 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Plate  2 x 10 (red)
+1 4 -139.999 -152 60.004 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  2 x 10 (red)
+1 4 -139.999 -152 -59.996 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  2 x  4 (red)
+1 4 -220.001 -152 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  2 x  4 (red)
+1 4 -60.001 -152 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Slope Brick 33  3 x  6 (trans_clear)
+1 47 -130.004 -176 0.004 0 0 -1 0 1 0 1 0 0 3939.dat
+0 // Slope Brick 33  3 x  6 (trans_clear)
+1 47 -150.004 -176 0.004 0 0 1 0 1 0 -1 0 0 3939.dat
+0 // Plant Tree Pyramidal  4 x  4 x  6.667 Type 1 (green)
+1 2 200 -8 -40 1 0 0 0 1 0 0 0 1 3471.dat
+0 // Plant Flower Stem Green with Three Flowers with 6 Petals Centre Upwards (yellow)
+1 14 150 -13 50 1 0 0 0 1 0 0 0 1 3741ac01.dat
+0 NOFILE
+
+
+0 STEP
+0 FILE 6364 - car.ldr 
+0 A small red car with mudguards, headlights, doors, a windshield, a blue seat, and red and clear light elements.
+0 Name: 6364 - car.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Car Base  4 x 10 x  0.667 with  2 x  2 Center Open (black)
+1 0 0 -32 0 1 0 0 0 1 0 0 0 1 4212b.dat
+0 STEP
+0 // Car Mudguard  2 x  4 (red)
+1 4 0 -48 -60 1 0 0 0 1 0 0 0 1 3788.dat
+0 // Car Mudguard  2 x  4 (red)
+1 4 0 -48 60 1 0 0 0 1 0 0 0 1 3788.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -40 -90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -40 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (red)
+1 4 30 -56 -90 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 30 -56 90 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 -30 -56 90 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 -30 -56 -90 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 10 -48 90 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 -10 -48 90 -1 0 0 0 1 0 0 0 -1 4085a.dat
+0 STEP
+0 // Car Steering Stand and Wheel (Complete) (red)
+1 4 0 -40 -30 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -30 -46 -104 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 30 -46 -104 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 30 -46 104 1 0 0 0 0 1 0 -1 0 3024.dat
+0 // Plate  1 x  2 (red)
+1 4 -30 -56 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 30 -56 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 -30 -56 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 30 -56 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -30 -46 104 1 0 0 0 0 1 0 -1 0 3024.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -56 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Brick  1 x  1 (red)
+1 4 30 -56 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 -30 -56 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Door  1 x  3 x  1 Left (red)
+1 4 30 -56 -30 1 0 0 0 1 0 0 0 1 3822.dat
+0 // Door  1 x  3 x  1 Right (red)
+1 4 -30 -56 -30 1 0 0 0 1 0 0 0 1 3821.dat
+0 // Minifig Seat  2 x  2 (blue)
+1 1 0 -24 0 1 0 0 0 1 0 0 0 1 4079.dat
+0 // Slope Brick 33  3 x  2 (white)
+1 15 0 -64 -50 1 0 0 0 1 0 0 0 1 3298.dat
+0 STEP
+0 // Plate  1 x  4 (white)
+1 15 30 -64 -60 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 -30 -64 -60 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -64 90 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  3 (white)
+1 15 -30 -64 50 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (white)
+1 15 30 -64 50 0 0 -1 0 1 0 1 0 0 3623.dat
+0 STEP
+0 // Windscreen  2 x  4 x  2 (trans_clear)
+1 47 0 -104 -30 1 0 0 0 1 0 0 0 1 3823.dat
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 -30 -120 -30 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (trans_dark_blue)
+1 33 30 -120 -30 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Bar  1 x  4 x  2 with Studs (white)
+1 15 0 -112 30 -1 0 0 0 1 0 0 0 -1 4083.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -112 -30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -30 -18 -60 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 -30 -18 60 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 30 -18 60 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (black)
+1 0 30 -18 -60 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Plate  2 x  2 with Red Wheels (Complete) (black)
+1 0 0 -24 -60 1 0 0 0 1 0 0 0 1 122c01.dat
+0 // Plate  2 x  2 with Red Wheels (Complete) (black)
+1 0 0 -24 60 1 0 0 0 1 0 0 0 1 122c01.dat
+0 STEP
+0 // Minifig Radio with Long Handle (black)
+1 0 -10 -46 110 -1 0 0 0 1 0 0 0 -1 3962b.dat
+0 STEP
+0 NOFILE
+
+
+0 STEP
+0 FILE 6364 - minifig 1.ldr 
+0 A female paramedic minifig with a white torso bearing a red cross pattern, red legs, black pigtails hair, and a smiling yellow head.
+0 Name: 6364 - minifig 1.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 -28 -0.538 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 -28 -0.538 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Hand (yellow)
+1 14 -23.66 -46.13 -10.538 0.99 -0.12 0.12 0.17 0.7 -0.7 0 0.71 0.71 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.66 -46.13 -10.538 0.99 0.12 -0.12 -0.17 0.7 -0.7 0 0.71 0.71 3820.dat
+0 // Minifig Arm Right (white)
+1 15 -15.5 -64 -0.538 0.99 -0.17 0 0.17 0.99 0 0 0 1 3818.dat
+0 // Minifig Arm Left (white)
+1 15 15.5 -64 -0.538 0.99 0.17 0 -0.17 0.99 0 0 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 -40 -0.538 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Torso with Red Cross Pattern (white)
+1 15 0 -72 -0.538 1 0 0 0 1 0 0 0 1 973p24.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 -0.538 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Hair Female with Pigtails (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 3625.dat
+0 NOFILE
+
+
+0 STEP
+0 FILE 6364 - minifig 2.ldr 
+0 A male mechanic minifig with a black torso patterned with a red V-neck, black legs, red arms, brown hair, and a smiling yellow head.
+0 Name: 6364 - minifig 2.ldr 
+0 Author: Robert Paciorek [bercik]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 -28 -0.538 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 -28 -0.538 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Hand (yellow)
+1 14 -23.66 -46.13 -10.538 0.99 -0.12 0.12 0.17 0.7 -0.7 0 0.71 0.71 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.66 -46.13 -10.538 0.99 0.12 -0.12 -0.17 0.7 -0.7 0 0.71 0.71 3820.dat
+0 // Minifig Arm Right (red)
+1 4 -15.5 -64 -0.538 0.99 -0.17 0 0.17 0.99 0 0 0 1 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.5 -64 -0.538 0.99 0.17 0 -0.17 0.99 0 0 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40 -0.538 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Torso with Red V-Neck and Buttons Pattern (black)
+1 0 0 -72 -0.538 1 0 0 0 1 0 0 0 1 973p17.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 -0.538 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Hair Male (brown)
+1 6 0 -96 0 1 0 0 0 1 0 0 0 1 3901.dat
+0 NOFILE
+
+

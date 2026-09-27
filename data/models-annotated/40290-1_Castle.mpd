@@ -1,0 +1,441 @@
+0 FILE 40290 - Castle - Main model.ldr
+0 A castle build on a black plate foundation with tan, green, and yellow sections, featuring a red flag, reddish-brown roof tiles, yellow walls, inverted slopes, door rails, and four corner towers with hinged walls and two door submodels.
+0 Name: 40290 - Castle - Main model.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  6 x 10 (black)
+1 0 0 0 -40 1 0 0 0 1 0 0 0 1 3033.dat
+0 STEP
+0 // Tile  1 x  8 (black)
+1 0 90 -8 0 0 0 1 0 1 0 -1 0 0 4162.dat
+0 // Tile  1 x  1 with Groove (black)
+1 0 90 -8 -90 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  8 (black)
+1 0 0 -8 -90 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Tile  1 x  1 with Groove (black)
+1 0 -90 -8 -90 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  8 (black)
+1 0 -90 -8 0 0 0 1 0 1 0 -1 0 0 4162.dat
+0 STEP
+0 // Plate  4 x 10 (black)
+1 0 0 0 60 1 0 0 0 1 0 0 0 1 3030.dat
+0 STEP
+0 // Tile  1 x  1 with Groove (black)
+1 0 -90 -8 90 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  1 with Groove (black)
+1 0 90 -8 90 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  8 (black)
+1 0 0 -8 90 1 0 0 0 1 0 0 0 1 4162.dat
+0 STEP
+0 // Plate  2 x  8 (tan)
+1 19 0 -8 -20 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  2 x  8 (tan)
+1 19 0 -8 20 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Tile  2 x  4 (reddish_brown)
+1 70 40 -8 -60 1 0 0 0 1 0 0 0 1 87079.dat
+0 // Tile  2 x  4 (reddish_brown)
+1 70 -40 -8 -60 1 0 0 0 1 0 0 0 1 87079.dat
+0 // Tile  2 x  4 (reddish_brown)
+1 70 -40 -8 60 1 0 0 0 1 0 0 0 1 87079.dat
+0 // Tile  2 x  4 (reddish_brown)
+1 70 40 -8 60 1 0 0 0 1 0 0 0 1 87079.dat
+0 STEP
+0 // Plate  4 x  4 (green)
+1 2 40 -16 0 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Plate  4 x  4 (green)
+1 2 -40 -16 0 1 0 0 0 1 0 0 0 1 3031.dat
+0 STEP
+1 0 -40 -16 -60 -1 0 0 0 1 0 0 0 -1 40290 - Castle - North-West.ldr
+0 STEP
+1 0 40 -16 -60 1 0 0 0 1 0 0 0 1 40290 - Castle - South-West.ldr
+0 STEP
+0 // Plate  1 x  2 with Handle (green)
+1 2 70 -24 0 0 0 -1 0 1 0 1 0 0 2540.dat
+0 // Flag  2 x  2 (red)
+1 4 90 -22 -20 -0.5 0 0.866 0.866 0 0.5 0 1 0 2335.dat
+0 STEP
+1 16 -40 -16 60 1 0 0 0 1 0 0 0 1 40290 - Castle - North-East.ldr
+0 STEP
+1 2 40 -16 60 -1 0 0 0 1 0 0 0 -1 40290 - Castle - South-East.ldr
+0 STEP
+1 4 -70 -32 -30 0 0 -1 0 1 0 1 0 0 40290 - Castle - North-West-Door.ldr
+1 2 -70 -32 30 0 0 -1 0 1 0 1 0 0 40290 - Castle - North-East-Door.ldr
+0 STEP
+0 // Brick  1 x  1 (yellow)
+1 14 -30 -40 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 -30 -64 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 -30 -40 30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 -30 -64 30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 -30 -88 -30 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 -70 -88 -30 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 -30 -88 30 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 -70 -88 30 1 0 0 0 1 0 0 0 1 3665a.dat
+0 STEP
+0 // Brick  1 x  2 (yellow)
+1 14 60 -48 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 (yellow)
+1 14 60 -56 -30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Brick  1 x  2 (yellow)
+1 14 60 -48 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 (yellow)
+1 14 60 -56 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 50 -80 30 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 50 -80 -30 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 STEP
+0 // Plate  1 x  4 (yellow)
+1 14 50 -88 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Plate  1 x  2 with Door Rail (yellow)
+1 14 50 -96 -20 0 0 -1 0 1 0 1 0 0 32028.dat
+0 // Plate  1 x  2 with Door Rail (yellow)
+1 14 50 -96 20 0 0 -1 0 1 0 1 0 0 32028.dat
+0 // Plate  2 x  3 (yellow)
+1 14 -50 -96 20 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 -50 -96 -20 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 STEP
+0 // Brick  1 x  1 (yellow)
+1 14 -70 -120 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 -70 -120 30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Panel  1 x  2 x  1 with Square Corners (yellow)
+1 14 -70 -120 0 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 STEP
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (yellow)
+1 14 -50 -104 -20 0 0 -1 0 1 0 1 0 0 3794b.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (yellow)
+1 14 -50 -104 20 0 0 -1 0 1 0 1 0 0 3794b.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (yellow)
+1 14 -30 -104 0 0 0 -1 0 1 0 1 0 0 3794b.dat
+0 STEP
+0 // Brick  1 x  1 (yellow)
+1 14 -30 -120 30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 -30 -120 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 STEP
+0 // Plate  1 x  1 (yellow)
+1 14 -30 -112 0 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (yellow)
+1 14 50 -104 -30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (yellow)
+1 14 50 -104 30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 STEP
+0 // Plate  2 x  3 (yellow)
+1 14 0 -104 -60 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  2 x  3 (yellow)
+1 14 0 -104 60 0 0 -1 0 1 0 1 0 0 3021.dat
+0 STEP
+1 14 -50 -112 0 -1 0 0 0 1 0 0 0 -1 40290 - Castle - Tower.ldr
+
+
+
+
+
+
+0 STEP
+0 FILE 40290 - Castle - North-West.ldr
+0 A small corner tower section on a green base with yellow bricks, headlight bricks, a sloped roof, and a hinge assembly allowing it to fold open.
+0 Name: 40290 - Castle - North-West.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  4 (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Brick  1 x  2 (yellow)
+1 14 -30 -24 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -10 -24 10 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (yellow)
+1 14 -10 -14 16 1 0 0 0 0 1 0 -1 0 54200.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 10 -24 10 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Hinge Plate  1 x  4 Top (yellow)
+1 14 40 -8 -20 -1 0 0 0 1 0 0 0 -1 2430.dat
+0 // Hinge Plate  1 x  4 Base (yellow)
+1 14 40 -8 -20 1 0 0 0 1 0 0 0 1 2429.dat
+0 STEP
+0 // Plate  1 x  2 (yellow)
+1 14 0 -32 10 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Brick  1 x  1 (yellow)
+1 14 30 -32 -10 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 STEP
+0 // Plate  2 x  2 Corner (yellow)
+1 14 10 -40 -10 1 0 0 0 1 0 0 0 1 2420.dat
+0 STEP
+0 // Brick  1 x  2 x  2 (yellow)
+1 14 -30 -72 0 0 0 1 0 1 0 -1 0 0 3245a.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (black)
+1 0 -30 -80 0 0 0 1 0 1 0 -1 0 0 3794b.dat
+
+
+
+
+
+
+0 STEP
+0 FILE 40290 - Castle - South-West.ldr
+0 A mirrored corner tower section on a green base with yellow bricks, three headlight bricks, dual sloped details, and a hinged fold-out wall.
+0 Name: 40290 - Castle - South-West.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  4 (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Brick  1 x  1 (yellow)
+1 14 -30 -24 10 0 0 -1 0 1 0 1 0 0 3005.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -30 -24 -10 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (yellow)
+1 14 -30 -14 -16 -1 0 0 0 0 1 0 1 0 54200.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -10 -24 -10 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Hinge Plate  1 x  4 Top (yellow)
+1 14 40 -8 20 -1 0 0 0 1 0 0 0 -1 2430.dat
+0 // Hinge Plate  1 x  4 Base (yellow)
+1 14 40 -8 20 1 0 0 0 1 0 0 0 1 2429.dat
+0 STEP
+0 // Brick  1 x  2 (yellow)
+1 14 20 -32 10 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 10 -24 -10 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (yellow)
+1 14 10 -14 -16 -1 0 0 0 0 1 0 1 0 54200.dat
+0 STEP
+0 // Plate  1 x  2 (yellow)
+1 14 0 -32 -10 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+0 // Plate  2 x  2 Corner (yellow)
+1 14 10 -40 10 0 0 1 0 1 0 -1 0 0 2420.dat
+0 STEP
+0 // Brick  1 x  2 x  2 (yellow)
+1 14 -30 -72 0 0 0 1 0 1 0 -1 0 0 3245a.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (black)
+1 0 -30 -80 0 0 0 1 0 1 0 -1 0 0 3794b.dat
+0 STEP
+
+
+
+
+
+
+0 STEP
+0 FILE 40290 - Castle - North-East.ldr
+0 A corner tower section on a green base with yellow bricks, two headlight bricks, a sloped detail, and a hinged wall assembly for folding.
+0 Name: 40290 - Castle - North-East.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  4 (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Brick  1 x  2 (yellow)
+1 14 30 -24 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 10 -24 10 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (yellow)
+1 14 10 -14 16 1 0 0 0 0 1 0 -1 0 54200.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -10 -24 10 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Hinge Plate  1 x  4 Top (yellow)
+1 14 -40 -8 -20 1 0 0 0 1 0 0 0 1 2430.dat
+0 // Hinge Plate  1 x  4 Base (yellow)
+1 14 -40 -8 -20 -1 0 0 0 1 0 0 0 -1 2429.dat
+0 STEP
+0 // Plate  1 x  2 (yellow)
+1 14 0 -32 10 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Brick  1 x  1 (yellow)
+1 14 -30 -32 -10 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 STEP
+0 // Plate  2 x  2 Corner (yellow)
+1 14 -10 -40 -10 0 0 -1 0 1 0 1 0 0 2420.dat
+0 STEP
+0 // Brick  1 x  2 x  2 (yellow)
+1 14 30 -72 0 0 0 -1 0 1 0 1 0 0 3245a.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (black)
+1 0 30 -80 0 0 0 -1 0 1 0 1 0 0 3794b.dat
+
+
+
+
+
+
+0 STEP
+0 FILE 40290 - Castle - South-East.ldr
+0 A mirrored corner tower section on a green base with yellow bricks, three headlight bricks, two slopes, and a hinged fold-out wall.
+0 Name: 40290 - Castle - South-East.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  4 (green)
+1 2 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Brick  1 x  1 (yellow)
+1 14 30 -24 10 0 0 1 0 1 0 -1 0 0 3005.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 30 -24 -10 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (yellow)
+1 14 30 -14 -16 -1 0 0 0 0 1 0 1 0 54200.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 10 -24 -10 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Hinge Plate  1 x  4 Top (yellow)
+1 14 -40 -8 20 1 0 0 0 1 0 0 0 1 2430.dat
+0 // Hinge Plate  1 x  4 Base (yellow)
+1 14 -40 -8 20 -1 0 0 0 1 0 0 0 -1 2429.dat
+0 STEP
+0 // Brick  1 x  2 (yellow)
+1 14 -20 -32 10 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -10 -24 -10 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (yellow)
+1 14 -10 -14 -16 -1 0 0 0 0 1 0 1 0 54200.dat
+0 STEP
+0 // Plate  1 x  2 (yellow)
+1 14 0 -32 -10 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+0 // Plate  2 x  2 Corner (yellow)
+1 14 -10 -40 10 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 STEP
+0 // Brick  1 x  2 x  2 (yellow)
+1 14 30 -72 0 0 0 -1 0 1 0 1 0 0 3245a.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (black)
+1 0 30 -80 0 0 0 -1 0 1 0 1 0 0 3794b.dat
+0 STEP
+
+
+
+
+
+
+0 STEP
+0 FILE 40290 - Castle - North-West-Door.ldr
+0 A small door detail with a round plate, a clip brick, and a red handle piece forming the gate latch.
+0 Name: 40290 - Castle - North-West-Door.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x  1 Round (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Brick  1 x  1 with Clip Vertical (Thick C-Clip) and Hollow Stud (yellow)
+1 14 0 -24 0 1 0 0 0 1 0 0 0 1 60475b.dat
+0 STEP
+0 // Plate  1 x  1 (yellow)
+1 14 0 -32 0 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Plate  1 x  2 with Handle Type 2 (red)
+1 4 20 -16 -22 0 0 1 1 0 0 0 1 0 48336.dat
+
+
+
+
+
+
+0 STEP
+0 FILE 40290 - Castle - North-East-Door.ldr
+0 A small door detail with a round plate, a clip brick, and a red handle piece forming the gate latch.
+0 Name: 40290 - Castle - North-East-Door.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x  1 Round (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Brick  1 x  1 with Clip Vertical (Thick C-Clip) and Hollow Stud (yellow)
+1 14 0 -24 0 1 0 0 0 1 0 0 0 1 60475b.dat
+0 STEP
+0 // Plate  1 x  1 (yellow)
+1 14 0 -32 0 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Plate  1 x  2 with Handle Type 2 (red)
+1 4 -20 -16 -22 0 0 -1 -1 0 0 0 1 0 48336.dat
+
+
+
+
+
+
+0 STEP
+0 FILE 40290 - Castle - Tower.ldr
+0 A cylindrical yellow tower with four round bricks, red headlight bricks, grooved tiles, and an offset plate base for stability.
+0 Name: 40290 - Castle - Tower.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x  3 (yellow)
+1 14 0 0 0 0 0 -1 0 1 0 1 0 0 3623.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 0 -24 -20 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 0 -24 20 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 0 -24 0 0 0 -1 0 1 0 1 0 0 4070.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 0 -48 -20 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 0 -48 0 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 0 -48 20 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 STEP
+0 // Tile  1 x  1 with Groove (yellow)
+1 14 14 -14 0 0 -1 0 0 0 -1 1 0 0 3070b.dat
+0 // Tile  1 x  1 with Groove (yellow)
+1 14 14 -38 0 0 -1 0 0 0 -1 1 0 0 3070b.dat
+0 STEP
+0 // Plate  2 x  3 (yellow)
+1 14 0 -64 0 0 0 -1 0 1 0 1 0 0 3021.dat
+0 STEP
+0 // Plate  1 x  3 with  2 Studs Offset (black)
+1 0 0 -56 0 0 0 -1 0 1 0 1 0 0 34103.dat
+
+
+
+
+
+
+
+
+

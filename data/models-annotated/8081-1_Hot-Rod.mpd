@@ -1,0 +1,1343 @@
+0 FILE 8081 - Main.ldr
+0 Main assembly for a Technic Hot Rod model, integrating the chassis, drivetrain, engine, steering, and body submodels.
+0 Name: 8081 - Main.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+1 71 0 -9.55 2.353 1 0 0 0 0.996 -0.094 0 0.094 0.996 8081 - Hot Rod.ldr
+
+
+0 STEP
+0 FILE 8081 - Hot Rod.ldr
+0 Core chassis assembly with beams, gears, and axles forming the main structural frame and drivetrain of the Hot Rod.
+0 Name: 8081 - Hot Rod.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Beam  7 x  5 with Open Center  5 x  3 (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 64179.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -50 0 40 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -50 0 0 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 50 0 40 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 50 0 0 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -40 -20 -60 0 1 0 -1 0 0 0 0 1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 40 -20 -60 0 1 0 -1 0 0 0 0 1 6558.dat
+0 STEP
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 0 0 80 0 1 0 0 0 -1 -1 0 0 6587.dat
+0 // Technic Gear 16 Tooth Reinforced (light_bluish_grey)
+1 71 0 0 80 0 1 0 -1 0 0 0 0 1 94925.dat
+0 STEP
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 0 0 110 0 1 0 -1 0 0 0 0 1 59443.dat
+0 // Technic Axle  7 (light_bluish_grey)
+1 71 0 0 180 0 1 0 0 0 1 1 0 0 44294.dat
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 0 0 250 0 1 0 -1 0 0 0 0 1 59443.dat
+0 STEP
+0 // Technic Beam 15 (red)
+1 4 -60 0 140 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -70 0 80 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -70 0 120 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -70 0 240 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Beam  5 (black)
+1 0 0 -20 -60 0 0 1 0 1 0 -1 0 0 32316.dat
+0 STEP
+0 // Technic Beam  7 x  5 with Open Center  5 x  3 (light_bluish_grey)
+1 71 0 -40 0 1 0 0 0 1 0 0 0 1 64179.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -50 -40 40 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -50 -40 0 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 50 -40 40 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 50 -40 0 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Beam 15 (red)
+1 4 -60 -40 140 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -50 -40 280 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -60 -40 180 -1 0 0 0 1 0 0 0 -1 6558.dat
+0 STEP
+0 // Technic Beam  3 x  3.8 x  7 Liftarm Bent 45 Double (red)
+1 4 -40 -80 280 0 1 0 1 0 0 0 0 -1 32009.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -60 -80 320 -1 0 0 0 1 0 0 0 -1 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -50 -80 400 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 STEP
+0 // Technic Angle Connector #2 (180 degree) (red)
+1 4 0 0 280 0 0 -1 0 1 0 1 0 0 32034.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 -60 0 280 1 0 0 0 1 0 0 0 1 32073.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 60 0 280 1 0 0 0 1 0 0 0 1 32073.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 280 0 0 1 0 1 0 -1 0 0 4519.dat
+0 STEP
+0 // Technic Angle Connector #2 (180 degree) (red)
+1 4 0 -80 440 0 0 -1 0 1 0 1 0 0 32034.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 -40 -80 440 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 40 -80 440 1 0 0 0 1 0 0 0 1 4519.dat
+0 STEP
+1 0 0 -80 340 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 011.ldr
+0 STEP
+0 // Technic Gear 16 Tooth with Clutch (dark_bluish_grey)
+1 72 0 -40 80 -0.981 -0.195 0 -0.195 0.981 0 0 0 -1 6542a.dat
+0 // Technic Axle  4 (black)
+1 0 0 -40 70 0 0 -1 0 1 0 1 0 0 3705.dat
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 0 -40 30 1 0 0 0 1 0 0 0 1 59443.dat
+0 STEP
+0 // Technic Beam  3 x  3.8 x  7 Liftarm Bent 45 Double (red)
+1 4 40 -80 280 0 1 0 1 0 0 0 0 -1 32009.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 60 -80 320 1 0 0 0 -1 0 0 0 -1 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 50 -80 400 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 50 -40 280 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 STEP
+0 // Technic Beam 15 (red)
+1 4 60 0 140 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 70 0 240 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 70 0 120 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 70 0 80 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Beam 15 (red)
+1 4 60 -40 140 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 60 -40 180 1 0 0 0 1 0 0 0 1 6558.dat
+0 STEP
+0 // Technic Axle  9 (light_bluish_grey)
+1 71 0 -40 -60 0 0 1 0 1 0 -1 0 0 60485.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 -40 -80 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 STEP
+0 // Technic Beam  3 x  5 Bent 90 (red)
+1 4 60 0 320 0 -1 0 0 0 -1 1 0 0 32526.dat
+0 // Technic Beam  3 x  5 Bent 90 (red)
+1 4 -60 0 320 0 -1 0 0 0 -1 1 0 0 32526.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -70 -40 320 1 0 0 0 0 -1 0 1 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 70 -40 320 1 0 0 0 0 -1 0 1 0 2780.dat
+0 STEP
+1 71 0 7.725 359.247 1 0 0 0 0.981 0.193 0 -0.193 0.981 8081 - Hot Rod 018.ldr
+0 STEP
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 -60 0 320 1 0 0 0 1 0 0 0 1 32556.dat
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 60 0 320 -1 0 0 0 1 0 0 0 -1 32556.dat
+0 STEP
+0 // Technic Beam  3 x  5 Bent 90 (red)
+1 4 80 0 240 0 1 0 -1 0 0 0 0 1 32526.dat
+0 // Technic Beam  3 x  5 Bent 90 (red)
+1 4 -80 0 240 0 1 0 -1 0 0 0 0 1 32526.dat
+0 STEP
+1 0 90 0 220 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 021.ldr
+1 0 -90 0 220 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 021.ldr
+1 0 -90 0 160 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 021.ldr
+1 0 90 0 160 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 021.ldr
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 100 0 280 1 0 0 0 0 -1 0 1 0 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -100 0 280 1 0 0 0 0 -1 0 1 0 6536.dat
+0 STEP
+0 // Technic Beam 13 (black)
+1 0 0 -20 300 0 0 -1 0 1 0 1 0 0 41239.dat
+0 // Technic Pin Long with Stop Bush (red)
+1 4 100 -20 300 0 0 -1 1 0 0 0 -1 0 32054.dat
+0 // Technic Pin Long with Stop Bush (red)
+1 4 -100 -20 300 0 0 -1 1 0 0 0 -1 0 32054.dat
+0 STEP
+0 // Technic Beam  7 (red)
+1 4 -60 -80 460 0 -1 0 1 0 0 0 0 1 32524.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -70 -80 480 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (red)
+1 4 -60 -80 520 -1 0 0 0 1 0 0 0 -1 32054.dat
+0 // Technic Pin Long with Stop Bush (red)
+1 4 60 -80 520 1 0 0 0 1 0 0 0 1 32054.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 0 -80 520 1 0 0 0 1 0 0 0 1 32073.dat
+0 STEP
+0 // Technic Beam  7 (red)
+1 4 60 -80 460 0 -1 0 1 0 0 0 0 1 32524.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 70 -80 480 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 STEP
+1 4 60 -60 240 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 027.ldr
+0 STEP
+1 1 -60 -60 240 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 028.ldr
+0 STEP
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (blue)
+1 1 80 -60 240 0 1 0 1 0 0 0 0 -1 32140.dat
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (blue)
+1 1 -80 -60 240 0 1 0 1 0 0 0 0 -1 32140.dat
+0 // Technic Beam  5 (black)
+1 0 60 -124.507 340.241 0 1 0 0.994 0 -0.113 -0.113 0 -0.994 32316.dat
+0 // Technic Beam  5 (black)
+1 0 -60 -124.507 340.241 0 1 0 0.994 0 -0.113 -0.113 0 -0.994 32316.dat
+0 STEP
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 80 -119.998 380 1 0 0 0 -0.994 -0.113 0 0.113 -0.994 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -80 -119.998 380 -1 0 0 0 -0.994 0.113 0 0.113 0.994 6558.dat
+0 // Technic Beam  5 (blue)
+1 1 80 -94.516 280.21 0 -1 0 0.507 0 -0.862 0.862 0 0.507 32316.dat
+0 // Technic Beam  5 (blue)
+1 1 -80 -94.516 280.21 0 -1 0 0.507 0 -0.862 0.862 0 0.507 32316.dat
+0 STEP
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 80 -160 320 0 1 0 0 0 1 1 0 0 32526.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 100 -160 320 1 0 0 0 -1 0 0 0 -1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 100 -120 320 1 0 0 0 -1 0 0 0 -1 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 90 -100 320 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 STEP
+1 0 80 -120 520 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 032.ldr
+0 STEP
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 -80 -160 320 0 1 0 0 0 1 1 0 0 32526.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -100 -160 320 -1 0 0 0 0 1 0 1 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -100 -120 320 -1 0 0 0 0 1 0 1 0 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -90 -100 320 -1 0 0 0 0 1 0 1 0 2780.dat
+0 STEP
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 100 -80 320 0 -1 0 0 0 -1 1 0 0 32526.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 100 -160 360 -1 0 0 0 -1 0 0 0 1 6558.dat
+0 STEP
+1 4 0 -160 340 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 035.ldr
+0 STEP
+0 // Technic Gear 20 Tooth Double Bevel (black)
+1 0 0 -180 320 0.707 0.707 0 0 0 -1 -0.707 0.707 0 32269.dat
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 0 -162 320 0 0.707 -0.707 -1 0 0 0 0.707 0.707 6587.dat
+0 STEP
+0 // Technic Beam  7 (black)
+1 0 120 -120 380 0 1 0 -1 0 0 0 0 1 32524.dat
+0 STEP
+1 0 -80 -120 520 -1 0 0 0 1 0 0 0 -1 8081 - Hot Rod 038.ldr
+0 STEP
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 -100 -80 320 0 -1 0 0 0 -1 1 0 0 32526.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -100 -160 360 1 0 0 0 -1 0 0 0 -1 6558.dat
+0 STEP
+0 // Technic Beam  7 (black)
+1 0 -120 -120 380 0 1 0 -1 0 0 0 0 1 32524.dat
+1 15 0 -40 540 1 0 0 0 0 1 0 -1 0 8081 - Hot Rod 040.ldr
+0 STEP
+1 0 -80 -149.964 419.155 0 0 -1 -0.167 -0.986 0 -0.986 0.167 0 8081 - Hot Rod 041.ldr
+1 0 80 -149.964 419.155 0 0 -1 -0.167 -0.986 0 -0.986 0.167 0 8081 - Hot Rod 041.ldr
+0 // Technic Axle Pin with Friction (blue)
+1 1 -70 -120 480 1 0 0 0 -0.996 0.085 0 -0.085 -0.996 43093.dat
+0 // Technic Beam  2 x  0.5 Liftarm (black)
+1 0 -65 -120 480 0 1 0 0.085 0 -0.996 -0.996 0 -0.085 41677.dat
+0 // Technic Beam  2 x  0.5 Liftarm (black)
+1 0 65 -120 480 0 1 0 0.085 0 -0.996 -0.996 0 -0.085 41677.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 70 -120 480 -1 0 0 0 0.085 -0.996 0 -0.996 -0.085 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 70 -139.928 478.309 -1 0 0 0 -0.996 -0.085 0 -0.085 0.996 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -70 -139.928 478.309 1 0 0 0 -0.996 0.085 0 -0.085 -0.996 43093.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 70 -40 140 1 0 0 0 1 0 0 0 1 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -70 -40 140 -1 0 0 0 1 0 0 0 -1 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -70 0 140 -1 0 0 0 1 0 0 0 -1 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 70 0 140 1 0 0 0 1 0 0 0 1 43093.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (light_bluish_grey)
+1 71 80 -20 140 1 0 0 0 1 0 0 0 1 32184.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (light_bluish_grey)
+1 71 -80 -20 140 1 0 0 0 1 0 0 0 1 32184.dat
+0 STEP
+0 // Technic Beam 11 (black)
+1 0 0 -20 120 0 0 -1 -1 0 0 0 1 0 32525.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -80 -20 120 0 0 -1 0 1 0 1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 80 -20 120 0 0 -1 0 1 0 1 0 0 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -100 -20 110 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 100 -20 110 0 0 -1 0 1 0 1 0 0 2780.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 -80 -50 100 0 0 1 1 0 0 0 1 0 43093.dat
+0 // Technic Angle Connector #1 (black)
+1 0 -80 -20 100 0 1 0 0 0 1 1 0 0 32013.dat
+0 // Technic Angle Connector #1 (black)
+1 0 80 -20 100 0 1 0 0 0 1 1 0 0 32013.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 80 -50 100 0 0 1 1 0 0 0 1 0 43093.dat
+0 STEP
+1 0 0 -60 120 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 045.ldr
+0 // Technic Pin with Friction and Slots (black)
+1 0 70 -40 80 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -70 -40 80 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Beam  9 (light_bluish_grey)
+1 71 120 0 220 0 -1 0 1 0 0 0 0 1 40490.dat
+0 // Technic Beam  9 (light_bluish_grey)
+1 71 -120 0 220 0 -1 0 1 0 0 0 0 1 40490.dat
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 80 -80 80 0 1 0 0 0 1 1 0 0 32526.dat
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 -80 -80 80 0 1 0 0 0 1 1 0 0 32526.dat
+0 STEP
+1 71 0 -130 -60 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 047.ldr
+0 STEP
+0 // Technic Beam  5 (light_bluish_grey)
+1 71 20 -40 -80 1 0 0 0 0 -1 0 1 0 32316.dat
+0 // Technic Beam  5 (light_bluish_grey)
+1 71 -20 -40 -80 1 0 0 0 0 -1 0 1 0 32316.dat
+0 STEP
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -20 0 -80 0 -1 0 0 0 -1 1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 -40 -80 0 -1 0 0 0 -1 1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 -80 0 -1 0 0 0 -1 1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -20 -40 -80 0 -1 0 0 0 -1 1 0 0 6558.dat
+0 STEP
+1 72 0 -10 -100 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 050.ldr
+0 STEP
+0 // Technic Gear  8 Tooth (dark_bluish_grey)
+1 72 0 -40 -120 1 0 0 0 1 0 0 0 1 3647.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 -40 -140 -1 0 0 0 1 0 0 0 -1 3713.dat
+0 STEP
+1 71 0 -100 120 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 052.ldr
+0 STEP
+1 0 100 0 60 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 053.ldr
+1 0 100 0 20 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 053.ldr
+1 0 -100 0 20 -1 0 0 0 -1 0 0 0 1 8081 - Hot Rod 053.ldr
+1 0 -100 0 60 -1 0 0 0 -1 0 0 0 1 8081 - Hot Rod 053.ldr
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 100 -10 60 0 1 0 -1 0 0 0 0 1 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -100 -10 60 0 1 0 -1 0 0 0 0 1 43093.dat
+0 // Technic Beam  3 x  0.5 Liftarm with Boss and Pin with Closed Central Axle Hole (light_bluish_grey)
+1 71 100 -20 60 -1 0 0 0 1 0 0 0 -1 33299.dat
+0 // Technic Beam  3 x  0.5 Liftarm with Boss and Pin with Closed Central Axle Hole (light_bluish_grey)
+1 71 -100 -20 60 -1 0 0 0 1 0 0 0 -1 33299.dat
+0 STEP
+1 0 120 -40 140 0 0 -1 0 1 0 1 0 0 8081 - Hot Rod 055.ldr
+0 STEP
+1 0 -120 -40 140 0 0 -1 0 1 0 1 0 0 8081 - Hot Rod 056.ldr
+0 STEP
+1 4 0 -160 240 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 057.ldr
+0 STEP
+0 // Technic Beam  3 (black)
+1 0 100 -160 160 0 -1 0 1 0 0 0 0 1 32523.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 110 -160 160 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 110 -160 180 -1 0 0 0 -1 0 0 0 1 2780.dat
+0 // Technic Beam 11 (black)
+1 0 120 -160 260 0 1 0 -1 0 0 0 0 1 32525.dat
+0 STEP
+1 0 120 -160 140 0 0 1 0.8 0.6 0 -0.6 0.8 0 8081 - Hot Rod 059.ldr
+1 0 -120 -160 140 0 0 1 0.8 0.6 0 -0.6 0.8 0 8081 - Hot Rod 059.ldr
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 100 -80 80 1 0 0 0 1 0 0 0 1 6587.dat
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 -100 -80 80 -1 0 0 0 1 0 0 0 -1 6587.dat
+0 STEP
+0 // Technic Panel Fairing Smooth #1 (Short) (black)
+1 0 80 -120 60 0 -1 0 -1 0 0 0 0 -1 87080.dat
+0 // Technic Panel Fairing Smooth #2 (Short) (black)
+1 0 -80 -120 60 0 1 0 1 0 0 0 0 -1 87086.dat
+0 STEP
+1 0 0 -180 30 -1 0 0 0 -1 0 0 0 1 8081 - Hot Rod 061.ldr
+0 STEP
+0 // Wheel Rim 26 x 43 with 6 Spokes and 6 Pegholes (light_bluish_grey)
+1 71 159.409 -29.705 -100 0 0 1 0 -1 0 1 0 0 56908.dat
+0 // Wheel Rim 26 x 43 with 6 Spokes and 6 Pegholes (light_bluish_grey)
+1 71 -159.409 -29.705 -100 0 0 -1 0 -1 0 -1 0 0 56908.dat
+0 // Tyre 34/ 37 x 43 Off Road (rubber_black)
+1 256 159.409 -29.705 -100 0 0 1 0 -1 0 1 0 0 61480.dat
+0 // Tyre 34/ 37 x 43 Off Road (rubber_black)
+1 256 -159.409 -29.705 -100 0 0 -1 0 -1 0 -1 0 0 61480.dat
+0 // Wheel Rim 26 x 43 with 6 Spokes and 6 Pegholes (light_bluish_grey)
+1 71 150 19.305 418.107 0 0 1 0.996 0.082 0 -0.082 0.996 0 56908.dat
+0 // Tyre 34/ 37 x 43 Off Road (rubber_black)
+1 256 150 19.305 418.107 0 0 1 0.996 0.082 0 -0.082 0.996 0 61480.dat
+0 // Wheel Rim 26 x 43 with 6 Spokes and 6 Pegholes (light_bluish_grey)
+1 71 -150 19.305 418.107 0 0 -1 -0.996 0.082 0 0.082 0.996 0 56908.dat
+0 // Tyre 34/ 37 x 43 Off Road (rubber_black)
+1 256 -150 19.305 418.107 0 0 -1 -0.996 0.082 0 0.082 0.996 0 61480.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 011.ldr
+0 Axle and connector linkage assembly with liftarms and a 4-knob gear, forming a drivetrain linkage.
+0 Name: 8081 - Hot Rod 011.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Axle  9 (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 60485.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 0 0 0 1 0 0 0 0 1 0 -1 0 6536.dat
+0 STEP
+0 // Technic Beam  2 x  0.5 Liftarm (black)
+1 0 -15 0 0 0 -1 0 1 0 0 0 0 1 41677.dat
+0 STEP
+0 // Technic Axle  9 (light_bluish_grey)
+1 71 0 0 20 1 0 0 0 1 0 0 0 1 60485.dat
+0 // Technic Beam  2 x  0.5 Liftarm (black)
+1 0 -25 0 0 0 -1 0 1 0 0 0 0 1 41677.dat
+0 STEP
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 -20 0 -0.707 0.707 1 0 0 0 0.707 0.707 4519.dat
+0 // Technic Angle Connector #2 (180 degree) (red)
+1 4 0 -40 -20 -0.707 0.707 0 0 0 1 0.707 0.707 0 32034.dat
+0 // Technic Gear  4 Knob (yellow)
+1 14 0 20 -20 0.707 -0.707 0 0 0 -1 0.707 0.707 0 32072.dat
+0 STEP
+1 71 0 20 20 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 011S05.ldr
+0 STEP
+0 // Technic Beam  2 x  0.5 Liftarm (black)
+1 0 15 0 0 0 -1 0 1 0 0 0 0 1 41677.dat
+0 // Technic Beam  2 x  0.5 Liftarm (black)
+1 0 25 0 0 0 -1 0 1 0 0 0 0 1 41677.dat
+0 STEP
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 0 40 -130 1 0 0 0 1 0 0 0 1 59443.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 0 40 -180 0 0 1 0 1 0 -1 0 0 32073.dat
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 0 40 -230 1 0 0 0 1 0 0 0 1 59443.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 011S05.ldr
+0 Small axle-driven gear sub-assembly with a cross block and 4-knob gear for drive transfer.
+0 Name: 8081 - Hot Rod 011S05.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 42003.dat
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 0 20 -20 0 0 -1 0 1 0 1 0 0 6587.dat
+0 STEP
+0 // Technic Gear  4 Knob (yellow)
+1 14 0 20 -20 1 0 0 0 1 0 0 0 1 32072.dat
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 0 20 -50 1 0 0 0 1 0 0 0 1 59443.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 0 20 -100 0 0 1 0 1 0 -1 0 0 32073.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 018.ldr
+0 Rear axle assembly featuring a differential, universal joint, bevel gears, and cross blocks for power delivery to the wheels.
+0 Name: 8081 - Hot Rod 018.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 0 0 0 1 0 1 0 -1 0 0 4519.dat
+0 // Technic Universal Joint 3L Centre (light_bluish_grey)
+1 71 0 0 -40 0 -1 0 -0.981 0 0.193 -0.193 0 -0.981 62519.dat
+0 STEP
+0 // Technic Beam 11 x  5 with Open Center  5 x  3 (light_bluish_grey)
+1 71 0 0 60 1 0 0 0 -1 0 0 0 -1 64178.dat
+0 // Technic Gear 20 Tooth Double Bevel (black)
+1 0 0 0 20 1 0 0 0 -1 0 0 0 -1 32269.dat
+0 STEP
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 40 0 80 0 1 0 1 0 0 0 0 -1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 40 0 40 0 1 0 1 0 0 0 0 -1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -40 0 80 0 1 0 1 0 0 0 0 -1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -40 0 40 0 1 0 1 0 0 0 0 -1 6558.dat
+0 STEP
+0 // Technic Differential with One Gear 28 Tooth Bevel (dark_bluish_grey)
+1 72 0 0 60 0 0 -1 0.994 0.112 0 0.112 -0.994 0 62821.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 -40 0 60 -1 0 0 0 0.112 -0.994 0 -0.994 -0.112 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 40 0 60 -1 0 0 0 0.112 -0.994 0 -0.994 -0.112 4519.dat
+0 // Technic Gear 12 Tooth Bevel (tan)
+1 19 17 0 60 0 0 -1 0.994 0.112 0 0.112 -0.994 0 6589.dat
+0 // Technic Gear 12 Tooth Bevel (tan)
+1 19 -17 0 60 0 0 1 0.994 -0.112 0 0.112 0.994 0 6589.dat
+0 // Technic Gear 12 Tooth Bevel (tan)
+1 19 0 -1.904 76.893 -0.259 0.966 0 0.96 0.257 0.112 0.108 0.029 -0.994 6589.dat
+0 STEP
+0 // Technic Cross Block 3 x 2 (Axle/Triple Pin) (light_bluish_grey)
+1 71 60 -20 60 0 -1 0 0 0 1 -1 0 0 63869.dat
+0 // Technic Cross Block 3 x 2 (Axle/Triple Pin) (light_bluish_grey)
+1 71 60 20 60 0 -1 0 0 0 1 -1 0 0 63869.dat
+0 // Technic Cross Block 3 x 2 (Axle/Triple Pin) (light_bluish_grey)
+1 71 -60 -20 60 0 1 0 0 0 1 1 0 0 63869.dat
+0 // Technic Cross Block 3 x 2 (Axle/Triple Pin) (light_bluish_grey)
+1 71 -60 20 60 0 1 0 0 0 1 1 0 0 63869.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 60 -20 60 0 1 0 0 0 1 1 0 0 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 -60 -20 60 0 1 0 0 0 1 1 0 0 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 -60 20 60 0 1 0 0 0 1 1 0 0 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 60 20 60 0 1 0 0 0 1 1 0 0 4519.dat
+0 STEP
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 70 0 60 0 0 -1 0.994 0.112 0 0.112 -0.994 0 59443.dat
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 -70 0 60 0 0 -1 0.994 0.112 0 0.112 -0.994 0 59443.dat
+0 STEP
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 100 -20 75 0 0 -1 1 0 0 0 -1 0 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 100 -20 45 0 0 -1 1 0 0 0 -1 0 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 100 20 45 0 0 -1 1 0 0 0 -1 0 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 -60 -20 45 0 0 -1 1 0 0 0 -1 0 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 -60 -20 75 0 0 -1 1 0 0 0 -1 0 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 -60 20 45 0 0 -1 1 0 0 0 -1 0 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 100 20 75 0 0 -1 1 0 0 0 -1 0 6632.dat
+0 // Technic Beam  3 x  0.5 Liftarm (light_bluish_grey)
+1 71 -60 20 75 0 0 -1 1 0 0 0 -1 0 6632.dat
+0 STEP
+0 // Technic Axle  5.5 with Stop Type 2 (dark_bluish_grey)
+1 72 -127 0 60 -1 0 0 0 0.112 -0.994 0 -0.994 -0.112 59426.dat
+0 // Technic Axle  5.5 with Stop Type 2 (dark_bluish_grey)
+1 72 127 0 60 1 0 0 0 0.112 0.994 0 -0.994 0.112 59426.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (light_bluish_grey)
+1 71 -100 0 60 0 0 -1 0 -1 0 -1 0 0 32184.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (light_bluish_grey)
+1 71 100 0 60 0 0 -1 0 -1 0 -1 0 0 32184.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 120 0 60 0 0 1 -0.112 -0.994 0 0.994 -0.112 0 3713.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 -120 0 60 0 0 -1 0.112 -0.994 0 -0.994 -0.112 0 3713.dat
+0 STEP
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 -100 20 68 0 0 -1 0 -1 0 -1 0 0 6587.dat
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 -100 -20 68 0 0 -1 0 -1 0 -1 0 0 6587.dat
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 100 20 68 0 0 -1 0 -1 0 -1 0 0 6587.dat
+0 // Technic Axle  3 with Stud (dark_tan)
+1 28 100 -20 68 0 0 -1 0 -1 0 -1 0 0 6587.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (light_bluish_grey)
+1 71 -100 -20 90 0 0 1 0 1 0 -1 0 0 6536.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -90 0 90 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (light_bluish_grey)
+1 71 100 -20 90 0 0 1 0 1 0 -1 0 0 6536.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 90 0 90 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Shock Absorber  6.5L Extra Stiff (Complete) (light_bluish_grey)
+1 71 -80 -109.393 101.538 0 0 -1 0.105 0.994 0 0.994 -0.105 0 76537.dat
+0 // Technic Shock Absorber  6.5L Extra Stiff (Complete) (light_bluish_grey)
+1 71 80 -109.393 101.538 0 0 -1 0.105 0.994 0 0.994 -0.105 0 76537.dat
+0 STEP
+0 // Technic Universal Joint 3L End (light_bluish_grey)
+1 71 0 0 -40 0 -1 0 -0.981 0 0.193 -0.193 0 -0.981 62520.dat
+0 // Technic Universal Joint 3L End (light_bluish_grey)
+1 71 0 0 -40 1 0 0 0 1 0 0 0 1 62520.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 021.ldr
+0 Simple pin joiner coupling connecting two friction pins for a short linkage.
+0 Name: 8081 - Hot Rod 021.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Pin Joiner Round with Slot (black)
+1 0 0 0 0 1 0 0 0 -1 0 0 0 -1 62462.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 0 0 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 0 0 1 0 0 0 -1 0 0 0 -1 2780.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 027.ldr
+0 Small bent liftarm bracket assembly with blue beams and pins for structural mounting.
+0 Name: 8081 - Hot Rod 027.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Beam  5 (blue)
+1 1 -20 -34.516 40.21 0 -1 0 0.507 0 -0.862 0.862 0 0.507 32316.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 0 -69.015 60.482 1 0 0 0 0.862 0.507 0 -0.507 0.862 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 0 0 20 1 0 0 0 1 0 0 0 1 6558.dat
+0 STEP
+0 // Technic Beam  2 Liftarm (black)
+1 0 0 0 0 0 -1 0 1 0 0 0 0 1 60483.dat
+0 STEP
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 0 -1 0 0 0 -1 0 0 0 1 4519.dat
+0 STEP
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (blue)
+1 1 -20 0 0 0 1 0 1 0 0 0 0 -1 32140.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 028.ldr
+0 Small bent liftarm bracket assembly with blue beams and pins for structural mounting.
+0 Name: 8081 - Hot Rod 028.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Beam  5 (blue)
+1 1 20 -34.516 40.21 0 -1 0 0.507 0 -0.862 0.862 0 0.507 32316.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 0 -69.015 60.482 -1 0 0 0 0.862 -0.507 0 -0.507 -0.862 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 0 0 20 -1 0 0 0 -1 0 0 0 1 6558.dat
+0 STEP
+0 // Technic Beam  2 Liftarm (black)
+1 0 0 0 0 0 -1 0 1 0 0 0 0 1 60483.dat
+0 STEP
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 0 -1 0 0 0 -1 0 0 0 1 4519.dat
+0 STEP
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (blue)
+1 1 20 0 0 0 1 0 1 0 0 0 0 -1 32140.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 032.ldr
+0 Front splitter or spoiler blade assembly using bent liftarms, angle connectors, and red/black decorative teeth.
+0 Name: 8081 - Hot Rod 032.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Beam  3 x  3.8 x  7 Liftarm Bent 45 Double (black)
+1 0 0 0 0 0 -1 0 1 0 0 0 0 1 32009.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 -80 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 -120 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 10 60 0 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Beam  3 x  3.8 x  7 Liftarm Bent 45 Double (black)
+1 0 20 0 0 0 -1 0 1 0 0 0 0 1 32009.dat
+0 // Technic Axle Pin (tan)
+1 19 30 0 -160 -1 0 0 0 -1 0 0 0 1 3749.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 20 80 0 -1 0 0 0 -1 0 0 0 1 32073.dat
+0 // Technic Angle Connector #6 (90 degree) (black)
+1 0 -40 80 0 0 0 -1 0 1 0 1 0 0 32014.dat
+0 STEP
+0 // Technic Tooth  1 x  3 with Axlehole with Rounded Bottom Cavity (black)
+1 0 40 80 0 0 1 0 0 0 1 1 0 0 41669.dat
+0 // Technic Tooth  1 x  3 with Axlehole with Rounded Bottom Cavity (trans_red)
+1 36 60 80 0 0 -1 0 0 0 1 -1 0 0 41669.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -40 80 10 0 -1 0 0 0 1 -1 0 0 2780.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 035.ldr
+0 Axle joiner coupling assembly using inline joiners and a cross block for a connecting shaft.
+0 Name: 8081 - Hot Rod 035.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 -30 0 0 0 0 1 0 1 0 -1 0 0 59443.dat
+0 STEP
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 30 0 0 0 0 1 0 1 0 -1 0 0 59443.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 0 0 0 1 0 0 0 0 1 0 -1 0 6536.dat
+0 STEP
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 -60 0 0 1 0 0 0 0 1 0 -1 0 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 60 0 0 1 0 0 0 0 1 0 -1 0 4519.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (red)
+1 4 100 0 0 1 0 0 0 0 1 0 -1 0 32054.dat
+0 // Technic Pin Long with Stop Bush (red)
+1 4 -100 0 0 -1 0 0 0 0 1 0 1 0 32054.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 038.ldr
+0 Front splitter or spoiler blade assembly using bent liftarms, angle connectors, and red/black decorative teeth.
+0 Name: 8081 - Hot Rod 038.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Beam  3 x  3.8 x  7 Liftarm Bent 45 Double (black)
+1 0 0 0 0 0 1 0 1 0 0 0 0 -1 32009.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 120 1 0 0 0 -1 0 0 0 -1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 80 1 0 0 0 -1 0 0 0 -1 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 10 60 0 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 STEP
+0 // Technic Beam  3 x  3.8 x  7 Liftarm Bent 45 Double (black)
+1 0 20 0 0 0 1 0 1 0 0 0 0 -1 32009.dat
+0 // Technic Axle Pin (tan)
+1 19 30 0 160 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 20 80 0 -1 0 0 0 1 0 0 0 -1 32073.dat
+0 // Technic Angle Connector #6 (90 degree) (black)
+1 0 -40 80 0 0 0 -1 0 1 0 1 0 0 32014.dat
+0 STEP
+0 // Technic Tooth  1 x  3 with Axlehole with Rounded Bottom Cavity (black)
+1 0 40 80 0 0 1 0 0 0 1 1 0 0 41669.dat
+0 // Technic Tooth  1 x  3 with Axlehole with Rounded Bottom Cavity (trans_red)
+1 36 60 80 0 0 -1 0 0 0 1 -1 0 0 41669.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -40 80 -10 0 -1 0 0 0 1 -1 0 0 2780.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 040.ldr
+0 Small mounting plate assembly with a black liftarm, half-pins, and a white grooved tile.
+0 Name: 8081 - Hot Rod 040.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Beam  5 (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 32316.dat
+0 // Technic Pin  1/2 (blue)
+1 1 20 -10 0 0 0 -1 -1 0 0 0 1 0 4274.dat
+0 // Technic Pin  1/2 (blue)
+1 1 -20 -10 0 0 0 -1 -1 0 0 0 1 0 4274.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (white)
+1 15 0 -18 0 1 0 0 0 1 0 0 0 1 2431.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 041.ldr
+0 Short axle and dual angle connector assembly forming a simple angled linkage.
+0 Name: 8081 - Hot Rod 041.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 32073.dat
+0 // Technic Angle Connector #1 (black)
+1 0 -60 0 0 0 0 -1 0 1 0 1 0 0 32013.dat
+0 // Technic Angle Connector #1 (black)
+1 0 60 0 0 0 0 1 0 1 0 -1 0 0 32013.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 045.ldr
+0 Axle coupling assembly with inline joiners and cross blocks forming a short structural connector.
+0 Name: 8081 - Hot Rod 045.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 32073.dat
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 -50 0 0 0 0 1 0 1 0 -1 0 0 59443.dat
+0 // Technic Axle Joiner Inline Smooth (black)
+1 0 50 0 0 0 0 1 0 1 0 -1 0 0 59443.dat
+0 STEP
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 -80 0 0 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 80 0 0 1 0 0 0 1 0 0 0 1 4519.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -80 0 0 1 0 0 0 0 1 0 -1 0 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 80 0 0 1 0 0 0 0 1 0 -1 0 6536.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 047.ldr
+0 Engine block sub-assembly with peghole bricks, gears, and axles supporting the cylinder heads and crankshaft.
+0 Name: 8081 - Hot Rod 047.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Brick  5 x  3 x  1 with  8 Pegholes and  2 Studs (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 32333.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 10 0 0 0 1 0 1 0 -1 0 0 6558.dat
+0 // Technic Pin  1/2 (blue)
+1 1 44 42 10 0 0 1 0 -1 0 1 0 0 4274.dat
+0 // Technic Pin  1/2 (blue)
+1 1 -44 42 10 0 0 1 0 -1 0 1 0 0 4274.dat
+0 STEP
+1 1 52.8 10.4 30 0.6 -0.8 0 0.8 0.6 0 0 0 1 8081 - Hot Rod 047S02.ldr
+0 STEP
+1 0 0 50 30 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 047S03.ldr
+0 // Technic Axle  2 Notched (red)
+1 4 0 50 0 0 0 1 0 1 0 -1 0 0 32062.dat
+0 STEP
+1 0 -52.8 10.4 30 0.6 0.8 0 -0.8 0.6 0 0 0 1 8081 - Hot Rod 047S04.ldr
+0 STEP
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -20 10 0 0 0 -1 0 1 0 1 0 0 6558.dat
+0 STEP
+0 // Technic Brick  5 x  3 x  1 with  8 Pegholes and  2 Studs (black)
+1 0 0 0 100 1 0 0 0 1 0 0 0 1 32333.dat
+0 STEP
+0 // Technic Axle  4 (black)
+1 0 0 50 120 0 0 -1 0 1 0 1 0 0 3705.dat
+0 STEP
+1 0 0 50 120 -1 0 0 0 -1 0 0 0 1 8081 - Hot Rod 047S08.ldr
+0 STEP
+0 // Technic Gear 16 Tooth Reinforced (light_bluish_grey)
+1 71 0 50 140 -1 0 0 0 -1 0 0 0 1 94925.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 50 -10 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 50 -10 0 0 1 0 1 0 -1 0 0 2780.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 047S02.ldr
+0 Pair of engine cylinder heads joined by pins, forming one bank of the V-engine.
+0 Name: 8081 - Hot Rod 047S02.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 2850a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 26 20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 26 20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 0 0 40 1 0 0 0 1 0 0 0 1 2850a.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -20 26 70 0 0 -1 0 1 0 1 0 0 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 26 60 0 0 -1 0 1 0 1 0 0 2780.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 047S03.ldr
+0 Engine crankshaft assembly with two crankshafts, four connecting rods, and pistons forming the moving internals.
+0 Name: 8081 - Hot Rod 047S03.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Engine Crankshaft (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2853.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 -10 0 0 0.473 -0.881 0 0.881 0.473 0 0 0 1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 -10 0 0 -0.713 0.701 0 0.701 0.713 0 0 0 -1 2852.dat
+0 // Technic Engine Crankshaft Centre (dark_bluish_grey)
+1 72 0 0 20 -1 0 0 0 1 0 0 0 -1 2854.dat
+0 STEP
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 0 40 0.713 -0.701 0 0.701 0.713 0 0 0 1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 0 40 -0.473 0.881 0 0.881 0.473 0 0 0 -1 2852.dat
+0 // Technic Engine Crankshaft (yellow)
+1 14 0 0 40 -1 0 0 0 1 0 0 0 -1 2853.dat
+0 STEP
+0 // Technic Engine Piston Round (yellow)
+1 14 38.038 -28.258 40 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 25.238 -18.928 0 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 -25.238 -18.928 40 0.6 0.8 0 -0.8 0.6 0 0 0 1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 -38.038 -28.528 0 0.6 0.8 0 -0.8 0.6 0 0 0 1 2851.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 047S04.ldr
+0 Pair of engine cylinder heads joined by pins, forming one bank of the V-engine.
+0 Name: 8081 - Hot Rod 047S04.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 2850a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 26 20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 26 20 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 0 0 40 1 0 0 0 1 0 0 0 1 2850a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 26 60 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 26 70 0 0 -1 0 1 0 1 0 0 6558.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 047S08.ldr
+0 Engine drive linkage with angle connectors, cross blocks, and red stop-bush pins transferring motion to the crankshaft.
+0 Name: 8081 - Hot Rod 047S08.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 32184.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 20 0 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 -20 0 1 0 0 0 1 0 0 0 1 4519.dat
+0 STEP
+0 // Technic Angle Connector #1 (black)
+1 0 -40 -20 0 0 0 -1 1 0 0 0 -1 0 32013.dat
+0 // Technic Angle Connector #1 (black)
+1 0 40 -20 0 0 0 1 1 0 0 0 1 0 32013.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -20 20 0 -1 0 0 0 1 0 0 0 -1 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 20 20 0 -1 0 0 0 1 0 0 0 -1 6536.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (red)
+1 4 40 -20 0 0 0 -1 -1 0 0 0 1 0 32054.dat
+0 // Technic Pin Long with Stop Bush (red)
+1 4 -40 -20 0 0 0 -1 -1 0 0 0 1 0 32054.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 050.ldr
+0 Front suspension and steering assembly with suspension arms, towballs, shock absorber, steering links, and gear rack.
+0 Name: 8081 - Hot Rod 050.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Brick  1 x  6 with Holes (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 3894.dat
+0 STEP
+0 // Plate  2 x  2 (light_bluish_grey)
+1 71 0 -8 -10 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (red)
+1 4 -40 -8 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 40 -8 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Technic Axle  2 Notched (red)
+1 4 40 10 0 0 0.121 0.993 0 0.993 -0.121 -1 0 0 32062.dat
+0 // Technic Suspension Arm  2 x  4.8 with Towball (light_bluish_grey)
+1 71 -79.705 5.147 0 0 -0.121 0.993 0 0.993 0.121 -1 0 0 6572.dat
+0 // Technic Suspension Arm  2 x  4.8 with Towball (light_bluish_grey)
+1 71 79.705 5.147 0 0 0.121 -0.993 0 0.993 0.121 1 0 0 6572.dat
+0 // Technic Axle  2 Notched (red)
+1 4 -40 10 0 0 -0.121 -0.993 0 0.993 -0.121 1 0 0 32062.dat
+0 STEP
+0 // Plate  1 x  6 (red)
+1 4 0 -16 0 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Technic Brick  1 x  6 with Holes (red)
+1 4 0 -40 0 1 0 0 0 1 0 0 0 1 3894.dat
+0 STEP
+0 // Technic Axle  2 Notched (red)
+1 4 -40 -30 0 0 -0.121 -0.993 0 0.993 -0.121 1 0 0 32062.dat
+0 // Technic Axle  2 Notched (red)
+1 4 40 -30 0 0 0.121 -0.993 0 0.993 0.121 1 0 0 32062.dat
+0 // Technic Suspension Arm  2 x  4.8 with Towball (light_bluish_grey)
+1 71 -79.705 -34.853 0 0 -0.121 0.993 0 0.993 0.121 -1 0 0 6572.dat
+0 // Technic Suspension Arm  2 x  4.8 with Towball (light_bluish_grey)
+1 71 79.705 -34.853 0 0 0.121 -0.993 0 0.993 0.121 1 0 0 6572.dat
+0 // Technic Axle  2 Notched (red)
+1 4 79.705 -34.853 0 0 0.121 -0.993 0 0.993 0.121 1 0 0 32062.dat
+0 // Technic Axle  2 Notched (red)
+1 4 -79.705 -34.853 0 0 -0.121 -0.993 0 0.993 -0.121 1 0 0 32062.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (light_bluish_grey)
+1 71 -77.278 -54.705 0 0 -0.121 -0.993 0 0.993 -0.121 1 0 0 32184.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (light_bluish_grey)
+1 71 77.278 -54.705 0 0 0.121 -0.993 0 0.993 0.121 1 0 0 32184.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 -74.852 -74.557 0 0 -0.121 -0.993 0 0.993 -0.121 1 0 0 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 74.852 -74.557 0 0 0.121 -0.993 0 0.993 0.121 1 0 0 4519.dat
+0 STEP
+1 14 119.409 -19.705 0 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 050S06.ldr
+1 14 -119.409 -19.705 0 -1 0 0 0 -1 0 0 0 1 8081 - Hot Rod 050S06.ldr
+0 STEP
+0 // Technic Beam  2 Liftarm (black)
+1 0 -74.852 -74.557 20 0.121 0 0.993 -0.993 0 0.121 0 -1 0 60483.dat
+0 // Technic Beam  2 Liftarm (black)
+1 0 74.852 -74.557 20 0.121 0 -0.993 0.993 0 0.121 0 -1 0 60483.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -55 -72.131 10 0 0.121 -0.993 0 -0.993 -0.121 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 55 -72.131 10 0 -0.121 -0.993 0 -0.993 0.121 -1 0 0 2780.dat
+0 STEP
+0 // Technic Shock Absorber  6.5L Extra Stiff (Complete) (light_bluish_grey)
+1 71 -55 -72.131 0 0 1 0 -1 0 0 0 0 1 76537.dat
+0 STEP
+0 // Technic Beam  2 Liftarm (black)
+1 0 -74.852 -74.557 -20 0.993 0 0.121 0.121 0 -0.993 0 1 0 60483.dat
+0 // Technic Beam  2 Liftarm (black)
+1 0 74.852 -74.557 -20 0.993 0 -0.121 -0.121 0 -0.993 0 1 0 60483.dat
+0 STEP
+1 1 -72.426 -94.409 -46 -0.993 0 0.121 -0.121 0 -0.993 0 -1 0 8081 - Hot Rod 050S10.ldr
+1 1 72.426 -94.409 -46 -0.993 0 -0.121 0.121 0 -0.993 0 -1 0 8081 - Hot Rod 050S10.ldr
+0 STEP
+0 // Technic Gear Rack  1 x  2.4 with Towballs (black)
+1 0 0 -16 -20 -1 0 0 0 1 0 0 0 -1 6574.dat
+0 // Technic Steering Link  6L Type 2 (dark_bluish_grey)
+1 72 20 -12 -40 0.069 -0.156 0.985 0.998 0 -0.07 0.011 0.988 0.156 32005.dat
+0 // Technic Steering Link  6L Type 2 (dark_bluish_grey)
+1 72 -20 -12 -40 0.069 0.156 -0.985 -0.998 0 -0.07 -0.011 0.988 0.156 32005.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 050S06.ldr
+0 Steering arm sub-assembly with a towball steering arm, stopped axle, and yellow bushing.
+0 Name: 8081 - Hot Rod 050S06.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Steering Arm 3H with Towball Sockets (black)
+1 0 0 0 0 0 0 -1 0 -1 0 -1 0 0 6571.dat
+0 // Technic Axle  4 with Stop (dark_bluish_grey)
+1 72 30 0 0 -1 0 0 0 -1 0 0 0 1 87083.dat
+0 STEP
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 15 0 0 0 0 1 0 -1 0 1 0 0 32123a.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 050S10.ldr
+0 Wheel hub cover assembly with a clear dish, round plate, and friction axle pin.
+0 Name: 8081 - Hot Rod 050S10.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Dish  2 x  2 with Rim (trans_clear)
+1 47 0 0 0 1 0 0 0 1 0 0 0 1 2654.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 4032a.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 0 -16 0 0 -1 0 1 0 0 0 0 1 43093.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 052.ldr
+0 Steering column assembly with a steering wheel, beams, cross blocks, and pins for the driver controls.
+0 Name: 8081 - Hot Rod 052.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Beam 11 (black)
+1 0 0 0 0 0 0 -1 1 0 0 0 -1 0 32525.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -40 0 -10 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 40 0 -10 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Beam  5 (black)
+1 0 0 0 -20 0 0 -1 1 0 0 0 -1 0 32316.dat
+0 STEP
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 -100 80 -20 1 0 0 0 0 -1 0 1 0 32526.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 -100 0 -20 0 -1 0 0 0 -1 1 0 0 32054.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 -80 0 -20 0 -1 0 0 0 -1 1 0 0 32054.dat
+0 STEP
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 100 80 -20 -1 0 0 0 0 -1 0 -1 0 32526.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 80 0 -20 0 -1 0 0 0 -1 1 0 0 32054.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 100 0 -20 0 -1 0 0 0 -1 1 0 0 32054.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 -100 60 -30 0 -1 0 0 0 -1 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -100 40 -30 0 -1 0 0 0 -1 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 100 40 -30 0 -1 0 0 0 -1 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 100 60 -30 0 -1 0 0 0 -1 1 0 0 2780.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (black)
+1 0 -100 40 -40 -1 0 0 0 1 0 0 0 -1 42003.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (black)
+1 0 100 40 -40 -1 0 0 0 1 0 0 0 -1 42003.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 -80 0 -50 0 0 -1 0 1 0 1 0 0 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -100 0 -50 0 0 -1 0 1 0 1 0 0 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 80 0 -50 0 0 -1 0 1 0 1 0 0 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 100 0 -50 0 0 -1 0 1 0 1 0 0 43093.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (red)
+1 4 60 0 0 0 0 1 0 1 0 -1 0 0 32054.dat
+0 // Technic Axle  2 Notched (red)
+1 4 60 0 30 0 0 1 0 1 0 -1 0 0 32062.dat
+0 // Technic Steering Wheel Small (light_bluish_grey)
+1 71 60 0 54 1 0 0 0 0 1 0 -1 0 2819.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 053.ldr
+0 Small angled connector joint with a 157.5-degree connector and friction axle pins for linkage.
+0 Name: 8081 - Hot Rod 053.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Angle Connector #3 (157.5 degree) (black)
+1 0 0 0 0 0 0 1 -1 0 0 0 -1 0 32016.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -30 0 0 1 0 0 0 0 1 0 -1 0 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 27.716 0 11.481 -0.924 -0.383 0 0 0 1 -0.383 0.924 0 43093.dat
+0 STEP
+0 // Technic Pin Joiner Round with Slot (black)
+1 0 46.194 0 19.134 0.924 0.383 0 0 0 1 0.383 -0.924 0 62462.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 055.ldr
+0 Body panel mounting assembly with a wide black fairing panel and cross blocks for exterior detail.
+0 Name: 8081 - Hot Rod 055.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -20 0 20 1 0 0 0 0 1 0 -1 0 6536.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -20 -20 0 0 0 1 -1 0 0 0 -1 0 6558.dat
+0 STEP
+0 // Technic Angle Connector #1 (black)
+1 0 -20 -20 0 0 -1 0 -1 0 0 0 0 -1 32013.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -20 -40 20 1 0 0 0 0 1 0 -1 0 6536.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 -10 -40 20 -1 0 0 0 0 1 0 1 0 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -10 0 20 -1 0 0 0 0 1 0 1 0 43093.dat
+0 STEP
+0 // Technic Panel Fairing Smooth #18 (Wide Long) (black)
+1 0 0 -60 0 0 0 1 0 -1 0 1 0 0 64682.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 056.ldr
+0 Hot Rod 056
+0 Name: 8081 - Hot Rod 056.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -20 0 -20 -1 0 0 0 0 1 0 1 0 6536.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -20 -20 0 0 0 -1 -1 0 0 0 1 0 6558.dat
+0 STEP
+0 // Technic Angle Connector #1 (black)
+1 0 -20 -20 0 0 1 0 -1 0 0 0 0 1 32013.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -20 -40 -20 -1 0 0 0 0 1 0 1 0 6536.dat
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 -10 -40 -20 -1 0 0 0 0 1 0 1 0 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -10 0 -20 -1 0 0 0 0 1 0 1 0 43093.dat
+0 // Technic Panel Fairing Smooth #17 (Wide Long) (black)
+1 0 0 -60 0 0 0 1 0 -1 0 1 0 0 64392.dat
+0 STEP
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 057.ldr
+0 Hot Rod 057
+0 Name: 8081 - Hot Rod 057.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Panel  5 x 11 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 64782.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 110 0 40 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 110 0 -40 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -110 0 40 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -110 0 -40 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -60 0 -60 0 0 1 0 1 0 -1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 60 0 -60 0 0 1 0 1 0 -1 0 0 6558.dat
+0 STEP
+0 // Technic Beam  7 (black)
+1 0 0 0 -60 0 0 1 -1 0 0 0 -1 0 32524.dat
+0 // Technic Beam  7 (black)
+1 0 0 0 -80 0 0 1 -1 0 0 0 -1 0 32524.dat
+0 STEP
+0 // Technic Beam 11 (black)
+1 0 -120 0 20 0 -1 0 -1 0 0 0 0 -1 32525.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -110 0 -60 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -110 0 -80 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 // Technic Beam  3 (black)
+1 0 -100 0 -80 0 1 0 1 0 0 0 0 -1 32523.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (black)
+1 0 -100 0 -100 -1 0 0 0 1 0 0 0 -1 32054.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 100 0 -100 1 0 0 0 1 0 0 0 1 32054.dat
+0 // Technic Axle  9 (light_bluish_grey)
+1 71 0 0 -100 -1 0 0 0 1 0 0 0 -1 60485.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 059.ldr
+0 Hot Rod 059
+0 Name: 8081 - Hot Rod 059.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Angle Connector #1 (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 32013.dat
+0 // Technic Axle  4 (black)
+1 0 50 0 0 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Angle Connector #1 (black)
+1 0 100 0 0 0 0 1 0 1 0 -1 0 0 32013.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 061.ldr
+0 Hot Rod 061
+0 Name: 8081 - Hot Rod 061.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Beam  5 (light_bluish_grey)
+1 71 0 0 0 0 0 -1 -1 0 0 0 1 0 32316.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -40 0 -10 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 40 0 -10 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 STEP
+0 // Technic Pin Joiner Round with Slot (black)
+1 0 -40 0 -30 0 0 -1 0 -1 0 -1 0 0 62462.dat
+0 // Technic Pin Joiner Round with Slot (black)
+1 0 40 0 -30 0 0 -1 0 -1 0 -1 0 0 62462.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -40 0 -50 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 40 0 -50 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 STEP
+1 0 0 -20 -30 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 061S03.ldr
+0 // Technic Beam  5 (light_bluish_grey)
+1 71 0 0 -60 0 0 -1 -1 0 0 0 1 0 32316.dat
+0 STEP
+1 0 0 -40 -70 1 0 0 0 1 0 0 0 1 8081 - Hot Rod 061S04.ldr
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 061S03.ldr
+0 Hot Rod 061S03
+0 Name: 8081 - Hot Rod 061S03.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 0 0 -1 0 1 0 0 0 0 1 4519.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 20 0 0 -1 0 0 0 -1 1 0 0 3713.dat
+0 STEP
+0 // Technic Pin  3L Double with Axlehole (black)
+1 0 0 0 0 -1 0 0 0 0 -1 0 -1 0 32138.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (light_bluish_grey)
+1 71 -20 20 10 0 0 1 0 -1 0 1 0 0 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (light_bluish_grey)
+1 71 -20 20 -10 0 0 1 0 -1 0 1 0 0 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (light_bluish_grey)
+1 71 20 20 10 0 0 1 0 -1 0 1 0 0 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (light_bluish_grey)
+1 71 20 20 -10 0 0 1 0 -1 0 1 0 0 6536.dat
+0 // Technic Axle  4 (black)
+1 0 -20 20 0 0 0 1 0 -1 0 1 0 0 3705.dat
+0 // Technic Axle  4 (black)
+1 0 20 20 0 0 0 1 0 -1 0 1 0 0 3705.dat
+
+
+0 STEP
+0 FILE 8081 - Hot Rod 061S04.ldr
+0 Hot Rod 061S04
+0 Name: 8081 - Hot Rod 061S04.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Connector (Axle/Bush) Type 1 (black)
+1 0 0 0 -20 1 0 0 0 1 0 0 0 1 32039.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 0 0 0 1 0 1 0 -1 0 0 4519.dat
+0 // Technic Connector (Axle/Bush) Type 1 (black)
+1 0 0 0 20 0 1 0 1 0 0 0 0 -1 32039.dat
+0 STEP
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 0 -40 -1 0 0 0 1 0 0 0 -1 4519.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (black)
+1 0 -20 -20 -40 1 0 0 0 -1 0 0 0 -1 42003.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (black)
+1 0 20 -20 -40 1 0 0 0 -1 0 0 0 -1 42003.dat
+
+
+

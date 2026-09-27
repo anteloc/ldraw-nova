@@ -169,7 +169,7 @@ Labels: **R** relevant new design; **D** duplicate of an earlier hit; **P** part
 
 **B1 — From hit to source to repaired copy.**
 - **What.** Turn `model|submodel` into:
-  1. `$LDRAW_LIB_DIR/models-annotated/<model>`;
+  1. `data/models-annotated/<model>`;
   2. `sections` for the original line numbers;
   3. `extract --section … --namespace … --repair-bfc-comments`, which produces an attributed copy with a manifest.
 - **How it helps.** Without the repair step, 1 in 5 source models cannot be inspected or rendered by the agent. With it, all 170 hits could be checked.

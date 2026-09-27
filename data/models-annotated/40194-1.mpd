@@ -1,0 +1,180 @@
+0 FILE 40194 - Main.ldr
+0 A complete racing scene featuring a finish line with checkered banners, a winner's podium, and a racing minifigure.
+0 Name: 40194 - Main.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 40194 - Finish Line.ldr
+1 0 150 0 -300 0 0 -1 0 1 0 1 0 0 40194 - MiniFig.ldr
+1 0 0 0 -300 1 0 0 0 1 0 0 0 1 40194 - Podium.ldr
+
+
+0 STEP
+0 FILE 40194 - Finish Line Side.ldr
+0 A tall side support structure with a stanchion, panels, lattice fences, and a red-and-yellow striped finish line banner.
+0 Name: 40194 - Finish Line Side.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x 10 (dark_bluish_grey)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (red)
+1 4 -80 -8 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (yellow)
+1 14 -40 -8 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (yellow)
+1 14 40 -8 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (red)
+1 4 80 -8 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 STEP
+0 // Brick  2 x  3 (red)
+1 4 0 -24 -10 0 0 -1 0 1 0 1 0 0 3002.dat
+0 STEP
+0 // Plate  2 x  4 (light_bluish_grey)
+1 71 0 0 -40 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // Brick  1 x  2 with Clip Vertical (Thick U-Clip) with Centre Notch (red)
+1 4 0 -24 -50 1 0 0 0 1 0 0 0 1 30237.dat
+0 STEP
+0 // Panel  1 x  4 x  2 with Hollow Studs (light_bluish_grey)
+1 71 -60 -48 -10 1 0 0 0 1 0 0 0 1 14718.dat
+0 // Panel  1 x  4 x  2 with Hollow Studs (light_bluish_grey)
+1 71 60 -48 -10 1 0 0 0 1 0 0 0 1 14718.dat
+0 STEP
+0 // Fence Lattice  1 x  4 x  1 (black)
+1 0 -60 -72 -10 -1 0 0 0 1 0 0 0 -1 3633.dat
+0 // Fence Lattice  1 x  4 x  1 (black)
+1 0 60 -72 -10 -1 0 0 0 1 0 0 0 -1 3633.dat
+0 STEP
+0 // Support  2 x  4 x  5 Stanchion Inclined (white)
+1 15 0 -144 20 1 0 0 0 1 0 0 0 1 4476.dat
+
+
+0 STEP
+0 FILE 40194 - Finish Line.ldr
+0 A finish line gate with a white flag, stoplight camera, traffic light plates, and a checkered tile base.
+0 Name: 40194 - Finish Line.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 15 0 0 -100 1 0 0 0 1 0 0 0 1 40194 - Finish Line Side.ldr
+1 15 0 0 100 -1 0 0 0 1 0 0 0 -1 40194 - Finish Line Side.ldr
+0 // Plate  2 x 10 (red)
+1 4 0 -152 0 0 0 1 0 1 0 -1 0 0 3832.dat
+0 STEP
+0 // Cone  1 x  1 with Stop (light_bluish_grey)
+1 71 0 -176 80 0 0 1 0 1 0 -1 0 0 59900.dat
+0 // Bracket  1 x  2 -  1 x  4 with Rounded Corners (white)
+1 15 10 -160 0 0 0 -1 0 1 0 1 0 0 2436b.dat
+0 STEP
+0 // Plate  1 x  1 Round (trans_red)
+1 36 32 -150 -30 0 -1 0 -1 0 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 32 -150 -10 0 -1 0 -1 0 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 32 -150 10 0 -1 0 -1 0 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (trans_green)
+1 34 32 -150 30 0 -1 0 -1 0 0 0 0 -1 6141.dat
+0 // Minifig Camera with Side Sight (black)
+1 0 -6.5 -196 80 1 0 0 0 1 0 0 0 1 4360.dat
+0 STEP
+0 // Bar  4L Lightsaber Blade (white)
+1 15 0 -82 -170 1 0 0 0 1 0 0 0 1 30374.dat
+0 // Flag  2 x  2 (white)
+1 15 0 -78 -170 -1 0 0 0 1 0 0 0 -1 2335.dat
+0 // Plate  1 x  2 with Handle (light_bluish_grey)
+1 71 2 -12 190 0 -1 0 1 0 0 0 0 1 2540.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 10 -12 200 0 -1 0 1 0 0 0 0 1 3068b.dat
+
+
+0 STEP
+0 FILE 40194 - Podium.ldr
+0 A tiered award podium with rounded corners, curved top sections, and red accent details.
+0 Name: 40194 - Podium.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  4 x  4 with Corner Round (dark_bluish_grey)
+1 72 0 0 -40 1 0 0 0 1 0 0 0 1 30565.dat
+0 // Plate  4 x  4 with Corner Round (dark_bluish_grey)
+1 72 0 0 40 0 0 -1 0 1 0 1 0 0 30565.dat
+0 STEP
+0 // Brick  1 x  6 (black)
+1 0 -30 -24 0 0 0 -1 0 1 0 1 0 0 3009.dat
+0 STEP
+0 // Brick  2 x  3 with Curved Top (white)
+1 15 0 -24 20 0 0 -1 0 1 0 1 0 0 6215.dat
+0 // Brick  2 x  3 with Curved Top (white)
+1 15 0 -24 -20 0 0 1 0 1 0 -1 0 0 6215.dat
+0 STEP
+0 // Brick  1 x  6 (black)
+1 0 -30 -48 0 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  2 (white)
+1 15 -10 -48 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 10 -48 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Brick  1 x  2 (white)
+1 15 -30 -72 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -30 -72 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -30 -72 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -30 -96 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -30 -96 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -30 -96 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -30 -120 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -30 -120 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -30 -120 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Plate  1 x  6 (red)
+1 4 -30 -128 0 0 0 -1 0 1 0 1 0 0 3666.dat
+0 STEP
+0 // Brick  1 x  4 with Studs on Side (red)
+1 4 -30 -152 0 0 0 -1 0 1 0 1 0 0 30414.dat
+0 STEP
+0 // Tile  2 x  2 with Groove (black)
+1 0 -12 -152 0 0 -1 0 0 0 1 -1 0 0 3068b.dat
+
+
+0 STEP
+0 FILE 40194 - MiniFig.ldr
+0 A racing minifigure wearing a red cap, red headphones, and a red torso outfit.
+0 Name: 40194 - MiniFig.ldr
+0 Author: Stefan Frenz [smf]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Hips and Legs (Obsolete) (red)
+1 4 0 -40 11 1 0 0 0 1 0 0 0 1 3815c01.dat
+0 // Minifig Torso (red)
+1 4 0 -72 11 1 0 0 0 1 0 0 0 1 973.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 -63 11 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 -63 11 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -23.688 -45.24 1.116 0.985 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.688 -45.24 1.116 0.985 -0.12 -0.12 0.002 0.717 -0.697 0.17 0.686 0.707 3820.dat
+0 // Minifig Head with Smile, Black Eyebrows and White Pupils Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 11 1 0 0 0 1 0 0 0 1 3626bp84.dat
+0 // Minifig Cap with Short Arched Peak with Seams and Top Pin Hole (red)
+1 4 0 -96 11 1 0 0 0 1 0 0 0 1 11303.dat
+0 // Minifig Headphones / Ear Protection (black)
+1 0 0 -104 11 1 0 0 0 1 0 0 0 1 14045.dat
+
+
+

@@ -1,0 +1,532 @@
+0 FILE 1775 - main.ldr
+0 The main model assembles an airport control tower, a radar dish, a red and black airplane with movable canopy, and three aviation-themed minifigures alongside two minifig suitcases.
+0 Name: 1775 - main.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+1 15 -280 0 130 1 0 0 0 1 0 0 0 1 1775 - airplane.ldr
+1 15 -220 0 431.433 -0.5 0 -0.866 0 1 0 0.866 0 -0.5 1775 - control tower.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 1775 - minifig 1.ldr
+1 0 -150 0 -90 0 0 -1 0 1 0 1 0 0 1775 - minifig 2.ldr
+1 1 -76.602 0 380 0.5 0 -0.866 0 1 0 0.866 0 0.5 1775 - minifig 3.ldr
+0 // Minifig Suitcase (Closed) (black)
+1 0 24.791 -39.562 -19.166 0.098 0.139 -0.985 0.565 0.807 0.17 0.819 -0.574 0 4449-f1.dat
+0 // Minifig Suitcase (Closed) (light_grey)
+1 7 -25.209 -39.562 -19.166 -0.075 -0.103 -0.992 0.551 0.825 -0.127 0.831 -0.556 0 4449-f1.dat
+
+
+
+
+
+
+
+0 STEP
+0 FILE 1775 - control tower.ldr
+0 A white and red control tower structure built on a green base, featuring stanchions, an inclined roof, a radar screen, and a control panel with a keyboard and control sticks.
+0 Name: 1775 - control tower.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  6 x  8 (green)
+1 2 0 -8 0 1 0 0 0 1 0 0 0 1 3036.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (white)
+1 15 0 -128 40 0 0 -1 0 1 0 1 0 0 4476.dat
+0 STEP
+0 // Slope Brick 75  2 x  2 x  3 with Hollow Studs (white)
+1 15 -40 -80 10 -1 0 0 0 1 0 0 0 -1 3684a.dat
+0 // Slope Brick 75  2 x  2 x  3 with Hollow Studs (white)
+1 15 -40 -80 -10 1 0 0 0 1 0 0 0 1 3684a.dat
+0 STEP
+0 // Brick  2 x  2 (white)
+1 15 -40 -104 0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 STEP
+0 // Support  2 x  4 x  5 Stanchion Inclined (white)
+1 15 0 -128 -40 0 0 -1 0 1 0 1 0 0 4476.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 -40 -128 10 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 -40 -128 -10 1 0 0 0 1 0 0 0 1 3660.dat
+0 STEP
+0 // Plate  4 x  6 (white)
+1 15 -20 -136 0 0 0 -1 0 1 0 1 0 0 3032.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -50 -160 20 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -50 -160 -20 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // Turntable  2 x  2 Plate with Light Grey Top (black)
+1 0 0 -144 0 0 0 -1 0 1 0 1 0 0 3680c01.dat
+0 STEP
+0 // Brick  1 x  4 (red)
+1 4 -20 -160 50 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (red)
+1 4 -20 -160 -50 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Hinge Control Stick Base (black)
+1 0 -50 -168 30 -0.5 0 0.866 0 1 0 -0.866 0 -0.5 4592.dat
+0 // Hinge Control Stick (light_grey)
+1 7 -50 -168 30 -0.5 -0.433 0.75 0 0.866 0.5 -0.866 0.25 -0.433 4593.dat
+0 // Plate  1 x  1 Round (trans_green)
+1 34 -50 -168 -30 0 0 1 0 1 0 -1 0 0 6141.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 with Radar Screen Pattern (white)
+1 15 -70 -184 0 0 0 -1 0 1 0 1 0 0 3039pc6.dat
+0 // Tile  1 x  2 with 28-Key 'QERYUIOP' Keyboard Pattern (white)
+1 15 -20 -168 50 1 0 0 0 1 0 0 0 1 3069bp80.dat
+0 // Tile  1 x  2 with Red & Yellow Controls Pattern (white)
+1 15 -20 -168 -50 -1 0 0 0 1 0 0 0 -1 3069bp68.dat
+0 STEP
+0 // Minifig Seat  2 x  2 (light_grey)
+1 7 0 -152 0 0 0 1 0 1 0 -1 0 0 4079.dat
+0 // Windscreen  3 x  4 x  4 Inverted (trans_light_blue)
+1 43 -70 -256 0 0 0 1 0 1 0 -1 0 0 4872.dat
+0 STEP
+0 // Plate  1 x  4 (white)
+1 15 -70 -264 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Windscreen  3 x  4 x  4 Inverted (trans_light_blue)
+1 43 -20 -256 -50 1 0 0 0 1 0 0 0 1 4872.dat
+0 // Windscreen  3 x  4 x  4 Inverted (trans_light_blue)
+1 43 -20 -256 50 -1 0 0 0 1 0 0 0 -1 4872.dat
+0 STEP
+0 // Tile  1 x  1 with Clip (light_grey)
+1 7 -50.251 -272 89.175 -1 0 0 0 1 0 0 0 -1 2555.dat
+0 // Plate  4 x 10 (white)
+1 15 -20 -264 0 0 0 1 0 1 0 -1 0 0 3030.dat
+0 STEP
+0 // Turntable  2 x  2 Plate with Light Grey Top (black)
+1 0 -60 -272 0 0 0 1 0 1 0 -1 0 0 3680c01.dat
+0 // Plate  2 x  4 (white)
+1 15 -100 -264 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 !LEOCAD PIECE PIVOT  0.000556 2 -21 1 0 0 0 1 0 0 0 1
+0 // Plate  1 x  2 with Handle (white)
+1 15 -59 -297.187 89.175 0 -0.866 -0.5 0 0.5 -0.866 1 0 0 2540.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -65.947 -293.187 99.175 0 -0.866 -0.5 0 0.5 -0.866 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_yellow)
+1 46 -65.946 -293.187 79.175 0 -0.866 -0.5 0 0.5 -0.866 1 0 0 3024.dat
+0 STEP
+0 // Antenna  8H Whip (black)
+1 0 -10 -272 -70 1 0 0 0 1 0 0 0 1 2569.dat
+1 7 -60 -272 0 0.5 0 0.866 0 1 0 -0.866 0 0.5 1775 - radar.ldr
+
+
+
+
+
+0 STEP
+0 FILE 1775 - radar.ldr
+0 A hinged black radar dish assembly mounted on light grey hinge plates with a trans-red round indicator.
+0 Name: 1775 - radar.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  1 x  2 with Handle (light_grey)
+1 7 0 -8 -10 1 0 0 0 1 0 0 0 1 2540.dat
+0 STEP
+0 // Hinge  6 x  3 Radar/Blade/Spoiler/Panel (black)
+1 0 -0.25 -43.2 32.105 1 0 0 0 0.71 -0.71 0 0.71 0.71 2440.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 -0.25 -27.23 47.545 0 0 -1 0.71 -0.71 0 -0.71 -0.71 0 3938.dat
+0 !LEOCAD PIECE PIVOT  31 4.26 -2.84 1 0 0 0 1 0 0 0 1
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (light_grey)
+1 7 -0.25 -23.448 54.533 0 0 -1 0.707 -0.707 0 -0.707 -0.707 0 4276b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers On Side (light_grey)
+1 7 0 -8 10 -1 0 0 0 1 0 0 0 -1 2452.dat
+0 !LEOCAD PIECE PIVOT  0 2 -19 1 0 0 0 1 0 0 0 1
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (light_grey)
+1 7 0 -23.454 -38.768 -1 0 0 0 0.5 -0.866 0 -0.866 -0.5 6019.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 -27.454 -31.84 -1 0 0 0 0.5 -0.866 0 -0.866 -0.5 6141.dat
+
+
+
+
+
+0 STEP
+0 FILE 1775 - airplane.ldr
+0 A red, black, and blue airplane with large wings, inverted slopes, and a fuselage built from plates, wedges, and panels.
+0 Name: 1775 - airplane.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Wedge  4 x  4 Triple Inverted without Ribs between Studs (black)
+1 0 200 -71.145 0 0 0 -1 0 1 0 1 0 0 4855.dat
+0 // Wedge  4 x  4 Triple Inverted without Ribs between Studs (black)
+1 0 -100 -71.145 0 0 0 1 0 1 0 -1 0 0 4855.dat
+0 // Slope Brick 45  4 x  4 Double Inverted with Open Centre (black)
+1 0 150 -71.145 0 1 0 0 0 1 0 0 0 1 4854.dat
+0 // Slope Brick 45  4 x  4 Double Inverted with Open Centre (black)
+1 0 70 -71.145 0 1 0 0 0 1 0 0 0 1 4854.dat
+0 // Slope Brick 45  4 x  4 Double Inverted with Open Centre (black)
+1 0 -10 -71.145 0 1 0 0 0 1 0 0 0 1 4854.dat
+0 // Plate  2 x  2 (black)
+1 0 -70 -55.145 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Plate  2 x  6 (red)
+1 4 150 -63.145 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  2 x 10 (red)
+1 4 -10 -63.145 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 STEP
+0 // Plate  1 x 10 (main_colour)
+1 16 110 -79.145 -30 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Plate  1 x 10 (main_colour)
+1 16 110 -79.145 30 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (main_colour)
+1 16 250 -79.145 0 0 0 -1 0 1 0 1 0 0 4859.dat
+0 STEP
+0 // Plate  2 x  2 (black)
+1 0 -110 -71.145 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Brick  2 x  3 (light_grey)
+1 7 160 -87.145 0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // Panel  1 x  2 x  1 with Square Corners (light_grey)
+1 7 80 -88 0 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Wedge  6 x  4 Inverted (main_colour)
+1 16 -160 -95.145 0 0 0 -1 0 1 0 1 0 0 4856.dat
+0 STEP
+0 // Wing  7 x 12 Right (main_colour)
+1 16 -60 -79.145 -140 0 0 -1 0 1 0 1 0 0 3585.dat
+0 // Wing  7 x 12 Left (main_colour)
+1 16 -60 -79.145 140 0 0 -1 0 1 0 1 0 0 3586.dat
+0 STEP
+0 // Plate  1 x 10 (blue)
+1 1 -10 -87.145 -30 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  1 x  1 (blue)
+1 1 80 -87.145 30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Tile  1 x  8 (blue)
+1 1 -10 -87.145 30 -1 0 0 0 1 0 0 0 -1 4162.dat
+0 // Plate  1 x  1 (blue)
+1 1 -100 -87.145 30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 STEP
+0 // Plate  1 x  6 (blue)
+1 1 150 -87.145 30 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (blue)
+1 1 250 -87.145 0 0 0 -1 0 1 0 1 0 0 4859.dat
+0 // Plate  1 x  6 (blue)
+1 1 150 -87.145 -30 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  1 x  1 (blue)
+1 1 -100 -95.145 30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 -100 -95.145 -30 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 with Flight Control Pattern (light_grey)
+1 7 180 -111.145 0 0 0 1 0 1 0 -1 0 0 3039pc5.dat
+0 // Minifig Seat  2 x  2 (light_grey)
+1 7 -30 -71.145 0 0 0 -1 0 1 0 1 0 0 4079.dat
+0 // Minifig Seat  2 x  2 (light_grey)
+1 7 50 -71.145 0 0 0 1 0 1 0 -1 0 0 4079.dat
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 10 -88 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Brick  1 x  4 (blue)
+1 1 -130 -120 30 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  4 (blue)
+1 1 -130 -120 -30 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Wedge  6 x  4 Inverted (blue)
+1 1 -220 -119.145 0 0 0 -1 0 1 0 1 0 0 4856.dat
+0 STEP
+0 // Wedge  3 x  4 (main_colour)
+1 16 -220 -143.145 0 0 0 1 0 1 0 -1 0 0 2399.dat
+0 // Brick  1 x  1 with Headlight (main_colour)
+1 16 -180 -143.145 -30 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (main_colour)
+1 16 -200 -143.145 -30 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (main_colour)
+1 16 -180 -143.145 30 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (main_colour)
+1 16 -200 -143.145 30 1 0 0 0 1 0 0 0 1 4070.dat
+0 STEP
+0 // Brick  1 x  2 (main_colour)
+1 16 -280 -143.145 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -130 -128 -30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -130 -128 30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Panel  1 x  2 x  1 with Square Corners (main_colour)
+1 16 130 -111.145 -30 -1 0 0 0 1 0 0 0 -1 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (main_colour)
+1 16 130 -111.145 30 1 0 0 0 1 0 0 0 1 4865a.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_light_blue)
+1 43 50 -135.145 -30 1 0 0 0 1 0 0 0 1 4862.dat
+0 // Window  1 x  4 x  2 Plane (main_colour)
+1 16 30 -135.145 -30 1 0 0 0 1 0 0 0 1 4863.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_light_blue)
+1 43 50 -135.145 -30 1 0 0 0 1 0 0 0 1 4862.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_light_blue)
+1 43 10 -135.145 -30 1 0 0 0 1 0 0 0 1 4862.dat
+0 // Window  1 x  4 x  2 Plane (main_colour)
+1 16 -50 -135.145 -30 1 0 0 0 1 0 0 0 1 4863.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_light_blue)
+1 43 -30 -135.145 -30 1 0 0 0 1 0 0 0 1 4862.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_light_blue)
+1 43 -70 -135.145 -30 1 0 0 0 1 0 0 0 1 4862.dat
+0 STEP
+0 // Wedge  6 x  4 without Stud Notches (main_colour)
+1 16 200 -111.145 0 0 0 -1 0 1 0 1 0 0 6153.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (main_colour)
+1 16 90 -135.145 -30 -1 0 0 0 1 0 0 0 -1 4864b.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (main_colour)
+1 16 90 -135.145 30 1 0 0 0 1 0 0 0 1 4864b.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -130 -136 30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -130 -136 -30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 -110 -143.145 30 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  1 without Groove (main_colour)
+1 16 -140 -143.145 30 0 0 -1 0 1 0 1 0 0 3070a.dat
+0 // Tile  1 x  1 without Groove (main_colour)
+1 16 80 -143.145 30 0 0 -1 0 1 0 1 0 0 3070a.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 100 -143.145 30 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (main_colour)
+1 16 100 -143.145 -30 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -160 -143.145 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+0 // Hinge Tile  1 x  4 (main_colour)
+1 16 -110 -143.145 -30 -1 0 0 0 1 0 0 0 -1 4625.dat
+0 // Hinge Tile  1 x  4 (main_colour)
+1 16 -30 -143.145 -30 -1 0 0 0 1 0 0 0 -1 4625.dat
+0 // Hinge Tile  1 x  4 (main_colour)
+1 16 50 -143.145 -30 -1 0 0 0 1 0 0 0 -1 4625.dat
+0 // Windscreen  6 x  4 x  1.333 Airplane with Hollow Studs and Bottom Tabs (trans_light_blue)
+1 43 150 -143.145 0 0 0 -1 0 1 0 1 0 0 6152.dat
+0 STEP
+1 16 -30 -146 -36 1 0 0 0 1 0 0 0 1 1775 - airplane - movable A.ldr
+0 // Slope Brick 45  2 x  3 (main_colour)
+1 16 -180 -167.145 -10 1 0 0 0 1 0 0 0 1 3038.dat
+0 // Slope Brick 45  2 x  3 (main_colour)
+1 16 -180 -167.145 10 -1 0 0 0 1 0 0 0 -1 3038.dat
+0 STEP
+0 // Plane Jet Engine Centre (light_grey)
+1 7 -195 -132.145 -64 0 0 -1 1 0 0 0 -1 0 4869.dat
+0 // Plane Jet Engine with Plate  1 x  2 (main_colour)
+1 16 -200 -133.145 -64 0 0 -1 1 0 0 0 -1 0 4868a.dat
+0 // Plane Jet Engine Centre (light_grey)
+1 7 -185 -134.145 64 0 0 -1 -1 0 0 0 1 0 4869.dat
+0 // Plane Jet Engine with Plate  1 x  2 (main_colour)
+1 16 -190 -133.145 64 0 0 -1 -1 0 0 0 1 0 4868a.dat
+0 STEP
+0 // Brick  1 x  2 (light_grey)
+1 7 -70 -71.145 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -70 -71.145 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 -70 -71.145 50 -1 0 0 0 1 0 0 0 -1 3298.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 -70 -71.145 -50 1 0 0 0 1 0 0 0 1 3298.dat
+0 STEP
+0 // Plate  2 x  6 (light_grey)
+1 7 -70 -47.145 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Turntable  2 x  2 Plate with Light Grey Top (black)
+1 0 150 -47.145 0 -1 0 0 0 1 0 0 0 -1 3680c01.dat
+0 STEP
+0 // Plate  2 x  2 with 2 Wheel Pins (light_grey)
+1 7 -70 -47.145 80 0 0 -1 0 1 0 1 0 0 4870.dat
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 -85 -17.145 92 -1 0 0 0 1 0 0 0 -1 4624.dat
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 -85 -17.145 68 1 0 0 0 1 0 0 0 1 4624.dat
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (black)
+1 0 -85 -17.145 92 0 0 -1 0 1 0 1 0 0 3139.dat
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (black)
+1 0 -85 -17.145 68 0 0 -1 0 1 0 1 0 0 3139.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (light_grey)
+1 7 -70 -47.145 -80 0 0 -1 0 1 0 1 0 0 4870.dat
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 -85 -17.145 -68 -1 0 0 0 1 0 0 0 -1 4624.dat
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 -85 -17.145 -92 1 0 0 0 1 0 0 0 1 4624.dat
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (black)
+1 0 -85 -17.145 -68 0 0 -1 0 1 0 1 0 0 3139.dat
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (black)
+1 0 -85 -17.145 -92 0 0 -1 0 1 0 1 0 0 3139.dat
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (black)
+1 0 170 -19 1 0 0 -1 0 1 0 1 0 0 3139.dat
+0 // Plate  2 x  2 with 2 Wheel Clips Angled (light_grey)
+1 7 150 -40 0 0 0 1 0 1 0 -1 0 0 2415.dat
+0 // Wheel Centre with Stub Axles (trans_clear)
+1 47 170 -19 0 0 0 1 0 1 0 -1 0 0 3464.dat
+0 STEP
+0 // Wedge  4 x  4 Triple (main_colour)
+1 16 100 -167.145 0 0 0 -1 0 1 0 1 0 0 6069.dat
+0 // Tail Plane (main_colour)
+1 16 -220 -167.145 0 0 0 -1 0 1 0 1 0 0 4867.dat
+0 STEP
+0 // Wing  4 x  8 Tail (main_colour)
+1 16 -330 -247.145 0 0 0 1 0 1 0 -1 0 0 3474.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (main_colour)
+1 16 -340 -255.145 0 0 0 1 0 1 0 -1 0 0 3794a.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -340 -263.145 0 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Plate  1 x  1 Round (trans_green)
+1 34 -120 -87.145 -250 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -120 -87.145 250 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 70 -48 0 1 0 0 0 1 0 0 0 1 6141.dat
+
+
+
+
+
+0 STEP
+0 FILE 1775 - airplane - movable A.ldr
+0 A movable airplane section featuring cockpit windows with trans-light-blue glass and hinged slope bricks forming an opening canopy.
+0 Name: 1775 - airplane - movable A.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Window  1 x  4 x  2 Plane (main_colour)
+1 16 -20 11 66 -1 0 0 0 1 0 0 0 -1 4863.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_light_blue)
+1 43 -40 11 66 -1 0 0 0 1 0 0 0 -1 4862.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_light_blue)
+1 43 0 11 66 -1 0 0 0 1 0 0 0 -1 4862.dat
+0 // Window  1 x  4 x  2 Plane (main_colour)
+1 16 60 11 66 -1 0 0 0 1 0 0 0 -1 4863.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_light_blue)
+1 43 40 11 66 -1 0 0 0 1 0 0 0 -1 4862.dat
+0 // Glass for Window  1 x  2 x  2 Plane (trans_light_blue)
+1 43 80 11 66 -1 0 0 0 1 0 0 0 -1 4862.dat
+0 STEP
+0 // Plate  1 x  8 (main_colour)
+1 16 20 3 66 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 STEP
+0 // Slope Brick 45  4 x  4 Double with Hinge (main_colour)
+1 16 80 -21 36 -1 0 0 0 1 0 0 0 -1 4857.dat
+0 // Slope Brick 45  4 x  4 Double with Hinge (main_colour)
+1 16 0 -21 36 -1 0 0 0 1 0 0 0 -1 4857.dat
+0 // Slope Brick 45  4 x  4 Double with Hinge (main_colour)
+1 16 -80 -21 36 -1 0 0 0 1 0 0 0 -1 4857.dat
+
+
+
+
+
+0 STEP
+0 FILE 1775 - minifig 1.ldr
+0 A minifigure wearing a leather jacket torso with a standard grin head and combed black hair.
+0 Name: 1775 - minifig 1.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (main_colour)
+1 16 0 -28 1.815 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (main_colour)
+1 16 0 -28 1.815 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Hand (yellow)
+1 14 -23.533 -45.929 -8.276 1 -0.121 0.121 0.171 0.694 -0.699 0 0.709 0.705 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.478 -45.939 -8.057 1 0.12 -0.122 -0.171 0.694 -0.699 0 0.709 0.705 3820.dat
+0 // Minifig Arm Right (main_colour)
+1 16 -15.372 -63.919 1.838 1 -0.171 0 0.171 1 0 0 0 1 3818.dat
+0 // Minifig Arm Left (main_colour)
+1 16 15.379 -63.93 1.792 1 0.171 0 -0.171 1 0 0 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (main_colour)
+1 16 0 -40 1.815 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Torso with Leather Jacket Pattern (main_colour)
+1 16 0 -72 1.815 1 0 0 0 1 0 0 0 1 973p28.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Hair Combed Front to Rear (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 92081.dat
+
+
+
+
+
+0 STEP
+0 FILE 1775 - minifig 2.ldr
+0 A minifigure wearing a six-button suit with airplane torso pattern, a police hat, and a standard grin head.
+0 Name: 1775 - minifig 2.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (main_colour)
+1 16 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (main_colour)
+1 16 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Hand (yellow)
+1 14 -23.523 -46 -10.091 1 -0.121 0.121 0.171 0.694 -0.699 0 0.709 0.705 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.472 -46 -9.876 1 0.12 -0.122 -0.171 0.694 -0.699 0 0.709 0.705 3820.dat
+0 // Minifig Arm Right (main_colour)
+1 16 -15.358 -63.949 0 1 -0.171 0 0.171 1 0 0 0 1 3818.dat
+0 // Minifig Arm Left (main_colour)
+1 16 15.358 -64 0 1 0.171 0 -0.171 1 0 0 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (main_colour)
+1 16 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Torso with Six Button Suit and Airplane Pattern (main_colour)
+1 16 0 -72 0 1 0 0 0 1 0 0 0 1 973p04.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Police Hat (main_colour)
+1 16 0 -96 0 1 0 0 0 1 0 0 0 1 3624.dat
+
+
+
+
+
+0 STEP
+0 FILE 1775 - minifig 3.ldr
+0 A minifigure wearing an airplane logo and 'AIR' badge torso with a freckle-nose grin head and combed black hair.
+0 Name: 1775 - minifig 3.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // ~Minifig Leg Right (Obsolete) (main_colour)
+1 16 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (main_colour)
+1 16 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Hand (yellow)
+1 14 -23.217 -49.927 -15 1 -0.15 0.079 0.169 0.871 -0.462 0 0.469 0.883 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.857 -46 -10.061 1 0.12 -0.12 -0.169 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Arm Right (main_colour)
+1 16 -15.65 -64 0 1 -0.162 -0.05 0.169 0.942 0.289 0 -0.293 1 3818.dat
+0 // Minifig Arm Left (main_colour)
+1 16 15.639 -64.05 0 1 0.169 0 -0.169 1 0 0 0 1 3819.dat
+0 // ~Minifig Hips (Obsolete) (main_colour)
+1 16 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Torso with Airplane Logo and "AIR" Badge Pattern (main_colour)
+1 16 0 -72 0 1 0 0 0 1 0 0 0 1 973p85.dat
+0 // Minifig Head with Freckle Nose and Standard Grin Pattern (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626bp07.dat
+0 // Minifig Hair Combed Front to Rear (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 92081.dat
+
+
+
+
+
+

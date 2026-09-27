@@ -64,24 +64,27 @@ Explore **21 inspected constructions** and **two adjustable recipes**, or genera
 
 ### 1. Set up the tools
 
-You need **Python 3.12+**, **Poppler** (`pdftotext`), **LeoCAD** and the **LDraw part library**. The rendering workflow has been tested on macOS. `uv` is recommended for installing the locked Python dependencies; `setup.sh` also supports a pip fallback.
+You need **Python 3.12+**, **Poppler** (`pdftotext`), the **`leocad` CLI** and the **LDraw part library**. Tools are resolved on `PATH` across operating systems. The rendering workflow has been tested on macOS. `uv` is recommended for installing the locked Python dependencies; `setup.sh` also supports a pip fallback.
 
 The default local resource layout is:
 
 ```text
-workspace/
-├── ldraw-astra/                # this repository
-└── ldraw-lib/
-    ├── ldraw/                 # official LDraw part library
-    ├── models-annotated/      # reference models, for discovery
-    └── scripts/ldraw-info.db  # searchable descriptions, for discovery
+ldraw-astra/
+└── data/
+    ├── categories/           # descriptive part and colour catalog
+    ├── offLibShadow/         # connector metadata
+    ├── models-annotated/     # reference models
+    └── ldraw-info.db         # searchable descriptions
 ```
 
-Use `LDRAW_LIB_DIR` for a different library-repository location, or `LDRAW_DIR` and `MODELS_DIR` to set the part and model directories separately. Model discovery uses the annotated sources and database; building an included example needs the part library.
+Set `LDRAW_DIR` to your installed parts library (containing `parts/`, `p/` and `LDConfig.ldr`). `LDRAWDIR` is the fallback when `LDRAW_DIR` is unset or empty; `--library` overrides either. Reference models and their database always come from this repository's `data/` directory.
+
+Optional workflows use globally available `jev-rerank` for semantic search, `mpd2glb.sh` for semantic GLB export, and `ldraw-render-steps.sh` to inspect construction steps from different views. The step renderer also helps find defects and improve unfinished submodels; see the [build-page guide](docs/agent/build-manuals.md#inspect-a-model-during-construction).
 
 From the repository root, run:
 
 ```sh
+export LDRAW_DIR=/path/to/ldraw
 ./setup.sh
 ```
 

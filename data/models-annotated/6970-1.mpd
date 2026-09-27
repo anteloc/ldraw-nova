@@ -1,0 +1,786 @@
+0 FILE 6970 - Main Model.ldr
+0 A Classic Space exploration set featuring a lunar base with dish antennas, a launch rack, a winged spacecraft with rocket engines, a monorail cart, a wheeled buggy, and four astronauts.
+0 Name: 6970 - Main Model.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 6970 - Base.ldr
+1 16 -550 -53 -320 0 -0.258819 0.965926 0 0.965926 0.258819 -1 0 0 6970 - Spacecraft.ldr
+1 16 -170 44 -250 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 6970 - Buggy.ldr
+1 16 -290 -32 -100 0 0 1 0 1 0 -1 0 0 6970 - Monorail Cart.ldr
+0
+
+
+0 STEP
+0 FILE 6970 - Base.ldr
+0 A large blue lunar surface base built on two crater baseplates, with structural bricks, support columns, turntables, and yellow accent plates forming the foundation.
+0 Name: 6970 - Base.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  4 x 12 (blue)
+1 1 200 0 60 1 0 0 0 1 0 0 0 1 3029.dat
+0 // Plate  4 x 12 (blue)
+1 1 200 0 -20 1 0 0 0 1 0 0 0 1 3029.dat
+0 // Plate  4 x 12 (blue)
+1 1 -40 0 60 1 0 0 0 1 0 0 0 1 3029.dat
+0 // Plate  4 x 12 (blue)
+1 1 -40 0 -20 1 0 0 0 1 0 0 0 1 3029.dat
+0 STEP
+0 // Brick  2 x 10 (blue)
+1 1 300 8 0 0 0 1 0 1 0 -1 0 0 3006.dat
+0 // Brick  2 x 10 (blue)
+1 1 80 8 0 0 0 1 0 1 0 -1 0 0 3006.dat
+0 // Brick  1 x  2 (blue)
+1 1 -140 8 90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  8 (blue)
+1 1 -150 8 0 0 0 -1 0 1 0 1 0 0 3008.dat
+0 STEP
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (light_grey)
+1 7 300 32 80 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (light_grey)
+1 7 300 32 -80 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (light_grey)
+1 7 80 32 80 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (light_grey)
+1 7 80 32 -80 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (light_grey)
+1 7 -140 32 80 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (light_grey)
+1 7 -160 32 -80 0 0 -1 0 1 0 1 0 0 3940.dat
+0 STEP
+0 // Baseplate 32 x 32 with Craters (light_grey)
+1 7 0 80 -200 0 0 1 0 1 0 -1 0 0 3947.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 310 -24 90 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 80 -24 90 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (blue)
+1 1 -150 -24 90 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // Brick  1 x  2 (blue)
+1 1 -160 8 -90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 STEP
+0 // Brick  1 x  6 (blue)
+1 1 310 -24 20 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  4 (blue)
+1 1 260 -24 90 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  6 (blue)
+1 1 160 -24 90 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  6 (blue)
+1 1 0 -24 90 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  4 (blue)
+1 1 -100 -24 90 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  6 (blue)
+1 1 -150 -24 20 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Plate  1 x  2 (yellow)
+1 14 240 -8 70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 240 -8 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 160 -8 70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (yellow)
+1 14 160 -8 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Turntable  2 x  2 Plate Base (yellow)
+1 14 40 -8 40 -1 0 0 0 1 0 0 0 -1 3680.dat
+0 // Turntable  2 x  2 Plate Base (yellow)
+1 14 -80 -8 40 -1 0 0 0 1 0 0 0 -1 3680.dat
+0 STEP
+0 // Plate  2 x  6 (yellow)
+1 14 240 -16 20 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  2 x  6 (yellow)
+1 14 160 -16 20 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Brick  1 x  2 (yellow)
+1 14 100 -24 70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (yellow)
+1 14 100 -24 10 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  6 (blue)
+1 1 310 -48 20 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  1 (blue)
+1 1 310 -48 110 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  3 (blue)
+1 1 290 -48 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (blue)
+1 1 80 -48 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (blue)
+1 1 80 -48 90 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  1 (blue)
+1 1 -150 -48 110 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  3 (blue)
+1 1 -130 -48 90 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Slope Brick 45  2 x  2 with Computer Panel Pattern (blue)
+1 1 -150 -48 60 0 0 -1 0 1 0 1 0 0 3039p34.dat
+0 // Slope Brick 45  2 x  2 with Computer Panel Pattern (blue)
+1 1 -150 -48 20 0 0 -1 0 1 0 1 0 0 3039p34.dat
+0 // Brick  1 x  2 (blue)
+1 1 -150 -48 -20 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 310 -56 -10 0 0 1 0 1 0 -1 0 0 4085a.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 270 -56 90 1 0 0 0 1 0 0 0 1 4085a.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 130 -56 90 1 0 0 0 1 0 0 0 1 4085a.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 -150 -56 -10 0 0 -1 0 1 0 1 0 0 4085a.dat
+0 STEP
+1 16 40 -8 40 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 6970 - Base - Minifig Seat.ldr
+1 16 -80 -8 40 0 0 1 0 1 0 -1 0 0 6970 - Base - Minifig Seat.ldr
+0 // Slope Brick 45  2 x  2 (yellow)
+1 14 240 -40 70 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Slope Brick 45  2 x  2 (yellow)
+1 14 160 -40 70 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Plate  2 x  4 (yellow)
+1 14 100 -32 40 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 290 -8 -10 1 0 0 0 1 0 0 0 1 3957a.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 -130 -8 -10 1 0 0 0 1 0 0 0 1 3957a.dat
+0 // Brick  1 x  1 (blue)
+1 1 310 -72 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Plate  1 x  1 (blue)
+1 1 310 -64 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 310 -72 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Brick  1 x  2 (blue)
+1 1 310 -72 100 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  1 (blue)
+1 1 290 -72 90 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Plate  1 x  1 (blue)
+1 1 270 -64 90 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 270 -72 90 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 130 -64 90 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 130 -72 90 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Brick  1 x  1 (blue)
+1 1 110 -72 90 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  2 x  2 (blue)
+1 1 80 -72 100 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // Brick  1 x  2 (blue)
+1 1 40 -72 90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 -120 -72 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 -150 -72 100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  1 x  1 (blue)
+1 1 -150 -64 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (blue)
+1 1 -150 -72 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Brick  1 x  1 (blue)
+1 1 -150 -72 -30 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Minifig Radio with Short Handle (black)
+1 0 270 -52 70 -1 0 0 0 1 0 0 0 -1 3962a.dat
+0 // Minifig Torch (black)
+1 0 130 -60 70 1 0 0 0 0 1 0 -1 0 3959.dat
+0 // Brick  1 x  2 (blue)
+1 1 310 -96 -20 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 (blue)
+1 1 310 -96 110 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  3 (blue)
+1 1 290 -96 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (blue)
+1 1 80 -96 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (blue)
+1 1 80 -96 90 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  1 (blue)
+1 1 -150 -96 110 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  3 (blue)
+1 1 -130 -96 90 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (blue)
+1 1 -150 -96 -20 0 0 -1 0 1 0 1 0 0 3004.dat
+0 STEP
+0 // Brick  1 x  2 (blue)
+1 1 310 -120 -20 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 310 -120 100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 280 -120 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 with White Down Arrow Pattern (blue)
+1 1 120 -120 90 1 0 0 0 1 0 0 0 1 3004p20.dat
+0 // Brick  2 x  2 (blue)
+1 1 80 -120 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  1 x  2 with White Down Arrow Pattern (blue)
+1 1 40 -120 90 1 0 0 0 1 0 0 0 1 3004p20.dat
+0 // Brick  1 x  2 (blue)
+1 1 -120 -120 90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 -150 -120 100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 -150 -120 -20 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Window  1 x  4 x  3 (blue)
+1 1 310 -120 40 0 0 -1 0 1 0 1 0 0 3853.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_yellow)
+1 46 310 -120 40 0 0 -1 0 1 0 1 0 0 3855.dat
+0 // Window  1 x  4 x  3 (blue)
+1 1 -150 -120 40 0 0 1 0 1 0 -1 0 0 3853.dat
+0 // Glass for Window  1 x  4 x  3 without Handle (trans_yellow)
+1 46 -150 -120 40 0 0 1 0 1 0 -1 0 0 3855.dat
+0 STEP
+0 // Window  1 x  6 x  5 (blue)
+1 1 200 -32 90 -1 0 0 0 1 0 0 0 -1 3761.dat
+0 // Glass for Window  1 x  6 x  5 (trans_yellow)
+1 46 200 -32 90 -1 0 0 0 1 0 0 0 -1 3762.dat
+0 // Brick  1 x  6 x  5 with Rocket Launch Pattern (blue)
+1 1 -40 -144 90 1 0 0 0 1 0 0 0 1 3754p02.dat
+0 // Brick  1 x  8 (blue)
+1 1 310 -144 40 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Brick  1 x  2 (blue)
+1 1 280 -144 90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 80 -144 110 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  6 (blue)
+1 1 80 -144 90 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  2 (blue)
+1 1 -120 -144 90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  8 (blue)
+1 1 -150 -144 40 0 0 1 0 1 0 -1 0 0 3008.dat
+0 STEP
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 310 -152 110 -1 0 0 0 1 0 0 0 -1 3957a.dat
+0 // Plate  1 x  2 (blue)
+1 1 80 -152 110 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Antenna  5H with Side Spokes (light_grey)
+1 7 -150 -168 110 -0.939693 0 -0.34202 0 1 0 0.34202 0 -0.939693 3144.dat
+0 STEP
+0 // Plate  6 x  8 (trans_yellow)
+1 46 240 -152 40 -1 0 0 0 1 0 0 0 -1 3036.dat
+0 // Plate  6 x  8 (blue)
+1 1 80 -152 40 -1 0 0 0 1 0 0 0 -1 3036.dat
+0 // Plate  6 x  8 (trans_yellow)
+1 46 -80 -152 40 -1 0 0 0 1 0 0 0 -1 3036.dat
+0 // Technic Brick  1 x 12 with Holes (blue)
+1 1 200 -176 -10 -1 0 0 0 1 0 0 0 -1 3895.dat
+0 // Technic Brick  1 x 12 with Holes (blue)
+1 1 -40 -176 -10 -1 0 0 0 1 0 0 0 -1 3895.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (trans_green)
+1 34 230 -200 -10 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Slope Brick 45  2 x  1 (blue)
+1 1 110 -200 -10 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Brick  1 x  2 with Classic Space Logo Pattern (blue)
+1 1 80 -200 -10 1 0 0 0 1 0 0 0 1 3004p90.dat
+0 // Slope Brick 45  2 x  1 (blue)
+1 1 50 -200 -10 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_green)
+1 34 -70 -200 -10 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 310 -168 -30 0 0 1 0 1 0 -1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 -150 -168 -30 0 0 1 0 1 0 -1 0 0 3062b.dat
+1 16 230 -210 -10 0.906308 0 -0.422618 0 1 0 0.422618 0 0.906308 6970 - Base - Small Dish Antenna.ldr
+1 16 -70 -210 -10 0.906308 0 0.422618 0 1 0 -0.422618 0 0.906308 6970 - Base - Small Dish Antenna.ldr
+0 STEP
+0 // Brick  2 x  2 (blue)
+1 1 80 -176 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (blue)
+1 1 80 -200 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (blue)
+1 1 80 -224 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Turntable  2 x  2 Plate Base (light_grey)
+1 7 80 -232 100 1 0 0 0 1 0 0 0 1 3680.dat
+1 16 80 -232 100 0.866025 0 0.5 0 1 0 -0.5 0 0.866025 6970 - Base - Big Dish Antenna.ldr
+0 STEP
+0 // Baseplate 32 x 32 with Craters (light_grey)
+1 7 -640 80 -200 -1 0 0 0 1 0 0 0 -1 3947.dat
+0 STEP
+0 // Brick  2 x  4 (blue)
+1 1 -620 56 -120 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Brick  1 x  4 (blue)
+1 1 -560 56 -150 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  2 x  4 (blue)
+1 1 -560 56 -320 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 STEP
+0 // Brick  1 x  3 (blue)
+1 1 -550 32 -150 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  2 x  4 (blue)
+1 1 -600 32 -120 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // Brick  2 x  4 (blue)
+1 1 -560 32 -320 1 0 0 0 1 0 0 0 1 3001.dat
+0 STEP
+0 // Brick  2 x  4 (blue)
+1 1 -560 8 -320 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // Brick  2 x  4 (blue)
+1 1 -580 8 -120 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Brick  1 x  2 (blue)
+1 1 -540 8 -150 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Plate  4 x 12 (blue)
+1 1 -560 0 -220 0 0 1 0 1 0 -1 0 0 3029.dat
+0 STEP
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (light_grey)
+1 7 -400 32 -80 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Brick  1 x  2 (blue)
+1 1 -400 8 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (blue)
+1 1 -630 32 -90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (blue)
+1 1 -620 8 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Technic Brick  1 x 12 with Holes (blue)
+1 1 200 -16 -90 -1 0 0 0 1 0 0 0 -1 3895.dat
+0 // Technic Brick  1 x 12 with Holes (blue)
+1 1 -40 -16 -90 -1 0 0 0 1 0 0 0 -1 3895.dat
+0 // Technic Brick  1 x 12 with Holes (blue)
+1 1 -280 -16 -90 -1 0 0 0 1 0 0 0 -1 3895.dat
+0 // Technic Brick  1 x 12 with Holes (blue)
+1 1 -520 -16 -90 -1 0 0 0 1 0 0 0 -1 3895.dat
+0 // Technic Pin (light_grey)
+1 7 300 -6 -80 0 0 -1 0 1 0 1 0 0 3673.dat
+0 // Technic Pin (light_grey)
+1 7 -620 -6 -80 0 0 -1 0 1 0 1 0 0 3673.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 160 -32 -90 -1 0 0 0 1 0 0 0 -1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 -160 -32 -90 -1 0 0 0 1 0 0 0 -1 3228b.dat
+0 // Train Track Rail Slotted Straight (light_grey)
+1 7 -480 -32 -90 -1 0 0 0 1 0 0 0 -1 3228b.dat
+0 STEP
+0 // Hinge Plate  2 x  5 Base with Large Hole (blue)
+1 1 -510 -6 -320 0 0 1 0 1 0 -1 0 0 3149e.dat
+0 // ~Hinge Plate  2 x  5 Pivot (red)
+1 4 -510 -6 -320 0 0 1 0 1 0 -1 0 0 313.dat
+1 16 -510 -6 -320 0 -0.258819 0.965926 0 0.965926 0.258819 -1 0 0 6970 - Base - Launch Rack.ldr
+0 // Flag on Flagpole with Classic Space Logo Stickers (Complete) (white)
+1 15 10 56 -310 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 3596d23.dat
+0 // Minifig Cup (trans_clear)
+1 47 110 -56 30 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 3899.dat
+0 // Minifig Airtanks (red)
+1 4 288.772 -58 -11 -0.714793 0.254887 -0.651233 0.00347155 0.932497 0.361161 0.699328 0.255894 -0.667427 3838.dat
+1 47 47.071 -69 47.071 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 6970 - Red Minifig - Two.ldr
+0
+
+
+0 STEP
+0 FILE 6970 - Base - Minifig Seat.ldr
+0 A small swiveling minifigure seat mounted on a turntable top with a yellow 2x2 seat.
+0 Name: 6970 - Base - Minifig Seat.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 0 -8 0 1 0 0 0 1 0 0 0 1 4079.dat
+0
+
+
+0 STEP
+0 FILE 6970 - Base - Small Dish Antenna.ldr
+0 A compact dish antenna assembly using an inverted dish, a torch mount, and a translucent green indicator stud.
+0 Name: 6970 - Base - Small Dish Antenna.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Minifig Torch (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3959.dat
+0 // Dish  4 x  4 Inverted (light_grey)
+1 7 0 0 -24 1 0 0 0 0 1 0 -1 0 3960.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_green)
+1 34 0 0 -40 1 0 0 0 0 1 0 -1 0 3062b.dat
+0
+
+
+0 STEP
+0 FILE 6970 - Base - Big Dish Antenna.ldr
+0 A tilt-mounted large antenna base using a turntable top, hinge base, and center-stud plates for support.
+0 Name: 6970 - Base - Big Dish Antenna.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (light_grey)
+1 7 -10 -8 0 0 0 1 0 1 0 -1 0 0 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (light_grey)
+1 7 10 -8 0 0 0 1 0 1 0 -1 0 0 3794a.dat
+0 STEP
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 0 -32 0 -1 0 0 0 1 0 0 0 -1 3937.dat
+1 16 0 -22 0 1 0 0 0 0.819152 0.573576 0 -0.573576 0.819152 6970 - Base - Big Dish Antenna - Dish.ldr
+0
+
+
+0 STEP
+0 FILE 6970 - Base - Big Dish Antenna - Dish.ldr
+0 The large 8x8 inverted dish array on a hinged bracket with a round support and a translucent green-tipped antenna.
+0 Name: 6970 - Base - Big Dish Antenna - Dish.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 0 -10 0 -1 0 0 0 1 0 0 0 -1 3938.dat
+0 STEP
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 0 -18 -10 -1 0 0 0 1 0 0 0 -1 3956.dat
+0 STEP
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (light_grey)
+1 7 0 -38 10 -1 0 0 0 0 -1 0 -1 0 3940.dat
+0 // Dish  8 x  8 Inverted with Solid Studs (light_grey)
+1 7 0 -38 -38 -1 0 0 0 0 -1 0 -1 0 3961.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 0 -38 -118 -1 0 0 0 0 -1 0 -1 0 3957a.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_green)
+1 34 0 -38 -126 -1 0 0 0 0 -1 0 -1 0 3062b.dat
+0
+
+
+0 STEP
+0 FILE 6970 - Base - Launch Rack.ldr
+0 A blue launch platform with a hinged ramp, grooved tiles, and brackets for holding a spacecraft during launch.
+0 Name: 6970 - Base - Launch Rack.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge Plate  2 x  5 Top with Large Hole (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 314e.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 0 -2 -60 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  8 (blue)
+1 1 0 -18 -50 0 0 1 0 1 0 -1 0 0 3034.dat
+0 STEP
+0 // Tile  2 x  2 with Groove (blue)
+1 1 0 -26 -110 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (blue)
+1 1 0 -26 -70 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (blue)
+1 1 0 -26 -30 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (blue)
+1 1 0 -26 10 -1 0 0 0 1 0 0 0 -1 3956.dat
+0
+
+
+0 STEP
+0 FILE 6970 - Spacecraft.ldr
+0 A grey winged space vessel with twin rocket thrusters, a round cockpit, inverted slopes, and a Classic Space patterned nose slope.
+0 Name: 6970 - Spacecraft.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  4 x  8 (light_grey)
+1 7 0 0 40 1 0 0 0 1 0 0 0 1 3035.dat
+0 // Plate  4 x  8 (light_grey)
+1 7 0 0 -40 1 0 0 0 1 0 0 0 1 3035.dat
+0 STEP
+0 // Plate  2 x  8 (light_grey)
+1 7 0 0 -160 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Wing  4 x  8 Right (light_grey)
+1 7 -100 -8 0 1 0 0 0 1 0 0 0 1 3934.dat
+0 // Wing  4 x  8 Right (light_grey)
+1 7 -40 -8 -140 1 0 0 0 1 0 0 0 1 3934.dat
+0 STEP
+0 // Plate  1 x  8 (light_grey)
+1 7 -50 -8 20 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 50 -8 20 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Wing  4 x  8 Left (light_grey)
+1 7 100 -8 0 1 0 0 0 1 0 0 0 1 3933.dat
+0 // Wing  4 x  8 Left (light_grey)
+1 7 40 -8 -140 1 0 0 0 1 0 0 0 1 3933.dat
+0 STEP
+0 // Plate  1 x  1 (trans_red)
+1 36 -50 0 90 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 50 0 90 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 -110 0 70 0 0 1 0 1 0 -1 0 0 3963.dat
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 110 0 70 0 0 -1 0 1 0 1 0 0 3963.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -60 8 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 60 8 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  1 x  8 (light_grey)
+1 7 -30 8 0 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Brick  1 x  8 (light_grey)
+1 7 30 8 0 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 0 8 -70 1 0 0 0 1 0 0 0 1 3747a.dat
+0 STEP
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 -100 -16 60 0 0 1 0 1 0 -1 0 0 3956.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 100 -16 60 0 0 -1 0 1 0 1 0 0 3956.dat
+0 // Bar  1 x  4 x  2 with Studs (light_grey)
+1 7 0 -48 50 1 0 0 0 1 0 0 0 1 4083.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 -90 -16 30 1 0 0 0 1 0 0 0 1 3957a.dat
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 0 -8 -50 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 // Slope Brick 33  3 x  4 with Classic Space Pattern (light_grey)
+1 7 0 -32 -70 1 0 0 0 1 0 0 0 1 3297p90.dat
+0 // Plate  1 x  2 with Handles Type 1 (light_grey)
+1 7 0 -8 -230 1 0 0 0 1 0 0 0 1 3839a.dat
+0 STEP
+1 7 -60 0 0 1 0 0 0 1 0 0 0 1 6970 - Spacecraft - Engine.ldr
+1 7 60 0 0 1 0 0 0 1 0 0 0 1 6970 - Spacecraft - Engine.ldr
+0 STEP
+0 // Wing  4 x  4 Left (light_grey)
+1 7 -136 -56 60 0 1 0 -1 0 0 0 0 1 3936.dat
+0 // Wing  4 x  4 Right (light_grey)
+1 7 136 -56 60 0 -1 0 1 0 0 0 0 1 3935.dat
+0 // Brick  1 x  4 (trans_yellow)
+1 46 0 -56 -70 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 26 -4 -244 1 0 0 0 0 1 0 -1 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 -26 -4 -244 1 0 0 0 0 1 0 -1 0 3062b.dat
+0 STEP
+1 16 0 -53 -12 1 0 0 0 1 0 0 0 1 6970 - Red Minifig - One.ldr
+0
+
+
+0 STEP
+0 FILE 6970 - Spacecraft - Engine.ldr
+0 A dual-nozzle rocket engine pod with round white cones, support columns, and a black-tipped antenna exhaust detail.
+0 Name: 6970 - Spacecraft - Engine.ldr
+0 Author: Holly-Wood
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Bracket  2 x  2 -  2 x  2 Up (black)
+1 0 0 -16 -20 1 0 0 0 1 0 0 0 1 3956.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (light_grey)
+1 7 0 -36 -40 1 0 0 0 0 -1 0 1 0 3940.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 0 -36 8 1 0 0 0 0 -1 0 1 0 3941.dat
+0 STEP
+0 // Bracket  2 x  2 -  2 x  2 Up (black)
+1 0 0 -16 60 1 0 0 0 1 0 0 0 1 3956.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 0 -36 40 1 0 0 0 0 -1 0 1 0 3941.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 0 -36 64 1 0 0 0 0 -1 0 1 0 3940.dat
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (white)
+1 15 0 -36 -96 1 0 0 0 0 -1 0 1 0 3942b.dat
+0 STEP
+0 // Antenna  4H with Rounded Top (black)
+1 0 0 -36 -104 1 0 0 0 0 -1 0 1 0 3957a.dat
+0 // Cone  4 x  4 x  2 with Axlehole (white)
+1 15 0 -36 112 1 0 0 0 0 -1 0 1 0 3943b.dat
+0
+
+
+0 STEP
+0 FILE 6970 - Monorail Cart.ldr
+0 A flat grey transport cart with two minifigure seats and a studded bar handle, built on plate and brick runners.
+0 Name: 6970 - Monorail Cart.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Brick  1 x  8 (light_grey)
+1 7 -30 0 0 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Brick  1 x  8 (light_grey)
+1 7 10 0 0 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Plate  4 x  8 (light_grey)
+1 7 0 -8 0 0 0 1 0 1 0 -1 0 0 3035.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -16 -50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -16 30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Minifig Seat  2 x  2 (light_grey)
+1 7 0 -16 60 1 0 0 0 1 0 0 0 1 4079.dat
+0 // Minifig Seat  2 x  2 (light_grey)
+1 7 0 -16 -20 1 0 0 0 1 0 0 0 1 4079.dat
+0 STEP
+0 // Bar  1 x  4 x  2 with Studs (light_grey)
+1 7 0 -56 -70 1 0 0 0 1 0 0 0 1 4083.dat
+0 STEP
+1 16 0 -69 -32 1 0 0 0 1 0 0 0 1 6970 - White Minifig - Two.ldr
+0
+
+
+0 STEP
+0 FILE 6970 - Buggy.ldr
+0 A small grey wheeled rover with four offset-tread tyres, a steering wheel, a sloped front, and a space minifig accessory loadout.
+0 Name: 6970 - Buggy.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  6 (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 STEP
+0 // Plate  2 x  2 with Red Wheels (Complete) (light_grey)
+1 7 0 8 40 -1 0 0 0 1 0 0 0 -1 122c01.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 0 8 0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  2 x  2 with Red Wheels (Complete) (light_grey)
+1 7 0 8 -40 -1 0 0 0 1 0 0 0 -1 122c01.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 30 14 40 0 0 -1 0 1 0 1 0 0 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 -30 14 40 0 0 1 0 1 0 -1 0 0 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 -30 14 -40 0 0 1 0 1 0 -1 0 0 3641.dat
+0 // Tyre  6/ 50 x  8 Offset Tread (rubber_black)
+1 256 30 14 -40 0 0 -1 0 1 0 1 0 0 3641.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 (light_grey)
+1 7 0 -24 50 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 10 -32 50 -1 0 0 0 1 0 0 0 -1 4085a.dat
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 0 -8 -30 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (light_grey)
+1 7 0 -8 -50 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 -10 -32 50 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Minifig Tool Spanner/Screwdriver (black)
+1 0 10 -40 70 -0.707107 0 -0.707107 0 1 0 0.707107 0 -0.707107 4006.dat
+0 // Minifig Airtanks (light_grey)
+1 7 0 -8 -50 -1 0 0 0 1 0 0 0 -1 3838.dat
+0 STEP
+1 16 0 -53 8 1 0 0 0 1 0 0 0 1 6970 - White Minifig - One.ldr
+0
+
+
+0 STEP
+0 FILE 6970 - White Minifig - One.ldr
+0 A Classic Space astronaut minifigure in white with helmet, airtanks, and a standard grin head.
+0 Name: 6970 - White Minifig - One.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (white)
+1 15 0 -27 0 1 0 0 0 1 0 0 0 1 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Airtanks (white)
+1 15 0 1 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Classic Space Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // ~Minifig Hips (Obsolete) (white)
+1 15 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (white)
+1 15 -15.552 9 0 0.985 -0.120208 -0.120208 0.17 0.6965 0.6965 0 -0.707107 0.707107 3818.dat
+0 // Minifig Arm Left (white)
+1 15 15.552 9 0 0.985 0.120208 0.120208 -0.17 0.6965 0.6965 0 -0.707107 0.707107 3819.dat
+0 // Minifig Hand (white)
+1 15 -21.6886 13.9945 -20.5641 0.985 -0.169974 0 0.17 0.984851 0 0 0 0.999849 3820.dat
+0 // Minifig Hand (white)
+1 15 21.6886 13.9945 -20.5641 0.985 0.169974 0 -0.17 0.984851 0 0 0 0.999849 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+0 STEP
+0 FILE 6970 - Red Minifig - One.ldr
+0 A Classic Space astronaut minifigure in red with helmet, airtanks, and a standard grin head.
+0 Name: 6970 - Red Minifig - One.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (red)
+1 4 0 -27 0 1 0 0 0 1 0 0 0 1 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Airtanks (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Classic Space Pattern (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 9 0 0.985 -0.120208 -0.120208 0.17 0.6965 0.6965 0 -0.707107 0.707107 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 9 0 0.985 0.120208 0.120208 -0.17 0.6965 0.6965 0 -0.707107 0.707107 3819.dat
+0 // Minifig Hand (red)
+1 4 -21.6886 13.9945 -20.5641 0.985 -0.169974 0 0.17 0.984851 0 0 0 0.999849 3820.dat
+0 // Minifig Hand (red)
+1 4 21.6886 13.9945 -20.5641 0.985 0.169974 0 -0.17 0.984851 0 0 0 0.999849 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+0
+
+
+0 STEP
+0 FILE 6970 - White Minifig - Two.ldr
+0 A Classic Space astronaut minifigure in white with helmet, airtanks, and a standard grin head.
+0 Name: 6970 - White Minifig - Two.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (white)
+1 15 0 -27 0 1 0 0 0 1 0 0 0 1 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Airtanks (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Classic Space Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // ~Minifig Hips (Obsolete) (white)
+1 15 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (white)
+1 15 -15.552 9 0 0.985 -0.120208 -0.120208 0.17 0.6965 0.6965 0 -0.707107 0.707107 3818.dat
+0 // Minifig Arm Left (white)
+1 15 15.552 9 0 0.985 0.120208 0.120208 -0.17 0.6965 0.6965 0 -0.707107 0.707107 3819.dat
+0 // Minifig Hand (white)
+1 15 -21.6886 13.9945 -20.5641 0.985 -0.169974 0 0.17 0.984851 0 0 0 0.999849 3820.dat
+0 // Minifig Hand (white)
+1 15 21.6886 13.9945 -20.5641 0.985 0.169974 0 -0.17 0.984851 0 0 0 0.999849 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+0
+
+
+0 STEP
+0 FILE 6970 - Red Minifig - Two.ldr
+0 A Classic Space astronaut minifigure in red with helmet, airtanks, a standard grin head, holding a transparent cup.
+0 Name: 6970 - Red Minifig - Two.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (red)
+1 4 0 -24 0 1 0 0 0 1 0 0 0 1 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -24 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso with Classic Space Pattern (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 9 0 0.985 -0.0609226 -0.158709 0.17 0.352992 0.919577 0 -0.93358 0.358368 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 9 0 0.985 0.164207 0.0439992 -0.17 0.951437 0.254937 0 -0.258819 0.965926 3819.dat
+0 // Minifig Hand (red)
+1 4 -20.1789 5.24754 -21.2136 0.985 -0.155279 -0.0691348 0.17 0.899706 0.400575 0 -0.406675 0.913408 3820.dat
+0 // Minifig Hand (red)
+1 4 23.3006 23.3347 -14.825 0.985 0.147202 -0.0849872 -0.17 0.852906 -0.492426 0 0.499924 0.865895 3820.dat
+0 // Minifig Cup (trans_clear)
+1 47 2.64669 -9.74906 -28.2062 0.0392988 -0.167352 -0.984657 0.182271 0.969654 -0.157669 0.982023 -0.17343 0.0686697 3899.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 0.0174524 0.999848 0 -0.999848 0.0174524 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 0.0174524 0.999848 0 -0.999848 0.0174524 3817.dat
+0
+0
+
+
+
+
+
+

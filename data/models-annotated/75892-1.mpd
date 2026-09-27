@@ -1,0 +1,1706 @@
+0 FILE 75892 - Main.ldr
+0 Complete Speed Champions car model featuring a wind tunnel test rig with a rotating fan, a detailed McLaren-style race car with chassis, bodywork, spoiler, rear bumper, wheels, and a pilot minifigure.
+0 Name: 75892 - Main.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HISTORY 2020-01-09 [Adrien Pennamen] Initial creation
+1 18 -101 -7 -71 1 0 0 0 1 0 0 0 1 75892 - Car.ldr
+1 18 103 0 17 1 0 0 0 1 0 0 0 1 75892 - Pilot.ldr
+1 18 100 -39 192 -1 0 0 0 1 0 0 0 -1 75892 - Wind Tunnel.ldr
+
+
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - Wind Tunnel.ldr
+0 Aerodynamic wind tunnel structure built from black plates and quarter-circle cutouts with white inverted arches, corner tiles, and curved slopes forming the tunnel housing.
+0 Name: 75892 - Wind Tunnel.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  1 x  6 (black)
+1 0 3.3333 -41.3333 20 0 1 0 -1 0 0 0 0 1 3666.dat
+0 STEP
+0 // Plate  4 x  4 with  3 x  3 Quarter Circle Cutout (black)
+1 0 -4.6667 -61.3333 -10 0 1 0 0 0 -1 -1 0 0 35044.dat
+0 STEP
+0 // Plate  1 x  6 (black)
+1 0 3.3333 -91.3333 -50 0 1 0 0 0 -1 -1 0 0 3666.dat
+0 STEP
+0 // Plate  4 x  4 with  3 x  3 Quarter Circle Cutout (black)
+1 0 -4.6667 -61.3333 -90 0 1 0 1 0 0 0 0 -1 35044.dat
+0 STEP
+0 // Plate  1 x  6 (black)
+1 0 3.3333 -41.3333 -120 0 1 0 -1 0 0 0 0 1 3666.dat
+0 STEP
+0 // Plate  1 x  3 (black)
+1 0 -4.6667 8.6667 -120 0 1 0 -1 0 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 -4.6667 8.6667 20 0 1 0 -1 0 0 0 0 1 3623.dat
+0 STEP
+0 // Arch  1 x  3 x  2 Inverted (white)
+1 15 -52.6667 28.6667 20 0 1 0 -1 0 0 0 0 1 18653.dat
+0 // Arch  1 x  3 x  2 Inverted (white)
+1 15 -52.6667 28.6667 -120 0 1 0 -1 0 0 0 0 1 18653.dat
+0 // Tile  4 x  4 Corner Round (white)
+1 15 -12.6667 -21.3333 -50 0 1 0 -1 0 0 0 0 1 27507.dat
+0 // Tile  4 x  4 Corner Round (white)
+1 15 -12.6667 -21.3333 -50 0 1 0 0 0 1 1 0 0 27507.dat
+0 STEP
+1 0 19.3333 8.6667 -50 0 1 0 -1 0 0 0 0 1 75892 - Rotating fan.ldr
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (white)
+1 15 11 29 -120 0 1 0 0 0 1 1 0 0 3665b.dat
+0 // Slope Brick 45  2 x  1 Inverted with Inner Stopper Ring (white)
+1 15 11 29 20 0 1 0 0 0 1 1 0 0 3665b.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (white)
+1 15 -52.6667 28.6667 -120 0 1 0 0 0 1 1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (white)
+1 15 -52.6667 28.6667 20 0 1 0 0 0 1 1 0 0 54200.dat
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - Rotating fan.ldr
+0 Mechanical fan assembly using Technic gears, an axle pin, and a three-blade propeller mounted on a dark grey plate base.
+0 Name: 75892 - Rotating fan.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Plate  2 x  4 with Holes (dark_grey)
+1 8 10 -8 0 1 0 0 0 1 0 0 0 1 3709b.dat
+0 STEP
+0 // Plate  1 x  8 (dark_grey)
+1 8 -20 -16 0 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // Tile  2 x  2 Round with Hole (dark_grey)
+1 8 30 -16 0 1 0 0 0 1 0 0 0 1 15535.dat
+0 STEP
+0 // Slope Brick Curved  2 x  1 Inverted (black)
+1 0 -20 -8 -30 1 0 0 0 1 0 0 0 1 24201.dat
+0 // Slope Brick Curved  2 x  1 Inverted (black)
+1 0 -20 -8 30 -1 0 0 0 1 0 0 0 -1 24201.dat
+0 STEP
+0 // Technic Axle Pin Long with Friction with  2L Axle (black)
+1 0 30 -6 0 0 1 0 1 0 0 0 0 -1 18651.dat
+0 // Technic Gear 12 Tooth Double Bevel (black)
+1 0 30 10 0 1 0 0 0 0 -1 0 1 0 32270.dat
+0 // Propeller  3 Blade  5.5 Diameter with Technic Peghole and Flat End Blades (black)
+1 0 30 -28 0 1 0 0 0 0 -1 0 1 0 92842.dat
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - Chassis rear.ldr
+0 Rear chassis section built around a black car base plate with curved slopes, cross plates, and medium orange accent panels forming the structural backbone.
+0 Name: 75892 - Chassis rear.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Car Base 10 x  4 x  2/3 with 4 x 2 Centre Well (black)
+1 0 2 -18 -29 1 0 0 0 1 0 0 0 1 30029.dat
+0 STEP
+0 // Slope Brick Curved  2 x  2 x   2/3 Triple with Two Top Studs (light_bluish_grey)
+1 71 2 -17 -19 -1 0 0 0 1 0 0 0 -1 47457.dat
+0 STEP
+0 // =Tile  1 x  4 with Groove (light_bluish_grey)
+1 71 2 -26 -19 1 0 0 0 1 0 0 0 1 91143.dat
+0 STEP
+0 // =Plate  1 x  1 (dark_grey)
+1 8 -28 -26 -39 1 0 0 0 1 0 0 0 1 30008.dat
+0 // =Plate  1 x  1 (dark_grey)
+1 8 32 -26 -39 1 0 0 0 1 0 0 0 1 30008.dat
+0 // Plate  2 x  6 (dark_grey)
+1 8 2 -26 11 1 0 0 0 1 0 0 0 1 3795.dat
+0 STEP
+0 // Plate  1 x  4 (medium_orange)
+1 462 2 -26 41 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  3 x  3 Cross (black)
+1 0 -28 -26 -79 1 0 0 0 1 0 0 0 1 15397.dat
+0 // Plate  3 x  3 Cross (black)
+1 0 32 -26 -79 1 0 0 0 1 0 0 0 1 15397.dat
+0 STEP
+0 // Plate  2 x  2 x  0.667 with Two Studs On Side and Two Raised with Closed Understud (black)
+1 0 52 -18 -69 0 0 -1 0 1 0 1 0 0 99206.dat
+0 // Plate  2 x  2 x  0.667 with Two Studs On Side and Two Raised with Closed Understud (black)
+1 0 -48 -18 -69 0 0 1 0 1 0 -1 0 0 99206.dat
+0 // Plate  2 x  2 x  0.667 with Two Studs On Side and Two Raised with Closed Understud (black)
+1 0 -48 -18 -29 0 0 1 0 1 0 -1 0 0 99206.dat
+0 // Plate  2 x  2 x  0.667 with Two Studs On Side and Two Raised with Closed Understud (black)
+1 0 -48 -18 11 0 0 1 0 1 0 -1 0 0 99206.dat
+0 // Plate  2 x  2 x  0.667 with Two Studs On Side and Two Raised with Closed Understud (black)
+1 0 52 -18 -29 0 0 -1 0 1 0 1 0 0 99206.dat
+0 // Plate  2 x  2 x  0.667 with Two Studs On Side and Two Raised with Closed Understud (black)
+1 0 52 -18 11 0 0 -1 0 1 0 1 0 0 99206.dat
+0 STEP
+0 // =Tile  1 x  6 (black)
+1 0 -66 -12 -29 0 1 0 0 0 -1 -1 0 0 63324.dat
+0 // =Tile  1 x  6 (black)
+1 0 70 -12 -29 0 -1 0 0 0 1 -1 0 0 63324.dat
+0 STEP
+0 // Plate  1 x  4 (medium_orange)
+1 462 2 -10 41 1 0 0 0 1 0 0 0 1 3710.dat
+0 // =Plate  1 x  1 (dark_grey)
+1 8 32 -18 41 1 0 0 0 1 0 0 0 1 30008.dat
+0 // =Plate  1 x  1 (dark_grey)
+1 8 -28 -18 41 1 0 0 0 1 0 0 0 1 30008.dat
+0 STEP
+0 // =Plate  1 x  1 (medium_orange)
+1 462 -48 -26 -19 1 0 0 0 1 0 0 0 1 30008.dat
+0 // =Plate  1 x  1 (medium_orange)
+1 462 52 -26 -19 1 0 0 0 1 0 0 0 1 30008.dat
+0 // Tile  1 x  2 without Groove (medium_orange)
+1 462 52 -26 -49 0 0 1 0 1 0 -1 0 0 3069a.dat
+0 // Tile  1 x  2 without Groove (medium_orange)
+1 462 -48 -26 -49 0 0 1 0 1 0 -1 0 0 3069a.dat
+0 STEP
+0 // Plate  2 x  4 with Side Bricks  1 x  2 x  1.333 with Hole (dark_grey)
+1 8 2 -34 71 1 0 0 0 1 0 0 0 1 18975.dat
+0 // =Plate  1 x  2 (medium_orange)
+1 462 2 -18 81 1 0 0 0 1 0 0 0 1 28653.dat
+0 STEP
+0 // Plate  2 x  4 (medium_orange)
+1 462 2 -26 -129 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // =Plate  2 x  2 (white)
+1 15 2 -26 71 1 0 0 0 1 0 0 0 1 94148.dat
+0 STEP
+0 // Plate  2 x  4 (medium_orange)
+1 462 2 -34 51 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // =Plate  1 x  2 (black)
+1 0 32 -34 31 0 0 -1 0 1 0 1 0 0 28653.dat
+0 // =Plate  1 x  2 (black)
+1 0 -28 -34 31 0 0 -1 0 1 0 1 0 0 28653.dat
+0 STEP
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 -18 -26 1 1 0 0 0 1 0 0 0 1 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 22 -26 1 1 0 0 0 1 0 0 0 1 85984.dat
+0 // Plate  1 x  3 (dark_grey)
+1 8 52 -34 1 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (dark_grey)
+1 8 -48 -34 1 0 0 1 0 1 0 -1 0 0 3623.dat
+0 STEP
+0 // Wing  2 x  2 Right (dark_grey)
+1 8 -38 -34 -49 1 0 0 0 1 0 0 0 1 24307.dat
+0 // Wing  2 x  2 Left (dark_grey)
+1 8 42 -34 -49 1 0 0 0 1 0 0 0 1 24299.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 32 -34 -99 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 -28 -34 -99 1 0 0 0 1 0 0 0 1 2420.dat
+0 STEP
+0 // Brick  1 x  4 (black)
+1 0 2 -58 21 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // =Plate  2 x  2 (white)
+1 15 2 -42 51 0 0 1 0 1 0 -1 0 0 94148.dat
+0 // =Bracket  1 x  2 -  2 x  2 Down (light_yellow)
+1 18 2 -42 81 -1 0 0 0 1 0 0 0 -1 92411.dat
+0 STEP
+0 // Car Mudguard  4 x  2.5 x  2 with Rounded Ends (dark_grey)
+1 8 42 -66 71 0 0 -1 0 1 0 1 0 0 35789.dat
+0 // Car Mudguard  4 x  2.5 x  2 with Rounded Ends (dark_grey)
+1 8 -38 -66 71 0 0 1 0 1 0 -1 0 0 35789.dat
+0 STEP
+0 // Brick  1 x  4 (black)
+1 0 2 -66 41 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // =Plate  1 x  2 (medium_orange)
+1 462 2 -74 41 -1 0 0 0 1 0 0 0 -1 28653.dat
+0 STEP
+0 // Brick  2 x  3 (light_bluish_grey)
+1 71 2 -66 81 0 0 1 0 1 0 -1 0 0 3002.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (dark_grey)
+1 8 -48 -58 21 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (dark_grey)
+1 8 52 -58 21 1 0 0 0 1 0 0 0 1 3040b.dat
+0 STEP
+0 // =Tile  1 x  2 Grille with Groove (black)
+1 0 32 -66 71 0 0 -1 0 1 0 1 0 0 15561.dat
+0 // =Tile  1 x  2 Grille with Groove (black)
+1 0 -28 -66 71 0 0 -1 0 1 0 1 0 0 15561.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 52 -66 21 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 -48 -66 21 1 0 0 0 1 0 0 0 1 2420.dat
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - Chassis front.ldr
+0 Front chassis section using rounded plates, corner panels, slopes, and a hinge mechanism to shape the nose and front bodywork mounting points.
+0 Name: 75892 - Chassis front.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  6 with Two Rounded Corners (black)
+1 0 0 -8 -80 1 0 0 0 1 0 0 0 1 18980.dat
+0 STEP
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 10 -16 -90 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 -10 -16 -90 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 STEP
+0 // Plate  2 x  2 x  0.667 with Two Studs On Side and Two Raised with Closed Understud (black)
+1 0 50 -24 -60 0 0 -1 0 1 0 1 0 0 99206.dat
+0 // Plate  2 x  2 x  0.667 with Two Studs On Side and Two Raised with Closed Understud (black)
+1 0 -50 -24 -60 0 0 1 0 1 0 -1 0 0 99206.dat
+0 STEP
+0 // =Plate  1 x  2 (medium_orange)
+1 462 30 -24 -80 0 0 -1 0 1 0 1 0 0 28653.dat
+0 // =Plate  1 x  2 (medium_orange)
+1 462 -30 -24 -80 0 0 -1 0 1 0 1 0 0 28653.dat
+0 STEP
+0 // Plate  2 x  2 without Corner (black)
+1 0 40 -8 -40 0 0 -1 0 1 0 1 0 0 26601.dat
+0 // Plate  2 x  2 without Corner (black)
+1 0 -40 -8 -40 -1 0 0 0 1 0 0 0 -1 26601.dat
+0 STEP
+0 // Tile  1 x  1 Round with Pin and Pin Hole (black)
+1 0 -30 -24 -50 0 0 1 0 1 0 -1 0 0 20482.dat
+0 // Tile  1 x  1 Round with Pin and Pin Hole (black)
+1 0 30 -24 -50 0 0 1 0 1 0 -1 0 0 20482.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 -30 -8 -30 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 30 -8 -30 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 STEP
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 -40 -24 -70 -1 0 0 0 1 0 0 0 -1 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 40 -24 -70 -1 0 0 0 1 0 0 0 -1 85984.dat
+0 STEP
+0 // Bracket  1 x  2 -  2 x  2 Up (black)
+1 0 0 -22 -52 -1 0 0 0 0 -1 0 -1 0 99207.dat
+0 // =Plate  1 x  2 (medium_orange)
+1 462 0 -22 -44 -1 0 0 0 0 -1 0 -1 0 28653.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (dark_grey)
+1 8 10 -22 -20 -1 0 0 0 0 -1 0 -1 0 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (dark_grey)
+1 8 -10 -22 -20 0 0 -1 1 0 0 0 -1 0 6231.dat
+0 // =Tile  2 x  2 with Groove (black)
+1 0 0 0 -40 -1 0 0 0 -1 0 0 0 1 63327.dat
+0 // Hinge  1 x  2 Base (light_bluish_grey)
+1 71 0 -36 -70 -1 0 0 0 1 0 0 0 -1 3937.dat
+0 // Hinge  1 x  2 Top (light_bluish_grey)
+1 71 0 -22 -60 -1 0 0 0 0 -1 0 -1 0 3938.dat
+0 STEP
+0 // Plate  2 x  4 with Side Bricks  1 x  2 x  1.333 with Hole (dark_grey)
+1 8 0 -32 -120 1 0 0 0 1 0 0 0 1 18975.dat
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - Car.ldr
+0 Main car body composed of white and medium orange plates, mudguards, a Technic rotor, stickered panels, and curved slopes forming the sculpted race car exterior.
+0 Name: 75892 - Car.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 71 2 0 167 1 0 0 0 1 0 0 0 1 75892 - Chassis rear.ldr
+0 STEP
+1 71 4 -2 -82 -1 0 0 0 1 0 0 0 -1 75892 - Chassis front.ldr
+0 STEP
+0 // Plate  1 x  4 with Two Studs (white)
+1 15 4 -34 8 -1 0 0 0 1 0 0 0 -1 92593.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (black)
+1 0 4 -34 28 -1 0 0 0 1 0 0 0 -1 3794b.dat
+0 // =Brick  1 x  2 (white)
+1 15 4 -50 48 -1 0 0 0 1 0 0 0 -1 93792.dat
+0 STEP
+0 // Technic Rotor  2 Blade with 4 Studs (black)
+1 0 4 -42 -12 0 0 1 0 1 0 -1 0 0 32124.dat
+0 // Minifig Axe Head Faceted with Bar  0.5L (trans_orange)
+1 57 34 -38 -32 -0.707107 -0.707107 0 0 0 1 -0.707107 0.707107 0 75892 - 22407.dat
+0 // Minifig Axe Head Faceted with Bar  0.5L (trans_orange)
+1 57 -26.1041 -38 -32.7071 -0.707107 0.707107 0 0 0 1 0.707107 0.707107 0 75892 - 22407.dat
+0 STEP
+0 // Car Mudguard  4 x  2.5 x  2 with Rounded Ends (dark_grey)
+1 8 44 -66 38 0 0 -1 0 1 0 1 0 0 35789.dat
+0 // Car Mudguard  4 x  2.5 x  2 with Rounded Ends (dark_grey)
+1 8 -36 -66 38 0 0 1 0 1 0 -1 0 0 35789.dat
+0 STEP
+0 // Plate  1 x  4 (medium_orange)
+1 462 4 -50 8 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (medium_orange)
+1 462 4 -50 68 1 0 0 0 1 0 0 0 1 3710.dat
+0 // =Plate  1 x  2 (medium_orange)
+1 462 4 -50 28 -1 0 0 0 1 0 0 0 -1 28653.dat
+0 // Plate  2 x  2 without Corner (medium_orange)
+1 462 44 -50 -22 1 0 0 0 1 0 0 0 1 26601.dat
+0 // Plate  2 x  2 without Corner (medium_orange)
+1 462 -36 -50 -22 0 0 1 0 1 0 -1 0 0 26601.dat
+0 STEP
+0 STEP
+0 // =Plate  1 x  1 (dark_grey)
+1 8 -26 -58 68 1 0 0 0 1 0 0 0 1 30008.dat
+0 // =Plate  1 x  1 (dark_grey)
+1 8 34 -58 68 1 0 0 0 1 0 0 0 1 30008.dat
+0 // Plate  2 x  3 (dark_grey)
+1 8 4 -58 48 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (black)
+1 0 4 -58 8 1 0 0 0 1 0 0 0 1 3794b.dat
+0 STEP
+0 // =Tile  1 x  2 with Groove (black)
+1 0 34 -58 -2 0 0 -1 0 1 0 1 0 0 30070.dat
+0 // =Tile  1 x  2 with Groove (black)
+1 0 -26 -58 -2 0 0 -1 0 1 0 1 0 0 30070.dat
+0 // =Plate  1 x  1 (dark_grey)
+1 8 54 -58 -12 1 0 0 0 1 0 0 0 1 30008.dat
+0 // =Plate  1 x  1 (dark_grey)
+1 8 -46 -58 -12 1 0 0 0 1 0 0 0 1 30008.dat
+0 STEP
+0 // Following part should have sticker per step 39.3 page 35
+0 // Slope Brick Curved  2 x  1 (medium_orange)
+1 462 4 -50 -2 1 0 0 0 1 0 0 0 1 11477.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (black)
+1 0 4 -50 -12 1 0 0 0 1 0 0 0 1 3794b.dat
+0 STEP
+0 // Following part should have sticker per step 40.3 page 36
+0 // Slope Brick Curved  2 x  2 x  0.667 (dark_grey)
+1 8 4 -42 -42 1 0 0 0 1 0 0 0 1 15068.dat
+0 // =Plate  1 x  2 (medium_orange)
+1 462 4 -50 -32 1 0 0 0 1 0 0 0 1 28653.dat
+0 STEP
+0 // Wing  2 x  2 Right (dark_grey)
+1 8 -64 -30 -22 0 1 0 0 0 1 1 0 0 24307.dat
+0 // Wing  2 x  2 Left (dark_grey)
+1 8 72 -30 -22 0 -1 0 0 0 1 -1 0 0 24299.dat
+0 // Slope Brick Curved  2 x  1 with Cutout Right (dark_grey)
+1 8 -26 -42 -42 1 0 0 0 1 0 0 0 1 29119.dat
+0 // Slope Brick Curved  2 x  1 with Cutout Left (dark_grey)
+1 8 34 -42 -42 1 0 0 0 1 0 0 0 1 29120.dat
+0 STEP
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (dark_grey)
+1 8 34 -58 88 -1 0 0 0 1 0 0 0 -1 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (dark_grey)
+1 8 54 -50 88 -1 0 0 0 1 0 0 0 -1 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (dark_grey)
+1 8 -26 -58 88 0 0 -1 0 1 0 1 0 0 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (dark_grey)
+1 8 -46 -50 88 0 0 -1 0 1 0 1 0 0 6231.dat
+0 // ~_Car Steering Stand and Wheel Black (Obsolete) (dark_grey)
+1 8 2 -34 88 1 0 0 0 1 0 0 0 1 73081.dat
+0 STEP
+0 // Slope Brick Curved  2 x  1 with Cutout Right (dark_grey)
+1 8 -46 -50 -22 1 0 0 0 1 0 0 0 1 29119.dat
+0 // Slope Brick Curved  2 x  1 with Cutout Right (dark_grey)
+1 8 54 -50 78 -1 0 0 0 1 0 0 0 -1 29119.dat
+0 // Slope Brick Curved  2 x  1 with Cutout Left (dark_grey)
+1 8 54 -50 -22 1 0 0 0 1 0 0 0 1 29120.dat
+0 // Slope Brick Curved  2 x  1 with Cutout Left (dark_grey)
+1 8 -46 -50 78 -1 0 0 0 1 0 0 0 -1 29120.dat
+0 // =Tile  1 x  1 with Groove (dark_grey)
+1 8 54 -66 8 0 0 -1 0 1 0 1 0 0 30039.dat
+0 // =Tile  1 x  1 with Groove (dark_grey)
+1 8 -46 -66 8 0 0 -1 0 1 0 1 0 0 30039.dat
+0 STEP
+0 // Windshield should have sticker per step 44 page 40
+0 // Windscreen  4 x  4 x  1 Type 1 (trans_brown)
+1 40 4 -34 138 1 0 0 0 -1 0 0 0 -1 6238a.dat
+0 // =Tile  1 x  4 with Groove (light_grey)
+1 7 4 -26 148 1 0 0 0 -1 0 0 0 -1 91143.dat
+0 STEP
+0 // =Plate  2 x  2 (white)
+1 15 4 -66 178 1 0 0 0 1 0 0 0 1 94148.dat
+0 // Plate  2 x  4 (black)
+1 0 4 -74 178 1 0 0 0 1 0 0 0 1 3020.dat
+0 // =Plate  1 x  2 (black)
+1 0 34 -66 158 0 0 -1 0 1 0 1 0 0 28653.dat
+0 // =Plate  1 x  2 (black)
+1 0 -26 -66 158 0 0 -1 0 1 0 1 0 0 28653.dat
+0 STEP
+0 // Slope Brick Curved  2 x  1 with Cutout Right (dark_grey)
+1 8 -46 -58 178 1 0 0 0 1 0 0 0 1 29119.dat
+0 // Slope Brick Curved  2 x  1 with Cutout Left (dark_grey)
+1 8 54 -58 178 1 0 0 0 1 0 0 0 1 29120.dat
+0 // Arch  1 x  4 (black)
+1 0 4 -90 148 1 0 0 0 1 0 0 0 1 3659.dat
+0 STEP
+0 // Wing  3 x  4 with  1 x  2 Cutout with Stud Notches and Rounded Underside Corners (dark_grey)
+1 8 4 -74 238 -1 0 0 0 1 0 0 0 -1 90194.dat
+0 STEP
+0 // Tile  1 x  3 (dark_grey)
+1 8 54 -74 228 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Tile  1 x  3 (dark_grey)
+1 8 -46 -74 228 0 0 -1 0 1 0 1 0 0 63864.dat
+0 STEP
+0 // Tile should have sticker per step 49 page 46
+0 // Slope Brick Curved  2 x  2 x  0.667 (dark_grey)
+1 8 4 -58 278 -1 0 0 0 1 0 0 0 -1 15068.dat
+0 STEP
+0 // Tile should have sticker per step 50 page 47
+0 // Slope Brick Curved  2 x  1 with Cutout Left (dark_grey)
+1 8 -46 -58 278 -1 0 0 0 1 0 0 0 -1 29120.dat
+0 // Tile should have sticker per step 50 page 47
+0 // Slope Brick Curved  2 x  1 with Cutout Right (dark_grey)
+1 8 54 -58 278 -1 0 0 0 1 0 0 0 -1 29119.dat
+0 // =Plate  1 x  1 (dark_grey)
+1 8 -46 -66 268 -1 0 0 0 1 0 0 0 -1 30008.dat
+0 // =Plate  1 x  1 (dark_grey)
+1 8 54 -66 268 -1 0 0 0 1 0 0 0 -1 30008.dat
+0 STEP
+0 // Wedge  3 x  4 x  0.667 Cutout (black)
+1 0 4 -82 168 -1 0 0 0 1 0 0 0 -1 11291.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (black)
+1 0 4 -90 168 -1 0 0 0 1 0 0 0 -1 3794b.dat
+0 // =Tile  1 x  1 with Groove (dark_grey)
+1 8 4 -98 168 -1 0 0 0 1 0 0 0 -1 30039.dat
+0 STEP
+0 // Windshield should have sticker per step 52 page 49
+0 // Windscreen  6 x  4 x  1.333 Curved with Black Roof and Bright Light Orange Uprights Pattern (trans_brown)
+1 40 4 -90 128 1 0 0 0 1 0 0 0 1 75892 - 18973p01.dat
+0 // Windshield should have sticker per step 52 page 49
+0 // Slope Brick Curved Top  2 x  2 x  1 (trans_brown)
+1 40 4 -74 198 -1 0 0 0 1 0 0 0 -1 30602.dat
+0 STEP
+1 0 4 -72 304 -1 0 0 0 1 0 0 0 -1 75892 - Spoiler.ldr
+0 STEP
+1 0 3 9 292 1 0 0 0 1 0 0 0 1 75892 - Rear Bumper.ldr
+0 STEP
+1 18 34 7 190 0 0 -1 0 1 0 1 0 0 75892 - Wheel.ldr
+1 18 34 7 -10 0 0 -1 0 1 0 1 0 0 75892 - Wheel.ldr
+1 18 -26 7 86 0 0 1 0 1 0 -1 0 0 75892 - Wheel.ldr
+1 18 -26 6 286 0 0 1 0 1 0 -1 0 0 75892 - Wheel.ldr
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - Spoiler.ldr
+0 Rear wing spoiler assembly using a long plate, mechanical arms as supports, triangular tiles, brackets, and stickered elements for the wing surface.
+0 Name: 75892 - Spoiler.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  1 x  6 (black)
+1 0 1 -8 -1 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 1 -8 -1 -1 0 0 0 1 0 0 0 -1 85984.dat
+0 STEP
+0 // Plate  1 x  1 Round with Horizontal Handle on Side (black)
+1 0 31 -16 -1 -1 0 0 0 1 0 0 0 -1 26047.dat
+0 // Plate  1 x  1 Round with Horizontal Handle on Side (black)
+1 0 -29 -16 -1 -1 0 0 0 1 0 0 0 -1 26047.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_grey)
+1 8 51 -16 9 0 0 -1 0 1 0 1 0 0 99780.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_grey)
+1 8 -49 -16 9 0 0 1 0 1 0 -1 0 0 99780.dat
+0 STEP
+0 // Tile  2 x  2 Corner without Corner (black)
+1 0 -49 -24 -1 1 0 0 0 1 0 0 0 1 27263.dat
+0 // Tile  2 x  2 Corner without Corner (black)
+1 0 51 -24 -1 0 0 -1 0 1 0 1 0 0 27263.dat
+0 STEP
+0 // Minifig Mechanical Arm with Clip and Rod Hole with Thick Forearm (black)
+1 0 -29 -16 19 0 0 1 1 0 0 0 1 0 75892 - 98313.dat
+0 // Minifig Mechanical Arm with Clip and Rod Hole with Thick Forearm (black)
+1 0 31 -16 19 0 0 1 1 0 0 0 1 0 75892 - 98313.dat
+0 // Tile  1 x  1 Round with Pin and Pin Hole (black)
+1 0 -29 22 36 1 0 0 0 1 0 0 0 1 20482.dat
+0 // Tile  1 x  1 Round with Pin and Pin Hole (black)
+1 0 31 22 36 1 0 0 0 1 0 0 0 1 20482.dat
+0 STEP
+0 // Tile should have sticker per step 58 page 52
+0 // Tile  2 x  2 Triangular (black)
+1 0 73 -8 11 0 -1 0 1 0 0 0 0 1 35787.dat
+0 // Tile should have sticker per step 59 page 53
+0 // Tile  2 x  2 Triangular (black)
+1 0 -71 -8 11 0 1 0 0 0 1 1 0 0 35787.dat
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - Rear Bumper.ldr
+0 Rear bumper assembly combining medium orange and dark grey plates, brackets, panels with trans-red accent spears, and curved slopes with cutouts.
+0 Name: 75892 - Rear Bumper.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  1 x  4 (medium_orange)
+1 462 0 -19.9167 -22.4167 -1 0 0 0 0 -1 0 -1 0 3710.dat
+0 STEP
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 -10 -19.9167 -14.4167 -1 0 0 0 0 -1 0 -1 0 2420.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 10 -19.9167 -14.4167 0 0 1 -1 0 0 0 -1 0 2420.dat
+0 // =Plate  1 x  2 (medium_orange)
+1 462 0 -39.9167 -22.4167 1 0 0 0 0 1 0 -1 0 6225.dat
+0 STEP
+0 // =Plate  2 x  2 (white)
+1 15 0 -29.9167 -6.4167 -1 0 0 0 0 -1 0 -1 0 94148.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_grey)
+1 8 30 -29.9167 -6.4167 0 0 -1 1 0 0 0 -1 0 99780.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_grey)
+1 8 -30 -29.9167 -6.4167 0 0 1 -1 0 0 0 -1 0 99780.dat
+0 STEP
+0 // Plate  1 x  2 with  2 Clips Horizontal (Thick U-Clips) (black)
+1 0 0 -39.9167 1.5833 1 0 0 0 0 1 0 -1 0 60470a.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 -30 -19.9167 1.5833 0 0 1 -1 0 0 0 -1 0 2420.dat
+0 // Plate  2 x  2 Corner (dark_grey)
+1 8 30 -19.9167 1.5833 -1 0 0 0 0 -1 0 -1 0 2420.dat
+0 STEP
+0 // =Plate  1 x  2 (black)
+1 0 52 -29.9167 -4.4167 0 -1 0 1 0 0 0 0 1 28653.dat
+0 // =Plate  1 x  2 (black)
+1 0 -52 -29.9167 -4.4167 0 1 0 -1 0 0 0 0 1 28653.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 -20 -39.9167 1.5833 -1 0 0 0 0 -1 0 -1 0 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 20 -39.9167 1.5833 -1 0 0 0 0 -1 0 -1 0 85984.dat
+0 STEP
+0 // Panel should have sticker per step 67 page 57
+0 // Panel  1 x  2 x  1 with Thin Central Divider and Rounded Corners (black)
+1 0 20 -19.9167 25.5833 -1 0 0 0 0 -1 0 -1 0 93095.dat
+0 // Panel should have sticker per step 67 page 57
+0 // Panel  1 x  2 x  1 with Thin Central Divider and Rounded Corners (black)
+1 0 -20 -19.9167 25.5833 -1 0 0 0 0 -1 0 -1 0 93095.dat
+0 STEP
+0 // =Plate  1 x  1 (dark_grey)
+1 8 60 -19.9167 -4.4167 0 -1 0 1 0 0 0 0 1 30008.dat
+0 // =Plate  1 x  1 (dark_grey)
+1 8 -60 -19.9167 -4.4167 0 1 0 -1 0 0 0 0 1 30008.dat
+0 // Minifig Spear Tip Faceted with Bar  0.4L (trans_red)
+1 36 6 -59.9167 -0.4167 0 -1 0 0 0 1 -1 0 0 27257.dat
+0 // Minifig Spear Tip Faceted with Bar  0.4L (trans_red)
+1 36 -6 -59.9167 -0.4167 0 1 0 0 0 -1 -1 0 0 27257.dat
+0 STEP
+0 // Slope Brick Curved  2 x  1 with Cutout Right (black)
+1 0 52 -19.9167 5.5833 0 -1 0 -1 0 0 0 0 -1 29119.dat
+0 // Slope Brick Curved  2 x  1 with Cutout Left (black)
+1 0 -52 -19.9167 5.5833 0 1 0 1 0 0 0 0 -1 29120.dat
+0 STEP
+0 // Tile  2 x  2 Triangular (black)
+1 0 60 -49.9167 5.5833 0 -1 0 0 0 -1 1 0 0 35787.dat
+0 // Tile  2 x  2 Triangular (black)
+1 0 -60 -49.9167 5.5833 0 1 0 -1 0 0 0 0 1 35787.dat
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - Wheel.ldr
+0 Single wheel assembly with a vented disc brake rim, five-spoke front rim, tyre, and axle pin.
+0 Name: 75892 - Wheel.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Wheel Rim 11 x 18 with Vented Disc Brake with Tyre 11.2/ 28 x 17.6 Intermediate (medium_orange)
+1 462 48 -30 -26 1 0 0 0 1 0 0 0 1 75892 - 18976c01.dat
+0 // Wheel Rim 11 x 18 Front with  5 Spokes (black)
+1 0 48 -30 -37 1 0 0 0 1 0 0 0 1 18978a.dat
+0 // =Technic Axle Pin (light_yellow)
+1 18 48 -30 -10 0 0 1 0 1 0 -1 0 0 6562.dat
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - Pilot.ldr
+0 Pilot minifigure with a black helmet and clear visor, dark grey torso and limbs, a printed head, and a spanner/screwdriver tool.
+0 Name: 75892 - Pilot.ldr
+0 Author: Adrien Pennamen [AdrienPennamen]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Helmet Standard (Obsolete) (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_clear)
+1 47 0 -96 0 1 0 0 0 1 0 0 0 1 2447.dat
+0 // Minifig Head with Black Eyebrows, Chin Dimple and Lopsided Grin Pattern (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626cp8i.dat
+0 // Minifig Torso (dark_grey)
+1 8 0 -72 0 1 0 0 0 1 0 0 0 1 973.dat
+0 // Minifig Hips (dark_grey)
+1 8 0 -40 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 // Minifig Arm Left (dark_grey)
+1 8 15.5 -64 0 0.985435 0.170055 0 -0.170055 0.985435 0 0 0 1 3819.dat
+0 // Minifig Arm Right (dark_grey)
+1 8 -15.5 -64 0 0.985435 -0.170055 0 0.170055 0.985435 0 0 0 1 3818.dat
+0 // Minifig Hand (black)
+1 0 23.6582 -46.127 -10 0.985435 0.120247 -0.120247 -0.170055 0.696808 -0.696808 0 0.707107 0.707107 3820.dat
+0 // Minifig Hand (black)
+1 0 -23.6582 -46.127 -10 0.985435 -0.120247 0.120247 0.170055 0.696808 -0.696808 0 0.707107 0.707107 3820.dat
+0 // Minifig Tool Spanner/Screwdriver (black)
+1 0 23.9405 -44.4909 -27.1244 -0.147272 0.085027 -0.985435 -0.853411 0.492717 0.170055 0.5 0.866025 0 4006.dat
+0 // ~Minifig Leg Left (Obsolete) (dark_grey)
+1 8 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (dark_grey)
+1 8 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+
+
+
+
+
+
+
+
+
+0 STEP
+0 FILE 75892 - 22407.dat
+0 Primitive cylindrical geometry subpart defining a closed cylinder shape.
+0 Name: 75892 - 22407.dat
+0 Author: Magnus Forsberg [MagFors]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !CATEGORY Minifig Accessory
+
+0 !HISTORY 2016-03-18 {LEGO Digital Designer} Original part shape
+0 !HISTORY 2018-12-07 [MagFors] File preparation for LDraw Parts Tracker
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 75892 - 22407s01.dat
+1 16 0 0 0 -1 0 0 0 1 0 0 0 -1 75892 - 22407s01.dat
+0 // Cylinder Closed 1.0 (main_colour)
+1 16 0 24 0 4 0 0 0 -10 0 0 0 4 4-4cylc.dat
+
+
+
+0 STEP
+0 FILE 75892 - 18973p01.dat
+0 Patterned part subpart composed of orange, black, and neutral coloured faces defining a printed decoration.
+0 Name: 75892 - 18973p01.dat
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 s\18973s01.dat
+
+4 16 0 14.016 -85 0 24 -110 5.22 24 -109.656 5.22 14.016 -84.742
+4 16 0 6.528 -60 0 14.016 -85 5.22 14.016 -84.742 5.22 6.528 -59.828
+3 16 5.22 24 -109.656 10.352 24 -108.636 10.352 14.016 -83.977
+3 16 10.352 14.016 -83.977 5.22 14.016 -84.742 5.22 24 -109.656
+4 16 10.352 6.528 -59.318 5.22 6.528 -59.828 5.22 14.016 -84.742 10.352 14.016 -83.977
+4 16 15.308 14.016 -82.717 10.352 24 -108.636 15.308 24 -106.956 20 14.016 -80.98
+3 16 10.352 24 -108.636 15.308 14.016 -82.717 10.352 14.016 -83.977
+4 16 15.308 6.528 -58.478 10.352 14.016 -83.977 15.308 14.016 -82.717 20 6.528 -57.32
+3 16 10.352 6.528 -59.318 10.352 14.016 -83.977 15.308 6.528 -58.478
+4 16 20 14.016 -80.98 15.308 24 -106.956 20 24 -104.64 24.352 14.016 -78.802
+4 16 20 6.528 -57.32 15.308 14.016 -82.717 20 14.016 -80.98 24.352 6.528 -55.868
+4 16 24.352 14.016 -78.802 20 24 -104.64 24.352 24 -101.736 28.284 14.016 -76.213
+3 16 24.352 6.528 -55.868 20 14.016 -80.98 24.352 14.016 -78.802
+4 16 28.284 14.016 -76.213 24.352 24 -101.736 28.284 24 -98.284 31.736 14.016 -73.264
+3 16 28.284 6.528 -54.142 24.352 14.016 -78.802 28.284 14.016 -76.213
+3 16 24.352 14.016 -78.802 28.284 6.528 -54.142 24.352 6.528 -55.868
+4 16 31.736 14.016 -73.264 28.284 24 -98.284 31.736 24 -94.352 34.64 14.016 -70
+3 16 28.284 14.016 -76.213 31.736 14.016 -73.264 31.736 6.528 -52.176
+3 16 31.736 6.528 -52.176 28.284 6.528 -54.142 28.284 14.016 -76.213
+0 // other side
+4 16 -5.22 14.016 -84.742 -5.22 24 -109.656 0 24 -110 0 14.016 -85
+4 16 -5.22 6.528 -59.828 -5.22 14.016 -84.742 0 14.016 -85 0 6.528 -60
+3 16 -10.352 24 -108.636 -5.22 24 -109.656 -10.352 14.016 -83.977
+3 16 -5.22 14.016 -84.742 -10.352 14.016 -83.977 -5.22 24 -109.656
+4 16 -10.352 14.016 -83.977 -5.22 14.016 -84.742 -5.22 6.528 -59.828 -10.352 6.528 -59.318
+4 16 -15.308 24 -106.956 -10.352 24 -108.636 -15.308 14.016 -82.717 -20 14.016 -80.98
+3 16 -10.352 24 -108.636 -10.352 14.016 -83.977 -15.308 14.016 -82.717
+4 16 -15.308 14.016 -82.717 -10.352 14.016 -83.977 -15.308 6.528 -58.478 -20 6.528 -57.32
+3 16 -15.308 6.528 -58.478 -10.352 14.016 -83.977 -10.352 6.528 -59.318
+4 16 -20 24 -104.64 -15.308 24 -106.956 -20 14.016 -80.98 -24.352 14.016 -78.802
+4 16 -20 14.016 -80.98 -15.308 14.016 -82.717 -20 6.528 -57.32 -24.352 6.528 -55.868
+4 16 -24.352 24 -101.736 -20 24 -104.64 -24.352 14.016 -78.802 -28.284 14.016 -76.213
+3 16 -24.352 6.528 -55.868 -24.352 14.016 -78.802 -20 14.016 -80.98
+4 16 -28.284 24 -98.284 -24.352 24 -101.736 -28.284 14.016 -76.213 -31.736 14.016 -73.264
+3 16 -28.284 6.528 -54.142 -28.284 14.016 -76.213 -24.352 14.016 -78.802
+3 16 -24.352 14.016 -78.802 -24.352 6.528 -55.868 -28.284 6.528 -54.142
+4 16 -31.736 24 -94.352 -28.284 24 -98.284 -31.736 14.016 -73.264 -34.64 14.016 -70
+3 16 -31.736 14.016 -73.264 -28.284 14.016 -76.213 -31.736 6.528 -52.176
+3 16 -28.284 6.528 -54.142 -31.736 6.528 -52.176 -28.284 14.016 -76.213
+0 // Added lines/Condlines
+5 24 20 0 -10 -20 0 -10 0 0.615 -20 20 0 10
+5 24 0 14.016 -85 0 24 -110 5.22 24 -109.656 -5.22 24 -109.656
+5 24 5.22 24 -109.656 5.22 14.016 -84.742 0 14.016 -85 10.352 14.016 -83.977
+5 24 5.22 14.016 -84.742 0 14.016 -85 0 24 -110 0 6.528 -60
+5 24 0 6.528 -60 0 14.016 -85 5.22 14.016 -84.742 -5.22 14.016 -84.742
+5 24 5.22 14.016 -84.742 5.22 6.528 -59.828 0 6.528 -60 10.352 6.528 -59.318
+5 24 5.22 6.528 -59.828 0 6.528 -60 0 14.016 -85 0 1.536 -35
+5 24 0 1.536 -35 0 6.528 -60 5.22 6.528 -59.828 -5.22 6.528 -59.828
+5 24 5.22 6.528 -59.828 5.22 1.536 -34.914 0 1.536 -35 10.352 1.536 -34.659
+5 24 5.22 1.536 -34.914 0 1.536 -35 0 6.528 -60 0 0.615 -20
+5 24 10.352 24 -108.636 10.352 14.016 -83.977 5.22 24 -109.656 15.308 14.016 -82.717
+5 24 10.352 14.016 -83.977 5.22 24 -109.656 10.352 24 -108.636 5.22 14.016 -84.742
+5 24 10.352 14.016 -83.977 5.22 14.016 -84.742 5.22 24 -109.656 10.352 6.528 -59.318
+5 24 10.352 6.528 -59.318 5.22 6.528 -59.828 5.22 14.016 -84.742 10.352 1.536 -34.659
+5 24 10.352 14.016 -83.977 10.352 6.528 -59.318 5.22 6.528 -59.828 15.308 6.528 -58.478
+5 24 10.352 1.536 -34.659 5.22 1.536 -34.914 5.22 6.528 -59.828 0 0.615 -20
+5 24 10.352 6.528 -59.318 10.352 1.536 -34.659 5.22 1.536 -34.914 15.308 1.536 -34.239
+5 24 15.308 14.016 -82.717 10.352 24 -108.636 15.308 24 -106.956 10.352 14.016 -83.977
+5 24 15.308 14.016 -82.717 10.352 14.016 -83.977 10.352 24 -108.636 15.308 6.528 -58.478
+5 24 15.308 6.528 -58.478 10.352 14.016 -83.977 15.308 14.016 -82.717 10.352 6.528 -59.318
+5 24 15.308 6.528 -58.478 10.352 6.528 -59.318 10.352 14.016 -83.977 15.308 1.536 -34.239
+5 24 15.308 1.536 -34.239 10.352 6.528 -59.318 15.308 6.528 -58.478 10.352 1.536 -34.659
+5 24 15.308 1.536 -34.239 10.352 1.536 -34.659 10.352 6.528 -59.318 15.308 0.5682 -19.239
+5 24 20 14.016 -80.98 15.308 24 -106.956 20 24 -104.64 15.308 14.016 -82.717
+5 24 20 14.016 -80.98 15.308 14.016 -82.717 15.308 24 -106.956 20 6.528 -57.32
+5 24 20 6.528 -57.32 15.308 14.016 -82.717 20 14.016 -80.98 15.308 6.528 -58.478
+5 24 20 6.528 -57.32 15.308 6.528 -58.478 15.308 14.016 -82.717 20 1.536 -33.66
+5 24 20 6.528 -57.32 20 1.536 -33.66 15.308 6.528 -58.478 24.352 1.536 -32.934
+5 24 20 1.536 -33.66 15.308 6.528 -58.478 20 6.528 -57.32 15.308 1.536 -34.239
+5 24 20 1.536 -33.66 15.308 1.536 -34.239 15.308 6.528 -58.478 15.308 0.5682 -19.239
+5 24 24.352 14.016 -78.802 20 24 -104.64 24.352 24 -101.736 20 14.016 -80.98
+5 24 24.352 14.016 -78.802 20 14.016 -80.98 20 24 -104.64 24.352 6.528 -55.868
+5 24 24.352 14.016 -78.802 24.352 6.528 -55.868 20 14.016 -80.98 28.284 6.528 -54.142
+5 24 24.352 6.528 -55.868 20 14.016 -80.98 24.352 14.016 -78.802 20 6.528 -57.32
+5 24 24.352 6.528 -55.868 20 6.528 -57.32 20 14.016 -80.98 24.352 1.536 -32.934
+5 24 24.352 6.528 -55.868 24.352 1.536 -32.934 20 6.528 -57.32 28.284 1.536 -32.071
+5 24 24.352 1.536 -32.934 20 6.528 -57.32 24.352 6.528 -55.868 20 1.536 -33.66
+5 24 24.352 1.536 -32.934 20 1.536 -33.66 20 6.528 -57.32 15.308 0.5682 -19.239
+5 24 28.284 14.016 -76.213 24.352 24 -101.736 28.284 24 -98.284 24.352 14.016 -78.802
+5 24 28.284 14.016 -76.213 24.352 14.016 -78.802 24.352 24 -101.736 28.284 6.528 -54.142
+5 24 28.284 14.016 -76.213 28.284 6.528 -54.142 24.352 14.016 -78.802 31.736 6.528 -52.176
+5 24 28.284 6.528 -54.142 24.352 14.016 -78.802 28.284 14.016 -76.213 24.352 6.528 -55.868
+5 24 28.284 6.528 -54.142 24.352 6.528 -55.868 24.352 14.016 -78.802 28.284 1.536 -32.071
+5 24 28.284 6.528 -54.142 28.284 1.536 -32.071 24.352 6.528 -55.868 31.736 1.536 -31.088
+5 24 28.284 1.536 -32.071 24.352 6.528 -55.868 28.284 6.528 -54.142 24.352 1.536 -32.934
+5 24 28.284 1.536 -32.071 24.352 1.536 -32.934 24.352 6.528 -55.868 28.284 0.4349 -17.071
+5 24 31.736 14.016 -73.264 28.284 24 -98.284 31.736 24 -94.352 28.284 14.016 -76.213
+5 24 31.736 14.016 -73.264 28.284 14.016 -76.213 28.284 24 -98.284 31.736 6.528 -52.176
+5 24 31.736 14.016 -73.264 31.736 6.528 -52.176 28.284 14.016 -76.213 34.64 6.528 -50
+5 24 31.736 6.528 -52.176 28.284 14.016 -76.213 31.736 14.016 -73.264 28.284 6.528 -54.142
+5 24 31.736 6.528 -52.176 28.284 6.528 -54.142 28.284 14.016 -76.213 31.736 1.536 -31.088
+5 24 31.736 6.528 -52.176 31.736 1.536 -31.088 28.284 6.528 -54.142 34.64 1.536 -30
+5 24 31.736 1.536 -31.088 28.284 6.528 -54.142 31.736 6.528 -52.176 28.284 1.536 -32.071
+5 24 31.736 1.536 -31.088 28.284 1.536 -32.071 28.284 6.528 -54.142 28.284 0.4349 -17.071
+5 24 34.64 14.016 -70 31.736 24 -94.352 34.64 24 -90 31.736 14.016 -73.264
+5 24 34.64 14.016 -70 31.736 14.016 -73.264 31.736 24 -94.352 34.64 6.528 -50
+5 24 34.64 14.016 -70 34.64 6.528 -50 31.736 14.016 -73.264 36.956 6.528 -47.654
+5 24 34.64 6.528 -50 31.736 14.016 -73.264 34.64 14.016 -70 31.736 6.528 -52.176
+5 24 34.64 6.528 -50 31.736 6.528 -52.176 31.736 14.016 -73.264 34.64 1.536 -30
+5 24 34.64 6.528 -50 34.64 1.536 -30 31.736 6.528 -52.176 36.956 1.536 -28.827
+5 24 34.64 1.536 -30 31.736 6.528 -52.176 34.64 6.528 -50 31.736 1.536 -31.088
+5 24 34.64 1.536 -30 31.736 1.536 -31.088 31.736 6.528 -52.176 28.284 0.4349 -17.071
+5 24 36.956 24 -85.308 36.956 14.016 -66.481 34.64 24 -90 38.636 14.016 -62.764
+5 24 36.956 14.016 -66.481 34.64 24 -90 36.956 24 -85.308 34.64 14.016 -70
+5 24 36.956 14.016 -66.481 34.64 14.016 -70 34.64 24 -90 36.956 6.528 -47.654
+5 24 36.956 6.528 -47.654 34.64 14.016 -70 36.956 14.016 -66.481 34.64 6.528 -50
+5 24 36.956 6.528 -47.654 34.64 6.528 -50 34.64 14.016 -70 36.956 1.536 -28.827
+5 24 36.956 6.528 -47.654 36.956 1.536 -28.827 34.64 6.528 -50 38.636 1.536 -27.588
+5 24 36.956 1.536 -28.827 34.64 6.528 -50 36.956 6.528 -47.654 34.64 1.536 -30
+5 24 36.956 1.536 -28.827 34.64 1.536 -30 34.64 6.528 -50 36.956 0.2354 -13.827
+5 24 38.636 24 -80.352 38.636 14.016 -62.764 36.956 24 -85.308 40 13.6299 -55.922
+5 24 38.636 14.016 -62.764 36.956 24 -85.308 38.636 24 -80.352 36.956 14.016 -66.481
+5 24 38.636 14.016 -62.764 36.956 14.016 -66.481 36.956 24 -85.308 38.636 6.528 -45.176
+5 24 38.636 14.016 -62.764 38.636 6.528 -45.176 36.956 14.016 -66.481 40 6.1075 -41.0546
+5 24 38.636 6.528 -45.176 36.956 14.016 -66.481 38.636 14.016 -62.764 36.956 6.528 -47.654
+5 24 38.636 6.528 -45.176 36.956 6.528 -47.654 36.956 14.016 -66.481 38.636 1.536 -27.588
+5 24 38.636 1.536 -27.588 36.956 6.528 -47.654 38.636 6.528 -45.176 36.956 1.536 -28.827
+5 24 38.636 1.536 -27.588 36.956 1.536 -28.827 36.956 6.528 -47.654 36.956 0.2354 -13.827
+5 24 39.656 24 -75.22 40 13.6299 -55.922 38.636 24 -80.352 40 24 -70
+5 24 40 13.6299 -55.922 38.636 14.016 -62.764 38.636 24 -80.352 40 6.1075 -41.0546
+5 24 40 6.1075 -41.0546 38.636 14.016 -62.764 40 13.6299 -55.922 38.636 6.528 -45.176
+5 24 40 6.1075 -41.0546 38.636 6.528 -45.176 38.636 14.016 -62.764 40 1.5403 -25.6593
+5 24 40 1.5403 -25.6593 38.636 6.528 -45.176 40 6.1075 -41.0546 38.636 1.536 -27.588
+5 24 40 1.5403 -25.6593 38.636 1.536 -27.588 38.636 6.528 -45.176 40 0 -10
+5 24 0 0.615 -20 0 1.536 -35 5.22 1.536 -34.914 -5.22 1.536 -34.914
+5 24 5.22 1.536 -34.914 0 0.615 -20 0 1.536 -35 10.352 1.536 -34.659
+5 24 15.308 0.5682 -19.239 0 0.615 -20 10.352 1.536 -34.659 20 0 -10
+5 24 10.352 1.536 -34.659 15.308 0.5682 -19.239 0 0.615 -20 15.308 1.536 -34.239
+5 24 15.308 0.5682 -19.239 15.308 1.536 -34.239 20 1.536 -33.66 10.352 1.536 -34.659
+5 24 20 1.536 -33.66 15.308 0.5682 -19.239 15.308 1.536 -34.239 24.352 1.536 -32.934
+5 24 28.284 0.4349 -17.071 15.308 0.5682 -19.239 24.352 1.536 -32.934 20 0 -10
+5 24 24.352 1.536 -32.934 28.284 0.4349 -17.071 15.308 0.5682 -19.239 28.284 1.536 -32.071
+5 24 28.284 0.4349 -17.071 28.284 1.536 -32.071 31.736 1.536 -31.088 24.352 1.536 -32.934
+5 24 31.736 1.536 -31.088 28.284 0.4349 -17.071 28.284 1.536 -32.071 34.64 1.536 -30
+5 24 34.64 1.536 -30 28.284 0.4349 -17.071 31.736 1.536 -31.088 36.956 0.2354 -13.827
+5 24 36.956 0.2354 -13.827 28.284 0.4349 -17.071 34.64 1.536 -30 40 0 -10
+5 24 34.64 1.536 -30 36.956 0.2354 -13.827 28.284 0.4349 -17.071 36.956 1.536 -28.827
+5 24 36.956 1.536 -28.827 36.956 0.2354 -13.827 34.64 1.536 -30 38.636 1.536 -27.588
+5 24 38.636 1.536 -27.588 36.956 0.2354 -13.827 36.956 1.536 -28.827 40 0 -10
+5 24 40 0 -10 38.636 1.536 -27.588 40 1.5403 -25.6593 36.956 0.2354 -13.827
+5 24 40 0 -10 36.956 0.2354 -13.827 38.636 1.536 -27.588 20 0 -10
+5 24 20 0 -10 0 0.615 -20 15.308 0.5682 -19.239 -20 0 -10
+5 24 28.284 0.4349 -17.071 20 0 -10 0 0.615 -20 40 0 -10
+5 24 40 0 -10 20 0 -10 28.284 0.4349 -17.071 40 0 10
+5 24 -20 0 -10 0 0.615 -20 20 0 -10 -15.308 0.5682 -19.239
+5 24 -5.22 24 -109.656 -5.22 14.016 -84.742 0 14.016 -85 -10.352 14.016 -83.977
+5 24 -5.22 14.016 -84.742 0 14.016 -85 0 24 -110 0 6.528 -60
+5 24 -5.22 14.016 -84.742 -5.22 6.528 -59.828 0 6.528 -60 -10.352 6.528 -59.318
+5 24 -5.22 6.528 -59.828 0 6.528 -60 0 14.016 -85 0 1.536 -35
+5 24 -5.22 6.528 -59.828 -5.22 1.536 -34.914 0 1.536 -35 -10.352 1.536 -34.659
+5 24 -5.22 1.536 -34.914 0 1.536 -35 0 6.528 -60 0 0.615 -20
+5 24 -10.352 24 -108.636 -10.352 14.016 -83.977 -5.22 24 -109.656 -15.308 14.016 -82.717
+5 24 -10.352 14.016 -83.977 -5.22 24 -109.656 -10.352 24 -108.636 -5.22 14.016 -84.742
+5 24 -10.352 14.016 -83.977 -5.22 14.016 -84.742 -5.22 24 -109.656 -10.352 6.528 -59.318
+5 24 -10.352 6.528 -59.318 -5.22 6.528 -59.828 -5.22 14.016 -84.742 -10.352 1.536 -34.659
+5 24 -10.352 14.016 -83.977 -10.352 6.528 -59.318 -5.22 6.528 -59.828 -15.308 6.528 -58.478
+5 24 -10.352 1.536 -34.659 -5.22 1.536 -34.914 -5.22 6.528 -59.828 0 0.615 -20
+5 24 -10.352 6.528 -59.318 -10.352 1.536 -34.659 -5.22 1.536 -34.914 -15.308 1.536 -34.239
+5 24 -15.308 14.016 -82.717 -10.352 24 -108.636 -15.308 24 -106.956 -10.352 14.016 -83.977
+5 24 -15.308 14.016 -82.717 -10.352 14.016 -83.977 -10.352 24 -108.636 -15.308 6.528 -58.478
+5 24 -15.308 6.528 -58.478 -10.352 14.016 -83.977 -15.308 14.016 -82.717 -10.352 6.528 -59.318
+5 24 -15.308 6.528 -58.478 -10.352 6.528 -59.318 -10.352 14.016 -83.977 -15.308 1.536 -34.239
+5 24 -15.308 1.536 -34.239 -10.352 6.528 -59.318 -15.308 6.528 -58.478 -10.352 1.536 -34.659
+5 24 -15.308 1.536 -34.239 -10.352 1.536 -34.659 -10.352 6.528 -59.318 -15.308 0.5682 -19.239
+5 24 -20 14.016 -80.98 -15.308 24 -106.956 -20 24 -104.64 -15.308 14.016 -82.717
+5 24 -20 14.016 -80.98 -15.308 14.016 -82.717 -15.308 24 -106.956 -20 6.528 -57.32
+5 24 -20 6.528 -57.32 -15.308 14.016 -82.717 -20 14.016 -80.98 -15.308 6.528 -58.478
+5 24 -20 6.528 -57.32 -15.308 6.528 -58.478 -15.308 14.016 -82.717 -20 1.536 -33.66
+5 24 -20 6.528 -57.32 -20 1.536 -33.66 -15.308 6.528 -58.478 -24.352 1.536 -32.934
+5 24 -20 1.536 -33.66 -15.308 6.528 -58.478 -20 6.528 -57.32 -15.308 1.536 -34.239
+5 24 -20 1.536 -33.66 -15.308 1.536 -34.239 -15.308 6.528 -58.478 -15.308 0.5682 -19.239
+5 24 -24.352 14.016 -78.802 -20 24 -104.64 -24.352 24 -101.736 -20 14.016 -80.98
+5 24 -24.352 14.016 -78.802 -20 14.016 -80.98 -20 24 -104.64 -24.352 6.528 -55.868
+5 24 -24.352 14.016 -78.802 -24.352 6.528 -55.868 -20 14.016 -80.98 -28.284 6.528 -54.142
+5 24 -24.352 6.528 -55.868 -20 14.016 -80.98 -24.352 14.016 -78.802 -20 6.528 -57.32
+5 24 -24.352 6.528 -55.868 -20 6.528 -57.32 -20 14.016 -80.98 -24.352 1.536 -32.934
+5 24 -24.352 6.528 -55.868 -24.352 1.536 -32.934 -20 6.528 -57.32 -28.284 1.536 -32.071
+5 24 -24.352 1.536 -32.934 -20 6.528 -57.32 -24.352 6.528 -55.868 -20 1.536 -33.66
+5 24 -24.352 1.536 -32.934 -20 1.536 -33.66 -20 6.528 -57.32 -15.308 0.5682 -19.239
+5 24 -28.284 14.016 -76.213 -24.352 24 -101.736 -28.284 24 -98.284 -24.352 14.016 -78.802
+5 24 -28.284 14.016 -76.213 -24.352 14.016 -78.802 -24.352 24 -101.736 -28.284 6.528 -54.142
+5 24 -28.284 14.016 -76.213 -28.284 6.528 -54.142 -24.352 14.016 -78.802 -31.736 6.528 -52.176
+5 24 -28.284 6.528 -54.142 -24.352 14.016 -78.802 -28.284 14.016 -76.213 -24.352 6.528 -55.868
+5 24 -28.284 6.528 -54.142 -24.352 6.528 -55.868 -24.352 14.016 -78.802 -28.284 1.536 -32.071
+5 24 -28.284 6.528 -54.142 -28.284 1.536 -32.071 -24.352 6.528 -55.868 -31.736 1.536 -31.088
+5 24 -28.284 1.536 -32.071 -24.352 6.528 -55.868 -28.284 6.528 -54.142 -24.352 1.536 -32.934
+5 24 -28.284 1.536 -32.071 -24.352 1.536 -32.934 -24.352 6.528 -55.868 -28.284 0.4349 -17.071
+5 24 -31.736 14.016 -73.264 -28.284 24 -98.284 -31.736 24 -94.352 -28.284 14.016 -76.213
+5 24 -31.736 14.016 -73.264 -28.284 14.016 -76.213 -28.284 24 -98.284 -31.736 6.528 -52.176
+5 24 -31.736 14.016 -73.264 -31.736 6.528 -52.176 -28.284 14.016 -76.213 -34.64 6.528 -50
+5 24 -31.736 6.528 -52.176 -28.284 14.016 -76.213 -31.736 14.016 -73.264 -28.284 6.528 -54.142
+5 24 -31.736 6.528 -52.176 -28.284 6.528 -54.142 -28.284 14.016 -76.213 -31.736 1.536 -31.088
+5 24 -31.736 6.528 -52.176 -31.736 1.536 -31.088 -28.284 6.528 -54.142 -34.64 1.536 -30
+5 24 -31.736 1.536 -31.088 -28.284 6.528 -54.142 -31.736 6.528 -52.176 -28.284 1.536 -32.071
+5 24 -31.736 1.536 -31.088 -28.284 1.536 -32.071 -28.284 6.528 -54.142 -28.284 0.4349 -17.071
+5 24 -34.64 14.016 -70 -31.736 24 -94.352 -34.64 24 -90 -31.736 14.016 -73.264
+5 24 -34.64 14.016 -70 -31.736 14.016 -73.264 -31.736 24 -94.352 -34.64 6.528 -50
+5 24 -34.64 14.016 -70 -34.64 6.528 -50 -31.736 14.016 -73.264 -36.956 6.528 -47.654
+5 24 -34.64 6.528 -50 -31.736 14.016 -73.264 -34.64 14.016 -70 -31.736 6.528 -52.176
+5 24 -34.64 6.528 -50 -31.736 6.528 -52.176 -31.736 14.016 -73.264 -34.64 1.536 -30
+5 24 -34.64 6.528 -50 -34.64 1.536 -30 -31.736 6.528 -52.176 -36.956 1.536 -28.827
+5 24 -34.64 1.536 -30 -31.736 6.528 -52.176 -34.64 6.528 -50 -31.736 1.536 -31.088
+5 24 -34.64 1.536 -30 -31.736 1.536 -31.088 -31.736 6.528 -52.176 -28.284 0.4349 -17.071
+5 24 -36.956 24 -85.308 -36.956 14.016 -66.481 -34.64 24 -90 -38.636 14.016 -62.764
+5 24 -36.956 14.016 -66.481 -34.64 24 -90 -36.956 24 -85.308 -34.64 14.016 -70
+5 24 -36.956 14.016 -66.481 -34.64 14.016 -70 -34.64 24 -90 -36.956 6.528 -47.654
+5 24 -36.956 6.528 -47.654 -34.64 14.016 -70 -36.956 14.016 -66.481 -34.64 6.528 -50
+5 24 -36.956 6.528 -47.654 -34.64 6.528 -50 -34.64 14.016 -70 -36.956 1.536 -28.827
+5 24 -36.956 6.528 -47.654 -36.956 1.536 -28.827 -34.64 6.528 -50 -38.636 1.536 -27.588
+5 24 -36.956 1.536 -28.827 -34.64 6.528 -50 -36.956 6.528 -47.654 -34.64 1.536 -30
+5 24 -36.956 1.536 -28.827 -34.64 1.536 -30 -34.64 6.528 -50 -36.956 0.2354 -13.827
+5 24 -38.636 24 -80.352 -38.636 14.016 -62.764 -36.956 24 -85.308 -40 13.6299 -55.922
+5 24 -38.636 14.016 -62.764 -36.956 24 -85.308 -38.636 24 -80.352 -36.956 14.016 -66.481
+5 24 -38.636 14.016 -62.764 -36.956 14.016 -66.481 -36.956 24 -85.308 -38.636 6.528 -45.176
+5 24 -38.636 14.016 -62.764 -38.636 6.528 -45.176 -36.956 14.016 -66.481 -40 6.1075 -41.0546
+5 24 -38.636 6.528 -45.176 -36.956 14.016 -66.481 -38.636 14.016 -62.764 -36.956 6.528 -47.654
+5 24 -38.636 6.528 -45.176 -36.956 6.528 -47.654 -36.956 14.016 -66.481 -38.636 1.536 -27.588
+5 24 -38.636 1.536 -27.588 -36.956 6.528 -47.654 -38.636 6.528 -45.176 -36.956 1.536 -28.827
+5 24 -38.636 1.536 -27.588 -36.956 1.536 -28.827 -36.956 6.528 -47.654 -36.956 0.2354 -13.827
+5 24 -39.656 24 -75.22 -40 13.6299 -55.922 -38.636 24 -80.352 -40 24 -70
+5 24 -40 13.6299 -55.922 -38.636 14.016 -62.764 -38.636 24 -80.352 -40 6.1075 -41.0546
+5 24 -40 6.1075 -41.0546 -38.636 14.016 -62.764 -40 13.6299 -55.922 -38.636 6.528 -45.176
+5 24 -40 6.1075 -41.0546 -38.636 6.528 -45.176 -38.636 14.016 -62.764 -40 1.5403 -25.6593
+5 24 -40 1.5403 -25.6593 -38.636 6.528 -45.176 -40 6.1075 -41.0546 -38.636 1.536 -27.588
+5 24 -40 1.5403 -25.6593 -38.636 1.536 -27.588 -38.636 6.528 -45.176 -40 0 -10
+5 24 -5.22 1.536 -34.914 0 0.615 -20 0 1.536 -35 -10.352 1.536 -34.659
+5 24 -15.308 0.5682 -19.239 0 0.615 -20 -10.352 1.536 -34.659 -20 0 -10
+5 24 -10.352 1.536 -34.659 -15.308 0.5682 -19.239 0 0.615 -20 -15.308 1.536 -34.239
+5 24 -15.308 0.5682 -19.239 -15.308 1.536 -34.239 -20 1.536 -33.66 -10.352 1.536 -34.659
+5 24 -20 1.536 -33.66 -15.308 0.5682 -19.239 -15.308 1.536 -34.239 -24.352 1.536 -32.934
+5 24 -28.284 0.4349 -17.071 -15.308 0.5682 -19.239 -24.352 1.536 -32.934 -20 0 -10
+5 24 -24.352 1.536 -32.934 -28.284 0.4349 -17.071 -15.308 0.5682 -19.239 -28.284 1.536 -32.071
+5 24 -28.284 0.4349 -17.071 -28.284 1.536 -32.071 -31.736 1.536 -31.088 -24.352 1.536 -32.934
+5 24 -31.736 1.536 -31.088 -28.284 0.4349 -17.071 -28.284 1.536 -32.071 -34.64 1.536 -30
+5 24 -34.64 1.536 -30 -28.284 0.4349 -17.071 -31.736 1.536 -31.088 -36.956 0.2354 -13.827
+5 24 -36.956 0.2354 -13.827 -28.284 0.4349 -17.071 -34.64 1.536 -30 -40 0 -10
+5 24 -34.64 1.536 -30 -36.956 0.2354 -13.827 -28.284 0.4349 -17.071 -36.956 1.536 -28.827
+5 24 -36.956 1.536 -28.827 -36.956 0.2354 -13.827 -34.64 1.536 -30 -38.636 1.536 -27.588
+5 24 -38.636 1.536 -27.588 -36.956 0.2354 -13.827 -36.956 1.536 -28.827 -40 0 -10
+5 24 -40 0 -10 -38.636 1.536 -27.588 -40 1.5403 -25.6593 -36.956 0.2354 -13.827
+5 24 -40 0 -10 -36.956 0.2354 -13.827 -38.636 1.536 -27.588 -20 0 -10
+5 24 -28.284 0.4349 -17.071 -20 0 -10 0 0.615 -20 -40 0 -10
+5 24 -40 0 -10 -20 0 -10 -28.284 0.4349 -17.071 -40 0 10
+0 // Modified faces
+0 // Black faces
+4 0 0 4.5312 -50 5.22 4.490225 -49.6579 5.22 1.536 -34.914 0 1.536 -35
+3 0 10.21986 1.536 -34.66557 10.352 1.596658 -34.95863 10.352 1.536 -34.659
+4 0 10.352 1.596658 -34.95863 10.21986 1.536 -34.66557 5.22 1.536 -34.914 5.22 4.490225 -49.6579
+3 0 5.22 4.490225 -49.6579 10.352 4.50431 -49.32157 10.352 1.596658 -34.95863
+4 0 20 1.536 -33.66 15.308 1.536 -34.239 13.69893 3.156761 -42.38144 16.64234 4.591253 -48.90933
+3 0 16.64234 4.591253 -48.90933 17.13557 4.583581 -48.81122 20 1.536 -33.66
+3 0 16.64234 4.591253 -48.90933 13.69893 3.156761 -42.38144 12.35337 4.512093 -49.19041
+4 0 15.308 1.536 -34.239 10.352 1.536 -34.659 10.352 1.596658 -34.95863 13.69893 3.156761 -42.38144
+4 0 12.35337 4.512093 -49.19041 13.69893 3.156761 -42.38144 10.352 1.596658 -34.95863 10.352 4.50431 -49.32157
+3 0 17.13557 4.583581 -48.81122 20 4.612518 -48.24141 20 1.536 -33.66
+3 0 24.352 4.679496 -47.37569 24.352 1.536 -32.934 21.67983 4.601139 -47.90725
+4 0 21.67983 4.601139 -47.90725 24.352 1.536 -32.934 20 1.536 -33.66 20 4.612518 -48.24141
+3 0 25.80288 4.685988 -47.08708 28.284 4.820692 -46.59353 28.284 1.536 -32.071
+4 0 25.80288 4.685988 -47.08708 28.284 1.536 -32.071 24.352 1.536 -32.934 24.352 4.679496 -47.37569
+3 0 31.736 4.06895 -41.78809 31.736 1.536 -31.088 30.63721 3.124986 -38.42624
+4 0 31.736 5.04395 -45.90684 31.736 4.06895 -41.78809 30.63721 3.124986 -38.42624 29.44897 4.84331 -46.36178
+3 0 28.53654 1.536 -31.99909 30.63721 3.124986 -38.42624 31.736 1.536 -31.088
+4 0 30.63721 3.124986 -38.42624 28.53654 1.536 -31.99909 28.284 1.536 -32.071 28.284 4.820692 -46.59353
+3 0 28.284 4.820692 -46.59353 29.44897 4.84331 -46.36178 30.63721 3.124986 -38.42624
+3 0 33 5.136862 -45.6554 33 4.355174 -42.52364 32.7072 4.858498 -44.75956
+3 0 33 5.136862 -45.6554 32.7072 4.858498 -44.75956 32.57892 5.079015 -45.73916
+4 0 33 1.536 -30.61444 31.736 1.536 -31.088 31.736 4.06895 -41.78809 32.7072 4.858498 -44.75956
+3 0 32.7072 4.858498 -44.75956 33 4.355174 -42.52364 33 1.536 -30.61444
+4 0 32.7072 4.858498 -44.75956 31.736 4.06895 -41.78809 31.736 5.04395 -45.90684 32.57892 5.079015 -45.73916
+3 0 0 0.615 -20 0 1.536 -35 5.22 1.536 -34.914
+4 0 10.352 1.536 -34.659 15.308 0.5682 -19.239 3.5281 0.6042138 -19.82461 10.21986 1.536 -34.66557
+4 0 10.21986 1.536 -34.66557 3.5281 0.6042138 -19.82461 0 0.615 -20 5.22 1.536 -34.914
+3 0 20 1.536 -33.66 15.308 0.5682 -19.239 15.308 1.536 -34.239
+3 0 26.28857 0.9936915 -25.12123 28.284 0.4349 -17.071 23.89698 0.479967 -17.80397
+4 0 26.28857 0.9936915 -25.12123 23.89698 0.479967 -17.80397 15.308 0.5682 -19.239 20 1.536 -33.66
+3 0 20 1.536 -33.66 24.352 1.536 -32.934 26.28857 0.9936915 -25.12123
+4 0 31.736 1.536 -31.088 28.284 0.4349 -17.071 28.284 1.474002 -31.22641 28.53654 1.536 -31.99909
+3 0 28.284 1.474002 -31.22641 28.284 1.536 -32.071 28.53654 1.536 -31.99909
+3 0 10.352 1.536 -34.659 15.308 1.536 -34.239 15.308 0.5682 -19.239
+3 0 28.284 1.474002 -31.22641 28.284 0.4349 -17.071 26.28857 0.9936915 -25.12123
+4 0 28.284 1.536 -32.071 28.284 1.474002 -31.22641 26.28857 0.9936915 -25.12123 24.352 1.536 -32.934
+4 0 33 1.536 -30.61444 33 1.25189 -26.66401 28.284 0.4349 -17.071 31.736 1.536 -31.088
+3 0 33 1.25189 -26.66401 33 0.3264081 -15.30685 28.284 0.4349 -17.071
+4 0 28.284 0.4349 -17.071 22 0.1049976 -11.70715 22 0.1230085 -12 23.89698 0.479967 -17.80397
+4 0 22 0.1230085 -12 16 0.123 -12 2.943561 0.5244855 -18.52822 3.5281 0.6042138 -19.82461
+4 0 15.308 0.5682 -19.239 23.89698 0.479967 -17.80397 22 0.1230085 -12 3.5281 0.6042138 -19.82461
+3 0 2.943561 0.5244855 -18.52822 0 0.615 -20 3.5281 0.6042138 -19.82461
+4 0 33 0 -10 22 0 -10 22 0.1049976 -11.70715 28.284 0.4349 -17.071
+3 0 28.284 0.4349 -17.071 33 0.3264081 -15.30685 33 0 -10
+4 0 33 0 -10 33 0 8 22 0 8 22 0 -10
+4 0 0 1.536 -35 -5.22 1.536 -34.914 -5.22 4.490228 -49.65792 0 4.5312 -50
+3 0 -10.21996 1.536 -34.66556 -10.352 1.536 -34.659 -10.352 1.596612 -34.9584
+4 0 -10.21996 1.536 -34.66556 -10.352 1.596612 -34.9584 -10.352 4.504316 -49.3216 -5.22 4.490228 -49.65792
+3 0 -5.22 4.490228 -49.65792 -5.22 1.536 -34.914 -10.21996 1.536 -34.66556
+4 0 -15.308 1.536 -34.239 -20 1.536 -33.66 -17.13555 4.583597 -48.8113 -16.64252 4.591263 -48.90936
+3 0 -16.64252 4.591263 -48.90936 -13.69897 3.156719 -42.38123 -15.308 1.536 -34.239
+3 0 -16.64252 4.591263 -48.90936 -12.35336 4.5121 -49.19044 -13.69897 3.156719 -42.38123
+4 0 -10.352 1.536 -34.659 -15.308 1.536 -34.239 -13.69897 3.156719 -42.38123 -10.352 1.596612 -34.9584
+4 0 -10.352 1.596612 -34.9584 -13.69897 3.156719 -42.38123 -12.35336 4.5121 -49.19044 -10.352 4.504316 -49.3216
+3 0 -20 4.612549 -48.24156 -17.13555 4.583597 -48.8113 -20 1.536 -33.66
+3 0 -21.67979 4.60118 -47.90745 -24.352 1.536 -32.934 -24.352 4.679553 -47.37596
+4 0 -20 1.536 -33.66 -24.352 1.536 -32.934 -21.67979 4.60118 -47.90745 -20 4.612549 -48.24156
+3 0 -28.284 4.820774 -46.59389 -25.80283 4.686053 -47.08739 -28.284 1.536 -32.071
+4 0 -24.352 4.679553 -47.37596 -24.352 1.536 -32.934 -28.284 1.536 -32.071 -25.80283 4.686053 -47.08739
+3 0 -30.63717 3.125042 -38.4265 -31.736 1.536 -31.088 -31.736 4.06905 -41.78851
+4 0 -31.736 5.044056 -45.90729 -29.44891 4.843397 -46.36219 -30.63717 3.125042 -38.4265 -31.736 4.06905 -41.78851
+3 0 -28.53646 1.536 -31.99911 -31.736 1.536 -31.088 -30.63717 3.125042 -38.4265
+4 0 -28.53646 1.536 -31.99911 -30.63717 3.125042 -38.4265 -29.44891 4.843397 -46.36219 -28.284 4.820774 -46.59389
+3 0 -28.284 4.820774 -46.59389 -28.284 1.536 -32.071 -28.53646 1.536 -31.99911
+3 0 -33 5.136982 -45.65588 -32.70716 4.858573 -44.75989 -33 4.355174 -42.52364
+3 0 -33 5.136982 -45.65588 -32.57886 5.079124 -45.73964 -32.70716 4.858573 -44.75989
+3 0 0 1.536 -35 0 0.615 -20 -5.22 1.536 -34.914
+4 0 -10.21996 1.536 -34.66556 -3.528134 0.6042137 -19.82461 -15.308 0.5682 -19.239 -10.352 1.536 -34.659
+4 0 0 0.615 -20 -3.528134 0.6042137 -19.82461 -10.21996 1.536 -34.66556 -5.22 1.536 -34.914
+3 0 -20 1.536 -33.66 -15.308 1.536 -34.239 -15.308 0.5682 -19.239
+3 0 -23.89696 0.4799673 -17.80398 -28.284 0.4349 -17.071 -26.28854 0.9936988 -25.12134
+4 0 -23.89696 0.4799673 -17.80398 -26.28854 0.9936988 -25.12134 -24.352 1.536 -32.934 -20 1.536 -33.66
+3 0 -20 1.536 -33.66 -15.308 0.5682 -19.239 -23.89696 0.4799673 -17.80398
+4 0 -28.284 1.474022 -31.22669 -28.284 0.4349 -17.071 -31.736 1.536 -31.088 -28.53646 1.536 -31.99911
+3 0 -28.284 1.474022 -31.22669 -28.53646 1.536 -31.99911 -28.284 1.536 -32.071
+3 0 -15.308 1.536 -34.239 -10.352 1.536 -34.659 -15.308 0.5682 -19.239
+3 0 -26.28854 0.9936988 -25.12134 -28.284 0.4349 -17.071 -28.284 1.474022 -31.22669
+4 0 -26.28854 0.9936988 -25.12134 -28.284 1.474022 -31.22669 -28.284 1.536 -32.071 -24.352 1.536 -32.934
+4 0 -31.736 1.536 -31.088 -28.284 0.4349 -17.071 -33 1.25189 -26.66401 -33 1.536 -30.61444
+3 0 -33 1.25189 -26.66401 -28.284 0.4349 -17.071 -33 0.3264081 -15.30685
+4 0 -22 0.1230085 -12 -22 0.1049976 -11.70715 -28.284 0.4349 -17.071 -23.89696 0.4799673 -17.80398
+4 0 -22 0.1230085 -12 -23.89696 0.4799673 -17.80398 -15.308 0.5682 -19.239 -3.528134 0.6042137 -19.82461
+4 0 -2.943585 0.5244848 -18.52821 -16 0.123 -12 -22 0.1230085 -12 -3.528134 0.6042137 -19.82461
+3 0 -3.528134 0.6042137 -19.82461 0 0.615 -20 -2.943585 0.5244848 -18.52821
+4 0 -22 0 -10 -33 0 -10 -33 0.3264081 -15.30685 -28.284 0.4349 -17.071
+3 0 -28.284 0.4349 -17.071 -22 0.1049976 -11.70715 -22 0 -10
+4 0 -22 0 -10 -22 0 8 -33 0 8 -33 0 -10
+3 0 0 0.123 -12 -16 0.123 -12 -2.943585 0.5244848 -18.52821
+3 0 0 0.123 -12 2.943561 0.5244855 -18.52822 16 0.123 -12
+4 0 2.943561 0.5244855 -18.52822 0 0.123 -12 -2.943585 0.5244848 -18.52821 0 0.615 -20
+4 0 -31.736 1.536 -31.088 -33 1.536 -30.61444 -33 4.355174 -42.52364 -32.70716 4.858573 -44.75989
+3 0 -32.70716 4.858573 -44.75989 -31.736 4.06905 -41.78851 -31.736 1.536 -31.088
+4 0 -31.736 4.06905 -41.78851 -32.70716 4.858573 -44.75989 -32.57886 5.079124 -45.73964 -31.736 5.044056 -45.90729
+0 // Orange faces
+4 25 35.69266 14.016 -68.40055 34.81457 14.016 -69.73475 35.23805 15.40012 -71.86398 36.15882 17.45254 -74.57635
+3 25 36.15882 17.45254 -74.57635 36.41124 16.36438 -72.013 35.69266 14.016 -68.40055
+3 25 36.58312 15.62343 -70.26758 36.956 14.016 -66.481 36.19925 14.016 -67.63082
+4 25 36.41124 16.36438 -72.013 36.58312 15.62343 -70.26758 36.19925 14.016 -67.63082 35.69266 14.016 -68.40055
+4 25 33.6346 9.120433 -58.05427 33.35564 9.839741 -60.28904 33.562 11.10516 -63.43695 34.64 13.58807 -68.85704
+3 25 34.64 13.58807 -68.85704 34.64 11.43586 -63.10861 33.6346 9.120433 -58.05427
+3 25 34.64 9.119009 -56.92043 34.64 6.528 -50 34.17492 7.727226 -53.7258
+4 25 34.64 11.43586 -63.10861 34.64 9.119009 -56.92043 34.17492 7.727226 -53.7258 33.6346 9.120433 -58.05427
+3 25 33 7.818774 -54.864 33.35564 9.839741 -60.28904 33.6346 9.120433 -58.05427
+3 25 34.17492 7.727226 -53.7258 34.64 6.528 -50 33.7316 6.528 -50.68068
+4 25 33.7316 6.528 -50.68068 33 6.528 -51.22887 33 7.818774 -54.864 33.6346 9.120433 -58.05427
+3 25 33.6346 9.120433 -58.05427 34.17492 7.727226 -53.7258 33.7316 6.528 -50.68068
+4 25 34.64 1.536 -30 33 4.355174 -42.52364 33 5.136862 -45.6554 33.7316 6.528 -50.68068
+3 25 33.7316 6.528 -50.68068 34.64 6.528 -50 34.64 1.536 -30
+3 25 33 5.136862 -45.6554 33 6.528 -51.22887 33.7316 6.528 -50.68068
+3 25 33 4.355174 -42.52364 34.64 1.536 -30 33 1.536 -30.61444
+4 25 36.956 18.40192 -74.7516 36.41124 16.36438 -72.013 36.15882 17.45254 -74.57635 36.956 19.55428 -76.92463
+3 25 36.956 17.38228 -72.82885 36.956 14.016 -66.481 36.58312 15.62343 -70.26758
+4 25 36.956 18.40192 -74.7516 36.956 17.38228 -72.82885 36.58312 15.62343 -70.26758 36.41124 16.36438 -72.013
+4 25 35.10958 12.49778 -65.46927 34.71788 13.76421 -69.2486 34.81457 14.016 -69.73475 35.69266 14.016 -68.40055
+4 25 38 6.528 -46.1141 36.956 6.528 -47.654 35.43186 11.45578 -62.35968 36.19925 14.016 -67.63082
+4 25 36.956 14.016 -66.481 38 9.362743 -53.24146 38 6.528 -46.1141 36.19925 14.016 -67.63082
+4 25 36.19925 14.016 -67.63082 35.43186 11.45578 -62.35968 35.10958 12.49778 -65.46927 35.69266 14.016 -68.40055
+4 25 34.71788 13.76421 -69.2486 35.10958 12.49778 -65.46927 34.64 11.43586 -63.10861 34.64 13.58807 -68.85704
+4 25 36.956 6.528 -47.654 34.64 6.528 -50 34.64 9.119009 -56.92043 35.43186 11.45578 -62.35968
+4 25 35.43186 11.45578 -62.35968 34.64 9.119009 -56.92043 34.64 11.43586 -63.10861 35.10958 12.49778 -65.46927
+3 25 34.64 6.528 -50 36.956 6.528 -47.654 36.956 1.536 -28.827
+3 25 34.64 6.528 -50 36.956 1.536 -28.827 34.64 1.536 -30
+3 25 38 22.73514 -80 37.52828 20.59903 -77.62856 37.46828 20.95559 -78.43369
+3 25 38 22.73514 -80 38 17.79566 -71.29851 37.5711 20.34454 -77.05393
+3 25 38 22.73514 -80 37.5711 20.34454 -77.05393 37.52828 20.59903 -77.62856
+4 25 37.52828 20.59903 -77.62856 36.956 18.40192 -74.7516 36.956 19.55428 -76.92463 37.46828 20.95559 -78.43369
+4 25 38 14.016 -64.17115 36.956 14.016 -66.481 36.956 17.38228 -72.82885 37.5711 20.34454 -77.05393
+3 25 37.5711 20.34454 -77.05393 38 17.79566 -71.29851 38 14.016 -64.17115
+4 25 36.956 18.40192 -74.7516 37.52828 20.59903 -77.62856 37.5711 20.34454 -77.05393 36.956 17.38228 -72.82885
+3 25 38 9.362743 -53.24146 36.956 14.016 -66.481 38 14.016 -64.17115
+3 25 38 3.425829 -35.18441 36.956 6.528 -47.654 38 6.528 -46.1141
+4 25 38 1.536 -28.05705 36.956 1.536 -28.827 36.956 6.528 -47.654 38 3.425829 -35.18441
+3 25 33 1.25189 -26.66401 33 1.536 -30.61444 34.64 1.536 -30
+4 25 36.956 0.2354 -13.827 33 0.3264081 -15.30685 33 1.25189 -26.66401 34.64 1.536 -30
+3 25 34.64 1.536 -30 36.956 1.536 -28.827 36.956 0.2354 -13.827
+4 25 36.956 1.536 -28.827 38 1.536 -28.05705 38 1.04363 -22.37848 36.956 0.2354 -13.827
+3 25 38 1.04363 -22.37848 38 0.1546649 -12.51445 36.956 0.2354 -13.827
+4 25 38 0.1546649 -12.51445 38 0 -10 33 0 -10 33 0.3264081 -15.30685
+3 25 33 0.3264081 -15.30685 36.956 0.2354 -13.827 38 0.1546649 -12.51445
+4 25 38 0 -10 38 0 8 33 0 8 33 0 -10
+3 25 -36.19923 14.016 -67.63085 -36.956 14.016 -66.481 -36.58311 15.62347 -70.26766
+4 25 -34.93433 14.016 -69.55279 -36.19923 14.016 -67.63085 -36.58311 15.62347 -70.26766 -36.15892 17.45213 -74.57538
+3 25 -36.15892 17.45213 -74.57538 -35.23868 15.40059 -71.86396 -34.93433 14.016 -69.55279
+3 25 -35.23868 15.40059 -71.86396 -34.81493 14.016 -69.73421 -34.93433 14.016 -69.55279
+3 25 -34.17489 7.72729 -53.726 -34.64 6.528 -50 -34.64 9.119129 -56.92075
+4 25 -33.53023 9.389563 -58.89041 -34.17489 7.72729 -53.726 -34.64 9.119129 -56.92075 -34.64 13.01176 -67.31774
+4 25 -33.35563 9.839775 -60.28915 -33.53023 9.389563 -58.89041 -34.64 13.01176 -67.31774 -34.64 13.58733 -68.85505
+3 25 -34.64 13.58733 -68.85505 -33.56197 11.10515 -63.43697 -33.35563 9.839775 -60.28915
+3 25 -34.17489 7.72729 -53.726 -33.73154 6.528 -50.68072 -34.64 6.528 -50
+4 25 -33 6.528 -51.22887 -33.73154 6.528 -50.68072 -34.17489 7.72729 -53.726 -33.53023 9.389563 -58.89041
+3 25 -33.53023 9.389563 -58.89041 -33 7.818774 -54.864 -33 6.528 -51.22887
+3 25 -33 7.818774 -54.864 -33.53023 9.389563 -58.89041 -33.35563 9.839775 -60.28915
+3 25 -33 1.25189 -26.66401 -34.64 1.536 -30 -33 1.536 -30.61444
+4 25 -33 1.25189 -26.66401 -33 0.3264081 -15.30685 -36.956 0.2354 -13.827 -34.64 1.536 -30
+3 25 -34.64 1.536 -30 -36.956 0.2354 -13.827 -36.956 1.536 -28.827
+4 25 -38 1.04363 -22.37848 -38 1.536 -28.05705 -36.956 1.536 -28.827 -36.956 0.2354 -13.827
+4 25 -38 0 -10 -38 0.1546649 -12.51445 -36.956 0.2354 -13.827 -33 0.3264081 -15.30685
+3 25 -33 0.3264081 -15.30685 -33 0 -10 -38 0 -10
+4 25 -33 0 -10 -33 0 8 -38 0 8 -38 0 -10
+4 25 -33 4.355174 -42.52364 -34.64 1.536 -30 -34.64 6.528 -50 -33.73154 6.528 -50.68072
+3 25 -33.73154 6.528 -50.68072 -33 5.136982 -45.65588 -33 4.355174 -42.52364
+3 25 -33 5.136982 -45.65588 -33.73154 6.528 -50.68072 -33 6.528 -51.22887
+3 25 -33 4.355174 -42.52364 -33 1.536 -30.61444 -34.64 1.536 -30
+3 25 -36.58311 15.62347 -70.26766 -36.956 14.016 -66.481 -36.956 17.38233 -72.82895
+4 25 -36.956 19.55391 -76.92393 -36.15892 17.45213 -74.57538 -36.58311 15.62347 -70.26766 -36.956 17.38233 -72.82895
+4 25 -38 6.528 -46.1141 -38 9.362743 -53.24146 -36.956 14.016 -66.481 -36.19923 14.016 -67.63085
+4 25 -35.43185 11.45583 -62.35982 -36.956 6.528 -47.654 -38 6.528 -46.1141 -36.19923 14.016 -67.63085
+4 25 -36.19923 14.016 -67.63085 -34.93433 14.016 -69.55279 -34.79556 13.51304 -68.49904 -35.43185 11.45583 -62.35982
+4 25 -34.93433 14.016 -69.55279 -34.81493 14.016 -69.73421 -34.71802 13.76374 -69.24719 -34.79556 13.51304 -68.49904
+4 25 -34.64 9.119129 -56.92075 -34.64 6.528 -50 -36.956 6.528 -47.654 -35.43185 11.45583 -62.35982
+4 25 -34.64 13.01176 -67.31774 -34.64 9.119129 -56.92075 -35.43185 11.45583 -62.35982 -34.79556 13.51304 -68.49904
+4 25 -34.71802 13.76374 -69.24719 -34.64 13.58733 -68.85505 -34.64 13.01176 -67.31774 -34.79556 13.51304 -68.49904
+3 25 -36.956 6.528 -47.654 -34.64 6.528 -50 -36.956 1.536 -28.827
+3 25 -34.64 1.536 -30 -36.956 1.536 -28.827 -34.64 6.528 -50
+3 25 -38 22.73514 -80 -37.5711 20.34455 -77.05396 -38 17.79566 -71.29851
+3 25 -38 22.73514 -80 -37.4683 20.95546 -78.43339 -37.5711 20.34455 -77.05396
+4 25 -36.956 14.016 -66.481 -38 14.016 -64.17115 -38 17.79566 -71.29851 -37.5711 20.34455 -77.05396
+3 25 -37.5711 20.34455 -77.05396 -36.956 17.38233 -72.82895 -36.956 14.016 -66.481
+4 25 -37.4683 20.95546 -78.43339 -36.956 19.55391 -76.92393 -36.956 17.38233 -72.82895 -37.5711 20.34455 -77.05396
+3 25 -38 14.016 -64.17115 -36.956 14.016 -66.481 -38 9.362743 -53.24146
+3 25 -38 6.528 -46.1141 -36.956 6.528 -47.654 -38 3.425829 -35.18441
+4 25 -36.956 1.536 -28.827 -38 1.536 -28.05705 -38 3.425829 -35.18441 -36.956 6.528 -47.654
+3 25 -38 1.04363 -22.37848 -36.956 0.2354 -13.827 -38 0.1546649 -12.51445
+0 // Neutral faces
+3 16 0 4.5312 -50 0 6.528 -60 5.22 6.528 -59.828
+3 16 5.22 6.528 -59.828 5.22 4.490225 -49.6579 0 4.5312 -50
+4 16 10.352 6.528 -59.318 10.352 4.50431 -49.32157 5.22 4.490225 -49.6579 5.22 6.528 -59.828
+3 16 10.352 6.528 -59.318 16.64234 4.591253 -48.90933 12.35337 4.512093 -49.19041
+3 16 15.308 6.528 -58.478 17.04909 4.675587 -49.26863 16.64234 4.591253 -48.90933
+3 16 16.64234 4.591253 -48.90933 10.352 6.528 -59.318 15.308 6.528 -58.478
+3 16 16.64234 4.591253 -48.90933 17.04909 4.675587 -49.26863 17.13557 4.583581 -48.81122
+3 16 10.352 6.528 -59.318 12.35337 4.512093 -49.19041 10.352 4.50431 -49.32157
+3 16 20 6.528 -57.32 24.3421 6.545041 -55.92515 24.352 6.528 -55.868
+4 16 20 6.528 -57.32 20 5.379227 -51.87529 17.04909 4.675587 -49.26863 15.308 6.528 -58.478
+4 16 20 4.612518 -48.24141 17.13557 4.583581 -48.81122 17.04909 4.675587 -49.26863 20 5.379227 -51.87529
+3 16 24.3421 6.545041 -55.92515 24.352 6.545621 -55.92197 24.352 6.528 -55.868
+4 16 24.352 6.528 -55.868 24.352 6.495698 -55.7196 20.83936 5.565206 -52.61673 20 6.528 -57.32
+4 16 20.83936 5.565206 -52.61673 24.352 6.495698 -55.7196 24.352 4.679496 -47.37569 21.67983 4.601139 -47.90725
+3 16 20 6.528 -57.32 20.83936 5.565206 -52.61673 20 5.379227 -51.87529
+4 16 21.67983 4.601139 -47.90725 20 4.612518 -48.24141 20 5.379227 -51.87529 20.83936 5.565206 -52.61673
+4 16 24.352 6.545621 -55.92197 24.52 6.552078 -55.868 24.46423 6.528 -55.81874 24.352 6.528 -55.868
+3 16 28.284 6.528 -54.142 24.46423 6.528 -55.81874 24.52 6.552078 -55.868
+3 16 24.3734 6.500834 -55.7385 24.352 6.528 -55.868 24.46423 6.528 -55.81874
+4 16 28.284 4.820692 -46.59353 25.80288 4.685988 -47.08708 24.3734 6.500834 -55.7385 24.46423 6.528 -55.81874
+3 16 24.46423 6.528 -55.81874 28.284 6.528 -54.142 28.284 4.820692 -46.59353
+3 16 24.3734 6.500834 -55.7385 24.352 6.495698 -55.7196 24.352 6.528 -55.868
+4 16 24.352 6.495698 -55.7196 24.3734 6.500834 -55.7385 25.80288 4.685988 -47.08708 24.352 4.679496 -47.37569
+3 16 31.736 14.016 -73.264 33.70814 17.21975 -77.81428 34.64 14.016 -70
+3 16 31.736 24 -94.352 33.70814 17.21975 -77.81428 31.736 14.016 -73.264
+4 16 31.736 5.52288 -47.93001 31.736 5.04395 -45.90684 29.44897 4.84331 -46.36178 28.284 6.528 -54.142
+3 16 31.736 6.528 -52.176 31.736 5.52288 -47.93001 28.284 6.528 -54.142
+3 16 28.284 6.528 -54.142 29.44897 4.84331 -46.36178 28.284 4.820692 -46.59353
+4 16 34.81457 14.016 -69.73475 34.64 14.016 -70 33.70814 17.21975 -77.81428 35.44528 20.52852 -81.82235
+4 16 35.90893 18.5298 -77.11402 35.23805 15.40012 -71.86398 34.81457 14.016 -69.73475 35.44528 20.52852 -81.82235
+4 16 34.64 24 -90 35.44528 20.52852 -81.82235 33.70814 17.21975 -77.81428 31.736 24 -94.352
+3 16 35.23805 15.40012 -71.86398 35.90893 18.5298 -77.11402 36.15882 17.45254 -74.57635
+3 16 31.736 14.016 -73.264 33.562 11.10516 -63.43695 33.35564 9.839741 -60.28904
+4 16 31.736 14.016 -73.264 34.64 14.016 -70 34.64 13.58807 -68.85704 33.562 11.10516 -63.43695
+4 16 31.736 6.528 -52.176 31.736 14.016 -73.264 33 7.818774 -54.864 33 6.528 -51.22887
+3 16 31.736 14.016 -73.264 33.35564 9.839741 -60.28904 33 7.818774 -54.864
+3 16 33 5.136862 -45.6554 32.57892 5.079015 -45.73916 32.46345 5.277511 -46.62094
+3 16 31.736 6.528 -52.176 33 5.136862 -45.6554 32.46345 5.277511 -46.62094
+3 16 31.736 6.528 -52.176 33 6.528 -51.22887 33 5.136862 -45.6554
+4 16 32.57892 5.079015 -45.73916 31.736 5.04395 -45.90684 31.736 5.52288 -47.93001 32.46345 5.277511 -46.62094
+3 16 31.736 6.528 -52.176 32.46345 5.277511 -46.62094 31.736 5.52288 -47.93001
+3 16 36.956 24 -85.308 35.90893 18.5298 -77.11402 35.44528 20.52852 -81.82235
+3 16 34.64 24 -90 36.956 24 -85.308 35.44528 20.52852 -81.82235
+4 16 35.90893 18.5298 -77.11402 36.956 24 -85.308 36.956 19.55428 -76.92463 36.15882 17.45254 -74.57635
+3 16 38 9.362743 -53.24146 38.636 6.528 -45.176 38 6.528 -46.1141
+3 16 34.71788 13.76421 -69.2486 34.64 14.016 -70 34.81457 14.016 -69.73475
+3 16 34.71788 13.76421 -69.2486 34.64 13.58807 -68.85704 34.64 14.016 -70
+4 16 38 17.79566 -71.29851 38 22.73514 -80 38.636 21.99503 -76.82 38.636 14.016 -62.764
+3 16 36.956 24 -85.308 38 22.73514 -80 37.46828 20.95559 -78.43369
+4 16 38.636 24 -80.352 38.636 22.75808 -78.1642 38 22.73514 -80 36.956 24 -85.308
+3 16 38 22.73514 -80 38.636 22.75808 -78.1642 38.636 21.99503 -76.82
+3 16 38 17.79566 -71.29851 38.636 14.016 -62.764 38 14.016 -64.17115
+3 16 36.956 24 -85.308 37.46828 20.95559 -78.43369 36.956 19.55428 -76.92463
+4 16 38.636 6.528 -45.176 38 9.362743 -53.24146 38 14.016 -64.17115 38.636 14.016 -62.764
+4 16 40 1.5403 -25.6593 38.636 1.536 -27.588 38 3.425829 -35.18441 38 6.528 -46.1141
+3 16 38 6.528 -46.1141 38.636 6.528 -45.176 40 1.5403 -25.6593
+3 16 38 1.536 -28.05705 38 3.425829 -35.18441 38.636 1.536 -27.588
+3 16 40 13.6299 -55.922 38.90957 21.92009 -75.45213 39.72449 21.93518 -71.37753
+3 16 38.636 24 -80.352 39.656 24 -75.22 38.78162 22.8929 -77.74388
+4 16 38.78162 22.8929 -77.74388 39.656 24 -75.22 39.72449 21.93518 -71.37753 38.90957 21.92009 -75.45213
+3 16 40 24 -70 40 13.6299 -55.922 39.72449 21.93518 -71.37753
+3 16 39.656 24 -75.22 40 24 -70 39.72449 21.93518 -71.37753
+4 16 40 13.6299 -55.922 38.636 14.016 -62.764 38.636 21.99503 -76.82 38.90957 21.92009 -75.45213
+3 16 38.636 24 -80.352 38.78162 22.8929 -77.74388 38.636 22.75808 -78.1642
+4 16 38.636 21.99503 -76.82 38.636 22.75808 -78.1642 38.78162 22.8929 -77.74388 38.90957 21.92009 -75.45213
+3 16 40 13.6299 -55.922 40 6.1075 -41.0546 38.636 14.016 -62.764
+3 16 40 6.1075 -41.0546 38.636 6.528 -45.176 38.636 14.016 -62.764
+3 16 40 6.1075 -41.0546 40 1.5403 -25.6593 38.636 6.528 -45.176
+3 16 38 1.536 -28.05705 38.636 1.536 -27.588 38 1.04363 -22.37848
+3 16 40 0 -10 38.636 1.536 -27.588 40 1.5403 -25.6593
+4 16 40 0 -10 38 0.1546649 -12.51445 38 1.04363 -22.37848 38.636 1.536 -27.588
+3 16 20 0 -10 22 0.1230085 -12 22 0.1049976 -11.70715
+3 16 20 0 -10 16 0.123 -12 22 0.1230085 -12
+3 16 20 0 -10 22 0.1049976 -11.70715 22 0 -10
+3 16 40 0 -10 38 0 -10 38 0.1546649 -12.51445
+4 16 20 0 -10 22 0 -10 22 0 8 20 0 10
+4 16 40 0 -10 40 0 10 38 0 8 38 0 -10
+3 16 40 0 10 33 0 8 38 0 8
+4 16 22 0 8 33 0 8 40 0 10 20 0 10
+3 16 -5.22 6.528 -59.828 0 4.5312 -50 -5.22 4.490228 -49.65792
+3 16 0 4.5312 -50 -5.22 6.528 -59.828 0 6.528 -60
+4 16 -10.352 6.528 -59.318 -5.22 6.528 -59.828 -5.22 4.490228 -49.65792 -10.352 4.504316 -49.3216
+3 16 -16.64252 4.591263 -48.90936 -17.13555 4.583597 -48.8113 -16.96452 4.765568 -49.71598
+4 16 -15.308 6.528 -58.478 -10.352 6.528 -59.318 -16.64252 4.591263 -48.90936 -16.96452 4.765568 -49.71598
+3 16 -10.352 6.528 -59.318 -12.35336 4.5121 -49.19044 -16.64252 4.591263 -48.90936
+3 16 -10.352 6.528 -59.318 -10.352 4.504316 -49.3216 -12.35336 4.5121 -49.19044
+4 16 -17.13555 4.583597 -48.8113 -20 4.612549 -48.24156 -20 6.528 -57.32 -16.96452 4.765568 -49.71598
+3 16 -15.308 6.528 -58.478 -16.96452 4.765568 -49.71598 -20 6.528 -57.32
+4 16 -24.352 6.528 -55.868 -20 6.528 -57.32 -21.67979 4.60118 -47.90745 -24.352 4.679553 -47.37596
+3 16 -20 6.528 -57.32 -20 4.612549 -48.24156 -21.67979 4.60118 -47.90745
+3 16 -28.284 6.528 -54.142 -24.352 6.528 -55.868 -28.284 5.868199 -51.22484
+4 16 -25.80283 4.686053 -47.08739 -28.284 4.820774 -46.59389 -28.284 5.868199 -51.22484 -24.352 6.528 -55.868
+3 16 -24.352 6.528 -55.868 -24.352 4.679553 -47.37596 -25.80283 4.686053 -47.08739
+3 16 -31.736 24 -94.352 -31.736 14.016 -73.264 -33.70814 17.21975 -77.81428
+3 16 -31.736 14.016 -73.264 -34.37663 14.92147 -72.20853 -33.70814 17.21975 -77.81428
+3 16 -31.736 14.016 -73.264 -34.64 14.016 -70 -34.37663 14.92147 -72.20853
+4 16 -31.736 6.528 -52.176 -28.284 6.528 -54.142 -28.81463 5.760652 -50.59824 -31.736 5.337877 -47.14849
+4 16 -31.736 5.337877 -47.14849 -28.81463 5.760652 -50.59824 -29.44891 4.843397 -46.36219 -31.736 5.044056 -45.90729
+3 16 -28.284 6.528 -54.142 -28.284 5.868199 -51.22484 -28.81463 5.760652 -50.59824
+4 16 -28.284 4.820774 -46.59389 -29.44891 4.843397 -46.36219 -28.81463 5.760652 -50.59824 -28.284 5.868199 -51.22484
+4 16 -34.64 24 -90 -31.736 24 -94.352 -33.70814 17.21975 -77.81428 -35.44528 20.52852 -81.82235
+4 16 -34.37663 14.92147 -72.20853 -35.23868 15.40059 -71.86396 -36.15892 17.45213 -74.57538 -35.44528 20.52852 -81.82235
+3 16 -35.44528 20.52852 -81.82235 -33.70814 17.21975 -77.81428 -34.37663 14.92147 -72.20853
+4 16 -34.81493 14.016 -69.73421 -35.23868 15.40059 -71.86396 -34.37663 14.92147 -72.20853 -34.64 14.016 -70
+3 16 -31.736 14.016 -73.264 -33.35563 9.839775 -60.28915 -33.56197 11.10515 -63.43697
+4 16 -31.736 14.016 -73.264 -33.56197 11.10515 -63.43697 -34.64 13.58733 -68.85505 -34.64 14.016 -70
+4 16 -31.736 6.528 -52.176 -33 6.528 -51.22887 -33 7.818774 -54.864 -31.736 14.016 -73.264
+3 16 -31.736 14.016 -73.264 -33 7.818774 -54.864 -33.35563 9.839775 -60.28915
+3 16 -31.736 6.528 -52.176 -32.51479 5.189246 -46.22884 -33 5.136982 -45.65588
+3 16 -33 5.136982 -45.65588 -32.51479 5.189246 -46.22884 -32.57886 5.079124 -45.73964
+3 16 -31.736 6.528 -52.176 -33 5.136982 -45.65588 -33 6.528 -51.22887
+3 16 -31.736 6.528 -52.176 -31.736 5.337877 -47.14849 -32.51479 5.189246 -46.22884
+4 16 -31.736 5.044056 -45.90729 -32.57886 5.079124 -45.73964 -32.51479 5.189246 -46.22884 -31.736 5.337877 -47.14849
+3 16 -34.64 24 -90 -35.44528 20.52852 -81.82235 -36.956 24 -85.308
+4 16 -36.956 24 -85.308 -35.44528 20.52852 -81.82235 -36.15892 17.45213 -74.57538 -36.956 19.55391 -76.92393
+3 16 -38 6.528 -46.1141 -38.636 6.528 -45.176 -38 9.362743 -53.24146
+3 16 -34.81493 14.016 -69.73421 -34.64 14.016 -70 -34.71802 13.76374 -69.24719
+3 16 -34.64 13.58733 -68.85505 -34.71802 13.76374 -69.24719 -34.64 14.016 -70
+4 16 -38.636 14.016 -62.764 -38.636 21.99503 -76.82 -38 22.73514 -80 -38 17.79566 -71.29851
+3 16 -36.956 24 -85.308 -37.4683 20.95546 -78.43339 -38 22.73514 -80
+4 16 -38.636 24 -80.352 -36.956 24 -85.308 -38 22.73514 -80 -38.636 22.75808 -78.1642
+3 16 -38 22.73514 -80 -38.636 21.99503 -76.82 -38.636 22.75808 -78.1642
+3 16 -38 14.016 -64.17115 -38.636 14.016 -62.764 -38 17.79566 -71.29851
+3 16 -36.956 24 -85.308 -36.956 19.55391 -76.92393 -37.4683 20.95546 -78.43339
+4 16 -38.636 14.016 -62.764 -38 14.016 -64.17115 -38 9.362743 -53.24146 -38.636 6.528 -45.176
+4 16 -38.636 1.536 -27.588 -40 1.5403 -25.6593 -38.636 6.528 -45.176 -38 6.528 -46.1141
+3 16 -38 6.528 -46.1141 -38 3.425829 -35.18441 -38.636 1.536 -27.588
+3 16 -38 1.536 -28.05705 -38.636 1.536 -27.588 -38 3.425829 -35.18441
+3 16 -40 13.6299 -55.922 -39.72449 21.93518 -71.37753 -38.90957 21.92009 -75.45213
+3 16 -38.636 24 -80.352 -38.78162 22.8929 -77.74388 -39.656 24 -75.22
+4 16 -39.656 24 -75.22 -38.78162 22.8929 -77.74388 -38.90957 21.92009 -75.45213 -39.72449 21.93518 -71.37753
+3 16 -40 24 -70 -39.72449 21.93518 -71.37753 -40 13.6299 -55.922
+3 16 -39.656 24 -75.22 -39.72449 21.93518 -71.37753 -40 24 -70
+4 16 -38.636 14.016 -62.764 -40 13.6299 -55.922 -38.90957 21.92009 -75.45213 -38.636 21.99503 -76.82
+3 16 -38.636 24 -80.352 -38.636 22.75808 -78.1642 -38.78162 22.8929 -77.74388
+4 16 -38.636 21.99503 -76.82 -38.90957 21.92009 -75.45213 -38.78162 22.8929 -77.74388 -38.636 22.75808 -78.1642
+3 16 -40 13.6299 -55.922 -38.636 14.016 -62.764 -40 6.1075 -41.0546
+3 16 -40 6.1075 -41.0546 -38.636 14.016 -62.764 -38.636 6.528 -45.176
+3 16 -40 6.1075 -41.0546 -38.636 6.528 -45.176 -40 1.5403 -25.6593
+3 16 -38 1.536 -28.05705 -38 1.04363 -22.37848 -38.636 1.536 -27.588
+3 16 -40 0 -10 -40 1.5403 -25.6593 -38.636 1.536 -27.588
+4 16 -38 1.04363 -22.37848 -38 0.1546649 -12.51445 -40 0 -10 -38.636 1.536 -27.588
+3 16 -20 0 -10 -22 0.1049976 -11.70715 -22 0.1230085 -12
+3 16 -20 0 -10 -22 0.1230085 -12 -16 0.123 -12
+3 16 -20 0 -10 -22 0 -10 -22 0.1049976 -11.70715
+3 16 -40 0 -10 -38 0.1546649 -12.51445 -38 0 -10
+4 16 -22 0 8 -20 0 10 -40 0 10 -33 0 8
+4 16 -20 0 -10 -20 0 10 -22 0 8 -22 0 -10
+4 16 -38 0 -10 -38 0 8 -40 0 10 -40 0 -10
+3 16 -40 0 10 -38 0 8 -33 0 8
+4 16 -20 0 -10 -16 0.123 -12 0 0.123 -12 20 0 -10
+3 16 20 0 -10 0 0.123 -12 16 0.123 -12
+
+
+
+0 STEP
+0 FILE 75892 - 98313.dat
+0 Primitive-based part definition built from circles, cylinders, spheres, and rectangles forming a complex molded element.
+0 Name: 75892 - 98313.dat
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+2 24 20.6 12.084 -5.6 20.6 12.084 5.6
+2 24 23.4 12.231 -5.6 23.4 12.231 5.6
+0 // Circle 0.5 (main_colour)
+1 16 22 12.158 5.6 -1.4 0 0 -0.074 1 0 0 0 1.4 2-4edge.dat
+0 // Circle 0.5 (main_colour)
+1 16 22 12.166 -5.6 -1.4 0 0 -0.074 1 0 0 0 -1.4 2-4edge.dat
+2 24 23.4 22.768 -5.6 23.4 22.768 5.6
+2 24 20.6 22.916 -5.6 20.6 22.916 5.6
+0 // Circle 0.5 (main_colour)
+1 16 22 22.842 5.6 -1.4 0 0 0.074 1 0 0 0 1.4 2-4edge.dat
+0 // Circle 0.5 (main_colour)
+1 16 22 22.842 -5.6 -1.4 0 0 0.074 1 0 0 0 -1.4 2-4edge.dat
+2 24 18.569 18.45 -5.6 18.569 18.45 5.6
+2 24 17.477 16.05 -5.6 17.477 16.05 5.6
+0 // Circle 0.5 (main_colour)
+1 16 18.023 17.25 5.6 -0.546 1 0 -1.2 0 0 0 0 1.4 2-4edge.dat
+0 // Circle 0.5 (main_colour)
+1 16 18.023 17.25 -5.6 -0.546 1 0 -1.2 0 0 0 0 -1.4 2-4edge.dat
+0 // Cylinder 0.5 (main_colour)
+1 16 22 12.158 -5.6 -1.4 0 -0.074 -0.074 0 1.34 0 11.2 0 2-4cyli.dat
+0 // Sphere 0.25 (main_colour)
+1 16 22 12.158 -5.6 -1.4 0 -0.074 -0.074 0 1.34 0 -1.4 0 2-8sphe.dat
+0 // Sphere 0.25 (main_colour)
+1 16 22 12.158 5.6 -1.4 0 -0.074 -0.074 0 1.34 0 1.4 0 2-8sphe.dat
+0 // Cylinder 0.5 (main_colour)
+1 16 22 22.842 -5.6 1.4 0 -0.074 -0.074 0 -1.34 0 11.2 0 2-4cyli.dat
+0 // Sphere 0.25 (main_colour)
+1 16 22 22.842 -5.6 1.4 0 -0.074 -0.074 0 -1.34 0 -1.4 0 2-8sphe.dat
+0 // Sphere 0.25 (main_colour)
+1 16 22 22.842 5.6 1.4 0 -0.074 -0.074 0 -1.34 0 1.4 0 2-8sphe.dat
+0 // Cylinder 0.5 (main_colour)
+1 16 18.023 17.25 -5.6 0.546 0 0.83 1.2 0 -0.35 0 11.2 0 2-4cyli.dat
+0 // Sphere 0.25 (main_colour)
+1 16 18.023 17.25 -5.6 0.546 0 0.83 1.2 0 -0.35 0 -1.4 0 2-8sphe.dat
+0 // Sphere 0.25 (main_colour)
+1 16 18.023 17.25 5.6 0.546 0 0.83 1.2 0 -0.35 0 1.4 0 2-8sphe.dat
+2 24 38 25 7 38 10 7
+4 16 19 26 -7 38 25 -7 35 22.158 -7 20.598 22.916 -7
+4 16 20.598 22.916 7 35 22.158 7 38 25 7 19 26 7
+0 // Rectangle (main_colour)
+1 16 28.5 25.5 0 9.5 0 0 -0.5 -1 0 0 0 -7 rect.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 27.799 22.537 0 0 0 -7.201 0 1 0.379 7 0 0 rect3.dat
+2 24 28 22.526 -6 35 22.158 -6
+2 24 28 22.526 6 35 22.158 6
+2 24 28 22.526 6 28 22.526 -6
+4 16 19.479 12.025 -7 35 12.842 -7 38 10 -7 19 9 -7
+4 16 19 9 7 38 10 7 35 12.842 7 19.479 12.025 7
+0 // Rectangle (main_colour)
+1 16 28.5 9.5 0 9.5 0 0 0.5 1 0 0 0 7 rect.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 27.2395 12.4335 0 0 0 -7.7605 0 -1 -0.4085 -7 0 0 rect3.dat
+2 24 28 12.474 -6 35 12.842 -6
+2 24 28 12.474 -6 28 12.474 6
+2 24 28 12.474 6 35 12.842 6
+4 16 19 9 -7 14 15 -7 17 15 -7 19.479 12.025 -7
+4 16 19.479 12.025 7 17 15 7 14 15 7 19 9 7
+0 // Rectangle with 3 Edges (main_colour)
+1 16 16.5 12 0 0 1 -2.5 0 0 3 7 0 0 rect3.dat
+4 16 20.598 22.916 -7 17 15 -7 14 15 -7 19 26 -7
+4 16 19 26 7 14 15 7 17 15 7 20.598 22.916 7
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 16.5 20.5 0 -2.5 1 0 -5.5 0 0 0 0 7 rect2p.dat
+4 16 16.193 19.826 -4 1.39 10.203 -4 -2.6188 11.5394 -4 18.7612 25.4746 -4
+4 16 18.7612 25.4746 4 -2.6188 11.5394 4 1.39 10.203 4 16.193 19.826 4
+0 // Rectangle (main_colour)
+1 16 8.7915 15.0145 -3 -7.4015 0 0 -4.8115 1 0 0 0 -1 rect.dat
+0 // Rectangle (main_colour)
+1 16 8.7915 15.0145 3 -7.4015 0 0 -4.8115 1 0 0 0 -1 rect.dat
+2 24 18.7612 25.4746 -4 16.193 19.826 -4
+2 24 18.7612 25.4746 4 16.193 19.826 4
+2 24 14 15 2 16.193 19.826 2
+2 24 14 15 -2 16.193 19.826 -2
+4 16 1.39 10.203 -2 16.193 19.826 -2 14 15 -2 6.668 8.441 -2
+4 16 14 15 2 16.193 19.826 2 1.39 10.203 2 6.668 8.441 2
+0 // Rectangle (main_colour)
+1 16 8.0712 18.507 0 -10.69 0 0 -6.9676 -1 0 0 0 4 rect.dat
+4 16 16.9507 11.4592 -4 10.5085 7.1637 -4 6.668 8.441 -4 14.893 13.928 -4
+4 16 14.893 13.928 4 6.668 8.441 4 10.5085 7.1637 4 16.9507 11.4592 4
+0 // Rectangle (main_colour)
+1 16 10.7805 11.1845 -3 -4.1125 0 0 -2.7435 -1 0 0 0 1 rect.dat
+0 // Rectangle (main_colour)
+1 16 10.7805 11.1845 3 -4.1125 0 0 -2.7435 -1 0 0 0 1 rect.dat
+2 24 16.9507 11.4592 -4 14.893 13.928 -4
+2 24 16.9507 11.4592 4 14.893 13.928 4
+2 24 14 15 -2 14.893 13.928 -2
+2 24 14 15 2 14.893 13.928 2
+3 16 6.668 8.441 2 14.893 13.928 2 14 15 2
+3 16 14 15 -2 14.893 13.928 -2 6.668 8.441 -2
+0 // Rectangle (main_colour)
+1 16 13.7296 9.31145 0 -3.2211 0 0 -2.14775 1 0 0 0 -4 rect.dat
+4 16 -4 4 -4 -8 6 -4 -4 12 -4 -2.6188 11.5394 -4
+4 16 -4 12 4 -8 6 4 -4 4 4 -2.6188 11.5394 4
+0 // Rectangle (main_colour)
+1 16 -6 9 0 -2 1 0 -3 0 0 0 0 4 rect.dat
+4 16 -8 -4 -4 -8 6 -4 -4 4 -4 -4 0 -4
+4 16 -4 0 4 -4 4 4 -8 6 4 -8 -4 4
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -8 1 0 0 1 0 0 0 -5 -4 0 0 rect3.dat
+4 16 4 0 -4 4 4 -4 11 7 -4 7 -4 -4
+4 16 7 -4 4 11 7 4 4 4 4 4 0 4
+0 // Rectangle (main_colour)
+1 16 9 1.5 0 2 -1 0 5.5 0 0 0 0 4 rect.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 5.25 -4 0 0 0 -1.75 0 1 0 4 0 0 rect3.dat
+3 16 7 -4 -4 3.5 -4 -4 4 0 -4
+3 16 4 0 4 3.5 -4 4 7 -4 4
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 3.75 -2 0 -0.25 1 0 -2 0 0 0 0 4 rect2p.dat
+3 16 -4 0 -4 -3.5 -4 -4 -8 -4 -4
+3 16 -8 -4 4 -3.5 -4 4 -4 0 4
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -3.75 -2 0 0 -1 0.25 0 0 -2 4 0 0 rect3.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 -5.75 -4 0 -2.25 0 0 0 1 0 0 0 -4 rect2p.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 18.2395 13.5125 0 0 -1 -1.2395 0 0 1.4875 -7 0 0 rect3.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 18.799 18.958 0 -1.799 -1 0 -3.958 0 0 0 0 -7 rect2p.dat
+4 16 38 10 7 38 10 -7 38 13.5 -4 38 13.5 4
+4 16 28 13.5 4 28 13.5 -4 28 12.474 -6 28 12.474 6
+4 16 38 21.5 4 38 21.5 -4 38 25 -7 38 25 7
+4 16 28 22.526 6 28 22.526 -6 28 21.5 -4 28 21.5 4
+2 24 38 25 -7 38 10 -7
+4 16 38 21.5 -4 38 13.5 -4 38 10 -7 38 25 -7
+4 16 28 22.526 -6 28 12.474 -6 28 13.5 -4 28 21.5 -4
+4 16 28 21.5 4 28 13.5 4 28 12.474 6 28 22.526 6
+4 16 38 25 7 38 10 7 38 13.5 4 38 21.5 4
+2 24 28 22.526 -6 28 12.474 -6
+2 24 28 22.526 6 28 12.474 6
+4 16 38 25 -7 38 10 -7 35 12.842 -7 35 22.158 -7
+4 16 35 22.158 7 35 12.842 7 38 10 7 38 25 7
+4 16 28 22.526 6 28 12.474 6 35 12.842 6 35 22.158 6
+4 16 35 22.158 -6 35 12.842 -6 28 12.474 -6 28 22.526 -6
+0 // Rectangle (main_colour)
+1 16 35 17.5 -6.5 0 1 0 -4.658 0 0 0 0 0.5 rect.dat
+0 // Rectangle (main_colour)
+1 16 35 17.5 6.5 0 1 0 -4.658 0 0 0 0 0.5 rect.dat
+0 // Circle 1.0 (main_colour)
+1 16 38 17.5 0 0 1 0 -4 0 0 0 0 4 4-4edge.dat
+0 // Disc Negative 1.0 (main_colour)
+1 16 38 17.5 0 0 -1 0 -4 0 0 0 0 -4 4-4ndis.dat
+0 // Circle 1.0 (main_colour)
+1 16 28 17.5 0 0 1 0 -4 0 0 0 0 4 4-4edge.dat
+0 // Disc Negative 1.0 (main_colour)
+1 16 28 17.5 0 0 1 0 -4 0 0 0 0 4 4-4ndis.dat
+0 BFC INVERTNEXT
+0 // Cylinder 1.0 (main_colour)
+1 16 28 17.5 0 0 10 0 -4 0 0 0 0 4 4-4cyli.dat
+0 // Circle 0.5 (main_colour)
+1 16 0 0 -4 4 0 0 0 0 4 0 -1 0 2-4edge.dat
+0 // Disc Negative 0.5 (main_colour)
+1 16 0 0 -4 -4 0 0 0 0 4 0 1 0 2-4ndis.dat
+0 // Disc Negative 0.5 (main_colour)
+1 16 0 0 4 4 0 0 0 0 4 0 -1 0 2-4ndis.dat
+0 BFC INVERTNEXT
+0 // Cylinder 0.5 (main_colour)
+1 16 0 0 4 4 0 0 0 0 4 0 -8 0 2-4cyli.dat
+0 // Circle 0.5 (main_colour)
+1 16 0 0 4 4 0 0 0 0 4 0 -1 0 2-4edge.dat
+
+
+0 // !LPE VERTEX -2.6187768172767788859603129904613 11.539395432866989111179582784335 4
+0 // !LPE VERTEX 10.508461563703002502434704245361 7.1637232300944237726324015866916 4
+3 16 10.5085 7.1637 -4 11 7 -4 4 4 -4
+3 16 10.5085 7.1637 -4 4 4 -4 6.668 8.441 -4
+4 16 0 4 -4 -4 4 -4 -2.6188 11.5394 -4 1.39 10.203 -4
+4 16 4 4 -4 0 4 -4 1.39 10.203 -4 6.668 8.441 -4
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 4.029 9.322 -3 -2.639 0 0 0.881 -1 0 0 0 1 rect2p.dat
+3 16 11 7 4 10.5085 7.1637 4 4 4 4
+3 16 4 4 4 10.5085 7.1637 4 6.668 8.441 4
+4 16 -2.6188 11.5394 4 -4 4 4 0 4 4 1.39 10.203 4
+4 16 1.39 10.203 4 0 4 4 4 4 4 6.668 8.441 4
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 4.029 9.322 3 2.639 0 0 -0.881 -1 0 0 0 -1 rect2p.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 -3.3094 11.7697 0 -0.6906 0 0 0.2303 -1 0 0 0 4 rect2p.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 10.75425 7.08185 0 -0.24575 0 0 0.08185 -1 0 0 0 4 rect2p.dat
+
+
+
+0 STEP
+0 FILE 75892 - 18976c01.dat
+0 Pre-assembled wheel subpart combining a vented disc brake rim with an intermediate tyre.
+0 Name: 75892 - 18976c01.dat
+0 Author: Steffen [Steffen]
+0 !LDRAW_ORG Unofficial_Shortcut
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 // Wheel Rim 11 x 18 with Vented Disc Brake (main_colour)
+1 16 0 0 6 1 0 0 0 1 0 0 0 1 18976.dat
+0 // Tyre 11.2/ 28 x 17.6 Intermediate (rubber_black)
+1 256 0 0 0 1 0 0 0 1 0 0 0 1 18977.dat
+
+
+
+0 STEP
+0 FILE 75892 - 22407s01.dat
+0 Half-section geometry subpart of the faceted minifig axe head built from rectangular primitives.
+0 Name: 75892 - 22407s01.dat
+0 Author: Magnus Forsberg [MagFors]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+4 16 -17.794 -13.145 -0.75 -25.574 -5.366 -0.75 -19.87 0.338 -0.75 -17.794 -1.739 -0.75
+4 16 11.801 -12.085 -0.75 -11.801 -12.085 -0.75 -9.704 -9.081 -0.75 9.704 -9.081 -0.75
+4 16 17.794 -13.145 -0.75 17.794 -1.739 -0.75 19.87 0.338 -0.75 25.574 -5.366 -0.75
+4 16 -5 7.303 -1.625 -3.883 11.903 -1.625 3.883 11.903 -1.625 5 7.303 -1.625
+4 16 3.365 -8.116 -2.5 3.365 -8.116 -3 8.013 -3.468 -3 7.502 -3.979 -2.5
+4 16 8.013 -3.468 -3 8.013 -3.468 -1.425 7.502 -3.979 -1.425 7.502 -3.979 -2.5
+4 16 8.013 -3.468 -3 3.365 -8.116 -3 2.951 -7.116 -4 7.013 -3.054 -4
+4 16 -5.169 14 -4 -7.013 6.406 -4 -8.013 6.526 -3 -6.198 14 -3
+4 16 5.169 14 -4 6.198 14 -3 8.013 6.526 -2.978 7.013 6.406 -3.978
+4 16 -30 -9.473 -1 -30 -9.473 1 -30 -7.14 1.619 -30 -7.14 -1.619
+4 16 8.013 6.526 -1.425 8.013 -3.468 -1.425 8.013 -3.468 -3 8.013 6.526 -2.978
+4 16 7.013 6.406 -3.978 8.013 6.526 -2.978 8.013 -3.468 -3 7.013 -3.054 -4
+4 16 -2.951 -7.116 -4 2.951 -7.116 -4 3.365 -8.116 -3 -3.365 -8.116 -3
+4 16 -2.951 -7.116 -4 -3.365 -8.116 -3 -8.013 -3.468 -3 -7.013 -3.054 -4
+4 16 -7.013 6.406 -4 -7.013 -3.054 -4 -8.013 -3.468 -3 -8.013 6.526 -3
+3 16 -8.013 6.526 -3 -8.013 6.526 -1.425 -6.198 14 -3
+4 16 -8.013 6.526 1.425 -6.198 14 3 -6.198 14 -3 -8.013 6.526 -1.425
+3 16 -6.198 14 3 -8.013 6.526 1.425 -8.013 6.526 3
+0 // Rectangle (main_colour)
+1 16 -8.013 1.529 -2.2125 0 1 0 0 0 4.997 0.7875 0 0 rect.dat
+4 16 -3.365 -8.116 -2.5 -7.502 -3.979 -2.5 -8.013 -3.468 -3 -3.365 -8.116 -3
+4 16 -7.502 -3.979 -1.425 -8.013 -3.468 -1.425 -8.013 -3.468 -3 -7.502 -3.979 -2.5
+4 16 -7.013 6.406 -4 -5 7.303 -4 -2.951 -7.116 -4 -7.013 -3.054 -4
+4 16 -5 7.303 -4 -7.013 6.406 -4 -5.169 14 -4 -3.883 11.903 -4
+4 16 -3.883 11.903 -4 -5.169 14 -4 5.169 14 -4 3.883 11.903 -4
+4 16 5.169 14 -4 7.013 6.406 -3.978 5 7.303 -4 3.883 11.903 -4
+4 16 7.013 6.406 -3.978 7.013 -3.054 -4 2.951 -7.116 -4 5 7.303 -4
+4 16 2.951 -7.116 -4 -2.951 -7.116 -4 -5 7.303 -4 5 7.303 -4
+0 // Rectangle (main_colour)
+1 16 0 -8.116 -2.75 -3.365 0 0 0 1 0 0 0 -0.25 rect.dat
+4 16 -30 -9.473 -1 -30 -7.14 -1.619 -28.338 -5.478 -2.5 -19.856 -13.96 -2.5
+3 16 -30 -9.473 -1 -19.856 -13.96 -2.5 -21.513 -17.96 -1
+4 16 -28.338 -5.478 2.5 -28.338 -5.478 -2.5 -30 -7.14 -1.619 -30 -7.14 1.619
+4 16 -20.137 2.723 -1.425 -28.338 -5.478 -2.5 -28.338 -5.478 2.5 -20.137 2.723 1.425
+3 16 -20.137 2.723 1.425 -28.338 -5.478 2.5 -20.137 2.723 2.5
+3 16 -28.338 -5.478 -2.5 -20.137 2.723 -1.425 -20.137 2.723 -2.5
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 -19.59 3.27 0 -0.547 0 0 -0.547 -1 0 0 0 1.425 rect2p.dat
+0 // Rectangle (main_colour)
+1 16 -25.7565 -13.7165 0 4.2435 0 0 -4.2435 1 0 0 0 1 rect.dat
+4 16 -19.856 -13.96 -2.5 19.856 -13.96 -2.5 21.513 -17.96 -1 -21.513 -17.96 -1
+3 16 -21.513 -17.96 -1 21.513 -17.96 -1 -21.513 -17.96 1
+4 16 30 -7.14 -1.619 30 -9.473 -1 21.513 -17.96 -1 19.856 -13.96 -2.5
+3 16 30 -7.14 -1.619 19.856 -13.96 -2.5 28.338 -5.478 -2.5
+4 16 10.178 -2.39 -1.425 19.043 3.817 -1.425 20.137 2.723 -1.425 15.066 -1.435 -1.425
+4 16 15.066 -1.435 -1.425 10.16 -3.979 -1.425 8.013 -3.468 -1.425 10.178 -2.39 -1.425
+3 16 8.013 -3.468 -1.425 10.16 -3.979 -1.425 7.502 -3.979 -1.425
+3 16 8.013 6.526 -1.425 10.178 -2.39 -1.425 8.013 -3.468 -1.425
+4 16 10.766 -5.558 -1.425 10.16 -3.979 -1.425 15.066 -1.435 -1.425 15.066 -5.558 -1.425
+4 16 9.704 -9.081 -2.5 7.502 -3.979 -2.5 10.16 -3.979 -2.5 10.766 -5.558 -2.5
+3 16 3.365 -8.116 -2.5 7.502 -3.979 -2.5 9.704 -9.081 -2.5
+4 16 -3.365 -8.116 -2.5 3.365 -8.116 -2.5 9.704 -9.081 -2.5 -9.704 -9.081 -2.5
+4 16 -11.801 -12.085 -2.5 -15.066 -5.558 -2.5 -10.766 -5.558 -2.5 -9.704 -9.081 -2.5
+4 16 17.794 -13.145 -2.5 -17.794 -13.145 -2.5 -11.801 -12.085 -2.5 11.801 -12.085 -2.5
+4 16 -17.794 -13.145 -2.5 17.794 -13.145 -2.5 19.856 -13.96 -2.5 -19.856 -13.96 -2.5
+4 16 17.794 -13.145 -2.5 25.574 -5.366 -2.5 28.338 -5.478 -2.5 19.856 -13.96 -2.5
+4 16 28.338 -5.478 -2.5 25.574 -5.366 -2.5 19.87 0.338 -2.5 20.137 2.723 -2.5
+4 16 19.87 0.338 -2.5 17.794 -1.739 -2.5 15.066 -1.435 -2.5 20.137 2.723 -2.5
+4 16 17.794 -13.145 -2.5 15.066 -5.558 -2.5 15.066 -1.435 -2.5 17.794 -1.739 -2.5
+4 16 9.704 -9.081 -2.5 15.066 -5.558 -2.5 17.794 -13.145 -2.5 11.801 -12.085 -2.5
+3 16 15.066 -5.558 -2.5 9.704 -9.081 -2.5 10.766 -5.558 -2.5
+4 16 -28.338 -5.478 -2.5 -25.574 -5.366 -2.5 -17.794 -13.145 -2.5 -19.856 -13.96 -2.5
+4 16 -28.338 -5.478 -2.5 -20.137 2.723 -2.5 -19.87 0.338 -2.5 -25.574 -5.366 -2.5
+3 16 -19.87 0.338 -2.5 -20.137 2.723 -2.5 -17.794 -1.739 -2.5
+4 16 -20.137 2.723 -2.5 -15.066 -1.435 -2.5 -15.066 -5.558 -2.5 -17.794 -1.739 -2.5
+4 16 -11.801 -12.085 -2.5 -17.794 -13.145 -2.5 -17.794 -1.739 -2.5 -15.066 -5.558 -2.5
+4 16 -9.704 -9.081 -2.5 -10.766 -5.558 -2.5 -7.502 -3.979 -2.5 -3.365 -8.116 -2.5
+3 16 -7.502 -3.979 -2.5 -10.766 -5.558 -2.5 -10.16 -3.979 -2.5
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 -9.0955 2.068 0 1.0825 0 0 4.458 -1 0 0 0 -1.425 rect2p.dat
+4 16 -10.16 -3.979 -1.425 -10.178 -2.39 -1.425 -8.013 6.526 -1.425 -8.013 -3.468 -1.425
+3 16 -10.16 -3.979 -1.425 -8.013 -3.468 -1.425 -7.502 -3.979 -1.425
+4 16 -10.178 -2.39 -1.425 -10.16 -3.979 -1.425 -15.066 -5.558 -1.425 -15.066 -1.435 -1.425
+3 16 -15.066 -5.558 -1.425 -10.16 -3.979 -1.425 -10.766 -5.558 -1.425
+4 16 -20.137 2.723 -1.425 -19.043 3.817 -1.425 -10.178 -2.39 -1.425 -15.066 -1.435 -1.425
+0 // Rectangle (main_colour)
+1 16 -14.6105 0.7135 0 4.4325 0 0 -3.1035 -1 0 0 0 -1.425 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 12.916 -5.558 -1.9625 -2.15 0 0 0 -1 0 0 0 0.5375 rect2p.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 -10.463 -4.7685 -1.9625 -0.303 0 0 -0.7895 -1 0 0 0 0.5375 rect2p.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 10.463 -4.7685 -1.9625 0 0 0.303 0 -1 -0.7895 0.5375 0 0 rect3.dat
+0 // Rectangle (main_colour)
+1 16 -8.831 -3.979 -1.9625 -1.329 0 0 0 -1 0 0 0 0.5375 rect.dat
+0 // Rectangle (main_colour)
+1 16 -12.916 -5.558 -1.9625 0 0 -2.15 0 -1 0 -0.5375 0 0 rect.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -15.066 -3.4965 -1.9625 0 -1 0 0 0 2.0615 -0.5375 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -17.6015 0.644 -1.9625 0 0 -2.5355 0 -1 2.079 -0.5375 0 0 rect3.dat
+0 // Rectangle (main_colour)
+1 16 15.066 -3.4965 -1.9625 0 1 0 0 0 -2.0615 -0.5375 0 0 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 17.6015 0.644 -1.9625 -2.5355 0 0 -2.079 -1 0 0 0 0.5375 rect2p.dat
+0 // Rectangle (main_colour)
+1 16 8.831 -3.979 -1.9625 -1.329 0 0 0 -1 0 0 0 0.5375 rect.dat
+2 24 7.502 -3.979 -2.5 3.365 -8.116 -2.5
+2 24 3.365 -8.116 -3 8.013 -3.468 -3
+2 24 8.013 -3.468 -3 8.013 -3.468 -1.425
+2 24 8.013 -3.468 -1.425 7.502 -3.979 -1.425
+2 24 7.013 -3.054 -4 8.013 -3.468 -3
+2 24 3.365 -8.116 -3 2.951 -7.116 -4
+2 24 2.951 -7.116 -4 7.013 -3.054 -4
+2 24 -5.169 14 -4 -7.013 6.406 -4
+2 24 -6.198 14 -3 -5.169 14 -4
+2 24 -7.013 6.406 -4 -8.013 6.526 -3
+2 24 -8.013 6.526 -3 -6.198 14 -3
+2 24 5.169 14 -4 6.198 14 -3
+2 24 8.013 6.526 -2.978 7.013 6.406 -3.978
+2 24 -30 -7.14 1.619 -30 -7.14 -1.619
+2 24 -30 -9.473 1 -30 -7.14 1.619
+2 24 -30 -7.14 -1.619 -30 -9.473 -1
+2 24 8.013 6.526 -1.425 8.013 -3.468 -1.425
+2 24 8.013 -3.468 -3 8.013 6.526 -2.978
+2 24 7.013 -3.054 -4 7.013 6.406 -3.978
+2 24 -2.951 -7.116 -4 2.951 -7.116 -4
+2 24 -3.365 -8.116 -3 -2.951 -7.116 -4
+2 24 -7.013 -3.054 -4 -2.951 -7.116 -4
+2 24 -3.365 -8.116 -3 -8.013 -3.468 -3
+2 24 -8.013 -3.468 -3 -7.013 -3.054 -4
+2 24 -7.013 6.406 -4 -7.013 -3.054 -4
+2 24 -6.198 14 3 -6.198 14 -3
+2 24 -8.013 6.526 1.425 -8.013 6.526 3
+2 24 -8.013 6.526 3 -6.198 14 3
+2 24 -3.365 -8.116 -2.5 -7.502 -3.979 -2.5
+2 24 -7.502 -3.979 -1.425 -8.013 -3.468 -1.425
+2 24 5.169 14 -4 -5.169 14 -4
+2 24 -28.338 -5.478 -2.5 -19.856 -13.96 -2.5
+2 24 -30 -7.14 -1.619 -28.338 -5.478 -2.5
+2 24 -19.856 -13.96 -2.5 -21.513 -17.96 -1
+2 24 -30 -7.14 1.619 -28.338 -5.478 2.5
+2 24 -28.338 -5.478 2.5 -20.137 2.723 2.5
+2 24 -20.137 2.723 2.5 -20.137 2.723 1.425
+2 24 -20.137 2.723 -2.5 -28.338 -5.478 -2.5
+2 24 -19.856 -13.96 -2.5 19.856 -13.96 -2.5
+2 24 19.856 -13.96 -2.5 21.513 -17.96 -1
+2 24 21.513 -17.96 -1 -21.513 -17.96 -1
+2 24 19.856 -13.96 -2.5 28.338 -5.478 -2.5
+2 24 7.013 6.406 -3.978 5.169 14 -4
+
+0 // Rectangle with 3 Edges (main_colour)
+1 16 21.684 -9.2555 -1.625 0 0 -3.89 0 -1 -3.8895 -0.875 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 22.722 -2.514 -1.625 0 0 2.852 0 1 -2.852 -0.875 0 0 rect3.dat
+0 // Rectangle (main_colour)
+1 16 18.832 -0.7005 -1.625 0 0 1.038 0 1 1.0385 -0.875 0 0 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 17.794 -7.442 -1.625 0 -1 0 5.703 0 0 0 0 0.875 rect2p.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 10.7525 -10.583 -1.625 0 0 -1.0485 0 1 1.502 0.875 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 0 -12.085 -1.625 0 0 11.801 0 -1 0 0.875 0 0 rect3.dat
+0 // Rectangle (main_colour)
+1 16 -10.7525 -10.583 -1.625 0 0 1.0485 0 1 1.502 -0.875 0 0 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 0 -9.081 -1.625 -9.704 0 0 0 1 0 0 0 -0.875 rect2p.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -21.684 -9.2555 -1.625 0 0 -3.89 0 -1 3.8895 -0.875 0 0 rect3.dat
+0 // Rectangle (main_colour)
+1 16 -17.794 -7.442 -1.625 0 1 0 0 0 -5.703 -0.875 0 0 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 -18.832 -0.7005 -1.625 1.038 0 0 -1.0385 1 0 0 0 0.875 rect2p.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -22.722 -2.514 -1.625 0 0 2.852 0 1 2.852 -0.875 0 0 rect3.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 0 11.903 -2.8125 -3.883 0 0 0 1 0 0 0 -1.1875 rect2p.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 4.4415 9.603 -2.8125 0 0 -0.5585 0 1 2.3 1.1875 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 0 7.303 -2.8125 0 0 5 0 -1 0 1.1875 0 0 rect3.dat
+0 // Rectangle (main_colour)
+1 16 -4.4415 9.603 -2.8125 0 0 -0.5585 0 1 -2.3 1.1875 0 0 rect.dat
+4 16 6.198 14 -3 5.169 14 -4 -5.169 14 -4 -6.198 14 -3
+3 16 6.198 14 -3 -6.198 14 -3 -6.198 14 3
+1 16 0 0 -4 0 0 1 1 0 0 0 1 0 stud2.dat
+
+
+
+
+

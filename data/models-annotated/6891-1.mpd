@@ -1,0 +1,670 @@
+0 FILE 6891 - Gamma-V Laser Craft.ldr
+0 A classic space shuttle craft featuring a cockpit with steering controls, twin hinged wings with jet engines, a finned tail with rockets, a top engine, a blue robot figure, and a cover panel, all built around a grey and black bracketed chassis.
+0 Name: 6891 - Gamma-V Laser Craft.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Classic Space
+0 !KEYWORDS spaceship, robot, 1985
+
+0 !HISTORY 2012-12-03 [jellby] Initial creation
+
+0 !HELP Cockpit is detachable and can be used as independent model
+0 !HELP Flexible hoses placed on the wings instead of cover, to facilitate wing rotations
+0 !HELP Wings rotated 13 degrees
+0 !HELP One piece (3004p01.dat) could be mirrored to get  symmetric model
+
+0 // Bracket  8 x  2 x  1 & 1/3 (black)
+1 0 0 -32 11 1 0 0 0 1 0 0 0 1 4732.dat
+0 STEP
+0 // Plate  1 x  3 (black)
+1 0 30 -8 1 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 -30 -8 1 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Brick  2 x  3 (light_grey)
+1 7 0 -24 81 0 0 -1 0 1 0 1 0 0 3002.dat
+0 STEP
+0 // Plate  2 x  3 (light_grey)
+1 7 20 -16 1 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 -20 -16 1 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -40 -39 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -40 41 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -40 81 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 -10 -40 -59 0 0 1 0 1 0 -1 0 0 4085a.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 10 -40 -59 0 0 -1 0 1 0 1 0 0 4085a.dat
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 30 -40 61 0 0 -1 0 1 0 1 0 0 3963.dat
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 -30 -40 61 0 0 1 0 1 0 -1 0 0 3963.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 0 -48 101 -1 0 0 0 1 0 0 0 -1 3747a.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -48 -39 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 0 -48 71 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 STEP
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -48 -89 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 0 -56 81 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 0 -56 121 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 STEP
+0 // Brick  1 x  4 (light_grey)
+1 7 0 -64 41 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  2 x  2 (light_grey)
+1 7 0 -72 -49 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -64 91 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 30 -64 121 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -30 -64 121 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Door  1 x  3 x  2 Right (black)
+1 0 -30 -64 -19 1 0 0 0 1 0 0 0 1 3188.dat
+0 // Door  1 x  3 x  2 Left (black)
+1 0 30 -64 -19 1 0 0 0 1 0 0 0 1 3189.dat
+0 STEP
+0 // Plate  4 x  4 (light_grey)
+1 7 0 -72 11 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 0 -72 141 -1 0 0 0 1 0 0 0 -1 3747a.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -72 91 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 0 -72 -119 -1 0 0 0 1 0 0 0 -1 3700.dat
+0 STEP
+0 // Plate  2 x 10 (light_grey)
+1 7 0 -80 -29 0 0 -1 0 1 0 1 0 0 3832.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 0 -80 91 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 STEP
+1 7 -10 -72 151 1 0 0 0 1 0 0 0 1 6891 - Right wing.ldr
+1 7 10 -72 151 1 0 0 0 1 0 0 0 1 6891 - Left wing.ldr
+0 STEP
+1 7 0 -80 -79 1 0 0 0 1 0 0 0 1 6891 - Cover.ldr
+0 STEP
+0 // Brick  2 x  4 (light_grey)
+1 7 0 -104 151 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Tile  2 x  2 with Yellow Arrow with Black Border Pattern (light_grey)
+1 7 0 -88 -109 -1 0 0 0 1 0 0 0 -1 3068bp08.dat
+0 // Technic Pin (light_grey)
+1 7 0 -62 -129 0 0 1 0 1 0 -1 0 0 3673.dat
+0 STEP
+1 7 0 -104 131 1 0 0 0 1 0 0 0 1 6891 - Tail.ldr
+0 STEP
+1 7 0 0 -189 1 0 0 0 1 0 0 0 1 6891 - Cockpit.ldr
+1 36 0 -8 -189 1 0 0 0 1 0 0 0 1 6891 - Minifig.ldr
+1 1 210 0 0 1 0 0 0 1 0 0 0 1 6891 - Robot.ldr
+
+
+0 STEP
+0 FILE 6891 - Cockpit.ldr
+0 An enclosed cockpit section with a steering wheel and stand, an instrument panel with buttons and red lamps, directional arrow patterns, and sloped light grey plates.
+0 Name: 6891 - Cockpit.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Bracket  8 x  2 x  1 & 1/3 (black)
+1 0 0 -32 -20 -1 0 0 0 1 0 0 0 -1 4732.dat
+0 STEP
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 0 -24 50 -1 0 0 0 1 0 0 0 -1 3747a.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 0 -24 -70 1 0 0 0 1 0 0 0 1 3747a.dat
+0 STEP
+0 // ~Car Steering Wheel Stand (light_grey)
+1 7 0 -16 -30 1 0 0 0 1 0 0 0 1 3829a.dat
+0 // ~Car Steering Wheel (black)
+1 0 0 -42.32 -30.24 1 0 0 0 0.6 0.8 0 -0.8 0.6 3828.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -32 80 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 STEP
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 0 -48 -110 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -40 80 -1 0 0 0 1 0 0 0 -1 3068b.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -40 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Slope Brick 45  2 x  2 with 12 Buttons and  3 Red Lamps on Black Panel Pattern (light_grey)
+1 7 0 -56 -70 -1 0 0 0 1 0 0 0 -1 3039p32.dat
+0 STEP
+0 // Plate  1 x  6 (light_grey)
+1 7 0 -48 50 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 0 -56 -90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // One of the next two parts should be mirrored if a symmetric model is desired
+0 // Arrow pointing backward, on the right side
+0 // Brick  1 x  2 with Yellow Left Arrow and Black Border Pattern (light_grey)
+1 7 -30 -56 80 0 0 1 0 1 0 -1 0 0 3004p01.dat
+0 // Arrow pointing forward, on the left side
+0 // Brick  1 x  2 with Yellow Left Arrow and Black Border Pattern (light_grey)
+1 7 30 -56 80 0 0 -1 0 1 0 1 0 0 3004p01.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (light_grey)
+1 7 0 -72 50 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 40 -56 50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -40 -56 50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (light_grey)
+1 7 0 -56 -150 1 0 0 0 1 0 0 0 1 4596.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 0 -56 -120 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -80 50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Wing  8 x  8 with  4 x  4 Cutout (light_grey)
+1 7 0 -64 -80 1 0 0 0 1 0 0 0 1 4475.dat
+0 // Brick  1 x  3 (light_grey)
+1 7 30 -80 70 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (light_grey)
+1 7 -30 -80 70 0 0 -1 0 1 0 1 0 0 3622.dat
+0 STEP
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (light_grey)
+1 7 60 -56 0 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (light_grey)
+1 7 -60 -56 0 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -30 -88 80 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 30 -88 80 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 50 -64 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -50 -64 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Tile  1 x  1 with Groove (trans_red)
+1 36 70 -64 -10 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  1 with Groove (trans_red)
+1 36 -70 -64 -10 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -60 -64 10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 60 -64 10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -96 80 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -104 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -112 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Wing  4 x  4 Right (light_grey)
+1 7 -80 -72 20 1 0 0 0 1 0 0 0 1 3935.dat
+0 // Wing  4 x  4 Left (light_grey)
+1 7 80 -72 20 1 0 0 0 1 0 0 0 1 3936.dat
+0 STEP
+0 // Plate  1 x  1 (trans_green)
+1 34 50 -80 50 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_green)
+1 34 -50 -80 50 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 0 -104 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 30 -104 50 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (light_grey)
+1 7 -30 -104 50 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 0 -54 -220 1 0 0 0 0 1 0 -1 0 4589.dat
+0 STEP
+0 // Hinge Plate  1 x  4 with Car Roof Holder (light_grey)
+1 7 0 -112 50 1 0 0 0 1 0 0 0 1 4315.dat
+0 // Windscreen  6 x  4 x  2 Canopy (trans_green)
+1 34 0 -108 36 1 0 0 0 1 0 0 0 1 4474.dat
+0 // Dish  2 x  2 Inverted (trans_red)
+1 36 0 -54 -244 1 0 0 0 0 1 0 -1 0 4740.dat
+0 STEP
+1 7 0 -112 70 1 0 0 0 1 0 0 0 1 6891 - Top engine.ldr
+
+
+0 STEP
+0 FILE 6891 - Robot.ldr
+0 A small blue robot figure with a dish head, studs-on-sides bricks forming the body, transparent red round plates for eyes, and black hinge control sticks for arms.
+0 Name: 6891 - Robot.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Dish  2 x  2 Inverted (blue)
+1 1 0 -8 0 1 0 0 0 1 0 0 0 1 4740.dat
+0 STEP
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (blue)
+1 1 0 -44 -10 1 0 0 0 0 -1 0 1 0 4595.dat
+0 STEP
+0 // Brick  1 x  1 with Studs on Four Sides (blue)
+1 1 0 -88 0 1 0 0 0 1 0 0 0 1 4733.dat
+0 STEP
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (blue)
+1 1 26 -54 0 0 -1 0 0.7071 0 -0.7071 0.7071 0 0.7071 4735.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (blue)
+1 1 -26 -54 0 0 1 0 -0.7071 0 -0.7071 -0.7071 0 0.7071 4735.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 -78 -18 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 -78 18 1 0 0 0 0 1 0 -1 0 6141.dat
+0 // Hinge Control Stick Base (black)
+1 0 -18 -78 0 0 1 0 0 0 1 1 0 0 4592.dat
+0 // Hinge Control Stick Base (black)
+1 0 18 -78 0 0 -1 0 0 0 1 -1 0 0 4592.dat
+0 // Hinge Control Stick (black)
+1 0 18 -78 0 0 -0.5 0.866 0 0.866 0.5 -1 0 0 4593.dat
+0 // Hinge Control Stick (black)
+1 0 -18 -78 0 0 0.5 -0.866 0 0.866 0.5 1 0 0 4593.dat
+
+0 STEP
+0 FILE 6891 - Top engine.ldr
+0 A compact top-mounted engine assembly consisting of a finned round brick with a black cone nozzle, mounted on a tail piece with plates and a studs-on-sides brick.
+0 Name: 6891 - Top engine.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  3 (light_grey)
+1 7 0 -8 0 0 0 1 0 1 0 -1 0 0 3021.dat
+0 STEP
+0 // Tail  4 x  2 x  2 (light_grey)
+1 7 0 -56 30 1 0 0 0 1 0 0 0 1 3479.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (light_grey)
+1 7 0 -64 40 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (light_grey)
+1 7 0 -64 20 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 0 -80 30 -1 0 0 0 1 0 0 0 -1 4595.dat
+0 STEP
+0 // Brick  1 x  1 Round with Fins (black)
+1 0 0 -70 66 -1 0 0 0 0 1 0 1 0 4588.dat
+0 // Cone  1 x  1 (black)
+1 0 0 -70 -14 -1 0 0 0 0 1 0 1 0 4589.dat
+
+
+0 STEP
+0 FILE 6891 - Right wing.ldr
+0 A right-side swept wing built from a large wing plate with cutout, a jet engine with fins, a hinged car roof mount, flexible hose detailing, and directional arrow tiles.
+0 Name: 6891 - Right wing.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge Plate  1 x  4 with Car Roof Holder (light_grey)
+1 7 0 -8 0 0 0 1 0 1 0 -1 0 0 4315.dat
+0 // Hinge Car Roof  4 x  4 (black)
+1 0 -49.9515 0.4257 0 0 0.225 0.9744 0 0.9744 -0.225 -1 0 0 4213.dat
+0 // Tile  1 x  2 with Arrow Long Yellow with Black Border Pattern (light_grey)
+1 7 -80.9822 -0.6207 0 0 0.225 0.9744 0 0.9744 -0.225 -1 0 0 3069bp06.dat
+0 STEP
+0 // Wing  8 x  8 with  4 x  4 Cutout (light_grey)
+1 7 -90.7259 1.6288 0 0 0.225 0.9744 0 0.9744 -0.225 -1 0 0 4475.dat
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 -127.9011 18.4218 0 0.9744 0.225 0 -0.225 0.9744 0 0 0 1 3020.dat
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 -87.1267 17.2187 0 0.9744 0.225 0 -0.225 0.9744 0 0 0 1 3020.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 -145.5889 30.7158 0 0.9744 0.225 0 -0.225 0.9744 0 0 0 1 4229.dat
+0 STEP
+
+0 // Flexible part created with LSynth. LSynth commands commented out
+
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 -20 -32 -38 1 0 0 0 0 1 0 -1 0 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 -63.7443 -14.8634 30 0 0.225 0.9744 0 0.9744 -0.225 -1 0 0 752.dat
+0 //  0 SYNTH BEGIN HOSE_FLEXIBLE_8.5L 256
+0 //  0 SYNTH SHOW
+0 //  1 2 -20 -32 -38 1 0 0 0 0 1 0 -1 0 LS100.dat
+0 //  1 14 -20 -32 -28 -1 0 0 0 0 -1 0 -1 0 LS02.dat
+0 //  1 14 -34 -68 22 0.7071 0.7071 0 0 0 -1 0.7071 -0.7071 0 LS02.dat
+0 //  1 14 -66.4437 -26.5559 30 0 -0.225 -0.9744 0 -0.9744 0.225 -1 0 0 LS02.dat
+0 //  1 4 -64.8691 -19.7353 30 0 -0.225 -0.9744 0 -0.9744 0.225 -1 0 0 LS100.dat
+0 //  0 SYNTH SYNTHESIZED BEGIN
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 -20 -32 -38 1 0 0 0 0 1 0 1 0 755.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -20 -32 -31.0465 0.9976 0 0.0688 -0.0688 0 0.9976 0 1 0 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -20 -32 -27.9439 0.9925 0 0.1225 -0.1225 0 0.9925 0 1 0 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.972 -32.1455 -24.8356 0.9843 0.0093 0.1763 -0.1757 -0.0484 0.9833 -0.0177 0.9988 0.046 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.8924 -32.5825 -21.7471 0.9726 0.0261 0.2311 -0.2251 -0.1436 0.9637 -0.0583 0.9893 0.1338 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.765 -33.3386 -18.7588 0.9572 0.0417 0.2863 -0.2677 -0.2478 0.9311 -0.1098 0.9679 0.2261 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.5976 -34.4333 -15.8736 0.938 0.0545 0.3424 -0.3019 -0.3573 0.8839 -0.1705 0.9324 0.3186 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.4045 -35.8673 -13.1178 0.9149 0.0623 0.3989 -0.3272 -0.4644 0.823 -0.2365 0.8834 0.4045 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.208 -37.597 -10.5602 0.8888 0.0635 0.4539 -0.3441 -0.5618 0.7523 -0.3028 0.8248 0.4775 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.0294 -39.5931 -8.1817 0.8601 0.0572 0.507 -0.356 -0.6445 0.6767 -0.3654 0.7625 0.534 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -18.894 -41.7876 -5.9983 0.8296 0.0432 0.5567 -0.3664 -0.7101 0.6012 -0.4213 0.7027 0.5733 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -18.8243 -44.1323 -3.9827 0.7976 0.0219 0.6028 -0.3789 -0.7595 0.5288 -0.4694 0.6502 0.5974 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -18.843 -46.5851 -2.1013 0.7639 -0.0069 0.6453 -0.3962 -0.7944 0.4604 -0.5094 0.6074 0.6095 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -18.9734 -49.1337 -0.2967 0.7276 -0.0432 0.6846 -0.4209 -0.8162 0.3958 -0.5417 0.5762 0.6121 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.239 -51.6875 1.4287 0.6887 -0.0872 0.7198 -0.4542 -0.8257 0.3345 -0.5652 0.5573 0.6083 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -19.667 -54.234 3.1332 0.6453 -0.14 0.751 -0.4977 -0.8228 0.2743 -0.5795 0.5508 0.6007 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -20.2878 -56.7283 4.8544 0.5954 -0.2026 0.7775 -0.5527 -0.8057 0.2133 -0.5832 0.5567 0.5916 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -21.1382 -59.1425 6.6465 0.5354 -0.275 0.7986 -0.619 -0.7711 0.1494 -0.5747 0.5743 0.5831 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -22.2289 -61.3577 8.5014 0.463 -0.3555 0.812 -0.6937 -0.7155 0.0823 -0.5517 0.6014 0.5779 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -23.5808 -63.3287 10.4568 0.3747 -0.4401 0.816 -0.7718 -0.6357 0.0115 -0.5137 0.6341 0.5779 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -25.1885 -64.9871 12.5168 0.2701 -0.5219 0.8091 -0.8442 -0.5324 -0.0616 -0.4629 0.6665 0.5844 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -27.0236 -66.2869 14.669 0.1538 -0.5919 0.7912 -0.9009 -0.413 -0.1339 -0.406 0.6922 0.5967 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -29.0195 -67.2005 16.8653 0.0347 -0.6444 0.7639 -0.9355 -0.2898 -0.2019 -0.3515 0.7077 0.6129 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -31.1177 -67.7498 19.0725 -0.0789 -0.6789 0.73 -0.9487 -0.1738 -0.2642 -0.3062 0.7133 0.6304 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -33.2819 -67.9808 21.2788 -0.1824 -0.6988 0.6917 -0.9444 -0.0711 -0.3209 -0.2734 0.7118 0.647 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -35.5042 -67.9775 23.4496 -0.263 -0.7158 0.6469 -0.9278 0.0038 -0.3731 -0.2646 0.6983 0.6651 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -37.8222 -67.8621 25.4897 -0.3042 -0.7511 0.5859 -0.9062 0.0385 -0.4211 -0.2938 0.659 0.6923 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -40.2551 -67.6248 27.381 -0.3402 -0.7882 0.5129 -0.8818 0.078 -0.465 -0.3265 0.6105 0.7216 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -42.8268 -67.2369 29.117 -0.3733 -0.8237 0.4268 -0.8545 0.1261 -0.5039 -0.3613 0.5528 0.7509 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -45.4553 -66.6756 30.6139 -0.4025 -0.855 0.327 -0.825 0.184 -0.5343 -0.3967 0.4848 0.7795 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -48.1812 -65.8967 31.8815 -0.4286 -0.8784 0.2115 -0.7926 0.2532 -0.5546 -0.4336 0.4054 0.8048 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -50.9513 -64.8671 32.8778 -0.4518 -0.8883 0.0821 -0.7572 0.3332 -0.5617 -0.4716 0.316 0.8232 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -53.6703 -63.5714 33.5665 -0.4725 -0.8795 -0.0571 -0.7187 0.422 -0.5526 -0.5101 0.2201 0.8315 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -56.2942 -61.9846 33.9547 -0.491 -0.8477 -0.2008 -0.6758 0.5161 -0.5262 -0.5497 0.1227 0.8263 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -58.7519 -60.1021 34.0598 -0.5073 -0.7913 -0.3413 -0.6274 0.6106 -0.4833 -0.5909 0.031 0.8062 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -60.9842 -57.9333 33.9213 -0.5195 -0.7133 -0.4705 -0.5728 0.6993 -0.4276 -0.6341 -0.0474 0.7718 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -62.9029 -55.5413 33.5945 -0.5261 -0.6194 -0.5827 -0.5128 0.7777 -0.3636 -0.6784 -0.1076 0.7268 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -64.51 -52.9347 33.1393 -0.5251 -0.5157 -0.677 -0.448 0.8439 -0.2953 -0.7236 -0.1482 0.6741 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -65.7991 -50.1467 32.6121 -0.5145 -0.4094 -0.7534 -0.3807 0.8964 -0.2271 -0.7684 -0.1699 0.6171 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -66.7479 -47.2696 32.0728 -0.4947 -0.3056 -0.8136 -0.3134 0.9359 -0.1609 -0.8106 -0.1754 0.5588 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -67.4007 -44.2826 31.551 -0.4652 -0.2071 -0.8606 -0.248 0.9638 -0.0978 -0.8497 -0.1679 0.4998 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -67.7681 -41.2503 31.0829 -0.4276 -0.1161 -0.8965 -0.1866 0.9817 -0.0382 -0.8845 -0.1509 0.4414 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -67.8811 -38.1734 30.6851 -0.3826 -0.0335 -0.9233 -0.1304 0.9913 0.0181 -0.9147 -0.1273 0.3836 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -67.7642 -35.0815 30.3726 -0.3319 0.0403 -0.9425 -0.0806 0.9942 0.0709 -0.9399 -0.0995 0.3267 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -67.4442 -32.0019 30.1535 -0.2771 0.1054 -0.9551 -0.0379 0.992 0.1204 -0.9601 -0.0695 0.2708 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -66.9473 -28.9596 30.0316 -0.2196 0.1627 -0.9619 -0.002 0.9859 0.1673 -0.9756 -0.0386 0.2162 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -66.2935 -25.9121 30.0008 -0.1601 0.2117 -0.9641 0.0259 0.9773 0.2103 -0.9868 -0.0087 0.1619 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -65.6006 -22.9051 30.0001 -0.1059 0.225 -0.9686 0.0245 0.9744 0.2237 -0.9941 0 0.1087 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -64.9017 -19.8822 30.0001 -0.0534 0.2254 -0.9728 0.0124 0.9743 0.225 -0.9985 0 0.0548 756.dat
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 -63.7422 -14.8639 30.0001 0 -0.2254 -0.9743 0 -0.9743 0.2254 -1 0 0 755.dat
+0 //  0 SYNTH SYNTHESIZED END
+0 //  0 SYNTH END
+
+
+0 STEP
+0 FILE 6891 - Left wing.ldr
+0 A left-side swept wing built from a large wing plate with cutout, a jet engine with fins, a hinged car roof mount, flexible hose detailing, and directional arrow tiles.
+0 Name: 6891 - Left wing.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge Plate  1 x  4 with Car Roof Holder (light_grey)
+1 7 0 -8 0 0 0 -1 0 1 0 1 0 0 4315.dat
+0 // Hinge Car Roof  4 x  4 (black)
+1 0 49.9515 0.4257 0 0 -0.225 -0.9744 0 0.9744 -0.225 1 0 0 4213.dat
+0 // Tile  1 x  2 with Arrow Long Yellow with Black Border Pattern (light_grey)
+1 7 80.9822 -0.6207 0 0 -0.225 0.9744 0 0.9744 0.225 -1 0 0 3069bp06.dat
+0 STEP
+0 // Wing  8 x  8 with  4 x  4 Cutout (light_grey)
+1 7 90.7259 1.6288 0 0 -0.225 -0.9744 0 0.9744 -0.225 1 0 0 4475.dat
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 127.9011 18.4218 0 -0.9744 -0.225 0 -0.225 0.9744 0 0 0 -1 3020.dat
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 87.1267 17.2187 0 -0.9744 -0.225 0 -0.225 0.9744 0 0 0 -1 3020.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 145.5889 30.7158 0 0.9744 -0.225 0 0.225 0.9744 0 0 0 1 4229.dat
+0 STEP
+
+0 // Flexible part created with LSynth. LSynth commands commented out
+
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 20 -32 -38 -1 0 0 0 0 -1 0 -1 0 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 63.7443 -14.8634 30 0 -0.225 0.9744 0 0.9744 0.225 -1 0 0 752.dat
+0 //  0 SYNTH BEGIN HOSE_FLEXIBLE_8.5L 256
+0 //  0 SYNTH SHOW
+0 //  1 2 20 -32 -38 -1 0 0 0 0 -1 0 -1 0 LS100.dat
+0 //  1 1 20 -32 -28 -1 0 0 0 0 -1 0 -1 0 LS02.dat
+0 //  1 1 34 -68 22 -0.7071 -0.7071 0 0 0 -1 0.7071 -0.7071 0 LS02.dat
+0 //  1 1 66.4437 -26.5559 30 0 0.225 0.9744 0 -0.9744 0.225 1 0 0 LS02.dat
+0 //  1 4 64.8691 -19.7353 30 0 0.225 -0.9744 0 -0.9744 -0.225 -1 0 0 LS100.dat
+0 //  0 SYNTH SYNTHESIZED BEGIN
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 20 -32 -38 -1 0 0 0 0 -1 0 1 0 755.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 20 -32 -31.0465 -0.9976 0 0.0688 -0.0688 0 -0.9976 0 1 0 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 20 -32 -27.9439 -0.9925 0 0.1225 -0.1225 0 -0.9925 0 1 0 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.972 -32.1455 -24.8356 -0.9843 -0.0093 0.1763 -0.1757 -0.0484 -0.9833 -0.0177 0.9988 -0.046 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.8924 -32.5825 -21.7471 -0.9726 -0.0261 0.2311 -0.2251 -0.1436 -0.9637 -0.0583 0.9893 -0.1338 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.765 -33.3386 -18.7588 -0.9572 -0.0417 0.2863 -0.2677 -0.2478 -0.9311 -0.1098 0.9679 -0.2261 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.5976 -34.4333 -15.8736 -0.938 -0.0545 0.3424 -0.3019 -0.3573 -0.8839 -0.1705 0.9324 -0.3186 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.4045 -35.8673 -13.1178 -0.9149 -0.0623 0.3989 -0.3272 -0.4644 -0.823 -0.2365 0.8834 -0.4045 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.208 -37.597 -10.5602 -0.8888 -0.0635 0.4539 -0.3441 -0.5618 -0.7523 -0.3028 0.8248 -0.4775 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.0294 -39.5931 -8.1817 -0.8601 -0.0572 0.507 -0.356 -0.6445 -0.6767 -0.3654 0.7625 -0.534 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 18.894 -41.7876 -5.9983 -0.8296 -0.0432 0.5567 -0.3664 -0.7101 -0.6012 -0.4213 0.7027 -0.5733 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 18.8243 -44.1323 -3.9827 -0.7976 -0.0219 0.6028 -0.3789 -0.7595 -0.5288 -0.4694 0.6502 -0.5974 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 18.843 -46.5851 -2.1013 -0.7639 0.0069 0.6453 -0.3962 -0.7944 -0.4604 -0.5094 0.6074 -0.6095 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 18.9734 -49.1337 -0.2967 -0.7276 0.0432 0.6846 -0.4209 -0.8162 -0.3958 -0.5417 0.5762 -0.6121 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.239 -51.6875 1.4287 -0.6887 0.0872 0.7198 -0.4542 -0.8257 -0.3345 -0.5652 0.5573 -0.6083 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 19.667 -54.234 3.1332 -0.6453 0.14 0.751 -0.4977 -0.8228 -0.2743 -0.5795 0.5508 -0.6007 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 20.2878 -56.7283 4.8544 -0.5954 0.2026 0.7775 -0.5527 -0.8057 -0.2133 -0.5832 0.5567 -0.5916 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 21.1382 -59.1425 6.6465 -0.5354 0.275 0.7986 -0.619 -0.7711 -0.1494 -0.5747 0.5743 -0.5831 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 22.2289 -61.3577 8.5014 -0.463 0.3555 0.812 -0.6937 -0.7155 -0.0823 -0.5517 0.6014 -0.5779 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 23.5808 -63.3287 10.4568 -0.3747 0.4401 0.816 -0.7718 -0.6357 -0.0115 -0.5137 0.6341 -0.5779 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 25.1885 -64.9871 12.5168 -0.2701 0.5219 0.8091 -0.8442 -0.5324 0.0616 -0.4629 0.6665 -0.5844 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 27.0236 -66.2869 14.669 -0.1538 0.5919 0.7912 -0.9009 -0.413 0.1339 -0.406 0.6922 -0.5967 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 29.0195 -67.2005 16.8653 -0.0347 0.6444 0.7639 -0.9355 -0.2898 0.2019 -0.3515 0.7077 -0.6129 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 31.1177 -67.7498 19.0725 0.0789 0.6789 0.73 -0.9487 -0.1738 0.2642 -0.3062 0.7133 -0.6304 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 33.2819 -67.9808 21.2788 0.1824 0.6988 0.6917 -0.9444 -0.0711 0.3209 -0.2734 0.7118 -0.647 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 35.5042 -67.9775 23.4496 0.263 0.7158 0.6469 -0.9278 0.0038 0.3731 -0.2646 0.6983 -0.6651 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 37.8222 -67.8621 25.4897 0.3042 0.7511 0.5859 -0.9062 0.0385 0.4211 -0.2938 0.659 -0.6923 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 40.2551 -67.6248 27.381 0.3402 0.7882 0.5129 -0.8818 0.078 0.465 -0.3265 0.6105 -0.7216 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 42.8268 -67.2369 29.117 0.3733 0.8237 0.4268 -0.8545 0.1261 0.5039 -0.3613 0.5528 -0.7509 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 45.4553 -66.6756 30.6139 0.4025 0.855 0.327 -0.825 0.184 0.5343 -0.3967 0.4848 -0.7795 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 48.1812 -65.8967 31.8815 0.4286 0.8784 0.2115 -0.7926 0.2532 0.5546 -0.4336 0.4054 -0.8048 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 50.9513 -64.8671 32.8778 0.4518 0.8883 0.0821 -0.7572 0.3332 0.5617 -0.4716 0.316 -0.8232 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 53.6703 -63.5714 33.5665 0.4725 0.8795 -0.0571 -0.7187 0.422 0.5526 -0.5101 0.2201 -0.8315 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 56.2942 -61.9846 33.9547 0.491 0.8477 -0.2008 -0.6758 0.5161 0.5262 -0.5497 0.1227 -0.8263 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 58.7519 -60.1021 34.0598 0.5073 0.7913 -0.3413 -0.6274 0.6106 0.4833 -0.5909 0.031 -0.8062 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 60.9842 -57.9333 33.9213 0.5195 0.7133 -0.4705 -0.5728 0.6993 0.4276 -0.6341 -0.0474 -0.7718 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 62.9029 -55.5413 33.5945 0.5261 0.6194 -0.5827 -0.5128 0.7777 0.3636 -0.6784 -0.1076 -0.7268 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 64.51 -52.9347 33.1393 0.5251 0.5157 -0.677 -0.448 0.8439 0.2953 -0.7236 -0.1482 -0.6741 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 65.7991 -50.1467 32.6121 0.5145 0.4094 -0.7534 -0.3807 0.8964 0.2271 -0.7684 -0.1699 -0.6171 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 66.7479 -47.2696 32.0728 0.4947 0.3056 -0.8136 -0.3134 0.9359 0.1609 -0.8106 -0.1754 -0.5588 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 67.4007 -44.2826 31.551 0.4652 0.2071 -0.8606 -0.248 0.9638 0.0978 -0.8497 -0.1679 -0.4998 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 67.7681 -41.2503 31.0829 0.4276 0.1161 -0.8965 -0.1866 0.9817 0.0382 -0.8845 -0.1509 -0.4414 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 67.8811 -38.1734 30.6851 0.3826 0.0335 -0.9233 -0.1304 0.9913 -0.0181 -0.9147 -0.1273 -0.3836 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 67.7642 -35.0815 30.3726 0.3319 -0.0403 -0.9425 -0.0806 0.9942 -0.0709 -0.9399 -0.0995 -0.3267 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 67.4442 -32.0019 30.1535 0.2771 -0.1054 -0.9551 -0.0379 0.992 -0.1204 -0.9601 -0.0695 -0.2708 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 66.9473 -28.9596 30.0316 0.2196 -0.1627 -0.9619 -0.002 0.9859 -0.1673 -0.9756 -0.0386 -0.2162 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 66.2935 -25.9121 30.0008 0.1601 -0.2117 -0.9641 0.0259 0.9773 -0.2103 -0.9868 -0.0087 -0.1619 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 65.6006 -22.9051 30.0001 0.1059 -0.225 -0.9686 0.0245 0.9744 -0.2237 -0.9941 0 -0.1087 756.dat
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 64.9017 -19.8822 30.0001 0.0534 -0.2254 -0.9728 0.0124 0.9743 -0.225 -0.9985 0 -0.0548 756.dat
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 63.7422 -14.8639 30.0001 0 0.2254 -0.9743 0 -0.9743 -0.2254 -1 0 0 755.dat
+0 //  0 SYNTH SYNTHESIZED END
+0 //  0 SYNTH END
+
+
+0 STEP
+0 FILE 6891 - Cover.ldr
+0 A small cover assembly of four headlight bricks, two outward-sloping black corner panels, and an offset-stud plate.
+0 Name: 6891 - Cover.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -10 -24 0 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -10 -24 160 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Panel  4 x  4 x  6 Outward Sloping Corner (black)
+1 0 -10 -14 150 0 0 1 -1 0 0 0 -1 0 4737.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 10 -24 0 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 10 -24 160 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Panel  4 x  4 x  6 Outward Sloping Corner (black)
+1 0 10 -14 150 1 0 0 0 0 1 0 -1 0 4737.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (light_grey)
+1 7 0 -14 174 -1 0 0 0 0 -1 0 -1 0 4590.dat
+0 1 0 30 -24 174 1 0 0 0 1 0 0 0 1 left_hose.dat
+0 1 0 -30 -24 174 1 0 0 0 1 0 0 0 1 right_hose.dat
+
+
+0 STEP
+0 FILE 6891 - Tail.ldr
+0 A tail section with a large tail fin, a round finned brick, a rocket-pattern tail piece, two transparent red cones, and a yellow antenna.
+0 Name: 6891 - Tail.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  6 (light_grey)
+1 7 0 -8 0 0 0 -1 0 1 0 1 0 0 3795.dat
+0 STEP
+0 // Tail  4 x  2 x  2 (light_grey)
+1 7 0 -56 40 1 0 0 0 1 0 0 0 1 3479.dat
+0 STEP
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -64 40 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Tail  4 x  2 x  2 with Rocket (black)
+1 0 0 -112 60 1 0 0 0 1 0 0 0 1 4746.dat
+0 STEP
+0 // Brick  2 x  2 x  2 Round with Fins (light_grey)
+1 7 0 -92 100 1 0 0 0 0 -1 0 1 0 4591.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 35 -92 69 0 -1 0 0 0 -1 1 0 0 4589.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 -35 -92 70 0 1 0 0 0 -1 -1 0 0 4589.dat
+0 // Antenna  4H with Rounded Top (trans_yellow)
+1 46 0 -92 -8 1 0 0 0 0 -1 0 1 0 3957a.dat
+
+
+0 STEP
+0 FILE 6891 - Minifig.ldr
+0 A classic black-suited space minifigure with airtanks, a classic space torso pattern, a smiling yellow head, and a helmet with thin chin guard.
+0 Name: 6891 - Minifig.ldr
+0 Author: Ignacio Fernandez Galvan [jellby]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 -9 8 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 -9 8 1 0 0 0 0 1 0 -1 0 3817.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -21 8 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Torso with Classic Space Pattern (black)
+1 0 0 -53 8 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // Minifig Airtanks (black)
+1 0 0 -53 8 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Head with Standard Grin Pattern (Solid Stud) (yellow)
+1 14 0 -78 8 0.866 0 -0.5 0 1 0 0.5 0 0.866 3626ap01.dat
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (black)
+1 0 0 -78 8 0.866 0 -0.5 0 1 0 0.5 0 0.866 3842a.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 -44 8 0.9855 -0.1201 -0.1201 0.1699 0.6969 0.6969 0 -0.7072 0.7071 3818.dat
+0 // Minifig Hand (black)
+1 0 -21.5609 -38.577 -12.3652 0.9855 -0.1699 0 0.1699 0.9855 0 0 0 1 3820.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 -44 8 0.9855 0.1201 0.1201 -0.1699 0.6969 0.6969 0 -0.7072 0.7071 3819.dat
+0 // Minifig Hand (black)
+1 0 21.5609 -38.577 -12.3652 0.9855 0.1699 0 -0.1699 0.9855 0 0 0 1 3820.dat
+

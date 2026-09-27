@@ -1,0 +1,175 @@
+0 FILE 1478 - Mobile Satellite Up-Link.ldr
+0 A mobile satellite up-link vehicle consisting of a front and rear wheeled chassis with a hinged joint, an articulated antenna, a twin-dish satellite array, and an M-Tron minifig operator.
+0 Name: 1478 - Mobile Satellite Up-Link.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 1478 - Vehicle - Front + Minifig.ldr
+1 0 22.961 0 95.433 0.92388 0 0.382683 0 1 0 -0.382683 0 0.92388 1478 - Vehicle - Back.ldr
+
+
+0 STEP
+0 FILE 1478 - Vehicle - Front.ldr
+0 Front section of the vehicle featuring two rubber wheels on grey rims, a red 45-degree slope windshield, a black hinged joint plate, and a control-patterned tile dashboard.
+0 Name: 1478 - Vehicle - Front.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4600.dat
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 30 5 0 0 0 -1 0 1 0 1 0 0 4624.dat
+0 // Wheel 13 x 20 Solid Rubber with Axle Hole (rubber_black)
+1 256 38 5 0 0 0 -1 0 1 0 1 0 0 4288.dat
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 -30 5 0 0 0 1 0 1 0 -1 0 0 4624.dat
+0 // Wheel 13 x 20 Solid Rubber with Axle Hole (rubber_black)
+1 256 -38 5 0 0 0 1 0 1 0 -1 0 0 4288.dat
+0 // Hinge Plate  2 x  4 with Articulated Joint - Male (black)
+1 0 0 -8 -20 -1 0 0 0 1 0 0 0 -1 3639.dat
+0 // Slope Brick 45  2 x  2 (red)
+1 4 0 -32 -30 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Tile  1 x  2 with Red & Yellow Controls Pattern (white)
+1 15 0 -40 -30 -1 0 0 0 1 0 0 0 -1 3069bp68.dat
+
+
+0 STEP
+0 FILE 1478 - Vehicle - Front + Minifig.ldr
+0 The front vehicle section assembled with the included minifig operator seated in place.
+0 Name: 1478 - Vehicle - Front + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 1478 - Vehicle - Front.ldr
+1 0 0 -61 8 1 0 0 0 1 0 0 0 1 1478 - Minifig.ldr
+
+
+0 STEP
+0 FILE 1478 - Vehicle - Back.ldr
+0 Rear section of the vehicle with two rubber wheels on grey rims, a black hinged joint plate, red structural bricks and plates, and grey handle plates for mounting accessories.
+0 Name: 1478 - Vehicle - Back.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4600.dat
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 30 5 0 0 0 -1 0 1 0 1 0 0 4624.dat
+0 // Wheel 13 x 20 Solid Rubber with Axle Hole (rubber_black)
+1 256 38 5 0 0 0 -1 0 1 0 1 0 0 4288.dat
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 -30 5 0 0 0 1 0 1 0 -1 0 0 4624.dat
+0 // Wheel 13 x 20 Solid Rubber with Axle Hole (rubber_black)
+1 256 -38 5 0 0 0 1 0 1 0 -1 0 0 4288.dat
+0 // Hinge Plate  2 x  4 with Articulated Joint - Female (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 3640.dat
+0 // Brick  1 x  2 (red)
+1 4 0 -32 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 0 -16 -30 1 0 0 0 1 0 0 0 1 3839b.dat
+0 // Plate  1 x  6 (red)
+1 4 0 -40 -10 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  2 with Handle (light_grey)
+1 7 -40 -48 -10 1 0 0 0 1 0 0 0 1 2540.dat
+0 // Plate  1 x  2 with Handle (light_grey)
+1 7 40 -48 -10 1 0 0 0 1 0 0 0 1 2540.dat
+1 0 -40 -65.242 -35.807 -1 0 0 0 0.382683 -0.92388 0 -0.92388 -0.382683 1478 - Vehicle - Back - Antenna.ldr
+1 0 40 -63.713 -20.501 -1 0 0 0 -0.382683 -0.92388 0 -0.92388 0.382683 1478 - Vehicle - Back - Satellite.ldr
+
+0 STEP
+0 FILE 1478 - Vehicle - Back - Antenna.ldr
+0 A whip antenna mounted on a black clip plate, forming a communications up-link element.
+0 Name: 1478 - Vehicle - Back - Antenna.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6019.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 0 -8 0 1 0 0 0 1 0 0 0 1 2569.dat
+
+
+0 STEP
+0 FILE 1478 - Vehicle - Back - Satellite.ldr
+0 A satellite dish assembly with two translucent neon-green inverted dishes mounted on a black clip and plate structure.
+0 Name: 1478 - Vehicle - Back - Satellite.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6019.dat
+0 // Plate  1 x  3 (black)
+1 0 0 8 0 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 20 16 0 1 0 0 0 1 0 0 0 1 4740.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 -20 16 0 1 0 0 0 1 0 0 0 1 4740.dat
+
+
+0 STEP
+0 FILE 1478 - Minifig.ldr
+0 An M-Tron minifig operator with a red logo torso, black airtanks, white arms and legs, and a standard smiling head.
+0 Name: 1478 - Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+1 0 0 -27 0 0.898794 0 -0.438371 0 1 0 0.438371 0 0.898794 1478 - Minifig - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.898794 0 -0.438371 0 1 0 0.438371 0 0.898794 3626bp01.dat
+0 // Minifig Airtanks (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with MTron Logo Pattern (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 973p68.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (white)
+1 15 -15.552 9 0 0.985 0.0382417 -0.165643 0.17 -0.221577 0.959755 0 -0.97437 -0.224951 3818.dat
+0 // Minifig Arm Left (white)
+1 15 15.552 9 0 0.985 0.106984 0.132115 -0.17 0.619881 0.765489 0 -0.777146 0.62932 3819.dat
+0 // Minifig Hand (black)
+1 0 -18.2469 -5.94663 -15.9584 0.985 -0.0900727 -0.144146 0.17 0.521892 0.835201 0 -0.84792 0.529839 3820.dat
+0 // Minifig Hand (black)
+1 0 21.3176 11.845 -21.0753 0.985 0.169043 0.0177672 -0.17 0.979456 0.102945 0 -0.104513 0.994372 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+0 STEP
+0 FILE 1478 - Minifig - Helmet.ldr
+0 A black space helmet with a translucent neon-green visor for the minifig operator.
+0 Name: 1478 - Minifig - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / M:Tron
+
+0 // ~Minifig Helmet Standard (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_neon_green)
+1 42 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+

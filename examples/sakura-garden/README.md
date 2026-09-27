@@ -118,7 +118,7 @@ wrongly seated figures (the 1.2 LDU foot-socket offset) were fixed.
   clutch. They are held through their tips, sockets and hidden bricks.
 - Several fronds and petals sit at 45° rotations on single studs. That is a
   valid rigid pose, but it isn't a grid-aligned build.
-- I didn't do a Blender/GLB material-intersection pass. The containment and
+- I didn't do a detailed material-intersection pass. The containment and
   clearance cases above were checked by sampling LDraw surfaces instead.
 - Availability of every part in every listed colour is not claimed.
 

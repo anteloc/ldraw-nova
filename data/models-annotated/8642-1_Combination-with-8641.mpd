@@ -1,0 +1,214 @@
+0 FILE 8642 - Main.ldr
+0 A combination model integrating two car submodels into a single build, featuring bodywork panels, engine details, and wheeled assemblies.
+0 Name: 8642 - Main.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HISTORY 2019-02-26 [technicbasics] OMRize file
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 8642 - 8641-8642-a.ldr
+1 0 0 -22 130 1 0 0 0 1 0 0 0 1 8642 - 8641-8642-b.ldr
+
+
+
+
+
+0 STEP
+0 FILE 8642 - 8641-8642-a.ldr
+0 A car body submodel featuring orange and red plates, black structural plating, dark grey mudguards, and a metallic silver engine with air scoop.
+0 Name: 8642 - 8641-8642-a.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x  2 (black)
+1 0 0 0 -70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  2 with 2 Wheel Pins Extended without Wishbones (black)
+1 0 0 -8 -100 1 0 0 0 1 0 0 0 1 6157.dat
+0 STEP
+0 // Plate  2 x  2 with 2 Wheel Pins Extended without Wishbones (black)
+1 0 0 -16 100 1 0 0 0 1 0 0 0 1 6157.dat
+0 // Plate  2 x  2 with 2 Wheel Pins Extended without Wishbones (black)
+1 0 0 -16 20 1 0 0 0 1 0 0 0 1 6157.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -8 -80 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 with Handle (black)
+1 0 0 -8 -110 1 0 0 0 1 0 0 0 1 2540.dat
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 0 -16 80 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  2 x  2 (red)
+1 4 0 -16 20 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Brick  2 x  3 (orange)
+1 25 0 -16 -30 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -16 -80 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (orange)
+1 25 0 -16 -110 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Plate  1 x  2 with Handle (red)
+1 4 0 -24 110 -1 0 0 0 1 0 0 0 -1 2540.dat
+0 // Plate  2 x  4 (red)
+1 4 0 -24 60 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  2 x  6 (black)
+1 0 0 -24 -40 0 0 1 0 1 0 -1 0 0 3795.dat
+0 STEP
+0 // Car Mudguard  2 x  4 Swept Back (dark_grey)
+1 8 0 -32 80 -1 0 0 0 1 0 0 0 -1 41854.dat
+0 // Car Mudguard  2 x  4 Swept Back (dark_grey)
+1 8 0 -32 40 1 0 0 0 1 0 0 0 1 41854.dat
+0 // Car Mudguard  2 x  4 Swept Back (dark_grey)
+1 8 0 -32 0 -1 0 0 0 1 0 0 0 -1 41854.dat
+0 // Brick  2 x  1 x  1.333 with Curved Top (orange)
+1 25 -10 -40 -30 0 0 1 0 1 0 -1 0 0 6091.dat
+0 // Brick  2 x  1 x  1.333 with Curved Top (orange)
+1 25 10 -40 -30 0 0 -1 0 1 0 1 0 0 6091.dat
+0 // Plate  1 x  2 (orange)
+1 25 0 -32 -50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Car Engine  2 x  2 with Air Scoop (metallic_silver)
+1 80 0 -56 -80 1 0 0 0 1 0 0 0 1 50943.dat
+0 STEP
+0 // Plate  2 x  6 (black)
+1 0 0 -40 40 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  1 x  1 Round (light_grey)
+1 7 -10 -40 -30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (light_grey)
+1 7 10 -40 -30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Wedge  4 x  3 Curved with  2 x  2 Cutout (red)
+1 4 0 -40 -80 1 0 0 0 1 0 0 0 1 47755.dat
+0 STEP
+0 // Plate  1 x  1 Round (black)
+1 0 -30 -8 -30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 30 -8 -30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Tile  1 x  2 Grille with Groove (red)
+1 4 0 -32 -110 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 0 -48 20 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  1 Round (light_grey)
+1 7 -10 -48 -30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (light_grey)
+1 7 10 -48 -30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  2 (dark_grey)
+1 8 0 -48 -50 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Plate  1 x  2 (orange)
+1 25 0 -56 50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (orange)
+1 25 0 -56 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (orange)
+1 25 -10 -64 70 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (orange)
+1 25 10 -64 70 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (black)
+1 0 -10 -64 50 0 0 1 0 1 0 -1 0 0 4081a.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (black)
+1 0 10 -64 50 0 0 -1 0 1 0 1 0 0 4081a.dat
+0 // Plate  1 x  2 (dark_grey)
+1 8 0 -64 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (orange)
+1 25 -10 -54 76 -1 0 0 0 0 -1 0 -1 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (orange)
+1 25 10 -54 76 -1 0 0 0 0 -1 0 -1 0 54200.dat
+0 // Minifig Flame with Pegs (trans_orange)
+1 57 -30 -62 58 0 -1 0 1 0 0 0 0 1 6126a.dat
+0 // Minifig Flame with Pegs (trans_orange)
+1 57 30 -62 58 0 -1 0 1 0 0 0 0 1 6126a.dat
+0 ROTSTEP 23 135 0 ABS
+0 // Tile  1 x  2 with Groove (orange)
+1 25 -10 -72 60 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (orange)
+1 25 10 -72 60 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Wedge  4 x  4 Triple Curved without Studs (black)
+1 0 0 -72 0 1 0 0 0 1 0 0 0 1 47753.dat
+0 ROTSTEP END
+0 // Wheel Rim 12 x 11 with Round Hole (dark_grey)
+1 8 -40 -11 100 0 0 1 0 1 0 -1 0 0 6014.dat
+0 // Wheel Rim 12 x 11 with Round Hole (dark_grey)
+1 8 40 -11 100 0 0 -1 0 1 0 1 0 0 6014.dat
+0 // Wheel Rim 12 x 11 with Round Hole (dark_grey)
+1 8 -40 -11 20 0 0 1 0 1 0 -1 0 0 6014.dat
+0 // Wheel Rim 12 x 11 with Round Hole (dark_grey)
+1 8 40 -11 20 0 0 -1 0 1 0 1 0 0 6014.dat
+0 // Wheel Rim  8 x  8 Round Hole, for Wheel Holding Pin (light_grey)
+1 7 -42 -3 -100 0 0 1 0 1 0 -1 0 0 30027a.dat
+0 // Wheel Rim  8 x  8 Round Hole, for Wheel Holding Pin (light_grey)
+1 7 42 -3 -100 0 0 -1 0 1 0 1 0 0 30027a.dat
+0 STEP
+0 // Tyre 12/ 40 x 11 Wide (rubber_black)
+1 256 -46 -11 100 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // Tyre 12/ 40 x 11 Wide (rubber_black)
+1 256 46 -11 100 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // Tyre 12/ 40 x 11 Wide (rubber_black)
+1 256 -46 -11 20 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // Tyre 12/ 40 x 11 Wide (rubber_black)
+1 256 46 -11 20 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // Tyre  8/ 40 x  8 Slick Smooth (rubber_black)
+1 256 -47 -3 -100 1 0 0 0 1 0 0 0 1 30028.dat
+0 // Tyre  8/ 40 x  8 Slick Smooth (rubber_black)
+1 256 37 -3 -100 1 0 0 0 1 0 0 0 1 30028.dat
+
+
+
+
+
+0 STEP
+0 FILE 8642 - 8641-8642-b.ldr
+0 A wheeled axle subassembly with red Technic components, wheel pins, and two grey rimmed rubber tyres.
+0 Name: 8642 - 8641-8642-b.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  2 with 2 Wheel Pins Extended without Wishbones (black)
+1 0 0 14 30 1 0 0 0 1 0 0 0 1 6157.dat
+0 STEP
+0 // Plate  2 x  2 (red)
+1 4 0 14 30 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (orange)
+1 25 0 6 20 1 0 0 0 1 0 0 0 1 3794b.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (red)
+1 4 0 -2 20 1 0 0 0 1 0 0 0 1 6019.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Holes (red)
+1 4 0 -10 40 1 0 0 0 1 0 0 0 1 32000.dat
+0 STEP
+0 // Technic Pin  1/2 (light_grey)
+1 7 -10 0 50 0 0 -1 0 1 0 1 0 0 4274.dat
+0 // Technic Pin  1/2 (light_grey)
+1 7 10 0 50 0 0 -1 0 1 0 1 0 0 4274.dat
+0 ROTSTEP 23 135 0 ABS
+0 // Tile  1 x  2 with Groove (orange)
+1 25 0 0 58 1 0 0 0 0 1 0 -1 0 3069b.dat
+0 STEP
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 -40 19 30 0 0 1 0 1 0 -1 0 0 4624.dat
+0 // Wheel Rim  6.4 x  8 (light_grey)
+1 7 40 19 30 0 0 -1 0 1 0 1 0 0 4624.dat
+0 ROTSTEP END
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (rubber_black)
+1 256 -40 19 30 1 0 0 0 1 0 0 0 1 3139.dat
+0 // Tyre  4/ 80 x  8 Single Smooth Type 1 (rubber_black)
+1 256 40 19 30 1 0 0 0 1 0 0 0 1 3139.dat
+
+
+
+
+
+
+
+
+
+

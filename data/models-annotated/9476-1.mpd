@@ -1,0 +1,1337 @@
+0 FILE 9476 - The Orc Forge.ldr
+0 A Lord of the Rings Orc Forge diorama featuring the forge structure, a glowing lava core, an elevator, water wheel, a winch with rope, an anvil, rocky terrain, and four orc and Uruk-hai minifigures including Lurtz.
+0 Name: 9476 - The Orc Forge.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+
+0 !HISTORY [legolijntje] Updated all ~moved files and swapped inlined parts for official versions
+
+1 16 0 0 0 0 0 1 0 1 0 -1 0 0 9476 - elevator.ldr
+1 72 0 0 -240 1 0 0 0 1 0 0 0 1 9476 - Fusion.ldr
+1 72 200 0 50 0.259 0 -0.966 0 1 0 0.966 0 0.259 9476 - annealing.ldr
+1 72 220 0 -120 0.707 0 0.707 0 1 0 -0.707 0 0.707 9476 - anvil.ldr
+1 0 191 -20 -65 0.755 0 -0.656 0 1 0 0.656 0 0.755 9476 - blacksmith.ldr
+1 148 29 -84 -160 0 0 -1 0 1 0 1 0 0 9476 - lurtz.ldr
+1 148 9 -292 -60 0 0 -1 0 1 0 1 0 0 9476 - uruk-hai.ldr
+1 308 40 -128 29 -1 0 0 0 1 0 0 0 -1 9476 - baldorc.ldr
+
+0 // Minifig Armour Plate (pearl_dark_grey)
+1 148 150 -26 -140 -0.259 0 -0.966 0 1 0 0.966 0 -0.259 2587.dat
+0 // Minifig Helmet Castle Uruk-Hai with Lateral Comb & Hand Pattern (pearl_dark_grey)
+1 148 179 -15 -186 -0.224 -0.5 -0.836 -0.966 0 0.259 -0.129 0.866 -0.483 10051p01.dat
+
+
+0 STEP
+0 FILE 9476 - anvil.ldr
+0 A small black anvil built from inverted dish, sloped bricks, and round plates.
+0 Name: 9476 - anvil.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Dish  2 x  2 Inverted (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 4740.dat
+0 // Brick  1 x  1 with Studs on Two Opposite Sides (black)
+1 0 0 -32 0 1 0 0 0 1 0 0 0 1 47905.dat
+0 // Plate  1 x  1 Round (black)
+1 0 0 -22 -18 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 0 -22 18 1 0 0 0 0 1 0 -1 0 6141.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 0 -22 18 -1 0 0 0 0 -1 0 -1 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 0 -22 -18 1 0 0 0 0 -1 0 1 0 54200.dat
+0 // Plate  1 x  1 Round (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 6141.dat
+
+0 STEP
+0 FILE 9476 - rock.ldr
+0 A dark bluish grey rocky outcrop made from concave and inverted slope bricks.
+0 Name: 9476 - rock.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Slope Brick 45  2 x  2 Double Concave (dark_bluish_grey)
+1 72 0 0 0 0 0 -1 0 1 0 1 0 0 3046.dat
+0 // Slope Brick 45  2 x  1 (dark_bluish_grey)
+1 72 0 -24 0 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (dark_bluish_grey)
+1 72 0 -24 20 0 0 -1 0 1 0 1 0 0 3665.dat
+
+
+
+0 STEP
+0 FILE 9476 - Fusion.ldr
+0 The central forge structure with dark tan base plates, glowing red light brick, sloped rock walls, and a rotating grille mechanism.
+0 Name: 9476 - Fusion.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Plate  6 x 12 (dark_tan)
+1 28 0 0 0 0 0 -1 0 1 0 1 0 0 3028.dat
+0 // Brick  1 x  4 (dark_bluish_grey)
+1 72 -50 -24 80 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  4 (dark_bluish_grey)
+1 72 -50 -24 0 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Plate  1 x 10 (red)
+1 4 60 -8 -30 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Plate  1 x 10 (red)
+1 4 60 -8 -90 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 -50 -24 -60 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Brick  1 x  1 (dark_green)
+1 288 -50 -24 -90 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  4 (dark_bluish_grey)
+1 72 -50 -48 40 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  4 (dark_bluish_grey)
+1 72 -50 -48 -60 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  1 (dark_green)
+1 288 -50 -48 -10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (dark_green)
+1 288 -50 -48 100 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Technic Brick  1 x  2 with Holes (red)
+1 4 -20 -24 110 1 0 0 0 1 0 0 0 1 32000.dat
+0 // Brick  1 x  1 (dark_green)
+1 288 10 -24 110 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  3 (red)
+1 4 -10 -48 110 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 30 -48 110 0 0 -1 0 1 0 1 0 0 60481.dat
+0 // Plate  6 x  6 (dark_tan)
+1 28 120 0 -60 0 0 -1 0 1 0 1 0 0 3958.dat
+0 // ~_Electric Light Brick  2 x  3 x  1.333 - TrRed Top - Red LED (Obsolete) (light_bluish_grey)
+1 71 90 -30 -60 -1 0 0 0 1 0 0 0 -1 54869.dat
+0 // Brick  1 x  2 without Centre Stud (trans_red)
+1 36 130 -24 -60 0 0 -1 0 1 0 1 0 0 3065.dat
+0 // Brick  1 x  2 without Centre Stud (trans_red)
+1 36 150 -24 -60 0 0 -1 0 1 0 1 0 0 3065.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 150 -8 -90 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 150 -8 -30 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Technic Axle  9 (light_bluish_grey)
+1 71 -20 -14 -60 -1 0 0 0 1 0 0 0 -1 60485.dat
+0 // Brick  2 x  2 Round with Grille (light_bluish_grey)
+1 71 -80 -14 -60 0 -1 0 -1 0 0 0 0 -1 92947.dat
+0 // Dish  2 x  2 with Rim (tan)
+1 19 -104 -14 -60 0 -1 0 -1 0 0 0 0 -1 2654.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 30 -48 50 0 0 -1 0 1 0 1 0 0 60481.dat
+0 // Wing  3 x  6 Left (dark_tan)
+1 28 120 0 30 0 0 -1 0 1 0 1 0 0 54384.dat
+0 // Brick  2 x  3 (dark_bluish_grey)
+1 72 60 -24 10 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // Brick  2 x  3 (dark_bluish_grey)
+1 72 60 -48 10 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 90 -48 10 -1 0 0 0 1 0 0 0 -1 60481.dat
+1 16 30 -24 70 1 0 0 0 1 0 0 0 1 9476 - rock.ldr
+1 16 130 -24 -10 0 0 -1 0 1 0 1 0 0 9476 - rock.ldr
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 150 -48 -10 -1 0 0 0 1 0 0 0 -1 60481.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 170 0 10 0 0 -1 0 1 0 1 0 0 54200.dat
+1 16 -50 -24 -110 0 0 1 0 1 0 -1 0 0 9476 - rock.ldr
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 -10 -48 -110 1 0 0 0 1 0 0 0 1 60481.dat
+0 // Wing  3 x  6 Left (dark_tan)
+1 28 0 0 -150 0 0 1 0 1 0 -1 0 0 54384.dat
+1 16 10 -24 -130 0 0 1 0 1 0 -1 0 0 9476 - rock.ldr
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 50 -48 -110 1 0 0 0 1 0 0 0 1 60481.dat
+1 16 70 -24 -130 0 0 1 0 1 0 -1 0 0 9476 - rock.ldr
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 110 -48 -110 1 0 0 0 1 0 0 0 1 60481.dat
+0 // Wing  3 x  6 Right (dark_tan)
+1 28 120 0 -150 0 0 -1 0 1 0 1 0 0 54383.dat
+1 16 130 -24 -110 0 0 1 0 1 0 -1 0 0 9476 - rock.ldr
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 170 0 -130 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 170 -48 -110 0 0 -1 0 1 0 1 0 0 60481.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 170 -48 -50 0 0 -1 0 1 0 1 0 0 60481.dat
+0 // Wing  2 x  3 Left (dark_tan)
+1 28 200 0 -90 1 0 0 0 1 0 0 0 1 43723.dat
+0 // Wing  2 x  3 Right (dark_tan)
+1 28 200 0 -30 -1 0 0 0 1 0 0 0 -1 43722.dat
+1 16 170 -24 -90 1 0 0 0 1 0 0 0 1 9476 - rock.ldr
+1 16 170 -24 -30 1 0 0 0 1 0 0 0 1 9476 - rock.ldr
+0 // Plate  6 x 12 (dark_tan)
+1 28 0 -56 0 0 0 -1 0 1 0 1 0 0 3028.dat
+0 // Plate  1 x  2 (dark_tan)
+1 28 20 -56 -130 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  4 (dark_tan)
+1 28 100 -56 -120 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (dark_tan)
+1 28 100 -56 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  6 (dark_tan)
+1 28 160 -56 -60 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  1 x  1 (dark_tan)
+1 28 90 -56 -150 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (dark_tan)
+1 28 190 -56 -70 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 100 -78 -60 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 150 -48 -130 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 190 -48 -10 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 70 -48 30 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 30 -48 -150 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 -30 -48 -130 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 -50 -104 -90 1 0 0 0 1 0 0 0 1 60481.dat
+0 // Support  1 x  6 x  5 Girder Rectangular (reddish_brown)
+1 70 -50 -176 -20 0 0 -1 0 1 0 1 0 0 64448.dat
+0 // Plate  1 x  6 (reddish_brown)
+1 70 -50 -184 -20 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 50 -80 -60 0 0 1 0 1 0 -1 0 0 2877.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (dark_brown)
+1 308 30 -104 -50 1 0 0 0 1 0 0 0 1 60481.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (dark_brown)
+1 308 -30 -104 -50 1 0 0 0 1 0 0 0 1 60481.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 -50 -104 -90 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (dark_brown)
+1 308 -30 -104 10 -1 0 0 0 1 0 0 0 -1 60481.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (dark_brown)
+1 308 30 -104 10 -1 0 0 0 1 0 0 0 -1 60481.dat
+0 // Brick  1 x  1 (dark_green)
+1 288 -10 -80 30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Plate  4 x  4 (reddish_brown)
+1 70 0 -112 -20 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Slope Brick 45  2 x  1 (dark_bluish_grey)
+1 72 -10 -80 50 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 10 -104 30 -1 0 0 0 1 0 0 0 -1 60481.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 -10 -128 30 -1 0 0 0 1 0 0 0 -1 60481.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (dark_bluish_grey)
+1 72 10 -128 30 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Plate  2 x  2 Round with Reduced Axlehole (dark_bluish_grey)
+1 72 0 -120 -20 0 0 -1 0 1 0 1 0 0 4032b.dat
+0 // Slope Brick 45  2 x  1 (dark_bluish_grey)
+1 72 -10 -152 30 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 30 -128 30 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Tile  2 x  2 Round with Round Underside Stud (black)
+1 0 0 -128 -20 -1 0 0 0 1 0 0 0 -1 14769.dat
+0 // Cone  1 x  1 with Stop (yellow)
+1 14 70 -28 -30 -0.7071 0 0.7071 0 1 0 -0.7071 0 -0.7071 59900.dat
+0 // Minifig Flame with Rim (trans_orange)
+1 57 70 -34 -30 -0.7071 0.7071 0 0 0 -1 -0.7071 -0.7071 0 6126b.dat
+0 // Cone  1 x  1 with Stop (yellow)
+1 14 70 -36 -90 0.7071 0 0.7071 0 1 0 -0.7071 0 0.7071 59900.dat
+0 // Minifig Flame with Rim (trans_orange)
+1 57 70 -42 -90 0.7071 0.7071 0 0 0 -1 -0.7071 0.7071 0 6126b.dat
+0 // Cone  1 x  1 with Stop (yellow)
+1 14 130 -28 -30 0.7071 0 0.7071 0 1 0 -0.7071 0 0.7071 59900.dat
+0 // Minifig Flame with Rim (trans_orange)
+1 57 130 -34 -30 0.7071 0.7071 0 0 0 -1 -0.7071 0.7071 0 6126b.dat
+0 // Cone  1 x  1 with Stop (yellow)
+1 14 130 -28 -90 0.866 0 -0.5 0 1 0 0.5 0 0.866 59900.dat
+0 // Minifig Flame with Rim (trans_orange)
+1 57 130 -34 -90 0.866 -0.5 0 0 0 -1 0.5 0.866 0 6126b.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 100 -80 -110 1 0 0 0 1 0 0 0 1 2877.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 100 -80 -10 -1 0 0 0 1 0 0 0 -1 2877.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 150 -80 -60 0 0 -1 0 1 0 1 0 0 2877.dat
+0 // Brick  2 x  2 Facet (black)
+1 0 60 -80 -20 -1 0 0 0 1 0 0 0 -1 87620.dat
+0 // Brick  2 x  2 Facet (black)
+1 0 60 -80 -100 0 0 1 0 1 0 -1 0 0 87620.dat
+0 // Brick  2 x  2 Facet (black)
+1 0 140 -80 -20 0 0 -1 0 1 0 1 0 0 87620.dat
+0 // Brick  2 x  2 Facet (black)
+1 0 140 -80 -100 1 0 0 0 1 0 0 0 1 87620.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 100 -64 10 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 100 -64 -130 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Minifig Cauldron (black)
+1 0 100 -120 -60 0 0 -1 0 1 0 1 0 0 4341.dat
+
+0 STEP
+0 FILE 9476 - annealing.ldr
+0 A black furnace-like cooling station with grille bricks, trans-orange glowing plates, metallic grilles, and a Uruk-hai sword.
+0 Name: 9476 - annealing.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Plate  6 x  6 (dark_tan)
+1 28 0 0 0 1 0 0 0 1 0 0 0 1 3958.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -8 -50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  2 x  2 with Groove with 1 Centre Stud (black)
+1 0 0 -8 -20 1 0 0 0 1 0 0 0 1 87580.dat
+0 // Plate  2 x  2 with Groove with 1 Centre Stud (black)
+1 0 0 -8 20 1 0 0 0 1 0 0 0 1 87580.dat
+0 // Plate  1 x  2 with Single Clip on Top (light_bluish_grey)
+1 71 20 -16 -50 1 0 0 0 1 0 0 0 1 92280.dat
+0 // Plate  1 x  2 with Single Clip on Top (light_bluish_grey)
+1 71 -20 -16 -50 -1 0 0 0 1 0 0 0 -1 92280.dat
+0 // Plate  1 x  2 (dark_tan)
+1 28 0 -24 -50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (trans_orange)
+1 57 30 -8 -20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (trans_orange)
+1 57 30 -8 20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (trans_orange)
+1 57 -30 -8 -20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (trans_orange)
+1 57 -30 -8 20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud, without Understud (black)
+1 0 0 -32 -50 1 0 0 0 1 0 0 0 1 15573.dat
+0 // Slope Brick 18  4 x  1 (black)
+1 0 0 -32 -30 -1 0 0 0 1 0 0 0 -1 60477.dat
+0 // Minifig Sword Uruk-Hai (pearl_dark_grey)
+1 148 30 -22 -51 1 0 0 0 0 1 0 -1 0 10050.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 50 -24 -40 0 0 -1 0 1 0 1 0 0 2877.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 50 -24 0 0 0 -1 0 1 0 1 0 0 2877.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 -50 -24 -40 0 0 1 0 1 0 -1 0 0 2877.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 -50 -24 0 0 0 1 0 1 0 -1 0 0 2877.dat
+0 // Brick  1 x  2 with Grille (black)
+1 0 0 -24 50 -1 0 0 0 1 0 0 0 -1 2877.dat
+0 // Brick  2 x  2 Facet (black)
+1 0 -40 -24 40 -1 0 0 0 1 0 0 0 -1 87620.dat
+0 // Brick  2 x  2 Facet (black)
+1 0 40 -24 40 0 0 -1 0 1 0 1 0 0 87620.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 0 -32 50 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 0 -40 -40 0 0 -1 0 1 0 1 0 0 2412b.dat
+
+
+0 STEP
+0 FILE 9476 - floor.ldr
+0 A wooden-toned base floor of reddish brown and dark tan plates with yellow handle plates.
+0 Name: 9476 - floor.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Plate  6 x  6 (reddish_brown)
+1 70 0 0 0 1 0 0 0 1 0 0 0 1 3958.dat
+0 // Plate  2 x  6 (black)
+1 0 0 8 -40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  2 x  6 (black)
+1 0 0 8 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  2 x  4 (dark_tan)
+1 28 0 8 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (dark_tan)
+1 28 0 24 0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  1 x  2 with Handle on End (yellow)
+1 14 20 16 -10 1 0 0 0 1 0 0 0 1 60478.dat
+0 // Plate  1 x  2 with Handle on End (yellow)
+1 14 20 16 10 1 0 0 0 1 0 0 0 1 60478.dat
+0 // Plate  1 x  2 with Handle on End (yellow)
+1 14 -20 16 -10 -1 0 0 0 1 0 0 0 -1 60478.dat
+0 // Plate  1 x  2 with Handle on End (yellow)
+1 14 -20 16 10 -1 0 0 0 1 0 0 0 -1 60478.dat
+
+
+0 STEP
+0 FILE 9476 - ladder.ldr
+0 A wooden ladder made of reddish brown planks with dark grooved tiles and black clips.
+0 Name: 9476 - ladder.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Tile  1 x  4 with Wood Grain and 4 Nails Pattern (reddish_brown)
+1 70 -30 0 0 1 0 0 0 1 0 0 0 1 2431p01.dat
+0 // Plate  1 x  6 (reddish_brown)
+1 70 -60 8 -10 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (reddish_brown)
+1 70 0 8 -10 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Tile  1 x  4 with Groove (dark_brown)
+1 308 -30 0 -60 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Tile  1 x  4 with Groove (dark_brown)
+1 308 -30 0 -40 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Tile  1 x  4 with Groove (dark_brown)
+1 308 -30 0 40 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Plate  1 x  2 with Clip Horizontal on End (Thick C-Clip) (black)
+1 0 -40 8 -50 0 0 1 0 1 0 -1 0 0 63868.dat
+0 // Plate  1 x  2 with Clip Horizontal on End (Thick C-Clip) (black)
+1 0 -20 8 -50 0 0 1 0 1 0 -1 0 0 63868.dat
+0 // Plate  2 x  2 Corner (tan)
+1 19 0 16 -60 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (tan)
+1 19 -60 16 -60 1 0 0 0 1 0 0 0 1 2420.dat
+
+
+0 STEP
+0 FILE 9476 - wheel.ldr
+0 A large brown water wheel built from hexagonal spoke plates, round bricks, and connecting plates.
+0 Name: 9476 - wheel.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Plate  6 x  6 Hexagonal with Six Spokes and Clips (Hollow Studs) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 64566.dat
+0 // Dish  3 x  3 Inverted (reddish_brown)
+1 70 0 -20 0 1 0 0 0 1 0 0 0 1 43898.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 0 -8 -60 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 0 -8 60 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 -50 -8 30 0.866 0 0.5 0 1 0 -0.5 0 0.866 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 51.9615 -8 -30 0.866 0 0.5 0 1 0 -0.5 0 0.866 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 51.9615 -8 30 0.866 0 -0.5 0 1 0 0.5 0 0.866 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 -51.9615 -8 -30 0.866 0 -0.5 0 1 0 0.5 0 0.866 3623.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 -34.641 -16 -20 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 -34.641 -24 -20 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 0 -16 -40 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 0 -24 -40 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 34.641 -16 -20 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 34.641 -24 -20 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 34.641 -16 20 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 34.641 -24 20 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 0 -16 40 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 0 -24 40 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 -32.6795 -16 20 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 -32.6795 -24 20 0.866 0 -0.5 0 1 0 0.5 0 0.866 6141.dat
+0 // Brick  1 x  1 Round with Hollow Stud (reddish_brown)
+1 70 0 -32 -80 0 0 1 0 1 0 -1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (reddish_brown)
+1 70 69.282 -32 -40 0 0 1 0 1 0 -1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (reddish_brown)
+1 70 69.282 -32 40 0 0 1 0 1 0 -1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (reddish_brown)
+1 70 0 -32 80 0 0 1 0 1 0 -1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (reddish_brown)
+1 70 -69.281 -32 40 0 0 1 0 1 0 -1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (reddish_brown)
+1 70 -71.2425 -32 -40 0 0 1 0 1 0 -1 0 0 3062b.dat
+0 STEP
+0 // Dish  3 x  3 Inverted (reddish_brown)
+1 70 0 -52 0 1 0 0 0 1 0 0 0 1 43898.dat
+0 // Plate  6 x  6 Hexagonal with Six Spokes and Clips (Hollow Studs) (black)
+1 0 0 -32 0 1 0 0 0 1 0 0 0 1 64566.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 -53.9225 -40 -30 0.866 0 -0.5 0 1 0 0.5 0 0.866 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 -1.961 -40 -60 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 50.0005 -40 -30 0.866 0 0.5 0 1 0 -0.5 0 0.866 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 50.0005 -40 30 0.866 0 -0.5 0 1 0 0.5 0 0.866 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 -1.961 -40 60 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (reddish_brown)
+1 70 -51.961 -40 30 0.866 0 0.5 0 1 0 -0.5 0 0.866 3623.dat
+
+
+0 STEP
+0 FILE 9476 - ropeLQ-1.ldr
+0 A long flexible rope generated from 204 cylindrical segments forming a curved cord.
+0 Name: 9476 - ropeLQ-1.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 !KEYWORDS flexible
+0 !LDCAD CONTENT [type=path] [addFallBack=default] [looped=false] [displayKind=mm] [curveStep=0] [displayLenCor=0]
+
+0 !LDCAD PATH_POINT [type=bezier] [posOri=4 99 0 -0.866 0.5 0 -0.5 -0.866 0 0 0 1] [prevCPDist=20] [nextCPDist=16.5] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-6 121 0 -0.866 0.5 0 -0.5 -0.866 0 0 0 1] [prevCPDist=20] [nextCPDist=8] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=6 120 0 1 0 0 0 1 0 0 0 1] [prevCPDist=15.5] [nextCPDist=8] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=0 102 0 1 0 0 0 1 0 0 0 1] [prevCPDist=9.5] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=0 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-1.5 -75 -30 1 0 0 0 -1 0 0 0 -1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-3 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-4.5 -75 -30 1 0 0 0 -1 0 0 0 -1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-6 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-7.5 -75 -30 1 0 0 0 -1 0 0 0 -1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-9 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-10.5 -75 -30 1 0 0 0 -1 0 0 0 -1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-12 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-13.5 -75 -30 1 0 0 0 -1 0 0 0 -1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-15 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-16.5 -75 -30 1 0 0 0 -1 0 0 0 -1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-18 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-19.5 -75 -30 1 0 0 0 -1 0 0 0 -1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-21 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-22.5 -75 -30 1 0 0 0 -1 0 0 0 -1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-24 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-25.5 -75 -30 1 0 0 0 -1 0 0 0 -1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=-27 -75 0 1 0 0 0 1 0 0 0 1] [prevCPDist=20] [nextCPDist=20] [cirR=25] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=1 0 0 0 1 0 0 0 1] [donPart=ldcLQRopeSeg.dat] [donYSize=600%] [donCen=absCen] [donCenYOfs=0] [donFinScale=none] [donPlace=refsDyn] [donYAlign=0] [donInline=true] [segSize=90%] [segSizeTol=5%] [segsCnt=0] [segsGrp=0] [segsMaxMerge=1] [segsMrgAng=0] [segsEdgeDelKind=keepFirstLeft]
+
+0 !LDCAD GENERATED [generator=LDCad 1.4]
+0 //This is the fallback LDraw content for above PATH configuration.
+0 // Do not edit, any changes will be lost upon regeneration.
+0 // The path is approx 440.558702 mm (1101.40) and exists out of 204 segments.
+
+0 //Some general hints about the document.
+0 UNOFFICIAL PART
+0 BFC CERTIFY CCW
+
+0 //Some of this content has been generated from other LDraw files, many thanks to all involved.
+0 // Credits for "ldcLQRopeSeg.dat":
+0 // Author: LDCad
+
+0 //Segments
+0 // Cylinder 1.0 (main_colour)
+1 16 1.2731 104.2294 0 -1.3414 2.6851 0 -0.6713 -5.3656 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.6553 109.3983 0 -1.3992 2.1626 0 -0.5406 -5.5967 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -2.4042 114.3695 0 -1.3942 2.2133 0 -0.5533 -5.5769 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -4.6844 119.1323 0 -1.3697 2.4457 0 -0.6114 -5.4789 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -6.0519 124.3774 0 -1.4876 0.7705 0 -0.1926 -5.9503 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -3.3226 128.5765 0 -1.2327 -3.4189 0 0.8547 -4.9307 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 2.1051 128.7441 0 -0.1323 -5.9766 0 1.4942 -0.5292 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 5.6743 124.9565 0 0.9982 -4.4784 0 1.1196 3.993 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 6.2174 119.5561 0 1.4676 -1.2394 0 0.3099 5.8706 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 4.6969 114.1607 0 1.4653 1.2826 0 -0.3206 5.8613 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 2.08 109.2941 0 1.3721 2.4246 0 -0.6061 5.4883 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0.129 104.434 0 1.4275 1.8428 0 -0.4607 5.71 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.2047 99.1674 0 1.4923 0.6055 0 -0.1514 5.9694 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.0278 93.8588 0 1.4999 0.0556 0 -0.0139 5.9997 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 88.3107 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 82.7627 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 77.4647 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 72.1667 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 66.8687 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 61.3206 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 55.7726 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 50.4746 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 45.1766 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 39.8786 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 34.3306 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 28.7826 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 23.4846 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 18.1866 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 12.8886 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 7.3406 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 1.7926 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -3.5054 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -8.8034 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -14.1015 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -19.6495 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -25.1975 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -30.4955 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -35.7935 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -41.0915 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -46.6395 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -52.1875 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -57.4855 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -62.7835 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -68.0815 0 1.5 0 0 0 6 0 0 0 1.5 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.0028 -73.629 -0.0568 1.5 0.0057 0 -0.0014 5.9989 -0.0284 0 0.1135 1.4997 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.0301 -79.1353 -0.6102 1.5 0.0403 0.0008 -0.0099 5.9435 -0.2052 -0.0021 0.8207 1.4859 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.1293 -83.9737 -2.6256 1.4997 0.1166 0.0021 -0.0259 5.4925 -0.6032 -0.0136 2.4123 1.3734 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.3167 -87.6479 -6.4077 1.4991 0.2036 0.0019 -0.0348 4.261 -1.0555 -0.0372 4.2193 1.0658 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.5607 -89.6708 -11.2989 1.4985 0.2648 0.001 -0.0263 2.4581 -1.3681 -0.0608 5.467 0.6151 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -0.8376 -89.9333 -16.8371 1.4982 0.2903 0.0002 -0.0052 0.4385 -1.496 -0.0724 5.9769 0.1098 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -1.1034 -88.4255 -22.1529 1.4984 0.2804 -0.0006 0.0181 -1.5995 -1.4456 -0.0677 5.7761 -0.4003 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -1.3149 -85.245 -26.3793 1.4989 0.2347 -0.0015 0.0332 -3.5189 -1.2145 -0.0484 4.8541 -0.8804 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -1.4534 -80.7363 -29.1259 1.4995 0.1564 -0.0022 0.0317 -5.046 -0.8109 -0.023 3.2425 -1.2619 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -1.5117 -75.5242 -30.0798 1.4999 0.0792 -0.0013 0.0191 -5.8621 -0.3192 -0.0055 1.2765 -1.4657 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -1.5498 -70.0284 -29.2787 1.4999 0.0673 0.0009 0.0166 -5.9535 0.1856 0.0029 -0.7422 -1.4885 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -1.6612 -65.1367 -26.7332 1.4996 0.1348 0.0023 0.0288 -5.3157 0.6951 0.0176 -2.7794 -1.3292 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -1.8638 -61.7858 -22.6463 1.499 0.2191 0.0017 0.0345 -3.9203 1.135 0.0426 -4.5369 -0.9807 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -2.115 -60.116 -17.6198 1.4984 0.2731 0.0008 0.0229 -2.0727 1.4075 0.0643 -5.624 -0.5187 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -2.3799 -60.1651 -12.3217 1.4982 0.2915 0 0.0012 -0.0969 1.4998 0.0729 -5.9921 -0.0242 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -2.64 -62.029 -7.1103 1.4984 0.2748 -0.0008 -0.0214 1.9322 1.4199 0.0653 -5.6737 0.4835 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -2.851 -65.5806 -2.8967 1.499 0.2213 -0.0017 -0.0343 3.8579 1.1483 0.0435 -4.59 0.9651 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -2.9717 -70.3067 -0.5182 1.4996 0.1377 -0.0022 -0.0293 5.2779 0.7128 0.0183 -2.8503 1.3198 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -3.0159 -75.5771 0.0842 1.4999 0.0673 -0.001 -0.0165 5.9336 0.2219 0.0035 -0.8877 1.4835 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -3.0576 -80.78 -0.9687 1.4999 0.0724 0.0012 -0.0176 5.9017 -0.2699 -0.0045 1.0794 1.4755 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -3.1908 -85.4739 -3.8748 1.4995 0.1494 0.0024 -0.0307 5.1315 -0.7767 -0.0214 3.1057 1.2832 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -3.4122 -88.7178 -8.3277 1.4989 0.2319 0.0016 -0.0333 3.5826 -1.2028 -0.0475 4.8074 0.8963 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -3.6696 -90.0149 -13.4727 1.4984 0.2799 0.0006 -0.0189 1.6653 -1.4409 -0.0674 5.7575 0.4167 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -3.9339 -89.6234 -18.7553 1.4982 0.2916 -0.0001 0.0034 -0.2911 -1.4982 -0.0728 5.9858 -0.0728 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -4.1768 -87.5537 -23.6215 1.4985 0.2691 -0.0009 0.0245 -2.2621 -1.3891 -0.0626 5.5507 -0.5661 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -4.374 -83.6863 -27.5624 1.4991 0.2087 -0.002 0.0346 -4.1388 -1.0855 -0.0391 4.339 -1.0353 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -4.4868 -78.6324 -29.7651 1.4997 0.1207 -0.0022 0.0266 -5.4652 -0.6185 -0.0145 2.4732 -1.3666 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -4.5206 -73.3216 -29.9985 1.4999 0.0602 -0.0005 0.0149 -5.9804 -0.1201 -0.0017 0.4804 -1.4952 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -4.5741 -68.202 -28.6178 1.4999 0.0831 0.0015 0.0198 -5.8183 0.3658 0.0065 -1.4632 -1.4547 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -4.719 -63.9085 -25.5564 1.4994 0.1647 0.0022 0.0326 -4.9265 0.8556 0.0253 -3.4209 -1.2321 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -4.9529 -61.0032 -20.8527 1.4988 0.2419 0.0015 0.0319 -3.2833 1.2551 0.0514 -5.0161 -0.8214 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -5.2242 -59.9078 -15.4323 1.4983 0.2842 0.0005 0.0148 -1.2896 1.4649 0.0695 -5.8529 -0.3228 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -5.4869 -60.6643 -10.184 1.4982 0.2899 -0.0002 -0.0082 0.6988 1.4898 0.072 -5.9521 0.1749 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -5.7222 -63.0662 -5.4749 1.4986 0.261 -0.001 -0.0278 2.6383 1.3469 0.059 -5.3825 0.6602 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -5.8982 -67.0054 -1.9623 1.4992 0.1958 -0.002 -0.0346 4.4088 1.0168 0.0347 -4.065 1.1027 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -5.9934 -72.2275 -0.1352 1.4998 0.1079 -0.0021 -0.0244 5.6005 0.5376 0.0117 -2.1499 1.4003 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -6.0274 -77.7724 -0.1289 1.4999 0.0584 -0.0002 -0.0146 5.9987 0.0282 0.0004 -0.1129 1.4997 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -6.0952 -82.7796 -1.8725 1.4998 0.097 0.0018 -0.0225 5.6984 -0.4691 -0.0093 1.8759 1.4248 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -6.2598 -86.8198 -5.2634 1.4993 0.1822 0.002 -0.0341 4.659 -0.9445 -0.0303 3.7763 1.1653 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -6.4924 -89.301 -9.9336 1.4987 0.252 0.0012 -0.0301 2.9624 -1.3041 -0.0554 5.2116 0.7412 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -6.7671 -90.0353 -15.4289 1.4983 0.2871 0.0004 -0.0111 0.9595 -1.4807 -0.0709 5.9158 0.2401 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -7.0387 -88.9923 -20.8577 1.4983 0.2865 -0.0004 0.0125 -1.0787 -1.4755 -0.0705 5.8953 -0.27 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -7.2646 -86.2365 -25.374 1.4987 0.2504 -0.0012 0.0306 -3.0312 -1.2941 -0.0546 5.1719 -0.7584 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -7.4251 -82.0342 -28.5679 1.4993 0.1797 -0.0021 0.0339 -4.6997 -0.9319 -0.0295 3.7257 -1.1754 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -7.5025 -76.9366 -29.9938 1.4998 0.0957 -0.0018 0.0223 -5.7222 -0.4506 -0.0089 1.8021 -1.4307 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -7.5351 -71.3905 -29.6492 1.4999 0.0613 0.0003 0.0153 -5.9956 0.0551 0.0008 -0.2205 -1.499 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -7.6214 -66.2737 -27.5715 1.4997 0.1131 0.0021 0.0254 -5.5566 0.5654 0.0126 -2.2609 -1.3894 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -7.8037 -62.5231 -23.8535 1.4992 0.1991 0.0019 0.0348 -4.3511 1.0323 0.0356 -4.1266 -1.0883 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -8.0454 -60.392 -19.0091 1.4986 0.2622 0.001 0.0273 -2.5846 1.3534 0.0596 -5.4084 -0.6467 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -8.3097 -59.9941 -13.7254 1.4982 0.2899 0.0002 0.0072 -0.6166 1.492 0.0721 -5.9612 -0.1543 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -8.5773 -61.3926 -8.3676 1.4983 0.2825 -0.0006 -0.0161 1.4118 1.4578 0.0688 -5.8247 0.3533 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -8.8046 -64.5128 -3.8231 1.4988 0.2386 -0.0015 -0.0325 3.3905 1.2371 0.0501 -4.9445 0.8482 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -8.9478 -68.9721 -0.9843 1.4995 0.1616 -0.0021 -0.0323 4.9748 0.8379 0.0244 -3.3504 1.2441 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -9.0097 -74.1628 0.0831 1.4999 0.0817 -0.0015 -0.0195 5.8312 0.3528 0.0062 -1.4109 1.4579 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -9.0419 -79.4363 -0.5356 1.4999 0.0623 0.0007 -0.0154 5.9735 -0.1399 -0.0021 0.5595 1.4935 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -9.147 -84.397 -2.9771 1.4997 0.1262 0.0023 -0.0274 5.4074 -0.6494 -0.0158 2.5969 1.3521 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -9.3495 -88.0761 -7.0692 1.499 0.2136 0.0019 -0.0346 4.0387 -1.1088 -0.0407 4.4321 1.0103 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -9.5995 -89.8342 -12.0723 1.4985 0.271 0.0008 -0.0239 2.1822 -1.3971 -0.0634 5.5825 0.5461 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -9.8645 -89.8797 -17.3706 1.4982 0.2915 0.0001 -0.0025 0.2096 -1.4991 -0.0728 5.9893 0.0525 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -10.1266 -88.1231 -22.6204 1.4984 0.2768 -0.0007 0.0202 -1.814 -1.4297 -0.0662 5.7125 -0.454 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -10.3414 -84.6669 -26.9124 1.4989 0.2251 -0.0017 0.0339 -3.7587 -1.1687 -0.0449 4.6713 -0.9403 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -10.4667 -79.9889 -29.3842 1.4996 0.1427 -0.0022 0.03 -5.2203 -0.7388 -0.0195 2.9543 -1.3054 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -10.5145 -74.7317 -30.0821 1.4999 0.0703 -0.0011 0.0171 -5.9161 -0.2493 -0.004 0.9972 -1.4791 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -10.5541 -69.5132 -29.1275 1.4999 0.07 0.0011 0.0171 -5.922 0.2405 0.0039 -0.9617 -1.4806 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -10.6807 -64.7508 -26.3316 1.4996 0.1439 0.0024 0.03 -5.2009 0.7473 0.02 -2.9883 -1.3006 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -10.8979 -61.4055 -21.9571 1.4989 0.228 0.0017 0.0337 -3.6872 1.1829 0.046 -4.7279 -0.9224 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -11.1542 -60.0118 -16.8348 1.4984 0.2782 0.0007 0.02 -1.7758 1.4327 0.0666 -5.7244 -0.4444 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -11.4189 -60.3078 -11.5449 1.4982 0.2918 -0.0001 -0.0021 0.1797 1.4993 0.0729 -5.9902 0.045 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -11.6639 -62.2813 -6.6379 1.4985 0.2714 -0.0009 -0.0235 2.1493 1.4003 0.0636 -5.5953 0.5378 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -11.8654 -66.0586 -2.6088 1.4991 0.2131 -0.002 -0.0345 4.0417 1.1081 0.0407 -4.4293 1.011 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -11.9832 -71.0628 -0.2959 1.4997 0.1254 -0.0023 -0.0273 5.4124 0.6468 0.0156 -2.5866 1.3534 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -12.019 -76.3697 0.0328 1.4999 0.0614 -0.0007 -0.0152 5.9705 0.1478 0.0022 -0.5913 1.4927 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -12.0687 -81.5166 -1.2543 1.4999 0.0795 0.0014 -0.019 5.8454 -0.3378 -0.0059 1.3509 1.4615 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -12.208 -85.878 -4.2218 1.4995 0.1596 0.0022 -0.032 4.9989 -0.8289 -0.0239 3.3144 1.2501 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -12.4385 -88.8863 -8.8604 1.4988 0.2384 0.0016 -0.0324 3.3874 -1.2377 -0.0501 4.9466 0.8475 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -12.7087 -90.0808 -14.2588 1.4983 0.2829 0.0006 -0.016 1.3994 -1.4585 -0.0689 5.8277 0.3502 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -12.9723 -89.4212 -19.5217 1.4982 0.2906 -0.0002 0.0069 -0.5845 -1.4928 -0.0723 5.9644 -0.1463 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -13.2099 -87.1193 -24.2797 1.4986 0.2636 -0.001 0.0269 -2.5256 -1.3604 -0.0602 5.4361 -0.632 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -13.3902 -83.258 -27.8794 1.4992 0.2005 -0.002 0.0347 -4.3185 -1.0408 -0.0362 4.1606 -1.0802 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -13.4906 -78.0765 -29.8177 1.4997 0.1125 -0.0022 0.0252 -5.5561 -0.5656 -0.0126 2.262 -1.3893 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -13.5258 -72.5346 -29.917 1.4999 0.0587 -0.0003 0.0147 -5.9957 -0.0552 -0.0009 0.2206 -1.499 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -13.5888 -67.4909 -28.271 1.4998 0.0926 0.0018 0.0216 -5.7356 0.4399 0.0085 -1.7592 -1.4341 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -13.7479 -63.3737 -24.9776 1.4993 0.1771 0.0021 0.0337 -4.7416 0.9185 0.0288 -3.6723 -1.1859 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -13.9778 -60.7969 -20.359 1.4987 0.249 0.0013 0.0307 -3.0675 1.2888 0.0541 -5.1506 -0.7675 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -14.2517 -59.9628 -14.8789 1.4983 0.2862 0.0004 0.0124 -1.0719 1.4758 0.0705 -5.8965 -0.2683 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -14.5244 -60.8999 -9.4301 1.4983 0.2876 -0.0003 -0.0112 0.9607 1.4806 0.071 -5.9156 0.2404 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -14.7531 -63.557 -4.8557 1.4987 0.2535 -0.0012 -0.0298 2.92 1.31 0.0559 -5.2354 0.7306 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -14.9182 -67.6889 -1.5688 1.4993 0.1845 -0.002 -0.0342 4.6176 0.9572 0.031 -3.8267 1.1549 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -15 -72.755 -0.0375 1.4998 0.0996 -0.0019 -0.023 5.6843 0.4796 0.0097 -1.918 1.4213 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -15.0322 -78.3073 -0.2799 1.4999 0.0606 0.0002 -0.0151 5.9988 -0.0263 -0.0004 0.1053 1.4998 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -15.1134 -83.468 -2.2556 1.4998 0.1086 0.002 -0.0246 5.6019 -0.5367 -0.0116 2.1465 1.4007 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -15.291 -87.3015 -5.89 1.4992 0.1945 0.002 -0.0347 4.4389 -1.0086 -0.0342 4.0322 1.1103 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -15.5304 -89.5322 -10.6898 1.4986 0.2595 0.0011 -0.0282 2.6936 -1.3401 -0.0584 5.3551 0.674 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -15.7942 -90.0284 -15.9656 1.4983 0.2893 0.0003 -0.0086 0.7308 -1.4888 -0.0718 5.9483 0.1829 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -16.0632 -88.7354 -21.3508 1.4983 0.2839 -0.0005 0.0148 -1.295 -1.4646 -0.0694 5.8517 -0.3241 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -16.2938 -85.7136 -25.9628 1.4988 0.2422 -0.0014 0.0319 -3.2832 -1.2551 -0.0514 5.0161 -0.8214 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -16.442 -81.3171 -28.9014 1.4994 0.1667 -0.0021 0.0328 -4.9014 -0.8646 -0.0258 3.4567 -1.2258 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -16.508 -76.1484 -30.0713 1.4998 0.0852 -0.0016 0.0202 -5.8025 -0.3812 -0.0069 1.5244 -1.4508 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -16.5388 -70.8633 -29.5469 1.4999 0.0607 0.0005 0.0151 -5.9831 0.1115 0.0017 -0.4458 -1.4959 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -16.638 -65.8494 -27.2107 1.4997 0.1212 0.0023 0.0266 -5.4614 0.6206 0.0146 -2.4817 -1.3656 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -16.8359 -62.0782 -23.2032 1.4991 0.2093 0.0019 0.0347 -4.1341 1.0866 0.0392 -4.3435 -1.0341 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -17.0841 -60.2199 -18.2353 1.4985 0.2687 0.0009 0.0249 -2.2931 1.3859 0.0624 -5.538 -0.5738 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -17.3492 -60.0674 -12.9384 1.4982 0.2915 0.0001 0.004 -0.342 1.4976 0.0728 -5.9831 -0.0856 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -17.6022 -61.5971 -7.8729 1.4984 0.2801 -0.0006 -0.0185 1.6318 1.4433 0.0675 -5.767 0.4084 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -17.8212 -64.9578 -3.4881 1.4989 0.2313 -0.0017 -0.0332 3.5896 1.2015 0.0473 -4.8022 0.898 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -17.9625 -69.704 -0.6927 1.4995 0.1488 -0.0023 -0.0307 5.1392 0.7735 0.0212 -3.093 1.2852 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -18.0134 -74.9571 0.0927 1.4999 0.073 -0.0012 -0.0177 5.8959 0.2777 0.0045 -1.1105 1.4741 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -18.0498 -80.1963 -0.7577 1.4999 0.0663 0.0009 -0.0163 5.9423 -0.2069 -0.0032 0.8274 1.4857 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -18.1616 -84.8362 -3.2792 1.4996 0.1357 0.0023 -0.0289 5.3 -0.7025 -0.0179 2.8092 1.3253 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -18.3748 -88.2945 -7.5831 1.499 0.221 0.0018 -0.0341 3.855 -1.1489 -0.0435 4.5924 0.9644 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -18.6382 -89.966 -12.8505 1.4984 0.2754 0.0008 -0.0213 1.9171 -1.4212 -0.0655 5.6788 0.4798 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -18.9038 -89.7523 -18.1517 1.4982 0.292 0 0.0008 -0.0647 -1.4999 -0.073 5.9925 -0.0162 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -19.151 -87.8913 -23.1014 1.4984 0.2742 -0.0008 0.0223 -2.0125 -1.4129 -0.0648 5.6458 -0.5036 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -19.3495 -84.4113 -27.0722 1.499 0.2201 -0.0018 0.0343 -3.8876 -1.142 -0.0431 4.5648 -0.9725 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -19.4727 -79.4487 -29.5023 1.4996 0.1339 -0.0024 0.0286 -5.3171 -0.6944 -0.0176 2.7768 -1.3296 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -19.5182 -73.9404 -30.0726 1.4999 0.0651 -0.0009 0.016 -5.954 -0.1846 -0.0029 0.7383 -1.4886 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -19.5643 -68.7706 -28.8622 1.4999 0.0766 0.0013 0.0185 -5.8702 0.3097 0.0052 -1.2387 -1.4677 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -19.6973 -64.3362 -25.9981 1.4995 0.1537 0.0022 0.0314 -5.0816 0.7969 0.0222 -3.1864 -1.2708 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -19.9123 -61.3116 -21.6689 1.4989 0.233 0.0016 0.0332 -3.5529 1.2083 0.0479 -4.8293 -0.8888 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -20.1815 -60.0043 -16.2827 1.4984 0.2802 0.0006 0.018 -1.5894 1.4463 0.0677 -5.7789 -0.3978 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -20.4573 -60.4787 -10.7724 1.4982 0.2907 -0.0001 -0.0052 0.4425 1.4959 0.0725 -5.9766 0.1108 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -20.6974 -62.7003 -5.9694 1.4985 0.2661 -0.0009 -0.0259 2.4154 1.3728 0.0613 -5.4859 0.6044 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -20.8824 -66.4744 -2.2772 1.4991 0.2059 -0.0019 -0.0348 4.2121 1.0677 0.038 -4.268 1.0536 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -20.9858 -71.3635 -0.2636 1.4997 0.12 -0.0022 -0.0265 5.4801 0.6102 0.0142 -2.4401 1.3703 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -21.0223 -76.9137 -0.0563 1.4999 0.0623 -0.0005 -0.0155 5.9858 0.1018 0.0015 -0.4071 1.4965 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -21.0829 -82.2395 -1.5715 1.4998 0.0897 0.0017 -0.0211 5.7761 -0.4054 -0.0077 1.6213 1.4442 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -21.2362 -86.4267 -4.7875 1.4994 0.1722 0.0021 -0.0333 4.8187 -0.8931 -0.0273 3.5707 1.2051 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -21.4632 -89.1099 -9.3449 1.4987 0.2456 0.0013 -0.0316 3.1907 -1.2699 -0.0527 5.0754 0.7983 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -21.7238 -90.0593 -14.5578 1.4983 0.2848 0.0004 -0.0144 1.2499 -1.467 -0.0697 5.8614 0.3128 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -21.9975 -89.2287 -20.0357 1.4983 0.2886 -0.0003 0.0091 -0.7765 -1.4874 -0.0716 5.9425 -0.1943 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -22.2415 -86.655 -24.9158 1.4986 0.2566 -0.0012 0.0288 -2.7888 -1.3278 -0.0573 5.3063 -0.6978 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -22.411 -82.5849 -28.289 1.4993 0.1893 -0.002 0.0345 -4.5336 -0.9819 -0.0325 3.9256 -1.1339 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -22.4973 -77.5545 -29.9321 1.4998 0.1036 -0.0019 0.0237 -5.6396 -0.5115 -0.0106 2.0454 -1.4101 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -22.5276 -72.2452 -29.8358 1.4999 0.0586 0 0.0146 -5.9993 -0.0168 -0.0002 0.0672 -1.4999 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -22.603 -67.0298 -27.9694 1.4998 0.101 0.002 0.0232 -5.6702 0.4899 0.0102 -1.9592 -1.4177 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -22.7777 -62.8686 -24.3741 1.4993 0.1884 0.0021 0.0343 -4.5444 0.9788 0.0324 -3.9132 -1.1366 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -23.0155 -60.5529 -19.6082 1.4986 0.2568 0.0011 0.029 -2.7996 1.3264 0.0573 -5.3006 -0.7005 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -23.2789 -59.9487 -14.3438 1.4983 0.2888 0.0003 0.0101 -0.864 1.4843 0.0715 -5.9304 -0.2162 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -23.5378 -61.0308 -9.1629 1.4983 0.2863 -0.0004 -0.0129 1.1105 1.474 0.0704 -5.8894 0.2779 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -23.7719 -63.9529 -4.4716 1.4987 0.2473 -0.0014 -0.0308 3.1078 1.2827 0.0536 -5.1265 0.7776 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -23.9362 -68.3886 -1.2078 1.4994 0.1723 -0.0022 -0.0332 4.8099 0.8961 0.0275 -3.5826 1.2029 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -24.0058 -73.5421 0.0461 1.4998 0.0886 -0.0016 -0.0209 5.7725 0.4086 0.0076 -1.6341 1.4433 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -24.0352 -78.8369 -0.37 1.4999 0.0586 0.0004 -0.0146 5.9918 -0.0768 -0.0011 0.3073 1.498 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -24.1214 -83.7016 -2.4415 1.4997 0.1134 0.0021 -0.0254 5.5437 -0.5732 -0.0128 2.2922 1.3862 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -24.3144 -87.578 -6.3687 1.4992 0.2015 0.0021 -0.0346 4.2881 -1.0486 -0.0367 4.1918 1.0726 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -24.5683 -89.7305 -11.4535 1.4985 0.2653 0.001 -0.026 2.4314 -1.3711 -0.061 5.4789 0.6084 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -24.8339 -89.9665 -16.7544 1.4982 0.2911 0.0002 -0.0054 0.4565 -1.4956 -0.0726 5.9755 0.1143 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -25.0886 -88.5497 -21.8515 1.4983 0.2823 -0.0005 0.0171 -1.4932 -1.4527 -0.0685 5.8044 -0.3737 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -25.3032 -85.4794 -26.1495 1.4988 0.2377 -0.0015 0.0326 -3.42 -1.232 -0.0497 4.9242 -0.8556 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -25.4502 -80.7897 -29.0679 1.4995 0.1576 -0.0024 0.0317 -5.0226 -0.8199 -0.0235 3.2785 -1.2561 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -25.513 -75.3588 -30.1147 1.4999 0.0774 -0.0014 0.0186 -5.8664 -0.3142 -0.0054 1.2568 -1.4667 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -25.5462 -70.0994 -29.3407 1.4999 0.0638 0.0008 0.0157 -5.9568 0.1789 0.0027 -0.7157 -1.4893 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -25.6516 -65.4009 -26.926 1.4996 0.1297 0.0022 0.0281 -5.368 0.6695 0.0164 -2.6773 -1.3423 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -25.8495 -61.9545 -22.9291 1.499 0.2148 0.0018 0.0346 -4.01 1.1152 0.0411 -4.458 -1.0031 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -26.1112 -60.1657 -17.6866 1.4985 0.2716 0.0009 0.0231 -2.1073 1.4043 0.0639 -5.6112 -0.5273 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -26.3882 -60.1731 -12.1549 1.4982 0.2915 0 0.0009 -0.0787 1.4999 0.0729 -5.9924 -0.0197 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -26.6375 -61.9515 -7.1685 1.4984 0.2762 -0.0007 -0.0212 1.8992 1.4227 0.0657 -5.6848 0.4753 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -26.8398 -65.3436 -3.1212 1.499 0.2242 -0.0017 -0.0341 3.7863 1.1631 0.0446 -4.649 0.9472 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -26.9688 -70.2466 -0.5712 1.4996 0.1398 -0.0023 -0.0295 5.2487 0.7262 0.019 -2.9037 1.3125 4-4cyli.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 -27.0062 -75.5416 0.1394 1.5 0.0455 -0.0015 -0.011 5.9259 0.2348 0.0032 -0.9392 1.4815 4-4cyli.dat
+0 STEP
+0 FILE 9476 - spool.ldr
+0 A dark bluish grey winch spool with a towball hook for the rope.
+0 Name: 9476 - spool.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Technic Reel  2.5 x  2 (dark_bluish_grey)
+1 72 0 0 0 0 0 -1 0 1 0 1 0 0 32012.dat
+1 0 -15 75 13 0 0 -1 0 1 0 1 0 0 9476 - ropeLQ-1.ldr
+0 // Hook with Towball (dark_bluish_grey)
+1 72 -15 207 13 -1 0 0 0 1 0 0 0 -1 30395.dat
+
+
+
+0 STEP
+0 FILE 9476 - chute.ldr
+0 A slanted dark bluish grey chute with rounded panels on a reddish brown base plate.
+0 Name: 9476 - chute.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Plate  4 x  6 (reddish_brown)
+1 70 0 0 0 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // Tile  2 x  3 with Clips Horizontal (Angled Clips) (dark_bluish_grey)
+1 72 0 -8 30 1 0 0 0 1 0 0 0 1 30350.dat
+0 // Tile  1 x  3 (dark_bluish_grey)
+1 72 -10 -8 -30 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Tile  1 x  3 (dark_bluish_grey)
+1 72 10 -8 -30 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_bluish_grey)
+1 72 30 -24 -40 0 0 -1 0 1 0 1 0 0 4865b.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_bluish_grey)
+1 72 30 -24 0 0 0 -1 0 1 0 1 0 0 4865b.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_bluish_grey)
+1 72 30 -24 40 0 0 -1 0 1 0 1 0 0 4865b.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_bluish_grey)
+1 72 -30 -24 40 0 0 1 0 1 0 -1 0 0 4865b.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_bluish_grey)
+1 72 -30 -24 0 0 0 1 0 1 0 -1 0 0 4865b.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_bluish_grey)
+1 72 -30 -24 -40 0 0 1 0 1 0 -1 0 0 4865b.dat
+
+
+
+0 STEP
+0 FILE 9476 - elevator.ldr
+0 A multi-level dark green and dark tan elevator tower with sloped rock detailing and technic pin connections.
+0 Name: 9476 - elevator.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Plate  6 x 12 (dark_tan)
+1 28 0 0 0 1 0 0 0 1 0 0 0 1 3028.dat
+0 // Brick  1 x  2 (dark_green)
+1 288 -100 -24 -50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (dark_green)
+1 288 20 -24 -50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Tile  1 x  2 with Groove (dark_brown)
+1 308 -60 -8 -50 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (dark_brown)
+1 308 -40 -8 -50 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  2 x  2 with Groove (dark_green)
+1 288 -40 -8 -20 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Tile  2 x  2 with Groove (dark_green)
+1 288 -40 -8 20 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Tile  2 x  2 with Groove (dark_green)
+1 288 -40 -8 60 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_green)
+1 288 -70 -24 -20 0 0 -1 0 1 0 1 0 0 4865b.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_green)
+1 288 -70 -24 20 0 0 -1 0 1 0 1 0 0 4865b.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_green)
+1 288 -10 -24 -20 0 0 1 0 1 0 -1 0 0 4865b.dat
+0 // Panel  1 x  2 x  1 with Rounded Corners (dark_green)
+1 288 -10 -24 20 0 0 1 0 1 0 -1 0 0 4865b.dat
+0 // Tile  1 x  2 with Groove (dark_brown)
+1 308 -10 -8 60 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (dark_brown)
+1 308 -70 -8 60 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Plate  2 x  4 (dark_tan)
+1 28 -40 0 80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  4 with Two Studs (dark_bluish_grey)
+1 72 -40 -8 90 1 0 0 0 1 0 0 0 1 92593.dat
+0 // Brick  1 x  4 (dark_bluish_grey)
+1 72 80 -24 -50 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  2 with 2 Pins (blue)
+1 1 110 -24 -20 0 0 -1 0 1 0 1 0 0 30526.dat
+0 // Brick  1 x  1 (dark_green)
+1 288 110 -24 10 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 110 -48 30 -1 0 0 0 1 0 0 0 -1 60481.dat
+1 71 90 -24 30 0 0 -1 0 1 0 1 0 0 9476 - rock.ldr
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 51 -49 50 -1 0 0 0 1 0 0 0 -1 60481.dat
+1 71 30 -24 50 0 0 -1 0 1 0 1 0 0 9476 - rock.ldr
+0 // Wing  2 x  3 Left (dark_tan)
+1 28 30 0 80 0 0 -1 0 1 0 1 0 0 43723.dat
+1 71 -90 -24 50 0 0 -1 0 1 0 1 0 0 9476 - rock.ldr
+0 // Wing  2 x  3 Right (dark_tan)
+1 28 -110 0 80 0 0 1 0 1 0 -1 0 0 43722.dat
+0 // Brick  1 x  3 (blue)
+1 1 110 -48 -10 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  1 (dark_green)
+1 288 110 -48 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  4 (dark_bluish_grey)
+1 72 60 -48 -50 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  1 (dark_green)
+1 288 -110 -48 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (dark_bluish_grey)
+1 72 -90 -48 -50 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (dark_bluish_grey)
+1 72 10 -48 -50 0 0 1 0 1 0 -1 0 0 3665.dat
+1 71 -110 -24 30 -1 0 0 0 1 0 0 0 -1 9476 - rock.ldr
+0 // Wing  3 x  6 Left (dark_tan)
+1 28 -150 0 0 -1 0 0 0 1 0 0 0 -1 54384.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 -130 -48 50 -1 0 0 0 1 0 0 0 -1 60481.dat
+1 71 -130 -24 -30 -1 0 0 0 1 0 0 0 -1 9476 - rock.ldr
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 -130 -48 -10 0 0 1 0 1 0 -1 0 0 60481.dat
+0 // Plate  6 x 12 (dark_tan)
+1 28 0 -56 0 1 0 0 0 1 0 0 0 1 3028.dat
+0 // Plate  1 x  4 (dark_tan)
+1 28 -130 -56 -20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 -150 -48 -50 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 -130 -48 50 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 -110 -48 70 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 10 -48 70 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Plate  2 x  4 (dark_tan)
+1 28 -40 -16 80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Slope Brick 45  2 x  2 Double Convex (light_bluish_grey)
+1 71 -70 -40 70 0 0 -1 0 1 0 1 0 0 3045.dat
+0 // Slope Brick 45  2 x  2 Double Convex (light_bluish_grey)
+1 71 -10 -40 70 -1 0 0 0 1 0 0 0 -1 3045.dat
+0 // Plate  1 x  4 (dark_tan)
+1 28 -40 -48 70 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 -30 -48 70 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 -50 -48 70 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Technic Brick  1 x  2 with Hole (reddish_brown)
+1 70 -20 -80 -50 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Brick  1 x  2 Log (dark_brown)
+1 308 -60 -80 -50 1 0 0 0 1 0 0 0 1 30136.dat
+0 // Technic Brick  1 x  2 with Hole (reddish_brown)
+1 70 -100 -80 -50 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Brick  1 x  1 (dark_green)
+1 288 -130 -80 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 x  6 Round with Square Base (reddish_brown)
+1 70 10 -200 -50 1 0 0 0 1 0 0 0 1 43888.dat
+0 // Brick  1 x  1 x  6 Round with Square Base (reddish_brown)
+1 70 110 -200 -50 1 0 0 0 1 0 0 0 1 43888.dat
+0 // Panel  2 x  4 x  6 Rock (dark_bluish_grey)
+1 72 60 -200 -40 -1 0 0 0 1 0 0 0 -1 47847.dat
+0 // Slope Brick 45  2 x  1 (dark_bluish_grey)
+1 72 -130 -80 -30 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Brick  1 x  1 (light_bluish_grey)
+1 71 30 -200 -50 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_bluish_grey)
+1 71 90 -200 -50 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Slope Brick 65  2 x  1 x  2 with Symmetric Stud Holder (light_bluish_grey)
+1 71 -130 -128 -50 -1 0 0 0 1 0 0 0 -1 60481.dat
+0 // Support  1 x  6 x  5 Girder Rectangular (reddish_brown)
+1 70 -60 -200 -50 -1 0 0 0 1 0 0 0 -1 64448.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (olive_green)
+1 330 -130 -128 -50 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Plate  1 x 12 (black)
+1 0 0 -208 -50 1 0 0 0 1 0 0 0 1 60479.dat
+0 // Brick  1 x  1 x  6 Round with Square Base (reddish_brown)
+1 70 10 -200 50 1 0 0 0 1 0 0 0 1 43888.dat
+0 // Slope Brick 45  2 x  1 (reddish_brown)
+1 70 30 -80 50 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (reddish_brown)
+1 70 90 -80 50 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Brick  1 x  1 with Stud on 1 Side (black)
+1 0 110 -80 50 -1 0 0 0 1 0 0 0 -1 87087.dat
+0 // Brick  1 x  1 x  6 Round with Square Base (reddish_brown)
+1 70 110 -224 50 1 0 0 0 1 0 0 0 1 43888.dat
+0 // Brick  1 x  1 Round with Hollow Stud (reddish_brown)
+1 70 10 -224 50 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Plate  1 x  6 (reddish_brown)
+1 70 60 -232 50 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Brick  1 x  2 Log (dark_brown)
+1 308 100 -232 -50 1 0 0 0 1 0 0 0 1 30136.dat
+0 // Brick  1 x  2 Log (dark_brown)
+1 308 60 -232 -50 1 0 0 0 1 0 0 0 1 30136.dat
+0 // Brick  1 x  2 Log (dark_brown)
+1 308 20 -232 -50 1 0 0 0 1 0 0 0 1 30136.dat
+1 28 60 -248 0 1 0 0 0 1 0 0 0 1 9476 - floor.ldr
+1 28 0 -152 32 0 1 0 0 0 1 1 0 0 9476 - ladder.ldr
+0 // Brick  1 x  2 Log (dark_brown)
+1 308 20 -272 -50 1 0 0 0 1 0 0 0 1 30136.dat
+0 // Brick  1 x  2 Log (dark_brown)
+1 308 60 -272 -50 1 0 0 0 1 0 0 0 1 30136.dat
+0 // Brick  1 x  2 Log (dark_brown)
+1 308 100 -272 -50 1 0 0 0 1 0 0 0 1 30136.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_bluish_grey)
+1 72 20 -256 50 -1 0 0 0 1 0 0 0 -1 99780.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_bluish_grey)
+1 72 100 -256 50 -1 0 0 0 1 0 0 0 -1 99780.dat
+0 // Support  1 x  6 x  5 Girder Rectangular (reddish_brown)
+1 70 -60 -328 -50 -1 0 0 0 1 0 0 0 -1 64448.dat
+0 // Plate  1 x  6 (reddish_brown)
+1 70 60 -258 72 -1 0 0 0 0 -1 0 -1 0 3666.dat
+0 // Tile  1 x  4 with Groove (dark_brown)
+1 308 60 -280 -50 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Minifig Telescope (black)
+1 0 10 -312 -50 1 0 0 0 1 0 0 0 1 64644.dat
+0 // Minifig Telescope (black)
+1 0 110 -312 -50 1 0 0 0 1 0 0 0 1 64644.dat
+0 // Minifig Plume/Flame Triple (trans_orange)
+1 57 110 -312 -50 0.2588 0 0.9659 0 1 0 -0.9659 0 0.2588 64647.dat
+0 // Minifig Plume/Flame Triple (trans_orange)
+1 57 10 -312 -50 0.2588 0 0.9659 0 1 0 -0.9659 0 0.2588 64647.dat
+0 // Tile  1 x  4 with Wood Grain and 4 Nails Pattern (reddish_brown)
+1 70 60 -258 80 -1 0 0 0 0 -1 0 -1 0 2431p01.dat
+0 // Plate  1 x 10 (reddish_brown)
+1 70 65 -147.9423 68 -0.5 0 0.866 -0.866 0 -0.5 0 -1 0 4477.dat
+0 // Plate  1 x  6 (reddish_brown)
+1 70 -60 -336 -50 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Technic Brick  1 x  6 with Holes (black)
+1 0 -60 -360 -50 -1 0 0 0 1 0 0 0 -1 3894.dat
+0 // Plate  1 x  6 (reddish_brown)
+1 70 -60 -368 -50 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  1 x  6 (reddish_brown)
+1 70 -60 -376 -50 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 -10 -376 -50 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 -110 -376 -50 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Technic Brick  5 x  3 x  1 with  8 Pegholes and  2 Studs (black)
+1 0 -60 -440 -50 -1 0 0 0 1 0 0 0 -1 32333.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -60 -350 -60 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -60 -390 -60 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Beam  3 (light_bluish_grey)
+1 71 -60 -370 -70 1 0 0 0 0 -1 0 1 0 32523.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -100 -350 -60 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 -350 -60 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 -70 -60 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -100 -70 -60 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Beam 15 (black)
+1 0 -100 -210 -70 1 0 0 0 0 -1 0 1 0 32278.dat
+0 // Technic Beam 15 (black)
+1 0 -20 -210 -70 1 0 0 0 0 -1 0 1 0 32278.dat
+0 // Dish  2 x  2 with Rim (tan)
+1 19 -60 -430 -124 1 0 0 0 0 1 0 -1 0 2654.dat
+0 // Technic Axle  2 Notched (red)
+1 4 -60 -430 -100 0 -1 0 0 0 1 -1 0 0 32062.dat
+0 // Technic Axle  5.5 with Stop Type 2 (dark_bluish_grey)
+1 72 -60 -430 -23 0 -1 0 0 0 -1 1 0 0 59426.dat
+0 // Technic Axle Joiner Inline Smooth (reddish_brown)
+1 70 -60 -430 -80 0 -1 0 -1 0 0 0 0 -1 59443.dat
+0 // Brick  2 x  2 Round with Grille (light_bluish_grey)
+1 71 -60 -430 -100 1 0 0 0 0 1 0 -1 0 92947.dat
+0 // Technic Bush with Two Flanges (red)
+1 4 -60 -430 -30 1 0 0 0 1 0 0 0 1 3713.dat
+1 72 -60.3205 -430 30 -1 0 0 0 0 -1 0 -1 0 9476 - wheel.ldr
+1 16 -60 -430 0 1 0 0 0 1 0 0 0 1 9476 - spool.ldr
+0 // Tile  2 x  2 Round with Technic Half Beam (black)
+1 0 -75 -161 12 0 0 1 0 1 0 -1 0 0 74698.dat
+0 // Barrel  4.5 x  4.5 with Axle Hole (reddish_brown)
+1 70 -75 -145 12 0 0 1 0 1 0 -1 0 0 64951.dat
+0 // Tile  1 x  1 Round with Groove (pearl_silver)
+1 179 -52 -168 2 0 -0.5 0.866 0 0.866 0.5 -1 0 0 98138.dat
+0 // Tile  1 x  1 Round with Groove (pearl_silver)
+1 179 -58 -164 21 0 0.2588 -0.9659 0 -0.9659 -0.2588 -1 0 0 98138.dat
+0 // Tile  1 x  1 Round with Groove (pearl_silver)
+1 179 -73 -172 32 -0.9659 -0.067 -0.25 0 0.9659 -0.2588 0.2588 -0.25 -0.933 98138.dat
+0 // Tile  1 x  1 Round with Groove (pearl_silver)
+1 179 -73 -173 -12 -0.9659 -0.067 -0.25 0 0.9659 -0.2588 0.2588 -0.25 -0.933 98138.dat
+0 // Tile  1 x  1 Round with Groove (pearl_silver)
+1 179 -95 -164 21 0 -0.5 -0.866 0 -0.866 0.5 -1 0 0 98138.dat
+1 72 169.6465 -192.8746 0 0 -0.454 -0.891 0 0.891 -0.454 1 0 0 9476 - chute.ldr
+
+
+
+0 STEP
+0 FILE 9476 - uruk-hai.ldr
+0 An Uruk-hai warrior minifigure with leather armor, scowling head, helmet with comb, spiked shield, and sword.
+0 Name: 9476 - uruk-hai.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // ~Minifig Leg Left with LOTR Leather Armour Pattern (Obsolete) (dark_brown)
+1 308 -20 16 0 1 0 0 0 1 0 0 0 1 3817pm0.dat
+0 // ~Minifig Hips with LOTR Leather Armour Pattern (Obsolete) (dark_bluish_grey)
+1 72 -20 4 0 1 0 0 0 1 0 0 0 1 3815pm0.dat
+0 // ~Minifig Leg Right with LOTR Leather Armour Pattern (Obsolete) (dark_brown)
+1 308 -20 16 0 1 0 0 0 1 0 0 0 1 3816pm0.dat
+0 // Minifig Torso with LOTR Leather Armour with Buckle Pattern (dark_brown)
+1 308 -20 -28 0 1 0 0 0 1 0 0 0 1 973pm0.dat
+0 // Minifig Head with LOTR Uruk-Hai Scowl and White Hand 2-Sided Pattern (Hollow Stud) (dark_red)
+1 320 -20 -55 0 1 0 0 0 1 0 0 0 1 3626cpm0.dat
+0 // Minifig Arm Left (dark_red)
+1 320 -4.448 -19 0 0.9855 0.1201 0.1201 -0.1699 0.6969 0.6969 0 -0.7072 0.7071 3819.dat
+0 // Minifig Arm Right (dark_red)
+1 320 -35.552 -19 0 0.9855 -0.1699 0 0.1699 0.9855 0 0 0 1 3818.dat
+0 // Minifig Hand (dark_bluish_grey)
+1 72 1.5608 -13.5778 -20.3429 -0.1699 -0.9855 0 0.9855 -0.1699 0 0.0001 0 1 3820.dat
+0 // Minifig Hand (dark_bluish_grey)
+1 72 -43.6875 -1.2401 -9.8839 0.9474 0.2966 0.1201 -0.1324 0.7049 -0.6968 -0.2913 0.6443 0.7071 3820.dat
+0 // Minifig Helmet Castle Uruk-Hai with Lateral Comb & Hand Pattern (pearl_dark_grey)
+1 148 -20 -55 0 1 0 0 0 1 0 0 0 1 10051p01.dat
+0 // Minifig Armour Plate (pearl_dark_grey)
+1 148 -20 -28 0 1 0 0 0 1 0 0 0 1 2587.dat
+0 // Minifig Shield Broad with Spiked Bottom, Cutout Corner with White Handprint Pattern (dark_bluish_grey)
+1 72 1.5608 -13.5778 -34.3427 0.9539 -0.1587 0.2551 0.1753 0.9836 -0.044 -0.2438 0.0867 0.9659 10049p01.dat
+0 // Minifig Sword Uruk-Hai (pearl_dark_grey)
+1 148 -43.2458 7.9692 -13.8836 -0.9392 0.3286 0.0994 0.2675 0.5189 0.8119 0.2152 0.7891 -0.5753 10050.dat
+
+0 STEP
+0 FILE 9476 - lurtz.ldr
+0 The Uruk-hai leader Lurtz minifigure with muscular torso, long black hair, scowling head, and spiked shield.
+0 Name: 9476 - lurtz.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // ~Minifig Leg Left (Obsolete) (reddish_brown)
+1 70 0 0 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Hips (Obsolete) (dark_bluish_grey)
+1 72 0 -12 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (reddish_brown)
+1 70 0 0 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Torso with LOTR Uruk-Hai Lurtz Muscles Outline Pattern (dark_brown)
+1 308 0 -44 0 1 0 0 0 1 0 0 0 1 973pmb.dat
+0 // Minifig Head with LOTR Uruk-Hai Lurtz Scowl and White Hand 2-Sided Pattern (reddish_brown)
+1 70 0 -68 0 1 0 0 0 1 0 0 0 1 3626bpmb.dat
+0 // Minifig Arm Left (reddish_brown)
+1 70 15.552 -35 0 0.9855 -0.044 0.1641 -0.1699 -0.2551 0.9519 0 -0.9661 -0.2589 3819.dat
+0 // Minifig Arm Right (reddish_brown)
+1 70 -15.552 -35 0 0.9855 -0.1699 0 0.1699 0.9855 0 0 0 1 3818.dat
+0 // Minifig Hand (reddish_brown)
+1 70 18.0272 -50.0757 -15.6832 0.9571 -0.25 0.1471 0.005 0.5212 0.8535 -0.29 -0.8161 0.5 3820.dat
+0 // Minifig Hand (reddish_brown)
+1 70 -23.6879 -17.2394 -9.8839 -0.0413 0.9919 0.1201 -0.7151 0.0546 -0.6968 -0.6977 -0.1146 0.707 3820.dat
+0 // Minifig Hair Long Straight (black)
+1 0 0 -68 0 1 0 0 0 1 0 0 0 1 40239.dat
+0 // Minifig Shield Broad with Spiked Bottom, Cutout Corner with White Handprint Pattern (dark_bluish_grey)
+1 72 -25.3317 -9.6118 -20.4711 0.9875 -0.0557 -0.1464 0.0561 0.9983 -0.0016 0.1463 -0.0066 0.9891 10049p01.dat
+
+0 STEP
+0 FILE 9476 - blacksmith.ldr
+0 An orc blacksmith minifigure with leather armor, orc head with grey hair, mallet, and sword.
+0 Name: 9476 - blacksmith.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Minifig Torso with LOTR Orc Leather Armour Pattern (dark_brown)
+1 308 0 -44 0 1 0 0 0 1 0 0 0 1 973pma.dat
+0 // Minifig Head with LOTR Orc with Grey Hair Pattern (dark_tan)
+1 28 0 -68 0 1 0 0 0 1 0 0 0 1 3626bpma.dat
+0 // Minifig Arm Left (dark_tan)
+1 28 15.552 -35 0 0.9855 0.1201 0.1201 -0.1699 0.6969 0.6969 0 -0.7072 0.7071 3819.dat
+0 // Minifig Arm Right (dark_tan)
+1 28 -15.552 -35 0 0.9855 -0.1641 0.044 0.1699 0.952 -0.2551 0 0.2589 0.9659 3818.dat
+0 // Minifig Hand (reddish_brown)
+1 70 21.5608 -29.5778 -20.3429 0.9623 -0.272 0 0.272 0.9623 0 0.0001 0 1 3820.dat
+0 // Minifig Hand (reddish_brown)
+1 70 -24.0129 -15.353 -4.6595 0.9653 -0.2156 0.1471 0.234 0.4656 -0.8534 0.1156 0.8583 0.5 3820.dat
+0 // Minifig Hair Orc with Dark Tan Ears Pattern (black)
+1 0 0 -68 0 1 0 0 0 1 0 0 0 1 10066p01.dat
+0 // Minifig Sword Uruk-Hai (pearl_dark_grey)
+1 148 -25.8854 -5.5383 -5.7411 -0.162 -0.1625 0.9733 0.9462 0.2541 0.1999 -0.2799 0.9533 0.1126 10050.dat
+0 // ~Minifig Leg Left (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Hips (Obsolete) (dark_brown)
+1 308 0 -12 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Tool Mallet (Obsolete) (black)
+1 0 31.9786 -67.3289 -41.095 -0.7263 -0.2628 -0.6353 -0.3672 0.9296 0.0352 0.5812 0.2589 -0.7715 4522.dat
+
+0 STEP
+0 FILE 9476 - baldorc.ldr
+0 A bald orc minifigure with leather armor, orc head, shovel, and a pearl silver round tile.
+0 Name: 9476 - baldorc.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Minifig Torso with LOTR Orc Leather Armour Pattern (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 973pma.dat
+0 // Minifig Head with LOTR Orc with Grey Hair Pattern (dark_tan)
+1 28 0 -24 0 0.848 0 0.5299 0 1 0 -0.5299 0 0.848 3626bpma.dat
+0 // Minifig Arm Left (dark_tan)
+1 28 15.552 9 0 0.9855 0.1699 0 -0.1699 0.9856 0 0 0 1.0001 3819.dat
+0 // Minifig Arm Right (dark_tan)
+1 28 -15.552 9 0 0.9855 -0.0975 0.1392 0.1699 0.5652 -0.8073 0 0.8193 0.5735 3818.dat
+0 // Minifig Hand (reddish_brown)
+1 70 23.6882 26.7613 -9.8842 0.9408 -0.3169 -0.1201 0.1474 0.7019 -0.6969 0.3052 0.6379 0.7071 3820.dat
+0 // Minifig Hand (reddish_brown)
+1 70 -23.6951 26.8032 9.8004 0.9806 -0.1022 0.1673 0.1454 -0.1923 -0.9705 0.1313 0.976 -0.1737 3820.dat
+0 // Minifig Shovel (black)
+1 0 -25.2083 56.5741 -31.8198 -0.9867 -0.0474 -0.1544 -0.1213 -0.4138 0.9021 -0.1067 0.9088 0.4027 3837.dat
+0 // ~Minifig Leg Left (Obsolete) (dark_brown)
+1 308 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Hips (Obsolete) (dark_brown)
+1 308 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (dark_brown)
+1 308 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Tile  1 x  1 Round with Groove (pearl_silver)
+1 179 -22 58 -66 0 0.0697 0.9975 0 0.9975 -0.0697 -1 0 0 98138.dat
+

@@ -1,0 +1,1752 @@
+0 FILE 5980 - 5980.ldr
+0 A large spaceship model composed of wings, engines, cockpit, landing gear, and interior detail submodels forming a complete space vessel.
+0 Name: 5980 - 5980.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 -400 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-1.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-2.ldr
+1 0 400 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-3.ldr
+1 0 0 -17 -400 1 0 0 0 1 0 0 0 1 5980 - 5980-4.ldr
+1 0 -280 -8 270 1 0 0 0 1 0 0 0 1 5980 - 5980-5.ldr
+1 0 280 -8 250 1 0 0 0 1 0 0 0 1 5980 - 5980-6.ldr
+1 0 140 -152 260 1 0 0 0 1 0 0 0 1 5980 - 5980-7.ldr
+1 0 140 -152 220 1 0 0 0 1 0 0 0 1 5980 - 5980-7.ldr
+1 0 0 -16 300 1 0 0 0 1 0 0 0 1 5980 - 5980-8.ldr
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-1.ldr
+0 A structural submodel assembly with no direct pieces, referencing the main hull and wing components of the ship.
+0 Name: 5980 - 5980-1.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-1-a.ldr
+1 0 -30 -46 80 0.885 0.466 0 -0.466 0.885 0 0 0 1 5980 - 5980-1-b.ldr
+1 0 30 -46 80 0.885 -0.466 0 0.466 0.885 0 0 0 1 5980 - 5980-1-c.ldr
+1 34 -104.142 -56.142 20 0.707 -0.707 0 0.707 0.707 0 0 0 1 5980 - 5970-5971-5980-5981-5983-5985-8399-0.ldr
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-1-a.ldr
+0 A white and black sloped wing section with inverted wedges, plates, and colored translucent round accent lights.
+0 Name: 5980 - 5980-1-a.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  4 x  6 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3032.dat
+0 STEP
+0 // Brick  1 x  2 with Handle (white)
+1 15 0 -24 50 -1 0 0 0 1 0 0 0 -1 30236.dat
+0 // Slope Brick 33  3 x  2 Inverted with Ribs between Studs (white)
+1 15 -30 -24 40 0 0 1 0 1 0 -1 0 0 3747b.dat
+0 // Slope Brick 33  3 x  2 Inverted with Ribs between Studs (white)
+1 15 30 -24 40 0 0 -1 0 1 0 1 0 0 3747b.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 0 -24 30 1 0 0 0 1 0 0 0 1 3039.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 -30 -24 0 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 30 -24 0 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Wedge  2 x  6 Double Inverted Right (white)
+1 15 -40 -24 -80 1 0 0 0 1 0 0 0 1 41764.dat
+0 // Wedge  2 x  6 Double Inverted Left (white)
+1 15 40 -24 -80 1 0 0 0 1 0 0 0 1 41765.dat
+0 STEP
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -70 -32 50 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 70 -32 50 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -32 40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (light_grey)
+1 7 -70 -32 30 0 0 1 0 1 0 -1 0 0 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (light_grey)
+1 7 70 -32 30 0 0 -1 0 1 0 1 0 0 4085c.dat
+0 // Plate  1 x  6 (black)
+1 0 -50 -32 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 50 -32 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Tile  1 x  2 with Handle (blue)
+1 1 0 -32 -10 1 0 0 0 1 0 0 0 1 2432.dat
+0 // Wing  2 x  4 Right (white)
+1 15 -40 -32 -100 1 0 0 0 1 0 0 0 1 41769.dat
+0 // Wing  2 x  4 Left (white)
+1 15 40 -32 -100 1 0 0 0 1 0 0 0 1 41770.dat
+0 STEP
+0 // Minifig Handcuffs (light_grey)
+1 7 90 -28 30 0 0 -1 -1 0 0 0 1 0 61482.dat
+0 // Technic Beam  2 with Angled Bar (black)
+1 0 -90 -42 30 -0.707107 0 -0.707107 0.707107 0 -0.707107 0 -1 0 85940.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 -60 -40 50 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 60 -40 50 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 0 -40 -70 1 0 0 0 1 0 0 0 1 2431.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Holes (white)
+1 15 -20 -56 50 1 0 0 0 1 0 0 0 1 32000.dat
+0 // Technic Brick  1 x  2 with Holes (white)
+1 15 20 -56 50 1 0 0 0 1 0 0 0 1 32000.dat
+0 STEP
+0 // Technic Pin Long without Friction with Single Slot (blue)
+1 1 -30 -46 50 0 0 -1 0 1 0 1 0 0 32556.dat
+0 // Technic Pin Long without Friction with Single Slot (blue)
+1 1 30 -46 50 0 0 -1 0 1 0 1 0 0 32556.dat
+0 STEP
+0 // Technic Brick  1 x  1 with Hole (white)
+1 15 -30 -56 30 1 0 0 0 1 0 0 0 1 6541.dat
+0 // Technic Brick  1 x  1 with Hole (white)
+1 15 30 -56 30 1 0 0 0 1 0 0 0 1 6541.dat
+0 // Wedge  2 x  6 Double Right (white)
+1 15 -50 -56 20 1 0 0 0 1 0 0 0 1 41747.dat
+0 // Wedge  2 x  6 Double Left (white)
+1 15 50 -56 20 1 0 0 0 1 0 0 0 1 41748.dat
+0 STEP
+0 // Tail  2 x  3 x  2 Fin (white)
+1 15 0 -64 50 1 0 0 0 1 0 0 0 1 44661.dat
+0 STEP
+0 // Windscreen  8 x  6 x  2 Curved (trans_dark_blue)
+1 33 0 -80 20 1 0 0 0 1 0 0 0 1 41751.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-1-b.ldr
+0 A right-side wing and thruster assembly with a wheel rim, orange inverted dish, and red translucent accent light.
+0 Name: 5980 - 5980-1-b.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Pin (black)
+1 0 0 0 20 0 0 1 0 1 0 -1 0 0 3673.dat
+0 STEP
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_grey)
+1 7 0 0 40 -1 0 0 0 1 0 0 0 -1 55981.dat
+0 // Plate  2 x  2 with Holes (light_grey)
+1 7 0 -10 0 0 0 1 0 1 0 -1 0 0 2817.dat
+0 STEP
+0 // Dish  2 x  2 Inverted (trans_orange)
+1 57 0 0 60 1 0 0 0 0 -1 0 1 0 4740.dat
+0 ROTSTEP 23 135 0 ABS
+0 // Plate  1 x  2 (black)
+1 0 -130 -18 -40 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -18 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 ROTSTEP END
+0 // Wing  3 x  8 Pentagonal Right (white)
+1 15 -60 -26 -10 0 0 1 0 1 0 -1 0 0 50304.dat
+0 STEP
+0 // Slope Brick Curved  3 x  1 (white)
+1 15 -130 -42 -50 1 0 0 0 1 0 0 0 1 50950.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_red)
+1 36 -110 -26 -30 0 0 -1 0 1 0 1 0 0 54200.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-1-c.ldr
+0 A left-side wing and thruster assembly with a wheel rim, orange inverted dish, and dark blue translucent accent light.
+0 Name: 5980 - 5980-1-c.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Pin (black)
+1 0 0 0 20 0 0 1 0 1 0 -1 0 0 3673.dat
+0 STEP
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_grey)
+1 7 0 0 40 -1 0 0 0 1 0 0 0 -1 55981.dat
+0 // Plate  2 x  2 with Holes (light_grey)
+1 7 0 -10 0 0 0 1 0 1 0 -1 0 0 2817.dat
+0 STEP
+0 // Dish  2 x  2 Inverted (trans_orange)
+1 57 0 0 60 1 0 0 0 0 -1 0 1 0 4740.dat
+0 ROTSTEP 23 135 0 ABS
+0 // Plate  2 x  2 (black)
+1 0 0 -18 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 (black)
+1 0 130 -18 -40 0 0 1 0 1 0 -1 0 0 3023.dat
+0 ROTSTEP END
+0 // Wing  3 x  8 Pentagonal Left (white)
+1 15 60 -26 -10 0 0 -1 0 1 0 1 0 0 50305.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_dark_blue)
+1 33 110 -26 -30 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Slope Brick Curved  3 x  1 (white)
+1 15 130 -42 -50 1 0 0 0 1 0 0 0 1 50950.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5970-5971-5980-5981-5983-5985-8399-0.ldr
+0 A small shared detail assembly consisting of a half-pin with bar and a cone piece.
+0 Name: 5980 - 5970-5971-5980-5981-5983-5985-8399-0.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Pin  1/2 with Bar 2L (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 61184.dat
+0 STEP
+0 // Cone  1 x  1 (main_colour)
+1 16 0 0 -24 1 0 0 0 0 -1 0 1 0 4589.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-2.ldr
+0 A grey and black plated structure with lime accents, loudhailers, neon green cones, and handlebar flags suggesting a cockpit or control station.
+0 Name: 5980 - 5980-2.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  6 (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 STEP
+0 // Plate  1 x  2 (lime)
+1 27 0 -8 -30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Wing  4 x  6 with  2 x  2 Cutout (black)
+1 0 0 -8 -40 1 0 0 0 1 0 0 0 1 47407.dat
+0 STEP
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -16 -60 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 (black)
+1 0 0 -24 50 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (red)
+1 4 0 -24 -30 1 0 0 0 1 0 0 0 1 3794b.dat
+0 // Plate  1 x  2 with Handles Type 1 (black)
+1 0 0 -24 -90 1 0 0 0 1 0 0 0 1 3839a.dat
+0 STEP
+0 // Minifig Loudhailer (black)
+1 0 -26 -20 -122 0 1 0 1 0 0 0 0 -1 4349.dat
+0 // Minifig Loudhailer (black)
+1 0 26 -20 -122 0 -1 0 -1 0 0 0 0 -1 4349.dat
+0 STEP
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 -26 -20 -164 1 0 0 0 0 -1 0 1 0 4589.dat
+0 // Cone  1 x  1 (trans_neon_green)
+1 42 26 -20 -164 1 0 0 0 0 -1 0 1 0 4589.dat
+0 STEP
+0 // Plate  1 x  2 (lime)
+1 27 0 -32 50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Tile  1 x  1 with Clip (dark_grey)
+1 8 0 -32 -30 0 0 1 0 1 0 -1 0 0 2555.dat
+0 // Tile  2 x  2 Round with Cross Underside Stud (black)
+1 0 0 -32 -80 1 0 0 0 1 0 0 0 1 4150.dat
+0 STEP
+0 // Plate  2 x  2 with Angled Bars and Attached  1 x  2 Plate (dark_grey)
+1 8 0 -40 0 1 0 0 0 1 0 0 0 1 2397.dat
+0 STEP
+0 // Flag  2 x  2 Trapezoid (Thin C-Clip) (black)
+1 0 -26 -24.078 -19.612 -0.258819 0 -0.965926 -0.947168 -0.196117 0.253793 -0.189435 0.98058 0.0507589 44676.dat
+0 // Flag  2 x  2 Trapezoid (Thin C-Clip) (black)
+1 0 26 -24.078 -19.612 -0.258819 0 0.965926 0.947168 -0.196117 0.253793 0.189435 0.98058 0.0507589 44676.dat
+0 // Brick  1 x  1 Round with Hollow Stud (lime)
+1 27 -26 -36 64 1 0 0 0 0 -1 0 1 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (lime)
+1 27 26 -36 64 1 0 0 0 0 -1 0 1 0 3062b.dat
+0 // Minifig Handlebars (dark_grey)
+1 8 0 -38 -30 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 30031.dat
+0 STEP
+0 // Tail  2 x  3 x  2 Fin (black)
+1 0 0 -48 50 1 0 0 0 1 0 0 0 1 44661.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-3.ldr
+0 A structural submodel assembly with no direct pieces, referencing engine and thruster components.
+0 Name: 5980 - 5980-3.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-3-a.ldr
+1 0 -30 -38 -40 0 -1 0 1 0 0 0 0 1 5980 - 5980-3-b.ldr
+1 0 30 -38 -40 0 1 0 -1 0 0 0 0 1 5980 - 5980-3-c.ldr
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-3-a.ldr
+0 A red and black engine module with exhaust pipes, air scoop, technic bricks, and angled flags forming a rear thruster unit.
+0 Name: 5980 - 5980-3-a.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  4 (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Slope Brick 33  3 x  2 Inverted with Ribs between Studs (red)
+1 4 0 -24 30 -1 0 0 0 1 0 0 0 -1 3747b.dat
+0 // Technic Brick  1 x  2 with Holes (red)
+1 4 -10 -24 0 0 0 1 0 1 0 -1 0 0 32000.dat
+0 // Technic Brick  1 x  2 with Holes (red)
+1 4 10 -24 0 0 0 1 0 1 0 -1 0 0 32000.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 0 -24 -30 1 0 0 0 1 0 0 0 1 3660.dat
+0 STEP
+0 // Exhaust Pipe with Pin (light_grey)
+1 7 -10 -14 -10 0 0 -1 0.707107 0.707107 0 0.707107 -0.707107 0 40620.dat
+0 // Exhaust Pipe with Pin (light_grey)
+1 7 10 -14 -10 0 0 1 -0.707107 0.707107 0 -0.707107 -0.707107 0 40620.dat
+0 STEP
+0 // Plate  2 x  8 (black)
+1 0 0 -32 20 0 0 1 0 1 0 -1 0 0 3034.dat
+0 STEP
+0 // Plate  1 x  2 with Handle (yellow)
+1 14 -10 -40 60 0 0 1 0 1 0 -1 0 0 2540.dat
+0 // Plate  1 x  2 with Handle (yellow)
+1 14 10 -40 60 0 0 -1 0 1 0 1 0 0 2540.dat
+0 // Plate  1 x  2 with Handle Type 2 (red)
+1 4 -10 -40 -40 0 0 1 0 1 0 -1 0 0 48336.dat
+0 // Plate  1 x  2 with Handle Type 2 (red)
+1 4 10 -40 -40 0 0 -1 0 1 0 1 0 0 48336.dat
+0 STEP
+0 // Flag  2 x  2 Trapezoid (Thin C-Clip) (dark_grey)
+1 8 -30 -38 40 0 0 -1 -1 0 0 0 1 0 44676.dat
+0 // Flag  2 x  2 Trapezoid (Thin C-Clip) (dark_grey)
+1 8 30 -38 40 0 0 1 1 0 0 0 1 0 44676.dat
+0 STEP
+0 // Car Engine  2 x  2 with Air Scoop (light_grey)
+1 7 0 -72 60 1 0 0 0 1 0 0 0 1 50943.dat
+0 // Plate  1 x  1 Round (yellow)
+1 14 -10 -48 -30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (yellow)
+1 14 10 -48 -30 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  2 x  2 with Hole and Complete Underside Rib (black)
+1 0 0 -48 -60 0 0 1 0 1 0 -1 0 0 10247.dat
+0 STEP
+0 // Technic Axle Pin (blue)
+1 1 0 -38 -80 0 0 1 0 1 0 -1 0 0 3749.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (black)
+1 0 0 -38 -110 0 0 1 0 1 0 -1 0 0 32054.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 -10 -56 90 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 10 -56 90 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Plate  2 x  3 (red)
+1 4 0 -56 -50 0 0 1 0 1 0 -1 0 0 3021.dat
+0 STEP
+0 // Minifig Gun Revolver (dark_grey)
+1 8 -10 -57 90 -1 0 0 0 1 0 0 0 -1 30132.dat
+0 // Minifig Gun Revolver (dark_grey)
+1 8 10 -57 90 -1 0 0 0 1 0 0 0 -1 30132.dat
+0 STEP
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (red)
+1 4 0 -64 -30 1 0 0 0 1 0 0 0 1 3794b.dat
+0 // Slope Brick Curved Top  2 x  2 x  1 (trans_very_light_blue)
+1 39 0 -56 -60 1 0 0 0 1 0 0 0 1 30602.dat
+0 STEP
+0 // Tile  1 x  1 with Clip (dark_grey)
+1 8 0 -72 -30 0 0 1 0 1 0 -1 0 0 2555.dat
+0 STEP
+0 // Minifig Handlebars (dark_grey)
+1 8 0 -78 -30 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 30031.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-3-b.ldr
+0 A right jet engine assembly built from a plane jet engine, clips, and a grille tile.
+0 Name: 5980 - 5980-3-b.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plane Jet Engine with Plate  2 x  2 (light_grey)
+1 7 30 32 0 1 0 0 0 1 0 0 0 1 4868b.dat
+0 STEP
+0 // Plate  1 x  2 with  2 Clips Horizontal (Thick U-Clips) (black)
+1 0 20 -2 0 0 0 1 0 1 0 -1 0 0 60470a.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 40 -2 0 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-3-c.ldr
+0 A left jet engine assembly built from a plane jet engine, clips, and a grille tile.
+0 Name: 5980 - 5980-3-c.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plane Jet Engine with Plate  2 x  2 (light_grey)
+1 7 -30 32 0 1 0 0 0 1 0 0 0 1 4868b.dat
+0 STEP
+0 // Plate  1 x  2 with  2 Clips Horizontal (Thick U-Clips) (black)
+1 0 -20 -2 0 0 0 -1 0 1 0 1 0 0 60470a.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 -40 -2 0 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-4.ldr
+0 A structural submodel assembly with no direct pieces, referencing the landing gear and chassis components.
+0 Name: 5980 - 5980-4.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 0.928 0.371 0 -0.371 0.928 5980 - 5980-4-a.ldr
+1 0 0 -38.996 4.828 1 0 0 0 0.919 -0.394 0 0.394 0.919 5980 - 5980-4-b.ldr
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-4-a.ldr
+0 A brown and grey wheeled landing gear unit with four wide rubber tyres, rims, hinges, and orange accent slopes.
+0 Name: 5980 - 5980-4-a.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  3 (brown)
+1 6 0 0 10 0 0 1 0 1 0 -1 0 0 3021.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -8 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  2 with 2 Wheel Pins (light_grey)
+1 7 0 -8 0 1 0 0 0 1 0 0 0 1 4600.dat
+0 STEP
+0 // Bracket  5 x  2 x  2.333 with Inside Rib (black)
+1 0 0 -64 50 1 0 0 0 1 0 0 0 1 6087.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -16 -10 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Plate  2 x  3 (brown)
+1 6 0 -24 10 0 0 1 0 1 0 -1 0 0 3021.dat
+0 STEP
+0 // Plate  2 x  2 with 2 Wheel Pins (light_grey)
+1 7 0 -40 80 1 0 0 0 1 0 0 0 1 4600.dat
+0 STEP
+0 // Plate  2 x  2 (black)
+1 0 0 -48 80 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 0 -48 -10 1 0 0 0 1 0 0 0 1 3937.dat
+0 STEP
+0 // Plate  1 x  2 with Handle (orange)
+1 25 0 -56 90 -1 0 0 0 1 0 0 0 -1 2540.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -56 70 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (orange)
+1 25 -10 -64 50 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (orange)
+1 25 10 -64 50 1 0 0 0 1 0 0 0 1 54200.dat
+0 STEP
+0 // Brick  1 x  2 with Pin (light_grey)
+1 7 0 -88 70 -1 0 0 0 1 0 0 0 -1 2458.dat
+0 STEP
+0 // Plate  1 x  2 with Exhaust Ports (black)
+1 0 0 -96 70 1 0 0 0 1 0 0 0 1 61072.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 0 -104 70 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+0 // Wheel Rim 12 x 11 with Round Hole (black)
+1 0 -30 -3 0 0 0 1 0 1 0 -1 0 0 6014.dat
+0 // Wheel Rim 12 x 11 with Round Hole (black)
+1 0 30 -3 0 0 0 -1 0 1 0 1 0 0 6014.dat
+0 // Wheel Rim 12 x 11 with Round Hole (black)
+1 0 -30 -35 80 0 0 1 0 1 0 -1 0 0 6014.dat
+0 // Wheel Rim 12 x 11 with Round Hole (black)
+1 0 30 -35 80 0 0 -1 0 1 0 1 0 0 6014.dat
+0 STEP
+0 // Tyre 12/ 40 x 11 Wide (rubber_black)
+1 256 -36 -3 0 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // Tyre 12/ 40 x 11 Wide (rubber_black)
+1 256 36 -3 0 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // Tyre 12/ 40 x 11 Wide (rubber_black)
+1 256 -36 -35 80 0 0 1 0 1 0 -1 0 0 6015.dat
+0 // Tyre 12/ 40 x 11 Wide (rubber_black)
+1 256 36 -35 80 0 0 1 0 1 0 -1 0 0 6015.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-4-b.ldr
+0 A small hinge and connection assembly with a top hinge, handled plate, and pinned tile.
+0 Name: 5980 - 5980-4-b.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Hinge  2 x  2 Top (black)
+1 0 0 -10 0 -1 0 0 0 1 0 0 0 -1 6134.dat
+0 STEP
+0 // Plate  1 x  2 with Handles Type 1 (light_grey)
+1 7 0 -18 0 -1 0 0 0 1 0 0 0 -1 3839a.dat
+0 // Tile  2 x  2 with Pin (black)
+1 0 0 -18 -30 1 0 0 0 1 0 0 0 1 2460.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-5.ldr
+0 A structural submodel assembly with no direct pieces, referencing turret or sensor components.
+0 Name: 5980 - 5980-5.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-5-a.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-5-b.ldr
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-5-a.ldr
+0 A lime dome-topped cylindrical turret or sensor pod with black inverted dish and clip mounting plate.
+0 Name: 5980 - 5980-5-a.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Dish  3 x  3 Inverted (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 43898.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (lime)
+1 27 0 -24 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // Plate  1 x  1 Round (black)
+1 0 -10 -32 10 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 10 -32 10 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 -10 -32 -10 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (black)
+1 0 10 -32 -10 0 0 -1 0 1 0 1 0 0 6019.dat
+0 STEP
+0 // Cylinder  2 x  2 with Dome Top with Axle Hole and Blocked Stud (lime)
+1 27 0 -56 0 1 0 0 0 1 0 0 0 1 30367b.dat
+0 STEP
+0 // Cone  1 x  1 (black)
+1 0 0 -80 0 1 0 0 0 1 0 0 0 1 4589.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-5-b.ldr
+0 An empty placeholder submodel assembly with no direct pieces.
+0 Name: 5980 - 5980-5-b.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 SYNTH BEGIN HOSE_FLEXIBLE_19L 16
+0 1 0 0 -84 0 1 0 0 0 1 0 0 0 1 LS01.dat
+0 1 0 0 -92 0 1 0 0 0 1 0 0 0 1 LS01.dat
+0 1 0 5 -130 -15 0.707107 -0.5 -0.5 0 0.707107 -0.707107 0.707107 0.5 0.5 LS01.dat
+0 1 0 25 -50 -60 -0.707107 -0.5 0.5 0 -0.707107 -0.707107 0.707107 -0.5 0.5 LS01.dat
+0 1 0 30 -30 -34 -1 0 0 0 0 -1 0 -1 0 LS01.dat
+0 1 0 30 -30 -26 -1 0 0 0 0 -1 0 -1 0 LS01.dat
+0 SYNTH SHOW
+0 SYNTH SYNTHESIZED BEGIN
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 4 0 -84 0 1 0 0 0 1 0 0 0 1 5980 - LS90.dat
+1 4 -0.041 -95.954 -0.039 0.997 -0.008 0.076 -0.008 -1 -0.008 -0.076 -0.008 0.997 5980 - LS91.dat
+1 4 -0.228 -99.696 -0.241 0.992 -0.039 0.116 -0.034 -0.998 -0.047 -0.118 -0.042 0.992 5980 - LS91.dat
+1 4 -0.531 -103.408 -0.65 0.986 -0.07 0.154 -0.055 -0.993 -0.102 -0.16 -0.092 0.983 5980 - LS91.dat
+1 4 -0.911 -107.07 -1.344 0.978 -0.094 0.189 -0.06 -0.982 -0.177 -0.202 -0.162 0.966 5980 - LS91.dat
+1 4 -1.267 -110.621 -2.413 0.971 -0.095 0.219 -0.033 -0.962 -0.271 -0.237 -0.255 0.937 5980 - LS91.dat
+1 4 -1.423 -114.056 -3.926 0.966 -0.055 0.252 0.043 -0.929 -0.368 -0.254 -0.367 0.895 5980 - LS91.dat
+1 4 -1.168 -117.29 -5.817 0.956 0.037 0.29 0.168 -0.881 -0.442 -0.239 -0.471 0.849 5980 - LS91.dat
+1 4 -0.412 -120.322 -7.907 0.929 0.161 0.333 0.31 -0.828 -0.466 -0.201 -0.537 0.82 5980 - LS91.dat
+1 4 0.773 -123.178 -10.014 0.887 0.278 0.37 0.432 -0.782 -0.449 -0.164 -0.558 0.814 5980 - LS91.dat
+1 4 2.277 -125.939 -12.067 0.84 0.37 0.396 0.523 -0.748 -0.409 -0.145 -0.55 0.822 5980 - LS91.dat
+1 4 4 -128.627 -14.031 0.797 0.438 0.416 0.586 -0.726 -0.36 -0.144 -0.531 0.835 5980 - LS91.dat
+1 4 5.875 -131.266 -15.908 0.76 0.485 0.432 0.631 -0.711 -0.311 -0.156 -0.509 0.846 5980 - LS91.dat
+1 4 7.744 -133.743 -18.013 0.722 0.495 0.482 0.67 -0.673 -0.312 -0.171 -0.549 0.819 5980 - LS91.dat
+1 4 9.55 -135.927 -20.512 0.673 0.483 0.559 0.719 -0.603 -0.345 -0.17 -0.635 0.754 5980 - LS91.dat
+1 4 11.227 -137.636 -23.369 0.611 0.46 0.644 0.778 -0.497 -0.383 -0.144 -0.735 0.662 5980 - LS91.dat
+1 4 12.746 -138.738 -26.656 0.533 0.418 0.736 0.842 -0.344 -0.415 -0.08 -0.841 0.536 5980 - LS91.dat
+1 4 13.959 -138.992 -30.191 0.444 0.351 0.824 0.895 -0.14 -0.423 0.033 -0.926 0.377 5980 - LS91.dat
+1 4 14.84 -138.376 -33.827 0.356 0.265 0.896 0.916 0.088 -0.39 0.182 -0.96 0.211 5980 - LS91.dat
+1 4 15.379 -137.014 -37.28 0.282 0.176 0.943 0.899 0.295 -0.324 0.335 -0.939 0.075 5980 - LS91.dat
+1 4 15.667 -135.101 -40.514 0.222 0.102 0.97 0.855 0.457 -0.244 0.468 -0.884 -0.014 5980 - LS91.dat
+1 4 15.779 -132.786 -43.53 0.172 0.047 0.984 0.802 0.574 -0.168 0.573 -0.818 -0.061 5980 - LS91.dat
+1 4 15.763 -130.234 -46.257 0.129 0.009 0.992 0.747 0.657 -0.103 0.652 -0.754 -0.078 5980 - LS91.dat
+1 4 15.662 -127.492 -48.751 0.089 -0.018 0.996 0.693 0.719 -0.049 0.715 -0.695 -0.076 5980 - LS91.dat
+1 4 15.506 -124.514 -51.127 0.049 -0.036 0.998 0.642 0.767 -0.004 0.765 -0.641 -0.06 5980 - LS91.dat
+1 4 15.319 -121.475 -53.27 0.011 -0.046 0.999 0.594 0.804 0.031 0.805 -0.593 -0.036 5980 - LS91.dat
+1 4 15.117 -118.348 -55.237 -0.027 -0.052 0.998 0.547 0.835 0.059 0.837 -0.548 -0.006 5980 - LS91.dat
+1 4 14.91 -115.091 -57.076 -0.065 -0.054 0.996 0.502 0.861 0.08 0.862 -0.505 0.029 5980 - LS91.dat
+1 4 14.712 -111.721 -58.787 -0.104 -0.053 0.993 0.458 0.884 0.095 0.883 -0.465 0.068 5980 - LS91.dat
+1 4 14.537 -108.324 -60.331 -0.143 -0.048 0.989 0.416 0.903 0.104 0.898 -0.427 0.109 5980 - LS91.dat
+1 4 14.395 -104.906 -61.713 -0.181 -0.041 0.983 0.375 0.921 0.108 0.909 -0.388 0.151 5980 - LS91.dat
+1 4 14.289 -101.329 -62.999 -0.221 -0.031 0.975 0.335 0.936 0.106 0.916 -0.35 0.196 5980 - LS91.dat
+1 4 14.238 -97.814 -64.094 -0.259 -0.018 0.966 0.296 0.95 0.098 0.919 -0.311 0.24 5980 - LS91.dat
+1 4 14.246 -94.143 -65.079 -0.299 -0.003 0.954 0.259 0.962 0.084 0.919 -0.272 0.287 5980 - LS91.dat
+1 4 14.327 -90.54 -65.877 -0.337 0.015 0.941 0.222 0.973 0.064 0.915 -0.231 0.332 5980 - LS91.dat
+1 4 14.491 -86.857 -66.525 -0.377 0.037 0.926 0.188 0.982 0.037 0.907 -0.188 0.376 5980 - LS91.dat
+1 4 14.752 -83.172 -66.995 -0.416 0.062 0.907 0.155 0.988 0.004 0.896 -0.142 0.42 5980 - LS91.dat
+1 4 15.127 -79.415 -67.287 -0.455 0.09 0.886 0.124 0.992 -0.037 0.882 -0.093 0.463 5980 - LS91.dat
+1 4 15.62 -75.745 -67.369 -0.494 0.122 0.861 0.096 0.992 -0.085 0.864 -0.041 0.502 5980 - LS91.dat
+1 4 16.26 -72.023 -67.243 -0.533 0.158 0.831 0.072 0.987 -0.141 0.843 0.015 0.538 5980 - LS91.dat
+1 4 17.045 -68.419 -66.886 -0.571 0.198 0.797 0.052 0.977 -0.205 0.819 0.075 0.569 5980 - LS91.dat
+1 4 18.012 -64.805 -66.282 -0.609 0.242 0.756 0.038 0.96 -0.276 0.792 0.139 0.594 5980 - LS91.dat
+1 4 19.142 -61.36 -65.434 -0.644 0.288 0.708 0.031 0.935 -0.352 0.764 0.205 0.612 5980 - LS91.dat
+1 4 20.457 -58.042 -64.329 -0.678 0.336 0.654 0.03 0.901 -0.432 0.734 0.273 0.621 5980 - LS91.dat
+1 4 21.959 -54.891 -62.967 -0.709 0.385 0.591 0.038 0.857 -0.513 0.705 0.341 0.622 5980 - LS91.dat
+1 4 23.64 -51.942 -61.359 -0.735 0.433 0.522 0.053 0.804 -0.592 0.676 0.407 0.614 5980 - LS91.dat
+1 4 25.485 -49.228 -59.526 -0.757 0.477 0.447 0.076 0.744 -0.664 0.649 0.468 0.599 5980 - LS91.dat
+1 4 27.265 -46.529 -57.635 -0.782 0.476 0.402 0.092 0.727 -0.681 0.616 0.496 0.612 5980 - LS91.dat
+1 4 28.69 -43.643 -55.831 -0.822 0.41 0.395 0.078 0.768 -0.635 0.564 0.491 0.664 5980 - LS91.dat
+1 4 29.799 -40.604 -53.941 -0.867 0.325 0.377 0.041 0.802 -0.597 0.496 0.502 0.709 5980 - LS91.dat
+1 4 30.492 -37.561 -51.869 -0.912 0.221 0.345 -0.024 0.811 -0.584 0.409 0.541 0.735 5980 - LS91.dat
+1 4 30.736 -34.729 -49.416 -0.949 0.105 0.298 -0.112 0.771 -0.626 0.296 0.627 0.72 5980 - LS91.dat
+1 4 30.608 -32.439 -46.413 -0.968 0.001 0.252 -0.19 0.652 -0.734 0.164 0.758 0.631 5980 - LS91.dat
+1 4 30.326 -30.954 -42.943 -0.975 -0.056 0.217 -0.218 0.462 -0.86 0.052 0.885 0.462 5980 - LS91.dat
+1 4 30.095 -30.199 -39.264 -0.98 -0.061 0.189 -0.199 0.269 -0.943 -0.006 0.961 0.275 5980 - LS91.dat
+1 4 29.984 -29.931 -35.522 -0.987 -0.037 0.156 -0.16 0.121 -0.98 -0.018 0.992 0.126 5980 - LS91.dat
+1 4 29.989 -29.971 -31.784 -0.993 -0.008 0.118 -0.118 0.023 -0.993 -0.006 1 0.024 5980 - LS91.dat
+1 4 30 -30 -28.046 -0.997 0 0.077 -0.077 0 -0.997 0 1 0 5980 - LS91.dat
+1 4 30 -30 -14 -1 0 0 0 0 -1 0 1 0 5980 - LS90.dat
+0 SYNTH SYNTHESIZED END
+0 SYNTH END
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-6.ldr
+0 An interior furniture unit featuring a hinged cupboard with a door and a yellow minifig cup.
+0 Name: 5980 - 5980-6.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Hinge  1 x  2 Top (black)
+1 0 -20 0 0 0 0 1 0 1 0 -1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 20 0 0 0 0 1 0 1 0 -1 0 0 3938.dat
+0 STEP
+0 // Container Cupboard  2 x  3 x  2 with Solid Studs (light_grey)
+1 7 0 -48 0 1 0 0 0 1 0 0 0 1 4532.dat
+0 STEP
+0 // Container Cupboard  2 x  3 x  2 Door (black)
+1 0 -24 -44 -17 0 0 1 0 1 0 -1 0 0 4533.dat
+0 STEP
+0 // Minifig Cup (yellow)
+1 14 0 -72 -10 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 3899.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-7.ldr
+0 A small yellow cylindrical storage or container assembly with a round cross-stud tile top.
+0 Name: 5980 - 5980-7.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Brick  2 x  2 Round without Reinforcement (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (yellow)
+1 14 0 -24 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // Tile  2 x  2 Round with Cross Underside Stud (yellow)
+1 14 0 -32 0 1 0 0 0 1 0 0 0 1 4150.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8.ldr
+0 A set of locking hinge arms with dual and single fingers plus a friction pin for articulating joints.
+0 Name: 5980 - 5980-8.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-8-a.ldr
+1 0 160 -94 -60 0 0 1 0 1 0 -1 0 0 5980 - 5980-8-b.ldr
+1 0 -100 -102 -90 0 -0.383 0.924 0 0.924 0.383 -1 0 0 5980 - 5980-8-c.ldr
+1 0 -173.91 -132.615 -70 0 -0.383 0.924 0 0.924 0.383 -1 0 0 5980 - 5980-8-c.ldr
+1 0 -247.821 -163.229 -40 0 0 1 0 1 0 -1 0 0 5980 - 5980-8-d.ldr
+1 0 0 -142 110 1 0 0 0 1 0 0 0 1 5980 - 5980-8-e.ldr
+1 0 100 -238 110 1 0 0 0 0 -1 0 1 0 5980 - 5980-8-f.ldr
+1 0 190 -260 110 1 0 0 0 1 0 0 0 1 5980 - 5980-8-g.ldr
+0 // Hinge Arm Locking with Dual Finger and Axlehole (black)
+1 0 -40 -252 130 0.707 -0.707 0 0 0 1 -0.707 -0.707 0 30553.dat
+0 // Hinge Arm Locking with Single and Dual Fingers without Hole (black)
+1 0 -40 -282 130 0.707107 0.707107 0 0 0 -1 -0.707107 0.707107 0 30554a.dat
+0 // Hinge Arm Locking with Single Finger and Friction Pin (black)
+1 0 -51 -315.556 119 0.707107 0.5 -0.5 0 -0.707107 -0.707107 -0.707107 0.5 -0.5 41532.dat
+1 0 -67 -338.184 103 -0.707 -0.5 -0.5 0 0.707 -0.707 0.707 -0.5 -0.5 5980 - 5980-8-h.ldr
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-a.ldr
+0 An empty placeholder submodel assembly with no direct pieces.
+0 Name: 5980 - 5980-8-a.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-8-i.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-8-o.ldr
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-b.ldr
+0 A small plate assembly with a holed plate and a red holed connector plate.
+0 Name: 5980 - 5980-8-b.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  2 with Holes (light_grey)
+1 7 0 -10 0 1 0 0 0 1 0 0 0 1 2817.dat
+0 STEP
+0 // Plate  3 x  2 with Hole (red)
+1 4 0 -18 0 -1 0 0 0 1 0 0 0 -1 3176.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-c.ldr
+0 A simple technic beam and pin connector assembly in red and black.
+0 Name: 5980 - 5980-8-c.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  5 (red)
+1 4 0 0 -40 0 -1 0 1 0 0 0 0 1 32316.dat
+0 STEP
+0 // Technic Pin (black)
+1 0 -10 0 -80 1 0 0 0 1 0 0 0 1 3673.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-d.ldr
+0 A small frame assembly combining a yellow rectangular rod-frame plate with a holed plate.
+0 Name: 5980 - 5980-8-d.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  2 with Rod Frame Rectangular (yellow)
+1 14 0 -18 0 1 0 0 0 1 0 0 0 1 30094.dat
+0 // Plate  2 x  2 with Holes (light_grey)
+1 7 0 -10 0 1 0 0 0 1 0 0 0 1 2817.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-e.ldr
+0 A red and black tool storage rack holding minifig tools including screwdriver, wrenches, and hammer with clipped wall mounts.
+0 Name: 5980 - 5980-8-e.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  1 x 10 (red)
+1 4 0 30 0 1 0 0 0 1 0 0 0 1 4477.dat
+0 STEP
+0 // Plate  1 x 10 (red)
+1 4 0 22 0 1 0 0 0 1 0 0 0 1 4477.dat
+0 STEP
+0 // Plate  1 x  1 Round (yellow)
+1 14 -90 14 0 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (yellow)
+1 14 90 14 0 1 0 0 0 1 0 0 0 1 6141.dat
+0 STEP
+0 // Brick  1 x  8 (black)
+1 0 0 -2 0 1 0 0 0 1 0 0 0 1 3008.dat
+0 STEP
+0 // Technic Brick  1 x  1 with Hole (black)
+1 0 -90 -10 0 0 0 1 0 1 0 -1 0 0 6541.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (red)
+1 4 -70 -10 0 1 0 0 0 1 0 0 0 1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (red)
+1 4 -50 -10 0 -1 0 0 0 1 0 0 0 -1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (red)
+1 4 -30 -10 0 1 0 0 0 1 0 0 0 1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (red)
+1 4 -10 -10 0 -1 0 0 0 1 0 0 0 -1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (red)
+1 4 10 -10 0 1 0 0 0 1 0 0 0 1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (red)
+1 4 30 -10 0 -1 0 0 0 1 0 0 0 -1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (red)
+1 4 50 -10 0 1 0 0 0 1 0 0 0 1 4085c.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick U-Clip) (red)
+1 4 70 -10 0 -1 0 0 0 1 0 0 0 -1 4085c.dat
+0 // Technic Brick  1 x  1 with Hole (black)
+1 0 90 -10 0 0 0 1 0 1 0 -1 0 0 6541.dat
+0 STEP
+0 // Minifig Hose Nozzle with Side String Hole Simplified (black)
+1 0 -50 -14 32 1 0 0 0 0 -1 0 1 0 60849.dat
+0 // Minifig Hose Nozzle with Side String Hole Simplified (black)
+1 0 -10 -14 32 1 0 0 0 0 -1 0 1 0 60849.dat
+0 // Technic Beam  2 with Angled Bar (black)
+1 0 30 8 20 -0.707107 0 -0.707107 -0.707107 0 0.707107 0 1 0 85940.dat
+0 // Minifig Torch (light_grey)
+1 7 70 -14 20 -1 0 0 0 0 1 0 1 0 3959.dat
+0 // Minifig Tool Screwdriver (black)
+1 0 -70 -6 -20 1 0 0 0 1 0 0 0 1 55298.dat
+0 // Minifig Tool Box Wrench (black)
+1 0 -30 -6 -20 1 0 0 0 1 0 0 0 1 55300.dat
+0 // Minifig Tool Open End Wrench (black)
+1 0 10 -6 -20 1 0 0 0 1 0 0 0 1 55299.dat
+0 // Minifig Tool Hammer (black)
+1 0 50 -6 -20 1 0 0 0 1 0 0 0 1 55295.dat
+0 // Technic Axle  3 with Stud (dark_grey)
+1 8 -130 0 0 1 0 0 0 1 0 0 0 1 6587.dat
+0 STEP
+0 // Cone  1 x  1 (trans_yellow)
+1 46 -50 22 20 1 0 0 0 -1 0 0 0 -1 4589.dat
+0 // Cone  1 x  1 (trans_yellow)
+1 46 -10 22 20 1 0 0 0 -1 0 0 0 -1 4589.dat
+0 // Cone  1 x  1 (trans_yellow)
+1 46 70 22 20 1 0 0 0 -1 0 0 0 -1 4589.dat
+0 // Technic Axle Joiner Inline Smooth (yellow)
+1 14 -160 0 0 0 0 1 0 1 0 -1 0 0 59443.dat
+0 ROTSTEP 23 135 0 ABS
+0 // Technic Connector (Axle) with Axle 1.5 (light_grey)
+1 7 -210 0 0 0 1 0 -1 0 0 0 0 1 6553.dat
+0 // Brick  1 x 10 (red)
+1 4 0 -34 0 1 0 0 0 1 0 0 0 1 6111.dat
+0 ROTSTEP END
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 -90 -34 0 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 90 -34 0 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-f.ldr
+0 A curved-top clear canopy assembly mounted with hinges on a small brown and grey base.
+0 Name: 5980 - 5980-8-f.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Hinge  1 x  2 Top (black)
+1 0 -40 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Hinge  1 x  2 Top (black)
+1 0 40 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 STEP
+0 // Panel  6 x  6 x  9 with Curved Top (trans_clear)
+1 47 0 -226 -90 -1 0 0 0 1 0 0 0 -1 2572.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (brown)
+1 6 -20 -234 -100 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Panel  1 x  2 x  1 with Square Corners (light_grey)
+1 7 40 -250 -100 -1 0 0 0 1 0 0 0 -1 4865a.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-g.ldr
+0 An empty submodel containing no direct pieces.
+0 Name: 5980 - 5980-8-g.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-8-j.ldr
+1 0 0 -64 0 1 0 0 0 1 0 0 0 1 5980 - 5980-8-k.ldr
+1 0 0 -94 0 1 0 0 0 0.707 0.707 0 -0.707 0.707 5980 - 5980-8-l.ldr
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-h.ldr
+0 A single red Technic beam used as a structural connector.
+0 Name: 5980 - 5980-8-h.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5980 - 5980-8-m.ldr
+1 0 0 10 20 1 0 0 0 0 1 0 -1 0 5980 - 5980-8-n.ldr
+0 // Technic Beam  5 (red)
+1 4 0 20 10 0 0 1 1 0 0 0 1 0 32316.dat
+1 46 -40 20 20 -1 0 0 0 1 0 0 0 -1 5980 - 5970-5971-5980-5981-5983-5985-8399-0.ldr
+1 46 -20 20 20 -1 0 0 0 1 0 0 0 -1 5980 - 5970-5971-5980-5981-5983-5985-8399-0.ldr
+1 46 20 20 20 -1 0 0 0 1 0 0 0 -1 5980 - 5970-5971-5980-5981-5983-5985-8399-0.ldr
+1 46 40 20 20 -1 0 0 0 1 0 0 0 -1 5980 - 5970-5971-5980-5981-5983-5985-8399-0.ldr
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-i.ldr
+0 A large multi-room interior structure with red brick walls, support pillars, plates, cones, and accessory details including a rat, flags, and an oilcan.
+0 Name: 5980 - 5980-8-i.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Brick  2 x  2 (red)
+1 4 -160 0 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (red)
+1 4 160 0 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (red)
+1 4 -160 0 -100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (red)
+1 4 160 0 -100 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Brick  2 x  2 (red)
+1 4 -160 -24 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -60 -24 100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 60 -24 100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Brick  2 x  2 (red)
+1 4 160 -24 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (red)
+1 4 -160 -24 -100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -60 -24 -100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 60 -24 -100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Brick  2 x  2 (red)
+1 4 160 -24 -100 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Brick  2 x  2 (red)
+1 4 -160 -48 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (red)
+1 4 160 -48 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (red)
+1 4 -160 -48 -100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (red)
+1 4 160 -48 -100 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Brick  2 x  2 (red)
+1 4 -160 -72 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -60 -72 100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 60 -72 100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Brick  2 x  2 (red)
+1 4 160 -72 100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (red)
+1 4 -160 -72 -100 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -60 -72 -100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 60 -72 -100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Brick  2 x  2 (red)
+1 4 160 -72 -100 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Plate  6 x 12 (light_grey)
+1 7 -120 -80 0 0 0 1 0 1 0 -1 0 0 3028.dat
+0 // Plate  6 x 12 (light_grey)
+1 7 0 -80 0 0 0 1 0 1 0 -1 0 0 3028.dat
+0 // Plate  6 x 12 (light_grey)
+1 7 120 -80 0 0 0 1 0 1 0 -1 0 0 3028.dat
+0 STEP
+0 // Animal Rat (light_grey)
+1 7 0 -80 -10 0 0 1 0 1 0 -1 0 0 40234.dat
+0 // Flag  2 x  2 Trapezoid (Thin C-Clip) (tan)
+1 19 -52 -86 40 0 -1 0 -1 0 0 0 0 -1 44676.dat
+0 // Flag  2 x  2 Trapezoid (Thin C-Clip) (tan)
+1 19 -116 -86 -10 0 -0.707107 0.707107 -1 0 0 0 -0.707107 -0.707107 44676.dat
+0 // Minifig Tool Oilcan (black)
+1 0 -20 -98.173 59.761 1 0 0 0 0.976107 -0.217292 0 0.217292 0.976107 55296.dat
+0 STEP
+0 // Plate  1 x 10 (red)
+1 4 0 -88 110 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Plate  1 x 12 (black)
+1 0 0 -88 -110 1 0 0 0 1 0 0 0 1 60479.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 140 -88 -110 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 Round (black)
+1 0 170 -88 -110 1 0 0 0 1 0 0 0 1 6141.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 -90 -88 110 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (black)
+1 0 90 -88 110 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -60 -96 -110 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Brick  1 x  2 with Grille (dark_grey)
+1 8 160 -104 110 1 0 0 0 1 0 0 0 1 2877.dat
+0 // Brick  2 x  4 (red)
+1 4 -140 -104 80 1 0 0 0 1 0 0 0 1 3001.dat
+0 // Brick  1 x  4 with Studs on Side (light_grey)
+1 7 170 -104 40 0 0 -1 0 1 0 1 0 0 30414.dat
+0 // Cone  1 x  1 (light_grey)
+1 7 170 -104 -10 1 0 0 0 1 0 0 0 1 4589.dat
+0 // Brick  1 x  2 with Pin (light_grey)
+1 7 160 -104 -30 1 0 0 0 1 0 0 0 1 2458.dat
+0 // Brick  1 x  2 with Clip Vertical (Thick U-Clip) with Centre Notch (brown)
+1 6 130 -104 -40 0 0 1 0 1 0 -1 0 0 30237.dat
+0 // Brick  1 x  2 with Clip Vertical (Thick U-Clip) with Centre Notch (brown)
+1 6 130 -104 -80 0 0 1 0 1 0 -1 0 0 30237.dat
+0 // Brick  1 x  2 with Pin (light_grey)
+1 7 160 -104 -90 -1 0 0 0 1 0 0 0 -1 2458.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -60 -104 -110 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Technic Gear Rack  1 x  4 (light_grey)
+1 7 188 -94 40 0 -1 0 0 0 1 -1 0 0 3743.dat
+0 // Minifig Tool Power Drill (black)
+1 0 110 -96 -80 -1 0 0 0 1 0 0 0 -1 55297.dat
+0 STEP
+0 // Panel  1 x  2 x  2 with Hollow Studs (light_grey)
+1 7 -140 -152 90 1 0 0 0 1 0 0 0 1 4864b.dat
+0 // Panel  1 x  2 x  2 with Hollow Studs (light_grey)
+1 7 -110 -152 80 0 0 1 0 1 0 -1 0 0 4864b.dat
+0 // Tile  1 x  1 with Groove (black)
+1 0 150 -112 -30 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 130 -112 -60 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Tile  1 x  1 with Groove (black)
+1 0 150 -112 -90 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 -100 -112 -110 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Brick  1 x  1 Round with Hollow Stud (blue)
+1 1 -30 -112 -110 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (lime)
+1 27 -10 -112 -110 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (white)
+1 15 10 -112 -110 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 50 -112 -110 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Brick  1 x  2 with Grille (brown)
+1 6 80 -112 -110 1 0 0 0 1 0 0 0 1 2877.dat
+0 // Brick  1 x  2 with Pin (light_grey)
+1 7 120 -112 -110 1 0 0 0 1 0 0 0 1 2458.dat
+0 // Brick  1 x  2 with Grille (brown)
+1 6 160 -112 -110 1 0 0 0 1 0 0 0 1 2877.dat
+0 STEP
+0 // Technic Pin Long without Friction with Single Slot (blue)
+1 1 -100 -102 -110 0 0 1 0 1 0 -1 0 0 32556.dat
+0 STEP
+0 STEP
+0 // Tile  1 x  2 with Groove (chrome_gold)
+1 334 -130 -120 80 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // ~Hinge Control Stick and Base (Complete) (Obsolete) (yellow)
+1 14 -110 -120 -110 0 0 -1 0 1 0 1 0 0 4592c01.dat
+0 // Plate  1 x  1 Round (yellow)
+1 14 50 -120 -110 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  6 (brown)
+1 6 120 -120 -110 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+0 // Brick  1 x  2 x  2 (red)
+1 4 -120 -128 110 1 0 0 0 1 0 0 0 1 3245a.dat
+0 // Brick  1 x  2 x  2 (red)
+1 4 120 -128 110 1 0 0 0 1 0 0 0 1 3245a.dat
+0 // Brick  1 x  2 with Grille (dark_grey)
+1 8 160 -128 110 1 0 0 0 1 0 0 0 1 2877.dat
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 -170 -128 90 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Tile  1 x  2 with Groove (chrome_gold)
+1 334 -130 -128 80 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Brick  1 x  2 with Grille (brown)
+1 6 170 -128 60 0 0 -1 0 1 0 1 0 0 2877.dat
+0 // Brick  1 x  4 with Groove (light_grey)
+1 7 170 -128 0 0 0 -1 0 1 0 1 0 0 2653.dat
+0 // Cone  1 x  1 (light_grey)
+1 7 170 -128 -90 1 0 0 0 1 0 0 0 1 4589.dat
+0 // Slope Brick Curved  3 x  1 (red)
+1 4 -70 -128 -110 0 0 -1 0 1 0 1 0 0 50950.dat
+0 // Tile  1 x  6 (black)
+1 0 100 -128 -110 1 0 0 0 1 0 0 0 1 6636.dat
+0 // Plate  1 x  1 Round (black)
+1 0 170 -128 -110 1 0 0 0 1 0 0 0 1 6141.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (chrome_gold)
+1 334 -130 -136 80 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Plate  1 x 10 (black)
+1 0 170 -136 -20 0 0 1 0 1 0 -1 0 0 4477.dat
+0 // Tap  1 x  1 with Hole in Spout (black)
+1 0 -30 -136 -110 1 0 0 0 1 0 0 0 1 4599a.dat
+0 // Tap  1 x  1 with Hole in Spout (black)
+1 0 -10 -136 -110 1 0 0 0 1 0 0 0 1 4599a.dat
+0 // Tap  1 x  1 with Hole in Spout (black)
+1 0 10 -136 -110 1 0 0 0 1 0 0 0 1 4599a.dat
+0 STEP
+0 // Plate  1 x  1 Round (black)
+1 0 170 -144 -90 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (black)
+1 0 170 -144 -110 1 0 0 0 1 0 0 0 1 6141.dat
+0 STEP
+0 // Technic Brick  1 x  1 with Hole (black)
+1 0 -130 -152 110 0 0 1 0 1 0 -1 0 0 6541.dat
+0 // Technic Brick  1 x  1 with Hole (black)
+1 0 -110 -152 110 0 0 1 0 1 0 -1 0 0 6541.dat
+0 // Technic Brick  1 x  1 with Hole (black)
+1 0 110 -152 110 0 0 1 0 1 0 -1 0 0 6541.dat
+0 // Brick  1 x  2 with Clip Vertical (Thick U-Clip) with Centre Notch (brown)
+1 6 140 -152 110 1 0 0 0 1 0 0 0 1 30237.dat
+0 // Brick  1 x  1 with Handle (red)
+1 4 170 -152 110 0 0 -1 0 1 0 1 0 0 2921.dat
+0 // Brick  1 x  1 Round with Hollow Stud (yellow)
+1 14 -170 -152 90 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Door  1 x  3 x  2 Left (yellow)
+1 14 -170 -152 70 0 0 1 0 1 0 -1 0 0 3189.dat
+0 STEP
+0 // Technic Pin (light_grey)
+1 7 100 -142 110 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Minifig Circular Blade Saw (dark_grey)
+1 8 140 -146 90 0 0 1 0 1 0 -1 0 0 30194.dat
+0 STEP
+0 // Brick  1 x  2 with Grille (dark_grey)
+1 8 170 -160 -60 0 0 1 0 1 0 -1 0 0 2877.dat
+0 STEP
+0 // Plate  1 x  2 (brown)
+1 6 170 -168 -60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Brick  1 x  1 with Handle (red)
+1 4 170 -176 110 0 0 -1 0 1 0 1 0 0 2921.dat
+0 // Brick  2 x  4 (red)
+1 4 -140 -176 100 1 0 0 0 1 0 0 0 1 3001.dat
+0 // Brick  1 x  4 with Studs on Side (light_grey)
+1 7 -140 -176 70 1 0 0 0 1 0 0 0 1 30414.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 170 -176 -60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Plate  4 x  4 with 4 Studs on One Edge (black)
+1 0 -140 -136 52 1 0 0 0 0 -1 0 1 0 6179.dat
+0 STEP
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (yellow)
+1 14 -120 -176 70 0 0 -1 0 1 0 1 0 0 61409.dat
+0 // Minifig Loudhailer (black)
+1 0 170 -166 -90 0 1 0 0 0 -1 -1 0 0 4349.dat
+0 // Minifig Loudhailer (black)
+1 0 170 -166 -110 0 1 0 0 0 -1 -1 0 0 4349.dat
+0 STEP
+0 // Slope Brick 33  3 x  2 (black)
+1 0 -160 -200 110 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Brick  1 x  2 with Handle (dark_grey)
+1 8 -120 -200 110 1 0 0 0 1 0 0 0 1 30236.dat
+0 // Brick  1 x  2 x  2 (red)
+1 4 120 -200 110 1 0 0 0 1 0 0 0 1 3245a.dat
+0 // Brick  1 x  1 with Handle (red)
+1 4 170 -200 110 0 0 -1 0 1 0 1 0 0 2921.dat
+0 // Brick  1 x  1 x  5 with Hollow Stud (brown)
+1 6 170 -200 90 1 0 0 0 1 0 0 0 1 2453a.dat
+0 // Brick  1 x  2 Log (black)
+1 0 170 -200 -60 0 0 1 0 1 0 -1 0 0 30136.dat
+0 STEP
+0 // Bar  7 x  3 with Double Clips (light_grey)
+1 7 190 -164 110 0 1 0 1 0 0 0 0 -1 6020.dat
+0 // Minifig Chain End for Chain  6L and 17L (dark_grey)
+1 8 186 -166 -110 0 -1 0 0 0 1 -1 0 0 30104k01.dat
+0 // Minifig Mechanical Arm with Clips Parallel (black)
+1 0 -120 -190 90 1 0 0 0 -0.939693 0.34202 0 -0.34202 -0.939693 30377.dat
+0 // Cone  1 x  1 (light_grey)
+1 7 -104 -190 90 0 1 0 -1 0 0 0 0 1 4589.dat
+0 STEP
+0 // Brick  2 x  1 x  1.333 with Curved Top (black)
+1 0 170 -216 -70 1 0 0 0 1 0 0 0 1 6091.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (light_grey)
+1 7 170 -216 -70 0 0 -1 0 1 0 1 0 0 6019.dat
+0 STEP
+0 // Minifig Barbed Wire Loop (metallic_silver)
+1 80 190 -214 -70 0 1 0 0 0 -1 -1 0 0 62700.dat
+0 // Minifig Barbed Wire Loop (metallic_silver)
+1 80 -100 -230.044 88.855 1 0 0 0 0 -1 0 1 0 62700.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -150 -224 110 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Brick  1 x 16 (black)
+1 0 20 -224 110 1 0 0 0 1 0 0 0 1 2465.dat
+0 // Brick  1 x  8 (brown)
+1 6 170 -224 20 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Arch  1 x  3 x  2 with Curved Top (black)
+1 0 170 -232 -70 1 0 0 0 1 0 0 0 1 6005.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 -140 -232 110 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Short Arm (red)
+1 4 -40 -232 110 -1 0 0 0 1 0 0 0 -1 88072.dat
+0 // Plate  1 x 10 (black)
+1 0 170 -232 20 0 0 1 0 1 0 -1 0 0 4477.dat
+0 STEP
+0 // Minifig Chain End for Chain  6L and 17L (dark_grey)
+1 8 170 -240 110 -0.707 0 0.707 0 1 0 -0.707 0 -0.707 30104k01.dat
+0 STEP
+0 // Slope Brick Curved  3 x  1 (red)
+1 4 -70 -248 110 0 0 1 0 1 0 -1 0 0 50950.dat
+0 // Slope Brick Curved  3 x  1 (red)
+1 4 -10 -248 110 0 0 -1 0 1 0 1 0 0 50950.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 60 -248 110 1 0 0 0 1 0 0 0 1 3937.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 100 -248 110 1 0 0 0 1 0 0 0 1 3937.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 140 -248 110 1 0 0 0 1 0 0 0 1 3937.dat
+0 STEP
+0 // Cone  1 x  1 (light_grey)
+1 7 170 -256 30 1 0 0 0 1 0 0 0 1 4589.dat
+0 // Cone  1 x  1 (light_grey)
+1 7 170 -256 -30 1 0 0 0 1 0 0 0 1 4589.dat
+0 STEP
+0 // Minifig Flame with Pegs (trans_orange)
+1 57 170 -262 30 0 -1 0 0 0 -1 1 0 0 6126a.dat
+0 // Minifig Flame with Pegs (trans_orange)
+1 57 170 -262 -30 0 -1 0 0 0 -1 1 0 0 6126a.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-j.ldr
+0 A spiral staircase axle assembly mounted with a Technic pin.
+0 Name: 5980 - 5980-8-j.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Staircase Spiral Axle (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 40244.dat
+0 STEP
+0 // Technic Pin  1/2 (light_grey)
+1 7 0 64 0 0 -1 0 1 0 0 0 0 1 4274.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-k.ldr
+0 A locking hinge arm mechanism with an axle pin for articulation.
+0 Name: 5980 - 5980-8-k.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Axle Pin (blue)
+1 1 0 0 0 0 1 0 -1 0 0 0 0 1 3749.dat
+0 STEP
+0 // Hinge Arm Locking with Single Finger and Axlehole (dark_grey)
+1 8 0 -20 0 1 0 0 0 0 1 0 -1 0 30552.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-l.ldr
+0 A small radar or antenna assembly combining a red inverted dish, whip antenna, and Technic bushing components.
+0 Name: 5980 - 5980-8-l.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Axle  3 with Stud (dark_grey)
+1 8 0 -40 0 0 1 0 -1 0 0 0 0 1 6587.dat
+0 STEP
+0 // Antenna  8H Whip (black)
+1 0 0 -78 0 1 0 0 0 1 0 0 0 1 2569.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 0 -63 0 1 0 0 0 0 -1 0 1 0 32123a.dat
+0 STEP
+0 // Dish  6 x  6 Inverted Webbed Type 1 (red)
+1 4 0 -50 0 1 0 0 0 -1 0 0 0 -1 4285a.dat
+0 STEP
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 0 -40 0 1 0 0 0 0 -1 0 1 0 3713.dat
+0 STEP
+0 // Hinge Arm Locking with Dual Finger and Axlehole (black)
+1 0 0 -10 0 1 0 0 0 0 -1 0 1 0 30553.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-m.ldr
+0 A hinged plate assembly with toothed flexible tips and yellow grille slopes forming a mechanical jaw or clamp.
+0 Name: 5980 - 5980-8-m.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  2 with Holes (light_grey)
+1 7 0 -10 0 0 0 1 0 1 0 -1 0 0 2817.dat
+0 // Plate  1 x  2 with Tooth and Flexible LightBluishGrey Tip (dark_grey)
+1 8 -80 -10 -10 -1 0 0 0 1 0 0 0 -1 61406p02.dat
+0 // Plate  1 x  2 with Tooth and Flexible LightBluishGrey Tip (dark_grey)
+1 8 80 -10 -10 -1 0 0 0 1 0 0 0 -1 61406p02.dat
+0 STEP
+0 // Plate  1 x  2 (brown)
+1 6 0 -18 10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x 10 (red)
+1 4 0 -18 -10 1 0 0 0 1 0 0 0 1 4477.dat
+0 STEP
+0 // Plate  4 x  6 with 12 Studs on Three Edges (black)
+1 0 0 -26 20 -1 0 0 0 1 0 0 0 -1 6180.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (yellow)
+1 14 -80 -18 -10 0 0 1 0 1 0 -1 0 0 61409.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (yellow)
+1 14 80 -18 -10 0 0 -1 0 1 0 1 0 0 61409.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-n.ldr
+0 A short yellow Technic beam connector joined with two black pins.
+0 Name: 5980 - 5980-8-n.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  2 (yellow)
+1 14 0 -10 0 1 0 0 0 1 0 0 0 1 43857.dat
+0 STEP
+0 // Technic Pin (black)
+1 0 0 0 10 0 -1 0 1 0 0 0 0 1 3673.dat
+0 // Technic Pin (black)
+1 0 0 0 -10 0 -1 0 1 0 0 0 0 1 3673.dat
+0 
+0
+
+
+
+0 STEP
+0 FILE 5980 - 5980-8-o.ldr
+0 A 21-link dark grey chain assembly.
+0 Name: 5980 - 5980-8-o.ldr
+0 Author: Massimo Maso
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 SYNTH BEGIN MINIFIG_CHAIN_16L 16
+0 1 0 185 -147 -108 0 0 -1 0 -1 0 -1 0 0 LS01.dat
+0 1 0 200 -116 -62 0 0 -1 1 0 0 0 -1 0 LS01.dat
+0 1 0 200 -156 30 0 0 -1 0.707107 0.707107 0 0.707107 -0.707107 0 LS01.dat
+0 1 0 200 -196 75 0 0 -1 0.5 0.866026 0 0.866026 -0.5 0 LS01.dat
+0 1 0 180.607 -228 99.393 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 LS01.dat
+0 SYNTH SHOW
+0 SYNTH SYNTHESIZED BEGIN
+0 ROTATION CENTER 0 0 0 1 "Custom" 
+0 ROTATION CONFIG 0 0
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 185.92 -138.126 -106.813 0.995 0.102 0.007 -0.102 0.986 0.132 -0.007 0.132 -0.991 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 189.403 -126.336 -101.345 -0.136 0.332 0.933 -0.523 0.776 -0.352 0.842 0.536 -0.067 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 194.284 -119.414 -91.026 -0.863 0.365 -0.348 0.475 0.355 -0.805 0.171 0.861 0.48 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 198.097 -116.722 -78.095 0.467 0.225 -0.855 0.861 0.106 0.498 -0.203 0.969 0.144 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 199.719 -116.081 -64.305 0.853 0.056 0.519 -0.521 0.013 0.854 -0.041 0.998 -0.04 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -116.505 -50.34 -0.549 0 0.836 -0.834 -0.054 -0.549 -0.045 0.999 -0.03 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -118.152 -36.457 -0.817 0 -0.577 0.57 -0.153 -0.807 0.088 0.988 -0.125 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -121.402 -22.86 0.603 0 -0.797 0.766 -0.276 0.58 0.22 0.961 0.167 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -126.449 -9.853 0.777 0 0.629 -0.575 -0.408 0.709 -0.257 0.913 0.317 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -133.226 2.362 -0.655 0 0.756 -0.643 -0.526 -0.557 -0.398 0.85 -0.345 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -141.404 13.701 -0.734 0 -0.679 0.535 -0.616 -0.578 0.419 0.788 -0.452 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -150.591 24.276 0.703 0 -0.711 0.523 -0.677 0.517 0.481 0.736 0.476 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -160.063 34.586 0.687 0 0.726 -0.535 -0.676 0.506 -0.491 0.737 0.465 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -168.465 45.702 -0.749 0 0.663 -0.549 -0.56 -0.62 -0.371 0.828 -0.419 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -176.188 57.375 -0.638 0 -0.77 0.645 -0.547 -0.534 0.421 0.837 -0.349 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 200 -185.635 67.516 0.791 0 -0.612 0.407 -0.747 0.525 0.458 0.664 0.591 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 199.642 -196.882 75.726 0.588 -0.04 0.808 -0.461 -0.837 0.294 -0.665 0.545 0.51 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 195.57 -206.216 84.699 -0.783 -0.43 0.449 -0.146 -0.575 -0.805 -0.605 0.696 -0.387 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 187.644 -213.051 93.523 -0.337 -0.651 -0.68 0.892 -0.453 -0.009 0.302 0.609 -0.733 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 181.901 -223.686 98.423 0.678 -0.284 -0.678 -0.039 -0.935 0.352 0.734 0.213 0.645 30104k02.dat
+0 // Minifig Chain Link for Chain  6L and 17L (dark_grey)
+1 8 180.607 -236.954 99.393 0.707 0 0.707 0 -1 0 -0.707 0 0.707 30104k02.dat
+0 SYNTH SYNTHESIZED END
+0 SYNTH END
+0 
+0 
+0 
+0 
+0 
+0
+0
+
+
+
+0 STEP
+0 FILE 5980 - LS90.dat
+0 A custom geometric primitive built from discs, cylinders, circles, and rings forming a round or tubular shape.
+0 Name: 5980 - LS90.dat
+0 Author: J.C. Tchang [tchang]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 // Disc 1.0 (main_colour)
+1 16 0 20 0 4 0 0 0 -1 0 0 0 4 4-4disc.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 20 0 4 0 0 0 1 0 0 0 4 4-4edge.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 20 0 4 0 0 0 -20 0 0 0 4 4-4cyli.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 0 4 0 0 0 1 0 0 0 4 4-4edge.dat
+0 //
+0 // Ring  4 x 1.0 (main_colour)
+1 16 0 0 0 1 0 0 0 -1 0 0 0 1 4-4ring4.dat
+0 // ~Ring 10 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 0 0.5 0 0 0 -1 0 0 0 0.5 4-4rin10.dat
+0 // Circle 0.125 (main_colour)
+1 16 0 0 0 5.08134 0 -2.10476 0 1 0 2.10476 0 5.08134 1-8edge.dat
+0 // Circle 0.125 (main_colour)
+1 16 0 0 0 -2.10476 0 -5.08134 0 1 0 5.08134 0 -2.10476 1-8edge.dat
+0 // Circle 0.125 (main_colour)
+1 16 0 0 0 -5.08134 0 2.10476 0 1 0 -2.10476 0 -5.08134 1-8edge.dat
+0 // Circle 0.125 (main_colour)
+1 16 0 0 0 2.10476 0 5.08134 0 1 0 -5.08134 0 2.10476 1-8edge.dat
+2 24 5.30095 0 1 5.081 0 2.105
+2 24 5.30095 0 -1 5.081 0 -2.105
+2 24 -1 0 5.30095 -2.105 0 5.081
+2 24 1 0 5.30095 2.105 0 5.081
+2 24 -5.30095 0 -1 -5.081 0 -2.105
+2 24 -5.30095 0 1 -5.081 0 2.105
+2 24 1 0 -5.30095 2.105 0 -5.081
+2 24 -1 0 -5.30095 -2.105 0 -5.081
+0 // Cylinder 1.0 (main_colour)
+1 16 0 0 0 5.5 0 0 0 -2 0 0 0 5.5 4-4cyli.dat
+0 //
+0 // Circle 1.0 (main_colour)
+1 16 0 -2 0 5.5 0 0 0 1 0 0 0 5.5 4-4edge.dat
+0 // ~Ring 21 x 1.0 (Obsolete) (main_colour)
+1 16 0 -2 0 0.25 0 0 0 1 0 0 0 0.25 4-4rin21.dat
+0 // Ring  6 x 1.0 (main_colour)
+1 16 0 -2 0 0.75 0 0 0 1 0 0 0 0.75 4-4ring6.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 -2 0 4.5 0 0 0 1 0 0 0 4.5 4-4edge.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -2 0 4.5 0 0 0 -6 0 0 0 4.5 4-4cyli.dat
+0 //
+0 // Circle 1.0 (main_colour)
+1 16 0 -8 0 4.5 0 0 0 1 0 0 0 4.5 4-4edge.dat
+0 // Ring  8 x 1.0 (main_colour)
+1 16 0 -8 0 0.5 0 0 0 1 0 0 0 0.5 4-4ring8.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 -8 0 4 0 0 0 1 0 0 0 4 4-4edge.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 -8 0 4 0 0 0 -3.9 0 0 0 4 4-4cyli.dat
+0 //
+4 16 -4.5 -5.5 0 -4.301 -5.699 1 -6 -4 1 -6 -4 -1
+3 16 -6 -4 -1 -4.301 -5.699 -1 -4.5 -5.5 0
+2 24 -6 -4 -1 -4.30139 -5.69861 -1
+2 24 -6 -4 1 -4.30139 -5.69861 1
+2 24 -4.30139 -5.69861 -1 -4.5 -5.5 0
+2 24 -4.30139 -5.69861 1 -4.5 -5.5 0
+4 16 -6 0 -1 -6 0 1 -5.30095 0 1 -5.5 0 0
+3 16 -5.5 0 0 -5.30095 0 -1 -6 0 -1
+2 24 -5.30095 0 -1 -6 0 -1
+2 24 -5.30095 0 1 -6 0 1
+4 16 -6 -4 -1 -6 0 -1 -5.30095 0 -1 -5.30095 -2 -1
+4 16 -4.30139 -2 -1 -4.30139 -5.69861 -1 -6 -4 -1 -5.30095 -2 -1
+2 24 -5.30095 0 -1 -5.30095 -2 -1
+2 24 -4.30139 -2 -1 -4.30139 -5.69861 -1
+2 24 -5.30095 -2 -1 -4.30139 -2 -1
+4 16 -5.301 -2 1 -5.301 0 1 -6 0 1 -6 -4 1
+4 16 -5.301 -2 1 -6 -4 1 -4.301 -5.699 1 -4.301 -2 1
+2 24 -5.30095 0 1 -5.30095 -2 1
+2 24 -4.30139 -2 1 -4.30139 -5.69861 1
+2 24 -5.30095 -2 1 -4.30139 -2 1
+0 // Rectangle (main_colour)
+1 16 -6 -2 0 0 1 0 0 0 -2 -1 0 0 rect.dat
+0 //
+4 16 0 -5.5 4.5 1 -5.699 4.301 1 -4 6 -1 -4 6
+3 16 -1 -4 6 -1 -5.699 4.301 0 -5.5 4.5
+2 24 -1 -4 6 -1 -5.69861 4.30139
+2 24 1 -4 6 1 -5.69861 4.30139
+2 24 -1 -5.69861 4.30139 0 -5.5 4.5
+2 24 1 -5.69861 4.30139 0 -5.5 4.5
+4 16 -1 0 6 1 0 6 1 0 5.30095 0 0 5.5
+3 16 0 0 5.5 -1 0 5.30095 -1 0 6
+2 24 -1 0 5.30095 -1 0 6
+2 24 1 0 5.30095 1 0 6
+4 16 -1 -4 6 -1 0 6 -1 0 5.30095 -1 -2 5.30095
+4 16 -1 -2 4.30139 -1 -5.69861 4.30139 -1 -4 6 -1 -2 5.30095
+2 24 -1 0 5.30095 -1 -2 5.30095
+2 24 -1 -2 4.30139 -1 -5.69861 4.30139
+2 24 -1 -2 5.30095 -1 -2 4.30139
+4 16 1 -2 5.301 1 0 5.301 1 0 6 1 -4 6
+4 16 1 -2 5.301 1 -4 6 1 -5.699 4.301 1 -2 4.301
+2 24 1 0 5.30095 1 -2 5.30095
+2 24 1 -2 4.30139 1 -5.69861 4.30139
+2 24 1 -2 5.30095 1 -2 4.30139
+0 // Rectangle (main_colour)
+1 16 0 -2 6 -1 0 0 0 0 -2 0 -1 0 rect.dat
+0 //
+4 16 4.5 -5.5 0 4.301 -5.699 -1 6 -4 -1 6 -4 1
+3 16 6 -4 1 4.301 -5.699 1 4.5 -5.5 0
+2 24 6 -4 1 4.30139 -5.69861 1
+2 24 6 -4 -1 4.30139 -5.69861 -1
+2 24 4.30139 -5.69861 1 4.5 -5.5 0
+2 24 4.30139 -5.69861 -1 4.5 -5.5 0
+4 16 6 0 1 6 0 -1 5.30095 0 -1 5.5 0 0
+3 16 5.5 0 0 5.30095 0 1 6 0 1
+2 24 5.30095 0 1 6 0 1
+2 24 5.30095 0 -1 6 0 -1
+4 16 6 -4 1 6 0 1 5.30095 0 1 5.30095 -2 1
+4 16 4.30139 -2 1 4.30139 -5.69861 1 6 -4 1 5.30095 -2 1
+2 24 5.30095 0 1 5.30095 -2 1
+2 24 4.30139 -2 1 4.30139 -5.69861 1
+2 24 5.30095 -2 1 4.30139 -2 1
+4 16 5.301 -2 -1 5.301 0 -1 6 0 -1 6 -4 -1
+4 16 5.301 -2 -1 6 -4 -1 4.301 -5.699 -1 4.301 -2 -1
+2 24 5.30095 0 -1 5.30095 -2 -1
+2 24 4.30139 -2 -1 4.30139 -5.69861 -1
+2 24 5.30095 -2 -1 4.30139 -2 -1
+0 // Rectangle (main_colour)
+1 16 6 -2 0 0 -1 0 0 0 -2 1 0 0 rect.dat
+0 //
+4 16 0 -5.5 -4.5 -1 -5.699 -4.301 -1 -4 -6 1 -4 -6
+3 16 1 -4 -6 1 -5.699 -4.301 0 -5.5 -4.5
+2 24 1 -4 -6 1 -5.69861 -4.30139
+2 24 -1 -4 -6 -1 -5.69861 -4.30139
+2 24 1 -5.69861 -4.30139 0 -5.5 -4.5
+2 24 -1 -5.69861 -4.30139 0 -5.5 -4.5
+4 16 1 0 -6 -1 0 -6 -1 0 -5.30095 0 0 -5.5
+3 16 0 0 -5.5 1 0 -5.30095 1 0 -6
+2 24 1 0 -5.30095 1 0 -6
+2 24 -1 0 -5.30095 -1 0 -6
+4 16 1 -4 -6 1 0 -6 1 0 -5.30095 1 -2 -5.30095
+4 16 1 -2 -4.30139 1 -5.69861 -4.30139 1 -4 -6 1 -2 -5.30095
+2 24 1 0 -5.30095 1 -2 -5.30095
+2 24 1 -2 -4.30139 1 -5.69861 -4.30139
+2 24 1 -2 -5.30095 1 -2 -4.30139
+4 16 -1 -2 -5.301 -1 0 -5.301 -1 0 -6 -1 -4 -6
+4 16 -1 -2 -5.301 -1 -4 -6 -1 -5.699 -4.301 -1 -2 -4.301
+2 24 -1 0 -5.30095 -1 -2 -5.30095
+2 24 -1 -2 -4.30139 -1 -5.69861 -4.30139
+2 24 -1 -2 -5.30095 -1 -2 -4.30139
+0 // Rectangle (main_colour)
+1 16 0 -2 -6 1 0 0 0 0 -2 0 1 0 rect.dat
+0 //
+
+
+
+0 STEP
+0 FILE 5980 - LS91.dat
+0 A custom geometric primitive composed of circles and nested cones forming a tapered or conical shape.
+0 Name: 5980 - LS91.dat
+0 Author: J.C. Tchang [tchang]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 // Circle 1.0 (main_colour)
+1 16 0 1.5 0 4 0 0 0 1 0 0 0 4 4-4edge.dat
+0 // Cone  4 x 1.0 (main_colour)
+1 16 0 1.25 0 1 0 0 0 0.25 0 0 0 1 4-4con4.dat
+1 16 0 0 0 5 0 0 0 5 0 0 0 5 t01o2500.dat
+1 16 0 0 0 5 0 0 0 -5 0 0 0 5 t01o2500.dat
+0 // Cone  4 x 1.0 (main_colour)
+1 16 0 -1.25 0 1 0 0 0 -0.25 0 0 0 1 4-4con4.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 -1.5 0 4 0 0 0 1 0 0 0 4 4-4edge.dat
+0 //
+0 // Cone  7 x 1.0 (main_colour)
+1 16 0 -1.5 0 0.5 0 0 0 -2.8 0 0 0 0.5 4-4con7.dat
+0 // Cone  7 x 1.0 (main_colour)
+1 16 0 1.5 0 0.5 0 0 0 2.8 0 0 0 0.5 4-4con7.dat
+0 //
+
+
+
+
+
+
+
+
+

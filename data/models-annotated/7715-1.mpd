@@ -1,0 +1,890 @@
+0 FILE 7715 - main.ldr
+0 A complete train set featuring a red locomotive, a passenger carriage, a small train station, curved track, and five minifigures including passengers and conductors.
+0 Name: 7715 - main.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+1 0 -594 -64 -325.27 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 7715 - loco.ldr
+1 0 -322.439 -64 -53.742 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 7715 - carriage.ldr
+1 0 -50.912 -64 217.787 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 7715 - carriage.ldr
+1 0 0 0 0 -0.707107 0 0.707107 0 1 0 -0.707107 0 -0.707107 7715 - mini train station.ldr
+1 0 -937.623 0 -510.532 -0.707107 0 0.707107 0 1 0 -0.707107 0 -0.707107 7715 - traintrack.ldr
+1 4 -240 0 -240 1 0 0 0 1 0 0 0 1 7715 - minifig 1.ldr
+1 4 -140 0 -250 1 0 0 0 1 0 0 0 1 7715 - minifig 2.ldr
+1 4 -40 0 -240 1 0 0 0 1 0 0 0 1 7715 - minifig 3.ldr
+1 4 60 0 -250 1 0 0 0 1 0 0 0 1 7715 - minifig 4.ldr
+1 4 160 0 -230 1 0 0 0 1 0 0 0 1 7715 - minifig 5.ldr
+0 STEP
+
+
+
+
+
+0 STEP
+0 FILE 7715 - loco.ldr
+0 A red diesel-style locomotive built on a train base with wheels, slopes, headlights, and magnetic couplings.
+0 Name: 7715 - loco.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+0 // Train Base  6 x 16 (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 4178.dat
+0 STEP
+0 // Brick  2 x 10 (red)
+1 4 0 8 20 1 0 0 0 1 0 0 0 1 3006.dat
+0 // Brick  2 x 10 (red)
+1 4 0 8 -20 1 0 0 0 1 0 0 0 1 3006.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -110 8 -20 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -110 8 20 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 110 8 20 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 110 8 -20 0 0 -1 0 1 0 1 0 0 3660.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -90 32 0 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 90 32 0 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 90 32 30 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 90 32 -30 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 -90 32 -30 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (red)
+1 4 -90 32 30 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 STEP
+0 // Train Coupling Type 1 (black)
+1 0 -150 24 0 0 0 1 0 1 0 -1 0 0 4023.dat
+0 // ~_Magnet Cylindrical in Casing Black (Obsolete) (black)
+1 0 -184 28 0 0 0 1 0 1 0 -1 0 0 73092.dat
+0 // Train Coupling Type 1 (black)
+1 0 150 24 0 0 0 -1 0 1 0 1 0 0 4023.dat
+0 // ~_Magnet Cylindrical in Casing Black (Obsolete) (black)
+1 0 184 28 0 0 0 -1 0 1 0 1 0 0 73092.dat
+0 STEP
+0 // Brick  1 x  4 (red)
+1 4 -30 32 0 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  4 (red)
+1 4 30 32 0 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  2 x  4 Black with Train Wheels Small (Complete) (red)
+1 4 -60 32 0 0 0 -1 0 1 0 1 0 0 4180c02.dat
+0 // Brick  2 x  4 Black with Train Wheels Small (Complete) (red)
+1 4 0 32 0 0 0 -1 0 1 0 1 0 0 4180c02.dat
+0 // Brick  2 x  4 Black with Train Wheels Small (Complete) (red)
+1 4 60 32 0 0 0 -1 0 1 0 1 0 0 4180c02.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (red)
+1 4 -120 8 -50 1 0 0 0 1 0 0 0 1 44728.dat
+0 // Tile  2 x  2 with Groove (red)
+1 4 -120 28 -72 1 0 0 0 0 -1 0 1 0 3068b.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (red)
+1 4 -120 8 50 -1 0 0 0 1 0 0 0 -1 44728.dat
+0 // Tile  2 x  2 with Groove (red)
+1 4 -120 28 72 -1 0 0 0 0 -1 0 -1 0 3068b.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (red)
+1 4 -130 -24 50 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 -144 -14 50 0 1 0 0 0 -1 -1 0 0 6141.dat
+0 // Brick  1 x  1 with Headlight (red)
+1 4 -130 -24 -50 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 -144 -14 -50 0 1 0 0 0 -1 -1 0 0 6141.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 150 -24 -50 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 164 -14 -50 0 -1 0 0 0 -1 1 0 0 6141.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 150 -24 50 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 -110 -24 50 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (red)
+1 4 -110 -24 -50 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Plate  1 x  2 (red)
+1 4 80 -8 50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 with Ladder (red)
+1 4 120 -8 50 -1 0 0 0 1 0 0 0 -1 4175.dat
+0 // Plate  1 x  2 with Ladder (red)
+1 4 120 -8 -50 1 0 0 0 1 0 0 0 1 4175.dat
+0 // Plate  1 x  2 (red)
+1 4 80 -8 -50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  4 (red)
+1 4 50 0 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 164 -14 50 0 -1 0 0 0 -1 1 0 0 6141.dat
+0 // Plate  2 x  4 (red)
+1 4 -60 0 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -130 -24 10 -1 0 0 0 1 0 0 0 -1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 150 -48 50 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 150 -48 -50 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -130 -24 -10 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Brick  1 x  1 (black)
+1 0 -70 -24 30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -70 -24 -30 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -100 -24 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -100 -24 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  6 (black)
+1 0 0 -24 -30 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  6 (black)
+1 0 0 -24 -50 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  6 (black)
+1 0 0 -24 30 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  6 (black)
+1 0 0 -24 50 1 0 0 0 1 0 0 0 1 3009.dat
+0 STEP
+0 // Brick  1 x  4 (black)
+1 0 -100 -48 30 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 -100 -48 -30 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (black)
+1 0 -120 -32 0 0 0 1 0 1 0 -1 0 0 3956.dat
+0 // Brick  2 x  3 (black)
+1 0 -30 -48 40 1 0 0 0 1 0 0 0 1 3002.dat
+0 // Brick  2 x  3 (black)
+1 0 30 -48 40 1 0 0 0 1 0 0 0 1 3002.dat
+0 // Brick  2 x  3 (black)
+1 0 -30 -48 -40 1 0 0 0 1 0 0 0 1 3002.dat
+0 // Brick  2 x  3 (black)
+1 0 30 -48 -40 1 0 0 0 1 0 0 0 1 3002.dat
+0 // Brick  1 x  1 x  2 with Shutter Holder (black)
+1 0 150 -48 -30 0 0 -1 0 1 0 1 0 0 3581.dat
+0 // Window  1 x  2 x  2 Shutter (black)
+1 0 163 -48 30 1 0 0 0 1 0 0 0 1 3582.dat
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 -156 -52 0 0 1 0 0 0 -1 -1 0 0 6141.dat
+0 // Window  1 x  2 x  2 Shutter (black)
+1 0 163 0 -30 1 0 0 0 -1 0 0 0 -1 3582.dat
+0 // Brick  1 x  1 x  2 with Shutter Holder (black)
+1 0 150 -48 30 0 0 -1 0 1 0 1 0 0 3581.dat
+0 STEP
+0 // Plate  1 x  2 (black)
+1 0 -130 -40 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  4 (black)
+1 0 -130 -56 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 -80 -56 -30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 -80 -56 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  1 (black)
+1 0 -50 -56 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (black)
+1 0 -50 -56 -50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -56 40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -56 -40 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  6 (black)
+1 0 160 -56 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  1 x  6 (black)
+1 0 50 -56 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  2 (black)
+1 0 -130 -48 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 STEP
+0 // Brick  2 x  3 (black)
+1 0 160 -80 -30 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Brick  2 x  3 (black)
+1 0 160 -80 30 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Slope Brick 45  2 x  3 (black)
+1 0 10 -80 -10 1 0 0 0 1 0 0 0 1 3038.dat
+0 // Slope Brick 45  2 x  3 (black)
+1 0 -50 -80 -10 1 0 0 0 1 0 0 0 1 3038.dat
+0 // Slope Brick 45  2 x  3 (black)
+1 0 -110 -80 -10 1 0 0 0 1 0 0 0 1 3038.dat
+0 // Slope Brick 45  2 x  3 (black)
+1 0 -110 -80 10 -1 0 0 0 1 0 0 0 -1 3038.dat
+0 // Slope Brick 45  2 x  3 (black)
+1 0 -50 -80 10 -1 0 0 0 1 0 0 0 -1 3038.dat
+0 // Slope Brick 45  2 x  3 (black)
+1 0 10 -80 10 -1 0 0 0 1 0 0 0 -1 3038.dat
+0 // Slope Brick 45  2 x  2 with 3 Gauges and 3 Knobs Pattern (black)
+1 0 50 -80 0 0 0 -1 0 1 0 1 0 0 3039pc4.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 (black)
+1 0 50 -104 0 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Brick  1 x  1 (black)
+1 0 150 -104 50 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 150 -104 -50 0 0 1 0 1 0 -1 0 0 3005.dat
+0 STEP
+0 // Brick  1 x  1 (black)
+1 0 150 -128 -50 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 150 -128 50 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 50 -128 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Train Door  1 x  4 x  5 Left with Sticker DB 7715 (black)
+1 0 70 -128 -50 0 0 1 0 1 0 -1 0 0 4181d07.dat
+0 // Glass for Train Door (trans_clear)
+1 47 70 -128 -50 0 0 1 0 1 0 -1 0 0 4183.dat
+0 // Glass for Train Door (trans_clear)
+1 47 130 -128 50 0 0 -1 0 1 0 1 0 0 4183.dat
+0 // Train Door  1 x  4 x  5 Right with Sticker DB 7715 (black)
+1 0 70 -128 50 0 0 1 0 1 0 -1 0 0 4182d07.dat
+0 // Train Window  1 x  2 x  3 (black)
+1 0 50 -128 40 0 0 1 0 1 0 -1 0 0 4035.dat
+0 // Train Window  1 x  2 x  3 (black)
+1 0 50 -128 -40 0 0 1 0 1 0 -1 0 0 4035.dat
+0 // Glass for Train Window  1 x  2 x  3 (trans_clear)
+1 47 50 -128 -40 0 0 1 0 1 0 -1 0 0 4036.dat
+0 // Glass for Train Window  1 x  2 x  3 (trans_clear)
+1 47 50 -128 40 0 0 1 0 1 0 -1 0 0 4036.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -40 -104 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -120 -104 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 STEP
+0 // Tile  2 x  2 Round with Cross Underside Stud (black)
+1 0 -40 -112 0 0 0 1 0 1 0 -1 0 0 4150.dat
+0 // Plate  2 x  2 Round with Axlehole (red)
+1 4 -120 -112 0 0 0 1 0 1 0 -1 0 0 4032a.dat
+0 // Plate  1 x  4 (black)
+1 0 50 -136 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  6 (black)
+1 0 100 -136 -50 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 100 -136 50 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -120 -136 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Slope Brick 33  6 x  6 Double (black)
+1 0 100 -160 0 -1 0 0 0 1 0 0 0 -1 4509.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 100 -168 0 -1 0 0 0 1 0 0 0 -1 3068b.dat
+
+
+
+0 STEP
+0 FILE 7715 - carriage.ldr
+0 A black passenger carriage with blue brick walls, windows, yellow seats, train wheels, and magnetic couplings.
+0 Name: 7715 - carriage.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+0 // Plate  6 x 16 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3027.dat
+0 // Plate  2 x 10 (black)
+1 0 0 8 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 STEP
+0 // Train Buffer Beam (red)
+1 4 120 8 0 0 0 -1 0 1 0 1 0 0 4022.dat
+0 // Train Buffer Beam (red)
+1 4 -120 8 0 0 0 1 0 1 0 -1 0 0 4022.dat
+0 // Train Coupling Type 1 (black)
+1 0 150 24 0 0 0 -1 0 1 0 1 0 0 4023.dat
+0 // ~_Magnet Cylindrical in Casing Black (Obsolete) (black)
+1 0 184 28 0 0 0 -1 0 1 0 1 0 0 73092.dat
+0 // Train Coupling Type 1 (black)
+1 0 -150 24 0 0 0 1 0 1 0 -1 0 0 4023.dat
+0 // ~_Magnet Cylindrical in Casing Black (Obsolete) (black)
+1 0 -184 28 0 0 0 1 0 1 0 -1 0 0 73092.dat
+0 // Plate  2 x  6 (black)
+1 0 -80 16 0 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  2 x  6 (black)
+1 0 80 16 0 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 STEP
+0 // Plate  2 x  2 (black)
+1 0 -100 24 0 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 100 24 0 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -110 8 -30 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -90 8 -30 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -110 8 30 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -90 8 30 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 90 8 -30 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 110 8 -30 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 90 8 30 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 110 8 30 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -20 8 30 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 20 8 30 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 20 8 -30 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -20 8 -30 1 0 0 0 1 0 0 0 1 3660.dat
+0 STEP
+0 // Plate  4 x  4 (black)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Brick  2 x  4 Black with Train Wheels Small (Complete) (red)
+1 4 -100 32 0 0 0 1 0 1 0 -1 0 0 4180c02.dat
+0 // Brick  2 x  4 Black with Train Wheels Small (Complete) (red)
+1 4 100 32 0 0 0 1 0 1 0 -1 0 0 4180c02.dat
+0 STEP
+0 // Brick  1 x  3 (blue)
+1 1 -130 -24 50 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  3 (blue)
+1 1 -130 -24 -50 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  3 (blue)
+1 1 50 -24 -50 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  3 (blue)
+1 1 50 -24 50 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  6 (blue)
+1 1 -40 -24 50 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  6 (blue)
+1 1 -40 -24 -50 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  2 x  2 (black)
+1 0 40 -24 -20 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 -40 -24 -20 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 STEP
+0 // Brick  1 x  6 (blue)
+1 1 -100 -48 -50 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  6 (blue)
+1 1 20 -48 -50 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  6 (blue)
+1 1 -100 -48 50 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  1 x  6 (blue)
+1 1 20 -48 50 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 -40 -32 -20 0 0 -1 0 1 0 1 0 0 4079.dat
+0 // Minifig Seat  2 x  2 (yellow)
+1 14 40 -32 -20 0 0 1 0 1 0 -1 0 0 4079.dat
+0 STEP
+0 // Brick  1 x  2 (red)
+1 4 -100 -72 50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -72 -50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -100 -96 50 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (red)
+1 4 -100 -96 -50 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Fence Lattice  1 x  4 x  1 (yellow)
+1 14 -90 -120 0 0 0 -1 0 1 0 1 0 0 3633.dat
+0 // Fence Lattice  1 x  4 x  1 (yellow)
+1 14 -110 -120 0 0 0 1 0 1 0 -1 0 0 3633.dat
+0 STEP
+0 // Train Door  1 x  4 x  5 Left Blue Bottom Half Sticker DB 7715 (red)
+1 4 150 -120 50 0 0 -1 0 1 0 1 0 0 4181p05d01.dat
+0 // Train Door  1 x  4 x  5 Right Blue Bottom Half Sticker DB 7715 (red)
+1 4 150 -120 -50 0 0 -1 0 1 0 1 0 0 4182p05d01.dat
+0 // Train Window  1 x  2 x  3 (red)
+1 4 -140 -120 -50 1 0 0 0 1 0 0 0 1 4035.dat
+0 // Train Window  1 x  4 x  3 (red)
+1 4 -40 -120 -50 1 0 0 0 1 0 0 0 1 4033.dat
+0 // Train Window  1 x  4 x  3 (red)
+1 4 40 -120 -50 1 0 0 0 1 0 0 0 1 4033.dat
+0 // Glass for Train Window  1 x  4 x  3 (trans_clear)
+1 47 40 -120 -50 1 0 0 0 1 0 0 0 1 4034.dat
+0 // Glass for Train Window  1 x  4 x  3 (trans_clear)
+1 47 -40 -120 -50 1 0 0 0 1 0 0 0 1 4034.dat
+0 // Glass for Train Window  1 x  2 x  3 (trans_clear)
+1 47 -140 -120 -50 1 0 0 0 1 0 0 0 1 4036.dat
+0 // Train Window  1 x  2 x  3 (red)
+1 4 -140 -120 50 -1 0 0 0 1 0 0 0 -1 4035.dat
+0 // Train Window  1 x  4 x  3 (red)
+1 4 40 -120 50 -1 0 0 0 1 0 0 0 -1 4033.dat
+0 // Train Window  1 x  4 x  3 (red)
+1 4 -40 -120 50 -1 0 0 0 1 0 0 0 -1 4033.dat
+0 // Glass for Train Window  1 x  4 x  3 (trans_clear)
+1 47 -40 -120 50 -1 0 0 0 1 0 0 0 -1 4034.dat
+0 // Glass for Train Window  1 x  4 x  3 (trans_clear)
+1 47 40 -120 50 -1 0 0 0 1 0 0 0 -1 4034.dat
+0 // Glass for Train Window  1 x  2 x  3 (trans_clear)
+1 47 -140 -120 50 -1 0 0 0 1 0 0 0 -1 4036.dat
+0 // Glass for Train Door (trans_clear)
+1 47 90 -120 -50 0 0 1 0 1 0 -1 0 0 4183.dat
+0 // Glass for Train Door (trans_clear)
+1 47 150 -120 50 0 0 -1 0 1 0 1 0 0 4183.dat
+0 // Tile  1 x  1 with Groove (black)
+1 0 -103.113 -120.745 0 -0.731354 0.681998 0 0.681998 0.731354 0 0 0 -1 3070b.dat
+0 // Minifig Suitcase (Closed) (brown)
+1 6 -88 -128 0 0 -0.731354 -0.681998 0 0.681998 -0.731354 1 0 0 4449-f1.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -120 -50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -100 -120 50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 -160 -8 0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Brick  1 x  2 (black)
+1 0 -160 -32 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -160 -32 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -150 -32 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -160 -80 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -160 -80 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -160 -104 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -160 -104 30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -160 -128 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -160 -128 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -56 30 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -170 -56 -30 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  4 (black)
+1 0 -150 -56 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Train Window  1 x  2 x  3 (black)
+1 0 -150 -128 0 0 0 1 0 1 0 -1 0 0 4035.dat
+0 // Plate  1 x  4 (black)
+1 0 -170 -136 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  2 (black)
+1 0 -170 -144 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Glass for Train Window  1 x  2 x  3 (trans_clear)
+1 47 -150 -128 0 0 0 1 0 1 0 -1 0 0 4036.dat
+0 // Plate  2 x  4 (black)
+1 0 160 -8 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Brick  1 x  2 (black)
+1 0 160 -32 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 160 -32 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 150 -32 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 160 -80 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 160 -80 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 160 -104 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 160 -104 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 160 -128 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 160 -128 -30 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 170 -56 -30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 170 -56 30 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  4 (black)
+1 0 150 -56 0 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Train Window  1 x  2 x  3 (black)
+1 0 150 -128 0 0 0 -1 0 1 0 1 0 0 4035.dat
+0 // Plate  1 x  4 (black)
+1 0 170 -136 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Glass for Train Window  1 x  2 x  3 (trans_clear)
+1 47 150 -128 0 0 0 -1 0 1 0 1 0 0 4036.dat
+0 // Plate  1 x  2 (black)
+1 0 170 -144 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  4 (red)
+1 4 0 -128 50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (red)
+1 4 0 -128 -50 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  6 (red)
+1 4 -100 -128 -50 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (red)
+1 4 -100 -128 50 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (red)
+1 4 100 -128 50 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (red)
+1 4 100 -128 -50 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 -140 -152 -10 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 -140 -152 10 -1 0 0 0 1 0 0 0 -1 3298.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 140 -152 -10 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 140 -152 10 -1 0 0 0 1 0 0 0 -1 3298.dat
+0 // Slope Brick 33  6 x  6 Double (light_grey)
+1 7 60 -152 0 -1 0 0 0 1 0 0 0 -1 4509.dat
+0 // Slope Brick 33  6 x  6 Double (light_grey)
+1 7 -60 -152 0 -1 0 0 0 1 0 0 0 -1 4509.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 -130 -160 0 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 130 -160 0 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 60 -160 0 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 -60 -160 0 0 0 -1 0 1 0 1 0 0 3068b.dat
+
+
+
+0 STEP
+0 FILE 7715 - mini train station.ldr
+0 A small black-and-white train station shelter with sloped roof sections built on a grey baseplate.
+0 Name: 7715 - mini train station.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+0 // Plate  2 x  4 (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  2 x  6 (black)
+1 0 -40 0 -20 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  2 x  6 (black)
+1 0 -220 0 -20 0 0 1 0 1 0 -1 0 0 3795.dat
+0 STEP
+0 // Brick  1 x  2 (black)
+1 0 -40 -24 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -40 -24 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  2 x  3 (black)
+1 0 -30 -24 0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // Brick  2 x  4 (black)
+1 0 -220 -24 0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Slope Brick 33  3 x  2 (black)
+1 0 -220 -24 -50 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Slope Brick 33  3 x  2 (black)
+1 0 -40 -24 -50 1 0 0 0 1 0 0 0 1 3298.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 (black)
+1 0 -220 -48 -30 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 -40 -48 -30 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Brick  2 x  3 (black)
+1 0 -40 -48 10 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // Brick  2 x  3 (black)
+1 0 -220 -48 10 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -10 -32 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  6 x 12 (light_grey)
+1 7 -140 -56 0 1 0 0 0 1 0 0 0 1 3028.dat
+0 // Bar  1 x  4 x  2 with Studs (black)
+1 0 -230 -104 0 0 0 1 0 1 0 -1 0 0 4083.dat
+0 STEP
+0 // Brick  1 x  4 (white)
+1 15 -230 -128 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (white)
+1 15 -230 -152 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (white)
+1 15 -230 -176 0 0 0 1 0 1 0 -1 0 0 3010.dat
+
+
+
+
+
+0 STEP
+0 FILE 7715 - traintrack.ldr
+0 A curved train track loop consisting of sixteen sections of curved rails and sleeper plates.
+0 Name: 7715 - traintrack.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 1 0 9.755 1 0 0.19509 0 1 0 -0.19509 0 1 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -44.185 0 -140.322 0.923879 0 0.382683 0 1 0 -0.382683 0 0.923879 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -48.079 -16 19.509 -0.19509 0 1 0 1 0 -0.980785 0 -0.19509 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 50 -16 0 -0.19509 0 1 0 1 0 -0.980785 0 -0.19509 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -118.447 0 -279.411 0.83147 0 0.55557 0 1 0 -0.55557 0 0.83147 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -217.588 0 -400.787 0.707107 0 0.707106 0 1 0 -0.707106 0 0.707107 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -160 -16 -251.632 -0.55557 0 0.83147 0 1 0 -0.83147 0 -0.55557 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -76.874 -16 -307.191 -0.55557 0 0.83147 0 1 0 -0.83147 0 -0.55557 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -339.672 0 -500.354 0.55557 0 0.83147 0 1 0 -0.83147 0 0.55557 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -477.714 0 -574.551 0.382684 0 0.923879 0 1 0 -0.923879 0 0.382684 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -367.45 -16 -458.78 -0.83147 0 0.55557 0 1 0 -0.55557 0 -0.83147 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -311.894 -16 -541.928 -0.83147 0 0.55557 0 1 0 -0.55557 0 -0.83147 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -628.576 0 -620.391 0.19509 0 1 0 1 0 -0.980785 0 0.19509 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -784.506 0 -636.115 0 0 1 0 1 0 -1 0 0 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -638.331 -16 -571.353 -0.980785 0 0.19509 0 1 0 -0.19509 0 -0.980785 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -618.823 -16 -669.431 -0.980785 0 0.19509 0 1 0 -0.19509 0 -0.980785 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -941 0 -620.19 -0.19509 0 1 0 1 0 -0.980785 0 -0.19509 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1091.1 0 -575 -0.382683 0 0.923879 0 1 0 -0.923879 0 -0.382683 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -931.266 -16 -571.15 -0.980785 0 -0.19509 0 1 0 0.19509 0 -0.980785 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -950.775 -16 -669.229 -0.980785 0 -0.19509 0 1 0 0.19509 0 -0.980785 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1230.1899 0 -500.782 -0.55557 0 0.83147 0 1 0 -0.83147 0 -0.55557 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1351.5601 0 -401.641 -0.707106 0 0.707107 0 1 0 -0.707107 0 -0.707106 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -1202.41 -16 -459.209 -0.83147 0 -0.55557 0 1 0 0.55557 0 -0.83147 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -1258 -16 -542.355 -0.83147 0 -0.55557 0 1 0 0.55557 0 -0.83147 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1451.13 0 -279.557 -0.83147 0 0.55557 0 1 0 -0.55557 0 -0.83147 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1525.33 0 -141.515 -0.923879 0 0.382684 0 1 0 -0.382684 0 -0.923879 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -1409.5601 -16 -251.779 -0.55557 0 -0.83147 0 1 0 0.83147 0 -0.55557 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -1492.7 -16 -307.335 -0.55557 0 -0.83147 0 1 0 0.83147 0 -0.55557 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1571.17 0 9.347 -0.980785 0 0.19509 0 1 0 -0.19509 0 -0.980785 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1586.89 0 165.277 -1 0 0 0 1 0 0 0 -1 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -1522.13 -16 19.102 -0.19509 0 -0.980785 0 1 0 1 0 -0.19509 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -1620.21 -16 -0.406 -0.19509 0 -0.980785 0 1 0 1 0 -0.19509 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1571.59 0 321.564 -0.980785 0 -0.19509 0 1 0 0.19509 0 -0.980785 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1526.4399 0 471.641 -0.923879 0 -0.382683 0 1 0 0.382683 0 -0.923879 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -1522.55 -16 311.81 0.19509 0 -0.980785 0 1 0 1 0 0.19509 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -1620.63 -16 331.319 0.19509 0 -0.980785 0 1 0 1 0 0.19509 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1452.1801 0 610.729 -0.83147 0 -0.55557 0 1 0 0.55557 0 -0.83147 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1353 0 732.106 -0.707107 0 -0.707106 0 1 0 0.707106 0 -0.707107 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -1410.61 -16 583 0.55557 0 -0.83147 0 1 0 0.83147 0 0.55557 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -1493.75 -16 638.511 0.55557 0 -0.83147 0 1 0 0.83147 0 0.55557 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1230.95 0 831.673 -0.55557 0 -0.83147 0 1 0 0.83147 0 -0.55557 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -1092.91 0 905.869 -0.382683 0 -0.923879 0 1 0 0.923879 0 -0.382683 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -1203.1801 -16 790.099 0.83147 0 -0.55557 0 1 0 0.55557 0 0.83147 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -1258.73 -16 873.248 0.83147 0 -0.55557 0 1 0 0.55557 0 0.83147 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -942 0 951.71 -0.19509 0 -0.980785 0 1 0 1 0 -0.19509 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -786.119 0 967.434 0 0 -1 0 1 0 1 0 0 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -932.294 -16 902.672 1 0 -0.19509 0 1 0 0.19509 0 1 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -951.802 -16 1000.75 1 0 -0.19509 0 1 0 0.19509 0 1 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -629.605 0 951.509 0.19509 0 -0.980785 0 1 0 1 0 0.19509 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -479.528 0 906.363 0.382683 0 -0.923879 0 1 0 0.923879 0 0.382683 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -639.36 -16 902.469 1 0 0.19509 0 1 0 -0.19509 0 1 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -619.85 -16 1000.55 1 0 0.19509 0 1 0 -0.19509 0 1 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -340.439 0 832.101 0.55557 0 -0.83147 0 1 0 0.83147 0 0.55557 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -219.063 0 733 0.707106 0 -0.707107 0 1 0 0.707107 0 0.707106 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -368.218 -16 790.528 0.83147 0 0.55557 0 1 0 -0.55557 0 0.83147 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -312.659 -16 873.674 0.83147 0 0.55557 0 1 0 -0.55557 0 0.83147 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -119.497 0 610.877 0.83147 0 -0.55557 0 1 0 0.55557 0 0.83147 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 -45.299 0 472.834 0.923879 0 -0.382683 0 1 0 0.382683 0 0.923879 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -161.07 -16 583.098 0.55557 0 0.83147 0 1 0 -0.83147 0 0.55557 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 -77.922 -16 638.654 0.55557 0 0.83147 0 1 0 -0.83147 0 0.55557 3229b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 0.541 0 322 1 0 -0.19509 0 1 0 0.19509 0 1 4166b.dat
+0 // Train Track Sleeper Plate  2 x  8 with Cable Grooves (dark_grey)
+1 8 16.265 0 166 1 0 0 0 1 0 0 0 1 4166b.dat
+0 // Train Track Slotted Rail Curved Inside (light_grey)
+1 7 -48.497 -16 312.217 0.19509 0 1 0 1 0 -0.980785 0 0.19509 3230b.dat
+0 // Train Track Slotted Rail Curved Outside (light_grey)
+1 7 49.581 -16 331.725 0.19509 0 1 0 1 0 -0.980785 0 0.19509 3229b.dat
+
+
+
+0 STEP
+0 FILE 7715 - minifig 1.ldr
+0 A minifigure with black shoulder-length hair, a white torso, and red legs.
+0 Name: 7715 - minifig 1.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+0 // Minifig Hair Shoulder Length (black)
+1 0 0 -96 5.6554 1 0 0 0 1 0 0 0 1 4530.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 5.6554 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso (white)
+1 15 0 -72 5.6554 1 0 0 0 1 0 0 0 1 973.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 -40 5.6554 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (white)
+1 15 -15.552 -63 5.6554 1 -0.17 0 0.17 1 0 0 0 1 3818.dat
+0 // Minifig Arm Left (white)
+1 15 15.552 -63 5.6554 1 0.17 0 -0.17 1 0 0 0 1 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -23.863 -45.4044 -4.6656 1 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.863 -45.4044 -4.6656 1 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 -28 5.6554 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 -28 5.6554 1 0 0 0 1 0 0 0 1 3817.dat
+
+
+
+
+
+0 STEP
+0 FILE 7715 - minifig 2.ldr
+0 A minifigure with short black hair, a blue torso, grey legs, and a white suitcase.
+0 Name: 7715 - minifig 2.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+0 // Minifig Hair Male (black)
+1 0 3.3034 -96 16.4199 1 0 0 0 1 0 0 0 1 3901.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 3.3034 -96 16.4199 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso (blue)
+1 1 3.3034 -72 16.4199 1 0 0 0 1 0 0 0 1 973.dat
+0 // ~Minifig Hips (Obsolete) (light_grey)
+1 7 3.3034 -40 16.4199 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (blue)
+1 1 -12.2486 -63 16.4199 1 -0.17 0 0.17 1 0 0 0 1 3818.dat
+0 // Minifig Arm Left (blue)
+1 1 18.8554 -63 16.4199 1 0.17 0 -0.17 1 0 0 0 1 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.5596 -45.404 6.0989 1 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 27.1664 -45.404 6.0989 1 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // Minifig Suitcase (Closed) (white)
+1 15 -21.6416 -39.137 -0.2641 -0.087498 -0.14567 -0.985 0.506976 0.844031 -0.17 0.856884 -0.514696 0 4449-f1.dat
+0 // ~Minifig Leg Right (Obsolete) (light_grey)
+1 7 3.3034 -28 16.4199 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (light_grey)
+1 7 3.3034 -28 16.4199 1 0 0 0 1 0 0 0 1 3817.dat
+
+
+
+0 STEP
+0 FILE 7715 - minifig 3.ldr
+0 A minifigure with brown hair, a black torso, and blue legs.
+0 Name: 7715 - minifig 3.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+0 // Minifig Hair Male (brown)
+1 6 0 -96 5.3964 1 0 0 0 1 0 0 0 1 3901.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 5.3964 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso (black)
+1 0 0 -72 5.3964 1 0 0 0 1 0 0 0 1 973.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 -40 5.3964 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 -63 5.3964 1 -0.17 0 0.17 1 0 0 0 1 3818.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 -63 5.3964 1 0.17 0 -0.17 1 0 0 0 1 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -23.8634 -45.4044 -4.9246 1 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.8634 -45.4044 -4.9246 1 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 5.3964 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 5.3964 1 0 0 0 1 0 0 0 1 3817.dat
+
+
+
+
+
+0 STEP
+0 FILE 7715 - minifig 4.ldr
+0 A minifigure wearing a red police hat, a blue suit-and-tie torso, blue legs, and carrying a signal holder.
+0 Name: 7715 - minifig 4.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+0 // Minifig Police Hat (red)
+1 4 -1.579 -96 20.5002 1 0 0 0 1 0 0 0 1 3624.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 -1.579 -96 20.5002 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso with Suit and Tie Pattern (blue)
+1 1 -1.579 -72 20.5002 1 0 0 0 1 0 0 0 1 973p18.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 -1.579 -40 20.5002 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (blue)
+1 1 14 -63 20.5002 1 0.17 0 -0.17 1 0 0 0 1 3819.dat
+0 // Minifig Hand (yellow)
+1 14 22.284 -45.4044 10.1792 1 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 -1.579 -28 20.5002 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 -1.579 -28 20.5002 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Arm Right (blue)
+1 1 -17.131 -63 20.5002 1 -0.130228 -0.109274 0.17 0.754554 0.633146 0 -0.642788 0.766044 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -23.5684 -56.2625 0.5345 1 0 0 0 1 -0.085835 0 0.085819 1 3820.dat
+0 // Minifig Signal Holder (light_grey)
+1 7 -26 -89.5068 -20.0739 0 1 0 0.324224 0 -0.945075 -0.945395 0 -0.324287 3900.dat
+
+
+
+
+
+0 STEP
+0 FILE 7715 - minifig 5.ldr
+0 A minifigure wearing a red police hat, a blue torso with patch pocket pattern, and blue legs.
+0 Name: 7715 - minifig 5.ldr
+0 Author: [Strikeman]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2019-11-13 [bercik] OMR version by Robert Paciorek [bercik] with perrmision of Strikeman
+
+0 // Minifig Police Hat (red)
+1 4 0 -96 4.6304 1 0 0 0 1 0 0 0 1 3624.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 4.6304 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso with Patch Pocket Pattern (blue)
+1 1 0 -72 4.6304 1 0 0 0 1 0 0 0 1 973p26.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 -40 4.6304 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (blue)
+1 1 15.552 -63 4.6304 1 0.17 0 -0.17 1 0 0 0 1 3819.dat
+0 // Minifig Hand (yellow)
+1 14 23.863 -45.4044 -5.6906 1 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 -28 4.6304 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 -28 4.6304 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.552 -63 4.6304 1 -0.17 0 0.17 1 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 -23.863 -45.4044 -5.6906 1 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+
+
+
+

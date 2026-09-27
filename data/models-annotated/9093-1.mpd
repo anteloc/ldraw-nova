@@ -1,0 +1,254 @@
+0 FILE 9093 - Main.ldr
+0 A Technic model composed of bent beams, angle connectors, axles, and curved slope elements forming a compact mechanical assembly.
+0 Name: 9093 - Main.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HISTORY 2019-02-21 [technicbasics] Cleanup and OMRize file
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 0.984 -0.179 0 0.179 0.984 9093 - 9093-a.ldr
+1 0 0 9.839 1.789 1 0 0 0 0.984 -0.179 0 0.179 0.984 9093 - 9093-b.ldr
+1 0 0 47.405 -93.02 1 0 0 0 0.984 -0.179 0 0.179 0.984 9093 - 9093-c.ldr
+
+
+
+
+0 STEP
+0 FILE 9093 - 9093-a.ldr
+0 A structural Technic submodel built from bent beams, long axles, pin joiners, and a curved yellow slope panel mounted on plates.
+0 Name: 9093 - 9093-a.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 -10 90 80 0 1 0 0 0 -1 -1 0 0 32526.dat
+0 // Technic Axle 12 (black)
+1 0 0 90 80 1 0 0 0 1 0 0 0 1 3708.dat
+0 // Technic Pin (black)
+1 0 0 70 80 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Technic Pin (black)
+1 0 0 10 80 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Technic Pin (black)
+1 0 -20 10 60 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Technic Pin Long without Friction with Single Slot (light_blue)
+1 9 -30 10 40 -1 0 0 0 1 0 0 0 -1 32556.dat
+0 STEP
+0 // Technic Pin Joiner Round with Slot (yellow)
+1 14 -40 90 80 1 0 0 0 1 0 0 0 1 62462.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 -30 0 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Technic Beam  3 x  5 Bent 90 (black)
+1 0 10 90 80 0 1 0 0 0 -1 -1 0 0 32526.dat
+0 // Technic Pin (black)
+1 0 20 10 60 1 0 0 0 1 0 0 0 1 3673.dat
+0 // Technic Axle  4 (black)
+1 0 0 10 0 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Axle Pin (tan)
+1 19 -20 10 -20 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Pin (black)
+1 0 -40 10 -60 1 0 0 0 1 0 0 0 1 3673.dat
+0 STEP
+0 // Technic Pin Joiner Round with Slot (yellow)
+1 14 40 90 80 1 0 0 0 1 0 0 0 1 62462.dat
+0 // Technic Cross Block  2 x  2 x  2 Bent 90 Split (Pin/Twin Axle) (light_grey)
+1 7 0 30 -20 1 0 0 0 -1 0 0 0 -1 92907.dat
+0 // Technic Axle Pin (tan)
+1 19 20 10 -20 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 STEP
+0 // Technic Bush with Two Flanges (red)
+1 4 70 90 80 0 0 -1 0 1 0 1 0 0 3713.dat
+0 // Technic Bush with Two Flanges (red)
+1 4 -70 90 80 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // Technic Brick  1 x  8 with Holes (yellow)
+1 14 30 0 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Technic Pin Long without Friction with Single Slot (light_blue)
+1 9 30 10 40 -1 0 0 0 1 0 0 0 -1 32556.dat
+0 // Technic Pin (black)
+1 0 40 10 -60 1 0 0 0 1 0 0 0 1 3673.dat
+0 STEP
+0 // Technic Link  4 x  6 Bent 53.13 (black)
+1 0 -50 10 40 0 1 0 1 0 0 0 0 -1 64451.dat
+0 // Technic Link  4 x  6 Bent 53.13 (black)
+1 0 50 10 40 0 1 0 1 0 0 0 0 -1 64451.dat
+0 STEP
+0 // Technic Axle 12 (black)
+1 0 0 58 -96 1 0 0 0 1 0 0 0 1 3708.dat
+0 // Technic Pin Joiner Round with Slot (yellow)
+1 14 -20 58 -96 1 0 0 0 1 0 0 0 1 62462.dat
+0 // Technic Pin Joiner Round with Slot (yellow)
+1 14 20 58 -96 1 0 0 0 1 0 0 0 1 62462.dat
+0 STEP
+0 // Technic Bush with Two Flanges (red)
+1 4 -70 58 -96 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // Technic Bush with Two Flanges (red)
+1 4 70 58 -96 0 0 -1 0 1 0 1 0 0 3713.dat
+0 STEP
+0 // Plate  1 x  6 (black)
+1 0 -30 -8 60 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 30 -8 60 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  4 x  4 (black)
+1 0 0 -8 -40 1 0 0 0 1 0 0 0 1 3031.dat
+0 STEP
+0 // Slope Brick Curved  2 x  4 with Underside Studs (yellow)
+1 14 0 -8 100 1 0 0 0 1 0 0 0 1 88930.dat
+0 // Arch  1 x  4 (black)
+1 0 0 -32 30 1 0 0 0 1 0 0 0 1 3659.dat
+0 // Brick  1 x  4 (yellow)
+1 14 -30 -32 -20 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (yellow)
+1 14 30 -32 -20 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Slope Brick 45  2 x  2 (dark_grey)
+1 8 0 -32 -50 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Brick  1 x  4 with Studs on Side (yellow)
+1 14 0 -32 -70 1 0 0 0 1 0 0 0 1 30414.dat
+0 STEP
+0 // Plate  2 x  4 (yellow)
+1 14 0 -12 -88 1 0 0 0 0 -1 0 1 0 3020.dat
+0 STEP
+0 // Plate  1 x  2 (dark_grey)
+1 8 0 -2 -96 1 0 0 0 0 -1 0 1 0 3023.dat
+0 // Plate  1 x  2 with Handle (yellow)
+1 14 0 -22 -96 -1 0 0 0 0 1 0 1 0 2540.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_clear)
+1 47 -30 -2 -88 0 0 1 1 0 0 0 1 0 54200.dat
+0 // Tile  1 x  2 Grille with Groove (yellow)
+1 14 0 -2 -104 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_clear)
+1 47 30 -2 -88 0 0 -1 -1 0 0 0 1 0 54200.dat
+0 // Slope Brick Curved  4 x  1 Double (yellow)
+1 14 0 -22 -88 0 0 1 1 0 0 0 1 0 93273.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -30 -40 -20 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 30 -40 -20 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Plate  2 x  4 (yellow)
+1 14 0 -40 -60 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (dark_grey)
+1 8 -30 -48 -50 0 0 1 0 1 0 -1 0 0 4085a.dat
+0 // Plate  1 x  2 (dark_grey)
+1 8 0 -48 -50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (dark_grey)
+1 8 30 -48 -50 0 0 -1 0 1 0 1 0 0 4085a.dat
+0 STEP
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 -30 -56 30 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (yellow)
+1 14 30 -56 30 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 0 -56 -50 1 0 0 0 1 0 0 0 1 2431.dat
+0 STEP
+0 // Tile  1 x  1 with Clip (yellow)
+1 14 -30 -64 30 0 0 1 0 1 0 -1 0 0 2555.dat
+0 // Tile  1 x  1 with Clip (yellow)
+1 14 30 -64 30 0 0 1 0 1 0 -1 0 0 2555.dat
+0 // Brick  1 x  4 x  1.333 with Curved Top (black)
+1 0 0 -72 -70 1 0 0 0 1 0 0 0 1 6191.dat
+0 STEP
+0 // Bar  4L Lightsaber Blade (yellow)
+1 14 40 -70 30 0 -1 0 1 0 0 0 0 1 30374.dat
+0 // Plate  1 x  2 with Handle (yellow)
+1 14 -65.556 -44 -37.272 0 0.707107 -0.707107 -1 0 0 0 0.707107 0.707107 2540.dat
+0 // Plate  1 x  2 with Handle (yellow)
+1 14 65.556 -44 -37.272 0 -0.707107 0.707107 1 0 0 0 0.707107 0.707107 2540.dat
+0 STEP
+0 // Plate  1 x  2 with  2 Clips Horizontal (Thick U-Clips) (black)
+1 0 0 -90.035 31.61 1 0 0 0 0.178888 -0.983869 0 0.983869 0.178888 60470a.dat
+0 STEP
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 -10 -91.466 23.739 1 0 0 0 0.179 -0.984 0 0.984 0.179 6141.dat
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 10 -91.466 23.739 1 0 0 0 0.179 -0.984 0 0.984 0.179 6141.dat
+0 STEP
+0 // Wheel Rim 20 x 30 with  6 Dual Spokes and External Ribs (yellow)
+1 14 -100 90 80 0 0 -1 0 1 0 1 0 0 56145.dat
+0 // Wheel Rim 20 x 30 with  6 Dual Spokes and External Ribs (yellow)
+1 14 100 90 80 0 0 1 0 1 0 -1 0 0 56145.dat
+0 // Wheel Rim 20 x 30 with  6 Dual Spokes and External Ribs (yellow)
+1 14 -100 58 -96 0 0 -1 0 1 0 1 0 0 56145.dat
+0 // Wheel Rim 20 x 30 with  6 Dual Spokes and External Ribs (yellow)
+1 14 100 58 -96 0 0 1 0 1 0 -1 0 0 56145.dat
+0 STEP
+0 // Tyre 26/ 24 x 30 Sand Racing (rubber_black)
+1 256 -100 90 80 0 0 1 0 1 0 -1 0 0 61481.dat
+0 // Tyre 26/ 24 x 30 Sand Racing (rubber_black)
+1 256 100 90 80 0 0 1 0 1 0 -1 0 0 61481.dat
+0 // Tyre 26/ 24 x 30 Sand Racing (rubber_black)
+1 256 -100 58 -96 0 0 1 0 1 0 -1 0 0 61481.dat
+0 // Tyre 26/ 24 x 30 Sand Racing (rubber_black)
+1 256 100 58 -96 0 0 1 0 1 0 -1 0 0 61481.dat
+
+
+
+
+0 STEP
+0 FILE 9093 - 9093-b.ldr
+0 A small Technic joint assembly using a cross block, half pin, and axle pin.
+0 Name: 9093 - 9093-b.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (red)
+1 4 0 10 20 0 0 1 -1 0 0 0 -1 0 32291.dat
+0 STEP
+0 // Technic Pin  1/2 (light_blue)
+1 9 10 20 0 1 0 0 0 1 0 0 0 1 4274.dat
+0 // Technic Axle Pin (tan)
+1 19 0 0 20 0 -1 0 1 0 0 0 0 1 3749.dat
+
+
+
+
+0 STEP
+0 FILE 9093 - 9093-c.ldr
+0 A Technic connector module with angle connectors, slotted bricks, and yellow curved slope bricks on dark grey plates.
+0 Name: 9093 - 9093-c.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Technic Angle Connector #2 (180 degree) (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 32034.dat
+0 STEP
+0 // Brick  2 x  2 with Slots and Axlehole (dark_grey)
+1 8 0 0 30 1 0 0 0 0 -1 0 1 0 90258.dat
+0 // Technic Axle  2 Notched (red)
+1 4 0 0 -30 0 0 1 0 1 0 -1 0 0 32062.dat
+0 STEP
+0 // Technic Axle  4 with Stop (dark_grey)
+1 8 0 0 50 0 0 -1 0 1 0 1 0 0 87083.dat
+0 // Brick  2 x  2 with Slots and Axlehole (dark_grey)
+1 8 0 0 -54 1 0 0 0 0 -1 0 1 0 90258.dat
+0 STEP
+0 // Slope Brick Curved  4 x  1 Double (yellow)
+1 14 0 10 -46 0 0 1 1 0 0 0 1 0 93273.dat
+0 // Slope Brick Curved  4 x  1 Double (yellow)
+1 14 0 -10 -46 0 0 1 1 0 0 0 1 0 93273.dat
+0 STEP
+0 // Plate  1 x  2 (dark_grey)
+1 8 -30 0 -46 0 0 1 1 0 0 0 1 0 3023.dat
+0 // Plate  1 x  2 (dark_grey)
+1 8 30 0 -46 0 0 1 1 0 0 0 1 0 3023.dat
+
+
+
+
+
+

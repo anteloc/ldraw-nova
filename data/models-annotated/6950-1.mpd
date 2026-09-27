@@ -1,0 +1,613 @@
+0 FILE 6950 - Mobile Rocket Transport - Main Model.ldr
+0 A classic Space theme mobile rocket transporter featuring a wheeled carrier vehicle, a large rocket with satellite payload, a launch cradle with grab arms, propulsion unit, and two yellow astronauts.
+0 Name: 6950 - Mobile Rocket Transport - Main Model.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 6950 - Mobile Rocket Transport - Transporter.ldr
+1 16 -190 -32 410 0.707 0 0.707 0 1 0 -0.707 0 0.707 6950 - Mobile Rocket Transport - Yellow Astronaut Standing.ldr
+1 16 0 -88 -19 1 0 0 0 1 0 0 0 1 6950 - Mobile Rocket Transport - Yellow Astronaut Sitting.ldr
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Transporter.ldr
+0 A large blue transporter base built from plates and bricks with inverted slopes, a turntable, and technic pin connections forming the carrier vehicle's main body.
+0 Name: 6950 - Mobile Rocket Transport - Transporter.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  4 (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Brick  2 x  2 (blue)
+1 1 0 -24 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 -30 -24 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 30 -24 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 STEP
+0 // Technic Pin (light_grey)
+1 7 -40 -14 0 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Technic Pin (light_grey)
+1 7 40 -14 0 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Brick  2 x  4 (blue)
+1 1 0 -48 0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (blue)
+1 1 -50 -24 0 0 0 -1 0 1 0 1 0 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (blue)
+1 1 50 -24 0 0 0 -1 0 1 0 1 0 0 3702.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 -30 -72 0 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 0 -72 10 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 30 -72 0 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 0 -72 -10 1 0 0 0 1 0 0 0 1 3660.dat
+0 // Plate  2 x  2 (blue)
+1 1 0 -80 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+1 16 0 0 260 0.966 0 -0.259 0 1 0 0.259 0 0.966 6950 - Mobile Rocket Transport - Tyres Back.ldr
+0 // Turntable  4 x  4 Top (black)
+1 0 0 -96 260 -1 0 0 0 1 0 0 0 -1 3404.dat
+0 STEP
+0 // Technic Axle Pin (black)
+1 0 -60 -14 60 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 // Technic Axle Pin (black)
+1 0 60 -14 60 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Axle Pin (black)
+1 0 -60 -14 -60 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 // Technic Axle Pin (black)
+1 0 60 -14 -60 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (blue)
+1 1 -40 -96 10 -1 0 0 0 1 0 0 0 -1 3747a.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 0 -96 30 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (blue)
+1 1 40 -96 10 -1 0 0 0 1 0 0 0 -1 3747a.dat
+0 // Brick  1 x  2 (blue)
+1 1 -40 -96 -10 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 40 -96 -10 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 STEP
+0 // Plate  6 x 14 (blue)
+1 1 0 -104 160 0 0 1 0 1 0 -1 0 0 3456.dat
+0 // Plate  2 x 10 (blue)
+1 1 0 -96 140 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Slope Brick 33  5 x  6 x  2 Inverted (trans_yellow)
+1 46 0 -120 -30 1 0 0 0 1 0 0 0 1 4228.dat
+0 // Plate  2 x  3 (blue)
+1 1 0 -88 -10 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  2 (blue)
+1 1 -40 -104 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 40 -104 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Plate  2 x  4 (blue)
+1 1 0 -112 260 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  4 (blue)
+1 1 0 -112 140 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  2 x  3 (blue)
+1 1 -90 -104 140 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  2 x  3 (blue)
+1 1 90 -104 140 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 0 -96 -50 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 with Computer Panel Pattern (light_grey)
+1 7 -20 -128 110 1 0 0 0 1 0 0 0 1 3039p34.dat
+0 // Slope Brick 45  2 x  2 with Computer Screen Pattern (light_grey)
+1 7 20 -128 110 1 0 0 0 1 0 0 0 1 3039p23.dat
+0 // Plate  1 x  2 with Ladder (light_grey)
+1 7 -110 -112 140 0 0 1 0 1 0 -1 0 0 4175.dat
+0 // Plate  1 x  2 with Ladder (light_grey)
+1 7 110 -112 140 0 0 -1 0 1 0 1 0 0 4175.dat
+0 // Wing  4 x  8 Left (light_grey)
+1 7 -80 -112 220 -1 0 0 0 1 0 0 0 -1 3933.dat
+0 // Wing  4 x  8 Right (light_grey)
+1 7 80 -112 220 -1 0 0 0 1 0 0 0 -1 3934.dat
+0 // Wing  4 x  8 Left (light_grey)
+1 7 80 -112 60 1 0 0 0 1 0 0 0 1 3933.dat
+0 // Wing  4 x  8 Right (light_grey)
+1 7 -80 -112 60 1 0 0 0 1 0 0 0 1 3934.dat
+0 STEP
+0 // Brick  2 x  1 with Positioning Rockets (light_grey)
+1 7 -50 -120 310 -1 0 0 0 1 0 0 0 -1 3963.dat
+0 // Brick  2 x  1 with Positioning Rockets (light_grey)
+1 7 50 -120 310 -1 0 0 0 1 0 0 0 -1 3963.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 0 -120 260 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Cone  4 x  4 x  2 with Axlehole (light_grey)
+1 7 0 -152 200 -1 0 0 0 1 0 0 0 -1 3943b.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 -60 -120 140 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 60 -120 140 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 -50 -136 70 -1 0 0 0 1 0 0 0 -1 4286.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 50 -136 70 -1 0 0 0 1 0 0 0 -1 4286.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -50 -120 20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 50 -120 20 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Plate  1 x  6 (light_grey)
+1 7 0 -128 310 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  1 (trans_green)
+1 34 -50 -128 290 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (trans_green)
+1 34 50 -128 290 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Bar  1 x  4 x  2 with Studs (light_grey)
+1 7 0 -168 130 1 0 0 0 1 0 0 0 1 4083.dat
+0 // Bar  1 x  4 x  2 with Studs (light_grey)
+1 7 0 -168 150 1 0 0 0 1 0 0 0 1 4083.dat
+0 // Bar  1 x  4 x  2 with Studs (light_grey)
+1 7 0 -168 250 1 0 0 0 1 0 0 0 1 4083.dat
+0 // Bar  1 x  4 x  2 with Studs (light_grey)
+1 7 0 -168 270 1 0 0 0 1 0 0 0 1 4083.dat
+0 // Slope Brick 33  3 x  6 (trans_yellow)
+1 46 0 -144 -70 1 0 0 0 1 0 0 0 1 3939.dat
+0 // Brick  1 x  6 without Centre Studs (trans_yellow)
+1 46 -50 -144 0 0 0 1 0 1 0 -1 0 0 3067a.dat
+0 // Brick  1 x  6 without Centre Studs (trans_yellow)
+1 46 50 -144 0 0 0 1 0 1 0 -1 0 0 3067a.dat
+0 // Brick  1 x  4 with Black 15 Bars Grille Pattern (light_grey)
+1 7 0 -152 110 1 0 0 0 1 0 0 0 1 3010p04.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 50 -144 70 0 0 -1 0 1 0 1 0 0 4085a.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (light_grey)
+1 7 -50 -144 70 0 0 1 0 1 0 -1 0 0 4085a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -160 200 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -168 200 1 0 0 0 1 0 0 0 1 4032a.dat
+0 STEP
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 50 -128 140 0 0 1 0 1 0 -1 0 0 3829c01.dat
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 -50 -128 140 0 0 -1 0 1 0 1 0 0 3829c01.dat
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 50 -128 260 0 0 1 0 1 0 -1 0 0 3829c01.dat
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 -50 -128 260 0 0 -1 0 1 0 1 0 0 3829c01.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 -50 -152 -50 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 50 -152 -50 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (light_grey)
+1 7 -50 -152 -10 0 0 1 0 1 0 -1 0 0 4081a.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (light_grey)
+1 7 50 -152 -10 0 0 -1 0 1 0 1 0 0 4081a.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -50 -152 40 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 50 -152 40 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 70 -120 70 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -70 -120 70 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 10 -152 310 0 0 -1 0 1 0 1 0 0 4286.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 -10 -152 310 0 0 1 0 1 0 -1 0 0 4286.dat
+0 // Hinge Plate  2 x  9 Base with Large Hole (light_grey)
+1 7 0 -174 290 1 0 0 0 1 0 0 0 1 3324e.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -184 180 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -184 140 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // ~Hinge Plate  2 x  5 Pivot (red)
+1 4 0 -174 290 1 0 0 0 1 0 0 0 1 313.dat
+1 7 0 -174 290 1 0 0 0 0.707 0.707 0 -0.707 0.707 6950 - Mobile Rocket Transport - Rocket Hinge.ldr
+0 STEP
+0 // Tile  1 x  2 with Groove (light_grey)
+1 7 0 -160 310 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -70 -150 -20 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 70 -150 -20 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (black)
+1 0 -70 -14 60 0 0 1 0 1 0 -1 0 0 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (black)
+1 0 70 -14 60 0 0 -1 0 1 0 1 0 0 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (black)
+1 0 -70 -14 -60 0 0 1 0 1 0 -1 0 0 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (black)
+1 0 70 -14 -60 0 0 -1 0 1 0 1 0 0 3482.dat
+0 // Tyre 10/130 x 17 Offset Tread (rubber_black)
+1 256 -70 -14 60 0 0 1 0 1 0 -1 0 0 3634.dat
+0 // Tyre 10/130 x 17 Offset Tread (rubber_black)
+1 256 70 -14 60 0 0 -1 0 1 0 1 0 0 3634.dat
+0 // Tyre 10/130 x 17 Offset Tread (rubber_black)
+1 256 -70 -14 -60 0 0 1 0 1 0 -1 0 0 3634.dat
+0 // Tyre 10/130 x 17 Offset Tread (rubber_black)
+1 256 70 -14 -60 0 0 -1 0 1 0 1 0 0 3634.dat
+1 7 0 -312.593 174.034 1 0 0 0 0.866 0.5 0 -0.5 0.866 6950 - Mobile Rocket Transport - Rocket Holder.ldr
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Tyres Back.ldr
+0 A rear axle assembly with four large rubber tyres mounted on black wheel rims, supported by a blue frame with technic bricks, pins, and a turntable base.
+0 Name: 6950 - Mobile Rocket Transport - Tyres Back.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Plate  2 x  4 (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Brick  1 x  6 (blue)
+1 1 -10 -24 40 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (blue)
+1 1 10 -24 40 0 0 1 0 1 0 -1 0 0 3009.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 30 -24 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (blue)
+1 1 -30 -24 0 0 0 1 0 1 0 -1 0 0 3700.dat
+0 STEP
+0 // Technic Pin (light_grey)
+1 7 40 -14 0 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Technic Pin (light_grey)
+1 7 -40 -14 0 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Brick  2 x  4 (blue)
+1 1 0 -48 0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 STEP
+1 16 0 -32 80 1 0 0 0 1 0 0 0 1 6950 - Mobile Rocket Transport - Propulsion.ldr
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (blue)
+1 1 -50 -24 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (blue)
+1 1 50 -24 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Brick  1 x  2 (blue)
+1 1 -30 -72 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 30 -72 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 0 -72 10 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 0 -72 -10 1 0 0 0 1 0 0 0 1 3660.dat
+0 STEP
+0 // Technic Axle Pin (black)
+1 0 -60 -14 60 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 // Technic Axle Pin (black)
+1 0 60 -14 60 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Axle Pin (black)
+1 0 60 -14 -60 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Axle Pin (black)
+1 0 -60 -14 -60 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 // Turntable  4 x  4 Base (black)
+1 0 0 -96 0 -1 0 0 0 1 0 0 0 -1 3403.dat
+0 STEP
+0 // Wheel Rim  8 x 17.5 with Axlehole (black)
+1 0 -70 -14 60 0 0 1 0 1 0 -1 0 0 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (black)
+1 0 70 -14 60 0 0 -1 0 1 0 1 0 0 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (black)
+1 0 -70 -14 -60 0 0 1 0 1 0 -1 0 0 3482.dat
+0 // Wheel Rim  8 x 17.5 with Axlehole (black)
+1 0 70 -14 -60 0 0 -1 0 1 0 1 0 0 3482.dat
+0 // Tyre 10/130 x 17 Offset Tread (rubber_black)
+1 256 -70 -14 60 0 0 1 0 1 0 -1 0 0 3634.dat
+0 // Tyre 10/130 x 17 Offset Tread (rubber_black)
+1 256 70 -14 60 0 0 -1 0 1 0 1 0 0 3634.dat
+0 // Tyre 10/130 x 17 Offset Tread (rubber_black)
+1 256 -70 -14 -60 0 0 1 0 1 0 -1 0 0 3634.dat
+0 // Tyre 10/130 x 17 Offset Tread (rubber_black)
+1 256 70 -14 -60 0 0 -1 0 1 0 1 0 0 3634.dat
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Rocket Hinge.ldr
+0 A hinged plate assembly using light grey and red hinge plates with a grooved tile, forming an articulating support mechanism.
+0 Name: 6950 - Mobile Rocket Transport - Rocket Hinge.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge Plate  2 x  5 Top with Large Hole (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 314e.dat
+0 STEP
+0 // Hinge Plate  2 x  9 Base with Large Hole (light_grey)
+1 7 0 -16 -180 -1 0 0 0 1 0 0 0 -1 3324e.dat
+0 // ~Hinge Plate  2 x  5 Pivot (red)
+1 4 0 -16 -180 -1 0 0 0 1 0 0 0 -1 313.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -26 -70 1 0 0 0 1 0 0 0 1 3068b.dat
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Rocket Holder.ldr
+0 A light grey rocket cradle featuring a hinged plate, grille-patterned bricks, headlight bricks, torches, and tiles forming a securing bracket for the rocket.
+0 Name: 6950 - Mobile Rocket Transport - Rocket Holder.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge Plate  2 x  5 Top with Large Hole (light_grey)
+1 7 0 0 0 -1 0 0 0 1 0 0 0 -1 314e.dat
+0 STEP
+0 // Plate  4 x  6 (light_grey)
+1 7 0 -18 70 0 0 -1 0 1 0 1 0 0 3032.dat
+0 STEP
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -26 110 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -26 70 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (light_grey)
+1 7 0 -26 30 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 STEP
+0 // Brick  1 x  1 (light_grey)
+1 7 -30 -42 20 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 30 -42 20 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -30 -42 120 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 30 -42 120 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  4 with Black 15 Bars Grille Pattern (light_grey)
+1 7 -30 -42 70 0 0 1 0 1 0 -1 0 0 3010p04.dat
+0 // Brick  1 x  4 with Black 15 Bars Grille Pattern (light_grey)
+1 7 30 -42 70 0 0 -1 0 1 0 1 0 0 3010p04.dat
+0 
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 30 -66 110 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 30 -66 30 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 -30 -66 30 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 -30 -66 110 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Minifig Torch (black)
+1 0 -46 -32 120 0 1 0 0.848 0 -0.53 -0.53 0 -0.848 3959.dat
+0 // Minifig Torch (black)
+1 0 46 -32 120 0 -1 0 -0.848 0 -0.53 0.53 0 -0.848 3959.dat
+0 STEP
+1 16 -30 -56 70 1 0 0 0 1 0 0 0 1 6950 - Mobile Rocket Transport - Grab Right.ldr
+1 16 30 -56 70 1 0 0 0 1 0 0 0 1 6950 - Mobile Rocket Transport - Grab Left.ldr
+1 16 0 -46 218 0.707 0 0.707 0.707 0 -0.707 0 1 0 6950 - Mobile Rocket Transport - Rocket.ldr
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Grab Right.ldr
+0 A right-side grab arm built from hinged plates, brackets, handled plates, an inverted webbed dish, a camera, and a trans-red round light.
+0 Name: 6950 - Mobile Rocket Transport - Grab Right.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 0 -10 40 0 0 1 0 1 0 -1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 0 -10 -40 0 0 1 0 1 0 -1 0 0 3938.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 10 -18 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 STEP
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 10 -26 20 -1 0 0 0 1 0 0 0 -1 3956.dat
+0 STEP
+0 // Plate  2 x  4 (light_grey)
+1 7 10 -66 40 0 0 -1 1 0 0 0 -1 0 3020.dat
+0 STEP
+0 // Plate  1 x  2 with Handles Type 1 (light_grey)
+1 7 10 -76 48 -1 0 0 0 0 -1 0 -1 0 3839a.dat
+0 // Plate  1 x  2 with Handles Type 1 (light_grey)
+1 7 10 -96 48 1 0 0 0 0 1 0 -1 0 3839a.dat
+0 STEP
+0 // Dish  6 x  6 Inverted Webbed Type 1 (light_grey)
+1 7 10 -86 32 1 0 0 0 0 1 0 -1 0 4285a.dat
+0 // Minifig Camera with Side Sight (black)
+1 0 10 -94 -16 0 0 1 0 1 0 -1 0 0 4360.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 27.5 -96 -32 0 0 1 -1 0 0 0 -1 0 3062b.dat
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Grab Left.ldr
+0 A simple left-side grab arm made from hinged top plates and a light grey plate.
+0 Name: 6950 - Mobile Rocket Transport - Grab Left.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 0 -10 40 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 0 -10 -40 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 -10 -18 0 0 0 1 0 1 0 -1 0 0 3795.dat
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Rocket.ldr
+0 A tall two-tone rocket built from white and black round bricks, cones with axleholes, jet engine plates, fins, ladders, and topped with a trans-red light and antenna.
+0 Name: 6950 - Mobile Rocket Transport - Rocket.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Cone  4 x  4 x  2 with Axlehole (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3943b.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 0 20 -40 1 0 0 0 0 1 0 -1 0 3956.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 0 20 40 -1 0 0 0 0 1 0 1 0 3956.dat
+0 STEP
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 -40 12 0 0 -1 0 0 0 1 -1 0 0 3956.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 40 12 0 0 1 0 0 0 1 1 0 0 3956.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -16 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -16 -30 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Cone  4 x  4 x  2 with Axlehole (white)
+1 15 0 -64 0 1 0 0 0 1 0 0 0 1 3943b.dat
+0 // Technic Axle 10 (black)
+1 0 0 -136 0 0 -1 0 1 0 0 0 0 1 3737.dat
+0 STEP
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -72 0 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -80 0 1 0 0 0 1 0 0 0 1 4032a.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 0 -104 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 0 -128 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 0 -152 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 0 -176 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 0 -200 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 0 -224 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 0 -248 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Plate  1 x  2 with Ladder (black)
+1 0 -10 -256 0 0 0 1 0 1 0 -1 0 0 4175.dat
+0 // Plate  1 x  2 with Ladder (black)
+1 0 10 -256 0 0 0 -1 0 1 0 1 0 0 4175.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 0 -280 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (white)
+1 15 0 -328 0 1 0 0 0 1 0 0 0 1 3942b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 0 -352 0 1 0 0 0 1 0 0 0 1 3062b.dat
+0 STEP
+1 16 0 -376 0 1 0 0 0 1 0 0 0 1 6950 - Mobile Rocket Transport - Satellit.ldr
+0 // Antenna  4H with Rounded Top (black)
+1 0 0 -424 0 1 0 0 0 1 0 0 0 1 3957a.dat
+0 STEP
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 0 20 -48 1 0 0 0 0 1 0 -1 0 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 48 12 0 0 1 0 0 0 1 1 0 0 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 0 20 48 -1 0 0 0 0 1 0 1 0 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 -48 12 0 0 -1 0 0 0 1 -1 0 0 4229.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 60 -74 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 74 52 0 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 60 74 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -74 52 0 1 0 0 0 1 0 0 0 1 6141.dat
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Yellow Astronaut Standing.ldr
+0 A standing yellow Classic Space minifigure with helmet, airtanks, classic space torso, and a black camera accessory.
+0 Name: 6950 - Mobile Rocket Transport - Yellow Astronaut Standing.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (yellow)
+1 14 0 -25 0 1 0 0 0 1 0 0 0 1 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -25 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Airtanks (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Classic Space Pattern (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (yellow)
+1 14 -15.552 9 0 0.985 -0.074 -0.153 0.17 0.432 0.886 0 -0.899 0.438 3818.dat
+0 // Minifig Arm Left (yellow)
+1 14 15.552 9 0 0.985 0.164 0.044 -0.17 0.951 0.255 0 -0.259 0.966 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.495 7.08 -21.386 0.998 0.013 -0.055 0.006 0.947 0.321 0.056 -0.32 0.946 3820.dat
+0 // Minifig Hand (yellow)
+1 14 23.3 23.335 -14.828 0.985 0.147 -0.085 -0.17 0.853 -0.492 0 0.499 0.866 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0.707 -0.707 0 0.707 0.707 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // Minifig Camera with Side Sight (black)
+1 0 -20.862 -18.837 -22.413 0.04 -0.002 0.999 -0.073 0.997 0.004 -0.996 -0.073 0.04 4360.dat
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Yellow Astronaut Sitting.ldr
+0 A seated yellow Classic Space minifigure with helmet, airtanks, classic space torso, and a black radio accessory.
+0 Name: 6950 - Mobile Rocket Transport - Yellow Astronaut Sitting.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (yellow)
+1 14 0 -78 8 1 0 0 0 1 0 0 0 1 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -78 8 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Airtanks (yellow)
+1 14 0 -53 8 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Classic Space Pattern (yellow)
+1 14 0 -53 8 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // Minifig Hips (yellow)
+1 14 0 -21 8 1 0 0 0 1 0 0 0 1 3815b.dat
+0 // Minifig Arm Right (yellow)
+1 14 -15.552 -44 8 0.985 -0.085 -0.147 0.17 0.493 0.853 0 -0.866 0.5 3818.dat
+0 // Minifig Arm Left (yellow)
+1 14 15.552 -44 8 0.985 0.143 0.093 -0.17 0.826 0.536 0 -0.545 0.839 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.749 -44.448 -13.407 0.985 -0.164 -0.044 0.17 0.951 0.255 0 -0.259 0.966 3820.dat
+0 // Minifig Hand (yellow)
+1 14 22.393 -34.923 -10.875 0.985 0.166 -0.035 -0.17 0.963 -0.205 0 0.208 0.978 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (yellow)
+1 14 0 -9 8 1 0 0 0 -0.052 0.999 0 -0.999 -0.052 3816b.dat
+0 // ~Minifig Leg Left (Obsolete) (yellow)
+1 14 0 -9 8 1 0 0 0 -0.052 0.999 0 -0.999 -0.052 3817b.dat
+0 // Minifig Radio with Short Handle (black)
+1 0 -20.094 -48.246 -22.748 -0.023 -0.17 -0.985 0.005 0.985 -0.17 1 -0.008 -0.022 3962a.dat
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Satellit.ldr
+0 A small satellite payload assembled from black round bricks and plates with yellow hinge plates and a trans-red light.
+0 Name: 6950 - Mobile Rocket Transport - Satellit.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // Hinge Plate  1 x  2 with 2 Fingers and Solid Studs (yellow)
+1 14 0 -8 10 1 0 0 0 1 0 0 0 1 4276a.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Solid Studs (yellow)
+1 14 0 -8 -10 -1 0 0 0 1 0 0 0 -1 4276a.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Solid Studs (yellow)
+1 14 18.371 -31.941 10 0.259 0.966 0 0.966 -0.259 0 0 0 -1 4275a.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Solid Studs (yellow)
+1 14 -18.375 -31.942 -10 -0.259 -0.966 0 0.966 -0.259 0 0 0 1 4275a.dat
+0 STEP
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -16 0 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 0 -40 0 1 0 0 0 1 0 0 0 1 3062b.dat
+
+0 STEP
+0 FILE 6950 - Mobile Rocket Transport - Propulsion.ldr
+0 A propulsion unit made from a black cone with axlehole, round bricks and plates, a technic axle, bush, and a light grey bracket.
+0 Name: 6950 - Mobile Rocket Transport - Propulsion.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Bracket  2 x  2 -  2 x  2 Up (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3956.dat
+0 // Technic Axle  4 (black)
+1 0 0 -20 -8 0 0 1 0 1 0 -1 0 0 3705.dat
+0 // Technic Bush with Two Flanges (light_grey)
+1 7 0 -20 -38 1 0 0 0 1 0 0 0 1 3713.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 0 -20 -20 1 0 0 0 0 -1 0 1 0 3941.dat
+0 STEP
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -20 4 1 0 0 0 0 -1 0 1 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 -20 12 1 0 0 0 0 -1 0 1 0 4032a.dat
+0 STEP
+0 // Cone  4 x  4 x  2 with Axlehole (black)
+1 0 0 -20 20 1 0 0 0 0 -1 0 1 0 3943b.dat
+
+
+

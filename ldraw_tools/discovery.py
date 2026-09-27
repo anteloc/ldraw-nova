@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import os
 import re
 import sqlite3
 import subprocess
@@ -15,7 +14,7 @@ from collections import Counter
 from pathlib import Path, PureWindowsPath
 from tempfile import NamedTemporaryFile
 
-from .common import CACHE, ROOT, atomic_write, dumps, jsonable, models_path, normalized
+from .common import CACHE, atomic_write, database_path, dumps, jsonable, models_path, normalized
 from .document import dependency_closure, is_part, parse_source, physical_context, resolve_section, section_table
 from .resources import model_sections
 
@@ -77,7 +76,7 @@ class DiscoveryIndex:
     def __init__(self, parts, root=None, *, database=None, cache=None):
         self.parts = parts
         self.root = models_path(root)
-        self.database = Path(database or self.root.parent/'scripts/ldraw-info.db').resolve()
+        self.database = database_path(database)
         self.cache = Path(cache or CACHE/'discovery'/digest([str(self.root), str(self.database), str(parts.path.resolve())])[:16]).resolve()
         self.cache.mkdir(parents=True, exist_ok=True)
         self.path = self.cache/'catalog.sqlite'
@@ -254,7 +253,7 @@ def mechanism_candidate(row, inventory=None):
 
 def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=60, system=True, construction=None,
            max_parts=None, min_parts=2, max_technic_share=0.5, parent_cap=2, yes=None, no=None,
-           jev_project=None, timeout=240):
+           timeout=240):
     if kind not in FIELDS or not query.strip() or engine not in {'jev','fts'}:
         raise ValueError('Choose parts/models/submodels, a nonblank query and jev/fts')
     if limit < 1 or pool < limit or candidates < 0 or (candidates and pool > candidates) or parent_cap < 1 or min_parts < 0:
@@ -285,8 +284,7 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
                 temp.replace(snapshot)
             finally:
                 temp.unlink(missing_ok=True)
-        command = ['uv','run','--project',str(jev_project or os.environ.get('JEV_RERANK_PROJECT',ROOT.parent/'jev-rerank')),
-                   'jev-rerank','--db',str(snapshot),'--table-field','candidates.full_description',
+        command = ['jev-rerank','--db',str(snapshot),'--table-field','candidates.full_description',
                    '--query',json.dumps(dict(query=query,yes=yes,no=no)) if yes is not None else query,
                    '--top',str(pool),'--candidates',str(candidates),'--model','jev-1.13.0','--json','--show']
         result = subprocess.run(command, capture_output=True, text=True, timeout=timeout)

@@ -1,0 +1,436 @@
+0 FILE 42031 - Cherry Picker.ldr
+0 Cherry picker vehicle with four wheels, angle connectors forming the chassis, and references to submodels for chassis, bumpers, roof, and the lifting arm assembly with bucket.
+0 Name: 42031 - Cherry Picker.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Technic
+
+1 16 0 0 66 1 0 0 0 1 0 0 0 1 42031 - chassis1.ldr
+1 16 -60 -20 -64 1 0 0 0 1 0 0 0 1 42031 - chassis2.ldr
+0 STEP
+0 STEP
+1 36 -40 0 126 1 0 0 0 1 0 0 0 1 42031 - rearbumper.ldr
+0 STEP
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 0 -60 -142 0 0 1 1 0 0 0 1 0 6141.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (black)
+1 0 0 -40 -124 1 0 0 0 -1 0 0 0 -1 42003.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 0 -40 -114 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // =Plate  1 x  1 Round (trans_clear)
+1 47 -80 -60 -142 0 0 1 1 0 0 0 1 0 30057.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (black)
+1 0 -80 -40 -124 1 0 0 0 -1 0 0 0 -1 42003.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -80 -40 -114 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 -80 -60 -134 0 0 1 0 1 0 -1 0 0 4274.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 0 -60 -134 0 0 1 0 1 0 -1 0 0 4274.dat
+0 STEP
+1 4 -50 -50 -134 1 0 0 0 0 1 0 -1 0 42031 - front.ldr
+0 STEP
+0 // Technic Axle  4 (black)
+1 0 -40 0 -124 1 0 0 0 0 -1 0 1 0 3705.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -55 0 -124 0 0 -1 -1 0 0 0 1 0 32123b.dat
+0 // Technic Angle Connector #1 (white)
+1 15 -90 0 -124 0 0 -1 0 -1 0 -1 0 0 32013.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 -90 0 -134 0 0 1 0 1 0 -1 0 0 4274.dat
+0 // =Plate  1 x  1 Round (trans_orange)
+1 57 -90 0 -142 0 0 1 1 0 0 0 1 0 30057.dat
+0 STEP
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -25 0 -124 0 0 -1 -1 0 0 0 1 0 32123b.dat
+0 // Technic Angle Connector #1 (white)
+1 15 10 0 -124 0 0 1 0 1 0 -1 0 0 32013.dat
+0 // =Plate  1 x  1 Round (trans_orange)
+1 57 10 0 -142 0 0 1 1 0 0 0 1 0 30057.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 10 0 -134 0 0 1 0 1 0 -1 0 0 4274.dat
+0 STEP
+0 // Technic Pin Long with Stop Bush (black)
+1 0 0 -60 -84 0 0 1 0 1 0 -1 0 0 32054.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 -80 -60 -84 0 0 1 0 1 0 -1 0 0 32054.dat
+0 // Technic Axle and Pin Connector Hub with 2 Axles at 90 Degrees (black)
+1 0 0 -60 -44 0 0 1 1 0 0 0 1 0 10197.dat
+0 // Technic Axle and Pin Connector Hub with 2 Axles at 90 Degrees (black)
+1 0 -80 -60 -44 0 -1 0 1 0 0 0 0 1 10197.dat
+0 // Technic Angle Connector #2 (180 degree) (black)
+1 0 -40 -60 -44 0 0 -1 1 0 0 0 -1 0 32034.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 -40 -40 -44 0 0 -1 1 0 0 0 -1 0 32073.dat
+1 71 -80 -100 -44 1 0 0 0 1 0 0 0 1 42031 - roof.ldr
+0 STEP
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_bluish_grey)
+1 71 -90 0 -74 0 0 1 0 1 0 -1 0 0 55981.dat
+0 // Tyre 14/ 25 x 17 Shallow Staggered Treads with Middle Band (rubber_black)
+1 256 -90 0 -74 0 0 1 0 1 0 -1 0 0 89201.dat
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_bluish_grey)
+1 71 -90 0 66 0 0 1 0 1 0 -1 0 0 55981.dat
+0 // Tyre 14/ 25 x 17 Shallow Staggered Treads with Middle Band (rubber_black)
+1 256 -90 0 66 0 0 1 0 1 0 -1 0 0 89201.dat
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_bluish_grey)
+1 71 10 0 -74 0 0 -1 0 1 0 1 0 0 55981.dat
+0 // Tyre 14/ 25 x 17 Shallow Staggered Treads with Middle Band (rubber_black)
+1 256 10 0 -74 0 0 -1 0 1 0 1 0 0 89201.dat
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_bluish_grey)
+1 71 10 0 66 0 0 -1 0 1 0 1 0 0 55981.dat
+0 // Tyre 14/ 25 x 17 Shallow Staggered Treads with Middle Band (rubber_black)
+1 256 10 0 66 0 0 -1 0 1 0 1 0 0 89201.dat
+1 14 -75 -59 56 1 0 0 0 1 0 0 0 1 42031 - picker.ldr
+
+0 STEP
+0 FILE 42031 - chassis1.ldr
+0 Short white Technic beam frame joined by long pins, forming a compact sub-assembly for the chassis structure.
+0 Name: 42031 - chassis1.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 0 0 0 1 0 0 0 0 -1 0 1 0 32556.dat
+0 // =Technic Beam  9 (white)
+1 15 -60 0 -60 0 -1 0 1 0 0 0 0 1 64289.dat
+0 // Technic Pin Long with Pin Hole Type 1 (light_bluish_grey)
+1 71 -40 0 20 -1 0 0 0 0 -1 0 -1 0 87082.dat
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 -80 0 0 -1 0 0 0 0 -1 0 -1 0 32556.dat
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 -80 0 -140 -1 0 0 0 0 -1 0 -1 0 32556.dat
+0 // Technic Pin  3L Double with Axlehole (light_bluish_grey)
+1 71 -40 0 -110 -1 0 0 0 0 -1 0 -1 0 32138.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -40 0 -80 1 0 0 0 0 1 0 -1 0 6558.dat
+0 // =Technic Beam  9 (white)
+1 15 -20 0 -60 0 -1 0 1 0 0 0 0 1 64289.dat
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 0 0 -140 1 0 0 0 0 -1 0 1 0 32556.dat
+
+
+0 STEP
+0 FILE 42031 - chassis2.ldr
+0 Main chassis built from long black beams with red bodywork plates and curved slopes, connected by cross blocks and pins.
+0 Name: 42031 - chassis2.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 // Technic Beam 13 (black)
+1 0 0 0 60 0 -1 0 1 0 0 0 0 1 41239.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 0 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 160 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 140 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Pin Long with Pin Hole Type 1 (light_bluish_grey)
+1 71 20 0 100 1 0 0 0 1 0 0 0 1 87082.dat
+0 // Technic Cross Block 2 x 2 Split (Axle/Twin Pin) (black)
+1 0 20 20 150 0 1 0 0 0 1 1 0 0 41678.dat
+0 STEP
+0 // Technic Axle Pin Long with Friction with  2L Axle (black)
+1 0 20 0 100 0 1 0 -1 0 0 0 0 1 18651.dat
+0 // Technic Pin Long with Pin Hole Type 1 (light_bluish_grey)
+1 71 20 20 100 0 0 1 0 1 0 -1 0 0 87082.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 20 0 80 1 0 0 0 1 0 0 0 1 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (white)
+1 15 20 0 120 1 0 0 0 1 0 0 0 1 6536.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 20 0 80 1 0 0 0 1 0 0 0 1 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 20 0 120 1 0 0 0 1 0 0 0 1 4519.dat
+0 STEP
+0 // Technic Cross Block 2 x 2 Split (Axle/Twin Pin) (black)
+1 0 20 -10 20 0 1 0 -1 0 0 0 0 1 41678.dat
+0 STEP
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 20 -20 0 1 0 0 0 1 0 0 0 1 32556.dat
+0 // Plate  1 x  2 with Offset Peghole on Underside (light_bluish_grey)
+1 71 0 -32.2474 -7.0711 0 0 1 0.9659 0.2588 0 -0.2588 0.9659 0 18677.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -49.4954 5.8327 0 0 1 0.9659 0.2588 0 -0.2588 0.9659 0 3023.dat
+0 // Slope Brick Curved  2 x  1 (red)
+1 4 0 -49.4954 5.8327 -1 0 0 0 0.2588 0.9659 0 0.9659 -0.2588 11477.dat
+0 STEP
+0 // Technic Beam 13 (black)
+1 0 40 0 60 0 -1 0 1 0 0 0 0 1 41239.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -10 0 -60 -1 0 0 0 -1 0 0 0 1 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 50 0 -60 1 0 0 0 1 0 0 0 1 43093.dat
+0 STEP
+0 // Plate  1 x  2 with Offset Peghole on Underside (light_bluish_grey)
+1 71 40 -32.2474 -7.0711 0 0 1 0.9659 0.2588 0 -0.2588 0.9659 0 18677.dat
+0 // Plate  1 x  2 (red)
+1 4 40 -49.4954 5.8327 0 0 1 0.9659 0.2588 0 -0.2588 0.9659 0 3023.dat
+0 // Slope Brick Curved  2 x  1 (red)
+1 4 40 -49.4954 5.8327 -1 0 0 0 0.2588 0.9659 0 0.9659 -0.2588 11477.dat
+0 STEP
+0 // Plate  1 x  3 (red)
+1 4 20 -24.6587 -17.3867 1 0 0 0 0.2588 -0.9659 0 0.9659 0.2588 3623.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (red)
+1 4 0 -24.6587 -17.3867 1 0 0 0 0.2588 -0.9659 0 0.9659 0.2588 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (red)
+1 4 20 -24.6587 -17.3867 1 0 0 0 0.2588 -0.9659 0 0.9659 0.2588 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (red)
+1 4 40 -24.6587 -17.3867 1 0 0 0 0.2588 -0.9659 0 0.9659 0.2588 54200.dat
+
+0 STEP
+0 FILE 42031 - rearbumper.ldr
+0 Rear bumper assembly using angle connectors and a Technic axle with bushes, accented by small red round plates.
+0 Name: 42031 - rearbumper.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 // Technic Axle  4 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Angle Connector #1 (white)
+1 15 -50 0 0 0 0 -1 0 1 0 1 0 0 32013.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 -15 0 0 0 0 -1 0 1 0 1 0 0 32123b.dat
+0 STEP
+0 // Technic Angle Connector #1 (white)
+1 15 50 0 0 0 0 1 0 1 0 -1 0 0 32013.dat
+0 // Technic Connector (Axle) with Axle 1.5 (light_bluish_grey)
+1 71 0 0 0 -1 0 0 0 0 -1 0 -1 0 6553.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 15 0 0 0 0 -1 0 1 0 1 0 0 32123b.dat
+0 STEP
+0 // =Plate  1 x  1 Round (trans_red)
+1 36 50 0 10 0 0 1 1 0 0 0 1 0 30057.dat
+0 // =Plate  1 x  1 Round (trans_red)
+1 36 -50 0 10 0 0 1 1 0 0 0 1 0 30057.dat
+
+0 STEP
+0 FILE 42031 - front.ldr
+0 Front-end assembly with a bent liftarm and cross blocks joined by pins and notched red axles.
+0 Name: 42031 - front.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (dark_bluish_grey)
+1 72 -10 -30 0 0 0 1 0 1 0 -1 0 0 32291.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 10 -10 -10 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 10 -10 10 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (black)
+1 0 10 -10 50 0 -1 0 -1 0 0 0 0 -1 32140.dat
+0 STEP
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (dark_bluish_grey)
+1 72 30 -30 0 0 0 1 0 1 0 -1 0 0 32291.dat
+0 STEP
+0 // Technic Axle  2 Notched (red)
+1 4 -10 -30 0 0 0 -1 0 1 0 1 0 0 32062.dat
+0 // Technic Cross Block 2 x 2 Split (Axle/Twin Pin) (black)
+1 0 -10 -30 0 0 0 1 0 1 0 -1 0 0 41678.dat
+0 // Technic Axle  2 Notched (red)
+1 4 30 -30 0 0 0 -1 0 1 0 1 0 0 32062.dat
+0 // Technic Cross Block 2 x 2 Split (Axle/Twin Pin) (black)
+1 0 30 -30 0 0 0 -1 0 1 0 1 0 0 41678.dat
+
+
+0 STEP
+0 FILE 42031 - roof.ldr
+0 Cab roof structure formed by angle connectors and cross blocks with a liftarm, featuring clear orange domed light elements.
+0 Name: 42031 - roof.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 // Technic Axle and Pin Connector Hub with 2 Axles at 90 Degrees (black)
+1 0 0 0 0 1 0 0 0 0 -1 0 1 0 10197.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 0 40 0 0 0 1 1 0 0 0 1 0 32054.dat
+0 // Technic Angle Connector #5 (112.5 degree) (black)
+1 0 0 0 -40 1 0 0 0 -1 0 0 0 -1 32015.dat
+0 // Technic Axle Pin Long with Friction with  2L Axle (black)
+1 0 20 0 0 1 0 0 0 -1 0 0 0 -1 18651.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 40 0 -40 1 0 0 0 -1 0 0 0 -1 32073.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 20 0 -20 1 0 0 0 0 1 0 -1 0 32184.dat
+0 // Technic Connector (Axle/Bush) Type 1 (black)
+1 0 40 20 0 -1 0 0 0 0 1 0 1 0 32039.dat
+0 STEP
+0 // =Technic Beam  2 Liftarm (black)
+1 0 40 0 -40 0 1 0 -1 0 0 0 0 1 74695.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 60 0 -20 1 0 0 0 0 1 0 -1 0 32184.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 70 0 0 -1 0 0 0 0 -1 0 -1 0 43093.dat
+0 STEP
+0 // Technic Axle and Pin Connector Hub with 2 Axles at 90 Degrees (black)
+1 0 80 0 0 1 0 0 0 0 -1 0 1 0 10197.dat
+0 // Technic Angle Connector #5 (112.5 degree) (black)
+1 0 80 0 -40 1 0 0 0 -1 0 0 0 -1 32015.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 80 40 0 0 0 1 1 0 0 0 1 0 32054.dat
+0 STEP
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 20 -10 -20 0 0 -1 -1 0 0 0 1 0 4274.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 60 -10 -20 0 0 -1 -1 0 0 0 1 0 4274.dat
+0 // Cylinder Domed  1 x  1 x  1.667 with Bar (trans_orange)
+1 57 20 -1 -20 0 0 -1 0 1 0 1 0 0 58176.dat
+0 // Cylinder Domed  1 x  1 x  1.667 with Bar (trans_orange)
+1 57 60 -1 -20 0 0 -1 0 1 0 1 0 0 58176.dat
+
+0 STEP
+0 FILE 42031 - picker.ldr
+0 Yellow lifting mechanism with bent liftarms, a worm gear, and bevel gear for the elevation and rotation of the boom.
+0 Name: 42031 - picker.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 // Technic Beam  3 x  0.5 Liftarm (yellow)
+1 14 0 0 0 0 1 0 -1 0 0 0 0 1 6632.dat
+0 // Technic Axle  4 (black)
+1 0 35 0 0 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Axle  4 (black)
+1 0 35 0 40 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Beam  3 x  5 x  0.5 Liftarm Bent 90 Quarter Ellipse (yellow)
+1 14 10 0 0 0 -1 0 0 0 -1 1 0 0 32250.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 20 0 40 0 0 -1 0 1 0 1 0 0 32123b.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 35 0 40 1 0 0 0 -1 0 0 0 -1 6536.dat
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 (yellow)
+1 14 20 0 -40 0 -1 0 0 0 -1 1 0 0 32056.dat
+0 // Technic Axle  2 Notched (red)
+1 4 35 -40 -40 1 0 0 0 0 -1 0 1 0 32062.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 35 0 -40 1 0 0 0 0 -1 0 1 0 4519.dat
+0 STEP
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (dark_bluish_grey)
+1 72 35 0 -40 1 0 0 0 1 0 0 0 1 32291.dat
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (dark_bluish_grey)
+1 72 35 0 0 1 0 0 0 1 0 0 0 1 32291.dat
+0 // Technic Pin  3L Double with Axlehole (light_bluish_grey)
+1 71 35 20 -20 0 -1 0 0 0 -1 1 0 0 32138.dat
+0 STEP
+0 // Technic Axle  8 with Stop (light_bluish_grey)
+1 71 35 -20 8 0 -1 0 0 0 1 -1 0 0 55013.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 35 -40 -40 1 0 0 0 1 0 0 0 1 6536.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 35 -20 -55 1 0 0 0 1 0 0 0 1 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 35 -20 -65 1 0 0 0 1 0 0 0 1 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 35 -20 -25 1 0 0 0 1 0 0 0 1 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 35 -20 25 1 0 0 0 1 0 0 0 1 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 35 -20 55 1 0 0 0 1 0 0 0 1 32123b.dat
+0 // Technic Worm Gear 2L (light_bluish_grey)
+1 71 35 -20 0 1 0 0 0 1 0 0 0 1 4716.dat
+0 STEP
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 (yellow)
+1 14 50 0 -40 0 -1 0 0 0 -1 1 0 0 32056.dat
+1 71 20 -60 -40 1 0 0 0 1 0 0 0 1 42031 - arm.ldr
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 50 0 40 0 0 -1 0 1 0 1 0 0 32123b.dat
+0 STEP
+0 // Technic Beam  3 x  5 x  0.5 Liftarm Bent 90 Quarter Ellipse (yellow)
+1 14 60 0 0 0 -1 0 0 0 -1 1 0 0 32250.dat
+0 // Technic Beam  3 x  0.5 Liftarm (yellow)
+1 14 70 0 0 0 1 0 -1 0 0 0 0 1 6632.dat
+0 // Technic Gear 12 Tooth Double Bevel (black)
+1 0 35 -20 70 0 1 0 -1 0 0 0 0 1 32270.dat
+0 STEP
+1 14 10 20 -220 1 0 0 0 1 0 0 0 1 42031 - bucket.ldr
+
+
+0 STEP
+0 FILE 42031 - arm.ldr
+0 Telescoping boom arm made of paired yellow and grey liftarms with a 24-tooth gear for articulation.
+0 Name: 42031 - arm.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 // Technic Beam  5 x  0.5 Liftarm with Axle Holes at Both Ends (light_bluish_grey)
+1 71 0 0 0 0 1 0 -1 0 0 0 0 1 11478.dat
+0 // Technic Axle  2 Notched (red)
+1 4 15 0 -40 1 0 0 0 1 0 0 0 1 32062.dat
+0 // Technic Beam  7 x  0.5 (yellow)
+1 14 10 0 -80 0 1 0 -1 0 0 0 0 1 32065.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 15 0 -20 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Axle  2 Notched (red)
+1 4 15 0 -120 1 0 0 0 -1 0 0 0 -1 32062.dat
+0 // Technic Beam  5 x  0.5 Liftarm with Axle Holes at Both Ends (light_bluish_grey)
+1 71 0 0 -160 0 1 0 1 0 0 0 0 -1 11478.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 15 0 -140 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Axle  2 Notched (red)
+1 4 15 0 -200 1 0 0 0 -1 0 0 0 -1 32062.dat
+0 // Technic Beam  7 x  0.5 (yellow)
+1 14 20 0 -80 0 1 0 -1 0 0 0 0 1 32065.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 15 0 -180 0 0 1 -1 0 0 0 -1 0 6536.dat
+0 // Technic Axle  4 (black)
+1 0 15 0 40 1 0 0 0 -1 0 0 0 -1 3705.dat
+0 // Technic Gear 24 Tooth with Single Axle Hole (dark_bluish_grey)
+1 72 15 0 40 0 0 1 0 -1 0 1 0 0 3648b.dat
+0 STEP
+0 // Technic Beam  5 x  0.5 Liftarm with Axle Holes at Both Ends (light_bluish_grey)
+1 71 30 0 0 0 1 0 -1 0 0 0 0 1 11478.dat
+0 // Technic Beam  5 x  0.5 Liftarm with Axle Holes at Both Ends (light_bluish_grey)
+1 71 30 0 -160 0 1 0 -1 0 0 0 0 1 11478.dat
+
+
+0 STEP
+0 FILE 42031 - bucket.ldr
+0 Work bucket platform built from curved grey liftarms and yellow connectors, forming the operator basket at the end of the arm.
+0 Name: 42031 - bucket.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Technic
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 Quarter Circle (light_bluish_grey)
+1 71 0 0 0 0 1 0 1 0 0 0 0 -1 32249.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 25 0 0 -1 0 0 0 1 0 0 0 -1 4519.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 10 0 0 0 0 -1 1 0 0 0 -1 0 32123b.dat
+0 // Technic Connector (Axle/Bush) Type 1 (yellow)
+1 14 25 -20 0 -1 0 0 0 0 -1 0 -1 0 32039.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 40 0 0 0 0 -1 1 0 0 0 -1 0 32123b.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 25 40 0 -1 0 0 0 1 0 0 0 -1 4519.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 25 0 -40 -1 0 0 0 1 0 0 0 -1 4519.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 15 0 -40 -1 0 0 0 1 0 0 0 -1 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 35 0 -40 -1 0 0 0 1 0 0 0 -1 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 15 40 0 -1 0 0 0 0 -1 0 -1 0 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 35 40 0 -1 0 0 0 0 -1 0 -1 0 6536.dat
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 Quarter Circle (light_bluish_grey)
+1 71 50 0 0 0 1 0 1 0 0 0 0 -1 32249.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 25 -30 0 0 1 0 1 0 0 0 0 -1 43093.dat
+0 // Technic Pin Joiner Round with Slot (yellow)
+1 14 25 -50 0 0 0 -1 1 0 0 0 -1 0 62462.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 25 -70 0 0 1 0 -1 0 0 0 0 1 43093.dat
+
+

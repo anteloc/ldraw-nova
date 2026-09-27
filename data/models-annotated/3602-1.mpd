@@ -1,0 +1,129 @@
+0 FILE 3602 - main.ldr
+0 A small assembly featuring a red Fabuland umbrella mounted on a bar, accompanied by two red wheeled axles.
+0 Name: 3602 - main.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 14 0 -30 -78 1 0 0 0 1 0 0 0 1 u9170c01.dat
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 3602 - biancalamb.ldr
+0 // Bar  6.6L with Stop (red)
+1 4 -30 -170.397 35.983 0 0 -1 -0.5 -0.866 0 -0.866 0.5 0 4095.dat
+0 // Fabuland Umbrella (red)
+1 4 -30 -182.521 42.983 0 0 1 -0.5 0.866 0 -0.866 -0.5 0 4094a.dat
+0 STEP
+0 FILE 3602 - biancalamb.ldr
+0 An empty submodel with no direct pieces.
+0 Name: 3602 - biancalamb.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 15 0 -67 4 1 0 0 0 1 0 0 0 1 u9140p01c01.dat
+1 2 0 -37 4 1 0 0 0 1 0 0 0 1 u9102.dat
+1 15 23 -63 4 1 0 0 0 0.423 0.906 0 -0.906 0.423 u9101.dat
+1 15 -23 -63 4 -1 0 0 0 -0.5 -0.866 0 -0.866 0.5 u9101.dat
+1 15 -10 -37 4 1 0 0 0 1 0 0 0 1 u9100.dat
+1 15 10 -37 4 1 0 0 0 1 0 0 0 1 u9100.dat
+1 4 0 -37 4 1 0 0 0 1 0 0 0 1 u9103.dat
+0 STEP
+0 FILE u9169c01.dat
+0 A redirected part alias for a complete red axle assembly with two 10x3 wheels.
+0 Name: u9169c01.dat
+0 Author: [PTadmin]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 // ~Axle Red with Two Wheels 10 x  3 (Complete)
+0 // ~Axle Red with Two Wheels 10 x  3 (Complete) (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 4108c01.dat
+0 STEP
+0 FILE 4108c01.dat
+0 A complete red wheel assembly consisting of an axle fitted with two 10x3 wheels.
+0 Name: 4108c01.dat
+0 Author: Alex Taylor [anathema]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !CATEGORY Wheel
+0 !KEYWORDS Fabuland, stroller, pram, pushchair, trolley, skateboard, handcart
+
+0 !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+0 !HISTORY 2017-09-08 [PTadmin] Renamed from u9169c01
+
+0 // ~Axle for Wheel 10 x  3 (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 4108.dat
+0 // ~Wheel 10 x  3 (main_colour)
+1 16 37.5 0 0 0 0 -1 0 1 0 1 0 0 4075.dat
+0 // ~Wheel 10 x  3 (main_colour)
+1 16 -37.5 0 0 0 0 1 0 1 0 -1 0 0 4075.dat
+
+0 STEP
+0 FILE 4108.dat
+0 A red wheel axle built from an open cylinder, four closed cylinders, and two discs.
+0 Name: 4108.dat
+0 Author: Alex Taylor [anathema]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !CATEGORY Wheel
+0 !KEYWORDS Fabuland, stroller, pram, pushchair, trolley, skateboard, handcart
+
+0 !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+0 !HISTORY 2017-09-08 [PTadmin] Renamed from u9139
+
+0 // Cylinder Open 1.0 (main_colour)
+1 16 25 0 0 0 -50 0 0 0 -2.5 2.5 0 0 4-4cylo.dat
+0 // Cylinder Closed 1.0 (main_colour)
+1 16 29.5 0 0 0 -2.5 0 0 0 -2.5 2.5 0 0 4-4cylc.dat
+0 // Cylinder Closed 1.0 (main_colour)
+1 16 -29.5 0 0 0 2.5 0 0 0 -2.5 -2.5 0 0 4-4cylc.dat
+0 // Cylinder Closed 1.0 (main_colour)
+1 16 -27 0 0 0 2 0 0 0 -5 -5 0 0 4-4cylc.dat
+0 // Disc 1.0 (main_colour)
+1 16 -25 0 0 0 -1 0 0 0 -5 5 0 0 4-4disc.dat
+0 // Cylinder Closed 1.0 (main_colour)
+1 16 25 0 0 0 2 0 0 0 -5 -5 0 0 4-4cylc.dat
+0 // Disc 1.0 (main_colour)
+1 16 27 0 0 0 -1 0 0 0 -5 5 0 0 4-4disc.dat
+
+0 STEP
+0 FILE 4075.dat
+0 A 10x3 wheel constructed from closed and open cylinders with various rings forming the tire profile.
+0 Name: 4075.dat
+0 Author: Alex Taylor [anathema]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 !KEYWORDS Fabuland, stroller, pram, pushchair, trolley, skateboard, handcart
+
+0 !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01
+0 !HISTORY 2017-09-08 [PTadmin] Renamed from u9168
+
+1 16 0 0 0 0 0 1 1 0 0 0 1 0 stud.dat
+0 // Cylinder Closed 1.0 (main_colour)
+1 16 0 0 0 13 0 0 0 0 -13 0 8 0 4-4cylc.dat
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 0 8 5 0 0 0 0 -5 0 2.5 0 4-4cylo.dat
+0 // Ring  5 x 1.0 (main_colour)
+1 16 0 0 10.5 0.5 0 0 0 0 0.5 0 -1 0 4-4ring5.dat
+0 // Ring  5 x 1.0 (main_colour)
+1 16 0 0 8 1 0 0 0 0 1 0 -1 0 4-4ring5.dat
+0 // Ring  1 x 1.0 (main_colour)
+1 16 0 0 8 6 0 0 0 0 6 0 -1 0 4-4ring1.dat
+0 // ~Ring 12 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 8 1 0 0 0 0 1 0 -1 0 4-4rin12.dat
+0 // Ring  3 x 1.0 (main_colour)
+1 16 0 0 10.5 1 0 0 0 0 1 0 -1 0 4-4ring3.dat
+0 // Ring  4 x 1.0 (main_colour)
+1 16 0 0 10.5 1 0 0 0 0 1 0 -1 0 4-4ring4.dat
+0 BFC INVERTNEXT
+0 // Cylinder Closed 1.0 (main_colour)
+1 16 0 0 8 2.5 0 0 0 0 -2.5 0 2.5 0 4-4cylc.dat
+

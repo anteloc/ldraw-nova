@@ -1,0 +1,474 @@
+0 FILE 7819 - main.ldr
+0 A 12V railway mail train built from a motor chassis, train car body, wheels bogie, cargo pallets, postal parcels, and a mail-worker minifig.
+0 Name: 7819 - main.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // 12V motor variant (+ 7865 set, pages 28 - 32 of instruction: http://peeron.com/scans/7722-1/28/), due to missing 4.5V motor (x469b)
+1 7 170 -8 40 0.5 0 -0.866 0 1 0 0.866 0 0.5 7819 - pallete.ldr
+1 15 206 -16 42.32 0.5 0 -0.866 0 1 0 0.866 0 0.5 7819 - postal parcel.ldr
+1 15 162.679 -16 67.32 0.5 0 -0.866 0 1 0 0.866 0 0.5 7819 - postal parcel big.ldr
+1 15 150 -16 5.36 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 7819 - postal parcel big.ldr
+1 16 160 -64 -140 1 0 0 0 1 0 0 0 1 7819 - train car.ldr
+1 16 300 0 77.326 -0.5 0 0.866 0 1 0 -0.866 0 -0.5 7819 - minifig 2.ldr
+1 15 150 -48 5.36 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 7819 - postal parcel big.ldr
+
+
+
+
+0 STEP
+0 FILE 7819 - train car.ldr
+0 A black railway mail car body with a long perforated train base, sloped sides, door rails, internal seating, and lattice fences.
+0 Name: 7819 - train car.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  4 x 12 (black)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3029.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -100 8 -30 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -100 8 30 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 100 8 -30 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 100 8 30 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 20 8 -30 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -20 8 -30 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -20 8 30 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 20 8 30 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 STEP
+0 // Brick  2 x  2 (black)
+1 0 -60 8 -40 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 -60 8 40 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 60 8 -40 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 60 8 40 1 0 0 0 1 0 0 0 1 3003.dat
+1 16 200 24 0 1 0 0 0 1 0 0 0 1 7819 - wheels.ldr
+1 16 -200 24 0 -1 0 0 0 1 0 0 0 -1 7819 - wheels.ldr
+0 STEP
+0 // Plate  1 x  3 (black)
+1 0 -90 0 30 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 90 0 30 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  6 (black)
+1 0 0 0 30 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  3 (black)
+1 0 -90 0 -30 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 90 0 -30 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  6 (black)
+1 0 0 0 -30 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+0 // Train Base  6 x 28 with 15 Holes (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 4093b.dat
+0 STEP
+0 // Plate  1 x  8 with Door Rail (black)
+1 0 -180 -16 -50 1 0 0 0 1 0 0 0 1 4510.dat
+0 // Plate  1 x  8 (red)
+1 4 200 -16 -50 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  8 (red)
+1 4 200 -16 50 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  8 with Door Rail (black)
+1 0 -180 -16 50 -1 0 0 0 1 0 0 0 -1 4510.dat
+0 // Plate  2 x  4 (black)
+1 0 280 -16 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  2 x  4 (black)
+1 0 -280 -16 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  8 with Door Rail (black)
+1 0 -20 -16 -50 1 0 0 0 1 0 0 0 1 4510.dat
+0 // Plate  1 x  8 with Door Rail (black)
+1 0 -20 -16 50 -1 0 0 0 1 0 0 0 -1 4510.dat
+0 // Plate  1 x  3 (red)
+1 4 90 -16 -50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (red)
+1 4 90 -16 50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  1 (red)
+1 4 -270 -16 -50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (red)
+1 4 -270 -16 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Tile  1 x  8 (black)
+1 0 -80 -16 -30 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Tile  1 x  8 (black)
+1 0 -80 -16 -10 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Tile  1 x  8 (black)
+1 0 -80 -16 10 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Tile  1 x  8 (black)
+1 0 -80 -16 30 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Brick  2 x  2 (black)
+1 0 100 -32 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (blue)
+1 1 140 -32 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 // Minifig Seat  2 x  2 (blue)
+1 1 100 -40 0 0 0 -1 0 1 0 1 0 0 4079.dat
+0 // Brick  2 x  2 (blue)
+1 1 140 -56 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Fence Lattice  1 x  4 x  1 (black)
+1 0 -170 -32 0 0 0 -1 0 1 0 1 0 0 3633.dat
+0 // Fence Lattice  1 x  4 x  1 (black)
+1 0 10 -32 0 0 0 1 0 1 0 -1 0 0 3633.dat
+0 STEP
+0 // Brick  1 x  8 (red)
+1 4 100 -40 -50 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 100 -40 50 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  3 (red)
+1 4 -250 -40 -50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  3 (red)
+1 4 -250 -40 50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  1 (red)
+1 4 270 -40 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (red)
+1 4 270 -40 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -280 -40 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -280 -40 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -40 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -40 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 STEP
+0 // Tile  1 x  2 with Letter Pattern (white)
+1 15 130 -64 0 0 0 -1 0 1 0 1 0 0 3069bp01.dat
+0 // Brick  1 x  8 (red)
+1 4 100 -64 50 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 100 -64 -50 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  2 (red)
+1 4 -240 -64 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -240 -64 -50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -270 -64 -40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 -270 -64 40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 270 -64 -40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (red)
+1 4 270 -64 40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 -290 -64 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -290 -64 30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 290 -64 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 290 -64 30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 STEP
+0 // Brick  1 x  3 (yellow)
+1 14 -250 -88 -50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  3 (yellow)
+1 14 -250 -88 50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  1 (yellow)
+1 14 270 -88 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 270 -88 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -280 -88 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -280 -88 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -88 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -88 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  3 (yellow)
+1 14 50 -88 -50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  3 (yellow)
+1 14 50 -88 50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  1 (yellow)
+1 14 170 -88 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 170 -88 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Brick  1 x  1 (yellow)
+1 14 170 -112 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 170 -112 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  3 (yellow)
+1 14 50 -112 50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  3 (yellow)
+1 14 50 -112 -50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  2 (yellow)
+1 14 -240 -112 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (yellow)
+1 14 -240 -112 -50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (yellow)
+1 14 -270 -112 -40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (yellow)
+1 14 -270 -112 40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (yellow)
+1 14 270 -112 -40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (yellow)
+1 14 270 -112 40 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 -290 -112 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -290 -112 30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 290 -112 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 290 -112 30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 270 -136 50 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 270 -126 64 -1 0 0 0 0 -1 0 -1 0 6141.dat
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 270 -136 -50 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 270 -126 -64 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Train Door  1 x  4 x  5 Right Red Bottom Half w/ Mail Sticker (yellow)
+1 14 190 -136 50 0 0 1 0 1 0 -1 0 0 4182p02d02.dat
+0 // Train Door  1 x  4 x  5 Left Red Bottom Half w/ Mail Sticker (yellow)
+1 14 190 -136 -50 0 0 1 0 1 0 -1 0 0 4181p02d02.dat
+0 // Train Window  1 x  4 x  3 with Trans-Clear Glass (yellow)
+1 14 120 -136 -50 1 0 0 0 1 0 0 0 1 4033c01.dat
+0 // Train Window  1 x  4 x  3 with Trans-Clear Glass (yellow)
+1 14 120 -136 50 -1 0 0 0 1 0 0 0 -1 4033c01.dat
+0 // Glass for Train Door (trans_clear)
+1 47 250 -136 50 0 0 -1 0 1 0 1 0 0 4183.dat
+0 // Glass for Train Door (trans_clear)
+1 47 190 -136 -50 0 0 1 0 1 0 -1 0 0 4183.dat
+0 // Brick  1 x  3 (yellow)
+1 14 -250 -136 -50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  3 (yellow)
+1 14 -250 -136 50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  1 (yellow)
+1 14 270 -136 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 270 -136 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -280 -136 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -280 -136 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -136 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 280 -136 30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  3 (yellow)
+1 14 50 -136 -50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  3 (yellow)
+1 14 50 -136 50 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  1 (yellow)
+1 14 170 -136 -50 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (yellow)
+1 14 170 -136 50 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // Plate  1 x  8 with Door Rail (black)
+1 0 -180 -144 -50 1 0 0 0 1 0 0 0 1 4510.dat
+0 // Door  6.5 x  5 Sliding with Corrugated Surface (red)
+1 4 -104 -75 -63 -1 0 0 0 -1 0 0 0 1 4511.dat
+0 // Door  6.5 x  5 Sliding with Corrugated Surface (red)
+1 4 -104 -75 -63 1 0 0 0 1 0 0 0 1 4511.dat
+0 // Plate  1 x  8 with Door Rail (black)
+1 0 -20 -144 -50 1 0 0 0 1 0 0 0 1 4510.dat
+0 // Plate  1 x  8 (yellow)
+1 14 200 -144 -50 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  8 (yellow)
+1 14 200 -144 50 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  3 (yellow)
+1 14 90 -144 -50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 90 -144 50 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  2 x  4 (black)
+1 0 280 -144 0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  2 x  4 (black)
+1 0 -280 -144 0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  1 x  1 (yellow)
+1 14 -270 -144 -50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (yellow)
+1 14 -270 -144 50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  2 x  6 (black)
+1 0 -100 -136 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 STEP
+0 // Door  6.5 x  5 Sliding with Corrugated Surface (red)
+1 4 -102 -75 63 -1 0 0 0 1 0 0 0 -1 4511.dat
+0 // Plate  1 x  8 with Door Rail (black)
+1 0 -180 -144 50 -1 0 0 0 1 0 0 0 -1 4510.dat
+0 // Plate  1 x  8 with Door Rail (black)
+1 0 -20 -144 50 -1 0 0 0 1 0 0 0 -1 4510.dat
+0 // Plate  2 x  4 (black)
+1 0 -100 -144 0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Door  6.5 x  5 Sliding with Corrugated Surface (red)
+1 4 -102 -75 63 1 0 0 0 -1 0 0 0 -1 4511.dat
+0 STEP
+0 // Slope Brick 33  6 x  6 Double (light_grey)
+1 7 -180 -168 0 1 0 0 0 1 0 0 0 1 4509.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 -100 -168 10 -1 0 0 0 1 0 0 0 -1 3298.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 -100 -168 -10 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Slope Brick 33  6 x  6 Double (light_grey)
+1 7 -20 -168 0 -1 0 0 0 1 0 0 0 -1 4509.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 -260 -168 -10 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Slope Brick 33  3 x  2 (light_grey)
+1 7 -260 -168 10 -1 0 0 0 1 0 0 0 -1 3298.dat
+0 // Slope Brick 33  6 x  6 Double (light_grey)
+1 7 100 -168 0 -1 0 0 0 1 0 0 0 -1 4509.dat
+0 // Slope Brick 33  6 x  6 Double (light_grey)
+1 7 220 -168 0 -1 0 0 0 1 0 0 0 -1 4509.dat
+0 STEP
+0 // Plate  2 x  2 Round with Axlehole (light_grey)
+1 7 220 -176 0 -1 0 0 0 1 0 0 0 -1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (light_grey)
+1 7 -180 -176 0 -1 0 0 0 1 0 0 0 -1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (light_grey)
+1 7 100 -176 0 -1 0 0 0 1 0 0 0 -1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (light_grey)
+1 7 -20 -176 0 -1 0 0 0 1 0 0 0 -1 4032a.dat
+
+
+
+
+0 STEP
+0 FILE 7819 - wheels.ldr
+0 A powered train bogie assembly with small black train wheels, a buffer beam with magnetic coupling, and a bogie plate with long pin.
+0 Name: 7819 - wheels.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  2 x  6 (black)
+1 0 0 8 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Brick  2 x  4 Black with Train Wheels Small (Complete) (black)
+1 0 40 16 0 0 0 -1 0 1 0 1 0 0 4180c02.dat
+0 // Brick  2 x  4 Black with Train Wheels Small (Complete) (black)
+1 0 -40 16 0 0 0 -1 0 1 0 1 0 0 4180c02.dat
+0 STEP
+0 // Plate  2 x  6 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 STEP
+0 // Train Buffer Beam with Black Coupling Type 1 with Magnet in Coupled Position (black)
+1 0 40 -8 0 0 0 -1 0 1 0 1 0 0 4022c01.dat
+0 STEP
+0 // Brick  1 x  6 (black)
+1 0 0 -8 -30 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Plate  2 x  4 (black)
+1 0 -20 -8 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Brick  1 x  6 (black)
+1 0 0 -8 30 1 0 0 0 1 0 0 0 1 3009.dat
+0 STEP
+0 // Train Bogie Plate with Long Pin (black)
+1 0 0 -16 0 1 0 0 0 1 0 0 0 1 4092a.dat
+
+
+
+
+0 STEP
+0 FILE 7819 - pallete.ldr
+0 A simple cargo pallet made of plates, formed from a large 4x6 base plate with two smaller 1x4 plates on top.
+0 Name: 7819 - pallete.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Plate  1 x  4 (main_colour)
+1 16 50 0 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (main_colour)
+1 16 -50 0 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+0 // Plate  4 x  6 (main_colour)
+1 16 0 -8 0 1 0 0 0 1 0 0 0 1 3032.dat
+
+
+
+
+0 STEP
+0 FILE 7819 - postal parcel.ldr
+0 A small postal parcel built from a 1x2 brick topped with a letter-patterned tile.
+0 Name: 7819 - postal parcel.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Brick  1 x  2 (main_colour)
+1 16 0 -24 0 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Tile  1 x  2 with Letter Pattern (main_colour)
+1 16 0 -32 0 1 0 0 0 1 0 0 0 1 3069bp01.dat
+
+
+
+
+0 STEP
+0 FILE 7819 - minifig 2.ldr
+0 A mail-worker minifig wearing a police hat, red torso with mail horn pattern, and black legs.
+0 Name: 7819 - minifig 2.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Minifig Police Hat (black)
+1 0 0 -96 0 1 0 0 0 1 0 0 0 1 3624.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -96 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Torso with Mail Horn Pattern (red)
+1 4 0 -72 0 1 0 0 0 1 0 0 0 1 973p1s.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 -40 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Left (red)
+1 4 15.5 -64 0 1 0.17 0 -0.17 1 0 0 0 1 3819.dat
+0 // Minifig Arm Right (red)
+1 4 -15.5 -64 0 1 -0.17 0 0.17 1 0 0 0 1 3818.dat
+0 // Minifig Hand (yellow)
+1 14 23.658 -46.127 -10 1 0.12 -0.12 -0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // Minifig Hand (yellow)
+1 14 -23.658 -46.127 -10 1 -0.12 0.12 0.17 0.697 -0.697 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (black)
+1 0 0 -28 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (black)
+1 0 0 -28 0 1 0 0 0 1 0 0 0 1 3816.dat
+
+
+
+
+0 STEP
+0 FILE 7819 - postal parcel big.ldr
+0 A larger postal parcel built from a 2x2 brick topped with letter-patterned and grooved tiles.
+0 Name: 7819 - postal parcel big.ldr
+0 Author: Robert Paciorek [bercik]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HELP Copyright (c) 2002-2017, Robert Paciorek (http://www.opcode.eu.org/)
+0 !HELP Released under a dual license, you can choise "CCAL version 2.0" or "BSD/MIT-type licence":
+0 !HELP Redistribution and use in source or any others forms, with or without modification, ARE PERMITTED provided save information about author(s).
+0 !HELP This material is distributed WITHOUT any warranty, use at YOUR own risk.
+0 // Brick  2 x  2 (main_colour)
+1 16 0 -24 0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Tile  1 x  2 with Letter Pattern (main_colour)
+1 16 0 -32 -10 1 0 0 0 1 0 0 0 1 3069bp01.dat
+0 // Tile  1 x  2 with Groove (main_colour)
+1 16 0 -32 10 1 0 0 0 1 0 0 0 1 3069b.dat
+
+
+

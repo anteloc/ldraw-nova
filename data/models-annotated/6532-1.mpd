@@ -1,0 +1,204 @@
+0 FILE 6532 - main.ldr
+0 A complete articulated construction dumper truck composed of a front cab submodel, a rear wheeled base, a tilting dump bucket, and a construction worker minifigure.
+0 Name: 6532 - main.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-06 [bercik] modification of division into sub-files
+
+1 14 0 -38 0 1 0 0 0 1 0 0 0 1 6532 - DUMPER.LDR
+1 16 0 -108 -32 1 0 0 0 1 0 0 0 1 6532 - MINIFIG.LDR
+
+
+
+
+0 STEP
+0 FILE 6532 - dumper.ldr
+0 An assembled articulated dumper truck combining the front cab, rear axle section, and tilting tipper bucket.
+0 Name: 6532 - dumper.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-06 [bercik] modification of division into sub-files
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 6532 - DUMPER - BACK.LDR
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 6532 - DUMPER - FRONT.LDR
+
+
+
+
+0 STEP
+0 FILE 6532 - dumper - front.ldr
+0 The front cab section of the dumper featuring a minifig seat, steering wheel and stand, control stick, headlight bricks, and a hinged male joint plate connecting to the rear.
+0 Name: 6532 - dumper - front.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-06 [bercik] modification of division into sub-files
+
+0 // Hinge Plate  2 x  4 with Articulated Joint - Male (black)
+1 0 0 0 -60 -1 0 0 0 1 0 0 0 -1 3639.DAT
+0 STEP
+0 // Plate  2 x  6 (main_colour)
+1 16 0 -8 -80 0 0 -1 0 1 0 1 0 0 3795.DAT
+0 STEP
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 0 8 -40 -1 0 0 0 1 0 0 0 -1 4600.DAT
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (main_colour)
+1 16 0 0 -120 1 0 0 0 1 0 0 0 1 4859.DAT
+0 STEP
+0 // Plate  1 x  4 (main_colour)
+1 16 0 -16 -70 1 0 0 0 1 0 0 0 1 3710.DAT
+0 STEP
+0 // Minifig Seat  2 x  2 (main_colour)
+1 16 0 -16 -40 1 0 0 0 1 0 0 0 1 4079.DAT
+0 // Brick  1 x  1 Round with Hollow Stud (black)
+1 0 -10 -32 -110 1 0 0 0 1 0 0 0 1 3062B.DAT
+0 // Brick  1 x  1 Round with Hollow Stud (black)
+1 0 10 -32 -110 1 0 0 0 1 0 0 0 1 3062B.DAT
+0 // Brick  1 x  1 with Headlight (main_colour)
+1 16 -10 -32 -130 1 0 0 0 1 0 0 0 1 4070.DAT
+0 // Brick  1 x  1 with Headlight (main_colour)
+1 16 10 -32 -130 1 0 0 0 1 0 0 0 1 4070.DAT
+0 // Brick  1 x  2 (black)
+1 0 0 -32 -90 1 0 0 0 1 0 0 0 1 3004.DAT
+0 STEP
+0 // Car Steering Stand and Wheel (Complete) (main_colour)
+1 16 0 -24 -70 1 0 0 0 1 0 0 0 1 3829C01.DAT
+0 // Plate  2 x  3 (main_colour)
+1 16 0 -40 -110 0 0 -1 0 1 0 1 0 0 3021.DAT
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 -10 -22 -144 1 0 0 0 0 -1 0 1 0 6141.DAT
+0 // Plate  1 x  1 Round (trans_clear)
+1 47 10 -22 -144 1 0 0 0 0 -1 0 1 0 6141.DAT
+0 // Hinge Control Stick Base (main_colour)
+1 16 30 -24 -70 0.755 0 -0.656 0 1 0 0.656 0 0.755 4592.DAT
+0 // Hinge Control Stick (black)
+1 0 30 -24 -70 0.755 0.246 -0.608 0 0.927 0.375 0.656 -0.283 0.7 4593.DAT
+0 STEP
+0 // Plate  1 x  1 Round (black)
+1 0 10 -48 -110 1 0 0 0 1 0 0 0 1 6141.DAT
+0 // Plate  1 x  1 Round (black)
+1 0 10 -56 -110 1 0 0 0 1 0 0 0 1 6141.DAT
+0 // Wheel Rim  6.4 x  8 (main_colour)
+1 16 30 13 -40 0 0 -1 0 1 0 1 0 0 4624.DAT
+0 // Wheel Rim  6.4 x  8 (main_colour)
+1 16 -30 13 -40 0 0 1 0 1 0 -1 0 0 4624.DAT
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 -30 13 -40 0 0 1 0 1 0 -1 0 0 4084.DAT
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 30 13 -40 0 0 -1 0 1 0 1 0 0 4084.DAT
+
+
+
+
+0 STEP
+0 FILE 6532 - dumper - back.ldr
+0 The rear chassis section of the dumper with a female hinge joint, four wheels with tyres, and hinge tiles supporting the tilting bucket.
+0 Name: 6532 - dumper - back.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-06 [bercik] modification of division into sub-files
+
+0 // Hinge Plate  2 x  4 with Articulated Joint - Female (black)
+1 0 0 0 60 1 0 0 0 1 0 0 0 1 3640.DAT
+0 STEP
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 0 8 100 -1 0 0 0 1 0 0 0 -1 4600.DAT
+0 STEP
+0 // Plate  2 x  4 (black)
+1 0 0 0 140 0 0 1 0 1 0 -1 0 0 3020.DAT
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -8 30 1 0 0 0 1 0 0 0 1 3023.DAT
+0 // Plate  2 x  2 (main_colour)
+1 16 0 -8 100 0 0 1 0 1 0 -1 0 0 3022.DAT
+0 STEP
+0 // Hinge Tile  1 x  2 with 2 Fingers (main_colour)
+1 16 -10 -16 140 0 0 -1 0 1 0 1 0 0 4531.DAT
+0 // Hinge Tile  1 x  2 with 2 Fingers (main_colour)
+1 16 10 -16 140 0 0 -1 0 1 0 1 0 0 4531.DAT
+1 16 0 -12 170 1 0 0 0 1 0 0 0 1 6532 - DUMPER - MOVABLE.LDR
+0 // Plate  1 x  2 with Handles Type 2 (light_grey)
+1 7 0 -16 30 1 0 0 0 1 0 0 0 1 3839B.DAT
+0 STEP
+0 // Plate  2 x  2 with 2 Wheel Pins (black)
+1 0 0 8 160 -1 0 0 0 1 0 0 0 -1 4600.DAT
+0 STEP
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -16 90 1 0 0 0 1 0 0 0 1 3069B.DAT
+0 STEP
+0 // Wheel Rim  6.4 x  8 (main_colour)
+1 16 30 13 100 0 0 -1 0 1 0 1 0 0 4624.DAT
+0 // Wheel Rim  6.4 x  8 (main_colour)
+1 16 30 13 160 0 0 -1 0 1 0 1 0 0 4624.DAT
+0 // Wheel Rim  6.4 x  8 (main_colour)
+1 16 -30 13 160 0 0 1 0 1 0 -1 0 0 4624.DAT
+0 // Wheel Rim  6.4 x  8 (main_colour)
+1 16 -30 13 100 0 0 1 0 1 0 -1 0 0 4624.DAT
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 -30 13 100 0 0 1 0 1 0 -1 0 0 4084.DAT
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 -30 13 160 0 0 1 0 1 0 -1 0 0 4084.DAT
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 30 13 160 0 0 -1 0 1 0 1 0 0 4084.DAT
+0 // Tyre  8/ 75 x  8 Offset Tread (rubber_black)
+1 256 30 13 100 0 0 -1 0 1 0 1 0 0 4084.DAT
+
+
+
+
+0 STEP
+0 FILE 6532 - dumper - movable.ldr
+0 The tilting dump bed consisting of a large tipper bucket mounted on hinged finger plates for articulation.
+0 Name: 6532 - dumper - movable.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-06 [bercik] modification of division into sub-files
+
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (main_colour)
+1 16 -10 -4 -30 0 0 -1 0 1 0 1 0 0 4275B.DAT
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (main_colour)
+1 16 10 -4 -30 0 0 -1 0 1 0 1 0 0 4275B.DAT
+0 STEP
+0 // Tipper Bucket  4 x  6 with Open Studs Front Lip (main_colour)
+1 16 0 -12 -50 1 0 0 0 1 0 0 0 1 4080.DAT
+0 STEP
+
+
+
+
+0 STEP
+0 FILE 6532 - minifig.ldr
+0 A construction worker minifig wearing a red helmet, white torso with blue dungarees, yellow head and hands, and blue legs.
+0 Name: 6532 - minifig.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !HISTORY 2018-01-06 [bercik] modification of division into sub-files
+
+0 // Minifig Construction Helmet (red)
+1 4 0 -23.834999 4.744 1 0 0 0 1 0.069757 0 -0.069757 1 3833.DAT
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -23.834999 4.744 1 0 0 0 1 0.069757 0 -0.069757 1 3626BP01.DAT
+0 // Minifig Torso with Blue Dungarees Pattern (white)
+1 15 0 0.108 3.069 1 0 0 0 1 0.069757 0 -0.069757 1 973P1B.DAT
+0 // Minifig Arm Right (white)
+1 15 -15.552 9.087 2.442 1 -0.139 -0.098 0.17 0.765 0.621 0 -0.628 0.778 3818.DAT
+0 // Minifig Arm Left (white)
+1 15 15.552 9.087 2.442 1 0.139 0.098 -0.17 0.765 0.621 0 -0.628 0.778 3819.DAT
+0 // Minifig Hand (yellow)
+1 14 -22.280001 16.148001 -17.315001 1 -0.167 0 0.17 1 -0.102 0 0.106 1 3820.DAT
+0 // Minifig Hand (yellow)
+1 14 22.280001 16.148001 -17.315001 1 0.253 0 -0.254 1 -0.102 0 0.106 1 3820.DAT
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 32 0.837 1 0 0 0 1 0.07 0 -0.07 1 3815.DAT
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 44 0 1 0 0 0 0 1 0 -1 0 3817.DAT
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 44 0 1 0 0 0 0 1 0 -1 0 3816.DAT
+
+
+

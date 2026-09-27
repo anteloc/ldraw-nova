@@ -1,0 +1,96 @@
+0 FILE 30030 - Main.ldr
+0 A small LEGO racing car model composed of a single racing car submodel with white body panels, red accents, wheels, and mudguards.
+0 Name: 30030 - Main.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !HISTORY 2019-02-22 [technicbasics] Build .mpd to OMRize file
+
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 30030 - Racing Car.ldr
+
+
+
+
+0 STEP
+0 FILE 30030 - Racing Car.ldr
+0 A compact red and white racing car featuring mudguards, wheel-hub plates, grille tile, and sloped curves for an aerodynamic body.
+0 Name: 30030 - Racing Car.ldr
+0 Author: Massimo Maso [Sirio]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  8 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3034.dat
+0 STEP
+0 // Plate  1 x  4 with 2 Wheel Pins (black)
+1 0 0 -8 70 1 0 0 0 1 0 0 0 1 2926.dat
+0 // Plate  2 x  6 (dark_grey)
+1 8 0 -8 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  1 x  4 with 2 Wheel Pins (black)
+1 0 0 -8 -70 1 0 0 0 1 0 0 0 1 2926.dat
+0 STEP
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (white)
+1 15 0 -16 70 -1 0 0 0 1 0 0 0 -1 2436a.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -16 50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  4 x  4 (white)
+1 15 0 -16 0 1 0 0 0 1 0 0 0 1 3031.dat
+0 // Car Mudguard  3 x  4 Overhanging (white)
+1 15 0 -16 -60 1 0 0 0 1 0 0 0 1 44674.dat
+0 STEP
+0 // Plate  1 x  1 Round (dark_grey)
+1 8 -30 -6 92 1 0 0 0 0 1 0 -1 0 6141.dat
+0 // Tile  1 x  2 Grille with Groove (red)
+1 4 0 -6 92 1 0 0 0 0 1 0 -1 0 2412b.dat
+0 // Plate  1 x  1 Round (dark_grey)
+1 8 30 -6 92 1 0 0 0 0 1 0 -1 0 6141.dat
+0 ROTSTEP 23 135 0 ABS
+0 // Car Mudguard  4.5 x  1 x  1 (white)
+1 15 -30 -24 20 0 0 -1 0 1 0 1 0 0 50947.dat
+0 // Car Mudguard  4.5 x  1 x  1 (white)
+1 15 30 -24 20 0 0 -1 0 1 0 1 0 0 50947.dat
+0 // Plate  2 x  8 (red)
+1 4 0 -24 0 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Plate  1 x  2 with Handle (red)
+1 4 -30 -24 -20 0 0 1 0 1 0 -1 0 0 2540.dat
+0 // Plate  1 x  2 with Handle (red)
+1 4 30 -24 -20 0 0 -1 0 1 0 1 0 0 2540.dat
+0 ROTSTEP END
+0 // Slope Brick 31  1 x  1 x  0.667 (red)
+1 4 -10 -24 70 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (red)
+1 4 10 -24 70 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick  3 x  4 x 0.667 Curved with  2 x  2 Cutout (black)
+1 0 0 -32 10 1 0 0 0 1 0 0 0 1 50948.dat
+0 STEP
+0 // Slope Brick Curved  4 x  1 (red)
+1 4 -10 -48 20 -1 0 0 0 1 0 0 0 -1 61678.dat
+0 // Slope Brick Curved  4 x  1 (red)
+1 4 10 -48 20 -1 0 0 0 1 0 0 0 -1 61678.dat
+0 STEP
+0 // =Wheel Rim  6.4 x 11 with  5 Spokes with Metallic Silver Outline Pattern (black)
+1 0 -50 -3 70 0 0 1 0 1 0 -1 0 0 51719.dat
+0 // =Wheel Rim  6.4 x 11 with  5 Spokes with Metallic Silver Outline Pattern (black)
+1 0 50 -3 70 0 0 -1 0 1 0 1 0 0 51719.dat
+0 // =Wheel Rim  6.4 x 11 with  5 Spokes with Metallic Silver Outline Pattern (black)
+1 0 -50 -3 -70 0 0 1 0 1 0 -1 0 0 51719.dat
+0 // =Wheel Rim  6.4 x 11 with  5 Spokes with Metallic Silver Outline Pattern (black)
+1 0 50 -3 -70 0 0 -1 0 1 0 1 0 0 51719.dat
+0 STEP
+0 // Tyre  6/ 30 x 11 (rubber_black)
+1 256 -50 -3 70 0 0 1 0 1 0 -1 0 0 50951.dat
+0 // Tyre  6/ 30 x 11 (rubber_black)
+1 256 50 -3 70 0 0 1 0 1 0 -1 0 0 50951.dat
+0 // Tyre  6/ 30 x 11 (rubber_black)
+1 256 -50 -3 -70 0 0 1 0 1 0 -1 0 0 50951.dat
+0 // Tyre  6/ 30 x 11 (rubber_black)
+1 256 50 -3 -70 0 0 1 0 1 0 -1 0 0 50951.dat
+
+
+
+
+

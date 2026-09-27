@@ -1,0 +1,616 @@
+0 FILE 6929 - Main Model.ldr
+0 A classic LEGO space ship built from a large winged hull, nose cone, twin hinged hatch doors, a transparent cockpit canopy, a windowed cargo container, and a red Classic Space minifigure astronaut.
+0 Name: 6929 - Main Model.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Classic Space
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 6929 - Space Ship.ldr
+1 16 0 72 460 1 0 0 0 1 0 0 0 1 6929 - Container.ldr
+1 16 -80 32 420 1 0 0 0 1 0 0 0 1 6929 - Hatch Door Right.ldr
+1 16 80 32 420 1 0 0 0 1 0 0 0 1 6929 - Hatch Door Left.ldr
+1 16 -50 -32 100 1 0 0 0 1 0 0 0 1 6929 - Cockpit Hatch.ldr
+1 16 0 10 -130 1 0 0 0 0 -1 0 1 0 6929 - Nose.ldr
+1 16 0 -5 110 1 0 0 0 1 0 0 0 1 6929 - Minifig.ldr
+
+0 STEP
+0 FILE 6929 - Space Ship.ldr
+0 A large light grey space ship fuselage assembled from plates, angled wing elements, and translucent red accent tiles.
+0 Name: 6929 - Space Ship.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Space / Classic Space
+0 // Plate  4 x 12 (light_grey)
+1 7 0 0 260 0 0 1 0 1 0 -1 0 0 3029.dat
+0 // Plate  2 x  6 (light_grey)
+1 7 0 0 20 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 0 -8 -60 0 0 1 0 1 0 -1 0 0 3034.dat
+0 STEP
+0 // Plate  2 x  8 (light_grey)
+1 7 0 -8 160 -1 0 0 0 1 0 0 0 -1 3034.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 0 -8 40 -1 0 0 0 1 0 0 0 -1 3034.dat
+0 STEP
+0 // Plate  6 x  6 (light_grey)
+1 7 0 -8 340 -1 0 0 0 1 0 0 0 -1 3958.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -30 -8 270 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 30 -8 270 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 0 -8 240 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -30 -8 210 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 30 -8 210 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 0 -8 190 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -40 -8 0 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 40 -8 0 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 STEP
+0 // Plate  1 x  3 (yellow)
+1 14 -70 -16 370 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  3 (yellow)
+1 14 70 -16 370 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 -50 -16 120 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 50 -16 120 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Wing  4 x  8 Right (light_grey)
+1 7 -40 -16 -40 1 0 0 0 1 0 0 0 1 3934.dat
+0 // Plate  1 x  2 with Handles Type 2 (light_grey)
+1 7 0 -16 -130 1 0 0 0 1 0 0 0 1 3839b.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 -60 -16 390 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 40 -16 390 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Wing  4 x  4 Right (light_grey)
+1 7 -80 -16 320 1 0 0 0 1 0 0 0 1 3935.dat
+0 // Wing  4 x  4 Left (light_grey)
+1 7 80 -16 320 1 0 0 0 1 0 0 0 1 3936.dat
+0 // Wing  4 x  4 Right (light_grey)
+1 7 -100 -16 60 1 0 0 0 1 0 0 0 1 3935.dat
+0 // Wing  4 x  4 Left (light_grey)
+1 7 100 -16 60 1 0 0 0 1 0 0 0 1 3936.dat
+0 // Wing  4 x  8 Left (light_grey)
+1 7 40 -16 -40 1 0 0 0 1 0 0 0 1 3933.dat
+0 STEP
+0 // Plate  4 x 12 (light_grey)
+1 7 0 -16 260 0 0 -1 0 1 0 1 0 0 3029.dat
+0 // Wing  4 x  4 Left (light_grey)
+1 7 -100 -16 140 -1 0 0 0 1 0 0 0 -1 3936.dat
+0 // Wing  4 x  4 Right (light_grey)
+1 7 100 -16 140 -1 0 0 0 1 0 0 0 -1 3935.dat
+0 STEP
+0 // Plate  2 x  4 (light_grey)
+1 7 -100 -8 380 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -70 -8 380 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 70 -8 380 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 100 -8 380 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 -110 -8 100 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 -60 -8 100 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  2 x  4 (light_grey)
+1 7 60 -8 100 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 110 -8 100 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 0 0 -90 -1 0 0 0 1 0 0 0 -1 3747a.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 10 0 -110 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -10 0 -110 1 0 0 0 1 0 0 0 1 4070.dat
+0 ROTSTEP 0 0 180 REL
+0 // Plate  1 x  4 (light_grey)
+1 7 -100 0 410 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 100 0 410 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 -80 0 390 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 80 0 390 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 -70 0 360 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 70 0 360 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -80 0 100 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 -50 0 120 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 50 0 120 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 80 0 100 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 0 10 -140 1 0 0 0 0 -1 0 1 0 3937.dat
+0 STEP
+0 // Brick  1 x  1 (light_grey)
+1 7 -90 8 390 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -80 8 370 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 -40 8 390 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 0 8 390 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (light_grey)
+1 7 40 8 390 1 0 0 0 1 0 0 0 1 3747a.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 80 8 370 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 90 8 390 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 8 300 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 8 240 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 -80 8 100 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 80 8 100 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 0 24 -100 1 0 0 0 1 0 0 0 1 4032a.dat
+0 STEP
+0 // Hinge Brick  1 x  4 Top (light_grey)
+1 7 -80 8 420 0 0 1 0 1 0 -1 0 0 3830.dat
+0 // Hinge Brick  1 x  4 Base (light_grey)
+1 7 80 8 420 0 0 -1 0 1 0 1 0 0 3831.dat
+0 // Slope Brick 33  5 x  6 x  2 Inverted (light_grey)
+1 7 0 8 110 -1 0 0 0 1 0 0 0 -1 4228.dat
+0 // Slope Brick 33  5 x  6 x  2 Inverted (trans_dark_blue)
+1 33 0 8 90 1 0 0 0 1 0 0 0 1 4228.dat
+0 // Car Steering Stand and Wheel (Complete) (white)
+1 15 0 32 70 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 STEP
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 -150 8 390 0 0 1 0 1 0 -1 0 0 3963.dat
+0 // Brick  2 x  1 with Positioning Rockets (black)
+1 0 150 8 390 0 0 -1 0 1 0 1 0 0 3963.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -80 32 380 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 80 32 380 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (light_grey)
+1 7 -120 0 100 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (light_grey)
+1 7 -120 26 140 1 0 0 0 0 -1 0 1 0 3942b.dat
+0 // Minifig Torch (light_grey)
+1 7 -120 26 52 1 0 0 0 1 0 0 0 1 3959.dat
+0 // Dish  4 x  4 Inverted (light_grey)
+1 7 -120 26 28 1 0 0 0 0 1 0 -1 0 3960.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_green)
+1 34 -120 26 12 1 0 0 0 0 1 0 -1 0 3062b.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 -80 32 100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 0 56 100 1 0 0 0 1 0 0 0 1 3941.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 80 32 100 1 0 0 0 1 0 0 0 1 3940.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (light_grey)
+1 7 120 0 100 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (light_grey)
+1 7 120 26 140 1 0 0 0 0 -1 0 1 0 3942b.dat
+0 // Minifig Torch (light_grey)
+1 7 120 26 52 1 0 0 0 1 0 0 0 1 3959.dat
+0 // Dish  4 x  4 Inverted (light_grey)
+1 7 120 26 28 1 0 0 0 0 1 0 -1 0 3960.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_green)
+1 34 120 26 12 1 0 0 0 0 1 0 -1 0 3062b.dat
+0 ROTSTEP END
+0 // Plate  1 x  3 (light_grey)
+1 7 -150 -8 410 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  3 (light_grey)
+1 7 150 -8 410 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -140 -8 390 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 140 -8 390 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -170 -16 410 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Wing  4 x  4 Right (light_grey)
+1 7 -140 -16 380 1 0 0 0 1 0 0 0 1 3935.dat
+0 // Wing  4 x  4 Left (light_grey)
+1 7 140 -16 380 1 0 0 0 1 0 0 0 1 3936.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 170 -16 410 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  2 with Ladder (black)
+1 0 -130 -16 100 0 0 1 0 1 0 -1 0 0 4175.dat
+0 // Plate  1 x  4 (white)
+1 15 50 -24 100 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 50 -32 100 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  2 with Ladder (black)
+1 0 130 -16 100 0 0 -1 0 1 0 1 0 0 4175.dat
+0 STEP
+0 // Slope Brick 45  2 x  2 with Computer Panel Pattern (white)
+1 15 -40 -40 390 1 0 0 0 1 0 0 0 1 3039p34.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -40 390 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 45  2 x  2 with Computer Panel Pattern (white)
+1 15 40 -40 390 1 0 0 0 1 0 0 0 1 3039p34.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -50 -40 120 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -50 -40 80 0 0 1 0 1 0 -1 0 0 3937.dat
+0 STEP
+0 // Hinge Brick  1 x  4 Top (white)
+1 15 -80 -40 420 0 0 1 0 1 0 -1 0 0 3830.dat
+0 // Hinge Brick  1 x  4 Base (white)
+1 15 80 -40 420 0 0 -1 0 1 0 1 0 0 3831.dat
+0 // Brick  1 x  1 (white)
+1 15 -70 -64 410 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 70 -64 410 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Slope Brick 33  3 x  2 (white)
+1 15 -40 -40 150 -1 0 0 0 1 0 0 0 -1 3298.dat
+0 // Slope Brick 33  3 x  2 with Classic Space Logo Pattern (white)
+1 15 0 -40 150 -1 0 0 0 1 0 0 0 -1 3298p90.dat
+0 // Slope Brick 33  3 x  2 (white)
+1 15 40 -40 150 -1 0 0 0 1 0 0 0 -1 3298.dat
+0 STEP
+0 // Brick  1 x  4 with Black 15 Bars Grille Pattern (white)
+1 15 -40 -64 390 1 0 0 0 1 0 0 0 1 3010p04.dat
+0 // Brick  1 x  4 with Black 15 Bars Grille Pattern (white)
+1 15 40 -64 390 1 0 0 0 1 0 0 0 1 3010p04.dat
+0 // Tail  4 x  2 x  2 (white)
+1 15 -120 -64 400 1 0 0 0 1 0 0 0 1 3479.dat
+0 // Tail  4 x  2 x  2 (white)
+1 15 120 -64 400 1 0 0 0 1 0 0 0 1 3479.dat
+0 // Tail  4 x  2 x  2 (white)
+1 15 0 -64 340 1 0 0 0 1 0 0 0 1 3479.dat
+0 // Tail  4 x  2 x  2 (white)
+1 15 0 -64 260 1 0 0 0 1 0 0 0 1 3479.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 50 -40 120 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 50 -40 80 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Slope Brick 33  3 x  6 (trans_dark_blue)
+1 33 0 -40 50 1 0 0 0 1 0 0 0 1 3939.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Light Type 1 (white)
+1 15 -130 -72 410 0 0 1 0 1 0 -1 0 0 4081a.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -110 -72 410 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  8 (white)
+1 15 0 -72 410 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 110 -72 410 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (white)
+1 15 130 -72 410 0 0 -1 0 1 0 1 0 0 4081a.dat
+0 // Plate  1 x  6 (white)
+1 15 -80 -72 390 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  2 x  8 (white)
+1 15 0 -72 320 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Plate  1 x  6 (white)
+1 15 80 -72 390 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 STEP
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 -120 -80 400 1 0 0 0 1 0 0 0 1 3956.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 120 -80 400 1 0 0 0 1 0 0 0 1 3956.dat
+0 STEP
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 -120 -100 380 1 0 0 0 0 -1 0 1 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 120 -100 380 1 0 0 0 0 -1 0 1 0 3941.dat
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (white)
+1 15 -120 -100 324 1 0 0 0 0 -1 0 1 0 3942b.dat
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (white)
+1 15 120 -100 324 1 0 0 0 0 -1 0 1 0 3942b.dat
+0 STEP
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (black)
+1 0 -120 -100 404 1 0 0 0 0 -1 0 1 0 3942b.dat
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (black)
+1 0 120 -100 404 1 0 0 0 0 -1 0 1 0 3942b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 -120 -100 300 1 0 0 0 0 -1 0 1 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 120 -100 300 1 0 0 0 0 -1 0 1 0 3062b.dat
+
+0 STEP
+0 FILE 6929 - Nose.ldr
+0 A tapered nose section featuring a toothed cone, a hinge plate, and a small antenna.
+0 Name: 6929 - Nose.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Space / Classic Space
+0 // Hinge  1 x  2 Top (light_grey)
+1 7 0 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 0 -18 10 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Cone  2 x  2 x  2 with Hollow Stud and Axlehole Teeth (light_grey)
+1 7 0 -66 10 1 0 0 0 1 0 0 0 1 3942b.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 0 -74 10 1 0 0 0 1 0 0 0 1 3957a.dat
+
+0 STEP
+0 FILE 6929 - Hatch Door Left.ldr
+0 A hinged left hatch door composed of light grey and white plates, hinge bricks, a grille-patterned brick, and translucent red accent tiles.
+0 Name: 6929 - Hatch Door Left.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Space / Classic Space
+0 // Plate  1 x  3 (light_grey)
+1 7 -50 -32 110 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -10 -32 60 0 0 -1 0 1 0 1 0 0 3666.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 -40 -24 110 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_grey)
+1 7 -10 -24 70 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -10 -24 50 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Hinge Brick  1 x  4 Top (light_grey)
+1 7 0 -24 0 0 0 -1 0 1 0 1 0 0 3830.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 -10 0 40 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 -40 -40 110 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -10 -40 90 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 -10 -40 70 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 -20 -40 40 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -10 -40 10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (white)
+1 15 -30 -48 40 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 STEP
+0 // Plate  1 x  3 (light_grey)
+1 7 -50 -48 110 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 -10 -48 60 0 0 -1 0 1 0 1 0 0 3666.dat
+0 STEP
+0 // Brick  1 x  3 (white)
+1 15 -50 -72 110 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  4 with Black 15 Bars Grille Pattern (white)
+1 15 -10 -72 80 0 0 -1 0 1 0 1 0 0 3010p04.dat
+0 // Hinge Brick  1 x  4 Top (white)
+1 15 0 -72 0 0 0 -1 0 1 0 1 0 0 3830.dat
+0 STEP
+0 // Plate  1 x  4 (white)
+1 15 -40 -80 110 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -70 -88 110 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 -40 -60 120 -1 0 0 0 0 1 0 1 0 3956.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (white)
+1 15 -10 -88 110 0 0 -1 0 1 0 1 0 0 4085a.dat
+0 STEP
+0 // Plate  1 x  4 (white)
+1 15 -40 -96 110 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (white)
+1 15 -40 -96 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Brick  1 x  2 with Classic Space Logo Pattern (white)
+1 15 -10 -96 80 0 0 -1 0 1 0 1 0 0 3004p90.dat
+0 // Brick  1 x  3 (white)
+1 15 -10 -96 30 0 0 -1 0 1 0 1 0 0 3622.dat
+0 STEP
+0 // Plate  4 x  6 (white)
+1 15 -40 -104 60 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // Minifig Radio with Short Handle (black)
+1 0 10 -85 110 0 0 -1 0 1 0 1 0 0 3962a.dat
+0 STEP
+0 // Tail  4 x  2 x  2 (white)
+1 15 -60 -152 120 1 0 0 0 1 0 0 0 1 3479.dat
+0 // Tail  4 x  2 x  2 (white)
+1 15 -20 -152 120 1 0 0 0 1 0 0 0 1 3479.dat
+0 STEP
+0 // Plate  1 x  2 (white)
+1 15 -40 -160 130 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 with Clip Light Type 1 (white)
+1 15 -10 -160 130 0 0 -1 0 1 0 1 0 0 4081a.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 10 -158 140 1 0 0 0 0 -1 0 1 0 3957a.dat
+0 STEP
+0 // Cone  4 x  4 x  2 with Axlehole (black)
+1 0 -40 -60 128 1 0 0 0 0 -1 0 1 0 3943b.dat
+
+0 STEP
+0 FILE 6929 - Hatch Door Right.ldr
+0 A hinged right hatch door composed of light grey and white plates, hinge bricks, a grille-patterned brick, and translucent red accent tiles.
+0 Name: 6929 - Hatch Door Right.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Space / Classic Space
+0 // Plate  1 x  3 (light_grey)
+1 7 50 -32 110 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 10 -32 60 0 0 -1 0 1 0 1 0 0 3666.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 40 -24 110 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_grey)
+1 7 10 -24 70 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 10 -24 50 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Hinge Brick  1 x  4 Base (light_grey)
+1 7 0 -24 0 0 0 1 0 1 0 -1 0 0 3831.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 10 0 40 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+0 // Plate  1 x  4 (light_grey)
+1 7 40 -40 110 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 10 -40 90 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (light_grey)
+1 7 10 -40 70 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  2 x  2 (light_grey)
+1 7 20 -40 40 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 10 -40 10 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (white)
+1 15 30 -48 40 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 STEP
+0 // Plate  1 x  3 (light_grey)
+1 7 50 -48 110 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  6 (light_grey)
+1 7 10 -48 60 0 0 -1 0 1 0 1 0 0 3666.dat
+0 STEP
+0 // Brick  1 x  3 (white)
+1 15 50 -72 110 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  4 with Black 15 Bars Grille Pattern (white)
+1 15 10 -72 80 0 0 1 0 1 0 -1 0 0 3010p04.dat
+0 // Hinge Brick  1 x  4 Base (white)
+1 15 0 -72 0 0 0 1 0 1 0 -1 0 0 3831.dat
+0 STEP
+0 // Plate  1 x  4 (white)
+1 15 40 -80 110 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Vertical (Thin C-Clip) (white)
+1 15 10 -88 110 0 0 1 0 1 0 -1 0 0 4085a.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 40 -60 120 -1 0 0 0 0 1 0 1 0 3956.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 70 -88 110 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Plate  1 x  4 (white)
+1 15 40 -96 110 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (white)
+1 15 40 -96 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Brick  1 x  2 with Classic Space Logo Pattern (white)
+1 15 10 -96 80 0 0 1 0 1 0 -1 0 0 3004p90.dat
+0 // Brick  1 x  3 (white)
+1 15 10 -96 30 0 0 -1 0 1 0 1 0 0 3622.dat
+0 STEP
+0 // Plate  4 x  6 (white)
+1 15 40 -104 60 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // Minifig Tool Spanner/Screwdriver (black)
+1 0 -10 -96 110 1 0 0 0 1 0 0 0 1 4006.dat
+0 STEP
+0 // Tail  4 x  2 x  2 (white)
+1 15 20 -152 120 1 0 0 0 1 0 0 0 1 3479.dat
+0 // Tail  4 x  2 x  2 (white)
+1 15 60 -152 120 1 0 0 0 1 0 0 0 1 3479.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Light Type 1 (white)
+1 15 10 -160 130 0 0 1 0 1 0 -1 0 0 4081a.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -10 -158 140 1 0 0 0 0 -1 0 1 0 3957a.dat
+0 // Plate  1 x  2 (white)
+1 15 40 -160 130 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 80 -160 130 1 0 0 0 1 0 0 0 1 3069b.dat
+0 STEP
+0 // Cone  4 x  4 x  2 with Axlehole (black)
+1 0 40 -60 128 1 0 0 0 0 -1 0 1 0 3943b.dat
+
+0 STEP
+0 FILE 6929 - Cockpit Hatch.ldr
+0 A wide transparent dark blue cockpit canopy attached via white hinge plates.
+0 Name: 6929 - Cockpit Hatch.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Space / Classic Space
+0 // Hinge  1 x  2 Top (white)
+1 15 0 -10 20 0 0 1 0 1 0 -1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 0 -10 -20 0 0 1 0 1 0 -1 0 0 3938.dat
+0 // Plate  4 x  6 (trans_dark_blue)
+1 33 50 -18 0 -1 0 0 0 1 0 0 0 -1 3032.dat
+
+0 STEP
+0 FILE 6929 - Container.ldr
+0 A white cargo container built from plates and bricks, featuring two windows with shutters and Classic Space logo panels.
+0 Name: 6929 - Container.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Space / Classic Space
+0 // Plate  4 x  6 (white)
+1 15 0 0 0 0 0 -1 0 1 0 1 0 0 3032.dat
+0 // Brick  1 x  4 (white)
+1 15 0 -24 50 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  4 (white)
+1 15 0 -24 -50 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+0 // Brick  1 x  1 (white)
+1 15 -30 -48 50 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  2 with Classic Space Logo Pattern (white)
+1 15 0 -48 50 -1 0 0 0 1 0 0 0 -1 3004p90.dat
+0 // Brick  1 x  1 (white)
+1 15 30 -48 50 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 -30 -48 -50 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  2 with Classic Space Logo Pattern (white)
+1 15 0 -48 -50 1 0 0 0 1 0 0 0 1 3004p90.dat
+0 // Brick  1 x  1 (white)
+1 15 30 -48 -50 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 STEP
+0 // Brick  1 x  4 (white)
+1 15 0 -72 50 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Window  1 x  4 x  3 (white)
+1 15 -30 -72 0 0 0 1 0 1 0 -1 0 0 3853.dat
+0 // Window  1 x  2 x  3 Shutter (white)
+1 15 -42 -72 40 1 0 0 0 1 0 0 0 1 3856.dat
+0 // Window  1 x  2 x  3 Shutter (white)
+1 15 -42 -72 -40 -1 0 0 0 1 0 0 0 -1 3856.dat
+0 // Window  1 x  4 x  3 (white)
+1 15 30 -72 0 0 0 -1 0 1 0 1 0 0 3853.dat
+0 // Window  1 x  2 x  3 Shutter (white)
+1 15 42 -72 40 1 0 0 0 1 0 0 0 1 3856.dat
+0 // Window  1 x  2 x  3 Shutter (white)
+1 15 42 -72 -40 -1 0 0 0 1 0 0 0 -1 3856.dat
+0 // Brick  1 x  4 (white)
+1 15 0 -72 -50 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 STEP
+0 // Plate  4 x  6 (white)
+1 15 0 -80 0 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // Plate  2 x  2 (white)
+1 15 0 -88 0 0 0 1 0 1 0 -1 0 0 3022.dat
+0 STEP
+0 // Plate  2 x  6 (white)
+1 15 0 -96 0 -1 0 0 0 1 0 0 0 -1 3795.dat
+
+0 STEP
+0 FILE 6929 - Minifig.ldr
+0 A red Classic Space astronaut minifigure with a helmet, airtanks, torso, arms, hands, and legs.
+0 Name: 6929 - Minifig.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Space / Classic Space
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (red)
+1 4 0 -27 0 1 0 0 0 1 0 0 0 1 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Airtanks (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Classic Space Pattern (red)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // ~Minifig Hips (Obsolete) (red)
+1 4 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (red)
+1 4 -15.552 9 0 0.985 -0.120208 -0.120208 0.17 0.6965 0.6965 0 -0.707107 0.707107 3818.dat
+0 // Minifig Arm Left (red)
+1 4 15.552 9 0 0.985 0.120208 0.120208 -0.17 0.6965 0.6965 0 -0.707107 0.707107 3819.dat
+0 // Minifig Hand (red)
+1 4 -21.6886 13.9945 -20.5641 0.985 -0.169974 0 0.17 0.984851 0 0 0 0.999849 3820.dat
+0 // Minifig Hand (red)
+1 4 21.6886 13.9945 -20.5641 0.985 0.169974 0 -0.17 0.984851 0 0 0 0.999849 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (red)
+1 4 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+

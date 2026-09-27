@@ -1,0 +1,154 @@
+0 FILE 6844 - Seismologic Vehicle - Main Model.ldr
+0 A blue articulated space vehicle with container boxes, an antenna, and an inverted dish, hauling a wheeled tractor unit, a white astronaut, and a metal detector.
+0 Name: 6844 - Seismologic Vehicle - Main Model.ldr
+0 Author: Willy Tschager [Holly-Wood]
+0 UNOFFICIAL MODEL
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge Plate  2 x  4 with Articulated Joint - Male (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3639.dat
+0 STEP
+0 // Plate  2 x  2 with Red Wheels (Complete) (light_grey)
+1 7 0 8 40 1 0 0 0 1 0 0 0 1 122c01.dat
+0 // Wheel 13 x 20 Solid Rubber with Axle Hole (rubber_black)
+1 256 40 10 40 0 0 -1 0 1 0 1 0 0 4288.dat
+0 // Wheel 13 x 20 Solid Rubber with Axle Hole (rubber_black)
+1 256 -40 10 40 0 0 1 0 1 0 -1 0 0 4288.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 0 50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 0 -24 20 1 0 0 0 1 0 0 0 1 3062b.dat
+0 STEP
+0 // Container Box  2 x  2 x  2 with Solid Studs (blue)
+1 1 20 -48 -20 0 0 -1 0 1 0 1 0 0 4345a.dat
+0 // Container Box  2 x  2 x  2 with Solid Studs (blue)
+1 1 -20 -48 -20 0 0 1 0 1 0 -1 0 0 4345a.dat
+0 // Container Box  2 x  2 x  2 Door with Slot (blue)
+1 1 65.883 -50.143 -20 0 -0.819 -0.574 0 0.574 -0.819 1 0 0 4346.dat
+0 // Container Box  2 x  2 x  2 Door with Slot (blue)
+1 1 -20 -48 -20 0 0 1 0 1 0 -1 0 0 4346.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_grey)
+1 7 0 -48 20 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Slope Brick 33  3 x  2 Inverted without Ribs between Studs (blue)
+1 1 0 -24 50 -1 0 0 0 1 0 0 0 -1 3747a.dat
+0 // Brick  1 x  2 (blue)
+1 1 0 -48 50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 0 -48 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 STEP
+0 // Plate  2 x  6 (blue)
+1 1 0 -56 40 0 0 1 0 1 0 -1 0 0 3795.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 0 -64 90 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 0 -64 70 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 0 -56 -30 1 0 0 0 1 0 0 0 1 3794a.dat
+0 STEP
+0 // Support  2 x  4 x  5 Stanchion Inclined (blue)
+1 1 0 -176 60 1 0 0 0 1 0 0 0 1 4476.dat
+1 1 0 -72 80 0 0 -1 0 1 0 1 0 0 u1126.dat
+0 STEP
+0 // Dish  6 x  6 Inverted Webbed Type 1 (light_grey)
+1 7 0 -184 60 1 0 0 0 1 0 0 0 1 4285a.dat
+0 // Antenna  4H with Rounded Top (light_grey)
+1 7 0 -64 -30 1 0 0 0 1 0 0 0 1 3957a.dat
+1 16 0 -68 110 0 0 -1 0.707 0.707 0 0.707 -0.707 0 6844 - Seismologic Vehicle - Detector.ldr
+1 16 -24 0 -93 0.809 0 0.588 0 1 0 -0.588 0 0.809 6844 - Seismologic Vehicle - White Astronaut.ldr
+1 16 0 0 -60 0.809 0 0.588 0 1 0 -0.588 0 0.809 6844 - Seismologic Vehicle - Tractor.ldr
+
+0 STEP
+0 FILE 6844 - Seismologic Vehicle - Tractor.ldr
+0 A light grey wheeled tractor unit with a female hinge joint, steering wheel, and red light elements.
+0 Name: 6844 - Seismologic Vehicle - Tractor.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Hinge Plate  2 x  4 with Articulated Joint - Female (light_grey)
+1 7 0 0 -60 -1 0 0 0 1 0 0 0 -1 3640.dat
+0 STEP
+0 // Plate  2 x  2 with Red Wheels (Complete) (light_grey)
+1 7 0 8 -60 1 0 0 0 1 0 0 0 1 122c01.dat
+0 // Wheel 13 x 20 Solid Rubber with Axle Hole (rubber_black)
+1 256 -40 14 -60 0 0 1 0 1 0 -1 0 0 4288.dat
+0 // Wheel 13 x 20 Solid Rubber with Axle Hole (rubber_black)
+1 256 40 14 -60 0 0 -1 0 1 0 1 0 0 4288.dat
+0 STEP
+0 // Plate  1 x  2 (light_grey)
+1 7 0 -8 -90 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Plate  1 x  2 with Handles Type 1 (light_grey)
+1 7 0 -16 -90 1 0 0 0 1 0 0 0 1 3839a.dat
+0 STEP
+0 // Car Steering Stand and Wheel (Complete) (light_grey)
+1 7 0 -8 -70 1 0 0 0 1 0 0 0 1 3829c01.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 -26 -12 -106 1 0 0 0 0 1 0 -1 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 26 -12 -106 1 0 0 0 0 1 0 -1 0 3062b.dat
+
+0 STEP
+0 FILE 6844 - Seismologic Vehicle - White Astronaut.ldr
+0 A white classic space minifigure with helmet, airtanks, and standard grin.
+0 Name: 6844 - Seismologic Vehicle - White Astronaut.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Minifig Helmet Classic with Thin Chin Guard and Visor Dimples (white)
+1 15 0 -78 9 1 0 0 0 1 0 0 0 1 3842a.dat
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -78 9 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 // Minifig Airtanks (white)
+1 15 0 -53 9 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Classic Space Pattern (white)
+1 15 0 -53 9 1 0 0 0 1 0 0 0 1 973p90.dat
+0 // Minifig Hips (white)
+1 15 0 -21 9 1 0 0 0 1 0 0 0 1 3815b.dat
+0 // Minifig Arm Right (white)
+1 15 -15.553 -44 9.001 0.985 -0.166 0.035 0.17 0.963 -0.205 0 0.208 0.978 3818.dat
+0 // Minifig Arm Left (white)
+1 15 15.551 -44 9.002 0.985 0.109 0.13 -0.17 0.633 0.755 0 -0.766 0.643 3819.dat
+0 // Minifig Hand (white)
+1 15 -24.158 -24.695 2.806 0.985 -0.093 0.143 0.17 0.536 -0.826 0 0.839 0.545 3820.dat
+0 // Minifig Hand (white)
+1 15 21.38 -40.793 -12.006 0.577 0.816 0.015 -0.814 0.574 0.086 0.062 -0.062 0.996 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 0 -9 9 1 0 0 0 -0.052 0.999 0 -0.999 -0.052 3816b.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 0 -9 9 1 0 0 0 -0.052 0.999 0 -0.999 -0.052 3817b.dat
+
+0 STEP
+0 FILE 6844 - Seismologic Vehicle - Detector.ldr
+0 A small blue hand-held detector unit with clips and two metal detector pieces.
+0 Name: 6844 - Seismologic Vehicle - Detector.ldr
+0 Author: Willy Tschager [Holly Wood]
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x  2 (blue)
+1 1 70 12 0 0 0 -1 0 1 0 1 0 0 3022.dat
+0 STEP
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (light_grey)
+1 7 80 4 -10 1 0 0 0 1 0 0 0 1 4085b.dat
+0 // Plate  1 x  1 with Clip Vertical (Thin U-Clip) (light_grey)
+1 7 80 4 10 -1 0 0 0 1 0 0 0 -1 4085b.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 60 4 0 0 0 -1 0 1 0 1 0 0 3794a.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (blue)
+1 1 80 -4 0 0 0 -1 0 1 0 1 0 0 3794a.dat
+0 // Plate  1 x  1 (blue)
+1 1 60 -4 0 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Plate  1 x  4 (blue)
+1 1 50 -12 0 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // ~Minifig Metal Detector (Obsolete) (light_grey)
+1 7 80 -12 30 -1 0 0 0 1 0 0 0 -1 4479.dat
+0 // ~Minifig Metal Detector (Obsolete) (light_grey)
+1 7 80 -12 -30 -1 0 0 0 1 0 0 0 -1 4479.dat
+0 STEP
+1 1 30 -4 0 -1 0 0 0 1 0 0 0 -1 u1125.dat
+
+
+

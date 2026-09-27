@@ -1,0 +1,312 @@
+0 FILE 8259 - Mini Bulldozer - Excavator.ldr
+0 Main excavator assembly combining a geared drivetrain, structural beams, and four track units for a compact tracked vehicle.
+0 Name: 8259 - Mini Bulldozer - Excavator.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Beam  5 (dark_bluish_grey)
+1 72 0 0 0 0 -1 0 1 0 0 0 0 1 32316.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 -40 1 0 0 0 1 0 0 0 1 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 40 1 0 0 0 1 0 0 0 1 6558.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (light_bluish_grey)
+1 71 20 0 -40 0 0 1 -1 0 0 0 -1 0 42003.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (light_bluish_grey)
+1 71 20 0 40 0 0 -1 -1 0 0 0 1 0 42003.dat
+0 STEP
+0 // Technic Beam  5 (dark_bluish_grey)
+1 72 40 0 0 0 -1 0 1 0 0 0 0 1 32316.dat
+0 STEP
+0 // Technic Axle Pin (tan)
+1 19 20 -10 -20 0 0 1 1 0 0 0 1 0 3749.dat
+0 // Technic Axle Pin (tan)
+1 19 20 -10 20 0 0 1 1 0 0 0 1 0 3749.dat
+0 STEP
+0 // Technic Beam  3 (dark_bluish_grey)
+1 72 20 -20 0 -1 0 0 0 -1 0 0 0 1 32523.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 -30 0 0 1 0 -1 0 0 0 0 1 2780.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 20 0 -60 1 0 0 0 0.978 0.208 0 -0.208 0.978 32073.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 40 0 -60 0 0 -1 -0.978 0.208 0 0.208 0.978 0 3713.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 0 -60 0 0 1 0.978 0.208 0 -0.208 0.978 0 3713.dat
+0 // Technic Gear 16 Tooth (light_bluish_grey)
+1 71 -20 0 -60 0 0 1 0.978 0.208 0 -0.208 0.978 0 4019.dat
+0 STEP
+0 // Technic Gear 16 Tooth (light_bluish_grey)
+1 71 60 0 -60 0 0 1 0.978 0.208 0 -0.208 0.978 0 4019.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 20 0 60 1 0 0 0 0.985 -0.174 0 0.174 0.985 32073.dat
+0 // Technic Gear 16 Tooth (light_bluish_grey)
+1 71 -20 0 60 0 0 1 0.985 -0.174 0 0.174 0.985 0 4019.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 -5 0 60 0 0 1 -0.174 -0.985 0 0.985 -0.174 0 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 5 0 60 0 0 1 -0.174 -0.985 0 0.985 -0.174 0 32123b.dat
+0 STEP
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 35 0 60 0 0 1 -0.174 -0.985 0 0.985 -0.174 0 32123b.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 45 0 60 0 0 1 -0.174 -0.985 0 0.985 -0.174 0 32123b.dat
+0 STEP
+0 // Technic Gear 16 Tooth (light_bluish_grey)
+1 71 60 0 60 0 0 1 0.985 -0.174 0 0.174 0.985 0 4019.dat
+0 STEP
+1 0 60 0 60 0 0 1 0 1 0 -1 0 0 8259 - technicChainTread17Closed-1.ldr
+1 0 -20 0 60 0 0 1 0 1 0 -1 0 0 8259 - technicChainTread17Closed-1.ldr
+0 STEP
+1 71 85 -40 -20 -1 0 0 0 1 0 0 0 -1 8259 - House.ldr
+
+
+0 STEP
+0 FILE 8259 - technicChainTread17Closed-1.ldr
+0 Closed loop of 23 chain tread segments forming a continuous rubber track band.
+0 Name: 8259 - technicChainTread17Closed-1.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !CATEGORY technic
+0 !KEYWORDS flexible, chain
+
+0 !LDCAD CONTENT [type=path] [addFallBack=default] [looped=true] [displayKind=links] [curveStep=16] [displayLenCor=0]
+0 !LDCAD PATH_POINT [type=circle] [posOri=0 0 0 1 0 0 0 1 0 0 0 1] [prevCPDist=25] [nextCPDist=25] [cirR=21] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=bezier] [posOri=60 -19 0 0 -1 0 1 0 0 0 0 1] [prevCPDist=25] [nextCPDist=25] [cirR=20] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+0 !LDCAD PATH_POINT [type=circle] [posOri=120 0 0 1 0 0 0 1 0 0 0 1] [prevCPDist=25] [nextCPDist=25] [cirR=21] [cirDir=xyCW] [prevYRoll=0] [nextYRoll=0]
+
+0 !LDCAD PATH_SKIN [donCol=16] [donOri=0 1 0 0 0 1 1 0 0] [donPart=3873.dat] [donYSize=100%] [donCen=partCen] [donCenYOfs=0] [donFinScale=none] [donPlace=refsStat] [donYAlign=1] [donInline=false] [segSize=16] [segSizeTol=0] [segsCnt=0] [segsGrp=0] [segsMaxMerge=1] [segsMrgAng=0] [segsMrgRollAng=0] [segsEdgeDelKind=keepFirstLeft]
+
+0 !LDCAD GENERATED [generator=LDCad 1.6b]
+0 //This is the fallback LDraw content for above PATH configuration.
+0 // Do not edit, any changes will be lost upon regeneration.
+0 // The path is approx 147.46 mm (368.64) and exists out of 23 segments.
+0 // warning: the path could not be filled out completely resulting in 0.26 mm (0.64) dead space due to configuration induced constrains.
+
+0 //Some general hints about the document.
+0 UNOFFICIAL PART
+0 BFC CERTIFY CCW
+
+0 //Segments
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 -14.850404 -14.771001 0 0 0.923188 -0.38435 0 0.38435 0.923188 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 -0.100635 -20.97135 0 0 0.387522 -0.921861 0 0.921861 0.387522 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 15.888102 -20.371115 0 0 -0.037515 -0.999296 0 0.999296 -0.037515 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 31.87006 -19.611487 0 0 -0.047477 -0.998872 0 0.998872 -0.047477 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 47.862234 -19.111137 0 0 -0.031272 -0.999511 0 0.999511 -0.031272 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 63.861945 -19.014966 0 0 -0.006011 -0.999982 0 0.999982 -0.006011 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 79.859419 -19.299275 0 0 0.017769 -0.999842 0 0.999842 0.017769 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 95.845084 -19.976421 0 0 0.042322 -0.999104 0 0.999104 0.042322 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 111.828254 -20.710083 0 0 0.045854 -0.998948 0 0.998948 0.045854 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 127.779553 -19.462655 0 0 -0.077964 -0.996956 0 0.996956 -0.077964 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 139.263663 -8.321954 0 0 -0.696294 -0.717757 0 0.717757 -0.696294 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 139.490475 7.676438 0 0 -0.9999 -0.014176 0 0.014176 -0.9999 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 128.416433 19.224841 0 0 -0.721775 0.692128 0 -0.692128 -0.721775 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 112.511701 20.968256 0 0 -0.108963 0.994046 0 -0.994046 -0.108963 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 96.511729 20.998056 0 0 -0.001863 0.999998 0 -0.999998 -0.001863 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 80.511729 20.999906 0 0 -0.000116 1 0 -1 -0.000116 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 64.511729 20.999999 0 0 -0.000006 1 0 -1 -0.000006 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 48.511729 21 0 0 0 1 0 -1 0 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 32.511729 21 0 0 0 1 0 -1 0 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 16.511729 21 0 0 0 1 0 -1 0 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 0.511729 21 0 0 0 1 0 -1 0 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 -14.418278 15.247183 0 0 0.359551 0.933125 0 -0.933125 0.359551 1 0 0 3873.dat
+0 // Technic Chain Tread 2.5 Wide (main_colour)
+1 16 -20.951591 0.641848 0 0 0.912833 0.408332 0 -0.408332 0.912833 1 0 0 3873.dat
+
+
+0 STEP
+0 FILE 8259 - House.ldr
+0 Structural frame built from bent yellow liftarms, cross blocks, and pins forming the body housing of the excavator.
+0 Name: 8259 - House.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 Quarter Circle (black)
+1 0 0 0 0 0 1 0 -1 0 0 0 0 1 32249.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 45 0 0 1 0 0 0 1 0 0 0 1 32073.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 45 0 40 1 0 0 0 1 0 0 0 1 32073.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 15 0 20 -1 0 0 0 0 1 0 1 0 32184.dat
+0 // Technic Beam  3 x  3 x  0.5 Liftarm Bent 90 Quarter Circle (black)
+1 0 30 0 0 0 1 0 -1 0 0 0 0 1 32249.dat
+0 STEP
+0 // Technic Pin  3/4 (dark_bluish_grey)
+1 72 35 0 20 -1 0 0 0 -1 0 0 0 1 32002.dat
+0 // Technic Beam  5 (yellow)
+1 14 45 0 0 0 1 0 -1 0 0 0 0 1 32316.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 35 0 -20 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 45 0 -40 1 0 0 0 1 0 0 0 1 6558.dat
+0 STEP
+0 // Technic Beam  3 x  5 Bent 90 (yellow)
+1 14 25 0 -20 0 -1 0 -1 0 0 0 0 -1 32526.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 65 0 0 1 0 0 0 0 1 0 -1 0 6536.dat
+0 STEP
+1 14 25 -20 -40 1 0 0 0 1 0 0 0 1 8259 - subModel-1.ldr
+0 STEP
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (black)
+1 0 105 -20 -40 1 0 0 0 0 -1 0 1 0 32291.dat
+0 STEP
+1 14 65 -22.04 194.642 -1 0 0 0 -0.742 0.67 0 0.67 0.742 8259 - Arm.ldr
+0 STEP
+0 // Technic Beam  5 (yellow)
+1 14 85 0 0 0 -1 0 1 0 0 0 0 1 32316.dat
+0 // Technic Pin  1/2 (blue)
+1 1 95 0 -40 -1 0 0 0 0 -1 0 -1 0 4274.dat
+0 // Technic Beam  3 x  5 Bent 90 (yellow)
+1 14 105 0 -20 0 -1 0 -1 0 0 0 0 -1 32526.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 95 0 -20 -1 0 0 0 0 -1 0 -1 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 95 0 -100 -1 0 0 0 0 -1 0 -1 0 2780.dat
+0 // Technic Pin  1/2 (blue)
+1 1 95 -40 -100 -1 0 0 0 0 -1 0 -1 0 4274.dat
+0 // Technic Pin Joiner Round with Slot (black)
+1 0 75 -40 -100 -1 0 0 0 -1 0 0 0 1 62462.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 105 -39.319 -54.824 -1 0 0 0 -0.966 0.259 0 0.259 0.966 32184.dat
+0 // Technic Axle Pin (tan)
+1 19 95 -58.637 -49.647 1 0 0 0 0.966 0.259 0 -0.259 0.966 3749.dat
+0 // Technic Beam  7 x  0.5 (yellow)
+1 14 90 -44.162 8.581 0 -1 0 0.97 0 0.241 -0.241 0 0.97 32065.dat
+0 // Technic Beam  7 x  0.5 (yellow)
+1 14 80 -44.162 8.581 0 -1 0 0.97 0 0.241 -0.241 0 0.97 32065.dat
+
+
+0 STEP
+0 FILE 8259 - subModel-1.ldr
+0 Worm gear and 8-tooth gear drivetrain on axles and bent liftarms providing a reduction mechanism.
+0 Name: 8259 - subModel-1.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Beam  2 Liftarm (light_bluish_grey)
+1 71 0 0 0 0 1 0 1 0 0 0 0 -1 60483.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 40 0 0 -1 0 0 0 1 0 0 0 -1 32073.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 20 0 0 1 0 0 0 -1 0 0 0 -1 6536.dat
+0 STEP
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 40 0 -20 -1 0 0 0 0.966 -0.259 0 -0.259 -0.966 32073.dat
+0 // Technic Gear  8 Tooth (dark_bluish_grey)
+1 72 20 0 -20 0 0 -1 -0.966 0.259 0 0.259 0.966 0 3647.dat
+0 STEP
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (black)
+1 0 60 0 0 0 1 0 1 0 0 0 0 -1 32140.dat
+0 // Technic Beam  2 x  4 Liftarm Bent 90 (black)
+1 0 40 0 -60 0 -1 0 1 0 0 0 0 1 32140.dat
+0 // Technic Pin  1/2 (blue)
+1 1 50 0 -40 -1 0 0 0 -1 0 0 0 1 4274.dat
+0 // Technic Axle  5 (light_bluish_grey)
+1 71 40 0 -60 -1 0 0 0 1 0 0 0 -1 32073.dat
+0 STEP
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (yellow)
+1 14 20 0 -60 1 0 0 0 -1 0 0 0 -1 6536.dat
+0 STEP
+0 // Technic Axle  7 (light_bluish_grey)
+1 71 20 -20 -30 0 0.259 0.966 0 -0.966 0.259 1 0 0 44294.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 20 -20 -75 -0.966 -0.259 0 -0.259 0.966 0 0 0 -1 32123b.dat
+0 // Technic Axle Joiner Inline Smooth (yellow)
+1 14 20 -20 -100 -0.966 -0.259 0 -0.259 0.966 0 0 0 -1 59443.dat
+0 // Technic Worm Gear 2L (light_bluish_grey)
+1 71 20 -20 -30 -0.966 -0.259 0 -0.259 0.966 0 0 0 -1 4716.dat
+0 STEP
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (yellow)
+1 14 20 -20 15 -0.966 -0.259 0 -0.259 0.966 0 0 0 -1 32123b.dat
+
+
+0 STEP
+0 FILE 8259 - Arm.ldr
+0 Excavator arm assembly with long yellow beams, a 2x4 plate, and a rounded yellow panel forming the articulated bucket arm.
+0 Name: 8259 - Arm.ldr
+0 Author: Tomas Kralicek [RabbiT_CZ]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Technic Beam  2 Liftarm (light_bluish_grey)
+1 71 0 0 0 0 1 0 1 0 0 0 0 -1 60483.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 0 -20 1 0 0 0 -1 0 0 0 -1 6558.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 20 0 0 1 0 0 0 -1 0 0 0 -1 4519.dat
+0 STEP
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (black)
+1 0 20 0 0 1 0 0 0 0 -1 0 1 0 32291.dat
+0 // Technic Beam  7 (yellow)
+1 14 20 0 -80 0 1 0 -1 0 0 0 0 1 32524.dat
+0 STEP
+0 // Technic Beam  2 Liftarm (light_bluish_grey)
+1 71 40 0 0 0 1 0 1 0 0 0 0 -1 60483.dat
+0 // Technic Pin  1/2 (blue)
+1 1 30 -10 20 0 -1 0 -1 0 0 0 0 -1 4274.dat
+0 // Technic Pin  1/2 (blue)
+1 1 10 -10 20 0 -1 0 -1 0 0 0 0 -1 4274.dat
+0 STEP
+0 // Technic Axle  3 with Stud (dark_bluish_grey)
+1 72 0 0 -140 1 0 0 0 -1 0 0 0 -1 6587.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 10 0 -100 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (black)
+1 0 0 -20 -140 1 0 0 0 -1 0 0 0 -1 32184.dat
+0 STEP
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 -20 0 -140 0 0 -1 0 -1 0 -1 0 0 3713.dat
+0 // Technic Axle Pin (tan)
+1 19 10 -40 -140 -1 0 0 0 0 -1 0 -1 0 3749.dat
+0 STEP
+0 // Technic Beam  7 (yellow)
+1 14 0 -60 -100 0 1 0 0 0 1 1 0 0 32524.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 10 -40 -100 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -10 -80 -100 1 0 0 0 -1 0 0 0 -1 2780.dat
+0 STEP
+0 // Technic Beam  3 (dark_bluish_grey)
+1 72 20 -40 -120 0 1 0 1 0 0 0 0 -1 32523.dat
+0 STEP
+0 // Plate  2 x  4 (dark_bluish_grey)
+1 72 20 -18 10 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Panel  1 x  4 x  1 with Rounded Corners, Thick Wall (yellow)
+1 14 20 -42 20 1 0 0 0 1 0 0 0 1 30413.dat
+0 STEP
+
+
+

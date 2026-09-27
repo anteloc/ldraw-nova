@@ -1,0 +1,697 @@
+0 FILE 9471 - Uruk-Hai Army.ldr
+0 A Lord of the Rings battle scene featuring a Uruk-Hai ballista siege weapon attacking a stone fortress wall, manned by armored Uruk-Hai warriors and opposed by Eomer on horseback and a Rohan archer.
+0 Name: 9471 - Uruk-Hai Army.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+
+0 !HISTORY [legolijntje] Updated ~moved files and swapped inlined parts for official ones
+
+1 78 0 0 0 1 0 0 0 1 0 0 0 1 9471 - wall.ldr
+1 78 -51 -180 180 0 0 -1 0 1 0 1 0 0 9471 - archer.ldr
+1 80 100 -85 -100 -0.5 0 -0.866 0 1 0 0.866 0 -0.5 9471 - eomer.ldr
+1 80 280 -20 215 0.4226 0 0.9063 0 1 0 -0.9063 0 0.4226 9471 - ballista.ldr
+1 80 230 -20 35 0.8192 0 0.5736 0 1 0 -0.5736 0 0.8192 9471 - uruk-helmet.ldr
+1 80 440 -20 115 0.1736 0 0.9848 0 1 0 -0.9848 0 0.1736 9471 - uruk-hair.ldr
+1 80 440 -20 305 0.866 0 0.5 0 1 0 -0.5 0 0.866 9471 - uruk-armor.ldr
+
+
+0 STEP
+0 FILE 9471 - ballista-chassis.ldr
+0 A wheeled wooden siege weapon chassis built with Technic plates, axles, and round plates forming wheels.
+0 Name: 9471 - ballista-chassis.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Technic Plate  2 x  6 with Holes (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 32001.dat
+0 // Brick  2 x  2 Round Reinforced (reddish_brown)
+1 70 0 -24 0 1 0 0 0 1 0 0 0 1 6143.dat
+0 // Technic Brick  1 x 10 with Holes (black)
+1 0 50 -24 80 0 0 -1 0 1 0 1 0 0 2730.dat
+0 // Technic Brick  1 x 10 with Holes (black)
+1 0 -50 -24 80 0 0 -1 0 1 0 1 0 0 2730.dat
+0 // Technic Axle Pin (tan)
+1 19 60 -14 0 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Axle Pin (tan)
+1 19 60 -14 160 1 0 0 0 1 0 0 0 1 3749.dat
+0 // Technic Axle Pin (tan)
+1 19 -60 -14 160 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 // Technic Axle Pin (tan)
+1 19 -60 -14 0 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 STEP
+0 // Technic Plate  2 x  6 with Holes (black)
+1 0 0 -32 0 1 0 0 0 1 0 0 0 1 32001.dat
+0 // Plate  2 x  6 (dark_bluish_grey)
+1 72 0 -32 160 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 40 -40 -10 1 0 0 0 1 0 0 0 1 44728.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 -40 -40 -10 1 0 0 0 1 0 0 0 1 44728.dat
+0 // Plate  1 x  1 Round (reddish_brown)
+1 70 50 -40 170 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (reddish_brown)
+1 70 -50 -40 170 1 0 0 0 1 0 0 0 1 6141.dat
+0 STEP
+0 // Slope Brick Curved  4 x  1 (dark_bluish_grey)
+1 72 50 -48 140 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (dark_bluish_grey)
+1 72 -50 -48 140 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (dark_bluish_grey)
+1 72 50 -48 20 -1 0 0 0 1 0 0 0 -1 61678.dat
+0 // Slope Brick Curved  4 x  1 (dark_bluish_grey)
+1 72 -50 -48 20 -1 0 0 0 1 0 0 0 -1 61678.dat
+0 // Plate  4 x  4 Round with Hole and Snapstud (black)
+1 0 69 -14 0 0 -1 0 -1 0 0 0 0 -1 60474.dat
+0 // Plate  2 x  2 Round with Reduced Axlehole (reddish_brown)
+1 70 77 -14 0 0 -1 0 -1 0 0 0 0 -1 4032b.dat
+0 // Plate  2 x  2 Round with Reduced Axlehole (reddish_brown)
+1 70 77 -14 160 0 -1 0 -1 0 0 0 0 -1 4032b.dat
+0 // Plate  4 x  4 Round with Hole and Snapstud (black)
+1 0 69 -14 160 0 -1 0 -1 0 0 0 0 -1 60474.dat
+0 // Plate  2 x  2 Round with Reduced Axlehole (reddish_brown)
+1 70 -77 -14 160 0 1 0 -1 0 0 0 0 1 4032b.dat
+0 // Plate  4 x  4 Round with Hole and Snapstud (black)
+1 0 -69 -14 160 0 1 0 -1 0 0 0 0 1 60474.dat
+0 // Plate  2 x  2 Round with Reduced Axlehole (reddish_brown)
+1 70 -77 -14 0 0 1 0 -1 0 0 0 0 1 4032b.dat
+0 // Plate  4 x  4 Round with Hole and Snapstud (black)
+1 0 -69 -14 0 0 1 0 -1 0 0 0 0 1 60474.dat
+0 STEP
+0 // Technic Pin  1/2 (blue)
+1 1 -60 -14 100 -1 0 0 0 -1 0 0 0 1 4274.dat
+0 // Technic Pin  1/2 (blue)
+1 1 -60 -14 60 -1 0 0 0 -1 0 0 0 1 4274.dat
+0 // Technic Pin  1/2 (blue)
+1 1 62 -14 100 1 0 0 0 -1 0 0 0 -1 4274.dat
+0 // Technic Pin  1/2 (blue)
+1 1 60 -14 60 1 0 0 0 -1 0 0 0 -1 4274.dat
+0 // Tile  1 x  4 with Wood Grain and 4 Nails Pattern (reddish_brown)
+1 70 68 -14 80 0 -1 0 0 0 1 -1 0 0 2431p01.dat
+0 // Tile  1 x  4 with Wood Grain and 4 Nails Pattern (reddish_brown)
+1 70 -68 -14 80 0 1 0 0 0 1 1 0 0 2431p01.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 -24 0 0 1 0 -1 0 0 0 0 1 4519.dat
+0 // Technic Angle Connector #3 (157.5 degree) (reddish_brown)
+1 70 0 -62 0 -1 0 0 0 0 -1 0 -1 0 32016.dat
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 -98.9552 15.3073 0 1 0 -0.9239 0 0.3827 0.3827 0 0.9239 4519.dat
+0 // Plate  2 x  2 Round with Reduced Axlehole (reddish_brown)
+1 70 0 -40 160 -1 0 0 0 1 0 0 0 -1 4032b.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 0 -64 150 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Tile  1 x  2 with Groove (dark_red)
+1 320 0 -72 150 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Plate  1 x  6 (black)
+1 0 0 -10 -32 -1 0 0 0 0 1 0 1 0 3666.dat
+0 // Plate  3 x  6 without Corners (black)
+1 0 0 -50 -32 -1 0 0 0 0 1 0 1 0 2419.dat
+0 // Plate  2 x  2 with Groove with 1 Centre Stud (black)
+1 0 0 -20 -40 -1 0 0 0 0 1 0 1 0 87580.dat
+0 // Plate  1 x  1 Round (reddish_brown)
+1 70 30 -50 -40 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (reddish_brown)
+1 70 -50 -10 -40 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Tile  1 x  4 with Wood Grain and 4 Nails Pattern (reddish_brown)
+1 70 2.1845 -38.7618 -48 -0.9272 0 0.3746 0.3746 0 0.9272 0 1 0 2431p01.dat
+
+0 STEP
+0 FILE 9471 - ballista-launcher.ldr
+0 The launcher assembly of a ballista featuring inverted slopes, hinges, and brackets for a firing mechanism.
+0 Name: 9471 - ballista-launcher.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Slope Brick 45  4 x  4 Double Inverted with Open Centre and 2 Holes (dark_bluish_grey)
+1 72 0 0 0 0 0 1 0 1 0 -1 0 0 72454.dat
+0 // Slope Brick 33  3 x  2 Inverted with Ribs between Studs (reddish_brown)
+1 70 0 -8 30 -1 0 0 0 1 0 0 0 -1 3747b.dat
+0 // Brick  2 x  2 Round Reinforced (reddish_brown)
+1 70 0 -8 -20 -1 0 0 0 1 0 0 0 -1 6143.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_bluish_grey)
+1 72 30 -8 -20 0 0 -1 0 1 0 1 0 0 99780.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_bluish_grey)
+1 72 30 -8 20 0 0 -1 0 1 0 1 0 0 99780.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_bluish_grey)
+1 72 -30 -8 20 0 0 1 0 1 0 -1 0 0 99780.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_bluish_grey)
+1 72 -30 -8 -20 0 0 1 0 1 0 -1 0 0 99780.dat
+0 STEP
+0 // Technic Plate  2 x  4 with Holes (dark_bluish_grey)
+1 72 0 -16 -20 -1 0 0 0 1 0 0 0 -1 3709b.dat
+0 // Technic Plate  2 x  4 with Holes (dark_bluish_grey)
+1 72 0 -16 20 -1 0 0 0 1 0 0 0 -1 3709b.dat
+0 // Plate  1 x  2 (reddish_brown)
+1 70 52 -10 0 0 -1 0 0 0 -1 1 0 0 3023.dat
+0 // Plate  1 x  2 (reddish_brown)
+1 70 -52 -10 0 0 1 0 0 0 -1 -1 0 0 3023.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick C-Clip) (black)
+1 0 -52 -10 -30 0 1 0 0 0 1 1 0 0 61252.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick C-Clip) (black)
+1 0 52 -10 -30 0 -1 0 0 0 1 -1 0 0 61252.dat
+0 STEP
+0 // Hinge Tile  1 x  3 Locking with Single Finger on Top (black)
+1 0 60 -10 -10 0 -1 0 0 0 1 -1 0 0 44300.dat
+0 // Hinge Plate  1 x  2 Locking with Dual Finger on End Vertical with Groove on Short Side (dark_bluish_grey)
+1 72 95.4954 -10 -24.1673 -0.9659 -0.2588 0 0 0 1 -0.2588 0.9659 0 44302.dat
+0 // Slope Brick Curved  4 x  1 (dark_bluish_grey)
+1 72 118.955 -10 -34.4457 0 -0.2588 -0.9659 -1 0 0 0 0.9659 -0.2588 61678.dat
+0 // Plate  1 x  1 Round (reddish_brown)
+1 70 87.9067 -10 -34.4829 0 -0.2588 -0.9659 -1 0 0 0 0.9659 -0.2588 6141.dat
+0 // Hinge Tile  1 x  3 Locking with Single Finger on Top (black)
+1 0 -60 -10 -10 0 1 0 0 0 -1 -1 0 0 44300.dat
+0 // Hinge Plate  1 x  2 Locking with Dual Finger on End Vertical with Groove on Short Side (dark_bluish_grey)
+1 72 -95.4954 -10 -24.1673 0.9659 0.2588 0 0 0 -1 -0.2588 0.9659 0 44302.dat
+0 // Plate  1 x  1 Round (reddish_brown)
+1 70 -87.9067 -10 -34.4829 0 0.2588 0.9659 1 0 0 0 0.9659 -0.2588 6141.dat
+0 // Slope Brick Curved  4 x  1 (dark_bluish_grey)
+1 72 -118.955 -10 -34.4457 0 0.2588 0.9659 1 0 0 0 0.9659 -0.2588 61678.dat
+0 // Plate  2 x  6 (dark_bluish_grey)
+1 72 0 -16 100 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (black)
+1 0 0 -16 150 -1 0 0 0 1 0 0 0 -1 85984.dat
+0 STEP
+0 // Tile  1 x  8 (black)
+1 0 -10 -24 60 0 0 -1 0 1 0 1 0 0 4162.dat
+0 // Tile  1 x  8 (black)
+1 0 10 -24 60 0 0 -1 0 1 0 1 0 0 4162.dat
+0 // Technic Brick  1 x  2 with Holes (dark_bluish_grey)
+1 72 0 -40 -30 1 0 0 0 1 0 0 0 1 32000.dat
+0 // Brick  1 x  3 (black)
+1 0 30 -40 -10 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (black)
+1 0 -30 -40 -10 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 30 -40 30 -1 0 0 0 1 0 0 0 -1 4286.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 -30 -40 30 -1 0 0 0 1 0 0 0 -1 4286.dat
+0 STEP
+0 STEP
+0 // Technic Plate  2 x  4 with Holes (dark_bluish_grey)
+1 72 0 -48 -20 -1 0 0 0 1 0 0 0 -1 3709b.dat
+0 // Technic Plate  2 x  4 with Holes (dark_bluish_grey)
+1 72 0 -48 20 -1 0 0 0 1 0 0 0 -1 3709b.dat
+0 // Technic Blade Curved  0.5 x  4 with Pin Hole (pearl_silver)
+1 179 50 -30 -13 1 0 0 0 1 0 0 0 1 98347.dat
+0 // Technic Blade Curved  0.5 x  4 with Pin Hole (pearl_silver)
+1 179 -50 -30 -7 1 0 0 0 1 0 0 0 1 98347.dat
+1 16 0 -34 139 1 0 0 0 1 0 0 0 1 9471 - trigger.ldr
+1 71 10 -30 -40 1 0 0 0 1 0 0 0 1 9471 - grapnel.ldr
+1 71 -10 -30 -40 0.5 0.866 0 -0.866 0.5 0 0 0 1 9471 - grapnel.ldr
+
+0 STEP
+0 FILE 9471 - trigger.ldr
+0 A small trigger mechanism made of a handle tile, bracket, and plates.
+0 Name: 9471 - trigger.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Tile  1 x  2 with Handle (red)
+1 4 0 0 0 1 0 0 0 0 1 0 -1 0 2432.dat
+0 // Bracket  1 x  2 -  1 x  2 Up (dark_bluish_grey)
+1 72 0 2 -46 -1 0 0 0 1 0 0 0 -1 99780.dat
+0 // Plate  2 x  3 (light_bluish_grey)
+1 71 0 2 -86 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Tile  2 x  4 (reddish_brown)
+1 70 0 -6 -76 0 0 1 0 1 0 -1 0 0 87079.dat
+
+
+0 STEP
+0 FILE 9471 - grapnel.ldr
+0 A grappling hook projectile with a hook, pin bar, cone, and bushing.
+0 Name: 9471 - grapnel.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Minifig Tool Grappling Hook (light_bluish_grey)
+1 71 0 0 -11 1 0 0 0 0 1 0 -1 0 30192.dat
+0 // Technic Pin  1/2 with Bar 2L (light_bluish_grey)
+1 71 0 0 0 0 0 1 0 1 0 -1 0 0 61184.dat
+0 // Cone  1 x  1 with Stop (reddish_brown)
+1 70 0 0 -24 0 0 1 1 0 0 0 1 0 59900.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 0 0 -33 1 0 0 0 -1 0 0 0 -1 32123b.dat
+
+
+0 STEP
+0 FILE 9471 - ballista.ldr
+0 A ballista siege weapon combining a wheeled chassis, launcher, trigger, and grapnel components.
+0 Name: 9471 - ballista.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+1 72 0 0 -90 1 0 0 0 1 0 0 0 1 9471 - ballista-chassis.ldr
+1 72 0 -113.3645 -46.3108 1 0 0 0 0.9239 0.3827 0 -0.3827 0.9239 9471 - ballista-launcher.ldr
+
+
+0 STEP
+0 FILE 9471 - wall.ldr
+0 A fortified stone fortress wall section built with grey and sand-green bricks, slopes, and corner pieces.
+0 Name: 9471 - wall.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // Plate  6 x  8 (dark_tan)
+1 28 0 0 0 0 0 1 0 1 0 -1 0 0 3036.dat
+0 // Plate  6 x  8 (dark_tan)
+1 28 0 0 160 0 0 1 0 1 0 -1 0 0 3036.dat
+0 // Brick  2 x  3 (dark_bluish_grey)
+1 72 30 -24 80 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // Technic Brick  1 x  2 with Holes (dark_bluish_grey)
+1 72 -40 -24 -70 -1 0 0 0 1 0 0 0 -1 32000.dat
+0 // Technic Brick  1 x  2 with Holes (dark_bluish_grey)
+1 72 -40 -24 230 -1 0 0 0 1 0 0 0 -1 32000.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 -10 -24 -60 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 -10 -24 220 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  3 (sand_green)
+1 378 -10 -24 -10 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  1 x  3 (sand_green)
+1 378 -10 -24 170 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -24 20 1 0 0 0 1 0 0 0 1 87620.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -24 140 0 0 -1 0 1 0 1 0 0 87620.dat
+0 // Slope Brick 45  2 x  1 (dark_bluish_grey)
+1 72 10 -24 -30 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (dark_bluish_grey)
+1 72 10 -24 210 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (dark_green)
+1 288 50 0 30 1 0 0 0 1 0 0 0 1 54200.dat
+0 STEP
+0 // Brick  1 x  3 (sand_green)
+1 378 -30 -48 -70 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 -10 -48 -40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (dark_green)
+1 288 10 -24 -30 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Brick  2 x  2 Corner (light_bluish_grey)
+1 71 -10 -48 10 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 30 -38 24 0 0 -1 -1 0 0 0 1 0 54200.dat
+0 // Brick  1 x  1 with Headlight (light_bluish_grey)
+1 71 30 -48 30 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Slope Brick 75  2 x  1 x  3 with Hollow Stud (dark_bluish_grey)
+1 72 30 -72 50 0 0 -1 0 1 0 1 0 0 4460b.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (dark_green)
+1 288 50 -24 70 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 20 -48 70 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 45  2 x  1 (dark_bluish_grey)
+1 72 30 -48 90 0 0 -1 0 1 0 1 0 0 3040b.dat
+0 // Slope Brick 75  2 x  1 x  3 with Hollow Stud (dark_bluish_grey)
+1 72 30 -72 110 0 0 -1 0 1 0 1 0 0 4460b.dat
+0 // Brick  1 x  1 with Headlight (light_bluish_grey)
+1 71 30 -48 130 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 30 -38 136 0 0 -1 1 0 0 0 -1 0 54200.dat
+0 // Brick  2 x  2 Corner (light_bluish_grey)
+1 71 -10 -48 150 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Brick  1 x  2 with Embossed Bricks (light_bluish_grey)
+1 71 -10 -48 200 0 0 -1 0 1 0 1 0 0 98283.dat
+0 // Brick  1 x  3 (sand_green)
+1 378 -30 -48 230 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (dark_green)
+1 288 50 0 130 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (dark_green)
+1 288 30 0 210 0 0 -1 0 1 0 1 0 0 54200.dat
+0 STEP
+0 // Brick  1 x  1 (light_bluish_grey)
+1 71 -50 -72 -70 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_bluish_grey)
+1 71 -50 -96 -70 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_bluish_grey)
+1 71 -50 -72 230 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_bluish_grey)
+1 71 -50 -96 230 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (sand_green)
+1 378 -10 -72 10 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (sand_green)
+1 378 -10 -72 150 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  4 (light_bluish_grey)
+1 71 -10 -72 -40 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (light_bluish_grey)
+1 71 -10 -72 200 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -72 20 1 0 0 0 1 0 0 0 1 87620.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -72 140 0 0 -1 0 1 0 1 0 0 87620.dat
+0 // Brick  1 x  1 (light_bluish_grey)
+1 71 30 -72 90 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (sand_green)
+1 378 -10 -96 -30 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (sand_green)
+1 378 -10 -96 190 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 -10 -96 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 -10 -96 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 -10 -96 160 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 -10 -96 220 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -96 20 1 0 0 0 1 0 0 0 1 87620.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -96 140 0 0 -1 0 1 0 1 0 0 87620.dat
+0 // Brick  1 x  1 (sand_green)
+1 378 30 -96 50 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  2 with Embossed Bricks (light_bluish_grey)
+1 71 30 -96 100 0 0 -1 0 1 0 1 0 0 98283.dat
+0 STEP
+0 // Panel  1 x  2 x  2 Reinforced (light_bluish_grey)
+1 71 20 -96 70 -1 0 0 0 1 0 0 0 -1 87552.dat
+0 // Arch  1 x  3 (light_bluish_grey)
+1 71 -30 -120 230 -1 0 0 0 1 0 0 0 -1 4490.dat
+0 // Arch  1 x  3 (light_bluish_grey)
+1 71 -30 -120 -70 -1 0 0 0 1 0 0 0 -1 4490.dat
+0 // Brick  1 x  4 (light_bluish_grey)
+1 71 -10 -120 -20 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (light_bluish_grey)
+1 71 -10 -120 180 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  1 (sand_green)
+1 378 10 -120 70 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 16 -110 10 0 -1 0 1 0 0 0 0 1 54200.dat
+0 // Brick  1 x  1 with Headlight (light_bluish_grey)
+1 71 10 -120 10 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (light_bluish_grey)
+1 71 10 -120 150 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 16 -110 150 0 -1 0 -1 0 0 0 0 -1 54200.dat
+0 // Brick  1 x  6 (light_bluish_grey)
+1 71 30 -120 80 0 0 -1 0 1 0 1 0 0 3009.dat
+0 STEP
+0 // Plate  2 x  4 (reddish_brown)
+1 70 -40 -8 80 1 0 0 0 1 0 0 0 1 3020.dat
+0 // Plate  1 x  4 (reddish_brown)
+1 70 -70 0 80 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  2 (reddish_brown)
+1 70 -40 -128 230 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Brick  1 x  2 with Embossed Bricks (light_bluish_grey)
+1 71 -10 -144 220 0 0 -1 0 1 0 1 0 0 98283.dat
+0 // Plate  1 x  1 Round (dark_bluish_grey)
+1 72 -30 -136 230 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Staircase  7 x  4 x  6 Open (reddish_brown)
+1 70 -60 -144 160 1 0 0 0 1 0 0 0 1 30134.dat
+0 // Plate  1 x  4 (reddish_brown)
+1 70 -60 -144 230 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -144 140 0 0 -1 0 1 0 1 0 0 87620.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -144 20 1 0 0 0 1 0 0 0 1 87620.dat
+0 // Brick  2 x  4 (light_bluish_grey)
+1 71 20 -144 80 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Brick  2 x  4 (light_bluish_grey)
+1 71 -20 -144 160 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Brick  2 x  4 (light_bluish_grey)
+1 71 -20 -144 -40 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Brick  1 x  1 (sand_green)
+1 378 -10 -144 10 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (sand_green)
+1 378 -50 -144 -70 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 STEP
+0 // Plate  2 x 16 (light_bluish_grey)
+1 71 0 -152 80 0 0 -1 0 1 0 1 0 0 4282.dat
+0 // Plate  2 x 16 (light_bluish_grey)
+1 71 -40 -152 80 0 0 -1 0 1 0 1 0 0 4282.dat
+0 // Plate  1 x  6 (light_bluish_grey)
+1 71 30 -152 80 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Brick  1 x  4 (light_bluish_grey)
+1 71 10 -176 200 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 10 -176 -60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 with Embossed Bricks (light_bluish_grey)
+1 71 10 -176 -20 0 0 -1 0 1 0 1 0 0 98283.dat
+0 // Brick  1 x  2 with Embossed Bricks (light_bluish_grey)
+1 71 30 -176 60 0 0 -1 0 1 0 1 0 0 98283.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 30 -176 100 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -176 140 0 0 -1 0 1 0 1 0 0 87620.dat
+0 // Brick  2 x  2 Facet (light_bluish_grey)
+1 71 20 -176 20 1 0 0 0 1 0 0 0 1 87620.dat
+0 // Slope Brick 45  2 x  1 (dark_bluish_grey)
+1 72 -10 -176 -70 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (dark_bluish_grey)
+1 72 -10 -176 230 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (dark_bluish_grey)
+1 72 10 -160 100 0 0 1 0 1 0 -1 0 0 3794b.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (dark_bluish_grey)
+1 72 10 -160 60 0 0 1 0 1 0 -1 0 0 3794b.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (dark_bluish_grey)
+1 72 -10 -160 100 0 0 1 0 1 0 -1 0 0 3794b.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (dark_bluish_grey)
+1 72 -10 -160 60 0 0 1 0 1 0 -1 0 0 3794b.dat
+0 STEP
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (dark_bluish_grey)
+1 72 10 -184 200 0 0 1 0 1 0 -1 0 0 3794b.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 10 -200 160 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 30 -200 120 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 30 -200 40 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 10 -200 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 0 -200 -70 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (light_bluish_grey)
+1 71 0 -200 230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 with Groove with 1 Centre Stud (dark_bluish_grey)
+1 72 10 -184 -40 0 0 1 0 1 0 -1 0 0 3794b.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (light_bluish_grey)
+1 71 30 -176 80 0 0 1 0 1 0 -1 0 0 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (light_bluish_grey)
+1 71 0 -200 230 -1 0 0 0 1 0 0 0 -1 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (light_bluish_grey)
+1 71 10 -200 160 0 0 -1 0 1 0 1 0 0 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (light_bluish_grey)
+1 71 30 -200 120 0 0 -1 0 1 0 1 0 0 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (light_bluish_grey)
+1 71 30 -200 40 0 0 -1 0 1 0 1 0 0 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (light_bluish_grey)
+1 71 10 -200 0 0 0 -1 0 1 0 1 0 0 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (light_bluish_grey)
+1 71 0 -200 -70 1 0 0 0 1 0 0 0 1 85984.dat
+0 STEP
+0 // Brick  2 x  3 (reddish_brown)
+1 70 0 -184 80 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // Technic Tile  1 x  2 with Two Holes (black)
+1 0 0 -192 60 -1 0 0 0 1 0 0 0 -1 32530.dat
+0 // Technic Tile  1 x  2 with Two Holes (black)
+1 0 0 -192 100 -1 0 0 0 1 0 0 0 -1 32530.dat
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 0 -214 80 0 0 -1 0 1 0 1 0 0 32556.dat
+0 // Plate  1 x  2 with Hole and Bucket (dark_brown)
+1 308 4.1603 -226.7942 80 0 0.5 -0.866 0 0.866 0.5 1 0 0 88289.dat
+0 // Brick  1 x  1 Round with Hollow Stud (dark_bluish_grey)
+1 72 -31.7493 -197.82 90 0.1564 0 -0.9877 0.9877 0 0.1564 0 -1 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (dark_bluish_grey)
+1 72 -30 -176 30 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (dark_bluish_grey)
+1 72 -30 -176 10 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Cone  1 x  1 with Stop (reddish_brown)
+1 70 10 -208 -40 0 0 -1 0 1 0 1 0 0 59900.dat
+0 // ~Bar  6L with Thick Stop (Obsolete) (reddish_brown)
+1 70 10 -212 -40 0 0 -1 0 1 0 1 0 0 63965.dat
+0 // Flag  4 x  1 with First Wave Right (pearl_gold)
+1 297 10 -309 -40 -0.9659 0 -0.2588 0 1 0 0.2588 0 -0.9659 4495b.dat
+0 // Flag  4 x  1 with First Wave Right (dark_green)
+1 288 10 -285 -40 -0.9659 0 -0.2588 0 1 0 0.2588 0 -0.9659 4495b.dat
+0 // Minifig Telescope (dark_brown)
+1 308 10 -224 200 0 0 1 0 1 0 -1 0 0 64644.dat
+0 // Minifig Plume/Flame Triple (trans_orange)
+1 57 10 -224 200 -0.9659 0 -0.2588 0 1 0 0.2588 0 -0.9659 64647.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -50 -14 -80 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -30 -14 -80 0 0 -1 0 1 0 1 0 0 2780.dat
+
+0 STEP
+0 FILE 9471 - uruk-armor.ldr
+0 An Uruk-Hai warrior minifigure with leather armor, scowling white-hand face, crested helmet, armor plate, and halberd.
+0 Name: 9471 - uruk-armor.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // ~Minifig Leg Left with LOTR Leather Armour Pattern (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3817pm0.dat
+0 // ~Minifig Hips with LOTR Leather Armour Pattern (Obsolete) (dark_bluish_grey)
+1 72 0 -12 0 1 0 0 0 1 0 0 0 1 3815pm0.dat
+0 // ~Minifig Leg Right with LOTR Leather Armour Pattern (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3816pm0.dat
+0 // Minifig Torso with LOTR Leather Armour with Buckle Pattern (dark_brown)
+1 308 0 -44 0 1 0 0 0 1 0 0 0 1 973pm0.dat
+0 // Minifig Head with LOTR Uruk-Hai Scowl and White Hand 2-Sided Pattern (Hollow Stud) (dark_red)
+1 320 0 -71 0 1 0 0 0 1 0 0 0 1 3626cpm0.dat
+0 // Minifig Arm Left (dark_red)
+1 320 15.552 -35 0 0.9855 0.1201 0.1201 -0.1699 0.6969 0.6969 0 -0.7072 0.7071 3819.dat
+0 // Minifig Arm Right (dark_red)
+1 320 -15.552 -35 0 0.9855 -0.1699 0 0.1699 0.9855 0 0 0 1 3818.dat
+0 // Minifig Hand (dark_bluish_grey)
+1 72 21.5608 -29.5778 -20.3429 0.9855 -0.1699 0 0.1699 0.9855 0 0.0001 0 1 3820.dat
+0 // Minifig Hand (dark_bluish_grey)
+1 72 -23.6875 -17.2401 -9.8839 0.9474 0.2966 0.1201 -0.1324 0.7049 -0.6968 -0.2913 0.6443 0.7071 3820.dat
+0 // Minifig Helmet Castle Uruk-Hai with Lateral Comb (pearl_dark_grey)
+1 148 0 -71 0 1 0 0 0 1 0 0 0 1 10051.dat
+0 // Minifig Armour Plate (pearl_dark_grey)
+1 148 0 -44 0 1 0 0 0 1 0 0 0 1 2587.dat
+0 // Minifig Polearm Halberd (dark_bluish_grey)
+1 72 24.187 -44.8084 -34.4843 0.9855 -0.1641 0.044 0.1699 0.9519 -0.2551 0.0001 0.2588 0.9659 6123.dat
+
+0 STEP
+0 FILE 9471 - uruk-helmet.ldr
+0 An Uruk-Hai warrior minifigure with leather armor, crested helmet, spiked shield, and Uruk-Hai sword.
+0 Name: 9471 - uruk-helmet.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // ~Minifig Leg Left with LOTR Leather Armour Pattern (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3817pm0.dat
+0 // ~Minifig Hips with LOTR Leather Armour Pattern (Obsolete) (dark_bluish_grey)
+1 72 0 -12 0 1 0 0 0 1 0 0 0 1 3815pm0.dat
+0 // ~Minifig Leg Right with LOTR Leather Armour Pattern (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3816pm0.dat
+0 // Minifig Torso with LOTR Leather Armour with Buckle Pattern (dark_brown)
+1 308 0 -44 0 1 0 0 0 1 0 0 0 1 973pm0.dat
+0 // Minifig Head with LOTR Uruk-Hai Scowl and White Hand 2-Sided Pattern (Hollow Stud) (dark_red)
+1 320 0 -68 0 1 0 0 0 1 0 0 0 1 3626cpm0.dat
+0 // Minifig Arm Left (dark_red)
+1 320 15.552 -35 0 0.9855 0.1201 0.1201 -0.1699 0.6969 0.6969 0 -0.7072 0.7071 3819.dat
+0 // Minifig Arm Right (dark_red)
+1 320 -15.552 -35 0 0.9855 -0.0582 -0.1596 0.1699 0.337 0.9261 0 -0.9397 0.3419 3818.dat
+0 // Minifig Hand (dark_bluish_grey)
+1 72 21.5608 -29.5778 -20.3429 0.091 -0.9959 0 0.9959 0.091 0 0.0001 0 1 3820.dat
+0 // Minifig Hand (dark_bluish_grey)
+1 72 -19.9986 -38.6383 -21.126 0.9613 0.2658 -0.0718 -0.2131 0.8838 0.4165 0.1742 -0.3851 0.9063 3820.dat
+0 // Minifig Helmet Castle Uruk-Hai with Lateral Comb (pearl_dark_grey)
+1 148 0 -68 0 1 0 0 0 1 0 0 0 1 10051.dat
+0 // Minifig Shield Broad with Spiked Bottom and Cutout Corner (dark_bluish_grey)
+1 72 21.5608 -29.5778 -34.3427 0.9668 0.1013 0.235 -0.0776 0.9912 -0.1085 -0.2438 0.0867 0.9659 10049.dat
+0 // Minifig Sword Uruk-Hai (pearl_dark_grey)
+1 148 -17.9121 -38.9692 -30.9517 -0.9263 0.2535 0.2789 0.1924 0.9543 -0.2287 -0.3241 -0.1582 -0.9328 10050.dat
+
+0 STEP
+0 FILE 9471 - uruk-hair.ldr
+0 An Uruk-Hai warrior minifigure with leather armor, long black hair, spiked shield, and Uruk-Hai sword.
+0 Name: 9471 - uruk-hair.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // ~Minifig Leg Left with LOTR Leather Armour Pattern (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3817pm0.dat
+0 // ~Minifig Hips with LOTR Leather Armour Pattern (Obsolete) (dark_bluish_grey)
+1 72 0 -12 0 1 0 0 0 1 0 0 0 1 3815pm0.dat
+0 // ~Minifig Leg Right with LOTR Leather Armour Pattern (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3816pm0.dat
+0 // Minifig Torso with LOTR Leather Armour with Buckle Pattern (dark_brown)
+1 308 0 -44 0 1 0 0 0 1 0 0 0 1 973pm0.dat
+0 // Minifig Head with LOTR Uruk-Hai Scowl and White Hand 2-Sided Pattern (Hollow Stud) (dark_red)
+1 320 0 -68 0 1 0 0 0 1 0 0 0 1 3626cpm0.dat
+0 // Minifig Arm Left (dark_red)
+1 320 15.552 -35 0 0.9855 0.1201 0.1201 -0.1699 0.6969 0.6969 0 -0.7072 0.7071 3819.dat
+0 // Minifig Arm Right (dark_red)
+1 320 -15.552 -35 0 0.9855 -0.1699 0 0.1699 0.9855 0 0 0 1 3818.dat
+0 // Minifig Hand (dark_bluish_grey)
+1 72 21.5608 -29.5778 -20.3429 -0.1699 -0.9855 0 0.9855 -0.1699 0 0.0001 0 1 3820.dat
+0 // Minifig Hand (dark_bluish_grey)
+1 72 -23.6875 -17.2401 -9.8839 0.9474 0.2966 0.1201 -0.1324 0.7049 -0.6968 -0.2913 0.6443 0.7071 3820.dat
+0 // Minifig Hair Long Straight (black)
+1 0 0 -68 0 1 0 0 0 1 0 0 0 1 40239.dat
+0 // Minifig Shield Broad with Spiked Bottom and Cutout Corner (dark_bluish_grey)
+1 72 21.5608 -29.5778 -34.3427 0.9539 -0.1587 0.2551 0.1753 0.9836 -0.044 -0.2438 0.0867 0.9659 10049.dat
+0 // Minifig Sword Uruk-Hai (pearl_dark_grey)
+1 148 -23.2458 -8.0308 -13.8836 -0.9392 0.3286 0.0994 0.2675 0.5189 0.8119 0.2152 0.7891 -0.5753 10050.dat
+
+0 STEP
+0 FILE 9471 - eomer.ldr
+0 An Eomer of Rohan minifigure wearing scale armor, a green cape, Rohan helmet, riding a poseable horse and armed with a spear and round shield.
+0 Name: 9471 - eomer.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // ~Minifig Leg Left with LOTR Scale Armour Pattern (Obsolete) (dark_brown)
+1 308 0 -16.9356 16.5956 1 0 0 0 0.866 0.5 0 -0.5 0.866 3817pm1.dat
+0 // ~Minifig Hips with LOTR Dark Red Belt & Scale Armour Pattern (Obsolete) (dark_bluish_grey)
+1 72 0 -28.2119 20.6998 1 0 0 0 0.9397 0.342 0 -0.342 0.9397 3815pm1.dat
+0 // ~Minifig Leg Right with LOTR Scale Armour Pattern (Obsolete) (dark_brown)
+1 308 0 -16.9356 16.5956 1 0 0 0 0.866 0.5 0 -0.5 0.866 3816pm1.dat
+0 // Minifig Torso with LOTR Armour, Brown Belt & Gold Buckle Pattern (dark_red)
+1 320 0 -58.282 31.6445 1 0 0 0 0.9397 0.342 0 -0.342 0.9397 973pm5.dat
+0 // Minifig Head with LOTR Frowning / Shouting 2-Sided Pattern (light_nougat)
+1 78 0 -82.7141 40.537 1 0 0 0 0.9397 0.342 0 -0.342 0.9397 3626cpm5.dat
+0 // Minifig Arm Left (dark_bluish_grey)
+1 72 15.552 -49.8248 28.5663 0.9855 0.1201 0.1201 -0.1597 0.413 0.8967 0.0581 -0.9029 0.4261 3819.dat
+0 // Minifig Arm Right (dark_bluish_grey)
+1 72 -15.552 -49.8248 28.5663 0.9155 -0.085 0.3932 0.2256 0.9179 -0.3266 -0.3331 0.3877 0.8595 3818.dat
+0 // Minifig Hand (light_nougat)
+1 78 21.5608 -51.6873 7.5957 0.9855 -0.1699 0 0.1597 0.9261 0.342 -0.058 -0.3371 0.9397 3820.dat
+0 // Minifig Hand (light_nougat)
+1 78 -25.6219 -30.392 29.0576 0.94 0.0447 0.3382 0.299 0.3691 -0.88 -0.1641 0.9282 0.3336 3820.dat
+0 // Minifig Helmet Castle Rohan with Cheek Protection & Comb with Eomer Pattern (pearl_light_grey)
+1 135 0 -82.7141 40.537 1 0 0 0 0.9397 0.342 0 -0.342 0.9397 10054p01.dat
+0 // Minifig Cape Cloth (Formed Floating) (dark_green)
+1 288 0 -60.1614 32.3285 1 0 0 0 0.9397 0.342 0 -0.342 0.9397 50231c02.dat
+0 // Minifig Pike / Spear Elaborate with Rubber Flat Silver Head Pattern (reddish_brown)
+1 70 -33.8342 -27.6991 -16.2737 0.9139 0.1064 0.3917 0.377 0.1344 -0.9164 -0.1502 0.9852 0.0827 90391p02.dat
+0 // Minifig Shield Round Bowed with DkGreen and Gold Rohan Pattern (dark_red)
+1 320 24.3513 -55.9274 -4.5758 -0.1641 -0.728 -0.6657 0.9831 -0.177 -0.0488 -0.0823 -0.6625 0.7446 75902p01.dat
+0 // Animal Horse Poseable Rear Legs (reddish_brown)
+1 70 0 22.5 39.9 1 0 0 0 1 0 0 0 1 10354c01.dat
+0 // Animal Horse Poseable Body (reddish_brown)
+1 70 0 22.5 39.9 1 0 0 0 0.866 0.5 0 -0.5 0.866 10352c01.dat
+0 // Animal Horse Poseable Head with Black Bridle and White Blaze Pattern (reddish_brown)
+1 70 0 -20.3926 -21.5921 1 0 0 0 1 0 0 0 1 10350p01c01.dat
+0 // Animal Horse Saddle with Two Clips (dark_bluish_grey)
+1 72 0 6.8131 1.7296 1 0 0 0 0.866 0.5 0 -0.5 0.866 4491b.dat
+0 // Minifig Sword Longsword with Thin Guard (pearl_silver)
+1 179 -30 12.7151 17.952 1 0 0 0 -0.866 -0.5 0 0.5 -0.866 98370.dat
+
+0 STEP
+0 FILE 9471 - archer.ldr
+0 A Rohan archer minifigure wearing scale armor, a Rohan helmet, and carrying a bow with arrows in a quiver.
+0 Name: 9471 - archer.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME The Hobbit and the Lord of the Rings / The Lord of the Rings
+0 // ~Minifig Leg Left (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3817.dat
+0 // ~Minifig Hips (Obsolete) (dark_brown)
+1 308 0 -12 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // ~Minifig Leg Right (Obsolete) (dark_brown)
+1 308 0 0 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // Minifig Torso with LOTR Scale Armour and Belt Pattern (dark_bluish_grey)
+1 72 0 -44 0 1 0 0 0 1 0 0 0 1 973pm6.dat
+0 // Minifig Head with LOTR Frowning / Grimacing 2-Sided Pattern (light_nougat)
+1 78 0 -70 0 1 0 0 0 1 0 0 0 1 3626cpm6.dat
+0 // Minifig Arm Left (dark_green)
+1 288 15.552 -35 0 0.9855 0.1201 0.1201 -0.1699 0.6969 0.6969 0 -0.7072 0.7071 3819.dat
+0 // Minifig Arm Right (dark_green)
+1 288 -15.5522 -35.0005 0.0008 0.9855 -0.1699 0 0.1699 0.9855 0 0 0 1 3818.dat
+0 // Minifig Hand (light_nougat)
+1 78 21.5608 -29.5778 -20.3429 0.9384 0.3456 0 -0.3456 0.9384 0 0.0001 0 1 3820.dat
+0 // Minifig Hand (light_nougat)
+1 78 -23.6875 -17.2401 -9.8839 0.9474 0.2966 0.1201 -0.1324 0.7049 -0.6968 -0.2913 0.6443 0.7071 3820.dat
+0 // Minifig Helmet Castle Rohan with Cheek Protection & Comb (pearl_light_grey)
+1 135 0 -70 0 1 0 0 0 1 0 0 0 1 10054.dat
+0 // Minifig Arrow Quiver (reddish_brown)
+1 70 0 -43 0 -1 0 0 0 1 0 0 0 -1 4498.dat
+0 // Minifig Bow with Arrow (reddish_brown)
+1 70 21.8951 -28.6719 -30.0847 0.9296 0.3338 0.1565 -0.271 0.9064 -0.3241 -0.2499 0.2588 0.933 4499.dat
+
+

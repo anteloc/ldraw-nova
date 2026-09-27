@@ -14,7 +14,7 @@ import jsonschema
 from ldraw.errors import PartError
 
 from .builder import build_plan, load_plan, rotation
-from .common import ROOT, DATA, atomic_write, dumps, get_parts, jsonable, library_path, models_path, shadow_paths
+from .common import ROOT, DATA, atomic_write, database_path, dumps, get_parts, jsonable, library_path, models_path, shadow_paths
 from .external import cad_check, render, prepare_glb, compare_bom
 from .geometry import analyze_geometry, profiles
 from .resources import search_spec, search_models, model_sections
@@ -52,10 +52,9 @@ def scope_options(c):
 
 def parser():
     p = argparse.ArgumentParser(description="Generate, inspect and review LDraw MPD assemblies. All reports are JSON. See docs/agent/tooling.md.")
-    p.add_argument("--library", help="LDraw library root (default LDRAW_DIR or ../ldraw-lib/ldraw)")
-    p.add_argument("--models", help="Annotated model directory (default MODELS_DIR)")
+    p.add_argument("--library", help="LDraw parts library root (default LDRAW_DIR, then LDRAWDIR)")
     shadows = p.add_mutually_exclusive_group()
-    shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./offLibShadow")
+    shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
@@ -342,13 +341,13 @@ def run(args):
         from .examples import search_examples
         if args.details and args.scale:raise ValueError('--scale applies to building examples')
         return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family),0
-    library = library_path(args.library)
     if args.command == "doctor":
+        library = library_path(args.library)
         report = dict(python=sys.version.split()[0], packages={n: version(n) for n in ["pyldraw3", "numpy", "jsonschema"]},
                       library=str(library), library_present=(library / "parts").is_dir(),
-                      models=str(models_path(args.models)), pdf=str(ROOT / "docs/ldraw-specs.pdf"),
+                      models=str(models_path()), database=str(database_path()), pdf=str(ROOT / "docs/ldraw-specs.pdf"),
                       shadow_sources=jsonable(shadow_paths([] if args.no_shadow else args.shadow)),
-                      tools={t: shutil.which(t) for t in ["pdftotext", "leocad", "mpd2glb.sh"]})
+                      tools={t: shutil.which(t) for t in ["pdftotext", "leocad", "jev-rerank", "mpd2glb.sh", "ldraw-render-steps.sh"]})
         return report, 0 if report["library_present"] and report["tools"]["pdftotext"] else 2
     if args.command == "spec":
         return search_spec(args.query, args.page, args.limit), 0
@@ -359,7 +358,8 @@ def run(args):
     if args.command == "profiles":
         return json.loads((DATA / "rectangular-parts.json").read_text()), 0
     if args.command == "search" and args.kind != "parts":
-        return search_models(args.query, root=args.models, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
+        return search_models(args.query, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
+    library = library_path(args.library)
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
     if args.command == 'spaceship':
         from .spaceships import design_brief, export_spaceship
@@ -409,7 +409,7 @@ def run(args):
     if args.command == "discover":
         from .discovery import DiscoveryIndex, search, part_suggestions
         from .reference_catalog import prepare_reference, build_catalog, export_example, record_review
-        index = DiscoveryIndex(parts,args.models)
+        index = DiscoveryIndex(parts)
         command = args.discovery_command
         if command == 'recipe':
             from .reference_recipes import RECIPES,recipe_plan

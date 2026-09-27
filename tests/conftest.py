@@ -24,8 +24,12 @@ def parts(tmp_path_factory):
 
 @pytest.fixture(scope="session")
 def official():
-    if not (library_path() / "parts").is_dir():
-        pytest.skip("Official integration library unavailable; set LDRAW_DIR")
+    try:
+        library = library_path()
+    except ValueError:
+        pytest.skip("Official integration library unavailable; set LDRAW_DIR or LDRAWDIR")
+    if not (library / "parts").is_dir():
+        pytest.skip("Official integration library unavailable; set LDRAW_DIR or LDRAWDIR")
     return get_parts()
 
 

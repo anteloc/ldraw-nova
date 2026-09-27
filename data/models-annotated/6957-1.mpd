@@ -1,0 +1,877 @@
+0 FILE 6957 - Solar Snooper.ldr
+0 A multi-vehicle space exploration set combining a wheeled front rover with antenna, a container module, a wheeled rear vehicle carrying a small spaceship, and three space-themed minifigures.
+0 Name: 6957 - Solar Snooper.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6957 - Vehicle.ldr
+1 0 265 -20 330 0.92388 0 -0.382683 0 1 0 0.382683 0 0.92388 6957 - Minifig 1.ldr
+
+
+
+0 STEP
+0 FILE 6957 - Container.ldr
+0 A compact cargo container module featuring a black base plate, red corner bricks, light grey arches and slopes, grille tiles, and a trans-green helicopter windscreen canopy.
+0 Name: 6957 - Container.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Plate  6 x  6 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3958.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 40 8 40 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -40 8 40 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 40 8 -40 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -40 8 -40 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Brick  2 x  2 Corner (red)
+1 4 -50 -24 -50 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Brick  2 x  2 Corner (red)
+1 4 -50 -24 30 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Brick  2 x  2 Corner (red)
+1 4 50 -24 -50 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (red)
+1 4 50 -24 30 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Arch  1 x  4 (light_grey)
+1 7 -50 -48 0 0 0 -1 0 1 0 1 0 0 3659.dat
+0 // Arch  1 x  4 (light_grey)
+1 7 50 -48 0 0 0 -1 0 1 0 1 0 0 3659.dat
+0 // Panel  1 x  2 x  2 with Solid Studs (black)
+1 0 0 -48 -50 -1 0 0 0 1 0 0 0 -1 4864a.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -50 -48 50 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 50 -48 50 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -40 -48 -50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 40 -48 -50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 -50 -72 -10 1 0 0 0 1 0 0 0 1 4286.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 -50 -72 10 -1 0 0 0 1 0 0 0 -1 4286.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 50 -72 -10 1 0 0 0 1 0 0 0 1 4286.dat
+0 // Slope Brick 33  3 x  1 (light_grey)
+1 7 50 -72 10 -1 0 0 0 1 0 0 0 -1 4286.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -50 -80 0 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 50 -80 0 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Hinge Tile  1 x  4 (black)
+1 0 0 -56 -50 1 0 0 0 1 0 0 0 1 4625.dat
+0 // Windscreen  4 x  4 x  3.667 Helicopter with Space Police II Pattern (trans_green)
+1 34 0 -60 -44 -1 0 0 0 0.7826 0.6225 0 0.6225 -0.7826 2483p50.dat
+
+
+
+0 STEP
+0 FILE 6957 - Vehicle.ldr
+0 An assembled wheeled space vehicle composed of the front and back vehicle submodels along with attached accessories and minifigures.
+0 Name: 6957 - Vehicle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6957 - Vehicle - Front + Container.ldr
+1 0 0 0 180 0.9537 0 0.3007 0 1 0 -0.3007 0 0.9537 6957 - Vehicle - Back + Spaceship.ldr
+
+
+
+0 STEP
+0 FILE 6957 - Vehicle - Front.ldr
+0 A large six-wheeled front rover section built from light grey bricks, black plates and wings, red side bricks, brackets, and a towball plate hitch.
+0 Name: 6957 - Vehicle - Front.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Brick  2 x 10 (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 3006.dat
+0 // Plate  1 x 10 (black)
+1 0 0 24 -90 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  2 x 10 (black)
+1 0 0 24 100 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  2 x 10 (black)
+1 0 0 24 0 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 -40 0 -90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 40 0 -90 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 -80 0 -100 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 -80 0 0 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 -80 0 100 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 80 0 100 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 80 0 0 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 80 0 -100 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 0 16 130 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  2 with Towball (black)
+1 0 0 8 140 -1 0 0 0 1 0 0 0 -1 3731.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 0 0 130 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  2 x 10 (black)
+1 0 0 -8 100 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Plate  2 x 10 (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Plate  1 x 10 (black)
+1 0 0 -8 -90 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Plate  1 x  2 (black)
+1 0 -50 -16 100 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 50 -16 100 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (black)
+1 0 0 -8 140 1 0 0 0 1 0 0 0 1 4859.dat
+0 // Plate  6 x  6 (black)
+1 0 0 -16 -40 1 0 0 0 1 0 0 0 1 3958.dat
+0 // Bracket  5 x  2 x  2.333 with Inside Rib (light_grey)
+1 7 -20 -24 -110 1 0 0 0 1 0 0 0 1 6087.dat
+0 // Bracket  5 x  2 x  2.333 with Inside Rib (light_grey)
+1 7 20 -24 -110 1 0 0 0 1 0 0 0 1 6087.dat
+0 // Brick  1 x  4 (red)
+1 4 -50 -40 -80 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (red)
+1 4 50 -40 -80 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  8 (red)
+1 4 -50 -40 40 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Brick  1 x  8 (red)
+1 4 50 -40 40 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Plate  8 x  8 with Grille without Hole (black)
+1 0 0 -48 80 0 0 1 0 1 0 -1 0 0 4151a.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 100 10 100 0 0 -1 0 1 0 1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 100 10 0 0 0 -1 0 1 0 1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 100 10 -100 0 0 -1 0 1 0 1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 -100 10 -100 0 0 1 0 1 0 -1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 -100 10 0 0 0 1 0 1 0 -1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 -100 10 100 0 0 1 0 1 0 -1 0 0 2593.dat
+0 // Cockpit  4 x 11 x  2.667 (light_grey)
+1 7 0 -8 -160 -1 0 0 0 1 0 0 0 -1 6058.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 20 -18 -130 0 1 0 0 0 1 1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -20 -18 -130 0 -1 0 0 0 1 -1 0 0 4070.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -30 -32 -120 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 30 -32 -120 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Wing  3 x  4 with  1 x  2 Cutout without Stud Notches (black)
+1 0 0 -8 -320 1 0 0 0 1 0 0 0 1 4859.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (black)
+1 0 -30 -8 -270 0 0 1 0 1 0 -1 0 0 6019.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (black)
+1 0 30 -8 -270 0 0 -1 0 1 0 1 0 0 6019.dat
+0 // Plate  1 x  1 (black)
+1 0 -30 -8 -250 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (black)
+1 0 30 -8 -250 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 -30 -8 -230 0 0 1 0 1 0 -1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 30 -8 -230 0 0 -1 0 1 0 1 0 0 4081b.dat
+0 // Slope Brick 45  2 x  2 with Horizon Indicator Screen Pattern (light_grey)
+1 7 0 -8 -270 -1 0 0 0 1 0 0 0 -1 3039pc3.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -50 -64 -10 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 50 -64 -10 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Plate  3 x  3 without Corner (black)
+1 0 -90 -56 130 0 0 1 0 1 0 -1 0 0 2450.dat
+0 // Plate  3 x  3 without Corner (black)
+1 0 90 -56 130 1 0 0 0 1 0 0 0 1 2450.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 -70 -72 80 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (light_grey)
+1 7 70 -72 80 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 0 -40 -110 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 -50 -88 -10 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (light_grey)
+1 7 50 -88 -10 0 0 1 0 1 0 -1 0 0 4070.dat
+1 0 -88 -78 -10 0 0 -1 0.9063 0.4226 0 0.4226 -0.9063 0 6957 - Vehicle - Front - Antenna.ldr
+1 0 88 -78 -10 0 0 1 -0.9063 0.4226 0 -0.4226 -0.9063 0 6957 - Vehicle - Front - Antenna.ldr
+0 // Panel  1 x  4 x  3 (trans_green)
+1 34 0 -120 10 -1 0 0 0 1 0 0 0 -1 4215a.dat
+0 // Brick  2 x  4 x  2 with 3 Understuds with Axlehole on Long Sides (light_grey)
+1 7 -60 -88 -60 0 0 -1 0 1 0 1 0 0 6061.dat
+0 // Brick  2 x  4 x  2 with 3 Understuds with Axlehole on Long Sides (light_grey)
+1 7 60 -88 -60 0 0 -1 0 1 0 1 0 0 6061.dat
+0 // Brick  1 x  8 (black)
+1 0 0 -64 -110 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 -30 -56 -130 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (light_grey)
+1 7 30 -56 -130 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Antenna  4H with Rounded Top (red)
+1 4 50 -6 -242 1 0 0 0 0 -1 0 1 0 3957a.dat
+0 // Antenna  4H with Rounded Top (red)
+1 4 -50 -6 -242 1 0 0 0 0 -1 0 1 0 3957a.dat
+1 0 -70 -62 80 0 0 -1 0 1 0 1 0 0 6957 - Vehicle - Front - Hinge 1.ldr
+1 0 70 -62 80 0 0 -1 0 1 0 1 0 0 6957 - Vehicle - Front - Hinge 2.ldr
+0 // Arch  1 x  6 (light_grey)
+1 7 0 -112 -10 1 0 0 0 1 0 0 0 1 3455.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 80 -68 -60 0 1 0 1 0 0 0 0 -1 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 -80 -68 -60 0 -1 0 -1 0 0 0 0 -1 4229.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (black)
+1 0 0 -64 -130 1 0 0 0 1 0 0 0 1 4315.dat
+0 // Windscreen 10 x  4 x  2.333 Canopy (trans_green)
+1 34 0 -60 -144 1 0 0 0 1 0 0 0 1 2507.dat
+0 // Brick  3 x  3 x  2 Facet Top (trans_green)
+1 34 60 -64 -110 0 0 -1 0 1 0 1 0 0 2463.dat
+0 // Brick  3 x  3 x  2 Facet Top (trans_green)
+1 34 -50 -64 -120 1 0 0 0 1 0 0 0 1 2463.dat
+0 // Tile  1 x  2 with Computer Pattern (light_grey)
+1 7 10 -72 -120 0 0 -1 0 1 0 1 0 0 3069bp25.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 -50 -96 -90 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 50 -96 -90 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Slope Brick 33  3 x  2 with Space Police II Pattern (black)
+1 0 -60 -112 -30 1 0 0 0 1 0 0 0 1 3298p69.dat
+0 // Slope Brick 33  3 x  2 with Space Police II Pattern (black)
+1 0 60 -112 -30 1 0 0 0 1 0 0 0 1 3298p69.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (black)
+1 0 0 -120 -10 1 0 0 0 1 0 0 0 1 4315.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 50 -120 -30 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 -50 -120 -30 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Windscreen 10 x  4 x  2.333 Canopy (trans_green)
+1 34 0 -116 -24 1 0 0 0 1 0 0 0 1 2507.dat
+0 // Plate  2 x  2 (black)
+1 0 0 -128 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 -30 -128 0 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (light_grey)
+1 7 30 -128 0 0 0 1 0 1 0 -1 0 0 2412b.dat
+
+
+0 STEP
+0 FILE 6957 - Vehicle - Front - Antenna.ldr
+0 A small signal antenna assembly made of a black minifig signal holder topped with a red whip antenna.
+0 Name: 6957 - Vehicle - Front - Antenna.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Minifig Signal Holder (black)
+1 0 0 -2 0 1 0 0 0 1 0 0 0 1 3900.dat
+0 // Antenna  8H Whip (red)
+1 4 0 -10 0 1 0 0 0 1 0 0 0 1 2569.dat
+
+
+
+0 STEP
+0 FILE 6957 - Vehicle - Front - Hinge 1.ldr
+0 A hinged panel assembly using a black hinge top, a side-stud brick, and a patterned arrow indicator tile.
+0 Name: 6957 - Vehicle - Front - Hinge 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 0 -26 0 0 0 -1 0 1 0 1 0 0 4595.dat
+0 // Tile  1 x  2 with Arrow Short DkRed with Silver Border Pattern (black)
+1 0 0 -34 0 1 0 0 0 1 0 0 0 1 3069bp15.dat
+
+
+
+0 STEP
+0 FILE 6957 - Vehicle - Front - Hinge 2.ldr
+0 A hinged panel assembly using a black hinge top, a side-stud brick, and a patterned arrow indicator tile.
+0 Name: 6957 - Vehicle - Front - Hinge 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Hinge  1 x  2 Top (black)
+1 0 0 -10 0 1 0 0 0 1 0 0 0 1 3938.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 0 -26 0 0 0 -1 0 1 0 1 0 0 4595.dat
+0 // Tile  1 x  2 with Arrow Short DkRed with Silver Border Pattern (black)
+1 0 0 -34 0 -1 0 0 0 1 0 0 0 -1 3069bp15.dat
+
+
+
+0 STEP
+0 FILE 6957 - Vehicle - Front + Container.ldr
+0 The front rover combined with the cargo container module to form a transport configuration.
+0 Name: 6957 - Vehicle - Front + Container.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6957 - Vehicle - Front + Minifigs.ldr
+1 0 0 -64 80 1 0 0 0 1 0 0 0 1 6957 - Container.ldr
+
+
+
+0 STEP
+0 FILE 6957 - Vehicle - Front + Minifigs.ldr
+0 The front rover section outfitted with crewed minifigures.
+0 Name: 6957 - Vehicle - Front + Minifigs.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6957 - Vehicle - Front.ldr
+1 0 0 -77 -72 1 0 0 0 1 0 0 0 1 6957 - Minifig 2.ldr
+1 0 0 -13 -192 1 0 0 0 1 0 0 0 1 6957 - Minifig 3.ldr
+
+
+
+0 STEP
+0 FILE 6957 - Vehicle - Back.ldr
+0 A six-wheeled rear vehicle section with light grey structural bricks, black plates, red side panels, grille tiles, and a towball socket hitch for trailer coupling.
+0 Name: 6957 - Vehicle - Back.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Brick  2 x 10 (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 3006.dat
+0 // Plate  2 x 10 (black)
+1 0 0 24 100 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Plate  2 x 10 (black)
+1 0 0 24 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Plate  2 x 10 (black)
+1 0 0 24 -100 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Brick  1 x  2 (light_grey)
+1 7 0 0 110 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 -80 0 100 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 -80 0 0 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 -80 0 -100 -1 0 0 0 1 0 0 0 -1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 80 0 -100 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 80 0 0 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Brick  2 x  2 with Pin (light_grey)
+1 7 80 0 100 1 0 0 0 1 0 0 0 1 4730.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 0 16 -130 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  2 with Towball Socket (black)
+1 0 0 8 -140 1 0 0 0 1 0 0 0 1 3730.dat
+0 // Plate  2 x  3 (light_grey)
+1 7 0 0 -130 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x 10 (black)
+1 0 0 -8 100 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  2 x 10 (black)
+1 0 0 -8 0 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  2 x 10 (black)
+1 0 0 -8 -100 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 0 -8 -130 1 0 0 0 1 0 0 0 1 3839b.dat
+0 // Brick  1 x  6 (red)
+1 4 -50 -32 60 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 -50 -32 -60 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 50 -32 60 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (red)
+1 4 50 -32 -60 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Tile  2 x  2 with Space Police II Pattern (black)
+1 0 0 -16 -120 1 0 0 0 1 0 0 0 1 3068bp69.dat
+0 // Plate  1 x  2 (black)
+1 0 -50 -40 -100 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 50 -40 -100 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 -50 -40 100 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 50 -40 100 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -50 -40 60 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 50 -40 60 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -50 -40 -60 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 50 -40 -60 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 // Plate  4 x  6 (black)
+1 0 0 -40 0 -1 0 0 0 1 0 0 0 -1 3032.dat
+0 // Brick  2 x  4 x  2 with 3 Understuds with Axlehole on Long Sides (light_grey)
+1 7 0 -88 0 -1 0 0 0 1 0 0 0 -1 6061.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 100 10 -100 0 0 -1 0 1 0 1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 100 10 0 0 0 -1 0 1 0 1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 100 10 100 0 0 -1 0 1 0 1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 -100 10 100 0 0 1 0 1 0 -1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 -100 10 0 0 0 1 0 1 0 -1 0 0 2593.dat
+0 // Wheel 30 x 35 with Tread on Sidewall (black)
+1 0 -100 10 -100 0 0 1 0 1 0 -1 0 0 2593.dat
+
+
+
+0 STEP
+0 FILE 6957 - Vehicle - Back + Spaceship.ldr
+0 The rear vehicle section carrying the small spaceship as a transport payload.
+0 Name: 6957 - Vehicle - Back + Spaceship.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 0 170 1 0 0 0 1 0 0 0 1 6957 - Vehicle - Back.ldr
+1 0 0 -64 350 1 0 0 0 1 0 0 0 1 6957 - Spaceship.ldr
+
+
+
+0 STEP
+0 FILE 6957 - Spaceship.ldr
+0 A small space vessel assembled from front and rear sections, cockpit canopy, and hinged panel components.
+0 Name: 6957 - Spaceship.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6957 - Spaceship - Front.ldr
+1 0 80 -24 -200 1 0 0 0 1 0 0 0 1 6957 - Spaceship - Hinge 1.ldr
+1 0 -80 -24 -200 1 0 0 0 1 0 0 0 1 6957 - Spaceship - Hinge 2.ldr
+
+
+
+0 STEP
+0 FILE 6957 - Spaceship - Front.ldr
+0 The front body of a small spaceship featuring black swept wings, hinge bricks, jet engine plates, round axlehole plates, and patterned computer console tiles.
+0 Name: 6957 - Spaceship - Front.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Wing  4 x  8 Right (black)
+1 0 -80 0 -280 1 0 0 0 1 0 0 0 1 3934.dat
+0 // Wing  4 x  8 Left (black)
+1 0 80 0 -280 1 0 0 0 1 0 0 0 1 3933.dat
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 -80 -24 -200 0 0 1 0 1 0 -1 0 0 3830.dat
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 80 -24 -200 0 0 -1 0 1 0 1 0 0 3831.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 50 -24 -210 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -50 -24 -210 -1 0 0 0 1 0 0 0 -1 3665.dat
+0 // Brick  1 x  6 (red)
+1 4 0 -24 -230 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Plate  2 x  8 (light_grey)
+1 7 0 -32 -220 -1 0 0 0 1 0 0 0 -1 3034.dat
+0 // Plate  1 x  4 (black)
+1 0 0 0 -230 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  2 x  8 (black)
+1 0 0 8 -220 -1 0 0 0 1 0 0 0 -1 3034.dat
+0 // Plate  1 x  2 with Jet Engine and Smooth Hole (black)
+1 0 50 8 -300 0 0 -1 0 1 0 1 0 0 3475a.dat
+0 // Plate  1 x  2 with Jet Engine and Smooth Hole (black)
+1 0 -50 8 -300 0 0 1 0 1 0 -1 0 0 3475a.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 70 8 -300 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -70 8 -300 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 60 16 -220 0 0 1 0 1 0 -1 0 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -60 16 -220 0 0 1 0 1 0 -1 0 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 60 16 -300 0 0 1 0 1 0 -1 0 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -60 16 -300 0 0 1 0 1 0 -1 0 0 4032a.dat
+0 // Tile  1 x  2 with Computer Pattern (light_grey)
+1 7 -90 -8 -260 0 0 1 0 1 0 -1 0 0 3069bp25.dat
+0 // Tile  1 x  2 with Computer Pattern (light_grey)
+1 7 90 -8 -260 0 0 1 0 1 0 -1 0 0 3069bp25.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 -70 -48 -220 0 0 -1 0 1 0 1 0 0 4531.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 -50 -48 -220 0 0 -1 0 1 0 1 0 0 4531.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 50 -48 -220 0 0 -1 0 1 0 1 0 0 4531.dat
+0 // Hinge Tile  1 x  2 with 2 Fingers (black)
+1 0 70 -48 -220 0 0 -1 0 1 0 1 0 0 4531.dat
+1 0 60 -44 -190 -1 0 0 0 0.4695 -0.8829 0 -0.8829 -0.4695 6957 - Spaceship - Front - Cockpit.ldr
+1 0 -60 -44 -190 -1 0 0 0 0.4695 -0.8829 0 -0.8829 -0.4695 6957 - Spaceship - Front - Cockpit.ldr
+
+
+0 STEP
+0 FILE 6957 - Spaceship - Front - Cockpit.ldr
+0 A trans-green cockpit canopy assembly with hinge plates and handles for the spaceship's pilot cabin.
+0 Name: 6957 - Spaceship - Front - Cockpit.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Panel  3 x  2 x  6 (trans_green)
+1 34 0 4 40 -1 0 0 0 1 0 0 0 -1 2466.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 -10 -4 30 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (black)
+1 0 10 -4 30 0 0 1 0 1 0 -1 0 0 4275b.dat
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 0 4 20 -1 0 0 0 1 0 0 0 -1 3839b.dat
+0 // Plate  2 x  2 (black)
+1 0 0 12 30 -1 0 0 0 1 0 0 0 -1 3022.dat
+
+
+
+0 STEP
+0 FILE 6957 - Spaceship - Hinge 1.ldr
+0 A hinged module of the spaceship composed of base and top hinge subassemblies.
+0 Name: 6957 - Spaceship - Hinge 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 6957 - Spaceship - Hinge 1 - 1.ldr
+1 0 80 0 20 0 0 -1 0 1 0 1 0 0 6957 - Spaceship - Hinge 1 - 2.ldr
+1 0 0 0 40 1 0 0 0 1 0 0 0 1 6957 - Spaceship - Hinge 1 - 3.ldr
+
+
+0 STEP
+0 FILE 6957 - Spaceship - Hinge 1 - 1.ldr
+0 A hinged cover assembly of two top hinge bricks with a plate and grooved tile to form a folding panel.
+0 Name: 6957 - Spaceship - Hinge 1 - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 3830.dat
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 -20 0 80 0 0 1 0 1 0 -1 0 0 3830.dat
+0 // Plate  1 x  4 (black)
+1 0 -10 24 40 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 -10 -8 40 0 0 1 0 1 0 -1 0 0 2431.dat
+
+
+
+0 STEP
+0 FILE 6957 - Spaceship - Hinge 1 - 2.ldr
+0 A hinged base assembly of two base hinge bricks, plates, and a patterned arrow indicator tile.
+0 Name: 6957 - Spaceship - Hinge 1 - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3831.dat
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 20 0 80 0 0 -1 0 1 0 1 0 0 3831.dat
+0 // Plate  1 x  4 (black)
+1 0 10 -8 40 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 10 24 40 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Tile  1 x  2 with Arrow Short DkRed with Silver Border Pattern (black)
+1 0 10 -16 20 0 0 1 0 1 0 -1 0 0 3069bp15.dat
+
+
+0 STEP
+0 FILE 6957 - Spaceship - Hinge 1 - 3.ldr
+0 A detailed hinged rear module with jet engine plates, round axlehole plates, grille tiles, finned round brick, and Space Police II patterned slopes.
+0 Name: 6957 - Spaceship - Hinge 1 - 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 3830.dat
+0 // Plate  4 x  8 (black)
+1 0 -80 24 40 1 0 0 0 1 0 0 0 1 3035.dat
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 -160 0 0 0 0 1 0 1 0 -1 0 0 3831.dat
+0 // Brick  1 x  2 (black)
+1 0 -150 0 60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -10 0 60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -130 0 10 1 0 0 0 1 0 0 0 1 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (black)
+1 0 -30 0 10 1 0 0 0 1 0 0 0 1 3665.dat
+0 // Plate  1 x  2 (black)
+1 0 -140 -8 10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 -20 -8 10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  3 x  3 without Corner (black)
+1 0 10 -8 50 1 0 0 0 1 0 0 0 1 2450.dat
+0 // Plate  3 x  3 without Corner (black)
+1 0 -170 -8 50 0 0 1 0 1 0 -1 0 0 2450.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -30 32 40 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (light_grey)
+1 7 -130 32 40 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 with Jet Engine and Smooth Hole (black)
+1 0 -10 32 40 0 0 1 0 1 0 -1 0 0 3475a.dat
+0 // Plate  1 x  2 with Jet Engine and Smooth Hole (black)
+1 0 -150 32 40 0 0 -1 0 1 0 1 0 0 3475a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -20 40 40 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -140 40 40 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Brick  2 x  4 x  2 with Studs on Sides (light_grey)
+1 7 -80 -24 40 0 0 -1 0 1 0 1 0 0 2434.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (black)
+1 0 -80 -4 80 -1 0 0 0 0 1 0 1 0 3956.dat
+0 // Tile  1 x  2 Grille with Groove (red)
+1 4 -90 -32 20 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (red)
+1 4 -70 -32 20 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // Brick  2 x  2 x  2 Round with Fins (black)
+1 0 -80 -4 88 0 0 -1 -1 0 0 0 1 0 4591.dat
+0 // Slope Brick 33  3 x  2 with Space Police II Pattern (black)
+1 0 -140 -32 50 1 0 0 0 1 0 0 0 1 3298p69.dat
+0 // Slope Brick 33  3 x  2 with Space Police II Pattern (black)
+1 0 -20 -32 50 1 0 0 0 1 0 0 0 1 3298p69.dat
+0 // Plate  1 x  8 (light_grey)
+1 7 -80 -40 50 1 0 0 0 1 0 0 0 1 3460.dat
+
+
+0 STEP
+0 FILE 6957 - Spaceship - Hinge 2.ldr
+0 A hinged module of the spaceship composed of base and top hinge subassemblies.
+0 Name: 6957 - Spaceship - Hinge 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 6957 - Spaceship - Hinge 2 - 1.ldr
+1 0 -80 0 20 0 0 1 0 1 0 -1 0 0 6957 - Spaceship - Hinge 2 - 2.ldr
+
+
+0 STEP
+0 FILE 6957 - Spaceship - Hinge 2 - 1.ldr
+0 A hinged base assembly of two base hinge bricks, a plate, and a grooved tile forming a folding underside panel.
+0 Name: 6957 - Spaceship - Hinge 2 - 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3831.dat
+0 // Hinge Brick  1 x  4 Base (black)
+1 0 20 0 80 0 0 -1 0 1 0 1 0 0 3831.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 10 -8 40 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Plate  1 x  4 (black)
+1 0 10 24 40 0 0 -1 0 1 0 1 0 0 3710.dat
+
+
+0 STEP
+0 FILE 6957 - Spaceship - Hinge 2 - 2.ldr
+0 A hinged top assembly of two top hinge bricks, plates, and a patterned arrow indicator tile.
+0 Name: 6957 - Spaceship - Hinge 2 - 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 3830.dat
+0 // Hinge Brick  1 x  4 Top (black)
+1 0 -20 0 80 0 0 1 0 1 0 -1 0 0 3830.dat
+0 // Plate  1 x  4 (black)
+1 0 -10 -8 40 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (black)
+1 0 -10 24 40 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Tile  1 x  2 with Arrow Short DkRed with Silver Border Pattern (black)
+1 0 -10 -16 20 0 0 -1 0 1 0 1 0 0 3069bp15.dat
+
+
+
+0 STEP
+0 FILE 6957 - Minifig 1.ldr
+0 A Blacktron II-patterned minifigure with a yellow head, black airtanks, black arms and hands, and white legs.
+0 Name: 6957 - Minifig 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 -27 0 0.920505 0 0.390731 0 1 0 -0.390731 0 0.920505 6957 - Minifig - Helmet 1.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.920505 0 0.390731 0 1 0 -0.390731 0 0.920505 3626bp01.dat
+0 // Minifig Airtanks (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Blacktron II Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p51.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 9 0 0.985 -0.16168 -0.0525329 0.17 0.936791 0.304382 0 -0.309017 0.951057 3818.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 9 0 0.985 0.163414 -0.0468584 -0.17 0.946843 -0.271503 0 0.275637 0.961262 3819.dat
+0 // Minifig Hand (black)
+1 0 -23.1651 22.5496 -15.6133 0.985 -0.151448 0.0771667 0.17 0.877509 -0.447113 0 0.453922 0.890872 3820.dat
+0 // Minifig Hand (black)
+1 0 24.2234 28.6819 -4.74995 0.985 0.0824052 -0.148663 -0.17 0.477465 -0.86137 0 0.874488 0.484736 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0.961262 -0.275637 0 0.275637 0.961262 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0.970296 0.241922 0 -0.241922 0.970296 3817.dat
+
+
+0 STEP
+0 FILE 6957 - Minifig 2.ldr
+0 A Space Police II officer minifigure with a red-haired head, black airtanks, green arms and legs, and a white loudhailer accessory.
+0 Name: 6957 - Minifig 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 -23.898 20.758 0.848048 0 -0.529919 0.154933 0.956305 0.247945 0.506764 -0.292372 0.810992 6957 - Minifig - Helmet 2.ldr
+0 // Minifig Head with Headset Over Fabuland Red Hair and Eyebrows Pattern (yellow)
+1 14 0 -23.898 20.758 0.848048 0 -0.529919 0.154933 0.956305 0.247945 0.506764 -0.292372 0.810992 3626bp69.dat
+0 // Minifig Airtanks (black)
+1 0 0 1.922 12.863 1 0 0 0 0.956305 0.292372 0 -0.292372 0.956305 3838.dat
+0 // Minifig Torso with Space Police II and Radio Pattern (white)
+1 15 0 1.922 12.863 1 0 0 0 0.956305 0.292372 0 -0.292372 0.956305 973p69.dat
+0 // ~Minifig Hips (Obsolete) (white)
+1 15 0 32.523 3.508 1 0 0 0 0.956305 0.292372 0 -0.292372 0.956305 3815.dat
+0 // Minifig Arm Right (green)
+1 2 -15.552 10.53 10.234 0.985 -0.11153 -0.128301 0.162572 0.397325 0.90272 -0.0497032 -0.910669 0.410046 3818.dat
+0 // Minifig Arm Left (green)
+1 2 15.552 10.53 10.234 0.985 0.159748 0.0581434 -0.162572 0.785156 0.596909 0.0497032 -0.597694 0.800136 3819.dat
+0 // Minifig Hand (black)
+1 0 -21.442 7.821 -10.825 0.985 -0.16956 -0.0118568 0.162572 0.919132 0.357313 -0.0497032 -0.35394 0.933745 3820.dat
+0 // Minifig Hand (black)
+1 0 23.071 18.254 -8.982 0.985 0.154049 -0.0718343 -0.162572 0.977119 -0.133091 0.0497032 0.143126 0.988265 3820.dat
+0 // Minifig Loudhailer (white)
+1 15 -18.658 -11.045 -17.354 0.985 -0.167343 0.0295325 0.162572 0.978028 0.124164 -0.0497032 -0.117356 0.991387 4349.dat
+0 // ~Minifig Leg Right (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+0 STEP
+0 FILE 6957 - Minifig 3.ldr
+0 A Space Police II officer minifigure with a red-haired head, black airtanks, and green arms and legs.
+0 Name: 6957 - Minifig 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+1 0 0 -25.921 12.329 0.857167 0 -0.515038 0.089435 0.984808 0.148845 0.507213 -0.173648 0.844145 6957 - Minifig - Helmet 2.ldr
+0 // Minifig Head with Headset Over Fabuland Red Hair and Eyebrows Pattern (yellow)
+1 14 0 -25.921 12.329 0.857167 0 -0.515038 0.0894354 0.984808 0.148845 0.507213 -0.173648 0.844145 3626bp69.dat
+0 // Minifig Airtanks (black)
+1 0 0 0.669 7.639 1 0 0 0 0.984808 0.173648 0 -0.173648 0.984808 3838.dat
+0 // Minifig Torso with Space Police II and Radio Pattern (white)
+1 15 0 0.669 7.639 1 0 0 0 0.984808 0.173648 0 -0.173648 0.984808 973p69.dat
+0 // ~Minifig Hips (Obsolete) (white)
+1 15 0 32.182 2.083 1 0 0 0 0.984808 0.173648 0 -0.173648 0.984808 3815.dat
+0 // Minifig Arm Right (green)
+1 2 -15.552 9.532 6.078 0.985 0.0207178 -0.168733 0.167417 -0.290571 0.941643 -0.0295202 -0.956622 -0.289786 3818.dat
+0 // Minifig Hand (black)
+1 0 -18.544 -6.509 -8.725 0.985 -0.104647 -0.133942 0.167417 0.460307 0.871175 -0.0295202 -0.881211 0.471453 3820.dat
+0 // Minifig Arm Left (green)
+1 2 15.552 9.532 6.078 0.985 0.0798102 0.150101 -0.167417 0.302082 0.938014 0.0295202 -0.949834 0.311317 3819.dat
+0 // Minifig Hand (black)
+1 0 20.622 4.649 -14.802 0.985 0.162547 0.0496957 -0.167417 0.876747 0.449604 0.0295202 -0.451431 0.891633 3820.dat
+0 // ~Minifig Leg Left (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+0 // ~Minifig Leg Right (Obsolete) (green)
+1 2 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+
+
+
+0 STEP
+0 FILE 6957 - Minifig - Helmet 1.ldr
+0 A standard black space helmet paired with a trans-neon-green visor.
+0 Name: 6957 - Minifig - Helmet 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // ~Minifig Helmet Standard (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_neon_green)
+1 42 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+
+0 STEP
+0 FILE 6957 - Minifig - Helmet 2.ldr
+0 A minifig helmet assembly consisting of a black standard helmet with a translucent green visor.
+0 Name: 6957 - Minifig - Helmet 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Space Police II
+
+0 // ~Minifig Helmet Standard (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_green)
+1 34 0 1.904 4.596 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 2447.dat
+

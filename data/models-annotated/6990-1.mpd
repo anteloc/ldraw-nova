@@ -1,0 +1,3049 @@
+0 FILE 6990 - Monorail Transport System.ldr
+0 Complete monorail transport system featuring motorized trains, support vehicles, cargo containers, and two rail stations with platforms and control infrastructure.
+0 Name: 6990 - Monorail Transport System.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6990 - Track + Train.ldr
+1 0 -1043 -27 -740 0.382683 0 -0.92388 0 1 0 0.92388 0 0.382683 6990 - Vehicle 2 + Minifig.ldr
+1 0 -1300 -44.9 -759.1 0.258819 0 -0.965926 0 1 0 0.965926 0 0.258819 6990 - Minifig 3.ldr
+
+0 STEP
+0 FILE 6990 - Vehicle 1.ldr
+0 Small white support vehicle built on a black 2x4 plate with round axle plates, headlight bricks, a console tile, and red indicator lights.
+0 Name: 6990 - Vehicle 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x  2 Round with Axlehole (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (white)
+1 15 0 0 40 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  2 x  4 (black)
+1 0 0 -8 20 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Brick  1 x  1 with Headlight (white)
+1 15 10 -32 50 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (white)
+1 15 -10 -32 50 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Tile  1 x  2 with Console (white)
+1 15 0 -16 -10 -1 0 0 0 1 0 0 0 -1 2342.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 10 -22 80 0 0 1 -1 0 0 0 -1 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 -10 -22 80 0 0 1 -1 0 0 0 -1 0 3062b.dat
+
+0 STEP
+0 FILE 6990 - Vehicle 2.ldr
+0 Large white ground vehicle with four jet engines, flexible hoses, and control sticks mounted on extended 2x10 and 2x6 plate chassis.
+0 Name: 6990 - Vehicle 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x 10 (white)
+1 15 0 0 0 0 0 1 0 1 0 -1 0 0 3832.dat
+0 // Plate  2 x  6 (white)
+1 15 0 8 60 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  2 x  6 (white)
+1 15 0 8 -60 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 -10 8 -90 0 0 1 0 1 0 -1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 10 8 -90 0 0 -1 0 1 0 1 0 0 4081b.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 40 16 -60 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 -40 16 -60 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 -40 16 60 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Plate  2 x  2 with Jet Engine with 12 Fins (black)
+1 0 40 16 60 1 0 0 0 1 0 0 0 1 4229.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -8 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -8 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 0 -8 60 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 -30 -16 -50 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 30 -16 -50 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Bracket  2 x  3 -  2 x  2 (white)
+1 15 0 -8 -70 1 0 0 0 1 0 0 0 1 4598.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -16 90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -16 30 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Hinge Control Stick Base (black)
+1 0 30 -6 -64 1 0 0 0 0 -1 0 1 0 4592.dat
+0 // Hinge Control Stick (black)
+1 0 30 -6 -64 1 0 0 0 0.544639 -0.838671 0 0.838671 0.544639 4593.dat
+0 // Hinge Control Stick Base (black)
+1 0 -30 -6 -64 1 0 0 0 0 -1 0 1 0 4592.dat
+0 // Hinge Control Stick (black)
+1 0 -30 -6 -64 1 0 0 0 0.358368 -0.93358 0 0.93358 0.358368 4593.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 40 0 70 1 0 0 0 1 0 0 0 1 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 40 0 50 1 0 0 0 1 0 0 0 1 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 -40 0 70 -1 0 0 0 1 0 0 0 -1 4275b.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers and Hollow Studs (white)
+1 15 -40 0 50 -1 0 0 0 1 0 0 0 -1 4275b.dat
+1 0 70 4 60 0 1 0 -1 0 0 0 0 1 6990 - Vehicle 2 - Door.ldr
+1 0 -70 4 60 0 -1 0 -1 0 0 0 0 -1 6990 - Vehicle 2 - Door.ldr
+1 0 0 -24 60 1 0 0 0 1 0 0 0 1 6990 - Vehicle 2 - Container.ldr
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (white)
+1 15 30 10 -112 1 0 0 0 0 -1 0 1 0 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (white)
+1 15 -30 10 -112 1 0 0 0 0 -1 0 1 0 752.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment End Section (rubber_white)
+1 511 30 10 -112 1 0 0 0 0 1 0 -1 0 755.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment End Section (rubber_white)
+1 511 -30 10 -112 1 0 0 0 0 1 0 -1 0 755.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.9682 10 -118.957 0.9987 0.0512 0 0 0 -1 0.0512 -0.9987 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.8525 10 -121.215 0.9961 0.0888 0 0 0 -1 0.0888 -0.9961 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.6494 10 -123.494 0.992 0.1265 0 0 0 -1 0.1265 -0.992 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.3632 10 -125.738 0.9864 0.1645 0 0 0 -1 0.1645 -0.9864 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -28.9908 10 -127.97 0.9791 0.2032 0 0 0 -1 0.2032 -0.9791 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -28.5305 10 -130.188 0.9701 0.2428 0 0 0 -1 0.2428 -0.9701 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -27.98 10 -132.387 0.9589 0.2837 0 0 0 -1 0.2837 -0.9589 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -27.3364 10 -134.563 0.9454 0.3259 0 0 0 -1 0.3259 -0.9454 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -26.5963 10 -136.71 0.9291 0.3698 0 0 0 -1 0.3698 -0.9291 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -25.7558 10 -138.822 0.9097 0.4152 0 0 0 -1 0.4152 -0.9097 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -24.823 10 -140.865 0.8866 0.4626 0 0 0 -1 0.4626 -0.8866 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -23.7707 10 -142.882 0.8588 0.5123 0 0 0 -1 0.5123 -0.8588 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -22.6054 10 -144.836 0.8259 0.5639 0 0 0 -1 0.5639 -0.8259 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -21.3234 10 -146.713 0.7871 0.6168 0 0 0 -1 0.6168 -0.7871 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -19.9393 10 -148.479 0.7416 0.6708 0 0 0 -1 0.6708 -0.7416 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -18.4174 10 -150.162 0.6883 0.7254 0 0 0 -1 0.7254 -0.6883 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -16.7738 10 -151.721 0.6265 0.7794 0 0 0 -1 0.7794 -0.6265 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -14.9889 10 -153.156 0.5567 0.8307 0 0 0 -1 0.8307 -0.5567 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -13.1113 10 -154.415 0.4797 0.8774 0 0 0 -1 0.8774 -0.4797 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -11.1293 10 -155.498 0.3966 0.918 0 0 0 -1 0.918 -0.3966 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -9.0554 10 -156.394 0.3088 0.9511 0 0 0 -1 0.9511 -0.3088 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -6.8789 10 -157.101 0.2192 0.9757 0 0 0 -1 0.9757 -0.2193 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -4.6711 10 -157.597 0.1313 0.9913 0 0 0 -1 0.9913 -0.1313 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -2.4265 10 -157.894 0.0466 0.9989 0 0 0 -1 0.9989 -0.0466 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -0.1655 10 -158 -0.0346 0.9994 0 0 0 -1 0.9994 0.0346 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 2.0951 10 -157.921 -0.1185 0.9929 0 0 0 -1 0.9929 0.1185 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 4.3427 10 -157.653 -0.2062 0.9785 0 0 0 -1 0.9785 0.2062 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 6.5566 10 -157.187 -0.2952 0.9554 0 0 0 -1 0.9554 0.2952 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 8.7165 10 -156.519 -0.3834 0.9236 0 0 0 -1 0.9236 0.3834 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 10.8283 10 -155.643 -0.4678 0.8838 0 0 0 -1 0.8838 0.4678 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 12.8246 10 -154.586 -0.5457 0.8379 0 0 0 -1 0.8379 0.5457 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 14.7183 10 -153.353 -0.6164 0.7874 0 0 0 -1 0.7874 0.6164 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 16.4996 10 -151.958 -0.679 0.7341 0 0 0 -1 0.7341 0.679 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 18.1626 10 -150.42 -0.7336 0.6796 0 0 0 -1 0.6796 0.7336 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 19.7043 10 -148.756 -0.7805 0.6251 0 0 0 -1 0.6251 0.7805 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 21.1242 10 -146.983 -0.8205 0.5716 0 0 0 -1 0.5716 0.8205 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 22.4239 10 -145.117 -0.8543 0.5198 0 0 0 -1 0.5198 0.8543 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 23.6063 10 -143.174 -0.8826 0.4701 0 0 0 -1 0.4701 0.8826 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 24.6628 10 -141.19 -0.9064 0.4224 0 0 0 -1 0.4224 0.9064 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 25.6236 10 -139.128 -0.9265 0.3764 0 0 0 -1 0.3764 0.9265 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 26.4793 10 -137.022 -0.9432 0.3322 0 0 0 -1 0.3322 0.9432 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 27.234 10 -134.879 -0.9571 0.2897 0 0 0 -1 0.2897 0.9571 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 27.8916 10 -132.707 -0.9686 0.2487 0 0 0 -1 0.2487 0.9686 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 28.4556 10 -130.511 -0.9779 0.2089 0 0 0 -1 0.2089 0.9779 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 28.929 10 -128.296 -0.9854 0.1701 0 0 0 -1 0.1701 0.9854 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.3141 10 -126.065 -0.9912 0.1321 0 0 0 -1 0.1321 0.9912 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.6128 10 -123.823 -0.9955 0.0945 0 0 0 -1 0.0945 0.9955 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.8264 10 -121.572 -0.9984 0.0571 0 0 0 -1 0.0571 0.9984 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.9555 10 -119.315 -0.9998 0.0195 0 0 0 -1 0.0195 0.9998 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 30 10 -117.028 -1 0 0 0 0 -1 0 1 0 756.dat
+0 MLCAD BTG Hose1
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 30 10 -114.781 -1 0 0 0 0 -1 0 1 0 756.dat
+0 GROUP 53 Hose1
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (white)
+1 15 30 -34 -50 1 0 0 0 1 0 0 0 1 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (white)
+1 15 -30 -34 -50 1 0 0 0 1 0 0 0 1 752.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment End Section (rubber_white)
+1 511 30 -34 -50 1 0 0 0 -1 0 0 0 -1 755.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment End Section (rubber_white)
+1 511 -30 -34 -50 1 0 0 0 -1 0 0 0 -1 755.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.968 -40.957 -50 0.9987 0.0512 0 0.0512 -0.9987 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.853 -43.215 -50 0.9961 0.0888 0 0.0888 -0.9961 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.649 -45.494 -50 0.992 0.1265 0 0.1265 -0.992 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.363 -47.738 -50 0.9864 0.1645 0 0.1645 -0.9864 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -28.991 -49.97 -50 0.9791 0.2032 0 0.2032 -0.9791 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -28.531 -52.188 -50 0.9701 0.2428 0 0.2428 -0.9701 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -27.98 -54.387 -50 0.9589 0.2837 0 0.2837 -0.9589 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -27.336 -56.563 -50 0.9454 0.3259 0 0.3259 -0.9454 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -26.596 -58.71 -50 0.9291 0.3698 0 0.3698 -0.9291 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -25.756 -60.822 -50 0.9097 0.4152 0 0.4152 -0.9097 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -24.823 -62.865 -50 0.8866 0.4626 0 0.4626 -0.8866 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -23.771 -64.882 -50 0.8588 0.5123 0 0.5123 -0.8588 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -22.605 -66.836 -50 0.8259 0.5639 0 0.5639 -0.8259 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -21.323 -68.713 -50 0.7871 0.6168 0 0.6168 -0.7871 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -19.939 -70.479 -50 0.7416 0.6708 0 0.6708 -0.7416 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -18.417 -72.162 -50 0.6883 0.7254 0 0.7254 -0.6883 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -16.774 -73.721 -50 0.6265 0.7794 0 0.7794 -0.6265 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -14.989 -75.156 -50 0.5567 0.8307 0 0.8307 -0.5567 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -13.111 -76.415 -50 0.4797 0.8774 0 0.8774 -0.4797 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -11.129 -77.498 -50 0.3966 0.918 0 0.918 -0.3966 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -9.055 -78.394 -50 0.3088 0.9511 0 0.9511 -0.3088 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -6.879 -79.101 -50 0.2192 0.9757 0 0.9757 -0.2193 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -4.671 -79.597 -50 0.1313 0.9913 0 0.9913 -0.1313 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -2.426 -79.894 -50 0.0466 0.9989 0 0.9989 -0.0466 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -0.166 -80 -50 -0.0346 0.9994 0 0.9994 0.0346 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 2.095 -79.921 -50 -0.1185 0.9929 0 0.9929 0.1185 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 4.343 -79.653 -50 -0.2062 0.9785 0 0.9785 0.2062 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 6.557 -79.187 -50 -0.2952 0.9554 0 0.9554 0.2952 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 8.717 -78.519 -50 -0.3834 0.9236 0 0.9236 0.3834 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 10.828 -77.643 -50 -0.4678 0.8838 0 0.8838 0.4678 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 12.825 -76.586 -50 -0.5457 0.8379 0 0.8379 0.5457 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 14.718 -75.353 -50 -0.6164 0.7874 0 0.7874 0.6164 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 16.5 -73.958 -50 -0.679 0.7341 0 0.7341 0.679 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 18.163 -72.42 -50 -0.7336 0.6796 0 0.6796 0.7336 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 19.704 -70.756 -50 -0.7805 0.6251 0 0.6251 0.7805 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 21.124 -68.983 -50 -0.8205 0.5716 0 0.5716 0.8205 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 22.424 -67.117 -50 -0.8543 0.5198 0 0.5198 0.8543 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 23.606 -65.174 -50 -0.8826 0.4701 0 0.4701 0.8826 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 24.663 -63.19 -50 -0.9064 0.4224 0 0.4224 0.9064 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 25.624 -61.128 -50 -0.9265 0.3764 0 0.3764 0.9265 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 26.479 -59.022 -50 -0.9432 0.3322 0 0.3322 0.9432 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 27.234 -56.879 -50 -0.9571 0.2897 0 0.2897 0.9571 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 27.892 -54.707 -50 -0.9686 0.2487 0 0.2487 0.9686 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 28.456 -52.511 -50 -0.9779 0.2089 0 0.2089 0.9779 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 28.929 -50.296 -50 -0.9854 0.1701 0 0.1701 0.9854 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.314 -48.065 -50 -0.9912 0.1321 0 0.1321 0.9912 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.613 -45.823 -50 -0.9955 0.0945 0 0.0945 0.9955 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.826 -43.572 -50 -0.9984 0.0571 0 0.0571 0.9984 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.956 -41.315 -50 -0.9998 0.0195 0 0.0195 0.9998 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 30 -39.028 -50 -1 0 0 0 1 0 0 0 1 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 30 -36.781 -50 -1 0 0 0 1 0 0 0 1 756.dat
+0 GROUP 53 Hose 2
+
+0 STEP
+0 FILE 6990 - Vehicle 2 - Door.ldr
+0 Hinged white door assembly with a yellow arrow pattern tile, inverted slope, and bracket mount for the Vehicle 2 cargo bay.
+0 Name: 6990 - Vehicle 2 - Door.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Slope Brick 45  4 x  2 Double Inverted with Open Centre (white)
+1 15 30 -12 0 1 0 0 0 1 0 0 0 1 4871.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 30 -4 10 -1 0 0 0 1 0 0 0 -1 4276b.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 30 -4 -10 -1 0 0 0 1 0 0 0 -1 4276b.dat
+0 // Plate  2 x  2 (black)
+1 0 30 -12 0 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x  6 (white)
+1 15 70 -20 0 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 90 -28 0 0 0 -1 0 1 0 1 0 0 3956.dat
+0 // Tile  2 x  2 with Yellow Arrow with Black Border Pattern (white)
+1 15 126 -48 0 0 -1 0 0 0 1 -1 0 0 3068bp08.dat
+
+0 STEP
+0 FILE 6990 - Vehicle 2 - Container.ldr
+0 White cargo container built on a black 4x8 base with hinged panels and side walls for the Vehicle 2 transporter.
+0 Name: 6990 - Vehicle 2 - Container.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  4 x  8 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3035.dat
+0 // Plate  1 x  4 (white)
+1 15 30 -8 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 -30 -8 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -24 70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -24 -70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -30 -24 60 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 30 -24 60 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 30 -24 -60 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -30 -24 -60 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -32 -20 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -32 20 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -32 20 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -32 -20 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -48 70 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -48 -70 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -56 70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -56 -70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 0 -64 70 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 0 -64 -70 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Plate  2 x  2 (black)
+1 0 0 8 -60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 0 8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 0 8 60 1 0 0 0 1 0 0 0 1 3022.dat
+1 0 30 -14 0 1 0 0 0 1 0 0 0 1 6990 - Train 1 - Container - Door 1.ldr
+1 0 -30 -14 0 1 0 0 0 1 0 0 0 1 6990 - Train 1 - Container - Door 2.ldr
+
+0 STEP
+0 FILE 6990 - Vehicle 2 + Minifig.ldr
+0 Assembly combining the Vehicle 2 transporter with an included minifigure operator.
+0 Name: 6990 - Vehicle 2 + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6990 - Vehicle 2.ldr
+1 0 0 -61 -72 1 0 0 0 1 0 0 0 1 6990 - Minifig 2.ldr
+
+0 STEP
+0 FILE 6990 - Train 1.ldr
+0 Main monorail passenger car built on a 4x20 black monorail base with white body panels, trans-dark-blue cones, windows, and hinge-mounted door assemblies.
+0 Name: 6990 - Train 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Monorail Base  4 x 20 (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 2687.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -8 -150 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -8 190 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -8 150 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -8 90 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  4 (white)
+1 15 30 -8 120 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 -30 -8 120 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -8 50 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 0 -8 20 -1 0 0 0 1 0 0 0 -1 3068b.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 0 -8 -20 -1 0 0 0 1 0 0 0 -1 3068b.dat
+1 0 0 -16 -150 -1 0 0 0 1 0 0 0 -1 6990 - Train 1 - Command.ldr
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 -30 -24 -50 0 0 1 0 1 0 -1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 30 -24 -50 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -24 -50 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 0 -16 50 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 0 -16 190 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (white)
+1 15 -30 -16 190 0 0 1 0 1 0 -1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (white)
+1 15 30 -16 190 0 0 -1 0 1 0 1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (white)
+1 15 30 -16 50 0 0 -1 0 1 0 1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (white)
+1 15 -30 -16 50 0 0 1 0 1 0 -1 0 0 4081b.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -16 90 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -16 150 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  2 (white)
+1 15 -30 -16 120 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 30 -16 120 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 30 -24 -20 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 30 -24 20 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -30 -24 20 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -30 -24 -20 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Tile  1 x  8 (white)
+1 15 30 -24 120 0 0 1 0 1 0 -1 0 0 4162.dat
+0 // Tile  1 x  8 (white)
+1 15 -30 -24 120 0 0 1 0 1 0 -1 0 0 4162.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -24 90 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -24 150 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 50 -14 78 -1 0 0 0 0 -1 0 -1 0 4589.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 -50 -14 78 -1 0 0 0 0 -1 0 -1 0 4589.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 50 -14 162 -1 0 0 0 0 1 0 1 0 4589.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 -50 -14 162 -1 0 0 0 0 1 0 1 0 4589.dat
+0 // Brick  1 x  4 (white)
+1 15 0 -24 -190 1 0 0 0 1 0 0 0 1 3010.dat
+0 // Brick  1 x  6 (white)
+1 15 30 -24 -120 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  6 (white)
+1 15 -30 -24 -120 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (white)
+1 15 0 -32 -190 1 0 0 0 1 0 0 0 1 2436a.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (black)
+1 0 -30 -32 -120 0 0 1 0 1 0 -1 0 0 2436a.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (black)
+1 0 30 -32 -120 0 0 -1 0 1 0 1 0 0 2436a.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -32 -50 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -30 -22 -212 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 30 -22 -212 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 0 -22 -212 1 0 0 0 0 -1 0 1 0 3794a.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 0 -22 -220 1 0 0 0 0 -1 0 1 0 4740.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 0 -22 -228 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 0 -22 -236 1 0 0 0 0 -1 0 1 0 4740.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 0 -22 -244 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 0 -22 -252 1 0 0 0 0 -1 0 1 0 4740.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (white)
+1 15 30 -22 -230 1 0 0 0 0 -1 0 1 0 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (white)
+1 15 -30 -22 -230 1 0 0 0 0 -1 0 1 0 752.dat
+0 // ~Hose Flexible Segment End Section (rubber_white)
+1 511 30 -22 -230 1 0 0 0 0 1 0 -1 0 755.dat
+0 // ~Hose Flexible Segment End Section (rubber_white)
+1 511 -30 -22 -230 1 0 0 0 0 1 0 -1 0 755.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.9682 -22 -236.957 0.9987 0.0512 0 0 0 -1 0.0512 -0.9987 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.8525 -22 -239.215 0.9961 0.0888 0 0 0 -1 0.0888 -0.9961 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.6494 -22 -241.494 0.992 0.1265 0 0 0 -1 0.1265 -0.992 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.3632 -22 -243.738 0.9864 0.1645 0 0 0 -1 0.1645 -0.9864 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -28.9908 -22 -245.97 0.9791 0.2032 0 0 0 -1 0.2032 -0.9791 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -28.5305 -22 -248.188 0.9701 0.2428 0 0 0 -1 0.2428 -0.9701 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -27.98 -22 -250.387 0.9589 0.2837 0 0 0 -1 0.2837 -0.9589 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -27.3364 -22 -252.563 0.9454 0.3259 0 0 0 -1 0.3259 -0.9454 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -26.5963 -22 -254.71 0.9291 0.3698 0 0 0 -1 0.3698 -0.9291 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -25.7558 -22 -256.822 0.9097 0.4152 0 0 0 -1 0.4152 -0.9097 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -24.823 -22 -258.865 0.8866 0.4626 0 0 0 -1 0.4626 -0.8866 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -23.7707 -22 -260.882 0.8588 0.5123 0 0 0 -1 0.5123 -0.8588 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -22.6054 -22 -262.836 0.8259 0.5639 0 0 0 -1 0.5639 -0.8259 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -21.3234 -22 -264.713 0.7871 0.6168 0 0 0 -1 0.6168 -0.7871 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -19.9393 -22 -266.479 0.7416 0.6708 0 0 0 -1 0.6708 -0.7416 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -18.4174 -22 -268.162 0.6883 0.7254 0 0 0 -1 0.7254 -0.6883 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -16.7738 -22 -269.721 0.6265 0.7794 0 0 0 -1 0.7794 -0.6265 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -14.9889 -22 -271.156 0.5567 0.8307 0 0 0 -1 0.8307 -0.5567 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -13.1113 -22 -272.415 0.4797 0.8774 0 0 0 -1 0.8774 -0.4797 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -11.1293 -22 -273.498 0.3966 0.918 0 0 0 -1 0.918 -0.3966 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -9.0554 -22 -274.394 0.3088 0.9511 0 0 0 -1 0.9511 -0.3088 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -6.8789 -22 -275.101 0.2192 0.9757 0 0 0 -1 0.9757 -0.2193 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -4.6711 -22 -275.597 0.1313 0.9913 0 0 0 -1 0.9913 -0.1313 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -2.4265 -22 -275.894 0.0466 0.9989 0 0 0 -1 0.9989 -0.0466 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -0.1655 -22 -276 -0.0346 0.9994 0 0 0 -1 0.9994 0.0346 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 2.0951 -22 -275.921 -0.1185 0.9929 0 0 0 -1 0.9929 0.1185 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 4.3427 -22 -275.653 -0.2062 0.9785 0 0 0 -1 0.9785 0.2062 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 6.5566 -22 -275.187 -0.2952 0.9554 0 0 0 -1 0.9554 0.2952 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 8.7165 -22 -274.519 -0.3834 0.9236 0 0 0 -1 0.9236 0.3834 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 10.8283 -22 -273.643 -0.4678 0.8838 0 0 0 -1 0.8838 0.4678 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 12.8246 -22 -272.586 -0.5457 0.8379 0 0 0 -1 0.8379 0.5457 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 14.7183 -22 -271.353 -0.6164 0.7874 0 0 0 -1 0.7874 0.6164 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 16.4996 -22 -269.958 -0.679 0.7341 0 0 0 -1 0.7341 0.679 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 18.1626 -22 -268.42 -0.7336 0.6796 0 0 0 -1 0.6796 0.7336 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 19.7043 -22 -266.756 -0.7805 0.6251 0 0 0 -1 0.6251 0.7805 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 21.1242 -22 -264.983 -0.8205 0.5716 0 0 0 -1 0.5716 0.8205 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 22.4239 -22 -263.117 -0.8543 0.5198 0 0 0 -1 0.5198 0.8543 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 23.6063 -22 -261.174 -0.8826 0.4701 0 0 0 -1 0.4701 0.8826 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 24.6628 -22 -259.19 -0.9064 0.4224 0 0 0 -1 0.4224 0.9064 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 25.6236 -22 -257.128 -0.9265 0.3764 0 0 0 -1 0.3764 0.9265 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 26.4793 -22 -255.022 -0.9432 0.3322 0 0 0 -1 0.3322 0.9432 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 27.234 -22 -252.879 -0.9571 0.2897 0 0 0 -1 0.2897 0.9571 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 27.8916 -22 -250.707 -0.9686 0.2487 0 0 0 -1 0.2487 0.9686 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 28.4556 -22 -248.511 -0.9779 0.2089 0 0 0 -1 0.2089 0.9779 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 28.929 -22 -246.296 -0.9854 0.1701 0 0 0 -1 0.1701 0.9854 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.3141 -22 -244.065 -0.9912 0.1321 0 0 0 -1 0.1321 0.9912 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.6128 -22 -241.823 -0.9955 0.0945 0 0 0 -1 0.0945 0.9955 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.8264 -22 -239.572 -0.9984 0.0571 0 0 0 -1 0.0571 0.9984 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.9555 -22 -237.315 -0.9998 0.0195 0 0 0 -1 0.0195 0.9998 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 30 -22 -235.028 -1 0 0 0 0 -1 0 1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 30 -22 -232.781 -1 0 0 0 0 -1 0 1 0 756.dat
+0 GROUP 51 Hose
+1 511 30 -14 0 1 0 0 0 1 0 0 0 1 6990 - Train 1 - Door.ldr
+1 511 -30 -14 0 -1 0 0 0 1 0 0 0 -1 6990 - Train 1 - Door.ldr
+0 // Plate  1 x  2 (rubber_white)
+1 511 52 -22 -140 0 -1 0 0 0 -1 1 0 0 3023.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 68 -22 -140 0 -1 0 -1 0 0 0 0 -1 4595.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 58 -22 -184 0 0 -1 -1 0 0 0 1 0 4589.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 58 -22 -104 0 0 -1 -1 0 0 0 1 0 6141.dat
+0 // Plate  1 x  2 (rubber_white)
+1 511 -52 -22 -140 0 1 0 0 0 1 1 0 0 3023.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 -68 -22 -140 0 1 0 1 0 0 0 0 -1 4595.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 -58 -22 -184 0 0 1 1 0 0 0 1 0 4589.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -58 -22 -104 0 0 1 1 0 0 0 1 0 6141.dat
+0 // Plate  1 x  3 (black)
+1 0 30 -32 -170 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 -30 -32 -170 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  2 (black)
+1 0 30 -32 -80 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (black)
+1 0 -30 -32 -80 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Slope Brick 45  2 x  4 (white)
+1 15 0 -56 -170 1 0 0 0 1 0 0 0 1 3037.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -56 -140 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -56 -100 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -56 -140 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -56 -100 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Brick  2 x  2 Corner (white)
+1 15 -10 -56 -70 0 0 -1 0 1 0 1 0 0 2357.dat
+0 // Brick  2 x  2 Corner (white)
+1 15 10 -56 -70 1 0 0 0 1 0 0 0 1 2357.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (white)
+1 15 30 -96 -50 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (white)
+1 15 -30 -96 -50 0 0 1 0 1 0 -1 0 0 4460a.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -80 -50 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Plate  2 x  2 (white)
+1 15 0 -88 -40 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 0 -96 -30 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -96 -50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (white)
+1 15 0 -104 -50 1 0 0 0 1 0 0 0 1 4315.dat
+0 // Windscreen  6 x  4 x  2 Canopy (trans_dark_blue)
+1 33 0 -100 -64 1 0 0 0 1 0 0 0 1 4474.dat
+1 0 0 -32 120 1 0 0 0 1 0 0 0 1 6990 - Train 1 - Container.ldr
+0 GROUP 3 Chassis
+0 MLCAD BTG Chassis
+0 // Monorail Wheel Chassis (black)
+1 0 0 16.001 -120.131 0 0 1 0.00872654 0.999962 0 -0.999962 0.00872654 0 2686.dat
+0 MLCAD BTG Chassis
+0 // ~Axle Steel  5 x  67.5 LDU with Two Wheels  1.6 x 10 (black)
+1 0 0 27.782 -95.027 0 0 1 0.00872654 0.999962 0 -0.999962 0.00872654 0 2688.dat
+0 MLCAD BTG Chassis
+0 // ~Axle Steel  5 x  67.5 LDU with Two Wheels  1.6 x 10 (black)
+1 0 0 28.218 -145.025 0 0 1 0.00872654 0.999962 0 -0.999962 0.00872654 0 2688.dat
+0 // Monorail Wheel Connector (black)
+1 0 0 31 -120 0 0 1 0 1 0 -1 0 0 2697.dat
+
+0 STEP
+0 FILE 6990 - Train 1 - Command.ldr
+0 Small command station with a console tile and computer display pattern for the Train 1 cockpit controls.
+0 Name: 6990 - Train 1 - Command.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Tile  1 x  2 with Console (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 2342.dat
+0 // Tile  1 x  1 with Computer Display Pattern (white)
+1 15 0 -39.71 -8.266 1 0 0 0 0.927999 -0.372583 0 0.372583 0.927999 3070bpc2.dat
+
+0 STEP
+0 FILE 6990 - Train 1 - Door.ldr
+0 Hinged door panel with trans-dark-blue transparent windows and corner plates for the Train 1 car.
+0 Name: 6990 - Train 1 - Door.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Hinge  1 x  2 Top (white)
+1 15 0 -10 -20 0 0 1 0 1 0 -1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 0 -10 20 0 0 1 0 1 0 -1 0 0 3938.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -18 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -26 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -34 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Panel  1 x  2 x  2 with Solid Studs (trans_dark_blue)
+1 33 0 -82 20 0 0 1 0 1 0 -1 0 0 4864a.dat
+0 // Panel  1 x  2 x  2 with Solid Studs (trans_dark_blue)
+1 33 0 -82 -20 0 0 1 0 1 0 -1 0 0 4864a.dat
+0 // Plate  2 x  2 Corner (white)
+1 15 0 -90 30 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (white)
+1 15 0 -90 -30 0 0 -1 0 1 0 1 0 0 2420.dat
+
+0 STEP
+0 FILE 6990 - Train 1 - Container.ldr
+0 White cargo container built on a black 4x8 base with hinged panels and side walls for the Train 1 monorail car.
+0 Name: 6990 - Train 1 - Container.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  4 x  8 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3035.dat
+0 // Plate  1 x  4 (white)
+1 15 30 -8 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 -30 -8 0 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -24 70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -24 -70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -30 -24 60 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 30 -24 60 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 30 -24 -60 0 0 -1 0 1 0 1 0 0 3937.dat
+0 // Hinge  1 x  2 Base (white)
+1 15 -30 -24 -60 0 0 1 0 1 0 -1 0 0 3937.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -32 -20 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -32 20 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -32 20 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -32 -20 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -48 70 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -48 -70 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -56 70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -56 -70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 0 -64 70 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 0 -64 -70 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Plate  2 x  2 (black)
+1 0 0 8 -60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 0 8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 0 8 60 1 0 0 0 1 0 0 0 1 3022.dat
+1 0 30 -14 0 1 0 0 0 1 0 0 0 1 6990 - Train 1 - Container - Door 1.ldr
+1 0 -30 -14 0 1 0 0 0 1 0 0 0 1 6990 - Train 1 - Container - Door 2.ldr
+
+0 STEP
+0 FILE 6990 - Train 1 - Container - Door 1.ldr
+0 First hinged container door with a long yellow arrow pattern tile and plate-built panel for the Train 1 cargo container.
+0 Name: 6990 - Train 1 - Container - Door 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Hinge  1 x  2 Top (white)
+1 15 0 -10 -60 0 0 1 0 1 0 -1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 0 -10 60 0 0 1 0 1 0 -1 0 0 3938.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -18 60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -26 60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -18 -60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -26 -60 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Brick  1 x  8 (white)
+1 15 0 -50 0 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // Plate  2 x  8 (white)
+1 15 -10 -58 0 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Tile  1 x  2 with Arrow Long Yellow with Black Border Pattern (white)
+1 15 0 -66 0 0 0 1 0 1 0 -1 0 0 3069bp06.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 -20 -66 0 0 0 1 0 1 0 -1 0 0 3069b.dat
+
+0 STEP
+0 FILE 6990 - Train 1 - Container - Door 2.ldr
+0 Second hinged container door with a long yellow arrow pattern tile and plate-built panel for the Train 1 cargo container.
+0 Name: 6990 - Train 1 - Container - Door 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !THEME Space / Futuron
+0 // Hinge  1 x  2 Top (white)
+1 15 0 -10 60 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 0 -10 -60 0 0 -1 0 1 0 1 0 0 3938.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -18 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -26 -60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -18 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -26 60 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Brick  1 x  8 (white)
+1 15 0 -50 0 0 0 -1 0 1 0 1 0 0 3008.dat
+0 // Plate  2 x  8 (white)
+1 15 10 -58 0 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Tile  1 x  2 with Arrow Long Yellow with Black Border Pattern (white)
+1 15 0 -66 0 0 0 1 0 1 0 -1 0 0 3069bp06.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 20 -66 0.001 0 0 -1 0 1 0 1 0 0 3069b.dat
+
+0 STEP
+0 FILE 6990 - Train 1 + Minifig.ldr
+0 Assembly combining the Train 1 monorail car with an included minifigure operator.
+0 Name: 6990 - Train 1 + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6990 - Train 1.ldr
+1 0 0 -61 -112 1 0 0 0 1 0 0 0 1 6990 - Minifig 1.ldr
+
+0 STEP
+0 FILE 6990 - Train 1 + Vehicle 1.ldr
+0 Assembly combining the Train 1 monorail car with the Vehicle 1 support vehicle attached.
+0 Name: 6990 - Train 1 + Vehicle 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6990 - Train 1 + Minifig.ldr
+1 0 0 -28 32 1 0 0 0 0 -1 0 1 0 6990 - Vehicle 1.ldr
+
+0 STEP
+0 FILE 6990 - Train 2.ldr
+0 Motorized monorail drive unit with motor base and case, steel axles with wheels, and a trans-dark-blue light element for propulsion.
+0 Name: 6990 - Train 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Monorail Motor Base (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 2684.dat
+0 // ~Monorail Motor Switch (black)
+1 0 0 111.5 0 0 0 1 0 1 0 -1 0 0 2682.dat
+0 // ~Axle Steel  5 x  67.5 LDU with Two Wheels  1.6 x 10 (black)
+1 0 0 124 -39 0 0 1 0 1 0 -1 0 0 2688.dat
+0 // ~Axle Steel  5 x  67.5 LDU with Two Wheels  1.6 x 10 (black)
+1 0 0 124 39 0 0 1 0 1 0 -1 0 0 2688.dat
+1 334 -14 135 0 0 0 1 0 1 0 -1 0 0 s\2684s01.dat
+0 // ~Monorail Motor Case (white)
+1 15 0 0 0 0 0 1 0 1 0 -1 0 0 2683.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 0 -10 0 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Dish  2 x  2 Inverted (trans_dark_blue)
+1 33 0 -18 0 0 0 1 0 1 0 -1 0 0 4740.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 0 -26 0 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Electric Brick  2 x  2 x  0.667 with Straight Sided Underside (black)
+1 0 0 74 53 0 0 1 -1 0 0 0 -1 0 2726c01.dat
+
+0 STEP
+0 FILE 6990 - Train 3.ldr
+0 Second monorail passenger car built on a 4x20 black monorail base with white and black body panels, trans-dark-blue cones, windows, and bracket detailing.
+0 Name: 6990 - Train 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Monorail Base  4 x 20 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 2687.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -8 150 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -8 -190 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -8 -150 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -8 -90 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  4 (white)
+1 15 -30 -8 -120 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 30 -8 -120 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -8 -50 1 0 0 0 1 0 0 0 1 3710.dat
+1 0 0 -16 150 1 0 0 0 1 0 0 0 1 6990 - Train 1 - Command.ldr
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 30 -24 -30 0 0 -1 0 1 0 1 0 0 3665.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (white)
+1 15 -30 -24 -30 0 0 1 0 1 0 -1 0 0 3665.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -24 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 0 -16 -50 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 0 -16 -190 -1 0 0 0 1 0 0 0 -1 3069b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (white)
+1 15 30 -16 -190 0 0 -1 0 1 0 1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (white)
+1 15 -30 -16 -190 0 0 1 0 1 0 -1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (white)
+1 15 -30 -16 -50 0 0 1 0 1 0 -1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (white)
+1 15 30 -16 -50 0 0 -1 0 1 0 1 0 0 4081b.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -16 -90 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 0 -16 -150 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  2 (white)
+1 15 30 -16 -120 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 -30 -16 -120 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Tile  1 x  8 (white)
+1 15 -30 -24 -120 0 0 -1 0 1 0 1 0 0 4162.dat
+0 // Tile  1 x  8 (white)
+1 15 30 -24 -120 0 0 -1 0 1 0 1 0 0 4162.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -24 -90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -24 -150 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 -50 -14 -78 1 0 0 0 0 -1 0 1 0 4589.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 50 -14 -78 1 0 0 0 0 -1 0 1 0 4589.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 -50 -14 -162 1 0 0 0 0 1 0 -1 0 4589.dat
+0 // Cone  1 x  1 (trans_dark_blue)
+1 33 50 -14 -162 1 0 0 0 0 1 0 -1 0 4589.dat
+0 // Brick  1 x  4 (white)
+1 15 0 -24 190 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  6 (white)
+1 15 -30 -24 120 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x  6 (white)
+1 15 30 -24 120 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (white)
+1 15 0 -32 190 -1 0 0 0 1 0 0 0 -1 2436a.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (black)
+1 0 30 -32 120 0 0 -1 0 1 0 1 0 0 2436a.dat
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (black)
+1 0 -30 -32 120 0 0 1 0 1 0 -1 0 0 2436a.dat
+0 // Plate  1 x  2 (black)
+1 0 0 -32 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 30 -22 212 -1 0 0 0 0 -1 0 -1 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -30 -22 212 -1 0 0 0 0 -1 0 -1 0 3024.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (white)
+1 15 0 -22 212 -1 0 0 0 0 -1 0 -1 0 3794a.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 0 -22 220 -1 0 0 0 0 -1 0 -1 0 4740.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 0 -22 228 -1 0 0 0 0 -1 0 -1 0 6141.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 0 -22 236 -1 0 0 0 0 -1 0 -1 0 4740.dat
+0 // Plate  1 x  1 Round (trans_dark_blue)
+1 33 0 -22 244 -1 0 0 0 0 -1 0 -1 0 6141.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 0 -22 252 -1 0 0 0 0 -1 0 -1 0 4740.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (white)
+1 15 -30 -22 230 -1 0 0 0 0 -1 0 -1 0 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (white)
+1 15 30 -22 230 -1 0 0 0 0 -1 0 -1 0 752.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment End Section (rubber_white)
+1 511 -30 -22 230 -1 0 0 0 0 1 0 1 0 755.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment End Section (rubber_white)
+1 511 30 -22 230 -1 0 0 0 0 1 0 1 0 755.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.968 -22 236.957 -0.9987 -0.0512 0 0 0 -1 -0.0512 0.9987 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.852 -22 239.215 -0.9961 -0.0888 0 0 0 -1 -0.0888 0.9961 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.649 -22 241.494 -0.992 -0.1265 0 0 0 -1 -0.1265 0.992 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 29.363 -22 243.738 -0.9864 -0.1645 0 0 0 -1 -0.1645 0.9864 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 28.991 -22 245.97 -0.9791 -0.2032 0 0 0 -1 -0.2032 0.9791 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 28.53 -22 248.188 -0.9701 -0.2428 0 0 0 -1 -0.2428 0.9701 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 27.98 -22 250.387 -0.9589 -0.2837 0 0 0 -1 -0.2837 0.9589 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 27.336 -22 252.563 -0.9454 -0.3259 0 0 0 -1 -0.3259 0.9454 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 26.596 -22 254.71 -0.9291 -0.3698 0 0 0 -1 -0.3698 0.9291 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 25.756 -22 256.822 -0.9097 -0.4152 0 0 0 -1 -0.4152 0.9097 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 24.823 -22 258.865 -0.8866 -0.4626 0 0 0 -1 -0.4626 0.8866 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 23.771 -22 260.882 -0.8588 -0.5123 0 0 0 -1 -0.5123 0.8588 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 22.605 -22 262.836 -0.8259 -0.5639 0 0 0 -1 -0.5639 0.8259 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 21.323 -22 264.713 -0.7871 -0.6168 0 0 0 -1 -0.6168 0.7871 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 19.939 -22 266.48 -0.7416 -0.6708 0 0 0 -1 -0.6708 0.7416 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 18.417 -22 268.162 -0.6883 -0.7254 0 0 0 -1 -0.7254 0.6883 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 16.774 -22 269.722 -0.6265 -0.7794 0 0 0 -1 -0.7794 0.6265 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 14.989 -22 271.156 -0.5567 -0.8307 0 0 0 -1 -0.8307 0.5567 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 13.111 -22 272.415 -0.4797 -0.8774 0 0 0 -1 -0.8774 0.4797 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 11.129 -22 273.498 -0.3966 -0.918 0 0 0 -1 -0.918 0.3966 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 9.055 -22 274.394 -0.3088 -0.9511 0 0 0 -1 -0.9511 0.3088 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 6.879 -22 275.101 -0.2192 -0.9757 0 0 0 -1 -0.9757 0.2193 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 4.671 -22 275.597 -0.1313 -0.9913 0 0 0 -1 -0.9913 0.1313 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 2.426 -22 275.894 -0.0466 -0.9989 0 0 0 -1 -0.9989 0.0466 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 0.165 -22 276 0.0346 -0.9994 0 0 0 -1 -0.9994 -0.0346 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -2.095 -22 275.921 0.1185 -0.9929 0 0 0 -1 -0.9929 -0.1185 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -4.343 -22 275.653 0.2062 -0.9785 0 0 0 -1 -0.9785 -0.2062 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -6.557 -22 275.187 0.2952 -0.9554 0 0 0 -1 -0.9554 -0.2952 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -8.717 -22 274.519 0.3834 -0.9236 0 0 0 -1 -0.9236 -0.3834 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -10.828 -22 273.643 0.4678 -0.8838 0 0 0 -1 -0.8838 -0.4678 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -12.825 -22 272.586 0.5457 -0.8379 0 0 0 -1 -0.8379 -0.5457 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -14.718 -22 271.353 0.6164 -0.7874 0 0 0 -1 -0.7874 -0.6164 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -16.5 -22 269.958 0.679 -0.7341 0 0 0 -1 -0.7341 -0.679 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -18.163 -22 268.42 0.7336 -0.6796 0 0 0 -1 -0.6796 -0.7336 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -19.704 -22 266.756 0.7805 -0.6251 0 0 0 -1 -0.6251 -0.7805 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -21.124 -22 264.983 0.8205 -0.5716 0 0 0 -1 -0.5716 -0.8205 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -22.424 -22 263.117 0.8543 -0.5198 0 0 0 -1 -0.5198 -0.8543 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -23.606 -22 261.174 0.8826 -0.4701 0 0 0 -1 -0.4701 -0.8826 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -24.663 -22 259.19 0.9064 -0.4224 0 0 0 -1 -0.4224 -0.9064 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -25.624 -22 257.128 0.9265 -0.3764 0 0 0 -1 -0.3764 -0.9265 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -26.479 -22 255.022 0.9432 -0.3322 0 0 0 -1 -0.3322 -0.9432 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -27.234 -22 252.879 0.9571 -0.2897 0 0 0 -1 -0.2897 -0.9571 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -27.892 -22 250.707 0.9686 -0.2487 0 0 0 -1 -0.2487 -0.9686 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -28.456 -22 248.511 0.9779 -0.2089 0 0 0 -1 -0.2089 -0.9779 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -28.929 -22 246.296 0.9854 -0.1701 0 0 0 -1 -0.1701 -0.9854 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.314 -22 244.065 0.9912 -0.1321 0 0 0 -1 -0.1321 -0.9912 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.613 -22 241.823 0.9955 -0.0945 0 0 0 -1 -0.0945 -0.9955 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.826 -22 239.572 0.9984 -0.0571 0 0 0 -1 -0.0571 -0.9984 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -29.956 -22 237.315 0.9998 -0.0195 0 0 0 -1 -0.0195 -0.9998 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -30 -22 235.028 1 0 0 0 0 -1 0 -1 0 756.dat
+0 MLCAD BTG Hose
+0 // ~Hose Flexible Segment Center Section (rubber_white)
+1 511 -30 -22 232.781 1 0 0 0 0 -1 0 -1 0 756.dat
+0 GROUP 53 Hose
+0 // Plate  1 x  2 (rubber_white)
+1 511 -52 -22 140 0 1 0 0 0 -1 -1 0 0 3023.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 -68 -22 140 0 1 0 -1 0 0 0 0 1 4595.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 -58 -22 184 0 0 1 -1 0 0 0 -1 0 4589.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -58 -22 104 0 0 1 -1 0 0 0 -1 0 6141.dat
+0 // Plate  1 x  2 (rubber_white)
+1 511 52 -22 140 0 -1 0 0 0 1 -1 0 0 3023.dat
+0 // Brick  1 x  2 x  0.667 with Studs on Sides (black)
+1 0 68 -22 140 0 -1 0 1 0 0 0 0 1 4595.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 58 -22 184 0 0 -1 1 0 0 0 -1 0 4589.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 58 -22 104 0 0 -1 1 0 0 0 -1 0 6141.dat
+0 // Plate  1 x  3 (black)
+1 0 -30 -32 170 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 30 -32 170 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Slope Brick 45  2 x  4 (white)
+1 15 0 -56 170 -1 0 0 0 1 0 0 0 -1 3037.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -56 140 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -56 100 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -56 140 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -56 100 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -56 60 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -56 60 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 -30 -56 20 0 0 -1 0 1 0 1 0 0 4865a.dat
+0 // Panel  1 x  2 x  1 with Square Corners (white)
+1 15 30 -56 20 0 0 1 0 1 0 -1 0 0 4865a.dat
+0 // Brick  1 x  4 (white)
+1 15 30 -24 20 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Brick  1 x  4 (white)
+1 15 -30 -24 20 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Plate  1 x  6 (black)
+1 0 30 -32 40 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 -30 -32 40 0 0 -1 0 1 0 1 0 0 3666.dat
+0 // Brick  2 x  2 Corner (white)
+1 15 -10 -56 -10 -1 0 0 0 1 0 0 0 -1 2357.dat
+0 // Brick  2 x  2 Corner (white)
+1 15 10 -56 -10 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -80 -30 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -88 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -96 -30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (white)
+1 15 -30 -96 -30 0 0 1 0 1 0 -1 0 0 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (white)
+1 15 30 -96 -30 0 0 -1 0 1 0 1 0 0 4460a.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (white)
+1 15 0 -104 -30 -1 0 0 0 1 0 0 0 -1 4315.dat
+0 // Windscreen  4 x  4 x  2 Canopy Extender (trans_dark_blue)
+1 33 0 -100 -16 -1 0 0 0 1 0 0 0 -1 2337.dat
+0 // Windscreen  6 x  4 x  2 Canopy (trans_dark_blue)
+1 33 0 -100 64 -1 0 0 0 1 0 0 0 -1 4474.dat
+1 0 0 -32 -120 1 0 0 0 1 0 0 0 1 6990 - Train 3 - Battery.ldr
+0 // Electric Brick  2 x  2 x  0.667 with Straight Sided Underside (black)
+1 0 0 -120 -120 0 0 1 0 1 0 -1 0 0 2726c01.dat
+0 MLCAD BTG Chassis
+0 // Monorail Wheel Chassis (black)
+1 0 0 16.069 121.438 0 0 -1 0.0958458 0.995396 0 0.995396 -0.0958458 0 2686.dat
+0 MLCAD BTG Chassis
+0 // ~Axle Steel  5 x  67.5 LDU with Two Wheels  1.6 x 10 (black)
+1 0 0 25.617 95.402 0 0 -1 0.0958458 0.995396 0 0.995396 -0.0958458 0 2688.dat
+0 MLCAD BTG Chassis
+0 // ~Axle Steel  5 x  67.5 LDU with Two Wheels  1.6 x 10 (black)
+1 0 0 30.411 145.173 0 0 -1 0.0958458 0.995396 0 0.995396 -0.0958458 0 2688.dat
+0 GROUP 3 Chassis
+0 // Monorail Wheel Connector (black)
+1 0 0 31 120 0 0 -1 0 1 0 1 0 0 2697.dat
+
+0 STEP
+0 FILE 6990 - Train 3 - Battery.ldr
+0 Power car assembly with a 9V battery box on a 4x8 plate, a light and sound brick with red globe, and yellow arrow indicator tiles.
+0 Name: 6990 - Train 3 - Battery.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  4 x  8 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3035.dat
+0 // Plate  1 x  8 (white)
+1 15 30 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (white)
+1 15 30 -16 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (white)
+1 15 -30 -8 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (white)
+1 15 -30 -16 0 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Electric  9V Battery Box  4 x  8 x  2.333 "9V" Patt. (Complete) (white)
+1 15 0 -72 0 1 0 0 0 1 0 0 0 1 4760p01c01.dat
+0 // Plate  2 x  2 (black)
+1 0 0 8 -60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 0 8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (black)
+1 0 0 8 60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Tile  1 x  2 with Arrow Long Yellow with Black Border Pattern (white)
+1 15 30 -80 0 0 0 -1 0 1 0 1 0 0 3069bp06.dat
+0 // Tile  1 x  2 with Arrow Long Yellow with Black Border Pattern (white)
+1 15 -30 -80 0 0 0 -1 0 1 0 1 0 0 3069bp06.dat
+0 // Electric Light & Sound Brick  1 x  2 with Single Top Light (white)
+1 15 0 -88 30 1 0 0 0 1 0 0 0 1 73666.dat
+0 // Electric Light & Sound Coloured Globe (trans_red)
+1 36 0 -88 30 1 0 0 0 1 0 0 0 1 4770.dat
+
+0 STEP
+0 FILE 6990 - Station 1.ldr
+0 Large monorail station built on a 16x32 baseplate with support stanchions, a stop/go switch, round pillars, platform plates, and decorative light dishes.
+0 Name: 6990 - Station 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Baseplate 16 x 32 with Square Corners (light_grey)
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 3857.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 140 -24 -200 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 100 -24 -200 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -100 -24 -200 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -140 -24 -200 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 140 -24 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 100 -24 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -100 -24 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -140 -24 0 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 140 -24 200 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 100 -24 200 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 -140 -24 200 0 0 1 0 1 0 -1 0 0 3941.dat
+0 // Support  6 x  6 x 10 Stanchion (black)
+1 0 -60 -240 240 0 0 1 0 1 0 -1 0 0 2681.dat
+0 // Brick  2 x  2 (black)
+1 0 100 -24 140 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Support  6 x  6 x 10 Stanchion (black)
+1 0 -60 -240 -80 0 0 1 0 1 0 -1 0 0 2681.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (white)
+1 15 -160 -144 -200 0 0 -1 0 1 0 1 0 0 4476.dat
+0 // Brick  2 x  2 (black)
+1 0 -160 -168 -200 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (white)
+1 15 -160 -216 -200 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -160 -224 -200 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (white)
+1 15 -160 -144 0 0 0 -1 0 1 0 1 0 0 4476.dat
+0 // Brick  2 x  2 (black)
+1 0 -160 -168 0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (white)
+1 15 -160 -216 0 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -160 -224 0 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (white)
+1 15 160 -144 -200 0 0 1 0 1 0 -1 0 0 4476.dat
+0 // Brick  2 x  2 (black)
+1 0 160 -168 -200 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (white)
+1 15 160 -216 -200 0 0 1 0 1 0 -1 0 0 3940.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 160 -224 -200 0 0 1 0 1 0 -1 0 0 4032a.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (white)
+1 15 160 -144 0 0 0 1 0 1 0 -1 0 0 4476.dat
+0 // Brick  2 x  2 (black)
+1 0 160 -168 0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (white)
+1 15 160 -216 0 0 0 1 0 1 0 -1 0 0 3940.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 160 -224 0 0 0 1 0 1 0 -1 0 0 4032a.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (white)
+1 15 160 -144 200 0 0 1 0 1 0 -1 0 0 4476.dat
+0 // Monorail Stop/Go Switch (light_grey)
+1 7 -60 -265 80 0 0 -1 0 1 0 1 0 0 2774c01.dat
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 -180 -289 0 0 0 -1 0 1 0 1 0 0 3941.dat
+0 // Tile  2 x  2 Round with Yellow Arrow with Black Border Pattern (light_grey)
+1 7 -180 -297 0 0 0 1 0 1 0 -1 0 0 4150p04.dat
+0 // Brick  2 x  2 (black)
+1 0 160 -168 200 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (white)
+1 15 160 -216 200 0 0 1 0 1 0 -1 0 0 3940.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 160 -224 200 0 0 1 0 1 0 -1 0 0 4032a.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (white)
+1 15 -160 -144 200 0 0 -1 0 1 0 1 0 0 4476.dat
+0 // Brick  2 x  2 (black)
+1 0 -160 -168 200 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (white)
+1 15 -160 -216 200 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -160 -224 200 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -100 -24 200 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (black)
+1 0 -100 -16 200 0 0 -1 0 1 0 1 0 0 4032a.dat
+0 // Plate  2 x 10 (white)
+1 15 160 -232 -100 0 0 -1 0 1 0 1 0 0 3832.dat
+0 // Plate  2 x 10 (white)
+1 15 160 -232 100 0 0 -1 0 1 0 1 0 0 3832.dat
+0 // Plate  2 x 10 (white)
+1 15 -160 -232 100 0 0 -1 0 1 0 1 0 0 3832.dat
+0 // Plate  2 x 10 (white)
+1 15 -160 -232 -100 0 0 -1 0 1 0 1 0 0 3832.dat
+0 // Tile  2 x  2 with Groove (black)
+1 0 100 -32 140 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (white)
+1 15 160 -232 -210 1 0 0 0 1 0 0 0 1 4596.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 160 -230 -280 1 0 0 0 0 1 0 -1 0 4740.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 160 -230 -288 1 0 0 0 0 1 0 -1 0 4740.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 160 -230 -296 1 0 0 0 0 1 0 -1 0 6141.dat
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (white)
+1 15 160 -232 210 -1 0 0 0 1 0 0 0 -1 4596.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 160 -230 280 -1 0 0 0 0 1 0 1 0 4740.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 160 -230 288 -1 0 0 0 0 1 0 1 0 4740.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 160 -230 296 -1 0 0 0 0 1 0 1 0 6141.dat
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (white)
+1 15 -160 -232 -210 1 0 0 0 1 0 0 0 1 4596.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 -160 -230 -280 1 0 0 0 0 1 0 -1 0 4740.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 -160 -230 -288 1 0 0 0 0 1 0 -1 0 4740.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -160 -230 -296 1 0 0 0 0 1 0 -1 0 6141.dat
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (white)
+1 15 -160 -232 210 -1 0 0 0 1 0 0 0 -1 4596.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 -160 -230 280 -1 0 0 0 0 1 0 1 0 4740.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 -160 -230 288 -1 0 0 0 0 1 0 1 0 4740.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 -160 -230 296 -1 0 0 0 0 1 0 1 0 6141.dat
+0 // Plate  2 x 16 (black)
+1 0 0 -240 0 1 0 0 0 1 0 0 0 1 4282.dat
+0 // Plate  1 x  2 with Ladder (black)
+1 0 -170 -240 0 0 0 1 0 1 0 -1 0 0 4175.dat
+0 // Slope Brick 45  2 x  2 (white)
+1 15 -160 -256 90 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Slope Brick 45  2 x  2 (white)
+1 15 -160 -256 -90 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 -160 -256 200 -1 0 0 0 1 0 0 0 -1 3941.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 -160 -256 -200 -1 0 0 0 1 0 0 0 -1 3941.dat
+0 // Tile  2 x  2 with Black Grille Pattern (white)
+1 15 160 -240 200 -1 0 0 0 1 0 0 0 -1 3068bp07.dat
+0 // Tile  2 x  2 with Black Grille Pattern (white)
+1 15 160 -240 -200 -1 0 0 0 1 0 0 0 -1 3068bp07.dat
+0 // Brick  1 x  1 (white)
+1 15 170 -256 170 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 170 -280 170 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 170 -256 110 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 170 -280 110 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Slope Brick 45  2 x  2 with 12 Buttons and  3 Red Lamps on Black Panel Pattern (white)
+1 15 -160 -280 -210 -1 0 0 0 1 0 0 0 -1 3039p32.dat
+0 // Slope Brick 45  2 x  2 with 12 Buttons and  3 Red Lamps on Black Panel Pattern (white)
+1 15 -160 -280 210 1 0 0 0 1 0 0 0 1 3039p32.dat
+0 // Brick  1 x  2 (white)
+1 15 -160 -280 90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 -160 -280 -90 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Rack Winder  2 x  4 x  2 without Axle (white)
+1 15 140 -280 140 0 0 1 0 1 0 -1 0 0 2426c01.dat
+0 // Plate  1 x  3 (white)
+1 15 150 -288 170 -1 0 0 0 1 0 0 0 -1 3623.dat
+0 // Plate  1 x  3 (white)
+1 15 150 -288 110 -1 0 0 0 1 0 0 0 -1 3623.dat
+1 0 140 -262 140 0 0 1 0 1 0 -1 0 0 u9068.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (black)
+1 0 140 -262 228 0 0 1 -1 0 0 0 -1 0 3940.dat
+0 // Brick  2 x  2 Round without Reinforcement (black)
+1 0 140 -262 252 0 0 1 -1 0 0 0 -1 0 3941.dat
+0 // Train Window  1 x  2 x  3 (white)
+1 15 -160 -352 -90 1 0 0 0 1 0 0 0 1 4035.dat
+0 // Train Window  1 x  2 x  3 (white)
+1 15 -160 -352 90 -1 0 0 0 1 0 0 0 -1 4035.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 -160 -360 -90 1 0 0 0 1 0 0 0 1 4623.dat
+0 // Plate  1 x  2 with Vertical Bar on Long Side and Long Arm (black)
+1 0 -160 -360 90 -1 0 0 0 1 0 0 0 -1 4623.dat
+1 0 90 -40 140 -1 0 0 0 1 0 0 0 -1 6990 - Station 1 - Antenna.ldr
+1 0 -160 -354 -112 -0.707107 0 0.707107 0 1 0 -0.707107 0 -0.707107 6990 - Station 1 - Lamp.ldr
+1 0 -160 -354 112 0.707107 0 0.707107 0 1 0 -0.707107 0 0.707107 6990 - Station 1 - Lamp.ldr
+0 // Panel 10 x  6 x 11 (trans_dark_blue)
+1 33 10 -496 0 0 0 -1 0 1 0 1 0 0 2408.dat
+0 // Panel  3 x  2 x  5 & 2/3 (trans_dark_blue)
+1 33 -160 -496 -50 1 0 0 0 1 0 0 0 1 2448.dat
+0 // Panel  3 x  2 x  5 & 2/3 (trans_dark_blue)
+1 33 -160 -496 50 -1 0 0 0 1 0 0 0 -1 2448.dat
+0 // Plate  1 x 10 (white)
+1 15 -60 -504 -50 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  1 x 10 (white)
+1 15 -60 -504 50 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  1 x  8 (white)
+1 15 -240 -504 50 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Plate  1 x  8 (white)
+1 15 -240 -504 -50 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Plate  1 x  4 (white)
+1 15 -160 -512 50 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 -160 -512 -50 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 -210 -512 50 -1 0 0 0 1 0 0 0 -1 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 -210 -512 -50 1 0 0 0 1 0 0 0 1 4081b.dat
+0 // Cone  1 x  1 (black)
+1 0 -210 -536 50 1 0 0 0 1 0 0 0 1 4589.dat
+0 // Cone  1 x  1 (black)
+1 0 -210 -536 -50 1 0 0 0 1 0 0 0 1 4589.dat
+0 // Plate  2 x  6 (white)
+1 15 -160 -520 0 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -130 -510 -70 0 1 0 0 0 -1 -1 0 0 3957a.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 -122 -510 -70 0 1 0 0 0 -1 -1 0 0 3062b.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -130 -510 70 0 1 0 0 0 -1 -1 0 0 3957a.dat
+0 // Brick  1 x  1 Round with Hollow Stud (trans_red)
+1 36 -122 -510 70 0 1 0 0 0 -1 -1 0 0 3062b.dat
+0 // Dish  4 x  4 Inverted (white)
+1 15 -310 -496 50 -1 0 0 0 1 0 0 0 -1 3960.dat
+0 // Dish  4 x  4 Inverted (white)
+1 15 -310 -496 -50 -1 0 0 0 1 0 0 0 -1 3960.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 -310 -522 50 -1 0 0 0 1 0 0 0 -1 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 -310 -522 -50 -1 0 0 0 1 0 0 0 -1 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 -232 -510 70 0 1 0 1 0 0 0 0 -1 752.dat
+0 // Hose Flexible End  1 x  1 x  0.667 without Tabs (black)
+1 0 -232 -510 -70 0 1 0 1 0 0 0 0 -1 752.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 -232 -510 70 0 -1 0 -1 0 0 0 0 -1 755.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 -310 -522 50 -1 0 0 0 -1 0 0 0 1 755.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -310 -528.95 50 -0.9993 0.0017 0.0375 -0.0018 -1 -0.002 -0.0375 0.0021 -0.9993 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.996 -531.526 50.0053 -0.9986 0.0123 0.0515 -0.0129 -0.9998 -0.0129 -0.0513 0.0136 -0.9986 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.964 -534.119 50.0405 -0.9974 0.0281 0.0657 -0.0299 -0.9992 -0.0261 -0.0649 0.028 -0.9975 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.892 -536.69 50.1126 -0.9955 0.0496 0.0802 -0.0529 -0.9978 -0.0407 -0.078 0.0448 -0.9959 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.764 -539.256 50.2279 -0.9924 0.0781 0.0951 -0.0837 -0.9949 -0.057 -0.0901 0.0646 -0.9938 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.564 -541.809 50.3935 -0.9871 0.1157 0.1107 -0.1244 -0.9894 -0.0753 -0.1008 0.0881 -0.991 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.266 -544.357 50.6205 -0.978 0.165 0.1276 -0.1777 -0.9794 -0.0958 -0.1092 0.1164 -0.9872 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -308.841 -546.88 50.9202 -0.9624 0.2291 0.1463 -0.247 -0.9617 -0.1187 -0.1135 0.1503 -0.9821 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -308.248 -549.368 51.3091 -0.9356 0.3105 0.1678 -0.3348 -0.9313 -0.1436 -0.1117 0.1905 -0.9753 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -307.452 -551.756 51.7976 -0.8913 0.4104 0.1929 -0.4422 -0.8807 -0.1695 -0.1004 0.2364 -0.9665 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -306.394 -554.027 52.4072 -0.8216 0.5249 0.2224 -0.5649 -0.802 -0.1942 -0.0765 0.2852 -0.9554 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -305.044 -556.09 53.1407 -0.7236 0.6414 0.2551 -0.6891 -0.6925 -0.2136 -0.0397 0.3303 -0.943 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -303.401 -557.864 53.987 -0.6036 0.7435 0.2878 -0.7973 -0.5603 -0.2246 0.0057 0.3651 -0.931 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -301.486 -559.307 54.9271 -0.4768 0.8199 0.3169 -0.8775 -0.4227 -0.2265 0.0518 0.3861 -0.921 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -299.368 -560.398 55.9243 -0.3587 0.8695 0.3397 -0.929 -0.2968 -0.2211 0.0914 0.3949 -0.9142 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -297.136 -561.16 56.938 -0.2568 0.8985 0.3561 -0.9587 -0.1902 -0.2114 0.1222 0.3957 -0.9102 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -294.819 -561.651 57.9582 -0.1718 0.9142 0.3671 -0.9745 -0.1031 -0.1992 0.1443 0.392 -0.9086 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -292.473 -561.915 58.9642 -0.1017 0.9218 0.374 -0.982 -0.0329 -0.1861 0.1592 0.3862 -0.9086 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -290.101 -562 59.9583 0.0274 0.9202 0.3904 -0.9798 0.1021 -0.1718 0.198 0.3778 -0.9045 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -287.741 -561.738 60.9269 0.2254 0.8819 0.4141 -0.9379 0.3114 -0.1527 0.2636 0.354 -0.8973 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -285.465 -560.934 61.8405 0.3865 0.8175 0.4269 -0.8677 0.4792 -0.1322 0.3127 0.3193 -0.8946 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -283.35 -559.694 62.6668 0.5038 0.7491 0.4302 -0.7928 0.5987 -0.1141 0.343 0.2836 -0.8955 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -281.435 -558.164 63.3916 0.5867 0.6879 0.4272 -0.7257 0.6808 -0.0995 0.3593 0.2517 -0.8986 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -279.66 -556.407 64.041 0.6465 0.6368 0.4202 -0.6693 0.7377 -0.0881 0.3661 0.2243 -0.9031 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -278.012 -554.498 64.6217 0.6901 0.5958 0.4107 -0.624 0.7774 -0.0793 0.3665 0.2016 -0.9083 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -276.496 -552.519 65.1347 0.7231 0.5633 0.3998 -0.5876 0.8059 -0.0726 0.3631 0.1824 -0.9137 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -275.029 -550.421 65.6098 0.7488 0.5377 0.3876 -0.5587 0.8266 -0.0673 0.3566 0.1662 -0.9194 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -273.659 -548.315 66.0331 0.7689 0.5179 0.3749 -0.5361 0.8418 -0.0634 0.3484 0.1523 -0.9249 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -272.313 -546.127 66.4289 0.7851 0.503 0.3614 -0.5186 0.8529 -0.0603 0.3386 0.1401 -0.9305 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -271.016 -543.928 66.79 0.798 0.4923 0.3476 -0.5057 0.8608 -0.058 0.3277 0.1295 -0.9359 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -269.756 -541.725 67.1216 0.8083 0.4853 0.3334 -0.4967 0.8661 -0.0564 0.3162 0.12 -0.9411 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -268.502 -539.488 67.4316 0.8162 0.4818 0.3189 -0.4914 0.8692 -0.0554 0.3038 0.1115 -0.9462 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -267.262 -537.251 67.7186 0.822 0.4815 0.304 -0.4895 0.8703 -0.0548 0.291 0.1038 -0.9511 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -266.025 -535.013 67.9854 0.8258 0.4844 0.2889 -0.4909 0.8695 -0.0547 0.2777 0.0967 -0.9558 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -264.778 -532.776 68.2342 0.8274 0.4906 0.2734 -0.4958 0.8667 -0.055 0.2639 0.0901 -0.9603 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -263.512 -530.539 68.4668 0.8267 0.5003 0.2575 -0.5042 0.8618 -0.0556 0.2497 0.0839 -0.9647 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -262.232 -528.334 68.6814 0.8233 0.5138 0.2413 -0.5166 0.8544 -0.0567 0.2353 0.078 -0.9688 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -260.909 -526.134 68.8824 0.8166 0.5318 0.2245 -0.5336 0.8438 -0.0581 0.2204 0.0723 -0.9727 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -259.528 -523.943 69.0702 0.8057 0.555 0.207 -0.5558 0.8291 -0.06 0.2049 0.0667 -0.9765 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -258.096 -521.803 69.2424 0.7893 0.5843 0.1888 -0.5842 0.8092 -0.0622 0.1891 0.0612 -0.98 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -256.597 -519.727 69.3993 0.7652 0.621 0.1697 -0.6201 0.7819 -0.065 0.173 0.0555 -0.9834 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -254.995 -517.71 69.5425 0.7303 0.6666 0.1491 -0.665 0.7438 -0.068 0.1562 0.0495 -0.9865 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -253.296 -515.814 69.6688 0.6791 0.723 0.1269 -0.7207 0.6895 -0.0714 0.1391 0.043 -0.9893 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -251.429 -514.034 69.7798 0.6026 0.7915 0.102 -0.7888 0.6101 -0.0745 0.1212 0.0356 -0.992 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -249.376 -512.451 69.8721 0.4901 0.8685 0.0743 -0.8656 0.4949 -0.0763 0.103 0.0269 -0.9943 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -247.157 -511.186 69.9409 0.3304 0.9428 0.0443 -0.94 0.333 -0.075 0.0854 0.0169 -0.9962 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -244.72 -510.326 69.9845 0.126 0.9919 0.0147 -0.9896 0.1267 -0.0678 0.0691 0.006 -0.9976 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -242.179 -510.001 69.9999 0.0005 1 0 -0.9985 0.0005 -0.0549 0.0549 0 -0.9985 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -239.62 -510 70 -0.0001 1 0 -0.9992 -0.0001 -0.0411 0.0411 0 -0.9992 756.dat
+0 MLCAD BTG Hose 1
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -237.048 -510 70 -0.0001 1 0 -0.9996 -0.0001 -0.0272 0.0272 0 -0.9996 756.dat
+0 GROUP 52 Hose 1
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 -232 -510 -70 0 -1 0 -1 0 0 0 0 1 755.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment End Section (rubber_black)
+1 256 -310 -522 -50 -1 0 0 0 -1 0 0 0 -1 755.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -310 -528.95 -50 -0.9993 0.0017 0.0375 -0.0018 -1 -0.002 0.0375 -0.0021 0.9993 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.996 -531.526 -50.005 -0.9986 0.0123 0.0515 -0.0129 -0.9998 -0.0129 0.0513 -0.0136 0.9986 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.964 -534.119 -50.041 -0.9974 0.0281 0.0657 -0.0299 -0.9992 -0.0261 0.0649 -0.028 0.9975 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.892 -536.69 -50.113 -0.9955 0.0496 0.0802 -0.0529 -0.9978 -0.0407 0.078 -0.0448 0.9959 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.764 -539.256 -50.228 -0.9924 0.0781 0.0951 -0.0837 -0.9949 -0.057 0.0901 -0.0646 0.9938 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.564 -541.809 -50.394 -0.9871 0.1157 0.1107 -0.1244 -0.9894 -0.0753 0.1008 -0.0881 0.991 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -309.266 -544.358 -50.621 -0.978 0.165 0.1276 -0.1777 -0.9794 -0.0958 0.1092 -0.1164 0.9872 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -308.841 -546.88 -50.92 -0.9624 0.2291 0.1463 -0.247 -0.9617 -0.1187 0.1135 -0.1503 0.9821 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -308.248 -549.368 -51.309 -0.9356 0.3105 0.1678 -0.3348 -0.9313 -0.1436 0.1117 -0.1905 0.9753 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -307.452 -551.756 -51.798 -0.8913 0.4104 0.1929 -0.4422 -0.8807 -0.1695 0.1004 -0.2364 0.9665 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -306.394 -554.027 -52.407 -0.8216 0.5249 0.2224 -0.5649 -0.802 -0.1942 0.0765 -0.2852 0.9554 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -305.044 -556.09 -53.141 -0.7236 0.6414 0.2551 -0.6891 -0.6925 -0.2136 0.0397 -0.3303 0.943 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -303.401 -557.864 -53.987 -0.6036 0.7435 0.2878 -0.7973 -0.5603 -0.2246 -0.0057 -0.3651 0.931 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -301.486 -559.307 -54.927 -0.4768 0.8199 0.3169 -0.8775 -0.4227 -0.2265 -0.0518 -0.3861 0.921 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -299.368 -560.398 -55.924 -0.3587 0.8695 0.3397 -0.929 -0.2968 -0.2211 -0.0914 -0.3949 0.9142 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -297.136 -561.16 -56.938 -0.2568 0.8985 0.3561 -0.9587 -0.1902 -0.2114 -0.1222 -0.3957 0.9102 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -294.819 -561.651 -57.958 -0.1718 0.9142 0.3671 -0.9745 -0.1031 -0.1992 -0.1443 -0.392 0.9086 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -292.473 -561.915 -58.964 -0.1017 0.9218 0.374 -0.982 -0.0329 -0.1861 -0.1592 -0.3862 0.9086 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -290.101 -562 -59.958 0.0274 0.9202 0.3904 -0.9798 0.1021 -0.1718 -0.198 -0.3778 0.9045 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -287.741 -561.738 -60.927 0.2254 0.8819 0.4141 -0.9379 0.3114 -0.1527 -0.2636 -0.354 0.8973 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -285.465 -560.934 -61.841 0.3865 0.8175 0.4269 -0.8677 0.4792 -0.1322 -0.3127 -0.3193 0.8946 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -283.35 -559.694 -62.667 0.5038 0.7491 0.4302 -0.7928 0.5987 -0.1141 -0.343 -0.2836 0.8955 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -281.435 -558.164 -63.392 0.5867 0.6879 0.4272 -0.7257 0.6808 -0.0995 -0.3593 -0.2517 0.8986 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -279.66 -556.407 -64.041 0.6465 0.6368 0.4202 -0.6693 0.7377 -0.0881 -0.3661 -0.2243 0.9031 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -278.012 -554.498 -64.622 0.6901 0.5958 0.4107 -0.624 0.7774 -0.0793 -0.3665 -0.2016 0.9083 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -276.496 -552.52 -65.135 0.7231 0.5633 0.3998 -0.5876 0.8059 -0.0726 -0.3631 -0.1824 0.9137 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -275.029 -550.421 -65.61 0.7488 0.5377 0.3876 -0.5587 0.8266 -0.0673 -0.3566 -0.1662 0.9194 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -273.659 -548.315 -66.033 0.7689 0.5179 0.3749 -0.5361 0.8418 -0.0634 -0.3484 -0.1523 0.9249 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -272.313 -546.127 -66.429 0.7851 0.503 0.3614 -0.5186 0.8529 -0.0603 -0.3386 -0.1401 0.9305 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -271.016 -543.929 -66.79 0.798 0.4923 0.3476 -0.5057 0.8608 -0.058 -0.3277 -0.1295 0.9359 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -269.756 -541.725 -67.122 0.8083 0.4853 0.3334 -0.4967 0.8661 -0.0564 -0.3162 -0.12 0.9411 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -268.502 -539.488 -67.432 0.8162 0.4818 0.3189 -0.4914 0.8692 -0.0554 -0.3038 -0.1115 0.9462 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -267.262 -537.251 -67.719 0.822 0.4815 0.304 -0.4895 0.8703 -0.0548 -0.291 -0.1038 0.9511 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -266.025 -535.013 -67.985 0.8258 0.4844 0.2889 -0.4909 0.8695 -0.0547 -0.2777 -0.0967 0.9558 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -264.778 -532.776 -68.234 0.8274 0.4906 0.2734 -0.4958 0.8667 -0.055 -0.2639 -0.0901 0.9603 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -263.512 -530.539 -68.467 0.8267 0.5003 0.2575 -0.5042 0.8618 -0.0556 -0.2497 -0.0839 0.9647 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -262.232 -528.334 -68.681 0.8233 0.5138 0.2413 -0.5166 0.8544 -0.0567 -0.2353 -0.078 0.9688 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -260.909 -526.134 -68.882 0.8166 0.5318 0.2245 -0.5336 0.8438 -0.0581 -0.2204 -0.0723 0.9727 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -259.528 -523.943 -69.07 0.8057 0.555 0.207 -0.5558 0.8291 -0.06 -0.2049 -0.0667 0.9765 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -258.096 -521.803 -69.242 0.7893 0.5843 0.1888 -0.5842 0.8092 -0.0622 -0.1891 -0.0612 0.98 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -256.597 -519.727 -69.399 0.7652 0.621 0.1697 -0.6201 0.7819 -0.065 -0.173 -0.0555 0.9834 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -254.995 -517.71 -69.543 0.7303 0.6666 0.1491 -0.665 0.7438 -0.068 -0.1562 -0.0495 0.9865 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -253.296 -515.814 -69.669 0.6791 0.723 0.1269 -0.7207 0.6895 -0.0714 -0.1391 -0.043 0.9893 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -251.429 -514.034 -69.78 0.6026 0.7915 0.102 -0.7888 0.6101 -0.0745 -0.1212 -0.0356 0.992 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -249.376 -512.451 -69.872 0.4901 0.8685 0.0743 -0.8656 0.4949 -0.0763 -0.103 -0.0269 0.9943 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -247.157 -511.186 -69.941 0.3304 0.9428 0.0443 -0.94 0.333 -0.075 -0.0854 -0.0169 0.9962 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -244.72 -510.326 -69.985 0.126 0.9919 0.0147 -0.9896 0.1267 -0.0678 -0.0691 -0.006 0.9976 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -242.179 -510.001 -70 0.0005 1 0 -0.9985 0.0005 -0.0549 -0.0549 0 0.9985 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -239.62 -510 -70 -0.0001 1 0 -0.9992 -0.0001 -0.0411 -0.0411 0 0.9992 756.dat
+0 MLCAD BTG Hose 2
+0 // ~Hose Flexible Segment Center Section (rubber_black)
+1 256 -237.048 -510 -70 -0.0001 1 0 -0.9996 -0.0001 -0.0272 -0.0272 0 0.9996 756.dat
+0 GROUP 52 Hose 2
+
+0 STEP
+0 FILE 6990 - Station 1 - Antenna.ldr
+0 Communications antenna array with an inverted 6x6 dish, a 1x20 gear rack, and trans-red indicator plates mounted on a bracket.
+0 Name: 6990 - Station 1 - Antenna.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Bracket  2 x  2 -  1 x  4 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 2422.dat
+0 // Plate  2 x  4 (white)
+1 15 0 -8 0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -10 -16 30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -10 -16 -30 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  4 (white)
+1 15 40 -16 30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (white)
+1 15 40 -16 -30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 20 -24 30 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Tile  1 x  4 with Groove (black)
+1 0 20 -24 -30 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Brick  1 x  4 (white)
+1 15 70 -40 0 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Rack  1 x 20 (white)
+1 15 -42 -200 0 0 1 0 -1 0 0 0 0 1 2428.dat
+0 // Plate  1 x 10 (black)
+1 0 -28 -180 0 0 1 0 -1 0 0 0 0 1 4477.dat
+0 // Plate  1 x  4 (black)
+1 0 -28 -320 0 0 1 0 -1 0 0 0 0 1 3710.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 -28 -370 0 0 1 0 0 0 -1 -1 0 0 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 -28 -390 0 0 1 0 0 0 -1 -1 0 0 3794a.dat
+0 // Dish  6 x  6 Inverted Webbed Type 1 (white)
+1 15 -20 -380 0 0 1 0 0 0 -1 -1 0 0 4285a.dat
+0 // Dish  2 x  2 Inverted (trans_red)
+1 36 -15 -380 0 0 1 0 0 0 -1 -1 0 0 4740.dat
+
+0 STEP
+0 FILE 6990 - Station 1 - Lamp.ldr
+0 Small station lamp fixture made from a trans-red dish on a clip bar and hinge control stick stand.
+0 Name: 6990 - Station 1 - Lamp.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Dish  2 x  2 Inverted (trans_red)
+1 36 0 0 40 1 0 0 0 1 0 0 0 1 4740.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (black)
+1 0 0 -16 40 1 0 0 0 1 0 0 0 1 4735.dat
+0 // Hinge Control Stick Base (black)
+1 0 0 -24 40 1 0 0 0 1 0 0 0 1 4592.dat
+0 // Hinge Control Stick (black)
+1 0 0 -24 40 1 0 0 0 0.92388 -0.382683 0 0.382683 0.92388 4593.dat
+
+0 STEP
+0 FILE 6990 - Station 1 + Minifig.ldr
+0 Assembly combining Station 1 with an included minifigure attendant.
+0 Name: 6990 - Station 1 + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6990 - Station 1.ldr
+1 0 169 -304 -140 0 0 -1 0 1 0 1 0 0 6990 - Minifig 4.ldr
+
+0 STEP
+0 FILE 6990 - Station 2.ldr
+0 Second monorail station built on a 32x32 baseplate with black brick walls, tiled surfaces, windows, and corner structural detailing.
+0 Name: 6990 - Station 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Baseplate 32 x 32 (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3811.dat
+0 // Brick  1 x  1 (black)
+1 0 -270 -24 230 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (black)
+1 0 -270 -24 170 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  2 (black)
+1 0 -190 -24 140 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (black)
+1 0 -190 -24 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  4 (black)
+1 0 -190 -24 -140 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 -50 -24 -140 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  6 (black)
+1 0 0 -24 -90 1 0 0 0 1 0 0 0 1 3009.dat
+0 // Brick  1 x  4 (black)
+1 0 -50 -24 20 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  4 (black)
+1 0 0 -24 50 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  2 x  2 Corner (black)
+1 0 30 -24 90 0 0 1 0 1 0 -1 0 0 2357.dat
+0 // Brick  1 x  4 (black)
+1 0 -50 -24 160 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Brick  1 x  6 (black)
+1 0 -50 -24 260 0 0 1 0 1 0 -1 0 0 3009.dat
+0 // Brick  1 x  2 (black)
+1 0 -70 -24 300 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  2 x  2 (black)
+1 0 0 -24 300 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 -60 -32 310 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 -60 -32 290 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -32 290 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (black)
+1 0 0 -32 310 1 0 0 0 1 0 0 0 1 3794a.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 -50 -32 260 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  4 with Groove (white)
+1 15 -50 -32 200 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Tile  1 x  8 (white)
+1 15 -50 -32 80 0 0 1 0 1 0 -1 0 0 4162.dat
+0 // Tile  1 x  8 (white)
+1 15 -50 -32 -80 0 0 1 0 1 0 -1 0 0 4162.dat
+0 // Tile  1 x  1 with Groove (white)
+1 15 -50 -32 -170 0 0 1 0 1 0 -1 0 0 3070b.dat
+0 // Tile  1 x  1 with Groove (white)
+1 15 -190 -32 -170 0 0 1 0 1 0 -1 0 0 3070b.dat
+0 // Tile  1 x  8 (white)
+1 15 -190 -32 -80 0 0 1 0 1 0 -1 0 0 4162.dat
+0 // Tile  1 x  8 (white)
+1 15 -190 -32 80 0 0 1 0 1 0 -1 0 0 4162.dat
+0 // Brick  1 x  2 (black)
+1 0 0 -24 -70 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Plate  1 x  2 (black)
+1 0 30 -8 20 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  2 x  2 (black)
+1 0 120 -8 20 0 0 -1 0 1 0 1 0 0 3022.dat
+0 // Slope Brick 33  3 x  2 (black)
+1 0 120 -24 150 1 0 0 0 1 0 0 0 1 3298.dat
+0 // Tile  1 x  1 with Groove (white)
+1 15 -30 -32 -90 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 0 -32 -80 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 40 -32 -90 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 30 -16 20 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 30 -32 60 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // Brick  1 x  6 (black)
+1 0 120 -24 90 -1 0 0 0 1 0 0 0 -1 3009.dat
+0 // Brick  2 x  3 (black)
+1 0 130 -24 240 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 290 -24 240 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -270 -32 230 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -270 -32 170 0 0 -1 0 1 0 1 0 0 3957a.dat
+0 // Turntable  2 x  2 Plate Base (black)
+1 0 120 -16 20 0 0 -1 0 1 0 1 0 0 3680.dat
+0 // Brick  2 x  4 (black)
+1 0 160 -24 -120 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // Brick  2 x  3 (black)
+1 0 160 -24 -190 0 0 -1 0 1 0 1 0 0 3002.dat
+1 0 120 -16 20 0 0 -1 0 1 0 1 0 0 6990 - Station 2 - Door 1.ldr
+0 // Rack Winder  2 x  4 x  2 without Axle (black)
+1 0 -30 -80 300 -1 0 0 0 1 0 0 0 -1 2426c01.dat
+1 0 -30 -62 300 -1 0 0 0 1 0 0 0 -1 u9068.dat
+0 // Brick  2 x  2 Round without Reinforcement (white)
+1 15 34 -62 300 0 -1 0 -1 0 0 0 0 -1 3941.dat
+1 0 -120 -40 0 1 0 0 0 1 0 0 0 1 6990 - Station 2 - Platform.ldr
+0 // Tile  1 x  8 (white)
+1 15 100 -32 90 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Plate  2 x  6 (white)
+1 15 120 -32 200 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Plate  2 x  8 (white)
+1 15 220 -32 240 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Tile  1 x  2 with Groove (white)
+1 15 160 -32 -90 1 0 0 0 1 0 0 0 1 3069b.dat
+1 0 20 -40 -60 0 0 -1 0 1 0 1 0 0 6990 - Station 2 - Door 2.ldr
+1 0 270 -24 90 1 0 0 0 1 0 0 0 1 6990 - Station 2 - Antenna.ldr
+1 0 270 -24 -50 -1 0 0 0 1 0 0 0 -1 6990 - Station 2 - Antenna.ldr
+0 // Monorail Stop/Go Switch (light_grey)
+1 7 -40 -24 -280 -1 0 0 0 1 0 0 0 -1 2774c01.dat
+0 // Brick  2 x  2 Round without Reinforcement (light_grey)
+1 7 40 -48 -400 -1 0 0 0 1 0 0 0 -1 3941.dat
+0 // Tile  2 x  2 Round with Yellow Arrow with Black Border Pattern (light_grey)
+1 7 40 -56 -400 1 0 0 0 1 0 0 0 1 4150p04.dat
+
+0 STEP
+0 FILE 6990 - Station 2 - Door 1.ldr
+0 Turntable-mounted door assembly on a 2x6 plate with grooved tiles for the Station 2 building entrance.
+0 Name: 6990 - Station 2 - Door 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Plate  2 x  6 (white)
+1 15 -40 -8 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 0 -16 0 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Tile  2 x  2 with Groove (white)
+1 15 -40 -16 0 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Turntable  2 x  2 Plate Base (white)
+1 15 -80 -16 0 1 0 0 0 1 0 0 0 1 3680.dat
+
+0 STEP
+0 FILE 6990 - Station 2 - Platform.ldr
+0 Large elevated platform built on a 10x10 corner plate with support plates, a gear rack, and a button-patterned slope control panel.
+0 Name: 6990 - Station 2 - Platform.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate 10 x 10 without Corner (white)
+1 15 0 0 0 -1 0 0 0 1 0 0 0 -1 2401.dat
+0 // Plate  2 x  6 (white)
+1 15 80 0 -80 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  1 x  1 (white)
+1 15 70 -8 90 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (white)
+1 15 70 -16 90 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  2 x  2 (white)
+1 15 -80 -8 -80 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x 10 (white)
+1 15 40 -8 -80 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  1 x  2 (white)
+1 15 -90 -16 -80 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 50 -16 -80 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  2 x  2 (white)
+1 15 100 -16 -80 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  2 x  3 (black)
+1 0 10 -16 -80 1 0 0 0 1 0 0 0 1 3021.dat
+0 // Plate  1 x  4 (white)
+1 15 -90 8 -60 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  2 (white)
+1 15 90 8 80 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Slope Brick 75  2 x  2 x  3 with Hollow Studs (white)
+1 15 10 -88 -80 0 0 1 0 1 0 -1 0 0 3684.dat
+0 // Rack  1 x 20 (white)
+1 15 90 -14 180 0 0 1 0 1 0 -1 0 0 2428.dat
+0 // Plate  2 x  3 (white)
+1 15 90 0 340 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  1 x  2 (white)
+1 15 80 -24 90 -1 0 0 0 1 0 0 0 -1 3023.dat
+1 0 0 0 -160 1 0 0 0 1 0 0 0 1 6990 - Station 2 - Platform - Platform.ldr
+0 // Brick  1 x  2 (black)
+1 0 30 -40 -80 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 30 -64 -90 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // Slope Brick 45  2 x  1 with 9 + 3 Black Buttons Pattern (white)
+1 15 30 -64 -70 -1 0 0 0 1 0 0 0 -1 3040p32.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -88 -80 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  2 x  2 (white)
+1 15 40 -24 40 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Plate  2 x  2 (white)
+1 15 -80 -24 -80 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (white)
+1 15 50 -88 -70 0 0 -1 0 1 0 1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (white)
+1 15 50 -88 -90 0 0 -1 0 1 0 1 0 0 2449.dat
+0 // Bracket  2 x  3 -  2 x  2 (black)
+1 0 40 -32 30 1 0 0 0 1 0 0 0 1 4598.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 80 -208 -80 0 0 1 0 1 0 -1 0 0 4476.dat
+0 // Brick  2 x  2 (white)
+1 15 80 -232 -80 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (white)
+1 15 80 -280 -80 0 0 1 0 1 0 -1 0 0 3940.dat
+0 // Panel 10 x 10 x 12 Corner (trans_dark_blue)
+1 33 70 -288 -70 -1 0 0 0 1 0 0 0 -1 2409.dat
+0 // Hinge Plate  1 x  4 Base (white)
+1 15 140 -16 -60 0 0 -1 0 1 0 1 0 0 2429.dat
+1 0 80 -296 -80 1 0 0 0 1 0 0 0 1 6990 - Station 2 - Door 2 - Antenna.ldr
+
+0 STEP
+0 FILE 6990 - Station 2 - Platform - Platform.ldr
+0 Platform surface extension made of 1x8 and 2x8 plates with black grooved tiles and trans-red indicator studs.
+0 Name: 6990 - Station 2 - Platform - Platform.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x  8 (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // Plate  1 x  2 (white)
+1 15 -70 -8 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (white)
+1 15 70 -8 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  8 (white)
+1 15 70 -16 20 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (white)
+1 15 -70 -16 20 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Brick  1 x  2 (white)
+1 15 -30 -24 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (white)
+1 15 30 -24 0 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Plate  1 x  8 (white)
+1 15 0 -24 -30 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  8 (white)
+1 15 0 -24 30 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 -70 -24 -50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (trans_red)
+1 36 70 -24 -50 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 -30 -32 0 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 30 -32 0 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  8 (black)
+1 0 0 -32 -30 1 0 0 0 1 0 0 0 1 4162.dat
+0 // Tile  1 x  8 (black)
+1 0 0 -32 30 1 0 0 0 1 0 0 0 1 4162.dat
+
+0 STEP
+0 FILE 6990 - Station 2 - Door 2.ldr
+0 A detailed white door structure built from plates, hinges, and sloped bricks with a turntable mechanism.
+0 Name: 6990 - Station 2 - Door 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate 10 x 10 without Corner (white)
+1 15 60 0 -100 1 0 0 0 1 0 0 0 1 2401.dat
+0 // Plate  2 x  2 (white)
+1 15 20 0 -20 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  6 (white)
+1 15 60 -8 -20 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Hinge Plate  1 x  4 Top (white)
+1 15 0 -16 0 0 0 1 0 1 0 -1 0 0 2430.dat
+0 // Plate  2 x  3 (black)
+1 0 50 -16 -20 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Brick  2 x  2 (white)
+1 15 140 -24 -20 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // Brick  1 x  2 (white)
+1 15 -20 -24 -190 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 8 -100 -1 0 0 0 1 0 0 0 -1 3679.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (white)
+1 15 10 -88 -10 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Slope Brick 75  2 x  1 x  3 Inverted (white)
+1 15 10 -88 -30 0 0 1 0 1 0 -1 0 0 2449.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -40 -20 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  1 (black)
+1 0 30 -64 -10 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // Slope Brick 45  2 x  1 with 9 + 3 Black Buttons Pattern (white)
+1 15 30 -64 -30 1 0 0 0 1 0 0 0 1 3040p32.dat
+0 // Brick  1 x  2 (black)
+1 0 30 -88 -20 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Slope Brick 75  2 x  2 x  3 with Hollow Studs (white)
+1 15 50 -88 -20 0 0 -1 0 1 0 1 0 0 3684.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 -20 -208 -20 0 0 -1 0 1 0 1 0 0 4476.dat
+0 // Brick  2 x  2 (white)
+1 15 -20 -232 -20 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // Support  2 x  2 x  2 Round with Open Hole and Stud Holders (white)
+1 15 -20 -280 -20 0 0 -1 0 1 0 1 0 0 3940.dat
+0 // Panel 10 x 10 x 12 Corner (trans_dark_blue)
+1 33 -10 -288 -30 1 0 0 0 1 0 0 0 1 2409.dat
+1 0 -20 -296 -20 -1 0 0 0 1 0 0 0 -1 6990 - Station 2 - Door 2 - Antenna.ldr
+
+0 STEP
+0 FILE 6990 - Station 2 - Door 2 - Antenna.ldr
+0 A small white and black antenna assembly with a trans-red dish and cone elements.
+0 Name: 6990 - Station 2 - Door 2 - Antenna.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Plate  2 x  2 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 -30 0 -10 0 0 1 0 1 0 -1 0 0 4081b.dat
+0 // Plate  1 x  1 with Clip Light Type 2 (black)
+1 0 10 0 30 -1 0 0 0 1 0 0 0 -1 4081b.dat
+0 // Plate  3 x  3 without Corner (white)
+1 15 -10 -8 10 -1 0 0 0 1 0 0 0 -1 2450.dat
+0 // Antenna  4H with Rounded Top (white)
+1 15 0 -16 0 -1 0 0 0 1 0 0 0 -1 3957a.dat
+0 // Dish  2 x  2 Inverted (trans_red)
+1 36 0 -24 0 -1 0 0 0 1 0 0 0 -1 4740.dat
+0 // Cone  1 x  1 (white)
+1 15 -50 2 18 -1 0 0 0 0 -1 0 -1 0 4589.dat
+0 // Cone  1 x  1 (white)
+1 15 -18 2 50 0 1 0 0 0 -1 -1 0 0 4589.dat
+
+0 STEP
+0 FILE 6990 - Station 2 - Antenna.ldr
+0 A compact communication antenna with a trans-dark-blue mast, inverted dish, and trans-red light.
+0 Name: 6990 - Station 2 - Antenna.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Brick  1 x  1 Round with Hollow Stud (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 x  0.667 Round with Bar and Clip Vertical (black)
+1 0 0 -16 0 1 0 0 0 1 0 0 0 1 4735.dat
+0 // Antenna  4H with Rounded Top (trans_dark_blue)
+1 33 0 16 -40 1 0 0 0 1 0 0 0 1 3957a.dat
+0 // Brick  1 x  1 with Headlight (black)
+1 0 0 -40 0 1 0 0 0 1 0 0 0 1 4070.dat
+0 // Dish  4 x  4 Inverted (white)
+1 15 0 -30 10 1 0 0 0 0 -1 0 1 0 3960.dat
+0 // Plate  1 x  1 Round (trans_red)
+1 36 0 -30 26 1 0 0 0 0 -1 0 1 0 6141.dat
+
+0 STEP
+0 FILE 6990 - Station 2 + Minifig.ldr
+0 An empty assembly placeholder referencing the Station 2 structure and an accompanying minifigure.
+0 Name: 6990 - Station 2 + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6990 - Station 2.ldr
+1 0 260 -104 251 1 0 0 0 1 0 0 0 1 6990 - Minifig 5.ldr
+
+0 STEP
+0 FILE 6990 - Track.ldr
+0 A monorail track layout with curved sections, straight segments, ramps, and black support stanchions.
+0 Name: 6990 - Track.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Monorail Track Curve Quarter (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 2672.dat
+0 // Monorail Track Curve Quarter (light_grey)
+1 7 0 0 -800 0 0 1 0 1 0 -1 0 0 2672.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 200 10 -400 0 -1 0 0 0 1 -1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 120 10 -400 0 1 0 0 0 -1 -1 0 0 3710.dat
+1 0 -400 0 160 -1 0 0 0 1 0 0 0 -1 6990 - Track - Rise.ldr
+0 // Plate  1 x  4 (light_grey)
+1 7 -400 10 120 -1 0 0 0 0 1 0 1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -400 10 200 -1 0 0 0 0 -1 0 -1 0 3710.dat
+0 // Support  4 x  4 x  5 Stanchion with Tall Studs (black)
+1 0 -1040 -95 160 -1 0 0 0 1 0 0 0 -1 2680.dat
+0 // Monorail Track Ramp Upper Section (light_grey)
+1 7 -1680 -240 160 1 0 0 0 1 0 0 0 1 2678.dat
+1 0 -1920 25 100 0 0 1 0 1 0 -1 0 0 6990 - Station 1 + Minifig.ldr
+0 // Plate  1 x  4 (light_grey)
+1 7 -1680 -230 120 -1 0 0 0 0 1 0 1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -1680 -230 200 -1 0 0 0 0 -1 0 -1 0 3710.dat
+0 // Monorail Track Straight  4 x 32 (light_grey)
+1 7 -2320 -240 160 1 0 0 0 1 0 0 0 1 2671.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -2000 -230 120 -1 0 0 0 0 1 0 1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -2000 -230 200 -1 0 0 0 0 -1 0 -1 0 3710.dat
+0 // Support  6 x  6 x 10 Stanchion (black)
+1 0 -2639 -215 160 1 0 0 0 1 0 0 0 1 2681.dat
+0 // Monorail Track Curve Quarter (light_grey)
+1 7 -3040 -240 -800 -1 0 0 0 1 0 0 0 -1 2672.dat
+0 // Monorail Track Curve Quarter (light_grey)
+1 7 -3040 -240 0 0 0 -1 0 1 0 1 0 0 2672.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -3240 -230 -400 0 1 0 0 0 1 1 0 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -3160 -230 -400 0 -1 0 0 0 -1 1 0 0 3710.dat
+0 // Support  6 x  6 x 10 Stanchion (black)
+1 0 -3040 -215 0 1 0 0 0 1 0 0 0 1 2681.dat
+0 // Support  6 x  6 x 10 Stanchion (black)
+1 0 -3200 -215 -400 1 0 0 0 1 0 0 0 1 2681.dat
+0 // Support  6 x  6 x 10 Stanchion (black)
+1 0 -3040 -215 -800 1 0 0 0 1 0 0 0 1 2681.dat
+0 // Support  6 x  6 x 10 Stanchion (black)
+1 0 -2640 -215 -960 1 0 0 0 1 0 0 0 1 2681.dat
+1 0 -1360 0 -960 -1 0 0 0 1 0 0 0 -1 6990 - Track - Rise.ldr
+0 // Plate  1 x  4 (light_grey)
+1 7 -1360 10 -1000 -1 0 0 0 0 1 0 1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -1360 10 -920 -1 0 0 0 0 -1 0 -1 0 3710.dat
+0 // Support  4 x  4 x  5 Stanchion with Tall Studs (black)
+1 0 -2000 -95 -960 -1 0 0 0 1 0 0 0 -1 2680.dat
+0 // Monorail Track Ramp Upper Section (light_grey)
+1 7 -2640 -240 -960 1 0 0 0 1 0 0 0 1 2678.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -2640 -230 -1000 -1 0 0 0 0 1 0 1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -2640 -230 -920 -1 0 0 0 0 -1 0 -1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -2640 -230 120 -1 0 0 0 0 1 0 1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -2640 -230 200 -1 0 0 0 0 -1 0 -1 0 3710.dat
+0 // Monorail Track Straight  4 x 32 (light_grey)
+1 7 -1040 0 -960 -1 0 0 0 1 0 0 0 -1 2671.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -720 10 -1000 -1 0 0 0 0 1 0 1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -720 10 -920 -1 0 0 0 0 -1 0 -1 0 3710.dat
+1 0 -520 24 -680 1 0 0 0 1 0 0 0 1 6990 - Station 2 + Minifig.ldr
+0 // Plate  1 x  4 (light_grey)
+1 7 -400 10 -1000 -1 0 0 0 0 1 0 1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 -400 10 -920 -1 0 0 0 0 -1 0 -1 0 3710.dat
+1 0 -3090 -292 -400 0 0 1 0 1 0 -1 0 0 6990 - Track - Gate.ldr
+1 0 -2640 -230 -896 1 0 0 0 1 0 0 0 1 6990 - Track - Antenna.ldr
+1 0 -2640 -230 96 -1 0 0 0 1 0 0 0 -1 6990 - Track - Antenna.ldr
+
+0 STEP
+0 FILE 6990 - Track - Antenna.ldr
+0 A trackside antenna mounted on a bracket with an inverted webbed dish and trans-red cone.
+0 Name: 6990 - Track - Antenna.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Brick  1 x  2 (white)
+1 15 0 0 0 1 0 0 0 0 1 0 -1 0 3004.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 0 0 24 1 0 0 0 0 1 0 -1 0 3660.dat
+0 // Plate  2 x 10 (white)
+1 15 0 -90 32 0 0 1 -1 0 0 0 -1 0 3832.dat
+0 // Dish  6 x  6 Inverted Webbed Type 1 (white)
+1 15 0 -170 24 0 0 1 -1 0 0 0 -1 0 4285a.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 0 -170 16 0 0 1 -1 0 0 0 -1 0 4589.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 0 -170 40 1 0 0 0 0 1 0 -1 0 3956.dat
+0 // Antenna  4H with Rounded Top (trans_red)
+1 36 0 -206 60 1 0 0 0 1 0 0 0 1 3957a.dat
+
+0 STEP
+0 FILE 6990 - Track - Gate.ldr
+0 A track gate with white panels, grille-patterned bricks, sloped elements, and trans-red warning cones.
+0 Name: 6990 - Track - Gate.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Slope Brick 45  2 x  2 (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 3039.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -24 0 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 with Black Grille Pattern (white)
+1 15 0 -48 0 -1 0 0 0 1 0 0 0 -1 3004p06.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -72 0 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Panel  3 x  2 x  5 & 2/3 (white)
+1 15 0 -208 -40 -1 0 0 0 1 0 0 0 -1 2448.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (black)
+1 0 0 -88 0 -1 0 0 0 1 0 0 0 -1 4590.dat
+0 // Slope Brick 45  2 x  2 (white)
+1 15 0 0 -220 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -24 -220 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Brick  1 x  2 with Black Grille Pattern (white)
+1 15 0 -48 -220 1 0 0 0 1 0 0 0 1 3004p06.dat
+0 // Brick  1 x  2 (white)
+1 15 0 -72 -220 -1 0 0 0 1 0 0 0 -1 3004.dat
+0 // Panel  3 x  2 x  5 & 2/3 (white)
+1 15 0 -208 -180 1 0 0 0 1 0 0 0 1 2448.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (black)
+1 0 0 -88 -220 1 0 0 0 1 0 0 0 1 4590.dat
+0 // Plate  2 x  8 (white)
+1 15 0 -200 -110 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (white)
+1 15 10 -208 -110 0 0 -1 0 1 0 1 0 0 4596.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 80 -206 -110 0 1 0 0 0 1 1 0 0 4740.dat
+0 // Plate  1 x  2 with 3L Extension and Stud Hole (white)
+1 15 -10 -208 -110 0 0 1 0 1 0 -1 0 0 4596.dat
+0 // Dish  2 x  2 Inverted (white)
+1 15 -80 -206 -110 0 -1 0 0 0 1 -1 0 0 4740.dat
+0 // Technic Plate  2 x  8 with Holes (white)
+1 15 0 -216 -110 0 0 1 0 1 0 -1 0 0 3738.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 0 -240 -50 0 0 1 0 1 0 -1 0 0 4589.dat
+0 // Cone  1 x  1 (trans_red)
+1 36 0 -240 -170 0 0 1 0 1 0 -1 0 0 4589.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 0 52 -30 1 0 0 0 0 1 0 -1 0 3956.dat
+0 // Bracket  2 x  2 -  2 x  2 Up (white)
+1 15 0 52 -190 -1 0 0 0 0 1 0 1 0 3956.dat
+0 // Plate  2 x  2 (white)
+1 15 0 52 -182 -1 0 0 0 0 1 0 1 0 3022.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 10 62 -174 0 0 -1 -1 0 0 0 1 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -10 62 -174 0 0 1 1 0 0 0 1 0 3040b.dat
+0 // Plate  2 x  2 (white)
+1 15 0 52 -38 1 0 0 0 0 1 0 -1 0 3022.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -10 62 -46 0 0 1 -1 0 0 0 -1 0 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 10 62 -46 0 0 -1 1 0 0 0 -1 0 3040b.dat
+
+0 STEP
+0 FILE 6990 - Track - Rise.ldr
+0 A lower ramp section of monorail track with supporting plates for elevation change.
+0 Name: 6990 - Track - Rise.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // Monorail Track Ramp Lower Section (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 2677.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 640 -109.162 40 -0.93144 0 -0.363895 0.363895 0 -0.93144 0 -1 0 3710.dat
+0 // Plate  1 x  4 (light_grey)
+1 7 640 -109.162 -40 -0.93144 0 -0.363895 0.363895 0 -0.93144 0 1 0 3710.dat
+
+0 STEP
+0 FILE 6990 - Track + Train.ldr
+0 An electric track assembly with motor clips and wiring cables for the monorail train.
+0 Name: 6990 - Track + Train.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6990 - Track.ldr
+1 0 -2541.13 -268.842 -960 0 -0.094108 -0.995562 0 0.995562 -0.094108 1 0 0 6990 - Train 3.ldr
+0 // ~Monorail Motor Clip (black)
+1 0 -2292.36 -212.179 -960 -0.995562 -0.0941083 0 -0.0941083 0.995562 0 0 0 -1 2685.dat
+1 0 -2249 -335 -960 0 -0.199368 -0.979925 0 0.979925 -0.199368 1 0 0 6990 - Train 2.ldr
+0 // ~Monorail Motor Clip (black)
+1 0 -2257.08 -205.002 -960 0.953191 -0.30237 0 0.30237 0.953191 0 0 0 1 2685.dat
+1 0 -2005.94 -159.958 -960 0 -0.30237 -0.953191 0 0.953191 -0.30237 1 0 0 6990 - Train 1 + Vehicle 1.ldr
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2408.05 -371.528 -960 0.0499 20 0 -0.9988 1 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2388.05 -370.528 -960 -0.0257 3.341 0 -0.9997 -0.086 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2385.64 -370.59 -960 -0.0775 4.1484 0 -0.997 -0.3223 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2382.42 -370.84 -960 -0.1291 5.0443 0 -0.9916 -0.657 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2378.3 -371.377 -960 -0.1803 7.3118 0 -0.9836 -1.3401 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2371.5 -372.624 -960 -0.2083 24.9266 0 -0.9781 -5.3098 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2347.77 -377.678 -960 -0.1411 6.0037 0 -0.99 -0.8554 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2342.7 -378.401 -960 -0.0895 4.711 0 -0.996 -0.4233 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2338.92 -378.741 -960 -0.0374 3.9931 0 -0.9993 -0.1495 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2335.86 -378.855 -960 0.0145 3.4297 0 -0.9999 0.0498 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2333.34 -378.818 -960 0.0648 3.0099 0 -0.9979 0.1954 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2331.25 -378.683 -960 0.1158 2.9339 0 -0.9933 0.342 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2329.23 -378.448 -960 0.1668 2.5293 0 -0.986 0.4279 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2327.56 -378.165 -960 0.2143 3.1782 0 -0.9768 0.6972 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2326.11 -377.846 -960 0.309 5.0129 0 -0.9511 1.6288 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2322.05 -376.528 -960 0.4048 1.3035 0 -0.9144 0.5771 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2321.58 -376.32 -960 0.4506 1.3743 0 -0.8927 0.6937 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2321.06 -376.058 -960 0.4975 1.3398 0 -0.8674 0.7685 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2320.53 -375.752 -960 0.5416 1.3243 0 -0.8406 0.8533 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2320.03 -375.429 -960 0.5865 1.3443 0 -0.8099 0.9735 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2319.42 -374.992 -960 0.627 1.1177 0 -0.779 0.8995 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2318.96 -374.62 -960 0.6627 1.2509 0 -0.7489 1.1069 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2318.42 -374.142 -960 0.7012 1.3348 0 -0.7129 1.3129 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2317.8 -373.527 -960 0.7396 1.3369 0 -0.673 1.4692 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2317.15 -372.813 -960 0.7766 1.317 0 -0.63 1.6235 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2316.43 -371.929 -960 0.8088 1.1559 0 -0.588 1.5899 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2315.8 -371.065 -960 0.8372 1.2088 0 -0.547 1.8501 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2315.09 -369.985 -960 0.864 1.1884 0 -0.5035 2.0392 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2314.35 -368.715 -960 0.8879 1.215 0 -0.4601 2.3446 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2313.61 -367.274 -960 0.9124 1.5264 0 -0.4092 3.4038 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2312.55 -364.915 -960 0.9366 1.5299 0 -0.3503 4.0905 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2311.41 -361.87 -960 0.9566 1.4869 0 -0.2916 4.8781 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2310.24 -358.023 -960 0.9723 1.4416 0 -0.2338 5.9962 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2309.04 -353.056 -960 0.9844 1.3748 0 -0.1762 7.6796 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2307.86 -346.437 -960 0.9931 1.2349 0 -0.1169 10.4873 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2306.76 -337.091 -960 0.9986 0.7819 0 -0.0533 14.6422 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2306.04 -323.608 -960 0.9999 -0.176 0 0.0112 15.7336 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2306.2 -308.988 -960 0.9973 -0.9303 0 0.073 12.7072 0 0 0 -1 993.dat
+0 MLCAD BTG Cable
+0 // ~Electric Cable 3LDU Twin (black)
+1 0 -2307.03 -297.697 -960 0.9885 -1.894 0 0.1515 12.3589 0 0 0 -1 993.dat
+0 GROUP 39 Cable
+
+0 STEP
+0 FILE 6990 - Minifig 1.ldr
+0 A yellow Futuron minifigure with airtanks, white torso with yellow pattern, and standard grin.
+0 Name: 6990 - Minifig 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -23.898 20.758 0.857167 0 -0.515038 0.150583 0.956305 0.250611 0.492533 -0.292372 0.819713 6990 - Minifig 1 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -23.898 20.758 0.857167 0 -0.515038 0.150583 0.956305 0.250611 0.492533 -0.292372 0.819713 3626bp01.dat
+0 // Minifig Airtanks (yellow)
+1 14 0 1.922 12.863 1 0 0 0 0.956305 0.292372 0 -0.292372 0.956305 3838.dat
+0 // Minifig Torso with Yellow Futuron Pattern (white)
+1 15 0 1.922 12.863 1 0 0 0 0.956305 0.292372 0 -0.292372 0.956305 973p6e.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32.523 3.508 1 0 0 0 0.956305 0.292372 0 -0.292372 0.956305 3815.dat
+0 // Minifig Arm Right (yellow)
+1 14 -15.552 10.53 10.234 0.985 -0.0824176 -0.148685 0.162572 0.200957 0.965602 -0.0497032 -0.976021 0.211747 3818.dat
+0 // Minifig Arm Left (yellow)
+1 14 15.552 10.53 10.234 0.985 0.11594 0.12433 -0.162572 0.428588 0.888303 0.0497032 -0.895803 0.441579 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -20.686 3.488 -10.005 0.985 -0.16339 -0.0468513 0.162572 0.824757 0.540603 -0.0497032 -0.540342 0.839753 3820.dat
+0 // Minifig Hand (yellow)
+1 14 21.566 8.556 -10.872 0.985 0.169871 0.00593202 -0.162572 0.931042 0.325018 0.0497032 -0.321137 0.945529 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+0 STEP
+0 FILE 6990 - Minifig 1 - Helmet.ldr
+0 A standard yellow helmet with a trans-dark-blue visor for a Futuron minifigure.
+0 Name: 6990 - Minifig 1 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 1.904 4.596 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 2447.dat
+
+0 STEP
+0 FILE 6990 - Minifig 2.ldr
+0 A yellow Futuron minifigure with airtanks, radio accessory, and white torso with yellow pattern.
+0 Name: 6990 - Minifig 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -27 0 0.920505 0 0.390731 0 1 0 -0.390731 0 0.920505 6990 - Minifig 2 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.920505 0 0.390731 0 1 0 -0.390731 0 0.920505 3626bp01.dat
+0 // Minifig Airtanks (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Yellow Futuron Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p6e.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (yellow)
+1 14 -15.552 9 0 0.985 -0.16168 -0.0525329 0.17 0.936791 0.304382 0 -0.309017 0.951057 3818.dat
+0 // Minifig Arm Left (yellow)
+1 14 15.552 9 0 0.985 0.0324375 0.166877 -0.17 0.187947 0.966903 0 -0.981627 0.190809 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -23.1651 22.5496 -15.6133 0.985 -0.151448 0.0771667 0.17 0.877509 -0.447113 0 0.453922 0.890872 3820.dat
+0 // Minifig Hand (yellow)
+1 14 19.5602 1.66267 -20.3856 0.985 0.140915 0.0950484 -0.17 0.816479 0.550722 0 -0.559108 0.828912 3820.dat
+0 // Minifig Radio with Short Handle (black)
+1 0 18.5451 -4.21909 -27.5041 0.0580955 0.159689 -0.985 0.336612 0.925259 0.17 0.939349 -0.341738 0 3962a.dat
+0 // ~Minifig Leg Right (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0 1 0 -1 0 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+0 STEP
+0 FILE 6990 - Minifig 2 - Helmet.ldr
+0 A standard yellow helmet with a trans-dark-blue visor for a Futuron minifigure.
+0 Name: 6990 - Minifig 2 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+0 STEP
+0 FILE 6990 - Minifig 3.ldr
+0 A yellow Futuron minifigure with airtanks, spanner/screwdriver tool, and white torso with yellow pattern.
+0 Name: 6990 - Minifig 3.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -27 0 0.777146 0 0.62932 0 1 0 -0.62932 0 0.777146 6990 - Minifig 3 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.777146 0 0.62932 0 1 0 -0.62932 0 0.777146 3626bp01.dat
+0 // Minifig Airtanks (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Yellow Futuron Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p6e.dat
+0 // ~Minifig Hips (Obsolete) (yellow)
+1 14 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (yellow)
+1 14 -15.552 9 0 0.985 -0.0798102 0.150101 0.17 0.462429 -0.869703 0 0.882948 0.469472 3818.dat
+0 // Minifig Arm Left (yellow)
+1 14 15.552 9 0 0.985 0.167417 -0.0295202 -0.17 0.970036 -0.171043 0 0.173648 0.984808 3819.dat
+0 // Minifig Hand (yellow)
+1 14 -23.7205 25.7678 11.7196 0.985 0.0496957 0.162547 0.17 -0.287943 -0.941818 0 0.95616 -0.292328 3820.dat
+0 // Minifig Hand (yellow)
+1 14 24.1196 28.0802 -6.90639 0.985 0.0974933 -0.139235 -0.17 0.564887 -0.806743 0 0.819028 0.57349 3820.dat
+0 // Minifig Tool Spanner/Screwdriver (black)
+1 0 24.5205 30.4029 -25.1332 0.975347 0.0608736 -0.209985 -0.217877 0.352709 -0.909086 0.0187405 0.933242 0.35759 4006.dat
+0 // ~Minifig Leg Right (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0.987688 0.156434 0 -0.156434 0.987688 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (yellow)
+1 14 0 44 0 1 0 0 0 0.97437 -0.224951 0 0.224951 0.97437 3817.dat
+
+0 STEP
+0 FILE 6990 - Minifig 3 - Helmet.ldr
+0 A standard yellow helmet with a trans-dark-blue visor for a Futuron minifigure.
+0 Name: 6990 - Minifig 3 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (yellow)
+1 14 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+0 STEP
+0 FILE 6990 - Minifig 4.ldr
+0 A blue Futuron minifigure with airtanks, camera accessory, and white torso with blue pattern.
+0 Name: 6990 - Minifig 4.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -26.126 11.107 0.978148 0 0.207912 -0.032525 0.987688 0.153016 -0.205352 -0.156434 0.966105 6990 - Minifig 4 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -26.126 11.107 0.978148 0 0.207912 -0.0325246 0.987688 0.153016 -0.205352 -0.156434 0.966105 3626bp01.dat
+0 // Minifig Airtanks (blue)
+1 1 0 0.542 6.882 1 0 0 0 0.987688 0.156434 0 -0.156434 0.987688 3838.dat
+0 // Minifig Torso with Blue Futuron Pattern (white)
+1 15 0 0.542 6.882 1 0 0 0 0.987688 0.156434 0 -0.156434 0.987688 973p6c.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 32.147 1.876 1 0 0 0 0.987688 0.156434 0 -0.156434 0.987688 3815.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.552 9.431 5.476 0.985 -0.120208 -0.120208 0.167907 0.577309 0.798541 -0.0265939 -0.807358 0.589444 3818.dat
+0 // Minifig Arm Left (blue)
+1 1 15.552 9.431 5.476 0.985 0.17 0 -0.167907 0.972873 0.156434 0.0265939 -0.154088 0.987688 3819.dat
+0 // Minifig Hand (blue)
+1 1 -21.689 11.148 -15.616 0.949501 0.312351 0 -0.308414 0.937694 0.156411 0.048848 -0.148516 0.987539 3820.dat
+0 // Minifig Hand (blue)
+1 1 23.863 25.195 -7.472 0.985 0.12019 -0.12019 -0.167907 0.79842 -0.577222 0.0265939 0.589355 0.807236 3820.dat
+0 // Minifig Camera with Side Sight (black)
+1 0 -29.128 -13.591 -20.313 0.0257923 0.302981 0.952156 0.0912415 0.947414 -0.304056 -0.995048 0.0949239 -0.00323324 4360.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+
+0 STEP
+0 FILE 6990 - Minifig 4 - Helmet.ldr
+0 A standard blue helmet with a trans-dark-blue visor for a Futuron minifigure.
+0 Name: 6990 - Minifig 4 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+0 STEP
+0 FILE 6990 - Minifig 5.ldr
+0 A blue Futuron minifigure with airtanks, torch accessory, and white torso with blue pattern.
+0 Name: 6990 - Minifig 5.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+1 0 0 -27 0 0.981627 0 -0.190809 0 1 0 0.190809 0 0.981627 6990 - Minifig 5 - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -27 0 0.981627 0 -0.190809 0 1 0 0.190809 0 0.981627 3626bp01.dat
+0 // Minifig Airtanks (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 // Minifig Torso with Blue Futuron Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p6c.dat
+0 // ~Minifig Hips (Obsolete) (blue)
+1 1 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (blue)
+1 1 -15.552 9 0 0.985 -0.166877 0.0324375 0.17 0.966903 -0.187947 0 0.190809 0.981627 3818.dat
+0 // Minifig Arm Left (blue)
+1 1 15.552 9 0 0.985 0.0950628 0.140936 -0.17 0.550805 0.816602 0 -0.829038 0.559193 3819.dat
+0 // Minifig Hand (blue)
+1 1 -24.1396 28.1959 -6.55161 0.989536 -0.00883834 0.140915 0.121355 0.563443 -0.816479 -0.0722445 0.825758 0.559108 3820.dat
+0 // Minifig Hand (blue)
+1 1 21.0029 10.0215 -21.325 0.998635 0.0281421 0.0324326 -0.033799 0.981008 0.187918 -0.0265515 -0.188924 0.981479 3820.dat
+0 // Minifig Torch (black)
+1 0 20.2541 -4.63146 -30.8637 0.992687 0.0351466 0.111592 -0.0288661 0.997054 -0.057859 -0.11341 0.0542621 0.991643 3959.dat
+0 // ~Minifig Leg Right (Obsolete) (blue)
+1 1 0 44 0 1 0 0 0 1 0 0 0 1 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (blue)
+1 1 0 44 0 1 0 0 0 1 0 0 0 1 3817.dat
+
+0 STEP
+0 FILE 6990 - Minifig 5 - Helmet.ldr
+0 A standard blue helmet with a trans-dark-blue visor for a Futuron minifigure.
+0 Name: 6990 - Minifig 5 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Futuron
+
+0 // ~Minifig Helmet Standard (Obsolete) (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_dark_blue)
+1 33 0 1.904 4.596 1 0 0 0 0.707107 0.707107 0 -0.707107 0.707107 2447.dat
+

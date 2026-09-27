@@ -1,0 +1,82 @@
+0 FILE 30028 - main.ldr
+0 A small articulated creature assembled from four red round connector plates linking a yellow clawed foot to green angled body segments.
+0 Name: 30028 - main.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+1 16 0 0 0 0.939693 -0.34202 0 0.34202 0.939693 0 0 0 1 30028 - Foot.ldr
+1 16 56.382 20.521 0 0.939693 0.34202 0 -0.34202 0.939693 0 0 0 1 30028 - Foot.ldr
+1 16 112.764 -0.001 0 0.5 0.866025 0 -0.866025 0.5 0 0 0 1 30028 - Segment.ldr
+0 // Plate  1 x  1 Round (red)
+1 4 105.049 -50.641 10 0.5 0.866025 0 -0.866025 0.5 0 0 0 1 6141.dat
+1 16 142.763 -51.961 0 -0.173648 0.984808 0 -0.984808 -0.173648 0 0 0 1 30028 - Segment.ldr
+1 16 132.344 -111.051 0 -0.766044 0.642788 0 -0.642788 -0.766044 0 0 0 1 30028 - Segment.ldr
+0 // Plate  1 x  1 Round (red)
+1 4 96.458 -99.392 10 -0.766044 0.642788 0 -0.642788 -0.766044 0 0 0 1 6141.dat
+1 16 86.381 -149.613 0 -1 0 0 0 -1 0 0 0 1 30028 - Segment.ldr
+1 16 26.381 -149.619 0 -0.766044 -0.642788 0 0.642788 -0.766044 0 0 0 1 30028 - Segment.ldr
+0 // Plate  1 x  1 Round (red)
+1 4 31.632 -112.249 10 -0.766044 -0.642788 0 0.642788 -0.766044 0 0 0 1 6141.dat
+1 16 -19.583 -111.051 0 -0.173648 -0.984808 0 0.984808 -0.173648 0 0 0 1 30028 - Segment.ldr
+1 16 -30.001 -51.963 0 0.5 -0.866025 0 0.866025 0.5 0 0 0 1 30028 - Segment.ldr
+0 // Plate  1 x  1 Round (red)
+1 4 7.711 -50.648 10 0.5 -0.866025 0 0.866025 0.5 0 0 0 1 6141.dat
+
+
+
+0 STEP
+0 FILE 30028 - Foot.ldr
+0 A yellow clawed foot built from a domed cylinder, round plates, inverted dish, and clip/handle plates joined by a black clip bar.
+0 Name: 30028 - Foot.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  2 Round with Axlehole (yellow)
+1 14 30 14 0 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  2 x  2 Round with Axlehole (yellow)
+1 14 30 6 0 1 0 0 0 1 0 0 0 1 4032a.dat
+0 // Plate  1 x  2 with  2 Clips Horizontal (Thick C-Clips) (yellow)
+1 14 20 -2 0 0 0 1 0 1 0 -1 0 0 60470b.dat
+0 // Plate  1 x  2 with Handle Type 2 (yellow)
+1 14 40 -2 0 0 0 -1 0 1 0 1 0 0 48336.dat
+0 // Cylinder  2 x  2 with Dome Top with Axle Hole and Blocked Stud (yellow)
+1 14 30 -26 0 1 0 0 0 1 0 0 0 1 30367b.dat
+0 // Plate  1 x  1 (green)
+1 2 30 -34 0 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 Round (red)
+1 4 30 -42 0 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Dish  3 x  3 Inverted (yellow)
+1 14 30 22 0 1 0 0 0 1 0 0 0 1 43898.dat
+0 // Bar  1.5L with Clip with Truncated Sides and Hole in Shaft (black)
+1 0 30 46 0 0 0 1 0 -1 0 1 0 0 48729b.dat
+
+
+
+0 STEP
+0 FILE 30028 - Segment.ldr
+0 A green body segment composed of a 2x2 plate, a 45-degree slope brick, and clip-and-handle plates for articulation.
+0 Name: 30028 - Segment.ldr
+0 Author: Takeshi Takahashi [RainbowDolphin]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 ROTATION CENTER 0 0 0 1 "Custom"
+0 ROTATION CONFIG 0 0
+0 // Plate  2 x  2 (green)
+1 2 30 6 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  1 x  2 with  2 Clips Horizontal (Thick C-Clips) (green)
+1 2 20 -2 0 0 0 1 0 1 0 -1 0 0 60470b.dat
+0 // Plate  1 x  2 with Handle Type 2 (green)
+1 2 40 -2 0 0 0 -1 0 1 0 1 0 0 48336.dat
+0 // Slope Brick 45  2 x  2 (green)
+1 2 30 -26 10 1 0 0 0 1 0 0 0 1 3039.dat
+
+
+
+
+
+
+

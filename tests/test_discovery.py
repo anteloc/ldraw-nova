@@ -163,6 +163,7 @@ def test_jev_results_map_stable_keys_and_keep_scores(index,monkeypatch):
     def execute(command,**kw):commands.append(command);return Result()
     monkeypatch.setattr('ldraw_tools.discovery.subprocess.run',execute)
     report=search(index,'parts','brick',pool=5,limit=2,candidates=5)
+    assert commands[0][0]=='jev-rerank' and '--project' not in commands[0]
     assert report['results'][0]['id']==identity and report['results'][0]['score']==.81
     db=Path(commands[0][commands[0].index('--db')+1])
     with sqlite3.connect(db) as c:
@@ -171,12 +172,13 @@ def test_jev_results_map_stable_keys_and_keep_scores(index,monkeypatch):
 
 
 def test_ranked_model_search_has_total_and_pagination(tmp_path):
-    root=tmp_path/'models';root.mkdir();(tmp_path/'scripts').mkdir()
-    with sqlite3.connect(tmp_path/'scripts/ldraw-info.db') as c:
+    root=tmp_path/'models-annotated';root.mkdir()
+    database=tmp_path/'ldraw-info.db'
+    with sqlite3.connect(database) as c:
         c.execute('CREATE VIRTUAL TABLE MODELS_DESCRIPTIONS_FTS USING fts5(model UNINDEXED, description)')
         c.executemany('INSERT INTO MODELS_DESCRIPTIONS_FTS VALUES(?,?)',[('a','bus and many other things in a building'),('b','bus'),('c','bus on a road')])
-    first=search_models('bus',root=root,limit=1)
-    second=search_models('bus',root=root,limit=1,offset=1)
+    first=search_models('bus',root=root,database=database,limit=1)
+    second=search_models('bus',root=root,database=database,limit=1,offset=1)
     assert first['total']==3 and first['truncated']
     assert first['results'][0]['model']=='b'
     assert second['results'][0]['model']!=first['results'][0]['model']

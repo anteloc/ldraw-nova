@@ -11,18 +11,25 @@ import numpy as np
 from ldraw import Parts, Vector, Matrix
 
 ROOT = Path(__file__).resolve().parents[1]
+RESOURCE_DATA = ROOT / "data"
 CACHE = ROOT / ".cache"
 DATA = Path(__file__).parent / "data"
 
 
 def library_path(value=None):
-    base = Path(os.environ.get("LDRAW_LIB_DIR", ROOT.parent / "ldraw-lib"))
-    return Path(value or os.environ.get("LDRAW_DIR", base / "ldraw")).expanduser().resolve()
+    path = value or os.environ.get("LDRAW_DIR") or os.environ.get("LDRAWDIR")
+    if not path:
+        raise ValueError("Set LDRAW_DIR (or LDRAWDIR) to the parts library, or pass --library")
+    return Path(path).expanduser().resolve()
 
 
 def models_path(value=None):
-    base = Path(os.environ.get("LDRAW_LIB_DIR", ROOT.parent / "ldraw-lib"))
-    return Path(value or os.environ.get("MODELS_DIR", base / "models-annotated")).expanduser().resolve()
+    """Project-owned sources; an explicit path is reserved for library callers/tests."""
+    return Path(value or RESOURCE_DATA / "models-annotated").expanduser().resolve()
+
+
+def database_path(value=None):
+    return Path(value or RESOURCE_DATA / "ldraw-info.db").expanduser().resolve()
 
 
 def atomic_write(path, text):
@@ -71,7 +78,7 @@ def shadow_paths(sources=None):
     """Explicit sources replace defaults; [] disables all external shadows."""
     if sources is None:
         configured = os.environ.get("LDRAW_SHADOW")
-        sources = configured.split(os.pathsep) if configured else ([ROOT / "offLibShadow"] if (ROOT / "offLibShadow").is_dir() else [])
+        sources = configured.split(os.pathsep) if configured else ([RESOURCE_DATA / "offLibShadow"] if (RESOURCE_DATA / "offLibShadow").is_dir() else [])
     result = []
     for source in sources:
         path = Path(source).expanduser().resolve()
@@ -92,7 +99,7 @@ def get_parts(root=None, *, refresh=False, shadows=None):
     """Supply pyldraw3's required index without writing into the source library."""
     root = library_path(root)
     if not (root / "parts").is_dir() or not (root / "p").is_dir():
-        raise ValueError(f"LDraw library missing at {root}; set LDRAW_DIR or --library")
+        raise ValueError(f"LDraw library missing at {root}; set LDRAW_DIR (or LDRAWDIR) or --library")
     target = CACHE / ("library-" + hashlib.sha256(str(root).encode()).hexdigest()[:12])
     target.mkdir(parents=True, exist_ok=True)
     # Only a read-through view: library geometry and colour files remain authoritative.

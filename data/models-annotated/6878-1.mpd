@@ -1,0 +1,252 @@
+0 FILE 6878 - Sub Orbital Guardian.ldr
+0 A sub-orbital guardian craft composed of a multi-legged walking vehicle, an armored cockpit, and a Blacktron II pilot with helmet and jetpack.
+0 Name: 6878 - Sub Orbital Guardian.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Blacktron II
+
+0 Official Model
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6878 - Vehicle.ldr
+1 0 -22.088 14.6 -124.804 -0.185667 0 -0.982613 0 1 0 0.982613 0 -0.185667 6878 - Minifig.ldr
+
+0 STEP
+0 FILE 6878 - Vehicle.ldr
+0 An assembly combining two articulated feet, a middle turntable joint, and a detailed cockpit into a multi-legged vehicle.
+0 Name: 6878 - Vehicle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Blacktron II
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 6878 - Vehicle - Cockpit.ldr
+1 0 0 8 80 0.92388 0 -0.382683 0 1 0 0.382683 0 0.92388 6878 - Vehicle - Middle.ldr
+1 0 0 8 0 0.92388 0 -0.382683 0 1 0 0.382683 0 0.92388 6878 - Vehicle - Middle.ldr
+1 0 -76.954 80 4.692 1 0 0 0 1 0 0 0 1 6878 - Vehicle - Foot 1.ldr
+1 0 76.955 80 35.307 1 0 0 0 1 0 0 0 1 6878 - Vehicle - Foot 2.ldr
+
+
+0 STEP
+0 FILE 6878 - Vehicle - Foot 1.ldr
+0 A right-facing articulated foot built from a large wing panel, sloped armor plates, and turntable bases for leg articulation.
+0 Name: 6878 - Vehicle - Foot 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Blacktron II
+
+0 // Wing  4 x  8 Right (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3934.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 -10 -8 10 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 10 -24 10 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 10 -24 30 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 30 -24 20 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 30 -48 20 0 0 1 0 1 0 -1 0 0 3039.dat
+0 // Brick  1 x  4 (black)
+1 0 50 -48 20 0 0 1 0 1 0 -1 0 0 3010.dat
+0 // Plate  2 x  6 (black)
+1 0 40 -56 20 0 0 1 0 1 0 -1 0 0 3795.dat
+0 // Turntable  2 x  2 Plate Base (white)
+1 15 40 -64 60 0 0 1 0 1 0 -1 0 0 3680.dat
+0 // Turntable  2 x  2 Plate Base (white)
+1 15 40 -64 -20 0 0 1 0 1 0 -1 0 0 3680.dat
+
+
+0 STEP
+0 FILE 6878 - Vehicle - Foot 2.ldr
+0 A left-facing articulated foot mirroring Foot 1, with a large wing panel, sloped armor, and turntable bases for leg articulation.
+0 Name: 6878 - Vehicle - Foot 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Blacktron II
+
+0 // Wing  4 x  8 Left (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3933.dat
+0 // Plate  1 x  1 Round (trans_neon_green)
+1 42 10 -8 10 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -10 -24 10 1 0 0 0 1 0 0 0 1 3040b.dat
+0 // Slope Brick 45  2 x  1 (black)
+1 0 -10 -24 30 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 -30 -24 20 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // Slope Brick 45  2 x  2 (black)
+1 0 -30 -48 20 0 0 -1 0 1 0 1 0 0 3039.dat
+0 // Brick  1 x  4 (black)
+1 0 -50 -48 20 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // Plate  2 x  6 (black)
+1 0 -40 -56 20 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Turntable  2 x  2 Plate Base (white)
+1 15 -40 -64 60 0 0 -1 0 1 0 1 0 0 3680.dat
+0 // Turntable  2 x  2 Plate Base (white)
+1 15 -40 -64 -20 0 0 -1 0 1 0 1 0 0 3680.dat
+
+
+0 STEP
+0 FILE 6878 - Vehicle - Middle.ldr
+0 A central turntable-based chassis plate that connects the legs and provides rotation between the vehicle's sections.
+0 Name: 6878 - Vehicle - Middle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Blacktron II
+
+0 // Plate  2 x  6 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Turntable  2 x  2 Plate Base (white)
+1 15 0 -8 0 1 0 0 0 1 0 0 0 1 3680.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 40 8 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 -40 8 0 1 0 0 0 1 0 0 0 1 3679.dat
+
+
+0 STEP
+0 FILE 6878 - Vehicle - Cockpit.ldr
+0 An enclosed cockpit module featuring a hinged roof, control panels, sloped armor, and a turntable base for mounting.
+0 Name: 6878 - Vehicle - Cockpit.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Blacktron II
+
+0 // Plate  6 x  6 Open Center without 4 Corners with 4 Clips (black)
+1 0 0 -8 40 1 0 0 0 1 0 0 0 1 2539.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Turntable  2 x  2 Plate Top (light_grey)
+1 7 0 0 80 1 0 0 0 1 0 0 0 1 3679.dat
+0 // Tile  1 x  2 Grille with Groove (white)
+1 15 0 -16 -10 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 50 -32 70 1 0 0 0 1 0 0 0 1 4286.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 -50 -32 70 1 0 0 0 1 0 0 0 1 4286.dat
+0 // Brick  1 x  1 (white)
+1 15 -50 -56 70 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 50 -56 70 1 0 0 0 1 0 0 0 1 3005.dat
+0 // Brick  2 x  4 x  2 with Studs on Sides (black)
+1 0 0 -56 80 1 0 0 0 1 0 0 0 1 2434.dat
+0 // Plate  1 x  6 (black)
+1 0 60 -64 70 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 -60 -64 70 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Tile  1 x  2 with Handle (white)
+1 15 0 -96 70 1 0 0 0 1 0 0 0 1 2432.dat
+0 // Hinge Car Roof  4 x  4 (black)
+1 0 0 -56 108 -1 0 0 0 0 -1 0 -1 0 4213.dat
+0 // Panel  1 x  2 x  2 with Solid Studs (black)
+1 0 0 -26 156 -1 0 0 0 0 -1 0 -1 0 4864a.dat
+0 // Container Box  2 x  2 x  2 with Solid Studs (white)
+1 15 0 -56 156 1 0 0 0 0 1 0 -1 0 4345a.dat
+0 // Tile  1 x  2 with Red & Yellow Controls Pattern (white)
+1 15 -2 -61.2 133 0.34202 -0.939693 0 0.939693 0.34202 0 0 0 1 3069bp68.dat
+0 // Container Box  2 x  2 x  2 Door with Slot with Controls Pattern (black)
+1 0 0 -56 156 1 0 0 0 0 1 0 -1 0 4346p60.dat
+0 // Support  2 x  4 x  5 Stanchion Inclined (black)
+1 0 0 -96 276 -1 0 0 0 0 -1 0 -1 0 4476.dat
+0 // Hinge  1 x  2 Base (black)
+1 0 0 -106 300 -1 0 0 0 0 -1 0 -1 0 3937.dat
+0 // Hinge  1 x  2 Top (white)
+1 15 0 -100.264 298.192 -1 0 0 0 -0.573576 -0.819152 0 -0.819152 0.573576 3938.dat
+0 // Plate  1 x  2 with  2 Offset Hollow Studs (black)
+1 0 0 -95.676 304.746 1 0 0 0 -0.573576 0.819152 0 -0.819152 -0.573576 4590.dat
+0 // Plate  1 x  1 Round (white)
+1 15 30 -82.895 305.562 1 0 0 0 -0.573576 0.819152 0 -0.819152 -0.573576 6141.dat
+0 // Plate  1 x  1 Round (white)
+1 15 -30 -82.895 305.562 1 0 0 0 -0.573576 0.819152 0 -0.819152 -0.573576 6141.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 30 -135.09 231.02 1 0 0 0 -0.573576 0.819152 0 -0.819152 -0.573576 3957a.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 30 -139.68 224.465 1 0 0 0 -0.573576 0.819152 0 -0.819152 -0.573576 4740.dat
+0 // Antenna  4H with Rounded Top (black)
+1 0 -30 -135.09 231.02 1 0 0 0 -0.573576 0.819152 0 -0.819152 -0.573576 3957a.dat
+0 // Dish  2 x  2 Inverted (trans_neon_green)
+1 42 -30 -139.68 224.465 1 0 0 0 -0.573576 0.819152 0 -0.819152 -0.573576 4740.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers On Side (black)
+1 0 100 -72 70 1 0 0 0 1 0 0 0 1 2452.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 100 -96.849 59.149 0 0 -1 0.984808 -0.173648 0 -0.173648 -0.984808 0 4276b.dat
+0 // Dish  4 x  4 Inverted (trans_neon_green)
+1 42 100 -108.086 53.009 0 0 -1 0.984808 -0.173648 0 -0.173648 -0.984808 0 3960.dat
+0 // Hinge Plate  1 x  2 with 3 Fingers On Side (black)
+1 0 -100 -72 70 1 0 0 0 1 0 0 0 1 2452.dat
+0 // Hinge Plate  1 x  2 with 2 Fingers and Hollow Studs (white)
+1 15 -100 -96.849 59.149 0 0 -1 0.984808 -0.173648 0 -0.173648 -0.984808 0 4276b.dat
+0 // Dish  4 x  4 Inverted (trans_neon_green)
+1 42 -100 -108.086 53.009 0 0 -1 0.984808 -0.173648 0 -0.173648 -0.984808 0 3960.dat
+0 // Hinge Plate  1 x  4 with Car Roof Holder (black)
+1 0 0 -105.921 99.732 -1 0 0 0 0.544639 -0.838671 0 -0.838671 -0.544639 4315.dat
+0 // Panel  3 x  2 x  6 (trans_neon_green)
+1 42 20 -101.563 93.018 1 0 0 0 0.544639 0.838671 0 -0.838671 0.544639 2466.dat
+0 // Panel  3 x  2 x  6 (trans_neon_green)
+1 42 -20 -101.563 93.018 1 0 0 0 0.544639 0.838671 0 -0.838671 0.544639 2466.dat
+0 // Plate  1 x  4 (black)
+1 0 0 -27.493 -21.04 1 0 0 0 0.544639 0.838671 0 -0.838671 0.544639 3710.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 70 -6 60 1 0 0 0 0 -1 0 1 0 2569.dat
+0 // Antenna  8H Whip (trans_neon_green)
+1 42 -70 -6 60 1 0 0 0 0 -1 0 1 0 2569.dat
+
+
+0 STEP
+0 FILE 6878 - Minifig.ldr
+0 A white-and-black Blacktron II minifigure equipped with arms, legs, and a dual-nozzle jetpack.
+0 Name: 6878 - Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Blacktron II
+
+1 0 0 -28 0 0.866025 0 0.5 0 1 0 -0.5 0 0.866025 6878 - Minifig - Helmet.ldr
+0 // Minifig Head with Standard Grin Pattern (Blocked Hollow Stud) (yellow)
+1 14 0 -28 0 0.866025 0 0.5 0 1 0 -0.5 0 0.866025 3626bp01.dat
+0 // Minifig Torso with Blacktron II Pattern (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 973p51.dat
+0 // Minifig Jet-Pack with 2 Octagonal Nozzles (Needs Work) (white)
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 6023.dat
+0 // ~Minifig Hips (Obsolete) (black)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815.dat
+0 // Minifig Arm Right (black)
+1 0 -15.552 9 0 0.985 -0.158709 -0.0609226 0.17 0.919577 0.352992 0 -0.358368 0.93358 3818.dat
+0 // Minifig Arm Left (black)
+1 0 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 // Minifig Hand (black)
+1 0 -23.0228 21.7249 -16.3588 0.985 -0.155279 0.0691348 0.17 0.899706 -0.400575 0 0.406675 0.913408 3820.dat
+0 // Minifig Hand (black)
+1 0 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 // ~Minifig Leg Right (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0.981627 0.190809 0 -0.190809 0.981627 3816.dat
+0 // ~Minifig Leg Left (Obsolete) (white)
+1 15 0 44 0 1 0 0 0 0.987688 -0.156434 0 0.156434 0.987688 3817.dat
+
+0 STEP
+0 FILE 6878 - Minifig - Helmet.ldr
+0 A black standard minifigure helmet paired with a translucent neon green visor.
+0 Name: 6878 - Minifig - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Blacktron II
+
+0 // ~Minifig Helmet Standard (Obsolete) (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 2446.dat
+0 // ~Minifig Helmet Visor Standard (Obsolete) (trans_neon_green)
+1 42 0 0 0 1 0 0 0 1 0 0 0 1 2447.dat
+
+

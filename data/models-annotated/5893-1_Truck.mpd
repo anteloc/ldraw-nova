@@ -1,0 +1,2183 @@
+0 FILE 5893 - Main.ldr
+0 Complete off-road recovery truck with a front loader, motorized winch, functional steering, detailed cab with doors and lights, and rugged bodywork.
+0 Name: 5893 - Main.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+1 0 0 -52 20 -1 0 0 0 1 0 0 0 -1 5893 - Loader.ldr
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 5893 - Truck.ldr
+
+
+
+0 STEP
+0 FILE 5893 - Truck.ldr
+0 Main truck assembly built on a large Technic open-center frame with wheels, wings, grille slopes, and blue corner plates forming the bodywork.
+0 Name: 5893 - Truck.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Brick  6 x  8 with Open Centre  4 x  6 with Cross Underside Studs (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 32532.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -60 10 -60 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -60 10 -40 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -60 10 0 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -60 10 60 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 60 10 60 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 60 10 0 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 60 10 -40 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 60 10 -60 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 STEP
+0 // Technic Brick  1 x 10 with Holes (white)
+1 15 70 0 80 0 0 1 0 1 0 -1 0 0 2730.dat
+0 // Technic Brick  1 x 10 with Holes (white)
+1 15 70 0 -120 0 0 1 0 1 0 -1 0 0 2730.dat
+0 STEP
+1 71 0 0 -240 1 0 0 0 1 0 0 0 1 5893 - Truck frame.ldr
+0 STEP
+0 // Technic Brick  1 x 10 with Holes (white)
+1 15 -70 0 -120 0 0 1 0 1 0 -1 0 0 2730.dat
+0 // Technic Brick  1 x 10 with Holes (white)
+1 15 -70 0 80 0 0 1 0 1 0 -1 0 0 2730.dat
+0 STEP
+0 // Technic Brick  4 x  6 with Open Centre  2 x  4 with Cross Underside Studs (light_bluish_grey)
+1 71 0 0 -360 -1 0 0 0 1 0 0 0 -1 32531.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 60 10 -250 0 -1 0 -1 0 0 0 0 -1 61409.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 -60 10 -250 0 1 0 1 0 0 0 0 -1 61409.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 80 10 160 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 80 10 120 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -80 10 160 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -80 10 120 1 0 0 0 1 0 0 0 1 2780.dat
+0 // Technic Brick  1 x  6 with Holes (dark_bluish_grey)
+1 72 -90 0 160 0 0 1 0 1 0 -1 0 0 3894.dat
+0 // Technic Brick  1 x  6 with Holes (dark_bluish_grey)
+1 72 90 0 160 0 0 1 0 1 0 -1 0 0 3894.dat
+0 // Technic Bush with Two Flanges (red)
+1 4 -110 10 140 0 0 -1 0 1 0 1 0 0 3713.dat
+0 // Technic Axle  4 with Stop (dark_bluish_grey)
+1 72 -120 10 140 1 0 0 0 1 0 0 0 1 87083.dat
+0 // Technic Axle  4 with Stop (dark_bluish_grey)
+1 72 120 10 140 -1 0 0 0 1 0 0 0 -1 87083.dat
+0 // Technic Bush with Two Flanges (red)
+1 4 110 10 140 0 0 1 0 1 0 -1 0 0 3713.dat
+0 STEP
+0 STEP
+1 72 0 24 220 1 0 0 0 1 0 0 0 1 5893 - Truck rear.ldr
+0 STEP
+0 // Wing  3 x  8 Pentagonal Right (dark_bluish_grey)
+1 72 -70 24 120 -1 0 0 0 1 0 0 0 -1 50304.dat
+0 // Wing  3 x  8 Pentagonal Left (dark_bluish_grey)
+1 72 70 24 120 -1 0 0 0 1 0 0 0 -1 50305.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 -80 24 30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 80 24 30 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 STEP
+0 // Plate  2 x  3 (red)
+1 4 -60 24 -90 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  4 x 12 (dark_bluish_grey)
+1 72 0 24 -20 -1 0 0 0 1 0 0 0 -1 3029.dat
+0 // Plate  2 x  3 (red)
+1 4 60 24 -90 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  1 x 12 (light_bluish_grey)
+1 71 0 24 -130 1 0 0 0 1 0 0 0 1 60479.dat
+0 // Plate  1 x 12 (light_bluish_grey)
+1 71 0 24 -150 1 0 0 0 1 0 0 0 1 60479.dat
+0 // Plate  1 x 12 (light_bluish_grey)
+1 71 0 24 -170 1 0 0 0 1 0 0 0 1 60479.dat
+0 // Plate  1 x 12 (light_bluish_grey)
+1 71 0 24 -190 1 0 0 0 1 0 0 0 1 60479.dat
+0 STEP
+0 // Plate  2 x  2 Corner (blue)
+1 1 -50 24 -210 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 50 24 -210 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  6 (red)
+1 4 0 24 -320 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  1 x 10 (black)
+1 0 0 24 -390 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 STEP
+0 // Plate  2 x  8 (black)
+1 0 -80 32 20 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  2 x  8 (black)
+1 0 80 32 20 0 0 -1 0 1 0 1 0 0 3034.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 -110 32 -120 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 110 32 -120 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // Plate  2 x  2 (dark_bluish_grey)
+1 72 -80 32 220 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x  2 (dark_bluish_grey)
+1 72 80 32 220 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x  4 (yellow)
+1 14 0 32 220 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 STEP
+0 // Plate  2 x  2 (dark_bluish_grey)
+1 72 0 32 -320 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x  4 (yellow)
+1 14 0 32 -160 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 32 -390 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 STEP
+0 // Plate  2 x  6 (light_bluish_grey)
+1 71 0 -8 240 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  2 x  6 (light_bluish_grey)
+1 71 -80 -8 180 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  2 x  6 (light_bluish_grey)
+1 71 80 -8 180 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 -8 210 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 -70 -8 110 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 70 -8 110 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 -8 70 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 STEP
+0 // Brick  2 x  2 (black)
+1 0 -20 0 -140 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Brick  2 x  2 (black)
+1 0 20 0 -140 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Tile  1 x  6 (blue)
+1 1 90 16 0 0 0 1 0 1 0 -1 0 0 6636.dat
+0 // Tile  1 x  6 (blue)
+1 1 -90 16 0 0 0 1 0 1 0 -1 0 0 6636.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -90 24 -130 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 90 24 -130 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Tile  1 x  3 (light_bluish_grey)
+1 71 110 24 -90 0 0 1 0 1 0 -1 0 0 63864.dat
+0 // Tile  1 x  3 (light_bluish_grey)
+1 71 -110 24 -90 0 0 1 0 1 0 -1 0 0 63864.dat
+0 // Tile  2 x  2 with Groove (dark_bluish_grey)
+1 72 -100 16 -160 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (dark_bluish_grey)
+1 72 100 16 -160 0 0 1 0 1 0 -1 0 0 3068b.dat
+0 STEP
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -110 -8 240 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 110 -8 240 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (light_bluish_grey)
+1 71 -90 -8 250 -1 0 0 0 1 0 0 0 -1 6019.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (light_bluish_grey)
+1 71 -70 -8 250 -1 0 0 0 1 0 0 0 -1 6019.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (light_bluish_grey)
+1 71 70 -8 250 -1 0 0 0 1 0 0 0 -1 6019.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (light_bluish_grey)
+1 71 90 -8 250 -1 0 0 0 1 0 0 0 -1 6019.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -110 0 -40 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -110 0 0 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -110 0 40 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 110 0 -40 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 110 0 0 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 110 0 40 0 0 -1 0 1 0 1 0 0 3660.dat
+0 STEP
+0 // Brick  1 x  3 (blue)
+1 1 -110 0 -190 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Brick  1 x  3 (blue)
+1 1 110 0 -190 1 0 0 0 1 0 0 0 1 3622.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 -30 0 -190 0 0 -1 0 1 0 1 0 0 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (yellow)
+1 14 30 0 -190 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 // Brick  1 x  1 with Headlight (dark_bluish_grey)
+1 72 110 0 -130 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (dark_bluish_grey)
+1 72 -110 0 -130 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 124 10 -130 0 -1 0 0 0 1 -1 0 0 3024.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 -124 10 -130 0 1 0 0 0 -1 -1 0 0 3024.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 -124 10 -130 0 1 0 0 0 -1 -1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 124 10 -130 0 -1 0 0 0 -1 1 0 0 54200.dat
+0 STEP
+0 // Plate  2 x  4 (yellow)
+1 14 -80 -8 40 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  2 x  4 (yellow)
+1 14 80 -8 40 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  4 x 12 (dark_bluish_grey)
+1 72 0 -8 -20 -1 0 0 0 1 0 0 0 -1 3029.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 -8 -70 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 -8 -90 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 -8 -110 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 0 -8 -130 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 STEP
+0 // Plate  1 x  6 (light_bluish_grey)
+1 71 -80 -8 -130 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  1 x  6 (light_bluish_grey)
+1 71 80 -8 -130 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  2 x  6 (light_bluish_grey)
+1 71 60 -8 -160 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  2 x  6 (light_bluish_grey)
+1 71 -60 -8 -160 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  1 x  6 (light_bluish_grey)
+1 71 -80 -8 -190 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Plate  1 x  6 (light_bluish_grey)
+1 71 80 -8 -190 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 STEP
+0 // Tile  1 x  6 (light_bluish_grey)
+1 71 0 -8 -250 -1 0 0 0 1 0 0 0 -1 6636.dat
+0 // Tile  1 x  6 (white)
+1 15 0 -8 -270 -1 0 0 0 1 0 0 0 -1 6636.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 -50 -8 -210 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 50 -8 -210 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  3 (white)
+1 15 -20 -8 -310 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  3 (white)
+1 15 20 -8 -310 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 -70 16 -390 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 -70 8 -390 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 70 16 -390 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 70 8 -390 0 0 1 0 1 0 -1 0 0 6141.dat
+0 STEP
+0 // Plate  2 x  2 Corner (black)
+1 0 -70 0 -410 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 70 0 -410 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -50 0 -370 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 50 0 -370 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (light_bluish_grey)
+1 71 -90 0 -390 0 0 1 0 1 0 -1 0 0 4287a.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (light_bluish_grey)
+1 71 90 0 -390 0 0 -1 0 1 0 1 0 0 4287a.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 -50 -8 -320 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 50 -8 -320 0 0 -1 0 1 0 1 0 0 2431.dat
+0 STEP
+0 // Wing  2 x  4 Left (light_bluish_grey)
+1 71 -80 -8 -400 0 0 1 0 1 0 -1 0 0 41770.dat
+0 // Wing  2 x  4 Right (light_bluish_grey)
+1 71 80 -8 -400 0 0 -1 0 1 0 1 0 0 41769.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 -130 -8 -390 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 130 -8 -390 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 -20 -8 -390 1 0 0 0 1 0 0 0 1 44728.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 20 -8 -390 1 0 0 0 1 0 0 0 1 44728.dat
+0 STEP
+1 71 0 22 -412 1 0 0 0 0 -1 0 1 0 5893 - Truck bumper.ldr
+0 STEP
+0 // Plate  1 x  1 (trans_orange)
+1 57 -130 -16 -390 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_orange)
+1 57 130 -16 -390 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 -30 2 -412 0 0 -1 -1 0 0 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 30 2 -412 0 0 -1 -1 0 0 0 1 0 6141.dat
+0 // Tile  1 x  4 with Groove (yellow)
+1 14 0 2 -420 1 0 0 0 0 -1 0 1 0 2431.dat
+0 STEP
+0 // Plate  2 x  4 (dark_bluish_grey)
+1 72 -100 -16 240 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  2 x  4 (dark_bluish_grey)
+1 72 100 -16 240 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Tile  1 x  6 (light_bluish_grey)
+1 71 0 -16 230 -1 0 0 0 1 0 0 0 -1 6636.dat
+0 // Plate  4 x 10 (light_bluish_grey)
+1 71 0 -16 180 -1 0 0 0 1 0 0 0 -1 3030.dat
+0 // Plate  4 x 10 (light_bluish_grey)
+1 71 0 -16 100 -1 0 0 0 1 0 0 0 -1 3030.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 -16 50 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 -16 30 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 STEP
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 -130 -8 20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 130 -8 20 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -130 -8 -40 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 130 -8 -40 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 -70 -16 120 1 0 0 0 1 0 0 0 1 61409.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 70 -16 120 1 0 0 0 1 0 0 0 1 61409.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 -70 -16 160 -1 0 0 0 1 0 0 0 -1 61409.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 70 -16 160 -1 0 0 0 1 0 0 0 -1 61409.dat
+0 STEP
+0 // Tile  1 x  3 (light_bluish_grey)
+1 71 -70 -16 -10 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Tile  1 x  3 (light_bluish_grey)
+1 71 70 -16 -10 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Tile  1 x  4 with Groove (light_bluish_grey)
+1 71 -70 -16 -80 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (light_bluish_grey)
+1 71 70 -16 -80 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Tile  1 x  6 (light_bluish_grey)
+1 71 0 -16 -110 1 0 0 0 1 0 0 0 1 6636.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 -16 -150 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Tile  2 x  2 with Groove (dark_bluish_grey)
+1 72 -100 -16 -160 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Tile  2 x  2 with Groove (dark_bluish_grey)
+1 72 100 -16 -160 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // Cone  1 x  1 with Stop (light_bluish_grey)
+1 71 -90 -32 -130 1 0 0 0 1 0 0 0 1 59900.dat
+0 // Cone  1 x  1 with Stop (light_bluish_grey)
+1 71 90 -32 -130 1 0 0 0 1 0 0 0 1 59900.dat
+0 // Plate  1 x  1 Round (yellow)
+1 14 -50 -16 -210 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (yellow)
+1 14 50 -16 -210 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -90 -16 40 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 90 -16 40 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+1 14 -60 10 -290 -1 0 0 0 1 0 0 0 -1 5893 - Truck brake.ldr
+1 14 60 10 -290 1 0 0 0 -1 0 0 0 -1 5893 - Truck brake.ldr
+0 STEP
+0 // Technic Axle Pin (tan)
+1 19 -90 0 -250 0 1 0 1 0 0 0 0 -1 3749.dat
+0 // Technic Axle Pin (tan)
+1 19 90 0 -250 0 1 0 1 0 0 0 0 -1 3749.dat
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 90 -32 -190 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -90 -32 -190 0 0 -1 0 1 0 1 0 0 4070.dat
+0 STEP
+0 // Technic Gear Rack  1 x 10 with Holes (light_bluish_grey)
+1 71 0 -18 -250 1 0 0 0 1 0 0 0 1 6592.dat
+0 // Technic Rotor  2 Blade with 4 Studs (blue)
+1 1 -50 -16 -290 -1 0 0 0 1 0 0 0 -1 32124.dat
+0 // Technic Rotor  2 Blade with 4 Studs (blue)
+1 1 50 -16 -290 -1 0 0 0 1 0 0 0 -1 32124.dat
+0 // Brick  1 x  2 (blue)
+1 1 -120 -32 -190 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 120 -32 -190 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Cone  1 x  1 with Stop (light_bluish_grey)
+1 71 -50 -40 -210 1 0 0 0 1 0 0 0 1 59900.dat
+0 // Cone  1 x  1 with Stop (light_bluish_grey)
+1 71 50 -40 -210 1 0 0 0 1 0 0 0 1 59900.dat
+0 STEP
+1 72 0 -40 -150 1 0 0 0 1 0 0 0 1 5893 - Truck steering.ldr
+0 STEP
+0 // Brick  1 x  1 (trans_orange)
+1 57 -130 -40 250 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (trans_orange)
+1 57 130 -40 250 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_bluish_grey)
+1 71 -130 -40 230 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Slope Brick 45  2 x  1 Inverted without Inner Stopper Ring (light_bluish_grey)
+1 71 130 -40 230 1 0 0 0 1 0 0 0 1 3665a.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -130 -16 20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 130 -16 20 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -120 -16 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 120 -16 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 -130 -64 240 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 130 -64 240 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Brick  1 x  1 with Headlight (dark_bluish_grey)
+1 72 -130 -64 210 0 0 1 0 1 0 -1 0 0 4070.dat
+0 // Brick  1 x  1 with Headlight (dark_bluish_grey)
+1 72 130 -64 210 0 0 -1 0 1 0 1 0 0 4070.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -110 -32 30 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 110 -32 30 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Cone  1 x  1 with Stop (black)
+1 0 -110 -32 10 0 0 -1 0 1 0 1 0 0 59900.dat
+0 // Cone  1 x  1 with Stop (black)
+1 0 110 -32 10 0 0 -1 0 1 0 1 0 0 59900.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 130 -16 30 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 130 -16 10 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 -130 -16 30 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 -130 -16 10 0 0 -1 0 1 0 1 0 0 54200.dat
+0 STEP
+1 71 -120 -32 -130 1 0 0 0 1 0 0 0 1 5893 - Truck side.ldr
+1 71 120 -32 -130 1 0 0 0 1 0 0 0 1 5893 - Truck side.ldr
+0 STEP
+1 71 130 -40 -40 0 0 -1 0 1 0 1 0 0 5893 - Truck side LH.ldr
+1 71 -130 -40 -40 0 0 1 0 1 0 -1 0 0 5893 - Truck side RH.ldr
+0 // Plate  2 x  3 (black)
+1 0 120 -40 10 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  2 x  3 (black)
+1 0 -120 -40 10 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 -110 -40 -30 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 110 -40 -30 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 120 -40 50 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -120 -40 50 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 STEP
+0 // Tile  1 x  6 (light_bluish_grey)
+1 71 -130 -48 0 0 0 1 0 1 0 -1 0 0 6636.dat
+0 // Tile  1 x  6 (light_bluish_grey)
+1 71 -110 -48 0 0 0 1 0 1 0 -1 0 0 6636.dat
+0 // Tile  1 x  6 (light_bluish_grey)
+1 71 110 -48 0 0 0 1 0 1 0 -1 0 0 6636.dat
+0 // Tile  1 x  6 (light_bluish_grey)
+1 71 130 -48 0 0 0 1 0 1 0 -1 0 0 6636.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 -110 -40 -160 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 -90 -40 -160 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 90 -40 -160 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 110 -40 -160 0 0 1 0 1 0 -1 0 0 3710.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 -130 -40 -130 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 -130 -40 -190 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 130 -40 -190 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 130 -40 -130 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -120 -48 70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 120 -48 70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+0 // Slope Brick Curved  8 x  1 x  1 & 2/3 with Arch (dark_bluish_grey)
+1 72 -130 -72 200 1 0 0 0 1 0 0 0 1 50967.dat
+0 // Slope Brick Curved  8 x  1 x  1 & 2/3 with Arch (dark_bluish_grey)
+1 72 130 -72 200 1 0 0 0 1 0 0 0 1 50967.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -130 -72 240 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 130 -72 240 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (light_bluish_grey)
+1 71 -130 -80 220 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (light_bluish_grey)
+1 71 130 -80 220 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Plate  1 x 10 (black)
+1 0 0 -48 -150 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 110 -40 -150 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -110 -40 -150 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 90 -48 -170 0 0 1 0 1 0 -1 0 0 6141.dat
+0 // Plate  1 x  1 (trans_orange)
+1 57 130 -48 -190 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (trans_orange)
+1 57 -130 -48 -190 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 -120 -40 -130 0 0 1 0 1 0 -1 0 0 61409.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 120 -40 -130 0 0 -1 0 1 0 1 0 0 61409.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (blue)
+1 1 -60 -56 -150 1 0 0 0 1 0 0 0 1 2431.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 -56 -150 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 -64 -150 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Brick  2 x  6 (light_bluish_grey)
+1 71 0 -32 -320 1 0 0 0 1 0 0 0 1 2456.dat
+0 // Brick  1 x  8 (blue)
+1 1 0 -32 -390 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Brick  1 x  2 (blue)
+1 1 -100 -32 -390 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 100 -32 -390 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 -110 -64 -180 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 110 -64 -180 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+0 // Technic Brick  1 x  2 with Holes (light_bluish_grey)
+1 71 40 -72 -150 -1 0 0 0 1 0 0 0 -1 32000.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 30 -62 -140 0 0 -1 0 1 0 1 0 0 4274.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 50 -62 -140 0 0 -1 0 1 0 1 0 0 4274.dat
+0 // Tile  1 x  2 with SW Computer Pattern (light_bluish_grey)
+1 71 40 -62 -132 1 0 0 0 0 1 0 -1 0 3069bps1.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 50 -40 -320 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -50 -40 -320 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  2 x  2 (dark_bluish_grey)
+1 72 0 -40 -320 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Plate  1 x 10 (black)
+1 0 0 -40 -390 -1 0 0 0 1 0 0 0 -1 4477.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 -110 -40 -390 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 110 -40 -390 -1 0 0 0 1 0 0 0 -1 3024.dat
+0 STEP
+0 // Plate  2 x  3 (red)
+1 4 0 -48 -330 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Technic Brick  1 x  2 with Hole (yellow)
+1 14 0 -64 -290 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 -100 -48 -390 1 0 0 0 1 0 0 0 1 44728.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 100 -48 -390 1 0 0 0 1 0 0 0 1 44728.dat
+0 // Brick  2 x  2 (black)
+1 0 80 -72 -160 1 0 0 0 1 0 0 0 1 3003.dat
+0 // Plate  1 x 10 (black)
+1 0 -50 -48 -300 0 0 1 0 1 0 -1 0 0 4477.dat
+0 // Plate  1 x 10 (black)
+1 0 50 -48 -300 0 0 1 0 1 0 -1 0 0 4477.dat
+0 STEP
+1 0 0 -28 -412 1 0 0 0 0 -1 0 1 0 5893 - Truck front.ldr
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -50 -48 -210 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 50 -48 -210 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Plate  2 x  8 (black)
+1 0 0 -56 -320 -1 0 0 0 1 0 0 0 -1 3034.dat
+0 // Plate  2 x  8 (black)
+1 0 0 -56 -360 -1 0 0 0 1 0 0 0 -1 3034.dat
+0 STEP
+0 // Tile  1 x  3 (red)
+1 4 -10 -64 -330 0 0 1 0 1 0 -1 0 0 63864.dat
+0 // Tile  1 x  3 (red)
+1 4 10 -64 -330 0 0 1 0 1 0 -1 0 0 63864.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (yellow)
+1 14 -50 -72 -260 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (yellow)
+1 14 50 -72 -260 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 50 -72 -230 0 0 -1 0 1 0 1 0 0 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -50 -72 -230 0 0 -1 0 1 0 1 0 0 3062b.dat
+1 47 -110 -28 -412 0 0 1 1 0 0 0 1 0 5893 - Truck light RH.ldr
+1 47 110 -28 -412 0 0 -1 -1 0 0 0 1 0 5893 - Truck light LH.ldr
+0 STEP
+1 0 0 -72 -200 1 0 0 0 1 0 0 0 1 5893 - Truck steering V.ldr
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 -100 -72 -390 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (blue)
+1 1 100 -72 -390 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Brick  1 x  8 (blue)
+1 1 0 -72 -390 -1 0 0 0 1 0 0 0 -1 3008.dat
+0 // Brick  2 x  2 with Pins and Axlehole (dark_bluish_grey)
+1 72 -40 -80 -320 -1 0 0 0 1 0 0 0 -1 30000.dat
+0 // Brick  2 x  2 with Pins and Axlehole (dark_bluish_grey)
+1 72 40 -80 -320 -1 0 0 0 1 0 0 0 -1 30000.dat
+0 STEP
+0 // Plate  2 x  6 (blue)
+1 1 60 -80 -260 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  2 x  6 (blue)
+1 1 -60 -80 -260 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  1 x 10 (black)
+1 0 0 -80 -390 1 0 0 0 1 0 0 0 1 4477.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 90 -80 -370 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 -90 -80 -370 1 0 0 0 1 0 0 0 1 6141.dat
+0 // Plate  1 x  3 (blue)
+1 1 -110 -80 -370 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (blue)
+1 1 110 -80 -370 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Cone  1 x  1 with Stop (light_bluish_grey)
+1 71 50 -96 -230 0 0 -1 0 1 0 1 0 0 59900.dat
+0 // Cone  1 x  1 with Stop (light_bluish_grey)
+1 71 -50 -96 -230 0 0 -1 0 1 0 1 0 0 59900.dat
+0 STEP
+0 // Plate  1 x  8 (blue)
+1 1 90 -88 -300 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (blue)
+1 1 -90 -88 -300 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  3 (light_bluish_grey)
+1 71 -70 -88 -250 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  1 x  3 (light_bluish_grey)
+1 71 70 -88 -250 0 0 1 0 1 0 -1 0 0 3623.dat
+0 // Plate  2 x  4 (dark_bluish_grey)
+1 72 0 -88 -320 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // Plate  1 x  2 with Handle on End (tan)
+1 19 50 -88 -320 0 0 -1 0 1 0 1 0 0 60478.dat
+0 // Plate  1 x  2 with Handle on End (tan)
+1 19 -50 -88 -320 0 0 -1 0 1 0 1 0 0 60478.dat
+0 STEP
+0 // Plate  1 x  2 (trans_red)
+1 36 0 -88 -390 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Brick  1 x  3 (blue)
+1 1 110 -88 -190 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Brick  1 x  3 (blue)
+1 1 -110 -88 -190 0 0 1 0 1 0 -1 0 0 3622.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 100 -88 -390 1 0 0 0 1 0 0 0 1 44728.dat
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 -100 -88 -390 1 0 0 0 1 0 0 0 1 44728.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 110 -88 -300 0 0 1 0 1 0 -1 0 0 3460.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 -110 -88 -300 0 0 1 0 1 0 -1 0 0 3460.dat
+0 STEP
+0 // Plate  2 x  3 (tan)
+1 19 -50 -96 -320 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (tan)
+1 19 50 -96 -320 -1 0 0 0 1 0 0 0 -1 3021.dat
+1 57 110 -68 -412 0 0 -1 -1 0 0 0 1 0 5893 - Truck light top LH.ldr
+1 57 -110 -68 -412 0 0 1 1 0 0 0 1 0 5893 - Truck light top RH.ldr
+0 STEP
+1 57 0 -78 -412 -1 0 0 0 0 1 0 1 0 5893 - Truck front middle.ldr
+0 STEP
+0 // Arch  1 x  3 x  2 with Curved Top (blue)
+1 1 -130 -96 -230 -1 0 0 0 1 0 0 0 -1 6005.dat
+0 // Arch  1 x  6 x  3.333 with Curved Top and Two Studs (blue)
+1 1 -130 -96 -300 1 0 0 0 1 0 0 0 1 6060.dat
+0 // Arch  1 x  3 x  2 with Curved Top (blue)
+1 1 130 -96 -230 -1 0 0 0 1 0 0 0 -1 6005.dat
+0 // Arch  1 x  6 x  3.333 with Curved Top and Two Studs (blue)
+1 1 130 -96 -300 1 0 0 0 1 0 0 0 1 6060.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (light_bluish_grey)
+1 71 -10 -112 -310 1 0 0 0 1 0 0 0 1 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (light_bluish_grey)
+1 71 -10 -112 -330 0 0 -1 0 1 0 1 0 0 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (light_bluish_grey)
+1 71 10 -112 -310 0 0 1 0 1 0 -1 0 0 6231.dat
+0 // Panel  1 x  1 x  1 Corner with Rounded Corners (light_bluish_grey)
+1 71 10 -112 -330 -1 0 0 0 1 0 0 0 -1 6231.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 -130 -88 -260 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 130 -88 -260 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 -130 -96 -260 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 130 -96 -260 0 0 1 0 1 0 -1 0 0 2431.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -120 -96 -310 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 120 -96 -310 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Tile  2 x  2 with Groove (blue)
+1 1 -100 -96 -340 -1 0 0 0 1 0 0 0 -1 3068b.dat
+0 // Tile  2 x  2 with Groove (blue)
+1 1 100 -96 -340 -1 0 0 0 1 0 0 0 -1 3068b.dat
+0 // Tile  1 x  1 with Groove (blue)
+1 1 -110 -96 -290 -1 0 0 0 1 0 0 0 -1 3070b.dat
+0 // Tile  1 x  1 with Groove (blue)
+1 1 -110 -96 -270 -1 0 0 0 1 0 0 0 -1 3070b.dat
+0 // Tile  1 x  1 with Groove (blue)
+1 1 110 -96 -290 -1 0 0 0 1 0 0 0 -1 3070b.dat
+0 // Tile  1 x  1 with Groove (blue)
+1 1 110 -96 -270 -1 0 0 0 1 0 0 0 -1 3070b.dat
+0 STEP
+0 // Plate  2 x 10 (blue)
+1 1 0 -96 -400 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  1 x  3 (blue)
+1 1 -110 -96 -390 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (blue)
+1 1 110 -96 -390 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 -90 -96 -370 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 90 -96 -370 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Bar  1 x  8 x  2 (metallic_silver)
+1 80 0 -58 -434 -1 0 0 0 1 0 0 0 -1 2486.dat
+0 STEP
+0 // Plate  2 x  3 (blue)
+1 1 -80 -96 -250 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  3 (blue)
+1 1 80 -96 -250 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 -110 -96 -250 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 110 -96 -250 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  3 (blue)
+1 1 -110 -96 -210 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (blue)
+1 1 110 -96 -210 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -110 -88 -170 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 110 -88 -170 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 STEP
+1 1 40 -80 -160 1 0 0 0 1 0 0 0 1 5893 - Truck winch.ldr
+0 STEP
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 110 -120 -250 1 0 0 0 1 0 0 0 1 6541.dat
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 -110 -120 -250 1 0 0 0 1 0 0 0 1 6541.dat
+0 // Brick  1 x  2 (blue)
+1 1 -100 -120 -230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 100 -120 -230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  8 (blue)
+1 1 0 -120 -230 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Plate  1 x  8 (blue)
+1 1 0 -104 -410 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  2 x  3 (blue)
+1 1 -100 -104 -390 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x  3 (blue)
+1 1 100 -104 -390 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Brick  1 x  2 (blue)
+1 1 -110 -120 -200 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 110 -120 -200 0 0 1 0 1 0 -1 0 0 3004.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 -110 -110 -260 0 0 1 0 1 0 -1 0 0 4274.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 110 -110 -260 0 0 1 0 1 0 -1 0 0 4274.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -60 -104 -390 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 -110 -128 -230 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 110 -128 -230 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 70 -128 -230 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 -70 -128 -230 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 0 -144 -230 1 0 0 0 1 0 0 0 1 3660.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 20 -120 -390 -1 0 0 0 1 0 0 0 -1 3937.dat
+0 // Hinge  1 x  2 Top (light_bluish_grey)
+1 71 20 -118.66 -385 -1 0 0 0 0.866 -0.5 0 -0.5 -0.866 3938.dat
+0 // Tile  1 x  2 with Digital Clock Pattern (white)
+1 15 20 -125.588 -381 -1 0 0 0 0.866 -0.5 0 -0.5 -0.866 3069bp08.dat
+0 STEP
+0 // Technic Plate  2 x  6 with Holes (black)
+1 0 0 -152 -200 0 0 1 0 1 0 -1 0 0 32001.dat
+0 // Hinge  1 x  2 Base (blue)
+1 1 60 -120 -390 -1 0 0 0 1 0 0 0 -1 3937.dat
+0 // Hinge  1 x  2 Top (light_bluish_grey)
+1 71 60 -118.66 -385 -1 0 0 0 0.866 -0.5 0 -0.5 -0.866 3938.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 70 -125.588 -381 -1 0 0 0 0.866 -0.5 0 -0.5 -0.866 6141.dat
+0 // Technic Steering Wheel Small (light_bluish_grey)
+1 71 50 -139.445 -373 -1 0 0 0 0.866 -0.5 0 -0.5 -0.866 2819.dat
+0 // Plate  1 x  2 (blue)
+1 1 -110 -136 -240 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 110 -136 -240 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 -80 -136 -230 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 80 -136 -230 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 -110 -160 -250 -1 0 0 0 1 0 0 0 -1 6541.dat
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 110 -160 -250 -1 0 0 0 1 0 0 0 -1 6541.dat
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 -70 -160 -230 0 0 -1 0 1 0 1 0 0 6541.dat
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 70 -160 -230 0 0 -1 0 1 0 1 0 0 6541.dat
+0 // Brick  1 x  2 (blue)
+1 1 -100 -160 -230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 100 -160 -230 1 0 0 0 1 0 0 0 1 3004.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -110 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -90 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -70 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -50 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -10 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 10 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 30 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 50 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 90 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 110 -104 -410 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 -30 -112 -410 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 70 -112 -410 1 0 0 0 1 0 0 0 1 3024.dat
+0 // Plate  2 x  2 (dark_bluish_grey)
+1 72 0 -160 -240 0 0 1 0 1 0 -1 0 0 3022.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 110 -150 -260 0 0 1 0 1 0 -1 0 0 4274.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 -110 -150 -260 0 0 1 0 1 0 -1 0 0 4274.dat
+0 // Technic Axle Joiner Inline Smooth (dark_bluish_grey)
+1 72 0 -204 -200 -0.707 -0.707 0 0 0 1 -0.707 0.707 0 59443.dat
+0 STEP
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (blue)
+1 1 -110 -192 -210 -1 0 0 0 1 0 0 0 -1 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (blue)
+1 1 110 -192 -210 -1 0 0 0 1 0 0 0 -1 4460a.dat
+0 // Brick  1 x  2 (blue)
+1 1 -110 -184 -240 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 110 -184 -240 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  8 (blue)
+1 1 0 -184 -230 1 0 0 0 1 0 0 0 1 3008.dat
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 -90 -184 -230 0 0 1 0 1 0 -1 0 0 6541.dat
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 90 -184 -230 0 0 1 0 1 0 -1 0 0 6541.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (black)
+1 0 0 -184 -250 1 0 0 0 1 0 0 0 1 3660.dat
+0 STEP
+0 // Brick  1 x  2 (blue)
+1 1 -110 -208 -240 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Brick  1 x  2 (blue)
+1 1 110 -208 -240 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 0 -208 -270 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Brick  1 x 10 with Holes (white)
+1 15 0 -208 -230 1 0 0 0 1 0 0 0 1 2730.dat
+0 // Technic Brick  1 x 10 with Holes (white)
+1 15 0 -208 -250 1 0 0 0 1 0 0 0 1 2730.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 80 -198 -240 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -80 -198 -240 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // Brick  2 x  4 x  1.333 with Curved Top (blue)
+1 1 -60 -224 -230 -1 0 0 0 1 0 0 0 -1 6081.dat
+0 // Brick  2 x  1 x  1.333 with Curved Top (blue)
+1 1 -110 -224 -230 -1 0 0 0 1 0 0 0 -1 6091.dat
+0 // Brick  2 x  1 x  1.333 with Curved Top (blue)
+1 1 110 -224 -230 -1 0 0 0 1 0 0 0 -1 6091.dat
+0 // Brick  2 x  4 x  1.333 with Curved Top (blue)
+1 1 60 -224 -230 -1 0 0 0 1 0 0 0 -1 6081.dat
+0 // Plate  2 x  3 (blue)
+1 1 0 -216 -250 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Tile  1 x  3 (red)
+1 4 -50 -216 -250 1 0 0 0 1 0 0 0 1 63864.dat
+0 // Tile  1 x  3 (red)
+1 4 50 -216 -250 1 0 0 0 1 0 0 0 1 63864.dat
+0 // Plate  1 x  2 with Handle on End (black)
+1 0 -100 -216 -250 -1 0 0 0 1 0 0 0 -1 60478.dat
+0 // Plate  1 x  2 with Handle on End (black)
+1 0 100 -216 -250 1 0 0 0 1 0 0 0 1 60478.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 -110 -160 -268 0 0 -1 -1 0 0 0 1 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 -110 -120 -268 0 0 -1 -1 0 0 0 1 0 3023.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 -110 -140 -276 0 0 -1 -1 0 0 0 1 0 2431.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 110 -140 -276 0 0 -1 -1 0 0 0 1 0 2431.dat
+0 // Plate  1 x  2 (blue)
+1 1 110 -160 -268 0 0 -1 -1 0 0 0 1 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 110 -120 -268 0 0 -1 -1 0 0 0 1 0 3023.dat
+0 STEP
+1 19 -50 -123.084 -273.852 1 0 0 0 0.259 -0.966 0 0.966 0.259 5893 - Truck seat.ldr
+1 19 50 -123.084 -273.852 1 0 0 0 0.259 -0.966 0 0.966 0.259 5893 - Truck seat.ldr
+0 STEP
+1 1 110 -104 -330 1 0 0 0 1 0 0 0 1 5893 - Truck door LH.ldr
+0 STEP
+1 1 -110 -104 -330 1 0 0 0 1 0 0 0 1 5893 - Truck door RH.ldr
+0 STEP
+0 // Tile  1 x  4 with Groove (blue)
+1 1 -80 -224 -230 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 80 -224 -230 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 -30 -120 -410 0 0 -1 0 1 0 1 0 0 2555.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 70 -120 -410 0 0 -1 0 1 0 1 0 0 2555.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (blue)
+1 1 -110 -192 -370 1 0 0 0 1 0 0 0 1 4460a.dat
+0 // Slope Brick 75  2 x  1 x  3 with Open Stud (blue)
+1 1 110 -192 -370 1 0 0 0 1 0 0 0 1 4460a.dat
+0 STEP
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 -110 -216 -370 0 0 1 0 1 0 -1 0 0 6541.dat
+0 // Technic Brick  1 x  1 with Hole (blue)
+1 1 110 -216 -370 0 0 1 0 1 0 -1 0 0 6541.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -120 -206 -370 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 120 -206 -370 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Bar  4L Lightsaber Blade (black)
+1 0 80 -126 -410 0 -1 0 -1 0 0 0 0 -1 30374.dat
+0 // Bar  4L Lightsaber Blade (black)
+1 0 -20 -126 -410 0 -1 0 -1 0 0 0 0 -1 30374.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick C-Clip) (black)
+1 0 -130 -234 -254 1 0 0 0 0 -1 0 1 0 60897.dat
+0 // Plate  1 x  1 (trans_orange)
+1 57 -130 -234 -262 1 0 0 0 0 -1 0 1 0 3024.dat
+0 // Plate  1 x  1 with Clip Vertical (Thick C-Clip) (black)
+1 0 130 -234 -254 1 0 0 0 0 -1 0 1 0 60897.dat
+0 // Plate  1 x  1 (trans_orange)
+1 57 130 -234 -262 1 0 0 0 0 -1 0 1 0 3024.dat
+0 STEP
+1 1 -150 -180 -376 0 0 -1 -1 0 0 0 1 0 5893 - Truck mirror.ldr
+1 1 150 -180 -376 0 0 1 1 0 0 0 1 0 5893 - Truck mirror.ldr
+0 STEP
+1 4 0 -224 -320 1 0 0 0 1 0 0 0 1 5893 - Truck roof.ldr
+0 STEP
+1 0 0 -126 268 1 0 0 0 0 -1 0 1 0 5893 - Truck ramp.ldr
+0 STEP
+0 // Technic Axle  3 (light_bluish_grey)
+1 71 0 -238 -200 0 0.707 0.707 -1 0 0 0 -0.707 0.707 4519.dat
+0 // Technic Gear 20 Tooth Double Bevel (black)
+1 0 0 -258 -200 0.707 -0.707 0 0 0 -1 0.707 0.707 0 32269.dat
+0 // Wheel Rim 20 x 30 with  6 Dual Spokes and External Ribs (light_bluish_grey)
+1 71 140 10 -290 0 0 1 0 1 0 -1 0 0 56145.dat
+0 // Tyre 26/ 52 x 30 Off Road (rubber_black)
+1 256 140 10 -290 0 0 1 0 1 0 -1 0 0 55976.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 146 10 -290 0 0 1 0 1 0 -1 0 0 32123a.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 145 10 140 0 0 1 0 1 0 -1 0 0 32123a.dat
+0 // Wheel Rim 20 x 30 with  6 Dual Spokes and External Ribs (light_bluish_grey)
+1 71 140 10 140 0 0 1 0 1 0 -1 0 0 56145.dat
+0 // Tyre 26/ 52 x 30 Off Road (rubber_black)
+1 256 140 10 140 0 0 1 0 1 0 -1 0 0 55976.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 -145 10 140 0 0 -1 0 1 0 1 0 0 32123a.dat
+0 // Wheel Rim 20 x 30 with  6 Dual Spokes and External Ribs (light_bluish_grey)
+1 71 -140 10 140 0 0 -1 0 1 0 1 0 0 56145.dat
+0 // Tyre 26/ 52 x 30 Off Road (rubber_black)
+1 256 -140 10 140 0 0 -1 0 1 0 1 0 0 55976.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 -146 10 -290 0 0 -1 0 1 0 1 0 0 32123a.dat
+0 // Wheel Rim 20 x 30 with  6 Dual Spokes and External Ribs (light_bluish_grey)
+1 71 -140 10 -290 0 0 -1 0 1 0 1 0 0 56145.dat
+0 // Tyre 26/ 52 x 30 Off Road (rubber_black)
+1 256 -140 10 -290 0 0 -1 0 1 0 1 0 0 55976.dat
+
+
+
+0 STEP
+0 FILE 5893 - Loader.ldr
+0 Front loader attachment with Technic bricks, inverted slopes, round bricks, and corner plates forming its boxy structure.
+0 Name: 5893 - Loader.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 0 0 -70 1 0 0 0 1 0 0 0 1 3710.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 0 0 70 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (black)
+1 0 -30 -24 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Technic Brick  1 x  8 with Holes (black)
+1 0 30 -24 0 0 0 1 0 1 0 -1 0 0 3702.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 -8 70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 with Handle (tan)
+1 19 0 -16 70 -1 0 0 0 1 0 0 0 -1 2540.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 -24 70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 0 -24 -70 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 STEP
+0 // Technic Pin (light_bluish_grey)
+1 71 -40 -14 40 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Technic Pin (light_bluish_grey)
+1 71 40 -14 40 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Technic Pin (light_bluish_grey)
+1 71 -40 -14 -60 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 // Technic Pin (light_bluish_grey)
+1 71 40 -14 -60 -1 0 0 0 1 0 0 0 -1 3673.dat
+0 STEP
+0 // Plate  2 x  2 Corner (black)
+1 0 30 -32 70 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 -30 -32 70 0 0 1 0 1 0 -1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 -30 -32 -70 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (black)
+1 0 30 -32 -70 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 -30 -32 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 30 -32 0 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -30 -56 40 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 30 -56 40 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // Brick  1 x  4 (white)
+1 15 0 -56 70 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -30 -56 10 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 30 -56 10 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -30 -56 -40 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 30 -56 -40 0 0 1 0 1 0 -1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -20 -56 -70 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 20 -56 -70 1 0 0 0 1 0 0 0 1 3660.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (white)
+1 15 30 -56 -10 0 0 -1 0 1 0 1 0 0 4287a.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (white)
+1 15 -30 -56 -10 0 0 1 0 1 0 -1 0 0 4287a.dat
+0 STEP
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 -64 70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 -30 -64 0 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 30 -64 0 0 0 -1 0 1 0 1 0 0 3460.dat
+0 STEP
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 -50 -64 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 50 -64 -10 0 0 -1 0 1 0 1 0 0 3024.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 70 -56 -10 0 0 -1 0 1 0 1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (light_bluish_grey)
+1 71 -70 -56 -10 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -20 -64 -90 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 20 -64 -90 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  2 x  2 (blue)
+1 1 0 -64 40 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 0 -64 -60 -1 0 0 0 1 0 0 0 -1 3022.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (light_bluish_grey)
+1 71 0 -72 70 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Plate  2 x  6 (light_bluish_grey)
+1 71 0 -72 40 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Plate  4 x  6 (light_bluish_grey)
+1 71 0 -72 -20 -1 0 0 0 1 0 0 0 -1 3032.dat
+0 STEP
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 -72 -70 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Plate  1 x  6 (light_bluish_grey)
+1 71 0 -72 -90 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 // Technic Plate  2 x  4 with Holes (white)
+1 15 0 -80 0 0 0 -1 0 1 0 1 0 0 3709b.dat
+0 STEP
+0 // Brick  1 x  6 (white)
+1 15 -50 -96 0 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x  6 (white)
+1 15 50 -96 0 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // Brick  1 x  4 (white)
+1 15 0 -96 50 -1 0 0 0 1 0 0 0 -1 3010.dat
+0 STEP
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -88 -30 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Plate  1 x  2 without Groove with 1 Centre Stud (yellow)
+1 14 0 -88 -10 -1 0 0 0 1 0 0 0 -1 3794a.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 -50 -96 -80 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 50 -96 -80 0 0 -1 0 1 0 1 0 0 3700.dat
+0 // Brick  1 x  4 with Studs on Side (light_bluish_grey)
+1 71 0 -96 -90 1 0 0 0 1 0 0 0 1 30414.dat
+0 STEP
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 -30 -96 -70 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Brick  1 x  1 with Headlight (yellow)
+1 14 30 -96 -70 -1 0 0 0 1 0 0 0 -1 4070.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -20 -86 -108 -1 0 0 0 0 1 0 1 0 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 20 -86 -108 -1 0 0 0 0 1 0 1 0 2412b.dat
+0 // Hinge Control Stick Base (white)
+1 15 -30 -86 -56 1 0 0 0 0 1 0 -1 0 4592.dat
+0 // Hinge Control Stick (black)
+1 0 -30 -86 -56 1 0 0 0 0.866 0.5 0 -0.5 0.866 4593.dat
+0 // Hinge Control Stick Base (white)
+1 15 30 -86 -56 1 0 0 0 0 1 0 -1 0 4592.dat
+0 // Hinge Control Stick (black)
+1 0 30 -86 -56 1 0 0 0 0.866 0.5 0 -0.5 0.866 4593.dat
+0 STEP
+0 // Hinge Plate  1 x  4 (Complete) (red)
+1 4 60 -104 -60 0 0 -1 0 1 0 1 0 0 2429c01.dat
+0 // Hinge Plate  1 x  4 (Complete) (red)
+1 4 -60 -104 -60 0 0 1 0 1 0 -1 0 0 2429c01.dat
+0 // Plate  2 x  2 Corner (white)
+1 15 -30 -104 -90 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (white)
+1 15 30 -104 -90 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Plate  2 x  6 (red)
+1 4 0 -104 40 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  1 x  2 (red)
+1 4 -50 -104 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 50 -104 0 0 0 1 0 1 0 -1 0 0 3023.dat
+0 STEP
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 0 -112 50 -1 0 0 0 1 0 0 0 -1 44728.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 -120 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 0 -128 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+1 71 0 -102 72 1 0 0 0 0 1 0 -1 0 5893 - Loader engine.ldr
+0 STEP
+0 // Brick  1 x  3 (white)
+1 15 -30 -128 30 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  3 (white)
+1 15 30 -128 30 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (white)
+1 15 -50 -128 50 -1 0 0 0 1 0 0 0 -1 4287a.dat
+0 // Slope Brick 33  3 x  1 Inverted with Notch and Thick Front (white)
+1 15 50 -128 50 -1 0 0 0 1 0 0 0 -1 4287a.dat
+0 STEP
+0 // Tile  1 x  3 (red)
+1 4 -50 -112 -10 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Tile  1 x  3 (red)
+1 4 50 -112 -10 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Brick  1 x  1 (white)
+1 15 -50 -128 -50 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Brick  1 x  1 (white)
+1 15 50 -128 -50 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // Plate  1 x  2 (red)
+1 4 -40 -112 -70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (red)
+1 4 40 -112 -70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+0 // Plate  2 x  6 (white)
+1 15 0 -136 40 -1 0 0 0 1 0 0 0 -1 3795.dat
+1 0 0 -96 -20 1 0 0 0 1 0 0 0 1 5893 - Loader seat.ldr
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (red)
+1 4 -50 -104 -90 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (red)
+1 4 -30 -104 -90 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (red)
+1 4 30 -104 -90 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (red)
+1 4 50 -104 -90 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (white)
+1 15 -40 -112 -70 1 0 0 0 1 0 0 0 1 85984.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (white)
+1 15 40 -112 -70 1 0 0 0 1 0 0 0 1 85984.dat
+0 // Plate  1 x  2 (white)
+1 15 0 -144 30 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 -50 -152 80 0 0 -1 0 1 0 1 0 0 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (white)
+1 15 50 -152 80 0 0 1 0 1 0 -1 0 0 3660.dat
+0 STEP
+0 // Plate  2 x  6 (white)
+1 15 0 -160 80 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Brick  1 x  3 (white)
+1 15 -30 -160 50 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Brick  1 x  3 (white)
+1 15 30 -160 50 -1 0 0 0 1 0 0 0 -1 3622.dat
+0 // Slope Brick 31  1 x  2 x  0.667 (white)
+1 15 0 -144 30 1 0 0 0 1 0 0 0 1 85984.dat
+0 STEP
+0 // Technic Brick  1 x  1 with Hole (white)
+1 15 -50 -152 -50 1 0 0 0 1 0 0 0 1 6541.dat
+0 // Technic Brick  1 x  1 with Hole (white)
+1 15 50 -152 -50 1 0 0 0 1 0 0 0 1 6541.dat
+0 // Plate  2 x  6 (white)
+1 15 0 -168 60 -1 0 0 0 1 0 0 0 -1 3795.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -50 -176 -50 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -50 -200 -50 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 50 -176 -50 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 50 -200 -50 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Plate  1 x  1 (trans_clear)
+1 47 -50 -142 -60 -1 0 0 0 0 -1 0 -1 0 3024.dat
+0 // Plate  1 x  1 (trans_clear)
+1 47 50 -142 -60 -1 0 0 0 0 -1 0 -1 0 3024.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -30 -192 70 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Tap  1 x  1 without Hole in Spout (light_bluish_grey)
+1 71 -30 -216 70 1 0 0 0 1 0 0 0 1 4599b.dat
+0 // Plate  1 x  6 (white)
+1 15 0 -176 50 -1 0 0 0 1 0 0 0 -1 3666.dat
+0 STEP
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -10 -200 50 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 10 -200 50 -1 0 0 0 1 0 0 0 -1 3062b.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -40 -200 50 1 0 0 0 1 0 0 0 1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 40 -200 50 1 0 0 0 1 0 0 0 1 3660.dat
+0 STEP
+0 // Plate  1 x  6 (black)
+1 0 -50 -208 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  6 (black)
+1 0 50 -208 0 0 0 1 0 1 0 -1 0 0 3666.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -20 -208 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 20 -208 50 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 STEP
+0 // Plate  1 x  3 (black)
+1 0 -50 -216 10 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  3 (black)
+1 0 50 -216 10 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  6 (black)
+1 0 0 -216 50 1 0 0 0 1 0 0 0 1 3666.dat
+0 // Technic Plate  2 x  6 with Holes (black)
+1 0 0 -216 -40 1 0 0 0 1 0 0 0 1 32001.dat
+0 STEP
+1 0 0 -224 50 1 0 0 0 1 0 0 0 1 5893 - Loader roof.ldr
+0 STEP
+0 // Technic Tile  1 x  2 with Two Holes (dark_bluish_grey)
+1 72 -40 -224 -50 1 0 0 0 1 0 0 0 1 32530.dat
+0 // Technic Tile  1 x  2 with Two Holes (dark_bluish_grey)
+1 72 40 -224 -50 1 0 0 0 1 0 0 0 1 32530.dat
+0 // Plate  1 x  1 (trans_clear)
+1 47 -40 -246 -60 1 0 0 0 0 1 0 -1 0 3024.dat
+0 // Plate  1 x  1 (trans_clear)
+1 47 40 -246 -60 1 0 0 0 0 1 0 -1 0 3024.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 0 -232 50 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_orange)
+1 57 -30 -216 50 0 0 1 0 1 0 -1 0 0 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_orange)
+1 57 30 -216 50 0 0 -1 0 1 0 1 0 0 54200.dat
+0 STEP
+1 1 0 27.404 -181.23 1 0 0 0 0.656 -0.755 0 0.755 0.656 5893 - Loader bucket.ldr
+0 STEP
+0 // Technic Axle Pin with Friction (blue)
+1 1 -60 -86 -80 -1 0 0 0 0.656 0.755 0 0.755 -0.656 43093.dat
+0 // Technic Beam  3 x  7 Liftarm Bent 53.13 (dark_bluish_grey)
+1 72 -70 -86 -80 0 -1 0 -0.656 0 0.755 -0.755 0 -0.656 32271.dat
+0 STEP
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_bluish_grey)
+1 71 60 -14 -60 0 0 -1 -1 0 0 0 1 0 55981.dat
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_bluish_grey)
+1 71 60 -14 40 0 0 -1 -1 0 0 0 1 0 55981.dat
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_bluish_grey)
+1 71 -60 -14 40 0 0 1 1 0 0 0 1 0 55981.dat
+0 // Wheel Rim 14 x 18 with Holes on Both Sides (Needs Work) (light_bluish_grey)
+1 71 -60 -14 -60 0 0 1 1 0 0 0 1 0 55981.dat
+0 // Tyre 18/ 56 x 17 Off-Road with Offset Centre (rubber_black)
+1 256 -60 -14 -60 0 0 1 1 0 0 0 1 0 56891.dat
+0 // Tyre 18/ 56 x 17 Off-Road with Offset Centre (rubber_black)
+1 256 -60 -14 40 0 0 1 1 0 0 0 1 0 56891.dat
+0 // Tyre 18/ 56 x 17 Off-Road with Offset Centre (rubber_black)
+1 256 60 -14 40 0 0 -1 1 0 0 0 -1 0 56891.dat
+0 // Tyre 18/ 56 x 17 Off-Road with Offset Centre (rubber_black)
+1 256 60 -14 -60 0 0 -1 1 0 0 0 -1 0 56891.dat
+0 // Plate  1 x  1 Round (red)
+1 4 80 -14 40 0 1 0 1 0 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (red)
+1 4 80 -14 -60 0 1 0 1 0 0 0 0 -1 6141.dat
+0 // Plate  1 x  1 Round (red)
+1 4 -80 -14 -60 0 -1 0 1 0 0 0 0 1 6141.dat
+0 // Plate  1 x  1 Round (red)
+1 4 -80 -14 40 0 -1 0 1 0 0 0 0 1 6141.dat
+
+
+
+0 STEP
+0 FILE 5893 - Loader engine.ldr
+0 Small engine module featuring an air scoop on a round plate base.
+0 Name: 5893 - Loader engine.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 0 -8 20 1 0 0 0 1 0 0 0 1 3839b.dat
+0 // Plate  2 x  3 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3021.dat
+0 STEP
+0 // Plate  2 x  2 Round with Reduced Axlehole (dark_bluish_grey)
+1 72 0 -8 -10 1 0 0 0 1 0 0 0 1 4032b.dat
+0 STEP
+0 // Car Engine  2 x  2 with Air Scoop (light_bluish_grey)
+1 71 0 -40 -10 1 0 0 0 1 0 0 0 1 50943.dat
+
+
+
+0 STEP
+0 FILE 5893 - Loader seat.ldr
+0 Simple operator seat built from tan and black plates with a handle.
+0 Name: 5893 - Loader seat.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  2 with Clip Horizontal on End (Thick C-Clip) (red)
+1 4 0 0 0 0 0 -1 0 1 0 1 0 0 63868.dat
+0 // Plate  1 x  2 with Handle on End (black)
+1 0 0 -28 28 0 0 1 1 0 0 0 1 0 60478.dat
+0 STEP
+0 // Plate  2 x  3 (tan)
+1 19 0 -8 0 -1 0 0 0 1 0 0 0 -1 3021.dat
+0 // Plate  2 x  3 (tan)
+1 19 0 -28 20 -1 0 0 0 0 1 0 1 0 3021.dat
+
+
+
+0 STEP
+0 FILE 5893 - Loader roof.ldr
+0 Roll-bar style roof using a lattice fence mounted on brackets.
+0 Name: 5893 - Loader roof.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Bracket  1 x  2 -  1 x  4 with Square Corners (light_bluish_grey)
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 2436a.dat
+0 STEP
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -20 10 -22 1 0 0 0 0 -1 0 1 0 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 20 10 -22 1 0 0 0 0 -1 0 1 0 3023.dat
+0 STEP
+0 // Fence Lattice  1 x  4 x  2 (black)
+1 0 0 10 -70 1 0 0 0 0 -1 0 1 0 3185.dat
+
+
+
+0 STEP
+0 FILE 5893 - Loader bucket.ldr
+0 Scoop bucket with sloped black panels, grille tiles, and a bent liftarm for articulation.
+0 Name: 5893 - Loader bucket.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Plate  2 x  6 with Holes (black)
+1 0 0 -37.687 25.909 1 0 0 0 -0.755 0.656 0 -0.656 -0.755 32001.dat
+0 // Plate  1 x  6 (black)
+1 0 0 -18.005 3.268 1 0 0 0 -0.755 0.656 0 -0.656 -0.755 3666.dat
+0 STEP
+0 // Technic Plate  2 x  6 with Holes (black)
+1 0 0 -63.929 56.098 1 0 0 0 -0.755 0.656 0 -0.656 -0.755 32001.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 -50 -6.453 26.561 0 0 1 -0.656 -0.755 0 0.755 -0.656 0 3700.dat
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 50 -6.453 26.561 0 0 1 -0.656 -0.755 0 0.755 -0.656 0 3700.dat
+0 STEP
+0 // Slope Brick 33  3 x  1 (black)
+1 0 -50 -26.135 49.202 1 0 0 0 -0.755 0.656 0 -0.656 -0.755 4286.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 50 -26.135 49.202 1 0 0 0 -0.755 0.656 0 -0.656 -0.755 4286.dat
+0 // Brick  1 x  4 with Groove (black)
+1 0 0 0.108 19.013 -1 0 0 0 -0.755 -0.656 0 -0.656 0.755 2653.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 -60 -14 20 -1 0 0 0 -0.755 -0.656 0 -0.656 0.755 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 60 -14 20 -1 0 0 0 -0.755 -0.656 0 -0.656 0.755 2780.dat
+0 STEP
+0 // Technic Beam  3 x  7 Liftarm Bent 53.13 (dark_bluish_grey)
+1 72 70 2 152 0 -1 0 -1 0 0 0 0 -1 32271.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 -50 18.221 34.759 1 0 0 0 -0.755 0.656 0 -0.656 -0.755 4286.dat
+0 // Slope Brick 33  3 x  1 (black)
+1 0 50 18.221 34.759 1 0 0 0 -0.755 0.656 0 -0.656 -0.755 4286.dat
+0 // Brick  1 x  4 with Groove (black)
+1 0 0 18.221 34.759 -1 0 0 0 -0.755 -0.656 0 -0.656 0.755 2653.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -40 24.258 40.007 -1 0 0 0 -0.755 -0.656 0 -0.656 0.755 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 40 24.258 40.007 -1 0 0 0 -0.755 -0.656 0 -0.656 0.755 2412b.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 60 2 152 1 0 0 0 1 0 0 0 1 43093.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck frame.ldr
+0 Central chassis frame using a large Technic open-center brick held together with friction pins.
+0 Name: 5893 - Truck frame.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Brick  6 x  8 with Open Centre  4 x  6 with Cross Underside Studs (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 32532.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 60 10 60 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 60 10 40 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -60 10 60 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -60 10 40 -1 0 0 0 1 0 0 0 -1 2780.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 10 -80 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 -80 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 -60 10 -20 -1 0 0 0 1 0 0 0 -1 4274.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 -60 10 0 -1 0 0 0 1 0 0 0 -1 4274.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 60 10 0 1 0 0 0 1 0 0 0 1 4274.dat
+0 // Technic Pin  1/2 (light_bluish_grey)
+1 71 60 10 -20 1 0 0 0 1 0 0 0 1 4274.dat
+
+
+
+
+
+
+0 STEP
+0 FILE 5893 - Truck rear.ldr
+0 Rear bed section with a long plate, yellow Technic brick, and inverted slopes.
+0 Name: 5893 - Truck rear.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x 10 (dark_bluish_grey)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Technic Brick  1 x  4 with Holes (yellow)
+1 14 0 -24 10 1 0 0 0 1 0 0 0 1 3701.dat
+0 STEP
+0 // Brick  1 x  2 (white)
+1 15 0 -24 -10 1 0 0 0 1 0 0 0 1 3004.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -60 -24 10 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 60 -24 10 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 STEP
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 -100 -24 10 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // ~Slope Brick 45  2 x  2 Inverted without Inner Stopper Ring (Obsolete) (light_bluish_grey)
+1 71 100 -24 10 -1 0 0 0 1 0 0 0 -1 3660.dat
+0 // Technic Pin Long with Stop Bush (light_bluish_grey)
+1 71 -20 -14 30 0 0 1 0 1 0 -1 0 0 32054.dat
+0 // Technic Pin Long with Stop Bush (light_bluish_grey)
+1 71 20 -14 30 0 0 1 0 1 0 -1 0 0 32054.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck bumper.ldr
+0 Front bumper with a black plate, silver grille, and curved slope accents.
+0 Name: 5893 - Truck bumper.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  6 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3666.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 -20 -8 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 20 -8 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 0 -16 0 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Slope Brick Curved  4 x  1 (light_bluish_grey)
+1 71 -60 -16 0 0 0 1 0 1 0 -1 0 0 61678.dat
+0 // Slope Brick Curved  4 x  1 (light_bluish_grey)
+1 71 60 -16 0 0 0 -1 0 1 0 1 0 0 61678.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck brake.ldr
+0 Brake and hub assembly with a steering arm, cross block, axle, and yellow belt wheels.
+0 Name: 5893 - Truck brake.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Steering Arm with Connectors (black)
+1 0 0 0 0 0 -1 0 1 0 0 0 0 1 32069.dat
+0 // Technic Cross Block 1 x 3 (Axle/None/Pin) (black)
+1 0 30 -10 -20 1 0 0 0 1 0 0 0 1 32068.dat
+0 STEP
+0 // Technic Axle  4 with Stop (dark_bluish_grey)
+1 72 48 0 0 -1 0 0 0 1 0 0 0 -1 87083.dat
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 15 0 0 0 0 -1 0 1 0 1 0 0 32123a.dat
+0 STEP
+0 // Technic Wedge Belt Wheel - Not Reinforced (yellow)
+1 14 45 0 0 0 0 -1 0 1 0 1 0 0 4185.dat
+0 STEP
+0 // Technic Wedge Belt Wheel - Not Reinforced (yellow)
+1 14 55 0 0 0 0 -1 0 1 0 1 0 0 4185.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck steering.ldr
+0 Steering gear assembly with an axle, 8-tooth gears, a knob gear, and bushings.
+0 Name: 5893 - Truck steering.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Axle  9 (light_bluish_grey)
+1 71 0 10 -60 0 0 -1 0 1 0 1 0 0 60485.dat
+0 // Technic Bush with Two Flanges (red)
+1 4 0 10 20 1 0 0 0 1 0 0 0 1 3713.dat
+0 STEP
+0 // Technic Brick  1 x  8 with Holes (black)
+1 0 0 0 0 -1 0 0 0 1 0 0 0 -1 3702.dat
+0 STEP
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 0 10 -15 1 0 0 0 1 0 0 0 1 32123a.dat
+0 STEP
+0 // Technic Bush with Two Flanges (red)
+1 4 0 10 -30 1 0 0 0 1 0 0 0 1 3713.dat
+0 // Technic Bush with Two Flanges (red)
+1 4 0 10 -50 1 0 0 0 1 0 0 0 1 3713.dat
+0 STEP
+0 // Technic Gear  4 Knob (yellow)
+1 14 0 10 -70 1 0 0 0 1 0 0 0 1 32072.dat
+0 STEP
+0 // Technic Gear  8 Tooth (dark_bluish_grey)
+1 72 0 10 -90 1 0 0 0 1 0 0 0 1 3647.dat
+0 // Technic Gear  8 Tooth (dark_bluish_grey)
+1 72 0 10 -110 1 0 0 0 1 0 0 0 1 3647.dat
+0 STEP
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 0 10 -125 1 0 0 0 1 0 0 0 1 32123a.dat
+0 STEP
+0 // Technic Brick  1 x  6 with Holes (dark_bluish_grey)
+1 72 0 0 -140 1 0 0 0 1 0 0 0 1 3894.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck side.ldr
+0 Wheel and axle assembly with a spoked rim mounted on a pin-axle brick.
+0 Name: 5893 - Truck side.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Brick  1 x  2 with Hole (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3700.dat
+0 // Technic Axle  4 with Stop (dark_bluish_grey)
+1 72 0 10 30 0 0 1 0 1 0 -1 0 0 87083.dat
+0 STEP
+0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (yellow)
+1 14 0 10 15 -1 0 0 0 1 0 0 0 -1 32123a.dat
+0 STEP
+0 // Wheel Rim 20 x 30 with  6 Dual Spokes and External Ribs (light_bluish_grey)
+1 71 0 10 40 1 0 0 0 1 0 0 0 1 56145.dat
+0 // Technic Pin Joiner Round with Slot (light_bluish_grey)
+1 71 0 10 70 0 0 -1 0 -1 0 -1 0 0 62462.dat
+0 STEP
+0 // Brick  2 x  2 with Pin and Axlehole (light_bluish_grey)
+1 71 0 0 110 0 0 1 0 1 0 -1 0 0 6232.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck side RH.ldr
+0 Right-side body detail with a gauge dial pattern tile and grille slope on a bracket.
+0 Name: 5893 - Truck side RH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 44728.dat
+0 STEP
+0 // Tile  1 x  1 with Clip (black)
+1 0 -10 30 -22 1 0 0 0 0 -1 0 1 0 2555.dat
+0 // Tile  1 x  1 with White and Red Dial, Black Needle and 4 Black Screw Heads Pattern (light_bluish_grey)
+1 71 10 30 -22 0 0 1 1 0 0 0 1 0 3070bp07.dat
+0 STEP
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 0 10 -14 0 0 1 1 0 0 0 1 0 61409.dat
+
+
+
+
+
+0 STEP
+0 FILE 5893 - Truck side LH.ldr
+0 Left-side body detail with round accent plates and a grille slope on a bracket.
+0 Name: 5893 - Truck side LH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Bracket  1 x  2 -  2 x  2 Down (dark_bluish_grey)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 44728.dat
+0 STEP
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 -10 30 -22 1 0 0 0 0 -1 0 1 0 6141.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 10 30 -22 0 0 1 1 0 0 0 1 0 6141.dat
+0 STEP
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 0 10 -14 0 0 -1 -1 0 0 0 1 0 61409.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck front.ldr
+0 Front fascia with blue plates, black grille and grooved tiles, and clip-mounted details.
+0 Name: 5893 - Truck front.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x 10 (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Plate  2 x  2 (blue)
+1 1 -80 -8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 80 -8 0 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (black)
+1 0 -40 -8 -10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 0 -8 -10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 -40 -8 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 40 -8 -10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (black)
+1 0 40 -8 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 0 -8 10 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+0 // Tile  1 x  1 with Groove (blue)
+1 1 -90 -16 10 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  1 with Groove (blue)
+1 1 -90 -16 -10 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  1 with Groove (blue)
+1 1 90 -16 10 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  1 with Groove (blue)
+1 1 90 -16 -10 1 0 0 0 1 0 0 0 1 3070b.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 -70 -16 10 1 0 0 0 1 0 0 0 1 2555.dat
+0 // Tile  1 x  1 with Clip (black)
+1 0 70 -16 10 1 0 0 0 1 0 0 0 1 2555.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck light LH.ldr
+0 Left headlight cluster using clear and blue transparent slope bricks.
+0 Name: 5893 - Truck light LH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_clear)
+1 47 -10 0 0 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 10 0 0 1 0 0 0 1 0 0 0 1 54200.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck light RH.ldr
+0 Right headlight cluster using clear and blue transparent slope bricks.
+0 Name: 5893 - Truck light RH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_clear)
+1 47 10 0 0 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -10 0 0 1 0 0 0 1 0 0 0 1 54200.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck steering V.ldr
+0 Steering linkage variant with a knob gear, axles, joiner, and a blue Technic plate.
+0 Name: 5893 - Truck steering V.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Axle  4 (black)
+1 0 0 -12 0 0 0.707 0.707 -1 0 0 0 -0.707 0.707 3705.dat
+0 // Technic Gear  4 Knob (yellow)
+1 14 0 18 0 -0.707 0.707 0 0 0 -1 -0.707 -0.707 0 32072.dat
+0 STEP
+0 // Technic Plate  2 x  8 with Holes (blue)
+1 1 0 0 -20 0 0 1 0 1 0 -1 0 0 3738.dat
+0 // Technic Axle Joiner Inline Smooth (dark_bluish_grey)
+1 72 0 -52 0 0.707 -0.707 0 0 0 -1 0.707 0.707 0 59443.dat
+0 STEP
+0 // Technic Axle  4 (black)
+1 0 0 -92 0 0 -0.707 -0.707 -1 0 0 0 0.707 -0.707 3705.dat
+
+
+
+
+0 STEP
+0 FILE 5893 - Truck front middle.ldr
+0 Central front grille panel with metallic silver grille tiles framed by clear and blue tiles.
+0 Name: 5893 - Truck front middle.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x 10 (blue)
+1 1 0 0 10 1 0 0 0 1 0 0 0 1 3832.dat
+0 // Plate  2 x  6 (light_bluish_grey)
+1 71 0 -8 10 1 0 0 0 1 0 0 0 1 3795.dat
+0 STEP
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 -40 -16 20 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 -40 -16 0 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 0 -16 20 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 0 -16 0 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 40 -16 20 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (metallic_silver)
+1 80 40 -16 0 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Plate  2 x  2 (white)
+1 15 -80 -8 10 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (white)
+1 15 80 -8 10 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (trans_clear)
+1 47 -80 -16 20 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (trans_clear)
+1 47 -80 -16 0 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (trans_clear)
+1 47 80 -16 20 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // Tile  1 x  2 with Groove (trans_clear)
+1 47 80 -16 0 1 0 0 0 1 0 0 0 1 3069b.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck winch.ldr
+0 Motorized winch with a windup motor, reel, towball, and hook assembly on a base plate.
+0 Name: 5893 - Truck winch.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x  6 (blue)
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -30 -24 -10 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -50 -24 -10 1 0 0 0 1 0 0 0 1 3062b.dat
+0 STEP
+0 // Cone  1 x  1 with Stop (black)
+1 0 -50 -48 -10 1 0 0 0 1 0 0 0 1 59900.dat
+0 // Cone  1 x  1 with Stop (black)
+1 0 -30 -48 -10 1 0 0 0 1 0 0 0 1 59900.dat
+0 STEP
+0 // Motor Windup  2 x  4 x  2.333 (Complete) (light_bluish_grey)
+1 71 20 -56 0 1 0 0 0 1 0 0 0 1 61100.dat
+0 STEP
+0 // Plate  2 x  2 Round with Reduced Axlehole (dark_bluish_grey)
+1 72 40 -56 0 1 0 0 0 1 0 0 0 1 4032b.dat
+0 // Technic Axle Towball (light_bluish_grey)
+1 71 78 -30 0 -1 0 0 0 1 0 0 0 -1 2736.dat
+0 STEP
+0 // Technic Reel  2 x  1 (light_bluish_grey)
+1 71 0 -30 -30 0 0 -1 0 1 0 1 0 0 61510.dat
+0 STEP
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -40 -56 -10 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Tile  2 x  2 Round with Black and Dark Bluish Grey Grid Pattern (light_bluish_grey)
+1 71 40 -64 0 1 0 0 0 1 0 0 0 1 4150ps4.dat
+0 // Hook with Towball (dark_bluish_grey)
+1 72 -40 -30 10 0 0 -1 -0.866 0.5 0 0.5 0.866 0 30395.dat
+0 STEP
+0 // Plate  2 x  4 (dark_bluish_grey)
+1 72 -20 -64 0 1 0 0 0 1 0 0 0 1 3020.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck light top LH.ldr
+0 Top-mounted left roof light with orange and clear transparent slope bricks.
+0 Name: 5893 - Truck light top LH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_orange)
+1 57 -10 0 0 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_clear)
+1 47 10 0 0 1 0 0 0 1 0 0 0 1 54200.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck light top RH.ldr
+0 Top-mounted right roof light with orange and clear transparent slope bricks.
+0 Name: 5893 - Truck light top RH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_orange)
+1 57 10 0 0 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (trans_clear)
+1 47 -10 0 0 1 0 0 0 1 0 0 0 1 54200.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck seat.ldr
+0 Cab seat with tan and black plates, grooved tiles, and clip handles.
+0 Name: 5893 - Truck seat.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  3 (black)
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3623.dat
+0 STEP
+0 // Plate  1 x  2 with Clip Horizontal on End (Thick C-Clip) (red)
+1 4 0 -8 10 0 0 -1 0 1 0 1 0 0 63868.dat
+0 // Plate  1 x  1 with Clip Horizontal (Thick U-Clip) (light_bluish_grey)
+1 71 0 -8 -20 1 0 0 0 1 0 0 0 1 6019.dat
+0 STEP
+0 // Plate  1 x  3 (tan)
+1 19 0 -16 20 1 0 0 0 1 0 0 0 1 3623.dat
+0 // Plate  2 x  3 (tan)
+1 19 0 -16 -10 1 0 0 0 1 0 0 0 1 3021.dat
+0 STEP
+0 // Tile  1 x  2 with Groove (tan)
+1 19 -20 -24 10 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // Tile  1 x  2 with Groove (tan)
+1 19 20 -24 10 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 STEP
+0 // Plate  1 x  2 with Handle Type 2 (light_bluish_grey)
+1 71 0 -11.443 59.349 1 0 0 0 0.985 -0.174 0 0.174 0.985 48336.dat
+0 // Tile  1 x  2 with Groove (tan)
+1 19 0 -19.321 57.96 1 0 0 0 0.985 -0.174 0 0.174 0.985 3069b.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck door LH.ldr
+0 Left hinged cab door with blue plates, corner plates, a grille tile, and a handle.
+0 Name: 5893 - Truck door LH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  3 (blue)
+1 1 0 0 0 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 0 0 40 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Plate  1 x  2 with Handle Type 2 (light_bluish_grey)
+1 71 0 -8 30 0 0 -1 0 1 0 1 0 0 48336.dat
+0 STEP
+0 // Hinge Plate  1 x  4 (Complete) (blue)
+1 1 10 -8 -30 0 0 -1 0 1 0 1 0 0 2429c01.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 0 -16 -50 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 0 -16 20 0 0 -1 0 1 0 1 0 0 2420.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 0 -16 0 -1 0 0 0 1 0 0 0 -1 2420.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 0 -24 30 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 0 -24 -10 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 -20 -24 10 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (blue)
+1 1 0 -32 10 0 0 -1 0 1 0 1 0 0 2431.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck door RH.ldr
+0 Right-hand blue truck door panel built with plates, a handle, corner pieces, a grille tile, and a hinge plate for mounting.
+0 Name: 5893 - Truck door RH.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  3 (blue)
+1 1 0 0 0 0 0 -1 0 1 0 1 0 0 3623.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 0 0 40 0 0 -1 0 1 0 1 0 0 3024.dat
+0 STEP
+0 // Plate  1 x  2 with Handle Type 2 (light_bluish_grey)
+1 71 0 -8 30 0 0 1 0 1 0 -1 0 0 48336.dat
+0 STEP
+0 // Hinge Plate  1 x  4 (Complete) (blue)
+1 1 -10 -8 -30 0 0 1 0 1 0 -1 0 0 2429c01.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 0 -16 -50 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 0 -16 20 1 0 0 0 1 0 0 0 1 2420.dat
+0 // Plate  2 x  2 Corner (blue)
+1 1 0 -16 0 0 0 1 0 1 0 -1 0 0 2420.dat
+0 STEP
+0 // Plate  1 x  2 (blue)
+1 1 0 -24 30 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  1 x  2 (blue)
+1 1 0 -24 -10 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 20 -24 10 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 STEP
+0 // Tile  1 x  4 with Groove (blue)
+1 1 0 -32 10 0 0 -1 0 1 0 1 0 0 2431.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck mirror.ldr
+0 Compact blue side mirror assembly using two slope bricks mounted on a handled plate.
+0 Name: 5893 - Truck mirror.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  1 x  2 with Handles Type 2 (black)
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3839b.dat
+0 STEP
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -10 0 0 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 10 0 0 -1 0 0 0 1 0 0 0 -1 54200.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck roof.ldr
+0 Large blue truck roof section constructed from a variety of plates, tiles, and slope bricks forming a flat structural canopy.
+0 Name: 5893 - Truck roof.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  4 x  8 (blue)
+1 1 0 0 0 0 0 1 0 1 0 -1 0 0 3035.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 0 0 90 -1 0 0 0 1 0 0 0 -1 3710.dat
+0 STEP
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 -30 -8 60 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Plate  1 x  4 (dark_bluish_grey)
+1 72 30 -8 60 0 0 -1 0 1 0 1 0 0 3710.dat
+0 // Tile  2 x  2 with Groove (dark_bluish_grey)
+1 72 -40 -8 0 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 // Tile  2 x  2 with Groove (dark_bluish_grey)
+1 72 40 -8 0 0 0 -1 0 1 0 1 0 0 3068b.dat
+0 STEP
+0 // Plate  4 x  8 (blue)
+1 1 -80 0 0 0 0 -1 0 1 0 1 0 0 3035.dat
+0 // Plate  4 x  8 (blue)
+1 1 80 0 0 0 0 -1 0 1 0 1 0 0 3035.dat
+0 STEP
+0 // Technic Plate  2 x  8 with Holes (blue)
+1 1 0 -8 60 0 0 -1 0 1 0 1 0 0 3738.dat
+0 STEP
+0 // Plate  2 x  6 (blue)
+1 1 -100 -8 20 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  2 x  6 (blue)
+1 1 100 -8 20 0 0 -1 0 1 0 1 0 0 3795.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -60 -8 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 60 -8 30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 -8 -30 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 60 -8 70 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 8 -70 1 0 0 0 1 0 0 0 1 3460.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -100 8 -70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 100 8 -70 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  2 x  3 (white)
+1 15 0 8 -30 0 0 1 0 1 0 -1 0 0 3021.dat
+0 // Plate  2 x 10 (dark_bluish_grey)
+1 72 0 8 20 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 STEP
+0 // Plate  2 x 10 (blue)
+1 1 0 -16 0 -1 0 0 0 1 0 0 0 -1 3832.dat
+0 // Plate  1 x  8 (blue)
+1 1 0 -16 30 -1 0 0 0 1 0 0 0 -1 3460.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 -110 -16 0 0 0 -1 0 1 0 1 0 0 2431.dat
+0 // Tile  1 x  4 with Groove (blue)
+1 1 110 -16 0 0 0 -1 0 1 0 1 0 0 2431.dat
+0 STEP
+0 // Plate  2 x  2 (blue)
+1 1 -20 -16 60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Plate  2 x  2 (blue)
+1 1 20 -16 60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -30 -8 90 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 30 -8 90 -1 0 0 0 1 0 0 0 -1 54200.dat
+0 // Plate  1 x  1 Round (light_bluish_grey)
+1 71 70 -16 70 -1 0 0 0 1 0 0 0 -1 6141.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -50 -24 70 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // Brick  1 x  1 Round with Hollow Stud (light_bluish_grey)
+1 71 -70 -24 70 1 0 0 0 1 0 0 0 1 3062b.dat
+0 STEP
+0 // Tile  1 x  1 with Clip (black)
+1 0 70 -24 70 -1 0 0 0 1 0 0 0 -1 2555.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 90 -24 10 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Plate  1 x  1 (dark_bluish_grey)
+1 72 -90 -24 10 0 0 1 0 1 0 -1 0 0 3024.dat
+0 // Tile  1 x  4 with Groove (white)
+1 15 0 -24 70 -1 0 0 0 1 0 0 0 -1 2431.dat
+0 // Plate  1 x  2 (dark_bluish_grey)
+1 72 -60 -32 70 -1 0 0 0 1 0 0 0 -1 3023.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 -90 -8 40 -1 0 0 0 1 0 0 0 -1 61409.dat
+0 // ~Slope Brick 18  2 x  1 x  0.667 Grille (Obsolete) (dark_bluish_grey)
+1 72 90 -8 40 -1 0 0 0 1 0 0 0 -1 61409.dat
+0 STEP
+0 // Tile  1 x  3 (white)
+1 15 -30 -24 30 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Tile  1 x  3 (white)
+1 15 -10 -24 30 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Tile  1 x  3 (white)
+1 15 10 -24 30 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Tile  1 x  3 (white)
+1 15 30 -24 30 0 0 -1 0 1 0 1 0 0 63864.dat
+0 // Cone  1 x  1 with Stop (light_bluish_grey)
+1 71 -70 -56 70 0 0 -1 0 1 0 1 0 0 59900.dat
+0 // Cone  1 x  1 with Stop (light_bluish_grey)
+1 71 -50 -56 70 0 0 -1 0 1 0 1 0 0 59900.dat
+0 // Minifig Lightsaber Hilt with Slight Sloping Fingers with Bottom Ring (light_bluish_grey)
+1 71 70 -30 53.5 0.707 0 0.707 0.707 0 -0.707 0 1 0 577b.dat
+0 // Tap  1 x  1 without Hole in Spout (light_bluish_grey)
+1 71 70 -30 109.5 -1 0 0 0 0 -1 0 -1 0 4599b.dat
+0 STEP
+0 // Bar  1 x  6 with Studs Closed (black)
+1 0 0 -40 10 -1 0 0 0 1 0 0 0 -1 6140.dat
+0 // Slope Brick Curved  4 x  1 (white)
+1 15 -30 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (white)
+1 15 -10 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (white)
+1 15 10 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (white)
+1 15 30 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 STEP
+0 // Slope Brick Curved  4 x  1 (blue)
+1 1 -50 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (blue)
+1 1 -70 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (blue)
+1 1 -90 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (blue)
+1 1 50 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (blue)
+1 1 70 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick Curved  4 x  1 (blue)
+1 1 90 -24 -40 1 0 0 0 1 0 0 0 1 61678.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 -110 0 -50 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Slope Brick 31  1 x  1 x  0.667 (blue)
+1 1 110 0 -50 1 0 0 0 1 0 0 0 1 54200.dat
+0 // Technic Tile  1 x  2 with Two Holes (dark_bluish_grey)
+1 72 -20 -48 10 1 0 0 0 1 0 0 0 1 32530.dat
+0 // Technic Tile  1 x  2 with Two Holes (dark_bluish_grey)
+1 72 20 -48 10 1 0 0 0 1 0 0 0 1 32530.dat
+0 STEP
+0 // Dish  2 x  2 with Rim (trans_yellow)
+1 46 -20 -70 -16 1 0 0 0 0 1 0 -1 0 2654.dat
+0 // Plate  2 x  2 Round with Reduced Axlehole (white)
+1 15 -20 -70 -8 1 0 0 0 0 1 0 -1 0 4032b.dat
+0 // Technic Axle Pin (tan)
+1 19 -20 -70 0 0 -1 0 0 0 1 -1 0 0 3749.dat
+0 // Technic Axle Pin (tan)
+1 19 20 -70 0 0 -1 0 0 0 1 -1 0 0 3749.dat
+0 // Dish  2 x  2 with Rim (trans_yellow)
+1 46 20 -70 -16 1 0 0 0 0 1 0 -1 0 2654.dat
+0 // Plate  2 x  2 Round with Reduced Axlehole (white)
+1 15 20 -70 -8 1 0 0 0 0 1 0 -1 0 4032b.dat
+
+
+
+0 STEP
+0 FILE 5893 - Truck ramp.ldr
+0 Dark and black loading ramp with grille tiles, transparent red accent plates, and handled end plates for a folding surface.
+0 Name: 5893 - Truck ramp.ldr
+0 Author: Marc Giraudet [Mad_Marc]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Plate  2 x 10 (dark_bluish_grey)
+1 72 0 0 10 1 0 0 0 1 0 0 0 1 3832.dat
+0 STEP
+0 // Plate  2 x  8 (black)
+1 0 -80 -8 -30 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Plate  2 x  8 (black)
+1 0 80 -8 -30 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 0 -8 20 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // Tile  1 x  2 Grille with Groove (black)
+1 0 0 -8 0 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+0 // Plate  1 x  2 (trans_red)
+1 36 -80 0 -20 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  2 (trans_red)
+1 36 80 0 -20 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Plate  1 x  8 (dark_bluish_grey)
+1 72 0 0 -40 1 0 0 0 1 0 0 0 1 3460.dat
+0 STEP
+0 // Plate  1 x  2 with Handle on End (black)
+1 0 -90 0 -90 0 0 1 0 1 0 -1 0 0 60478.dat
+0 // Plate  1 x  2 with Handle on End (black)
+1 0 -70 0 -90 0 0 1 0 1 0 -1 0 0 60478.dat
+0 // Plate  1 x  2 with Handle on End (black)
+1 0 70 0 -90 0 0 1 0 1 0 -1 0 0 60478.dat
+0 // Plate  1 x  2 with Handle on End (black)
+1 0 90 0 -90 0 0 1 0 1 0 -1 0 0 60478.dat
+
+
+
+
+
+

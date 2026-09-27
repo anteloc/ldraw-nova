@@ -14,11 +14,11 @@ from collections import Counter
 from functools import lru_cache
 from pathlib import Path
 
-from .common import ROOT, jsonable
+from .common import RESOURCE_DATA, jsonable
 
 
 def category_path():
-    path = Path(os.environ.get('LDRAW_CATEGORIES', ROOT / 'categories')).expanduser().resolve()
+    path = Path(os.environ.get('LDRAW_CATEGORIES', RESOURCE_DATA / 'categories')).expanduser().resolve()
     if not (path / 'parts').is_dir():
         raise ValueError(f'Categories missing at {path}; set LDRAW_CATEGORIES or use numeric part references')
     return path
