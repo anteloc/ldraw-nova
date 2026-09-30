@@ -236,7 +236,7 @@ def test_embedded_part_can_be_selected_as_cad_root(parts,tmp_path):
     atomic_write(source,mpd(ref(),'custom.dat').replace('!LDRAW_ORG Model','!LDRAW_ORG Unofficial_Part'))
     temporary=tmp_path/'render';temporary.mkdir()
     ready,library,names=cad_source(source,parts.path.parent,temporary)
-    assert ready.read_text().startswith('0 FILE astra-cad-root.ldr')
+    assert ready.read_text().startswith('0 FILE nova-cad-root.ldr')
     assert next(iter(names)) in ready.read_text()
 
 

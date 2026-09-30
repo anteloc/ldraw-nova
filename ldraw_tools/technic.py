@@ -85,7 +85,7 @@ def local_features(code, entry):
                 caps=CylindricalCaps.ONE if kind is Kind.STUD else CylindricalCaps.NONE),
             feature_id=PREFIX+port['id'], name=port['id'], owner_code=code,
             source=Source.OVERRIDE, confidence=1, freedoms=frozenset(freedoms),
-            provenance=('astra:technic-parts-v1', entry['evidence']),
+            provenance=('nova:technic-parts-v1', entry['evidence']),
             scale_inheritance='none',
         )
 

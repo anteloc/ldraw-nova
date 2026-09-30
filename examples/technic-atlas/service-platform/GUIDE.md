@@ -18,7 +18,7 @@ Inspect all seven views, especially the bottom and the hidden face of each mount
 
 ## Current evidence
 
-- Source SHA-256: `c793d4e85fcb2a1f97ec44a6b3d1c2762518d8ac18b2d3323d58e8fa45e27ff8`
+- Source SHA-256: `1a4da42ba87b08fa4c04ee29ed43227a654037229f264e04a14814c1f4d6c3b2`
 - Physical placements: 55
 - Reviewed mechanical contacts: 32
 - Structural member groups after the multiple-pin rule: 1

@@ -30,7 +30,7 @@ def _passed(diagnostics):
 
 def preview_wrapper(text, root, colour, identity):
     return ('\r\n'.join([f'0 FILE preview-{identity}.ldr', '0 Reference preview with explicit inherited colour',
-            '0 Author: ldraw-astra reference catalog', '0 !LDRAW_ORG Model',
+            '0 Author: ldraw-nova reference catalog', '0 !LDRAW_ORG Model',
             f'1 {colour} 0 0 0 1 0 0 0 1 0 0 0 1 {root}', '0 NOFILE'])+'\r\n'+text)
 
 
@@ -273,7 +273,7 @@ def export_example(index, identity, card_dir, output, *, title, lesson, placemen
     for filename in ['source.mpd','preview.mpd','extraction.json','card.json']:
         shutil.copyfile(source/filename,target/filename)
     shutil.copytree(source/'renders',target/'renders',dirs_exist_ok=True)
-    plan = dict(version=1,author='ldraw-astra reference example',assets=['source.mpd'],sections=[
+    plan = dict(version=1,author='ldraw-nova reference example',assets=['source.mpd'],sections=[
         dict(name='example-'+identity+'.ldr',description=title,anchors={'source_origin':dict(at=[0,0,0])},steps=[[
             dict(id='reference',ref=card['source_root'],colour=card['preview_colour'],at=[0,0,0],purpose=lesson)]])])
     atomic_write(target/'scene.plan.json',dumps(plan)+'\n')

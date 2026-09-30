@@ -269,7 +269,7 @@ def apply_snap(model, report, candidate=0):
             break
         original = table[normalized(piece.reference)]
         number = 1
-        while normalized(name := f'astra-snap-{number}.ldr') in table:
+        while normalized(name := f'nova-snap-{number}.ldr') in table:
             number += 1
         clone = copy.deepcopy(replace(original, submodels={}))
         clone.name = name

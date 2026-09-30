@@ -36,7 +36,7 @@ def recipe_plan(name, *, height=None, colour=None, accent=None):
         p('cornice-masonry','98283',colour,20,arch_y-24,yaw=180)
         for i,x in enumerate([-30,-10,10,30]):p('cornice-round-'+str(i),'85861',accent,x,arch_y-32)
         p('cornice-cap','3010',colour,0,arch_y-56)
-        author='Orion Pobursky [OrionP]; parameterized adaptation by ldraw-astra'
+        author='Orion Pobursky [OrionP]; parameterized adaptation by ldraw-nova'
     else:
         p('base','3022',colour,0,-8)
         p('centred-post-mount','87580',colour,0,-16)
@@ -45,7 +45,7 @@ def recipe_plan(name, *, height=None, colour=None, accent=None):
         p('collar','85861',accent,0,top-8)
         p('light','3062b',46,0,top-32)
         p('shade','4740',colour,0,top-40)
-        author='ldraw-astra; lamp vocabulary from Marc Giraudet [Mad_Marc]'
+        author='ldraw-nova; lamp vocabulary from Marc Giraudet [Mad_Marc]'
     return dict(version=1,author=author,license='Redistributable under CCAL version 2.0 : see CAreadme.txt',sections=[
         dict(name='recipe-'+name+'.ldr',description=RECIPES[name]['description'],anchors={'base':dict(at=[0,0,0])},steps=[placements])])
 

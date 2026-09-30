@@ -21,7 +21,7 @@ import argparse
 import json
 from pathlib import Path
 
-AUTHOR = "ldraw-astra stadium example generator"
+AUTHOR = "ldraw-nova stadium example generator"
 HERE = Path(__file__).resolve().parent
 
 # LDraw colour codes (validated via `ldraw-agent colours`).

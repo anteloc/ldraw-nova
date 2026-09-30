@@ -32,7 +32,7 @@ def query_frames(inspection, *, snapping=False):
                               frame=item.occurrence.matrix * Matrix([[1,0,0],[0,0,-1],[0,1,0]]),
                               profile=replace(feature.profile, radius=max(bounds.size.x,bounds.size.y)/2,
                                               width=bounds.size.z),
-                              provenance=(*feature.provenance, 'astra:6014-local-Z-wheel-axis'))
+                              provenance=(*feature.provenance, 'nova:6014-local-Z-wheel-axis'))
         authored = feature.source in LDCAD
         profile = feature.profile
         # LDCad uses closed S 6 cavities for ordinary 1-wide brick/slope
@@ -49,7 +49,7 @@ def query_frames(inspection, *, snapping=False):
                               source=ConnectionSource.HEURISTIC, confidence=min(feature.confidence, 0.8),
                               profile=replace(profile, sections=tuple(replace(s, shape=SectionShape.ROUND)
                                                                      for s in profile.sections)),
-                              provenance=(*feature.provenance, 'astra:inscribed-stud-in-square-socket'))
+                              provenance=(*feature.provenance, 'nova:inscribed-stud-in-square-socket'))
         if feature.kind is ConnectionKind.STUD_RECEPTACLE and (authored != snapping):
             feature = replace(feature, frame=feature.frame * REVERSE_AXIS)
         return feature

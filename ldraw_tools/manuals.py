@@ -127,7 +127,7 @@ def prepare_manual(path, section, outdir, parts, *, title=None, views=('home', '
                     matrix=jsonable(p.matrix), colour=p.colour.code)
                for s in section_table(original).values() for p in s.pieces
                if normalized(p.reference) == normalized(selected.name)]
-    plan = dict(version=1, author='ldraw-astra '+kind+' reference wrapper', assets=['source.mpd'], sections=[
+    plan = dict(version=1, author='ldraw-nova '+kind+' reference wrapper', assets=['source.mpd'], sections=[
         dict(name=namespace+'-placement.ldr', description=title or selected.description,
              anchors={'source_origin':dict(at=[0,0,0])}, steps=[[
                  dict(id='reference', ref=model.name, colour=colour, at=[0,0,0],

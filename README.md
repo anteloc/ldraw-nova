@@ -1,8 +1,8 @@
-# ldraw-astra
+# ldraw-nova
 
 **Give an AI agent a model idea. Get an editable brick model, a parts list and preview images.**
 
-ldraw-astra provides the tools, examples and instructions an agent needs to design models with real LDraw parts. It helps the agent find suitable pieces, build in sections, check its work and improve the result by looking at rendered images.
+ldraw-nova provides the tools, examples and instructions an agent needs to design models with real LDraw parts. It helps the agent find suitable pieces, build in sections, check its work and improve the result by looking at rendered images.
 
 LDraw is a format for digital brick models. An `.mpd` file holds a model and its smaller assemblies in one editable file.
 
@@ -69,7 +69,7 @@ You need **Python 3.12+**, **Poppler** (`pdftotext`), the **`leocad` CLI** and t
 The default local resource layout is:
 
 ```text
-ldraw-astra/
+ldraw-nova/
 └── data/
     ├── categories/           # descriptive part and colour catalog
     ├── offLibShadow/         # connector metadata

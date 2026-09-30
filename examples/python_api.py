@@ -10,7 +10,7 @@ from ldraw_tools.geometry import analyze_geometry
 
 plan = {
     "version": 1,
-    "author": "LDraw Astra example",
+    "author": "LDraw Nova example",
     "sections": [{
         "name": "tower-main.ldr", "description": "Alternating colour brick tower",
         "steps": [[{"id": f"brick-{i}", "ref": "3003.dat", "colour": 4 if i % 2 else 1,

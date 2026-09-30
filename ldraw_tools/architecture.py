@@ -9,7 +9,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from builtins import id as id_key
 
-AUTHOR = 'ldraw-astra building atlas'
+AUTHOR = 'ldraw-nova building atlas'
 BRICKS = {1:'3005', 2:'3004', 3:'3622', 4:'3010', 6:'3009', 8:'3008'}
 PLATES = {1:'3024', 2:'3023b', 3:'3623', 4:'3710', 6:'3666', 8:'3460'}
 WIDE_PLATES = {1:'3023b', 2:'3022', 3:'3021', 4:'3020', 6:'3795', 8:'3034'}

@@ -360,7 +360,7 @@ def build_scene():
     ch.add(roof('cathedral-choir-roof', 8, 12), STONE, 0, 248, 0, yaw=90)
     m.add(ch, STONE, 0, 24, 28)
     plan = m.plan()
-    plan['author'] = 'Original design generated with ldraw-astra for the workspace owner'
+    plan['author'] = 'Original design generated with ldraw-nova for the workspace owner'
     return plan
 
 

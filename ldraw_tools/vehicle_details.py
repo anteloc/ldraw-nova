@@ -72,5 +72,5 @@ def detail_module(name, palette='heritage-racing'):
 
 def detail_plan(name, palette='heritage-racing'):
     plan=detail_module(name,palette).plan()
-    plan['author']='ldraw-astra vehicle detail recipes'
+    plan['author']='ldraw-nova vehicle detail recipes'
     return plan

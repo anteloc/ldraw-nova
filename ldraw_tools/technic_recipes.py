@@ -92,7 +92,7 @@ class Structure:
         for i, entry in enumerate(ordered):
             indices[entry['id']] = i
             phases[entry['phase']].append({k: v for k, v in entry.items() if k != 'phase'})
-        plan = dict(version=1, author='ldraw-astra structural examples', sections=[dict(
+        plan = dict(version=1, author='ldraw-nova structural examples', sections=[dict(
             name=self.name+'.ldr', description=RECIPES[self.name]['title']+'; static structure, stage 1',
             steps=list(phases.values()), anchors={'origin': {'at': [0, 0, 0]}})])
         contract = dict(version=1, require_rigid=True,

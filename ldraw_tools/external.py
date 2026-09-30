@@ -84,7 +84,7 @@ def cad_source(path, library, temp):
     if not embedded:
         return path,library,{}
     digest=hashlib.sha256(path.read_bytes()).hexdigest()[:16]
-    renames={normalized(s.name):f"astra-{digest}-{i:03d}.dat" for i,s in enumerate(embedded)}
+    renames={normalized(s.name):f"nova-{digest}-{i:03d}.dat" for i,s in enumerate(embedded)}
     parts=get_parts(library)
     mini=temp/'library';mini.mkdir()
     (mini/'parts').mkdir();(mini/'p').mkdir()
@@ -129,7 +129,7 @@ def cad_source(path, library, temp):
         return result
     lines=[]
     if is_part(model):
-        wrapper='astra-cad-root.ldr'
+        wrapper='nova-cad-root.ldr'
         while normalized(wrapper) in table:wrapper='_'+wrapper
         lines.extend(['0 FILE '+wrapper,'0 Embedded part preview',
                       '1 7 0 0 0 1 0 0 0 1 0 0 0 1 '+renames[normalized(model.name)]])

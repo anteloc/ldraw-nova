@@ -23,7 +23,7 @@ REPO = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO))
 from ldraw_tools.architecture import Module  # noqa: E402
 
-AUTHOR = 'ldraw-astra sakura-garden generator'
+AUTHOR = 'ldraw-nova sakura-garden generator'
 ROOT = Path(__file__).resolve().parent
 
 C = dict(

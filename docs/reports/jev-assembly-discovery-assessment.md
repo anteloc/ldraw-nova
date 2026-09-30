@@ -187,7 +187,7 @@ Read diagnostics and open the renders before adapting it. Once selected, measure
 
 ## Reproducibility, usage and acceptance criteria
 
-Inspected revisions: `ldraw-astra` `115c97cb1de535f7533bbb738f2277c6d0e7be51`; sibling `jev-rerank` `1e9bc79ff3d01773bdba40890a27e701be5196c8`. Database SHA-256: `5472f2479da929c06d4a39dd94c04aa58c3065306441e1746fc6cc4a8bd49e02`.
+Inspected revisions: `ldraw-nova` `115c97cb1de535f7533bbb738f2277c6d0e7be51`; sibling `jev-rerank` `1e9bc79ff3d01773bdba40890a27e701be5196c8`. Database SHA-256: `5472f2479da929c06d4a39dd94c04aa58c3065306441e1746fc6cc4a8bd49e02`.
 
 Across all 20 invocations, Jev reported 11,321 candidate evaluations: 9,821 API calls and 1,500 cache hits, with 5,151,947 input tokens and 216,062 output tokens. These are repeated query/candidate evaluations, not unique source records. Summed CLI-reported time was 166.62 seconds; subprocess wall time was 169.47 seconds. Fresh 500-candidate pilot searches took approximately 8.06–10.32 seconds. This is not end-to-end agent time or a throughput benchmark. Dollar costs were not estimated.
 

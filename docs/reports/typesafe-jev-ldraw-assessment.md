@@ -24,7 +24,7 @@ The [TypeSafe skill](https://docs.typesafe.ai/agent-skill) is guidance for the c
 
 ## What the current tools already provide
 
-Inspected revisions: `ldraw-astra` at `de65bcaf62f6659312b50b59c4d8ed514241c5b2`; sibling `jev-rerank` at `1e9bc79ff3d01773bdba40890a27e701be5196c8`. These identify the current inspection, not the exact source used by every historical cathedral HTTP request.
+Inspected revisions: `ldraw-nova` at `de65bcaf62f6659312b50b59c4d8ed514241c5b2`; sibling `jev-rerank` at `1e9bc79ff3d01773bdba40890a27e701be5196c8`. These identify the current inspection, not the exact source used by every historical cathedral HTTP request.
 
 | Current capability | Evidence | Consequence for a proposal |
 |---|---|---|

@@ -73,4 +73,4 @@ def detail_section(name, palette='botanical-bookshop'):
 
 
 def detail_plan(name, palette='botanical-bookshop'):
-    return dict(version=1,author='ldraw-astra detail recipes',sections=[detail_section(name,palette)])
+    return dict(version=1,author='ldraw-nova detail recipes',sections=[detail_section(name,palette)])

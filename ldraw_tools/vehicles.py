@@ -125,7 +125,7 @@ def vehicle_plan(name, palette=None):
     if design.get('profile') in {'motorcycle','watercraft','aircraft'}:
         from .vehicle_families import family_model
         plan=family_model(name,palette).plan()
-        plan['author']='ldraw-astra vehicle examples'
+        plan['author']='ldraw-nova vehicle examples'
         return plan
     length, wb = design['length'], design['wheelbase']
     half = length//2
@@ -247,7 +247,7 @@ def vehicle_plan(name, palette=None):
             smooth_deck(cabin, 4, half-2, 1, 102, c['trim'])
     root.add(cabin, c['body'], id='cabin')
     plan = root.plan()
-    plan['author'] = 'ldraw-astra vehicle examples'
+    plan['author'] = 'ldraw-nova vehicle examples'
     return plan
 
 

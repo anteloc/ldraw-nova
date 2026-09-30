@@ -2,7 +2,7 @@
 
 Evaluated 2026-09-24 with `jev-1.13.0`:
 
-- **Repositories:** `ldraw-astra` at `115c97c`, `jev-rerank` at `1e9bc79`, `ldraw-info.db` modified 2026-09-24 22:07.
+- **Repositories:** `ldraw-nova` at `115c97c`, `jev-rerank` at `1e9bc79`, `ldraw-info.db` modified 2026-09-24 22:07.
 - **Queries:** 29 queries, plus a 3,000-candidate rerun, an exhaustive run and 3 runs on a scratch table.
 - **Checks:** all 170 submodel hits were inspected, and 4 references were extracted and rendered.
 

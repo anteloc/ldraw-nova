@@ -66,7 +66,7 @@ def assembly_view(model, section=None, colour=None):
     table = {normalized(s.name): s for s in closure if not is_part(s)}
     view = replace(selected, submodels={k: s for k, s in table.items() if k != normalized(selected.name)})
     if is_part(selected) or colour is not None:
-        wrapper = Model(name="astra-preview-root.ldr", objects=[Piece.place(selected.name, colour=colour if colour is not None else 7)])
+        wrapper = Model(name="nova-preview-root.ldr", objects=[Piece.place(selected.name, colour=colour if colour is not None else 7)])
         wrapper.submodels = table
         return wrapper
     return view
@@ -145,7 +145,7 @@ def selected_source(path, section, colour=None):
     blocks = source_blocks(path)
     lines, line_map = [], {}
     if colour is not None or is_part(closure[0]):
-        wrapper = "astra-selection-root.ldr"
+        wrapper = "nova-selection-root.ldr"
         while normalized(wrapper) in section_table(model):
             wrapper = "_" + wrapper
         lines.extend(["0 FILE " + wrapper, "0 Section preview", "0 Name: " + wrapper,

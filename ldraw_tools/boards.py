@@ -19,7 +19,7 @@ def part_board(refs, parts, library, outdir, *, colour=19, timeout=90):
     cards=[];records=[]
     for index,ref in enumerate(refs):
         code=(resolve_part(ref,parts) if ref.startswith('@') else ref).casefold().removesuffix('.dat')
-        plan=dict(version=1,author='ldraw-astra part board',sections=[dict(name='part-preview.ldr',description=f'Part preview: {code}',steps=[[dict(id='candidate',ref=code+'.dat',colour=colour,at=[0,0,0])]])])
+        plan=dict(version=1,author='ldraw-nova part board',sections=[dict(name='part-preview.ldr',description=f'Part preview: {code}',steps=[[dict(id='candidate',ref=code+'.dat',colour=colour,at=[0,0,0])]])])
         text,model,diagnostics=build_plan(plan,parts)
         if any(d['severity']=='error' for d in diagnostics):raise ValueError(f'Cannot preview {ref}: {dumps(diagnostics)}')
         inspection=inspect_model(model,parts)

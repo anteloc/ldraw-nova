@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 from ldraw_tools.details import palettes, detail_section
 
-AUTHOR = "ldraw-astra example generator"
+AUTHOR = "ldraw-nova example generator"
 
 
 def place(id, ref, colour, at=None, **kw):

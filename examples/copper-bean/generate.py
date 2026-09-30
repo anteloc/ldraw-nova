@@ -39,7 +39,7 @@ ARM_SWING = -60                   # clears the horizontal thighs of a sitter
 SIT = [[1, 0, 0], [0, 0, 1], [0, -1, 0]]      # proper rotation, det = +1
 SNOT = [[1, 0, 0], [0, 0, -1], [0, 1, 0]]     # upright tile on side studs
 
-AUTHOR = 'ldraw-astra copper-bean generator'
+AUTHOR = 'ldraw-nova copper-bean generator'
 ROOT = Path(__file__).resolve().parent
 
 C = dict(
