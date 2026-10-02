@@ -1,8 +1,31 @@
 # ldraw-nova
 
-**Give an AI agent a model idea. Get an editable brick model, a parts list and preview images.**
+**Give an AI agent a model idea. Get an editable LEGO© model**
 
-ldraw-nova provides the tools, examples and instructions an agent needs to design models with real LDraw parts. It helps the agent find suitable pieces, build in sections, check its work and improve the result by looking at rendered images.
+What you get:
+
+- Its **source code**, in **[LDraw language](https://www.ldraw.org/)**.
+- **Different views:** 3D viewer, 3D player, VR interactive (Meta Quest 3), images...
+- **Blender editable** glTF file, in `.glb` format.
+- **Chat history** and **agent thinking process**.
+
+Take a look at [the video](https://youtu.be/YDjjxGqWpgU):
+
+[<img src="img/ldraw-nova-yt-thumb.jpg">](https://youtu.be/YDjjxGqWpgU)
+
+
+## How it works
+
+**ldraw-nova** provides the tools, examples and instructions an agent needs to design models with real LDraw parts. 
+
+The process is as follows:
+
+1. The agent takes a prompt
+2. Reads instructions.md and related documents
+3. Plans how to build the model: required parts, submodels to be created, aesthetics...
+4. Iteratively, renders images from the model/submodel(s)
+
+It helps the agent find suitable pieces, build in sections, check its work and improve the result by looking at rendered images.
 
 LDraw is a format for digital brick models. An `.mpd` file holds a model and its smaller assemblies in one editable file.
 
