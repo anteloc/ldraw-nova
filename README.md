@@ -8,7 +8,7 @@ What you get when the building process finishes:
 - **Different views:** 3D viewer, 3D player, VR interactive (Meta Quest 3), images...
 - **Blender editable** glTF file, in `.glb` format, metainfo as Blender's Custom Properties.
 - **Chat history** and **agent thinking process**.
-- and more...
+- and more... 👌
 
 Take a look at [the video](https://youtu.be/YDjjxGqWpgU):
 
@@ -64,12 +64,11 @@ To stop it:
 docker compose down
 ```
 
-
 ## Why all of this?
 
 Well, to summarize: I did this in order to get **agentic LLMs capable of designing buildable, physical things!**
 
-Finding **LDraw**, an **assembly language** (pun intended!) that would be at the same time **simple**, **low level**, and **executable** in order to **produce 3D CAD models**, gave me the idea of **experimenting** with both **ChatGPT** and **Claude** in order to try and make them **code in LDraw**, same as they do with other programming languages.
+Finding **LDraw**, an **assembly language** (pun intended! 😜) that would be at the same time **simple**, **low level**, and **executable** in order to **produce 3D CAD models**, gave me the idea of **experimenting** with both **ChatGPT** and **Claude** in order to try and make them **code in LDraw**, same as they do with other programming languages.
 
 To my surprise, even though this language is heavily focused on **math** (parts rotations, positioning...), which LLMs are **usually bad** at, **agents did pretty well** instead on initial tests, and subsequent projects also yielded **good results**, but **never enough** in order to consider generated models to be correct:
 
@@ -79,20 +78,20 @@ To my surprise, even though this language is heavily focused on **math** (parts 
 
 These three attempts, and quite some other experimentation, led me to the following **conclusions**:
 
-**Conclusion 1:** there is a **minimum resistance path to geometry math** for agents, i.e.:
+**💡 Conclusion 1:** there is a **minimum resistance path to geometry math** for agents, i.e.:
 
 - **Giving the agents tooling** to generate LDraw sources would **sidestep (evil!) geometry math**
 - ... because they do way **better** at generating **python code** that **produces math**
 - ... **than on producing math themselves!**
 
-**Conclusion 2:** 
+**💡 Conclusion 2:** 
 
 - Agents tend to do **better when learning** from python **code** that **produces models**
 - ... than from **models themselves** (LDraw's evil geometry, again...)
 
-Then, the **only thing left (!)** was to create a python-based tooling with the required **primitives, verbs, constructive vocabulary**... so agents would **learn by example** and **do similar things on their own.**
+Then, the **only thing left 🤔** was to create a python-based tooling with the required **primitives, verbs, constructive vocabulary**... so agents would **learn by example** and **do similar things on their own.**
 
-Which proved to be really **hard to get right**, even if vibe coding it... until **GPT-6 Astra** and **Claude Opus 5.5** arrived... and **vibe-coded it right!**
+Which proved to be really **hard to get right**, even if vibe coding it... until **GPT-6 Astra** and **Claude Opus 5.5** arrived... and **vibe-coded it right!** 🚀🚀🚀
 
 ## How it works
 
@@ -126,9 +125,13 @@ The way it produces models is more like:
 - ... that when executed, **produce LDraw source** file(s), a very specialized **3D CAD language**.
 - ... like e.g. [atlas-crane.mpd](examples/atlas-crane/atlas-crane.mpd)
 
-To **summarize**, this is like an **agent** creating a **generator** that produces a **3D model** in a model **assembly language** named **LDraw**.
+To **summarize**, this is like:
 
-A **compiler** of sorts, so to say 😉
+- an **agent** creating a **generator** 
+- ... that produces a **3D model** 
+- ... in an **assembly language** named **LDraw** 🤯
+
+A **compiler** of sorts, so to say 🤓
 
 
 ```mermaid
@@ -157,6 +160,21 @@ These are some of the guides and references given to the agent in order to make 
 | Organize a large model                | [Module workflow](docs/agent/complex-models.md) and [Copper Lane example](examples/modular-street/README.md)       |
 | Understand connections and checks     | [Geometry](docs/agent/geometry.md), [snapping](docs/agent/snapping.md) and [validation](docs/agent/validation.md)  |
 | Look up a command or file-format rule | [Tool reference](docs/agent/tooling.md) and [LDraw rules](docs/agent/ldraw-reference.md)                           |
+
+## Development
+
+Being this a **first release**, there are quite some things that still require some work:
+
+- **VR on Meta Quest 3:** model handling has **many issues**, performance issues.
+- **Adapt for low-end agents:** adapt current tooling, docs and instructions in order to improve usage by low-end models like e.g. Luna, Haiku, etc.
+- **Expensive generation:** currently, only **expensive**, high-end models, are currently capable of generating large-sized and correct models.
+- **Improve efficiency:** generative process is currently slow.
+- **Add and improve** more **model families:** 
+	- Humans and animals: minifigs
+	- Technic models: machines, engines... 
+	- Spaceships: generated models are not very good
+- **Building models from manuals:** it partially works, better if page manuals are given as images.
+- **Fine-grained inspection:** for inspecting submodels and their step-by-step building processes.
 
 ## Contributing
 
