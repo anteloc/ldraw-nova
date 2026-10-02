@@ -6,13 +6,63 @@ What you get when the building process finishes:
 
 - Its **source code**, in **[LDraw language](https://www.ldraw.org/)**.
 - **Different views:** 3D viewer, 3D player, VR interactive (Meta Quest 3), images...
-- **Blender editable** glTF file, in `.glb` format, metainfo as Blender's Custom Properties
+- **Blender editable** glTF file, in `.glb` format, metainfo as Blender's Custom Properties.
 - **Chat history** and **agent thinking process**.
 - and more...
 
 Take a look at [the video](https://youtu.be/YDjjxGqWpgU):
 
 [<img src="img/ldraw-nova-yt-thumb.jpg">](https://youtu.be/YDjjxGqWpgU)
+
+## Installation
+
+
+> [!IMPORTANT]
+> **Tools** used by agents in order to find **suitable parts** and **example models** take advantage of [jev-rerank](https://github.com/anteloc/jev-rerank) (I'm also the author). 
+> This is a **semantic search tool** with **re-ranking** backed by [TypeSafe](https://typesafe.ai/)'s [Jev System One](https://typesafe.ai/) AI model.
+> 
+> - **If you have a TypeSafe API key** (`TYPESAFE_API_KEY`), set its value on the web app's **Settings** section.
+> - **If you don't**, reranking search **will not work**, and agents will resort to a **FTS (Full Text Search)** strategy as a fallback, which could (maybe) yield **worse models.**
+
+Run **ldraw-nova** as a web app, with Docker. You need [Git](https://git-scm.com/downloads) and [Docker](https://docs.docker.com/get-started/get-docker/).
+
+This web app will run dockerized, and to build the Docker image, two sibling repos are required:
+
+- [`ldraw-nova`](https://github.com/anteloc/ldraw-nova): this one, of course 😉
+- [`ldraw-nova-docker`](https://github.com/anteloc/ldraw-nova-docker): provides both Docker configuration and the web app.
+
+**1. Clone** both repos side by side, at the **same tag**, so they work together:
+
+```bash
+git clone --branch v0.6.0 https://github.com/anteloc/ldraw-nova.git
+git clone --branch v0.6.0 https://github.com/anteloc/ldraw-nova-docker.git
+```
+
+**2. Build** the Docker image. The first build takes a while and needs about 5 GB of disk space:
+
+```bash
+cd ldraw-nova-docker
+docker compose build
+```
+
+**3. Start** the app:
+
+```bash
+docker compose up -d
+```
+
+**4. Open** it in your browser:
+
+- **https://localhost:8443**: needed for VR on Meta Quest 3. The certificate is self-signed, so accept the browser's warning the first time.
+- **http://localhost:8765**: plain HTTP, no certificate warnings. Use it if the self-signed certificate gets in the way. VR won't work over it.
+
+Other devices on your network can reach the app by your computer's IP instead of `localhost`, e.g. `https://192.168.1.20:8443` from a Quest 3. The app has no login, so only run it on networks you trust.
+
+To stop it: 
+
+```bash
+docker compose down
+```
 
 
 ## Why all of this?
@@ -27,7 +77,7 @@ To my surprise, even though this language is heavily focused on **math** (parts 
 - **1st attempt** at an agentic python tooling: [py2bricks](https://github.com/anteloc/py2bricks)
 - **2nd attempt**: [py4bricks](https://github.com/anteloc/py4bricks)
 
-These three attempts, and quite some other experimentation, led me to these conclusions:
+These three attempts, and quite some other experimentation, led me to the following **conclusions**:
 
 **Conclusion 1:** there is a **minimum resistance path to geometry math** for agents, i.e.:
 
@@ -127,10 +177,9 @@ I'd like to thank the following:
 
 **NOTE:** For this work, I've used many LDraw models, libraries, tools, docs... from many sources.
 
-There is a lot **amazing people** that generously contributed to this, even for **decades**, by **generously donating their work** to the public domain and open source community. 
+There is a lot **amazing people** that generously contributed to this, even for **decades**, by **generously donating their finest work** to the public domain and open source community. 
 
-If you think you should be included in this section, please **drop me an email!**
-
+If you think you should be included on this section, please **drop me an email!**
 
 ## Trademarks
 
