@@ -1,18 +1,18 @@
 # ldraw-nova
 
-**Give an AI agent a model idea. Get an editable LEGO© model**
+**Give an AI agent a model idea. Guide it, let it build it, and get an LDraw LEGO© model.**
 
-What you get:
+What you get when the building process finishes:
 
 - Its **source code**, in **[LDraw language](https://www.ldraw.org/)**.
 - **Different views:** 3D viewer, 3D player, VR interactive (Meta Quest 3), images...
-- **Blender editable** glTF file, in `.glb` format.
+- **Blender editable** glTF file, in `.glb` format, metainfo as Blender's Custom Properties
 - **Chat history** and **agent thinking process**.
+- and more...
 
 Take a look at [the video](https://youtu.be/YDjjxGqWpgU):
 
 [<img src="img/ldraw-nova-yt-thumb.jpg">](https://youtu.be/YDjjxGqWpgU)
-
 
 ## How it works
 
@@ -20,145 +20,88 @@ Take a look at [the video](https://youtu.be/YDjjxGqWpgU):
 
 The process is as follows:
 
-1. The agent takes a prompt
-2. Reads instructions.md and related documents
-3. Plans how to build the model: required parts, submodels to be created, aesthetics...
-4. Iteratively, renders images from the model/submodel(s)
+1. The agent takes a **prompt**.
+2. **Reads** [instructions.md](./instructions.md) and related documents to [LDraw language](https://www.ldraw.org/) and LEGO© models building.
+3. **Plans** how to build the model: required parts, submodels to be created, aesthetics...
+4. **Iteratively**:
+	1. Renders images from the model/submodel(s)
+	2. Inspects them, adjusts positioning, aesthetics... and back to rendering
+5. ... until it considers the **model finished** and ready to deliver!
 
-It helps the agent find suitable pieces, build in sections, check its work and improve the result by looking at rendered images.
+Provided tooling helps the agent in:
 
-LDraw is a format for digital brick models. An `.mpd` file holds a model and its smaller assemblies in one editable file.
+- **Finding** suitable parts.
+- Also, **example models** and **submodels** to start with.
+- **Collision** and **gaps detection** for placing parts correctly.
+- **Headless rendering** for inspecting current results.
+- and more...
 
-**Using an agent? Start it with [instructions.md](instructions.md) and your model request.** This README explains the project; that file guides the agent through the work.
+The agent **doesn't actually start with placing parts**, except for things like e.g. prototyping and learning by altering pre-existing example models.
 
-| Buildings | Gardens and landscapes | Vehicles |
-| --- | --- | --- |
-| [![Corner café with apartments and an outdoor terrace](examples/copper-bean/review/home.png)](examples/copper-bean/README.md) | [![Pagoda garden with cherry trees, a pond and a bridge](examples/sakura-garden/review/home.png)](examples/sakura-garden/README.md) | [![Green grand tourer with a cream roof](examples/vehicle-atlas/grand-tourer/home.png)](examples/vehicle-atlas/README.md) |
-| [The Copper Bean](examples/copper-bean/README.md) | [Sakura Garden](examples/sakura-garden/README.md) | [Vehicle examples](examples/vehicle-atlas/README.md) |
+The way it produces models is more like:
 
-Examples include buildings, street scenes, cars, trucks, motorcycles, boats and aircraft. The [spaceship atlas](examples/spaceship-atlas/README.md) adds advanced Star Wars spacecraft studies and reusable cockpit, engine, wing and hull constructions. [Technic structures](examples/technic-atlas/README.md) add frames, chassis, towers and supports for stud-built bodies. [Mechanism studies](examples/mechanism-atlas/README.md) add gears, worm drives, steering racks, piston/crank assemblies, differentials and turntables. Agents study their build pages and adapt the source; analytical mechanism verification is deferred.
+- **Collects** the required information, from experimental results, docs and planning.
+- **Builds** one or more **plans**, that fully describe the model and submodels, including its geometry, like e.g. [atlas-crane.plan.json](examples/atlas-crane/atlas-crane.plan.json)
+- And with that plan, it creates one or more **generator scripts** like e.g. [generate.py](examples/atlas-crane/generate.py) 
+- ... that when executed, **produce LDraw source** file(s), a very specialized **3D CAD language**.
+- ... like e.g. [atlas-crane.mpd](examples/atlas-crane/atlas-crane.mpd)
 
-## From an idea to a model
+To **summarize**, this is like an **agent** creating a **generator** that produces a **3D model** in a model **assembly language** named **LDraw**.
 
-The agent makes the design choices. The tools help it build, measure, check and render those choices. The process includes two kinds of review: checking the construction and looking at the design.
+A **compiler** of sorts, so to say 😉
 
-```mermaid
-flowchart TD
-    request["Describe your model"] --> plan["Plan the design"]
-    plan --> find["Find parts and examples"]
-    find --> build["Build in sections"]
-    build --> checks{"Checks pass?"}
-    checks -->|"No: fix the source"| build
-    checks -->|Yes| render["Look at rendered images"]
-    render --> review{"Does it look right?"}
-    review -->|"No: refine the design"| plan
-    review -->|Yes| deliver["Deliver the finished files"]
-```
-
-Review the shape, colours, details and fit to the brief. For a large model, check individual sections before the complete scene. Keep changes in the plan or Python generator so the model can be rebuilt.
-
-The delivery includes the **model**, its **editable source**, a **parts list** (BOM), **check reports** and **reviewed images**. Passing checks provides useful evidence; physical strength, stability and every connection still require judgement. See [what validation covers](docs/agent/validation.md).
-
-## Find better parts and building ideas
-
-The agent can learn from three levels of reference: a **whole model** for proportions, a **submodel** such as an engine or window for construction, and a **single part** such as a seat or windscreen for detail.
-
-Start with the [reference examples](examples/reference-atlas/README.md). When more options are needed, search the local collection:
 
 ```mermaid
 flowchart TD
-    need["Choose what to look for"] --> available{"Is Jev available?"}
-    available -->|Yes| semantic["Search by meaning"]
-    available -->|No| keywords["Search by keywords offline"]
-    semantic -->|"Search fails"| keywords
-    semantic -->|Results| compare["Compare images and sizes"]
-    keywords --> compare
-    compare --> study["Study useful submodels and their build pages"]
-    study --> adapt["Adapt the idea to your model"]
+    agent([agent]) -- produces --> plan[plan.json]
+    plan -- interpretation --> gen[generator.py]
+    gen -- execution --> model[model.mpd]
+
 ```
 
-Optional semantic search uses Jev from TypeSafe to find descriptions that match an idea. Agents [check its availability first](docs/agent/reference-discovery.md#check-jev-availability-before-searching) and explicitly use `--engine fts` for offline keyword search when it is unavailable. Existing examples, building tools and rendering remain usable.
 
-To understand a useful submodel, [turn its source steps into a build manual](docs/agent/build-manuals.md): follow the pictures, inspect its parts and mounts, then add the construction to the appropriate atlas.
+## Agent's informational sources
 
-Explore **21 inspected constructions** and **two adjustable recipes**, or generate an image catalog of **220 selected references**. The [reference discovery guide](docs/agent/reference-discovery.md) explains how.
+These are some of the guides and references given to the agent in order to make it a builder:
 
-## Get started
-
-### 1. Set up the tools
-
-You need **Python 3.12+**, **Poppler** (`pdftotext`), the **`leocad` CLI** and the **LDraw part library**. Tools are resolved on `PATH` across operating systems. The rendering workflow has been tested on macOS. `uv` is recommended for installing the locked Python dependencies; `setup.sh` also supports a pip fallback.
-
-The default local resource layout is:
-
-```text
-ldraw-nova/
-└── data/
-    ├── categories/           # descriptive part and colour catalog
-    ├── offLibShadow/         # connector metadata
-    ├── models-annotated/     # reference models
-    └── ldraw-info.db         # searchable descriptions
-```
-
-Set `LDRAW_DIR` to your installed parts library (containing `parts/`, `p/` and `LDConfig.ldr`). `LDRAWDIR` is the fallback when `LDRAW_DIR` is unset or empty; `--library` overrides either. Reference models and their database always come from this repository's `data/` directory.
-
-Optional workflows use globally available `jev-rerank` for semantic search, `mpd2glb.sh` for semantic GLB export, and `ldraw-render-steps.sh` to inspect construction steps from different views. The step renderer also helps find defects and improve unfinished submodels; see the [build-page guide](docs/agent/build-manuals.md#inspect-a-model-during-construction).
-
-From the repository root, run:
-
-```sh
-export LDRAW_DIR=/path/to/ldraw
-./setup.sh
-```
-
-Setup installs Python packages in `.venv`, checks the environment and prepares local indexes. The [tool guide](docs/agent/tooling.md) covers configuration and individual commands.
-
-### 2. Give your agent a brief
-
-Use an agent that can read files and run commands in this repository. For example:
-
-> Read instructions.md and build a compact delivery van in dark blue with a cream roof. Include seats, a steering wheel and a cargo area. Save the model, editable source, checks, parts list and reviewed images under output/.
-
-Describe the subject, approximate size, style and details that matter to you. The agent follows [instructions.md](instructions.md) to plan, build, check and refine it.
-
-### 3. Or try a small example yourself
-
-This five-part bridge demonstrates the build, check and render loop:
-
-```sh
-./ldraw-agent build examples/bridge.plan.json --output output/first-model.mpd
-./ldraw-agent validate output/first-model.mpd --geometry --strict
-./ldraw-agent render output/first-model.mpd --outdir output/first-model-review
-./ldraw-agent compare-bom output/first-model.mpd \
-  --csv output/first-model-review/leocad-bom.csv
-```
-
-Open `output/first-model.mpd` in LeoCAD and the PNGs in `output/first-model-review/`. The last command compares the toolkit's parts list with LeoCAD's. Add `--force` to the build command when intentionally replacing a previous result.
-
-## Where to go next
-
-| I want to… | Read… |
-| --- | --- |
-| Ask an agent to generate a model | [Agent instructions](instructions.md) |
-| Improve shape, colour and detail | [Visual design guide](docs/agent/visual-design.md) |
-| Build vehicles | [Vehicle workflow](docs/agent/vehicles.md) and [examples](examples/vehicle-atlas/README.md) |
-| Build advanced spaceships | [Spaceship workflow](docs/agent/spaceships.md) and [atlas](examples/spaceship-atlas/README.md) |
-| Learn a submodel and grow an atlas | [Build-manual workflow](docs/agent/build-manuals.md) |
-| Build Technic structures | [Structural workflow](docs/agent/technic.md) and [examples](examples/technic-atlas/README.md) |
-| Build with mechanisms | [Mechanism workflow](docs/agent/mechanisms.md) and [build manuals](examples/mechanism-atlas/README.md) |
+| I want to…                            | Read…                                                                                                              |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Ask an agent to generate a model      | [Agent instructions](instructions.md)                                                                              |
+| Improve shape, colour and detail      | [Visual design guide](docs/agent/visual-design.md)                                                                 |
+| Build vehicles                        | [Vehicle workflow](docs/agent/vehicles.md) and [examples](examples/vehicle-atlas/README.md)                        |
+| Build advanced spaceships             | [Spaceship workflow](docs/agent/spaceships.md) and [atlas](examples/spaceship-atlas/README.md)                     |
+| Learn a submodel and grow an atlas    | [Build-manual workflow](docs/agent/build-manuals.md)                                                               |
+| Build Technic structures              | [Structural workflow](docs/agent/technic.md) and [examples](examples/technic-atlas/README.md)                      |
+| Build with mechanisms                 | [Mechanism workflow](docs/agent/mechanisms.md) and [build manuals](examples/mechanism-atlas/README.md)             |
 | Find parts and reusable constructions | [Reference discovery](docs/agent/reference-discovery.md) and [reference atlas](examples/reference-atlas/README.md) |
-| Organize a large model | [Module workflow](docs/agent/complex-models.md) and [Copper Lane example](examples/modular-street/README.md) |
-| Understand connections and checks | [Geometry](docs/agent/geometry.md), [snapping](docs/agent/snapping.md) and [validation](docs/agent/validation.md) |
-| Look up a command or file-format rule | [Tool reference](docs/agent/tooling.md) and [LDraw rules](docs/agent/ldraw-reference.md) |
+| Organize a large model                | [Module workflow](docs/agent/complex-models.md) and [Copper Lane example](examples/modular-street/README.md)       |
+| Understand connections and checks     | [Geometry](docs/agent/geometry.md), [snapping](docs/agent/snapping.md) and [validation](docs/agent/validation.md)  |
+| Look up a command or file-format rule | [Tool reference](docs/agent/tooling.md) and [LDraw rules](docs/agent/ldraw-reference.md)                           |
 
-## Development and credits
+## Contributing
 
-To check a tooling change after setup:
+COMING SOON
 
-```sh
-.venv/bin/python -m pytest -q
-```
+## Acknowledgements
 
-The toolkit builds on [pyldraw3](https://github.com/hbmartin/pyldraw3), NumPy, JSON Schema, SQLite, Poppler and LeoCAD. The [verification record](docs/agent/verification.md) documents tested behavior; the [LDraw specification](docs/ldraw-specs.pdf) supplies the file-format rules.
+I'd like to thank the following:
 
-See [LICENSE](LICENSE) for the project's GNU AGPL v3 license. Referenced models and bundled third-party resources retain their own authorship and license notices.
+- [The LDraw Community](https://www.ldraw.org/)
+- [LDView](https://tcobbs.github.io/ldview/)'s Travis Cobbs (@tcobbs), and contributors.
+- [LeoCAD](https://github.com/leozide/leocad)'s Leonardo Zide (@leozide), and contributors.
+- [LDCad](https://www.melkert.net/LDCad) and Shadow Library, Roland Melkert.
+- [ldraw.rs](https://github.com/segfault87/ldraw.rs)'s Park Joon-Kyu (@segfault87), and contributors.
+- [pyldraw3](https://github.com/hbmartin/pyldraw3)'s  Harold Martin (@hbmartin), and contributors.
+
+... and thanks to all of the many other LDraw creators!
+
+**NOTE:** For this work, I've used many LDraw models, libraries, tools, docs... from many sources.
+
+There is a lot **amazing people** that generously contributed to this, even for **decades**, by **generously donating their work** to the public domain and open source community. 
+
+If you think you should be included in this section, please **drop me an email!**
+
+
+## Trademarks
+
+**LEGO(R)** is a trademark of the **LEGO Group** of companies which does not sponsor, authorize or endorse this software.

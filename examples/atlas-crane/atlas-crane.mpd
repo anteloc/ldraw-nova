@@ -1,0 +1,2791 @@
+0 FILE atc-main.ldr
+0 Atlas AT-90 all-terrain crane (original design) - working pose
+0 Name: atc-main.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // atc-carrier-0: carrier
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-carrier.ldr
+0 STEP
+0 // atc-super-0: superstructure, slewed 0 deg
+1 16 0 -290 -30 1 0 0 0 1 0 0 0 1 atc-super.ldr
+0 // atc-boom-0: telescopic boom, luffed 40 deg
+1 16 0 -410 120 1 0 0 0 0.766044443 0.64278761 0 -0.64278761 0.766044443 atc-boom.ldr
+0 STEP
+0 // 61927-f2-0: luffing cylinder (linear actuator, extended)
+1 72 -40 -340.403 -16.697 -1 0 0 0 0.52012828 -0.854088152 0 -0.854088152 -0.52012828 61927-f2.dat
+0 // 61927-f2-1: luffing cylinder (linear actuator, extended)
+1 72 40 -340.403 -16.697 -1 0 0 0 0.52012828 -0.854088152 0 -0.854088152 -0.52012828 61927-f2.dat
+0 STEP
+0 // 71149-0: hoist rope run (braided string)
+1 0 0 -809.279 100.304 0 0 -1 -0.562107717 -0.827064033 0 -0.827064033 0.562107717 0 71149.dat
+0 // 14225-0: hoist rope run (braided string)
+1 0 0 -1189.517 -459.163 0 0 -1 -0.562107717 -0.827064033 0 -0.827064033 0.562107717 0 14225.dat
+0 // 75924-0: hoist rope run (braided string)
+1 0 0 -1461.115 -858.783 0 0 -1 -0.562107717 -0.827064033 0 -0.827064033 0.562107717 0 75924.dat
+0 // 76384-0: hoist rope run (braided string)
+1 0 0 -1624.074 -1098.555 0 0 -1 -0.562107717 -0.827064033 0 -0.827064033 0.562107717 0 76384.dat
+0 // 75924-1: hoist rope fall
+1 0 -10 -1442.39 -1255.69 0 1 0 1 0 0 0 0 -1 75924.dat
+0 // 75924-2: hoist rope fall
+1 0 10 -1442.39 -1255.69 0 1 0 1 0 0 0 0 -1 75924.dat
+0 // atc-hook-00-42082---hook-0: hook block (adapted from 42082)
+1 4 0 -1201.39 -1255.69 0 0 -1 0 1 0 1 0 0 atc-hook-00-42082---hook.ldr
+0 // 70644-0: crane hook
+1 71 0 -1103.39 -1255.69 1 0 0 0 1 0 0 0 1 70644.dat
+0 NOFILE
+0 FILE atc-carrier.ldr
+0 Carrier: frame, axle stations, bodywork, cab, outriggers and engine bay
+0 Name: atc-carrier.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // atc-frame-0: ladder frame
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-frame.ldr
+0 // atc-rear-0: rear engine bay
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-rear.ldr
+0 STEP
+0 // atc-axle-0: axle station 1
+1 16 0 -80 -470 1 0 0 0 1 0 0 0 1 atc-axle.ldr
+0 // atc-axle-driven-0: axle station 2
+1 16 0 -80 -250 1 0 0 0 1 0 0 0 1 atc-axle-driven.ldr
+0 // atc-axle-driven-1: axle station 3
+1 16 0 -80 190 1 0 0 0 1 0 0 0 1 atc-axle-driven.ldr
+0 // atc-axle-1: axle station 4
+1 16 0 -80 410 1 0 0 0 1 0 0 0 1 atc-axle.ldr
+0 STEP
+0 // atc-body-0: bodywork
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-body.ldr
+0 // atc-cab-0: driver cab
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-cab.ldr
+0 // atc-front-0: front equipment box and boom rest
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-front.ldr
+0 // 18939-0: turntable bottom (60 tooth) on the deck crossmembers
+1 71 0 -260 -30 1 0 0 0 1 0 0 0 1 18939.dat
+0 STEP
+0 // atc-outrigger-0: right outrigger
+1 16 90 -127 -100 1 0 0 0 1 0 0 0 1 atc-outrigger.ldr
+0 // atc-outrigger-1: left outrigger
+1 16 -90 -127 -100 -1 0 0 0 1 0 0 0 -1 atc-outrigger.ldr
+0 // atc-outrigger-2: right outrigger
+1 16 90 -127 560 1 0 0 0 1 0 0 0 1 atc-outrigger.ldr
+0 // atc-outrigger-3: left outrigger
+1 16 -90 -127 560 -1 0 0 0 1 0 0 0 -1 atc-outrigger.ldr
+0 NOFILE
+0 FILE atc-frame.ldr
+0 Carrier ladder frame: 7x5 open-frame webs with beam flanges and crossmembers
+0 Name: atc-frame.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 64179-0: rail web (open frame)
+1 0 -60 -160 -490 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-1: rail web (open frame)
+1 0 -60 -160 -350 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-2: rail web (open frame)
+1 0 -60 -160 -210 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-3: rail web (open frame)
+1 0 -60 -160 -70 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-4: rail web (open frame)
+1 0 -60 -160 70 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-5: rail web (open frame)
+1 0 -60 -160 210 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-6: rail web (open frame)
+1 0 60 -160 -490 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-7: rail web (open frame)
+1 0 60 -160 -350 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-8: rail web (open frame)
+1 0 60 -160 -210 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-9: rail web (open frame)
+1 0 60 -160 -70 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-10: rail web (open frame)
+1 0 60 -160 70 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-11: rail web (open frame)
+1 0 60 -160 210 0 1 0 -1 0 0 0 0 1 64179.dat
+0 STEP
+0 // 41239-0: rail flange
+1 72 -80 -200 -430 0 1 0 -1 0 0 0 0 1 41239.dat
+0 // 32278-0: rail flange
+1 72 -80 -200 -150 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 41239-1: rail flange
+1 72 -80 -200 130 0 1 0 -1 0 0 0 0 1 41239.dat
+0 // 2780-0: flange-to-web pin
+1 0 -70 -200 -550 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-1: flange-to-web pin
+1 0 -70 -200 -510 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-2: flange-to-web pin
+1 0 -70 -200 -470 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-3: flange-to-web pin
+1 0 -70 -200 -430 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-4: flange-to-web pin
+1 0 -70 -200 -410 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-5: flange-to-web pin
+1 0 -70 -200 -370 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-6: flange-to-web pin
+1 0 -70 -200 -330 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-7: flange-to-web pin
+1 0 -70 -200 -290 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-8: flange-to-web pin
+1 0 -70 -200 -270 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-9: flange-to-web pin
+1 0 -70 -200 -230 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-10: flange-to-web pin
+1 0 -70 -200 -190 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-11: flange-to-web pin
+1 0 -70 -200 -150 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-12: flange-to-web pin
+1 0 -70 -200 -130 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-13: flange-to-web pin
+1 0 -70 -200 -90 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-14: flange-to-web pin
+1 0 -70 -200 -50 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-15: flange-to-web pin
+1 0 -70 -200 -10 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-16: flange-to-web pin
+1 0 -70 -200 10 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-17: flange-to-web pin
+1 0 -70 -200 50 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-18: flange-to-web pin
+1 0 -70 -200 90 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-19: flange-to-web pin
+1 0 -70 -200 130 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-20: flange-to-web pin
+1 0 -70 -200 150 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-21: flange-to-web pin
+1 0 -70 -200 190 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-22: flange-to-web pin
+1 0 -70 -200 230 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 32278-1: rail flange
+1 72 -80 -120 -410 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-2: rail flange
+1 72 -80 -120 -110 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 41239-2: rail flange
+1 72 -80 -120 170 0 1 0 -1 0 0 0 0 1 41239.dat
+0 // 2780-23: flange-to-web pin
+1 0 -70 -120 -550 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-24: flange-to-web pin
+1 0 -70 -120 -510 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-25: flange-to-web pin
+1 0 -70 -120 -470 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-26: flange-to-web pin
+1 0 -70 -120 -430 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-27: flange-to-web pin
+1 0 -70 -120 -410 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-28: flange-to-web pin
+1 0 -70 -120 -370 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-29: flange-to-web pin
+1 0 -70 -120 -330 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-30: flange-to-web pin
+1 0 -70 -120 -290 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-31: flange-to-web pin
+1 0 -70 -120 -270 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-32: flange-to-web pin
+1 0 -70 -120 -230 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-33: flange-to-web pin
+1 0 -70 -120 -190 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-34: flange-to-web pin
+1 0 -70 -120 -150 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-35: flange-to-web pin
+1 0 -70 -120 -130 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-36: flange-to-web pin
+1 0 -70 -120 -90 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-37: flange-to-web pin
+1 0 -70 -120 -50 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-38: flange-to-web pin
+1 0 -70 -120 -10 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-39: flange-to-web pin
+1 0 -70 -120 10 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-40: flange-to-web pin
+1 0 -70 -120 50 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-41: flange-to-web pin
+1 0 -70 -120 90 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-42: flange-to-web pin
+1 0 -70 -120 130 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-43: flange-to-web pin
+1 0 -70 -120 150 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-44: flange-to-web pin
+1 0 -70 -120 190 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-45: flange-to-web pin
+1 0 -70 -120 230 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 41239-3: rail flange
+1 72 80 -200 -430 0 1 0 -1 0 0 0 0 1 41239.dat
+0 // 32278-3: rail flange
+1 72 80 -200 -150 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 41239-4: rail flange
+1 72 80 -200 130 0 1 0 -1 0 0 0 0 1 41239.dat
+0 // 2780-46: flange-to-web pin
+1 0 70 -200 -550 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-47: flange-to-web pin
+1 0 70 -200 -510 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-48: flange-to-web pin
+1 0 70 -200 -470 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-49: flange-to-web pin
+1 0 70 -200 -430 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-50: flange-to-web pin
+1 0 70 -200 -410 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-51: flange-to-web pin
+1 0 70 -200 -370 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-52: flange-to-web pin
+1 0 70 -200 -330 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-53: flange-to-web pin
+1 0 70 -200 -290 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-54: flange-to-web pin
+1 0 70 -200 -270 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-55: flange-to-web pin
+1 0 70 -200 -230 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-56: flange-to-web pin
+1 0 70 -200 -190 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-57: flange-to-web pin
+1 0 70 -200 -150 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-58: flange-to-web pin
+1 0 70 -200 -130 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-59: flange-to-web pin
+1 0 70 -200 -90 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-60: flange-to-web pin
+1 0 70 -200 -50 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-61: flange-to-web pin
+1 0 70 -200 -10 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-62: flange-to-web pin
+1 0 70 -200 10 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-63: flange-to-web pin
+1 0 70 -200 50 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-64: flange-to-web pin
+1 0 70 -200 90 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-65: flange-to-web pin
+1 0 70 -200 130 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-66: flange-to-web pin
+1 0 70 -200 150 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-67: flange-to-web pin
+1 0 70 -200 190 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-68: flange-to-web pin
+1 0 70 -200 230 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 32278-4: rail flange
+1 72 80 -120 -410 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-5: rail flange
+1 72 80 -120 -110 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 41239-5: rail flange
+1 72 80 -120 170 0 1 0 -1 0 0 0 0 1 41239.dat
+0 // 2780-69: flange-to-web pin
+1 0 70 -120 -550 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-70: flange-to-web pin
+1 0 70 -120 -510 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-71: flange-to-web pin
+1 0 70 -120 -470 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-72: flange-to-web pin
+1 0 70 -120 -430 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-73: flange-to-web pin
+1 0 70 -120 -410 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-74: flange-to-web pin
+1 0 70 -120 -370 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-75: flange-to-web pin
+1 0 70 -120 -330 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-76: flange-to-web pin
+1 0 70 -120 -290 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-77: flange-to-web pin
+1 0 70 -120 -270 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-78: flange-to-web pin
+1 0 70 -120 -230 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-79: flange-to-web pin
+1 0 70 -120 -190 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-80: flange-to-web pin
+1 0 70 -120 -150 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-81: flange-to-web pin
+1 0 70 -120 -130 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-82: flange-to-web pin
+1 0 70 -120 -90 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-83: flange-to-web pin
+1 0 70 -120 -50 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-84: flange-to-web pin
+1 0 70 -120 -10 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-85: flange-to-web pin
+1 0 70 -120 10 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-86: flange-to-web pin
+1 0 70 -120 50 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-87: flange-to-web pin
+1 0 70 -120 90 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-88: flange-to-web pin
+1 0 70 -120 130 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-89: flange-to-web pin
+1 0 70 -120 150 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-90: flange-to-web pin
+1 0 70 -120 190 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-91: flange-to-web pin
+1 0 70 -120 230 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 // 32524-0: deck crossmember
+1 72 0 -220 -530 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-92: crossmember-to-web pin
+1 0 -60 -210 -530 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-93: crossmember-to-web pin
+1 0 60 -210 -530 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-1: deck crossmember
+1 72 0 -220 -450 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-94: crossmember-to-web pin
+1 0 -60 -210 -450 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-95: crossmember-to-web pin
+1 0 60 -210 -450 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-2: deck crossmember
+1 72 0 -220 -390 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-96: crossmember-to-web pin
+1 0 -60 -210 -390 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-97: crossmember-to-web pin
+1 0 60 -210 -390 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-3: deck crossmember
+1 72 0 -220 -310 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-98: crossmember-to-web pin
+1 0 -60 -210 -310 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-99: crossmember-to-web pin
+1 0 60 -210 -310 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-4: deck crossmember
+1 72 0 -220 -250 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-100: crossmember-to-web pin
+1 0 -60 -210 -250 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-101: crossmember-to-web pin
+1 0 60 -210 -250 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-5: deck crossmember
+1 72 0 -220 -170 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-102: crossmember-to-web pin
+1 0 -60 -210 -170 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-103: crossmember-to-web pin
+1 0 60 -210 -170 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-6: deck crossmember
+1 72 0 -220 -110 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-104: crossmember-to-web pin
+1 0 -60 -210 -110 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-105: crossmember-to-web pin
+1 0 60 -210 -110 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-7: deck crossmember
+1 72 0 -220 -30 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-106: crossmember-to-web pin
+1 0 -60 -210 -30 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-107: crossmember-to-web pin
+1 0 60 -210 -30 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-8: deck crossmember
+1 72 0 -220 30 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-108: crossmember-to-web pin
+1 0 -60 -210 30 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-109: crossmember-to-web pin
+1 0 60 -210 30 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-9: deck crossmember
+1 72 0 -220 110 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-110: crossmember-to-web pin
+1 0 -60 -210 110 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-111: crossmember-to-web pin
+1 0 60 -210 110 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-10: deck crossmember
+1 72 0 -220 170 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-112: crossmember-to-web pin
+1 0 -60 -210 170 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-113: crossmember-to-web pin
+1 0 60 -210 170 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-11: deck crossmember
+1 72 0 -220 250 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-114: crossmember-to-web pin
+1 0 -60 -210 250 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-115: crossmember-to-web pin
+1 0 60 -210 250 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-12: lower crossmember
+1 72 0 -100 -350 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-116: crossmember-to-web pin
+1 0 -60 -110 -350 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-117: crossmember-to-web pin
+1 0 60 -110 -350 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-13: lower crossmember
+1 72 0 -100 -170 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-118: crossmember-to-web pin
+1 0 -60 -110 -170 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-119: crossmember-to-web pin
+1 0 60 -110 -170 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-14: lower crossmember
+1 72 0 -100 -70 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-120: crossmember-to-web pin
+1 0 -60 -110 -70 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-121: crossmember-to-web pin
+1 0 60 -110 -70 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-15: lower crossmember
+1 72 0 -100 30 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-122: crossmember-to-web pin
+1 0 -60 -110 30 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-123: crossmember-to-web pin
+1 0 60 -110 30 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 32524-16: lower crossmember
+1 72 0 -100 250 0 0 1 0 1 0 -1 0 0 32524.dat
+0 // 2780-124: crossmember-to-web pin
+1 0 -60 -110 250 0 0 1 1 0 0 0 1 0 2780.dat
+0 // 2780-125: crossmember-to-web pin
+1 0 60 -110 250 0 0 1 1 0 0 0 1 0 2780.dat
+0 NOFILE
+0 FILE atc-rear.ldr
+0 Rear engine bay: extension rails, carrier V8 under a grille hood, radiator, exhaust
+0 Name: atc-rear.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 32278-0: rear extension rail
+1 72 -80 -200 450 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32316-0: rail splice plate
+1 72 -100 -200 290 0 1 0 -1 0 0 0 0 1 32316.dat
+0 // 2780-0: splice pin (flange/extension + splice)
+1 0 -90 -200 250 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-1: splice pin (flange/extension + splice)
+1 0 -90 -200 310 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-2: splice pin (flange/extension + splice)
+1 0 -90 -200 330 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 32278-1: rear extension rail
+1 72 -80 -120 450 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32316-1: rail splice plate
+1 72 -100 -120 290 0 1 0 -1 0 0 0 0 1 32316.dat
+0 // 2780-3: splice pin (flange/extension + splice)
+1 0 -90 -120 250 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-4: splice pin (flange/extension + splice)
+1 0 -90 -120 290 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-5: splice pin (flange/extension + splice)
+1 0 -90 -120 310 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-6: splice pin (flange/extension + splice)
+1 0 -90 -120 330 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 6558-0: web + flange + splice pin
+1 0 -80 -120 270 1 0 0 0 1 0 0 0 1 6558.dat
+0 // 32278-2: rear extension rail
+1 72 80 -200 450 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32316-2: rail splice plate
+1 72 100 -200 290 0 1 0 -1 0 0 0 0 1 32316.dat
+0 // 2780-7: splice pin (flange/extension + splice)
+1 0 90 -200 250 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-8: splice pin (flange/extension + splice)
+1 0 90 -200 310 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-9: splice pin (flange/extension + splice)
+1 0 90 -200 330 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 32278-3: rear extension rail
+1 72 80 -120 450 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32316-3: rail splice plate
+1 72 100 -120 290 0 1 0 -1 0 0 0 0 1 32316.dat
+0 // 2780-10: splice pin (flange/extension + splice)
+1 0 90 -120 250 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-11: splice pin (flange/extension + splice)
+1 0 90 -120 290 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-12: splice pin (flange/extension + splice)
+1 0 90 -120 310 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-13: splice pin (flange/extension + splice)
+1 0 90 -120 330 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 6558-1: web + flange + splice pin
+1 0 80 -120 270 1 0 0 0 1 0 0 0 1 6558.dat
+0 STEP
+0 // atc-v8-00-42082---engine-0: carrier V8 (adapted from 42082)
+1 71 0 -199 580 -1 0 0 0 1 0 0 0 -1 atc-v8-00-42082---engine.ldr
+0 STEP
+0 // 3005-0: rear wall corner
+1 14 -150 -154 690 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 2877-0: radiator louvre (grille brick)
+1 0 -120 -154 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-1: radiator louvre (grille brick)
+1 0 -80 -154 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-2: radiator louvre (grille brick)
+1 0 -40 -154 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-3: radiator louvre (grille brick)
+1 0 0 -154 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-4: radiator louvre (grille brick)
+1 0 40 -154 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-5: radiator louvre (grille brick)
+1 0 80 -154 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-6: radiator louvre (grille brick)
+1 0 120 -154 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 3005-1: rear wall corner
+1 14 150 -154 690 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3005-2: rear wall corner
+1 14 -150 -178 690 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 2877-7: radiator louvre (grille brick)
+1 0 -120 -178 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-8: radiator louvre (grille brick)
+1 0 -80 -178 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-9: radiator louvre (grille brick)
+1 0 -40 -178 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-10: radiator louvre (grille brick)
+1 0 0 -178 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-11: radiator louvre (grille brick)
+1 0 40 -178 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-12: radiator louvre (grille brick)
+1 0 80 -178 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-13: radiator louvre (grille brick)
+1 0 120 -178 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 3005-3: rear wall corner
+1 14 150 -178 690 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3005-4: rear body left side
+1 0 -160 -178 550 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-0: rear body left side
+1 0 -160 -178 620 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-5: rear wall corner
+1 14 -150 -202 690 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 2877-14: radiator louvre (grille brick)
+1 0 -120 -202 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-15: radiator louvre (grille brick)
+1 0 -80 -202 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-16: radiator louvre (grille brick)
+1 0 -40 -202 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-17: radiator louvre (grille brick)
+1 0 0 -202 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-18: radiator louvre (grille brick)
+1 0 40 -202 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-19: radiator louvre (grille brick)
+1 0 80 -202 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-20: radiator louvre (grille brick)
+1 0 120 -202 690 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 3005-6: rear wall corner
+1 14 150 -202 690 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3009-1: rear body left side
+1 14 -160 -202 600 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-7: rear body left side
+1 14 -160 -202 670 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3004-0: rear warning band
+1 15 -140 -226 690 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-1: rear warning band
+1 4 -100 -226 690 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-2: rear warning band
+1 15 -60 -226 690 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-3: rear warning band
+1 4 -20 -226 690 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-4: rear warning band
+1 15 20 -226 690 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-5: rear warning band
+1 4 60 -226 690 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-6: rear warning band
+1 15 100 -226 690 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-7: rear warning band
+1 4 140 -226 690 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3005-8: rear body left side
+1 14 -160 -226 550 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-2: rear body left side
+1 14 -160 -226 620 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3008-0: rear wall top course
+1 14 -80 -250 690 1 0 0 0 1 0 0 0 1 3008.dat
+0 // 3008-1: rear wall top course
+1 14 80 -250 690 1 0 0 0 1 0 0 0 1 3008.dat
+0 // 3009-3: rear body left side
+1 14 -160 -250 600 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-9: rear body left side
+1 14 -160 -250 670 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 32316-4: rear body right post (open side)
+1 14 150 -200 550 0 1 0 0 0 1 1 0 0 32316.dat
+0 // 32316-5: rear body right post (open side)
+1 14 150 -200 670 0 1 0 0 0 1 1 0 0 32316.dat
+0 STEP
+0 // 3035-0: rear walkway plate 4x8
+1 72 -130 -258 620 0 0 -1 0 1 0 1 0 0 3035.dat
+0 // 3035-1: rear walkway plate 4x8
+1 72 130 -258 620 0 0 -1 0 1 0 1 0 0 3035.dat
+0 // atc-hood-0: engine hood, hinged open for service
+1 16 0 -250 540 1 0 0 0 0.422618262 -0.906307787 0 0.906307787 0.422618262 atc-hood.ldr
+0 // atc-exhaust-00-8285---exhaust1-0: exhaust silencer and stack (adapted from 8285)
+1 80 -130 -386 640 1 0 0 0 1 0 0 0 1 atc-exhaust-00-8285---exhaust1.ldr
+0 // 3706-0: fuel tank shaft
+1 71 130 -175 0 0 0 -1 0 1 0 1 0 0 3706.dat
+0 // 41531-0: fuel tank shell
+1 80 130 -175 -20 1 0 0 0 1 0 0 0 1 41531.dat
+0 // 41531-1: fuel tank shell
+1 80 130 -175 20 1 0 0 0 1 0 0 0 1 41531.dat
+0 // 3960-0: fuel tank end cap
+1 80 130 -175 -44 1 0 0 0 0 1 0 -1 0 3960.dat
+0 // 3960-1: fuel tank end cap
+1 80 130 -175 44 1 0 0 0 0 -1 0 1 0 3960.dat
+0 NOFILE
+0 FILE atc-axle.ldr
+0 Steered axle station: through-shaft, round axle tubes, steering-hub bearings, hydropneumatic struts and two wheels
+0 Name: atc-axle.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 62462-0: axle tube (round joiner) over the half-shaft
+1 72 -50 0 0 1 0 0 0 1 0 0 0 1 62462.dat
+0 // 62462-1: axle tube (round joiner) over the half-shaft
+1 72 50 0 0 1 0 0 0 1 0 0 0 1 62462.dat
+0 STEP
+0 // 11950-0: steering hub bearing
+1 72 -100 0 0 0 0 -1 0 1 0 1 0 0 11950.dat
+0 // 11950-1: steering hub bearing
+1 72 100 0 0 0 0 1 0 1 0 -1 0 0 11950.dat
+0 // 50451-0: through half-shaft, diff to both rims
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 50451.dat
+0 STEP
+0 // atc-wheel-0: road wheel
+1 16 -130 0 0 0 0 1 1 0 0 0 1 0 atc-wheel.ldr
+0 // atc-wheel-1: road wheel
+1 16 130 0 0 0 0 -1 1 0 0 0 -1 0 atc-wheel.ldr
+0 STEP
+0 // 76138-0: hydropneumatic strut
+1 14 -100 -30 40 -1 0 0 0 -1 0 0 0 1 76138.dat
+0 // 76138-1: hydropneumatic strut
+1 14 100 -30 40 -1 0 0 0 -1 0 0 0 1 76138.dat
+0 NOFILE
+0 FILE atc-axle-driven.ldr
+0 Steered axle station: through-shaft, 28T differential, round axle tubes, steering-hub bearings, hydropneumatic struts and two wheels
+0 Name: atc-axle-driven.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 62821-0: differential, bore on the shaft
+1 72 0 0 0 0 0 1 0 1 0 -1 0 0 62821.dat
+0 // 62462-0: axle tube (round joiner) over the half-shaft
+1 72 -50 0 0 1 0 0 0 1 0 0 0 1 62462.dat
+0 // 62462-1: axle tube (round joiner) over the half-shaft
+1 72 50 0 0 1 0 0 0 1 0 0 0 1 62462.dat
+0 STEP
+0 // 11950-0: steering hub bearing
+1 72 -100 0 0 0 0 -1 0 1 0 1 0 0 11950.dat
+0 // 11950-1: steering hub bearing
+1 72 100 0 0 0 0 1 0 1 0 -1 0 0 11950.dat
+0 // 50451-0: through half-shaft, diff to both rims
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 50451.dat
+0 STEP
+0 // atc-wheel-0: road wheel
+1 16 -130 0 0 0 0 1 1 0 0 0 1 0 atc-wheel.ldr
+0 // atc-wheel-1: road wheel
+1 16 130 0 0 0 0 -1 1 0 0 0 -1 0 atc-wheel.ldr
+0 STEP
+0 // 76138-0: hydropneumatic strut
+1 14 -100 -30 40 -1 0 0 0 -1 0 0 0 1 76138.dat
+0 // 76138-1: hydropneumatic strut
+1 14 100 -30 40 -1 0 0 0 -1 0 0 0 1 76138.dat
+0 NOFILE
+0 FILE atc-wheel.ldr
+0 Road wheel: 18 x 37 rim in a 64 x 37 tyre; local +Z points inboard
+0 Name: atc-wheel.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 86652-0: six-peghole rim, axle bore along local Z
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 86652.dat
+0 // 32019-0: 20/64 x 37 S tyre
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 32019.dat
+0 NOFILE
+0 FILE atc-body.ldr
+0 Carrier bodywork: mudguards, skirts, walkways, deck, lockers and bumpers
+0 Name: atc-body.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 2509-0: arched mudguard, axle 1
+1 14 -160 -81 -470 -1 0 0 0 1 0 0 0 -1 2509.dat
+0 // 15458-0: skirt above the wheel arch
+1 14 -170 -200 -470 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 2509-1: arched mudguard, axle 1
+1 14 160 -81 -470 1 0 0 0 1 0 0 0 1 2509.dat
+0 // 15458-1: skirt above the wheel arch
+1 14 170 -200 -470 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 2509-2: arched mudguard, axle 2
+1 14 -160 -81 -250 -1 0 0 0 1 0 0 0 -1 2509.dat
+0 // 15458-2: skirt above the wheel arch
+1 14 -170 -200 -250 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 2509-3: arched mudguard, axle 2
+1 14 160 -81 -250 1 0 0 0 1 0 0 0 1 2509.dat
+0 // 15458-3: skirt above the wheel arch
+1 14 170 -200 -250 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 2509-4: arched mudguard, axle 3
+1 14 -160 -81 190 -1 0 0 0 1 0 0 0 -1 2509.dat
+0 // 15458-4: skirt above the wheel arch
+1 14 -170 -200 190 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 2509-5: arched mudguard, axle 3
+1 14 160 -81 190 1 0 0 0 1 0 0 0 1 2509.dat
+0 // 15458-5: skirt above the wheel arch
+1 14 170 -200 190 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 2509-6: arched mudguard, axle 4
+1 14 -160 -81 410 -1 0 0 0 1 0 0 0 -1 2509.dat
+0 // 15458-6: skirt above the wheel arch
+1 14 -170 -200 410 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 2509-7: arched mudguard, axle 4
+1 14 160 -81 410 1 0 0 0 1 0 0 0 1 2509.dat
+0 // 15458-7: skirt above the wheel arch
+1 14 170 -200 410 0 1 0 0 0 1 1 0 0 15458.dat
+0 STEP
+0 // 64782-0: walkway panel (non-slip grey)
+1 72 -120 -240 -470 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-1: walkway panel (non-slip grey)
+1 72 120 -240 -470 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-2: walkway panel (non-slip grey)
+1 72 -120 -240 -250 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-3: walkway panel (non-slip grey)
+1 72 120 -240 -250 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-4: walkway panel (non-slip grey)
+1 72 -120 -240 -30 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-5: walkway panel (non-slip grey)
+1 72 120 -240 -30 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-6: walkway panel (non-slip grey)
+1 72 -120 -240 190 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-7: walkway panel (non-slip grey)
+1 72 120 -240 190 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-8: walkway panel (non-slip grey)
+1 72 -120 -240 410 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-9: walkway panel (non-slip grey)
+1 72 120 -240 410 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-10: centre deck panel
+1 72 0 -240 -470 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-11: centre deck panel
+1 72 0 -240 -250 0 0 -1 0 1 0 1 0 0 64782.dat
+0 STEP
+0 // 15458-8: locker door
+1 14 -170 -200 -30 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 3069b-0: locker handle
+1 72 -180 -206 -110 0 -1 0 0 0 -1 1 0 0 3069b.dat
+0 // 3069b-1: locker handle
+1 72 -180 -206 -30 0 -1 0 0 0 -1 1 0 0 3069b.dat
+0 // 3069b-2: locker handle
+1 72 -180 -206 50 0 -1 0 0 0 -1 1 0 0 3069b.dat
+0 STEP
+0 // 3703-0: front bumper (Technic brick 1x16)
+1 0 0 -110 -755 1 0 0 0 1 0 0 0 1 3703.dat
+0 // 3069b-3: front lamp
+1 47 -130 -118 -755 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // 3069b-4: indicator
+1 57 -90 -118 -755 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // 3069b-5: front lamp
+1 47 130 -118 -755 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // 3069b-6: indicator
+1 57 90 -118 -755 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // 3703-1: rear bumper (Technic brick 1x16)
+1 0 0 -130 710 1 0 0 0 1 0 0 0 1 3703.dat
+0 // 3069b-7: tail light
+1 36 -130 -138 710 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // 3069b-8: rear indicator
+1 57 -90 -138 710 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // 3069b-9: tail light
+1 36 130 -138 710 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // 3069b-10: rear indicator
+1 57 90 -138 710 1 0 0 0 1 0 0 0 1 3069b.dat
+0 NOFILE
+0 FILE atc-cab.ldr
+0 Driver cab (front left): brick shell, grille band, 1x4x5 windows, roof details
+0 Name: atc-cab.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 41539-0: cab floor plate 8x8
+1 72 -95 -130 -665 1 0 0 0 1 0 0 0 1 41539.dat
+0 STEP
+0 // 3008-0: cab front wall
+1 0 -95 -154 -735 1 0 0 0 1 0 0 0 1 3008.dat
+0 // 3009-0: cab side wall
+1 0 -165 -154 -665 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-0: cab side wall
+1 0 -165 -154 -595 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-1: cab side wall
+1 0 -25 -154 -665 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-1: cab side wall
+1 0 -25 -154 -595 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3005-2: cab rear wall
+1 0 -145 -154 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3010-0: cab rear wall
+1 0 -95 -154 -595 1 0 0 0 1 0 0 0 1 3010.dat
+0 // 3005-3: cab rear wall
+1 0 -45 -154 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3005-4: cab headlamp
+1 47 -165 -178 -735 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3005-5: cab headlamp
+1 47 -25 -178 -735 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 2877-0: cab front grille
+1 0 -135 -178 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-1: cab front grille
+1 0 -95 -178 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-2: cab front grille
+1 0 -55 -178 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 3005-6: cab side wall
+1 14 -165 -178 -715 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-2: cab side wall
+1 14 -165 -178 -645 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-7: cab side wall
+1 14 -25 -178 -715 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-3: cab side wall
+1 14 -25 -178 -645 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3009-4: cab rear wall
+1 14 -95 -178 -595 1 0 0 0 1 0 0 0 1 3009.dat
+0 // 3008-1: cab front wall
+1 14 -95 -202 -735 1 0 0 0 1 0 0 0 1 3008.dat
+0 // 3009-5: cab side wall
+1 14 -165 -202 -665 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-8: cab side wall
+1 14 -165 -202 -595 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-6: cab side wall
+1 14 -25 -202 -665 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-9: cab side wall
+1 14 -25 -202 -595 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3005-10: cab rear wall
+1 14 -145 -202 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3010-1: cab rear wall
+1 14 -95 -202 -595 1 0 0 0 1 0 0 0 1 3010.dat
+0 // 3005-11: cab rear wall
+1 14 -45 -202 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3005-12: cab front wall
+1 14 -165 -226 -735 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3009-7: cab front wall
+1 14 -95 -226 -735 1 0 0 0 1 0 0 0 1 3009.dat
+0 // 3005-13: cab front wall
+1 14 -25 -226 -735 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3005-14: cab side wall
+1 14 -165 -226 -715 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-8: cab side wall
+1 14 -165 -226 -645 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-15: cab side wall
+1 14 -25 -226 -715 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-9: cab side wall
+1 14 -25 -226 -645 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3009-10: cab rear wall
+1 14 -95 -226 -595 1 0 0 0 1 0 0 0 1 3009.dat
+0 // 3622-0: cab side pillar
+1 14 -165 -250 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-1: cab side pillar
+1 14 -25 -250 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3005-16: cab rear wall
+1 14 -145 -250 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3010-2: cab rear wall
+1 14 -95 -250 -595 1 0 0 0 1 0 0 0 1 3010.dat
+0 // 3005-17: cab rear wall
+1 14 -45 -250 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3622-2: cab side pillar
+1 14 -165 -274 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-3: cab side pillar
+1 14 -25 -274 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3009-11: cab rear wall
+1 14 -95 -274 -595 1 0 0 0 1 0 0 0 1 3009.dat
+0 // 3622-4: cab side pillar
+1 14 -165 -298 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-5: cab side pillar
+1 14 -25 -298 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3005-18: cab rear wall
+1 14 -145 -298 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3010-3: cab rear wall
+1 14 -95 -298 -595 1 0 0 0 1 0 0 0 1 3010.dat
+0 // 3005-19: cab rear wall
+1 14 -45 -298 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3622-6: cab side pillar
+1 14 -165 -322 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-7: cab side pillar
+1 14 -25 -322 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3009-12: cab rear wall
+1 14 -95 -322 -595 1 0 0 0 1 0 0 0 1 3009.dat
+0 // 3622-8: cab side pillar
+1 14 -165 -346 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-9: cab side pillar
+1 14 -25 -346 -615 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3005-20: cab rear wall
+1 14 -145 -346 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3010-4: cab rear wall
+1 14 -95 -346 -595 1 0 0 0 1 0 0 0 1 3010.dat
+0 // 3005-21: cab rear wall
+1 14 -45 -346 -595 1 0 0 0 1 0 0 0 1 3005.dat
+0 STEP
+0 // 2493b-0: windscreen frame 1x4x5
+1 0 -135 -346 -735 1 0 0 0 1 0 0 0 1 2493b.dat
+0 // 2494-0: tinted windscreen glass
+1 40 -135 -346 -735 1 0 0 0 1 0 0 0 1 2494.dat
+0 // 2493b-1: windscreen frame 1x4x5
+1 0 -55 -346 -735 1 0 0 0 1 0 0 0 1 2493b.dat
+0 // 2494-1: tinted windscreen glass
+1 40 -55 -346 -735 1 0 0 0 1 0 0 0 1 2494.dat
+0 // 2493b-2: side window frame
+1 0 -165 -346 -685 0 0 -1 0 1 0 1 0 0 2493b.dat
+0 // 2494-2: side window glass
+1 40 -165 -346 -685 0 0 -1 0 1 0 1 0 0 2494.dat
+0 // 2493b-3: side window frame
+1 0 -25 -346 -685 0 0 -1 0 1 0 1 0 0 2493b.dat
+0 // 2494-3: side window glass
+1 40 -25 -346 -685 0 0 -1 0 1 0 1 0 0 2494.dat
+0 STEP
+0 // 41539-1: cab roof 8x8
+1 14 -95 -354 -665 1 0 0 0 1 0 0 0 1 41539.dat
+0 // 4162-0: sun visor
+1 0 -95 -362 -735 1 0 0 0 1 0 0 0 1 4162.dat
+0 // 3001-0: roof air-conditioning unit
+1 72 -95 -378 -635 1 0 0 0 1 0 0 0 1 3001.dat
+0 // 87079-0: air-conditioning cover
+1 72 -95 -386 -635 1 0 0 0 1 0 0 0 1 87079.dat
+0 // 6141-0: beacon base
+1 57 -155 -362 -605 1 0 0 0 1 0 0 0 1 6141.dat
+0 // 3062b-0: rotating beacon
+1 57 -155 -386 -605 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // 6141-1: beacon base
+1 57 -35 -362 -605 1 0 0 0 1 0 0 0 1 6141.dat
+0 // 3062b-1: rotating beacon
+1 57 -35 -386 -605 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // 3004-0: mirror arm block
+1 0 -185 -322 -735 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // 3069b-0: mirror head
+1 0 -185 -330 -735 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // 3004-1: mirror arm block
+1 0 -5 -322 -735 0 0 -1 0 1 0 1 0 0 3004.dat
+0 // 3069b-1: mirror head
+1 0 -5 -330 -735 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 NOFILE
+0 FILE atc-front.ldr
+0 Front equipment box beside the cab and the boom rest
+0 Name: atc-front.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 41539-0: front box floor/lid 8x8
+1 72 65 -130 -665 1 0 0 0 1 0 0 0 1 41539.dat
+0 // 3460-0: front box floor/lid 1x8
+1 72 155 -130 -665 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // 41539-1: front box floor/lid 8x8
+1 14 65 -258 -665 1 0 0 0 1 0 0 0 1 41539.dat
+0 // 3460-1: front box floor/lid 1x8
+1 14 155 -258 -665 0 0 -1 0 1 0 1 0 0 3460.dat
+0 // 3008-0: front box face
+1 0 65 -154 -735 1 0 0 0 1 0 0 0 1 3008.dat
+0 // 3005-0: front box face
+1 0 155 -154 -735 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3009-0: front box side
+1 0 155 -154 -665 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-1: front box side
+1 0 155 -154 -595 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 2877-0: front air intake grille
+1 0 5 -178 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-1: front air intake grille
+1 0 45 -178 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-2: front air intake grille
+1 0 85 -178 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-3: front air intake grille
+1 0 125 -178 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 3005-2: front box corner
+1 14 155 -178 -735 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3005-3: front box side
+1 14 155 -178 -715 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-1: front box side
+1 14 155 -178 -645 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 2877-4: front air intake grille
+1 0 5 -202 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-5: front air intake grille
+1 0 45 -202 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-6: front air intake grille
+1 0 85 -202 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 2877-7: front air intake grille
+1 0 125 -202 -735 1 0 0 0 1 0 0 0 1 2877.dat
+0 // 3005-4: front box corner
+1 14 155 -202 -735 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3009-2: front box side
+1 14 155 -202 -665 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-5: front box side
+1 14 155 -202 -595 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3005-6: front box face
+1 14 -5 -226 -735 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3008-1: front box face
+1 14 85 -226 -735 1 0 0 0 1 0 0 0 1 3008.dat
+0 // 3005-7: front box side
+1 14 155 -226 -715 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-3: front box side
+1 14 155 -226 -645 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3008-2: front box face
+1 14 65 -250 -735 1 0 0 0 1 0 0 0 1 3008.dat
+0 // 3005-8: front box face
+1 14 155 -250 -735 1 0 0 0 1 0 0 0 1 3005.dat
+0 // 3009-4: front box side
+1 14 155 -250 -665 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-9: front box side
+1 14 155 -250 -595 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 2412b-0: lid vent
+1 0 25 -266 -695 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // 2412b-1: lid vent
+1 0 65 -266 -695 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // 2412b-2: lid vent
+1 0 105 -266 -695 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // 2412b-3: lid vent
+1 0 145 -266 -695 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+0 // 40490-0: boom rest post
+1 14 -40 -340 -520 -1 0 0 0 0 1 0 1 0 40490.dat
+0 // 40490-1: boom rest post
+1 14 40 -340 -520 -1 0 0 0 0 1 0 1 0 40490.dat
+0 // 32524-0: boom rest cross head
+1 14 0 -440 -520 0 0 1 1 0 0 0 1 0 32524.dat
+0 // 32523-0: boom rest saddle arm
+1 0 -50 -470 -520 0.707106781 0 -0.707106781 -0.707106781 0 -0.707106781 0 1 0 32523.dat
+0 // 32523-1: boom rest saddle arm
+1 0 50 -470 -520 0.707106781 0 0.707106781 0.707106781 0 -0.707106781 0 1 0 32523.dat
+0 // 3032-0: sling crate base 4x6
+1 72 110 -258 -330 0 0 -1 0 1 0 1 0 0 3032.dat
+0 // 3010-0: sling crate end wall
+1 0 110 -282 -380 1 0 0 0 1 0 0 0 1 3010.dat
+0 // 3010-1: sling crate end wall
+1 0 110 -282 -280 1 0 0 0 1 0 0 0 1 3010.dat
+0 // 3010-2: sling crate side wall
+1 0 80 -282 -330 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // 3010-3: sling crate side wall
+1 0 140 -282 -330 0 0 -1 0 1 0 1 0 0 3010.dat
+0 // 3641-0: coiled sling (tyre as rope coil)
+1 0 110 -266 -350 1 0 0 0 0 -1 0 1 0 3641.dat
+0 // 3641-1: coiled sling (tyre as rope coil)
+1 0 110 -266 -310 1 0 0 0 0 -1 0 1 0 3641.dat
+0 // 3136-0: spare crane hook in the crate
+1 71 110 -270 -330 -1 0 0 0 0 1 0 1 0 3136.dat
+0 NOFILE
+0 FILE atc-outrigger.ldr
+0 Outrigger: fixed box, twin extended beams with red tips, actuator jack and pad
+0 Name: atc-outrigger.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 32316-0: outrigger box wall
+1 72 50 -10 -30 0 0 1 1 0 0 0 1 0 32316.dat
+0 // 32316-1: outrigger box wall
+1 72 50 10 -30 0 0 1 1 0 0 0 1 0 32316.dat
+0 // 32316-2: outrigger box wall
+1 72 50 -10 30 0 0 1 1 0 0 0 1 0 32316.dat
+0 // 32316-3: outrigger box wall
+1 72 50 10 30 0 0 1 1 0 0 0 1 0 32316.dat
+0 // 40490-0: extended outrigger beam
+1 14 130 -10 -10 0 0 1 1 0 0 0 1 0 40490.dat
+0 // 32316-4: outrigger beam tip (warning red)
+1 4 270 -10 -10 0 0 1 1 0 0 0 1 0 32316.dat
+0 // 32525-0: extended outrigger beam
+1 14 150 -10 10 0 0 1 1 0 0 0 1 0 32525.dat
+0 // 32523-0: outrigger beam tip (warning red)
+1 4 290 -10 10 0 0 1 1 0 0 0 1 0 32523.dat
+0 // 40490-1: extended outrigger beam
+1 14 130 10 -10 0 0 1 1 0 0 0 1 0 40490.dat
+0 // 32316-5: outrigger beam tip (warning red)
+1 4 270 10 -10 0 0 1 1 0 0 0 1 0 32316.dat
+0 // 32525-1: extended outrigger beam
+1 14 150 10 10 0 0 1 1 0 0 0 1 0 32525.dat
+0 // 32523-1: outrigger beam tip (warning red)
+1 4 290 10 10 0 0 1 1 0 0 0 1 0 32523.dat
+0 STEP
+0 // 3705-0: box-to-beam locking shaft (wall, both beam layers, wall)
+1 71 70 -10 0 0 0 -1 0 1 0 1 0 0 3705.dat
+0 // 3705-1: box-to-beam locking shaft (wall, both beam layers, wall)
+1 71 70 10 0 0 0 -1 0 1 0 1 0 0 3705.dat
+0 // 3705-2: box-to-beam locking shaft (wall, both beam layers, wall)
+1 71 90 -10 0 0 0 -1 0 1 0 1 0 0 3705.dat
+0 // 3705-3: box-to-beam locking shaft (wall, both beam layers, wall)
+1 71 90 10 0 0 0 -1 0 1 0 1 0 0 3705.dat
+0 // 2780-0: beam doubling pin (bridges the staggered joints)
+1 0 150 -10 0 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // 2780-1: beam doubling pin (bridges the staggered joints)
+1 0 150 10 0 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // 2780-2: beam doubling pin (bridges the staggered joints)
+1 0 230 -10 0 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // 2780-3: beam doubling pin (bridges the staggered joints)
+1 0 230 10 0 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // 2780-4: beam doubling pin (bridges the staggered joints)
+1 0 250 -10 0 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // 2780-5: beam doubling pin (bridges the staggered joints)
+1 0 250 10 0 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // 2780-6: beam doubling pin (bridges the staggered joints)
+1 0 290 -10 0 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // 2780-7: beam doubling pin (bridges the staggered joints)
+1 0 290 10 0 0 0 -1 0 1 0 1 0 0 2780.dat
+0 STEP
+0 // 92693c01-f1-0: vertical jack (linear actuator) at the beam tip
+1 72 330 -10 0 0 1 0 0 0 1 1 0 0 92693c01-f1.dat
+0 // 60474-0: outrigger pad (round plate 4x4)
+1 4 330 119 0 1 0 0 0 1 0 0 0 1 60474.dat
+0 NOFILE
+0 FILE atc-hood.ldr
+0 Carrier engine hood: 8x8 plate with grille tiles; hinge line at local z=0
+0 Name: atc-hood.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 41539-0: engine hood plate 8x8
+1 0 0 0 80 1 0 0 0 1 0 0 0 1 41539.dat
+0 // 2412b-0: hood ventilation grille
+1 72 -60 -8 20 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-1: hood ventilation grille
+1 72 -20 -8 20 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-2: hood ventilation grille
+1 72 20 -8 20 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-3: hood ventilation grille
+1 72 60 -8 20 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-4: hood ventilation grille
+1 72 -60 -8 60 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-5: hood ventilation grille
+1 72 -20 -8 60 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-6: hood ventilation grille
+1 72 20 -8 60 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-7: hood ventilation grille
+1 72 60 -8 60 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-8: hood ventilation grille
+1 72 -60 -8 100 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-9: hood ventilation grille
+1 72 -20 -8 100 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-10: hood ventilation grille
+1 72 20 -8 100 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-11: hood ventilation grille
+1 72 60 -8 100 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-12: hood ventilation grille
+1 72 -60 -8 140 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-13: hood ventilation grille
+1 72 -20 -8 140 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-14: hood ventilation grille
+1 72 20 -8 140 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 // 2412b-15: hood ventilation grille
+1 72 60 -8 140 0 0 -1 0 1 0 1 0 0 2412b.dat
+0 NOFILE
+0 FILE atc-super.ldr
+0 Revolving superstructure: platform, boom foot plates, operator cab, transverse inline-six, hoist winch and counterweight
+0 Name: atc-super.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 18938-0: turntable top (60 tooth), rotates with the superstructure
+1 0 0 30 0 1 0 0 0 1 0 0 0 1 18938.dat
+0 STEP
+0 // 64179-0: revolving platform frame
+1 72 -100 -10 -110 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-1: revolving platform frame
+1 72 -100 -10 30 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-2: revolving platform frame
+1 72 -100 -10 170 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-3: revolving platform frame
+1 72 -100 -10 310 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-4: revolving platform frame
+1 72 -100 -10 450 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-5: revolving platform frame
+1 72 0 -10 -110 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-6: revolving platform frame
+1 72 0 -10 30 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-7: revolving platform frame
+1 72 0 -10 170 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-8: revolving platform frame
+1 72 0 -10 310 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-9: revolving platform frame
+1 72 0 -10 450 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-10: revolving platform frame
+1 72 100 -10 -110 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-11: revolving platform frame
+1 72 100 -10 30 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-12: revolving platform frame
+1 72 100 -10 170 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-13: revolving platform frame
+1 72 100 -10 310 1 0 0 0 1 0 0 0 1 64179.dat
+0 // 64179-14: revolving platform frame
+1 72 100 -10 450 1 0 0 0 1 0 0 0 1 64179.dat
+0 STEP
+0 // 64179-15: boom foot side plate
+1 14 -80 -70 170 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-16: boom foot side plate
+1 14 -80 -170 170 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-17: boom foot side plate
+1 14 80 -70 170 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 64179-18: boom foot side plate
+1 14 80 -170 170 0 1 0 -1 0 0 0 0 1 64179.dat
+0 // 3737-0: boom pivot shaft
+1 0 0 -130 150 1 0 0 0 1 0 0 0 1 3737.dat
+0 STEP
+0 // 3737-1: winch shaft
+1 71 0 -262 450 1 0 0 0 1 0 0 0 1 3737.dat
+0 // 41531-0: winch drum (rope wraps)
+1 0 -20 -262 450 0 0 1 0 1 0 -1 0 0 41531.dat
+0 // 41531-1: winch drum (rope wraps)
+1 0 20 -262 450 0 0 1 0 1 0 -1 0 0 41531.dat
+0 // 3736-0: winch drum flange
+1 14 -50 -262 450 0 0 1 0 1 0 -1 0 0 3736.dat
+0 // 3736-1: winch drum flange
+1 14 50 -262 450 0 0 1 0 1 0 -1 0 0 3736.dat
+0 // 32316-0: winch upright
+1 72 -80 -222 450 0 1 0 0 0 1 1 0 0 32316.dat
+0 // 32316-1: winch upright
+1 72 80 -222 450 0 1 0 0 0 1 1 0 0 32316.dat
+0 STEP
+0 // atc-i6-00-8285---engine-0: superstructure inline-six (adapted from 8285)
+1 71 70 -160 330 0 0 1 0 1 0 -1 0 0 atc-i6-00-8285---engine.ldr
+0 STEP
+0 // 2465-0: counterweight slab
+1 72 0 -44 410 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-1: counterweight slab
+1 72 0 -44 430 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-2: counterweight slab
+1 72 0 -44 450 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 6112-0: counterweight slab (rear)
+1 72 0 -44 470 1 0 0 0 1 0 0 0 1 6112.dat
+0 // 3004-0: counterweight warning corner
+1 15 -140 -44 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-1: counterweight warning corner
+1 4 140 -44 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 2465-3: counterweight slab
+1 0 0 -68 410 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-4: counterweight slab
+1 0 0 -68 430 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-5: counterweight slab
+1 0 0 -68 450 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 6112-1: counterweight slab (rear)
+1 0 0 -68 470 1 0 0 0 1 0 0 0 1 6112.dat
+0 // 3004-2: counterweight warning corner
+1 4 -140 -68 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-3: counterweight warning corner
+1 15 140 -68 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 2465-6: counterweight slab
+1 72 0 -92 410 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-7: counterweight slab
+1 72 0 -92 430 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-8: counterweight slab
+1 72 0 -92 450 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 6112-2: counterweight slab (rear)
+1 72 0 -92 470 1 0 0 0 1 0 0 0 1 6112.dat
+0 // 3004-4: counterweight warning corner
+1 15 -140 -92 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-5: counterweight warning corner
+1 4 140 -92 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 2465-9: counterweight slab
+1 0 0 -116 410 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-10: counterweight slab
+1 0 0 -116 430 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-11: counterweight slab
+1 0 0 -116 450 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 6112-3: counterweight slab (rear)
+1 0 0 -116 470 1 0 0 0 1 0 0 0 1 6112.dat
+0 // 3004-6: counterweight warning corner
+1 4 -140 -116 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-7: counterweight warning corner
+1 15 140 -116 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 2465-12: counterweight slab
+1 72 0 -140 410 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-13: counterweight slab
+1 72 0 -140 430 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-14: counterweight slab
+1 72 0 -140 450 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 6112-4: counterweight slab (rear)
+1 72 0 -140 470 1 0 0 0 1 0 0 0 1 6112.dat
+0 // 3004-8: counterweight warning corner
+1 15 -140 -140 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-9: counterweight warning corner
+1 4 140 -140 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 2465-15: counterweight slab
+1 0 0 -164 410 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-16: counterweight slab
+1 0 0 -164 430 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 2465-17: counterweight slab
+1 0 0 -164 450 1 0 0 0 1 0 0 0 1 2465.dat
+0 // 6112-5: counterweight slab (rear)
+1 0 0 -164 470 1 0 0 0 1 0 0 0 1 6112.dat
+0 // 3004-10: counterweight warning corner
+1 4 -140 -164 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3004-11: counterweight warning corner
+1 15 140 -164 470 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 4282-0: counterweight cap plate 2x16
+1 14 0 -172 420 1 0 0 0 1 0 0 0 1 4282.dat
+0 // 4282-1: counterweight cap plate 2x16
+1 14 0 -172 460 1 0 0 0 1 0 0 0 1 4282.dat
+0 STEP
+0 // 64782-0: superstructure house side (right)
+1 14 150 -70 -60 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-1: superstructure house side (right)
+1 14 150 -70 160 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-2: superstructure house side (left)
+1 14 -150 -70 60 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-3: superstructure house side (left)
+1 14 -150 -70 280 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-4: engine hood roof
+1 14 0 -196 330 1 0 0 0 1 0 0 0 1 64782.dat
+0 STEP
+0 // 3035-0: cab floor 4x8
+1 72 -135 -28 -130 0 0 -1 0 1 0 1 0 0 3035.dat
+0 // 3010-0: operator cab front
+1 0 -135 -52 -200 1 0 0 0 1 0 0 0 1 3010.dat
+0 // 3009-0: operator cab outer side
+1 0 -165 -52 -130 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-0: operator cab outer side
+1 0 -165 -52 -60 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-1: operator cab inner side
+1 0 -105 -52 -130 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-1: operator cab inner side
+1 0 -105 -52 -60 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3004-12: operator cab rear
+1 0 -135 -52 -60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3010-1: operator cab front
+1 14 -135 -76 -200 1 0 0 0 1 0 0 0 1 3010.dat
+0 // 3005-2: operator cab outer side
+1 14 -165 -76 -180 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-2: operator cab outer side
+1 14 -165 -76 -110 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3005-3: operator cab inner side
+1 14 -105 -76 -180 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // 3009-3: operator cab inner side
+1 14 -105 -76 -110 0 0 -1 0 1 0 1 0 0 3009.dat
+0 // 3004-13: operator cab rear
+1 14 -135 -76 -60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3622-0: operator cab side, rear
+1 14 -165 -100 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-1: operator cab side, rear
+1 14 -105 -100 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3004-14: operator cab rear
+1 14 -135 -100 -60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3622-2: operator cab side, rear
+1 14 -165 -124 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-3: operator cab side, rear
+1 14 -105 -124 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3004-15: operator cab rear
+1 14 -135 -124 -60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3622-4: operator cab side, rear
+1 14 -165 -148 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-5: operator cab side, rear
+1 14 -105 -148 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3004-16: operator cab rear
+1 14 -135 -148 -60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3622-6: operator cab side, rear
+1 14 -165 -172 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-7: operator cab side, rear
+1 14 -105 -172 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3004-17: operator cab rear
+1 14 -135 -172 -60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3622-8: operator cab side, rear
+1 14 -165 -196 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-9: operator cab side, rear
+1 14 -105 -196 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3004-18: operator cab rear
+1 14 -135 -196 -60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 3622-10: operator cab side, rear
+1 14 -165 -220 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3622-11: operator cab side, rear
+1 14 -105 -220 -80 0 0 -1 0 1 0 1 0 0 3622.dat
+0 // 3004-19: operator cab rear
+1 14 -135 -220 -60 1 0 0 0 1 0 0 0 1 3004.dat
+0 // 57894-0: operator cab front window frame
+1 0 -135 -220 -200 1 0 0 0 1 0 0 0 1 57894.dat
+0 // 57895-0: front glass
+1 40 -135 -220 -200 1 0 0 0 1 0 0 0 1 57895.dat
+0 // 57894-1: operator cab side window frame
+1 0 -165 -220 -150 0 0 -1 0 1 0 1 0 0 57894.dat
+0 // 57895-1: side glass
+1 40 -165 -220 -150 0 0 -1 0 1 0 1 0 0 57895.dat
+0 // 57894-2: inner side window frame
+1 0 -105 -220 -150 0 0 -1 0 1 0 1 0 0 57894.dat
+0 // 57895-2: inner side glass
+1 40 -105 -220 -150 0 0 -1 0 1 0 1 0 0 57895.dat
+0 // 3035-1: operator cab roof
+1 14 -135 -228 -130 0 0 -1 0 1 0 1 0 0 3035.dat
+0 // 3062b-0: superstructure beacon
+1 57 -135 -252 -60 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // 3710-0: operator cab sun visor
+1 0 -135 -236 -200 1 0 0 0 1 0 0 0 1 3710.dat
+0 // 3069b-0: roof work light
+1 47 -135 -236 -160 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 // 3069b-1: roof work light
+1 47 -135 -236 -100 0 0 -1 0 1 0 1 0 0 3069b.dat
+0 NOFILE
+0 FILE atc-boom.ldr
+0 Three-section telescopic boom with head sheaves (B frame: pivot origin, axis -Z)
+0 Name: atc-boom.ldr
+0 Author: Atlas AT-90 generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // 64782-0: B0 top plate
+1 14 0 -150 -70 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-1: B0 bottom plate
+1 14 0 10 -70 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-2: B0 side web
+1 14 -60 -90 -70 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-3: B0 side web
+1 14 60 -90 -70 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-4: B0 top plate
+1 14 0 -150 -290 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-5: B0 bottom plate
+1 14 0 10 -290 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-6: B0 side web
+1 14 -60 -90 -290 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-7: B0 side web
+1 14 60 -90 -290 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-8: B0 top plate
+1 14 0 -150 -510 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-9: B0 bottom plate
+1 14 0 10 -510 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-10: B0 side web
+1 14 -60 -90 -510 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-11: B0 side web
+1 14 60 -90 -510 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-12: B0 top plate
+1 14 0 -150 -730 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-13: B0 bottom plate
+1 14 0 10 -730 0 0 -1 0 1 0 1 0 0 64782.dat
+0 // 64782-14: B0 side web
+1 14 -60 -90 -730 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 64782-15: B0 side web
+1 14 60 -90 -730 0 1 0 0 0 1 1 0 0 64782.dat
+0 // 32278-0: B0 longitudinal member
+1 0 -60 -30 -110 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-1: B0 longitudinal member
+1 0 -60 -30 -410 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-0: B0 longitudinal member
+1 0 -60 -30 -670 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-0: B0 longitudinal member
+1 0 -60 -30 -810 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-2: B0 longitudinal member
+1 0 -60 -10 -110 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-3: B0 longitudinal member
+1 0 -60 -10 -410 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-1: B0 longitudinal member
+1 0 -60 -10 -670 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-1: B0 longitudinal member
+1 0 -60 -10 -810 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-4: B0 longitudinal member
+1 0 -60 -150 -110 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32278-5: B0 longitudinal member
+1 0 -60 -150 -410 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32525-2: B0 longitudinal member
+1 0 -60 -150 -670 1 0 0 0 1 0 0 0 1 32525.dat
+0 // 32523-2: B0 longitudinal member
+1 0 -60 -150 -810 1 0 0 0 1 0 0 0 1 32523.dat
+0 // 32278-6: B0 longitudinal member
+1 0 -60 10 -110 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32278-7: B0 longitudinal member
+1 0 -60 10 -410 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32525-3: B0 longitudinal member
+1 0 -60 10 -670 1 0 0 0 1 0 0 0 1 32525.dat
+0 // 32523-3: B0 longitudinal member
+1 0 -60 10 -810 1 0 0 0 1 0 0 0 1 32523.dat
+0 // 32278-8: B0 longitudinal member
+1 0 60 -30 -110 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-9: B0 longitudinal member
+1 0 60 -30 -410 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-4: B0 longitudinal member
+1 0 60 -30 -670 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-4: B0 longitudinal member
+1 0 60 -30 -810 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-10: B0 longitudinal member
+1 0 60 -10 -110 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-11: B0 longitudinal member
+1 0 60 -10 -410 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-5: B0 longitudinal member
+1 0 60 -10 -670 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-5: B0 longitudinal member
+1 0 60 -10 -810 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-12: B0 longitudinal member
+1 0 60 -150 -110 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32278-13: B0 longitudinal member
+1 0 60 -150 -410 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32525-6: B0 longitudinal member
+1 0 60 -150 -670 1 0 0 0 1 0 0 0 1 32525.dat
+0 // 32523-6: B0 longitudinal member
+1 0 60 -150 -810 1 0 0 0 1 0 0 0 1 32523.dat
+0 // 32278-14: B0 longitudinal member
+1 0 60 10 -110 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32278-15: B0 longitudinal member
+1 0 60 10 -410 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32525-7: B0 longitudinal member
+1 0 60 10 -670 1 0 0 0 1 0 0 0 1 32525.dat
+0 // 32523-7: B0 longitudinal member
+1 0 60 10 -810 1 0 0 0 1 0 0 0 1 32523.dat
+0 STEP
+0 // 15458-0: T1 top plate
+1 14 0 -130 -530 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-1: T1 bottom plate
+1 14 0 -10 -530 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-2: T1 side web
+1 14 -40 -50 -530 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 15458-3: T1 side web
+1 14 40 -50 -530 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 15458-4: T1 top plate
+1 14 0 -130 -750 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-5: T1 bottom plate
+1 14 0 -10 -750 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-6: T1 side web
+1 14 -40 -50 -750 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 15458-7: T1 side web
+1 14 40 -50 -750 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 15458-8: T1 top plate
+1 14 0 -130 -970 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-9: T1 bottom plate
+1 14 0 -10 -970 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-10: T1 side web
+1 14 -40 -50 -970 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 15458-11: T1 side web
+1 14 40 -50 -970 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 15458-12: T1 top plate
+1 14 0 -130 -1190 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-13: T1 bottom plate
+1 14 0 -10 -1190 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-14: T1 side web
+1 14 -40 -50 -1190 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 15458-15: T1 side web
+1 14 40 -50 -1190 0 1 0 0 0 1 1 0 0 15458.dat
+0 // 32278-16: T1 longitudinal member
+1 14 -40 -110 -570 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-17: T1 longitudinal member
+1 14 -40 -110 -870 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-8: T1 longitudinal member
+1 14 -40 -110 -1130 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-8: T1 longitudinal member
+1 14 -40 -110 -1270 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-18: T1 longitudinal member
+1 14 -40 -90 -570 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-19: T1 longitudinal member
+1 14 -40 -90 -870 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-9: T1 longitudinal member
+1 14 -40 -90 -1130 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-9: T1 longitudinal member
+1 14 -40 -90 -1270 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-20: T1 longitudinal member
+1 14 -40 -130 -570 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32278-21: T1 longitudinal member
+1 14 -40 -130 -870 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32525-10: T1 longitudinal member
+1 14 -40 -130 -1130 1 0 0 0 1 0 0 0 1 32525.dat
+0 // 32523-10: T1 longitudinal member
+1 14 -40 -130 -1270 1 0 0 0 1 0 0 0 1 32523.dat
+0 // 32278-22: T1 longitudinal member
+1 14 -40 -10 -570 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32278-23: T1 longitudinal member
+1 14 -40 -10 -870 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32525-11: T1 longitudinal member
+1 14 -40 -10 -1130 1 0 0 0 1 0 0 0 1 32525.dat
+0 // 32523-11: T1 longitudinal member
+1 14 -40 -10 -1270 1 0 0 0 1 0 0 0 1 32523.dat
+0 // 32278-24: T1 longitudinal member
+1 14 40 -110 -570 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-25: T1 longitudinal member
+1 14 40 -110 -870 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-12: T1 longitudinal member
+1 14 40 -110 -1130 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-12: T1 longitudinal member
+1 14 40 -110 -1270 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-26: T1 longitudinal member
+1 14 40 -90 -570 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-27: T1 longitudinal member
+1 14 40 -90 -870 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-13: T1 longitudinal member
+1 14 40 -90 -1130 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-13: T1 longitudinal member
+1 14 40 -90 -1270 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-28: T1 longitudinal member
+1 14 40 -130 -570 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32278-29: T1 longitudinal member
+1 14 40 -130 -870 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32525-14: T1 longitudinal member
+1 14 40 -130 -1130 1 0 0 0 1 0 0 0 1 32525.dat
+0 // 32523-14: T1 longitudinal member
+1 14 40 -130 -1270 1 0 0 0 1 0 0 0 1 32523.dat
+0 // 32278-30: T1 longitudinal member
+1 14 40 -10 -570 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32278-31: T1 longitudinal member
+1 14 40 -10 -870 1 0 0 0 1 0 0 0 1 32278.dat
+0 // 32525-15: T1 longitudinal member
+1 14 40 -10 -1130 1 0 0 0 1 0 0 0 1 32525.dat
+0 // 32523-15: T1 longitudinal member
+1 14 40 -10 -1270 1 0 0 0 1 0 0 0 1 32523.dat
+0 STEP
+0 // 15458-16: T2 top plate
+1 14 0 -110 -990 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-17: T2 bottom plate
+1 14 0 -30 -990 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-18: T2 top plate
+1 14 0 -110 -1210 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-19: T2 bottom plate
+1 14 0 -30 -1210 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-20: T2 top plate
+1 14 0 -110 -1430 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-21: T2 bottom plate
+1 14 0 -30 -1430 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-22: T2 top plate
+1 14 0 -110 -1650 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 15458-23: T2 bottom plate
+1 14 0 -30 -1650 0 0 -1 0 1 0 1 0 0 15458.dat
+0 // 32278-32: T2 longitudinal member
+1 14 -20 -90 -1030 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-33: T2 longitudinal member
+1 14 -20 -90 -1330 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-16: T2 longitudinal member
+1 14 -20 -90 -1590 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-16: T2 longitudinal member
+1 14 -20 -90 -1730 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-34: T2 longitudinal member
+1 14 -20 -70 -1030 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-35: T2 longitudinal member
+1 14 -20 -70 -1330 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-17: T2 longitudinal member
+1 14 -20 -70 -1590 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-17: T2 longitudinal member
+1 14 -20 -70 -1730 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-36: T2 longitudinal member
+1 14 -20 -50 -1030 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-37: T2 longitudinal member
+1 14 -20 -50 -1330 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-18: T2 longitudinal member
+1 14 -20 -50 -1590 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-18: T2 longitudinal member
+1 14 -20 -50 -1730 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-38: T2 longitudinal member
+1 14 20 -90 -1030 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-39: T2 longitudinal member
+1 14 20 -90 -1330 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-19: T2 longitudinal member
+1 14 20 -90 -1590 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-19: T2 longitudinal member
+1 14 20 -90 -1730 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-40: T2 longitudinal member
+1 14 20 -70 -1030 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-41: T2 longitudinal member
+1 14 20 -70 -1330 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-20: T2 longitudinal member
+1 14 20 -70 -1590 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-20: T2 longitudinal member
+1 14 20 -70 -1730 0 1 0 -1 0 0 0 0 1 32523.dat
+0 // 32278-42: T2 longitudinal member
+1 14 20 -50 -1030 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32278-43: T2 longitudinal member
+1 14 20 -50 -1330 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 32525-21: T2 longitudinal member
+1 14 20 -50 -1590 0 1 0 -1 0 0 0 0 1 32525.dat
+0 // 32523-21: T2 longitudinal member
+1 14 20 -50 -1730 0 1 0 -1 0 0 0 0 1 32523.dat
+0 STEP
+0 // 3706-0: head sheave shaft
+1 71 0 -90 -1810 1 0 0 0 1 0 0 0 1 3706.dat
+0 // 3736-0: head sheave
+1 72 -10 -90 -1810 0 0 1 0 1 0 -1 0 0 3736.dat
+0 // 3736-1: head sheave
+1 72 10 -90 -1810 0 0 1 0 1 0 -1 0 0 3736.dat
+0 // 32316-0: boom head cheek
+1 14 -40 -90 -1770 0 1 0 -1 0 0 0 0 1 32316.dat
+0 // 32316-1: boom head cheek
+1 14 40 -90 -1770 0 1 0 -1 0 0 0 0 1 32316.dat
+0 // 32278-44: fly-jib chord
+1 14 80 -30 -290 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 41239-0: fly-jib chord
+1 14 80 -30 -570 0 1 0 -1 0 0 0 0 1 41239.dat
+0 // 32278-45: fly-jib chord
+1 14 80 -110 -290 0 1 0 -1 0 0 0 0 1 32278.dat
+0 // 41239-1: fly-jib chord
+1 14 80 -110 -570 0 1 0 -1 0 0 0 0 1 41239.dat
+0 // 32063-0: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 95 -70 -180 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 32063-1: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 105 -70 -180 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 32063-2: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 115 -70 -240 0 1 0 0.6 0 0.8 0.8 0 -0.6 32063.dat
+0 // 32063-3: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 125 -70 -240 0 1 0 0.6 0 0.8 0.8 0 -0.6 32063.dat
+0 // 32063-4: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 95 -70 -300 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 32063-5: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 105 -70 -300 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 32063-6: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 115 -70 -360 0 1 0 0.6 0 0.8 0.8 0 -0.6 32063.dat
+0 // 32063-7: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 125 -70 -360 0 1 0 0.6 0 0.8 0.8 0 -0.6 32063.dat
+0 // 32063-8: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 95 -70 -420 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 32063-9: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 105 -70 -420 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 32063-10: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 115 -70 -480 0 1 0 0.6 0 0.8 0.8 0 -0.6 32063.dat
+0 // 32063-11: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 125 -70 -480 0 1 0 0.6 0 0.8 0.8 0 -0.6 32063.dat
+0 // 32063-12: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 95 -70 -540 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 32063-13: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 105 -70 -540 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 32063-14: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 115 -70 -600 0 1 0 0.6 0 0.8 0.8 0 -0.6 32063.dat
+0 // 32063-15: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 125 -70 -600 0 1 0 0.6 0 0.8 0.8 0 -0.6 32063.dat
+0 // 32063-16: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 95 -70 -660 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 32063-17: fly-jib diagonal (doubled 6x0.5 liftarm)
+1 14 105 -70 -660 0 1 0 0.6 0 -0.8 -0.8 0 -0.6 32063.dat
+0 // 4519-0: fly-jib node shaft (boom row, chord, diagonals)
+1 0 80 -30 -150 1 0 0 0 1 0 0 0 1 4519.dat
+0 // 6558-0: fly-jib node pin (chord + diagonals)
+1 0 100 -110 -210 1 0 0 0 1 0 0 0 1 6558.dat
+0 // 3705-0: fly-jib node shaft (boom row, chord, diagonals)
+1 0 90 -30 -270 1 0 0 0 1 0 0 0 1 3705.dat
+0 // 6558-1: fly-jib node pin (chord + diagonals)
+1 0 100 -110 -330 1 0 0 0 1 0 0 0 1 6558.dat
+0 // 3705-1: fly-jib node shaft (boom row, chord, diagonals)
+1 0 90 -30 -390 1 0 0 0 1 0 0 0 1 3705.dat
+0 // 6558-2: fly-jib node pin (chord + diagonals)
+1 0 100 -110 -450 1 0 0 0 1 0 0 0 1 6558.dat
+0 // 3705-2: fly-jib node shaft (boom row, chord, diagonals)
+1 0 90 -30 -510 1 0 0 0 1 0 0 0 1 3705.dat
+0 // 6558-3: fly-jib node pin (chord + diagonals)
+1 0 100 -110 -570 1 0 0 0 1 0 0 0 1 6558.dat
+0 // 3705-3: fly-jib node shaft (boom row, chord, diagonals)
+1 0 90 -30 -630 1 0 0 0 1 0 0 0 1 3705.dat
+0 // 2780-0: fly-jib node pin (chord + diagonals)
+1 0 90 -110 -690 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-1: fly-jib stowage pin into the base section
+1 0 70 -30 -170 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-2: fly-jib stowage pin into the base section
+1 0 70 -30 -230 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-3: fly-jib stowage pin into the base section
+1 0 70 -30 -290 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-4: fly-jib stowage pin into the base section
+1 0 70 -30 -350 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-5: fly-jib stowage pin into the base section
+1 0 70 -30 -410 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-6: fly-jib stowage pin into the base section
+1 0 70 -30 -470 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-7: fly-jib stowage pin into the base section
+1 0 70 -30 -530 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-8: fly-jib stowage pin into the base section
+1 0 70 -30 -590 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 2780-9: fly-jib stowage pin into the base section
+1 0 70 -30 -650 1 0 0 0 1 0 0 0 1 2780.dat
+0 // 87994-0: head light mast (bar 3L)
+1 0 40 -130 -1770 0 1 0 -1 0 0 0 0 1 87994.dat
+0 // 3062b-0: aircraft warning light
+1 36 40 -184 -1770 1 0 0 0 1 0 0 0 1 3062b.dat
+0 // 32523-22: luffing cylinder lug
+1 0 -60 50 -330 0 1 0 0 0 1 1 0 0 32523.dat
+0 // 32523-23: luffing cylinder lug
+1 0 -20 50 -330 0 1 0 0 0 1 1 0 0 32523.dat
+0 // 32523-24: luffing cylinder lug
+1 0 20 50 -330 0 1 0 0 0 1 1 0 0 32523.dat
+0 // 32523-25: luffing cylinder lug
+1 0 60 50 -330 0 1 0 0 0 1 1 0 0 32523.dat
+0 // 3707-0: luffing cylinder eye shaft
+1 71 0 50 -330 1 0 0 0 1 0 0 0 1 3707.dat
+0 NOFILE
+0 FILE atc-v8-00-42082---engine.ldr
+0 Inline V8 engine assembly with eight pistons, cylinder heads, connecting rods, crankshaft sections, and engine block bricks.
+0 Name: atc-v8-00-42082---engine.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Axle 2 Notched (red)
+1 4 -10 50 70 0 0 1 0 1 0 -1 0 0 32062.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 -10 50 70 0.473026017 -0.881048459 0 0.881048459 0.473026017 0 0 0 1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 -10 50 70 -0.713082009 0.701080629 0 0.701080629 0.713082009 0 0 0 -1 2852.dat
+0 // Technic Engine Crankshaft Centre (tan)
+1 19 0 50 50 -1 0 0 0 -1 0 0 0 1 2854.dat
+0 // Technic Engine Crankshaft Centre (tan)
+1 19 0 50 90 -1 0 0 0 1 0 0 0 -1 2854.dat
+0 // Technic Axle 2 Notched (red)
+1 4 10 50 110 0 0 -1 0 -1 0 -1 0 0 32062.dat
+0 STEP
+0 // Technic Engine Crankshaft Centre (tan)
+1 19 0 50 130 1 0 0 0 -1 0 0 0 -1 2854.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 50 110 -0.473026017 0.881048459 0 0.881048459 0.473026017 0 0 0 -1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 50 110 0.713082009 -0.701080629 0 0.701080629 0.713082009 0 0 0 1 2852.dat
+0 // Technic Engine Crankshaft (light_bluish_grey)
+1 71 0 50 150 1 0 0 0 -1 0 0 0 -1 2853.dat
+0 // Technic Engine Crankshaft (light_bluish_grey)
+1 71 0 50 30 -1 0 0 0 -1 0 0 0 1 2853.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 50 30 -0.713082009 -0.701080629 0 -0.701080629 0.713082009 0 0 0 -1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 50 30 0.473026017 0.881048459 0 -0.881048459 0.473026017 0 0 0 1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 -10 50 150 -0.473026017 -0.881048459 0 -0.881048459 0.473026017 0 0 0 -1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 -10 50 150 0.713082009 0.701080629 0 -0.701080629 0.713082009 0 0 0 1 2852.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 25.238 31.072 70 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 -38.038 21.472 70 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 -25.238 31.072 110 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 38.038 21.472 110 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 38.038 21.472 30 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 -25.238 31.072 30 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 25.238 31.072 150 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 -38.038 21.472 150 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2851.dat
+0 STEP
+0 // Technic Engine Cylinder Head with Bottom Slots (light_bluish_grey)
+1 71 52.8 10.4 30 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2850b.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 50 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 44 42 50 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Engine Cylinder Head with Bottom Slots (light_bluish_grey)
+1 71 52.8 10.4 70 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2850b.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 90 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 44 42 90 0 0 1 0 -1 0 1 0 0 2780.dat
+0 STEP
+0 // Technic Engine Cylinder Head with Bottom Slots (light_bluish_grey)
+1 71 52.8 10.4 110 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2850b.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 130 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 44 42 130 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Engine Cylinder Head with Bottom Slots (light_bluish_grey)
+1 71 52.8 10.4 150 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2850b.dat
+0 // Technic Engine Cylinder Head with Bottom Slots (light_bluish_grey)
+1 71 -52.8 10.4 30 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2850b.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 10 50 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -44 42 50 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 // Technic Engine Cylinder Head with Bottom Slots (light_bluish_grey)
+1 71 -52.8 10.4 70 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2850b.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 10 90 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -44 42 90 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 // Technic Engine Cylinder Head with Bottom Slots (light_bluish_grey)
+1 71 -52.8 10.4 110 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2850b.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 10 130 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -44 42 130 0 0 -1 0 -1 0 -1 0 0 2780.dat
+0 // Technic Engine Cylinder Head with Bottom Slots (light_bluish_grey)
+1 71 -52.8 10.4 150 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2850b.dat
+0 STEP
+0 // Technic Brick 5 x 3 x 1 with 8 Pegholes and 2 Studs (black)
+1 0 0 0 0 -1 0 0 0 1 0 0 0 -1 32333.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 44 42 10 0 0 1 0 -1 0 1 0 0 43093.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -44 42 10 0 0 1 0 -1 0 1 0 0 43093.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 10 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 10 10 0 0 1 0 -1 0 1 0 0 2780.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 -44 42 170 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 44 42 170 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Brick 5 x 3 x 1 with 8 Pegholes and 2 Studs (black)
+1 0 0 0 180 -1 0 0 0 1 0 0 0 -1 32333.dat
+0 // Technic Axle 4 (red)
+1 4 0 50 200 0 -1 0 0 0 -1 1 0 0 3705.dat
+0 // Technic Bush with Two Flanges (red)
+1 4 0 50 200 0 -1 0 1 0 0 0 0 1 3713.dat
+0 // Technic Axle Pin Long with Friction with 2L Axle (black)
+1 0 0 10 -20 0 -1 0 0 0 1 -1 0 0 18651.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -20 50 -20 0 -1 0 0 0 1 -1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 20 50 -20 0 -1 0 0 0 1 -1 0 0 6558.dat
+0 STEP
+0 // Technic Beam 5 x 3 x 0.5 Liftarm Triangle Type 2 (yellow)
+1 14 0 50 -15 1 0 0 0 0 -1 0 1 0 99773.dat
+0 // Technic Axle 2 Notched (red)
+1 4 -40 50 -30 0 0 -1 0 -1 0 -1 0 0 32062.dat
+0 // Technic Axle 2 Notched (red)
+1 4 40 50 -30 0 0 -1 0 -1 0 -1 0 0 32062.dat
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (light_bluish_grey)
+1 71 -40 50 -30 0 0 -1 0 -1 0 -1 0 0 32291.dat
+0 // Technic Cross Block 2 x 2 (Axle/Twin Pin) (light_bluish_grey)
+1 71 40 50 -30 0 0 -1 0 -1 0 -1 0 0 32291.dat
+0 // Technic Bush with Two Flanges (red)
+1 4 0 10 -30 -1 0 0 0 -1 0 0 0 1 3713.dat
+0 // Technic Axle 3 with Stop (reddish_brown)
+1 70 0 50 -12 0 0 -1 0 -1 0 -1 0 0 24316.dat
+0 // Technic Gear 8 Tooth Reinforced (dark_bluish_grey)
+1 72 0 50 -30 -1 0 0 0 -1 0 0 0 1 10928.dat
+0 STEP
+0 // Technic Beam 5 x 3 x 0.5 Liftarm Triangle Type 2 (yellow)
+1 14 0 50 -45 1 0 0 0 0 -1 0 1 0 99773.dat
+0 // Technic Axle 4 with Stop (dark_bluish_grey)
+1 72 0 30 -32 0 -0.965885549 -0.258969314 0 -0.258969314 0.965885549 -1 0 0 87083.dat
+0 // Propeller 8 Blade 5 Diameter (orange)
+1 25 0 30 -60 0.965885549 0.258969314 0 0.258969314 -0.965885549 0 0 0 -1 41530.dat
+0 // Technic Gear 8 Tooth Reinforced (dark_bluish_grey)
+1 72 0 30 -30 -0.965885549 0.258969314 0 -0.258969314 -0.965885549 0 0 0 1 10928.dat
+0 STEP
+0 // Technic Axle Pin Long with Friction with 2L Pin (red)
+1 4 20 10 180 0 0 1 0 -1 0 1 0 0 11214.dat
+0 // Technic Beam 5 x 3 x 0.5 Liftarm Triangle Type 2 (yellow)
+1 14 20 50 195 0 0 1 1 0 0 0 1 0 99773.dat
+0 // Technic Beam 5 x 3 x 0.5 Liftarm Triangle Type 2 (yellow)
+1 14 20 50 205 0 0 1 1 0 0 0 1 0 99773.dat
+0 // Technic Engine Crankshaft (light_bluish_grey)
+1 71 20 80 200 0 1 0 -1 0 0 0 0 1 2853.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 50 190 0 0 1 0 -1 0 1 0 0 2780.dat
+0 // Technic Axle 3 with Stop (reddish_brown)
+1 70 40 50 220 0 0 1 0 1 0 -1 0 0 24316.dat
+0 // Technic Gear 20 Tooth Double Bevel Reinforced (tan)
+1 19 40 50 220 -1 0 0 0 1 0 0 0 -1 atc-v8-01-42082---18575.dat
+0 // Technic Gear 16 Tooth Reinforced (light_bluish_grey)
+1 71 40 50 240 -1 0 0 0 1 0 0 0 -1 94925.dat
+0 STEP
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -20 10 180 0 0 1 0 1 0 -1 0 0 6558.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 50 190 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Beam 5 (yellow)
+1 14 -20 50 200 -1 0 0 0 0 -1 0 -1 0 32316.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 30 210 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 70 210 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -20 90 210 0 0 -1 0 1 0 1 0 0 43093.dat
+0 // Technic Gear 12 Tooth Double Bevel (black)
+1 0 0 50 220 1 0 0 0 1 0 0 0 1 32270.dat
+0 STEP
+0 // Technic Cross Block 2 x 2 Bent 90 (Pin/Pin/Pin) (light_bluish_grey)
+1 71 -40 30 220 1 0 0 0 1 0 0 0 1 44809.dat
+0 // Technic Axle Pin Long with Friction with 2L Axle (black)
+1 0 -40 50 220 0 0 1 1 0 0 0 1 0 18651.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (dark_bluish_grey)
+1 72 -40 50 220 0 0 1 1 0 0 0 1 0 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (dark_bluish_grey)
+1 72 -40 70 220 0 1 0 1 0 0 0 0 -1 6536.dat
+0 // Technic Axle Pin with Friction (blue)
+1 1 -30 50 240 1 0 0 0 1 0 0 0 1 43093.dat
+0 // Technic Connector Toggle Joint Smooth (white)
+1 15 -20 50 240 0 0 -1 0 1 0 1 0 0 32126.dat
+0 STEP
+0 // Technic Pin 1/2 (light_bluish_grey)
+1 71 -50 30 200 -1 0 0 0 1 0 0 0 -1 4274.dat
+0 // Bar 3L (black)
+1 0 -36 30 200 0 -1 0 0 0 -1 1 0 0 87994.dat
+0 // Plate 2 x 2 Round with 1 Centre Stud (white)
+1 15 -58 30 200 0 -1 0 0 0 -1 1 0 0 18674.dat
+0 // Brick 2 x 2 Round Reinforced (white)
+1 15 -66 30 200 0 -1 0 0 0 -1 1 0 0 atc-v8-04-42082---6143.dat
+0 // Dish 2 x 2 with Rim (white)
+1 15 -90 30 200 0 -1 0 0 0 -1 1 0 0 2654.dat
+0 STEP
+0 NOFILE
+0 FILE atc-v8-01-42082---18575.dat
+0 A Technic part with an open axle hole and rectangular structural edges.
+0 Name: atc-v8-01-42082---18575.dat
+0 Author: Merlijn Wissink [legolijntje]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 BFC CERTIFY CCW
+0 !HISTORY 2016-06-19 [marckl] Based on 32269 from Marc Klein
+0 !HISTORY 2016-12-31 [PTadmin] Official Update 2016-01
+0 !HISTORY 2018-06-06 [Philo] Subparted, minor improvements
+0 // Technic Axle Hole Open Two Opposite Sides (main_colour)
+1 16 0 0 -10 1 0 0 0 0 -1 0 20 0 axlehol5.dat
+1 16 0 0 0 1 0 0 0 -1 0 0 0 -1 atc-v8-02-42082---32269s01.dat
+1 16 0 0 0 1 0 0 0 -1 0 0 0 -1 atc-v8-03-42082---32269s02.dat
+1 16 0 0 10 1.4167 0 0 0 0 1.4167 0 -1 0 48\4-4rin12.dat
+1 16 0 0 -10 1.4167 0 0 0 0 1.4167 0 1 0 48\4-4rin12.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -1 -7.901 0 0 -1 0 0 0 2.0994 10 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -1 7.901 0 0 -1 0 0 0 -2.0994 10 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 1 7.901 0 0 1 0 0 0 -2.0994 10 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 1 -7.901 0 0 1 0 0 0 2.0994 10 0 0 rect3.dat
+4 16 4.4495 -4.4495 10 6.7725 -2.897 10 5.5433 -2.2961 10 4.2428 -4.2427 10
+4 16 2.897 -6.7725 10 4.4495 -4.4495 10 4.2428 -4.2427 10 2.2959 -5.5428 10
+4 16 2.352 -9.513 10 2.897 -6.7725 10 2.2959 -5.5428 10 1 -5.8011 10
+3 16 11.998 -1 10 11 -1 10 9.513 -2.352 10
+3 16 1 -11 10 2.352 -9.513 10 1 -5.8016 10
+3 16 1 -11 10 1 -11.998 10 2.352 -9.513 10
+1 16 0 0 0 0 1 0 1 0 0 0 0 -1 atc-v8-02-42082---32269s01.dat
+1 16 0 0 0 0 1 0 1 0 0 0 0 -1 atc-v8-03-42082---32269s02.dat
+0 BFC INVERTNEXT
+1 16 0 -10 10 -1 0 0 0 0 -1 0 -20 0 8\2-4cylo.dat
+1 16 0 -10 10 -1 0 0 0 0 -1 0 -1 0 8\2-4ndis.dat
+1 16 0 -10 -10 -1 0 0 0 0 -1 0 1 0 8\2-4ndis.dat
+1 16 0 0 0 -1 0 0 0 1 0 0 0 -1 atc-v8-02-42082---32269s01.dat
+1 16 0 0 0 -1 0 0 0 1 0 0 0 -1 atc-v8-03-42082---32269s02.dat
+1 16 0 0 0 0 -1 0 -1 0 0 0 0 -1 atc-v8-02-42082---32269s01.dat
+1 16 0 0 0 0 -1 0 -1 0 0 0 0 -1 atc-v8-03-42082---32269s02.dat
+0 BFC INVERTNEXT
+1 16 0 10 10 1 0 0 0 0 1 0 -20 0 8\2-4cylo.dat
+1 16 0 10 10 1 0 0 0 0 1 0 -1 0 8\2-4ndis.dat
+1 16 0 10 -10 1 0 0 0 0 1 0 1 0 8\2-4ndis.dat
+3 16 1 11.998 10 1 11 10 2.352 9.513 10
+3 16 11 1 10 11.998 1 10 9.513 2.352 10
+4 16 2.897 6.7725 10 2.352 9.513 10 1 5.8011 10 2.2961 5.5433 10
+4 16 4.4495 4.4495 10 2.897 6.7725 10 2.2961 5.5433 10 4.2425 4.2426 10
+4 16 6.7725 2.897 10 4.4495 4.4495 10 4.2425 4.2426 10 5.5428 2.2959 10
+3 16 1 5.8009 10 2.352 9.513 10 1 11 10
+3 16 -11.998 1 10 -11 1 10 -9.513 2.352 10
+3 16 -1 11 10 -1 11.998 10 -2.352 9.513 10
+4 16 -4.4495 4.4495 10 -6.7725 2.897 10 -5.5433 2.2961 10 -4.2428 4.2427 10
+4 16 -2.897 6.7725 10 -4.4495 4.4495 10 -4.2428 4.2427 10 -2.2959 5.5428 10
+4 16 -2.352 9.513 10 -2.897 6.7725 10 -2.2959 5.5428 10 -1 5.8011 10
+3 16 -1 11 10 -2.352 9.513 10 -1 5.8016 10
+3 16 -1 -11.998 10 -1 -11 10 -2.352 -9.513 10
+3 16 -11 -1 10 -11.998 -1 10 -9.513 -2.352 10
+4 16 -2.897 -6.7725 10 -2.352 -9.513 10 -1 -5.8011 10 -2.2961 -5.5433 10
+4 16 -4.4495 -4.4495 10 -2.897 -6.7725 10 -2.2961 -5.5433 10 -4.2425 -4.2426 10
+4 16 -6.7725 -2.897 10 -4.4495 -4.4495 10 -4.2425 -4.2426 10 -5.5428 -2.2959 10
+3 16 -1 -5.8009 10 -2.352 -9.513 10 -1 -11 10
+4 16 -1 11 10 1 11 10 1 11.998 10 -1 11.998 10
+4 16 -11 -1 10 -11 1 10 -11.998 1 10 -11.998 -1 10
+4 16 1 -11 10 -1 -11 10 -1 -11.998 10 1 -11.998 10
+4 16 5.5433 -2.2961 -10 6.7725 -2.897 -10 4.4495 -4.4495 -10 4.2427 -4.2428 -10
+4 16 4.2427 -4.2428 -10 4.4495 -4.4495 -10 2.897 -6.7725 -10 2.2959 -5.5428 -10
+3 16 11 -1 -10 11.998 -1 -10 9.513 -2.352 -10
+3 16 1 -11.998 -10 1 -11 -10 2.352 -9.513 -10
+4 16 2.2959 -5.5428 -10 2.897 -6.7725 -10 2.352 -9.513 -10 1 -5.8011 -10
+3 16 2.352 -9.513 -10 1 -11 -10 1 -5.8016 -10
+4 16 2.2961 5.5433 -10 2.897 6.7725 -10 4.4495 4.4495 -10 4.2425 4.2426 -10
+4 16 4.2425 4.2426 -10 4.4495 4.4495 -10 6.7725 2.897 -10 5.5428 2.2959 -10
+3 16 1 11 -10 1 11.998 -10 2.352 9.513 -10
+3 16 11.998 1 -10 11 1 -10 9.513 2.352 -10
+4 16 1 5.8011 -10 2.352 9.513 -10 2.897 6.7725 -10 2.2961 5.5433 -10
+3 16 2.352 9.513 -10 1 5.8009 -10 1 11 -10
+4 16 1 11.998 -10 1 11 -10 -1 11 -10 -1 11.998 -10
+4 16 -5.5433 2.2961 -10 -6.7725 2.897 -10 -4.4495 4.4495 -10 -4.2427 4.2428 -10
+4 16 -4.2427 4.2428 -10 -4.4495 4.4495 -10 -2.897 6.7725 -10 -2.2959 5.5428 -10
+3 16 -11 1 -10 -11.998 1 -10 -9.513 2.352 -10
+3 16 -1 11.998 -10 -1 11 -10 -2.352 9.513 -10
+4 16 -2.2959 5.5428 -10 -2.897 6.7725 -10 -2.352 9.513 -10 -1 5.8011 -10
+3 16 -2.352 9.513 -10 -1 11 -10 -1 5.8016 -10
+4 16 -11.998 1 -10 -11 1 -10 -11 -1 -10 -11.998 -1 -10
+4 16 -2.2961 -5.5433 -10 -2.897 -6.7725 -10 -4.4495 -4.4495 -10 -4.2425 -4.2426 -10
+4 16 -4.2425 -4.2426 -10 -4.4495 -4.4495 -10 -6.7725 -2.897 -10 -5.5428 -2.2959 -10
+3 16 -1 -11 -10 -1 -11.998 -10 -2.352 -9.513 -10
+3 16 -11.998 -1 -10 -11 -1 -10 -9.513 -2.352 -10
+4 16 -1 -5.8011 -10 -2.352 -9.513 -10 -2.897 -6.7725 -10 -2.2961 -5.5433 -10
+3 16 -2.352 -9.513 -10 -1 -5.8009 -10 -1 -11 -10
+4 16 -1 -11.998 -10 -1 -11 -10 1 -11 -10 1 -11.998 -10
+4 16 -6 0 10 -5.5433 2.2961 10 -6.7725 2.897 10 -9.513 2.352 10
+4 16 -6.7725 -2.897 10 -5.5433 -2.2961 10 -6 0 10 -9.513 -2.352 10
+4 16 -9.513 -2.352 10 -6 0 10 -9.513 2.352 10 -11 1 10
+3 16 -11 1 10 -11 -1 10 -9.513 -2.352 10
+4 16 6.7725 2.897 10 5.5433 2.2961 10 6 0 10 9.513 2.352 10
+4 16 6 0 10 5.5433 -2.2961 10 6.7725 -2.897 10 9.513 -2.352 10
+4 16 9.513 2.352 10 6 0 10 9.513 -2.352 10 11 1 10
+3 16 11 -1 10 11 1 10 9.513 -2.352 10
+4 16 11 1 10 11 -1 10 11.998 -1 10 11.998 1 10
+4 16 -6.7725 2.897 -10 -5.5433 2.2961 -10 -6 0 -10 -9.513 2.352 -10
+4 16 -6 0 -10 -5.5433 -2.2961 -10 -6.7725 -2.897 -10 -9.513 -2.352 -10
+4 16 -9.513 2.352 -10 -6 0 -10 -9.513 -2.352 -10 -11 1 -10
+3 16 -11 -1 -10 -11 1 -10 -9.513 -2.352 -10
+4 16 6 0 -10 5.5433 2.2961 -10 6.7725 2.897 -10 9.513 2.352 -10
+4 16 6.7725 -2.897 -10 5.5433 -2.2961 -10 6 0 -10 9.513 -2.352 -10
+4 16 9.513 -2.352 -10 6 0 -10 9.513 2.352 -10 11 1 -10
+3 16 11 1 -10 11 -1 -10 9.513 -2.352 -10
+4 16 11.998 -1 -10 11 -1 -10 11 1 -10 11.998 1 -10
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -1.5 -5.7018 0 0 0 -0.5 0 -1 0.0998 -10 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 1.5 -5.7018 0 0 0 0.5 0 -1 0.0998 10 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 -1.5 5.7018 0 0 0 -0.5 0 1 -0.0998 10 0 0 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 1.5 5.7018 0 0 0 0.5 0 1 -0.0998 -10 0 0 rect3.dat
+0 STEP
+0 NOFILE
+0 FILE atc-v8-02-42082---32269s01.dat
+0 A rectangular panel subpart made of multiple rectangles and edge rectangles forming a flat structural surface.
+0 Name: atc-v8-02-42082---32269s01.dat
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 BFC CERTIFY CCW
+1 16 6.1803 19.0211 0 0.95106 0.30902 0 -0.30902 0.95106 0 0 0 -1 toothb12.dat
+0 // Rectangle (main_colour)
+1 16 3.186525 20.119 3 1.7983 0 0.07595 -0.28485 0 0.4942 0 -1 0 rect.dat
+0 // Rectangle (main_colour)
+1 16 3.186525 20.119 -3 -1.7983 0 0.0805 0.28485 0 0.4935 0 1 0 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 3.26475 20.61285 0 0 0 1.80285 0 -1 -0.28555 3 0 0 rect2p.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 3.1083 19.62515 6.5 0 0 1.7983 0 -1 -0.28485 3.5 0 0 rect1.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 3.1083 19.62515 -6.5 0 0 -1.7983 0 -1 0.28485 -3.5 0 0 rect1.dat
+1 16 11.7557 16.1803 0 0.80902 0.58779 0 -0.58779 0.80902 0 0 0 -1 toothb12.dat
+0 // Rectangle (main_colour)
+1 16 9.2477 18.1496 3 1.6223 0 0.22495 -0.8266 0 0.44655 0 -1 0 rect.dat
+0 // Rectangle (main_colour)
+1 16 9.2477 18.1496 -3 -1.6223 0 0.22905 0.8266 0 0.44445 0 1 0 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 9.4747 18.5951 0 0 0 1.6264 0 -1 -0.8287 3 0 0 rect2p.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 9.0207 17.7041 6.5 0 0 1.6223 0 -1 -0.8266 3.5 0 0 rect1.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 9.0207 17.7041 -6.5 0 0 -1.6223 0 -1 0.8266 -3.5 0 0 rect1.dat
+1 16 16.1803 11.7557 0 0.58779 0.80902 0 -0.80902 0.58779 0 0 0 -1 toothb12.dat
+0 // Rectangle (main_colour)
+1 16 14.40363 14.40363 3 1.28745 0 0.35195 -1.28745 0 0.3552 0 -1 0 rect.dat
+0 // Rectangle (main_colour)
+1 16 14.40363 14.40363 -3 -1.28745 0 0.3552 1.28745 0 0.35195 0 1 0 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 14.7572 14.7572 0 0 -1 1.2907 0 0 -1.2907 3 0 0 rect2p.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 14.05005 14.05005 6.5 0 -1 1.28745 0 0 -1.28745 3.5 0 0 rect1.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 14.05005 14.05005 -6.5 0 -1 -1.28745 0 0 1.28745 -3.5 0 0 rect1.dat
+1 16 19.0211 6.1803 0 0.30902 0.95106 0 -0.95106 0.30902 0 0 0 -1 toothb12.dat
+0 // Rectangle (main_colour)
+1 16 18.1496 9.2477 3 0.8266 0 0.44445 -1.6223 0 0.22905 0 -1 0 rect.dat
+0 // Rectangle (main_colour)
+1 16 18.1496 9.2477 -3 -0.8266 0 0.44655 1.6223 0 0.22495 0 1 0 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 18.5951 9.4747 0 0 -1 0.8287 0 0 -1.6264 3 0 0 rect2p.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 17.7041 9.0207 6.5 0 -1 0.8266 0 0 -1.6223 3.5 0 0 rect1.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 17.7041 9.0207 -6.5 0 -1 -0.8266 0 0 1.6223 -3.5 0 0 rect1.dat
+1 16 20 0 0 0 1 0 -1 0 0 0 0 -1 toothb12.dat
+0 // Rectangle (main_colour)
+1 16 20.119 3.186525 3 0.28485 0 0.4935 -1.7983 0 0.0805 0 -1 0 rect.dat
+0 // Rectangle (main_colour)
+1 16 20.119 3.186525 -3 -0.28485 0 0.4942 1.7983 0 0.07595 0 1 0 rect.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 20.61285 3.26475 0 0 -1 0.28555 0 0 -1.80285 3 0 0 rect2p.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 19.62515 3.1083 6.5 0 -1 0.28485 0 0 -1.7983 3.5 0 0 rect1.dat
+0 // Rectangle with 1 Edge (main_colour)
+1 16 19.62515 3.1083 -6.5 0 -1 -0.28485 0 0 1.7983 -3.5 0 0 rect1.dat
+4 16 1.31 19.91 10 2.4034 18.258699 10 4.7663 17.789101 10 4.9066 19.3403 10
+4 16 4.9066 19.3403 10 4.7663 17.789101 10 7.0482 17.0156 10 7.3984 18.530701 10
+4 16 7.3984 18.530701 10 7.0482 17.0156 10 9.2086 15.9492 10 10.643 16.877501 10
+4 16 10.643 16.877501 10 9.2086 15.9492 10 11.2123 14.6121 10 12.7626 15.3375 10
+4 16 12.7626 15.3375 10 11.2123 14.6121 10 13.0227 13.0227 10 15.3375 12.7626 10
+4 16 18.258699 -2.4034 10 19.91 -1.31 10 19.91 1.31 10 18.417101 0 10
+4 16 18.417101 0 10 19.91 1.31 10 19.3403 4.9066 10 18.258699 2.4034 10
+4 16 18.530701 7.3984 10 17.0156 7.0482 10 17.789101 4.7663 10 19.3403 4.9066 10
+4 16 15.9492 9.2086 10 17.0156 7.0482 10 18.530701 7.3984 10 16.877501 10.643 10
+4 16 15.9492 9.2086 10 16.877501 10.643 10 15.3375 12.7626 10 14.6121 11.2123 10
+3 16 17.789101 4.7663 10 18.258699 2.4034 10 19.3403 4.9066 10
+3 16 14.6121 11.2123 10 15.3375 12.7626 10 13.0227 13.0227 10
+4 16 4.7663 17.789101 -10 2.4034 18.258699 -10 1.31 19.91 -10 4.9066 19.3403 -10
+4 16 7.0482 17.0156 -10 4.7663 17.789101 -10 4.9066 19.3403 -10 7.3984 18.530701 -10
+4 16 9.2086 15.9492 -10 7.0482 17.0156 -10 7.3984 18.530701 -10 10.643 16.877501 -10
+4 16 11.2123 14.6121 -10 9.2086 15.9492 -10 10.643 16.877501 -10 12.7626 15.3375 -10
+4 16 13.0227 13.0227 -10 11.2123 14.6121 -10 12.7626 15.3375 -10 15.3375 12.7626 -10
+4 16 19.91 1.31 -10 19.91 -1.31 -10 18.258699 -2.4034 -10 18.417101 0 -10
+4 16 19.3403 4.9066 -10 19.91 1.31 -10 18.417101 0 -10 18.258699 2.4034 -10
+4 16 17.789101 4.7663 -10 17.0156 7.0482 -10 18.530701 7.3984 -10 19.3403 4.9066 -10
+4 16 18.530701 7.3984 -10 17.0156 7.0482 -10 15.9492 9.2086 -10 16.877501 10.643 -10
+4 16 15.3375 12.7626 -10 16.877501 10.643 -10 15.9492 9.2086 -10 14.6121 11.2123 -10
+3 16 18.258699 2.4034 -10 17.789101 4.7663 -10 19.3403 4.9066 -10
+3 16 15.3375 12.7626 -10 14.6121 11.2123 -10 13.0227 13.0227 -10
+0 STEP
+0 NOFILE
+0 FILE atc-v8-03-42082---32269s02.dat
+0 A curved subpart combining an open cylinder, rings, and rectangles forming a rounded segment with edges.
+0 Name: atc-v8-03-42082---32269s02.dat
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 BFC CERTIFY CCW
+0 BFC INVERTNEXT
+1 16 0 0 10 16.85456 0 -2.21895 2.21895 0 16.85456 0 -20 0 48\5-24cylo.dat
+0 // Cylinder Open 0.25 (main_colour)
+0 BFC INVERTNEXT
+1 16 9.513 9.513 10 -6.51 0 0 0 0 -6.51 0 -20 0 1-4cylo.dat
+0 // ~Ring 10 x 0.25 (Obsolete) (main_colour)
+1 16 9.513 9.513 10 -0.651 0 0 0 0 -0.651 0 -1 0 1-4rin10.dat
+0 // ~Ring 10 x 0.25 (Obsolete) (main_colour)
+1 16 9.513 9.513 -10 -0.651 0 0 0 0 -0.651 0 1 0 1-4rin10.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 10.56675 3.0015 0 1.05375 0 0 -0.0015 -1 0 0 0 -10 rect2p.dat
+2 24 16.7985 3 1 11.6205 3 1
+4 16 11.998 1 1 16.934099 1 1 16.7985 3 1 11.6205 3 1
+0 // Rectangle (main_colour)
+1 16 11.80925 2 5.5 -0.18875 -1 0 1 0 0 0 0 4.5 rect.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 14.46605 1 5.5 0 0 2.46805 0 -1 0 4.5 0 0 rect3.dat
+2 24 16.7985 3 -1 11.6205 3 -1
+4 16 11.998 1 -1 11.6205 3 -1 16.7985 3 -1 16.934099 1 -1
+0 // Rectangle (main_colour)
+1 16 11.80925 2 -5.5 0 -1 -0.18875 0 0 1 -4.5 0 0 rect.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 14.46605 1 -5.5 0 0 2.46805 0 -1 0 4.5 0 0 rect3.dat
+2 24 16.6985 3 -1 16.8503 2.2363 -1
+2 24 16.8503 2.2363 1 16.6985 3 1
+2 24 16.8503 2.2363 -1 16.934099 1 -1
+2 24 16.8503 2.2363 1 16.934099 1 1
+0 // Rectangle with 1 Edge (main_colour)
+1 16 14.1595 3 0 2.539 0 0 0 -1 0 0 0 -1 rect1.dat
+4 16 16.934099 1 10 11.998 1 10 11.998 -1 10 16.934099 -1 10
+3 16 16.934099 -1 10 17 0 10 16.934099 1 10
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 3.0015 10.56675 0 0.0015 -1 0 -1.05375 0 0 0 0 -10 rect2p.dat
+2 24 3 16.7985 1 3 11.6205 1
+4 16 3 16.7985 1 1 16.934099 1 1 11.998 1 3 11.6205 1
+0 // Rectangle (main_colour)
+1 16 2 11.80925 5.5 0 0 -1 0 -1 0.18875 -4.5 0 0 rect.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 1 14.46605 5.5 0 -1 0 0 0 2.46805 -4.5 0 0 rect3.dat
+2 24 3 16.7985 -1 3 11.6205 -1
+4 16 3 16.7985 -1 3 11.6205 -1 1 11.998 -1 1 16.934099 -1
+0 // Rectangle (main_colour)
+1 16 2 11.80925 -5.5 -1 0 0 0.18875 -1 0 0 0 4.5 rect.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 1 14.46605 -5.5 0 -1 0 0 0 2.46805 -4.5 0 0 rect3.dat
+2 24 3 16.6985 -1 2.2363 16.8503 -1
+2 24 2.2363 16.8503 1 3 16.6985 1
+2 24 2.2363 16.8503 -1 1 16.934099 -1
+2 24 2.2363 16.8503 1 1 16.934099 1
+0 // Rectangle with 1 Edge (main_colour)
+1 16 3 14.1595 0 0 -1 0 2.539 0 0 0 0 1 rect1.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 1.60935 16.8941 0 -0.60935 0 0 0.04 1 0 0 0 -10 rect2p.dat
+0 // Rectangle with 2 Parallel Edges (main_colour)
+1 16 16.89435 1.60945 0 0.03975 1 0 -0.60945 0 0 0 0 10 rect2p.dat
+4 16 3 11.6205 10 1 11.998 10 2.352 9.513 10 3.003 9.513 10
+4 16 11.6205 3 10 9.513 3.003 10 9.513 2.352 10 11.998 1 10
+4 16 9.513 2.352 -10 9.513 3.003 -10 11.6205 3 -10 11.998 1 -10
+4 16 2.352 9.513 -10 1 11.998 -10 3 11.6205 -10 3.003 9.513 -10
+4 16 11.998 -1 -10 11.998 1 -10 16.934099 1 -10 16.934099 -1 -10
+3 16 17 0 -10 16.934099 -1 -10 16.934099 1 -10
+0 STEP
+0 NOFILE
+0 FILE atc-v8-04-42082---6143.dat
+0 A simple cylindrical primitive element.
+0 Name: atc-v8-04-42082---6143.dat
+0 Author: Steve Bliss [sbliss]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 BFC CERTIFY CCW
+0 !HISTORY 2002-02-18 [PTadmin] Official Update 2002-01
+0 !HISTORY 2007-07-16 [PTadmin] Header formatted for Contributor Agreement
+0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01
+0 !HISTORY 2018-01-01 [Steffen] BFCed
+0 !HISTORY 2018-02-22 [MagFors] Made subfile, no longer an "alias"
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-v8-05-42082---6143s01.dat
+0 // Cylinder 1.0 (main_colour)
+1 16 0 0 0 20 0 0 0 20 0 0 0 20 4-4cyli.dat
+0 LDCad info for "Brick 2 x 2 Round Type 2"
+0 Author: Roland Melkert [roland]
+0 !LICENSE Free for non-commercial use.
+0 !LDCAD SNAP_INCL [ref=3941.dat]
+0 STEP
+0 NOFILE
+0 FILE atc-v8-05-42082---6143s01.dat
+0 A semi-reduced Technic axle hole subpart composed of tooth edges, surfaces, and perimeter pieces.
+0 Name: atc-v8-05-42082---6143s01.dat
+0 Author: Magnus Forsberg [MagFors]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 BFC CERTIFY CCW
+0 !HISTORY 2018-03-30 [MagFors] Used stug15-2x2 primitive
+1 16 0 18 0 1 0 0 0 -1.5 0 0 0 1 stud4a.dat
+0 // Technic Axle Hole Semi-Reduced Tooth Outer Edges (main_colour)
+1 16 0 18 0 1 0 0 0 1 0 0 0 1 axl3hol3.dat
+0 // Technic Axle Hole Semi-Reduced Tooth Inner Edges (main_colour)
+1 16 0 18 0 1 0 0 0 1 0 0 0 1 axl3hol9.dat
+0 // Technic Axle Hole Semi-Reduced Tooth Surface (main_colour)
+1 16 0 18 0 1 0 0 0 -1 0 0 0 1 axl3ho10.dat
+0 // Technic Axle Hole Semi-Reduced Perimeter (main_colour)
+1 16 0 0 0 1 0 0 0 18 0 0 0 1 axl3hol8.dat
+0 // Technic Axle Hole Semi-Reduced Side Edges (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 axl3hol2.dat
+0 // Technic Axle Hole Semi-Reduced Tooth Inner Edges (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 axl3hol9.dat
+0 // Technic Axle Hole Semi-Reduced Tooth Surface (main_colour)
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 axl3ho10.dat
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-v8-06-42082---6143s02.dat
+1 16 0 0 0 0 0 1 0 1 0 -1 0 0 atc-v8-06-42082---6143s02.dat
+1 16 0 0 0 -1 0 0 0 1 0 0 0 -1 atc-v8-06-42082---6143s02.dat
+1 16 0 0 0 0 0 -1 0 1 0 1 0 0 atc-v8-06-42082---6143s02.dat
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-v8-07-42082---stug15-2x2.dat
+0 STEP
+0 NOFILE
+0 FILE atc-v8-06-42082---6143s02.dat
+0 A detailed cylindrical subpart with small circles, rings, and rectangles forming a fine-profiled ring assembly.
+0 Name: atc-v8-06-42082---6143s02.dat
+0 Author: Magnus Forsberg [MagFors]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 BFC CERTIFY CCW
+0 // Circle 0.125 (main_colour)
+1 16 0 24 0 18.4776 0 7.65367 0 1 0 -7.65367 0 18.4776 1-8edge.dat
+0 // Cylinder 0.125 (main_colour)
+1 16 0 20 0 18.4776 0 7.65367 0 4 0 -7.65367 0 18.4776 1-8cyli.dat
+2 24 16.870001 24 -10.07 18.4778 24 -7.6539
+2 24 16.870001 20 -10.07 14.142 20 -14.142
+2 24 14.142 20 -14.142 10.07 20 -16.870001
+2 24 18.476999 24 7.654 16.870001 24 10.07
+2 24 6.123 20 -14.782 10.07 20 -16.870001
+0 // Circle 0.125 (main_colour)
+1 16 0 24 0 14.7821 0 6.12293 0 1 0 -6.12293 0 14.7821 1-8edge.dat
+0 // Ring 4 x 0.125 (main_colour)
+1 16 0 24 0 3.69552 0 1.53073 0 -1 0 -1.53073 0 3.69552 1-8ring4.dat
+4 16 16.870001 24 10.07 16.870001 20 10.07 18.477699 20 7.6538 18.476999 24 7.654
+3 16 14.7819 24 6.1229 16.870001 24 10.07 18.476999 24 7.654
+0 // Rectangle with 3 Edges (main_colour)
+1 16 15.826 22 8.096475 1.04395 1 -0.0001 0 0 2 1.9735 0 0 rect3.dat
+4 16 18.4778 24 -7.6539 18.4778 20 -7.6539 16.870001 20 -10.07 16.870001 24 -10.07
+3 16 18.4778 24 -7.6539 16.870001 24 -10.07 14.7821 24 -6.1229
+0 // Rectangle (main_colour)
+1 16 15.82607 22 -8.096475 0 1 -1.04395 -2 0 0 0 0 1.97355 rect.dat
+4 16 10.07 20 -16.870001 6.123 20 -14.782 11.3139 20 -11.3139 14.142 20 -14.142
+4 16 14.142 20 -14.142 11.3139 20 -11.3139 14.7822 20 -6.123 16.870001 20 -10.07
+4 16 8 13.8011 0 8 18 0 7.3912 18 3.0616 7.6023 14 2
+4 16 7.3912 18 3.0616 7.3912 4 3.0616 7.6023 4 2 7.6023 14 2
+4 16 7.6023 4 -2 7.3912 4 -3.0615 7.3913 18 -3.0616 7.6023 14 -2
+4 16 8 13.8011 0 7.6023 14 -2 7.3913 18 -3.0616 8 18 0
+4 16 7.3912 4 -3.0615 7.6023 4 -2 15.6023 4 -2 14.7823 4 -6.123
+4 16 14.7824 4 6.1232 15.6023 4 2 7.6023 4 2 7.3912 4 3.0616
+3 16 16 9.8 0 15.6023 10 2 14.7821 20 6.123
+4 16 15.6023 4 2 14.7824 4 6.1232 14.7821 20 6.123 15.6023 10 2
+4 16 14.7822 20 -6.123 14.7823 4 -6.123 15.6023 4 -2 15.6023 10 -2
+4 16 14.7821 24 -6.1229 14.7822 20 -6.123 16 9.8 0 16 24 0
+3 16 14.7822 20 -6.123 15.6023 10 -2 16 9.8 0
+4 16 16 9.8 0 14.7821 20 6.123 14.7819 24 6.1229 16 24 0
+0 // Circle 0.125 (main_colour)
+1 16 0 4 0 3.06147 0 7.39104 0 1 0 -7.39104 0 3.06147 1-8edge.dat
+0 // Cylinder 0.125 (main_colour)
+1 16 0 4 0 3.06147 0 7.39104 0 14 0 -7.39104 0 3.06147 1-8cyli.dat
+0 // Ring 1 x 0.125 (main_colour)
+1 16 0 4 0 3.06147 0 7.39104 0 -1 0 -7.39104 0 3.06147 1-8ring1.dat
+0 // Cylinder Open 0.125 (main_colour)
+0 BFC INVERTNEXT
+1 16 0 4 0 6.12293 0 14.78207 0 16 0 -14.78207 0 6.12293 1-8cylo.dat
+0 // Chord 0.25 (main_colour)
+1 16 0 0 0 20 0 0 0 1 0 0 0 -20 1-4chrd.dat
+0 // Circle 0.25 (main_colour)
+1 16 0 0 0 20 0 0 0 1 0 0 0 -20 1-4edge.dat
+0 // Disc Negative 0.25 (main_colour)
+1 16 0 0 0 4.24263 0 4.24265 0 1 0 -4.24265 0 4.24263 1-4ndis.dat
+4 16 0 0 -20 20 0 0 8.4853 0 0 0 0 -8.4853
+2 24 7.6023 4 -2 15.6023 4 -2
+2 24 15.6023 4 2 7.6023 4 2
+2 24 7.6023 4 2 7.6023 14 2
+2 24 7.6023 4 -2 7.6023 14 -2
+2 24 15.6023 4 2 15.6023 10 2
+2 24 15.6023 4 -2 15.6023 10 -2
+0 // Rectangle with 3 Edges (main_colour)
+1 16 11.80115 11.90028 1 -4 0 -0.19885 2.00055 -1 0.1 0 0 1 rect3.dat
+0 // Rectangle with 3 Edges (main_colour)
+1 16 11.80115 11.90028 -1 4 0 -0.19885 -2.00055 -1 0.09945 0 0 -1 rect3.dat
+4 16 15.6023 10 -2 15.6023 4 -2 7.6023 4 -2 7.6023 14 -2
+4 16 7.6023 14 2 7.6023 4 2 15.6023 4 2 15.6023 10 2
+2 24 14.7824 4 6.1232 15.6023 4 2
+2 24 15.6023 4 -2 14.7823 4 -6.123
+2 24 7.3912 4 -3.0615 7.6023 4 -2
+2 24 7.3912 4 3.0616 7.6023 4 2
+5 24 16 9.8 0 16 24 0 14.7822 20 -6.123 14.7821 20 6.123
+5 24 8 13.8011 0 8 18 0 7.6023 14 -2 7.6023 14 2
+5 24 14.7821 20 6.123 14.7824 4 6.1232 16 24 0 11.3136 20 11.3136
+5 24 14.7822 20 -6.123 14.7823 4 -6.123 11.3139 20 -11.3139 16 24 0
+5 24 7.3913 18 -3.0616 7.3912 4 -3.0615 5.6569 18 -5.6569 8 18 0
+5 24 7.3912 18 3.0616 7.3912 4 3.0616 8 18 0 5.6568 18 5.6568
+5 24 18.4778 20 -7.6539 18.4778 24 -7.6539 16.870001 24 -10.07 20.0005 24 0.0002
+5 24 18.477699 20 7.6538 18.476999 24 7.654 16.870001 24 10.07 20.0005 24 0.0002
+0 STEP
+0 NOFILE
+0 FILE atc-v8-07-42082---stug15-2x2.dat
+0 A 2x2 hollow stud base with four logo-decorated studs positioned at the corners.
+0 Name: atc-v8-07-42082---stug15-2x2.dat
+0 Author: Magnus Forsberg [MagFors]
+0 !LDRAW_ORG Unofficial_Primitive
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 BFC CERTIFY CCW
+0 // activate next lines to add logos on studs
+0 // 1 16 10 -4 10 1 0 0 0 1 0 0 0 1 logo5.dat
+0 // 1 16 -10 -4 10 1 0 0 0 1 0 0 0 1 logo5.dat
+0 // 1 16 -10 -4 -10 1 0 0 0 1 0 0 0 1 logo5.dat
+0 // 1 16 10 -4 -10 1 0 0 0 1 0 0 0 1 logo5.dat
+1 16 10 0 10 1 0 0 0 1 0 0 0 1 stud15.dat
+1 16 -10 0 10 0 0 -1 0 1 0 1 0 0 stud15.dat
+1 16 10 0 -10 0 0 1 0 1 0 -1 0 0 stud15.dat
+1 16 -10 0 -10 -1 0 0 0 1 0 0 0 -1 stud15.dat
+0 STEP
+0 NOFILE
+0 FILE atc-exhaust-00-8285---exhaust1.ldr
+0 Exhaust pipe assembly with a silver inverted dish, round brick, horizontal cylinder, and curved-top brick forming a muffler.
+0 Name: atc-exhaust-00-8285---exhaust1.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Brick 2 x 2 Round Reinforced (black)
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 6143.dat
+0 // Plate 1 x 1 Round (metallic_silver)
+1 80 0 -8 0 0 0 -1 0 1 0 1 0 0 6141.dat
+0 // Dish 3 x 3 Inverted (metallic_silver)
+1 80 0 -16 0 0 0 -1 0 1 0 1 0 0 43898.dat
+0 // Plate 1 x 1 Round (metallic_silver)
+1 80 0 -24 0 0 0 -1 0 1 0 1 0 0 6141.dat
+0 STEP
+0 // Cylinder 3 x 6 x 2.667 Horizontal with Hollow Studs (light_bluish_grey)
+1 71 0 60 0 0 1 0 0 0 1 1 0 0 30360.dat
+0 // Brick 2 x 3 with Curved Top (light_bluish_grey)
+1 71 -30 60 10 0 1 0 0 0 -1 -1 0 0 6215.dat
+0 // Technic Brick 1 x 2 with Reduced Axlehole (black)
+1 0 10 60 -20 0 1 0 -1 0 0 0 0 1 32064b.dat
+0 // Technic Brick 1 x 2 with Reduced Axlehole (black)
+1 0 10 60 0 0 1 0 -1 0 0 0 0 1 32064b.dat
+0 // Technic Axle 3 with Stud (dark_bluish_grey)
+1 72 20 60 -2 0 1 0 0 0 -1 -1 0 0 6587.dat
+0 // Plate 1 x 1 Round (metallic_silver)
+1 80 20 60 -40 -1 0 0 0 0 1 0 1 0 6141.dat
+0 // Technic Connector (Axle/Bush) Type 1 (black)
+1 0 40 60 20 0 0 1 0 1 0 -1 0 0 32039.dat
+0 STEP
+0 NOFILE
+0 FILE atc-i6-00-8285---engine.ldr
+0 Inline six-cylinder Technic engine with cylinder heads, pistons, connecting rods, crankshaft, and a 16-tooth drive gear.
+0 Name: atc-i6-00-8285---engine.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Brick 5 x 3 x 1 with 8 Pegholes and 2 Studs (black)
+1 0 0 0 0 -1 0 0 0 1 0 0 0 -1 32333.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 -44 42 0 0 0 1 0 1 0 -1 0 0 32054.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 -20 10 0 0 0.8 0.6 0 0.6 -0.8 -1 0 0 32054.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 20 10 0 0 0 1 0 1 0 -1 0 0 32054.dat
+0 // Technic Pin Long with Stop Bush (black)
+1 0 44 42 0 0 0 1 0 1 0 -1 0 0 32054.dat
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 -52.8 10.4 -30 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2850a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -44 42 -50 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 10 -50 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 10 -90 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 -52.8 10.4 -70 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2850a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -44 42 -90 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 10 -130 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 -52.8 10.4 -110 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2850a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -44 42 -130 0 0 1 0 1 0 -1 0 0 2780.dat
+0 STEP
+0 // Technic Axle 4 (black)
+1 0 0 50 20 0 -1 0 0 0 1 -1 0 0 3705.dat
+0 // Technic Engine Crankshaft (light_bluish_grey)
+1 71 0 50 -30 -1 0 0 0 1 0 0 0 -1 2853.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 50 -30 -0.473026017 0.881048459 0 0.881048459 0.473026017 0 0 0 -1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 50 -30 0.713082009 -0.701080629 0 0.701080629 0.713082009 0 0 0 1 2852.dat
+0 // Technic Engine Crankshaft Centre (dark_bluish_grey)
+1 72 0 50 -50 -1 0 0 0 1 0 0 0 -1 2854.dat
+0 // Technic Axle 2 Notched (red)
+1 4 -10 50 -70 0 -1 0 0 0 1 -1 0 0 32062.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 -10 50 -70 0.713082009 0.701080629 0 -0.701080629 0.713082009 0 0 0 1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 -10 50 -70 -0.473026017 -0.881048459 0 -0.881048459 0.473026017 0 0 0 -1 2852.dat
+0 // Technic Engine Crankshaft Centre (dark_bluish_grey)
+1 72 0 50 -90 -1 0 0 0 -1 0 0 0 1 2854.dat
+0 // Technic Engine Crankshaft (light_bluish_grey)
+1 71 0 50 -110 -1 0 0 0 -1 0 0 0 1 2853.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 50 -110 -0.473026017 0.881048459 0 0.881048459 0.473026017 0 0 0 -1 2852.dat
+0 // Technic Engine Connecting Rod (light_bluish_grey)
+1 71 10 50 -110 0.713082009 -0.701080629 0 0.701080629 0.713082009 0 0 0 1 2852.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 -25.238 31.072 -30 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 38.038 21.472 -30 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 -38.038 21.472 -70 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 25.238 31.072 -70 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 -25.238 31.072 -110 -0.6 0.8 0 0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Engine Piston Round (yellow)
+1 14 38.038 21.472 -110 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2851.dat
+0 // Technic Axle 4 (black)
+1 0 0 50 -160 0 -1 0 0 0 1 -1 0 0 3705.dat
+0 STEP
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 52.8 10.4 -30 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2850a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 44 42 -50 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 -50 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 -90 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 52.8 10.4 -70 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2850a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 44 42 -90 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 10 -130 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Engine Cylinder Head with Side Slots (light_bluish_grey)
+1 71 52.8 10.4 -110 -0.6 -0.8 0 -0.8 0.6 0 0 0 -1 2850a.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 44 42 -130 0 0 -1 0 1 0 1 0 0 2780.dat
+0 STEP
+0 // Technic Brick 5 x 3 x 1 with 8 Pegholes and 2 Studs (black)
+1 0 0 0 -140 -1 0 0 0 1 0 0 0 -1 32333.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 50 10 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 50 10 0 0 1 0 1 0 -1 0 0 2780.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -20 70 20 1 0 0 0 -1 0 0 0 -1 6536.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 20 70 20 1 0 0 0 -1 0 0 0 -1 6536.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 50 20 1 0 0 0 -1 0 0 0 -1 3713.dat
+0 // Technic Gear 16 Tooth (light_bluish_grey)
+1 71 0 50 40 1 0 0 0 -1 0 0 0 -1 4019.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 0 50 -160 1 0 0 0 -1 0 0 0 -1 3713.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 0 50 -175 1 0 0 0 -1 0 0 0 -1 32123b.dat
+0 STEP
+0 // Technic Pin with Friction and Slots (black)
+1 0 -20 50 -150 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 -20 70 -160 -1 0 0 0 -1 0 0 0 1 6536.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 20 50 -150 0 0 -1 0 1 0 1 0 0 2780.dat
+0 // Technic Cross Block 1 x 2 (Axle/Pin) (black)
+1 0 20 70 -160 -1 0 0 0 -1 0 0 0 1 6536.dat
+0 // Technic Axle 3 (light_bluish_grey)
+1 71 0 70 -160 1 0 0 0 -1 0 0 0 -1 4519.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Axle) (red)
+1 4 0 90 -160 1 0 0 0 -1 0 0 0 -1 32184.dat
+0 // Technic Axle 5 (light_bluish_grey)
+1 71 0 110 -160 1 0 0 0 -1 0 0 0 -1 32073.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 -20 110 -160 0 0 1 -1 0 0 0 -1 0 3713.dat
+0 // Technic Bush with Two Flanges (light_bluish_grey)
+1 71 20 110 -160 0 0 -1 1 0 0 0 -1 0 3713.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (black)
+1 0 -40 110 -140 -1 0 0 0 0 1 0 1 0 42003.dat
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (black)
+1 0 40 110 -140 -1 0 0 0 0 1 0 1 0 42003.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 40 120 -120 0 0 -1 1 0 0 0 -1 0 2780.dat
+0 // Technic Pin with Friction and Slots (black)
+1 0 -40 120 -120 0 0 -1 1 0 0 0 -1 0 2780.dat
+0 STEP
+0 // Technic Rotor 3 Blade with 6 Studs (light_bluish_grey)
+1 71 0 50 -188 1 0 0 0 0 -1 0 1 0 32125.dat
+0 // Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced (light_bluish_grey)
+1 71 0 50 -193 1 0 0 0 -1 0 0 0 -1 32123b.dat
+0 // Plate 2 x 8 (light_bluish_grey)
+1 71 0 -8 -70 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // Tile 1 x 2 Grille with Groove (red)
+1 4 0 -16 -140 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Tile 1 x 2 Grille with Groove (red)
+1 4 0 -16 0 -1 0 0 0 1 0 0 0 -1 2412b.dat
+0 // Tile 1 x 6 (light_bluish_grey)
+1 71 10 -16 -70 0 0 -1 0 1 0 1 0 0 6636.dat
+0 // Tile 1 x 6 (light_bluish_grey)
+1 71 -10 -16 -70 0 0 -1 0 1 0 1 0 0 6636.dat
+0 STEP
+0 NOFILE
+0 FILE atc-hook-00-42082---hook.ldr
+0 Hook assembly with triangular liftarms, angle connectors, towball axles, and a wheel rim forming a swivel lifting hook.
+0 Name: atc-hook-00-42082---hook.ldr
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 // Technic Beam 5 x 3 x 0.5 Liftarm Triangle Type 2 (black)
+1 0 0 0 0 -1 0 0 0 0 1 0 1 0 99773.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 0 40 -25 0 -1 0 0 0 1 -1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 0 20 -25 0 -1 0 0 0 1 -1 0 0 6558.dat
+0 // Technic Beam 5 x 3 x 0.5 Liftarm Triangle Type 2 (black)
+1 0 0 0 -10 -1 0 0 0 0 1 0 1 0 99773.dat
+0 STEP
+0 // Technic Cross Block 1 x 3 (Axle/Pin/Pin) (red)
+1 4 0 40 -25 -1 0 0 0 -1 0 0 0 1 42003.dat
+0 // Technic Axle 3 (light_bluish_grey)
+1 71 0 60 -25 -1 0 0 0 -1 0 0 0 1 4519.dat
+0 // Technic Angle Connector #5 (112.5 degree) (red)
+1 4 40 60 -25 0 0 1 0 1 0 -1 0 0 32015.dat
+0 // Technic Angle Connector #5 (112.5 degree) (red)
+1 4 -40 60 -25 0 0 -1 0 1 0 1 0 0 32015.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 -40 60 -25 0 -1 0 0 0 1 -1 0 0 6558.dat
+0 // Technic Pin Long with Friction and Slot (blue)
+1 1 40 60 -25 0 -1 0 0 0 1 -1 0 0 6558.dat
+0 // Technic Beam 5 (red)
+1 4 0 60 -45 0 0 1 1 0 0 0 1 0 32316.dat
+0 // Technic Beam 5 (red)
+1 4 0 60 -5 0 0 1 1 0 0 0 1 0 32316.dat
+0 // Technic Axle Towball (light_bluish_grey)
+1 71 -51.481 32.284 -25 0.382910984 0 0.923785245 0.923785245 0 -0.382910984 0 1 0 2736.dat
+0 // Technic Axle Towball (light_bluish_grey)
+1 71 51.481 32.284 -25 -0.382910984 0 0.923785245 0.923785245 0 0.382910984 0 1 0 2736.dat
+0 STEP
+0 // Technic Axle 3 (light_bluish_grey)
+1 71 -40 0 -25 0 1 0 0 0 1 1 0 0 4519.dat
+0 // Technic Axle 3 (light_bluish_grey)
+1 71 40 0 -25 0 1 0 0 0 1 1 0 0 4519.dat
+0 // Technic Beam 2 x 0.5 Liftarm (black)
+1 0 40 0 -30 -1 0 0 0 0 -1 0 -1 0 41677.dat
+0 // Technic Beam 2 x 0.5 Liftarm (black)
+1 0 40 0 -20 -1 0 0 0 0 -1 0 -1 0 41677.dat
+0 // Technic Beam 2 x 0.5 Liftarm (black)
+1 0 -40 0 -30 -1 0 0 0 0 -1 0 -1 0 41677.dat
+0 // Technic Beam 2 x 0.5 Liftarm (black)
+1 0 -40 0 -20 -1 0 0 0 0 -1 0 -1 0 41677.dat
+0 // Technic Axle Pin Long with Friction with 2L Axle (black)
+1 0 -40 -20 -25 0 -1 0 0 0 1 -1 0 0 18651.dat
+0 // Technic Axle Pin Long with Friction with 2L Axle (black)
+1 0 40 -20 -25 0 -1 0 0 0 1 -1 0 0 18651.dat
+0 STEP
+0 // Technic Beam 5 (red)
+1 4 0 -20 -5 0 0 1 1 0 0 0 1 0 32316.dat
+0 // Technic Pin Long without Friction with Single Slot (tan)
+1 19 0 -20 -25 0 -1 0 0 0 1 -1 0 0 32556.dat
+0 // Wheel Rim 8 x 18 with Deep Centre Groove, Deep Spokes and Peghole (light_bluish_grey)
+1 71 0 -20 -25 1 0 0 0 -1 0 0 0 -1 atc-hook-01-42082---13971.dat
+0 STEP
+0 NOFILE
+0 FILE atc-hook-01-42082---13971.dat
+0 A Technic wheel rim primitive with conical surfaces, rings, and a connector hole.
+0 Name: atc-hook-01-42082---13971.dat
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Unofficial_Part
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 BFC CERTIFY CCW
+0 // Nomenclature: width_(mm) x rim_diameter_(mm) [optional qualifier]
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 0 4 0 0 -21 -21 0 0 0 5 0 4-4cylo.dat
+0 // Cone 2 x 1.0 (main_colour)
+1 16 0 0 -3 0 0 -6 -6 0 0 0 1 0 4-4con2.dat
+0 // Cone 6 x 1.0 (main_colour)
+1 16 0 0 -4 0 0 -3 -3 0 0 0 1 0 4-4con6.dat
+0 // Cone 2 x 1.0 (main_colour)
+1 16 0 0 3 0 0 -6 6 0 0 0 -1 0 4-4con2.dat
+0 // Cone 6 x 1.0 (main_colour)
+1 16 0 0 4 0 0 -3 3 0 0 0 -1 0 4-4con6.dat
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 0 -2 0 0 -12 -12 0 0 0 4 0 4-4cylo.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 9 0 0 -21 -21 0 0 0 1 0 4-4edge.dat
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 0 -9 0 0 -21 -21 0 0 0 5 0 4-4cylo.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 9 0 0 19.5 19.5 0 0 0 1 0 4-4edge.dat
+0 // ~Ring 12 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 -9 0 0 1.61538 -1.61538 0 0 0 1 0 4-4rin12.dat
+0 // Cone 15 x 1.0 (main_colour)
+0 BFC INVERTNEXT
+1 16 0 0 -9 0 0 1.21154 -1.21154 0 0 0 2 0 4-4con15.dat
+0 // ~Ring 13 x 1.0 (Obsolete) (main_colour)
+1 16 0 0 9 0 0 1.5 1.5 0 0 0 -1 0 4-4rin13.dat
+0 // Cone 12 x 1.0 (main_colour)
+0 BFC INVERTNEXT
+1 16 0 0 9 0 0 1.5 1.5 0 0 0 -1.5 0 4-4con12.dat
+0 // Cylinder Open 1.0 (main_colour)
+0 BFC INVERTNEXT
+1 16 0 0 -7 0 0 18.1731 -18.1731 0 0 0 2 0 4-4cylo.dat
+0 // Cylinder Open 1.0 (main_colour)
+0 BFC INVERTNEXT
+1 16 0 0 5.5 0 0 18 18 0 0 0 2 0 4-4cylo.dat
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 0 5.5 0 0 13.5 13.5 0 0 0 1.5 0 4-4cylo.dat
+0 // Ring 2 x 1.0 (main_colour)
+1 16 0 0 7 0 0 4.5 4.5 0 0 0 -1 0 4-4ring2.dat
+0 // Ring 3 x 1.0 (main_colour)
+1 16 0 0 5.5 0 0 4.5 4.5 0 0 0 -1 0 4-4ring3.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 -9 0 0 19.3846 -19.3846 0 0 0 1 0 4-4edge.dat
+0 // Circle 1.0 (main_colour)
+1 16 0 0 -7 0 0 -19 -19 0 0 0 1 0 4-4edge.dat
+0 // Cylinder Open 1.0 (main_colour)
+1 16 0 0 -10 0 0 -10 -10 0 0 0 5 0 4-4cylo.dat
+0 // Ring 9 x 1.0 (main_colour)
+1 16 0 0 -10 0 0 1 -1 0 0 0 1 0 4-4ring9.dat
+1 16 0 0 -5 0 1 0 -1 0 0 0 0 0.5 s\55981s01.dat
+1 16 0 0 -5 0 -1 0 1 0 0 0 0 0.5 s\55981s01.dat
+0 // Technic Connector Hole Long (main_colour)
+1 16 0 0 0 0 0 1 -1 0 0 0 -1 0 connhole.dat
+5 24 -6.8886 -16.630199 -3 0 -18 -3 -4.5924 -11.0868 -2 -8.0367 -19.401899 -4
+5 24 -12.7278 -12.7278 -3 -6.8886 -16.630199 -3 -8.4852 -8.4852 -2 -14.8491 -14.8491 -4
+5 24 -16.630199 -6.8886 -3 -12.7278 -12.7278 -3 -11.0868 -4.5924 -2 -19.401899 -8.0367 -4
+5 24 -18 0 -3 -16.630199 -6.8886 -3 -12 0 -2 -21 0 -4
+5 24 -16.630199 6.8886 -3 -18 0 -3 -11.0868 4.5924 -2 -19.401899 8.0367 -4
+5 24 -12.7278 12.7278 -3 -16.630199 6.8886 -3 -8.4852 8.4852 -2 -14.8491 14.8491 -4
+5 24 -6.8886 16.630199 -3 -12.7278 12.7278 -3 -4.5924 11.0868 -2 -8.0367 19.401899 -4
+5 24 0 18 -3 -6.8886 16.630199 -3 0 12 -2 0 21 -4
+5 24 6.8886 16.630199 -3 0 18 -3 4.5924 11.0868 -2 8.0367 19.401899 -4
+5 24 12.7278 12.7278 -3 6.8886 16.630199 -3 8.4852 8.4852 -2 14.8491 14.8491 -4
+5 24 16.630199 6.8886 -3 12.7278 12.7278 -3 11.0868 4.5924 -2 19.401899 8.0367 -4
+5 24 18 0 -3 16.630199 6.8886 -3 12 0 -2 21 0 -4
+5 24 16.630199 -6.8886 -3 18 0 -3 11.0868 -4.5924 -2 19.401899 -8.0367 -4
+5 24 12.7278 -12.7278 -3 16.630199 -6.8886 -3 8.4852 -8.4852 -2 14.8491 -14.8491 -4
+5 24 6.8886 -16.630199 -3 12.7278 -12.7278 -3 4.5924 -11.0868 -2 8.0367 -19.401899 -4
+5 24 0 -18 -3 6.8886 -16.630199 -3 0 -12 -2 0 -21 -4
+5 24 -6.8886 16.630199 3 0 18 3 -4.5924 11.0868 2 -8.0367 19.401899 4
+5 24 -12.7278 12.7278 3 -6.8886 16.630199 3 -8.4852 8.4852 2 -14.8491 14.8491 4
+5 24 -16.630199 6.8886 3 -12.7278 12.7278 3 -11.0868 4.5924 2 -19.401899 8.0367 4
+5 24 -18 0 3 -16.630199 6.8886 3 -12 0 2 -21 0 4
+5 24 -16.630199 -6.8886 3 -18 0 3 -11.0868 -4.5924 2 -19.401899 -8.0367 4
+5 24 -12.7278 -12.7278 3 -16.630199 -6.8886 3 -8.4852 -8.4852 2 -14.8491 -14.8491 4
+5 24 -6.8886 -16.630199 3 -12.7278 -12.7278 3 -4.5924 -11.0868 2 -8.0367 -19.401899 4
+5 24 0 -18 3 -6.8886 -16.630199 3 0 -12 2 0 -21 4
+5 24 6.8886 -16.630199 3 0 -18 3 4.5924 -11.0868 2 8.0367 -19.401899 4
+5 24 12.7278 -12.7278 3 6.8886 -16.630199 3 8.4852 -8.4852 2 14.8491 -14.8491 4
+5 24 16.630199 -6.8886 3 12.7278 -12.7278 3 11.0868 -4.5924 2 19.401899 -8.0367 4
+5 24 18 0 3 16.630199 -6.8886 3 12 0 2 21 0 4
+5 24 16.630199 6.8886 3 18 0 3 11.0868 4.5924 2 19.401899 8.0367 4
+5 24 12.7278 12.7278 3 16.630199 6.8886 3 8.4852 8.4852 2 14.8491 14.8491 4
+5 24 6.8886 16.630199 3 12.7278 12.7278 3 4.5924 11.0868 2 8.0367 19.401899 4
+5 24 0 18 3 6.8886 16.630199 3 0 12 2 0 21 4
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-hook-02-42082---13971s01.dat
+1 16 0 0 0 -1 0 0 0 1 0 0 0 1 atc-hook-02-42082---13971s01.dat
+1 16 0 0 0 1 0 0 0 -1 0 0 0 1 atc-hook-02-42082---13971s01.dat
+1 16 0 0 0 -1 0 0 0 -1 0 0 0 1 atc-hook-02-42082---13971s01.dat
+0 STEP
+0 NOFILE
+0 FILE atc-hook-02-42082---13971s01.dat
+0 A simple rectangular plate subpart made of two edge-defined rectangles forming a flat surface.
+0 Name: atc-hook-02-42082---13971s01.dat
+0 Author: Philippe Hurbain [Philo]
+0 !LDRAW_ORG Unofficial_Subpart
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 BFC CERTIFY CCW
+4 16 10.0812 4.3136 9.888 10.4486 1.5216 10 19.837601 1.3316 8.81 19.318199 3.7274 8.74
+3 16 8.851 5.1101 10 10.4486 1.5216 10 10.0812 4.3136 9.888
+4 16 1.3049 10.8874 9.888 3.9065 9.8096 10 8.7656 17.845699 8.81 6.4311 18.5938 8.74
+3 16 0 10.2202 10 3.9065 9.8096 10 1.3049 10.8874 9.888
+4 16 12.8872 14.8664 8.74 11.072 16.514099 8.81 6.5421 8.288 10 8.7763 6.5738 9.888
+3 16 8.7763 6.5738 9.888 6.5421 8.288 10 8.851 5.1101 10
+4 16 19.1318 1.3459 8.8995 10.4486 1.5217 10 10.4486 1.5217 5.5 19.1318 1.3459 5.5
+0 // Rectangle with 2 Adjacent Edges (main_colour)
+1 16 10.4486 0.76085 7.75 0 -1 0 0.76085 0 0 0 0 2.25 rect2a.dat
+4 16 8.4115 17.260099 8.8967 3.9065 9.8096 10 3.9065 9.8096 5.5 8.4115 17.260099 5.5
+0 // Rectangle with 3 Edges (main_colour)
+1 16 5.2243 9.04875 7.75 -1.3178 0 0 0.76085 -1 0 0 0 2.25 rect3.dat
+4 16 6.5421 8.2879 10 10.666 15.7769 8.9167 10.666 15.7769 5.5 6.5421 8.2879 5.5
+4 16 12.6278 14.3429 8.8125 8.7764 6.5739 9.888 8.7764 6.5739 5.5 12.6278 14.3429 5.5
+4 16 8.7764 6.5739 9.888 8.851 5.1101 10 8.851 5.1101 5.5 8.7764 6.5739 5.5
+4 16 8.851 5.1101 10 10.0813 4.3136 9.888 10.0813 4.3136 5.5 8.851 5.1101 5.5
+4 16 10.0813 4.3136 9.888 18.5811 3.7743 8.8316 18.5811 3.7743 5.5 10.0813 4.3136 5.5
+4 16 0 10.2202 10 1.305 10.8875 9.888 1.305 10.8875 5.5 0 10.2202 5.5
+4 16 1.305 10.8875 9.888 6.1026 18.1001 8.8136 6.1026 18.1001 5.5 1.305 10.8875 5.5
+5 24 8.7764 6.5739 9.888 8.7764 6.5739 5.5 8.851 5.1101 10 12.6278 14.3429 8.8125
+5 24 8.851 5.1101 10 8.851 5.1101 5.5 10.0813 4.3136 9.888 8.7764 6.5739 9.888
+5 24 0 10.2202 10 0 10.2202 5.5 1.3049 10.8875 9.888 -1.305 10.8875 9.888
+5 24 10.0813 4.3136 9.888 10.0813 4.3136 5.5 18.5811 3.7743 8.8316 8.851 5.1101 10
+5 24 1.305 10.8875 9.888 1.305 10.8875 5.5 6.1026 18.1001 8.8136 0 10.2202 10
+2 24 10.4486 1.5217 10 19.1318 1.3459 8.8995
+2 24 8.851 5.1101 10 10.0813 4.3136 9.888
+2 24 18.5811 3.7743 8.8316 10.0813 4.3136 9.888
+2 24 3.9065 9.8096 10 8.4115 17.260099 8.8967
+2 24 0 10.2202 10 1.305 10.8875 9.888
+2 24 6.1026 18.1001 8.8136 1.305 10.8875 9.888
+2 24 6.5421 8.2879 10 10.666 15.7769 8.9167
+2 24 8.851 5.1101 10 8.7764 6.5739 9.888
+2 24 12.6278 14.3429 8.8125 8.7764 6.5739 9.888
+4 16 3.9065 9.8096 10 0 10.2202 10 0 9 10 3.4443 8.3151 10
+4 16 6.5421 8.2879 10 3.9065 9.8096 10 3.4443 8.3151 10 6.3639 6.3639 10
+4 16 8.851 5.1101 10 6.5421 8.2879 10 6.3639 6.3639 10 8.3151 3.4443 10
+4 16 10.4486 1.5217 10 8.851 5.1101 10 8.3151 3.4443 10 9 0 10
+3 16 10.4486 1.5217 10 9 0 10 10.4486 0 10
+2 24 18.5811 3.7742 8.8316 19.1318 1.3459 8.8995
+2 24 7.397 17.8575 8.8284 8.4115 17.260099 8.8967
+2 24 10.666 15.7769 8.9166 12.6277 14.343 8.8125
+2 24 6.1026 18.1 8.8136 7.397 17.8575 8.8284
+2 24 13.2085 1.4658 5.5 13.2085 1.4658 7
+2 24 12.675 4.149 5.5 12.675 4.149 7
+2 24 9.95 8.9412 5.5 9.95 8.9412 7
+2 24 5.4159 12.3059 5.5 5.4159 12.3059 7
+2 24 7.8565 10.6749 5.5 7.8565 10.6749 7
+2 24 2.6873 12.9656 5.5 2.6873 12.9656 7
+2 24 10.0813 4.3136 7 12.675 4.149 7
+2 24 10.4486 1.5217 7 13.2085 1.4658 7
+2 24 10.4486 1.5217 7 10.4486 0 7
+2 24 9.95 8.9412 7 8.7764 6.5739 7
+2 24 8.7764 6.5739 7 8.851 5.1101 7
+2 24 8.851 5.1101 7 10.0813 4.3136 7
+2 24 5.4159 12.3059 7 3.9065 9.8096 7
+2 24 3.9065 9.8096 7 6.5421 8.2879 7
+2 24 7.8565 10.6749 7 6.5421 8.2879 7
+2 24 0 10.2202 7 1.305 10.8875 7
+2 24 2.6873 12.9656 7 1.305 10.8875 7
+2 24 13.2085 1.4658 5.5 17.7267 1.3743 5.5
+2 24 12.675 4.149 5.5 17.2325 3.8598 5.5
+2 24 12.0513 13.1799 5.5 9.95 8.9412 5.5
+2 24 7.702 16.086599 5.5 5.4159 12.3059 5.5
+2 24 9.9933 14.5553 5.5 7.8565 10.6749 5.5
+2 24 5.3309 16.940001 5.5 2.6873 12.9656 5.5
+2 24 17.7267 1.3743 7.5 19.1318 1.3459 8.8994
+2 24 17.2325 3.8598 7.5 18.5811 3.7743 8.8316
+2 24 7.702 16.086599 7.5 8.4115 17.260099 8.8967
+2 24 9.9933 14.5553 7.5 10.666 15.7769 8.9167
+2 24 12.0513 13.1799 7.5 12.6278 14.3429 8.8125
+2 24 5.3309 16.940001 7.5 6.1026 18.1001 8.8136
+2 24 17.7267 1.3743 5.5 17.7267 1.3743 7.5
+2 24 17.2325 3.8598 5.5 17.2325 3.8598 7.5
+2 24 7.702 16.086599 5.5 7.702 16.086599 7.5
+2 24 9.9933 14.5553 5.5 9.9933 14.5553 7.5
+2 24 12.0513 13.1799 5.5 12.0513 13.1799 7.5
+2 24 5.3309 16.940001 5.5 5.3309 16.940001 7.5
+5 24 10.4486 1.5216 10 8.851 5.1101 10 10.0812 4.3136 9.888 9 0 10
+5 24 3.9065 9.8096 10 0 10.2202 10 1.3049 10.8874 9.888 3.4443 8.3151 10
+5 24 8.851 5.1101 10 6.5421 8.288 10 8.7763 6.5738 9.888 8.3151 3.4443 10
+0 STEP
+0 NOFILE

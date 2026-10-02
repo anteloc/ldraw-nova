@@ -1,0 +1,73 @@
+{
+  "source_checks_passed": true,
+  "diagnostics": [
+    {
+      "code": "header.missing",
+      "severity": "warning",
+      "message": "Add a descriptive Name: header.",
+      "line_number": null,
+      "section": "preview-study-6d62ff7befc5.ldr"
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 38,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -50.0,
+        -126.970173157022,
+        -81.7218755945108
+      ],
+      "max": [
+        70.0,
+        12.8694989308336,
+        38.15156072
+      ]
+    },
+    "occurrence_count": 38,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": false,
+    "contact_count": null,
+    "contacts": [],
+    "contacts_truncated": false,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": null,
+    "confirmed_component_count": null,
+    "components_truncated": false,
+    "overlap_candidate_count": 94,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "coverage.contacts_skipped",
+        "severity": "warning",
+        "message": "Contacts were not computed. Select a subassembly or request --contacts all; no connectivity conclusion is available.",
+        "line_number": null,
+        "section": null
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  },
+  "physical_validity": "not_proven"
+}
