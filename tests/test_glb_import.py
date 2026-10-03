@@ -8,7 +8,7 @@ import pytest
 
 trimesh = pytest.importorskip("trimesh")
 from PIL import Image
-from ldraw_tools.sculpture.glb_import import validate_glb, voxelize_glb, surface_colors, ldraw_palette
+from ldraw_tools.sculpture.glb_import import validate_glb, voxelize_glb, convert_glb, surface_colors, ldraw_palette
 from ldraw_tools.sculpture.conversion import convert
 
 
@@ -120,7 +120,7 @@ def test_rejects_bad_container(data):
 def test_subdivision_budget_and_resolution_are_checked(tmp_path, palette, monkeypatch):
     import ldraw_tools.sculpture.glb_import as module
     path = save(tmp_path, trimesh.Scene(colored_box([255,0,0])))
-    for value in [0,49,True,16.5]:
+    for value in [0,97,True,16.5]:
         with pytest.raises(ValueError, match="resolution"): voxelize_glb(path,resolution=value,library=palette)
     monkeypatch.setattr(module,"MAX_SAMPLES",1)
     with pytest.raises(ValueError, match="too complex"): voxelize_glb(path,resolution=16,library=palette)
@@ -154,3 +154,50 @@ def test_cli_writes_revision_bound_editable_artifacts(tmp_path, palette, monkeyp
     path.write_bytes(b"broken GLB")
     with pytest.raises(ValueError): cli.run(args)
     assert output.read_bytes() == original
+
+
+def test_auto_size_targets_actual_packed_bricks_and_keeps_surface_colors(tmp_path, palette):
+    path = save(tmp_path, trimesh.Scene(colored_box([255,0,0])))
+    text, report = convert_glb(path, library=palette, target_bricks=3000)
+    metadata = report['import']
+    assert metadata['target_bricks'] == 3000 and metadata['target_reached']
+    assert 2700 <= report['brick_count'] <= 3300
+    assert text.count('0 STEP') == report['brick_count'] == metadata['brick_count']
+    assert report['checks_passed'] and report['stud_components'] == 1
+    assert report['connected_instruction_prefixes']
+    surface, _ = voxelize_glb(path, resolution=metadata['resolution'], library=palette)
+    assert {tuple(row) for row in surface['voxels']} <= {tuple(row) for row in report['voxel_data']['voxels']}
+    assert len(metadata['size_trials']) <= 5
+
+
+def test_auto_size_keeps_best_connected_result_when_larger_sizes_hit_limits(tmp_path, palette, monkeypatch):
+    import ldraw_tools.sculpture.glb_import as module
+    path = save(tmp_path, trimesh.Scene(colored_box([255,0,0])))
+    original = module.voxelize_glb
+    def bounded(path, *, resolution, library):
+        if resolution > 8: raise ValueError('Voxel grid is too large; lower the resolution')
+        return original(path, resolution=resolution, library=library)
+    monkeypatch.setattr(module,'voxelize_glb',bounded)
+    _, report = convert_glb(path, library=palette)
+    assert report['checks_passed'] and report['stud_components'] == 1
+    assert report['import']['target_reached'] is False
+    assert report['import']['resolution'] == 8
+    assert any(not trial['converted'] for trial in report['import']['size_trials'])
+
+
+def test_auto_size_rejects_unsafe_input_before_search(tmp_path, palette, monkeypatch):
+    import ldraw_tools.sculpture.glb_import as module
+    path = save(tmp_path, trimesh.Scene(colored_box([255,0,0])))
+    path.write_bytes(alter_document(path.read_bytes(),lambda d:d['buffers'][0].update(uri='https://example.org/mesh.bin')))
+    monkeypatch.setattr(module,'voxelize_glb',lambda *a,**k:pytest.fail('Unsafe input reached size search'))
+    with pytest.raises(ValueError): convert_glb(path,library=palette)
+
+
+def test_cli_defaults_to_auto_size_and_allows_explicit_manual_override():
+    from ldraw_tools import cli
+    auto = cli.parser().parse_args(['glb-sculpture','mesh.glb','--output','model.mpd'])
+    assert auto.resolution is None and auto.target_bricks == 3000
+    manual = cli.parser().parse_args(['glb-sculpture','mesh.glb','--output','model.mpd','--resolution','16'])
+    assert manual.resolution == 16
+    with pytest.raises(SystemExit):
+        cli.parser().parse_args(['glb-sculpture','mesh.glb','--output','model.mpd','--resolution','16','--target-bricks','3000'])

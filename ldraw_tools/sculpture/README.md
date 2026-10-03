@@ -37,7 +37,7 @@ No alternate assembly engine is used for Nova's existing part-based workflows.
 
 ## Import a colored GLB
 
-`./ldraw-agent glb-sculpture model.glb --resolution 24 --output output/model.mpd`
+`./ldraw-agent glb-sculpture model.glb --output output/model.mpd`
 loads a self-contained glTF 2.0 mesh with Python
 [Trimesh](https://trimesh.org/trimesh.voxel.creation.html), using its subdivision
 voxelizer instead of BrickBuilder's legacy C++ `obj2voxel`. The color sampling
@@ -56,7 +56,17 @@ reports include resolution, surface cells, palette colors and dimensions. Matchi
 repaired voxel and hash sidecars make imports editable in the web app. No LLM,
 hosted BrickBuilder API, Open3D, C++ voxelizer or force solver is involved.
 
-Bounds: 16 MB per GLB, 8–48 studs on the longest grid axis, 100,000 triangles
+By default, auto sizing aims for **about 3,000 actual packed bricks** (within 10%).
+It runs at most five bounded voxelization/repair/packing trials, adjusting the
+longest grid dimension from the measured brick count and retaining the closest
+successfully connected result. Reports include the target, trials, actual count
+and whether the target was reached. Limits or difficult geometry can prevent
+reaching the target; the web app states this instead of claiming a fixed count.
+Use `--target-bricks 1500` for another target (100–10,000), or `--resolution 24`
+for a fixed manual grid. The same automatic 3,000-brick target is the web default.
+
+Bounds: 16 MB per GLB, 8–96 cells on the longest grid axis (also subject to the
+262,144-cell world and 65,536 occupied-cell caps), 100,000 triangles
 including instances, 200,000 source vertices, 128 scene nodes, 4 megapixels per
 embedded PNG/JPEG texture and a 2-million-face subdivision budget. External
 resources and required glTF extensions (including compressed meshes) are rejected;

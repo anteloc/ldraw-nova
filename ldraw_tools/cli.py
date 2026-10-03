@@ -65,7 +65,9 @@ def parser():
     c.add_argument("--report")
     c = commands.add_parser("glb-sculpture", help="Voxelize a colored GLB in Python and pack it with sculpture connectivity repair")
     c.add_argument("file", help="Self-contained GLB with embedded PNG/JPEG textures")
-    c.add_argument("--resolution", type=int, default=24, help="Longest voxel grid dimension in studs (8–48)")
+    size = c.add_mutually_exclusive_group()
+    size.add_argument("--resolution", type=int, help="Manual longest voxel grid dimension in studs (8–96, subject to grid/work limits)")
+    size.add_argument("--target-bricks", type=int, default=3000, help="Automatically size for approximately this many packed bricks (default 3000)")
     c.add_argument("--output", required=True)
     c.add_argument("--title", default="Imported GLB sculpture")
     c.add_argument("--report")
@@ -355,13 +357,10 @@ def run(args):
         except ModuleNotFoundError as exc:
             raise ValueError("Install the optional sculpture dependencies: uv sync --extra sculpture (or pip install '.[sculpture]')") from exc
         if args.command == "glb-sculpture":
-            from .sculpture.glb_import import voxelize_glb
-            voxels, import_report = voxelize_glb(args.file, resolution=args.resolution, library=library_path(args.library))
-            with TemporaryDirectory(prefix="ldraw-glb-") as folder:
-                source = Path(folder) / "voxels.json"
-                source.write_text(json.dumps(voxels))
-                text, report = convert(source, name=Path(args.output).name, title=args.title)
-            report["import"] = import_report
+            from .sculpture.glb_import import convert_glb
+            text, report = convert_glb(args.file, resolution=args.resolution,
+                target_bricks=args.target_bricks, library=library_path(args.library),
+                name=Path(args.output).name, title=args.title)
         else:
             text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
         voxel_data = report.pop("voxel_data")

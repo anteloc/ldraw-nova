@@ -150,8 +150,8 @@ def surface_colors(mesh: trimesh.Trimesh, points: np.ndarray, *, surface=None) -
 
 
 def voxelize_glb(path: str | Path, *, resolution: int, library: Path) -> tuple[dict, dict]:
-    if type(resolution) is not int or not 8 <= resolution <= 48:
-        raise ValueError("Choose a resolution from 8 to 48 studs")
+    if type(resolution) is not int or not 8 <= resolution <= 96:
+        raise ValueError("Choose a resolution from 8 to 96 studs")
     path = Path(path)
     if path.stat().st_size > MAX_GLB_BYTES:
         raise ValueError("GLB exceeds 16 MB")
@@ -179,6 +179,8 @@ def voxelize_glb(path: str | Path, *, resolution: int, library: Path) -> tuple[d
     if extents.max() <= 1e-12:
         raise ValueError("GLB mesh has zero extent")
     scale = (resolution - 1) / extents.max()
+    if np.prod(np.rint(extents * scale).astype(int) + 1) > MAX_GRID_CELLS:
+        raise ValueError("Voxel grid is too large; lower the resolution")
     codes, palette = ldraw_palette(library)
     cells: dict[tuple, tuple] = {}
     sample_budget = 0
@@ -223,3 +225,66 @@ def voxelize_glb(path: str | Path, *, resolution: int, library: Path) -> tuple[d
     return {"voxels": rows}, {"voxelizer": "trimesh-subdivide", "resolution": resolution,
         "mesh_instances": len(meshes), "surface_voxels": len(rows),
         "palette_colors": len({row[3] for row in rows}), "dimensions": dimensions.tolist()}
+
+
+def convert_glb(path: str | Path, *, library: Path, resolution: int | None = None,
+                target_bricks: int = 3000, name: str = "sculpture.mpd",
+                title: str = "Imported GLB sculpture") -> tuple[str, dict]:
+    """Choose a bounded grid from actual repaired packing counts, retaining the best valid result."""
+    from tempfile import TemporaryDirectory
+    from .conversion import convert
+
+    if type(target_bricks) is not int or not 100 <= target_bricks <= 10000:
+        raise ValueError("Choose a target from 100 to 10000 bricks")
+    # Reject unsafe input once, before any size search or loading external resources.
+    path = Path(path)
+    if path.stat().st_size > MAX_GLB_BYTES:
+        raise ValueError("GLB exceeds 16 MB")
+    validate_glb(path.read_bytes())
+    automatic = resolution is None
+    candidate = 48 if automatic else resolution
+    lower, upper = 8, 96
+    attempts, best, failure = [], None, None
+    with TemporaryDirectory(prefix="ldraw-glb-") as folder:
+        source = Path(folder) / "voxels.json"
+        for trial in range(5 if automatic else 1):
+            try:
+                voxels, metadata = voxelize_glb(path, resolution=candidate, library=library)
+                source.write_text(json.dumps(voxels))
+                text, report = convert(source, name=name, title=title)
+            except ValueError as exc:
+                if not automatic:
+                    raise
+                failure = exc
+                attempts.append({"resolution": candidate, "converted": False})
+                # A size exceeding resource or repair limits must never displace
+                # a successfully connected model. Search smaller bounded grids.
+                upper = candidate - 1
+                candidate = (lower + upper) // 2
+                if trial == 3 and best is None:
+                    candidate = 8  # Last trial still tests the minimum supported grid.
+            else:
+                count = report["brick_count"]
+                attempts.append({"resolution": candidate, "converted": True, "brick_count": count})
+                report["import"] = {**metadata, "brick_count": count}
+                if best is None or abs(count - target_bricks) < abs(best[1]["brick_count"] - target_bricks):
+                    best = text, report
+                if not automatic or abs(count - target_bricks) <= target_bricks * .1:
+                    break
+                if count < target_bricks:
+                    lower = candidate + 1
+                else:
+                    upper = candidate - 1
+                # Surface-shell packing grows roughly with area. Actual counts
+                # correct this estimate on each trial; brackets bound overshoot.
+                estimate = round(candidate * (target_bricks / max(count, 1)) ** .5)
+                candidate = estimate if lower <= estimate <= upper else (lower + upper) // 2
+            if lower > upper or any(a["resolution"] == candidate for a in attempts):
+                break
+    if best is None:
+        raise failure or ValueError("GLB could not be converted at a supported size")
+    if automatic:
+        best[1]["import"].update(target_bricks=target_bricks,
+            target_reached=abs(best[1]["brick_count"] - target_bricks) <= target_bricks * .1,
+            size_trials=attempts)
+    return best
