@@ -1,6 +1,6 @@
-# Optional 3D sculpture workflow
+# Optional Sculpture model workflow
 
-Use this only when the user chooses **3D sculpture** or asks for a voxel sculpture.
+Use this only when the user chooses **Sculpture model** or asks for a voxel sculpture.
 Keep Nova's selected model, Agent/Plan mode and tool permissions. In Plan mode,
 plan this route without running conversion. Ordinary part-based models keep their usual flow.
 
@@ -26,9 +26,11 @@ No image-generation service or force-solver license is needed by conversion.
    connected instruction prefixes. If bounded repairs cannot connect everything,
    revise the subject's own supports and rerun; never bypass the checks.
 4. Continue Nova's usual validation, rendering, image review and `publish_model`.
-   Keep the generator/design, report and `output/sculpture.repaired.voxels.json`.
+   Keep the generator/design, report, `output/sculpture.repaired.voxels.json` and
+   `output/sculpture.sculpture.json` beside the MPD. The last file binds the saved
+   cells to this exact revision so the web model card can offer **Sculpture editor**.
    That JSON contains accepted support voxels and preserves original cells/colours,
-   so voxel-editor edits and rebuilds use the actual exported sculpture. Ordinary
+   so sculpture-editor edits and rebuilds use the actual exported sculpture. Ordinary
    `0 STEP` records drive Nova's existing step player.
 
 ## Design rules from BrickBuilderAI

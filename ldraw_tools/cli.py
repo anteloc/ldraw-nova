@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import shutil
 import sqlite3
@@ -60,7 +61,7 @@ def parser():
     c = commands.add_parser("sculpture", help="Pack coloured voxels into a connected sculpture with deterministic build steps")
     c.add_argument("voxels", help="JSON with voxels: [[x,y,z,LDraw colour], ...]; z is brick-height layers")
     c.add_argument("--output", required=True, help="Self-contained .mpd for the existing viewer/player")
-    c.add_argument("--title", default="3D sculpture")
+    c.add_argument("--title", default="Sculpture model")
     c.add_argument("--report")
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
@@ -359,6 +360,11 @@ def run(args):
             voxel_output = str(Path(args.output).with_suffix(".repaired.voxels.json"))
             atomic_write(voxel_output, json.dumps(voxel_data))
             report["voxel_output"] = voxel_output
+            # Bind editable cells to this exact exported revision, not a stale design.
+            marker = {"version": 1,
+                      "model_sha256": hashlib.sha256(Path(args.output).read_bytes()).hexdigest(),
+                      "voxel_sha256": hashlib.sha256(Path(voxel_output).read_bytes()).hexdigest()}
+            atomic_write(Path(args.output).with_suffix(".sculpture.json"), json.dumps(marker))
         return report, 0 if report["checks_passed"] else 1
     if args.command == "examples":
         from .examples import search_examples
@@ -496,7 +502,6 @@ def run(args):
             diagnostics.extend(analyze_geometry(model, parts, detail='summary')['diagnostics'])
             if any(d['severity']=='error' for d in diagnostics) or not review['checks_passed']:
                 return dict(written=False, diagnostics=diagnostics, structure=review), 1
-            import hashlib
             contract['model_sha256'] = hashlib.sha256(model.to_ldraw().encode()).hexdigest()
             atomic_write(target, dumps(plan)+'\n')
             atomic_write(contract_path, dumps(contract)+'\n')
