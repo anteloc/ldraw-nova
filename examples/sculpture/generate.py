@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 
-cells = {(x, y, z): 7 for x in range(16) for y in range(12) for z in range(2)}
+cells = {}  # Subject only: no display base, stand, plinth or ground plate.
 for x in range(16):
     for y in range(12):
         for z in range(2, 19):

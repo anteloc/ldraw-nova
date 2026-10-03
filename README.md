@@ -67,8 +67,9 @@ docker compose down
 ## Optional 3D sculpture mode
 
 Ask for “a 3D sculpture of …” (or enable **3D sculpture** under **Additional settings** in the web composer).
-The agent designs coloured voxels; BrickBuilderAI's current algorithmic voxel-to-LEGO
-pipeline packs real bricks, reinforces enclosed interiors, checks one stud-connected
+The agent follows BrickBuilderAI's sculpture design rules (no display base unless
+requested). Its algorithmic voxel-to-LEGO pipeline packs real bricks, repairs
+disconnected regions with support voxels inside first, then outside if needed, checks one stud-connected
 assembly and deterministically reorders connected build steps for the existing 3D
 player. Existing part-based generation remains the default. The stability-oriented
 heuristics draw on [Legolization: optimizing LEGO designs](https://dl.acm.org/doi/10.1145/2816795.2818091);

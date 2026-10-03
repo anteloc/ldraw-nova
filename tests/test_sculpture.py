@@ -63,7 +63,46 @@ def test_side_touching_is_not_a_stud_connection():
 
 
 def test_disconnected_input_never_silently_loses_subject_voxels(tmp_path):
-    with pytest.raises(ValueError, match="disconnected|preserve"):
+    rows = [[0, 0, 0, 4], [10, 0, 0, 1]]
+    _, report = convert(source(tmp_path, rows))
+    repaired = report["voxel_data"]["voxels"]
+    assert all(row in repaired for row in rows)
+    assert report["exterior_support_voxels"] > 0 and report["unresolved_voxels"] == 0
+
+
+def test_flat_section_is_repacked_after_support_additions(tmp_path, official):
+    rows = box(20, 2, 1)
+    text, report = convert(source(tmp_path, rows))
+    assert report["support_repair_rounds"] > 0
+    assert report["exterior_support_voxels"] > 0
+    assert all(row in report["voxel_data"]["voxels"] for row in rows)
+    assert text.count("0 STEP") == report["step_count"]
+    # Verify the actual exported brick assembly, not only reported connectivity.
+    from ldraw_tools.validation import validate_text
+    from ldraw_tools.geometry import analyze_geometry
+
+    model, issues = validate_text(text, official)
+    assert not [issue for issue in issues if issue["severity"] == "error"]
+    assert len(analyze_geometry(model, official)["optimistic_components"]) == 1
+
+
+def test_floating_coloured_island_gets_support_without_recolouring(tmp_path):
+    rows = box(2, 2, 3) + [[7, 0, 4, 1]]
+    _, report = convert(source(tmp_path, rows))
+    assert all(row in report["voxel_data"]["voxels"] for row in rows)
+    assert report["support_repair_rounds"] > 0
+
+
+def test_unresolved_colour_seam_is_rejected(tmp_path):
+    with pytest.raises(ValueError, match="disconnected.*after support repair"):
+        convert(source(tmp_path, [[0, 0, 0, 4], [1, 0, 0, 1]]))
+
+
+def test_supports_cannot_exceed_the_saved_voxel_input_budget(tmp_path, monkeypatch):
+    from ldraw_tools.sculpture import conversion
+
+    monkeypatch.setattr(conversion, "MAX_VOXELS", 2)
+    with pytest.raises(ValueError, match="disconnected.*after support repair"):
         convert(source(tmp_path, [[0, 0, 0, 4], [10, 0, 0, 4]]))
 
 
@@ -98,7 +137,7 @@ def test_bad_input_rejected_before_packing(tmp_path, rows):
 
 
 def test_cli_rejects_without_overwriting_output(tmp_path):
-    path = source(tmp_path, [[0, 0, 0, 4], [10, 0, 0, 4]])
+    path = source(tmp_path, [[0, 0, 0, 4], [1, 0, 0, 1]])
     output = tmp_path / "sculpture.mpd"
     output.write_text("previous valid model")
     run = subprocess.run(

@@ -9,7 +9,7 @@ from pathlib import Path
 
 import networkx as nx
 import numpy as np
-from scipy.ndimage import binary_fill_holes
+from scipy.ndimage import binary_fill_holes, distance_transform_edt
 
 from .brick_structure import (
     ConnectivityBrickStructure,
@@ -17,6 +17,8 @@ from .brick_structure import (
     reorder_bricks_for_stability,
 )
 from .voxel2brick import Voxel2Brick
+from .voxel_support import add_voxel_supports, audit_supports
+from .design import rasterize
 
 MAX_INPUT_BYTES = 8 * 1024 * 1024
 MAX_VOXELS = 65536
@@ -30,9 +32,21 @@ def load_voxels(path: str | Path) -> tuple[np.ndarray, np.ndarray]:
     if path.stat().st_size > MAX_INPUT_BYTES:
         raise ValueError("Sculpture input exceeds 8 MB")
     data = json.loads(path.read_text())
+    if isinstance(data, dict) and "shapes" in data:
+        if set(data) - {"grid", "shapes", "title", "layer_unit", "hollow"}:
+            raise ValueError(
+                "Design input supports grid, shapes, title, layer_unit and hollow; add requested bases explicitly as shapes"
+            )
+        grid, _ = rasterize(data)
+        data = {
+            "voxels": [
+                [int(x), int(y), int(z), int(grid[x, y, z])]
+                for x, y, z in np.argwhere(grid >= 0)
+            ]
+        }
     if not isinstance(data, dict) or set(data) != {"voxels"}:
         raise ValueError(
-            'Use a JSON object containing only "voxels": [[x,y,z,colour], ...]'
+            'Use {"voxels": [[x,y,z,colour], ...]} or a BrickBuilder grid/shapes design'
         )
     rows = data["voxels"]
     if not isinstance(rows, list) or not 1 <= len(rows) <= MAX_VOXELS:
@@ -88,7 +102,7 @@ def reorder_connected_bricks(bricks, shape):
     structure.add_bricks(preferred)
     if structure.n_components() != 1:
         raise ValueError(
-            "Sculpture has disconnected stud components; add a connected base or supports and retry"
+            "Sculpture has disconnected stud components; revise the subject's supports and retry"
         )
     graph = structure.connection_graph
     ground = [node for node, brick in structure.bricks.items() if brick.z == 0]
@@ -132,22 +146,93 @@ def convert(
     ):
         raise ValueError("Use a single-line title and a plain .mpd filename")
     original, colours = load_voxels(path)
-    # Only reinforce enclosed air: no visible exterior additions or lost input cells.
-    occupied = binary_fill_holes(np.pad(original, 1))[1:-1, 1:-1, 1:-1]
+    # Same initial two-cell interior shell as BrickBuilder's shared converter.
+    interior = binary_fill_holes(np.pad(original, 1))[1:-1, 1:-1, 1:-1] & ~original
+    occupied = original | (interior & (distance_transform_edt(~original) <= 2))
+    if int(occupied.sum()) > MAX_VOXELS:
+        occupied = original.copy()  # Keep saved editor data within the same input cap.
     added = occupied & ~original
     palette, counts = np.unique(colours[original], return_counts=True)
     colours[added] = int(palette[np.argmax(counts)])
-    solver = Voxel2Brick(
-        occupied,
-        seed=42,
-        color_array=colours,
-        run_stability_passes=True,
-        use_color_constraints=True,
-        hard_constraints=True,
-        surface_mask=original,
-    )
-    with redirect_stdout(StringIO()):
-        bricks = solver()
+
+    def pack(voxels, palette, surface):
+        solver = Voxel2Brick(
+            voxels,
+            seed=42,
+            color_array=palette,
+            run_stability_passes=False,
+            use_color_constraints=True,
+            hard_constraints=True,
+            wc=1000.0,
+            max_failures=100,
+            surface_mask=surface,
+        )
+        with redirect_stdout(StringIO()):
+            return solver()
+
+    surface = original.copy()
+    bricks = pack(occupied, colours, surface)
+    audit = audit_supports(bricks, occupied)
+    rounds = 0
+    accepted_repairs = []
+    initial_count = int(occupied.sum())
+    original_region = tuple(slice(0, size) for size in original.shape)
+    # Ported from BrickBuilder's inside-first repair pipeline: re-pack and audit
+    # every candidate before accepting additions. No pedestal is ever inserted.
+    for inside_only, broad in (
+        (True, False),
+        (True, True),
+        (False, False),
+        (False, True),
+    ):
+        if not audit.conflicts.any():
+            break
+        budget = min(20_000, max(256, initial_count)) - (
+            int(occupied.sum()) - initial_count
+        )
+        budget = min(budget, MAX_VOXELS - int(occupied.sum()))
+        repaired, repaired_colours = add_voxel_supports(
+            occupied,
+            colours,
+            audit,
+            inside_only=inside_only,
+            broad=broad,
+            max_added=budget,
+            max_grid_cells=MAX_GRID_CELLS,
+            max_extent=MAX_EXTENT,
+        )
+        if repaired is occupied:
+            continue
+        padding = ((0, 0), (0, 0), (0, repaired.shape[2] - occupied.shape[2]))
+        additions = repaired & ~np.pad(occupied, padding)
+        repaired_surface = np.pad(surface, padding)
+        if not inside_only:
+            repaired_surface |= additions
+        candidate = pack(repaired, repaired_colours, repaired_surface)
+        candidate_audit = audit_supports(candidate, repaired)
+        rounds += 1
+        old_score = (
+            int((audit.conflicts[original_region] & original).sum()),
+            int(audit.conflicts.sum()),
+        )
+        new_score = (
+            int((candidate_audit.conflicts[original_region] & original).sum()),
+            int(candidate_audit.conflicts.sum()),
+        )
+        if new_score < old_score:
+            occupied, colours, surface = repaired, repaired_colours, repaired_surface
+            bricks, audit = candidate, candidate_audit
+            accepted_repairs.append(
+                dict(
+                    placement="interior" if inside_only else "exterior",
+                    broad=broad,
+                    voxels=int(additions.sum()),
+                )
+            )
+    if audit.conflicts.any():
+        raise ValueError(
+            f"Sculpture has {int(audit.conflicts.sum())} disconnected voxels after support repair; revise the subject's supports and retry"
+        )
     exported = np.zeros(occupied.shape, dtype=bool)
     for brick in bricks:
         if exported[brick.slice].any():
@@ -158,6 +243,15 @@ def convert(
             "Packing did not preserve every voxel; adjust supports and retry"
         )
     ordered, hanging = reorder_connected_bricks(bricks, occupied.shape)
+    exported_colours = np.zeros(occupied.shape, dtype=np.int32)
+    for brick in ordered:
+        exported_colours[brick.slice] = brick.color
+    if not np.array_equal(
+        exported_colours[original_region][original], colours[original_region][original]
+    ):
+        raise ValueError(
+            "Packing recoloured subject voxels; revise the colour seams and retry"
+        )
     body = "".join(
         brick.to_ldr(color=brick.color).replace(brick.part_id, brick.part_id.lower())
         for brick in ordered
@@ -173,12 +267,25 @@ def convert(
         algorithm="brickbuilder-voxel2brick",
         seed=42,
         input_voxels=int(original.sum()),
-        interior_support_voxels=int(added.sum()),
+        interior_support_voxels=int(added.sum())
+        + sum(r["voxels"] for r in accepted_repairs if r["placement"] == "interior"),
+        exterior_support_voxels=sum(
+            r["voxels"] for r in accepted_repairs if r["placement"] == "exterior"
+        ),
+        support_repair_rounds=rounds,
+        accepted_repairs=accepted_repairs,
+        unresolved_voxels=0,
         brick_count=len(ordered),
         step_count=len(ordered),
         stud_components=1,
         connected_instruction_prefixes=True,
         hanging_steps=hanging,
         physical_validity="not_proven",
+        voxel_data={
+            "voxels": [
+                [int(x), int(y), int(z), int(exported_colours[x, y, z])]
+                for x, y, z in np.argwhere(occupied)
+            ]
+        },
     )
     return text, report
