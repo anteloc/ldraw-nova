@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import shutil
 import sqlite3
@@ -57,6 +58,11 @@ def parser():
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
+    c = commands.add_parser("sculpture", help="Pack coloured voxels into a connected sculpture with deterministic build steps")
+    c.add_argument("voxels", help="JSON with voxels: [[x,y,z,LDraw colour], ...]; z is brick-height layers")
+    c.add_argument("--output", required=True, help="Self-contained .mpd for the existing viewer/player")
+    c.add_argument("--title", default="Sculpture model")
+    c.add_argument("--report")
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
@@ -337,6 +343,29 @@ def parser():
 
 
 def run(args):
+    if args.command == "sculpture":
+        try:
+            from .sculpture.conversion import convert
+        except ModuleNotFoundError as exc:
+            raise ValueError("Install the optional sculpture dependencies: uv sync --extra sculpture (or pip install '.[sculpture]')") from exc
+        text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
+        voxel_data = report.pop("voxel_data")
+        parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow)
+        model, issues = validate_text(text, parts)
+        report["diagnostics"] = issues
+        report["checks_passed"] = model is not None and not any(d["severity"] == "error" for d in issues)
+        if report["checks_passed"]:
+            atomic_write(args.output, text)
+            report["output"] = args.output
+            voxel_output = str(Path(args.output).with_suffix(".repaired.voxels.json"))
+            atomic_write(voxel_output, json.dumps(voxel_data))
+            report["voxel_output"] = voxel_output
+            # Bind editable cells to this exact exported revision, not a stale design.
+            marker = {"version": 1,
+                      "model_sha256": hashlib.sha256(Path(args.output).read_bytes()).hexdigest(),
+                      "voxel_sha256": hashlib.sha256(Path(voxel_output).read_bytes()).hexdigest()}
+            atomic_write(Path(args.output).with_suffix(".sculpture.json"), json.dumps(marker))
+        return report, 0 if report["checks_passed"] else 1
     if args.command == "examples":
         from .examples import search_examples
         if args.details and args.scale:raise ValueError('--scale applies to building examples')
@@ -473,7 +502,6 @@ def run(args):
             diagnostics.extend(analyze_geometry(model, parts, detail='summary')['diagnostics'])
             if any(d['severity']=='error' for d in diagnostics) or not review['checks_passed']:
                 return dict(written=False, diagnostics=diagnostics, structure=review), 1
-            import hashlib
             contract['model_sha256'] = hashlib.sha256(model.to_ldraw().encode()).hexdigest()
             atomic_write(target, dumps(plan)+'\n')
             atomic_write(contract_path, dumps(contract)+'\n')
