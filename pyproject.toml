@@ -11,9 +11,11 @@ dependencies = ["pyldraw3==1.7.0", "numpy==2.5.2", "jsonschema==4.26.0"]
 
 [project.optional-dependencies]
 test = ["pytest==9.1.1"]
+mcp = ["mcp==1.30.0", "httpx==0.28.1"]
 
 [project.scripts]
 ldraw-agent = "ldraw_tools.cli:main"
+ldraw-nova-mcp = "ldraw_tools.mcp_server:main"
 
 [tool.setuptools.packages.find]
 include = ["ldraw_tools*"]

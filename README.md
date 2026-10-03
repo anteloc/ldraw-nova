@@ -64,7 +64,12 @@ To stop it:
 docker compose down
 ```
 
+Want to build and revise models from an MCP assistant? See the optional
+[local MCP server setup](docs/mcp.md). It connects to the running web app and
+uses the same provider settings, chat history, model files and human approvals.
+
 ## Why all of this?
+
 
 Well, to summarize: I did this in order to get **agentic LLMs capable of designing buildable, physical things!**
 
