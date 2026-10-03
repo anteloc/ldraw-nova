@@ -64,6 +64,17 @@ To stop it:
 docker compose down
 ```
 
+## Optional 3D sculpture mode
+
+Ask for “a 3D sculpture of …” (or select **3D sculpture** in the web composer).
+The agent designs coloured voxels; BrickBuilderAI's current algorithmic voxel-to-LEGO
+pipeline packs real bricks, reinforces enclosed interiors, checks one stud-connected
+assembly and deterministically reorders connected build steps for the existing 3D
+player. Existing part-based generation remains the default. The stability-oriented
+heuristics draw on [Legolization: optimizing LEGO designs](https://dl.acm.org/doi/10.1145/2816795.2818091);
+connectivity checks do not replace physical load testing.
+See [the workflow](docs/agent/sculptures.md) for optional installation and input format.
+
 ## Why all of this?
 
 Well, to summarize: I did this in order to get **agentic LLMs capable of designing buildable, physical things!**
