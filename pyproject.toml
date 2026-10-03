@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 dependencies = ["pyldraw3==1.7.0", "numpy==2.5.2", "jsonschema==4.26.0"]
 
 [project.optional-dependencies]
-sculpture = ["networkx>=3.4,<4", "scipy>=1.14,<2"]
+sculpture = ["networkx>=3.4,<4", "scipy>=1.14,<2", "trimesh==4.12.2", "Pillow>=12,<13", "rtree>=1.4,<2"]
 test = ["pytest==9.1.1"]
 
 [project.scripts]

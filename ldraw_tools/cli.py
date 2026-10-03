@@ -63,6 +63,12 @@ def parser():
     c.add_argument("--output", required=True, help="Self-contained .mpd for the existing viewer/player")
     c.add_argument("--title", default="Sculpture model")
     c.add_argument("--report")
+    c = commands.add_parser("glb-sculpture", help="Voxelize a colored GLB in Python and pack it with sculpture connectivity repair")
+    c.add_argument("file", help="Self-contained GLB with embedded PNG/JPEG textures")
+    c.add_argument("--resolution", type=int, default=24, help="Longest voxel grid dimension in studs (8–48)")
+    c.add_argument("--output", required=True)
+    c.add_argument("--title", default="Imported GLB sculpture")
+    c.add_argument("--report")
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
@@ -343,12 +349,21 @@ def parser():
 
 
 def run(args):
-    if args.command == "sculpture":
+    if args.command in {"sculpture", "glb-sculpture"}:
         try:
             from .sculpture.conversion import convert
         except ModuleNotFoundError as exc:
             raise ValueError("Install the optional sculpture dependencies: uv sync --extra sculpture (or pip install '.[sculpture]')") from exc
-        text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
+        if args.command == "glb-sculpture":
+            from .sculpture.glb_import import voxelize_glb
+            voxels, import_report = voxelize_glb(args.file, resolution=args.resolution, library=library_path(args.library))
+            with TemporaryDirectory(prefix="ldraw-glb-") as folder:
+                source = Path(folder) / "voxels.json"
+                source.write_text(json.dumps(voxels))
+                text, report = convert(source, name=Path(args.output).name, title=args.title)
+            report["import"] = import_report
+        else:
+            text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
         voxel_data = report.pop("voxel_data")
         parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow)
         model, issues = validate_text(text, parts)
