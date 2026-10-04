@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import io
 import json
 from collections import Counter
 from pathlib import Path
@@ -9,10 +10,11 @@ from pathlib import Path
 import numpy as np
 from ldraw import Model
 from ldraw.lines import Comment
+from scipy import ndimage
 from scipy.ndimage import binary_fill_holes, distance_transform_edt
 
 from .builder import serialize_mpd
-from .sculpture_packing import Voxel2Brick
+from .sculpture_packing import Voxel2Brick, preview_pack, _repair_loose
 from .sculpture_structure import BrickStructure, audit_supports, add_voxel_supports
 
 MAX_INPUT_BYTES = 8 * 1024 * 1024
@@ -297,3 +299,171 @@ def convert(path, *, name="sculpture.mpd", title="Sculpture model"):
                   unresolved_voxels=int(audit.conflicts.sum()),
                   physical_validity="not_proven")
     return text, report
+
+
+def _voxel_islands(solid):
+    """Face-connected voxel groups that never reach layer 0 (can't be fixed by packing)."""
+    (labels, count) = ndimage.label(solid)
+    grounded = set(np.unique(labels[:, :, 0]).tolist()) - {0}
+    boxes = ndimage.find_objects(labels)
+    islands = []
+    for label in range(1, count + 1):
+        if label not in grounded:
+            islands.append((int((labels == label).sum()), boxes[label - 1]))
+    return islands
+
+
+def _describe_box(box, layer_offset=0):
+    (xs, zs, ys) = box
+    return f'x {xs.start}-{xs.stop - 1}, z {zs.start}-{zs.stop - 1}, layers {ys.start - layer_offset}-{ys.stop - 1 - layer_offset}'
+
+
+def _joint_degrees(owner):
+    degree = Counter()
+    for layer in range(owner.shape[2] - 1):
+        (a, b) = (owner[:, :, layer], owner[:, :, layer + 1])
+        both = (a >= 0) & (b >= 0)
+        for (p, q) in set(zip(a[both].tolist(), b[both].tolist())):
+            degree[p] += 1
+            degree[q] += 1
+    return degree
+
+
+def _hollow(grid):
+    """Remove voxels more than 2 studs inside the surface. The ground below the model counts as
+    solid, so the bottom layer is hollowed too (open-bottomed like a real brick sculpture)."""
+    solid = grid != EMPTY
+    padded = np.concatenate([np.ones(solid.shape[:2] + (1,), dtype=bool), solid], axis=2)
+    inner = ndimage.binary_erosion(padded, structure=np.ones((5, 5, 3), dtype=bool))[:, :, 1:]
+    out = grid.copy()
+    out[inner] = EMPTY
+    return out
+
+
+def render_preview_png(grid, palette, max_size=1100):
+    """Two isometric views (front-left and back-right) of the built voxels, as PNG bytes."""
+    from PIL import Image, ImageDraw
+
+    h = 1.2
+    (width, depth, layers) = grid.shape
+    span = width + depth + layers * h
+    scale = max(3.0, min(14.0, (max_size / 2 - 40) / (span * 0.95)))
+
+    def view(g):
+        (w, d, n) = g.shape
+        (cos30, sin30) = (0.866, 0.5)
+        img_w = int((w + d) * cos30 * scale) + 40
+        img_h = int(((w + d) * sin30 + n * h) * scale) + 40
+        image = Image.new('RGB', (img_w, img_h), (246, 246, 244))
+        draw = ImageDraw.Draw(image)
+        (ox, oy) = (20 + d * cos30 * scale, 20 + n * h * scale)
+
+        def project(x, y, z):
+            return (ox + (x - z) * cos30 * scale, oy - y * scale + (w + d - (x + z)) * sin30 * scale)
+        filled = g != EMPTY
+        (xs, zs, ls) = np.nonzero(filled)
+        order = np.argsort(-(xs + zs - ls * h), kind='stable')
+        for idx in order:
+            (x, z, l) = (int(xs[idx]), int(zs[idx]), int(ls[idx]))
+            rgb_hex = palette.get(int(g[x, z, l]), ('', '888888'))[1]
+            base = tuple((int(rgb_hex[i:i + 2], 16) for i in (0, 2, 4)))
+            (y0, y1) = (l * h, (l + 1) * h)
+            faces = []
+            if l + 1 >= n or not filled[x, z, l + 1]:
+                faces.append(([(x, y1, z), (x + 1, y1, z), (x + 1, y1, z + 1), (x, y1, z + 1)], 1.0))
+            if z == 0 or not filled[x, z - 1, l]:
+                faces.append(([(x, y0, z), (x + 1, y0, z), (x + 1, y1, z), (x, y1, z)], 0.82))
+            if x == 0 or not filled[x - 1, z, l]:
+                faces.append(([(x, y0, z), (x, y0, z + 1), (x, y1, z + 1), (x, y1, z)], 0.66))
+            for (corners, shade) in faces:
+                fill = tuple((int(c * shade) for c in base))
+                outline = tuple((int(c * shade * 0.8) for c in base))
+                draw.polygon([project(*c) for c in corners], fill=fill, outline=outline)
+        return image
+    front = view(grid)
+    back = view(grid[::-1, ::-1, :])
+    canvas = Image.new('RGB', (front.width + back.width, max(front.height, back.height)), (246, 246, 244))
+    canvas.paste(front, (0, 0))
+    canvas.paste(back, (front.width, 0))
+    draw = ImageDraw.Draw(canvas)
+    draw.text((10, 6), 'front-left', fill=(90, 90, 90))
+    draw.text((front.width + 10, 6), 'back-right', fill=(90, 90, 90))
+    buffer = io.BytesIO()
+    canvas.save(buffer, format='PNG', optimize=True)
+    return buffer.getvalue()
+
+
+def preview(path, palette, *, repair=False):
+    """Check and render a shape design; return its solid voxels for later conversion."""
+    path = Path(path)
+    if path.stat().st_size > MAX_INPUT_BYTES:
+        raise ValueError("Sculpture input exceeds 8 MB")
+    design = json.loads(path.read_text())
+    if not isinstance(design, dict) or set(design) - {"grid", "shapes", "title", "layer_unit", "hollow"}:
+        raise ValueError("Submit grid, shapes, title, layer_unit and hollow; add requested bases as shapes")
+    grid, _ = rasterize(design)
+    if any(int(colour) not in palette for colour in np.unique(grid[grid != EMPTY])):
+        raise ValueError("Use colours available in the installed LDraw library")
+    islands = _voxel_islands(grid != EMPTY)
+    if islands and not repair:
+        details = "; ".join(f"{size} voxels at {_describe_box(box)}" for size, box in islands[:8])
+        raise ValueError(f"{len(islands)} parts float above layer 0: {details}. Add supports or move them so they touch the model.")
+    warnings = []
+    if islands:
+        labels, _ = ndimage.label(grid != EMPTY)
+        keep = set(np.unique(labels[:, :, 0]).tolist()) - {0}
+        mask = (labels > 0) & ~np.isin(labels, list(keep))
+        warnings.append(f"Removed {int(mask.sum())} floating voxels.")
+        grid[mask] = EMPTY
+    if not (grid != EMPTY).any():
+        raise ValueError("No voxels reach layer 0")
+    solid = grid != EMPTY
+    work = _hollow(grid) if design.get("hollow", True) else grid.copy()
+    result = preview_pack(work)
+    for _ in range(30):
+        if not result.loose:
+            break
+        added = 0
+        for n in result.loose:
+            _, x0, z0, layer, fx, fz = result.bricks[n]
+            regions = [(slice(x0, x0 + fx), slice(z0, z0 + fz), ll)
+                       for ll in (layer - 1, layer + 1) if 0 <= ll < work.shape[2]]
+            regions.append((slice(max(0, x0 - 1), x0 + fx + 1), slice(max(0, z0 - 1), z0 + fz + 1), layer))
+            for region in regions:
+                fill = solid[region] & (work[region] == EMPTY)
+                if fill.any():
+                    work[region] = np.where(fill, grid[region], work[region])
+                    added += int(fill.sum())
+        if not added:
+            if not repair:
+                break
+            before = work.copy()
+            work = _repair_loose(work, result, warnings)
+            if np.array_equal(before, work):
+                break
+        result = preview_pack(work)
+    removed = np.zeros(work.shape, dtype=bool)
+    if result.loose:
+        mask = np.isin(result.owner, result.loose)
+        labels, _ = ndimage.label(mask)
+        areas = [_describe_box(box) for box in ndimage.find_objects(labels)[:8]]
+        if not repair:
+            raise ValueError(f"{len(result.loose)} bricks cannot connect: {'; '.join(areas)}. Support overhangs, make narrow features at least two studs deep, or match the neighbouring colour.")
+        work[mask] = EMPTY
+        removed |= mask
+        warnings.append(f"Removed {len(result.loose)} unconnected preview bricks.")
+        result = preview_pack(work)
+    if not result.bricks:
+        raise ValueError("No buildable voxels remain")
+    if len(result.bricks) > 5000:
+        raise ValueError(f"Preview needs {len(result.bricks)} pieces; keep it under 5000 with a smaller grid or hollow volume")
+    degrees = _joint_degrees(result.owner)
+    solid_grid = np.where(work != EMPTY, work, grid)
+    solid_grid[removed] = EMPTY
+    rows = [[int(x), int(z), int(layer), int(solid_grid[x, z, layer])]
+            for x, z, layer in np.argwhere(solid_grid != EMPTY)]
+    report = dict(checks_passed=True, preview_brick_count=len(result.bricks),
+                  grid=list(grid.shape), grounded_groups=result.grounded_groups,
+                  weak_bricks=sum(degrees[i] == 1 for i in range(len(result.bricks))),
+                  warnings=warnings, input_voxels=len(rows))
+    return {"voxels": rows}, report, render_preview_png(work, palette)

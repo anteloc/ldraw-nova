@@ -59,10 +59,12 @@ def parser():
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
     c = commands.add_parser("sculpture", help="Pack coloured voxels into a connected sculpture with deterministic build steps")
-    c.add_argument("voxels", help="JSON with voxels: [[x,y,z,LDraw colour], ...]; z is brick-height layers")
-    c.add_argument("--output", required=True, help="Self-contained .mpd for the existing viewer/player")
+    c.add_argument("voxels", help="JSON shape design or voxels: [[x,y,z,LDraw colour], ...]; raw voxels use z-up brick layers")
+    c.add_argument("--output", required=True, help="Self-contained MPD, or accepted solid-voxel JSON with --preview")
     c.add_argument("--title", default="Sculpture model")
     c.add_argument("--report")
+    c.add_argument("--preview", help="Check a shape design and write two voxel views to this PNG; --output saves its accepted solid voxels")
+    c.add_argument("--repair", action="store_true", help="Repair loose preview cells on the final design attempt")
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
@@ -345,11 +347,21 @@ def parser():
 def run(args):
     if args.command == "sculpture":
         try:
-            from .sculpture import convert
+            from .sculpture import convert, preview
         except ModuleNotFoundError as exc:
             raise ValueError("Install the optional sculpture dependencies: uv sync --extra sculpture (or pip install '.[sculpture]')") from exc
-        text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
         parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow)
+        if args.preview:
+            palette = {code: (colour.name, colour.rgb.removeprefix("#"))
+                       for code, colour in parts.colours_by_code.items()}
+            voxels, report, png = preview(args.voxels, palette, repair=args.repair)
+            atomic_write(args.output, dumps(voxels))
+            image = Path(args.preview)
+            image.parent.mkdir(parents=True, exist_ok=True)
+            image.write_bytes(png)
+            report.update(output=args.output, preview=str(image))
+            return report, 0
+        text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
         model, issues = validate_text(text, parts)
         report["diagnostics"] = issues
         report["checks_passed"] = model is not None and not any(d["severity"] == "error" for d in issues)
