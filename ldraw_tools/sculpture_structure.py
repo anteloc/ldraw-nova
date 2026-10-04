@@ -3,6 +3,8 @@
 from dataclasses import dataclass
 import networkx as nx
 import numpy as np
+from scipy.ndimage import binary_dilation, binary_fill_holes, distance_transform_edt, label
+from scipy.spatial import cKDTree
 
 
 BRICK_PARTS = {
@@ -92,26 +94,7 @@ def brick_support_type(occupancy: np.ndarray, brick: Brick) -> str:
     return "floating"
 
 
-def reorder_bricks_for_stability(
-    bricks: list[Brick], shape: tuple[int, int, int]
-) -> tuple[list[Brick], set[Brick]]:
-    """
-    Reorder bricks to place each at its absolute earliest possible position.
-
-    Places ALL below-supported bricks per round (safe because z-first sorting
-    guarantees monotonic placement), but only ONE above-supported brick per
-    round (to allow correct interleaving with newly-unlocked below bricks).
-    Uses an index-set for O(1) removal instead of O(n) list removal.
-
-    Complexity: O(n × rounds) where rounds ≈ max(z), down from O(n²).
-
-    Args:
-        bricks: List of bricks to reorder
-        shape: (x, y, z) size of the voxel space the bricks live in
-
-    Returns:
-        Tuple of (ordered bricks list, set of deferred/force-placed bricks)
-    """
+def reorder_bricks_for_stability(bricks: list[Brick], shape: tuple[int, int, int]) -> tuple[list[Brick], set[Brick]]:
     if not bricks:
         return (bricks, set())
     occupancy = np.zeros(shape, dtype=np.int32)
@@ -123,48 +106,25 @@ def reorder_bricks_for_stability(
     def place(brick: Brick) -> None:
         occupancy[brick.slice] += 1
         ordered_bricks.append(brick)
-
     while remaining_set:
         supported_below = []
         supported_above = []
         for idx in remaining_set:
             support = brick_support_type(occupancy, bricks[idx])
-            if support == "ground" or support == "below":
+            if support == 'ground' or support == 'below':
                 supported_below.append(idx)
-            elif support == "above":
+            elif support == 'above':
                 supported_above.append(idx)
-        supported_below.sort(
-            key=lambda i: (
-                bricks[i].z,
-                bricks[i].x,
-                bricks[i].y,
-                bricks[i].h,
-                bricks[i].w,
-                bricks[i].color,
-            )
-        )
-        supported_above.sort(
-            key=lambda i: (
-                -bricks[i].z,
-                bricks[i].x,
-                bricks[i].y,
-                bricks[i].h,
-                bricks[i].w,
-                bricks[i].color,
-            )
-        )
+        supported_below.sort(key=lambda i: (bricks[i].z, bricks[i].x, bricks[i].y))
+        supported_above.sort(key=lambda i: (-bricks[i].z, bricks[i].x, bricks[i].y))
         if supported_below:
             for idx in supported_below:
                 brick = bricks[idx]
                 place(brick)
                 remaining_set.discard(idx)
                 if brick.z > 0:
-                    support_voxels = occupancy[
-                        brick.slice_2d[0], brick.slice_2d[1], brick.z - 1
-                    ]
-                    deferred_support = deferred_voxels[
-                        brick.slice_2d[0], brick.slice_2d[1], brick.z - 1
-                    ]
+                    support_voxels = occupancy[brick.slice_2d[0], brick.slice_2d[1], brick.z - 1]
+                    deferred_support = deferred_voxels[brick.slice_2d[0], brick.slice_2d[1], brick.z - 1]
                     if np.all((support_voxels > 0) == deferred_support):
                         deferred_bricks.add(brick)
                         deferred_voxels[brick.slice] = True
@@ -176,23 +136,13 @@ def reorder_bricks_for_stability(
             deferred_bricks.add(brick)
             deferred_voxels[brick.slice] = True
         else:
-            forced_idx = max(
-                remaining_set,
-                key=lambda i: (
-                    -bricks[i].z,
-                    bricks[i].x,
-                    bricks[i].y,
-                    bricks[i].h,
-                    bricks[i].w,
-                    bricks[i].color,
-                ),
-            )
+            forced_idx = max(remaining_set, key=lambda i: (-bricks[i].z, bricks[i].x, bricks[i].y))
             forced_brick = bricks[forced_idx]
             place(forced_brick)
             remaining_set.discard(forced_idx)
             deferred_bricks.add(forced_brick)
             deferred_voxels[forced_brick.slice] = True
-    return (ordered_bricks, deferred_bricks)
+    return ordered_bricks, deferred_bricks
 
 
 class ConnectivityBrickStructure:
@@ -224,9 +174,6 @@ class ConnectivityBrickStructure:
     def _reset_cache(self) -> None:
         self._connected_components = None
         self._component_labels = None
-
-    def n_components(self) -> int:
-        return len(self.connected_components())
 
     def connected_components(self):
         if self._connected_components is None:
@@ -314,9 +261,254 @@ class ConnectivityBrickStructure:
         """
         removed_bricks = []
         nodes = set(np.unique(self.voxel_bricks[voxel_subset])) - {0}
-        for node in sorted(nodes):
+        for node in nodes:
             brick = self.bricks[node]
             assert voxel_subset[brick.slice].all()
             removed_bricks.append(brick)
             self.remove_brick(node)
         return removed_bricks
+
+
+class BrickStructure:
+    """Clean up packed bricks and export supported instruction ordering."""
+
+    def __init__(self, bricks: list[Brick], world_dim: int):
+        self.world_dim = world_dim
+        self.bricks = list(bricks)
+        self.voxel_occupancy = np.zeros((world_dim,) * 3, dtype=int)
+        for brick in self.bricks:
+            self.voxel_occupancy[brick.slice] += 1
+
+    def to_ldr(self) -> str:
+        ordered, deferred = self._reorder_bricks_for_stability(self.bricks)
+        if deferred and self.remove_interior_deferred_bricks(deferred):
+            ordered, _ = self._reorder_bricks_for_stability(self.bricks)
+        if self.remove_floating_bricks():
+            ordered, _ = self._reorder_bricks_for_stability(self.bricks)
+        return "".join(brick.to_ldr(color=brick.color) for brick in ordered)
+
+    def _reorder_bricks_for_stability(self, bricks: list[Brick]) -> tuple[list[Brick], set[Brick]]:
+        return reorder_bricks_for_stability(bricks, (self.world_dim,) * 3)
+
+    def _compute_exterior_mask(self) -> np.ndarray:
+        """Find air reachable from outside using six-neighbor connectivity."""
+        padded_shape = tuple((s + 2 for s in self.voxel_occupancy.shape))
+        padded_air = np.ones(padded_shape, dtype=bool)
+        padded_air[1:-1, 1:-1, 1:-1] = self.voxel_occupancy == 0
+        structure_6conn = np.array([
+            [[0, 0, 0], [0, 1, 0], [0, 0, 0]],
+            [[0, 1, 0], [1, 1, 1], [0, 1, 0]],
+            [[0, 0, 0], [0, 1, 0], [0, 0, 0]],
+        ], dtype=bool)
+        labels, _ = label(padded_air, structure=structure_6conn)
+        exterior_label = labels[0, 0, 0]
+        exterior_padded = labels == exterior_label
+        return exterior_padded[1:-1, 1:-1, 1:-1]
+
+    def _is_brick_interior(self, brick: Brick, exterior_mask: np.ndarray) -> bool:
+        neighbors = [(-1, 0, 0), (1, 0, 0), (0, -1, 0), (0, 1, 0), (0, 0, -1), (0, 0, 1)]
+        for x in range(brick.x, brick.x + brick.h):
+            for y in range(brick.y, brick.y + brick.w):
+                z = brick.z
+                for dx, dy, dz in neighbors:
+                    nx, ny, nz = (x + dx, y + dy, z + dz)
+                    if 0 <= nx < self.world_dim and 0 <= ny < self.world_dim and (0 <= nz < self.world_dim):
+                        if exterior_mask[nx, ny, nz]:
+                            return False
+                    else:
+                        return False
+        return True
+
+    def remove_interior_deferred_bricks(self, deferred_bricks: set[Brick]) -> list[Brick]:
+        if not deferred_bricks:
+            return []
+        exterior_mask = self._compute_exterior_mask()
+        removed_bricks = []
+        for brick in deferred_bricks:
+            if brick not in self.bricks:
+                continue
+            if self._is_brick_interior(brick, exterior_mask):
+                self.voxel_occupancy[brick.slice] -= 1
+                self.bricks.remove(brick)
+                removed_bricks.append(brick)
+        return removed_bricks
+
+    def get_floating_bricks(self) -> list[Brick]:
+        return [brick for brick in self.bricks if self.brick_floats(brick)]
+
+    def remove_floating_bricks(self) -> list[Brick]:
+        all_removed = []
+        while True:
+            floating = self.get_floating_bricks()
+            if not floating:
+                break
+            for brick in floating:
+                self.voxel_occupancy[brick.slice] -= 1
+                self.bricks.remove(brick)
+                all_removed.append(brick)
+        return all_removed
+
+    def brick_floats(self, brick: Brick) -> bool:
+        if brick.z == 0:
+            return False
+        if np.any(self.voxel_occupancy[brick.slice_2d[0], brick.slice_2d[1], brick.z - 1]):
+            return False
+        if brick.z != self.world_dim - 1 and np.any(self.voxel_occupancy[brick.slice_2d[0], brick.slice_2d[1], brick.z + 1]):
+            return False
+        return True
+
+@dataclass(frozen=True)
+class SupportAudit:
+    ldr: str
+    conflicts: np.ndarray
+    connected: np.ndarray
+
+
+def audit_supports(structure: BrickStructure, voxels: np.ndarray) -> SupportAudit:
+    """Audit the exported bricks, including removal during instruction ordering.
+
+    Only vertical stud contacts connect bricks. Horizontal voxel adjacency alone
+    does not. Keep the largest grounded component and report everything omitted
+    from the requested geometry, rather than stale pre-reconnection diagnostics.
+    """
+    structure.to_ldr()
+    owners = np.full(voxels.shape, -1, dtype=np.int32)
+    graph = nx.Graph()
+    for index, brick in enumerate(structure.bricks):
+        graph.add_node(index)
+        owners[brick.slice] = index
+    below, above = owners[:, :, :-1], owners[:, :, 1:]
+    contacts = (below >= 0) & (above >= 0)
+    if contacts.any():
+        graph.add_edges_from(np.unique(np.stack((below[contacts], above[contacts]), axis=1), axis=0))
+    grounded = [component for component in nx.connected_components(graph)
+                if any(structure.bricks[index].z == 0 for index in component)]
+    main = max(grounded, key=lambda component: sum(structure.bricks[index].area for index in component), default=set())
+    connected = np.isin(owners, list(main))
+    conflicts = voxels & ~connected
+    if len(main) != len(structure.bricks):
+        for index, brick in enumerate(structure.bricks):
+            if index not in main:
+                structure.voxel_occupancy[brick.slice] -= 1
+        structure.bricks = [brick for index, brick in enumerate(structure.bricks) if index in main]
+    ldr = structure.to_ldr()
+    return SupportAudit(ldr, conflicts, connected)
+
+
+def _add_internal_supports(voxels: np.ndarray, colors: np.ndarray, conflicts: np.ndarray,
+                           *, broad: bool, max_added: int) -> tuple[np.ndarray, np.ndarray]:
+    """Reinforce enclosed cavities without adding any exterior geometry.
+
+    Six-connected flood filling from outside keeps open cavities and gaps out of
+    the interior mask. Local reinforcement looks past the pipeline's two-cell
+    shell. Broader reinforcement fills enclosed cavities bordering an affected
+    voxel component, allowing hidden connections elsewhere in the same body.
+    """
+    interior = binary_fill_holes(voxels) & ~voxels
+    if not interior.any():
+        return voxels, colors
+    if broad:
+        bodies, _ = label(voxels)
+        affected = np.unique(bodies[conflicts])
+        body = voxels & np.isin(bodies, affected[affected != 0])
+        cavities, _ = label(interior)
+        touching = np.unique(cavities[binary_dilation(body) & interior])
+        additions = interior & np.isin(cavities, touching[touching != 0])
+    else:
+        additions = interior & binary_dilation(conflicts, iterations=3)
+    count = int(additions.sum())
+    if not count or count > max_added or int(voxels.sum()) + count > 100_000:
+        return voxels, colors
+    # Inherit nearby material colors while leaving every existing cell intact.
+    nearest = distance_transform_edt(~voxels, return_distances=False, return_indices=True)
+    repaired, repaired_colors = voxels.copy(), colors.copy()
+    repaired[additions] = True
+    repaired_colors[additions] = colors[tuple(axis[additions] for axis in nearest)]
+    return repaired, repaired_colors
+
+
+def add_voxel_supports(voxels: np.ndarray, colors: np.ndarray, audit: SupportAudit,
+                       *, inside_only: bool = False, broad: bool = False, max_added: int = 20_000,
+                       max_grid_cells: int = 4_000_000) -> tuple[np.ndarray, np.ndarray]:
+    """Thicken conflict areas and bridge separate islands to the grounded model.
+
+    A second layer lets the packer stagger bricks across seams in a long flat
+    section. Small repairs include its immediate neighbors; a second attempt
+    can reinforce the entire affected horizontal section. Separate voxel islands
+    get a two-layer Manhattan bridge to the existing main structure. Existing
+    cells and colors are never removed or recolored. The converter first calls
+    this with inside_only=True and verifies the result before allowing exterior
+    reinforcement.
+    """
+    if not audit.conflicts.any() or max_added <= 0:
+        return voxels, colors
+    shape = voxels.shape if inside_only else (*voxels.shape[:2], voxels.shape[2] + 1)
+    if np.prod(shape) > max_grid_cells or max(shape) > 256:
+        return voxels, colors
+    if inside_only:
+        return _add_internal_supports(voxels, colors, audit.conflicts, broad=broad, max_added=max_added)
+    additions: dict[tuple[int, int, int], np.ndarray] = {}
+
+    def add(coord, color):
+        coord = tuple(int(value) for value in coord)
+        if coord[2] >= voxels.shape[2] or not voxels[coord]:
+            additions[coord] = color
+
+    for z in np.flatnonzero(audit.conflicts.any(axis=(0, 1))):
+        plane = voxels[:, :, z]
+        if broad:
+            sections, _ = label(plane)
+            affected = np.unique(sections[audit.conflicts[:, :, z]])
+            region = plane & np.isin(sections, affected[affected != 0])
+        else:
+            region = plane & binary_dilation(audit.conflicts[:, :, z])
+        for x, y in np.argwhere(region):
+            # Prefer the underside of elevated details; cap sections on the floor.
+            support_z = z - 1 if z > 0 else z + 1
+            add((x, y, support_z), colors[x, y, z])
+            # When the underside already exists, a cap can still bridge brick seams.
+            if z > 0 and voxels[x, y, support_z]:
+                add((x, y, z + 1), colors[x, y, z])
+
+    components, _ = label(voxels)
+    main_labels = np.unique(components[audit.connected])
+    separate = np.unique(components[audit.conflicts])
+    targets = np.argwhere(audit.connected)
+    if len(targets):
+        tree = cKDTree(targets)
+        for component in separate:
+            if component in main_labels:
+                continue
+            coords = np.argwhere(components == component)
+            distances, indices = tree.query(coords, p=1)
+            start_index = int(np.argmin(distances))
+            start = coords[start_index]
+            target = targets[indices[start_index]]
+            color = colors[tuple(start)]
+            current = start.copy()
+            # Descend to the anchor's height before bridging horizontally.
+            for axis in (2, 0, 1):
+                while current[axis] != target[axis]:
+                    add(current, color)
+                    add(current + (0, 0, 1), color)
+                    current[axis] += 1 if target[axis] > current[axis] else -1
+            add(target + (0, 0, 1), color)
+
+    # A model with no retained ground needs a pillar before any seam repairs work.
+    else:
+        x, y, z = np.argwhere(voxels)[0]
+        for support_z in range(z):
+            add((x, y, support_z), colors[x, y, z])
+
+    if not additions or len(additions) > max_added or int(voxels.sum()) + len(additions) > 100_000:
+        return voxels, colors
+    repaired = np.pad(voxels, ((0, 0), (0, 0), (0, 1)))
+    repaired_colors = np.pad(colors, ((0, 0), (0, 0), (0, 1)))
+    for coord, color in additions.items():
+        repaired[coord] = True
+        repaired_colors[coord] = color
+    # Do not grow the grid when all supports fit under existing geometry.
+    if not repaired[:, :, -1].any():
+        repaired = repaired[:, :, :-1]
+        repaired_colors = repaired_colors[:, :, :-1]
+    return repaired, repaired_colors

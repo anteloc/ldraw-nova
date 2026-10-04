@@ -69,9 +69,9 @@ docker compose down
 Ask for “a Sculpture model of …” (or enable **Sculpture model** under **Additional settings** in the web composer).
 The selected agent designs colored voxels using the shape schema and
 no-base guidance. Its deterministic pipeline fills enclosed interior space, packs
-rectangular bricks and orders supported build steps. Export checks coverage and
-stud connectivity before continuing through Nova's usual viewer and publication
-workflow. Ordinary part-based generation remains the default.
+rectangular bricks, adds support voxels where needed and orders build steps.
+It retains the largest grounded stud-connected component before continuing through
+Nova's usual viewer and publication workflow. Ordinary part-based generation remains the default.
 See [the workflow](docs/agent/sculptures.md) for optional installation and input format.
 
 ## Why all of this?

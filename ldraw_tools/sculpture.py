@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import json
 from collections import Counter
-from contextlib import redirect_stdout
-from io import StringIO
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -13,7 +11,7 @@ import numpy as np
 from scipy.ndimage import binary_fill_holes, distance_transform_edt
 
 from .sculpture_packing import Voxel2Brick
-from .sculpture_structure import ConnectivityBrickStructure, reorder_bricks_for_stability
+from .sculpture_structure import BrickStructure, audit_supports, add_voxel_supports
 
 MAX_INPUT_BYTES = 8 * 1024 * 1024
 MAX_GRID_CELLS = 262144
@@ -286,45 +284,68 @@ def load_voxels(path: str | Path) -> tuple[np.ndarray, np.ndarray]:
     return occupied, colours
 
 
+def fill_interior(occupied: np.ndarray, colours: np.ndarray, thickness: int):
+    """Add an interior shell while retaining the current surface for color constraints."""
+    interior = binary_fill_holes(np.pad(occupied, 1))[1:-1, 1:-1, 1:-1] & ~occupied
+    filled = occupied | (interior & (distance_transform_edt(~occupied) <= thickness))
+    filled_colours = colours.copy()
+    filled_colours[filled & ~occupied] = Counter(colours[occupied].tolist()).most_common(1)[0][0]
+    return filled, filled_colours, occupied.copy()
+
+
 def convert(path: str | Path, *, name: str = "sculpture.mpd", title: str = "Sculpture model"):
-    """Fill interior space, pack bricks with a fixed seed and order build steps."""
+    """Fill the shell, pack and reconnect bricks, then clean up and order the export."""
     original, colours = load_voxels(path)
-    occupied = original.copy()
-    interior = binary_fill_holes(np.pad(original, 1))[1:-1, 1:-1, 1:-1] & ~original
-    # Fill two layers inward, using the dominant colour.
-    occupied |= interior & (distance_transform_edt(~original) <= 2)
-    if int(occupied.sum()) > MAX_VOXELS:
-        raise ValueError("Interior fill exceeds the sculpture voxel budget")
-    colours[occupied & ~original] = Counter(colours[original].tolist()).most_common(1)[0][0]
-    with redirect_stdout(StringIO()):
+    occupied, colours, surface = fill_interior(original, colours, 2)
+
+    def pack(voxels, colors, surface_mask):
         bricks = Voxel2Brick(
-            occupied, seed=42, color_array=colours, surface_mask=original,
-            use_color_constraints=True,
-            hard_constraints=True,
+            voxels, seed=42, color_array=colors, surface_mask=surface_mask,
+            use_color_constraints=True, hard_constraints=True,
         )()
-    exported = np.zeros(occupied.shape, dtype=bool)
-    for brick in bricks:
-        if exported[brick.slice].any():
-            raise ValueError("Packing produced overlapping bricks")
-        exported[brick.slice] = True
-    if not np.array_equal(exported, occupied):
-        raise ValueError("Packing did not preserve every voxel; revise the design and retry")
-    structure = ConnectivityBrickStructure(occupied.shape)
-    structure.add_bricks(bricks)
-    if structure.n_components() != 1:
-        raise ValueError("Sculpture has disconnected stud components; revise the design and retry")
-    with redirect_stdout(StringIO()):
-        ordered, deferred = reorder_bricks_for_stability(sorted(bricks), occupied.shape)
-    if deferred:
-        raise ValueError("Sculpture has unsupported build steps; revise the design and retry")
-    body = "".join(brick.to_ldr(color=brick.color).replace(brick.part_id, brick.part_id.lower())
-                   for brick in ordered)
+        return BrickStructure(bricks, world_dim=max(voxels.shape))
+
+    structure = pack(occupied, colours, surface)
+    requested = original.copy()
+    audit = audit_supports(structure, requested)
+    original_count = int(occupied.sum())
+    repair_rounds = 0
+    # Try hidden supports before changing the visible silhouette.
+    for inside_only, broad in ((True, False), (True, True), (False, False), (False, True)):
+        if not audit.conflicts.any():
+            break
+        budget = min(20_000, max(256, original_count)) - (int(occupied.sum()) - original_count)
+        repaired, repaired_colours = add_voxel_supports(
+            occupied, colours, audit, inside_only=inside_only, broad=broad, max_added=budget,
+        )
+        if repaired is occupied:
+            continue
+        padding = ((0, 0), (0, 0), (0, repaired.shape[2] - occupied.shape[2]))
+        added = repaired & ~np.pad(occupied, padding)
+        repaired_surface = np.pad(surface, padding)
+        if not inside_only:
+            repaired_surface |= added
+        repaired_requested = np.pad(requested, padding) | added
+        candidate = pack(repaired, repaired_colours, repaired_surface)
+        candidate_audit = audit_supports(candidate, repaired_requested)
+        repair_rounds += 1
+        original_shape = tuple(slice(0, size) for size in original.shape)
+        old_score = (int((audit.conflicts[original_shape] & original).sum()), int(audit.conflicts.sum()))
+        new_score = (int((candidate_audit.conflicts[original_shape] & original).sum()), int(candidate_audit.conflicts.sum()))
+        if new_score < old_score:
+            occupied, colours, surface = repaired, repaired_colours, repaired_surface
+            structure, audit = candidate, candidate_audit
+            requested = repaired_requested
+    body = structure.to_ldr()
     section = Path(name).stem + ".ldr"
     text = (f"0 FILE {section}\n0 {title}\n0 Name: {section}\n0 Author: LDraw Nova\n"
             f"0 !LDRAW_ORG Model\n{body}0 NOFILE\n").replace("\n", "\r\n")
     report = dict(checks_passed=True, mode="sculpture", algorithm="voxel2brick",
                   seed=42, input_voxels=int(original.sum()),
-                  interior_support_voxels=int((occupied & ~original).sum()),
-                  brick_count=len(ordered), step_count=len(ordered), stud_components=1,
+                  interior_support_voxels=original_count - int(original.sum()),
+                  brick_count=len(structure.bricks), step_count=len(structure.bricks),
+                  support_repair_rounds=repair_rounds,
+                  support_voxels_added=int(occupied.sum()) - original_count,
+                  unresolved_voxels=int(audit.conflicts.sum()),
                   physical_validity="not_proven")
     return text, report

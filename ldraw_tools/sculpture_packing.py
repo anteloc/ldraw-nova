@@ -72,6 +72,8 @@ class Voxel2Brick:
             self.hard_constraints = original_hard_constraints
         if self.color_array is not None:
             self._assign_colors_to_bricks()
+        for brick_id in self._find_disconnected_bricks():
+            self.bricks.remove_brick(brick_id)
         return list(self.bricks.bricks.values())
 
     def _brickify_voxels_greedy(self, voxel_subset: np.ndarray, priority: Callable) -> None:
@@ -279,7 +281,7 @@ class Voxel2Brick:
         disconnected = []
         for component in components:
             if component != largest_component:
-                disconnected.extend(sorted(component))
+                disconnected.extend(component)
         return disconnected
 
     def _find_bricks_around_disconnected_bricks(self, k_ring: int = 1) -> np.ndarray:
