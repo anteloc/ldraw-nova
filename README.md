@@ -72,6 +72,8 @@ docker compose down
 
 **Usage:** Ask for “a sculpture model of …” or enable **Sculpture model** under **Additional settings** in the web composer.
 
+**Web app setup requires both PRs:** Pull the [toolkit PR](https://github.com/jjohnson5253/ldraw-nova/pull/1) and [web app PR](https://github.com/jjohnson5253/ldraw-nova-docker/pull/1), then build both repositories together.
+
 See [the workflow](docs/agent/sculptures.md) for installation and input format.
 
 ## Why all of this?
