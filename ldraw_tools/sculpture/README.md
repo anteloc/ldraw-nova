@@ -75,3 +75,22 @@ skinning, morph targets and texture transforms before importing. Imports use the
 scene pose. Lower resolution or simplify a mesh when limits or connectivity repair
 prevent conversion. Fine gradients can produce many tiny bricks because packing
 preserves each mapped surface color.
+
+## Resize a sculpture
+
+The web sculpture editor offers an 8–96-cell size slider and **Resize model**.
+Unedited GLB imports retain a bounded `.source.glb` whose hash is recorded in the
+revision marker. Resizing re-voxelizes that original mesh, preserving texture
+detail when growing again rather than enlarging a previously coarse grid.
+Repeated mesh resizes keep the same source. Saving voxel edits produces a voxel
+revision: future resizes use its current saved cells so those edits are retained.
+
+`./ldraw-agent resize-sculpture model.repaired.voxels.json --resolution 32 --output resized.mpd`
+resamples voxel-only designs with the saved BrickBuilder worktree's
+`upsample_xyzrgb` / `downsample_xyzrgb` approach: nearest-neighbor grid growth,
+or coordinate binning with averaged RGB mapped back to opaque LDraw colors.
+LDraw color identifiers are never averaged. It then uses the same connected
+packing, support repair, instruction checks and revision-bound export as imports.
+World, occupied-cell and axis limits still apply. A failed resize leaves the
+original model intact. The editor requires saved/undone edits before resizing,
+saves a new version and remains editable after a successful resize.

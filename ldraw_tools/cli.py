@@ -63,6 +63,12 @@ def parser():
     c.add_argument("--output", required=True, help="Self-contained .mpd for the existing viewer/player")
     c.add_argument("--title", default="Sculpture model")
     c.add_argument("--report")
+    c = commands.add_parser("resize-sculpture", help="Resample saved sculpture voxels and rebuild connected LEGO instructions")
+    c.add_argument("voxels")
+    c.add_argument("--resolution", type=int, required=True, help="Longest voxel grid dimension (8–96 cells)")
+    c.add_argument("--output", required=True)
+    c.add_argument("--title", default="Resized sculpture")
+    c.add_argument("--report")
     c = commands.add_parser("glb-sculpture", help="Voxelize a colored GLB in Python and pack it with sculpture connectivity repair")
     c.add_argument("file", help="Self-contained GLB with embedded PNG/JPEG textures")
     size = c.add_mutually_exclusive_group()
@@ -351,16 +357,31 @@ def parser():
 
 
 def run(args):
-    if args.command in {"sculpture", "glb-sculpture"}:
+    if args.command in {"sculpture", "glb-sculpture", "resize-sculpture"}:
         try:
             from .sculpture.conversion import convert
         except ModuleNotFoundError as exc:
             raise ValueError("Install the optional sculpture dependencies: uv sync --extra sculpture (or pip install '.[sculpture]')") from exc
         if args.command == "glb-sculpture":
-            from .sculpture.glb_import import convert_glb
-            text, report = convert_glb(args.file, resolution=args.resolution,
-                target_bricks=args.target_bricks, library=library_path(args.library),
-                name=Path(args.output).name, title=args.title)
+            from .sculpture.glb_import import convert_glb, MAX_GLB_BYTES
+            if Path(args.file).stat().st_size > MAX_GLB_BYTES:
+                raise ValueError("GLB exceeds 16 MB")
+            source_glb = Path(args.file).read_bytes()
+            # Capture the exact source revision used by every sizing trial.
+            with TemporaryDirectory(prefix="ldraw-glb-source-") as folder:
+                source = Path(folder) / "source.glb"
+                source.write_bytes(source_glb)
+                text, report = convert_glb(source, resolution=args.resolution,
+                    target_bricks=args.target_bricks, library=library_path(args.library),
+                    name=Path(args.output).name, title=args.title)
+        elif args.command == "resize-sculpture":
+            from .sculpture.resize import resample_voxels
+            voxels, resize_report = resample_voxels(args.voxels, resolution=args.resolution, library=library_path(args.library))
+            with TemporaryDirectory(prefix="ldraw-resize-") as folder:
+                source = Path(folder) / "voxels.json"
+                source.write_text(json.dumps(voxels))
+                text, report = convert(source, name=Path(args.output).name, title=args.title)
+            report["resize"] = resize_report
         else:
             text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
         voxel_data = report.pop("voxel_data")
@@ -378,6 +399,9 @@ def run(args):
             marker = {"version": 1,
                       "model_sha256": hashlib.sha256(Path(args.output).read_bytes()).hexdigest(),
                       "voxel_sha256": hashlib.sha256(Path(voxel_output).read_bytes()).hexdigest()}
+            if args.command == "glb-sculpture":
+                atomic_write(Path(args.output).with_suffix(".source.glb"), source_glb)
+                marker["source_glb_sha256"] = hashlib.sha256(source_glb).hexdigest()
             atomic_write(Path(args.output).with_suffix(".sculpture.json"), json.dumps(marker))
         return report, 0 if report["checks_passed"] else 1
     if args.command == "examples":

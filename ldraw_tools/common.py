@@ -37,7 +37,8 @@ def atomic_write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = None
     try:
-        with NamedTemporaryFile(mode="w", encoding="utf-8", newline="", dir=path.parent, delete=False) as f:
+        options = {} if isinstance(text, bytes) else {"encoding": "utf-8", "newline": ""}
+        with NamedTemporaryFile(mode="wb" if isinstance(text, bytes) else "w", dir=path.parent, delete=False, **options) as f:
             tmp = Path(f.name)
             f.write(text)
         tmp.replace(path)

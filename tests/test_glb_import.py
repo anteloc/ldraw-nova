@@ -150,10 +150,13 @@ def test_cli_writes_revision_bound_editable_artifacts(tmp_path, palette, monkeyp
     marker = json.loads(output.with_suffix(".sculpture.json").read_text())
     assert marker["model_sha256"] == hashlib.sha256(output.read_bytes()).hexdigest()
     assert marker["voxel_sha256"] == hashlib.sha256(voxels.read_bytes()).hexdigest()
+    assert output.with_suffix('.source.glb').read_bytes() == path.read_bytes()
+    assert marker['source_glb_sha256'] == hashlib.sha256(path.read_bytes()).hexdigest()
     original = output.read_bytes()
     path.write_bytes(b"broken GLB")
     with pytest.raises(ValueError): cli.run(args)
     assert output.read_bytes() == original
+    assert hashlib.sha256(output.with_suffix('.source.glb').read_bytes()).hexdigest() == marker['source_glb_sha256']
 
 
 def test_auto_size_targets_actual_packed_bricks_and_keeps_surface_colors(tmp_path, palette):
