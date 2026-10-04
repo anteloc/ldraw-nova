@@ -1,7 +1,9 @@
+"""Track brick occupancy, stud connections and supported build ordering."""
+
 from dataclasses import dataclass
 import networkx as nx
 import numpy as np
-from .brick_library import part_for_dimensions
+from .parts import part_for_dimensions
 
 
 @dataclass(frozen=True, order=True, kw_only=True)
@@ -190,7 +192,6 @@ class ConnectivityBrickStructure:
         self.neighbor_graph = nx.Graph()
         self._connected_components = None
         self._component_labels = None
-        self._node2component = None
 
     @property
     def max_x(self) -> int:
@@ -204,14 +205,9 @@ class ConnectivityBrickStructure:
     def max_z(self) -> int:
         return self.voxel_bricks.shape[2]
 
-    @property
-    def voxels(self) -> np.ndarray:
-        return self.voxel_bricks != 0
-
     def _reset_cache(self) -> None:
         self._connected_components = None
         self._component_labels = None
-        self._node2component = None
 
     def n_components(self) -> int:
         return len(self.connected_components())
@@ -231,15 +227,6 @@ class ConnectivityBrickStructure:
                     brick = self.bricks[node]
                     self._component_labels[brick.slice] = i + 1
         return self._component_labels
-
-    def node2component(self) -> dict[int, int]:
-        if self._node2component is None:
-            self._node2component = {
-                node: component_idx + 1
-                for component_idx, component in enumerate(self.connected_components())
-                for node in component
-            }
-        return self._node2component
 
     def node_exists(self, node_id: int):
         return node_id in self.bricks

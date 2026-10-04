@@ -3,12 +3,10 @@ import random
 import subprocess
 import sys
 
-import numpy as np
 import pytest
 
-nx = pytest.importorskip("networkx")
+pytest.importorskip("networkx")
 pytest.importorskip("scipy")
-from ldraw_tools.sculpture.brick_structure import Brick, ConnectivityBrickStructure
 from ldraw_tools.sculpture.conversion import (
     convert,
     load_voxels,

@@ -10,11 +10,11 @@ from pathlib import Path
 import numpy as np
 from scipy.ndimage import binary_fill_holes, distance_transform_edt
 
-from .brick_structure import (
+from .structure import (
     ConnectivityBrickStructure,
     reorder_bricks_for_stability,
 )
-from .voxel2brick import Voxel2Brick
+from .packing import Voxel2Brick
 from .design import rasterize
 
 MAX_INPUT_BYTES = 8 * 1024 * 1024
@@ -101,8 +101,8 @@ def convert(path: str | Path, *, name: str = "sculpture.mpd", title: str = "Scul
     with redirect_stdout(StringIO()):
         bricks = Voxel2Brick(
             occupied, seed=42, color_array=colours, surface_mask=original,
-            run_stability_passes=False, use_color_constraints=True,
-            hard_constraints=True, wc=1000.0, max_failures=100,
+            use_color_constraints=True,
+            hard_constraints=True,
         )()
     exported = np.zeros(occupied.shape, dtype=bool)
     for brick in bricks:

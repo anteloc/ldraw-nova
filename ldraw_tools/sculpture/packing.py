@@ -1,8 +1,10 @@
+"""Pack colored voxels into rectangular bricks and reconnect loose regions."""
+
 from typing import Callable
 import networkx as nx
 import numpy as np
-from .brick_library import BRICK_PARTS
-from .brick_structure import Brick, ConnectivityBrickStructure
+from .parts import BRICK_PARTS
+from .structure import Brick, ConnectivityBrickStructure
 
 
 def first_zero_idx(arr: np.ndarray, axis: int = -1) -> np.ndarray:
@@ -25,54 +27,27 @@ def k_ring_neighbors(node, k: int, graph: nx.Graph) -> list:
     return list(shortest_paths.keys())
 
 
-def valid_brick(h, w) -> bool:
-    return tuple(sorted((h, w))) in BRICK_PARTS
-
-
-def get_merged_brick(b1: Brick, b2: Brick) -> Brick | None:
-    assert b1.z == b2.z
-    if b1.x == b2.x and b1.h == b2.h and (b1.y + b1.w == b2.y or b2.y + b2.w == b1.y):
-        new_h, new_w = (b1.h, b1.w + b2.w)
-        if valid_brick(new_h, new_w):
-            new_x, new_y = (b1.x, min(b1.y, b2.y))
-            return Brick(h=new_h, w=new_w, x=new_x, y=new_y, z=b1.z)
-    elif b1.y == b2.y and b1.w == b2.w and (b1.x + b1.h == b2.x or b2.x + b2.h == b1.x):
-        new_h, new_w = (b1.h + b2.h, b1.w)
-        if valid_brick(new_h, new_w):
-            new_x, new_y = (min(b1.x, b2.x), b1.y)
-            return Brick(h=new_h, w=new_w, x=new_x, y=new_y, z=b1.z)
-    return None
-
-
 class Voxel2Brick:
     def __init__(
         self,
         voxels: np.ndarray,
-        max_failures: int = 10,
         seed: int = 42,
         color_array: np.ndarray = None,
-        run_stability_passes: bool = False,
         use_color_constraints: bool = False,
         hard_constraints: bool = False,
-        wc: float = 1000.0,
         min_support_ratio: float = 0.5,
         surface_mask: np.ndarray = None,
     ):
         self.voxels = voxels.astype(bool)
         self.bricks = ConnectivityBrickStructure(voxels.shape)
         self.color_array = color_array
-        self.run_stability_passes = run_stability_passes
         self.surface_mask = (
             surface_mask if surface_mask is not None else voxels.astype(bool)
         )
         self.use_color_constraints = use_color_constraints and color_array is not None
         self.hard_constraints = hard_constraints
-        self.wc = wc
         self.min_support_ratio = min_support_ratio
-        self.n_failures = 0
-        self.max_failures = max_failures
         self.rng = np.random.default_rng(seed)
-        self.disconnected_voxels: list[tuple[int, int, int]] = []
 
     @property
     def max_x(self) -> int:
@@ -88,41 +63,10 @@ class Voxel2Brick:
 
     def __call__(self) -> list[Brick]:
         self._brickify_voxels_greedy(self.voxels, self._greedy_priority)
-        min_components_possible = nx.number_connected_components(
-            self.bricks.neighbor_graph
-        )
-        n_components = self.bricks.n_components()
-        if self.run_stability_passes:
-            self.n_failures = 0
-            while self.n_failures < self.max_failures:
-                if n_components == min_components_possible:
-                    break
-                critical_voxels = self._find_critical_voxels_connectivity()
-                removed_bricks = self.bricks.remove_voxel_subset(critical_voxels)
-                reverse_layer_order = self.rng.uniform() > 0.5
-                self._brickify_voxels_greedy(
-                    critical_voxels,
-                    self._component_priority,
-                    reverse_layer_order=reverse_layer_order,
-                )
-                new_n_components = self.bricks.n_components()
-                if new_n_components < n_components:
-                    n_components = new_n_components
-                    self.n_failures = 0
-                else:
-                    self.bricks.remove_voxel_subset(critical_voxels)
-                    self.bricks.add_bricks(removed_bricks)
-                    self.n_failures += 1
         disconnected_bricks = self._find_disconnected_bricks()
         if disconnected_bricks:
-            for brick_id in disconnected_bricks:
-                if self.bricks.node_exists(brick_id):
-                    brick = self.bricks.bricks[brick_id]
-                    for x in range(brick.x, brick.x + brick.h):
-                        for y in range(brick.y, brick.y + brick.w):
-                            self.disconnected_voxels.append((x, y, brick.z))
             bricks_to_remerge = self._find_bricks_around_disconnected_bricks()
-            removed_bricks = self.bricks.remove_voxel_subset(bricks_to_remerge)
+            self.bricks.remove_voxel_subset(bricks_to_remerge)
             original_hard_constraints = self.hard_constraints
             self.hard_constraints = False
             self._brickify_voxels_greedy(bricks_to_remerge, self._component_priority)
@@ -131,32 +75,11 @@ class Voxel2Brick:
             self._assign_colors_to_bricks()
         return list(self.bricks.bricks.values())
 
-    def _brickify_voxels_greedy(
-        self,
-        voxel_subset: np.ndarray,
-        priority: Callable,
-        reverse_layer_order: bool = False,
-    ) -> None:
-        self._brickify_voxels(
-            voxel_subset,
-            lambda v, z: self._brickify_layer_greedy(v, z, priority),
-            reverse_layer_order=reverse_layer_order,
-        )
-
-    def _brickify_voxels(
-        self,
-        voxel_subset: np.ndarray,
-        layer_brickify_fn: Callable,
-        reverse_layer_order: bool = False,
-    ) -> None:
+    def _brickify_voxels_greedy(self, voxel_subset: np.ndarray, priority: Callable) -> None:
         min_z = first_nonzero_idx(voxel_subset.sum(axis=(0, 1)))
         max_z = self.max_z - first_nonzero_idx(voxel_subset.sum(axis=(0, 1))[::-1])
-        if reverse_layer_order:
-            for z in reversed(range(min_z, max_z)):
-                layer_brickify_fn(voxel_subset, z)
-        else:
-            for z in range(min_z, max_z):
-                layer_brickify_fn(voxel_subset, z)
+        for z in range(min_z, max_z):
+            self._brickify_layer_greedy(voxel_subset, z, priority)
         assert ((self.bricks.voxel_bricks != 0) == (self.voxels != 0)).all()
 
     def _brickify_layer_greedy(
@@ -223,19 +146,6 @@ class Voxel2Brick:
             return True
         first_color = colors.flat[0]
         return (colors == first_color).all()
-
-    def _assign_brick_color(self, brick: Brick) -> Brick:
-        """Assign color to a brick based on its voxel colors."""
-        if self.color_array is None:
-            return brick
-        colors = self.color_array[brick.slice]
-        if colors.size == 0:
-            return brick
-        unique_colors, counts = np.unique(colors, return_counts=True)
-        majority_color = int(unique_colors[np.argmax(counts)])
-        return Brick(
-            h=brick.h, w=brick.w, x=brick.x, y=brick.y, z=brick.z, color=majority_color
-        )
 
     def _greedy_priority(self, brick: Brick):
         dangles = 1 if 0 < self._calc_support_ratio(brick) < 1 else 0
@@ -376,7 +286,6 @@ class Voxel2Brick:
     def _find_bricks_around_disconnected_bricks(self, k_ring: int = 1) -> np.ndarray:
         """
         Find the voxels of bricks surrounding disconnected bricks.
-        Similar to _get_critical_voxels but for all disconnected bricks.
         Returns a voxel array marking the bricks to be removed and re-added.
 
         Args:
@@ -397,36 +306,3 @@ class Voxel2Brick:
                     brick = self.bricks.bricks[node]
                     critical_voxels[brick.slice] = 1
         return critical_voxels
-
-    def _find_critical_voxels_connectivity(self) -> np.ndarray:
-        """
-        From the Legolization paper
-        """
-        nodes = list(self.bricks.bricks.keys())
-        pvals = np.array(
-            [self._num_neighboring_components(node) - 1 for node in nodes], dtype=float
-        )
-        pvals /= pvals.sum()
-        selected_node_idx = np.argmax(self.rng.multinomial(1, pvals))
-        weakest_node = nodes[selected_node_idx]
-        return self._get_critical_voxels(weakest_node)
-
-    def _num_neighboring_components(self, node: int) -> int:
-        components = {
-            self.bricks.node2component()[neighbor]
-            for neighbor in self.bricks.neighbor_graph.neighbors(node)
-        } | {self.bricks.node2component()[node]}
-        return len(components)
-
-    def _get_critical_voxels(self, critical_node) -> np.ndarray:
-        critical_nodes = k_ring_neighbors(
-            critical_node, self._k_ring_size(), self.bricks.neighbor_graph
-        )
-        critical_bricks = [self.bricks.bricks[n] for n in critical_nodes]
-        critical_voxels = np.zeros_like(self.voxels)
-        for brick in critical_bricks:
-            critical_voxels[brick.slice] = 1
-        return critical_voxels
-
-    def _k_ring_size(self) -> int:
-        return self.n_failures // 10 + 1
