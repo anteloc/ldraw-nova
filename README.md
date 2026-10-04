@@ -72,7 +72,7 @@ docker compose down
 
 **Usage:** Ask for “a sculpture model of …” or enable **Sculpture model** under **Additional settings** in the web composer.
 
-See [the workflow](docs/agent/sculptures.md) for optional installation and input format.
+See [the workflow](docs/agent/sculptures.md) for installation and input format.
 
 ## Why all of this?
 

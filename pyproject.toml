@@ -7,10 +7,9 @@ name = "ldraw-nova"
 version = "0.1.0"
 description = "Specification-grounded generation and review tools for LDraw assemblies"
 requires-python = ">=3.12"
-dependencies = ["pyldraw3==1.7.0", "numpy==2.5.2", "jsonschema==4.26.0"]
+dependencies = ["pyldraw3==1.7.0", "numpy==2.5.2", "jsonschema==4.26.0", "networkx>=3.4,<4", "scipy>=1.14,<2"]
 
 [project.optional-dependencies]
-sculpture = ["networkx>=3.4,<4", "scipy>=1.14,<2"]
 test = ["pytest==9.1.1"]
 
 [project.scripts]

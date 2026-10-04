@@ -57,6 +57,6 @@ the existing player. Honour requested sizes and brick budgets in your design, bu
 a budget was met until the final count is available. Software connectivity checks do not prove
 physical strength; the report includes added supports and unresolved voxel counts.
 
-For standalone use, install the optional converter dependencies with `uv sync --extra sculpture`
-(or `pip install '.[sculpture]'`) and run the same command. Input can also be
+For standalone use, install the toolkit with `uv sync` (or `pip install .`)
+and run the same command. Input can also be
 {"voxels": [[x, y, z, LDraw_colour], ...]}, where raw voxel rows use z-up brick-height layers.

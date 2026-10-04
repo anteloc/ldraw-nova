@@ -344,10 +344,7 @@ def parser():
 
 def run(args):
     if args.command == "sculpture":
-        try:
-            from .sculpture import convert
-        except ModuleNotFoundError as exc:
-            raise ValueError("Install the optional sculpture dependencies: uv sync --extra sculpture (or pip install '.[sculpture]')") from exc
+        from .sculpture import convert
         text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
         parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow)
         model, issues = validate_text(text, parts)
