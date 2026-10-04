@@ -95,7 +95,7 @@ def test_no_conflicts_and_repair_limits_leave_the_model_unchanged():
     assert add_voxel_supports(voxels, colors, conflicts, max_grid_cells=40)[0] is voxels
 
 
-def test_repair_does_not_exceed_supported_editor_dimensions_or_voxel_count():
+def test_repair_does_not_exceed_supported_input_dimensions_or_voxel_count():
     for shape in [(1, 1, 96), (100, 100, 10)]:
         voxels = np.ones(shape, dtype=bool)
         colors = np.ones((*shape, 3))

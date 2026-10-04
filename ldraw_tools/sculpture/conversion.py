@@ -150,7 +150,7 @@ def convert(
     interior = binary_fill_holes(np.pad(original, 1))[1:-1, 1:-1, 1:-1] & ~original
     occupied = original | (interior & (distance_transform_edt(~original) <= 2))
     if int(occupied.sum()) > MAX_VOXELS:
-        occupied = original.copy()  # Keep saved editor data within the same input cap.
+        occupied = original.copy()  # Keep saved voxel data within the same input cap.
     added = occupied & ~original
     palette, counts = np.unique(colours[original], return_counts=True)
     colours[added] = int(palette[np.argmax(counts)])

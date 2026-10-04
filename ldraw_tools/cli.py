@@ -360,11 +360,6 @@ def run(args):
             voxel_output = str(Path(args.output).with_suffix(".repaired.voxels.json"))
             atomic_write(voxel_output, json.dumps(voxel_data))
             report["voxel_output"] = voxel_output
-            # Bind editable cells to this exact exported revision, not a stale design.
-            marker = {"version": 1,
-                      "model_sha256": hashlib.sha256(Path(args.output).read_bytes()).hexdigest(),
-                      "voxel_sha256": hashlib.sha256(Path(voxel_output).read_bytes()).hexdigest()}
-            atomic_write(Path(args.output).with_suffix(".sculpture.json"), json.dumps(marker))
         return report, 0 if report["checks_passed"] else 1
     if args.command == "examples":
         from .examples import search_examples

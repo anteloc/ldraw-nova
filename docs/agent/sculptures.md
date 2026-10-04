@@ -26,12 +26,10 @@ No image-generation service or force-solver license is needed by conversion.
    connected instruction prefixes. If bounded repairs cannot connect everything,
    revise the subject's own supports and rerun; never bypass the checks.
 4. Continue Nova's usual validation, rendering, image review and `publish_model`.
-   Keep the generator/design, report, `output/sculpture.repaired.voxels.json` and
-   `output/sculpture.sculpture.json` beside the MPD. The last file binds the saved
-   cells to this exact revision so the web model card can offer **Sculpture editor**.
-   That JSON contains accepted support voxels and preserves original cells/colours,
-   so sculpture-editor edits and rebuilds use the actual exported sculpture. Ordinary
-   `0 STEP` records drive Nova's existing step player.
+   Keep the generator/design, report and `output/sculpture.repaired.voxels.json`
+   beside the MPD. The repaired voxel JSON includes accepted support additions and
+   preserves original cells/colours for inspection and future agent revisions.
+   Ordinary `0 STEP` records drive Nova's existing step player.
 
 ## Design rules from BrickBuilderAI
 

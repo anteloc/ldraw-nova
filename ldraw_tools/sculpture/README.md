@@ -16,9 +16,8 @@ worktree snapshot `3fac6df27dc0508b504f1da41275696f9b8dbcfb` (`voxel_support.py`
 `glb2brick.py`). That later repair code is not on main `220f3fe`. It audits actual
 vertical stud contacts, tries local/broad interior reinforcement before local/broad
 exterior bridges, and repacks/re-audits each candidate. Existing cells/colours are
-preserved. The resulting `.repaired.voxels.json` includes accepted additions for edits.
-The CLI also saves `.sculpture.json` with hashes of the MPD and repaired cells, so
-the web app can identify matching editable revisions without trusting a stale design.
+preserved. The resulting `.repaired.voxels.json` includes accepted additions for
+inspection and future agent revisions.
 
 Integration changes: isolate the numerical code from API/storage, Open3D and the
 Gurobi force solver; remove inactive debug blocks; retain disconnected geometry

@@ -170,15 +170,11 @@ def test_real_library_export_validates(tmp_path, official):
     assert geometry["occurrence_count"] == report["brick_count"]
 
 
-def test_cli_saves_matching_editable_revision(tmp_path, official):
-    import hashlib
+def test_cli_saves_repaired_voxels(tmp_path, official):
     path = source(tmp_path, box(2, 2, 2))
-    output = tmp_path / 'editable.mpd'
+    output = tmp_path / 'sculpture.mpd'
     run = subprocess.run([sys.executable, '-m', 'ldraw_tools.cli', 'sculpture', str(path),
         '--output', str(output)], capture_output=True, text=True)
     assert run.returncode == 0, run.stdout + run.stderr
-    marker = json.loads(output.with_suffix('.sculpture.json').read_text())
     repaired = output.with_suffix('.repaired.voxels.json')
-    assert marker == {'version': 1, 'model_sha256': hashlib.sha256(output.read_bytes()).hexdigest(),
-                      'voxel_sha256': hashlib.sha256(repaired.read_bytes()).hexdigest()}
     assert json.loads(repaired.read_text())['voxels'] == box(2,2,2)
