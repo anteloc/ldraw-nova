@@ -349,7 +349,6 @@ def run(args):
         except ModuleNotFoundError as exc:
             raise ValueError("Install the optional sculpture dependencies: uv sync --extra sculpture (or pip install '.[sculpture]')") from exc
         text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
-        voxel_data = report.pop("voxel_data")
         parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow)
         model, issues = validate_text(text, parts)
         report["diagnostics"] = issues
@@ -357,9 +356,6 @@ def run(args):
         if report["checks_passed"]:
             atomic_write(args.output, text)
             report["output"] = args.output
-            voxel_output = str(Path(args.output).with_suffix(".repaired.voxels.json"))
-            atomic_write(voxel_output, json.dumps(voxel_data))
-            report["voxel_output"] = voxel_output
         return report, 0 if report["checks_passed"] else 1
     if args.command == "examples":
         from .examples import search_examples

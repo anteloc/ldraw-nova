@@ -130,6 +130,7 @@ class Voxel2Brick:
             bricks_to_remerge = self._find_bricks_around_disconnected_bricks()
             removed_bricks = self.bricks.remove_voxel_subset(bricks_to_remerge)
             original_hard_constraints = self.hard_constraints
+            self.hard_constraints = False
             self._brickify_voxels_greedy(bricks_to_remerge, self._component_priority)
             self.hard_constraints = original_hard_constraints
         if self.color_array is not None:

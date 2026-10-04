@@ -106,14 +106,14 @@ def test_malformed_or_oversized_design_is_rejected(updates):
         rasterize(data)
 
 
-def test_cli_persists_repaired_voxels_and_never_overwrites_source(tmp_path, official):
+def test_cli_exports_design_without_overwriting_source(tmp_path, official):
     path = tmp_path / "design.json"
     path.write_text(
         json.dumps(
             {
-                "grid": {"width": 20, "depth": 2, "layers": 1},
+                "grid": {"width": 4, "depth": 4, "layers": 4},
                 "shapes": [
-                    {"shape": "box", "x": [0, 19], "y": 0, "z": [0, 1], "color": 4}
+                    {"shape": "box", "x": [0, 3], "y": [0, 3], "z": [0, 3], "color": 4}
                 ],
             }
         )
@@ -136,14 +136,7 @@ def test_cli_persists_repaired_voxels_and_never_overwrites_source(tmp_path, offi
     assert run.returncode == 0, run.stdout + run.stderr
     report = json.loads(run.stdout)
     assert path.read_text() == original
-    data = json.loads(Path(report["voxel_output"]).read_text())
-    assert (
-        len(data["voxels"])
-        == report["input_voxels"]
-        + report["interior_support_voxels"]
-        + report["exterior_support_voxels"]
-    )
-    assert report["support_repair_rounds"] > 0
+    assert output.is_file() and report["stud_components"] == 1
 
 
 def test_sculpture_guide_retains_main_no_base_and_review_rules():
@@ -153,4 +146,4 @@ def test_sculpture_guide_retains_main_no_base_and_review_rules():
     assert "Do not add a display base, stand, plinth, or ground plate" in guide
     assert "unless the user explicitly asks for a base or stand" in guide
     assert "at most 299" in guide and "publish_model" in guide
-    assert "local interior, broad interior, local exterior" in guide
+    assert "fixed-seed color-constrained rectangular-brick packing" in guide

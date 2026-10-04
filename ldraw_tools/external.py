@@ -204,23 +204,6 @@ def prepare_glb(path, library, output, parts, *, timeout=180):
                 note="Preview maps unresolved colour 16 to Pearl Dark Grey. In source, 16 means inherited current colour. MPD remains authoritative.")
 
 
-def snapshot_source(path, temp):
-    """Show every placement in snapshots, including models with over 255 steps.
-
-    LeoCAD's default current step can truncate long instruction sequences. Strip
-    step boundaries from a disposable copy; the delivered instructions stay intact.
-    """
-    path = Path(path)
-    lines = path.read_text(encoding="utf-8-sig").splitlines()
-    complete = [line for line in lines if line.split()[:2] not in
-                (["0", "STEP"], ["0", "ROTSTEP"])]
-    if len(complete) == len(lines):
-        return path
-    target = Path(temp) / ("snapshot-source" + path.suffix)
-    target.write_bytes(("\r\n".join(complete) + "\r\n").encode("utf-8"))
-    return target
-
-
 def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90, bounds=None):
     outdir = Path(outdir).resolve()
     outdir.mkdir(parents=True, exist_ok=True)
@@ -228,14 +211,13 @@ def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90,
     # Unique temporary outputs ensure an old artifact cannot make a failed run pass.
     with TemporaryDirectory(prefix=".render-", dir=outdir) as temp:
         path,library,embedded_names=cad_source(path,library,temp)
-        snapshot = snapshot_source(path, temp)
         for view in views:
             if view not in {"home", "front", "back", "left", "right", "top", "bottom"}:
                 raise ValueError(f"Unknown view {view}")
             target = Path(temp) / f"{view}.png"
             command = ["leocad", "-l", str(library), "-i", str(target), "-w", "1000", "-h", "800",
                        "--aa-samples", "4", "--shading", "full", "--line-width", "1",
-                       "--no-highlight", "--no-fade-steps", str(snapshot.resolve())]
+                       "--no-highlight", "--no-fade-steps", str(Path(path).resolve())]
             if bounds is None:
                 command += ["--viewpoint", view]
             if bounds is not None:

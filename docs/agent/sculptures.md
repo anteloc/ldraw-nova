@@ -18,18 +18,13 @@ No image-generation service or force-solver license is needed by conversion.
    in that raw format **z is vertical** and x/y are horizontal. Do not mix the two conventions.
 2. Run `./ldraw-agent sculpture output/sculpture.design.json --output output/sculpture.mpd
    --title "My sculpture" --report output/sculpture-checks.json` on one line.
-3. Read the report: BrickBuilder's fixed-seed packer is followed by a stud-contact
-   audit. Problem areas trigger local interior, broad interior, local exterior,
-   then broad exterior support additions. Each candidate is repacked and audited;
-   only improvements are accepted. No display base is automatically added.
-   Export requires full coverage, no overlaps, one stud-connected component and
-   connected instruction prefixes. If bounded repairs cannot connect everything,
-   revise the subject's own supports and rerun; never bypass the checks.
+3. Read the report. The converter uses BrickBuilder's two-layer interior fill,
+   fixed-seed color-constrained rectangular-brick packing and supported instruction
+   ordering. Export requires complete coverage, no overlap, one stud-connected
+   component and supported build steps. Revise the design and rerun if checks fail.
 4. Continue Nova's usual validation, rendering, image review and `publish_model`.
-   Keep the generator/design, report and `output/sculpture.repaired.voxels.json`
-   beside the MPD. The repaired voxel JSON includes accepted support additions and
-   preserves original cells/colours for inspection and future agent revisions.
-   Ordinary `0 STEP` records drive Nova's existing step player.
+   Keep the design and report beside the MPD. Ordinary `0 STEP` records drive the
+   existing step player.
 
 ## Design rules from BrickBuilderAI
 
@@ -67,14 +62,14 @@ BUILD RULES (the builder enforces them; follow them to avoid rework)
   a trim line, the edge of hair) cannot attach. Make such details at least 2 studs deep, match the color
   of the cells they sit against, or support them from below.
 - Overhangs: each layer should step out at most 1-2 studs beyond the layer below it.
-- Keep walls at least 2 studs thick. The final converter preserves subject voxels, reinforces enclosed spaces and repairs missing stud connections; it does not silently drop or recolor subject cells.
+- Keep walls at least 2 studs thick. The converter fills enclosed interior space and checks stud connectivity; revise unsupported designs before publication.
 - Do not add a display base, stand, plinth, or ground plate under the model. Build only the requested
   subject, resting directly on layer 0, unless the user explicitly asks for a base or stand.
 
 WORKFLOW: think about proportions and recognizable features first, then write one complete design.
 Convert it and read the checks report. Render at least two views through Nova's usual renderer, open
 the images and compare them to the request/reference. Revise and rebuild if needed; use publish_model
-only after a successful conversion and visual review. Preserve repaired voxel JSON for future edits.
+only after a successful conversion and visual review. Preserve the JSON design for future agent revisions.
 
 MODEL SIZE FOR NEW BUILDS
 For a character, person, animal, or individual object, default to fewer than 300 finished bricks (at most 299); aim for roughly 150-299 bricks, and use fewer for simple subjects. Preserve the recognizable silhouette and key features at this compact scale. This budget counts actual bricks after packing, not voxel cells. Choose compact dimensions and simplify small details and color fragmentation. Use more bricks only when the requested subject genuinely needs a larger build for recognizability, structural stability, a complex scene with multiple objects, or an explicit large-scale request. Before accepting or submitting the final model, check the brick count and reduce an oversized individual subject unless that extra size is necessary. Briefly explain any necessary larger build in a progress update.
@@ -88,10 +83,8 @@ Apply the following when a reference image is attached:
 REFERENCE IMAGE DESIGN
 Use the image to identify the main subject and its distinctive silhouette, colors, face, hair, clothing, markings, or defining object features. Preserve those identity cues, but take creative liberty with proportions and simplify fine details to make an appealing, recognizable voxelized brick model within the brick budget. Prioritize a strong silhouette, readable features, and balanced proportions over a literal copy of the image's geometry or pose. For people and characters, default to a charming collectible interpretation with a large expressive head, sculpted stepped hair, large readable eyes with prominent upper eyelids or eyelashes, a small dimensional nose, a simple pleasant mouth, a compact body and short legs. Shape the face in depth with inset and projecting features rather than a flat pixel drawing; avoid a tall rectangular torso. Start small, often around 12-14 studs across and 18-22 brick layers tall, aiming at 200-250 finished bricks to leave room within the under-300 budget. Simplify secondary details instead of making the model taller. Adapt these proportions to the subject; do not force every subject into the same style. Ignore the background and incidental details unless requested. Explicit user instructions for realistic proportions, an exact pose, or a particular style take precedence.
 
-Determinism applies to identical voxel input, software versions and settings; AI design
-is still generative. Connected instructions may include parts attached from above,
-reported as `hanging_steps`. Connectivity/support heuristics are not the force-based
-analysis in [Legolization](https://dl.acm.org/doi/10.1145/2816795.2818091) and do not
-certify load capacity, balance, assembly access or real-world stability.
+Determinism applies to identical voxel input, software versions and settings; AI
+design is still generative. Connectivity checks do not certify load capacity,
+balance, assembly access or real-world stability.
 
 [Port provenance and retained license](../../ldraw_tools/sculpture/README.md).
