@@ -64,14 +64,15 @@ To stop it:
 docker compose down
 ```
 
-## Optional Sculpture model mode
+## Optional sculpture model tool
 
+Generates cheaper and faster
+Uses only basic rectangular bricks
+Uses common (legolization algorithms)[https://dl.acm.org/doi/epdf/10.1145/2816795.2818091] to deterministaclly convert voxels into bricks
+
+Usage:
 Ask for “a Sculpture model of …” (or enable **Sculpture model** under **Additional settings** in the web composer).
-The selected agent designs colored voxels using the shape schema and
-no-base guidance. Its deterministic pipeline fills enclosed interior space, packs
-rectangular bricks, adds support voxels where needed and orders build steps.
-It retains the largest grounded stud-connected component before continuing through
-Nova's usual viewer and publication workflow. Ordinary part-based generation remains the default.
+
 See [the workflow](docs/agent/sculptures.md) for optional installation and input format.
 
 ## Why all of this?
