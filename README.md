@@ -67,7 +67,7 @@ docker compose down
 ## Optional Sculpture model mode
 
 Ask for “a Sculpture model of …” (or enable **Sculpture model** under **Additional settings** in the web composer).
-The selected agent designs colored voxels using BrickBuilderAI's shape schema and
+The selected agent designs colored voxels using the shape schema and
 no-base guidance. Its deterministic pipeline fills enclosed interior space, packs
 rectangular bricks and orders supported build steps. Export checks coverage and
 stud connectivity before continuing through Nova's usual viewer and publication

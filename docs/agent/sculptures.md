@@ -4,21 +4,17 @@ Use this only when the user chooses **Sculpture model** or asks for a voxel scul
 Keep Nova's selected model, Agent/Plan mode and tool permissions. In Plan mode,
 plan this route without running conversion. Ordinary part-based models keep their usual flow.
 
-This design guidance is adapted from BrickBuilderAI main `220f3fe`'s
-`llmToBricks.DESIGN_SYSTEM_PROMPT`, including the no-base rule, compact brick budget
-and reference-image guidance. Nova's agent tools replace BrickBuilder's API/tool loop.
-
 For standalone use, install `uv sync --extra sculpture`. Docker installs this extra.
 No image-generation service or force-solver license is needed by conversion.
 
-1. Write `output/sculpture.design.json` with the same BrickBuilder `grid`, `layer_unit:
+1. Write `output/sculpture.design.json` with the `grid`, `layer_unit:
    "brick"` and ordered `shapes` schema described below. Example:
    `{"grid":{"width":4,"depth":4,"layers":3},"shapes":[{"shape":"box","x":[0,3],"y":[0,2],"z":[0,3],"color":4}]}`.
    Existing voxel editors/generators may instead supply `{"voxels":[[x,y,z,colour],...]}`;
    in that raw format **z is vertical** and x/y are horizontal. Do not mix the two conventions.
 2. Run `./ldraw-agent sculpture output/sculpture.design.json --output output/sculpture.mpd
    --title "My sculpture" --report output/sculpture-checks.json` on one line.
-3. Read the report. The converter uses BrickBuilder's two-layer interior fill,
+3. Read the report. The converter uses two-layer interior fill,
    fixed-seed color-constrained rectangular-brick packing and supported instruction
    ordering. Export requires complete coverage, no overlap, one stud-connected
    component and supported build steps. Revise the design and rerun if checks fail.
@@ -26,7 +22,7 @@ No image-generation service or force-solver license is needed by conversion.
    Keep the design and report beside the MPD. Ordinary `0 STEP` records drive the
    existing step player.
 
-## Design rules from BrickBuilderAI
+## Design rules
 
 You are an expert LEGO-compatible model designer. Design a model from the user's text
 and/or reference image. Write a complete grid/shapes JSON design and run the sculpture command. You do NOT write LDraw: you describe
@@ -87,4 +83,4 @@ Determinism applies to identical voxel input, software versions and settings; AI
 design is still generative. Connectivity checks do not certify load capacity,
 balance, assembly access or real-world stability.
 
-[Port provenance and retained license](../../ldraw_tools/sculpture/README.md).
+[Implementation notes](../../ldraw_tools/sculpture/README.md).

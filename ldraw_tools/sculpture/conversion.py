@@ -1,4 +1,4 @@
-"""Strict, reproducible adapter around BrickBuilderAI's voxel packing algorithms."""
+"""Convert colored voxel designs into reproducible rectangular-brick models."""
 
 from __future__ import annotations
 
@@ -43,7 +43,7 @@ def load_voxels(path: str | Path) -> tuple[np.ndarray, np.ndarray]:
         }
     if not isinstance(data, dict) or set(data) != {"voxels"}:
         raise ValueError(
-            'Use {"voxels": [[x,y,z,colour], ...]} or a BrickBuilder grid/shapes design'
+            'Use {"voxels": [[x,y,z,colour], ...]} or a grid/shapes design'
         )
     rows = data["voxels"]
     if not isinstance(rows, list) or not 1 <= len(rows) <= MAX_VOXELS:
@@ -88,11 +88,11 @@ def load_voxels(path: str | Path) -> tuple[np.ndarray, np.ndarray]:
 
 
 def convert(path: str | Path, *, name: str = "sculpture.mpd", title: str = "Sculpture model"):
-    """Use BrickBuilder's shell fill, fixed-seed packing and instruction ordering."""
+    """Fill interior space, pack bricks with a fixed seed and order build steps."""
     original, colours = load_voxels(path)
     occupied = original.copy()
     interior = binary_fill_holes(np.pad(original, 1))[1:-1, 1:-1, 1:-1] & ~original
-    # BrickBuilder glb2brick fills two layers inward, using the dominant colour.
+    # Fill two layers inward, using the dominant colour.
     occupied |= interior & (distance_transform_edt(~original) <= 2)
     if int(occupied.sum()) > MAX_VOXELS:
         raise ValueError("Interior fill exceeds the sculpture voxel budget")
@@ -124,7 +124,7 @@ def convert(path: str | Path, *, name: str = "sculpture.mpd", title: str = "Scul
     section = Path(name).stem + ".ldr"
     text = (f"0 FILE {section}\n0 {title}\n0 Name: {section}\n0 Author: LDraw Nova\n"
             f"0 !LDRAW_ORG Model\n{body}0 NOFILE\n").replace("\n", "\r\n")
-    report = dict(checks_passed=True, mode="sculpture", algorithm="brickbuilder-voxel2brick",
+    report = dict(checks_passed=True, mode="sculpture", algorithm="voxel2brick",
                   seed=42, input_voxels=int(original.sum()),
                   interior_support_voxels=int((occupied & ~original).sum()),
                   brick_count=len(ordered), step_count=len(ordered), stud_components=1,

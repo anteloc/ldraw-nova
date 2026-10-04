@@ -1,5 +1,3 @@
-# Adapted from BrickBuilderAI main (220f3fe), copyright (c) 2026 Jake Johnson.
-# MIT license: see LICENSE.brickbuilder.
 """Rasterize the same compact shape designs used by llmToBricks."""
 
 from typing import Any, Dict, List, Optional, Tuple
@@ -22,7 +20,7 @@ def palette_prompt_text(palette):
 
 
 class DesignError(ValueError):
-    """The design can't be built as submitted. The message is written for Claude."""
+    """The design is invalid; the message explains what the agent should revise."""
 
 
 def _as_range(value: Any, name: str, limit: int) -> Tuple[int, int]:

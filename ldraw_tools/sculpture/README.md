@@ -1,22 +1,14 @@
-# BrickBuilder sculpture conversion
+# Sculpture conversion
 
-The shape rasterizer, six-part rectangular-brick catalogue, fixed-seed packing,
-stud-connection graph and supported instruction ordering are adapted from
-[BrickBuilderAI](https://github.com/jjohnson5253/brickbuilderai), main `220f3fe`.
-The original MIT copyright and license are retained in `LICENSE.brickbuilder`.
+`design.py` turns ordered JSON shapes into colored voxels. `conversion.py` fills
+two layers of enclosed interior space, runs fixed-seed rectangular-brick packing
+and writes an MPD with supported instruction steps.
 
-This adapter follows the design route in `llmToBricks._convert_design_voxels`:
-existing design voxels skip mesh voxelization, receive two layers of enclosed
-interior fill, and use color-constrained `Voxel2Brick` packing with seed 42,
-`max_failures=100`, `wc=1000`, hard surface-color constraints and force stability
-passes disabled. Its reconnection pass uses soft color constraints, as BrickBuilder
-does.
-Nova writes an MPD with ordinary build steps and rejects incomplete or disconnected
-results so the agent can revise its design. There is no editor or GLB import.
+`brick_library.py` maps the six allowed footprints directly to LDraw filenames.
+`brick_structure.py` tracks voxel occupancy, stud connections and build ordering.
+`voxel2brick.py` packs and reconnects bricks using color constraints, seed 42,
+`max_failures=100` and `wc=1000`; force stability passes are disabled.
 
-Integration changes remove API/storage and unused force-solver dependencies,
-resolve local imports, bound inputs and sort packing tie-breakers. The six allowed
-footprints and part filenames live together in `brick_library.py`; packing occupancy
-and connectivity remain in `brick_structure.py`. AI design and
-review continue through Nova's existing selected model and tools.
+Input bounds, voxel coverage, overlap and stud connectivity are checked before
+export. The agent revises unsuccessful designs through the existing tool workflow.
 Connectivity checks do not certify physical stability.

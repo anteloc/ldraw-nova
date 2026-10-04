@@ -1,5 +1,3 @@
-# Adapted from BrickBuilderAI, copyright (c) 2026 Jake Johnson.
-# MIT license: see LICENSE.brickbuilder.
 """Allowed rectangular footprints in studs and their LDraw part filenames."""
 
 BRICK_PARTS = {

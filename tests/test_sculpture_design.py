@@ -16,7 +16,7 @@ def design(shapes, **kwargs):
     return {"grid": {"width": 4, "depth": 4, "layers": 4}, "shapes": shapes, **kwargs}
 
 
-def test_brickbuilder_design_axes_and_raw_voxels_produce_identical_bricks(tmp_path):
+def test_shape_design_axes_and_raw_voxels_produce_identical_bricks(tmp_path):
     data = design([{"shape": "box", "x": [0, 2], "y": [0, 3], "z": [0, 1], "color": 4}])
     path = tmp_path / "design.json"
     path.write_text(json.dumps(data))
@@ -57,7 +57,7 @@ def test_ordered_shapes_paint_and_carve_without_painting_air():
     assert grid[0, 0, 0] == -1 and grid[1, 1, 1] == 1 and grid[3, 3, 1] == -1
 
 
-def test_ellipsoid_cylinder_and_layer_follow_brickbuilder_schema():
+def test_ellipsoid_cylinder_and_layer_follow_shape_schema():
     grid, _ = rasterize(
         design(
             [

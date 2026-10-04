@@ -1,5 +1,3 @@
-# Adapted from BrickBuilderAI, copyright (c) 2026 Jake Johnson.
-# MIT license: see LICENSE.brickbuilder. Integration changes are documented in README.md.
 from dataclasses import dataclass
 import networkx as nx
 import numpy as np
