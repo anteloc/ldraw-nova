@@ -66,12 +66,11 @@ docker compose down
 
 ## Optional sculpture model tool
 
-Generates cheaper and faster
-Uses only basic rectangular bricks
-Uses common (legolization algorithms)[https://dl.acm.org/doi/epdf/10.1145/2816795.2818091] to deterministaclly convert voxels into bricks
+- Can generate models faster and at lower cost.
+- Uses basic rectangular bricks only.
+- Deterministically converts voxels into bricks using [legolization algorithms](https://dl.acm.org/doi/epdf/10.1145/2816795.2818091).
 
-Usage:
-Ask for “a Sculpture model of …” (or enable **Sculpture model** under **Additional settings** in the web composer).
+**Usage:** Ask for “a sculpture model of …” or enable **Sculpture model** under **Additional settings** in the web composer.
 
 See [the workflow](docs/agent/sculptures.md) for optional installation and input format.
 
