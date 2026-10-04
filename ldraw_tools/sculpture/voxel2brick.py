@@ -3,7 +3,7 @@
 from typing import Callable
 import networkx as nx
 import numpy as np
-from .brick_library import brick_library, dimensions_to_brick_id
+from .brick_library import BRICK_PARTS
 from .brick_structure import Brick, ConnectivityBrickStructure
 
 
@@ -28,11 +28,7 @@ def k_ring_neighbors(node, k: int, graph: nx.Graph) -> list:
 
 
 def valid_brick(h, w) -> bool:
-    try:
-        dimensions_to_brick_id(h, w)
-        return True
-    except ValueError:
-        return False
+    return tuple(sorted((h, w))) in BRICK_PARTS
 
 
 def get_merged_brick(b1: Brick, b2: Brick) -> Brick | None:
@@ -168,12 +164,8 @@ class Voxel2Brick:
     def _brickify_layer_greedy(
         self, voxel_subset: np.ndarray, z: int, priority: Callable
     ) -> None:
-        brick_dimensions = [
-            (v["height"], v["width"]) for v in brick_library.values()
-        ] + [
-            (v["width"], v["height"])
-            for v in brick_library.values()
-            if v["height"] != v["width"]
+        brick_dimensions = list(BRICK_PARTS) + [
+            (w, h) for h, w in BRICK_PARTS if h != w
         ]
         min_x = first_nonzero_idx(voxel_subset[..., z].sum(axis=1))
         max_x = self.max_x - first_nonzero_idx(voxel_subset[..., z].sum(axis=1)[::-1])

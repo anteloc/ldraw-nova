@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 import networkx as nx
 import numpy as np
-from .brick_library import dimensions_to_brick_id, brick_id_to_part_id
+from .brick_library import part_for_dimensions
 
 
 @dataclass(frozen=True, order=True, kw_only=True)
@@ -20,12 +20,8 @@ class Brick:
     color: int = 4
 
     @property
-    def brick_id(self) -> int:
-        return dimensions_to_brick_id(self.h, self.w)
-
-    @property
     def part_id(self) -> str:
-        return brick_id_to_part_id(self.brick_id)
+        return part_for_dimensions(self.h, self.w)
 
     @property
     def ori(self) -> int:
@@ -45,15 +41,6 @@ class Brick:
 
     def __repr__(self):
         return self.to_txt()[:-1]
-
-    def to_json(self) -> dict:
-        return {
-            "brick_id": self.brick_id,
-            "x": self.x,
-            "y": self.y,
-            "z": self.z,
-            "ori": self.ori,
-        }
 
     def to_txt(self) -> str:
         return f"{self.h}x{self.w} ({self.x},{self.y},{self.z})\n"

@@ -15,6 +15,8 @@ Nova writes an MPD with ordinary build steps and rejects incomplete or disconnec
 results so the agent can revise its design. There is no editor or GLB import.
 
 Integration changes remove API/storage and unused force-solver dependencies,
-resolve local imports, bound inputs and sort packing tie-breakers. AI design and
+resolve local imports, bound inputs and sort packing tie-breakers. The six allowed
+footprints and part filenames live together in `brick_library.py`; packing occupancy
+and connectivity remain in `brick_structure.py`. AI design and
 review continue through Nova's existing selected model and tools.
 Connectivity checks do not certify physical stability.
