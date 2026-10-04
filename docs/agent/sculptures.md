@@ -92,3 +92,5 @@ balance, assembly access or real-world stability.
 `ldraw_tools/sculpture_packing.py` performs fixed-seed packing and reconnection.
 `ldraw_tools/sculpture_structure.py` defines the six rectangular brick footprints,
 tracks occupancy and stud connectivity, orders build steps and adds support voxels.
+Placements use pyldraw3's `Piece.place`; MPD export uses Nova's existing
+`serialize_mpd` helper in `ldraw_tools/builder.py`.

@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 import networkx as nx
 import numpy as np
+from ldraw import Piece, Vector, Matrix
 from scipy.ndimage import binary_dilation, binary_fill_holes, distance_transform_edt, label
 from scipy.spatial import cKDTree
 
@@ -17,7 +18,7 @@ BRICK_PARTS = {
 }
 
 
-def part_for_dimensions(h: int, w: int) -> str:
+def part_for_dimensions(h, w):
     try:
         return BRICK_PARTS[tuple(sorted((h, w)))]
     except KeyError:
@@ -26,63 +27,47 @@ def part_for_dimensions(h: int, w: int) -> str:
 
 @dataclass(frozen=True, order=True, kw_only=True)
 class Brick:
-    """
-    Represents a 1-unit-tall rectangular brick.
-    """
+    """One brick-height rectangular footprint on the voxel grid."""
 
     h: int
     w: int
     x: int
     y: int
     z: int
-    color: int = 4
+    colour: int = 4
 
     @property
-    def part_id(self) -> str:
+    def part_id(self):
         return part_for_dimensions(self.h, self.w)
 
     @property
-    def ori(self) -> int:
+    def ori(self):
         return 1 if self.h > self.w else 0
 
     @property
-    def area(self) -> int:
+    def area(self):
         return self.h * self.w
 
     @property
-    def slice_2d(self) -> (slice, slice):
+    def slice_2d(self):
         return (slice(self.x, self.x + self.h), slice(self.y, self.y + self.w))
 
     @property
-    def slice(self) -> (slice, slice, int):
+    def slice(self):
         return (*self.slice_2d, self.z)
 
-    def __repr__(self):
-        return self.to_txt()[:-1]
-
-    def to_txt(self) -> str:
-        return f"{self.h}x{self.w} ({self.x},{self.y},{self.z})\n"
-
-    def to_ldr(self, base_height: float = 0, color: int = 4) -> str:
+    def to_piece(self):
+        """Convert grid coordinates to an ordinary pyldraw3 placement."""
         x = (self.x + self.h * 0.5) * 20
         z = (self.y + self.w * 0.5) * 20
-        y = (self.z + base_height) * -24
-        matrix = "0 0 1 0 1 0 -1 0 0" if self.ori == 0 else "-1 0 0 0 1 0 0 0 -1"
-        line = f"1 {color} {x} {y} {z} {matrix} {self.part_id}\n"
-        step_line = "0 STEP\n"
-        return line + step_line
+        y = self.z * -24
+        matrix = ([[0, 0, 1], [0, 1, 0], [-1, 0, 0]] if self.ori == 0
+                  else [[-1, 0, 0], [0, 1, 0], [0, 0, -1]])
+        return Piece.place(self.part_id, colour=self.colour, position=Vector(x, y, z), matrix=Matrix(matrix))
 
 
-def brick_support_type(occupancy: np.ndarray, brick: Brick) -> str:
-    """
-    Determine how a brick is supported by the occupied voxels (indexed [x, y, z]).
-
-    Returns:
-        'ground' - brick is on ground level (z=0)
-        'below' - brick has support from below
-        'above' - brick only has support from above
-        'floating' - brick has no support
-    """
+def brick_support_type(occupancy, brick):
+    """Classify support from occupied cells above, below or on the ground."""
     if brick.z == 0:
         return "ground"
     if np.any(occupancy[brick.slice_2d[0], brick.slice_2d[1], brick.z - 1]):
@@ -94,7 +79,7 @@ def brick_support_type(occupancy: np.ndarray, brick: Brick) -> str:
     return "floating"
 
 
-def reorder_bricks_for_stability(bricks: list[Brick], shape: tuple[int, int, int]) -> tuple[list[Brick], set[Brick]]:
+def reorder_bricks_for_stability(bricks, shape):
     if not bricks:
         return (bricks, set())
     occupancy = np.zeros(shape, dtype=np.int32)
@@ -103,7 +88,7 @@ def reorder_bricks_for_stability(bricks: list[Brick], shape: tuple[int, int, int
     deferred_bricks = set()
     deferred_voxels = np.zeros(shape, dtype=bool)
 
-    def place(brick: Brick) -> None:
+    def place(brick):
         occupancy[brick.slice] += 1
         ordered_bricks.append(brick)
     while remaining_set:
@@ -146,11 +131,9 @@ def reorder_bricks_for_stability(bricks: list[Brick], shape: tuple[int, int, int
 
 
 class ConnectivityBrickStructure:
-    """
-    Brick structure that keeps graph connectivity information
-    """
+    """Track occupancy, stud connections and neighbouring bricks during packing."""
 
-    def __init__(self, shape: tuple[int, int, int]):
+    def __init__(self, shape):
         self.voxel_bricks = np.zeros(shape, dtype=int)
         self.bricks = {}
         self.node_id_counter = 0
@@ -160,29 +143,27 @@ class ConnectivityBrickStructure:
         self._component_labels = None
 
     @property
-    def max_x(self) -> int:
+    def max_x(self):
         return self.voxel_bricks.shape[0]
 
     @property
-    def max_y(self) -> int:
+    def max_y(self):
         return self.voxel_bricks.shape[1]
 
     @property
-    def max_z(self) -> int:
+    def max_z(self):
         return self.voxel_bricks.shape[2]
 
-    def _reset_cache(self) -> None:
+    def _reset_cache(self):
         self._connected_components = None
         self._component_labels = None
 
     def connected_components(self):
         if self._connected_components is None:
-            self._connected_components = list(
-                nx.connected_components(self.connection_graph)
-            )
+            self._connected_components = list(nx.connected_components(self.connection_graph))
         return self._connected_components
 
-    def component_labels(self) -> np.ndarray:
+    def component_labels(self):
         if self._component_labels is None:
             self._component_labels = np.zeros_like(self.voxel_bricks)
             for i, comp in enumerate(self.connected_components()):
@@ -191,10 +172,10 @@ class ConnectivityBrickStructure:
                     self._component_labels[brick.slice] = i + 1
         return self._component_labels
 
-    def node_exists(self, node_id: int):
+    def node_exists(self, node_id):
         return node_id in self.bricks
 
-    def add_brick(self, brick: Brick) -> int:
+    def add_brick(self, brick):
         self._reset_cache()
         if self.voxel_bricks[brick.slice].any():
             raise ValueError(f"Cannot place brick {brick} due to collisions")
@@ -243,10 +224,7 @@ class ConnectivityBrickStructure:
         self.neighbor_graph.add_edges_from(vert_neighbors + horz_neighbors)
         return node
 
-    def add_bricks(self, bricks: list[Brick]) -> list[int]:
-        return [self.add_brick(brick) for brick in bricks]
-
-    def remove_brick(self, node_id: int) -> None:
+    def remove_brick(self, node_id):
         self._reset_cache()
         brick = self.bricks[node_id]
         self.bricks.pop(node_id)
@@ -254,11 +232,8 @@ class ConnectivityBrickStructure:
         self.connection_graph.remove_node(node_id)
         self.neighbor_graph.remove_node(node_id)
 
-    def remove_voxel_subset(self, voxel_subset: np.ndarray) -> list[Brick]:
-        """
-        Erases all bricks inside the specified subset of voxels.
-        Assumes that all bricks in voxel_subset are completely contained within voxel_subset.
-        """
+    def remove_voxel_subset(self, voxel_subset):
+        """Remove bricks fully contained in the requested voxel subset."""
         removed_bricks = []
         nodes = set(np.unique(self.voxel_bricks[voxel_subset])) - {0}
         for node in nodes:
@@ -272,25 +247,26 @@ class ConnectivityBrickStructure:
 class BrickStructure:
     """Clean up packed bricks and export supported instruction ordering."""
 
-    def __init__(self, bricks: list[Brick], world_dim: int):
+    def __init__(self, bricks, world_dim):
         self.world_dim = world_dim
         self.bricks = list(bricks)
         self.voxel_occupancy = np.zeros((world_dim,) * 3, dtype=int)
         for brick in self.bricks:
             self.voxel_occupancy[brick.slice] += 1
 
-    def to_ldr(self) -> str:
+    def ordered_bricks(self):
+        """Remove unbuildable interior/floating bricks and return instruction order."""
         ordered, deferred = self._reorder_bricks_for_stability(self.bricks)
         if deferred and self.remove_interior_deferred_bricks(deferred):
             ordered, _ = self._reorder_bricks_for_stability(self.bricks)
         if self.remove_floating_bricks():
             ordered, _ = self._reorder_bricks_for_stability(self.bricks)
-        return "".join(brick.to_ldr(color=brick.color) for brick in ordered)
+        return ordered
 
-    def _reorder_bricks_for_stability(self, bricks: list[Brick]) -> tuple[list[Brick], set[Brick]]:
+    def _reorder_bricks_for_stability(self, bricks):
         return reorder_bricks_for_stability(bricks, (self.world_dim,) * 3)
 
-    def _compute_exterior_mask(self) -> np.ndarray:
+    def _compute_exterior_mask(self):
         """Find air reachable from outside using six-neighbor connectivity."""
         padded_shape = tuple((s + 2 for s in self.voxel_occupancy.shape))
         padded_air = np.ones(padded_shape, dtype=bool)
@@ -305,7 +281,7 @@ class BrickStructure:
         exterior_padded = labels == exterior_label
         return exterior_padded[1:-1, 1:-1, 1:-1]
 
-    def _is_brick_interior(self, brick: Brick, exterior_mask: np.ndarray) -> bool:
+    def _is_brick_interior(self, brick, exterior_mask):
         neighbors = [(-1, 0, 0), (1, 0, 0), (0, -1, 0), (0, 1, 0), (0, 0, -1), (0, 0, 1)]
         for x in range(brick.x, brick.x + brick.h):
             for y in range(brick.y, brick.y + brick.w):
@@ -319,7 +295,7 @@ class BrickStructure:
                         return False
         return True
 
-    def remove_interior_deferred_bricks(self, deferred_bricks: set[Brick]) -> list[Brick]:
+    def remove_interior_deferred_bricks(self, deferred_bricks):
         if not deferred_bricks:
             return []
         exterior_mask = self._compute_exterior_mask()
@@ -333,10 +309,10 @@ class BrickStructure:
                 removed_bricks.append(brick)
         return removed_bricks
 
-    def get_floating_bricks(self) -> list[Brick]:
+    def get_floating_bricks(self):
         return [brick for brick in self.bricks if self.brick_floats(brick)]
 
-    def remove_floating_bricks(self) -> list[Brick]:
+    def remove_floating_bricks(self):
         all_removed = []
         while True:
             floating = self.get_floating_bricks()
@@ -348,7 +324,7 @@ class BrickStructure:
                 all_removed.append(brick)
         return all_removed
 
-    def brick_floats(self, brick: Brick) -> bool:
+    def brick_floats(self, brick):
         if brick.z == 0:
             return False
         if np.any(self.voxel_occupancy[brick.slice_2d[0], brick.slice_2d[1], brick.z - 1]):
@@ -357,21 +333,16 @@ class BrickStructure:
             return False
         return True
 
+
 @dataclass(frozen=True)
 class SupportAudit:
-    ldr: str
     conflicts: np.ndarray
     connected: np.ndarray
 
 
-def audit_supports(structure: BrickStructure, voxels: np.ndarray) -> SupportAudit:
-    """Audit the exported bricks, including removal during instruction ordering.
-
-    Only vertical stud contacts connect bricks. Horizontal voxel adjacency alone
-    does not. Keep the largest grounded component and report everything omitted
-    from the requested geometry, rather than stale pre-reconnection diagnostics.
-    """
-    structure.to_ldr()
+def audit_supports(structure, voxels):
+    """Clean up the export and retain the largest grounded stud-connected component."""
+    structure.ordered_bricks()
     owners = np.full(voxels.shape, -1, dtype=np.int32)
     graph = nx.Graph()
     for index, brick in enumerate(structure.bricks):
@@ -391,22 +362,15 @@ def audit_supports(structure: BrickStructure, voxels: np.ndarray) -> SupportAudi
             if index not in main:
                 structure.voxel_occupancy[brick.slice] -= 1
         structure.bricks = [brick for index, brick in enumerate(structure.bricks) if index in main]
-    ldr = structure.to_ldr()
-    return SupportAudit(ldr, conflicts, connected)
+    structure.ordered_bricks()
+    return SupportAudit(conflicts, connected)
 
 
-def _add_internal_supports(voxels: np.ndarray, colors: np.ndarray, conflicts: np.ndarray,
-                           *, broad: bool, max_added: int) -> tuple[np.ndarray, np.ndarray]:
-    """Reinforce enclosed cavities without adding any exterior geometry.
-
-    Six-connected flood filling from outside keeps open cavities and gaps out of
-    the interior mask. Local reinforcement looks past the pipeline's two-cell
-    shell. Broader reinforcement fills enclosed cavities bordering an affected
-    voxel component, allowing hidden connections elsewhere in the same body.
-    """
+def _add_internal_supports(voxels, colours, conflicts, *, broad, max_added):
+    """Reinforce enclosed cavities near conflicts, without changing the exterior."""
     interior = binary_fill_holes(voxels) & ~voxels
     if not interior.any():
-        return voxels, colors
+        return voxels, colours
     if broad:
         bodies, _ = label(voxels)
         affected = np.unique(bodies[conflicts])
@@ -418,41 +382,32 @@ def _add_internal_supports(voxels: np.ndarray, colors: np.ndarray, conflicts: np
         additions = interior & binary_dilation(conflicts, iterations=3)
     count = int(additions.sum())
     if not count or count > max_added or int(voxels.sum()) + count > 100_000:
-        return voxels, colors
+        return voxels, colours
     # Inherit nearby material colors while leaving every existing cell intact.
     nearest = distance_transform_edt(~voxels, return_distances=False, return_indices=True)
-    repaired, repaired_colors = voxels.copy(), colors.copy()
+    repaired, repaired_colours = voxels.copy(), colours.copy()
     repaired[additions] = True
-    repaired_colors[additions] = colors[tuple(axis[additions] for axis in nearest)]
-    return repaired, repaired_colors
+    repaired_colours[additions] = colours[tuple(axis[additions] for axis in nearest)]
+    return repaired, repaired_colours
 
 
-def add_voxel_supports(voxels: np.ndarray, colors: np.ndarray, audit: SupportAudit,
-                       *, inside_only: bool = False, broad: bool = False, max_added: int = 20_000,
-                       max_grid_cells: int = 4_000_000) -> tuple[np.ndarray, np.ndarray]:
-    """Thicken conflict areas and bridge separate islands to the grounded model.
-
-    A second layer lets the packer stagger bricks across seams in a long flat
-    section. Small repairs include its immediate neighbors; a second attempt
-    can reinforce the entire affected horizontal section. Separate voxel islands
-    get a two-layer Manhattan bridge to the existing main structure. Existing
-    cells and colors are never removed or recolored. The converter first calls
-    this with inside_only=True and verifies the result before allowing exterior
-    reinforcement.
-    """
+def add_voxel_supports(voxels, colours, audit,
+                       *, inside_only=False, broad=False, max_added=20_000,
+                       max_grid_cells=4_000_000):
+    """Thicken seams and bridge islands, preserving existing cells and colours."""
     if not audit.conflicts.any() or max_added <= 0:
-        return voxels, colors
+        return voxels, colours
     shape = voxels.shape if inside_only else (*voxels.shape[:2], voxels.shape[2] + 1)
     if np.prod(shape) > max_grid_cells or max(shape) > 256:
-        return voxels, colors
+        return voxels, colours
     if inside_only:
-        return _add_internal_supports(voxels, colors, audit.conflicts, broad=broad, max_added=max_added)
-    additions: dict[tuple[int, int, int], np.ndarray] = {}
+        return _add_internal_supports(voxels, colours, audit.conflicts, broad=broad, max_added=max_added)
+    additions = {}
 
-    def add(coord, color):
+    def add(coord, colour):
         coord = tuple(int(value) for value in coord)
         if coord[2] >= voxels.shape[2] or not voxels[coord]:
-            additions[coord] = color
+            additions[coord] = colour
 
     for z in np.flatnonzero(audit.conflicts.any(axis=(0, 1))):
         plane = voxels[:, :, z]
@@ -465,10 +420,10 @@ def add_voxel_supports(voxels: np.ndarray, colors: np.ndarray, audit: SupportAud
         for x, y in np.argwhere(region):
             # Prefer the underside of elevated details; cap sections on the floor.
             support_z = z - 1 if z > 0 else z + 1
-            add((x, y, support_z), colors[x, y, z])
+            add((x, y, support_z), colours[x, y, z])
             # When the underside already exists, a cap can still bridge brick seams.
             if z > 0 and voxels[x, y, support_z]:
-                add((x, y, z + 1), colors[x, y, z])
+                add((x, y, z + 1), colours[x, y, z])
 
     components, _ = label(voxels)
     main_labels = np.unique(components[audit.connected])
@@ -484,31 +439,31 @@ def add_voxel_supports(voxels: np.ndarray, colors: np.ndarray, audit: SupportAud
             start_index = int(np.argmin(distances))
             start = coords[start_index]
             target = targets[indices[start_index]]
-            color = colors[tuple(start)]
+            colour = colours[tuple(start)]
             current = start.copy()
             # Descend to the anchor's height before bridging horizontally.
             for axis in (2, 0, 1):
                 while current[axis] != target[axis]:
-                    add(current, color)
-                    add(current + (0, 0, 1), color)
+                    add(current, colour)
+                    add(current + (0, 0, 1), colour)
                     current[axis] += 1 if target[axis] > current[axis] else -1
-            add(target + (0, 0, 1), color)
+            add(target + (0, 0, 1), colour)
 
     # A model with no retained ground needs a pillar before any seam repairs work.
     else:
         x, y, z = np.argwhere(voxels)[0]
         for support_z in range(z):
-            add((x, y, support_z), colors[x, y, z])
+            add((x, y, support_z), colours[x, y, z])
 
     if not additions or len(additions) > max_added or int(voxels.sum()) + len(additions) > 100_000:
-        return voxels, colors
+        return voxels, colours
     repaired = np.pad(voxels, ((0, 0), (0, 0), (0, 1)))
-    repaired_colors = np.pad(colors, ((0, 0), (0, 0), (0, 1)))
-    for coord, color in additions.items():
+    repaired_colours = np.pad(colours, ((0, 0), (0, 0), (0, 1)))
+    for coord, colour in additions.items():
         repaired[coord] = True
-        repaired_colors[coord] = color
+        repaired_colours[coord] = colour
     # Do not grow the grid when all supports fit under existing geometry.
     if not repaired[:, :, -1].any():
         repaired = repaired[:, :, :-1]
-        repaired_colors = repaired_colors[:, :, :-1]
-    return repaired, repaired_colors
+        repaired_colours = repaired_colours[:, :, :-1]
+    return repaired, repaired_colours
