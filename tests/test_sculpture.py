@@ -7,7 +7,7 @@ import pytest
 
 pytest.importorskip("networkx")
 pytest.importorskip("scipy")
-from ldraw_tools.sculpture.conversion import (
+from ldraw_tools.sculpture import (
     convert,
     load_voxels,
 )

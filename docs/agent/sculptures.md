@@ -83,4 +83,9 @@ Determinism applies to identical voxel input, software versions and settings; AI
 design is still generative. Connectivity checks do not certify load capacity,
 balance, assembly access or real-world stability.
 
-[Implementation notes](../../ldraw_tools/sculpture/README.md).
+## Implementation
+
+`ldraw_tools/sculpture.py` handles shape designs, bounded voxel input and MPD export.
+`ldraw_tools/sculpture_packing.py` performs fixed-seed packing and reconnection.
+`ldraw_tools/sculpture_structure.py` defines the six rectangular brick footprints,
+tracks occupancy and stud connectivity, and orders supported build steps.

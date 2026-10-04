@@ -3,7 +3,23 @@
 from dataclasses import dataclass
 import networkx as nx
 import numpy as np
-from .parts import part_for_dimensions
+
+
+BRICK_PARTS = {
+    (2, 4): "3001.DAT",
+    (2, 6): "2456.DAT",
+    (1, 4): "3010.DAT",
+    (1, 2): "3004.DAT",
+    (1, 1): "3005.DAT",
+    (2, 2): "3003.DAT",
+}
+
+
+def part_for_dimensions(h: int, w: int) -> str:
+    try:
+        return BRICK_PARTS[tuple(sorted((h, w)))]
+    except KeyError:
+        raise ValueError(f"No brick part for dimensions: {h}x{w}") from None
 
 
 @dataclass(frozen=True, order=True, kw_only=True)

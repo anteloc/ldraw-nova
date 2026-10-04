@@ -345,7 +345,7 @@ def parser():
 def run(args):
     if args.command == "sculpture":
         try:
-            from .sculpture.conversion import convert
+            from .sculpture import convert
         except ModuleNotFoundError as exc:
             raise ValueError("Install the optional sculpture dependencies: uv sync --extra sculpture (or pip install '.[sculpture]')") from exc
         text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)

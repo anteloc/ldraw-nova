@@ -8,8 +8,8 @@ import pytest
 
 pytest.importorskip("scipy")
 pytest.importorskip("networkx")
-from ldraw_tools.sculpture.design import rasterize
-from ldraw_tools.sculpture.conversion import convert, load_voxels
+from ldraw_tools.sculpture import rasterize
+from ldraw_tools.sculpture import convert, load_voxels
 
 
 def design(shapes, **kwargs):

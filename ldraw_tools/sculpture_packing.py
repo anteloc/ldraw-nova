@@ -3,8 +3,7 @@
 from typing import Callable
 import networkx as nx
 import numpy as np
-from .parts import BRICK_PARTS
-from .structure import Brick, ConnectivityBrickStructure
+from .sculpture_structure import BRICK_PARTS, Brick, ConnectivityBrickStructure
 
 
 def first_zero_idx(arr: np.ndarray, axis: int = -1) -> np.ndarray:
