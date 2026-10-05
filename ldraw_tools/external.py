@@ -211,17 +211,13 @@ def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90,
     # Unique temporary outputs ensure an old artifact cannot make a failed run pass.
     with TemporaryDirectory(prefix=".render-", dir=outdir) as temp:
         path,library,embedded_names=cad_source(path,library,temp)
-        # LeoCAD limits image steps to 255; review images must show the full assembly.
-        snapshot = Path(temp) / "complete-model.mpd"
-        snapshot.write_bytes(b"\n".join(line for line in Path(path).read_bytes().splitlines()
-                                      if line.upper().split()[:2] not in ([b"0", b"STEP"], [b"0", b"ROTSTEP"])) + b"\n")
         for view in views:
             if view not in {"home", "front", "back", "left", "right", "top", "bottom"}:
                 raise ValueError(f"Unknown view {view}")
             target = Path(temp) / f"{view}.png"
             command = ["leocad", "-l", str(library), "-i", str(target), "-w", "1000", "-h", "800",
                        "--aa-samples", "4", "--shading", "full", "--line-width", "1",
-                       "--no-highlight", "--no-fade-steps", str(snapshot)]
+                       "--no-highlight", "--no-fade-steps", str(Path(path).resolve())]
             if bounds is None:
                 command += ["--viewpoint", view]
             if bounds is not None:

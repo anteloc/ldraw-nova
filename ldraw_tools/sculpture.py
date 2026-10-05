@@ -8,7 +8,6 @@ from pathlib import Path
 
 import numpy as np
 from ldraw import Model
-from ldraw.lines import Comment
 from scipy.ndimage import binary_fill_holes, distance_transform_edt
 
 from .builder import serialize_mpd
@@ -238,6 +237,27 @@ def fill_interior(occupied, colours, thickness):
     return filled, filled_colours, occupied.copy()
 
 
+def _group_steps(text, bricks_per_step):
+    """Group consecutive placements without changing their build order."""
+    lines = [line for line in text.splitlines() if line.upper().split()[:2] != ["0", "STEP"]]
+    remaining = sum(line.startswith("1 ") for line in lines)
+    output = []
+    placed = 0
+    for line in lines:
+        output.append(line)
+        if line.startswith("1 "):
+            placed += 1
+            remaining -= 1
+            if placed % bricks_per_step == 0 and remaining:
+                output.append("0 STEP")
+    return "\r\n".join(output) + "\r\n"
+
+
+def render_copy(text, brick_count):
+    """LeoCAD image export stops at step 255; keep this copy separate from instructions."""
+    return _group_steps(text, max(3, (brick_count + 254) // 255))
+
+
 def convert(path, *, name="sculpture.mpd", title="Sculpture model"):
     """Fill the shell, pack and reconnect bricks, then clean up and order the export."""
     original, colours = load_voxels(path)
@@ -286,12 +306,11 @@ def convert(path, *, name="sculpture.mpd", title="Sculpture model"):
     model.set_header(description=title, name=section, author="LDraw Nova", ldraw_org="Model")
     for brick in structure.ordered_bricks():
         model.add(brick.to_piece())
-        model.add(Comment("STEP"))
-    text = serialize_mpd(model)
+    text = _group_steps(serialize_mpd(model), 3)
     report = dict(checks_passed=True, mode="sculpture", algorithm="voxel2brick",
                   seed=42, input_voxels=int(original.sum()),
                   interior_support_voxels=original_count - int(original.sum()),
-                  brick_count=len(structure.bricks), step_count=len(structure.bricks),
+                  brick_count=len(structure.bricks), step_count=(len(structure.bricks) + 2) // 3,
                   support_repair_rounds=repair_rounds,
                   support_voxels_added=int(occupied.sum()) - original_count,
                   unresolved_voxels=int(audit.conflicts.sum()),

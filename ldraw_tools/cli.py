@@ -69,6 +69,7 @@ def parser():
     d = sculpture.add_parser("convert", help="Pack voxels into bricks and order the building steps")
     d.add_argument("voxels", help="JSON shape design or voxels: [[x,y,z,LDraw colour], ...]; raw voxels use z-up brick layers")
     d.add_argument("--output", required=True, help="Self-contained .mpd for the existing viewer/player")
+    d.add_argument("--render-output", help="Optional MPD copy with at most 255 steps for LeoCAD snapshots")
     d.add_argument("--title", default="Sculpture model")
     d.add_argument("--report")
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
@@ -355,7 +356,9 @@ def run(args):
         if args.sculpture_command == "preview":
             from .sculpture_preview import preview
             return preview(args.design, args.output, args.voxels_output, repair=args.repair), 0
-        from .sculpture import convert
+        from .sculpture import convert, render_copy
+        if args.render_output and Path(args.render_output).resolve() == Path(args.output).resolve():
+            raise ValueError("The render copy must be separate from the instruction model")
         text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
         parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow)
         model, issues = validate_text(text, parts)
@@ -364,6 +367,9 @@ def run(args):
         if report["checks_passed"]:
             atomic_write(args.output, text)
             report["output"] = args.output
+            if args.render_output:
+                atomic_write(args.render_output, render_copy(text, report["brick_count"]))
+                report["render_output"] = args.render_output
         return report, 0 if report["checks_passed"] else 1
     if args.command == "examples":
         from .examples import search_examples
