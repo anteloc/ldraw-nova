@@ -63,6 +63,8 @@ def parser():
     c.add_argument("--output", required=True, help="Self-contained .mpd for the existing viewer/player")
     c.add_argument("--title", default="Sculpture model")
     c.add_argument("--report")
+    c.add_argument("--preview", help="Review a lightweight draft PNG instead of final conversion")
+    c.add_argument("--repair", action="store_true", help="Repair the last failed draft before accepting it")
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
@@ -344,6 +346,9 @@ def parser():
 
 def run(args):
     if args.command == "sculpture":
+        if args.preview:
+            from .sculpture_preview import preview
+            return preview(args.voxels, args.preview, args.output, repair=args.repair), 0
         from .sculpture import convert
         text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
         parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow)
