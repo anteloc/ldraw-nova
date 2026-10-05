@@ -64,6 +64,18 @@ To stop it:
 docker compose down
 ```
 
+## Optional sculpture model tool
+
+- Can generate models faster and at lower cost.
+- Uses basic rectangular bricks only.
+- Deterministically converts voxels into bricks using [legolization algorithms](https://dl.acm.org/doi/epdf/10.1145/2816795.2818091).
+
+**Usage:** Ask for “a sculpture model of …” or enable **Sculpture model** under **Additional settings** in the web composer.
+
+**Web app setup requires both PRs:** Pull the [toolkit PR](https://github.com/jjohnson5253/ldraw-nova/pull/1) and [web app PR](https://github.com/jjohnson5253/ldraw-nova-docker/pull/1), then build both repositories together.
+
+See [the workflow](docs/agent/sculptures.md) for shape designs and [the tool reference](docs/agent/tooling.md#sculpture-conversion) for standalone installation and usage.
+
 ## Why all of this?
 
 Well, to summarize: I did this in order to get **agentic LLMs capable of designing buildable, physical things!**
