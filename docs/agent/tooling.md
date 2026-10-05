@@ -1,5 +1,23 @@
 # Tool reference
 
+## Sculpture conversion
+
+Install with `uv sync` (or `pip install .`). Run the converter directly:
+
+```sh
+./ldraw-agent sculpture output/design.json --output output/sculpture.mpd --report output/checks.json
+```
+
+For a lightweight draft, add `--preview output/draft.png` and set `--output` to a voxel JSON file.
+The web workflow permits three failed attempts and one preview review; the final attempt can
+repair the draft with `--repair`. Accepted solid voxels run through the final converter once.
+Nova's ordinary publication validates, renders, exports the parts list and creates the chat card.
+
+Input can also be `{"voxels": [[x, y, z, LDraw_colour], ...]}` with z-up brick-height layers.
+Final conversion retains fixed-seed, colour-constrained packing, reconnection, connectivity
+cleanup, supported instruction ordering and interior-first support repair. Software checks
+do not prove physical strength.
+
 ## Build manuals for any atlas
 
 ```sh

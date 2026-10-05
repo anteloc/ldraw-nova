@@ -74,7 +74,7 @@ docker compose down
 
 **Web app setup requires both PRs:** Pull the [toolkit PR](https://github.com/jjohnson5253/ldraw-nova/pull/1) and [web app PR](https://github.com/jjohnson5253/ldraw-nova-docker/pull/1), then build both repositories together.
 
-See [the workflow](docs/agent/sculptures.md) for installation and input format.
+See [the workflow](docs/agent/sculptures.md) for shape designs and [the tool reference](docs/agent/tooling.md#sculpture-conversion) for standalone installation and usage.
 
 ## Why all of this?
 
