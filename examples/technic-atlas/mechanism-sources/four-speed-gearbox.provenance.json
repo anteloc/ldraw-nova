@@ -1,0 +1,84 @@
+{
+  "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/data/models-annotated/42110-1.mpd",
+  "source_sha256": "b27fb06903785d25418371314af7aec01ffe4b5df3b0154a4a1ea7accb0267dc",
+  "source_section": "42110 - reargearbox.ldr",
+  "parser_section": "42110 - reargearbox.ldr",
+  "root": "atlas-four-speed-gearbox-00-42110---reargearbox.ldr",
+  "renames": {
+    "42110 - reargearbox.ldr": "atlas-four-speed-gearbox-00-42110---reargearbox.ldr",
+    "42110 - 35188.dat": "atlas-four-speed-gearbox-01-42110---35188.dat",
+    "s\\42110 - 35188s01.dat": "atlas-four-speed-gearbox-02-42110---35188s01.dat",
+    "48\\42110 - 1-6ring6.dat": "atlas-four-speed-gearbox-03-42110---1-6ring6.dat",
+    "42110 - reargearbox2.ldr": "atlas-four-speed-gearbox-04-42110---reargearbox2.ldr",
+    "42110 - 18575.dat": "atlas-four-speed-gearbox-05-42110---18575.dat",
+    "s\\42110 - 32269s01.dat": "atlas-four-speed-gearbox-06-42110---32269s01.dat",
+    "s\\42110 - 32269s02.dat": "atlas-four-speed-gearbox-07-42110---32269s02.dat"
+  },
+  "attribution": [
+    {
+      "section": "42110 - reargearbox.ldr",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    },
+    {
+      "section": "42110 - 35188.dat",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    },
+    {
+      "section": "s\\42110 - 35188s01.dat",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    },
+    {
+      "section": "48\\42110 - 1-6ring6.dat",
+      "author": "Max Martin Richter [MMR1988]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    },
+    {
+      "section": "42110 - reargearbox2.ldr",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    },
+    {
+      "section": "42110 - 18575.dat",
+      "author": "Merlijn Wissink [legolijntje]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    },
+    {
+      "section": "s\\42110 - 32269s01.dat",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    },
+    {
+      "section": "s\\42110 - 32269s02.dat",
+      "author": "Philippe Hurbain [Philo]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    }
+  ],
+  "changes": [],
+  "output_sha256": "ade5c739b2a2b1d3cbac4cbb21d0317e5730df2711556b4677fbfd164f7cc689",
+  "note": "Original authors and licences retained. Source bytes unchanged. Extraction is not validation or permission to relicense.",
+  "summary": "Selected four-speed topology of `42110 - reargearbox.ldr` from Hurbain\u2019s 42110 model. Mecha identifies it as the sequential four-speed core at full-model occurrence `0/1/133`; its surrounding shafts and external selector control are outside this section. One exact coincident 4519.dat axle duplicate (source index 43, identical to retained index 39) is removed in this derived copy; the original model remains unchanged.",
+  "source_project": "ldraw-mecha",
+  "selected_on": "2026-10-08",
+  "documentation": {
+    "docs/reference/42110/sequential-gearbox.md": "1999fb3b8cc1650930fd8131e51915a3284f6c186aa4e9b5be8a1ecc064ad137",
+    "docs/reference/42110/range-direction-gearbox.md": "a5ac229b0ae66607eff19d78be0f3bc8ccc66ba70d246167d5a3cfbc1658e5e2"
+  },
+  "source_author": "Philippe Hurbain [Philo]",
+  "source_license": "CCAL 2.0",
+  "repairs": [
+    {
+      "kind": "remove_exact_coincident_duplicate",
+      "source_section": "42110 - reargearbox.ldr",
+      "removed_source_type1_index": 43,
+      "retained_source_type1_index": 39,
+      "original_line": "1 71 -100 -20 -40 -1 0 0 0 0.974 -0.225 0 -0.225 -0.974 4519.dat",
+      "reason": "Both 4519.dat axle placements have the same colour, position and matrix; Nova assembly validation rejects the duplicate.",
+      "physical_placements_before": 67,
+      "physical_placements_after": 66
+    }
+  ],
+  "derived_sha256": "e5fdf0c10388c3e66bdeb70851b7ab412dd7f1c02ee702cb878f0547fbd7a93b"
+}

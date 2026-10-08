@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "status": "Selected values retained from sibling reports; no motion or Blender checks rerun",
+  "source_manifest": "sources.json",
+  "observations": [
+    {
+      "case": "w16",
+      "source": "examples/reference/42083-w16-reference-review/review.json",
+      "pointer": "/inventory",
+      "value": {
+        "parts": 223,
+        "nodes": 226,
+        "moving": 66,
+        "bodies": 36,
+        "signals": 20,
+        "checks": 16
+      }
+    },
+    {
+      "case": "w16",
+      "source": "examples/reference/42083-w16-reference-review/review.json",
+      "pointer": "/findings",
+      "value": [
+        "The source description says V8/two cranks; the selected section contains 16 pistons and 3 crankshafts.",
+        "The 20T/12T double-bevel pair is used on parallel shafts, not as a right-angle bevel drive.",
+        "Raw gear-mesh ratios use part-local axis directions; convert to the common +Z body axes.",
+        "No new sampled surface crossings in the retained clearance report does not establish bore containment.",
+        "The slider-crank helper assumes a +Z planar crank and a cylinder line through its centre."
+      ]
+    },
+    {
+      "case": "w16",
+      "source": "examples/reference/42083-w16-reference-review/review.json",
+      "pointer": "/meshes",
+      "value": [
+        {
+          "a": "68",
+          "b": "84/16",
+          "a_body": "crank_c",
+          "b_body": "crank_l",
+          "ratio_about_plus_z": -1.0,
+          "reported_ratio": 1.0,
+          "distance_ldu": 59.99999999999999,
+          "plane_error_ldu": 0.0
+        },
+        {
+          "a": "68",
+          "b": "85/16",
+          "a_body": "crank_c",
+          "b_body": "crank_r",
+          "ratio_about_plus_z": -1.0,
+          "reported_ratio": 1.0,
+          "distance_ldu": 59.99999999999999,
+          "plane_error_ldu": 0.0
+        },
+        {
+          "a": "82",
+          "b": "83",
+          "a_body": "crank_c",
+          "b_body": "input_shaft",
+          "ratio_about_plus_z": -0.6,
+          "reported_ratio": -0.6,
+          "distance_ldu": 40.0,
+          "plane_error_ldu": 0.0
+        }
+      ]
+    },
+    {
+      "case": "defender",
+      "source": "examples/reference/42110-reference-review/review.json",
+      "pointer": "/findings",
+      "value": [
+        "Wheel spin uses +/-0.978102966480559 times the halfshaft signal. This is a projection approximation, not exact 1:1 CV angular transfer.",
+        "Winch contains two checked bevel meshes linking three rotating bodies, despite older prose saying three meshes.",
+        "Internal propshaft phase corrections are 0.0117/0.0191 degrees; the old within-0.01-degree summary is too tight.",
+        "Forward engine_per_drive is negative about +ZC; reverse is positive. Values in the old overview were magnitudes.",
+        "Suspension, rope/hose/bands, ratchet clicking and body openings are not implemented motion examples.",
+        "Passing differential/mesh/clutch checks does not prove tooth phase, full CV behavior, cam contact, transition synchronization or clearance."
+      ]
+    },
+    {
+      "case": "suspension",
+      "source": "examples/reference/42110-suspension-standalone-reference-review/review.json",
+      "pointer": "/extraction",
+      "value": {
+        "parts": 259,
+        "max_world_matrix_error": 5.684341886080802e-14,
+        "counts": {
+          "moving": 117,
+          "mount": 38,
+          "frame": 104
+        }
+      }
+    },
+    {
+      "case": "suspension",
+      "source": "examples/reference/42110-suspension-standalone-reference-review/review.json",
+      "pointer": "/corners/fl/roles",
+      "value": {
+        "upper": "26",
+        "lower": "11",
+        "bearing": "30",
+        "yoke": "14",
+        "wheel": [
+          "38",
+          "251",
+          "252"
+        ],
+        "links": [
+          "77"
+        ],
+        "shocks": [
+          {
+            "rod": "56",
+            "cylinder": "57",
+            "spring": "58"
+          },
+          {
+            "rod": "59",
+            "cylinder": "60",
+            "spring": "61"
+          }
+        ]
+      }
+    },
+    {
+      "case": "suspension",
+      "source": "examples/reference/42110-suspension-standalone-reference-review/review.json",
+      "pointer": "/corners/fl/geometry/arm_length",
+      "value": 100.0
+    },
+    {
+      "case": "suspension",
+      "source": "examples/reference/42110-suspension-standalone-reference-review/review.json",
+      "pointer": "/corners/fl/geometry/coupler_holes",
+      "value": [
+        [
+          158.24986,
+          -68.397978,
+          -300.049926
+        ],
+        [
+          158.24986,
+          -148.397978,
+          -299.809926
+        ]
+      ]
+    },
+    {
+      "case": "suspension",
+      "source": "examples/reference/42110-suspension-standalone-reference-review/review.json",
+      "pointer": "/corners/fl/geometry/shocks/0/free_length",
+      "value": 110.028
+    },
+    {
+      "case": "suspension",
+      "source": "examples/reference/42110-suspension-standalone-reference-review/review.json",
+      "pointer": "/corners/fl/geometry/travel_limit",
+      "value": 30.5
+    },
+    {
+      "case": "suspension",
+      "source": "examples/reference/42110-suspension-standalone-reference-review/review.json",
+      "pointer": "/corners/rl/geometry/travel_limit",
+      "value": 40.5
+    },
+    {
+      "case": "chiron",
+      "source": "examples/reference/42083-mechanisms-reference-review/review.json",
+      "pointer": "/reconstruction",
+      "value": {
+        "R/S6_12T": {
+          "id": "395",
+          "centre": [
+            80.0,
+            0.0,
+            40.0
+          ],
+          "like": "0/90/14",
+          "partner": "0/90/84",
+          "shaft": "stage-1 output shaft 0/90/53 (empty slot between beams 0/90/86 and 0/90/68)"
+        },
+        "R/S5_12T": {
+          "id": "396",
+          "centre": [
+            -80.0,
+            -40.0,
+            160.0
+          ],
+          "like": "0/90/14",
+          "partner": "0/90/13",
+          "shaft": "low-range shaft 0/90/30 (empty slot beside 20T 0/90/13)"
+        }
+      }
+    },
+    {
+      "case": "chiron",
+      "source": "examples/reference/42083-mechanisms-reference-review/review.json",
+      "pointer": "/wing_translation",
+      "value": [
+        {
+          "wing": 0,
+          "translation_ldu": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_error": 0.0,
+          "max_closure_error_ldu": 6.290216418847194e-07
+        },
+        {
+          "wing": 0.13,
+          "translation_ldu": [
+            0.0,
+            -5.095878233278465,
+            1.016840859237032
+          ],
+          "rotation_error": 0.0,
+          "max_closure_error_ldu": 5.974122956331485e-07
+        },
+        {
+          "wing": 0.27,
+          "translation_ldu": [
+            0.0,
+            -10.680570677678473,
+            1.3632836970378737
+          ],
+          "rotation_error": 0.0,
+          "max_closure_error_ldu": 5.506821025846875e-07
+        },
+        {
+          "wing": 0.4,
+          "translation_ldu": [
+            0.0,
+            -15.863053233604926,
+            0.9840544010525658
+          ],
+          "rotation_error": 0.0,
+          "max_closure_error_ldu": 4.96430061502906e-07
+        }
+      ]
+    },
+    {
+      "case": "chiron",
+      "source": "examples/reference/42083-mechanisms-reference-review/review.json",
+      "pointer": "/paddle_only_ratchet_angle",
+      "value": -0.0
+    },
+    {
+      "case": "mustang-audit",
+      "source": "examples/reference/10265-discovery-audit/comparison.json",
+      "pointer": "/raw/tested_parts",
+      "value": 1441
+    },
+    {
+      "case": "mustang-audit",
+      "source": "examples/reference/10265-discovery-audit/comparison.json",
+      "pointer": "/raw/contacts",
+      "value": 29
+    },
+    {
+      "case": "mustang-audit",
+      "source": "examples/reference/10265-discovery-audit/comparison.json",
+      "pointer": "/raw/axles/total",
+      "value": 25
+    },
+    {
+      "case": "mustang-audit",
+      "source": "examples/reference/10265-discovery-audit/comparison.json",
+      "pointer": "/raw/axles/with_axle_hole_contact",
+      "value": 0
+    },
+    {
+      "case": "mustang-audit",
+      "source": "examples/reference/10265-discovery-audit/comparison.json",
+      "pointer": "/normalized/contacts",
+      "value": 921
+    },
+    {
+      "case": "mustang-audit",
+      "source": "examples/reference/10265-discovery-audit/comparison.json",
+      "pointer": "/normalized/axles/with_axle_hole_contact",
+      "value": 25
+    },
+    {
+      "case": "mustang-audit",
+      "source": "examples/reference/10265-discovery-audit/comparison.json",
+      "pointer": "/remaining/crank_to_frame",
+      "value": "Unverified surface coupling; not rigged"
+    }
+  ]
+}

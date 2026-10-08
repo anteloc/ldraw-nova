@@ -1,0 +1,381 @@
+{
+  "version": 1,
+  "imported_on": "2026-10-08",
+  "scope": "Technic construction knowledge; not executable recipes or a new physical verification claim",
+  "source_project": "ldraw-mecha",
+  "source_root_hint_relative_to_nova": "../ldraw-mecha",
+  "source_revision": "a1182a3f87e323003b64fe79d4f32f040668a95d",
+  "source_worktree_modified": true,
+  "modified_source_files_used": [
+    "docs/part-information.md",
+    "docs/reference/42083-mechanisms/cascaded-gearbox.md",
+    "docs/reference/42083-mechanisms/independent-rigs.md",
+    "docs/reference/42083-mechanisms/paddle-stepper.md",
+    "docs/reference/42083-mechanisms/scope-and-evidence.md",
+    "docs/reference/42083-mechanisms/wing-lift.md",
+    "docs/reference/42083-w16/README.md",
+    "docs/reference/42083-w16/central-eight.md",
+    "docs/reference/42083-w16/gear-train.md",
+    "docs/reference/42083-w16/scope-and-evidence.md",
+    "docs/reference/42110-suspension-standalone/README.md",
+    "docs/reference/42110-suspension-standalone/extraction-and-mounts.md",
+    "docs/reference/42110-suspension-standalone/scope-and-evidence.md",
+    "docs/reference/42110-suspension-standalone/wishbones-and-links.md",
+    "docs/reference/42110/README.md",
+    "docs/reference/42110/engine.md",
+    "docs/reference/42110/range-direction-gearbox.md",
+    "docs/reference/42110/rear-axle.md",
+    "docs/reference/42110/scope-and-evidence.md",
+    "docs/reference/42110/sequential-gearbox.md",
+    "docs/reference/42110/steering.md"
+  ],
+  "identity_note": "File hashes identify the actual working-tree inputs. The revision alone is insufficient.",
+  "attribution": {
+    "author": "Carlos Antelo",
+    "project_url": "https://github.com/anteloc/ldraw-mecha",
+    "documentation_license": "CC BY-SA 4.0",
+    "42083_42110_model_author": "Philippe Hurbain [Philo]",
+    "model_license": "CCAL 2.0",
+    "changes": "Construction summaries, qualifications, Nova integration, design prompts and selected evidence values; previews copied unchanged."
+  },
+  "cases": {
+    "w16": {
+      "report": "examples/reference/42083-w16-reference-review/review.json",
+      "example_sources": [
+        "examples/reference/42083-w16/engine-extracted.mpd",
+        "examples/reference/42083-w16/plan.json"
+      ],
+      "local_model": "data/models-annotated/42083-1.mpd",
+      "section": "42083 - engine.ldr",
+      "qualification": "Cutaway hides fixed parts; centred planar linkage; source annotation misidentifies the inventory.",
+      "documents": [
+        "docs/reference/42083-w16/README.md",
+        "docs/reference/42083-w16/scope-and-evidence.md",
+        "docs/reference/42083-w16/gear-train.md",
+        "docs/reference/42083-w16/slider-crank.md",
+        "docs/reference/42083-w16/central-eight.md",
+        "docs/reference/42083-w16/lower-banks.md"
+      ]
+    },
+    "defender": {
+      "report": "examples/reference/42110-reference-review/review.json",
+      "example_sources": [
+        "examples/reference/42110/plan.json"
+      ],
+      "local_model": "data/models-annotated/42110-1.mpd",
+      "section": "42110 - main.ldr",
+      "qualification": "Fixed suspension height; approximate hub spin and cam/selector laws; rope and ratchet action absent.",
+      "documents": [
+        "docs/reference/42110/README.md",
+        "docs/reference/42110/scope-and-evidence.md",
+        "docs/reference/42110/engine.md",
+        "docs/reference/42110/steering.md",
+        "docs/reference/42110/winch.md",
+        "docs/reference/42110/front-axle.md",
+        "docs/reference/42110/rear-axle.md",
+        "docs/reference/42110/centre-differential.md",
+        "docs/reference/42110/internal-propshafts.md",
+        "docs/reference/42110/range-direction-gearbox.md",
+        "docs/reference/42110/sequential-gearbox.md"
+      ]
+    },
+    "suspension": {
+      "report": "examples/reference/42110-suspension-standalone-reference-review/review.json",
+      "example_sources": [
+        "examples/reference/42110-suspension-standalone/source/42110-suspension-standalone.mpd",
+        "examples/reference/42110-suspension-standalone/source/idmap.json",
+        "examples/reference/42110-suspension-standalone/keep.json",
+        "examples/reference/42110-suspension-standalone/plan.json"
+      ],
+      "local_model": "data/models-annotated/42110-1.mpd",
+      "section": "42110 - main.ldr",
+      "qualification": "Derived full-droop extract omits some mounts and Cardan inputs; separate steering/drive absent; spring mesh scaling is animation-only.",
+      "documents": [
+        "docs/reference/42110-suspension-standalone/README.md",
+        "docs/reference/42110-suspension-standalone/scope-and-evidence.md",
+        "docs/reference/42110-suspension-standalone/extraction-and-mounts.md",
+        "docs/reference/42110-suspension-standalone/wishbones-and-links.md",
+        "docs/reference/42110-suspension-standalone/halfshafts.md",
+        "docs/reference/42110-suspension-standalone/shocks.md"
+      ]
+    },
+    "chiron": {
+      "report": "examples/reference/42083-mechanisms-reference-review/review.json",
+      "example_sources": [
+        "examples/reference/42083-mechanisms/wing/source/42083-wing.mpd",
+        "examples/reference/42083-mechanisms/wing/source/idmap.json",
+        "examples/reference/42083-mechanisms/wing/plan.json",
+        "examples/reference/42083-mechanisms/gearbox/source/42083-gearbox.mpd",
+        "examples/reference/42083-mechanisms/gearbox/source/idmap.json"
+      ],
+      "local_model": "data/models-annotated/42083-1.mpd",
+      "section": "42083 - chiron.ldr",
+      "qualification": "Wing upper pivot assumed fixed; paddle/shift independently prescribed; gearbox adds two reconstruction gears.",
+      "documents": [
+        "docs/reference/42083-mechanisms/wing-lift.md",
+        "docs/reference/42083-mechanisms/paddle-stepper.md",
+        "docs/reference/42083-mechanisms/cascaded-gearbox.md",
+        "docs/reference/42083-mechanisms/independent-rigs.md",
+        "docs/reference/42083-mechanisms/scope-and-evidence.md"
+      ]
+    },
+    "mustang-audit": {
+      "report": "examples/reference/10265-discovery-audit/comparison.json",
+      "example_sources": [
+        "examples/reference/10265-discovery-audit/README.md"
+      ],
+      "local_model": "data/models-annotated/10265-1_B-Model.mpd",
+      "section": null,
+      "qualification": "Crank-to-frame surface coupling unresolved; transform correction is a Mecha analysis policy, not new Nova behaviour.",
+      "documents": []
+    }
+  },
+  "local_models": {
+    "data/models-annotated/10265-1_B-Model.mpd": {
+      "local_sha256": "566c4eebc488c0311ae15e9ae1fc32641d7e5174d15852e720626440b44d1155",
+      "sibling_sha256": "566c4eebc488c0311ae15e9ae1fc32641d7e5174d15852e720626440b44d1155",
+      "identical_bytes": true
+    },
+    "data/models-annotated/42083-1.mpd": {
+      "local_sha256": "72df8a1a852d6584eeba935320de411b9dc9dc23582177336341af68156469db",
+      "sibling_sha256": "72df8a1a852d6584eeba935320de411b9dc9dc23582177336341af68156469db",
+      "identical_bytes": true
+    },
+    "data/models-annotated/42110-1.mpd": {
+      "local_sha256": "b27fb06903785d25418371314af7aec01ffe4b5df3b0154a4a1ea7accb0267dc",
+      "sibling_sha256": "b27fb06903785d25418371314af7aec01ffe4b5df3b0154a4a1ea7accb0267dc",
+      "identical_bytes": true
+    }
+  },
+  "copied_previews": [
+    {
+      "path": "images/w16-cranks.png",
+      "source": "examples/reference/42083-w16/pose-crank-quarter.png",
+      "sha256": "da5a128ccd9d2b4169513b2cf3289605c9be07cc834a29b31ef4465ee78bd08e"
+    },
+    {
+      "path": "images/suspension-corner.png",
+      "source": "examples/reference/42110-suspension-standalone/preview-corner-rest.png",
+      "sha256": "32ff85a19467808c34287013a9eff728731d5fe7023128b293a9c572af96a03d"
+    },
+    {
+      "path": "images/wing-lift.png",
+      "source": "examples/reference/42083-mechanisms/wing/previews/lifted.png",
+      "sha256": "1141a34285e90fe8e89d655c03cde0ca0df41a66d4b847e4fafb4d11f32dcc02"
+    }
+  ],
+  "source_files": {
+    "ATTRIBUTION.md": {
+      "sha256": "552c5afe1e39d07ca525e2552fa3fd31bb170c5fd30b010106562d6647b58fd9",
+      "bytes": 1417
+    },
+    "docs/discovery-quality.md": {
+      "sha256": "32ae5d39f6e7390962ad97fd4252b11c4130b4e97761e4f9afd27b027f33d6fa",
+      "bytes": 9014
+    },
+    "docs/part-information.md": {
+      "sha256": "707ebda4022208220e08133649ed92cb382feff9afa58a50b0def6061eeb616c",
+      "bytes": 7697
+    },
+    "docs/reference/42083-mechanisms/cascaded-gearbox.md": {
+      "sha256": "aa29c7dbe4684b71566ccef3ffee067f826fdfe89971db08ff8efdaf294b9fe0",
+      "bytes": 7002
+    },
+    "docs/reference/42083-mechanisms/independent-rigs.md": {
+      "sha256": "4c9d2bbac2ffe2ca158fccd219be0a31f5ca00e8b116b7fa2e0dc42c3b57260b",
+      "bytes": 6662
+    },
+    "docs/reference/42083-mechanisms/paddle-stepper.md": {
+      "sha256": "98741e88dfd3e10203549050779610d9cdfc1a00ad86e0630010d013c52d1ce9",
+      "bytes": 5873
+    },
+    "docs/reference/42083-mechanisms/scope-and-evidence.md": {
+      "sha256": "67ce9272ab06cce7efa4cc3d6662498bd47c7ac590fadf862ae3536510b38484",
+      "bytes": 7607
+    },
+    "docs/reference/42083-mechanisms/wing-lift.md": {
+      "sha256": "8508957fbb9ee986c1bb2683257df382fd0c401b28e65c4dc4b35b1baa0d2f1a",
+      "bytes": 5626
+    },
+    "docs/reference/42083-w16/README.md": {
+      "sha256": "f2cd6b384b2b2abf7e55be0a122d8bb5fa1673dc6e1c543d7ff56e845b5f6a9a",
+      "bytes": 5030
+    },
+    "docs/reference/42083-w16/central-eight.md": {
+      "sha256": "6d974f1651efe807b075002ed8c9504dd8297382f212aee7ab941f6c5bc31fd4",
+      "bytes": 4411
+    },
+    "docs/reference/42083-w16/gear-train.md": {
+      "sha256": "c20aa261c542e43c3eedc5cb191de2341c6c79d6f086778d7a968c2ec8bcdda4",
+      "bytes": 4464
+    },
+    "docs/reference/42083-w16/lower-banks.md": {
+      "sha256": "e86eef566f788acde3332b2ddd7def7b15c4a2ae349c0dfa2aad90f8d6622203",
+      "bytes": 4039
+    },
+    "docs/reference/42083-w16/scope-and-evidence.md": {
+      "sha256": "875874f0b7c8dab3cdd5753686a1858be615c054a27fc7fe444aa19746a922b1",
+      "bytes": 7931
+    },
+    "docs/reference/42083-w16/slider-crank.md": {
+      "sha256": "37504b781099923d24bbf59b8960be275b90f030b17fe25122fc78b91dd46372",
+      "bytes": 5177
+    },
+    "docs/reference/42110-suspension-standalone/README.md": {
+      "sha256": "3423a97ac26076584960ecd33675e3d579c97cfbb6d106201f5a717ffab5ad62",
+      "bytes": 5072
+    },
+    "docs/reference/42110-suspension-standalone/extraction-and-mounts.md": {
+      "sha256": "b174c7f267d7bedb130128935592199012a4c5a3bf42ab69e6d0fe7968a104d6",
+      "bytes": 5365
+    },
+    "docs/reference/42110-suspension-standalone/halfshafts.md": {
+      "sha256": "02ae30df40e030343b978c0ecda6316990977057c45e063824c175c6df37863a",
+      "bytes": 3637
+    },
+    "docs/reference/42110-suspension-standalone/scope-and-evidence.md": {
+      "sha256": "2044979169450101dc6305a135f53242648bf9b8ed3d598cf9ebb4b7eeb77821",
+      "bytes": 8998
+    },
+    "docs/reference/42110-suspension-standalone/shocks.md": {
+      "sha256": "66db51c2ca2a7bd048c6eac301770870b9d71d8f3cd8ea42929eb4e0e14fa650",
+      "bytes": 4428
+    },
+    "docs/reference/42110-suspension-standalone/wishbones-and-links.md": {
+      "sha256": "493ee32ed9fc5734e38a78852edb10d66ecbdbead70c392d42dec4094072c30a",
+      "bytes": 4751
+    },
+    "docs/reference/42110/README.md": {
+      "sha256": "2436eebff67b36485d2e3405bfd16b06d4a28c48ff7f7d17bf20e99d9fbdca8b",
+      "bytes": 5806
+    },
+    "docs/reference/42110/centre-differential.md": {
+      "sha256": "ae23c4318b4185bc1810d3477e63332c7aa5aec0b6b45834c5fed21cbbb606f1",
+      "bytes": 3031
+    },
+    "docs/reference/42110/engine.md": {
+      "sha256": "f4a857f8443ad4e188f549d6287c2e6fd88268ea0ab93bea9a1b468d964514b7",
+      "bytes": 3395
+    },
+    "docs/reference/42110/front-axle.md": {
+      "sha256": "9a1cd4fb24371630fefa97f87a4b6af5e38074371603aa2b8a44b9a2c42f72a2",
+      "bytes": 4489
+    },
+    "docs/reference/42110/internal-propshafts.md": {
+      "sha256": "e838116d230054301ff2fc043e91f19fa406b006223aafe14445fb2ec72e42d1",
+      "bytes": 3444
+    },
+    "docs/reference/42110/range-direction-gearbox.md": {
+      "sha256": "a5ac229b0ae66607eff19d78be0f3bc8ccc66ba70d246167d5a3cfbc1658e5e2",
+      "bytes": 5494
+    },
+    "docs/reference/42110/rear-axle.md": {
+      "sha256": "9ec809783fba389d029a09fdc024b7094b6056fc66192b4130d408cab097a677",
+      "bytes": 2956
+    },
+    "docs/reference/42110/scope-and-evidence.md": {
+      "sha256": "f7a021d830dc83d924e23415fc2bf08360a598ddb31b77903f8e2d9ad8043763",
+      "bytes": 8711
+    },
+    "docs/reference/42110/sequential-gearbox.md": {
+      "sha256": "1999fb3b8cc1650930fd8131e51915a3284f6c186aa4e9b5be8a1ecc064ad137",
+      "bytes": 4923
+    },
+    "docs/reference/42110/steering.md": {
+      "sha256": "88ee702a50a402af9fd64ae7e95a7fe3a7d61f30c6f72579d4f57a09b25fdf40",
+      "bytes": 4864
+    },
+    "docs/reference/42110/winch.md": {
+      "sha256": "b303922fd9c7558d0c3d36c31e1d411f76bd3f353c9b866ddbddb6c559d69a84",
+      "bytes": 2525
+    },
+    "docs/reference/README.md": {
+      "sha256": "5d2d96399bcb820079d412a3a92b577ec5c8c279df9b6f7a036b492bc1e4b119",
+      "bytes": 3775
+    },
+    "examples/reference/10265-discovery-audit/README.md": {
+      "sha256": "1e72f2fe7474506ee6daf57d1f5e48fd56afb825138421471ef1af16821db836",
+      "bytes": 1197
+    },
+    "examples/reference/10265-discovery-audit/comparison.json": {
+      "sha256": "8b482957296fd0b861c8e1f1350b35e05d27c7192ee6515905860515aaef3087",
+      "bytes": 16265
+    },
+    "examples/reference/42083-mechanisms-reference-review/review.json": {
+      "sha256": "9b3b52476033477b9f7e1a9b0e2b5cc23def9b0f960a7816b8504b684f879524",
+      "bytes": 21946
+    },
+    "examples/reference/42083-mechanisms/gearbox/source/42083-gearbox.mpd": {
+      "sha256": "242dbcb20126b9d960571394567a7a430fa8c3eccb9d8ecc3677709e48acbcd0",
+      "bytes": 67471
+    },
+    "examples/reference/42083-mechanisms/gearbox/source/idmap.json": {
+      "sha256": "d5165feba875bc1b0487439fb8605b44d0c7bfeb1127b295b6b20f20f3420778",
+      "bytes": 9102
+    },
+    "examples/reference/42083-mechanisms/wing/plan.json": {
+      "sha256": "c63bf235ef17c596148fc594addc767a397885c3d6d80e8aab80fd4676d3a778",
+      "bytes": 291065
+    },
+    "examples/reference/42083-mechanisms/wing/previews/lifted.png": {
+      "sha256": "1141a34285e90fe8e89d655c03cde0ca0df41a66d4b847e4fafb4d11f32dcc02",
+      "bytes": 903945
+    },
+    "examples/reference/42083-mechanisms/wing/source/42083-wing.mpd": {
+      "sha256": "e978e97ddb0fb19aa67856b09879abebea8e39f5c97b391649bbae905530c686",
+      "bytes": 22921
+    },
+    "examples/reference/42083-mechanisms/wing/source/idmap.json": {
+      "sha256": "b9d8909b8d9a1bde43e3ca9aa0ae5004c95d9800b2693195d40d4f9b57d649f9",
+      "bytes": 2711
+    },
+    "examples/reference/42083-w16-reference-review/review.json": {
+      "sha256": "b6e8e138f7714c149bd2ea87cf8bd26a36b486010848f50baaafe342379a9677",
+      "bytes": 20079
+    },
+    "examples/reference/42083-w16/engine-extracted.mpd": {
+      "sha256": "fd899ff744d5935063b8d37257aef4eb987862ea67094ca2fb78f25b0e204341",
+      "bytes": 19769
+    },
+    "examples/reference/42083-w16/plan.json": {
+      "sha256": "0dec73f2257f550e4bdbdb8a47adc004c017cacef7da09c321493f28f04b5669",
+      "bytes": 801580
+    },
+    "examples/reference/42083-w16/pose-crank-quarter.png": {
+      "sha256": "da5a128ccd9d2b4169513b2cf3289605c9be07cc834a29b31ef4465ee78bd08e",
+      "bytes": 1182300
+    },
+    "examples/reference/42110-reference-review/review.json": {
+      "sha256": "538c029208c365f47a011d7aec750c06bd1c76904319375e3478bf896704e9d9",
+      "bytes": 27899
+    },
+    "examples/reference/42110-suspension-standalone-reference-review/review.json": {
+      "sha256": "171d177467d3ca78fba289f5da8ad6740515566819fafecf403adf32c418e89c",
+      "bytes": 45428
+    },
+    "examples/reference/42110-suspension-standalone/keep.json": {
+      "sha256": "9b78461b226fb61720e33b465b4a3fb3aab185a45e888253fd8d44d840059767",
+      "bytes": 41475
+    },
+    "examples/reference/42110-suspension-standalone/plan.json": {
+      "sha256": "bf7d31a66b08333299c53c1f3543edbb5e0405f87c40be4514c652285c47da61",
+      "bytes": 954276
+    },
+    "examples/reference/42110-suspension-standalone/preview-corner-rest.png": {
+      "sha256": "32ff85a19467808c34287013a9eff728731d5fe7023128b293a9c572af96a03d",
+      "bytes": 1010102
+    },
+    "examples/reference/42110-suspension-standalone/source/42110-suspension-standalone.mpd": {
+      "sha256": "30c62143630438e51b3a6bfa83b78fffc4f8fe06b6b6898b3904944d5f33fc16",
+      "bytes": 141507
+    },
+    "examples/reference/42110-suspension-standalone/source/idmap.json": {
+      "sha256": "f6b6c8829c30075e8b2e3522ec215529deadcfb88c396f7d5ea6752a054e7800",
+      "bytes": 5819
+    },
+    "examples/reference/42110/plan.json": {
+      "sha256": "5cdaaa8ec9715c6b50a3ecd41a2f8c6900018bb6a3ca1bdc6c3fe4c54b999805",
+      "bytes": 4594363
+    }
+  }
+}

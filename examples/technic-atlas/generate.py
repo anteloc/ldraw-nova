@@ -10,6 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ldraw_tools.builder import build_plan
 from ldraw_tools.common import atomic_write, dumps, get_parts, library_path, jsonable
@@ -18,6 +19,7 @@ from ldraw_tools.external import render, compare_bom
 from ldraw_tools.geometry import analyze_geometry
 from ldraw_tools.technic_recipes import RECIPES, structure_plan
 from ldraw_tools.technic_review import review_structure
+from technic_catalog import write_catalog
 
 VIEWS = ['home', 'front', 'back', 'right', 'left', 'top', 'bottom']
 ORDERS = {
@@ -135,7 +137,7 @@ Run `./ldraw-agent technic check {command_path(path)} --contract {command_path(f
                 row['visual_review'] = f'{name}/visual-review.json'
         rows[name] = row
         print(f'{name}: {geometry["occurrence_count"]} parts, {structure["joint_count"]} reviewed contacts; checks passed', flush=True)
-    atomic_write(catalog_path, dumps(dict(version=1, scope='technic-structure', examples=list(rows.values()), details=[]))+'\n')
+    write_catalog(outdir, rows.values())
 
 
 if __name__ == '__main__':

@@ -4,6 +4,10 @@ Stage 1 supports **static structural assemblies**: frames, chassis, supports, re
 
 Use this guide with [instructions.md](../../instructions.md), the [Technic atlas](../../examples/technic-atlas/README.md) and the [research assessment](../reports/technic-structure-readiness.md). Keep the normal design, validation, BOM and visual review loop.
 
+For more varied subjects and functional layouts, use the [Technic design guide](technic-design.md) and [Mecha construction studies](../../examples/technic-studies/README.md). They connect these fixed-frame techniques to engines, transmissions, suspension and lifts, including the real mounts that an isolated source study may omit.
+
+The [Technic atlas mechanism studies](../../examples/technic-atlas/README.md#mechanisms-from-ldraw-mecha) provide six editable constructions with build pages and operation notes. Query `examples --family technic --limit 20` for both structures and mechanisms. Use their directory with `mechanism export`; fixed structural contracts apply to their supports only.
+
 ## Start from the structure and its mounting points
 
 Record the silhouette, support/load direction, dimensions, palette and body attachment locations. Design the skeleton and visible body together; filling the body first can leave inaccessible joints.

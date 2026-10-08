@@ -4,6 +4,10 @@ Stage 2 is authorized for **construction from studied examples**: discover mecha
 
 Start with the [mechanism atlas](../../examples/mechanism-atlas/README.md). Its six studies cover gears, a worm drive, a steering rack, a piston/crank, a differential and a driven turntable. They include attributed source, build pages, per-step parts, parent placements, operation notes and an editable placement plan. The [structural workflow](technic.md) still applies to fixed chassis and supports.
 
+For additional construction knowledge, read [creative Technic design](technic-design.md) and the [Mecha studies](../../examples/technic-studies/README.md). They add measured patterns for multi-crank engines, suspension, steering, Cardan shafts, selectors and four-bar lifts. Read their source qualifications before adapting them; these notes are separate from the atlas's reviewed exportable manuals.
+
+Six of these patterns also have [portable Technic-atlas studies](../../examples/technic-atlas/README.md#mechanisms-from-ldraw-mecha), including actual source, pages and operation notes. Use `examples --family technic --limit 20` to find them and `mechanism export examples/technic-atlas/mechanisms/NAME --outdir output/my-study` to reuse a reviewed directory. Their guides identify missing parent interfaces and the recorded duplicate-axle repair in the four-speed core.
+
 ```mermaid
 flowchart LR
     A[Find a useful example] --> B[Read its build pages]

@@ -1,0 +1,369 @@
+{
+  "version": 1,
+  "title": "Cam-driven inline-six followers",
+  "scope": "mechanism-construction-study",
+  "notes_file": "operation.json",
+  "image_mode": "steps",
+  "final_images": [
+    "renders/home.png"
+  ],
+  "source": {
+    "model": "cam-follower-engine.mpd",
+    "section": "cam-follower-engine.ldr",
+    "sha256": "85ab5c80c58ce6c1b82db4c4fa2177d1bc3cab326f1cdac473b4b9b36e733b14"
+  },
+  "source_root": "study-8dbe60c2f580-00-cam-follower-engine.ldr",
+  "preview_colour": 7,
+  "parents": [],
+  "sections": [
+    {
+      "name": "study-8dbe60c2f580-00-cam-follower-engine.ldr",
+      "original_name": "cam-follower-engine.ldr",
+      "description": "Defender camshaft and guided inline-six followers",
+      "directory": "manual/00",
+      "steps": [
+        {
+          "number": 1,
+          "added_placements": 1,
+          "parts": [
+            {
+              "ref": "study-8dbe60c2f580-01-42110---engine.ldr",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "submodel",
+              "description": "Inline engine block built from connector blocks, angle connectors, axles, bushes, and beams simulating a multi-cylinder piston engine.",
+              "source_section": "study-8dbe60c2f580-01-42110---engine.ldr"
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-001-home.png",
+            "top": "manual/00/step-001-top.png"
+          }
+        },
+        {
+          "number": 2,
+          "added_placements": 1,
+          "parts": [
+            {
+              "ref": "study-8dbe60c2f580-04-42110---camshaft.ldr",
+              "colour": 71,
+              "quantity": 1,
+              "kind": "submodel",
+              "description": "Engine camshaft assembly on a long axle with offset liftarms in black and olive green, a gear, and cross blocks to actuate engine pistons.",
+              "source_section": "study-8dbe60c2f580-04-42110---camshaft.ldr"
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-002-home.png",
+            "top": "manual/00/step-002-top.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "study-8dbe60c2f580-01-42110---engine.ldr",
+      "original_name": "42110 - engine.ldr",
+      "description": "Inline engine block built from connector blocks, angle connectors, axles, bushes, and beams simulating a multi-cylinder piston engine.",
+      "directory": "manual/01",
+      "steps": [
+        {
+          "number": 1,
+          "added_placements": 3,
+          "parts": [
+            {
+              "ref": "32316.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Beam  5",
+              "source_section": null
+            },
+            {
+              "ref": "6558.dat",
+              "colour": 1,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Pin Long with Friction and Slot",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/01/step-001-home.png",
+            "top": "manual/01/step-001-top.png"
+          }
+        },
+        {
+          "number": 2,
+          "added_placements": 3,
+          "parts": [
+            {
+              "ref": "study-8dbe60c2f580-02-42110---39793.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "39793",
+              "source_section": null
+            },
+            {
+              "ref": "2780.dat",
+              "colour": 0,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Pin with Friction and Slots",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/01/step-002-home.png",
+            "top": "manual/01/step-002-top.png"
+          }
+        },
+        {
+          "number": 3,
+          "added_placements": 19,
+          "parts": [
+            {
+              "ref": "study-8dbe60c2f580-02-42110---39793.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "39793",
+              "source_section": null
+            },
+            {
+              "ref": "4519.dat",
+              "colour": 71,
+              "quantity": 6,
+              "kind": "part",
+              "description": "Technic Axle  3",
+              "source_section": null
+            },
+            {
+              "ref": "3713.dat",
+              "colour": 4,
+              "quantity": 6,
+              "kind": "part",
+              "description": "Technic Bush with Two Flanges",
+              "source_section": null
+            },
+            {
+              "ref": "32123b.dat",
+              "colour": 71,
+              "quantity": 6,
+              "kind": "part",
+              "description": "Technic Bush 1/2 Smooth with Axle Hole Semi-Reduced",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/01/step-003-home.png",
+            "top": "manual/01/step-003-top.png"
+          }
+        },
+        {
+          "number": 4,
+          "added_placements": 10,
+          "parts": [
+            {
+              "ref": "43093.dat",
+              "colour": 1,
+              "quantity": 4,
+              "kind": "part",
+              "description": "Technic Axle Pin with Friction",
+              "source_section": null
+            },
+            {
+              "ref": "32034.dat",
+              "colour": 0,
+              "quantity": 4,
+              "kind": "part",
+              "description": "Technic Angle Connector #2 (180 degree)",
+              "source_section": null
+            },
+            {
+              "ref": "32062.dat",
+              "colour": 4,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Axle  2 Notched",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/01/step-004-home.png",
+            "top": "manual/01/step-004-top.png"
+          }
+        },
+        {
+          "number": 5,
+          "added_placements": 3,
+          "parts": [
+            {
+              "ref": "6558.dat",
+              "colour": 1,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Pin Long with Friction and Slot",
+              "source_section": null
+            },
+            {
+              "ref": "40490.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Beam  9",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/01/step-005-home.png",
+            "top": "manual/01/step-005-top.png"
+          }
+        }
+      ]
+    },
+    {
+      "name": "study-8dbe60c2f580-04-42110---camshaft.ldr",
+      "original_name": "42110 - camshaft.ldr",
+      "description": "Engine camshaft assembly on a long axle with offset liftarms in black and olive green, a gear, and cross blocks to actuate engine pistons.",
+      "directory": "manual/02",
+      "steps": [
+        {
+          "number": 1,
+          "added_placements": 9,
+          "parts": [
+            {
+              "ref": "3708.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Axle 12",
+              "source_section": null
+            },
+            {
+              "ref": "3713.dat",
+              "colour": 4,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Bush with Two Flanges",
+              "source_section": null
+            },
+            {
+              "ref": "74695.dat",
+              "colour": 0,
+              "quantity": 3,
+              "kind": "part",
+              "description": "=Technic Beam  2 Liftarm",
+              "source_section": null
+            },
+            {
+              "ref": "74695.dat",
+              "colour": 330,
+              "quantity": 3,
+              "kind": "part",
+              "description": "=Technic Beam  2 Liftarm",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/02/step-001-home.png",
+            "top": "manual/02/step-001-top.png"
+          }
+        },
+        {
+          "number": 2,
+          "added_placements": 8,
+          "parts": [
+            {
+              "ref": "32184.dat",
+              "colour": 72,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Cross Block 1 x 3 (Axle/Pin/Axle)",
+              "source_section": null
+            },
+            {
+              "ref": "4519.dat",
+              "colour": 71,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Axle  3",
+              "source_section": null
+            },
+            {
+              "ref": "74695.dat",
+              "colour": 0,
+              "quantity": 2,
+              "kind": "part",
+              "description": "=Technic Beam  2 Liftarm",
+              "source_section": null
+            },
+            {
+              "ref": "42003.dat",
+              "colour": 71,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Cross Block 1 x 3 (Axle/Pin/Pin)",
+              "source_section": null
+            },
+            {
+              "ref": "94925.dat",
+              "colour": 71,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Gear 16 Tooth Reinforced",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/02/step-002-home.png",
+            "top": "manual/02/step-002-top.png"
+          }
+        }
+      ]
+    }
+  ],
+  "physical_placements": 55,
+  "views": [
+    "home",
+    "top"
+  ],
+  "rendered": true,
+  "source_checks_passed": true,
+  "bom_matches": true,
+  "analytical_verification": "deferred",
+  "physical_validity": "not_proven",
+  "artifact_hashes": {
+    "source.mpd": "5d477bb908ccff1fd206a856d69d7e4884cbfe106a014f10d9fa43923ae96352",
+    "extraction.json": "9fe835b56920ed83162471c864ec5b58a93d8003a044f5d380f49b507566df88",
+    "source-checks.json": "0aa13e35274c2c82e10152e779044b002409164db951a0ba3ecc5c96817b54a6",
+    "operation.json": "78edc2b7abaab3f85d10700187a28cf56dd6d93f69210bcce09c0619ccc0850d",
+    "bom.json": "e750e202a8739a5d838ef915dd794315462bba733aad89c6bc80f67e6b6e1aeb",
+    "scene.plan.json": "3dfb046fd744dc6beb7b15fbefdd51f6c6bb45d9f3ccb2489c34cb9074165742",
+    "manual/00/preview.mpd": "1a7476899092e95371da9182b88ade9a014120c50150f45d00e13dbdd66b3e40",
+    "manual/00/step-001-home.png": "9f9b7f5126d7e12325108a496e2c65ca24690b5c56f4bb8ddab8dfebef21c473",
+    "manual/00/step-002-home.png": "3ffb8f0fa4ba5218ff478c536fbaf5df5c2ec77382bffbdcd00e3a6ee2bb1e8b",
+    "manual/00/step-001-top.png": "8879ed17268bcc6c805972e00aeb29095dec687e8a311e053a67d8a8e95ddc2b",
+    "manual/00/step-002-top.png": "61f344306f27a2166def2edf29c8806f32c8c2b1a452afdb53008ffdd18efd0d",
+    "manual/01/preview.mpd": "f147cdd1e65f62680a9f9a3fcfed2c420246a1fa04daea7496a69540a08e8bed",
+    "manual/01/step-001-home.png": "6dac6ec15e7d8f7390afe4266882e6fd07820de6769e36d11df1c57aa8248703",
+    "manual/01/step-002-home.png": "70f034f48fa0fca1c6b403c2623b37496e00fdfa89904fe1a0a62237a715e744",
+    "manual/01/step-003-home.png": "dee1a38c1db8953306dd96e0d3345eea5d07ce020113ffbe7a3aa310c1e8413e",
+    "manual/01/step-004-home.png": "9c224ee2f8a589ec71e5e362dde45d73f0415089281994a3035b8cec158818b1",
+    "manual/01/step-005-home.png": "aea0d10fb85cdcb7e8a1fbb4200113c1c0cf2d3bd5b9c81e5a82322826c72b6b",
+    "manual/01/step-001-top.png": "4476c5ec0fcb944a0de32ac880aa19aad7570e0ac053cb3f0bbe0cead1ff1dfc",
+    "manual/01/step-002-top.png": "e81d965ee0c7746771ab913d8d22e6aa172a4fabebdca7197aba1990f45c8698",
+    "manual/01/step-003-top.png": "ac7a204cc5cc21fe3ff920e3812a30450242c1440e1bbd9e1e86b52da41ee177",
+    "manual/01/step-004-top.png": "7a8465c616440091a4f266f023d2b35ae16b50333b6260a24617b913899cc805",
+    "manual/01/step-005-top.png": "540c125c19506a92dec20f52201d44ae39766dbdeea0759aacf2305de0bc9b55",
+    "manual/02/preview.mpd": "628e6e50529d1954286172caed67c35a846b621fdcd77f8b7383151f067ed643",
+    "manual/02/step-001-home.png": "048f3e4cfe3a387760c74366d5cbb79dd4098dd1ad659b567a1fb6ba97809fa5",
+    "manual/02/step-002-home.png": "70dd2d076066744ad43f42af55b601e0e83a1378b65696bb37e17e1a4d1dff66",
+    "manual/02/step-001-top.png": "8f9b8cf62f105244c7bae768b56fcdef698692712ef48febcb401fb38bdc9292",
+    "manual/02/step-002-top.png": "b06d5e51f388824400950441148b092245ffdb7e7b53caf7ea095fd8ea6a8938",
+    "renders/leocad-bom.csv": "6eaab7741f6c6774c66e9a5e215d8af59e36af30ef3fdea35f9aa81efee215be",
+    "bom-comparison.json": "04dac1b9654135c646520aac5254f8d08080f1c01936f2343c216b52ff9a854e",
+    "renders/home.png": "2fc711a9d115b310695ca483036dc6bfe1f71a7cfc8fb8badd35e01b85f4af75",
+    "provenance/cam-follower-engine.provenance.json": "31caf5b6d13f8ba292d004f4c34d3d0a6cd55f3d4540aced4c4e22196c39e17b"
+  }
+}

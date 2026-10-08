@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "selection": "Six complementary constructions from the supplied Mecha references; no semantic search or runtime rig import.",
+  "references": [
+    {
+      "key": "four-cylinder-bank",
+      "title": "Four-cylinder crank engine bank",
+      "category": "Crank engines",
+      "lesson": "Repeat a compact piston/rod/crank construction while preserving cylinder guides, phase and the geared input.",
+      "source": "mechanism-sources/four-cylinder-bank.mpd",
+      "source_sha256": "08be58bada85635d22bdf4480541a788ba5e420967c4967474694a1c9c743748",
+      "section": "atlas-four-cylinder-bank-00-42083---enginelower.ldr",
+      "views": [
+        "home",
+        "right"
+      ],
+      "provenance_files": {
+        "mechanism-sources/four-cylinder-bank.provenance.json": "550df838632d5ce37cd778dd8c566ed9565c9caa74fbf474b9d015a769b27bf7"
+      },
+      "origin_summary": "Lower four-cylinder bank from Philippe Hurbain\u2019s 42083 model, selected from `42083 - enginelower.ldr`. This is one repeated bank of the W16 studied in Mecha; the surrounding engine and its central drive are omitted.",
+      "operation": {
+        "function": "Four dedicated pistons reciprocate through connecting rods around a shared crankshaft.",
+        "fixed": "Cylinder heads and the bank\u2019s static connectors; a new model must provide a supporting frame.",
+        "moving": "Crank pieces, axle and 24T input gear; four separate connecting rods and four pistons.",
+        "input": "The 24T gear/crankshaft interface, normally driven by the parent engine\u2019s central 24T gear.",
+        "output": "Four guided piston strokes with alternating source phases.",
+        "parent_context": "The parent supplies the central driving gear, frame and opposite banks. This 34-part extract is an engine core, not a freestanding supported engine.",
+        "reuse_notes": "Preserve the nominal 10-LDU throw, 40-LDU rods, head positions and source phase. Adapt the mounts and input route before changing the internals; use proper rotations for another bank."
+      },
+      "adaptation": "Use it in an engine stand, compact compressor or exposed machinery bay. Pair two instances at measured angles for a wider engine, providing separate supports and one deliberate drive interface.",
+      "construction_notes": "Read all four source groups. The first group already contains heads and parts of the crank mechanism together; inspect the part list for hidden rods and pistons. Pin-to-ball joints must remain seated while the bank is installed.",
+      "qualification": "The slider-crank construction is centred and planar. Source phase is LEGO mechanism geometry, not combustion timing; bore clearance and load capacity are not certified."
+    },
+    {
+      "key": "cam-follower-engine",
+      "title": "Cam-driven inline-six followers",
+      "category": "Cam followers",
+      "lesson": "Combine phased liftarm cams with a separate guided follower block and preserve the source rest offset.",
+      "source": "mechanism-sources/cam-follower-engine.mpd",
+      "source_sha256": "85ab5c80c58ce6c1b82db4c4fa2177d1bc3cab326f1cdac473b4b9b36e733b14",
+      "section": "cam-follower-engine.ldr",
+      "views": [
+        "home",
+        "top"
+      ],
+      "provenance_files": {
+        "mechanism-sources/cam-follower-engine.provenance.json": "31caf5b6d13f8ba292d004f4c34d3d0a6cd55f3d4540aced4c4e22196c39e17b"
+      },
+      "origin_summary": "Engine block and camshaft from source type-1 indices 126 and 127 of `42110 - frontaxle.ldr`, placed in their original common frame. Source groups 23 and 24 become the two root groups; both child manuals retain their original steps.",
+      "operation": {
+        "function": "A bank of liftarm cams is intended to lift six guided axle followers in sequence.",
+        "fixed": "Engine-block guides, connector frame and camshaft supports retained in the two source sections.",
+        "moving": "Camshaft axle, gear and phased cams; six follower axles moving through their guides.",
+        "input": "Exposed camshaft gear/axle; the upstream engine-side shaft and idler are supplied by the original gearbox and are omitted.",
+        "output": "Six short follower lifts. One follower already starts raised in the source pose.",
+        "parent_context": "These two source sections retain their mutual placements but omit the front-axle frame and upstream gear/idler route. Add physical mounts for both sections and an accessible drive.",
+        "reuse_notes": "Keep the cam phases, guides and stops, including the raised follower\u2019s rest offset. Do not substitute crank-and-rod motion. Adapt the enclosing frame while reserving the space above the follower heads."
+      },
+      "adaptation": "Use this compact arrangement in a tractor bonnet, pumping station or a visible sequence of industrial plungers. Expose the cams or make the cover removable so the action reads clearly.",
+      "construction_notes": "Study the block and camshaft child pages as well as the two parent groups. Insert/retain the camshaft before closing a new enclosure, and mount the follower block above the correct cam row.",
+      "qualification": "Mecha\u2019s lift law is a cam-contact hypothesis. Gravity return, full-cycle surface clearance and spring/loading behaviour remain unverified. The 55-part module is shown in its source pose."
+    },
+    {
+      "key": "double-cardan-shaft",
+      "title": "Paired Cardan drive shaft",
+      "category": "Universal joints",
+      "lesson": "Route an offset drive through two yokes-and-crosses joints while retaining the intermediate fork phase.",
+      "source": "mechanism-sources/double-cardan-shaft.mpd",
+      "source_sha256": "64923a35383837e8748e94878b7aae70806688ed9ecd8edaa9198df08aee8d96",
+      "section": "double-cardan-shaft.ldr",
+      "views": [
+        "home",
+        "top"
+      ],
+      "provenance_files": {
+        "mechanism-sources/double-cardan-shaft.provenance.json": "c08fd7d98c95aeead7c69cfa968871b85621b027c77c7f78b7464036598d120c"
+      },
+      "origin_summary": "Seven source placements 194\u2013200 from `42110 - rearaxle.ldr`, corresponding to Mecha full-model paths `0/1/194` through `0/1/200`. The section frame is preserved; these indices are not Nova\u2019s later flattened occurrence indices.",
+      "operation": {
+        "function": "Two universal joints connect parallel end axes through an angled intermediate axle.",
+        "fixed": "No fixed bearings are retained in this seven-part selection; end supports belong to the two parent gearboxes.",
+        "moving": "Four yokes, two crosses and the intermediate axle. Crosses and yokes have distinct joint axes.",
+        "input": "The first end yoke, originally source index 199 in the selected rear-axle section.",
+        "output": "The opposite end yoke, originally source index 194, leading into the sequential gearbox.",
+        "parent_context": "Both gearbox supports, adjoining input/output axles and their retention are omitted. A new frame must hold the end axes at the measured locations without obstructing fork swing.",
+        "reuse_notes": "Preserve joint centres, matched bend angles and fork phase. Use the source frame as a positioning reference, then inspect actual axle sockets before adding new supports. Never treat coaxial bearings as axle-locked parts."
+      },
+      "adaptation": "Use it to pass a drive around a crossmember or between offset machinery modules. Make the drive path visible through an open side of the frame; size the supports around the joint centres.",
+      "construction_notes": "All seven placements belong to one source group, so no substep insertion sequence is claimed. Study the two crosses and the axle engagement before adding the external bearings and end retainers.",
+      "qualification": "The sibling\u2019s equal-speed far-end relation depends on equal bends, parallel end axes and corrected fork phase. This static source extract is not a moving-suspension or universal constant-velocity solution."
+    },
+    {
+      "key": "four-speed-gearbox",
+      "title": "Four-speed driving-ring gearbox",
+      "category": "Selectable transmissions",
+      "lesson": "Study constant-mesh gear trains, two alternating driving rings and the separate rotary selector.",
+      "source": "mechanism-sources/four-speed-gearbox.mpd",
+      "source_sha256": "e5fdf0c10388c3e66bdeb70851b7ab412dd7f1c02ee702cb878f0547fbd7a93b",
+      "section": "atlas-four-speed-gearbox-00-42110---reargearbox.ldr",
+      "views": [
+        "home",
+        "back"
+      ],
+      "provenance_files": {
+        "mechanism-sources/four-speed-gearbox.provenance.json": "3d942b70982c20aa88b0471dcb6ac318c70186653a695f7fef296a81f2a08c54"
+      },
+      "origin_summary": "Selected four-speed topology of `42110 - reargearbox.ldr` from Hurbain\u2019s 42110 model. Mecha identifies it as the sequential four-speed core at full-model occurrence `0/1/133`; its surrounding shafts and external selector control are outside this section. One exact coincident 4519.dat axle duplicate (source index 43, identical to retained index 39) is removed in this derived copy; the original model remains unchanged.",
+      "operation": {
+        "function": "A compact transmission selects among four gear routes using two driving rings and a rotary catch.",
+        "fixed": "The retained beam/cross-block gearbox frame and bearing supports.",
+        "moving": "Input/output shafts, intermediate shafts, loose gears, sliding driving rings and the rotary selector.",
+        "input": "The source gearbox input shaft; the adjacent propshaft and its support belong to the parent.",
+        "output": "The selected output shaft route, with the rotary catch as a separate user-controlled interface.",
+        "parent_context": "The selector knob/dial, adjacent propshafts and range/direction gearbox are omitted. This is the four-speed core, not a complete vehicle transmission or self-contained control station.",
+        "reuse_notes": "Keep gear centres, tooth planes, shaft stacks, free-versus-keyed gear roles and ring travel. Ring A starts engaged toward first gear in the source; preserve that offset and space for the catch and forks."
+      },
+      "adaptation": "Use it as the core of a cutaway transmission exhibit or a vehicle drivetrain. Add an accessible selector and supporting chassis, with a removable panel that reveals the ring positions.",
+      "construction_notes": "Follow the source\u2019s eleven groups before adapting the case. Fit internal gears and retaining stacks before the closing frame members; identify hidden gear additions in the per-step lists.",
+      "qualification": "The selector cam profile and engagement windows in Mecha are approximations. This source has no added Chiron reconstruction gears. Clutch contact, tooth phase and shifting under load are not certified."
+    },
+    {
+      "key": "four-bar-lift",
+      "title": "Orientation-preserving four-bar lift",
+      "category": "Four-bar linkages",
+      "lesson": "Use equal cranks and matched pivot spacing to lift a panel while retaining its orientation.",
+      "source": "mechanism-sources/four-bar-lift.mpd",
+      "source_sha256": "e978e97ddb0fb19aa67856b09879abebea8e39f5c97b391649bbae905530c686",
+      "section": "42083-wing.ldr",
+      "views": [
+        "home",
+        "right"
+      ],
+      "provenance_files": {
+        "mechanism-sources/four-bar-lift.provenance.json": "784f8fa7ac9565459439af282cddefdc77a32848dfd138c8632d3066e4eba4af",
+        "mechanism-sources/four-bar-lift.idmap.json": "b9d8909b8d9a1bde43e3ca9aa0ae5004c95d9800b2693195d40d4f9b57d649f9"
+      },
+      "origin_summary": "Unchanged Mecha extract `42083-mechanisms/wing/source/42083-wing.mpd` derived from Hurbain\u2019s model. Its original occurrence comments and retained identity map preserve the selection history.",
+      "operation": {
+        "function": "A paired-crank parallelogram raises the wing/payload along a shallow arc without tilting it in the studied arrangement.",
+        "fixed": "Retained mounting frame and axis-spacing links; the upper pivot is assumed fixed by the sibling rig.",
+        "moving": "Upper/lower cranks, struts and wing panel, with two closing rear rods and short links.",
+        "input": "The lower crank/axle rotation; the complete key-driven tilt actuator is not retained or solved.",
+        "output": "A level payload carried through a shallow arc, including a small sideways displacement.",
+        "parent_context": "The 119-part selection is a standalone study with partial surrounding mounts. It assumes a fixed upper pivot and omits the complete key-driven wing mechanism and nearby bodywork obstacles.",
+        "reuse_notes": "Preserve the nominal 40-LDU sides in the YZ linkage plane, real axis spacing and roughly 120-LDU rear rods. Do not mistake an off-plane spatial diagonal for a crank radius. Add a frame that physically fixes both pivots."
+      },
+      "adaptation": "Adapt it into a service deck, cargo platform or retractable equipment tray. Broaden the payload only after adding lateral support and clearance for its curved path.",
+      "construction_notes": "The sibling source is flattened into one group. It supplies identities and final placement, not a recovered build sequence. Insert pins and rods before closing a new paired support frame.",
+      "qualification": "The upper-axis restraint is an assumption; key-driven tilt is not established. Source clearance limits belong to the original bodywork, and this source-pose study does not demonstrate motion."
+    },
+    {
+      "key": "independent-suspension",
+      "title": "Independent wishbone suspension",
+      "category": "Suspension",
+      "lesson": "Study four wheel corners, parallel wishbones, guide links, matching half-shafts and paired shocks with their mounting frame.",
+      "source": "mechanism-sources/independent-suspension.mpd",
+      "source_sha256": "30c62143630438e51b3a6bfa83b78fffc4f8fe06b6b6898b3904944d5f33fc16",
+      "section": "42110-suspension-standalone.ldr",
+      "views": [
+        "home",
+        "top"
+      ],
+      "provenance_files": {
+        "mechanism-sources/independent-suspension.provenance.json": "4700069052e4e088e2cfca97f09316bc801025b415976e4e5374597afef3a4f6",
+        "mechanism-sources/independent-suspension.idmap.json": "f6b6c8829c30075e8b2e3522ec215529deadcfb88c396f7d5ea6752a054e7800"
+      },
+      "origin_summary": "Unchanged Mecha extract `42110-suspension-standalone/source/42110-suspension-standalone.mpd` derived from Hurbain\u2019s model. Its original occurrence comments and retained identity map preserve the selection history.",
+      "operation": {
+        "function": "Four independent wheel corners use equal parallel upper/lower wishbones and two shocks per corner.",
+        "fixed": "The retained central frame and suspension pivots; some guide-link and Cardan boundary holders are absent.",
+        "moving": "Wishbones, knuckles, hubs/wheels, guide links and articulating half-shafts; shock cylinders pivot and rods slide in the intended mechanism.",
+        "input": "Independent wheel rise at each corner; the static source is at full droop, not normal ride height.",
+        "output": "Wheel rise with lateral arc motion and shock compression. Steering, wheel spin and drivetrain motion are separate omitted systems.",
+        "parent_context": "This 259-part Mecha extract includes 117 moving-role pieces, 38 mounts and 104 frame pieces. Front inner tie-rod pins 74/75 lack their rack-side holders, and input Cardan yokes are omitted. Prescribed fixed positions do not make it self-supporting.",
+        "reuse_notes": "Preserve 100-LDU outer arms, 80-LDU inner coupler attachments, joint centres and shock eyes. Add the missing pin holders and shaft supports before integrating it. Keep the split rods/cylinders/springs as rigid source-pose parts; do not import animation spring scaling."
+      },
+      "adaptation": "Use a measured corner as a starting point for a service rover or off-road chassis. Build its actual mounts first, then adapt track, frame and wheel arches while keeping travel space clear. Reconcile shared hubs before adding steering or drive.",
+      "construction_notes": "The sibling flattened this selection into one source group and split shock shortcuts. The pages show the assembly and individual BOM, not a recovered assembly order. Keep the retained ID map with any corner extraction; count separate shock components only once.",
+      "qualification": "The source contains deliberately incomplete fixed boundary interfaces. The source\u2019s 30.5/40.5-LDU travel limits and spring deformation are animation-study choices, not verified limits for a new build. Source-pose geometric checks do not certify a loaded suspension."
+    }
+  ]
+}

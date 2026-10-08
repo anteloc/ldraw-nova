@@ -2,6 +2,10 @@
 
 Six small Technic constructions to study, copy and adapt. Each includes the original attributed parts, step-by-step images, parts lists, operation notes and an editable placement plan.
 
+For a wider design vocabulary, see [Mecha construction studies](../technic-studies/README.md) and the [Technic design guide](../../docs/agent/technic-design.md): suspension, multi-crank engines, selectors, Cardan shafts and lifts, with source qualifications and new subject ideas. Those notes complement these six exportable manuals.
+
+The [Technic atlas](../technic-atlas/README.md#mechanisms-from-ldraw-mecha) now adds six portable mechanism studies with their own build pages: a four-cylinder bank, cam followers, a paired Cardan shaft, four-speed gearbox, four-bar lift and independent suspension. Find them with `examples --family technic`; export their prepared directories using `mechanism export`.
+
 Open the [interactive gallery](index.html) locally, choose a construction and move through its steps. Yellow outlines show the additions. Switch viewpoints to see the shaft stacks, gear faces and supports.
 
 | Construction | Preview | Parts | Steps | What to learn |
