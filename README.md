@@ -150,6 +150,8 @@ These are some of the guides and references given to the agent in order to make 
 | I want to…                            | Read…                                                                                                              |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Ask an agent to generate a model      | [Agent instructions](instructions.md)                                                                              |
+| Build with the construction kit       | [Construction kit](docs/agent/kit.md) and [tested recipes](docs/reference/README.md)                               |
+| Check, look at and deliver a model    | [Fast check](docs/agent/tooling.md#fast-check-run-after-every-build) and [lessons](docs/reference/lessons.md)      |
 | Improve shape, colour and detail      | [Visual design guide](docs/agent/visual-design.md)                                                                 |
 | Build vehicles                        | [Vehicle workflow](docs/agent/vehicles.md) and [examples](examples/vehicle-atlas/README.md)                        |
 | Build advanced spaceships             | [Spaceship workflow](docs/agent/spaceships.md) and [atlas](examples/spaceship-atlas/README.md)                     |

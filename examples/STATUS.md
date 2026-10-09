@@ -1,6 +1,6 @@
 # Example status
 
-`check` verdicts for the curated examples (52 of 83 pass). Regenerate with `.venv/bin/python scripts/example_status.py`.
+`check` verdicts for the curated examples (48 of 83 pass). Regenerate with `.venv/bin/python scripts/example_status.py`.
 
 A failing example still shows ideas (shapes, palettes, layouts), but its construction has the listed defects. Do not copy its coordinates. Prefer the [recipes](../docs/reference/README.md), which always pass.
 
@@ -9,19 +9,19 @@ A failing example still shows ideas (shapes, palettes, layouts), but its constru
 | [atlas-crane/atlas-crane.mpd](atlas-crane/atlas-crane.mpd) | 1082 | FAIL | 891 floating, 21 collisions |
 | [bridge.mpd](bridge.mpd) | 5 | PASS | clean |
 | [building-atlas/clinic/clinic.mpd](building-atlas/clinic/clinic.mpd) | 426 | FAIL | 10 floating |
-| [building-atlas/conservatory/conservatory.mpd](building-atlas/conservatory/conservatory.mpd) | 437 | PASS | clean |
+| [building-atlas/conservatory/conservatory.mpd](building-atlas/conservatory/conservatory.mpd) | 437 | FAIL | 2 floating |
 | [building-atlas/cottage/cottage.mpd](building-atlas/cottage/cottage.mpd) | 442 | FAIL | 2 collisions |
 | [building-atlas/desert-sanctuary/desert-sanctuary.mpd](building-atlas/desert-sanctuary/desert-sanctuary.mpd) | 260 | FAIL | 4 floating |
 | [building-atlas/details/battlement/battlement.mpd](building-atlas/details/battlement/battlement.mpd) | 25 | PASS | clean |
-| [building-atlas/details/beacon/beacon.mpd](building-atlas/details/beacon/beacon.mpd) | 4 | PASS | clean |
+| [building-atlas/details/beacon/beacon.mpd](building-atlas/details/beacon/beacon.mpd) | 4 | FAIL | 1 floating |
 | [building-atlas/details/bench/bench.mpd](building-atlas/details/bench/bench.mpd) | 6 | PASS | clean |
-| [building-atlas/details/chimney/chimney.mpd](building-atlas/details/chimney/chimney.mpd) | 12 | PASS | clean |
+| [building-atlas/details/chimney/chimney.mpd](building-atlas/details/chimney/chimney.mpd) | 12 | FAIL | 1 floating |
 | [building-atlas/details/clock/clock.mpd](building-atlas/details/clock/clock.mpd) | 2 | PASS | clean |
 | [building-atlas/details/display-window/display-window.mpd](building-atlas/details/display-window/display-window.mpd) | 2 | PASS | clean |
 | [building-atlas/details/dormer-roof/dormer-roof.mpd](building-atlas/details/dormer-roof/dormer-roof.mpd) | 213 | FAIL | 2 collisions |
 | [building-atlas/details/fence/fence.mpd](building-atlas/details/fence/fence.mpd) | 5 | PASS | clean |
 | [building-atlas/details/flower-box/flower-box.mpd](building-atlas/details/flower-box/flower-box.mpd) | 13 | PASS | clean |
-| [building-atlas/details/fountain/fountain.mpd](building-atlas/details/fountain/fountain.mpd) | 27 | PASS | clean |
+| [building-atlas/details/fountain/fountain.mpd](building-atlas/details/fountain/fountain.mpd) | 27 | FAIL | 2 floating |
 | [building-atlas/details/glazed-door/glazed-door.mpd](building-atlas/details/glazed-door/glazed-door.mpd) | 2 | PASS | clean |
 | [building-atlas/details/lamppost/lamppost.mpd](building-atlas/details/lamppost/lamppost.mpd) | 6 | PASS | clean |
 | [building-atlas/details/market-stall/market-stall.mpd](building-atlas/details/market-stall/market-stall.mpd) | 33 | PASS | clean |
@@ -31,14 +31,14 @@ A failing example still shows ideas (shapes, palettes, layouts), but its constru
 | [building-atlas/details/tree/tree.mpd](building-atlas/details/tree/tree.mpd) | 18 | PASS | clean |
 | [building-atlas/details/window/window.mpd](building-atlas/details/window/window.mpd) | 3 | PASS | clean |
 | [building-atlas/farmstead/farmstead.mpd](building-atlas/farmstead/farmstead.mpd) | 531 | PASS | clean |
-| [building-atlas/fire-station/fire-station.mpd](building-atlas/fire-station/fire-station.mpd) | 462 | FAIL | 1 floating |
+| [building-atlas/fire-station/fire-station.mpd](building-atlas/fire-station/fire-station.mpd) | 462 | FAIL | 3 floating |
 | [building-atlas/frontier/frontier.mpd](building-atlas/frontier/frontier.mpd) | 381 | PASS | clean |
 | [building-atlas/gatehouse/gatehouse.mpd](building-atlas/gatehouse/gatehouse.mpd) | 322 | PASS | clean |
 | [building-atlas/lighthouse/lighthouse.mpd](building-atlas/lighthouse/lighthouse.mpd) | 368 | FAIL | 4 floating |
 | [building-atlas/market-court/market-court.mpd](building-atlas/market-court/market-court.mpd) | 712 | PASS | clean |
 | [building-atlas/medieval-village/medieval-village.mpd](building-atlas/medieval-village/medieval-village.mpd) | 857 | PASS | clean |
-| [building-atlas/moon-base/moon-base.mpd](building-atlas/moon-base/moon-base.mpd) | 487 | FAIL | 1 floating |
-| [building-atlas/museum/museum.mpd](building-atlas/museum/museum.mpd) | 376 | FAIL | 8 floating |
+| [building-atlas/moon-base/moon-base.mpd](building-atlas/moon-base/moon-base.mpd) | 487 | FAIL | 5 floating |
+| [building-atlas/museum/museum.mpd](building-atlas/museum/museum.mpd) | 376 | FAIL | 15 floating |
 | [building-atlas/railway-station/railway-station.mpd](building-atlas/railway-station/railway-station.mpd) | 504 | FAIL | 10 floating |
 | [building-atlas/school/school.mpd](building-atlas/school/school.mpd) | 530 | FAIL | 2 floating |
 | [building-atlas/skyline/skyline.mpd](building-atlas/skyline/skyline.mpd) | 441 | PASS | clean |
@@ -46,7 +46,7 @@ A failing example still shows ideas (shapes, palettes, layouts), but its constru
 | [building-atlas/treehouse/treehouse.mpd](building-atlas/treehouse/treehouse.mpd) | 339 | PASS | clean |
 | [building-atlas/winter-lodge/winter-lodge.mpd](building-atlas/winter-lodge/winter-lodge.mpd) | 489 | FAIL | 2 collisions |
 | [building-atlas/wizard-tower/wizard-tower.mpd](building-atlas/wizard-tower/wizard-tower.mpd) | 459 | FAIL | 1 floating |
-| [building-atlas/workshop/workshop.mpd](building-atlas/workshop/workshop.mpd) | 475 | FAIL | 14 floating |
+| [building-atlas/workshop/workshop.mpd](building-atlas/workshop/workshop.mpd) | 475 | FAIL | 16 floating |
 | [cathedral/cathedral.mpd](cathedral/cathedral.mpd) | 5394 | FAIL | 139 floating |
 | [copper-bean/copper-bean.mpd](copper-bean/copper-bean.mpd) | 1022 | FAIL | 18 floating |
 | [mechanism-atlas/differential/differential.mpd](mechanism-atlas/differential/differential.mpd) | 29 | PASS | clean |
@@ -72,7 +72,7 @@ A failing example still shows ideas (shapes, palettes, layouts), but its constru
 | [technic-atlas/mechanisms/four-bar-lift/four-bar-lift.mpd](technic-atlas/mechanisms/four-bar-lift/four-bar-lift.mpd) | 119 | PASS | clean |
 | [technic-atlas/mechanisms/four-cylinder-bank/four-cylinder-bank.mpd](technic-atlas/mechanisms/four-cylinder-bank/four-cylinder-bank.mpd) | 34 | PASS | clean |
 | [technic-atlas/mechanisms/four-speed-gearbox/four-speed-gearbox.mpd](technic-atlas/mechanisms/four-speed-gearbox/four-speed-gearbox.mpd) | 66 | FAIL | 1 collisions |
-| [technic-atlas/mechanisms/independent-suspension/independent-suspension.mpd](technic-atlas/mechanisms/independent-suspension/independent-suspension.mpd) | 259 | FAIL | 189 floating, 16 collisions |
+| [technic-atlas/mechanisms/independent-suspension/independent-suspension.mpd](technic-atlas/mechanisms/independent-suspension/independent-suspension.mpd) | 259 | FAIL | 189 floating, 20 collisions |
 | [technic-atlas/reinforced-frame/reinforced-frame.mpd](technic-atlas/reinforced-frame/reinforced-frame.mpd) | 13 | PASS | clean |
 | [technic-atlas/service-platform/service-platform.mpd](technic-atlas/service-platform/service-platform.mpd) | 55 | PASS | clean |
 | [turntable-frame/turntable-frame.mpd](turntable-frame/turntable-frame.mpd) | 32 | PASS | clean |

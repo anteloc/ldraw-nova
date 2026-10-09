@@ -11,6 +11,8 @@ flowchart TB
   frame -->|"hinge"| door["door 60623"]
   walls -->|"studs"| windows["windows 60592 (2 wide, 2 courses)"]
   walls -->|"studs"| slopes["roof: 2x4 / 2x2 slopes, one stud inward per course"]
+  walls -->|"studs"| gables["gables: 1xN bricks closing each end"]
+  gables -->|"studs into the slopes above"| slopes
   slopes -->|"studs, both sides"| ridge["ridge: double slopes 3041 / 3043"]
 ```
 
@@ -40,6 +42,10 @@ for course in range(D // 2 - 1):               # each course steps one stud inwa
     m.place("3039", "Red", cell=(x0 + 8, z0 + course), level=top + 3 * course, id=f"roof-front-{course}-end")
     m.place("3039", "Red", cell=(x0 + 8, z0 + D - 2 - course), level=top + 3 * course, turn=180,
             id=f"roof-back-{course}-end")
+for course in range(D // 2 - 2):               # close both gables under the slopes, two studs narrower per course
+    for x in (x0, x0 + W - 1):
+        m.wall("White", start=(x, z0 + 2 + course), length=D - 4 - 2 * course, courses=1,
+               level=top + 3 * course, along="Z", prefix=f"gable-{x}-{course}")
 for x in (x0, x0 + 4):                         # the ridge sits on both slope rows and joins the halves
     m.place("3041", "Red", cell=(x, z0 + D // 2 - 1), level=top + 3 * (D // 2 - 1), id=f"ridge-{x}")
 m.place("3043", "Red", cell=(x0 + 8, z0 + D // 2 - 1), level=top + 3 * (D // 2 - 1), id="ridge-end")
@@ -51,7 +57,7 @@ m.save("output/small-house/small-house.mpd")
 | Size | `W` (any length the slopes cover: 4s and a 2), `D` (even). Keep the openings inside the wall. |
 | Openings | `openings=[(offset, width, first_course, last_course)]`. Door frame 60596 needs 4 x 6 courses; window 60592 needs 2 x 2. |
 | Taller house | More `courses`; then move `top` and the window levels by 3 per course. |
-| Closed gables | Fill each gable end with 1xN bricks that shrink by two studs per course. |
+| Gables | The gable loop fills the triangle under the slopes at both ends and follows `D`. Without it the attic is open at each end. |
 
 **Watch out**
 - Part sizes are not in their numbers. 60623 is a 4x6 door, so check `ports PART` (the body box) before cutting an opening.
