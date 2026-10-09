@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import shutil
 import sqlite3
@@ -57,6 +58,20 @@ def parser():
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
+    c = commands.add_parser("sculpture", help="Pack coloured voxels into a connected sculpture with deterministic build steps")
+    sculpture = c.add_subparsers(dest="sculpture_command", required=True)
+    d = sculpture.add_parser("preview", help="Build a lightweight voxel draft and two preview views")
+    d.add_argument("design", help="JSON shape design")
+    d.add_argument("--output", required=True, help="Draft PNG with two views")
+    d.add_argument("--voxels-output", required=True, help="Solid voxel JSON for final conversion")
+    d.add_argument("--report")
+    d.add_argument("--repair", action="store_true", help="Recolour or remove unsupported draft bricks after failed attempts")
+    d = sculpture.add_parser("convert", help="Pack voxels into bricks and order the building steps")
+    d.add_argument("voxels", help="JSON shape design or voxels: [[x,y,z,LDraw colour], ...]; raw voxels use z-up brick layers")
+    d.add_argument("--output", required=True, help="Self-contained .mpd for the existing viewer/player")
+    d.add_argument("--render-output", help="Optional MPD copy with at most 255 steps for LeoCAD snapshots")
+    d.add_argument("--title", default="Sculpture model")
+    d.add_argument("--report")
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
@@ -337,6 +352,25 @@ def parser():
 
 
 def run(args):
+    if args.command == "sculpture":
+        if args.sculpture_command == "preview":
+            from .sculpture_preview import preview
+            return preview(args.design, args.output, args.voxels_output, repair=args.repair), 0
+        from .sculpture import convert, render_copy
+        if args.render_output and Path(args.render_output).resolve() == Path(args.output).resolve():
+            raise ValueError("The render copy must be separate from the instruction model")
+        text, report = convert(args.voxels, name=Path(args.output).name, title=args.title)
+        parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow)
+        model, issues = validate_text(text, parts)
+        report["diagnostics"] = issues
+        report["checks_passed"] = model is not None and not any(d["severity"] == "error" for d in issues)
+        if report["checks_passed"]:
+            atomic_write(args.output, text)
+            report["output"] = args.output
+            if args.render_output:
+                atomic_write(args.render_output, render_copy(text, report["brick_count"]))
+                report["render_output"] = args.render_output
+        return report, 0 if report["checks_passed"] else 1
     if args.command == "examples":
         from .examples import search_examples
         if args.details and args.scale:raise ValueError('--scale applies to building examples')
@@ -473,7 +507,6 @@ def run(args):
             diagnostics.extend(analyze_geometry(model, parts, detail='summary')['diagnostics'])
             if any(d['severity']=='error' for d in diagnostics) or not review['checks_passed']:
                 return dict(written=False, diagnostics=diagnostics, structure=review), 1
-            import hashlib
             contract['model_sha256'] = hashlib.sha256(model.to_ldraw().encode()).hexdigest()
             atomic_write(target, dumps(plan)+'\n')
             atomic_write(contract_path, dumps(contract)+'\n')

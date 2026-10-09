@@ -32,6 +32,14 @@ The language authority is the mandatory [docs/ldraw-specs.pdf](docs/ldraw-specs.
 
 Resolve the parts library through `LDRAW_DIR`, falling back to `LDRAWDIR` if unset or empty, or pass global `--library` before the command. Reference models and their database are always `data/models-annotated/` and `data/ldraw-info.db`. Part catalogs and connector metadata are under `data/categories/` and `data/offLibShadow/`. Keep these resources unchanged. Put new work under `output/`.
 
+## Optional: 3D sculpture
+
+When the user explicitly requests **3D sculpture mode**, follow
+[the voxel sculpture workflow](docs/agent/sculptures.md): design coloured voxels,
+then let `./ldraw-agent sculpture` pack the bricks, check a single stud-connected
+component and order the build steps. Keep the usual visual review and publication
+flow. Otherwise use the existing part/submodel workflows below.
+
 ## 2. Plan the model and study useful constructions
 
 Before using Jev, follow the [availability check](docs/agent/reference-discovery.md#check-jev-availability-before-searching): verify the CLI, credentials and a bounded live request. If Jev is unavailable or fails later (including missing/invalid credentials or a service outage), report the reason briefly and continue with `discover search models|submodels|parts ... --engine fts`, existing catalogs and examples. Identify the fallback as offline keyword ranking, and avoid repeatedly retrying the unavailable service.

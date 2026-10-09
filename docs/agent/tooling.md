@@ -1,5 +1,12 @@
 # Tool reference
 
+## Sculpture conversion
+
+```sh
+./ldraw-agent sculpture preview output/design.json --output output/draft.png --voxels-output output/draft.voxels.json --report output/draft.report.json
+./ldraw-agent sculpture convert output/draft.voxels.json --output output/sculpture.mpd --report output/checks.json
+```
+
 ## Build manuals for any atlas
 
 ```sh
