@@ -139,7 +139,8 @@ def parser():
     d.add_argument('archetype', choices=['starfighter','freighter','capital-ship'])
     d.add_argument('--output')
     d.add_argument('--force', action='store_true')
-    d = ships.add_parser('export', help='Export a reviewed spaceship construction with source and placement plan')
+    d = ships.add_parser('export', help='Export a source construction with its placement plan '
+                         '[legacy: large official extracts; start from docs/reference recipes]')
     d.add_argument('name')
     d.add_argument('--outdir', required=True)
     d.add_argument('--force', action='store_true')
@@ -219,7 +220,8 @@ def parser():
     v.add_argument("--palette", default="heritage-racing")
     v.add_argument("--output", help="Write an editable detail JSON plan")
     v.add_argument("--force", action="store_true")
-    v = vehicle_commands.add_parser("plan", help="Export an editable vehicle plan and its design brief")
+    v = vehicle_commands.add_parser("plan", help="Export an editable vehicle plan and its design brief "
+                                    "[legacy: road and jet profiles fail check; see docs/reference]")
     v.add_argument("name")
     v.add_argument("--palette", help="Vehicle palette (default depends on design)")
     v.add_argument("--output", required=True)
@@ -296,6 +298,8 @@ def parser():
     c.add_argument("--tolerance", type=float, default=0.5, help="Collision and seating tolerance in LDU")
     c.add_argument("--limit", type=positive, default=12, help="Rows per issue list")
     c.add_argument("--report", help="Also write the full JSON report here")
+    c.add_argument("--family", choices=["spaceship", "building", "car", "aircraft", "boat", "technic"],
+                   help="Also compare how the model is built with official models of this family (advice, not a failure)")
     scope_options(c)
     c = commands.add_parser("look", help="One labelled contact sheet of several views (parallel renders); prints its path")
     c.add_argument("file")
@@ -310,6 +314,8 @@ def parser():
     c.add_argument("file")
     c.add_argument("--outdir", help="Default: a delivery/ folder beside the model")
     c.add_argument("--no-glb", action="store_true")
+    c.add_argument("--family", choices=["spaceship", "building", "car", "aircraft", "boat", "technic"],
+                   help="Also compare how the model is built with official models of this family (advice, not a failure)")
     c = commands.add_parser("ports", help="Named connection ports of parts (for kit mate/place): compact table")
     c.add_argument("refs", nargs="+")
     c.add_argument("--json", action="store_true")
@@ -395,7 +401,7 @@ def run(args):
     if args.command == "check":
         from .check import check_model, format_report, mermaid_graph, compare_intended
         report = check_model(args.file, parts, library, section=args.section, colour=args.colour,
-                             tolerance=args.tolerance, limit=args.limit)
+                             tolerance=args.tolerance, limit=args.limit, family=args.family)
         if args.intended and "parts" in report:
             report["intended"] = compare_intended(report, Path(args.intended).read_text())
             report["checks_passed"] &= not report["intended"]["missing"]
@@ -423,7 +429,7 @@ def run(args):
         return f"sheet: {result['sheet']}  ({len(result['views'])} views, {result['seconds']} s{notes}). Open it to review.", 0
     if args.command == "deliver":
         from .deliver import deliver
-        result = deliver(args.file, parts, library, args.outdir, glb=not args.no_glb)
+        result = deliver(args.file, parts, library, args.outdir, glb=not args.no_glb, family=args.family)
         return (f"{result['verdict']}  delivered to {result['outdir']} in {result['seconds']} s\n"
                 f"  summary: {result['summary']}\n  views: {result['sheet']}\n"
                 f"  BOM {'matches' if result['bom_matches'] else 'DIFFERS'}; GLB {result['glb'] or 'not produced'}"), \
@@ -586,7 +592,7 @@ def run(args):
             atomic_write(Path(args.report), dumps(review)+'\n')
         return review, 0 if review['checks_passed'] else 1
     if args.command == "vehicle":
-        from .vehicles import DESIGNS, vehicle_plan, wheel_report, design_brief
+        from .vehicles import DESIGNS, FAILS_CHECK, vehicle_plan, wheel_report, design_brief
         if args.vehicle_command == "list":
             return DESIGNS, 0
         if args.vehicle_command == "wheels":
@@ -621,8 +627,12 @@ def run(args):
                 return dict(checks_passed=False, written=False, diagnostics=diagnostics), 1
             atomic_write(target, dumps(plan)+'\n')
             atomic_write(brief, dumps(design_brief(args.name, args.palette))+'\n')
-            return dict(plan=str(target), brief=str(brief), diagnostics=diagnostics,
-                        next='Build, validate, vehicle check, render and open all review views.'), 0
+            result = dict(plan=str(target), brief=str(brief), diagnostics=diagnostics,
+                          next='Build, validate, vehicle check, render and open all review views.')
+            if args.name in FAILS_CHECK:
+                result['warning'] = (f'Legacy profile: its model fails check ({FAILS_CHECK[args.name]}). '
+                                     'Prefer a recipe from docs/reference/README.md and the kit.')
+            return result, 0
         from .vehicle_review import review_vehicle
         model, diagnostics = validate_file(args.file, parts, assembly=True, section=args.section,
                                            colour=args.colour, instance_limit=args.max_instances)

@@ -34,6 +34,7 @@ from .common import normalized
 from .document import physical_context
 from .partcache import PartCache
 from .validation import validate_file
+from .signature import compare, format_signature, signature
 
 EPS = 0.02            # LDU: crossings shallower than this are touching surfaces
 # Analysis-only snap of near-rigid rotations (ldraw-mecha uses 0.002). Reference
@@ -42,6 +43,8 @@ EPS = 0.02            # LDU: crossings shallower than this are touching surfaces
 ROUNDING_LIMIT = 0.01
 COS_PARALLEL = math.cos(math.radians(3))
 LINE_TOLERANCE = 0.6     # LDU between mated axes; reference models accumulate ~0.4 from rounding
+GENERIC_TOLERANCE = 2.0  # generic interfaces (shooters, special fittings) describe volumes, not axes
+TIGHT_FIT = 2.0          # LDU: official models fit grilles, fences and clips this closely; studs are judged by seating
 RADIUS_TOLERANCE = 0.35
 MALE_INTO = {"R": "RS", "A": "AR", "S": "S"}  # male section shape -> female shapes it fits
 # Parts that interlock by design (teeth, clutch faces, cranks, ball joints, hubs in
@@ -55,6 +58,12 @@ FAMILIES = {
     "wheel": re.compile(r"\b(Wheel|Tyre|Tire|Rim|Hub)\b(?! Arch)", re.I),
     "window": re.compile(r"Window|Glass|Pane\b|Door|Shutter|Frame", re.I),
     "clip": re.compile(r"Clip|\bBar\b|Handle|Holder", re.I),
+    # Hinge halves whose finger data is missing or inferred along the wrong axis.
+    "hinge": re.compile(r"\bHinge\b", re.I),
+    # Roller-door segments slide in grooved bricks and panels without port data.
+    "groove": re.compile(r"Roller Door|Brick\s+\d+\s*x\s*\d+\s+with\s+Groove|Panel 3 x 2 x 6", re.I),
+    # Spring shooters and launchers: spring, housing and projectile interlock inside one body.
+    "shooter": re.compile(r"Shooter|Launcher", re.I),
 }
 FIGURE = re.compile(r"Minifig|Figure", re.I)   # posed figures overlap furniture loosely: review only
 FLEXIBLE = re.compile(r"String|Hose|Rubber Band|Chain|Tread Link|Link Tread|\bBand\b|Cable|Rope|Flex|Spring"
@@ -324,7 +333,8 @@ def _mates(ports):
             continue
         delta = pb["P"] - pa["P"]
         along = float(delta @ pa["A"])
-        if np.linalg.norm(delta - along * pa["A"]) > LINE_TOLERANCE:
+        generic = bool(pa["secs"] and pb["secs"] and pa["secs"][0][0] == pb["secs"][0][0] == "G")
+        if np.linalg.norm(delta - along * pa["A"]) > (GENERIC_TOLERANCE if generic else LINE_TOLERANCE):
             continue
         overlap = min(pa["half"], along + pb["half"]) - max(-pa["half"], along - pb["half"])
         needed = min(1.0, pa["half"] + pb["half"]) if pa["half"] + pb["half"] > 0.5 else -LINE_TOLERANCE
@@ -362,7 +372,7 @@ def _components(count, edges):
 
 # --------------------------------------------------------------------- main entry
 
-def check_model(path, parts, library, *, section=None, colour=None, tolerance=0.5, limit=12):
+def check_model(path, parts, library, *, section=None, colour=None, tolerance=0.5, limit=12, family=None):
     started = time.perf_counter()
     model, diagnostics = validate_file(path, parts, assembly=True, section=section, colour=colour)
     errors = [d for d in diagnostics if d["severity"] == "error"]
@@ -375,6 +385,9 @@ def check_model(path, parts, library, *, section=None, colour=None, tolerance=0.
     rows, locals_, transforms = placed_rows(model, path, parts, library)
     result = analyze(rows, tolerance=tolerance, limit=limit)
     report.update(parts=len(rows), part_types=len(locals_), transforms=dict(transforms), **result)
+    report["signature"] = signature(rows)
+    if family:
+        report["family"], report["style"] = family, compare(report["signature"], family)
     report["checks_passed"] = not errors and result["clean"]
     report["seconds"] = round(time.perf_counter() - started, 2)
     return report
@@ -496,7 +509,9 @@ def analyze(rows, *, tolerance=0.5, limit=12):
             if box > depth:
                 depth, at = box, box_at
         if depth > tolerance:
-            special = a["overlap"] or b["overlap"] or _interlocking(a["local"].data.description, b["local"].data.description)
+            # A shallow overlap between shaped parts is a tight fit to review; two boxes overlapping is an error.
+            tight = depth <= TIGHT_FIT and not (a["local"].data.boxy and b["local"].data.boxy)
+            special = a["overlap"] or b["overlap"] or tight or _interlocking(a["local"].data.description, b["local"].data.description)
             (reviews if special else collisions).append((depth, i, j, at))
     collisions.sort(key=lambda c: -c[0])
     reviews.sort(key=lambda c: -c[0])
@@ -505,6 +520,10 @@ def analyze(rows, *, tolerance=0.5, limit=12):
     judged = [g for g in groups if not (len(g) == 1 and g[0] in unknown_set)]
     main = max(judged, key=lambda g: sum(1 for k in g if not rows[k]["free"]), default=[])
     floating_groups = [g for g in judged if g is not main and not all(rows[k]["free"] for k in g)]
+    # Minifigures, their accessories and the hoses they hold are not construction: report, do not fail.
+    figure_groups = [g for g in floating_groups if all(FIGURE.search(rows[k]["local"].data.description)
+                                                        or FLEXIBLE.search(rows[k]["local"].data.description) for k in g)]
+    floating_groups = [g for g in floating_groups if g not in figure_groups]
     floating = sum(len(g) for g in floating_groups)
     # Module graph: mates between top-level modules.
     module_edges = Counter()
@@ -518,7 +537,7 @@ def analyze(rows, *, tolerance=0.5, limit=12):
 
     def name(k):
         row = rows[k]
-        return dict(id=row["label"], part=row["code"], section=row["section"], line=row["line"])
+        return dict(id=row["label"], part=row["code"], section=row["section"], line=row["line"], index=int(k))
     def contact(item):
         d, i, j, at = item
         return dict(depth=round(d, 2), a=name(i), b=name(j), at=[round(float(v), 1) for v in at] if at is not None else None)
@@ -532,6 +551,7 @@ def analyze(rows, *, tolerance=0.5, limit=12):
         floating_count=floating, group_count=len(judged), main_group=len(main),
         floating_groups=[dict(size=len(g), parts=[name(k) for k in g[:limit]]) for g in floating_groups[:limit]],
         free_parts=sum(1 for row in rows if row["free"]),
+        figure_parts=sum(len(g) for g in figure_groups),
         unknown=[name(k) for k in unknown[:limit]], unknown_count=len(unknown),
         unsupported_transforms=[name(k) for k, row in enumerate(rows) if row["status"] == "unsupported"][:limit],
         modules=[dict(module=m, parts=n, floating=module_floating.get(m, 0)) for m, n in module_sizes.most_common()],
@@ -572,13 +592,17 @@ def format_report(report, limit=8):
         lines.append(f"  {report['rolled_axles']} axle(s) turned inside their cross holes (connected; rotate them to align)")
     if report.get("review_count"):
         first = report["reviews"][0]
-        lines.append(f"  review {report['review_count']} overlap(s) between interlocking parts (gears, clutches, joints, hubs, flexible),"
+        lines.append(f"  review {report['review_count']} overlap(s): interlocking parts (gears, clutches, joints, hubs, flexible) or tight fits ≤ {TIGHT_FIT:g} LDU,"
                      f" e.g. {first['depth']} LDU {_who(first['a'])} × {_who(first['b'])}")
     if report["unknown_count"]:
         lines.append(f"  no connector data ({report['unknown_count']}, connectivity not judged): "
                      + ", ".join(_who(u) for u in report["unknown"][:4]))
     if report["free_parts"]:
         lines.append(f"  declared free: {report['free_parts']} parts")
+    if report.get("figure_parts"):
+        lines.append(f"  loose figures: {report['figure_parts']} minifigure parts and accessories (not judged)")
+    if report.get("family"):
+        lines.append("  " + format_signature(report["signature"], report["family"]))
     if report.get("transforms", {}).get("normalized"):
         lines.append(f"  {report['transforms']['normalized']} rounded rotations normalized for analysis")
     return "\n".join(lines)

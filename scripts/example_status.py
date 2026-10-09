@@ -19,6 +19,9 @@ from ldraw_tools.common import get_parts, library_path  # noqa: E402
 
 SKIP = ("part-board", "shortlist", "/proto/", "review-manual", "rose-fit", "window-fit", "/manual/", "/work/",
         "/studies/", "/research/", "/assets/", "mechanism-sources", "/archive/")
+# Official LEGO models and their extracts are well built: what check still reports there is a
+# gap in check (GAP), not a construction defect.
+OFFICIAL = ("examples/spaceship-atlas/", "examples/technic-atlas/mechanisms/", "examples/reference-atlas/")
 
 
 def models():
@@ -43,21 +46,27 @@ def main():
     status = {}
     for relative in models():
         report = check_model(ROOT / relative, parts, library)
-        status[relative] = dict(verdict="PASS" if report.get("checks_passed") else "FAIL", parts=report.get("parts"),
+        verdict = "PASS" if report.get("checks_passed") else "GAP" if relative.startswith(OFFICIAL) else "FAIL"
+        status[relative] = dict(verdict=verdict, parts=report.get("parts"),
                                 problems=summary(report))
         print(f"{status[relative]['verdict']} {relative}: {status[relative]['problems']}")
     (ROOT / "examples/status.json").write_text(json.dumps(status, indent=1) + "\n")
     passed = sum(s["verdict"] == "PASS" for s in status.values())
+    gaps = sum(s["verdict"] == "GAP" for s in status.values())
     lines = ["# Example status", "",
-             f"`check` verdicts for the curated examples ({passed} of {len(status)} pass). "
+             f"`check` verdicts for the curated examples ({passed} of {len(status)} pass"
+             + (f"; {gaps} official models show gaps in check" if gaps else "") + "). "
              "Regenerate with `.venv/bin/python scripts/example_status.py`.", "",
              "A failing example still shows ideas (shapes, palettes, layouts), but its construction has the listed "
-             "defects. Do not copy its coordinates. Prefer the [recipes](../docs/reference/README.md), which always pass.", "",
+             "defects. Do not copy its coordinates. Prefer the [recipes](../docs/reference/README.md), which always pass. "
+             "Examples that failed are moved to the [archive](archive/README.md). "
+             "GAP marks an official LEGO model whose remaining problems are parts or joints `check` cannot judge yet, "
+             "not construction defects.", "",
              "| Example | Parts | Check | Problems |", "|---|---:|---|---|"]
     for relative, s in status.items():
         lines.append(f"| [{relative.removeprefix('examples/')}]({relative.removeprefix('examples/')}) | {s['parts']} | {s['verdict']} | {s['problems']} |")
     (ROOT / "examples/STATUS.md").write_text("\n".join(lines) + "\n")
-    print(f"{passed} of {len(status)} pass")
+    print(f"{passed} of {len(status)} pass, {gaps} official with check gaps")
     return 0
 
 

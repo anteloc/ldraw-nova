@@ -177,10 +177,10 @@ def test_auto_contacts_does_not_invent_connectivity(parts):
 
 
 def test_original_complex_example(official):
-    plan=load_plan(ROOT/'examples/modular-street/scene.plan.json')
+    plan=load_plan(ROOT/'examples/archive/modular-street/scene.plan.json')
     text,model,d=build_plan(plan,official)
     assert not errors(d)
-    assert text.encode()==(ROOT/'examples/modular-street/copper-lane.mpd').read_bytes()
+    assert text.encode()==(ROOT/'examples/archive/modular-street/copper-lane.mpd').read_bytes()
     report=analyze_geometry(model,official,detail='summary',contacts='none')
     assert report['complete'] and not errors(report['diagnostics'])
     assert report['occurrence_count']>1500

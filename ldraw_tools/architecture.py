@@ -260,6 +260,7 @@ def attach_roof(scene,shell,roof,x=0,h=0,z=0,*,id='building',colour=19):
 
 
 def porch(name='porch',*,trim=15,roof=72,w=8,d=4,height=144):
+    """Legacy: built alone, this module fails `check` (its two roof halves are not bridged); prefer the kit and docs/reference recipes."""
     m=Module(f'{name}-{trim}-{roof}-{w}-{d}-{height}', 'Supported porch: base underside Y=0, entry at rear +Z; keep middle four studs clear')
     slab(m,-w/2,-d/2,w,d,8,trim)
     for x in [-w/2+.5,w/2-.5]:
@@ -334,12 +335,14 @@ def fence(w=8,c=70):
 
 
 def beacon():
+    """Legacy: built alone, this module fails `check` (a floating part); prefer the kit and docs/reference recipes."""
     m=Module('landing-beacon','Low blue landing beacon; functional industrial lighting')
     m.add('3022',72,h=8);m.add('3941',15,h=32);m.add('3941',43,h=56);m.add('4740',72,h=64)
     return m
 
 
 def utility_stack():
+    """Legacy: built alone, this module fails `check` (a floating part); prefer the kit and docs/reference recipes."""
     m=Module('utility-stack','Banded industrial chimney on a 4x4 stud equipment plinth')
     slab(m,-2,-2,4,4,8,72)
     for row in range(9):m.add('3941',71 if row%3 else 72,h=32+24*row)
@@ -348,6 +351,7 @@ def utility_stack():
 
 
 def fountain():
+    """Legacy: built alone, this module fails `check` (floating parts); prefer the kit and docs/reference recipes."""
     m=Module('garden-fountain','Six-stud pool and central water column; base Y=0, front -Z')
     slab(m,-3,-3,6,6,8,71);ring(m,6,6,32,71,plate=False);ring(m,6,6,40,19)
     for x in [-1.5,-.5,.5,1.5]:
@@ -360,6 +364,7 @@ def fountain():
 
 
 def solar_array():
+    """Legacy: built alone, this module fails `check` (unbridged panels); prefer the kit and docs/reference recipes."""
     m=Module('solar-array','Eight by four stud static solar rack; base Y=0; all panels rest on real supports')
     for x in [-3,3]:
         for z in [-1,1]:m.add('3003',72,x,24,z)

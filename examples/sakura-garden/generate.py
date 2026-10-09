@@ -745,7 +745,7 @@ def bench():
 # ---------------------------------------------------------------- figures
 
 # Standing minifigure stack measured from this library's connector frames in
-# examples/copper-bean/generate.py: legs 12 LDU below the hips origin, torso 32
+# examples/archive/copper-bean/generate.py: legs 12 LDU below the hips origin, torso 32
 # above, head 57 above; hips 40 above the stud surface. 43368/43369 arms carry
 # their own geometry (a mirrored 3819 is rejected by the assembly profile).
 HIPS_TO_LEGS, HIPS_TO_TORSO, HIPS_TO_HEAD, STANDING_HIPS = 12, 32, 57, 40

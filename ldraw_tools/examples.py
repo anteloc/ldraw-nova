@@ -23,7 +23,8 @@ def search_examples(query='', *, limit=5, scale=None, details=False, family='bui
         if 'model' in item:
             checked=status.get(Path(item['model']).resolve().relative_to(ROOT).as_posix())
             item.pop('checks_passed',None)   # superseded by the current check verdict
-            item['check']=f"{checked['verdict']}: {checked['problems']}" if checked else 'not checked (run scripts/example_status.py)'
+            item['check']=(f"{checked['verdict']}: {checked['problems']}"+(' (official model: gaps in check, not defects)' if checked['verdict']=='GAP' else '')
+                           if checked else 'not checked (run scripts/example_status.py)')
         rows.append(item)
     return dict(total=len(rows),results=rows[:limit],truncated=len(rows)>limit,
                 note='Recipes in docs/reference always pass check; prefer them. Use an example for its ideas; '

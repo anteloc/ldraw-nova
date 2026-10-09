@@ -1,70 +1,68 @@
-# Design advanced spaceships
+# Spaceships
 
-Use this workflow for detailed starfighters, freighters, shuttles and capital ships, including Star Wars subjects. Start with the [spaceship atlas](../../examples/spaceship-atlas/README.md): whole ships teach silhouette and scale; smaller cockpit, engine, wing, armour and service-bay studies teach construction. Keep the source's authorship when copying it, and distinguish a reconstruction from an original design.
+Build a ship from **plates**, shaped with wedges and slopes, with many parts mounted **sideways** or **hinged at an angle**. Upright bricks make a building with wings. Start from a [spaceship recipe](../reference/README.md) and build with the [kit](kit.md).
 
-```sh
-./ldraw-agent spaceship list
-./ldraw-agent spaceship details
-./ldraw-agent examples --family spaceship
-./ldraw-agent examples --family spaceship --details
-./ldraw-agent spaceship brief starfighter --output output/my-ship-brief.json
+## What official ships are made of
+
+Share of parts in 53 official LEGO ships (Classic Space to UCS), against a generated ship that looked like a building:
+
+| | Official ships: median (middle half) | Building-like ship |
+|---|---|---|
+| Plain bricks | 3% (0–7%) | 35% |
+| Mounted sideways or upside down | 45% (20–57%) | 0% |
+| At non-right angles (hinges) | 20% (0–49%) | 0% |
+| Hinges, clips and bars | 12% (6–17%) | 0% |
+| Wedge plates | 5% (2–7%) | 0% |
+| Height ÷ length | 0.39 (0.32–0.51) | 0.26 |
+
+`./ldraw-agent check MODEL.mpd --family spaceship` prints your model's shares and says when it reads as a building. `Model(..., family="spaceship")` adds the same advice to every `save()`.
+
+## If it looks wrong
+
+| It looks like | Because | Do instead |
+|---|---|---|
+| A building with wings | Hull walls of stacked bricks | Plate stacks; slopes and wedges shape the top and nose |
+| A slab | Rectangular outline in the top view | Wedge plates taper the nose and wings; `mirror()` builds the other side |
+| A toy | Engines and guns as upright bricks | Round parts on side studs: `place(..., on=lamp.port("stud[0]"))` |
+| Flat | Wings in the hull's plane | Hinge the wing root: `mate(..., "hinge[0]", roll=20)` |
+| Busy | The same detail everywhere | Quiet tiled hull, two or three detail clusters (grilles, cheese slopes) |
+
+## Parts by role
+
+| Role | Parts |
+|---|---|
+| Hull, spine | Plates 3020, 3022, 3034, 3832; tiles 3068b, 3069b on top |
+| Nose and taper | Wing plates 41769/41770, 43722/43723 (left/right pairs), 51739; slopes 3039, 3040b; cheese slope 54200; curved 15068, 11477 |
+| Wing roots | Hinge plates 4275b + 4276b (fingers), 2429 + 2430 (swivel), 44301a + 44302a (click) |
+| Sideways mounts | Headlight brick 4070, side-stud brick 87087, brackets 99780/99781 |
+| Engines, guns, lights | Cones 4589, dishes 4740, round plates 6141 and 4032a, round brick 3062b, grille tile 2412b |
+| Cockpit | Canopies 47844 (3 wide), 4474 and 41883 (4 wide) |
+| Underside | Inverted slopes 3665a, 4287a |
+
+## How a starfighter connects
+
+```mermaid
+flowchart LR
+  spine["spine: plate stack"] -->|"studs"| nose["nose: wedge plates and slopes"]
+  spine -->|"studs"| cockpit["cockpit: canopy on a plate"]
+  spine -->|"hinge 4275b/4276b, roll 10–30°"| wingR["right wing: wing plates"]
+  wingR -.->|"mirror(about=spine)"| wingL["left wing"]
+  spine -->|"side studs (4070), place(on=)"| engines["engines: cones, dishes"]
+  wingR -->|"side studs"| guns["wing guns: cones on bars"]
 ```
 
-`brief` also accepts `freighter` and `capital-ship`. It supplies design roles, module suggestions, part-search prompts and a review checklist. Complete its scale, dimensions, pose and attachment decisions before building; it is a brief, not a generated model.
+## Build order
 
-## Establish identity and scale
-
-Decide whether the model is minifigure scale, a larger display model or microscale. Choose two or three defining masses before adding small details: an X-shaped wing arrangement, a long engine pair, a broad asymmetric cargo hull, or a wedge with a raised bridge. For a named fictional ship, study the specific variant and retain its defining proportions.
-
-For new designs use X for width, -Z for forward and negative Y for up. Choose a hull or display-stand datum explicitly; spacecraft do not inherit a car's wheelbase and road plane. Imported source axes may differ. Measure the source before rotating or positioning it, and use proper rotations rather than mirrored or stretched parts.
-
-| Family | Main construction decisions | Visual priorities |
-| --- | --- | --- |
-| Starfighter/interceptor | Central spine, wing roots, cockpit, nacelles and landing/display attachments | Nose/cockpit balance, thin wing edges, engine spacing and a distinct front silhouette |
-| Freighter/shuttle | Cargo frame, access corridor, hull panels, ramp, cockpit and landing supports | Hull mass, deliberate asymmetry, readable loading access and restrained weathering accents |
-| Capital ship | Internal truss, lower hull, paired upper panels, bridge, trenches and engine block | Large clean outline, layered silhouette, recessed detail and consistent miniature scale |
-
-## Study constructions and choose real parts
-
-Use Jev only after its availability check; use explicit FTS when unavailable. Search separately for whole-ship proportions and each construction role. Do not restrict useful source parts to the same theme. Spacecraft often combine System skins with Technic frames; `--construction all` helps discover both.
-
-```sh
-./ldraw-agent discover search models 'a detailed Star Wars starfighter with wing and engine submodels' \
-  --construction all --min-parts 300 --max-parts 2500 --limit 5
-./ldraw-agent discover search submodels 'a spaceship engine nacelle with a cylindrical shell and exhaust' \
-  --construction all --max-parts 180 --limit 5
+```mermaid
+flowchart LR
+  A["spine plates"] --> B["nose taper"] --> C["cockpit"] --> D["wing roots (hinges)"] --> E["one wing"] --> F["mirror()"] --> G["engines on side studs"] --> H["check --family spaceship"] --> I["look: top and right views"]
 ```
 
-Inspect dedicated canopies and windscreens with their mating rims, printed instrument tiles, seats and control sticks, matched wedge plates, curved slopes, brackets, hinge halves, cylinders, dishes, cones, grilles, bars and clips. Preserve embedded custom definitions where the source needs them. Do not invent a part ID or replace all these distinctive forms with rectangular slabs.
+## Review
 
-Use [build pages](build-manuals.md) when layers or hidden interfaces are hard to read. The atlas includes manuals for an X-wing nacelle, an enclosed canopy cockpit, a UCS Y-wing armour panel and a Millennium Falcon service cluster. Its larger wing study includes source sections that can be expanded into manuals when needed.
+- **Top view:** a tapered outline (nose, wing sweep), not a rectangle.
+- **Right view:** thin; height about a third of the length.
+- **Back view:** the engines read as engines.
+- **`check --family spaceship`:** the style line shows no "reads as a building".
 
-## Build from the frame outward
-
-Reserve the cockpit, cargo volume, engine envelopes and attachment space first. Separate the internal spine/truss, cockpit tub, nose, wing roots, wings, engines, hull panels, service details and landing/display supports. Record each module's local origin, bounds, mounting parts and dependencies.
-
-Long wings and cantilevered engines need a bonded plate stack or a braced frame. Do not place a wing or pod in space merely because its bounding box touches the hull. Keep a bare-frame or root close-up to inspect the real attachment. Use the [Technic workflow](technic.md) for fixed supports and the [mechanism workflow](mechanisms.md) for actual folding wings, ramps or retracting gear. Analytical mechanism verification remains deferred; a static hinge pose does not demonstrate motion.
-
-Export a reviewed starting construction:
-
-```sh
-./ldraw-agent spaceship export b-wing --outdir output/my-starship
-./ldraw-agent build output/my-starship/scene.plan.json --contacts none \
-  --output output/my-starship/my-starship.mpd
-```
-
-Edit the placement plan to position the whole module; edit its attributed `source.mpd` when changing internal parts. Its origin frame is not a promised connector. Check individual new interfaces and fixed supports separately. Export is blocked for inspiration entries with unresolved source errors. Whole-model source studies can contain minifigures, stands or accessories; inspect the section list before using them as a single ship module.
-
-## Make the design attractive
-
-Keep the primary hull colour dominant and use smaller roles for panel shadows, markings, frame, canopy and exhaust. Differentiate mechanical cores from exterior armour. Put fine pipes, clips and grille patterns in a few recessed service areas; leave broad hull and wing surfaces quiet enough to show the silhouette. Repeated engine parts, coherent panel seams and a few deliberate asymmetries read better than uniformly dense decoration.
-
-Use real depth: inset cockpits, layered leading edges, thin outer wing edges, recessed trenches, overlapping armour and concentric engine nozzles. Avoid thick plate sandwiches at every exposed edge. Design the underside, landing feet and display mount with the same care as the top.
-
-## Inspect and deliver
-
-Run normal source and geometry validation and compare Python/LeoCAD BOMs. The spaceship family does not imply car-wheel checks, flight physics or automatic symmetry checks. Preserve diagnostic coverage, especially on imported angled constructions and curves.
-
-Render home/front/back/right/left/top/bottom for a delivered spacecraft, plus exposed frame, cockpit and wing-root views where the exterior hides important work. Judge front/top silhouette, side thickness, rear engines, canopy fit, negative space, detail density and underside supports. Revise after opening the images.
-
-Deliver the editable MPD, reproducible plan/generator, design brief, checks, BOM comparison, attribution and final visual review. Explain source adaptations and outstanding physical limits. Atlas overviews are study images; a new model still needs its own final inspection.
+The [spaceship atlas](../../examples/spaceship-atlas/README.md) holds studies of large official ships (B-wing, X-wing, Y-wing). Use them for proportion and detail ideas, not as starting points.

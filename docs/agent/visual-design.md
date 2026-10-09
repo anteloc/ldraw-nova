@@ -26,7 +26,7 @@ Write a short `design-brief.json` or Markdown brief outside the assembly plan. R
 - **Detail vocabulary:** choose a few consistent motifs—arches, masonry, flower boxes, brass fittings—and vary their use by function. Leave quiet wall and roof areas.
 - **Scene/story:** readable entrance, a window display, books, a seat, planting, paving and appropriate lighting. Add intentional asymmetry and different plant heights without random scattering.
 
-Use the current [Copper Lane brief](../../examples/modular-street/design-brief.json) and [review](../../examples/modular-street/visual-review.md) as an example. Adapt the principles to other subjects: vehicles need stance, wheel/arch proportions and readable functional details; animals need silhouette, pose and expressive features; interiors need a clear activity and appropriate furniture scale.
+Use the [Copper Lane brief](../../examples/archive/modular-street/design-brief.json) and [review](../../examples/archive/modular-street/visual-review.md) as an example of the design process; the model itself is archived because its construction fails `check`. Adapt the principles to other subjects: vehicles need stance, wheel/arch proportions and readable functional details; animals need silhouette, pose and expressive features; interiors need a clear activity and appropriate furniture scale.
 
 ## Find a shape before memorizing a number
 

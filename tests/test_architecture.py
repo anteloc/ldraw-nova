@@ -93,8 +93,9 @@ def test_each_building_is_reproducible_resolved_and_on_its_site_grid(official,ke
 def test_catalog_covers_each_family_and_only_current_artifacts():
     manifest=json.loads((ATLAS/'catalog.json').read_text())
     assert {r['key'] for r in manifest['examples']}==set(atlas.DESIGNS)
-    assert len({r['category'] for r in manifest['examples']})==21
-    assert len(manifest['details'])>=18
+    # Failing examples are archived (examples/archive); each remaining one is a distinct family.
+    assert len({r['category'] for r in manifest['examples']})==len(manifest['examples'])==8
+    assert len(manifest['details'])==12
     for row in manifest['examples']+manifest['details']:
         source=ATLAS/row['model'];sha=hashlib.sha256(source.read_bytes()).hexdigest()
         assert row['source_sha256']==sha
@@ -107,6 +108,6 @@ def test_bounded_example_selection_and_scale():
     r=search_examples('farm',limit=2)
     assert r['total'] and r['results'][0]['key']=='farmstead'
     r=search_examples(scale='microscale');assert [v['key'] for v in r['results']]==['skyline']
-    assert search_examples('porch',details=True)['total']
+    assert search_examples('bench',details=True)['total']
     assert len(search_examples(limit=2)['results'])==2
     assert search_examples(limit=2)['truncated']

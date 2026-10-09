@@ -57,7 +57,7 @@ or must accommodate seats, controls, a driver, headroom and an access route.
 `tourer.plan.brief.json`. It is an editable construction starting point, not a
 substitute for designing the requested vehicle. It does not scale parts or promise
 colour availability. Change the brief and source together. Use the
-[vehicle atlas](../../examples/vehicle-atlas/README.md) to study the seven different
+[vehicle atlas](../../examples/vehicle-atlas/README.md) (two designs remain; five failing ones are [archived](../../examples/archive/README.md)) to study the different
 vehicle arrangements and their opened-image review.
 
 ## Choose dedicated parts before building substitutes

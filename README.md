@@ -120,10 +120,10 @@ The agent **doesn't actually start with placing parts**, except for things like 
 The way it produces models is more like:
 
 - **Collects** the required information, from experimental results, docs and planning.
-- **Builds** one or more **plans**, that fully describe the model and submodels, including its geometry, like e.g. [atlas-crane.plan.json](examples/atlas-crane/atlas-crane.plan.json)
-- And with that plan, it creates one or more **generator scripts** like e.g. [generate.py](examples/atlas-crane/generate.py) 
+- **Builds** one or more **plans**, that fully describe the model and submodels, including its geometry, like e.g. [atlas-crane.plan.json](examples/archive/atlas-crane/atlas-crane.plan.json)
+- And with that plan, it creates one or more **generator scripts** like e.g. [generate.py](examples/archive/atlas-crane/generate.py) 
 - ... that when executed, **produce LDraw source** file(s), a very specialized **3D CAD language**.
-- ... like e.g. [atlas-crane.mpd](examples/atlas-crane/atlas-crane.mpd)
+- ... like e.g. [atlas-crane.mpd](examples/archive/atlas-crane/atlas-crane.mpd)
 
 To **summarize**, this is like:
 
@@ -160,7 +160,7 @@ These are some of the guides and references given to the agent in order to make 
 | Design creative Technic models        | [Design patterns](docs/agent/technic-design.md) and [Mecha construction studies](examples/technic-studies/README.md) |
 | Build with mechanisms                 | [Mechanism workflow](docs/agent/mechanisms.md) and [build manuals](examples/mechanism-atlas/README.md)             |
 | Find parts and reusable constructions | [Reference discovery](docs/agent/reference-discovery.md) and [reference atlas](examples/reference-atlas/README.md) |
-| Organize a large model                | [Module workflow](docs/agent/complex-models.md) and [Copper Lane example](examples/modular-street/README.md)       |
+| Organize a large model                | [Module workflow](docs/agent/complex-models.md) and [Copper Lane example](examples/archive/modular-street/README.md)       |
 | Understand connections and checks     | [Geometry](docs/agent/geometry.md), [snapping](docs/agent/snapping.md) and [validation](docs/agent/validation.md)  |
 | Look up a command or file-format rule | [Tool reference](docs/agent/tooling.md) and [LDraw rules](docs/agent/ldraw-reference.md)                           |
 

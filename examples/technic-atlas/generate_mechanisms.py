@@ -21,9 +21,14 @@ from ldraw_tools.manuals import prepare_manual, regenerate_placement, sha, write
 from technic_catalog import write_catalog
 
 
+# Fails `check` standalone (boundary holders omitted); lives in examples/archive/technic-atlas/.
+ARCHIVED = {'independent-suspension'}
+
+
 def generate(outdir, *, names=None, renders=True):
     outdir = Path(outdir)
-    seeds = json.loads((HERE / 'mechanism-selections.json').read_text())['references']
+    seeds = [s for s in json.loads((HERE / 'mechanism-selections.json').read_text())['references']
+             if s['key'] not in ARCHIVED]
     if names and set(names) - {s['key'] for s in seeds}:
         raise ValueError('Unknown Technic mechanism selection')
     selected = [s for s in seeds if not names or s['key'] in names]

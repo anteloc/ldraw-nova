@@ -7,7 +7,8 @@ holes on the npeghole cut-outs between Technic holes, or hole faces instead of
 centred bores, male axles read into axle holes, and stud receptacles that reach
 10 LDU below a brick and fake a mate across a one-plate gap). One exception: a
 complete part with no authored socket at all takes its inferred stud receptacles,
-clipped to its body. Newer library revisions remodel parts with primitives the
+clipped to its body, and a plate-height part also a socket under each top stud. Newer
+library revisions remodel parts with primitives the
 shadow library predates; the 2026-05 wings 41769a/41770a keep authored studs while
 their receptacles are inferred only. Parts without complete metadata fall back to
 the inferred features and primitive studs. Exact duplicate descriptions merge into
@@ -34,7 +35,7 @@ from ldraw.connection_types import (AnnularProfile, ConnectionSource, Cylindrica
 
 from .common import CACHE, normalized
 
-VERSION = 6
+VERSION = 11
 AUTHORED = {ConnectionSource.LDCAD_SHADOW, ConnectionSource.LDCAD_INLINE, ConnectionSource.OVERRIDE,
             ConnectionSource.SHORTCUT, ConnectionSource.STUDIO}
 EMPTY = np.zeros((0, 3, 3))
@@ -96,6 +97,26 @@ class TriangleExpander:
         if moved and depth < 4:
             return self.is_stud(moved.group(1) + ("" if moved.group(1).lower().endswith(".dat") else ".dat"), depth + 1)
         return _stud_title(title)
+
+    def placements(self, name, wanted, depth=0):
+        """(file, R, t) for every reference to a file in ``wanted``, through nested subfiles."""
+        path = self.path(name)
+        if path is None or depth > 12:
+            return []
+        found = []
+        with open(path, encoding="utf-8-sig", errors="replace") as handle:
+            for line in handle:
+                t = line.split()
+                if len(t) < 15 or t[0] != "1":
+                    continue
+                child = normalized(" ".join(t[14:])).strip()
+                values = np.array(t[2:14], dtype=float)
+                R, offset = values[3:].reshape(3, 3), values[:3]
+                if child in wanted:
+                    found.append((child, R, offset))
+                elif not self.is_stud(child):
+                    found.extend((c, R @ r, R @ o + offset) for c, r, o in self.placements(child, wanted, depth + 1))
+        return found
 
     def triangles(self, name, depth=0):
         key = normalized(name).strip()
@@ -202,10 +223,12 @@ def _box_support(lo, hi, axis):
     return float(reach.min()), float(reach.max())
 
 
-def clean_ports(geometry, body=None):
+def clean_ports(geometry, body=None, hinges=()):
     """Authored interfaces when metadata coverage is complete, else every inferred feature.
 
     ``body`` (lo, hi) clips the inferred receptacles a complete part without authored sockets takes.
+    ``hinges`` are authored finger hinges from referenced primitives; they replace the part's
+    inferred hinges unless the part's own metadata already authors one.
     """
     metadata = geometry.connection_metadata
     complete = metadata is not None and str(metadata.coverage) == "complete"
@@ -216,7 +239,34 @@ def clean_ports(geometry, body=None):
         inferred = [r for r in inferred if r["kind"] == "stud_receptacle"]
         if body is not None:
             inferred = [c for c in (_clipped(r, *body) for r in inferred) if c is not None]
+            if body[1][1] - body[0][1] <= 8.5:   # plate height: every top stud has a socket under it
+                taken = [(r["p"][0], r["p"][2]) for r in inferred]
+                for stud in [r for r in records if r["kind"] == "stud" and r["axis"][1] < -0.99]:
+                    if all(abs(stud["p"][0] - x) > 1 or abs(stud["p"][2] - z) > 1 for x, z in taken):
+                        inferred.append(dict(kind="stud_receptacle", gender="F", p=[stud["p"][0], round(float(body[1][1]) - 2, 4), stud["p"][2]],
+                                             axis=[0.0, -1.0, 0.0], half=2.0, group=None, centered=False, source="inferred",
+                                             secs=[("R", 6.0)]))
         records += inferred
+    if not complete:
+        # Partial metadata: a guess of a kind the part already authors is noise (the inverted
+        # slope 4287 gets studs inside its body); other guessed sockets are cut to the body.
+        authored_kinds = {r["kind"] for r in records if r["source"] == "authored"}
+        kept = []
+        for r in records:
+            if r["source"] != "authored" and authored_kinds:
+                if r["kind"] in authored_kinds:
+                    continue
+                if r["gender"] == "F" and body is not None:
+                    r = _clipped(r, *body)
+                    if r is None:
+                        continue
+            kept.append(r)
+        records = kept
+    if hinges or any(r["kind"] == "hinge" and r["source"] == "authored" for r in records):
+        # Inferred hinges run along the fingers' extent, not the pivot: keep only real data.
+        authored = [r for r in records if r["kind"] == "hinge" and r["source"] == "authored"]
+        extra = [h for h in hinges if all(np.linalg.norm(np.subtract(h["p"], a["p"])) > 2 for a in authored)]
+        records = [r for r in records if r["kind"] != "hinge"] + authored + extra
     if not any(r["kind"] == "stud" for r in records) and not complete:
         for stud in geometry.top_studs:
             up = _unit(_vector(stud.up))
@@ -275,7 +325,49 @@ class PartCache:
         self.embedded_paths = {normalized(k): Path(v) for k, v in (embedded_paths or {}).items()}
         self._files = None
         self._expander = None
+        self._fingers = None
         self.memory = {}
+
+    @property
+    def finger_primitives(self):
+        """Authored finger hinges of shadow primitives (h1, h2, clh*), in primitive coordinates.
+
+        When a part references one of these primitives, pyldraw3 replaces its authored
+        SNAP_FGR with a primitive guess along the wrong axis (the fingers' extent instead of
+        the pivot), so hinged parts never mate once turned. The authored data is carried
+        into the part by `_primitive_hinges` instead.
+        """
+        if self._fingers is None:
+            self._fingers = {}
+            for shadow in getattr(self.parts, "_connection_shadow_libraries", []):
+                folder = Path(str(getattr(shadow, "source", ""))) / "p"
+                for path in sorted(folder.glob("*.dat")) if folder.is_dir() else []:
+                    if "SNAP_FGR" not in path.read_text(errors="replace"):
+                        continue
+                    try:
+                        geometry = self.parts.geometry(path.stem)
+                    except Exception:  # a primitive the parts library lacks
+                        continue
+                    records = [port_record(f) for f in geometry.connections
+                               if f.source in AUTHORED and f.confidence > 0 and isinstance(f.profile, FingerProfile)]
+                    if records:
+                        self._fingers[path.name.lower()] = records
+        return self._fingers
+
+    def _primitive_hinges(self, code):
+        """Authored finger hinges of the hinge primitives a part references, in part coordinates."""
+        wanted = self.finger_primitives
+        records = []
+        for child, R, offset in self.expander.placements(code + ".dat", wanted) if wanted else []:
+            for record in wanted[child]:
+                axis = R @ np.array(record["axis"])
+                scale = float(np.linalg.norm(axis))
+                if scale < 1e-9:
+                    continue
+                records.append(dict(record, p=(R @ np.array(record["p"]) + offset).round(4).tolist(),
+                                    axis=(axis / scale).round(6).tolist(), half=round(record["half"] * scale, 4),
+                                    fingers=[round(v * scale, 3) for v in record.get("fingers", [])]))
+        return records
 
     @property
     def expander(self):
@@ -334,6 +426,19 @@ class PartCache:
             np.allclose(_vector(library.bounds.max), _vector(geometry.bounds.max), atol=1.0)
         return library if same else None
 
+    def _library_description(self, code, description):
+        """An embedded copy titled only by its number ('35188') takes the library part's description.
+
+        Reports and family rules (gears, hubs, flexible parts) read descriptions, and a bare
+        number hides that the copy is, say, a clutch gear.
+        """
+        match = re.search(r"(\d{3,}[a-z0-9]*)$", code)
+        if code not in self.embedded_paths or not match or description.lower() != match.group(1):
+            return description
+        if self.parts.find_part(code=match.group(1)) is None:
+            return description
+        return (self.parts.geometry(match.group(1)).description or description).strip()
+
     def _build(self, code):
         geometry = self.parts.geometry(code)
         twin = self._library_twin(code, geometry)
@@ -347,8 +452,8 @@ class PartCache:
             lo, hi = np.array(_vector(geometry.bounds.min)), np.array(_vector(geometry.bounds.max))
         else:
             lo = hi = np.zeros(3)
-        ports, coverage = clean_ports(twin or geometry, body=(lo, hi))
-        description = (geometry.description or "").strip()
+        ports, coverage = clean_ports(twin or geometry, body=(lo, hi), hinges=self._primitive_hinges(code))
+        description = self._library_description(code, (geometry.description or "").strip())
         return PartData(code=code, description=description, tris=tris, edges=unique_edges(tris), lo=lo, hi=hi,
                         ports=ports, coverage=coverage + (f" (ports from library {twin.code})" if twin else ""),
                         boxy=bool(BOXY.match(description)), missing=sorted(expander.missing - before))

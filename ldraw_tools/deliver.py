@@ -31,12 +31,12 @@ Fill this in before you finish. It is how the toolkit and the recipes improve fo
 """
 
 
-def deliver(path, parts, library, outdir=None, *, glb=True):
+def deliver(path, parts, library, outdir=None, *, glb=True, family=None):
     started = time.perf_counter()
     path = Path(path).resolve()
     outdir = Path(outdir) if outdir else path.parent / "delivery"
     outdir.mkdir(parents=True, exist_ok=True)
-    report = checker.check_model(path, parts, library)
+    report = checker.check_model(path, parts, library, family=family)
     atomic_write(outdir / "check.json", __import__("json").dumps(report, indent=1, default=str) + "\n")
     sheet = look(path, parts, library, outdir, views=VIEWS)["sheet"]
     rendered = render(path, library, outdir / "views", views=VIEWS)
@@ -59,6 +59,7 @@ def deliver(path, parts, library, outdir=None, *, glb=True):
              f"floating {report.get('floating_count', '?')}, collisions {report.get('collision_count', '?')}, "
              f"badly seated {report.get('seating_count', '?')}, duplicates {report.get('duplicate_count', '?')}.",
              f"LeoCAD BOM {'matches' if comparison.get('matches') else 'DIFFERS from'} the Python BOM.", "",
+             *([checker.format_signature(report["signature"], family), ""] if family and "signature" in report else []),
              f"![Views]({Path(sheet).name})", "", "## Modules", "", "```mermaid", checker.mermaid_graph(report) if "modules" in report else "flowchart LR", "```", "",
              "## Parts", "", "| Part | Colour | Qty |", "|---|---|---:|"]
     for (part, colour), quantity in bom_rows.most_common(25):

@@ -18,6 +18,10 @@ from ldraw_tools.vehicles import DESIGNS, design_brief, vehicle_plan
 from ldraw_tools.vehicle_details import DETAILS, detail_plan
 from ldraw import inspect_model
 
+# These fail `check` (mudguards or panels collide) and live in examples/archive/vehicle-atlas/.
+# They are not regenerated or indexed; see examples/archive/README.md.
+ARCHIVED = {'grand-tourer', 'delivery-van', 'pickup', 'tipper-truck', 'courier-jet'}
+
 
 def artifacts(outdir, relative, name, plan, parts, *, renders=False, profile=None):
     folder = outdir/relative
@@ -73,7 +77,7 @@ def generate(outdir, *, renders=False, names=None, details=None):
     parts = get_parts()
     all_examples = names is None and details is None
     rows, detail_rows = [], []
-    for name in DESIGNS if all_examples else names or []:
+    for name in [n for n in DESIGNS if n not in ARCHIVED] if all_examples else names or []:
         design = DESIGNS[name]
         row = artifacts(outdir, name, name, vehicle_plan(name), parts,
                         renders=renders, profile=design.get('profile','road'))
@@ -94,7 +98,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--outdir', type=Path, default=Path('output/vehicle-atlas'))
     parser.add_argument('--render', action='store_true')
-    parser.add_argument('--name', choices=list(DESIGNS), action='append')
+    parser.add_argument('--name', choices=[n for n in DESIGNS if n not in ARCHIVED], action='append')
     parser.add_argument('--detail', choices=list(DETAILS), action='append')
     args = parser.parse_args()
     generate(args.outdir, renders=args.render, names=args.name, details=args.detail)

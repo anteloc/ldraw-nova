@@ -13,7 +13,7 @@ pytestmark = pytest.mark.skipif(shutil.which("leocad") is None, reason="LeoCAD C
 
 
 def test_look_makes_one_labelled_sheet_with_problems(official, tmp_path):
-    result = look(ROOT / "examples/building-atlas/details/porch/porch.mpd", official, library_path(), tmp_path,
+    result = look(ROOT / "examples/archive/building-atlas/details/porch/porch.mpd", official, library_path(), tmp_path,
                   views=("home", "top"), problems=True)
     sheet = Image.open(result["sheet"])
     assert sheet.width > sheet.height and result["highlighted"] == 18   # the unbridged half is magenta

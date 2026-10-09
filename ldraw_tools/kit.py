@@ -31,6 +31,7 @@ from __future__ import annotations
 import json
 import math
 import re
+import sqlite3
 from pathlib import Path
 
 import numpy as np
@@ -39,7 +40,7 @@ from ldraw.lines import Comment
 
 from . import check as checker
 from .builder import serialize_mpd
-from .common import atomic_write, get_parts, library_path, normalized
+from .common import ROOT, atomic_write, get_parts, library_path, normalized
 from .partcache import PartCache
 
 STUD, PLATE = 20.0, 8.0
@@ -181,14 +182,64 @@ class Section:
         self.entries, self.rows, self.counts, self.step = [], [], {}, 0
 
     # ----------------------------------------------------------------- verbs
-    def place(self, ref, colour, cell, level=0, turn=0, **options):
-        """Put a studded part on the stud grid: footprint corner at ``cell``, bottom at ``level`` plates."""
+    def place(self, ref, colour, cell=(0, 0), level=0, turn=0, on=None, **options):
+        """Put a studded part on a stud grid: footprint corner at ``cell``, bottom at ``level`` plates.
+
+        Without ``on`` the grid is the ground. With ``on=part.port("stud[k]")`` it is the face that
+        stud stands on, at any angle (a bracket's side, a hinged plate, an upside-down part):
+        cell (0, 0) is that stud and ``level`` counts plates out from the face. On a top or
+        bottom face, even a tilted one, cells run like the ground (x toward +X, z toward +Z);
+        on a side face cell z points up. ``turn`` rotates about the stud's axis.
+        """
         data = self.model.part(ref)
         rotation = yaw(turn)
         points = _footprint(data)
         rotated = points @ rotation.T
         t = np.array([STUD * cell[0] - rotated[:, 0].min(), -PLATE * level - stacking_bottom(data), STUD * cell[1] - rotated[:, 2].min()])
-        return self._admit(ref, data, colour, rotation, t, options, verb=f"place(cell={tuple(cell)}, level={level})")
+        verb = f"place(cell={tuple(cell)}, level={level})"
+        if on is not None:
+            frame, origin = _face(on, self)
+            rotation, t = frame @ rotation, origin + frame @ t
+            verb = f"place(on={on.handle.id}.{on.name}, cell={tuple(cell)}, level={level})"
+        return self._admit(ref, data, colour, rotation, t, options, verb=verb)
+
+    def mirror(self, handles, about=None, plane="X", at=0.0):
+        """Place the mirror image of parts across a plane: build one side, then mirror it.
+
+        ``about=hull`` mirrors across that placed part's centre line; otherwise across x=at
+        (``plane="X"``, the default: left/right) or z=at (``plane="Z"``: front/back).
+        Left and right parts swap (41769 Wing Right becomes 41770 Wing Left); symmetric parts are
+        turned so the copy is a true mirror image. Parts lying on the plane are their own mirror
+        and are skipped. Returns the new handles in order; ids swap left/right or get "-mirror".
+        """
+        flip = {"X": np.diag([-1.0, 1, 1]), "Z": np.diag([1.0, 1, -1])}.get(plane.upper())
+        if flip is None:
+            raise KitError("mirror plane must be 'X' (left/right, across x) or 'Z' (front/back, across z)")
+        axis = 0 if plane.upper() == "X" else 2
+        centre = np.zeros(3)
+        if about is not None:
+            if not isinstance(about, Handle) or about.data is None:
+                raise KitError("about= must be a placed part, e.g. about=hull")
+            low, high = about.box
+            centre[axis] = (low[axis] + high[axis]) / 2
+        else:
+            centre[axis] = at
+        made = []
+        for handle in handles if isinstance(handles, (list, tuple)) else [handles]:
+            if handle.data is None:
+                raise KitError(f"{handle.id} is a submodel; mirror the parts inside it")
+            ref, local = self.model.counterpart(handle.ref)
+            rotation = flip @ handle.R @ local
+            t = flip @ (handle.t - centre) + centre
+            if normalized(ref) == normalized(handle.ref) and np.allclose(rotation, handle.R, atol=1e-6) and np.allclose(t, handle.t, atol=0.01):
+                continue
+            swapped = re.sub(r"left|right", lambda m: {"left": "right", "right": "left"}[m.group(0)], handle.id)
+            options = dict(id=swapped if swapped != handle.id else f"{handle.id}-mirror")
+            if handle.entry.get("purpose"):
+                options["purpose"] = handle.entry["purpose"]
+            made.append(self._admit(ref, self.model.part(ref), handle.entry["colour"], rotation, t, options,
+                                    verb=f"mirror({handle.id})"))
+        return made
 
     def add(self, ref, colour, at=(0, 0, 0), turn=0, axes=None, matrix=None, **options):
         """Explicit placement in LDU. ``ref`` may also be a Section (a submodel instance)."""
@@ -224,16 +275,58 @@ class Section:
             target_reference = _unit(wanted - (wanted @ to.A) * to.A)
         failures = []
         for sign in ((1, -1) if flip is None else ((-1,) if flip else (1,))):
-            frame_local = np.column_stack([local_axis, _reference(local_axis), np.cross(local_axis, _reference(local_axis))])
-            axis = sign * to.A
-            ref_world = target_reference - (target_reference @ axis) * axis
-            frame_world = np.column_stack([axis, _unit(ref_world), np.cross(axis, _unit(ref_world))])
-            rotation = frame_world @ frame_local.T
-            t = to.P + slide * to.A - rotation @ local_mid
-            t = _seat(record, rotation, t, to)
+            rotation, t = _pose(record, to, target_reference, sign, slide)
             try:
                 return self._admit(ref, data, colour, rotation, t, options, verb=f"mate({port} to {to.handle.id}.{to.name})",
                                    partner=to.handle)
+            except KitError as error:
+                failures.append(str(error))
+        raise KitError(" / ".join(failures))
+
+    def hinge(self, ref, colour, port, to, angle=0, **options):
+        """Join the other half of a hinge (``port`` to ``to=base.port("hinge[0]")``) at ``angle`` degrees.
+
+        0 extends the new part flat, straight out from the base part; a positive angle
+        tilts it toward the base's top side (a wing raised in dihedral, a ramp lifted),
+        negative toward its underside. Build on the tilted part with
+        ``place(..., on=part.port("stud[k]"))``.
+        """
+        if not isinstance(to, Port) or to.handle.section is not self:
+            raise KitError("to= must be a hinge port of a part in this same section, e.g. to=root.port('hinge[0]')")
+        data = self.model.part(ref)
+        record = next((r for r in data.ports if r["name"] == port), None)
+        if record is None:
+            raise KitError(f"{ref} has no port {port!r}; it has: {', '.join(r['name'] for r in data.ports) or 'none'}")
+        axis = _unit(to.A)
+        low, high = to.handle.box
+        out = to.P - (low + high) / 2
+        out = out - (out @ axis) * axis
+        if np.linalg.norm(out) < 1e-6:
+            raise KitError(f"{to.handle.id}.{to.name} is at the base part's centre; hinge() needs a hinge on its edge")
+        out = _unit(out)
+        up = to.handle.R @ np.array([0.0, -1.0, 0.0])
+        up = up - (up @ axis) * axis - (up @ out) * out
+        up = _unit(up) if np.linalg.norm(up) > 1e-6 else np.cross(axis, out)
+        wanted = math.cos(math.radians(angle)) * out + math.sin(math.radians(angle)) * up
+        lo, hi = data.lo, data.hi
+        upright = -math.sin(math.radians(angle)) * out + math.cos(math.radians(angle)) * up
+        poses = []
+        for sign in (1, -1):
+            rotation, t = _pose(record, to, to.reference, sign, 0.0)
+            centre = rotation @ ((lo + hi) / 2) + t - to.P
+            centre = centre - (centre @ axis) * axis
+            if np.linalg.norm(centre) > 1e-6:
+                turn = math.atan2(float(np.cross(_unit(centre), wanted) @ axis), float(_unit(centre) @ wanted))
+                spin = _rodrigues(axis, math.degrees(turn))
+                rotation, t = spin @ rotation, spin @ (t - to.P) + to.P
+            poses.append((rotation, t))
+        # Studs up (the base's top side, turned by the angle) first; upside down only if that is blocked.
+        poses.sort(key=lambda pose: -float(pose[0] @ np.array([0.0, -1.0, 0.0]) @ upright))
+        failures = []
+        for rotation, t in poses:
+            try:
+                return self._admit(ref, data, colour, rotation, t, options,
+                                   verb=f"hinge({port} to {to.handle.id}.{to.name}, angle={angle})", partner=to.handle)
             except KitError as error:
                 failures.append(str(error))
         raise KitError(" / ".join(failures))
@@ -392,7 +485,8 @@ class Section:
             depth, at = checker._pair_depth(first, second, (), self.model.tolerance)
             if row["local"].data.boxy and other["local"].data.boxy:
                 depth = max(depth, checker._box_depth(first, second)[0])
-            if depth <= self.model.tolerance or row["overlap"] or other["overlap"] or \
+            tight = depth <= checker.TIGHT_FIT and not (row["local"].data.boxy and other["local"].data.boxy)
+            if depth <= self.model.tolerance or tight or row["overlap"] or other["overlap"] or \
                     checker._interlocking(row["local"].data.description, other["local"].data.description):
                 continue
             handle = self._handle(k)
@@ -404,6 +498,27 @@ class Section:
     def _handle(self, k):
         label = self.rows[k]["label"]
         return Handle(self, next(e for e in self.entries if e["id"] == label))
+
+
+def _codes_described(description):
+    """Library part numbers whose description is exactly ``description`` (whitespace-insensitive)."""
+    database = ROOT / "data/ldraw-info.db"
+    if not database.is_file():
+        return []
+    with sqlite3.connect(f"file:{database}?mode=ro", uri=True) as connection:
+        rows = connection.execute("SELECT alias, description FROM PART_INFOS WHERE description LIKE ?",
+                                  (description.split()[0] + "%",)).fetchall()
+    return [alias.removesuffix(".dat") for alias, text in rows if " ".join((text or "").split()) == description]
+
+
+def _mirrors(original, candidate, local):
+    """Candidate's body and ports equal the original's flipped by the local axis matrix."""
+    lo, hi = np.minimum(original.lo @ local, original.hi @ local), np.maximum(original.lo @ local, original.hi @ local)
+    if not (np.allclose(lo, candidate.lo, atol=0.6) and np.allclose(hi, candidate.hi, atol=0.6)):
+        return False
+    def keys(ports, matrix):
+        return sorted((r["kind"], r["gender"], *np.round(np.array(r["p"]) @ matrix * 2).astype(int).tolist()) for r in ports)
+    return keys(original.ports, local) == keys(candidate.ports, np.eye(3))
 
 
 def stacking_bottom(data):
@@ -418,13 +533,48 @@ def stacking_bottom(data):
 
 
 def _footprint(data):
-    """Local stud-grid points of a part's underside (sockets), else its studs, else its body corners."""
-    vertical = [r for r in data.ports if abs(abs(r["axis"][1]) - 1) < 1e-6]
-    for kinds in (("stud_receptacle", "pin_hole"), ("stud",)):
-        points = [r["p"] for r in vertical if r["kind"] in kinds and (r["kind"] != "pin_hole" or not r.get("centered", True))]
-        if points:
-            return np.array(points, dtype=float) * np.array([1, 0, 1])
+    """Local stud-grid points of a part: its sockets and studs together, else its body corners.
+
+    Both lie on the part's stud grid. Together they stay complete when a library revision
+    leaves one of them partial: the 2026-05 wing plates 41769a/41770a have sockets only on
+    their back half, which moved their anchor corner by two cells.
+    """
+    points = [r["p"] for r in data.ports if abs(abs(r["axis"][1]) - 1) < 1e-6
+              and r["kind"] in ("stud_receptacle", "pin_hole", "stud") and (r["kind"] != "pin_hole" or not r.get("centered", True))]
+    if points:
+        return np.array(points, dtype=float) * np.array([1, 0, 1])
     return np.array([[data.lo[0] + STUD / 2, 0, data.lo[2] + STUD / 2]])
+
+
+def _pose(record, to, target_reference, sign, slide):
+    """Rotation and translation putting port ``record`` of a new part on port ``to``."""
+    local_axis, local_mid = np.array(record["axis"]), np.array(record["p"])
+    frame_local = np.column_stack([local_axis, _reference(local_axis), np.cross(local_axis, _reference(local_axis))])
+    axis = sign * to.A
+    ref_world = target_reference - (target_reference @ axis) * axis
+    frame_world = np.column_stack([axis, _unit(ref_world), np.cross(axis, _unit(ref_world))])
+    rotation = frame_world @ frame_local.T
+    t = to.P + slide * to.A - rotation @ local_mid
+    return rotation, _seat(record, rotation, t, to)
+
+
+def _face(port, section):
+    """The stud face a port stands on, as (frame, origin): columns map ground x, y (down), z onto it."""
+    if not isinstance(port, Port) or port.handle.section is not section:
+        raise KitError("on= must be a stud of a part in this same section, e.g. on=bracket.port('stud[2]')")
+    if port.kind != "stud" or port.gender != "M":
+        raise KitError(f"on= needs a stud; {port.handle.id}.{port.name} is a {port.kind}. "
+                       "Use mate() for pins, axles, hinges, clips and bars")
+    up = _unit(port.A)
+    if abs(up[1]) > 0.7:          # a top or bottom face, flat or tilted: cells run like the ground (x to +X)
+        across = np.array([1.0, 0, 0]) - up[0] * up
+        across = _unit(across)
+        depth = np.cross(up, across)
+    else:                         # a side face: cell z points up, cell x along the face
+        depth = np.array([0.0, -1, 0]) - (-up[1]) * up
+        depth = _unit(depth)
+        across = np.cross(depth, up)
+    return np.column_stack([across, -up, depth]), port.P - up * port.record["half"]
 
 
 def _seat(record, rotation, t, target):
@@ -447,14 +597,58 @@ def _seat(record, rotation, t, target):
 class Model(Section):
     """The main FILE block plus any sections; owns the part cache and writes the MPD."""
 
-    def __init__(self, name, description, *, author="ldraw-nova kit", strict=True, tolerance=0.5, library=None):
+    def __init__(self, name, description, *, author="ldraw-nova kit", strict=True, tolerance=0.5, library=None, family=None):
         self.parts = get_parts(library)
         self.library = library_path(library)
         self.cache = PartCache(self.parts, self.library)
-        self._locals, self.sections = {}, []
-        self.author, self.strict, self.tolerance = author, strict, tolerance
+        self._locals, self.sections, self._mirrors = {}, [], {}
+        self.author, self.strict, self.tolerance, self.family = author, strict, tolerance, family
         super().__init__(self, name, description)
         self.sections.append(self)
+
+    def counterpart(self, ref):
+        """(mirror part, local flip): the part that is ref's mirror image and the local axis it flips.
+
+        LDCad's MIRROR_INFO names the counterpart when it exists; otherwise "Left" and "Right" swap
+        in the description, or the part is its own mirror. The flip is the local axis (x, z or y)
+        under which the counterpart's ports and body match the original's mirror image.
+        """
+        code = normalized(ref).removesuffix(".dat")
+        if code in self._mirrors:
+            return self._mirrors[code]
+        original = self.part(code)
+        candidates, axes = [], "xzy"
+        for shadow in getattr(self.parts, "_connection_shadow_libraries", []):
+            path = Path(str(getattr(shadow, "source", ""))) / "parts" / f"{code}.dat"
+            info = re.search(r"MIRROR_INFO(.*)", path.read_text(errors="replace")) if path.is_file() else None
+            if info:
+                other = re.search(r"\[counterPart=([^\]]+)\]", info.group(1))
+                if other:
+                    candidates.append(code if other.group(1).lower() == "self" else normalized(other.group(1)).removesuffix(".dat"))
+                base = re.search(r"\[baseFlip=([XYZ])\]", info.group(1), re.I)
+                if base:
+                    axes = base.group(1).lower() + axes.replace(base.group(1).lower(), "")
+        description = original.description
+        moved = re.match(r"~Moved to (\S+)", description)            # a renamed part: read its new description
+        if moved and self.parts.find_part(code=normalized(moved.group(1)).removesuffix(".dat")) is not None:
+            description = self.part(normalized(moved.group(1)).removesuffix(".dat")).description
+        swapped = re.sub(r"\b(Left|Right)\b", lambda m: "Right" if m.group(1) == "Left" else "Left", description)
+        if swapped != description:
+            candidates += _codes_described(" ".join(swapped.split()))
+        candidates.append(code)
+        number = re.fullmatch(r"(\d+)([a-z]*)", code)               # left/right pairs are usually consecutive
+        if number:
+            candidates += [f"{int(number.group(1)) + step}{number.group(2)}" for step in (-1, 1)]
+        for candidate in dict.fromkeys(candidates):
+            if self.parts.find_part(code=candidate) is None:
+                continue
+            data = self.part(candidate)
+            for axis in axes:
+                local = np.diag([-1.0 if a == axis else 1.0 for a in "xyz"])
+                if _mirrors(original, data, local):
+                    self._mirrors[code] = (candidate, local)
+                    return self._mirrors[code]
+        raise KitError(f"cannot mirror {ref}: no part matches its mirror image; place the other side explicitly")
 
     def part(self, ref):
         code = normalized(ref).removesuffix(".dat")
@@ -534,7 +728,7 @@ class Model(Section):
         atomic_write(path.with_suffix(".plan.json"), json.dumps(self.plan(), indent=1) + "\n")
         if not check:
             return None
-        report = checker.check_model(path, self.parts, self.library, tolerance=self.tolerance)
+        report = checker.check_model(path, self.parts, self.library, tolerance=self.tolerance, family=self.family)
         if not quiet:
             print(checker.format_report(report))
         return report

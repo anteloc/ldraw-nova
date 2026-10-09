@@ -18,7 +18,8 @@ ARCHETYPES = {
         'focal_feature': 'Choose one: split wings, a rotating-looking cockpit, oversized engines, or an asymmetric main blade.',
         'detail_strategy': 'Use smooth nose armour and broad wing surfaces beside concentrated engine plumbing and service recesses.',
         'palette': {'hull': 71, 'shadow': 72, 'frame': 0, 'markings': 320, 'canopy': 40, 'exhaust': 47},
-        'references': ['b-wing', 'x-wing-wing', 'x-wing-nacelle', 'canopy-cockpit'],
+        'recipes': ['docs/reference/starfighter.md', 'docs/reference/hinged-wing.md', 'docs/reference/engine-pod.md'],
+        'studies': ['b-wing', 'x-wing-wing', 'x-wing-nacelle', 'canopy-cockpit'],
     },
     'freighter': {
         'title': 'Detailed light freighter',
@@ -27,7 +28,8 @@ ARCHETYPES = {
         'focal_feature': 'Choose one asymmetric cockpit or antenna feature, supported by coherent hull seams.',
         'detail_strategy': 'Group pipes, vents and machinery into service bays; leave broad hull panels quiet. Give the underside a deliberate design.',
         'palette': {'hull': 71, 'shadow': 72, 'frame': 0, 'markings': 308, 'canopy': 40, 'exhaust': 43},
-        'references': ['falcon-greebles', 'y-wing-armour', 'x-wing-nacelle'],
+        'recipes': ['docs/reference/shuttle.md', 'docs/reference/engine-pod.md'],
+        'studies': ['falcon-greebles', 'y-wing-armour', 'x-wing-nacelle'],
     },
     'capital-ship': {
         'title': 'Large display-scale capital ship',
@@ -36,7 +38,8 @@ ARCHETYPES = {
         'focal_feature': 'A recognisable bridge or engine cluster; preserve large negative spaces and the primary hull outline.',
         'detail_strategy': 'Concentrate small mechanical details in recessed trenches and hangars. Reduce detail size relative to the main hull to establish scale.',
         'palette': {'hull': 71, 'shadow': 72, 'frame': 0, 'markings': 7, 'canopy': 0, 'exhaust': 43},
-        'references': ['star-destroyer-study', 'y-wing-armour', 'falcon-greebles'],
+        'recipes': ['docs/reference/shuttle.md', 'docs/reference/hinged-wing.md'],
+        'studies': ['star-destroyer-study', 'y-wing-armour', 'falcon-greebles'],
     },
 }
 
@@ -46,6 +49,16 @@ def design_brief(archetype):
         raise ValueError('Choose starfighter, freighter or capital-ship')
     return dict(version=1, family='spaceship', archetype=archetype, **deepcopy(ARCHETYPES[archetype]),
         coordinates='X width, -Z forward, negative Y up; choose the hull or stand datum explicitly.',
+        construction=('Official ships: about 3% plain bricks, 45% of parts sideways or upside down, 20% hinged at an angle. '
+                      'Build the hull from plates, taper it with wedge plates and slopes, mount engines and guns on side studs '
+                      '(place(on=...)), hinge the wings (mate hinge[0], roll) and mirror() the other side. '
+                      'Check with Model(..., family="spaceship") or check --family spaceship.'),
+        parts={'hull': ['3020', '3022', '3034', '3832', '3068b', '3069b'],
+               'taper': ['41769/41770', '43722/43723', '51739', '3039', '3040b', '54200', '15068', '11477'],
+               'wing roots': ['4275b + 4276b', '2429 + 2430', '44301a + 44302a'],
+               'sideways mounts': ['4070', '87087', '99780', '99781'],
+               'engines, guns, lights': ['4589', '4740', '6141', '4032a', '3062b', '2412b'],
+               'cockpit': ['47844', '4474', '41883'], 'underside': ['3665a', '4287a']},
         scale='Choose minifigure, display or microscale before selecting the canopy and detail sizes.',
         part_queries={
             'cockpit': 'a spacecraft canopy with a compatible cockpit rim and pilot controls',
@@ -57,7 +70,8 @@ def design_brief(archetype):
         review=['front/top silhouette', 'side thickness and cockpit proportions', 'rear engine spacing', 'underside and stand attachments', 'bare frame and exposed wing roots', 'open cockpit or removable hull where interiors matter', 'quiet surfaces beside concentrated detail'],
         mechanism_scope='Study actual folding-wing, ramp or landing-gear mechanisms using the mechanism workflow when requested; analytical mechanism verification remains deferred.',
         palette_note='Suggested design roles; inspect actual part/colour availability. Preserve functional and printed colours when adapting a source.',
-        next='Choose and study references, design an original module layout, build, inspect interfaces, render and refine. A brief is not a generated model.')
+        next='Copy the closest recipe, build with the kit, run check --family spaceship, look at the top and right views and refine. '
+             'The studies are large official ships for proportion and detail ideas, not starting points. A brief is not a model.')
 
 
 def export_spaceship(key, outdir, *, force=False):

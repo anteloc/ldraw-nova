@@ -26,7 +26,7 @@ Read:
 - For Technic design vocabulary, read [creative Technic design](docs/agent/technic-design.md) and the [Mecha construction studies](examples/technic-studies/README.md). Choose patterns by function, preserve their measured interfaces and source qualifications, and adapt the supporting frame and appearance to the new subject.
 - For reusable Mecha-derived mechanisms, the [Technic atlas](examples/technic-atlas/README.md#mechanisms-from-ldraw-mecha) includes engines, paired Cardan shafts, a four-speed gearbox, a lift and suspension with editable source and build pages. Find them with `examples --family technic --limit 20` and use `mechanism export` on the prepared directory; read its omitted-parent interfaces before composing it with a frame.
 - [Tool reference](docs/agent/tooling.md) and [validation guide](docs/agent/validation.md).
-- For complex work, [module workflow and Bookshop case study](docs/agent/complex-models.md), [measured reference inventory](docs/agent/resources/bookshop-study.json), and [Copper Lane example](examples/modular-street/README.md).
+- For complex work, [module workflow and Bookshop case study](docs/agent/complex-models.md), [measured reference inventory](docs/agent/resources/bookshop-study.json), and [Copper Lane example](examples/archive/modular-street/README.md).
 
 The language authority is the mandatory [docs/ldraw-specs.pdf](docs/ldraw-specs.pdf). Use `./ldraw-agent spec --page 65` or `./ldraw-agent spec 'INVERTNEXT'`; the [source map](docs/agent/specification-map.md) identifies relevant pages. Distinguish official part-authoring rules from personal model rules.
 
@@ -100,7 +100,7 @@ To copy a useful module, use `extract --section NAME --namespace UNIQUE --output
 
 ## 3. Build reproducibly with module contracts
 
-Use the [JSON schema](ldraw_tools/data/plan.schema.json). The [bridge](examples/bridge.plan.json) teaches basic format; the [modular street plans](examples/modular-street/scene.plan.json) teach complex composition. Use these as examples of technique, then design the requested model.
+Use the [JSON schema](ldraw_tools/data/plan.schema.json). The [bridge](examples/bridge.plan.json) teaches basic format; the [modular street plans](examples/archive/modular-street/scene.plan.json) teach complex composition. Use these as examples of technique, then design the requested model.
 
 - Every plan has `version: 1`, accurate `author` and `sections`; an authorized `license` is optional. The root plan's first section is the scene main.
 - Use `includes` for other JSON plans and `assets` for extracted MPDs. Paths are relative to the declaring plan. Section names must be unique across all inputs; copied headers retain their authorship.
@@ -123,7 +123,7 @@ Keep these placement rules visible while constructing:
 6. Model subassemblies belong in embedded `.ldr` blocks. Imported classified `.dat` definitions may contain polygons and primitive transforms; keep those internal definitions separate from rigid physical placements.
 7. Avoid cycles, unresolved dependencies, library-name shadowing and coincident duplicates. Bridge adjacent brick seams with actual connecting parts. Leave floor, roof, hinge and door interfaces clear.
 
-Use Python for parameterized bonds, openings, stepped roofs or other conditional patterns. See [generate.py](examples/modular-street/generate.py). Use `load_plan(path)`, `build_plan`, `rotation`, and pyldraw3's existing classes; do not implement another LDraw parser/serializer. Keep geometry fixes in the generator/plan so rebuilding retains them.
+Use Python for parameterized bonds, openings, stepped roofs or other conditional patterns. See [generate.py](examples/archive/modular-street/generate.py). Use `load_plan(path)`, `build_plan`, `rotation`, and pyldraw3's existing classes; do not implement another LDraw parser/serializer. Keep geometry fixes in the generator/plan so rebuilding retains them.
 
 ```sh
 ./ldraw-agent build output/my-model.plan.json --output output/my-model.mpd \

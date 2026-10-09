@@ -59,6 +59,8 @@ def jsonable(value):
         return str(value)
     if isinstance(value, np.ndarray):
         return value.tolist()
+    if isinstance(value, np.generic):   # numpy scalars (int64 indices, float64 depths)
+        return value.item()
     if hasattr(value, "to_dict"):
         return jsonable(value.to_dict())
     if dataclasses.is_dataclass(value):

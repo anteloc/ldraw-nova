@@ -31,9 +31,10 @@ These additions fill gaps beyond the existing [six mechanism-atlas manuals](../m
 | [Paired Cardan shaft](mechanisms/double-cardan-shaft/GUIDE.md) | [![Cardan shaft](mechanisms/double-cardan-shaft/renders/home.png)](mechanisms/double-cardan-shaft/index.html) | 7 | Offset drive routing, two crosses and fork phasing; end bearings and adjoining shafts belong to the parent |
 | [Four-speed gearbox](mechanisms/four-speed-gearbox/GUIDE.md) | [![Four-speed gearbox](mechanisms/four-speed-gearbox/renders/home.png)](mechanisms/four-speed-gearbox/index.html) | 66 | Constant-mesh paths, two driving rings and a rotary selector; add the external control and propshafts |
 | [Four-bar lift](mechanisms/four-bar-lift/GUIDE.md) | [![Four-bar lift](mechanisms/four-bar-lift/renders/home.png)](mechanisms/four-bar-lift/index.html) | 119 | Level payload on paired cranks and closing rods; physically support the assumed fixed upper pivot |
-| [Independent suspension](mechanisms/independent-suspension/GUIDE.md) | [![Suspension](mechanisms/independent-suspension/renders/home.png)](mechanisms/independent-suspension/index.html) | 259 | Wishbones, guide links, half-shafts and paired shocks; replace omitted boundary holders before reuse |
 
-The studies contain **540 physical placements** in total. Each guide distinguishes retained construction, parent-supplied interfaces and intended operation. The Cardan, lift and suspension sources have one retained placement group, so their pages are multi-view assembly studies rather than recovered insertion sequences. The other studies retain source STEP groups and child-assembly pages.
+The studies contain **281 physical placements** in total. Each guide distinguishes retained construction, parent-supplied interfaces and intended operation. The Cardan and lift sources have one retained placement group, so their pages are multi-view assembly studies rather than recovered insertion sequences. The other studies retain source STEP groups and child-assembly pages.
+
+The independent-suspension study is [archived](../archive/README.md): it omits boundary holders, so it fails `check` on its own.
 
 The four-speed source contained two identical `4519.dat` axle placements at the same transform. The derived atlas input removes source index 43 and retains 39, reducing 67 parts to 66; [its provenance](mechanism-sources/four-speed-gearbox.provenance.json) records the exact repair. Supplied original models remain unchanged. The reconstructed Chiron eight-speed gearbox and incomplete paddle drive were not selected.
 
@@ -43,7 +44,7 @@ Read the [mechanism workflow](../../docs/agent/mechanisms.md) and [mechanism vis
 
 ```sh
 ./ldraw-agent examples --family technic --limit 20
-./ldraw-agent examples --family technic suspension
+./ldraw-agent examples --family technic gearbox
 ./ldraw-agent mechanism export examples/technic-atlas/mechanisms/four-bar-lift \
   --outdir output/my-lift
 ./ldraw-agent build output/my-lift/scene.plan.json --contacts none \

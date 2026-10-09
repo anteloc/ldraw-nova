@@ -13,7 +13,7 @@ from ldraw_tools.connection_adapter import connection_contacts, query_frames
 from ldraw_tools.examples import search_examples
 from ldraw_tools.geometry import analyze_geometry
 from ldraw_tools.vehicle_review import review_vehicle
-from ldraw_tools.vehicles import DESIGNS, WHEEL_PACKS, axle, vehicle_plan, wheel_report
+from ldraw_tools.vehicles import DESIGNS, FAILS_CHECK, WHEEL_PACKS, axle, vehicle_plan, wheel_report
 from ldraw_tools.vehicle_details import DETAILS, detail_plan
 
 
@@ -157,9 +157,10 @@ def test_cli_exports_plan_and_brief_and_protects_both_paths(official, tmp_path, 
 def test_saved_examples_are_reproducible_and_reports_match_current_revision(official):
     atlas=ROOT/'examples/vehicle-atlas'
     catalog=json.loads((atlas/'catalog.json').read_text())
-    assert {row['key'] for row in catalog['examples']}==set(DESIGNS)
+    active=[name for name in DESIGNS if name not in FAILS_CHECK]   # failing profiles are archived
+    assert {row['key'] for row in catalog['examples']}==set(active)
     assert {row['key'] for row in catalog['details']}==set(DETAILS)
-    for name in [*DESIGNS,*DETAILS]:
+    for name in [*active,*DETAILS]:
         is_detail=name in DETAILS
         folder=atlas/'details'/name if is_detail else atlas/name
         plan=detail_plan(name) if is_detail else vehicle_plan(name)
@@ -169,7 +170,8 @@ def test_saved_examples_are_reproducible_and_reports_match_current_revision(offi
         sha=hashlib.sha256(text.encode()).hexdigest()
         for report in ['validation','bom','bom-comparison','render-manifest','visual-review']+([] if is_detail else ['vehicle-check']):
             assert json.loads((folder/(report+'.json')).read_text())['source_sha256']==sha
-    assert search_examples('pickup',family='vehicle')['total']==1
+    assert search_examples('pickup',family='vehicle')['total']==0
+    assert search_examples('motorcycle',family='vehicle')['total']==1
     assert search_examples(family='vehicle',limit=1)['truncated']
     assert search_examples('cockpit',family='vehicle',details=True)['total']==2
 

@@ -37,6 +37,10 @@ DESIGNS = {
     'courier-jet': dict(title='Courier jet', palette='coastal-delivery', length=26,
                        profile='aircraft', lesson='Matched aircraft nose/glass and tapered rear, swept wings, dedicated engine pods and an equipped cockpit.'),
 }
+# Legacy profiles: the models they generate fail `check`, and their atlas examples are
+# archived (examples/archive/vehicle-atlas). Start from docs/reference recipes instead.
+FAILS_CHECK = {'grand-tourer': '4 collisions', 'delivery-van': '4 collisions', 'pickup': '6 collisions',
+               'tipper-truck': '4 collisions', 'courier-jet': '1 collision'}
 
 
 def tiled_strip(module, x, z, length, h, colour, *, axis='z'):

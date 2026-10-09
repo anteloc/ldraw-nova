@@ -95,3 +95,25 @@ def test_wall_and_fill_helpers_make_connected_structures(model, tmp_path):
 def test_axes_matrix_is_a_proper_rotation():
     rotation = axes_matrix({"y": "X", "z": "-Z"})
     assert np.allclose(rotation @ [0, 1, 0], [1, 0, 0]) and np.isclose(np.linalg.det(rotation), 1)
+
+
+def test_place_on_any_stud_face(model, tmp_path):
+    deck = model.place("3958", "Dark_Bluish_Grey", cell=(0, 0), level=0, id="deck")
+    lamp = model.place("4070", "Light_Bluish_Grey", cell=(2, 0), level=deck.top, id="lamp")
+    gun = model.place("4589", "Trans_Red", on=lamp.port("stud[0]"), id="gun")        # the headlight's side stud
+    assert abs(gun.R[:, 1] @ np.array([0, 0, 1])) > 0.99                             # the cone now points along Z
+    bracket = model.place("99780", "White", cell=(2, 2), level=deck.top, id="bracket")
+    model.place("3069b", "White", on=bracket.port("stud[0]"), id="side-tile")        # a tile on the vertical face
+    with pytest.raises(KitError, match="on= needs a stud"):
+        model.place("3069b", "White", on=lamp.port("pin_hole[0]"))
+    assert model.save(tmp_path / "on.mpd", quiet=True)["checks_passed"]
+
+
+def test_mirror_swaps_left_and_right(model, tmp_path):
+    hull = model.place("3958", "Dark_Bluish_Grey", cell=(0, 0), level=0, id="hull")
+    wing = model.place("41769", "White", cell=(6, 1), level=0, id="wing-right")
+    bridge = model.place("3710", "White", cell=(4, 2), level=wing.top, id="bridge-right")   # hull and wing studs
+    left = model.mirror([wing, bridge], about=hull)
+    assert [h.ref for h in left] == ["41770.dat", "3710.dat"] and [h.id for h in left] == ["wing-left", "bridge-left"]
+    assert np.allclose(left[0].box[0][0] + wing.box[1][0], 2 * 50)                          # mirrored about x = 50
+    assert model.save(tmp_path / "mirror.mpd", quiet=True)["checks_passed"]

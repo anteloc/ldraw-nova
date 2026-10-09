@@ -61,6 +61,8 @@ Rules:
 - **Modules.** Build each module as a `section`, or as a block of ids sharing a prefix.
 - **Joins.** Join every part to a neighbour. Two plates side by side need a part across the seam, and every Technic beam needs a pin or axle into another layer.
 - **Declarations.** Mark a deliberately loose object `free="reason"` and a deliberate overlap `overlap="reason"`.
+- **Sideways, angled, symmetric.** Build on a side or tilted face with `place(..., on=part.port("stud[k]"))`, hinge parts with `hinge(..., angle=)`, and build one side of a symmetric model, then `mirror(parts, about=hull)`.
+- **Style.** `Model(..., family="spaceship")` (or `building`, `car`, `aircraft`, `boat`) compares how your model is built with official LEGO models of that family. Ships made of stacked bricks read as buildings.
 
 ## 4. Check and fix
 

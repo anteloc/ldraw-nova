@@ -10,7 +10,7 @@ import json
 from html import escape
 from pathlib import Path
 
-from generate import DESIGNS, ROOT
+from generate import ARCHIVED, DESIGNS, ROOT
 from ldraw_tools.common import atomic_write, dumps
 
 
@@ -84,7 +84,7 @@ Render and inspect one submodel with `--section NAME --colour CODE`; replace NAM
 Change the generator for reproducible structural edits; changing only the emitted MPD loses the change on regeneration. The examples focus on exterior composition and interfaces. Most rooms have no furniture or internal stairs; the skyline is explicitly microscale. No vehicles, minifigures, moving mechanisms or manufacturing inventory are implied. Read the per-view observations and physical scope in the [collection review](../visual-review.md).
 '''
         atomic_write(folder/'README.md',text)
-    details=json.loads((root/'details/catalog.json').read_text())
+    details=[row for row in json.loads((root/'details/catalog.json').read_text()) if row['key'] not in ARCHIVED]
     for row in details:
         row.update(artifact_status(root/'details'/row['key'],row['key'],detail=True))
     atomic_write(root/'details/catalog.json',dumps(details)+'\n')

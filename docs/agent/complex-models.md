@@ -1,6 +1,6 @@
 # Building complex models with small, verifiable modules
 
-Use this workflow for multi-building scenes, vehicles, [advanced spaceships](spaceships.md), structural frames, figures, and models with hundreds or thousands of placements. Use the [structural workflow](technic.md) for fixed Technic supports and the [mechanism workflow](mechanisms.md) for mechanisms studied from source and build pages; analytical mechanism verification is deferred. Complexity comes from composing inspected modules; a single enormous list of coordinates is difficult to repair. The original [Copper Lane generator](../../examples/modular-street/generate.py) and [modular plans](../../examples/modular-street/scene.plan.json) demonstrate a complete 1,655-placement, nineteen-section streetscape. Start with its [visual brief and review](../../examples/modular-street/visual-review.md): complexity should serve an attractive, readable design.
+Use this workflow for multi-building scenes, vehicles, [advanced spaceships](spaceships.md), structural frames, figures, and models with hundreds or thousands of placements. Use the [structural workflow](technic.md) for fixed Technic supports and the [mechanism workflow](mechanisms.md) for mechanisms studied from source and build pages; analytical mechanism verification is deferred. Complexity comes from composing inspected modules; a single enormous list of coordinates is difficult to repair. The original [Copper Lane generator](../../examples/archive/modular-street/generate.py) and [modular plans](../../examples/archive/modular-street/scene.plan.json) demonstrate a complete 1,655-placement, nineteen-section streetscape. Start with its [visual brief and review](../../examples/archive/modular-street/visual-review.md): complexity should serve an attractive, readable design.
 
 ## 1. Study structure before geometry
 
@@ -104,8 +104,8 @@ This expands to IDs `roof-slope-0` through `roof-slope-7`. `step` is a translati
 3. **Scene:** validate the complete assembly, check cross-module duplicates/body overlaps, compare BOMs, and render home/top/front plus relevant rear/side views. Module checks alone cannot detect collisions introduced when composing modules.
 
 ```sh
-.venv/bin/python examples/modular-street/generate.py
-./ldraw-agent build examples/modular-street/scene.plan.json --output output/copper-lane.mpd \
+.venv/bin/python examples/archive/modular-street/generate.py
+./ldraw-agent build examples/archive/modular-street/scene.plan.json --output output/copper-lane.mpd \
   --detail summary --report output/copper-lane.build.json
 ./ldraw-agent inspect output/copper-lane.mpd --section lane-ground.ldr --colour 19 \
   --contacts all --detail summary --report output/ground-inspection.json
@@ -124,4 +124,4 @@ The LeoCAD adapter materializes embedded DAT definitions and their library depen
 
 ## Example scope
 
-Copper Lane has a three-storey tan/green bookshop beside a two-storey sand-green townhouse. Arched flower windows, striped awnings, a gold BOOKS sign, a dormer and stepped clock pediment distinguish their façades. It includes exposed-side glazing, localized masonry, layered leaf trees, two lamps and five furnished removable floors. The [design guide](visual-design.md) explains how category symbols, palette roles and reusable details express these choices. Floor/roof interfaces are studded; levels are accessed by lifting them off, and the example does not include a minifigure stairwell. This is an original modular construction example, not a recreation of set 10270 or a guarantee of retail part/colour availability. See the [verification record](verification.md) for measured coverage and remaining physical review limits.
+Copper Lane is [archived](../../examples/archive/README.md): it fails `check` (a floating part and two collisions), so study its module layout, not its construction. It has a three-storey tan/green bookshop beside a two-storey sand-green townhouse. Arched flower windows, striped awnings, a gold BOOKS sign, a dormer and stepped clock pediment distinguish their façades. It includes exposed-side glazing, localized masonry, layered leaf trees, two lamps and five furnished removable floors. The [design guide](visual-design.md) explains how category symbols, palette roles and reusable details express these choices. Floor/roof interfaces are studded; levels are accessed by lifting them off, and the example does not include a minifigure stairwell. This is an original modular construction example, not a recreation of set 10270 or a guarantee of retail part/colour availability. See the [verification record](verification.md) for measured coverage and remaining physical review limits.

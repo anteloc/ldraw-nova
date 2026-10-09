@@ -19,23 +19,29 @@ m.save("output/pier/pier.mpd")                                       # MPD + .pl
 ```mermaid
 flowchart TD
   Q{How does the part attach?} -->|"on studs, upright"| P["place(ref, colour, cell=(x, z), level=n, turn=deg)"]
+  Q -->|"on studs facing sideways, down or tilted"| O["place(ref, colour, on=part.port('stud[k]'), cell=..., turn=...)"]
   Q -->|"pin, axle, stud, hinge, clip or wheel interface"| M["mate(ref, colour, port, to=part.port(name))"]
   Q -->|"a pin joining two parts' aligned holes"| T["pin(colour, between=(a.port(name), b.port(name)))"]
+  Q -->|"the other half of a hinge, at an angle"| H["hinge(ref, colour, 'hinge[0]', to=root.port('hinge[0]'), angle=deg)"]
   Q -->|"nothing fits; I know the LDU position"| A["add(ref, colour, at=(x, y, z), axes={...})"]
   Q -->|"a whole module"| S["s = m.section(name, description); build it; m.add(s, None, at=..., turn=...)"]
+  Q -->|"the other side of a symmetric model"| R["m.mirror(parts, about=hull)"]
   M --> N["names: ./ldraw-agent ports PART"]
 ```
 
 | Verb or property | What it does |
 |---|---|
 | `place(ref, colour, cell=(x, z), level=n, turn=0)` | `cell` is the stud cell of the footprint's minimum corner (one stud = 20 LDU). `level` is the part's bottom in plates above the ground (one plate = 8 LDU; a brick = 3 plates). `turn` is 0, 90, 180 or 270 about the vertical. |
+| `place(ref, colour, on=part.port("stud[k]"), cell=(x, z), level=0, turn=0)` | The same grid on any stud face: a bracket's side, a headlight brick's side stud, a hinged plate, an upside-down part. Cell (0, 0) is that stud; on a top face (even tilted) cells run like the ground, on a side face cell z points up; `turn` rotates about the stud. |
 | `part.top`, `part.bottom` | The level of a placed part's top and bottom. Stack the next part with `level=below.top`. |
 | `part.port(name)`, `part.ports(kind)` | One port of a placed part, to pass as `to=`; or the names of its ports, optionally of one kind (`"pin_hole"`). |
 | `mate(ref, colour, port, to=other.port(name), roll=0, along=None, slide=0, toward=None, flip=None)` | Puts the new part's `port` on the target port: studs seat at the socket mouth, other ports centre on each other. `along="UP"` (or `"X"`, `"-Z"`, ...) points the new part's length that way; otherwise `roll` turns it about the shared axis. `slide` moves it along the axis in LDU, toward `toward="UP"` when given. `flip=True` turns it end for end. |
+| `hinge(ref, colour, port, to=root.port("hinge[0]"), angle=0)` | The other half of a hinge: 0 extends it flat, straight out from the root part; positive tilts it toward the root's top (a raised wing), negative toward its underside. Studs stay up. Build on it with `place(on=...)`. |
 | `pin(colour, between=(a.port(name), b.port(name)), ref="2780")` | A pin through two coaxial holes of different parts, which closes a Technic frame. 2780 joins holes 20 LDU apart; long pins 6558/32556 join holes 40 apart. |
 | `add(ref, colour, at=(x, y, z), turn=0, axes={"y": "X", "z": "-Z"})` | Explicit LDU position. `axes` says where two local axes point (`X`, `-X`, `Y`/`DOWN`, `-Y`/`UP`, `Z`, `-Z`). |
 | `wall(colour, start=(x, z), length=n, courses=k, level=l, along="X", openings=[...])` | A straight running-bond wall of 1xN bricks; joints are staggered so the courses lock together. Its top is at `l + 3k`. Each opening `(offset, width, first_course, last_course)` leaves a gap for a door or window. |
 | `m.part(ref)` | A part's data without placing it: `.lo` and `.hi` are its body box, so `m.part("3641").hi[1]` is a tyre's radius. |
+| `mirror(parts, about=hull, plane="X")` | Places the mirror image of parts across `hull`'s centre line (`plane="Z"` for front/back). Left and right parts swap (41769 Wing Right becomes 41770 Wing Left); ids swap `left`/`right`. Build one side, then mirror it. |
 | `fill(colour, cell=(x, z), size=(w, d), level=l, part="plate")` | Covers a rectangle with the largest 2xN (then 1xN) plates or tiles. Plates side by side are not joined: bridge each seam or use one large plate. |
 | `section(name, description)` | A submodel with the same verbs; place it with `add(section, None, at=..., turn=...)`. Collision and seating checks run within each section as you build; `save` checks the whole model. |
 | Options on any verb | `id="roof-left"` (unique; used in every report), `purpose="..."`, `free="reason"` (an intentionally separate object), `overlap="reason"` (a deliberate overlap, reviewed instead of failing). |

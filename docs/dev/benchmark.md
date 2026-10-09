@@ -50,3 +50,22 @@ Measured from existing transcripts and chats. "Defects" were re-checked with `va
 | Crawler (T1), Gemini 3.1 flash-lite | Low | 0.1 h | — | 43 | 1.0 | 4k | 0 | 9 parts |
 | House (B1), Gemini 3.1 flash-lite | Low | 0.03 h | — | 25 | 0.3 | 0 | 0 | 3 parts |
 | *Reference: ldraw-mecha rig, Sonnet 5.5* | Mid | 0.5 h | — | 132 | 5.9 | 30k | 4 | Success |
+
+## Results after the 2026-10 rework
+
+| Run | Tier | Wall | Tokens | Tool calls | Tool min | Images | Outcome |
+|---|---|---|---|---|---|---|---|
+| Spaceship, Sonnet 5.5, same prompt as the Sonnet 5 baseline ("build me a spectacular spaceship…") | Mid | 1.4 h | 0.9 M | 297 | 15.5 | 63 | Delivered a 1,276-part delta-wing cruiser. `check` PASS: 0 floating, 0 collisions, 0 badly seated. Built like a ship: 1% plain bricks, 25% of parts sideways, 14% angled (the baseline: 35% bricks, 0% sideways). It used `hinge()`, `place(on=)` and `mirror()`, and `deliver` |
+
+Against the Sonnet 5 baseline, time spent in tools fell from 47 to 15.5 minutes. The agent made about twice as many calls but each one was fast (`check` takes under a second). It ran in a scratch copy of the toolkit with no other help.
+
+### Friction it reported, to fold into the kit
+
+| Friction | Follow-up |
+|---|---|
+| No area fill for arbitrary outlines; it wrote `cover`, `paint`, `rectangles` and `skin` inside its generator | `fill(cells=...)` for any set of stud cells, with a locking second layer |
+| It imported the private `_face` to find studs on a tilted face | A public face grid on placed parts (cells, nearest stud) |
+| It wrote `axle_pod` for banded cylinders on an axle | A technique recipe: round bricks and plates on an axle |
+| `look` has seven fixed views; it wrote its own camera script | `look --angle` or more presets |
+| `check --json` and `--report` crashed when overlaps went to review | Fixed: report indices are plain integers, and JSON output accepts numpy numbers |
+| Jev search returned HTTP 402 (no credits) | Offline search worked; nothing to change |

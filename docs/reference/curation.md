@@ -2,6 +2,8 @@
 
 Use this when the user selects a finished model as good. The result is one new recipe page that later agents can copy. Selection shows the model is useful, but the page must still pass the checks.
 
+The [recipe roadmap](../dev/recipe-roadmap.md) lists the pages still needed, by kind and priority.
+
 ```mermaid
 flowchart LR
   S[selected model and its generator] --> R[reduce to the reusable core]

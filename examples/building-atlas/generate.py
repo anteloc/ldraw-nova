@@ -23,6 +23,11 @@ from ldraw_tools.external import render, compare_bom
 
 ROOT=Path(__file__).resolve().parent
 DESIGNS={}
+# These fail `check` (floating parts or collisions) and live in examples/archive/building-atlas/.
+# They are not regenerated or indexed; see examples/archive/README.md.
+ARCHIVED={'clinic','conservatory','cottage','desert-sanctuary','fire-station','lighthouse','moon-base','museum',
+          'railway-station','school','winter-lodge','wizard-tower','workshop',
+          'beacon','chimney','dormer-roof','fountain','porch','solar-array'}
 
 
 def snapshot_manifest(folder,source_sha,images):
@@ -32,8 +37,9 @@ def snapshot_manifest(folder,source_sha,images):
 
 def example(key,title,category,lesson,source,*,scale='minifigure',fit='',avoid='',modules=()):
     def register(fn):
-        DESIGNS[key]=dict(key=key,title=title,category=category,lesson=lesson,source=source,
-                          scale=scale,fit=fit,avoid=avoid,modules=list(modules),factory=fn)
+        if key not in ARCHIVED:
+            DESIGNS[key]=dict(key=key,title=title,category=category,lesson=lesson,source=source,
+                              scale=scale,fit=fit,avoid=avoid,modules=list(modules),factory=fn)
         return fn
     return register
 
@@ -663,6 +669,8 @@ def generate_details(outdir=ROOT, *, snapshots=False):
     from ldraw import inspect_model
     parts=get_parts();library=library_path();records=[]
     for key,factory in detail_factories().items():
+        if key in ARCHIVED:
+            continue
         m=factory();folder=Path(outdir)/'details'/key;folder.mkdir(parents=True,exist_ok=True)
         plan=m.plan();text,model,ds=build_plan(plan,parts)
         g=analyze_geometry(model,parts,detail='summary',contacts='all')

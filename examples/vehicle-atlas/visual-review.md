@@ -1,5 +1,7 @@
 # Vehicle atlas visual and construction review
 
+> The grand tourer, delivery van, pickup, tipper truck and courier jet are archived: they fail `check` (collisions). Their findings below are historical; see [the archive](../archive/README.md).
+
 Reviewed 2026-09-24. Opened all six views (home, front, back, right, top and
 bottom) for seven complete vehicles and six fitting recipes, including six-view
 contact sheets of the final images. Each `visual-review.json` identifies the
