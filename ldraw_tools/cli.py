@@ -50,20 +50,26 @@ def scope_options(c):
     c.add_argument("--colour", type=int, help="Explicit inherited colour for a selected subassembly")
 
 
+CORE = ("check", "look", "deliver", "ports", "search", "catalog", "colours", "part", "spec", "doctor", "extract", "build")
+
+
 def parser():
-    p = argparse.ArgumentParser(description="Generate, inspect and review LDraw MPD assemblies. All reports are JSON. See docs/agent/tooling.md.")
+    p = argparse.ArgumentParser(
+        description="Generate, check and review LDraw models. Build with the Python kit (docs/agent/kit.md) and the "
+                    "recipes (docs/reference/README.md); the core commands are: " + ", ".join(CORE) + ". "
+                    "Commands marked [advanced] serve atlases, plans and research (docs/agent/tooling.md).")
     p.add_argument("--library", help="LDraw parts library root (default LDRAW_DIR, then LDRAWDIR)")
     shadows = p.add_mutually_exclusive_group()
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
-    c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
+    c = commands.add_parser("examples", help="[advanced] Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
     c.add_argument("--family", choices=["building", "vehicle", "reference", "technic", "mechanism", "spaceship"], default="building")
-    c = commands.add_parser("discover", help="Find, measure and visually review parts, source models and submodels")
+    c = commands.add_parser("discover", help="[advanced] Find, measure and visually review parts, source models and submodels")
     discovery = c.add_subparsers(dest="discovery_command", required=True)
     d = discovery.add_parser("index", help="Build a local typed index from the three Jev fields and actual source headers")
     d.add_argument("--refresh", action="store_true")
@@ -125,7 +131,7 @@ def parser():
     d.add_argument("--placement-notes", required=True)
     d.add_argument("--scale", choices=["minifigure","microscale","display","unknown"], default="unknown")
     d.add_argument("--force", action="store_true")
-    c = commands.add_parser('spaceship', help='Advanced spacecraft design briefs and reusable source constructions')
+    c = commands.add_parser('spaceship', help='[advanced] Advanced spacecraft design briefs and reusable source constructions')
     ships = c.add_subparsers(dest='spaceship_command', required=True)
     ships.add_parser('list', help='List whole-ship construction and inspiration studies')
     ships.add_parser('details', help='List reusable cockpit, wing, engine and hull studies')
@@ -137,7 +143,7 @@ def parser():
     d.add_argument('name')
     d.add_argument('--outdir', required=True)
     d.add_argument('--force', action='store_true')
-    c = commands.add_parser('manual', help='Study any source submodel through build pages and export it for an atlas')
+    c = commands.add_parser('manual', help='[advanced] Study any source submodel through build pages and export it for an atlas')
     m = c.add_subparsers(dest='manual_command', required=True)
     d = m.add_parser('prepare', help='Extract a source assembly and make attributed step manuals')
     d.add_argument('file')
@@ -161,7 +167,7 @@ def parser():
     d.add_argument('reference', help='Prepared study directory')
     d.add_argument('--outdir', required=True)
     d.add_argument('--force', action='store_true')
-    c = commands.add_parser('mechanism', help='Study and reuse mechanisms from source and build pages; no motion analysis')
+    c = commands.add_parser('mechanism', help='[advanced] Study and reuse mechanisms from source and build pages; no motion analysis')
     m = c.add_subparsers(dest='mechanism_command', required=True)
     m.add_parser('list', help='List the curated mechanism studies')
     d = m.add_parser('prepare', help='Extract a source assembly and make attributed step manuals')
@@ -185,7 +191,7 @@ def parser():
     d.add_argument('reference', help='Curated mechanism key or prepared study directory')
     d.add_argument('--outdir', required=True)
     d.add_argument('--force', action='store_true')
-    c = commands.add_parser('technic', help='Reviewed structural parts, plans and joint/brace checks for fixed structures')
+    c = commands.add_parser('technic', help='[advanced] Reviewed structural parts, plans and joint/brace checks for fixed structures')
     t = c.add_subparsers(dest='technic_command', required=True)
     t.add_parser('list', help='List editable structural recipes')
     d = t.add_parser('parts', help='Inspect reviewed nominal ports and geometry fingerprints')
@@ -203,7 +209,7 @@ def parser():
     d.add_argument('--report')
     d.add_argument('--max-instances', type=positive, default=500)
     scope_options(d)
-    c = commands.add_parser("vehicle", help="System road, motorcycle, boat and aircraft designs, dedicated fittings and review")
+    c = commands.add_parser("vehicle", help="[advanced] System road, motorcycle, boat and aircraft designs, dedicated fittings and review")
     vehicle_commands = c.add_subparsers(dest="vehicle_command", required=True)
     vehicle_commands.add_parser("list", help="List editable vehicle starting points")
     v = vehicle_commands.add_parser("wheels", help="Inspect measured, matched wheel packs")
@@ -234,19 +240,19 @@ def parser():
     c.add_argument("--max-size", type=float, nargs=3, metavar=("X","Y","Z"), help="Maximum cached full bounds in LDU; not stacking dimensions")
     c.add_argument("--include-unavailable", action="store_true", help="Include missing, alias and internal entries with status flags")
     c.add_argument("--measure", action="store_true", help="Measure selected part results and flag differences from cached dimensions")
-    c = commands.add_parser("design", help="Role-based palettes and reusable architectural detail plans")
+    c = commands.add_parser("design", help="[advanced] Role-based palettes and reusable architectural detail plans")
     c.add_argument("kind", choices=["palettes", "details"])
     c.add_argument("name", nargs="?")
     c.add_argument("--palette", default="botanical-bookshop")
     c.add_argument("--output", help="Write a detail JSON plan")
     c.add_argument("--force", action="store_true")
-    c = commands.add_parser("part-board", help="Render 1–12 real part candidates into an offline visual shortlist")
+    c = commands.add_parser("part-board", help="[advanced] Render 1–12 real part candidates into an offline visual shortlist")
     c.add_argument("refs", nargs='+')
     c.add_argument("--outdir", required=True)
     c.add_argument("--colour", default='19', help="Installed colour code or @colours.Name")
     c.add_argument("--timeout", type=positive, default=90)
     commands.add_parser("doctor", help="Show dependencies and source paths")
-    commands.add_parser("index", help="Refresh the local parts index; source library remains unchanged")
+    commands.add_parser("index", help="[advanced] Refresh the local parts index; source library remains unchanged")
     c = commands.add_parser("search", help="Search actual library parts or annotated models")
     c.add_argument("kind", choices=["parts", "models", "submodels"])
     c.add_argument("query")
@@ -261,10 +267,10 @@ def parser():
     c.add_argument("query", nargs="?")
     c.add_argument("--page", type=positive)
     c.add_argument("--limit", type=positive, default=8)
-    c = commands.add_parser("sections", help="Read original annotated model sections with source line numbers")
+    c = commands.add_parser("sections", help="[advanced] Read original annotated model sections with source line numbers")
     c.add_argument("file")
     c.add_argument("--section")
-    c = commands.add_parser("study", help="Inventory an OMR assembly hierarchy, physical BOM, and source issues")
+    c = commands.add_parser("study", help="[advanced] Inventory an OMR assembly hierarchy, physical BOM, and source issues")
     c.add_argument("file")
     c.add_argument("--report")
     c.add_argument("--max-instances", type=positive, default=100000)
@@ -278,10 +284,35 @@ def parser():
     c.add_argument("--repair-bfc-comments", action="store_true", help="Explicitly move annotation comments before INVERTNEXT, recording each edit")
     c.add_argument("--normalize-rotations", action="store_true", help="Project nearly rigid assembly matrices (error <=0.002) to proper rotations; record changes")
     c.add_argument("--force", action="store_true")
-    c = commands.add_parser("matrix", help="Compute a right-handed rotation in LDraw coordinates")
+    c = commands.add_parser("matrix", help="[advanced] Compute a right-handed rotation in LDraw coordinates")
     c.add_argument("axis", choices=["x", "y", "z"])
     c.add_argument("degrees", type=float)
-    commands.add_parser("profiles", help="List curated ordinary brick/plate dimensions for on placement")
+    commands.add_parser("profiles", help="[advanced] List curated ordinary brick/plate dimensions for on placement")
+    c = commands.add_parser("check", help="Fast verdict: floating parts, collisions, stud seating, named by plan id (text; --json for data)")
+    c.add_argument("file")
+    c.add_argument("--json", action="store_true", help="Print the full JSON report instead of the text summary")
+    c.add_argument("--graph", action="store_true", help="Also print the actual module-connection graph (Mermaid)")
+    c.add_argument("--intended", help="Markdown/text with a Mermaid flowchart of the intended module connections to compare")
+    c.add_argument("--tolerance", type=float, default=0.5, help="Collision and seating tolerance in LDU")
+    c.add_argument("--limit", type=positive, default=12, help="Rows per issue list")
+    c.add_argument("--report", help="Also write the full JSON report here")
+    scope_options(c)
+    c = commands.add_parser("look", help="One labelled contact sheet of several views (parallel renders); prints its path")
+    c.add_argument("file")
+    c.add_argument("--outdir", help="Default: a look/ folder beside the model")
+    c.add_argument("--views", nargs="+", default=["home", "front", "right", "top"])
+    c.add_argument("--focus", help="Close-up around this plan id")
+    c.add_argument("--highlight", nargs="+", default=[], help="Recolour these plan ids magenta")
+    c.add_argument("--problems", action="store_true", help="Run check; floating parts magenta, colliding parts red")
+    c.add_argument("--cell", type=positive, default=640, help="Pixel size of each view")
+    scope_options(c)
+    c = commands.add_parser("deliver", help="Final revision in one call: check, 7-view sheet, BOM comparison, GLB, summary.md")
+    c.add_argument("file")
+    c.add_argument("--outdir", help="Default: a delivery/ folder beside the model")
+    c.add_argument("--no-glb", action="store_true")
+    c = commands.add_parser("ports", help="Named connection ports of parts (for kit mate/place): compact table")
+    c.add_argument("refs", nargs="+")
+    c.add_argument("--json", action="store_true")
     c = commands.add_parser("build", help="Build a validated MPD from a JSON plan")
     c.add_argument("plan")
     c.add_argument("--output", required=True)
@@ -289,7 +320,7 @@ def parser():
     c.add_argument("--force", action="store_true", help="Replace an existing MPD after successful validation")
     geometry_options(c)
     for command in ["validate", "inspect", "bom", "compare-bom", "snap", "connectors"]:
-        c = commands.add_parser(command)
+        c = commands.add_parser(command, help="[advanced] JSON report" + ("; check is the fast verdict" if command in ("validate", "inspect") else ""))
         c.add_argument("file")
         c.add_argument("--report")
         scope_options(c)
@@ -319,17 +350,17 @@ def parser():
             c.add_argument("--limit", type=positive, default=50)
             c.add_argument("--offset", type=int, default=0)
             c.add_argument("--max-instances", type=positive, default=100000)
-    c = commands.add_parser("cad-check", help="Run Python validation and a LeoCAD snapshot/BOM import check")
+    c = commands.add_parser("cad-check", help="[advanced] Run Python validation and a LeoCAD snapshot/BOM import check")
     c.add_argument("file")
     c.add_argument("--timeout", type=positive, default=90)
     scope_options(c)
-    c = commands.add_parser("render", help="Render review views and export a LeoCAD BOM")
+    c = commands.add_parser("render", help="[advanced] Render review views and export a LeoCAD BOM")
     c.add_argument("file")
     c.add_argument("--outdir", required=True)
     c.add_argument("--views", nargs="+", default=["home", "top", "front"])
     c.add_argument("--timeout", type=positive, default=90)
     scope_options(c)
-    c = commands.add_parser("glb", help="Convert a local model or part with semantic descriptions")
+    c = commands.add_parser("glb", help="[advanced] Convert a local model or part with semantic descriptions")
     c.add_argument("file")
     c.add_argument("--output", required=True)
     c.add_argument("--timeout", type=positive, default=180)
@@ -361,6 +392,72 @@ def run(args):
         return search_models(args.query, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
     library = library_path(args.library)
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
+    if args.command == "check":
+        from .check import check_model, format_report, mermaid_graph, compare_intended
+        report = check_model(args.file, parts, library, section=args.section, colour=args.colour,
+                             tolerance=args.tolerance, limit=args.limit)
+        if args.intended and "parts" in report:
+            report["intended"] = compare_intended(report, Path(args.intended).read_text())
+            report["checks_passed"] &= not report["intended"]["missing"]
+        if args.report:
+            atomic_write(Path(args.report), dumps(report) + "\n")
+            args.report = None   # main() must not overwrite the JSON with the text summary
+        status = 0 if report["checks_passed"] else 1
+        if args.json:
+            return report, status
+        text = format_report(report, limit=args.limit)
+        if "intended" in report:
+            missing = report["intended"]["missing"]
+            text += "\n  intended connections: " + ("all present" if not missing else
+                     "MISSING " + ", ".join(f"{a} -- {b}" for a, b in missing))
+            if report["intended"]["unknown_modules"]:
+                text += "\n  intended graph names unknown modules: " + ", ".join(report["intended"]["unknown_modules"])
+        if args.graph and "parts" in report:
+            text += "\n\n```mermaid\n" + mermaid_graph(report) + "\n```"
+        return text, status
+    if args.command == "look":
+        from .look import look
+        result = look(args.file, parts, library, args.outdir, views=args.views, focus=args.focus, highlight=args.highlight,
+                      problems=args.problems, section=args.section, colour=args.colour, cell=args.cell)
+        notes = ("; " + "; ".join(result["notes"])) if result["notes"] else ""
+        return f"sheet: {result['sheet']}  ({len(result['views'])} views, {result['seconds']} s{notes}). Open it to review.", 0
+    if args.command == "deliver":
+        from .deliver import deliver
+        result = deliver(args.file, parts, library, args.outdir, glb=not args.no_glb)
+        return (f"{result['verdict']}  delivered to {result['outdir']} in {result['seconds']} s\n"
+                f"  summary: {result['summary']}\n  views: {result['sheet']}\n"
+                f"  BOM {'matches' if result['bom_matches'] else 'DIFFERS'}; GLB {result['glb'] or 'not produced'}"), \
+            0 if result["verdict"] == "PASS" else 1
+    if args.command == "ports":
+        from .partcache import PartCache
+        from .catalog import resolve_part
+        from .kit import stacking_bottom
+        cache = PartCache(parts, library)
+        names = {(1, 0, 0): "+X", (-1, 0, 0): "-X", (0, 1, 0): "+Y (down)", (0, -1, 0): "-Y (up)", (0, 0, 1): "+Z", (0, 0, -1): "-Z"}
+        tables, blocks = [], []
+        for ref in args.refs:
+            code = (resolve_part(ref, parts) if ref.startswith("@") else ref).casefold().removesuffix(".dat")
+            if parts.find_part(code=code) is None:
+                raise ValueError(f"Unknown part {ref}; search with ./ldraw-agent search parts 'words'")
+            data = cache.get(code)
+            tables.append(dict(part=code, description=data.description, coverage=data.coverage, ports=data.ports,
+                               body=dict(lo=data.lo.tolist(), hi=data.hi.tolist())))
+            lines = [f"{code}  {data.description}  (port data: {data.coverage})",
+                     f"  body x {data.lo[0]:g}..{data.hi[0]:g}  y {data.lo[1]:g}..{data.hi[1]:g}  z {data.lo[2]:g}..{data.hi[2]:g}"
+                     f"  (stacks on local y={stacking_bottom(data):g}; kit place() puts that plane at y=-8*level)",
+                     f"  {'port':18} {'kind':16} {'g':2} {'centre (local)':22} {'axis':10} {'length':>6}  sections"]
+            for p in data.ports:
+                axis = names.get(tuple(int(round(v)) for v in p["axis"]) if all(abs(abs(v) - round(abs(v))) < 1e-6 for v in p["axis"]) else None,
+                                 str([round(v, 3) for v in p["axis"]]))
+                centre = "(" + ", ".join(f"{v:g}" for v in p["p"]) + ")"
+                sections = " ".join(f"{s}{r:g}" for s, r in p["secs"])
+                lines.append(f"  {p['name']:18} {p['kind']:16} {p['gender']:2} {centre:22} {axis:10} {2 * p['half']:>6g}  {sections}")
+            if not data.ports:
+                lines.append("  (no connection data: place it explicitly and inspect the result)")
+            blocks.append("\n".join(lines))
+        if args.json:
+            return dict(parts=tables), 0
+        return "\n\n".join(blocks) + "\n\nsections: R round, A axle, S square, F hinge fingers, N wheel rim/tyre, G generic; g: M male, F female, N neutral", 0
     if args.command == 'spaceship':
         from .spaceships import design_brief, export_spaceship
         if args.spaceship_command in {'list','details'}:
@@ -729,7 +826,7 @@ def main():
         report, status = run(args)
     except (OSError, ValueError, PartError, RecursionError, sqlite3.Error, subprocess.SubprocessError, jsonschema.ValidationError) as exc:
         report, status = dict(checks_passed=False, error=str(exc), error_type=type(exc).__name__), 2
-    text = dumps(report) + "\n"
+    text = report + "\n" if isinstance(report, str) else dumps(report) + "\n"
     if getattr(args, "report", None):
         atomic_write(args.report, text)
     print(text, end="")

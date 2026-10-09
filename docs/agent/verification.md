@@ -1,12 +1,12 @@
 # Verification record
 
-The [spaceship and build-manual implementation record](../reports/spaceship-support-implementation.md) documents the 2026-09-26 extension: general source-step manuals, three spaceship design briefs, eight source studies, six checked reusable entries, 50 inspected images, eight matching rendered BOMs and **211 passing tests**. Two large sources remain explicitly inspiration-only with unresolved source errors.
+The [spaceship and build-manual implementation record](../dev/reports/spaceship-support-implementation.md) documents the 2026-09-26 extension: general source-step manuals, three spaceship design briefs, eight source studies, six checked reusable entries, 50 inspected images, eight matching rendered BOMs and **211 passing tests**. Two large sources remain explicitly inspiration-only with unresolved source errors.
 
-The [Technic stage-1 implementation record](../reports/technic-stage1-implementation.md) documents the 2026-09-26 structural extension: 34 reviewed part definitions, seating and structural contracts, four reproducible examples, 28 inspected views, matching LeoCAD BOMs and **199 passing tests**. The now-authorized Stage 2 is recorded separately below.
+The [Technic stage-1 implementation record](../dev/reports/technic-stage1-implementation.md) documents the 2026-09-26 structural extension: 34 reviewed part definitions, seating and structural contracts, four reproducible examples, 28 inspected views, matching LeoCAD BOMs and **199 passing tests**. The now-authorized Stage 2 is recorded separately below.
 
-The [Technic stage-2 implementation record](../reports/technic-stage2-implementation.md) documents construction from studied mechanism examples: six Jev-selected references, 22 source steps, 55 inspected images, six matching rendered BOMs, portable exports and **206 passing tests**. Analytical mechanism verification is deferred at the user's request; normal source, geometry, BOM and visual checks remain.
+The [Technic stage-2 implementation record](../dev/reports/technic-stage2-implementation.md) documents construction from studied mechanism examples: six Jev-selected references, 22 source steps, 55 inspected images, six matching rendered BOMs, portable exports and **206 passing tests**. Analytical mechanism verification is deferred at the user's request; normal source, geometry, BOM and visual checks remain.
 
-The [reference-discovery implementation record](../reports/reference-discovery-implementation.md) documents the 2026-09-25 extension: live Jev searches across all three fields, a 220-reference visual library, 21 curated source examples and two adjustable recipes, with source and geometry checks kept separate from visual review.
+The [reference-discovery implementation record](../dev/reports/reference-discovery-implementation.md) documents the 2026-09-25 extension: live Jev searches across all three fields, a 220-reference visual library, 21 curated source examples and two adjustable recipes, with source and geometry checks kept separate from visual review.
 
 Base tooling verified on 2026-09-06, with the visual-design extension verified on 2026-09-07 in the supplied macOS workspace with Python 3.14.6, pyldraw3 1.7.0, NumPy 2.5.2, JSON Schema 4.26.0, Poppler, and the installed LeoCAD/semantic GLB converter.
 

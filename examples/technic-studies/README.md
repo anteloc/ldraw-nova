@@ -114,7 +114,7 @@ the sibling revision and local modifications, matching local model hashes, and
 the unchanged copied previews. [evidence.json](evidence.json) contains selected
 values from the sibling's saved review reports with JSON pointers. These are
 retained observations; no motion or Blender check was rerun for this transfer.
-The [transfer report](../../docs/reports/technic-knowledge-transfer.md) records
+The [transfer report](../../docs/dev/reports/technic-knowledge-transfer.md) records
 the checks actually performed here.
 
 Supplementary originals, when the sibling checkout is present:

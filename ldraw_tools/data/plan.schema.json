@@ -127,6 +127,14 @@
         "purpose": {
           "$ref": "#/$defs/text"
         },
+        "free": {
+          "$ref": "#/$defs/text",
+          "description": "Reason this placement is intentionally not connected (e.g. a loose accessory); check does not count it as floating"
+        },
+        "overlap": {
+          "$ref": "#/$defs/text",
+          "description": "Reason this placement deliberately overlaps a neighbour; check lists it for review instead of failing"
+        },
         "ref": {
           "oneOf": [
             {

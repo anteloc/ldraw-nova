@@ -190,6 +190,36 @@ Generated refs are flat official `.dat` names, generated `.ldr` names, or namesp
 
 For loops, procedural repetition, or matrix composition, use the [Python example](../../examples/python_api.py): `.venv/bin/python examples/python_api.py`. `ldraw_tools.builder.load_plan(path)`, `rotation(axis, degrees)`, `build_plan(plan, parts)`, `get_parts()`, and `analyze_geometry(model, parts)` are the small supported Python API. `ldraw.Model`, `Piece`, `Matrix`, and `Vector` remain available from pyldraw3. Run validation on serialized bytes before accepting custom Python output.
 
+## Fast check (run after every build)
+
+```sh
+./ldraw-agent check output/my-model.mpd                 # text verdict in seconds; exit 0 pass, 1 fail
+./ldraw-agent check output/my-model.mpd --graph         # plus the module-connection graph (Mermaid)
+./ldraw-agent check output/my-model.mpd --intended output/my-model/design-brief.md
+./ldraw-agent check output/my-model.mpd --json --report output/my-model.check.json
+```
+
+`check` names parts by plan id (`module>part-id (part)`) and reports four kinds of problem:
+
+| Problem | Meaning | Usual fix |
+|---|---|---|
+| floating | Not connected to the largest group by any stud, pin, axle, hinge, clip or wheel interface | Bridge the seam (two plates side by side need a part across them), add the missing pin/axle, or declare `free` |
+| collision | Two unconnected parts overlap; the number is the shift that would separate them | Correct the coordinate (often one plate, 8 LDU, or one stud, 20 LDU) |
+| badly seated | A stacked part is sunk into (negative) or floats above (positive) the stud it sits on | Use `y_upper = y_lower - body height` |
+| duplicate | Same part, same place | Delete one |
+
+```mermaid
+flowchart TD
+  B[build] --> C[check]
+  C -->|PASS| L[render and look]
+  C -->|floating| F[connect it, or declare free with a reason]
+  C -->|collision / badly seated| X[fix the coordinate in the generator]
+  F --> B
+  X --> B
+```
+
+Connected parts may interlock (tyre on rim, glass in frame, gears): they are not collision-tested. Overlaps between interlocking families are listed as `review`, not failures. A placement's `free` / `overlap` field (plan JSON) records an intentional loose object or overlap with its reason; `check` then stops failing on it. `--intended FILE` reads the Mermaid flowchart in your design brief (module names = top-level placement ids) and fails if an intended connection is missing.
+
 ## Validate and review
 
 ```sh

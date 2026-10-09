@@ -2,7 +2,7 @@
 
 Stage 1 supports **static structural assemblies**: frames, chassis, supports, retained structural axles and mounts for System bodies. Stage 2 is now authorized through the [mechanism workflow](mechanisms.md): study source assemblies and build pages, then reuse or adapt them. Analytical mechanism verification is deferred at the user's request. Keep this guide's fixed-member contracts scoped to the stationary structure.
 
-Use this guide with [instructions.md](../../instructions.md), the [Technic atlas](../../examples/technic-atlas/README.md) and the [research assessment](../reports/technic-structure-readiness.md). Keep the normal design, validation, BOM and visual review loop.
+Use this guide with [instructions.md](../../instructions.md), the [Technic atlas](../../examples/technic-atlas/README.md) and the [research assessment](../dev/reports/technic-structure-readiness.md). Keep the normal design, validation, BOM and visual review loop.
 
 For more varied subjects and functional layouts, use the [Technic design guide](technic-design.md) and [Mecha construction studies](../../examples/technic-studies/README.md). They connect these fixed-frame techniques to engines, transmissions, suspension and lifts, including the real mounts that an isolated source study may omit.
 
