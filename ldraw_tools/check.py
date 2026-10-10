@@ -54,7 +54,7 @@ FAMILIES = {
     "gear": re.compile(r"\b(Gear|Worm|Rack|Turntable)\b", re.I),
     "drive": re.compile(r"Driving Ring|Clutch|Changeover|Transmission|Axle Joiner|Differential|Universal Joint|Cardan", re.I),
     "engine": re.compile(r"Technic Engine|Crankshaft|Piston|Connecting Rod|Pneumatic Cylinder", re.I),
-    "joint": re.compile(r"Ball Joint|Ball Socket|Tow Ball|with Ball\b|Socket", re.I),
+    "joint": re.compile(r"Ball Joint|Ball Socket|Tow ?ball|with Ball\b|Socket|Steering Link|Suspension Arm", re.I),
     "wheel": re.compile(r"\b(Wheel|Tyre|Tire|Rim|Hub)\b(?! Arch)", re.I),
     "window": re.compile(r"Window|Glass|Pane\b|Door|Shutter|Frame", re.I),
     "clip": re.compile(r"Clip|\bBar\b|Handle|Holder", re.I),
@@ -66,8 +66,24 @@ FAMILIES = {
     "shooter": re.compile(r"Shooter|Launcher", re.I),
 }
 FIGURE = re.compile(r"Minifig|Figure", re.I)   # posed figures overlap furniture loosely: review only
-FLEXIBLE = re.compile(r"String|Hose|Rubber Band|Chain|Tread Link|Link Tread|\bBand\b|Cable|Rope|Flex|Spring"
+FLEXIBLE = re.compile(r"String|Hose|Rubber Band|Chain|Tread|\bBand\b|Cable|Rope|Flex|Spring"
                       r"|Shock Absorber|Sticker|Plant|Flower|Lea(f|ves)|Stem|Vine|(?<!Technic )Bush\b|Grass", re.I)
+# Chains, treads, strings and hoses hang on whatever they wrap or touch; official models also
+# draw strings and hoses with bare primitives ("4-4cyli"). Contact connects them.
+PRIMITIVE = re.compile(r"^\d+-\d+[a-z]")
+
+
+def _flexible(row):
+    return bool(FLEXIBLE.search(row["local"].data.description) or PRIMITIVE.match(row["code"]))
+
+
+def _boxy_pair(first, second):
+    """Two boxy parts are judged by their boxes, unless they meet at an angle: then the
+    rounded ends of crossing beams are not their boxes, and the mesh test decides."""
+    if not (first["local"].data.boxy and second["local"].data.boxy):
+        return False
+    turn = np.abs(first["R"].T @ second["R"])
+    return bool(np.all((turn < 1e-3) | (turn > 1 - 1e-3)))
 
 
 def _families(description):
@@ -329,11 +345,15 @@ def _mates(ports):
     found = []
     for a, b in pairs:
         pa, pb = ports[a], ports[b]
-        if abs(float(pa["A"] @ pb["A"])) < COS_PARALLEL:
-            continue
         delta = pb["P"] - pa["P"]
-        along = float(delta @ pa["A"])
         generic = bool(pa["secs"] and pb["secs"] and pa["secs"][0][0] == pb["secs"][0][0] == "G")
+        if abs(float(pa["A"] @ pb["A"])) < COS_PARALLEL:
+            # A towball turns freely in its socket: same centre, any axis.
+            if generic and pa["gender"] != pb["gender"] and float(np.linalg.norm(delta)) <= GENERIC_TOLERANCE \
+                    and _compatible(pa, pb):
+                found.append((a, b, False))
+            continue
+        along = float(delta @ pa["A"])
         if np.linalg.norm(delta - along * pa["A"]) > (GENERIC_TOLERANCE if generic else LINE_TOLERANCE):
             continue
         overlap = min(pa["half"], along + pb["half"]) - max(-pa["half"], along - pb["half"])
@@ -467,7 +487,8 @@ def analyze(rows, *, tolerance=0.5, limit=12):
     # Interlocking parts without port data (glass in a frame, tyre on a spoked wheel,
     # spider gear in a differential) count as connected when their bodies overlap.
     family_edges = [(i, j) for i, j in candidates if (i, j) not in mated_pairs and
-                    _families(rows[i]["local"].data.description) & _families(rows[j]["local"].data.description)]
+                    (_families(rows[i]["local"].data.description) & _families(rows[j]["local"].data.description)
+                     or _flexible(rows[i]) or _flexible(rows[j]))]
     part_edges += family_edges
     # Stud seating: the receptacle must start at the stud's base plane. LDCad does not
     # orient receptacle axes consistently, so measure its near end along the stud's
@@ -504,14 +525,16 @@ def analyze(rows, *, tolerance=0.5, limit=12):
             continue   # connected parts may interlock (tyre on rim, ring on joiner); seating is checked above
         first, second = (a["local"], a["R"], a["t"]), (b["local"], b["R"], b["t"])
         depth, at = _pair_depth(first, second, zones.get((i, j), ()), tolerance)
-        if a["local"].data.boxy and b["local"].data.boxy:
+        boxes = _boxy_pair(a, b)
+        if boxes:
             box, box_at = _box_depth(first, second)
             if box > depth:
                 depth, at = box, box_at
         if depth > tolerance:
             # A shallow overlap between shaped parts is a tight fit to review; two boxes overlapping is an error.
-            tight = depth <= TIGHT_FIT and not (a["local"].data.boxy and b["local"].data.boxy)
-            special = a["overlap"] or b["overlap"] or tight or _interlocking(a["local"].data.description, b["local"].data.description)
+            tight = depth <= TIGHT_FIT and not boxes
+            special = a["overlap"] or b["overlap"] or tight or _flexible(a) or _flexible(b) or \
+                _interlocking(a["local"].data.description, b["local"].data.description)
             (reviews if special else collisions).append((depth, i, j, at))
     collisions.sort(key=lambda c: -c[0])
     reviews.sort(key=lambda c: -c[0])

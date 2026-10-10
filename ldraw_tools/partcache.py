@@ -35,7 +35,7 @@ from ldraw.connection_types import (AnnularProfile, ConnectionSource, Cylindrica
 
 from .common import CACHE, normalized
 
-VERSION = 11
+VERSION = 14
 AUTHORED = {ConnectionSource.LDCAD_SHADOW, ConnectionSource.LDCAD_INLINE, ConnectionSource.OVERRIDE,
             ConnectionSource.SHORTCUT, ConnectionSource.STUDIO}
 EMPTY = np.zeros((0, 3, 3))
@@ -223,17 +223,32 @@ def _box_support(lo, hi, axis):
     return float(reach.min()), float(reach.max())
 
 
-def clean_ports(geometry, body=None, hinges=()):
+def _curated(kind, gender, p, axis, half, secs):
+    return dict(kind=kind, gender=gender, p=list(p), axis=list(axis), half=half, group=None, centered=True,
+                source="curated", secs=[list(s) for s in secs])
+
+
+# Interfaces the LDCad shadow library clears or never authored, measured from the part's own
+# geometry. Calibrated on official Technic sets (docs/dev/reports/technic-corpus.md).
+CURATED_PORTS = {
+    # Engine crankshaft: the shadow keeps only the centre axle hole; the throw is an axle stub
+    # (x=-10, z -9.8..20, capped by axleend.dat) that enters the next crank or a beam.
+    "2853": [_curated("axle", "M", (-10.0, 0.0, 5.1), (0.0, 0.0, 1.0), 14.9, [("A", 6.0)])],
+}
+
+
+def clean_ports(geometry, body=None, hinges=(), curated=()):
     """Authored interfaces when metadata coverage is complete, else every inferred feature.
 
     ``body`` (lo, hi) clips the inferred receptacles a complete part without authored sockets takes.
     ``hinges`` are authored finger hinges from referenced primitives; they replace the part's
-    inferred hinges unless the part's own metadata already authors one.
+    inferred hinges unless the part's own metadata already authors one. ``curated`` ports
+    (CURATED_PORTS) add interfaces the shadow library lacks.
     """
     metadata = geometry.connection_metadata
     complete = metadata is not None and str(metadata.coverage) == "complete"
     features = [f for f in geometry.connections if not complete or f.source in AUTHORED]
-    records = [port_record(f) for f in features if f.confidence > 0]
+    records = [port_record(f) for f in features if f.confidence > 0] + [dict(c) for c in curated]
     if complete and not any(r["gender"] == "F" for r in records):
         inferred = [port_record(f) for f in geometry.connections if f.source not in AUTHORED and f.confidence > 0]
         inferred = [r for r in inferred if r["kind"] == "stud_receptacle"]
@@ -253,7 +268,7 @@ def clean_ports(geometry, body=None, hinges=()):
         authored_kinds = {r["kind"] for r in records if r["source"] == "authored"}
         kept = []
         for r in records:
-            if r["source"] != "authored" and authored_kinds:
+            if r["source"] not in ("authored", "curated") and authored_kinds:
                 if r["kind"] in authored_kinds:
                     continue
                 if r["gender"] == "F" and body is not None:
@@ -439,8 +454,30 @@ class PartCache:
             return description
         return (self.parts.geometry(match.group(1)).description or description).strip()
 
+    def _moved_target(self, code, description):
+        """'~Moved to 32532a': the target code when the stub places it unrotated at the origin."""
+        match = re.match(r"~Moved to (\S+)", description)
+        if not match or code in self.embedded_paths:
+            return None
+        target = normalized(match.group(1)).removesuffix(".dat")
+        path = self.expander.path(code + ".dat")
+        if self.parts.find_part(code=target) is None or path is None:
+            return None
+        lines = [line.split() for line in path.read_text(encoding="utf-8-sig", errors="replace").splitlines()]
+        references = [t for t in lines if len(t) >= 15 and t[0] == "1"]
+        if len(references) != 1 or [float(v) for v in references[0][2:14]] != [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1]:
+            return None
+        return target
+
     def _build(self, code):
         geometry = self.parts.geometry(code)
+        target = self._moved_target(code, (geometry.description or "").strip())
+        if target is not None:
+            # A renamed part: its stub has no shadow data of its own, so its ports were guesses.
+            moved = self.get(target)
+            return PartData(code=code, description=moved.description, tris=moved.tris, edges=moved.edges, lo=moved.lo,
+                            hi=moved.hi, ports=moved.ports, coverage=moved.coverage + f" (moved to {target})",
+                            boxy=moved.boxy, missing=moved.missing)
         twin = self._library_twin(code, geometry)
         expander = self.expander
         before = set(expander.missing)
@@ -452,7 +489,8 @@ class PartCache:
             lo, hi = np.array(_vector(geometry.bounds.min)), np.array(_vector(geometry.bounds.max))
         else:
             lo = hi = np.zeros(3)
-        ports, coverage = clean_ports(twin or geometry, body=(lo, hi), hinges=self._primitive_hinges(code))
+        ports, coverage = clean_ports(twin or geometry, body=(lo, hi), hinges=self._primitive_hinges(code),
+                                      curated=CURATED_PORTS.get(code, ()))
         description = self._library_description(code, (geometry.description or "").strip())
         return PartData(code=code, description=description, tris=tris, edges=unique_edges(tris), lo=lo, hi=hi,
                         ports=ports, coverage=coverage + (f" (ports from library {twin.code})" if twin else ""),

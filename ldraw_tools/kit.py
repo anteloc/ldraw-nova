@@ -15,8 +15,8 @@ caused it, naming the ids involved and suggesting a fix.
 
 ``add`` places explicitly in LDU when nothing else fits; ``axes={"y": "X", "z": "-Z"}``
 says where two local axes point instead of writing a matrix. ``section`` builds a
-submodel with the same verbs. ``save`` writes the MPD and an equivalent JSON plan
-(rebuildable with ``ldraw-agent build``), then prints the full ``check`` verdict.
+submodel with the same verbs. ``save`` writes the MPD, then prints the full ``check``
+verdict. The generator is the source: rerun it after every change.
 
 World axes (LDraw): X right, Y down (negative Y is up), Z toward the viewer.
 
@@ -28,7 +28,6 @@ World axes (LDraw): X right, Y down (negative Y is up), Z toward the viewer.
 """
 from __future__ import annotations
 
-import json
 import math
 import re
 import sqlite3
@@ -39,7 +38,6 @@ from ldraw import Matrix, Model as LDrawModel, Piece, Vector
 from ldraw.lines import Comment
 
 from . import check as checker
-from .builder import serialize_mpd
 from .common import ROOT, atomic_write, get_parts, library_path, normalized
 from .partcache import PartCache
 
@@ -57,6 +55,25 @@ TILES_1 = {1: "3070b", 2: "3069b", 3: "63864", 4: "2431", 6: "6636", 8: "4162"}
 
 class KitError(ValueError):
     """A placement that would collide, sit badly or reference something unknown."""
+
+
+# What joins two ports of the same gender, by port kind: a mate needs one male and one female.
+SAME_GENDER = {
+    "axle": "axle to axle is not a joint: join them with an axle joiner (6538a, 26287) or a part with an axle hole",
+    "pin": "pin to pin is not a joint: put the pin into a pin hole (a beam, a connector) instead",
+    "stud": "stud to stud is not a joint: stack on a part's underside (stud_receptacle) instead",
+    "axle_hole": "two holes need an axle through both: mate an axle (3705, 3706, ...) into one, then mate the other part onto it",
+    "pin_hole": "two holes need a pin through both: m.pin(colour, between=(a.port(...), b.port(...)))",
+    "stud_receptacle": "two undersides do not join: put a plate or brick between them",
+}
+
+
+def serialize_mpd(model):
+    """Always emit a main FILE block, UTF-8 without BOM, and specification CRLF."""
+    text = model.to_ldraw()
+    if not model.submodels:
+        text = f"0 FILE {model.name}\n{text}\n0 NOFILE"
+    return text.replace("\r\n", "\n").replace("\n", "\r\n") + "\r\n"
 
 
 def _split(length, offset, sizes):
@@ -266,7 +283,10 @@ class Section:
         record = next((r for r in data.ports if r["name"] == port), None)
         if record is None:
             raise KitError(f"{ref} has no port {port!r}; it has: {', '.join(r['name'] for r in data.ports) or 'none'}")
-        local_axis, local_mid = np.array(record["axis"]), np.array(record["p"])
+        if record["gender"] == to.gender and record["gender"] in ("M", "F"):
+            hint = SAME_GENDER.get(record["kind"]) or SAME_GENDER.get(to.kind) or "one port must be male and the other female"
+            raise KitError(f"mate({port} to {to.handle.id}.{to.name}): both are {'male' if to.gender == 'M' else 'female'} "
+                           f"({record['kind']}, {to.kind}); {hint}")
         target_reference = _rodrigues(to.A, roll) @ to.reference
         if along is not None:
             wanted = _direction(along)
@@ -281,7 +301,11 @@ class Section:
                                    partner=to.handle)
             except KitError as error:
                 failures.append(str(error))
-        raise KitError(" / ".join(failures))
+        hint = ""
+        if all("collides" in f for f in failures):
+            hint = (f". Both directions collide: move it along the {to.handle.id}.{to.name} axis with slide=LDU "
+                    "(20 per stud) and toward='X'/'-X'/'UP'/..., use a longer axle or another port, or turn it with along=/roll=")
+        raise KitError(" / ".join(failures) + hint)
 
     def hinge(self, ref, colour, port, to, angle=0, **options):
         """Join the other half of a hinge (``port`` to ``to=base.port("hinge[0]")``) at ``angle`` degrees.
@@ -483,9 +507,10 @@ class Section:
                 continue
             first, second = (row["local"], row["R"], row["t"]), (other["local"], other["R"], other["t"])
             depth, at = checker._pair_depth(first, second, (), self.model.tolerance)
-            if row["local"].data.boxy and other["local"].data.boxy:
+            boxes = checker._boxy_pair(row, other)
+            if boxes:
                 depth = max(depth, checker._box_depth(first, second)[0])
-            tight = depth <= checker.TIGHT_FIT and not (row["local"].data.boxy and other["local"].data.boxy)
+            tight = depth <= checker.TIGHT_FIT and not boxes
             if depth <= self.model.tolerance or tight or row["overlap"] or other["overlap"] or \
                     checker._interlocking(row["local"].data.description, other["local"].data.description):
                 continue
@@ -679,26 +704,8 @@ class Model(Section):
         self.sections.append(section)
         return section
 
-    def plan(self):
-        """The equivalent version-1 JSON plan (explicit at + matrix placements)."""
-        sections = []
-        for section in self.sections:
-            steps = {}
-            for e in section.entries:
-                placement = dict(id=e["id"], ref=e["ref"], colour=e["colour"],
-                                 at=[round(float(v), 4) + 0.0 for v in e["t"]],
-                                 matrix=[[round(float(v), 9) + 0.0 for v in row] for row in e["R"]])
-                for key in ("purpose", "free", "overlap"):
-                    if e.get(key):
-                        placement[key] = e[key]
-                steps.setdefault(e["step"], []).append(placement)
-            if steps:
-                sections.append(dict(name=section.name, description=section.description,
-                                     steps=[steps[k] for k in sorted(steps)]))
-        return dict(version=1, author=self.author, sections=sections)
-
     def save(self, path, *, check=True, quiet=False):
-        """Write PATH (.mpd) and PATH.plan.json, then run the full check and print its verdict."""
+        """Write PATH (.mpd), then run the full check and print its verdict."""
         path = Path(path)
         if path.suffix.lower() != ".mpd":
             raise KitError("save to a .mpd path")
@@ -725,7 +732,6 @@ class Model(Section):
         root = models[self.name]
         root.submodels = {normalized(n): m for n, m in models.items() if n != self.name}
         atomic_write(path, serialize_mpd(root))
-        atomic_write(path.with_suffix(".plan.json"), json.dumps(self.plan(), indent=1) + "\n")
         if not check:
             return None
         report = checker.check_model(path, self.parts, self.library, tolerance=self.tolerance, family=self.family)

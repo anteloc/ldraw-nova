@@ -14,7 +14,67 @@ from collections import Counter
 from functools import lru_cache
 from pathlib import Path
 
-from .common import RESOURCE_DATA, jsonable
+from .common import DATA, RESOURCE_DATA, jsonable
+
+SIZE = re.compile(r'(\d)\s*[x×]\s*(?=\d)')
+
+
+def _words(text):
+    """Casefolded words with LDraw sizes spaced out: '1x2', '1 x  2' and '1×2' all read '1 x 2'."""
+    return SIZE.sub(r'\1 x ', text.casefold()).replace(',', ' ').replace('(', ' ').replace(')', ' ').split()
+
+
+@lru_cache(maxsize=1)
+def _synonyms():
+    data = __import__('json').loads((DATA / 'search-synonyms.json').read_text())
+    return data['words'], data['phrases']
+
+
+def _term_matches(term, alternatives, code, words):
+    """Numbers match a whole word (or, from three digits, the start of a part number);
+    other terms match inside any word."""
+    for t in (term, *alternatives):
+        if re.fullmatch(r'[\d.]+', t):
+            if t in words or (len(t) >= 3 and code.startswith(t)):
+                return True
+        elif t in code or any(t in w for w in words):
+            return True
+    return False
+
+
+def search_parts(by_code, query, *, limit=10):
+    """Library parts whose code or description matches every query word, best first.
+
+    LDraw naming is normalised: sizes ('1x7' reads '1 x 7'), whole-word numbers ('beam 7'
+    is not 'Beam 15'), and synonyms from data/search-synonyms.json ('liftarm' also finds
+    'beam'). When nothing matches every word, the parts matching the most words are
+    returned with a note naming the words that missed.
+    """
+    word_map, phrases = _synonyms()
+    text = ' '.join(_words(query))
+    for phrase, replacement in phrases.items():
+        text = re.sub(rf'(?<![\w-]){re.escape(phrase)}(?![\w-])', replacement, text)
+    terms = [t.removesuffix('.dat') for t in text.split()]
+    if not terms:
+        raise ValueError('Give at least one search word')
+    exact = query.strip().casefold().removesuffix('.dat')
+    scored = []
+    for code, description in by_code.items():
+        words = _words(description)
+        hits = [_term_matches(t, word_map.get(t, ()), code.casefold(), words) for t in terms]
+        if any(hits):
+            scored.append((sum(hits), code, description, hits))
+    best = max((s[0] for s in scored), default=0)
+    rows = [s for s in scored if s[0] == best and best >= max(1, len(terms) - 2)]
+    rows.sort(key=lambda s: (s[1].casefold() != exact, s[2].startswith(('~', '=')), len(_words(s[2])), s[1]))
+    result = dict(query=query, total=len(rows), results=[dict(code=c + '.dat', description=d) for _, c, d, _ in rows[:limit]])
+    if rows and best < len(terms):
+        missed = sorted({t for *_, hits in rows for t, h in zip(terms, hits) if not h})
+        result['note'] = (f'No part matches every word. These match {best} of {len(terms)}; '
+                          f'missing: {", ".join(missed)}. LDraw names parts like "Technic Beam 7", "Tyre", "Brick 1 x 2".')
+    elif not rows:
+        result['note'] = 'Nothing matched. Try fewer words, or the LDraw name ("Technic Beam", "Tyre", "Slope Brick").'
+    return result
 
 
 def category_path():

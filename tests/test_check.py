@@ -10,6 +10,7 @@ from ldraw_tools.common import ROOT, library_path
 from ldraw_tools.partcache import PartCache
 
 PIN_UP = "0 -1 0 1 0 0 0 0 1"     # 2780 shaft (local X) along world Y
+FIXTURES = ROOT / "tests/fixtures"
 
 
 @pytest.fixture(scope="module")
@@ -97,7 +98,7 @@ def test_loose_figures_are_reported_not_failed(official, library, tmp_path):
 
 def test_official_tight_fits_are_reviews(official, library):
     # UCS Y-wing armour (75181): a grille tile sits 2 LDU into a bar pin by design.
-    report = check_model(ROOT / "examples/spaceship-atlas/y-wing-armour/y-wing-armour.mpd", official, library)
+    report = check_model(FIXTURES / "official/y-wing-armour.mpd", official, library)
     assert report["checks_passed"] and report["review_count"], format_report(report)
     from ldraw_tools.common import dumps
     assert '"reviews"' in dumps(report)                       # --json and --report serialise review entries
@@ -106,8 +107,7 @@ def test_official_tight_fits_are_reviews(official, library):
 def test_embedded_copy_named_by_number_keeps_its_family(official, library):
     # The 42110 gearbox embeds clutch gear 35188 as a file titled only "35188"; its
     # meshing with a driving ring is a review, not a collision.
-    report = check_model(ROOT / "examples/technic-atlas/mechanisms/four-speed-gearbox/four-speed-gearbox.mpd",
-                         official, library)
+    report = check_model(FIXTURES / "official/four-speed-gearbox.mpd", official, library)
     assert report["checks_passed"], format_report(report)
     assert report["review_count"] > 0
 
@@ -154,21 +154,28 @@ def test_declarations_and_plan_ids(official, library, tmp_path):
 
 def test_expert_mechanism_extracts_are_clean(official, library):
     for name in ("four-bar-lift", "cam-follower-engine", "double-cardan-shaft"):
-        report = check_model(ROOT / f"examples/technic-atlas/mechanisms/{name}/{name}.mpd", official, library)
+        report = check_model(FIXTURES / f"official/{name}.mpd", official, library)
         assert report["checks_passed"], format_report(report)
 
 
-def test_crane_boom_is_reported_and_graphed(official, library):
-    report = check_model(ROOT / "examples/archive/atlas-crane/atlas-crane.mpd", official, library)
-    floating = {m["module"]: m["floating"] for m in report["modules"]}
-    assert floating["atc-boom-0"] == 181 and not report["checks_passed"]
+def test_floating_module_is_reported_and_graphed(official, library, tmp_path):
+    from ldraw_tools.kit import Model
+    m = Model("yard", "A base and a boom nobody attached")
+    boom = m.section("boom", "Boom")
+    boom.place("3001", "Yellow", cell=(0, 0), level=0, id="boom-brick")
+    base = m.place("3001", "Red", cell=(0, 0), level=0, id="base")
+    m.place("3001", "Red", cell=(0, 0), level=base.top, id="base-top")
+    m.add(boom, None, at=(200, 0, 0), id="boom")
+    report = m.save(tmp_path / "yard.mpd", quiet=True)
+    floating = {mod["module"]: mod["floating"] for mod in report["modules"]}
+    assert floating["boom"] == 1 and not report["checks_passed"]
     graph = mermaid_graph(report)
-    assert graph.startswith("flowchart") and "atc_boom_0" in graph and ":::bad" in graph
-    intended = compare_intended(report, "```mermaid\nflowchart LR\n  atc_super_0 -->|pins| atc_boom_0\n```")
-    assert intended["missing"] == [["atc_boom_0", "atc_super_0"]]
+    assert graph.startswith("flowchart") and "boom" in graph and ":::bad" in graph
+    intended = compare_intended(report, "```mermaid\nflowchart LR\n  yard -->|studs| boom\n```")
+    assert intended["missing"] == [["boom", "yard"]]
 
 
 def test_cli_prints_text_and_sets_exit_status(official):
-    result = subprocess.run([sys.executable, "-m", "ldraw_tools.cli", "check", str(ROOT / "examples/bridge.mpd")],
+    result = subprocess.run([sys.executable, "-m", "ldraw_tools.cli", "check", str(FIXTURES / "bridge.mpd")],
                             cwd=ROOT, capture_output=True, text=True)
     assert result.returncode == 0 and result.stdout.startswith("PASS")

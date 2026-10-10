@@ -49,6 +49,11 @@ FAMILIES = ("spaceship", *KEYWORDS)
 def corpus(family, limit=60):
     if family == "spaceship":
         return [MODELS / f"{s}-1.mpd" for s in SHIPS if (MODELS / f"{s}-1.mpd").exists()]
+    if family == "technic":
+        # Technic sets (42xxx, 8xxx) small enough to stand for an agent's model; "technic" in a
+        # description also matches mosaics and System sets with a few pins.
+        sets = [p for p in sorted(MODELS.glob("*.mpd")) if re.match(r"(42|8\d)\d{3}-1", p.name)]
+        return [p for p in sets if sum(line.startswith("1 ") for line in p.read_text(errors="replace").splitlines()) <= 1200][:limit]
     db = sqlite3.connect(f"file:{ROOT / 'data/ldraw-info.db'}?mode=ro", uri=True)
     pattern = re.compile(KEYWORDS[family], re.I)
     picks = []

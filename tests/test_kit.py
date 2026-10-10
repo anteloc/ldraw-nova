@@ -1,8 +1,4 @@
 """Construction kit: grid placement, port mating, call-site errors and saved output."""
-import json
-import subprocess
-import sys
-
 import numpy as np
 import pytest
 
@@ -51,7 +47,7 @@ def test_wheels_mate_to_pins_and_rims(model, tmp_path):
     assert model.save(tmp_path / "wheels.mpd", quiet=True)["checks_passed"]
 
 
-def test_sections_free_parts_and_rebuildable_plan(model, tmp_path):
+def test_sections_and_free_parts(model, tmp_path):
     wing = model.section("wing", "A small wing module")
     wing.place("3020", "Blue", cell=(0, 0), level=0, id="wing-plate")
     wing.place("3068b", "White", cell=(0, 0), level=1, id="wing-tile")
@@ -62,25 +58,26 @@ def test_sections_free_parts_and_rebuildable_plan(model, tmp_path):
     report = model.save(path, quiet=True)
     assert report["checks_passed"] and report["free_parts"] == 1
     assert {m["module"] for m in report["modules"]} >= {"wing", "kit-test"}
-    rebuilt = tmp_path / "rebuilt.mpd"
-    result = subprocess.run([sys.executable, "-m", "ldraw_tools.cli", "build", str(path.with_suffix(".plan.json")),
-                             "--output", str(rebuilt), "--contacts", "none", "--detail", "summary"],
-                            cwd=ROOT, capture_output=True, text=True)
-    assert result.returncode == 0, result.stdout[-500:]
-    lines = lambda p: [l for l in p.read_text().splitlines() if l.startswith("1 ")]
-    assert lines(rebuilt) == lines(path)
-    plan = json.loads(path.with_suffix(".plan.json").read_text())
-    assert plan["sections"][0]["name"] == "kit-test.ldr"
+    assert "0 FILE wing.ldr" in path.read_text() and not list(tmp_path.glob("*.json"))
 
 
-@pytest.mark.parametrize("document", ["docs/agent/kit.md", "instructions.md"])
+@pytest.mark.parametrize("document", ["docs/agent/kit.md", "instructions.md", "docs/agent/technic.md"])
 def test_documented_examples_run_and_pass(official, tmp_path, monkeypatch, capsys, document):
     import re
     source = re.search(r"```python\n(.*?)```", (ROOT / document).read_text(), re.S).group(1)
     monkeypatch.chdir(tmp_path)
     exec(compile(source, document, "exec"), {})
     assert capsys.readouterr().out.startswith("PASS")
-    assert list(tmp_path.glob("output/*/*.plan.json"))
+    assert list(tmp_path.glob("output/*/*.mpd"))
+
+
+def test_same_gender_mates_name_the_joining_part(model):
+    beam = model.add("32524", "Red", at=(0, -100, 0), axes={"y": "Y", "z": "X"})
+    axle = model.mate("3705", "Black", "axle[0]", to=beam.port("pin_hole[0]"))
+    with pytest.raises(KitError, match="axle to axle is not a joint.*6538a"):
+        model.mate("3706", "Black", "axle[0]", to=axle.port("axle[0]"))
+    with pytest.raises(KitError, match="pin through both"):
+        model.mate("32524", "Blue", "pin_hole[0]", to=beam.port("pin_hole[6]"))
 
 
 def test_wall_and_fill_helpers_make_connected_structures(model, tmp_path):
