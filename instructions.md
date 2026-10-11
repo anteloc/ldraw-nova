@@ -2,7 +2,25 @@
 
 Create the model the user requests and deliver its editable `.mpd`, reproducible source plans/generator, checks, BOM and reviewed previews. Match the requested subject, scale, palette, features and complexity. Make visual quality an explicit design objective: recognizable proportions, a controlled palette, depth, coherent details and a readable focal feature. Geometric correctness alone does not complete the task. For a large model, divide it into modules and finish them in stages. Do not silently reduce a requested detailed scene to a few bricks. When no subject is supplied, choose a recognizable subject and state its scope briefly.
 
-Work through design, construction, checks, repair, rendering and delivery. Correct syntax, a plausible picture and a connected-component result are separate kinds of evidence; none alone proves physical buildability.
+Creative freedom and visual quality lead the process. Explore the subject, compose its major forms, render and revise them, then establish representative constructions before repeating them across the model. Preserve the visual intent when repairing geometry. Correct syntax, a plausible picture and a connected-component result are separate kinds of evidence; none alone proves physical buildability.
+
+```mermaid
+flowchart LR
+  Explore --> Compose --> Draft
+  Draft --> View["Render and open views"]
+  View -->|"revise proportions and character"| Compose
+  View --> Engineer["Establish representative constructions and interfaces"]
+  Engineer --> Local["Check and view with actual supports"]
+  Local -->|"repair while preserving features"| Engineer
+  Local --> Expand["Repeat and compose established assemblies"]
+  Expand --> Verify["Check modules in context and the whole model"]
+  Verify -->|"repair the responsible assembly"| Engineer
+  Verify --> Final["Review final geometry and appearance"]
+  Final -->|"design weakened"| Compose
+  Final --> Deliver
+```
+
+Use references and recipes to expand your construction vocabulary. Choose your own composition; copying a whole-model recipe is optional. Python helpers, explicit coordinates/rotations, JSON plans and the optional [kit](docs/agent/kit.md) are all valid authoring tools. A custom generator is a legitimate design tool. A failed construction check must not prevent looking at a draft.
 
 ## 1. Prepare
 
@@ -14,7 +32,7 @@ Run from this repository's root:
 
 Run `./setup.sh` if needed. It installs pinned Python packages in `.venv` and prepares local indexes. Use the globally available **`leocad` CLI** for snapshots, including embedded unofficial parts; the render adapter supplies those parts through an isolated temporary library. Use `./prepare-glb.sh --file MODEL.mpd MODEL.glb` for semantic GLB export through the global `mpd2glb.sh` executable.
 
-Read:
+Start with [visual design](docs/agent/visual-design.md). Consult the relevant guides below as needed; this is a reference map, not a requirement to read every guide before designing:
 
 - [LDraw rules](docs/agent/ldraw-reference.md): records, coordinates, colours, MPD, BFC and headers.
 - [Geometry](docs/agent/geometry.md): origins, stacking, connectors and collision evidence.
@@ -27,6 +45,7 @@ Read:
 - For reusable Mecha-derived mechanisms, the [Technic atlas](examples/technic-atlas/README.md#mechanisms-from-ldraw-mecha) includes engines, paired Cardan shafts, a four-speed gearbox, a lift and suspension with editable source and build pages. Find them with `examples --family technic --limit 20` and use `mechanism export` on the prepared directory; read its omitted-parent interfaces before composing it with a frame.
 - [Tool reference](docs/agent/tooling.md) and [validation guide](docs/agent/validation.md).
 - For complex work, [module workflow and Bookshop case study](docs/agent/complex-models.md), [measured reference inventory](docs/agent/resources/bookshop-study.json), and [Copper Lane example](examples/modular-street/README.md).
+- For large-model construction, [composition and construction workflow](docs/agent/construction-workflow.md): establish supported bays, floors and roof interfaces before repetition; retain exact evidence for reference fittings.
 
 The language authority is the mandatory [docs/ldraw-specs.pdf](docs/ldraw-specs.pdf). Use `./ldraw-agent spec --page 65` or `./ldraw-agent spec 'INVERTNEXT'`; the [source map](docs/agent/specification-map.md) identifies relevant pages. Distinguish official part-authoring rules from personal model rules.
 
@@ -41,6 +60,19 @@ Use [reference discovery](docs/agent/reference-discovery.md) to expand the desig
 When a useful submodel is difficult to read from its completed picture, follow the [build-manual workflow](docs/agent/build-manuals.md). `manual prepare` renders its source steps with per-step parts and child-assembly callouts; study parent interfaces, record the inspected pages and export a useful construction for the appropriate atlas. Use `--overview` for completed-model studies of large references. Keep inspiration sources with unresolved errors separate from reusable examples.
 
 Record a short design brief outside the assembly plan: subject/story, silhouette, dimensions, palette roles, primary focal feature, two supporting features, detail vocabulary, quiet surfaces, physical subassemblies and build order. State what will make this particular design attractive; do not equate part count with quality. For a building scene, separate the street/base, individual storeys, roofs, façade/window modules, interiors and landscaping. Allocate space and attachment surfaces before decoration. Keep a module checklist with local origin, envelope, anchors, dependencies and review status.
+
+Record the important features and relationships that repairs must preserve using the [brief template](docs/agent/design-brief.md). For example: a porch covers the entrance at usable door height; a chimney continues through a reserved roof opening to a real support; steering keeps the chosen wheelbase and has room to move. Describe these in spatial and visual terms, not just part or module names.
+
+Before expanding a large design into repeated walls, storeys or roof courses, establish representative constructions with their actual supports and neighbouring parts. Render and check them first. Reuse their measured interfaces through deterministic code, then check each new module in its parent context. Choose construction references by the feature they solve; preserve freedom over the whole composition. Do not repeat an unverified placement pattern hundreds of times and defer discovering its basic fit until the end.
+
+Before extensive part research or detailed construction, render a rough composition using real parts as provisional masses. For an open-ended brief, consider different silhouettes and develop the strongest one. Choose the number of alternatives to suit the request; avoid turning a small task into a planning exercise. Label incomplete source as a draft:
+
+```sh
+./ldraw-agent build output/my-model/draft.plan.json --draft --contacts none --output output/my-model/draft.mpd
+./ldraw-agent look output/my-model/draft.mpd --outdir output/my-model/composition
+```
+
+Open the images now. Revise the silhouette, proportions, focal feature and palette before investing in detail. Drafts may contain unattached or intersecting parts; keep their unresolved construction explicit and use them only for visual exploration. Continue rendering important interfaces and modules while engineering them. Neither a recipe nor a checker result chooses the design for you.
 
 For a spaceship, choose scale and silhouette before selecting the canopy, wing system and engine size. Allocate the internal spine/truss, cockpit, hull panels, engines and landing/display supports; use a few dense service areas beside quiet armour surfaces. Inspect wing roots, internal mounts and underside views. Use general model checks and the relevant Technic/mechanism workflow for those modules; road-wheel and aircraft-profile checks do not establish spacecraft quality.
 
@@ -100,7 +132,7 @@ To copy a useful module, use `extract --section NAME --namespace UNIQUE --output
 
 ## 3. Build reproducibly with module contracts
 
-Use the [JSON schema](ldraw_tools/data/plan.schema.json). The [bridge](examples/bridge.plan.json) teaches basic format; the [modular street plans](examples/modular-street/scene.plan.json) teach complex composition. Use these as examples of technique, then design the requested model.
+Use the [JSON schema](ldraw_tools/data/plan.schema.json) directly, generate plans in Python, or use the optional [construction kit](docs/agent/kit.md). Kit `Model.plan()` exports the same schema, including authored module anchors, for use with `includes` and extracted assets. The [bridge](examples/bridge.plan.json) teaches basic format; the [modular street plans](examples/modular-street/scene.plan.json) teach complex composition. Use these as examples of technique, then design the requested model.
 
 - Every plan has `version: 1`, accurate `author` and `sections`; an authorized `license` is optional. The root plan's first section is the scene main.
 - Use `includes` for other JSON plans and `assets` for extracted MPDs. Paths are relative to the declaring plan. Section names must be unique across all inputs; copied headers retain their authorship.
@@ -132,6 +164,8 @@ Use Python for parameterized bonds, openings, stepped roofs or other conditional
 
 Use one descriptive basename consistently. `build` writes only after selected assembly/geometry checks have no errors; warnings remain visible. It emits UTF-8 without BOM, CRLF, headers, comments and steps. Use `--force` for an intentional rebuild. Texture/data/custom colour semantics and newly authored unofficial part geometry need the additional review described in the references.
 
+`build --draft` instead writes valid assembly source despite geometry errors, marks the MPD as a draft and reports `checks_passed: false`. This permits early visual iteration. A successful draft command means the draft was written. Rebuild without `--draft` when ready for final verification. With the kit, `save(path, draft=True)` serves the same purpose; a normal `save(path)` refuses failures and unresolved reviews without replacing an existing final file.
+
 ## 4. Check details, modules and the assembled scene
 
 Work locally first: test one window/hinge/roof detail, then its containing module, then the full scene. A checked module can still collide with its neighbour after assembly.
@@ -160,6 +194,10 @@ Read exit status, errors, warnings, `complete`, truncation flags and `contacts_c
 
 Repair every error, rebuild and rerun affected checks. Explain each remaining warning using specific evidence. AABB candidates are not material-collision proofs; engaged studs/sockets normally overlap in bounds. Fragmented connector groups can indicate missing metadata, floating parts or intentionally separate objects. Investigate the implicated parts instead of deleting warnings.
 
+Run `./ldraw-agent check MODEL.mpd --report output/my-model/check.json` on the assembled model too. It reports `PASS`, `FAIL` or `REVIEW` for static construction evidence. `REVIEW` is unresolved and returns nonzero; it is not a softer pass. Read coverage, missing connector data and overlap reviews. A known connection does not exempt the rest of either part from collision checks. This does not verify strength, inventory or mechanism motion. Use the existing detailed geometry, vehicle and mechanism tools to investigate specific interfaces.
+
+Repair the construction around the design. If a canopy floats, engineer its supports and bonded plates while preserving its coverage and height. If a chimney has no attachment on a peaked ridge, create a supported shaft and roof opening. Do not shrink, remove, obscure or relocate a promised feature just to clear a check. Reconsider the containing assembly when needed, render alternatives, and record any unavoidable design compromise in the brief and final answer.
+
 Open the first whole-model PNGs and perform a visual design pass before final delivery. Check thumbnail silhouette, proportions, focal hierarchy, palette balance, depth/shadows, useful variation, quiet versus detailed areas, exposed side/rear walls, and readable entrances. Improve specific weaknesses and render again. Do not add random ornament everywhere or stop because geometry passes. Record the viewed images, problems found and revisions in a short visual-review document.
 
 Open the final PNGs. Inspect silhouette, palette, orientation, support, openings, missing parts, intersections and overhangs. Review individual floors/interiors and obscured rear/side interfaces. Compare Python and LeoCAD BOMs by reference, colour and quantity using `compare-bom`; do not reconcile a mismatch by discarding parts. The LeoCAD adapter handles embedded DAT definitions without modifying the source library.
@@ -168,6 +206,10 @@ Inspect uncertain interfaces with close LeoCAD views and the global `ldraw-rende
 
 ## 5. Deliver the exact final revision
 
+For System models, finish through the shared [stage review/export route](docs/agent/tooling.md#construction-studies-and-stage-review), regardless of whether the source came from the kit, JSON or custom Python. Run `stage prepare` on the MPD or plan, supplying measurable feature requirements where applicable. Open all generated views, record the real observations with `stage review --decision accept`, and use `stage export` for the delivered MPD. Reject an unattractive result with `--decision revise` even if the technical checks pass. A stale, failed or unreviewed stage cannot export. Authoring commands and raw generator output remain drafts until this review is complete; do not bypass the gate by relabelling their output as final. Preserve the existing separately scoped mechanism workflow.
+
 After the last source change, regenerate affected checks, BOMs and renders. Provide clickable paths to the final `.mpd`, plans/generator, reused-asset manifests, design brief/visual review, validation report, BOM comparison and preview images. Briefly state actual features and physical placement count, which checks passed, and specific unresolved physical/inventory limitations. The toolkit's `physical_validity: not_proven` is intentional.
+
+Compare every retained feature in the brief with the final views and construction evidence. Keep draft artifacts distinguishable from final ones. Do not call a failed or review-only assembly finished; if an interface cannot be verified, deliver its explicit status and the remaining work rather than claiming full correctness. A static pass still needs the visual review and the subject-specific checks above.
 
 Finish the requested model and its review artifacts. Do not stop at a design proposal or instructions for the user to run.

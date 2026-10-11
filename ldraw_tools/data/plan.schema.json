@@ -127,6 +127,14 @@
         "purpose": {
           "$ref": "#/$defs/text"
         },
+        "free": {
+          "$ref": "#/$defs/text",
+          "description": "Reason this placement intentionally stands apart; does not exempt collisions"
+        },
+        "overlap": {
+          "$ref": "#/$defs/text",
+          "description": "Overlap requiring review; never establishes a connection or a passing final check"
+        },
         "ref": {
           "oneOf": [
             {

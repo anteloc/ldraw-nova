@@ -4,6 +4,14 @@ For the authorized [mechanism workflow](mechanisms.md), analytical mechanism ver
 
 Successful parsing is necessary but insufficient. The tools distinguish file-format checks, constraints for new assemblies, and physical review evidence. `checks_passed` means no reported errors in that selected profile; **it never means a model is proven buildable**.
 
+For creative exploration, `build --draft` or kit `save(..., draft=True)` writes a labelled draft with unresolved geometry. Render it early with `look` or `render`. Rebuild without draft mode for final checking. Kit final saves refuse failures and unresolved reviews without replacing the last output.
+
+The additional `check` command has three verdicts: PASS for the covered static checks, FAIL for identified defects, and REVIEW for unresolved overlaps/coverage or a draft. Both FAIL and REVIEW return nonzero. It uses connector profiles and body meshes; sharing a category or intersecting bounding boxes never proves attachment. Unknown isolated connectors and loose figure/flexible groups remain review items unless explicitly declared separate. A declaration of overlap keeps it unresolved. Rolled axles inside cross holes fail. Read the coverage fields and keep the existing subject-specific checks; motion and structural strength remain unverified.
+
+Four frame/pane fittings have exact pose and part-source calibration, recorded in `fitting_rules`. Their mesh overlap remains visible as evidence; their specific matching pair contributes a connection. Full DAT dependency hashes prevent applying the rule to a changed part or primitive. Shifted inserts, duplicate panes and collisions with surrounding walls remain checked. Other special fittings remain unresolved until independently investigated.
+
+The [stage export route](tooling.md#construction-studies-and-stage-review) combines this check, explicit feature requirements, rendered BOM comparison and a recorded visual decision for System construction stages. Evidence is bound to the source and inspection environment; stale evidence cannot authorize export. Feature checks measure body envelopes and direct detected module connections, not complete architectural function. The stage cannot establish that a person actually looked at the pictures, nor automatically judge beauty.
+
 For [Technic structures](technic.md), normal geometry checks also reject invalid seating, incomplete pin grips and conflicting occupation on reviewed interfaces when contacts are computed. Run `technic check --contract ...` as well to check required mounts, axial retention, connector-before-closure STEP constraints and the conservative multiple-pin restraint rule. Review unknown parts and unsupported bracing patterns. These checks do not simulate mechanisms or prove swept insertion access, strength, stiffness or manufacturing fit.
 
 | Check | Automated behaviour / boundary |

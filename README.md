@@ -101,11 +101,13 @@ The process is as follows:
 
 1. The agent takes a **prompt**.
 2. **Reads** [instructions.md](./instructions.md) and related documents to [LDraw language](https://www.ldraw.org/) and LEGO© models building.
-3. **Plans** how to build the model: required parts, submodels to be created, aesthetics...
-4. **Iteratively**:
-	1. Renders images from the model/submodel(s)
-	2. Inspects them, adjusts positioning, aesthetics... and back to rendering
-5. ... until it considers the **model finished** and ready to deliver!
+3. **Composes** the model: silhouette, proportions, palette and focal features, informed by useful references.
+4. **Renders drafts early**, revises their appearance, then engineers supports and connections while preserving the design.
+5. **Verifies and reviews** the final assembly, including subject-specific checks and any unresolved limitations.
+
+Python generators, JSON plans and the optional [construction kit](docs/agent/kit.md) can be combined. Recipes are sources of techniques; they do not prescribe the design. Draft mode permits visual exploration before construction is complete. The additional static `check` reports PASS, FAIL or REVIEW and does not claim to verify strength, mechanism motion or beauty.
+
+Large System models now have a [construction workflow](docs/agent/construction-workflow.md): compose the design, establish small constructions, then repeat them and check the joins. Three initial construction studies and a shared `stage prepare/review/export` route provide reusable geometry and current review evidence without prescribing a whole-building template.
 
 Provided tooling helps the agent in:
 

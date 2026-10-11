@@ -57,6 +57,53 @@ def parser():
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
+    c = commands.add_parser("stage", help="Check and visually review an MPD or plan before exporting the exact revision")
+    stages = c.add_subparsers(dest="stage_command", required=True)
+    d = stages.add_parser("prepare", help="Snapshot, check, render and compare BOMs; failed drafts remain inspectable")
+    d.add_argument("file")
+    d.add_argument("--outdir", required=True)
+    d.add_argument("--requirements", help="JSON feature envelopes and required module connections")
+    d.add_argument("--views", nargs="+", default=["home", "front", "right", "top"])
+    d.add_argument("--no-render", action="store_true", help="Checks only; cannot be reviewed or exported")
+    d.add_argument("--timeout", type=positive, default=90)
+    d.add_argument("--force", action="store_true")
+    d = stages.add_parser("review", help="Record all views actually opened and accept or request revision")
+    d.add_argument("folder")
+    d.add_argument("--images", nargs="+", required=True)
+    d.add_argument("--note", required=True)
+    d.add_argument("--decision", choices=["accept", "revise"], required=True)
+    d = stages.add_parser("export", help="Export only passing, reviewed, unchanged evidence; preserve previous output on failure")
+    d.add_argument("folder")
+    d.add_argument("--output", required=True)
+    d.add_argument("--force", action="store_true")
+    c = commands.add_parser("construction", help="Small reusable building assemblies, their supported parameters and parent interfaces")
+    constructions = c.add_subparsers(dest="construction_command", required=True)
+    constructions.add_parser("list")
+    d = constructions.add_parser("export")
+    d.add_argument("name")
+    d.add_argument("--outdir", required=True)
+    d.add_argument("--parameters", help="JSON object of supported parameter values")
+    d.add_argument("--palette", default="botanical-bookshop")
+    d.add_argument("--force", action="store_true")
+    c = commands.add_parser("check", help="Static construction evidence: PASS, FAIL or REVIEW; does not judge aesthetics or motion")
+    c.add_argument("file")
+    c.add_argument("--report")
+    c.add_argument("--tolerance", type=float, default=0.5)
+    c.add_argument("--limit", type=positive, default=12)
+    c.add_argument("--graph", action="store_true")
+    c.add_argument("--intended", help="Brief containing a Mermaid graph of required module connections")
+    scope_options(c)
+    c = commands.add_parser("ports", help="Named part interfaces, body bounds and connector metadata for optional kit helpers")
+    c.add_argument("refs", nargs="+")
+    c = commands.add_parser("look", help="Render a contact sheet of a draft or finished model; no construction PASS required")
+    c.add_argument("file")
+    c.add_argument("--outdir")
+    c.add_argument("--views", nargs="+", default=["home", "front", "right", "top"])
+    c.add_argument("--focus")
+    c.add_argument("--highlight", nargs="*", default=[])
+    c.add_argument("--problems", action="store_true")
+    c.add_argument("--cell", type=positive, default=640)
+    scope_options(c)
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
@@ -286,6 +333,7 @@ def parser():
     c.add_argument("plan")
     c.add_argument("--output", required=True)
     c.add_argument("--report")
+    c.add_argument("--draft", action="store_true", help="Write a labelled visual draft despite geometry errors; source must still be valid")
     c.add_argument("--force", action="store_true", help="Replace an existing MPD after successful validation")
     geometry_options(c)
     for command in ["validate", "inspect", "bom", "compare-bom", "snap", "connectors"]:
@@ -361,6 +409,52 @@ def run(args):
         return search_models(args.query, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
     library = library_path(args.library)
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
+    if args.command == "stage":
+        from .stages import prepare_stage, review_stage, export_stage
+        if args.stage_command == "prepare":
+            report = prepare_stage(args.file, args.outdir, parts, library, requirements=args.requirements,
+                                   views=args.views, no_render=args.no_render, timeout=args.timeout, force=args.force)
+            return report, 0 if report["status"] == "READY_FOR_REVIEW" else 1
+        if args.stage_command == "review":
+            report = review_stage(args.folder, images=args.images, note=args.note, decision=args.decision)
+            return report, 0 if args.decision == "accept" else 1
+        return export_stage(args.folder, args.output, parts, library, force=args.force), 0
+    if args.command == "construction":
+        from .constructions import CATALOG, export_construction
+        from .stages import read_json
+        if args.construction_command == "list":
+            return CATALOG, 0
+        report = export_construction(args.name, args.outdir, parts, library,
+                                     parameters=read_json(args.parameters) if args.parameters else None,
+                                     palette=args.palette, force=args.force)
+        return report, 0 if report["checks_passed"] else 1
+    if args.command == "check":
+        from .check import check_model, compare_intended, mermaid_graph
+        report = check_model(args.file, parts, library, section=args.section, colour=args.colour,
+                             tolerance=args.tolerance, limit=args.limit)
+        if args.intended and "modules" in report:
+            report["intended"] = compare_intended(report, Path(args.intended).read_text())
+            if report["intended"]["missing"] or report["intended"]["unknown_modules"]:
+                report.update(verdict="FAIL", checks_passed=False)
+        if args.graph and "modules" in report:
+            report["graph"] = mermaid_graph(report)
+        return report, 0 if report["checks_passed"] else 1
+    if args.command == "ports":
+        from .partcache import PartCache
+        from .catalog import resolve_part
+        cache = PartCache(parts, library)
+        result = []
+        for ref in args.refs:
+            code = resolve_part(ref, parts) if ref.startswith("@") else ref
+            data = cache.get(code.casefold().removesuffix(".dat"))
+            result.append(dict(part=data.code, description=data.description, bounds=dict(min=data.lo, max=data.hi),
+                               coverage=data.coverage, ports=data.ports,
+                               note="Body extrema are not attachment surfaces. Select a real port and inspect its direction."))
+        return result, 0
+    if args.command == "look":
+        from .look import look
+        return look(args.file, parts, library, args.outdir, views=args.views, focus=args.focus,
+                    highlight=args.highlight, problems=args.problems, section=args.section, colour=args.colour, cell=args.cell), 0
     if args.command == 'spaceship':
         from .spaceships import design_brief, export_spaceship
         if args.spaceship_command in {'list','details'}:
@@ -657,16 +751,20 @@ def run(args):
             raise ValueError("Output exists; use --force to replace after successful validation")
         plan = load_plan(args.plan)
         text, model, diagnostics = build_plan(plan, parts, instance_limit=args.max_instances)
+        source_passed = not any(d["severity"] == "error" for d in diagnostics)
         geometry = None
-        if not any(d["severity"] == "error" for d in diagnostics):
+        if source_passed:
             geometry = geometry_report(model, parts, args)
             diagnostics += geometry["diagnostics"]
         passed = not any(d["severity"] == "error" for d in diagnostics)
-        report = dict(profile="assembly", checks_passed=passed, physical_validity="not_proven", output=str(target),
-                      written=passed, diagnostics=diagnostics, geometry=geometry)
-        if passed:
+        written = source_passed and (args.draft or passed)
+        report = dict(profile="assembly", checks_passed=passed and not args.draft, physical_validity="not_proven", output=str(target),
+                      draft=args.draft, written=written, diagnostics=diagnostics, geometry=geometry)
+        if written:
+            if args.draft:
+                text = text.replace("\r\n", "\r\n0 !NOVA DRAFT unfinished design; not a final assembly\r\n", 1)
             atomic_write(target, text)
-        return report, 0 if passed else 1
+        return report, 0 if written else 1
     assembly = args.command == "validate" and args.profile == "assembly"
     model, diagnostics = validate_file(args.file, parts, assembly=assembly, section=args.section, colour=args.colour,
                                        instance_limit=getattr(args,"max_instances",100000))

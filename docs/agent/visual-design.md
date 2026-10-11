@@ -2,6 +2,12 @@
 
 Geometric correctness is a constraint, not the design brief. An attractive model needs a recognizable subject, clear proportions, a controlled palette, depth, and details that belong to its story. A thousand repetitive bricks do not substitute for these decisions. Make a visual revision after opening the first render; do not end at the first valid assembly.
 
+Make the first render early, while choosing the major masses. `build --draft` and kit `save(..., draft=True)` let you inspect an incomplete composition; `look` does not require a passing construction check. Develop the visual idea before committing to a detailed part inventory. Keep unresolved construction visible, then engineer it around the chosen design.
+
+Recipes are optional demonstrations of technique. Study several useful precedents when the request leaves room for exploration, and choose the model's own silhouette and proportions. Custom generators and helpers are welcome. Part-count, technique percentages and the number of helper functions are not measures of beauty or originality.
+
+Keep a [feature brief](design-brief.md) through repair iterations. Check what each feature does and where it belongs: a porch shelters an entrance, a loft window sits in the attic, and a chimney needs both convincing proportions and a supported route through the roof. When a repair changes an important shape or relationship, render it and reconsider the surrounding assembly. A local geometry success that weakens the requested design is unfinished work.
+
 For [Technic structures](technic.md), choose the skeleton and body mounts together. Keep long members, bracing and repeated frames visually coherent; use a restrained palette and give exposed pins a clear purpose. A System body needs real, supported mounting interfaces. Review the bare skeleton and the covered model from the side and underside before adding surface detail. For mechanisms, use the [Stage 2 workflow](mechanisms.md): expose the useful moving forms, preserve space around them in the chosen pose, and adapt bodywork and mounts to the studied construction. Analytical mechanism verification is deferred.
 
 For vehicles, use the [vehicle design workflow](vehicles.md) and its review criteria:

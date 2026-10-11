@@ -235,6 +235,9 @@ def build_plan(plan, parts, *, instance_limit=100000):
                 else:
                     position = Vector(*entry["at"])
                 model.add(Comment(f"// {entry['id']}: {entry.get('purpose', ref)}"))
+                for declaration in ("free", "overlap"):
+                    if entry.get(declaration):
+                        model.add(Comment(f"!NOVA {declaration.upper()} {entry[declaration]}"))
                 piece = Piece.place(ref, colour=entry["colour"], position=position, matrix=matrix)
                 model.add(piece)
                 placed[entry["id"]] = (piece, code)

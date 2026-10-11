@@ -57,6 +57,10 @@ Extraction writes a review artifact even when syntax checks fail and then return
 
 ## 3. Define module contracts
 
+Keep important visual and functional requirements in the [feature brief](design-brief.md) as modules develop. Render the rough composition before finishing all interfaces. During repairs, preserve module envelopes, openings and intended roles rather than dropping a feature to clear a connectivity report.
+
+The optional [kit](kit.md) can build modules with grid/port helpers or explicit transforms. `section.expose_port(name, part.port(...))` makes a real interface available on placed instances; the instance transforms its position and axis. `section.anchor(...)` and `Model.plan()` also retain compatibility with the authored-frame composition below. Complete a section before instancing it; final checks inspect all instances together.
+
 Before populating parts, record each module's purpose, approximate envelope, local origin, attachment frames, inherited palette, construction steps, and review status. For a building, start with the street/base, then separate each floor, façade detail, roof, interior and landscaping. Keep the main section short enough to read in one screen.
 
 In JSON plans, a section can expose named **anchor frames**:

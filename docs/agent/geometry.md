@@ -1,5 +1,7 @@
 # Placement and physical review
 
+Compose and inspect a draft before completing its construction. The optional [kit](kit.md) provides stud-grid, port and hinge placement alongside explicit rigid transforms and the plan tools below. Kit `part.top` is the body's highest level, not proof of a usable support face. Inspect actual studs and socket mouths; peaked roofs require an opening and supported shaft for a chimney. The static `check` command continues checking bodies outside their engagement regions even when two parts are connected.
+
 ## Inspect before placing
 
 Run `./ldraw-agent part 3001 --limit 30`. It returns actual library metadata, origin-relative bounds, dimensions, stud positions, connectors, provenance, and completeness. Bounds include decorative geometry and stud height; **bounding-box height is not stacking height**. Do not infer axes from the part description alone.

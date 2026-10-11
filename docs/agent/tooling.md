@@ -1,5 +1,57 @@
 # Tool reference
 
+## Drafts, optional placement helpers and static checks
+
+```sh
+./ldraw-agent build output/study.plan.json --draft --contacts none --output output/study-draft.mpd
+./ldraw-agent look output/study-draft.mpd --outdir output/study-views
+./ldraw-agent look output/study-draft.mpd --focus roof --problems
+./ldraw-agent ports 3001 32524 2780
+./ldraw-agent check output/study.mpd --report output/study-check.json --graph
+```
+
+All commands return JSON. `build --draft` writes valid source even when the selected geometry checks find errors; it labels the MPD and returns `checks_passed: false`. Exit zero means the draft was written, not verified. `look` produces a contact sheet and accepts unfinished assemblies. Open its `sheet` path before making visual claims.
+
+`ports` exposes named connectors, body bounds, profile information and coverage. The optional [kit](kit.md) consumes these interfaces and also accepts explicit coordinates and matrices. Its `Model.plan()` exports the existing plan schema, preserving interoperability with includes, authored anchors and extracted assets.
+
+`check` reports static mesh/connector evidence with `verdict` PASS, FAIL or REVIEW. Only PASS returns zero. Unknown connectivity, unresolved special overlaps and draft status do not pass. Similar part descriptions never establish a connection; collisions are still tested between connected parts outside supported engagement regions. PASS applies only to the checks described in the report, not strength, motion, retail inventory or appearance. `--intended brief.md` compares Mermaid module edges; unknown module names fail too, and this graph does not verify semantic feature requirements.
+
+The existing discovery, design, build, snap, inspect, vehicle, Technic and mechanism commands remain available. Use their detailed evidence when the fast checker lacks an interface. A library limitation remains unresolved until investigated; it is not permission to simplify away the intended feature.
+
+## Construction studies and stage review
+
+```sh
+./ldraw-agent construction list
+./ldraw-agent construction export glazed-bay --outdir output/bay-source
+# Optional --parameters FILE contains supported values, e.g. {"style":"straight"}.
+./ldraw-agent stage prepare output/bay-source/model.plan.json \
+  --requirements output/bay-source/requirements.json \
+  --outdir output/bay-review --views home front right top
+# Open all four PNGs before recording the observations below.
+./ldraw-agent stage review output/bay-review --decision accept \
+  --images views/home.png views/front.png views/right.png views/top.png \
+  --note 'Record the actual observations, defects and remaining limits here'
+./ldraw-agent stage export output/bay-review --output output/reviewed-bay.mpd
+```
+
+`construction export` checks every result. The supported dimension/style combinations are tested; other values are rejected, never scaled. Generated source stays editable. Its `construction.json` records the mounting stud grid, body envelope, reserved spaces, source hashes and build sequence. A check in isolation does not establish fit with a new parent. Adding detail, recolouring or changing an interface requires checking and viewing the result in context. Retail part/colour availability is not checked.
+
+`stage prepare` accepts ordinary `.mpd`/`.ldr` output or an included JSON plan. It runs source, mesh/connector and optional feature checks, then renders and compares the Python/LeoCAD BOM. `READY_FOR_REVIEW` (exit 0) still needs visual inspection. `FAIL` or `REVIEW` returns 1 and cannot be accepted for export. `--no-render` produces an inspectable check-only stage; it cannot be exported. `--force` refreshes an existing stage and discards its old acceptance, including when preparation fails.
+
+`stage review --decision revise` records a rejected visual result. Acceptance requires every generated image and a nonempty note; inspection is self-reported. Export checks hashes for the exact snapshot, reports, images, authoring source, included plan content, imported assets and requirements. It also checks the current part dependencies, connector data, colour configuration and checking code, then reruns the static and feature checks. Changed evidence requires a new preparation/review. Output must be a separate `.mpd`; replacement requires `--force` and occurs only after passing. This is the final export route for System construction studies; `build`, raw file writes and draft helpers remain available for authoring.
+
+Feature requirements use LDU and source IDs (`bay>frame`, or `bay` to select its descendants). Unknown selectors fail. Supported checks are `extent`, `envelope_covers`, `above`, `clearance` and direct module `connection`; the exported constructions provide complete examples. An envelope is an AABB, not a solid surface: it cannot prove a roof has no holes, a door can swing, stairs are walkable, or a design looks good. Keep those in visual/functional review. For example:
+
+```json
+{"version":1,"requirements":[
+  {"id":"covers-door","kind":"envelope_covers","cover":["roof"],"target":["entrance"],"axes":["x","z"]},
+  {"id":"headroom","kind":"above","upper":["roof"],"lower":["entrance"],"min_gap":8},
+  {"id":"support","kind":"connection","modules":["roof","pillars"]}
+]}
+```
+
+`check` also reports calibrated frame/pane fittings in `fittings` and `fitting_rules`. The four initial rules require exact identities, unnormalized relative poses and complete part-source hashes, and include reference evidence. Neither other placements of those parts nor their contacts with surrounding walls inherit the calibration.
+
 ## Build manuals for any atlas
 
 ```sh
