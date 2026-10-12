@@ -1,0 +1,15 @@
+# Alder Court Sol benchmark
+
+**The revised approach produced a much cleaner large model, but still failed the visual goal.** GPT-6 Sol at medium reasoning built a 2,979-part, 64×48-stud library and café. An independent final check reports zero collisions, seating errors, duplicates, disconnected parts or unresolved overlaps, without exemptions. Eight supplied feature checks pass and the Python/LeoCAD BOMs match. The generator reproduces the saved plan exactly.
+
+[Full benchmark report and evidence](../../output/hybrid-benchmark/alder-court-sol/report.md) · [editable model](../../output/hybrid-benchmark/alder-court-sol/model/full/alder-court-v19.mpd) · [final preview](../../output/hybrid-benchmark/alder-court-sol/evaluation/final/full/stage-v19/views/home.png).
+
+The parent visual score is 2.7/5 against a 3.5 target: low small windows, broad blank walls and roofs, rudimentary interiors and sparse landscaping remain. The promised upper rear reading nook is empty and has no internal doorway. Sol independently scored the design 2.8 and recorded `revise`; it did not export the technically passing stage as an accepted model.
+
+Three prototype interfaces passed before expansion, but their successes did not transfer automatically. The first full draft had 156 collisions and 123 seating findings. The full generator initially discarded bonded-floor construction in favour of edge-to-edge plate fields. Later repairs connected the structure. Raising the windows for better proportions then caused 1,394 parts to fall outside the main recognized connected component, so Sol reverted the visual improvement. It reached its first static pass at v18 and retained v19 after a foliage improvement.
+
+The recorded active run is approximately 43 minutes, including parent checkpoint waits, with 19 numbered full-model iterations. Two quota pauses during generation and another after the saved final assessment prevent any uninterrupted latency claim. The final independent static check took 1.31 seconds; final stage preparation with six views took 30.71 seconds including CLI overhead. The costly problem was repeated design and construction repair, not the final checker.
+
+The run used commit `d471bc0f170a7b0ef1e9881b3575682caee924da` and an unchanged toolkit. The parent gave two planned checkpoint reviews and one final repair request, but wrote no model repairs. All 275 final frozen files retain their hashes. This was a supervised trial with simpler roofs than Willow Quay, not a controlled branch comparison. Static PASS does not prove strength, assembly order, door motion or real part/colour availability.
+
+The next useful work is to preserve valid construction across sill/storey-height changes, establish a complete small building section with its real neighbours before repetition, require an attractive façade/landscape sample early, and check room access as well as geometry. Keep master's composition and reference-led design freedom; give it construction operations that maintain supports, openings and bonds during visual revision. More instructions and a final pass/fail gate alone have not achieved the user's goal.

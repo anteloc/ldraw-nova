@@ -33,7 +33,7 @@ The three existing negative controls still fail: shifted panes produce four coll
 
 ## Remaining work and limits
 
-This establishes a tested construction foundation, not reliable open-ended agent design. A fresh Sol benchmark has not been run with these tools. The next useful trial should choose a new composition, review its massing first, then give Sol bounded construction tasks with parent interfaces. It should include an unfamiliar join, a fixed effort limit and separately recorded design/tool/repair time.
+This establishes a tested construction foundation, not reliable open-ended agent design. The subsequent [Alder Court Sol benchmark](alder-court-sol-benchmark.md) produced a 2,979-part model that passes independent static checks, but failed visual acceptance and required about 43 minutes of recorded active work with quota interruptions. Its inspected prototypes did not prevent full-model integration failures, and a visual revision broke connectivity before being reverted. The benchmark report records the remaining construction, design and evaluation gaps.
 
 The catalog still needs supported roof/dormer/chimney constructions, stair/landing interfaces and more varied wall/corner techniques. Existing master references remain available while those are established. No current static pass proves strength, insertion order, usable door motion, retail part/colour availability or complete buildability. Visual review is a recorded judgment, not an automated aesthetic score.
 
