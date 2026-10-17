@@ -86,6 +86,8 @@ Use exact part/category searches to refine the shortlist and inspect real geomet
 
 Use categories to discover appropriate forms, then compare a short list visually with `part-board REF ... --outdir output/part-shortlist` when names are insufficient. Categories supply descriptive symbols and dimension hints; current LDraw geometry and LDConfig remain authoritative. Cached dimensions may differ, include studs, and are not stacking heights. Never invent a part ID or infer axes from a description. Inspect each unfamiliar part's actual bounds, origin, variant/status and connector frames. Use physical parts, not arbitrary primitives or internal subparts. A valid palette code does not prove retail part/colour availability.
 
+When the user provides an allowed-parts CSV, choose only its exact LDraw part/color pairs and honor any `max_quantity` limits. Use `build --parts-palette CSV` for JSON plans, or check a generated MPD with `python -m ldraw_tools.catalog_inventory MODEL LIBRARY --palette CSV`. Repair every violation before delivery. Do not create custom geometry, change part dimensions or override library DAT definitions to imitate an allowed part.
+
 Study references in small sections:
 
 ```sh

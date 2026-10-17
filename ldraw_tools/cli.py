@@ -283,6 +283,7 @@ def parser():
     c.add_argument("degrees", type=float)
     commands.add_parser("profiles", help="List curated ordinary brick/plate dimensions for on placement")
     c = commands.add_parser("build", help="Build a validated MPD from a JSON plan")
+    c.add_argument("--parts-palette", type=Path, help="Restrict parts/colors and quantities using CSV, LDR, XML, or Studio IO")
     c.add_argument("plan")
     c.add_argument("--output", required=True)
     c.add_argument("--report")
@@ -657,6 +658,18 @@ def run(args):
             raise ValueError("Output exists; use --force to replace after successful validation")
         plan = load_plan(args.plan)
         text, model, diagnostics = build_plan(plan, parts, instance_limit=args.max_instances)
+        palette_report = None
+        if args.parts_palette and not any(d["severity"] == "error" for d in diagnostics):
+            from .catalog_inventory import model_inventory
+            from .parts_catalog import PartsCatalog
+            palette = PartsCatalog.load(args.parts_palette)
+            with TemporaryDirectory(prefix="ldraw-palette-build-") as temporary:
+                candidate = Path(temporary) / "candidate.mpd"
+                candidate.write_text(text, encoding="utf-8")
+                inventory = model_inventory(candidate, library)
+            palette.validate(inventory)
+            palette_report = dict(valid=True, allowed_combinations=len(palette.parts),
+                                  physical_parts=sum(inventory.values()))
         geometry = None
         if not any(d["severity"] == "error" for d in diagnostics):
             geometry = geometry_report(model, parts, args)
@@ -664,6 +677,8 @@ def run(args):
         passed = not any(d["severity"] == "error" for d in diagnostics)
         report = dict(profile="assembly", checks_passed=passed, physical_validity="not_proven", output=str(target),
                       written=passed, diagnostics=diagnostics, geometry=geometry)
+        if palette_report is not None:
+            report["parts_palette"] = palette_report
         if passed:
             atomic_write(target, text)
         return report, 0 if passed else 1
