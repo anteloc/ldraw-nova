@@ -109,16 +109,14 @@ This expands to IDs `roof-slope-0` through `roof-slope-7`. `step` is a translati
 
 ```sh
 .venv/bin/python examples/modular-street/generate.py
-./ldraw-agent build examples/modular-street/scene.plan.json --output output/copper-lane.mpd \
-  --detail summary --report output/copper-lane.build.json
-./ldraw-agent inspect output/copper-lane.mpd --section lane-ground.ldr --colour 19 \
+./ldraw-agent stage prepare examples/modular-street/scene.plan.json --outdir output/copper-lane-review --views home front right top
+./ldraw-agent inspect output/copper-lane-review/model.mpd --section lane-ground.ldr --colour 19 \
   --contacts all --detail summary --report output/ground-inspection.json
-./ldraw-agent render output/copper-lane.mpd --section lane-ground.ldr --colour 19 \
+./ldraw-agent render output/copper-lane-review/model.mpd --section lane-ground.ldr --colour 19 \
   --outdir output/ground-review --views home top
-./ldraw-agent validate output/copper-lane.mpd --geometry --detail summary
-./ldraw-agent render output/copper-lane.mpd --outdir output/copper-lane-review
-./ldraw-agent compare-bom output/copper-lane.mpd --csv output/copper-lane-review/leocad-bom.csv
 ```
+
+Preparation accepts the JSON plan directly and includes the modern static check and rendered BOM comparison. Read any findings and open every image before `stage review` and `stage export`. This historical example is a source to study, not a promise that a current check passes. For a compact executable parent-assembly exercise, use the [starter](../../examples/construction-studies/starter/README.md). Generate before checking; dependent commands must run sequentially.
 
 Default contact mode is `auto`: compute contacts through 500 physical placements; above that, explicitly report skipped coverage. Request `--contacts all` for a deliberate full analysis, or scope to modules. `--contacts none` still checks all resolved bounds and curated rectangular overlaps. It reports no connected-component conclusion. Missing connector metadata produces fragmented groups even for apparently mated parts; investigate the reported parts and do not equate group count with a buildability verdict.
 

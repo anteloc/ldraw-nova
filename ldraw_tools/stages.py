@@ -122,6 +122,11 @@ def prepare_stage(source, folder, parts, library, *, requirements=None, views=("
                   feature_requirements=len(feature["requirements"]), images=images,
                   rendered=bool(images) and not render_error, render_error=render_error,
                   bom_matches=comparison["matches"] if comparison is not None else None,
+                  preparation="checks_only" if no_render else "render_failed" if render_error else "complete",
+                  review_state="pending_review" if ready else "pending_images" if technical and no_render else "blocked",
+                  next_action="Open every image, then stage review; export requires acceptance" if ready else
+                              "Prepare again with rendering, open the images and record a review" if technical and no_render else
+                              "Inspect check.json, requirements-check.json and render_error; repair or resolve findings",
                   environment=context, artifact_hashes={name: sha(folder/name) for name in artifacts},
                   seconds=dict(checks=round(checked-start, 3), render=round(time.perf_counter()-checked, 3)),
                   note="Open all views before recording a review; a technical pass does not judge beauty or prove buildability")

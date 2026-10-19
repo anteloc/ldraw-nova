@@ -20,6 +20,25 @@ def check_schema(plan):
     jsonschema.Draft202012Validator(json.loads((DATA / "plan.schema.json").read_text())).validate(plan)
 
 
+def schema_diagnostic(error):
+    """Keep CLI errors local and actionable; library callers retain ValidationError."""
+    path = list(error.absolute_path)
+    pointer = "/" + "/".join(str(k).replace("~", "~0").replace("/", "~1") for k in path) if path else ""
+    field = path[-1] if path else None
+    hint = "See the runnable starter at examples/construction-studies/starter/generate.py."
+    if field == "id":
+        hint = 'Use a unique local ID containing letters, digits, underscores or hyphens, e.g. "bay-2".'
+    elif field == "colour":
+        hint = 'Use a named colour such as "@colours.Tan" or an inspected numeric LDraw colour code.'
+    elif field == "name":
+        hint = 'Use a flat section name such as "facade.ldr".'
+    elif "steps" in path and error.validator == "type":
+        hint = 'steps is an array of placement arrays: [[{"id":"base","ref":"3001.dat","colour":"@colours.Tan","at":[0,0,0]}]].'
+    elif error.validator == "oneOf" and isinstance(error.instance, dict):
+        hint = 'Choose exactly one position mode: at, on, attach or snap. Example: "at": [0, 0, 0].'
+    return dict(error=error.message[:400], path=pointer, hint=hint)
+
+
 def load_plan(path):
     """Resolve relative plan includes once; retain each module's authorship."""
     loaded, sections, assets = set(), [], []

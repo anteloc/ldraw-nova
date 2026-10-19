@@ -4,6 +4,8 @@ Use the kit for positioning real parts after choosing a composition. Explicit co
 
 The runnable [canopy study](../../examples/python_kit.py) sketches an unsupported canopy, saves a draft, then adds supports while preserving its footprint and height. It also exports a normal JSON plan.
 
+For a complete command sequence with local constructions, actual parent support and stage review, use the [entrance starter](../../examples/construction-studies/starter/README.md). The [atlas learning pack](../../examples/building-atlas/README.md) distinguishes design inspiration from checked construction and explains which edits have evidence.
+
 ```python
 from ldraw_tools.kit import Model
 

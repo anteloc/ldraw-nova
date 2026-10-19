@@ -4,6 +4,8 @@ Use this workflow for large models. The [Willow Quay experiment and construction
 
 The designer chooses the subject, silhouette, proportions, façade rhythm, palette and character. The construction work must establish that those choices have plausible assemblies before they are repeated across a large model. A custom generator, the kit and explicit plans are all valid. No whole-model template is required.
 
+Start with the [runnable parent-assembly exercise](../../examples/construction-studies/starter/README.md) for the command sequence, and find a small visual shortlist with `examples --curated --role facade` or `--role planting`. Read the [learning pack's evidence and limitations](../../examples/building-atlas/README.md); older passing metadata is not a modern construction approval.
+
 ## 1. Make the composition worth building
 
 Use master's visual references and detail vocabulary. Render a small number of substantially different massing options when the brief is open-ended; select on appearance and feature relationships. Keep early studies cheap. A large part count is a scale constraint, never a design objective or a substitute for detail.

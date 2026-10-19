@@ -82,7 +82,7 @@ def parser():
     d = constructions.add_parser("export")
     d.add_argument("name")
     d.add_argument("--outdir", required=True)
-    d.add_argument("--parameters", help="JSON object of supported parameter values")
+    d.add_argument("--parameters", metavar="FILE", help="Path to a JSON file containing supported parameter values")
     d.add_argument("--palette", default="botanical-bookshop")
     d.add_argument("--force", action="store_true")
     c = commands.add_parser("check", help="Static construction evidence: PASS, FAIL or REVIEW; does not judge aesthetics or motion")
@@ -109,6 +109,8 @@ def parser():
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
+    c.add_argument("--role", help="Building learning role, e.g. facade, stairs, roof, furniture or planting")
+    c.add_argument("--curated", action="store_true", help="Only building entries with an adaptation guide and scoped audit")
     c.add_argument("--family", choices=["building", "vehicle", "reference", "technic", "mechanism", "spaceship"], default="building")
     c = commands.add_parser("discover", help="Find, measure and visually review parts, source models and submodels")
     discovery = c.add_subparsers(dest="discovery_command", required=True)
@@ -329,7 +331,7 @@ def parser():
     c.add_argument("axis", choices=["x", "y", "z"])
     c.add_argument("degrees", type=float)
     commands.add_parser("profiles", help="List curated ordinary brick/plate dimensions for on placement")
-    c = commands.add_parser("build", help="Build a validated MPD from a JSON plan")
+    c = commands.add_parser("build", help="Build a plan with source/legacy geometry validation; use check or stage prepare for construction evidence")
     c.add_argument("plan")
     c.add_argument("--output", required=True)
     c.add_argument("--report")
@@ -388,7 +390,8 @@ def run(args):
     if args.command == "examples":
         from .examples import search_examples
         if args.details and args.scale:raise ValueError('--scale applies to building examples')
-        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family),0
+        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family,
+                               role=args.role,curated=args.curated),0
     if args.command == "doctor":
         library = library_path(args.library)
         report = dict(python=sys.version.split()[0], packages={n: version(n) for n in ["pyldraw3", "numpy", "jsonschema"]},
@@ -759,7 +762,10 @@ def run(args):
         passed = not any(d["severity"] == "error" for d in diagnostics)
         written = source_passed and (args.draft or passed)
         report = dict(profile="assembly", checks_passed=passed and not args.draft, physical_validity="not_proven", output=str(target),
-                      draft=args.draft, written=written, diagnostics=diagnostics, geometry=geometry)
+                      draft=args.draft, written=written, diagnostics=diagnostics, geometry=geometry,
+                      validation_scope="Source and legacy geometry only; modern construction has not been checked",
+                      construction_checked=False,
+                      next_action="Use check on this MPD, or stage prepare on the plan for construction and final review")
         if written:
             if args.draft:
                 text = text.replace("\r\n", "\r\n0 !NOVA DRAFT unfinished design; not a final assembly\r\n", 1)
@@ -825,7 +831,10 @@ def main():
     args = parser().parse_args()
     try:
         report, status = run(args)
-    except (OSError, ValueError, PartError, RecursionError, sqlite3.Error, subprocess.SubprocessError, jsonschema.ValidationError) as exc:
+    except jsonschema.ValidationError as exc:
+        from .builder import schema_diagnostic
+        report, status = dict(checks_passed=False, error_type=type(exc).__name__, **schema_diagnostic(exc)), 2
+    except (OSError, ValueError, PartError, RecursionError, sqlite3.Error, subprocess.SubprocessError) as exc:
         report, status = dict(checks_passed=False, error=str(exc), error_type=type(exc).__name__), 2
     text = dumps(report) + "\n"
     if getattr(args, "report", None):

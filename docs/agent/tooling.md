@@ -20,6 +20,8 @@ The existing discovery, design, build, snap, inspect, vehicle, Technic and mecha
 
 ## Construction studies and stage review
 
+The [runnable starter](../../examples/construction-studies/starter/README.md) demonstrates these commands with a real parent assembly. `construction export --parameters FILE` reads a JSON **file**, not an inline JSON string.
+
 ```sh
 ./ldraw-agent construction list
 ./ldraw-agent construction export glazed-bay --outdir output/bay-source
@@ -267,6 +269,10 @@ For loops, procedural repetition, or matrix composition, use the [Python example
 The global `ldraw-render-steps.sh` is also useful during construction. Read its current help with no arguments, select a submodel and step range, then render several viewpoints to expose misplaced parts, concealed gaps or awkward layering. Open the images, fix the source plan/generator and render again. The [build-page guide](build-manuals.md#inspect-a-model-during-construction) covers this review loop and the richer `manual prepare` workflow for atlas studies. All rendering calls use the `leocad` CLI on `PATH`.
 
 ## Automation contract
+
+For stages, inspect `technical_checks_passed`, `construction_verdict`, `preparation`, `review_state` and `next_action`. `--no-render` with passing checks returns exit 1 and `review_state: pending_images`; render and review next. It is not an input failure or a construction failure. `READY_FOR_REVIEW` returns 0 but still needs visual acceptance. `check` is the static-only command with exit 0 on PASS. Legacy `build` reports `construction_checked: false`; its `checks_passed` covers source/legacy geometry only.
+
+Schema input errors return exit 2 with a JSON-pointer `path`, a bounded `error` and a concrete `hint`. Correct the source field before retrying. Complete generation before launching checks against its output.
 
 Reports are JSON. Exit **0** means the selected command/checks completed successfully; **1** means validation/coverage failed (or warnings failed under `--strict`); **2** means bad input, dependency, I/O, conversion, budget, or execution failure. Read `diagnostics`, `complete`, truncation flags, and `physical_validity`, not just the exit code. `study` is informational: read `source_checks_passed`. `extract` can write a failing review artifact with exit 1. Empty search results are a successful empty query. `--report` writes a report in addition to stdout. Do not use a shell pipeline that loses the first command's exit status.
 
