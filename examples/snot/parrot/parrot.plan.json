@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "author": "marco9999; preparation by ldraw-nova",
+  "includes": ["head.plan.json"],
+  "sections": [
+    {
+      "name": "parrot.ldr",
+      "description": "30581 Tropical Parrot - prepared SNOT reference",
+      "steps": [
+        [
+          {"id": "body", "ref": "parrot-body.ldr", "colour": 4, "at": [0, 0, 0]}
+        ],
+        [
+          {"id": "head", "ref": "parrot-head.ldr", "colour": 4, "at": [30, -136, 0], "purpose": "Official step 17; head includes step 18 beak"}
+        ],
+        [
+          {"id": "wing-right", "ref": "parrot-wing-right.ldr", "colour": 4, "at": [10, -92, 30], "matrix": [[0.4049159586, 0.0, 0.9143539066], [0.0, -1.0, 0.0], [0.9143539066, 0.0, -0.4049159586]], "purpose": "Official step 19: ball into socket"}
+        ],
+        [
+          {"id": "wing-left", "ref": "parrot-wing-left.ldr", "colour": 4, "at": [10, -92, -30], "matrix": [[0.4279050291, -0.1767547298, -0.8863718472], [-2.641e-07, -0.9806911087, 0.1955631595], [-0.903823703, -0.0836822254, -0.4196427041]], "purpose": "Official step 20: ball into socket"}
+        ],
+        [
+          {"id": "perch", "ref": "parrot-perch.ldr", "colour": 70, "at": [0, 0, 0], "purpose": "Official step 25: bird onto jumper studs"}
+        ]
+      ]
+    },
+    {
+      "name": "parrot-body.ldr",
+      "description": "Body and tail; steps follow official 1-11",
+      "steps": [
+        [
+          {"id": "part-62", "ref": "90194.dat", "colour": 0, "at": [-10.0, -56.0, 0.0], "purpose": "Wing 3 x 4 with 1 x 2 Cutout with Stud Notches and Rounded Underside Corners", "matrix": [[0.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 0.0]]},
+          {"id": "part-61", "ref": "3004.dat", "colour": 4, "at": [-20.0, -80.0, 0.0], "purpose": "Brick 1 x 2", "matrix": [[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-60", "ref": "3660b.dat", "colour": 4, "at": [0.0, -80.0, 0.0], "purpose": "Slope Brick 45 2 x 2 Inverted with Flat Bottom Pin with Inner Stopper Ring", "matrix": [[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-57", "ref": "3021.dat", "colour": 320, "at": [0.0, -88.0, 0.0], "purpose": "Plate 2 x 3"}
+        ],
+        [
+          {"id": "part-58", "ref": "14704.dat", "colour": 71, "at": [10.0, -96.0, 10.0], "purpose": "Plate 1 x 2 with Socket Joint-8 with Friction Centre", "matrix": [[-1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, -1.0]]},
+          {"id": "part-59", "ref": "14704.dat", "colour": 71, "at": [10.0, -96.0, -10.0], "purpose": "Plate 1 x 2 with Socket Joint-8 with Friction Centre"},
+          {"id": "part-56", "ref": "60470a.dat", "colour": 4, "at": [-20.0, -96.0, 0.0], "purpose": "Plate 1 x 2 with 2 Clips Horizontal (Thick U-Clips)", "matrix": [[0.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-54", "ref": "3660b.dat", "colour": 4, "at": [20.0, -120.0, 0.0], "purpose": "Slope Brick 45 2 x 2 Inverted with Flat Bottom Pin with Inner Stopper Ring", "matrix": [[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-52", "ref": "18671.dat", "colour": 4, "at": [0.0, -128.0, 0.0], "purpose": "Bracket 3 x 2 x 1.333", "matrix": [[0.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "tail-right", "ref": "parrot-tail-right.ldr", "colour": 4, "at": [-40, -94, 10], "purpose": "Official step 7: handle into right tail clip"}
+        ],
+        [
+          {"id": "tail-left", "ref": "parrot-tail-left.ldr", "colour": 4, "at": [-40, -94, -10], "purpose": "Official step 8: handle into left tail clip"}
+        ],
+        [
+          {"id": "part-53", "ref": "15068.dat", "colour": 4, "at": [-10.0, -120.0, 0.0], "purpose": "Slope Brick Curved 2 x 2 x 0.667", "matrix": [[0.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 0.0]]},
+          {"id": "part-55", "ref": "47457.dat", "colour": 4, "at": [-20.0, -120.0, 0.0], "purpose": "Slope Brick Curved 2 x 2 x 2/3 Triple with Two Top Studs", "matrix": [[0.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-51", "ref": "3023b.dat", "colour": 320, "at": [40.0, -128.0, 0.0], "purpose": "Plate 1 x 2", "matrix": [[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-50", "ref": "3680.dat", "colour": 4, "at": [30.0, -136.0, 0.0], "purpose": "Turntable 2 x 2 Plate Base"}
+        ]
+      ]
+    },
+    {
+      "name": "parrot-tail-right.ldr",
+      "description": "Right tail feather; origin at handle centre",
+      "steps": [
+        [
+          {"id": "part-26", "ref": "43723.dat", "colour": 4, "at": [-40.0, 6.0, 10.0], "purpose": "Wing 2 x 3 Left", "matrix": [[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]},
+          {"id": "part-25", "ref": "60478.dat", "colour": 14, "at": [-30.0, -2.0, 0.0], "purpose": "Plate 1 x 2 with Handle on End"}
+        ],
+        [
+          {"id": "part-24", "ref": "25269.dat", "colour": 321, "at": [-20.0, -10.0, 0.0], "purpose": "Tile 1 x 1 Corner Round", "matrix": [[0.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 0.0]]},
+          {"id": "part-30", "ref": "29120.dat", "colour": 27, "at": [-70.0, 14.0, 0.0], "purpose": "Slope Brick Curved 2 x 1 with Cutout Left", "matrix": [[0.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 0.0]]}
+        ]
+      ]
+    },
+    {
+      "name": "parrot-tail-left.ldr",
+      "description": "Left tail feather; origin at handle centre",
+      "steps": [
+        [
+          {"id": "part-29", "ref": "43722.dat", "colour": 4, "at": [-40.0, 6.0, -10.0], "purpose": "Wing 2 x 3 Right", "matrix": [[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]},
+          {"id": "part-28", "ref": "60478.dat", "colour": 14, "at": [-30.0, -2.0, 0.0], "purpose": "Plate 1 x 2 with Handle on End"}
+        ],
+        [
+          {"id": "part-27", "ref": "25269.dat", "colour": 321, "at": [-20.0, -10.0, 0.0], "purpose": "Tile 1 x 1 Corner Round", "matrix": [[-1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, -1.0]]},
+          {"id": "part-32", "ref": "29119.dat", "colour": 27, "at": [-70.0, 14.0, 0.0], "purpose": "Slope Brick Curved 2 x 1 with Cutout Right", "matrix": [[0.0, 0.0, 1.0], [0.0, 1.0, 0.0], [-1.0, 0.0, 0.0]]}
+        ]
+      ]
+    },
+    {
+      "name": "parrot-wing-right.ldr",
+      "description": "Right wing; origin at ball centre",
+      "steps": [
+        [
+          {"id": "part-3", "ref": "3021.dat", "colour": 320, "at": [12.0, 0.0, -40.0], "purpose": "Plate 2 x 3", "matrix": [[0.0, -1.0, 0.0], [0.0, 0.0, -1.0], [1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-4", "ref": "24299.dat", "colour": 321, "at": [20.0, 0.0, -70.0], "purpose": "Wing 2 x 2 Left", "matrix": [[0.0, -1.0, 0.0], [0.0, 0.0, 1.0], [-1.0, 0.0, 0.0]]},
+          {"id": "part-2", "ref": "3176.dat", "colour": 4, "at": [20.0, 0.0, -30.0], "purpose": "Plate 3 x 2 with Hole", "matrix": [[0.0, -1.0, 0.0], [-1.0, 0.0, 0.0], [0.0, 0.0, -1.0]]}
+        ],
+        [
+          {"id": "part-1", "ref": "3176.dat", "colour": 4, "at": [28.0, 0.0, -30.0], "purpose": "Plate 3 x 2 with Hole", "matrix": [[0.0, -1.0, 0.0], [-1.0, 0.0, 0.0], [0.0, 0.0, -1.0]]}
+        ],
+        [
+          {"id": "part-0", "ref": "29119.dat", "colour": 27, "at": [20.0, 10.0, -50.0], "purpose": "Slope Brick Curved 2 x 1 with Cutout Right", "matrix": [[0.0, -1.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0]]},
+          {"id": "part-6", "ref": "29119.dat", "colour": 27, "at": [20.0, -10.0, -50.0], "purpose": "Slope Brick Curved 2 x 1 with Cutout Right", "matrix": [[0.0, -1.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0]]},
+          {"id": "part-5", "ref": "25269.dat", "colour": 14, "at": [36.0, 10.0, -20.0], "purpose": "Tile 1 x 1 Corner Round", "matrix": [[0.0, -1.0, 0.0], [0.0, 0.0, -1.0], [1.0, 0.0, 0.0]]},
+          {"id": "part-7", "ref": "25269.dat", "colour": 14, "at": [36.0, -10.0, -20.0], "purpose": "Tile 1 x 1 Corner Round", "matrix": [[0.0, -1.0, 0.0], [-1.0, 0.0, 0.0], [0.0, 0.0, -1.0]]}
+        ],
+        [
+          {"id": "part-8", "ref": "6628.dat", "colour": 4, "at": [10.0, 0.0, 0.0], "purpose": "Technic Pin Towball with Friction"}
+        ]
+      ]
+    },
+    {
+      "name": "parrot-wing-left.ldr",
+      "description": "Left wing; origin at ball centre",
+      "steps": [
+        [
+          {"id": "part-35", "ref": "3021.dat", "colour": 320, "at": [12.0, 0.0, 40.0], "purpose": "Plate 2 x 3", "matrix": [[0.0, -1.0, 0.0], [0.0, 0.0, -1.0], [1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-36", "ref": "24307.dat", "colour": 321, "at": [20.0, 0.0, 70.0], "purpose": "Wing 2 x 2 Right", "matrix": [[0.0, -1.0, 0.0], [0.0, 0.0, 1.0], [-1.0, 0.0, 0.0]]},
+          {"id": "part-33", "ref": "3176.dat", "colour": 4, "at": [20.0, 0.0, 30.0], "purpose": "Plate 3 x 2 with Hole", "matrix": [[0.0, -1.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0]]}
+        ],
+        [
+          {"id": "part-34", "ref": "3176.dat", "colour": 4, "at": [28.0, 0.0, 30.0], "purpose": "Plate 3 x 2 with Hole", "matrix": [[0.0, -1.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0]]}
+        ],
+        [
+          {"id": "part-38", "ref": "29120.dat", "colour": 27, "at": [20.0, 10.0, 50.0], "purpose": "Slope Brick Curved 2 x 1 with Cutout Left", "matrix": [[0.0, -1.0, 0.0], [-1.0, 0.0, 0.0], [0.0, 0.0, -1.0]]},
+          {"id": "part-40", "ref": "29120.dat", "colour": 27, "at": [20.0, -10.0, 50.0], "purpose": "Slope Brick Curved 2 x 1 with Cutout Left", "matrix": [[0.0, -1.0, 0.0], [-1.0, 0.0, 0.0], [0.0, 0.0, -1.0]]},
+          {"id": "part-37", "ref": "25269.dat", "colour": 14, "at": [36.0, 10.0, 20.0], "purpose": "Tile 1 x 1 Corner Round", "matrix": [[0.0, -1.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0]]},
+          {"id": "part-39", "ref": "25269.dat", "colour": 14, "at": [36.0, -10.0, 20.0], "purpose": "Tile 1 x 1 Corner Round", "matrix": [[0.0, -1.0, 0.0], [0.0, 0.0, 1.0], [-1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-31", "ref": "6628.dat", "colour": 4, "at": [10.0, 0.0, 0.0], "purpose": "Technic Pin Towball with Friction"}
+        ]
+      ]
+    },
+    {
+      "name": "parrot-perch.ldr",
+      "description": "Perch; official steps 21-24",
+      "steps": [
+        [
+          {"id": "part-48", "ref": "60474.dat", "colour": 28, "at": [0.0, -8.0, 0.0], "purpose": "Plate 4 x 4 Round with Hole and Snapstud", "matrix": [[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-47", "ref": "6143.dat", "colour": 70, "at": [0.0, -32.0, 0.0], "purpose": "Brick 2 x 2 Round Reinforced", "matrix": [[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]},
+          {"id": "part-46", "ref": "3023b.dat", "colour": 320, "at": [-10.0, -40.0, 0.0], "purpose": "Plate 1 x 2", "matrix": [[0.0, 0.0, -1.0], [0.0, 1.0, 0.0], [1.0, 0.0, 0.0]]}
+        ],
+        [
+          {"id": "part-42", "ref": "2423.dat", "colour": 2, "at": [10.0, -40.0, 10.0], "purpose": "Plant Leaves 4 x 3", "matrix": [[-0.7071067812, 0.0, -0.7071067812], [0.0, 1.0, 0.0], [0.7071067812, 0.0, -0.7071067812]]},
+          {"id": "part-65", "ref": "2423.dat", "colour": 2, "at": [10.0, -40.0, -10.0], "purpose": "Plant Leaves 4 x 3", "matrix": [[0.7071067812, 0.0, -0.7071067812], [0.0, 1.0, 0.0], [0.7071067812, 0.0, 0.7071067812]]},
+          {"id": "part-23", "ref": "11477.dat", "colour": 2, "at": [21.7985854278, -32.0, -62.1479176838], "purpose": "Slope Brick Curved 2 x 1", "matrix": [[0.9721510813, 0.0, 0.2343550196], [0.0, 1.0, 0.0], [-0.2343550196, 0.0, 0.9721510813]]},
+          {"id": "part-41", "ref": "11477.dat", "colour": 2, "at": [59.4974746831, -32.0, 59.4974746831], "purpose": "Slope Brick Curved 2 x 1", "matrix": [[-0.7071067812, 0.0, -0.7071067812], [0.0, 1.0, 0.0], [0.7071067812, 0.0, -0.7071067812]]},
+          {"id": "part-43", "ref": "11477.dat", "colour": 2, "at": [62.3599135654, -32.0, 22.9908560069], "purpose": "Slope Brick Curved 2 x 1", "matrix": [[0.1151279617, 0.0, -0.9933506694], [0.0, 1.0, 0.0], [0.9933506694, 0.0, 0.1151279617]]},
+          {"id": "part-44", "ref": "11477.dat", "colour": 2, "at": [21.7685267469, -32.0, 62.1406222744], "purpose": "Slope Brick Curved 2 x 1", "matrix": [[-0.9714215403, 0.0, 0.2373608877], [0.0, 1.0, 0.0], [-0.2373608877, 0.0, -0.9714215403]]},
+          {"id": "part-63", "ref": "11477.dat", "colour": 2, "at": [59.4974746831, -32.0, -59.4974746831], "purpose": "Slope Brick Curved 2 x 1", "matrix": [[0.7071067812, 0.0, -0.7071067812], [0.0, 1.0, 0.0], [0.7071067812, 0.0, 0.7071067812]]},
+          {"id": "part-64", "ref": "11477.dat", "colour": 2, "at": [62.3069391063, -32.0, -22.6010052751], "purpose": "Slope Brick Curved 2 x 1", "matrix": [[-0.1541130349, 0.0, -0.9880532235], [0.0, 1.0, 0.0], [0.9880532235, 0.0, -0.1541130349]]}
+        ],
+        [
+          {"id": "part-45", "ref": "15573.dat", "colour": 0, "at": [0.0, -48.0, 10.0], "purpose": "Plate 1 x 2 with Groove with 1 Centre Stud, without Understud", "matrix": [[-1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, -1.0]]},
+          {"id": "part-49", "ref": "15573.dat", "colour": 0, "at": [0.0, -48.0, -10.0], "purpose": "Plate 1 x 2 with Groove with 1 Centre Stud, without Understud", "matrix": [[-1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, -1.0]]}
+        ]
+      ]
+    }
+  ]
+}

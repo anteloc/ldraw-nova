@@ -1,0 +1,227 @@
+0 FILE parrot.ldr
+0 30581 Tropical Parrot - prepared SNOT reference
+0 Name: parrot.ldr
+0 Author: marco9999; preparation by ldraw-nova
+0 !LDRAW_ORG Model
+0 // body: parrot-body.ldr
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 parrot-body.ldr
+0 STEP
+0 // head: Official step 17; head includes step 18 beak
+1 4 30 -136 0 1 0 0 0 1 0 0 0 1 parrot-head.ldr
+0 STEP
+0 // wing-right: Official step 19: ball into socket
+1 4 10 -92 30 0.4049159586 0 0.9143539066 0 -1 0 0.9143539066 0 -0.4049159586 parrot-wing-right.ldr
+0 STEP
+0 // wing-left: Official step 20: ball into socket
+1 4 10 -92 -30 0.4279050291 -0.1767547298 -0.8863718472 -0.0000002641 -0.9806911087 0.1955631595 -0.903823703 -0.0836822254 -0.4196427041 parrot-wing-left.ldr
+0 STEP
+0 // perch: Official step 25: bird onto jumper studs
+1 70 0 0 0 1 0 0 0 1 0 0 0 1 parrot-perch.ldr
+0 NOFILE
+0 FILE parrot-body.ldr
+0 Body and tail; steps follow official 1-11
+0 Name: parrot-body.ldr
+0 Author: marco9999; preparation by ldraw-nova
+0 !LDRAW_ORG Model
+0 // part-62: Wing 3 x 4 with 1 x 2 Cutout with Stud Notches and Rounded Underside Corners
+1 0 -10 -56 0 0 0 1 0 1 0 -1 0 0 90194.dat
+0 // part-61: Brick 1 x 2
+1 4 -20 -80 0 0 0 -1 0 1 0 1 0 0 3004.dat
+0 STEP
+0 // part-60: Slope Brick 45 2 x 2 Inverted with Flat Bottom Pin with Inner Stopper Ring
+1 4 0 -80 0 0 0 -1 0 1 0 1 0 0 3660b.dat
+0 STEP
+0 // part-57: Plate 2 x 3
+1 320 0 -88 0 1 0 0 0 1 0 0 0 1 3021.dat
+0 STEP
+0 // part-58: Plate 1 x 2 with Socket Joint-8 with Friction Centre
+1 71 10 -96 10 -1 0 0 0 1 0 0 0 -1 14704.dat
+0 // part-59: Plate 1 x 2 with Socket Joint-8 with Friction Centre
+1 71 10 -96 -10 1 0 0 0 1 0 0 0 1 14704.dat
+0 // part-56: Plate 1 x 2 with 2 Clips Horizontal (Thick U-Clips)
+1 4 -20 -96 0 0 0 1 0 1 0 -1 0 0 60470a.dat
+0 STEP
+0 // part-54: Slope Brick 45 2 x 2 Inverted with Flat Bottom Pin with Inner Stopper Ring
+1 4 20 -120 0 0 0 -1 0 1 0 1 0 0 3660b.dat
+0 STEP
+0 // part-52: Bracket 3 x 2 x 1.333
+1 4 0 -128 0 0 0 1 0 1 0 -1 0 0 18671.dat
+0 STEP
+0 // tail-right: Official step 7: handle into right tail clip
+1 4 -40 -94 10 1 0 0 0 1 0 0 0 1 parrot-tail-right.ldr
+0 STEP
+0 // tail-left: Official step 8: handle into left tail clip
+1 4 -40 -94 -10 1 0 0 0 1 0 0 0 1 parrot-tail-left.ldr
+0 STEP
+0 // part-53: Slope Brick Curved 2 x 2 x 0.667
+1 4 -10 -120 0 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // part-55: Slope Brick Curved 2 x 2 x 2/3 Triple with Two Top Studs
+1 4 -20 -120 0 0 0 1 0 1 0 -1 0 0 47457.dat
+0 STEP
+0 // part-51: Plate 1 x 2
+1 320 40 -128 0 0 0 -1 0 1 0 1 0 0 3023b.dat
+0 STEP
+0 // part-50: Turntable 2 x 2 Plate Base
+1 4 30 -136 0 1 0 0 0 1 0 0 0 1 3680.dat
+0 NOFILE
+0 FILE parrot-tail-right.ldr
+0 Right tail feather; origin at handle centre
+0 Name: parrot-tail-right.ldr
+0 Author: marco9999; preparation by ldraw-nova
+0 !LDRAW_ORG Model
+0 // part-26: Wing 2 x 3 Left
+1 4 -40 6 10 0 0 -1 0 1 0 1 0 0 43723.dat
+0 // part-25: Plate 1 x 2 with Handle on End
+1 14 -30 -2 0 1 0 0 0 1 0 0 0 1 60478.dat
+0 STEP
+0 // part-24: Tile 1 x 1 Corner Round
+1 321 -20 -10 0 0 0 1 0 1 0 -1 0 0 25269.dat
+0 // part-30: Slope Brick Curved 2 x 1 with Cutout Left
+1 27 -70 14 0 0 0 1 0 1 0 -1 0 0 29120.dat
+0 NOFILE
+0 FILE parrot-tail-left.ldr
+0 Left tail feather; origin at handle centre
+0 Name: parrot-tail-left.ldr
+0 Author: marco9999; preparation by ldraw-nova
+0 !LDRAW_ORG Model
+0 // part-29: Wing 2 x 3 Right
+1 4 -40 6 -10 0 0 -1 0 1 0 1 0 0 43722.dat
+0 // part-28: Plate 1 x 2 with Handle on End
+1 14 -30 -2 0 1 0 0 0 1 0 0 0 1 60478.dat
+0 STEP
+0 // part-27: Tile 1 x 1 Corner Round
+1 321 -20 -10 0 -1 0 0 0 1 0 0 0 -1 25269.dat
+0 // part-32: Slope Brick Curved 2 x 1 with Cutout Right
+1 27 -70 14 0 0 0 1 0 1 0 -1 0 0 29119.dat
+0 NOFILE
+0 FILE parrot-wing-right.ldr
+0 Right wing; origin at ball centre
+0 Name: parrot-wing-right.ldr
+0 Author: marco9999; preparation by ldraw-nova
+0 !LDRAW_ORG Model
+0 // part-3: Plate 2 x 3
+1 320 12 0 -40 0 -1 0 0 0 -1 1 0 0 3021.dat
+0 STEP
+0 // part-4: Wing 2 x 2 Left
+1 321 20 0 -70 0 -1 0 0 0 1 -1 0 0 24299.dat
+0 // part-2: Plate 3 x 2 with Hole
+1 4 20 0 -30 0 -1 0 -1 0 0 0 0 -1 3176.dat
+0 STEP
+0 // part-1: Plate 3 x 2 with Hole
+1 4 28 0 -30 0 -1 0 -1 0 0 0 0 -1 3176.dat
+0 STEP
+0 // part-0: Slope Brick Curved 2 x 1 with Cutout Right
+1 27 20 10 -50 0 -1 0 1 0 0 0 0 1 29119.dat
+0 // part-6: Slope Brick Curved 2 x 1 with Cutout Right
+1 27 20 -10 -50 0 -1 0 1 0 0 0 0 1 29119.dat
+0 // part-5: Tile 1 x 1 Corner Round
+1 14 36 10 -20 0 -1 0 0 0 -1 1 0 0 25269.dat
+0 // part-7: Tile 1 x 1 Corner Round
+1 14 36 -10 -20 0 -1 0 -1 0 0 0 0 -1 25269.dat
+0 STEP
+0 // part-8: Technic Pin Towball with Friction
+1 4 10 0 0 1 0 0 0 1 0 0 0 1 6628.dat
+0 NOFILE
+0 FILE parrot-wing-left.ldr
+0 Left wing; origin at ball centre
+0 Name: parrot-wing-left.ldr
+0 Author: marco9999; preparation by ldraw-nova
+0 !LDRAW_ORG Model
+0 // part-35: Plate 2 x 3
+1 320 12 0 40 0 -1 0 0 0 -1 1 0 0 3021.dat
+0 STEP
+0 // part-36: Wing 2 x 2 Right
+1 321 20 0 70 0 -1 0 0 0 1 -1 0 0 24307.dat
+0 // part-33: Plate 3 x 2 with Hole
+1 4 20 0 30 0 -1 0 1 0 0 0 0 1 3176.dat
+0 STEP
+0 // part-34: Plate 3 x 2 with Hole
+1 4 28 0 30 0 -1 0 1 0 0 0 0 1 3176.dat
+0 STEP
+0 // part-38: Slope Brick Curved 2 x 1 with Cutout Left
+1 27 20 10 50 0 -1 0 -1 0 0 0 0 -1 29120.dat
+0 // part-40: Slope Brick Curved 2 x 1 with Cutout Left
+1 27 20 -10 50 0 -1 0 -1 0 0 0 0 -1 29120.dat
+0 // part-37: Tile 1 x 1 Corner Round
+1 14 36 10 20 0 -1 0 1 0 0 0 0 1 25269.dat
+0 // part-39: Tile 1 x 1 Corner Round
+1 14 36 -10 20 0 -1 0 0 0 1 -1 0 0 25269.dat
+0 STEP
+0 // part-31: Technic Pin Towball with Friction
+1 4 10 0 0 1 0 0 0 1 0 0 0 1 6628.dat
+0 NOFILE
+0 FILE parrot-perch.ldr
+0 Perch; official steps 21-24
+0 Name: parrot-perch.ldr
+0 Author: marco9999; preparation by ldraw-nova
+0 !LDRAW_ORG Model
+0 // part-48: Plate 4 x 4 Round with Hole and Snapstud
+1 28 0 -8 0 0 0 -1 0 1 0 1 0 0 60474.dat
+0 STEP
+0 // part-47: Brick 2 x 2 Round Reinforced
+1 70 0 -32 0 0 0 -1 0 1 0 1 0 0 6143.dat
+0 // part-46: Plate 1 x 2
+1 320 -10 -40 0 0 0 -1 0 1 0 1 0 0 3023b.dat
+0 STEP
+0 // part-42: Plant Leaves 4 x 3
+1 2 10 -40 10 -0.7071067812 0 -0.7071067812 0 1 0 0.7071067812 0 -0.7071067812 2423.dat
+0 // part-65: Plant Leaves 4 x 3
+1 2 10 -40 -10 0.7071067812 0 -0.7071067812 0 1 0 0.7071067812 0 0.7071067812 2423.dat
+0 // part-23: Slope Brick Curved 2 x 1
+1 2 21.7985854278 -32 -62.1479176838 0.9721510813 0 0.2343550196 0 1 0 -0.2343550196 0 0.9721510813 11477.dat
+0 // part-41: Slope Brick Curved 2 x 1
+1 2 59.4974746831 -32 59.4974746831 -0.7071067812 0 -0.7071067812 0 1 0 0.7071067812 0 -0.7071067812 11477.dat
+0 // part-43: Slope Brick Curved 2 x 1
+1 2 62.3599135654 -32 22.9908560069 0.1151279617 0 -0.9933506694 0 1 0 0.9933506694 0 0.1151279617 11477.dat
+0 // part-44: Slope Brick Curved 2 x 1
+1 2 21.7685267469 -32 62.1406222744 -0.9714215403 0 0.2373608877 0 1 0 -0.2373608877 0 -0.9714215403 11477.dat
+0 // part-63: Slope Brick Curved 2 x 1
+1 2 59.4974746831 -32 -59.4974746831 0.7071067812 0 -0.7071067812 0 1 0 0.7071067812 0 0.7071067812 11477.dat
+0 // part-64: Slope Brick Curved 2 x 1
+1 2 62.3069391063 -32 -22.6010052751 -0.1541130349 0 -0.9880532235 0 1 0 0.9880532235 0 -0.1541130349 11477.dat
+0 STEP
+0 // part-45: Plate 1 x 2 with Groove with 1 Centre Stud, without Understud
+1 0 0 -48 10 -1 0 0 0 1 0 0 0 -1 15573.dat
+0 // part-49: Plate 1 x 2 with Groove with 1 Centre Stud, without Understud
+1 0 0 -48 -10 -1 0 0 0 1 0 0 0 -1 15573.dat
+0 NOFILE
+0 FILE parrot-head.ldr
+0 30581 Tropical Parrot - multi-face SNOT head
+0 Name: parrot-head.ldr
+0 Author: marco9999; preparation by ldraw-nova
+0 !LDRAW_ORG Model
+0 // turntable-top: Turntable 2 x 2 Plate Top
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 3679.dat
+0 STEP
+0 // core-right: Brick 1 x 2 x 1.667 with 8 Studs on 3 Sides
+1 15 0 -40 10 -1 0 0 0 1 0 0 0 -1 67329.dat
+0 // core-left: Brick 1 x 2 x 1.667 with 8 Studs on 3 Sides
+1 15 0 -40 -10 1 0 0 0 1 0 0 0 1 67329.dat
+0 STEP
+0 // rear-plate: Plate 1 x 2
+1 320 -28 -10 0 0 1 0 0 0 1 1 0 0 3023b.dat
+0 // beak-lower-jumper: Plate 1 x 2 with Groove with 1 Centre Stud, without Understud
+1 0 28 -10 0 0 -1 0 0 0 -1 1 0 0 15573.dat
+0 // beak-spacer: Plate 1 x 2 with Round Ends and 2 Open Studs
+1 15 28 -30 0 0 -1 0 0 0 -1 1 0 0 35480.dat
+0 // beak-upper-jumper: Plate 1 x 2 with Groove with 1 Centre Stud, without Understud
+1 0 36 -30 0 0 -1 0 0 0 -1 1 0 0 15573.dat
+0 STEP
+0 // rear-lower-slope: Slope Brick 31 1 x 2 x 0.667
+1 4 -28 -10 0 0 1 0 0 0 1 1 0 0 85984.dat
+0 // rear-upper-slope: Slope Brick 31 1 x 2 x 0.667
+1 4 -20 -30 0 0 1 0 0 0 1 1 0 0 85984.dat
+0 STEP
+0 // eye-right: Tile 2 x 2 Round with Eye with Metallic Light Blue Iris and Black Pupil Pattern
+1 15 0 -20 28 -1 0 0 0 0 -1 0 -1 0 14769p0k.dat
+0 // eye-left: Tile 2 x 2 Round with Eye with Metallic Light Blue Iris and Black Pupil Pattern
+1 15 0 -20 -28 0 0 -1 -1 0 0 0 1 0 14769p0k.dat
+0 STEP
+0 // crown: Slope Brick Curved 2 x 2 x 2/3 Triple with Two Top Studs
+1 4 10 -56 0 0 0 -1 0 1 0 1 0 0 47457.dat
+0 // rear-crown: Slope Brick 31 1 x 2 x 0.667
+1 4 -10 -40 0 0 0 1 0 1 0 -1 0 0 85984.dat
+0 STEP
+0 // beak: Slope Brick Curved 3 x 1
+1 191 52 -10 0 0 -1 0 0 0 -1 1 0 0 50950.dat
+0 NOFILE

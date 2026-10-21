@@ -24,6 +24,7 @@ Use the appropriate guide as the design requires it:
 | Shape, palette, detail and image review | [Visual design](docs/agent/visual-design.md) |
 | Plans, placements and Python generation | [Plan guide](docs/agent/plans.md) |
 | Large models and reusable modules | [Module workflow](docs/agent/complex-models.md) |
+| Sideways studs, SNOT cores and offsets | [SNOT](docs/agent/snot.md) |
 | Vehicles or spaceships | [Vehicles](docs/agent/vehicles.md), [spaceships](docs/agent/spaceships.md) |
 | Fixed Technic structures | [Technic](docs/agent/technic.md), [design patterns](docs/agent/technic-design.md) |
 | Moving mechanisms | [Mechanisms](docs/agent/mechanisms.md) |

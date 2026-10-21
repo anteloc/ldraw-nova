@@ -35,6 +35,8 @@ The plan's `on` field implements this rule for the curated parts in `./ldraw-age
 
 Half-stud offsets are 10 LDU. A centred 1×1 over a 2×2 needs an X/Z offset to an actual stud, e.g. `[0.5,0.5]`, not `[0,0]`. Side-by-side bricks touching walls have no clutch connection; bridge them with a plate or a correctly mated connector. Place long plates across seams for connected assemblies.
 
+For perpendicular stud grids and shaped-part origins, follow the [SNOT guide](snot.md). Its small parrot head demonstrates exact socket-to-stud alignment, sideways jumper offsets and seven visible construction stages using the same plan format.
+
 ## Reuse subassemblies and connection evidence
 
 Search `./ldraw-agent search submodels 'steering' --limit 5`, then inspect the original section with `sections`. Learn its real relative transforms and mating components, but verify names, variants, completeness and annotations. OMR examples are evidence, not proof that every legacy transform is rigid or every annotation accurate. Preserve attribution if copying actual source.

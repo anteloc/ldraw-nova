@@ -54,3 +54,5 @@ The broad gallery also retains problematic sources for inspiration: 26 of its 22
 The default, two-course and seven-course forms pass geometry error checks with one optimistic connection group. Their plans retain the construction-source credits. Unchanged OMR submodels use the shared extractor and placement plans; only selected adaptable constructions need their own generator.
 
 For new searches, preparation and review/export commands, follow the [agent workflow](../../docs/agent/reference-discovery.md).
+
+For a small SNOT lesson, use the separately prepared [Tropical Parrot head](../snot/parrot/README.md): fourteen pieces, seven construction stages, exact sideways offsets and a complete bird for context. Its plans use the same builder and preserve the supplied source credit.
