@@ -56,3 +56,5 @@ The default, two-course and seven-course forms pass geometry error checks with o
 For new searches, preparation and review/export commands, follow the [agent workflow](../../docs/agent/reference-discovery.md).
 
 For a small SNOT lesson, use the separately prepared [Tropical Parrot head](../snot/parrot/README.md): fourteen pieces, seven construction stages, exact sideways offsets and a complete bird for context. Its plans use the same builder and preserve the supplied source credit.
+
+The [Cat studies](../snot/cat/README.md) add single-stud diagonal details, a layered face and a three-piece limb repeated around ball joints. Use these for shaping and articulation; the face is posed upright on a ball joint rather than attached by a fixed perpendicular stud connection.
