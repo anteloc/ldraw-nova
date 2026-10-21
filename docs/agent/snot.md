@@ -4,6 +4,8 @@ Start with the [14-piece parrot head](../../examples/snot/parrot/README.md). Its
 
 Then use the [cat studies](../../examples/snot/cat/README.md) for single-stud diagonal details and a repeated three-piece limb. The cat's face is a flat panel posed on a ball joint; its brow bracket's sideways studs remain exposed. It broadens the shaping and articulation vocabulary without supplying another fixed perpendicular stud interface.
 
+For vehicle bodywork, use the [Ferrari F40 reference](../../examples/snot/ferrari-f40/README.md): a searchable map of 74 sections and five small build studies covering body mounts, door trim, lamp/grille corners, window louvers and fascia supports. Its flattened main car and saved callouts differ; use the checked small studies and their parent notes when adapting a construction.
+
 ```sh
 ./ldraw-agent review examples/snot/parrot/head.plan.json --outdir output/snot-head
 ```

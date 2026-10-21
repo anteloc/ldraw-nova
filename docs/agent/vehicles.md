@@ -64,6 +64,8 @@ vehicle arrangements and their opened-image review.
 
 Search [model and submodel references](reference-discovery.md) as well as individual parts. Compare whole vehicles for silhouette, then query one cab, bogie, wing, engine or hull role at a time. `discover parts SAVED_SEARCH.json` exposes the actual fittings used in matched constructions. Inspect parent subject, dimensions, preview images and Technic content before reusing them; a spacecraft module may teach a technique without fitting a passenger aircraft directly.
 
+The [Ferrari F40 section gallery and studies](../../examples/snot/ferrari-f40/README.md) provide a large sports-car precedent and five checked SNOT details. Study the complete silhouette, then inspect a small body mount, door rail, lamp corner, louver or fascia core. The full source retains overlap errors, and its saved callouts are separate constructions rather than declared children of the flattened car.
+
 Use actual seats, steering wheels, windscreens, mudguards, motorcycle frames,
 boat hulls, aircraft shells, wings, engine housings, printed instruments and cargo
 containers where they suit the design. Do not fill every functional area with

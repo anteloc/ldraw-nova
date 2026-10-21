@@ -1,0 +1,111 @@
+{
+  "id": "04",
+  "model": "10248 Ferrari F40.ldr",
+  "section": "subModel-4.ldr",
+  "parser_section": "subModel-4.ldr",
+  "description": "Long chassis side rail",
+  "kind": "submodels",
+  "parent_description": "F40: saved callout, not referenced by the main car",
+  "status": "reference",
+  "assembly_checks_passed": true,
+  "source_sha256": "4dad4d71da85a93456562d58fd2f289b64f98bbdb35ed8d90d7bc6fc2055a5ba",
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 8,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -10.0,
+        -4.0,
+        -100.0
+      ],
+      "max": [
+        50.0,
+        24.0,
+        260.0
+      ]
+    },
+    "occurrence_count": 8,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": false,
+    "contact_count": null,
+    "contacts": [],
+    "contacts_truncated": false,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": null,
+    "confirmed_component_count": null,
+    "components_truncated": false,
+    "overlap_candidate_count": 10,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "coverage.contacts_skipped",
+        "severity": "warning",
+        "message": "Contacts were not computed. Select a subassembly or request --contacts all; no connectivity conclusion is available.",
+        "line_number": null,
+        "section": null
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  },
+  "contacts_checked": false,
+  "inventory": {
+    "expanded_leaf_count": 8
+  },
+  "size_studs_plates_studs": [
+    3.0,
+    3.5,
+    18.0
+  ],
+  "bom_comparison": {
+    "matches": true
+  },
+  "views": [
+    "home"
+  ],
+  "semantic_annotation": {
+    "section": "subModel-4.ldr",
+    "title": "Long chassis side rail",
+    "category": "chassis",
+    "context_steps": [
+      8
+    ],
+    "lesson": "Technic bricks overlap through pins to establish a long frame member. Saved colours differ from the main model.",
+    "declared_parents": [],
+    "declared_children": {},
+    "reachable_from_main": false,
+    "source_steps": 2
+  },
+  "source_repairs": [],
+  "visual_review": {
+    "decision": "technique",
+    "views": [
+      "home"
+    ],
+    "note": "Inspected this home image in the labeled section overview contact sheet. Long chassis side rail: Technic bricks overlap through pins to establish a long frame member. Saved colours differ from the main model. Overview evidence supports the construction role only. Main source step pointers are contextual, not proof of identical placements. Isolated source/geometry checks pass and the rendered BOM matches; contacts and parent clearance are not established by this overview.",
+    "image_sha256": "fa1f46cfcf09a57d657c093a294dd9cfb5ab9d60e8ab9fec50277a0cdff9dc71"
+  },
+  "evidence_scope": "Isolated extracted section; contacts not checked. Rendered with bounded rotation normalization where recorded. See visual-review.md for overview inspection.",
+  "physical_validity": "not_proven"
+}
