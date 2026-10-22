@@ -1,0 +1,50 @@
+0 ELECTRIC_CABLE-Constraints
+0 Name: ELECTRIC_CABLE-Constraints.ldr
+0 Author: Steffen [Steffen]
+0 Unofficial Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 BFC CERTIFY CCW
+
+0 // Plate  2 x  6 (trans_clear)
+1 47 0 -16 0 1 0 0 0 1 0 0 0 1 3795.dat
+0 // Plate  1 x  2 (trans_clear)
+1 47 30 -8 0 0 0 -1 0 1 0 1 0 0 3023.dat
+0 // Plate  2 x  3 (trans_clear)
+1 47 -40 -8 -10 0 0 -1 0 1 0 1 0 0 3021.dat
+0 // Plate  1 x  2 (trans_clear)
+1 47 -40 -16 -30 1 0 0 0 1 0 0 0 1 3023.dat
+0 // Train Signal Stand (trans_clear)
+1 47 -40 -24 -10 0 0 -1 0 1 0 1 0 0 4169.dat
+0 // Train Signal Mast (trans_clear)
+1 47 -44 -188 -10 0 1 0 -1 0 0 0 0 1 4168.dat
+0 // Technic Axle  4 (trans_clear)
+1 47 -24 -298 -10 1 0 0 0 1 0 0 0 1 3705.dat
+0 // Technic Bush with Two Flanges (trans_clear)
+1 47 -54 -298 -10 0 0 -1 0 1 0 1 0 0 3713.dat
+0 // Technic Bush with Two Flanges (trans_clear)
+1 47 -26 -298 -10 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // Technic Connector (Pin/Bush) with 2 Studs (trans_clear)
+1 47 10 -298 -10 0 0 -1 1 0 0 0 -1 0 3651.dat
+0 // Dish  4 x  4 Inverted (trans_clear)
+1 47 30 -288 -10 1 0 0 0 1 0 0 0 1 3960.dat
+0 // Electric Lightbrick  2 x  2 Type 1 12V (Complete) (trans_clear)
+1 47 30 -273 -10 0 0 -1 0 1 0 1 0 0 266ac01.dat
+0 // Electric Plug (Type 4) Single with Cable End (trans_clear)
+1 47 6.5 -264 -10 0 0 -1 0 1 0 1 0 0 765c02.dat
+0 
+0 SYNTH BEGIN ELECTRIC_CABLE 1
+0 SYNTH SHOW
+1 2 -15 -264 -10 0 1 0 0 0 -1 -1 0 0 LS03.dat
+1 1 -40 -257 -23 0.707107 0.707107 0 0.707107 -0.707107 0 0 0 -1 LS03.dat
+1 1 -47 -239 -11 0 0 -1 0.707107 -0.707107 0 -0.707107 -0.707107 0 LS03.dat
+1 1 -40 -214 3 -0.707107 -0.707107 0 0.707107 -0.707107 0 0 0 1 LS03.dat
+1 1 -33 -189 -8 0 0 1 0.707107 -0.707107 0 0.707107 0.707107 0 LS03.dat
+1 1 -40 -164 -23 0.707107 0.707107 0 0.707107 -0.707107 0 0 0 -1 LS03.dat
+1 1 -47 -139 -11 0 0 -1 0.707107 -0.707107 0 -0.707107 -0.707107 0 LS03.dat
+1 1 -40 -114 3 -0.707107 -0.707107 0 0.707107 -0.707107 0 0 0 1 LS03.dat
+1 1 -33 -89 -8 0 0 1 0.707107 -0.707107 0 0.707107 0.707107 0 LS03.dat
+1 1 -44 -64 -23 0.707107 0.707107 0 0.707107 -0.707107 0 0 0 -1 LS03.dat
+1 1 -55 -52 -14 0 0 -1 0.707107 -0.707107 0 -0.707107 -0.707107 0 LS03.dat
+1 4 -50 -40 3 -0.25038 -0.968148 0 0.968148 -0.25038 0 0 0 1 LS03.dat
+0 SYNTH END

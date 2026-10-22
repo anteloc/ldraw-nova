@@ -1,0 +1,67 @@
+{
+  "root": "press-hoses.ldr",
+  "blocks": [
+    {
+      "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+      "colour": "0",
+      "token": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+      "product_hint": null,
+      "part": "press-hoses-flex-01.dat",
+      "representation": "posed_part",
+      "segment_count": 34
+    },
+    {
+      "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+      "colour": "4",
+      "token": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+      "product_hint": null,
+      "part": "press-hoses-flex-02.dat",
+      "representation": "posed_part",
+      "segment_count": 211
+    },
+    {
+      "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+      "colour": "1",
+      "token": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+      "product_hint": null,
+      "part": "press-hoses-flex-03.dat",
+      "representation": "posed_part",
+      "segment_count": 207
+    }
+  ],
+  "embedded_sources": [
+    {
+      "name": "ls22.dat",
+      "embedded_as": "press-hoses-ls22.dat",
+      "sha256": "de9d9925e741931b8d7b60e3b0ad19ffbdf4f1db88fec3a03475e5fae3c16faa",
+      "changes": [
+        "Transcoded Latin-1 header to UTF-8"
+      ]
+    },
+    {
+      "name": "ls23.dat",
+      "embedded_as": "press-hoses-ls23.dat",
+      "sha256": "a4685434ddf689693634a4ceab1c4962283ff9766a005f74d425d3b13b368fa5",
+      "changes": []
+    }
+  ],
+  "engine": {
+    "available": true,
+    "version": "3.1.0"
+  },
+  "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/hoses.ldr",
+  "source_sha256": "8509c9ffe883b5dd6eb5b77e64e61e25bae4e32179e4e7567abf0f47165a14b9",
+  "source_credits": [
+    "0 Author: Pneumatic press generator (Claude Code, Claude Opus 5.5) for anteloc"
+  ],
+  "config_sha256": "d92c074bc22e6e70ce0d3056ed999d87fdf3583c6ae6c52a345c3fe5fc5a0118",
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/hoses.mpd",
+  "model_sha256": "6aa0425c003c37cb342f1e4be675d9d7b1e16d759eb746193ec6e23a1ec6a4d6",
+  "diagnostics": [],
+  "physical_validity": "not_proven",
+  "review_required": true,
+  "limitations": [
+    "Posed parts have no verified length, stock identity, bend radius or connector metadata.",
+    "Synthesis does not prove tension, material clearance, link engagement or motion."
+  ]
+}

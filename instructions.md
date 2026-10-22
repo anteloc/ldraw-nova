@@ -30,6 +30,7 @@ Use the appropriate guide as the design requires it:
 | Vehicles or spaceships | [Vehicles](docs/agent/vehicles.md), [spaceships](docs/agent/spaceships.md) |
 | Fixed Technic structures | [Technic](docs/agent/technic.md), [design patterns](docs/agent/technic-design.md) |
 | Moving mechanisms | [Mechanisms](docs/agent/mechanisms.md) |
+| Hoses, cables, rubber bands, chains and treads | [Flexible parts with LSynth](docs/agent/flexible-parts.md) |
 | Finding or adapting source constructions | [Discovery](docs/agent/reference-discovery.md), [build manuals](docs/agent/build-manuals.md) |
 
 For semantic discovery, perform the [Jev availability check](docs/agent/reference-discovery.md#check-jev-availability-before-searching) first. If unavailable, report why and use `discover search parts|models|submodels ... --engine fts`, catalogs and examples. Do not keep retrying a failed service. Rankings suggest candidates; actual dimensions, connectors and parent context determine suitability. Preserve authorship and extraction manifests when reusing source.

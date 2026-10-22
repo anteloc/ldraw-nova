@@ -1,5 +1,7 @@
 # Verification record
 
+The [LSynth integration assessment](../reports/lsynth-integration.md) documents the optional flexible-parts workflow, the 26-source sweep, four rendered models with matching BOMs, inspected previews, compatibility findings and regression coverage.
+
 The [workflow simplification record](../reports/workflow-simplification.md) documents the 2026-10-20 combined `review` command, preserved CLI behavior, shorter agent instructions, failure regressions and real LeoCAD/BOM checks on the bridge and 2,979-placement Alder Court model.
 
 The [spaceship and build-manual implementation record](../reports/spaceship-support-implementation.md) documents the 2026-09-26 extension: general source-step manuals, three spaceship design briefs, eight source studies, six checked reusable entries, 50 inspected images, eight matching rendered BOMs and **211 passing tests**. Two large sources remain explicitly inspiration-only with unresolved source errors.

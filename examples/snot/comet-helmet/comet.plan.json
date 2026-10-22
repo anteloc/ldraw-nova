@@ -1,0 +1,3880 @@
+{
+ "version": 1,
+ "author": "Comet generator (Claude Code, Claude Opus 5.5) for anteloc",
+ "assets": [
+  "hoses.mpd"
+ ],
+ "sections": [
+  {
+   "name": "comet.ldr",
+   "description": "Comet: retro astronaut helmet with ribbed hoses and twin air tanks",
+   "steps": [
+    [
+     {
+      "id": "stand",
+      "ref": "comet-stand.ldr",
+      "colour": 16,
+      "at": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "helmet",
+      "ref": "comet-helmet.ldr",
+      "colour": 16,
+      "at": [
+       0.0,
+       -128.0,
+       0.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "backpack",
+      "ref": "comet-backpack.ldr",
+      "colour": 16,
+      "at": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "hoses",
+      "ref": "comet-hoses.ldr",
+      "colour": 0,
+      "at": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ]
+   ]
+  },
+  {
+   "name": "comet-helmet.ldr",
+   "description": "Comet helmet: shell, crown and SNOT modules in the helmet frame",
+   "steps": [
+    [
+     {
+      "id": "shell",
+      "ref": "comet-shell.ldr",
+      "colour": 16,
+      "at": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "crown",
+      "ref": "comet-crown.ldr",
+      "colour": 16,
+      "at": [
+       0.0,
+       0.0,
+       0.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "faceplate",
+      "ref": "comet-faceplate.ldr",
+      "colour": 16,
+      "at": [
+       0.0,
+       -92.0,
+       -120.0
+      ],
+      "matrix": [
+       [
+        1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "cheek-right",
+      "ref": "comet-cheek.ldr",
+      "colour": 16,
+      "at": [
+       120.0,
+       -92.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        -1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "cheek-left",
+      "ref": "comet-cheek.ldr",
+      "colour": 16,
+      "at": [
+       -120.0,
+       -92.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "vent",
+      "ref": "comet-vent.ldr",
+      "colour": 16,
+      "at": [
+       0.0,
+       -92.0,
+       120.0
+      ],
+      "matrix": [
+       [
+        1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        -1.0,
+        0.0
+       ]
+      ]
+     }
+    ]
+   ]
+  },
+  {
+   "name": "comet-shell.ldr",
+   "description": "Comet helmet shell: alternating plate layers, r=80 corner courses, SNOT course",
+   "steps": [
+    [
+     {
+      "id": "floor-fr",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -8.0,
+       -60.0
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "floor-fl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -8.0,
+       -60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "floor-br",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -8.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "floor-bl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -8.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     }
+    ],
+    [
+     {
+      "id": "c1-arcfr",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -32.0,
+       -40.0
+      ]
+     },
+     {
+      "id": "c1-arcfl",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -32.0,
+       -40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "c1-arcbr",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -32.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "c1-arcbl",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -32.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ]
+     },
+     {
+      "id": "c1-front",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       0.0,
+       -32.0,
+       -110.0
+      ]
+     },
+     {
+      "id": "c1-right",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       110.0,
+       -32.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "c1-back",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       0.0,
+       -32.0,
+       110.0
+      ]
+     },
+     {
+      "id": "c1-left",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       -110.0,
+       -32.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "p1-fr",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -40.0,
+       -60.0
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "p1-fl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -40.0,
+       -60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "p1-br",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -40.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "p1-bl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -40.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     }
+    ],
+    [
+     {
+      "id": "c2-arcfr",
+      "ref": "48092.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -64.0,
+       -40.0
+      ]
+     },
+     {
+      "id": "c2-arcfl",
+      "ref": "48092.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -64.0,
+       -40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "c2-arcbr",
+      "ref": "48092.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -64.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "c2-arcbl",
+      "ref": "48092.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -64.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ]
+     },
+     {
+      "id": "c2-front",
+      "ref": "3010.dat",
+      "colour": 4,
+      "at": [
+       0.0,
+       -64.0,
+       -110.0
+      ]
+     },
+     {
+      "id": "c2-right",
+      "ref": "3010.dat",
+      "colour": 4,
+      "at": [
+       110.0,
+       -64.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "c2-back",
+      "ref": "3010.dat",
+      "colour": 4,
+      "at": [
+       0.0,
+       -64.0,
+       110.0
+      ]
+     },
+     {
+      "id": "c2-left",
+      "ref": "3010.dat",
+      "colour": 4,
+      "at": [
+       -110.0,
+       -64.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "p2-fr",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -72.0,
+       -60.0
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "p2-fl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -72.0,
+       -60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "p2-br",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -72.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "p2-bl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -72.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     }
+    ],
+    [
+     {
+      "id": "snot-front-0",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       -30.0,
+       -112.0,
+       -110.0
+      ],
+      "purpose": "Two side studs facing front"
+     },
+     {
+      "id": "snot-front-1",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       -10.0,
+       -112.0,
+       -110.0
+      ],
+      "purpose": "Two side studs facing front"
+     },
+     {
+      "id": "snot-front-2",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       10.0,
+       -112.0,
+       -110.0
+      ],
+      "purpose": "Two side studs facing front"
+     },
+     {
+      "id": "snot-front-3",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       30.0,
+       -112.0,
+       -110.0
+      ],
+      "purpose": "Two side studs facing front"
+     },
+     {
+      "id": "snot-right-0",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       110.0,
+       -112.0,
+       -30.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Two side studs facing right"
+     },
+     {
+      "id": "snot-right-1",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       110.0,
+       -112.0,
+       -10.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Two side studs facing right"
+     },
+     {
+      "id": "snot-right-2",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       110.0,
+       -112.0,
+       10.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Two side studs facing right"
+     },
+     {
+      "id": "snot-right-3",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       110.0,
+       -112.0,
+       30.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Two side studs facing right"
+     },
+     {
+      "id": "snot-back-0",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       -30.0,
+       -112.0,
+       110.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Two side studs facing back"
+     },
+     {
+      "id": "snot-back-1",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       -10.0,
+       -112.0,
+       110.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Two side studs facing back"
+     },
+     {
+      "id": "snot-back-2",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       10.0,
+       -112.0,
+       110.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Two side studs facing back"
+     },
+     {
+      "id": "snot-back-3",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       30.0,
+       -112.0,
+       110.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Two side studs facing back"
+     },
+     {
+      "id": "snot-left-0",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       -110.0,
+       -112.0,
+       -30.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Two side studs facing left"
+     },
+     {
+      "id": "snot-left-1",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       -110.0,
+       -112.0,
+       -10.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Two side studs facing left"
+     },
+     {
+      "id": "snot-left-2",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       -110.0,
+       -112.0,
+       10.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Two side studs facing left"
+     },
+     {
+      "id": "snot-left-3",
+      "ref": "32952.dat",
+      "colour": 15,
+      "at": [
+       -110.0,
+       -112.0,
+       30.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Two side studs facing left"
+     },
+     {
+      "id": "s-arcfr",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -96.0,
+       -40.0
+      ]
+     },
+     {
+      "id": "s-fill0fr",
+      "ref": "30565.dat",
+      "colour": 15,
+      "at": [
+       80.0,
+       -104.0,
+       -80.0
+      ],
+      "purpose": "Corner fill to the SNOT course height"
+     },
+     {
+      "id": "s-fill1fr",
+      "ref": "30565.dat",
+      "colour": 15,
+      "at": [
+       80.0,
+       -112.0,
+       -80.0
+      ],
+      "purpose": "Corner fill to the SNOT course height"
+     },
+     {
+      "id": "s-arcfl",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -96.0,
+       -40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "s-fill0fl",
+      "ref": "30565.dat",
+      "colour": 15,
+      "at": [
+       -80.0,
+       -104.0,
+       -80.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Corner fill to the SNOT course height"
+     },
+     {
+      "id": "s-fill1fl",
+      "ref": "30565.dat",
+      "colour": 15,
+      "at": [
+       -80.0,
+       -112.0,
+       -80.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Corner fill to the SNOT course height"
+     },
+     {
+      "id": "s-arcbr",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -96.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "s-fill0br",
+      "ref": "30565.dat",
+      "colour": 15,
+      "at": [
+       80.0,
+       -104.0,
+       80.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Corner fill to the SNOT course height"
+     },
+     {
+      "id": "s-fill1br",
+      "ref": "30565.dat",
+      "colour": 15,
+      "at": [
+       80.0,
+       -112.0,
+       80.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Corner fill to the SNOT course height"
+     },
+     {
+      "id": "s-arcbl",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -96.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ]
+     },
+     {
+      "id": "s-fill0bl",
+      "ref": "30565.dat",
+      "colour": 15,
+      "at": [
+       -80.0,
+       -104.0,
+       80.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Corner fill to the SNOT course height"
+     },
+     {
+      "id": "s-fill1bl",
+      "ref": "30565.dat",
+      "colour": 15,
+      "at": [
+       -80.0,
+       -112.0,
+       80.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Corner fill to the SNOT course height"
+     }
+    ],
+    [
+     {
+      "id": "p3-fr",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -120.0,
+       -60.0
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "p3-fl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -120.0,
+       -60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "p3-br",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -120.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "p3-bl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -120.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "c4-arcfr",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -144.0,
+       -40.0
+      ]
+     },
+     {
+      "id": "c4-arcfl",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -144.0,
+       -40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "c4-arcbr",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -144.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "c4-arcbl",
+      "ref": "48092.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -144.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ]
+     },
+     {
+      "id": "c4-front",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       0.0,
+       -144.0,
+       -110.0
+      ]
+     },
+     {
+      "id": "c4-right",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       110.0,
+       -144.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "c4-back",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       0.0,
+       -144.0,
+       110.0
+      ]
+     },
+     {
+      "id": "c4-left",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       -110.0,
+       -144.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     }
+    ],
+    [
+     {
+      "id": "top-fr",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -152.0,
+       -60.0
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "top-fl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -152.0,
+       -60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "top-br",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -152.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     },
+     {
+      "id": "top-bl",
+      "ref": "6003.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -152.0,
+       60.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "6 x 6 quadrant with the r=80 round corner"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "comet-crown.ldr",
+   "description": "Comet crown: curved tiers on a riser, quarter-dome cap and antenna",
+   "steps": [
+    [
+     {
+      "id": "riser-arcfr",
+      "ref": "5152.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -176.0,
+       -40.0
+      ]
+     },
+     {
+      "id": "riser-fillfr",
+      "ref": "3063b.dat",
+      "colour": 15,
+      "at": [
+       50.0,
+       -176.0,
+       -50.0
+      ],
+      "purpose": "r=20..40 macaroni fills the corner between the round dome and the rounded-square tier"
+     },
+     {
+      "id": "riser-arcfl",
+      "ref": "5152.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -176.0,
+       -40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-fillfl",
+      "ref": "3063b.dat",
+      "colour": 15,
+      "at": [
+       -50.0,
+       -176.0,
+       -50.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "r=20..40 macaroni fills the corner between the round dome and the rounded-square tier"
+     },
+     {
+      "id": "riser-arcbr",
+      "ref": "5152.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -176.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-fillbr",
+      "ref": "3063b.dat",
+      "colour": 15,
+      "at": [
+       50.0,
+       -176.0,
+       50.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "r=20..40 macaroni fills the corner between the round dome and the rounded-square tier"
+     },
+     {
+      "id": "riser-arcbl",
+      "ref": "5152.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -176.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-fillbl",
+      "ref": "3063b.dat",
+      "colour": 15,
+      "at": [
+       -50.0,
+       -176.0,
+       50.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "r=20..40 macaroni fills the corner between the round dome and the rounded-square tier"
+     },
+     {
+      "id": "riser-front",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       0.0,
+       -176.0,
+       -90.0
+      ]
+     },
+     {
+      "id": "riser-right",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       90.0,
+       -176.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-back",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       0.0,
+       -176.0,
+       90.0
+      ]
+     },
+     {
+      "id": "riser-left",
+      "ref": "3010.dat",
+      "colour": 15,
+      "at": [
+       -90.0,
+       -176.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-core0",
+      "ref": "3001.dat",
+      "colour": 15,
+      "at": [
+       -20.0,
+       -176.0,
+       -40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-core1",
+      "ref": "3001.dat",
+      "colour": 15,
+      "at": [
+       20.0,
+       -176.0,
+       -40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-core2",
+      "ref": "3001.dat",
+      "colour": 15,
+      "at": [
+       -20.0,
+       -176.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-core3",
+      "ref": "3001.dat",
+      "colour": 15,
+      "at": [
+       20.0,
+       -176.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-arm-right",
+      "ref": "3001.dat",
+      "colour": 15,
+      "at": [
+       60.0,
+       -176.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "riser-arm-left",
+      "ref": "3001.dat",
+      "colour": 15,
+      "at": [
+       -60.0,
+       -176.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     }
+    ],
+    [
+     {
+      "id": "tier1-arcfr",
+      "ref": "5651.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -176.0,
+       -40.0
+      ]
+     },
+     {
+      "id": "tier1-arcfl",
+      "ref": "5651.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -176.0,
+       -40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "tier1-arcbr",
+      "ref": "5651.dat",
+      "colour": 15,
+      "at": [
+       40.0,
+       -176.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "tier1-arcbl",
+      "ref": "5651.dat",
+      "colour": 15,
+      "at": [
+       -40.0,
+       -176.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ]
+     },
+     {
+      "id": "tier1-front-l",
+      "ref": "37352.dat",
+      "colour": 15,
+      "at": [
+       -20.0,
+       -176.0,
+       -110.0
+      ],
+      "purpose": "Curved top descending outward"
+     },
+     {
+      "id": "tier1-front-r",
+      "ref": "37352.dat",
+      "colour": 15,
+      "at": [
+       20.0,
+       -176.0,
+       -110.0
+      ],
+      "purpose": "Curved top descending outward"
+     },
+     {
+      "id": "tier1-right-l",
+      "ref": "37352.dat",
+      "colour": 15,
+      "at": [
+       110.0,
+       -176.0,
+       -20.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Curved top descending outward"
+     },
+     {
+      "id": "tier1-right-r",
+      "ref": "37352.dat",
+      "colour": 15,
+      "at": [
+       110.0,
+       -176.0,
+       20.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Curved top descending outward"
+     },
+     {
+      "id": "tier1-back-l",
+      "ref": "37352.dat",
+      "colour": 15,
+      "at": [
+       -20.0,
+       -176.0,
+       110.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Curved top descending outward"
+     },
+     {
+      "id": "tier1-back-r",
+      "ref": "37352.dat",
+      "colour": 15,
+      "at": [
+       20.0,
+       -176.0,
+       110.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Curved top descending outward"
+     },
+     {
+      "id": "tier1-left-l",
+      "ref": "37352.dat",
+      "colour": 15,
+      "at": [
+       -110.0,
+       -176.0,
+       -20.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Curved top descending outward"
+     },
+     {
+      "id": "tier1-left-r",
+      "ref": "37352.dat",
+      "colour": 15,
+      "at": [
+       -110.0,
+       -176.0,
+       20.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Curved top descending outward"
+     }
+    ],
+    [
+     {
+      "id": "tier2-arcfr",
+      "ref": "65617.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -200.0,
+       -40.0
+      ]
+     },
+     {
+      "id": "tier2-arcfl",
+      "ref": "65617.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -200.0,
+       -40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "tier2-arcbr",
+      "ref": "65617.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -200.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "tier2-arcbl",
+      "ref": "65617.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -200.0,
+       40.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ]
+     },
+     {
+      "id": "tier2-front-l",
+      "ref": "37352.dat",
+      "colour": 4,
+      "at": [
+       -20.0,
+       -200.0,
+       -90.0
+      ],
+      "purpose": "Red crown band"
+     },
+     {
+      "id": "tier2-front-r",
+      "ref": "37352.dat",
+      "colour": 4,
+      "at": [
+       20.0,
+       -200.0,
+       -90.0
+      ],
+      "purpose": "Red crown band"
+     },
+     {
+      "id": "tier2-right-l",
+      "ref": "37352.dat",
+      "colour": 4,
+      "at": [
+       90.0,
+       -200.0,
+       -20.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Red crown band"
+     },
+     {
+      "id": "tier2-right-r",
+      "ref": "37352.dat",
+      "colour": 4,
+      "at": [
+       90.0,
+       -200.0,
+       20.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Red crown band"
+     },
+     {
+      "id": "tier2-back-l",
+      "ref": "37352.dat",
+      "colour": 4,
+      "at": [
+       -20.0,
+       -200.0,
+       90.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Red crown band"
+     },
+     {
+      "id": "tier2-back-r",
+      "ref": "37352.dat",
+      "colour": 4,
+      "at": [
+       20.0,
+       -200.0,
+       90.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ],
+      "purpose": "Red crown band"
+     },
+     {
+      "id": "tier2-left-l",
+      "ref": "37352.dat",
+      "colour": 4,
+      "at": [
+       -90.0,
+       -200.0,
+       -20.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Red crown band"
+     },
+     {
+      "id": "tier2-left-r",
+      "ref": "37352.dat",
+      "colour": 4,
+      "at": [
+       -90.0,
+       -200.0,
+       20.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ],
+      "purpose": "Red crown band"
+     }
+    ],
+    [
+     {
+      "id": "domefr",
+      "ref": "49612.dat",
+      "colour": 15,
+      "at": [
+       10.0,
+       -240.0,
+       -10.0
+      ]
+     },
+     {
+      "id": "domefl",
+      "ref": "49612.dat",
+      "colour": 15,
+      "at": [
+       -10.0,
+       -240.0,
+       -10.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "domebr",
+      "ref": "49612.dat",
+      "colour": 15,
+      "at": [
+       10.0,
+       -240.0,
+       10.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        -1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "domebl",
+      "ref": "49612.dat",
+      "colour": 15,
+      "at": [
+       -10.0,
+       -240.0,
+       10.0
+      ],
+      "matrix": [
+       [
+        -1.0,
+        0.0,
+        0.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        0.0,
+        0.0,
+        -1.0
+       ]
+      ]
+     }
+    ],
+    [
+     {
+      "id": "antenna-base",
+      "ref": "30367c.dat",
+      "colour": 4,
+      "at": [
+       0.0,
+       -264.0,
+       0.0
+      ],
+      "purpose": "Domed cap on the four centre studs"
+     },
+     {
+      "id": "antenna",
+      "ref": "3957a.dat",
+      "colour": 179,
+      "at": [
+       0.0,
+       -272.0,
+       0.0
+      ],
+      "purpose": "Antenna on the cap's hollow stud"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "comet-faceplate.ldr",
+   "description": "Comet porthole: silver ring, smoked glass and rivets, built flat",
+   "steps": [
+    [
+     {
+      "id": "ring",
+      "ref": "11213.dat",
+      "colour": 179,
+      "at": [
+       0.0,
+       -8.0,
+       0.0
+      ],
+      "purpose": "Seated on the eight forward-facing side studs"
+     }
+    ],
+    [
+     {
+      "id": "jumper",
+      "ref": "87580.dat",
+      "colour": 179,
+      "at": [
+       0.0,
+       -16.0,
+       0.0
+      ],
+      "purpose": "Centre stud for the glass"
+     },
+     {
+      "id": "rivet-0",
+      "ref": "98138.dat",
+      "colour": 179,
+      "at": [
+       50.0,
+       -16.0,
+       -10.0
+      ],
+      "purpose": "Rivet"
+     },
+     {
+      "id": "rivet-1",
+      "ref": "98138.dat",
+      "colour": 179,
+      "at": [
+       50.0,
+       -16.0,
+       10.0
+      ],
+      "purpose": "Rivet"
+     },
+     {
+      "id": "rivet-2",
+      "ref": "98138.dat",
+      "colour": 179,
+      "at": [
+       -50.0,
+       -16.0,
+       -10.0
+      ],
+      "purpose": "Rivet"
+     },
+     {
+      "id": "rivet-3",
+      "ref": "98138.dat",
+      "colour": 179,
+      "at": [
+       -50.0,
+       -16.0,
+       10.0
+      ],
+      "purpose": "Rivet"
+     },
+     {
+      "id": "rivet-4",
+      "ref": "98138.dat",
+      "colour": 179,
+      "at": [
+       -10.0,
+       -16.0,
+       50.0
+      ],
+      "purpose": "Rivet"
+     },
+     {
+      "id": "rivet-5",
+      "ref": "98138.dat",
+      "colour": 179,
+      "at": [
+       10.0,
+       -16.0,
+       50.0
+      ],
+      "purpose": "Rivet"
+     },
+     {
+      "id": "rivet-6",
+      "ref": "98138.dat",
+      "colour": 179,
+      "at": [
+       -10.0,
+       -16.0,
+       -50.0
+      ],
+      "purpose": "Rivet"
+     },
+     {
+      "id": "rivet-7",
+      "ref": "98138.dat",
+      "colour": 179,
+      "at": [
+       10.0,
+       -16.0,
+       -50.0
+      ],
+      "purpose": "Rivet"
+     }
+    ],
+    [
+     {
+      "id": "glass",
+      "ref": "3960.dat",
+      "colour": 40,
+      "at": [
+       0.0,
+       -32.0,
+       0.0
+      ],
+      "purpose": "Smoked bubble glass"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "comet-cheek.ldr",
+   "description": "Comet cheek port: red disc, silver dish and the hose spigot",
+   "steps": [
+    [
+     {
+      "id": "disc",
+      "ref": "60474.dat",
+      "colour": 4,
+      "at": [
+       0.0,
+       -8.0,
+       0.0
+      ],
+      "purpose": "Round base on the side-stud field"
+     }
+    ],
+    [
+     {
+      "id": "jumper",
+      "ref": "87580.dat",
+      "colour": 4,
+      "at": [
+       0.0,
+       -16.0,
+       0.0
+      ],
+      "purpose": "Centre stud for the dish"
+     }
+    ],
+    [
+     {
+      "id": "dish",
+      "ref": "3960.dat",
+      "colour": 179,
+      "at": [
+       0.0,
+       -32.0,
+       0.0
+      ],
+      "purpose": "Ear dish"
+     }
+    ],
+    [
+     {
+      "id": "port",
+      "ref": "85861.dat",
+      "colour": 4,
+      "at": [
+       0.0,
+       -40.0,
+       0.0
+      ],
+      "purpose": "Hose port: the ribbed hose slides over this stud"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "comet-vent.ldr",
+   "description": "Comet rear vent: grille plate on the backward-facing side studs",
+   "steps": [
+    [
+     {
+      "id": "plate",
+      "ref": "3020.dat",
+      "colour": 72,
+      "at": [
+       0.0,
+       -8.0,
+       0.0
+      ],
+      "purpose": "Seated on the eight backward-facing side studs"
+     }
+    ],
+    [
+     {
+      "id": "grille-0",
+      "ref": "2412b.dat",
+      "colour": 179,
+      "at": [
+       -20.0,
+       -16.0,
+       -10.0
+      ],
+      "purpose": "Vent grille"
+     },
+     {
+      "id": "grille-1",
+      "ref": "2412b.dat",
+      "colour": 179,
+      "at": [
+       20.0,
+       -16.0,
+       -10.0
+      ],
+      "purpose": "Vent grille"
+     },
+     {
+      "id": "grille-2",
+      "ref": "2412b.dat",
+      "colour": 179,
+      "at": [
+       -20.0,
+       -16.0,
+       10.0
+      ],
+      "purpose": "Vent grille"
+     },
+     {
+      "id": "grille-3",
+      "ref": "2412b.dat",
+      "colour": 179,
+      "at": [
+       20.0,
+       -16.0,
+       10.0
+      ],
+      "purpose": "Vent grille"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "comet-stand.ldr",
+   "description": "Comet display stand: tiled base, plaque, round column and silver collar",
+   "steps": [
+    [
+     {
+      "id": "base-1",
+      "ref": "91405.dat",
+      "colour": 0,
+      "at": [
+       0.0,
+       16.0,
+       0.0
+      ]
+     },
+     {
+      "id": "base-1-rear-r",
+      "ref": "3035.dat",
+      "colour": 0,
+      "at": [
+       80.0,
+       16.0,
+       200.0
+      ]
+     },
+     {
+      "id": "base-1-rear-l",
+      "ref": "3035.dat",
+      "colour": 0,
+      "at": [
+       -80.0,
+       16.0,
+       200.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "base-2",
+      "ref": "91405.dat",
+      "colour": 0,
+      "at": [
+       0.0,
+       8.0,
+       80.0
+      ],
+      "purpose": "Bonds the rear strip to the front square"
+     },
+     {
+      "id": "base-2-front-r",
+      "ref": "3035.dat",
+      "colour": 0,
+      "at": [
+       80.0,
+       8.0,
+       -120.0
+      ]
+     },
+     {
+      "id": "base-2-front-l",
+      "ref": "3035.dat",
+      "colour": 0,
+      "at": [
+       -80.0,
+       8.0,
+       -120.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "tile-edge-r",
+      "ref": "4162.dat",
+      "colour": 0,
+      "at": [
+       80.0,
+       0.0,
+       -150.0
+      ]
+     },
+     {
+      "id": "tile-plaque-r",
+      "ref": "87079.dat",
+      "colour": 0,
+      "at": [
+       120.0,
+       0.0,
+       -120.0
+      ]
+     },
+     {
+      "id": "tile-plaque-end-r",
+      "ref": "3069b.dat",
+      "colour": 0,
+      "at": [
+       70.0,
+       0.0,
+       -120.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "tile-front-r",
+      "ref": "6934.dat",
+      "colour": 0,
+      "at": [
+       100.0,
+       0.0,
+       -70.0
+      ]
+     },
+     {
+      "id": "tile-waist-r",
+      "ref": "1751.dat",
+      "colour": 0,
+      "at": [
+       120.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "id": "tile-waist-in-r",
+      "ref": "87079.dat",
+      "colour": 0,
+      "at": [
+       60.0,
+       0.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "tile-back-r",
+      "ref": "6320.dat",
+      "colour": 0,
+      "at": [
+       80.0,
+       0.0,
+       100.0
+      ]
+     },
+     {
+      "id": "tile-rear-r",
+      "ref": "1751.dat",
+      "colour": 0,
+      "at": [
+       120.0,
+       0.0,
+       200.0
+      ]
+     },
+     {
+      "id": "tile-edge-l",
+      "ref": "4162.dat",
+      "colour": 0,
+      "at": [
+       -80.0,
+       0.0,
+       -150.0
+      ]
+     },
+     {
+      "id": "tile-plaque-l",
+      "ref": "87079.dat",
+      "colour": 0,
+      "at": [
+       -120.0,
+       0.0,
+       -120.0
+      ]
+     },
+     {
+      "id": "tile-plaque-end-l",
+      "ref": "3069b.dat",
+      "colour": 0,
+      "at": [
+       -70.0,
+       0.0,
+       -120.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "tile-front-l",
+      "ref": "6934.dat",
+      "colour": 0,
+      "at": [
+       -100.0,
+       0.0,
+       -70.0
+      ]
+     },
+     {
+      "id": "tile-waist-l",
+      "ref": "1751.dat",
+      "colour": 0,
+      "at": [
+       -120.0,
+       0.0,
+       0.0
+      ]
+     },
+     {
+      "id": "tile-waist-in-l",
+      "ref": "87079.dat",
+      "colour": 0,
+      "at": [
+       -60.0,
+       0.0,
+       0.0
+      ],
+      "matrix": [
+       [
+        0.0,
+        0.0,
+        1.0
+       ],
+       [
+        0.0,
+        1.0,
+        0.0
+       ],
+       [
+        -1.0,
+        0.0,
+        0.0
+       ]
+      ]
+     },
+     {
+      "id": "tile-back-l",
+      "ref": "6320.dat",
+      "colour": 0,
+      "at": [
+       -80.0,
+       0.0,
+       100.0
+      ]
+     },
+     {
+      "id": "tile-rear-l",
+      "ref": "1751.dat",
+      "colour": 0,
+      "at": [
+       -120.0,
+       0.0,
+       200.0
+      ]
+     },
+     {
+      "id": "tile-front-mid",
+      "ref": "87079.dat",
+      "colour": 0,
+      "at": [
+       0.0,
+       0.0,
+       -80.0
+      ]
+     },
+     {
+      "id": "tile-front-mid-b",
+      "ref": "2431.dat",
+      "colour": 0,
+      "at": [
+       0.0,
+       0.0,
+       -50.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "plaque-plate",
+      "ref": "3795.dat",
+      "colour": 0,
+      "at": [
+       0.0,
+       0.0,
+       -120.0
+      ],
+      "purpose": "Raised plaque"
+     },
+     {
+      "id": "plaque",
+      "ref": "69729.dat",
+      "colour": 297,
+      "at": [
+       0.0,
+       -8.0,
+       -120.0
+      ],
+      "purpose": "Name plaque"
+     },
+     {
+      "id": "column-foot",
+      "ref": "60474.dat",
+      "colour": 72,
+      "at": [
+       0.0,
+       0.0,
+       0.0
+      ],
+      "purpose": "Column foot in its recess"
+     }
+    ],
+    [
+     {
+      "id": "column-0",
+      "ref": "87081.dat",
+      "colour": 72,
+      "at": [
+       0.0,
+       -24.0,
+       0.0
+      ],
+      "purpose": "Round column"
+     }
+    ],
+    [
+     {
+      "id": "column-1",
+      "ref": "87081.dat",
+      "colour": 72,
+      "at": [
+       0.0,
+       -48.0,
+       0.0
+      ],
+      "purpose": "Round column"
+     }
+    ],
+    [
+     {
+      "id": "column-2",
+      "ref": "87081.dat",
+      "colour": 72,
+      "at": [
+       0.0,
+       -72.0,
+       0.0
+      ],
+      "purpose": "Round column"
+     }
+    ],
+    [
+     {
+      "id": "column-3",
+      "ref": "87081.dat",
+      "colour": 72,
+      "at": [
+       0.0,
+       -96.0,
+       0.0
+      ],
+      "purpose": "Round column"
+     }
+    ],
+    [
+     {
+      "id": "collar-ring",
+      "ref": "18897.dat",
+      "colour": 179,
+      "at": [
+       0.0,
+       -120.0,
+       0.0
+      ],
+      "purpose": "Neck ring"
+     }
+    ],
+    [
+     {
+      "id": "collar-plate",
+      "ref": "74611.dat",
+      "colour": 179,
+      "at": [
+       0.0,
+       -128.0,
+       0.0
+      ],
+      "purpose": "Collar flange under the helmet floor"
+     }
+    ]
+   ]
+  },
+  {
+   "name": "comet-backpack.ldr",
+   "description": "Comet backpack: twin red tanks with cone shoulders, valves and a strap",
+   "steps": [
+    [
+     {
+      "id": "foot-r",
+      "ref": "60474.dat",
+      "colour": 179,
+      "at": [
+       40.0,
+       0.0,
+       200.0
+      ],
+      "purpose": "Tank foot ring"
+     },
+     {
+      "id": "foot-l",
+      "ref": "60474.dat",
+      "colour": 179,
+      "at": [
+       -40.0,
+       0.0,
+       200.0
+      ],
+      "purpose": "Tank foot ring"
+     }
+    ],
+    [
+     {
+      "id": "tank-low0-r",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -24.0,
+       200.0
+      ]
+     },
+     {
+      "id": "tank-low0-l",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -24.0,
+       200.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "tank-low1-r",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -48.0,
+       200.0
+      ]
+     },
+     {
+      "id": "tank-low1-l",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -48.0,
+       200.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "strap",
+      "ref": "3035.dat",
+      "colour": 72,
+      "at": [
+       0.0,
+       -56.0,
+       200.0
+      ],
+      "purpose": "Harness strap through both tanks"
+     }
+    ],
+    [
+     {
+      "id": "tank-high0-r",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -80.0,
+       200.0
+      ]
+     },
+     {
+      "id": "tank-high0-l",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -80.0,
+       200.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "tank-high1-r",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -104.0,
+       200.0
+      ]
+     },
+     {
+      "id": "tank-high1-l",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -104.0,
+       200.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "tank-high2-r",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -128.0,
+       200.0
+      ]
+     },
+     {
+      "id": "tank-high2-l",
+      "ref": "87081.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -128.0,
+       200.0
+      ]
+     }
+    ],
+    [
+     {
+      "id": "band-r",
+      "ref": "60474.dat",
+      "colour": 179,
+      "at": [
+       40.0,
+       -136.0,
+       200.0
+      ],
+      "purpose": "Silver neck band"
+     },
+     {
+      "id": "band-l",
+      "ref": "60474.dat",
+      "colour": 179,
+      "at": [
+       -40.0,
+       -136.0,
+       200.0
+      ],
+      "purpose": "Silver neck band"
+     }
+    ],
+    [
+     {
+      "id": "shoulder-r",
+      "ref": "3943b.dat",
+      "colour": 4,
+      "at": [
+       40.0,
+       -184.0,
+       200.0
+      ],
+      "purpose": "Cone shoulder"
+     },
+     {
+      "id": "shoulder-l",
+      "ref": "3943b.dat",
+      "colour": 4,
+      "at": [
+       -40.0,
+       -184.0,
+       200.0
+      ],
+      "purpose": "Cone shoulder"
+     }
+    ],
+    [
+     {
+      "id": "valve-r",
+      "ref": "30367c.dat",
+      "colour": 179,
+      "at": [
+       40.0,
+       -208.0,
+       200.0
+      ],
+      "purpose": "Valve; its hollow stud is the hose spigot"
+     },
+     {
+      "id": "valve-l",
+      "ref": "30367c.dat",
+      "colour": 179,
+      "at": [
+       -40.0,
+       -208.0,
+       200.0
+      ],
+      "purpose": "Valve; its hollow stud is the hose spigot"
+     }
+    ]
+   ]
+  }
+ ]
+}

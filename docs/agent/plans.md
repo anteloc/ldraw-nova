@@ -68,6 +68,8 @@ Use colour 16 inside reusable submodels only when an explicit ancestor colour re
 
 Use `extract --section NAME --namespace UNIQUE --output output/assets/NAME.mpd` to copy an attributed dependency closure from a reference. Keep its `.manifest.json` and use the returned `root` name in the plan. Extraction may retain invalid source for review: check its diagnostics before reuse. Explicit BFC/rotation repairs are recorded changes, not physical certification.
 
+For hoses, cables, rubber bands or chains, generate an MPD with `flex build CONSTRAINTS.ldr --output output/my-hose.mpd` and import it through `assets` the same way. Keep the constraints and manifest. See [flexible parts](flexible-parts.md) for the optional LSynth installation and physical part boundaries.
+
 ## Use Python for calculations
 
 The [Python example](../../examples/python_api.py) produces a four-brick tower and preserves its editable plan:

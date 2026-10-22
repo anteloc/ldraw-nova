@@ -12,6 +12,8 @@ The supplied `data/offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overri
 
 ## Review a model
 
+For flexible geometry, first use `flex types` and `flex build CONSTRAINTS.ldr --output output/asset.mpd`. Install the optional sibling `lsynth-nova` port with `./setup.sh --with-lsynth`. The resulting MPD works with normal review and plan assets; its manifest records synthesis provenance. See [flexible parts](flexible-parts.md) for path constraints, BOM boundaries and limitations.
+
 ```sh
 ./ldraw-agent review output/my-model.plan.json
 ./ldraw-agent review output/my-model.mpd --force

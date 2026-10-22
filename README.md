@@ -40,6 +40,7 @@ Existing JSON plans, `build --output`, individual check/render commands and shel
 | Plan format, placements and Python API | [Plan guide](docs/agent/plans.md) |
 | Commands, review options and artifacts | [Tool reference](docs/agent/tooling.md) |
 | Geometry checks and limitations | [Validation](docs/agent/validation.md) |
+| Flexible hoses, cables, bands, chains and treads | [LSynth guide](docs/agent/flexible-parts.md), [small examples](examples/flex/README.md) |
 | Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/snot.md), [parrot core](examples/snot/parrot/README.md), [cat details and joints](examples/snot/cat/README.md), [Halcyon original interceptor](examples/snot/halcyon/README.md) |
 | Spaceships: SNOT by default | [Halcyon default model](examples/snot/halcyon/README.md), [spaceship guide](docs/agent/spaceships.md) |
 | Reusable constructions and model examples | [Reference atlas](examples/reference-atlas/README.md), `./ldraw-agent examples --help` |

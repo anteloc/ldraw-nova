@@ -60,6 +60,15 @@ def parser():
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
+    c = commands.add_parser("flex", help="Synthesize flexible MPD assets with optional lsynth-nova")
+    flex = c.add_subparsers(dest="flex_command", required=True)
+    flex.add_parser("types", help="List synthesis types, products and constraint parts")
+    f = flex.add_parser("build", help="Generate an MPD from visible LSynth constraints")
+    f.add_argument("file")
+    f.add_argument("--output", required=True)
+    f.add_argument("--namespace", help="Unique asset prefix (default: output filename stem)")
+    f.add_argument("--force", action="store_true")
+    f.add_argument("--timeout", type=positive, default=90)
     c = commands.add_parser("review", help="Build if needed, check geometry, render and compare BOMs in one folder")
     c.add_argument("file", help="JSON plan or existing MPD/LDR assembly")
     c.add_argument("--outdir", help="Dedicated artifact directory (default: SOURCE-review beside input)")
@@ -334,17 +343,22 @@ def parser():
 
 
 def run(args):
+    if args.command == "flex" and args.flex_command == "types":
+        from .flex import definitions
+        return definitions(), 0
     if args.command == "examples":
         from .examples import search_examples
         if args.details and args.scale:raise ValueError('--scale applies to building examples')
         return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family),0
     if args.command == "doctor":
+        from .flex import availability
         library = library_path(args.library)
         report = dict(python=sys.version.split()[0], packages={n: version(n) for n in ["pyldraw3", "numpy", "jsonschema"]},
                       library=str(library), library_present=(library / "parts").is_dir(),
                       models=str(models_path()), database=str(database_path()), pdf=str(ROOT / "docs/ldraw-specs.pdf"),
                       shadow_sources=jsonable(shadow_paths([] if args.no_shadow else args.shadow)),
                       tools={t: shutil.which(t) for t in ["pdftotext", "leocad", "jev-rerank", "mpd2glb.sh", "ldraw-render-steps.sh"]})
+        report["optional"] = {"lsynth-nova": availability()}
         return report, 0 if report["library_present"] and report["tools"]["pdftotext"] else 2
     if args.command == "spec":
         return search_spec(args.query, args.page, args.limit), 0
@@ -358,6 +372,9 @@ def run(args):
         return search_models(args.query, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
     library = library_path(args.library)
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
+    if args.command == "flex":
+        from .flex import build
+        return build(args.file, args.output, parts, namespace=args.namespace, force=args.force, timeout=args.timeout), 0
     if args.command == 'review':
         return review_model(args.file, parts, library, outdir=args.outdir, force=args.force,
                             section=args.section, colour=args.colour, views=args.views,
