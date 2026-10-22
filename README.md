@@ -40,7 +40,8 @@ Existing JSON plans, `build --output`, individual check/render commands and shel
 | Plan format, placements and Python API | [Plan guide](docs/agent/plans.md) |
 | Commands, review options and artifacts | [Tool reference](docs/agent/tooling.md) |
 | Geometry checks and limitations | [Validation](docs/agent/validation.md) |
-| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/snot.md), [parrot core](examples/snot/parrot/README.md), [cat details and joints](examples/snot/cat/README.md) |
+| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/snot.md), [parrot core](examples/snot/parrot/README.md), [cat details and joints](examples/snot/cat/README.md), [Halcyon original interceptor](examples/snot/halcyon/README.md) |
+| Spaceships: SNOT by default | [Halcyon default model](examples/snot/halcyon/README.md), [spaceship guide](docs/agent/spaceships.md) |
 | Reusable constructions and model examples | [Reference atlas](examples/reference-atlas/README.md), `./ldraw-agent examples --help` |
 
 Semantic reference search uses [jev-rerank](https://github.com/anteloc/jev-rerank) and a TypeSafe API key. It is optional: offline catalogs, examples and `discover search ... --engine fts` remain available. Follow the [availability check](docs/agent/reference-discovery.md#check-jev-availability-before-searching) before using the service.

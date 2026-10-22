@@ -6,6 +6,10 @@ Then use the [cat studies](../../examples/snot/cat/README.md) for single-stud di
 
 For vehicle bodywork, use the [Ferrari F40 reference](../../examples/snot/ferrari-f40/README.md): a searchable map of 74 sections and five small build studies covering body mounts, door trim, lamp/grille corners, window louvers and fascia supports. Its flattened main car and saved callouts differ; use the checked small studies and their parent notes when adapting a construction.
 
+For spacecraft, use the [6208 B-Wing study](../../examples/snot/b-wing-6208/README.md). Its exposed bracket core, opposing curved skins and wing-root carrier show how to combine System surfaces with Technic attachments. This is a source-and-image learning reference; geometry and flexible-part verification were deferred for this study.
+
+The [Halcyon interceptor](../../examples/snot/halcyon/README.md) is the default model to follow for all new spaceships, which use SNOT by default. Fifteen `30414` side-stud bricks in one hull course expose stud faces to port, starboard, forward and aft. Flank panels, pod stripes, intakes, nozzles and cannons are each built upright in their own section and seated with `stud - R * socket`. The 195-piece model forms one automatic connection group, and its test checks every SNOT interface's contact count.
+
 ```sh
 ./ldraw-agent review examples/snot/parrot/head.plan.json --outdir output/snot-head
 ```

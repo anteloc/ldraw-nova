@@ -63,7 +63,7 @@ Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM
 ./ldraw-agent spaceship list
 ./ldraw-agent spaceship details
 ./ldraw-agent spaceship brief starfighter --output output/starfighter-brief.json
-./ldraw-agent spaceship export b-wing --outdir output/my-ship
+./ldraw-agent spaceship export halcyon --outdir output/my-ship
 ```
 
 `manual` shares the mechanism step renderer but uses construction notes: lesson, construction, interfaces, parent context and reuse notes. `--overview` renders completed-model views and retains source step data; `--no-render` leaves rendered evidence pending. Existing mechanism commands retain their operation-specific notes and review requirements. See [build manuals and atlas additions](build-manuals.md) and [spaceship design](spaceships.md).

@@ -10,8 +10,12 @@ def search_examples(query='', *, limit=5, scale=None, details=False, family='bui
     path=ROOT/f'examples/{family}-atlas/catalog.json'
     if not path.is_file():raise ValueError(f'{family.title()} atlas catalog missing')
     catalog=json.loads(path.read_text())
+    candidates=list(catalog['details' if details else 'examples'])
+    if family == 'spaceship' and not details:
+        from .spaceships import default_reference
+        candidates.insert(0,default_reference())
     terms=query.casefold().split();rows=[]
-    for row in catalog['details' if details else 'examples']:
+    for row in candidates:
         text=' '.join(str(row.get(k,'')) for k in ['key','title','category','lesson','description','placement_notes','modules']).casefold()
         if not all(t in text for t in terms):continue
         if scale and row.get('scale')!=scale:continue

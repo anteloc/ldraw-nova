@@ -17,6 +17,8 @@ Start with relevant examples and inspect unfamiliar parts:
 ./ldraw-agent design palettes
 ```
 
+**Spaceships use SNOT by default.** Follow the [Halcyon](examples/snot/halcyon/README.md) for construction and visual quality: a supported core, attached sideways hull skins, axial engine modules, smooth contours and thin wing edges. Make SNOT part of the main exterior design. Adapt this approach to each ship's own silhouette and scale; upright internal frames are still appropriate.
+
 Use the appropriate guide as the design requires it:
 
 | Task | Guide |

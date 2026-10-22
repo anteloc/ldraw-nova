@@ -1,0 +1,552 @@
+0 FILE halcyon.ldr
+0 Halcyon SNOT interceptor on its display stand
+0 Name: halcyon.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // hull: halcyon-hull.ldr
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 halcyon-hull.ldr
+0 STEP
+0 // nose: halcyon-nose.ldr
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 halcyon-nose.ldr
+0 STEP
+0 // strake-s: halcyon-strake-s.ldr
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 halcyon-strake-s.ldr
+0 // wing-s: halcyon-wing-s.ldr
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 halcyon-wing-s.ldr
+0 // strake-p: halcyon-strake-p.ldr
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 halcyon-strake-p.ldr
+0 // wing-p: halcyon-wing-p.ldr
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 halcyon-wing-p.ldr
+0 STEP
+0 // flank-s: halcyon-flank-s.ldr
+1 16 40 -36 -100 0 -1 0 0 0 -1 1 0 0 halcyon-flank-s.ldr
+0 // pod-panel-s: halcyon-pod-panel-s.ldr
+1 16 120 -46 140 0 -1 0 0 0 -1 1 0 0 halcyon-pod-panel-s.ldr
+0 // flank-p: halcyon-flank-p.ldr
+1 16 -40 -36 -100 0 1 0 0 0 1 1 0 0 halcyon-flank-p.ldr
+0 // pod-panel-p: halcyon-pod-panel-p.ldr
+1 16 -120 -46 140 0 1 0 0 0 1 1 0 0 halcyon-pod-panel-p.ldr
+0 STEP
+0 // intake-s: halcyon-intake.ldr
+1 16 80 -36 32 1 0 0 0 0 -1 0 1 0 halcyon-intake.ldr
+0 // exhaust-s: halcyon-exhaust.ldr
+1 16 80 -36 248 1 0 0 0 0 1 0 -1 0 halcyon-exhaust.ldr
+0 // cannon-s: halcyon-cannon.ldr
+1 16 130 -38 -8 1 0 0 0 0 -1 0 1 0 halcyon-cannon.ldr
+0 // intake-p: halcyon-intake.ldr
+1 16 -80 -36 32 1 0 0 0 0 -1 0 1 0 halcyon-intake.ldr
+0 // exhaust-p: halcyon-exhaust.ldr
+1 16 -80 -36 248 1 0 0 0 0 1 0 -1 0 halcyon-exhaust.ldr
+0 // cannon-p: halcyon-cannon.ldr
+1 16 -130 -38 -8 1 0 0 0 0 -1 0 1 0 halcyon-cannon.ldr
+0 // aft-cap: halcyon-aft-cap.ldr
+1 16 0 -36 248 1 0 0 0 0 1 0 -1 0 halcyon-aft-cap.ldr
+0 STEP
+0 // cockpit: halcyon-cockpit.ldr
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 halcyon-cockpit.ldr
+0 STEP
+0 // stand: halcyon-stand.ldr
+1 16 0 0 80 1 0 0 0 1 0 0 0 1 halcyon-stand.ldr
+0 NOFILE
+0 FILE halcyon-hull.ldr
+0 Halcyon hull core and engine pods: four keel plates, side-stud course, deck
+0 Name: halcyon-hull.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // k1-fwd: 3034.dat
+1 72 0 -8 -60 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // k1-waist: 3710.dat
+1 72 0 -8 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // k1-aft: 3030.dat
+1 72 0 -8 140 0 0 1 0 1 0 -1 0 0 3030.dat
+0 // k1-pod-s: 3030.dat
+1 72 80 -8 140 0 0 1 0 1 0 -1 0 0 3030.dat
+0 // k1-pod-p: 3030.dat
+1 72 -80 -8 140 0 0 1 0 1 0 -1 0 0 3030.dat
+0 STEP
+0 // k2-fwd: 3032.dat
+1 72 0 -16 -100 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // k2-mid: 3032.dat
+1 72 0 -16 20 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // k2-pod-in-s: 3022.dat
+1 72 60 -16 60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // k2-pod-in-p: 3022.dat
+1 72 -60 -16 60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // k2-bridge: 3036.dat
+1 72 0 -16 140 1 0 0 0 1 0 0 0 1 3036.dat
+0 // k2-bridge-tail: 3034.dat
+1 72 0 -16 220 1 0 0 0 1 0 0 0 1 3034.dat
+0 STEP
+0 // k3-fwd: 3030.dat
+1 72 0 -24 -80 0 0 1 0 1 0 -1 0 0 3030.dat
+0 // k3-waist: 3710.dat
+1 72 0 -24 30 1 0 0 0 1 0 0 0 1 3710.dat
+0 // k3-aft: 3030.dat
+1 72 0 -24 140 0 0 1 0 1 0 -1 0 0 3030.dat
+0 // k3-pod-s: 3030.dat
+1 72 80 -24 140 0 0 1 0 1 0 -1 0 0 3030.dat
+0 // k3-pod-p: 3030.dat
+1 72 -80 -24 140 0 0 1 0 1 0 -1 0 0 3030.dat
+0 STEP
+0 // k4-fwd: 3035.dat
+1 72 0 -32 -120 0 0 1 0 1 0 -1 0 0 3035.dat
+0 // k4-mid: 3032.dat
+1 72 0 -32 20 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // k4-pod-in-s: 3022.dat
+1 72 60 -32 60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // k4-pod-in-p: 3022.dat
+1 72 -60 -32 60 1 0 0 0 1 0 0 0 1 3022.dat
+0 // k4-bridge: 3036.dat
+1 72 0 -32 140 1 0 0 0 1 0 0 0 1 3036.dat
+0 // k4-bridge-tail: 3034.dat
+1 72 0 -32 220 1 0 0 0 1 0 0 0 1 3034.dat
+0 // k4-pod-out-s: 3034.dat
+1 72 100 -32 120 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // k4-pod-tail-s: 3022.dat
+1 72 100 -32 220 1 0 0 0 1 0 0 0 1 3022.dat
+0 // k4-pod-out-p: 3034.dat
+1 72 -100 -32 120 0 0 1 0 1 0 -1 0 0 3034.dat
+0 // k4-pod-tail-p: 3022.dat
+1 72 -100 -32 220 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+0 // flank-mount-0-s: studs face (1, 0, 0)
+1 15 30 -56 -180 0 0 -1 0 1 0 1 0 0 30414.dat
+0 // flank-mount-1-s: studs face (1, 0, 0)
+1 15 30 -56 -100 0 0 -1 0 1 0 1 0 0 30414.dat
+0 // flank-mount-2-s: studs face (1, 0, 0)
+1 15 30 -56 -20 0 0 -1 0 1 0 1 0 0 30414.dat
+0 // intake-mount-s: studs face (0, 0, -1)
+1 72 80 -56 50 1 0 0 0 1 0 0 0 1 30414.dat
+0 // exhaust-mount-s: studs face (0, 0, 1)
+1 72 80 -56 230 -1 0 0 0 1 0 0 0 -1 30414.dat
+0 // pod-panel-mount-0-s: studs face (1, 0, 0)
+1 15 110 -56 100 0 0 -1 0 1 0 1 0 0 30414.dat
+0 // pod-panel-mount-1-s: studs face (1, 0, 0)
+1 15 110 -56 180 0 0 -1 0 1 0 1 0 0 30414.dat
+0 // pod-mid-s: 3008.dat
+1 72 90 -56 140 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // pod-in-s: 3007.dat
+1 15 60 -56 140 0 0 1 0 1 0 -1 0 0 3007.dat
+0 // flank-mount-0-p: studs face (-1, 0, 0)
+1 15 -30 -56 -180 0 0 1 0 1 0 -1 0 0 30414.dat
+0 // flank-mount-1-p: studs face (-1, 0, 0)
+1 15 -30 -56 -100 0 0 1 0 1 0 -1 0 0 30414.dat
+0 // flank-mount-2-p: studs face (-1, 0, 0)
+1 15 -30 -56 -20 0 0 1 0 1 0 -1 0 0 30414.dat
+0 // intake-mount-p: studs face (0, 0, -1)
+1 72 -80 -56 50 1 0 0 0 1 0 0 0 1 30414.dat
+0 // exhaust-mount-p: studs face (0, 0, 1)
+1 72 -80 -56 230 -1 0 0 0 1 0 0 0 -1 30414.dat
+0 // pod-panel-mount-0-p: studs face (-1, 0, 0)
+1 15 -110 -56 100 0 0 1 0 1 0 -1 0 0 30414.dat
+0 // pod-panel-mount-1-p: studs face (-1, 0, 0)
+1 15 -110 -56 180 0 0 1 0 1 0 -1 0 0 30414.dat
+0 // pod-mid-p: 3008.dat
+1 72 -90 -56 140 0 0 1 0 1 0 -1 0 0 3008.dat
+0 // pod-in-p: 3007.dat
+1 15 -60 -56 140 0 0 1 0 1 0 -1 0 0 3007.dat
+0 // core-0: 3001.dat
+1 72 0 -56 -180 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // core-1: 3001.dat
+1 72 0 -56 -100 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // core-2: 3001.dat
+1 72 0 -56 -20 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // core-waist: 3010.dat
+1 15 0 -56 30 1 0 0 0 1 0 0 0 1 3010.dat
+0 // core-front: 3010.dat
+1 72 0 -56 50 1 0 0 0 1 0 0 0 1 3010.dat
+0 // spine-s: 3007.dat
+1 72 20 -56 140 0 0 1 0 1 0 -1 0 0 3007.dat
+0 // spine-p: 3007.dat
+1 72 -20 -56 140 0 0 1 0 1 0 -1 0 0 3007.dat
+0 // tail-mount: studs face (0, 0, 1)
+1 72 0 -56 230 -1 0 0 0 1 0 0 0 -1 30414.dat
+0 STEP
+0 // deck-bow: 87079.dat
+1 15 0 -64 -200 1 0 0 0 1 0 0 0 1 87079.dat
+0 // deck-bow-b: 2431.dat
+1 15 0 -64 -170 1 0 0 0 1 0 0 0 1 2431.dat
+0 // deck-bow-stripe: 2431.dat
+1 321 0 -64 -150 1 0 0 0 1 0 0 0 1 2431.dat
+0 // cockpit-floor: 3032.dat
+1 72 0 -64 -80 0 0 1 0 1 0 -1 0 0 3032.dat
+0 // cockpit-floor-aft: 3710.dat
+1 72 0 -64 -10 1 0 0 0 1 0 0 0 1 3710.dat
+0 // deck-waist: 87079.dat
+1 15 0 -64 20 1 0 0 0 1 0 0 0 1 87079.dat
+0 STEP
+0 // cabin-sill-s: 3069b.dat
+1 71 30 -72 -120 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // cabin-side-s: 3069b.dat
+1 71 30 -72 -60 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // cabin-sill-p: 3069b.dat
+1 71 -30 -72 -120 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // cabin-side-p: 3069b.dat
+1 71 -30 -72 -60 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // cabin-console: 2431.dat
+1 321 0 -72 -90 1 0 0 0 1 0 0 0 1 2431.dat
+0 // cabin-seat: 3068b.dat
+1 72 0 -72 -60 1 0 0 0 1 0 0 0 1 3068b.dat
+0 // cabin-aft: 87079.dat
+1 72 0 -72 -20 1 0 0 0 1 0 0 0 1 87079.dat
+0 STEP
+0 // spine-front: 87079.dat
+1 72 0 -64 60 1 0 0 0 1 0 0 0 1 87079.dat
+0 // spine-mid: 87079.dat
+1 72 0 -64 100 1 0 0 0 1 0 0 0 1 87079.dat
+0 // spine-grille-a: 2412b.dat
+1 71 0 -64 130 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // spine-grille-b: 2412b.dat
+1 71 0 -64 150 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // spine-aft: 87079.dat
+1 72 0 -64 200 0 0 1 0 1 0 -1 0 0 87079.dat
+0 // spine-edge-s: 3069b.dat
+1 72 30 -64 140 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // tail-s: Swept tail on the spine edge
+1 15 30 -128 240 1 0 0 0 1 0 0 0 1 2340.dat
+0 // tail-cap-s: Tail cap
+1 321 30 -136 240 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // spine-edge-p: 3069b.dat
+1 72 -30 -64 140 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 // tail-p: Swept tail on the spine edge
+1 15 -30 -128 240 1 0 0 0 1 0 0 0 1 2340.dat
+0 // tail-cap-p: Tail cap
+1 321 -30 -136 240 0 0 1 0 1 0 -1 0 0 3069b.dat
+0 STEP
+0 // pod-top-s-in0: Curved pod top
+1 15 60 -56 60 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // pod-top-s-out0: Curved pod top
+1 15 100 -56 60 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-s-in1: Curved pod top
+1 15 60 -56 100 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // pod-top-s-out1: Curved pod top
+1 15 100 -56 100 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-s-in2: Curved pod top
+1 15 60 -56 140 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // pod-top-s-out2: Curved pod top
+1 15 100 -56 140 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-s-in3: Curved pod top
+1 15 60 -56 180 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // pod-top-s-out3: Curved pod top
+1 15 100 -56 180 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-s-in4: Curved pod top
+1 71 60 -56 220 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // pod-top-s-out4: Curved pod top
+1 71 100 -56 220 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-p-in0: Curved pod top
+1 15 -60 -56 60 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-p-out0: Curved pod top
+1 15 -100 -56 60 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // pod-top-p-in1: Curved pod top
+1 15 -60 -56 100 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-p-out1: Curved pod top
+1 15 -100 -56 100 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // pod-top-p-in2: Curved pod top
+1 15 -60 -56 140 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-p-out2: Curved pod top
+1 15 -100 -56 140 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // pod-top-p-in3: Curved pod top
+1 15 -60 -56 180 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-p-out3: Curved pod top
+1 15 -100 -56 180 0 0 1 0 1 0 -1 0 0 15068.dat
+0 // pod-top-p-in4: Curved pod top
+1 71 -60 -56 220 0 0 -1 0 1 0 1 0 0 15068.dat
+0 // pod-top-p-out4: Curved pod top
+1 71 -100 -56 220 0 0 1 0 1 0 -1 0 0 15068.dat
+0 NOFILE
+0 FILE halcyon-nose.ldr
+0 Halcyon nose: stepped handed wedge plates under a triple-curved wedge
+0 Name: halcyon-nose.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // wedge-1s: Starboard half of the pointed plate
+1 15 20 -8 -180 1 0 0 0 1 0 0 0 1 41770.dat
+0 // wedge-1p: Port half of the pointed plate
+1 15 -20 -8 -180 1 0 0 0 1 0 0 0 1 41769.dat
+0 STEP
+0 // wedge-2s: Starboard half of the pointed plate
+1 15 20 -16 -200 1 0 0 0 1 0 0 0 1 41770.dat
+0 // wedge-2p: Port half of the pointed plate
+1 15 -20 -16 -200 1 0 0 0 1 0 0 0 1 41769.dat
+0 STEP
+0 // wedge-3s: Starboard half of the pointed plate
+1 15 20 -24 -220 1 0 0 0 1 0 0 0 1 41770.dat
+0 // wedge-3p: Port half of the pointed plate
+1 15 -20 -24 -220 1 0 0 0 1 0 0 0 1 41769.dat
+0 STEP
+0 // wedge-4s: Starboard half of the pointed plate
+1 15 20 -32 -240 1 0 0 0 1 0 0 0 1 41770.dat
+0 // wedge-4p: Port half of the pointed plate
+1 15 -20 -32 -240 1 0 0 0 1 0 0 0 1 41769.dat
+0 STEP
+0 // wedge-5s: Starboard half of the pointed plate
+1 15 20 -40 -260 1 0 0 0 1 0 0 0 1 41770.dat
+0 // wedge-5p: Port half of the pointed plate
+1 15 -20 -40 -260 1 0 0 0 1 0 0 0 1 41769.dat
+0 STEP
+0 // cap: Triple-curved nose wedge
+1 15 0 -64 -260 1 0 0 0 1 0 0 0 1 47753.dat
+0 NOFILE
+0 FILE halcyon-strake-s.ldr
+0 Halcyon starboard strake
+0 Name: halcyon-strake-s.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // plate: Handed 4 x 8 wing plate; its inner column runs under the hull
+1 15 60 -8 -60 1 0 0 0 1 0 0 0 1 3933.dat
+0 STEP
+0 // tile-inner: 6636.dat
+1 15 50 -16 -40 0 0 1 0 1 0 -1 0 0 6636.dat
+0 // tile-outer: 2431.dat
+1 15 70 -16 -20 0 0 1 0 1 0 -1 0 0 2431.dat
+0 NOFILE
+0 FILE halcyon-strake-p.ldr
+0 Halcyon port strake
+0 Name: halcyon-strake-p.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // plate: Handed 4 x 8 wing plate; its inner column runs under the hull
+1 15 -60 -8 -60 1 0 0 0 1 0 0 0 1 3934.dat
+0 STEP
+0 // tile-inner: 6636.dat
+1 15 -50 -16 -40 0 0 1 0 1 0 -1 0 0 6636.dat
+0 // tile-outer: 2431.dat
+1 15 -70 -16 -20 0 0 1 0 1 0 -1 0 0 2431.dat
+0 NOFILE
+0 FILE halcyon-wing-s.ldr
+0 Halcyon starboard wing, root splice and tiles
+0 Name: halcyon-wing-s.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // splice: 3030.dat
+1 72 120 -16 140 0 0 1 0 1 0 -1 0 0 3030.dat
+0 STEP
+0 // wing: Handed 6 x 12 wing plate
+1 15 180 -24 120 1 0 0 0 1 0 0 0 1 30355.dat
+0 STEP
+0 // tile-root-a: 3069b.dat
+1 15 160 -32 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // cannon-mount: Side stud faces forward for the cannon
+1 71 130 -48 10 1 0 0 0 1 0 0 0 1 87087.dat
+0 // tile-root-b: 63864.dat
+1 15 150 -32 30 1 0 0 0 1 0 0 0 1 63864.dat
+0 // tile-root-c: 63864.dat
+1 15 150 -32 50 1 0 0 0 1 0 0 0 1 63864.dat
+0 // tile-mid-a: 87079.dat
+1 15 160 -32 80 1 0 0 0 1 0 0 0 1 87079.dat
+0 // tile-mid-b: 2431.dat
+1 15 160 -32 110 1 0 0 0 1 0 0 0 1 2431.dat
+0 // tile-mid-c: 87079.dat
+1 15 160 -32 140 1 0 0 0 1 0 0 0 1 87079.dat
+0 // tile-mid-d: 2431.dat
+1 15 160 -32 170 1 0 0 0 1 0 0 0 1 2431.dat
+0 // tile-edge: 63864.dat
+1 321 210 -32 150 0 0 1 0 1 0 -1 0 0 63864.dat
+0 // tile-aft: 87079.dat
+1 15 160 -32 200 1 0 0 0 1 0 0 0 1 87079.dat
+0 // tile-trailing: 2431.dat
+1 321 160 -32 230 1 0 0 0 1 0 0 0 1 2431.dat
+0 // tile-tip: 3068b.dat
+1 15 220 -32 220 1 0 0 0 1 0 0 0 1 3068b.dat
+0 STEP
+0 // tip-fin: Wingtip fin
+1 15 220 -32 190 1 0 0 0 1 0 0 0 1 44661.dat
+0 NOFILE
+0 FILE halcyon-wing-p.ldr
+0 Halcyon port wing, root splice and tiles
+0 Name: halcyon-wing-p.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // splice: 3030.dat
+1 72 -120 -16 140 0 0 1 0 1 0 -1 0 0 3030.dat
+0 STEP
+0 // wing: Handed 6 x 12 wing plate
+1 15 -180 -24 120 1 0 0 0 1 0 0 0 1 30356.dat
+0 STEP
+0 // tile-root-a: 3069b.dat
+1 15 -160 -32 10 1 0 0 0 1 0 0 0 1 3069b.dat
+0 // cannon-mount: Side stud faces forward for the cannon
+1 71 -130 -48 10 1 0 0 0 1 0 0 0 1 87087.dat
+0 // tile-root-b: 63864.dat
+1 15 -150 -32 30 1 0 0 0 1 0 0 0 1 63864.dat
+0 // tile-root-c: 63864.dat
+1 15 -150 -32 50 1 0 0 0 1 0 0 0 1 63864.dat
+0 // tile-mid-a: 87079.dat
+1 15 -160 -32 80 1 0 0 0 1 0 0 0 1 87079.dat
+0 // tile-mid-b: 2431.dat
+1 15 -160 -32 110 1 0 0 0 1 0 0 0 1 2431.dat
+0 // tile-mid-c: 87079.dat
+1 15 -160 -32 140 1 0 0 0 1 0 0 0 1 87079.dat
+0 // tile-mid-d: 2431.dat
+1 15 -160 -32 170 1 0 0 0 1 0 0 0 1 2431.dat
+0 // tile-edge: 63864.dat
+1 321 -210 -32 150 0 0 1 0 1 0 -1 0 0 63864.dat
+0 // tile-aft: 87079.dat
+1 15 -160 -32 200 1 0 0 0 1 0 0 0 1 87079.dat
+0 // tile-trailing: 2431.dat
+1 321 -160 -32 230 1 0 0 0 1 0 0 0 1 2431.dat
+0 // tile-tip: 3068b.dat
+1 15 -220 -32 220 1 0 0 0 1 0 0 0 1 3068b.dat
+0 STEP
+0 // tip-fin: Wingtip fin
+1 15 -220 -32 190 1 0 0 0 1 0 0 0 1 44661.dat
+0 NOFILE
+0 FILE halcyon-flank-s.ldr
+0 Halcyon starboard flank panel, built flat and mounted on side studs
+0 Name: halcyon-flank-s.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // base-fwd: Two-row base plate on the side studs
+1 15 -40 -8 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // base-aft: Two-row base plate on the side studs
+1 15 80 -8 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // stripe-fwd: Accent stripe, level with the pod stripes
+1 321 -80 -16 10 1 0 0 0 1 0 0 0 1 2431.dat
+0 // stripe-aft: Accent stripe bridging the base-plate seam
+1 321 40 -16 10 1 0 0 0 1 0 0 0 1 4162.dat
+0 // lower-fwd: Lower tile row
+1 15 -40 -16 -10 1 0 0 0 1 0 0 0 1 4162.dat
+0 // lower-aft: Lower tile row
+1 15 80 -16 -10 1 0 0 0 1 0 0 0 1 2431.dat
+0 NOFILE
+0 FILE halcyon-flank-p.ldr
+0 Halcyon port flank panel, built flat and mounted on side studs
+0 Name: halcyon-flank-p.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // base-fwd: Two-row base plate on the side studs
+1 15 -40 -8 0 1 0 0 0 1 0 0 0 1 3034.dat
+0 // base-aft: Two-row base plate on the side studs
+1 15 80 -8 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // stripe-fwd: Accent stripe, level with the pod stripes
+1 321 -80 -16 -10 1 0 0 0 1 0 0 0 1 2431.dat
+0 // stripe-aft: Accent stripe bridging the base-plate seam
+1 321 40 -16 -10 1 0 0 0 1 0 0 0 1 4162.dat
+0 // lower-fwd: Lower tile row
+1 15 -40 -16 10 1 0 0 0 1 0 0 0 1 4162.dat
+0 // lower-aft: Lower tile row
+1 15 80 -16 10 1 0 0 0 1 0 0 0 1 2431.dat
+0 NOFILE
+0 FILE halcyon-pod-panel-s.ldr
+0 Halcyon starboard pod stripe
+0 Name: halcyon-pod-panel-s.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // base: One-row base plate on the pod side studs
+1 15 0 -8 0 1 0 0 0 1 0 0 0 1 3460.dat
+0 STEP
+0 // stripe: Accent stripe
+1 321 0 -16 0 1 0 0 0 1 0 0 0 1 4162.dat
+0 NOFILE
+0 FILE halcyon-pod-panel-p.ldr
+0 Halcyon port pod stripe
+0 Name: halcyon-pod-panel-p.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // base: One-row base plate on the pod side studs
+1 15 0 -8 0 1 0 0 0 1 0 0 0 1 3460.dat
+0 STEP
+0 // stripe: Accent stripe
+1 321 0 -16 0 1 0 0 0 1 0 0 0 1 4162.dat
+0 NOFILE
+0 FILE halcyon-intake.ldr
+0 Halcyon engine intake: round ring and truncated-cone spinner
+0 Name: halcyon-intake.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // ring: Round 4 x 4 intake ring on four forward-facing studs
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 60474.dat
+0 STEP
+0 // hub: Spinner hub
+1 71 0 -24 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // spinner: Spinner cone
+1 15 0 -48 0 1 0 0 0 1 0 0 0 1 98100.dat
+0 NOFILE
+0 FILE halcyon-exhaust.ldr
+0 Halcyon exhaust nozzle: round plate, jumper, dish bell and glowing core
+0 Name: halcyon-exhaust.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // ring: Round 4 x 4 base seated on four aft-facing studs
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 60474.dat
+0 STEP
+0 // jumper: Centre stud for the dish
+1 72 0 -8 0 1 0 0 0 1 0 0 0 1 87580.dat
+0 STEP
+0 // bell: Nozzle bell
+1 71 0 -24 0 1 0 0 0 1 0 0 0 1 3960.dat
+0 STEP
+0 // core: Glowing core
+1 57 0 -32 0 1 0 0 0 1 0 0 0 1 4740.dat
+0 NOFILE
+0 FILE halcyon-aft-cap.ldr
+0 Halcyon aft cap: dark panel with grille and two glowing vents
+0 Name: halcyon-aft-cap.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // panel: Seated on the aft-facing tail studs
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // vent-s: Glowing vent
+1 57 30 -8 -10 1 0 0 0 1 0 0 0 1 98138.dat
+0 // vent-p: Glowing vent
+1 57 -30 -8 -10 1 0 0 0 1 0 0 0 1 98138.dat
+0 // grille: Grille
+1 71 0 -8 -10 1 0 0 0 1 0 0 0 1 2412b.dat
+0 // lower: Lower tile
+1 71 0 -8 10 1 0 0 0 1 0 0 0 1 2431.dat
+0 NOFILE
+0 FILE halcyon-cannon.ldr
+0 Halcyon cannon: stacked round parts on a forward-facing side stud
+0 Name: halcyon-cannon.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // barrel-0: 85861.dat
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 85861.dat
+0 STEP
+0 // barrel-1: 3062b.dat
+1 71 0 -24 0 1 0 0 0 1 0 0 0 1 3062b.dat
+0 STEP
+0 // barrel-2: 85861.dat
+1 321 0 -32 0 1 0 0 0 1 0 0 0 1 85861.dat
+0 STEP
+0 // barrel-3: 3062b.dat
+1 71 0 -56 0 1 0 0 0 1 0 0 0 1 3062b.dat
+0 STEP
+0 // barrel-4: 98138.dat
+1 72 0 -64 0 1 0 0 0 1 0 0 0 1 98138.dat
+0 NOFILE
+0 FILE halcyon-cockpit.ldr
+0 Halcyon canopy
+0 Name: halcyon-cockpit.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // canopy: Rounded pointed canopy on the cockpit floor studs
+1 40 0 -64 -90 1 0 0 0 1 0 0 0 1 30384.dat
+0 NOFILE
+0 FILE halcyon-stand.ldr
+0 Halcyon display stand
+0 Name: halcyon-stand.ldr
+0 Author: Halcyon generator (Claude Code, Claude Opus 5.5) for anteloc
+0 !LDRAW_ORG Model
+0 // base: Base plate 8 x 8 with rounded corners
+1 0 0 104 0 1 0 0 0 1 0 0 0 1 65140.dat
+0 STEP
+0 // flange: Round flange
+1 71 0 96 0 1 0 0 0 1 0 0 0 1 60474.dat
+0 STEP
+0 // column-0: Round column brick
+1 72 0 72 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // column-1: Round column brick
+1 72 0 48 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // column-2: Round column brick
+1 72 0 24 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 STEP
+0 // column-3: Round column brick
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 3941.dat
+0 NOFILE

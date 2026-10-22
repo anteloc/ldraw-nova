@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "family": "spaceship",
+  "archetype": "starfighter",
+  "title": "Halcyon SNOT interceptor",
+  "silhouette": "A readable nose-to-cockpit spine, distinctive wing arrangement and clearly separate engine masses.",
+  "modules": [
+    {
+      "section": "halcyon-hull.ldr",
+      "frame": "ship",
+      "role": "Keel plates K1-K4, side-stud course, deck, cockpit floor, pod tops, twin tails",
+      "exposes": "side studs at x=+-40 and +-120 (Y=-46), forward studs at Z=40, aft studs at Z=240"
+    },
+    {
+      "section": "halcyon-nose.ldr",
+      "frame": "ship",
+      "role": "Stepped handed wedge pairs under a 47753 triple-curved wedge",
+      "attachment": "each wedge pair overlaps the first hull row of the neighbouring keel layer"
+    },
+    {
+      "section": "halcyon-flank-s/p.ldr",
+      "frame": "built flat, local up -> +-X",
+      "role": "Accent stripe and white flank tiles",
+      "attachment": "12 side studs of three 30414 bricks per side"
+    },
+    {
+      "section": "halcyon-pod-panel-s/p.ldr",
+      "frame": "built flat, local up -> +-X",
+      "role": "Pod accent stripe",
+      "attachment": "8 side studs of two 30414 bricks per pod"
+    },
+    {
+      "section": "halcyon-intake.ldr",
+      "frame": "upright, local up -> -Z",
+      "role": "Intake ring and spinner",
+      "attachment": "four forward-facing 30414 studs per pod"
+    },
+    {
+      "section": "halcyon-exhaust.ldr",
+      "frame": "upright, local up -> +Z",
+      "role": "Nozzle ring, dish bell, glowing core",
+      "attachment": "four aft-facing 30414 studs per pod"
+    },
+    {
+      "section": "halcyon-aft-cap.ldr",
+      "frame": "upright, local up -> +Z",
+      "role": "Centre panel with vents",
+      "attachment": "four aft-facing 30414 studs"
+    },
+    {
+      "section": "halcyon-cannon.ldr",
+      "frame": "upright, local up -> -Z",
+      "role": "Wing-root cannon",
+      "attachment": "one forward 87087 side stud"
+    },
+    {
+      "section": "halcyon-strake-s/p.ldr",
+      "frame": "ship",
+      "role": "Leading-edge strake from handed 4 x 8 wing plates",
+      "attachment": "inner column sandwiched between K2 and the narrowed K1 core"
+    },
+    {
+      "section": "halcyon-wing-s/p.ldr",
+      "frame": "ship",
+      "role": "Handed 6 x 12 wing, root splice, tiles, tip fin, cannon mount",
+      "attachment": "K2 splice runs under the pod; wing at K3 outboard"
+    },
+    {
+      "section": "halcyon-cockpit.ldr",
+      "frame": "ship",
+      "role": "30384 canopy",
+      "attachment": "four cockpit-floor studs at x=+-10, Z=-130/-110"
+    },
+    {
+      "section": "halcyon-stand.ldr",
+      "frame": "ship",
+      "role": "Display stand",
+      "attachment": "column top studs in the K1 underside"
+    }
+  ],
+  "focal_feature": "Choose one: split wings, a rotating-looking cockpit, oversized engines, or an asymmetric main blade.",
+  "detail_strategy": "Use smooth nose armour and broad wing surfaces beside concentrated engine plumbing and service recesses.",
+  "palette": {
+    "hull": 71,
+    "shadow": 72,
+    "frame": 0,
+    "markings": 320,
+    "canopy": 40,
+    "exhaust": 47
+  },
+  "references": [
+    "b-wing",
+    "x-wing-wing",
+    "x-wing-nacelle",
+    "canopy-cockpit"
+  ],
+  "coordinates": "X width, -Z forward, negative Y up; choose the hull or stand datum explicitly.",
+  "scale": "Choose minifigure, display or microscale before selecting the canopy and detail sizes.",
+  "part_queries": {
+    "cockpit": "a spacecraft canopy with a compatible cockpit rim and pilot controls",
+    "hull": "matched left and right wedge plates and slopes for an angular spaceship hull",
+    "engines": "a cylindrical thruster nacelle with concentric shells, grille intake and exhaust nozzle",
+    "surface_detail": "a small recessed spaceship machinery bay with grilles, bars, clips and dishes",
+    "supports": "a braced frame for long wings, cantilevered engines and a display stand"
+  },
+  "interfaces": "Record each module origin, bounds, exact mounting parts, attachment frames, and parent dependencies. Use proper rotations and real left/right parts.",
+  "review": [
+    "front/top silhouette",
+    "side thickness and cockpit proportions",
+    "rear engine spacing",
+    "underside and stand attachments",
+    "bare frame and exposed wing roots",
+    "open cockpit or removable hull where interiors matter",
+    "quiet surfaces beside concentrated detail"
+  ],
+  "mechanism_scope": "Study actual folding-wing, ramp or landing-gear mechanisms using the mechanism workflow when requested; analytical mechanism verification remains deferred.",
+  "palette_note": "Suggested design roles; inspect actual part/colour availability. Preserve functional and printed colours when adapting a source.",
+  "next": "Built and reviewed; see README.md and visual-review.md.",
+  "decisions": {
+    "scale": "Display scale without a minifigure; the 4 x 7 canopy sets the cockpit width.",
+    "dimensions_ldu": {
+      "length": 584,
+      "span": 480,
+      "height": 140,
+      "stand_below_keel": 112,
+      "note": "Measured bounds of the ship without its stand: about 29 x 24 x 7 studs."
+    },
+    "coordinates": "X width (starboard +X), -Z forward, -Y up; Y=0 keel underside, origin at the keel centre by the wing roots.",
+    "silhouette": "Arrowhead from above: pointed nose, strakes that flare into twin pods, swept wings with tip fins. Slim wedge from the side.",
+    "focal_feature": "Pointed nose and smoked canopy, balanced by two glowing exhausts.",
+    "palette": {
+      "hull": 15,
+      "panel": 71,
+      "frame": 72,
+      "accent": 321,
+      "canopy": 40,
+      "glow": 57,
+      "stand": 0
+    },
+    "pose": "Level flight on a round column stand plugged into the keel underside at Z=80.",
+    "surface_rule": "No exposed studs on the ship; every SNOT stud face carries a skin or module."
+  }
+}
