@@ -300,3 +300,43 @@ def test_shared_manual_cli_keeps_notes_and_study_kind(kind, notes_option, source
     assert status == 0 and captured['notes'] == {'lesson': 'fixture'}
     assert captured['kind'] == ('construction' if kind == 'manual' else 'mechanism')
     assert not captured['renders'] and not captured['overview']
+
+
+@pytest.mark.parametrize('explicit_output', [False, True])
+def test_build_palette_preserves_checked_workflow_and_existing_output(plan, parts, explicit_output):
+    from ldraw_tools import cli
+    from ldraw_tools.parts_catalog import PartsUnavailable
+
+    palette = plan.with_name('palette.csv')
+    palette.write_text('part_id,color_id,max_quantity\n3001,4,1\n')
+    target = plan.with_name('explicit.mpd' if explicit_output else 'brick.mpd')
+    command = ['--library', str(parts.path.parent), '--no-shadow', 'build', str(plan),
+               '--parts-palette', str(palette), '--force']
+    if explicit_output:
+        command += ['--output', str(target)]
+    args = cli.parser().parse_args(command)
+    report, status = cli.run(args)
+    assert status == 0 and report['written'] and report['checks_passed']
+    assert report['geometry'] is not None
+    assert report['parts_palette'] == dict(valid=True, allowed_combinations=1, physical_parts=1)
+    original = target.read_bytes()
+
+    palette.write_text('part_id,color_id,max_quantity\n3001,0,1\n')
+    with pytest.raises(PartsUnavailable):
+        cli.run(args)
+    assert target.read_bytes() == original
+
+    palette.write_text('part_id,color_id,max_quantity\n3001,4,1\n')
+    content = json.loads(plan.read_text())
+    content['sections'][0]['steps'][0].append(dict(id='extra', ref='3001.dat', colour=4, at=[100, 0, 0]))
+    plan.write_text(json.dumps(content))
+    with pytest.raises(PartsUnavailable):
+        cli.run(args)
+    assert target.read_bytes() == original
+
+    content['sections'][0]['steps'][0][1]['at'] = [10, 0, 0]
+    plan.write_text(json.dumps(content))
+    report, status = cli.run(args)
+    assert status == 1 and not report['written']
+    assert any(d['code'] == 'assembly.body_overlap' for d in report['diagnostics'])
+    assert target.read_bytes() == original

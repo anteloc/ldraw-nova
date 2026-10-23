@@ -280,6 +280,7 @@ def parser():
     c.add_argument("degrees", type=float)
     commands.add_parser("profiles", help="List curated ordinary brick/plate dimensions for on placement")
     c = commands.add_parser("build", help="Build a validated MPD from a JSON plan")
+    c.add_argument("--parts-palette", type=Path, help="Restrict parts/colors and quantities using CSV, LDR, XML, or Studio IO")
     c.add_argument("plan")
     c.add_argument("--output", help="MPD path (default: NAME.mpd beside NAME.plan.json or NAME.json)")
     c.add_argument("--report")
@@ -651,6 +652,17 @@ def run(args):
         plan = load_plan(args.plan)
         text, _, report = build_checked(plan, parts, **geometry_settings(args))
         report.update(profile="assembly", output=str(target), written=report['checks_passed'])
+        if args.parts_palette and report['checks_passed']:
+            from .catalog_inventory import model_inventory
+            from .parts_catalog import PartsCatalog
+            palette = PartsCatalog.load(args.parts_palette)
+            with TemporaryDirectory(prefix="ldraw-palette-build-") as temporary:
+                candidate = Path(temporary) / "candidate.mpd"
+                candidate.write_text(text, encoding="utf-8")
+                inventory = model_inventory(candidate, library)
+            palette.validate(inventory)
+            report["parts_palette"] = dict(valid=True, allowed_combinations=len(palette.parts),
+                                  physical_parts=sum(inventory.values()))
         if report['written']:
             atomic_write(target, text)
         return report, 0 if report['checks_passed'] else 1

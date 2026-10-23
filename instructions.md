@@ -19,6 +19,8 @@ Start with relevant examples and inspect unfamiliar parts:
 
 **Spaceships use SNOT by default.** Follow the [Halcyon](examples/snot/halcyon/README.md) for construction and visual quality: a supported core, attached sideways hull skins, axial engine modules, smooth contours and thin wing edges. Make SNOT part of the main exterior design. Adapt this approach to each ship's own silhouette and scale; upright internal frames are still appropriate.
 
+When the user provides an allowed-parts CSV, choose only its exact LDraw part/color pairs and honor any `max_quantity` limits. Use `build --parts-palette CSV` for JSON plans, or check a generated MPD with `python -m ldraw_tools.catalog_inventory MODEL LIBRARY --palette CSV`. Repair every violation before delivery. Do not create custom geometry, change part dimensions or override library DAT definitions to imitate an allowed part.
+
 Use the appropriate guide as the design requires it:
 
 | Task | Guide |
