@@ -1,5 +1,59 @@
 # Tool reference
 
+For the normal modeling loop, follow [instructions.md](../../instructions.md). Use `build` for fast iteration and `review` for the combined automatic checks and previews. Every existing command remains available.
+
+## Setup
+
+Run commands from the repository root. `./setup.sh` installs the pinned Python tools into `.venv`, checks source paths, builds a local parts index, and extracts a PDF page to verify Poppler. It needs Python 3.12+ and `pdftotext`; LeoCAD must be available for rendering. `uv sync --locked --extra test` reproduces `uv.lock`. The pip fallback pins direct dependencies; transitive dependencies may differ.
+
+`./ldraw-agent --help` lists the executable interface. Global `--library` and repeatable `--shadow` options go **before** the command. Parts resolve from `--library`, then `LDRAW_DIR`, then `LDRAWDIR` (empty variables are treated as unset). Reference models and descriptions always reside in `data/models-annotated/` and `data/ldraw-info.db`, resolved relative to this repository even when invoked from elsewhere. The local `.cache` directory can be deleted and rebuilt. No library download, database mutation, or global pyldraw configuration is needed.
+
+The supplied `data/offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides the default; explicit `--shadow` paths replace defaults, and `--no-shadow` disables external shadows. `doctor` reports selected sources. See the [shadow and snapping guide](snapping.md) for coverage, connector discovery, candidate application and the pyldraw3 1.7 adapters.
+
+## Review a model
+
+```sh
+./ldraw-agent review output/my-model.plan.json
+./ldraw-agent review output/my-model.mpd --force
+```
+
+`review` accepts a JSON plan or an existing `.mpd`/`.ldr` assembly. A plan is built in memory through the same builder and checks as `build`; an existing assembly is copied before validation. The command then writes a Python BOM, renders LeoCAD views and compares reference/colour/quantity counts. It checks and renders the same frozen model bytes. It does not modify the input or claim to inspect images.
+
+The default output is `NAME-review/` beside `NAME.plan.json`, `NAME.json`, `NAME.mpd` or `NAME.ldr`. Use `--outdir` to choose another dedicated directory. For an example without touching supplied assets:
+
+```sh
+./ldraw-agent review examples/bridge.plan.json --outdir output/bridge-review
+```
+
+| Artifact | Contents |
+|---|---|
+| `review.json` | Stage outcomes, diagnostics, physical count, source/model hashes and artifact hashes |
+| `model.mpd` | Exact assembly reviewed; emitted only after source and geometry checks pass |
+| `validation.json` | Assembly and geometry diagnostics, coverage, contacts and truncation flags |
+| `bom.json` | Python physical parts list and model hash |
+| `bom-comparison.json` | Exact Python/LeoCAD comparison and model hash |
+| `previews/` | Requested PNG views and `leocad-bom.csv` |
+
+Open the images and record your visual observations beside the source. The generated directory is replaceable output: `--force` replaces only an unchanged review bundle. Extra files or edited artifacts are protected even with `--force`; use another directory or move your work out first. A rerun replaces the bundle as a unit, so old images and BOM comparisons cannot masquerade as new evidence. Validation, rendering or comparison failures publish the available reports and return nonzero; failed validation does not publish a model. Input/output preflight failures leave any existing bundle unchanged and report the error on stdout.
+
+Useful variations:
+
+```sh
+# Intermediate checks without invoking LeoCAD; render/comparison are explicitly skipped.
+./ldraw-agent review output/my-model.plan.json --no-render --outdir output/my-model-checks
+
+# An MPD module with inherited colour resolved; source lines still refer to the input.
+./ldraw-agent review output/my-model.mpd --section my-floor.ldr --colour 19 --outdir output/floor-review
+
+# More views for final review, or full diagnostic rows for investigation.
+./ldraw-agent review output/my-model.mpd --views home front back right top bottom --force
+./ldraw-agent review output/my-model.mpd --no-render --detail full --contacts all --force
+```
+
+Section selection applies to existing MPD/LDR inputs; build a JSON plan first to select one of its sections. `--colour` requires `--section`. General geometry options are unchanged: `--contacts auto|all|none`, `--max-instances`, `--limit`, `--offset`, and `--detail summary|full`. Review defaults to summary; all selected checks still run. Auto contacts skip above 500 placements and report that limitation. `--timeout` defaults to 90 seconds per external command.
+
+Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM comparison failed; 2 means input/dependency/execution failure. `--no-render` can return 0 with rendering and comparison explicitly skipped. Full review still reports visual inspection as required and `physical_validity: not_proven`. Run family-specific `vehicle check` or `technic check` as appropriate; general review does not replace them. See [validation coverage](validation.md).
+
 ## Build manuals for any atlas
 
 ```sh
@@ -9,7 +63,7 @@
 ./ldraw-agent spaceship list
 ./ldraw-agent spaceship details
 ./ldraw-agent spaceship brief starfighter --output output/starfighter-brief.json
-./ldraw-agent spaceship export b-wing --outdir output/my-ship
+./ldraw-agent spaceship export halcyon --outdir output/my-ship
 ```
 
 `manual` shares the mechanism step renderer but uses construction notes: lesson, construction, interfaces, parent context and reuse notes. `--overview` renders completed-model views and retains source step data; `--no-render` leaves rendered evidence pending. Existing mechanism commands retain their operation-specific notes and review requirements. See [build manuals and atlas additions](build-manuals.md) and [spaceship design](spaceships.md).
@@ -28,12 +82,6 @@
 
 `prepare` creates source, provenance, normal source/geometry checks, per-section build pages, per-step parts, parent context, operation notes and a placement plan. It uses LeoCAD's step export with highlighted additions, a stable camera and embedded-DAT support. `--operation FILE` supplies the seven descriptive fields explained in the [mechanism guide](mechanisms.md). `--no-render` leaves rendering/BOM comparison pending. `review DIRECTORY --images ... --note ...` records only pages actually opened, binding all artifacts by hash. `export KEY_OR_DIRECTORY --outdir DIR` copies a current reviewed study with passing source checks and matching BOM. Analytical mechanism verification is deferred and is not an export prerequisite.
 
-
-Run commands from the repository root. `./setup.sh` installs the pinned Python tools into `.venv`, checks source paths, builds a local parts index, and extracts a PDF page to verify Poppler. It needs Python 3.12+ and `pdftotext`; LeoCAD must be available for rendering. `uv sync --locked --extra test` reproduces `uv.lock`. The pip fallback pins direct dependencies; transitive dependencies may differ.
-
-`./ldraw-agent --help` lists the executable interface. Global `--library` and repeatable `--shadow` options go **before** the command. Parts resolve from `--library`, then `LDRAW_DIR`, then `LDRAWDIR` (empty variables are treated as unset). Reference models and descriptions always reside in `data/models-annotated/` and `data/ldraw-info.db`, resolved relative to this repository even when invoked from elsewhere. The local `.cache` directory can be deleted and rebuilt. No library download, database mutation, or global pyldraw configuration is needed.
-
-The supplied `data/offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides the default; explicit `--shadow` paths replace defaults, and `--no-shadow` disables external shadows. `doctor` reports selected sources. See the [shadow and snapping guide](snapping.md) for coverage, connector discovery, candidate application and the pyldraw3 1.7 adapters.
 
 ## Discover and inspect
 
@@ -164,33 +212,18 @@ With `--top 10`, the current reranker normally scores a BM25 shortlist of up to 
 
 ## Generate from a plan
 
-Copy the structure of [examples/bridge.plan.json](../../examples/bridge.plan.json), then design a new assembly. The machine-readable contract is [plan.schema.json](../../ldraw_tools/data/plan.schema.json). Unknown keys, malformed vectors, mixed position modes, duplicate IDs, missing references, nonfinite numbers, invalid transforms, and invalid colours fail explicitly.
+See the [plan guide](plans.md) for a complete example, placement modes, modules and the Python API. The [JSON schema](../../ldraw_tools/data/plan.schema.json) remains the contract; existing plans and explicit output paths are unchanged.
 
 ```sh
-./ldraw-agent build output/my-model.plan.json --output output/my-model.mpd --report output/my-model.build.json
+./ldraw-agent build output/my-model.plan.json
+./ldraw-agent build output/my-model.plan.json --output output/custom.mpd --report output/my-model.build.json
 ```
 
-Top-level keys: `version: 1`, `author`, optional `license`, ordered `sections`, and optional `includes` (relative JSON plan paths) / `assets` (relative MPD paths). `load_plan(path)` resolves nested includes once and preserves each module's headers; cycles and namespace collisions fail. The **first section is the main model**. Each section has `name` ending in `.ldr`, a descriptive `description`, and `steps`, an array of arrays of placements. Every placement has a unique section-local `id`, `ref`, `colour`, optional `purpose`, and exactly one of `at`, `on`, `attach`, or `snap`. Sections may declare named `anchors` and their own `author`/`license`. See the complete [module contract examples](complex-models.md).
+Without `--output`, `NAME.plan.json` or `NAME.json` builds to `NAME.mpd` beside the plan. `build` serializes with pyldraw3, validates the emitted source and analyzes geometry. It writes atomically only with no errors; `--force` permits replacing an existing output after successful checks. Failed builds preserve the previous MPD. Warnings remain visible. Keep fixes in the plan/generator so regeneration preserves them.
 
-| Field | Meaning |
-|---|---|
-| `at: [x,y,z]` | Translation in LDU, in the containing section's coordinate system. Required unless using `on`, `attach`, or `snap`. |
-| `yaw: degrees` | Optional right-handed rotation about that section's +Y axis; default zero. |
-| `matrix: [[a,b,c],[d,e,f],[g,h,i]]` | Optional explicit proper rotation; mutually exclusive with `yaw`. |
-| `on: "earlier-id"` | Stack a curated upright brick/plate on an earlier placement in the same section. Computes Y from the upper body's height and checks stud-grid alignment. |
-| `offset_studs: [x,z]` | Only with `on`: offset in the support's local X/Z axes, multiplied by 20 LDU. Default `[0,0]`. |
-| `attach: {"to":"earlier-id","anchor":"seat","using":"base"}` | Align named frames on generated modules, including orientation. Optional `offset` is in the support anchor frame. Mutually exclusive with explicit position/orientation and repeats. |
-| `snap: {"to":"earlier-id","near":[0,-8,0]}` | Mate a selected leaf interface and move the complete part/submodel. Optional leaf and feature selectors; see [snapping](snapping.md). |
-| `repeat: {"count":8,"step":[40,0,0]}` | Repeat an `at` placement in containing-section axes; generated IDs are `id-0` etc. |
-| `colour: 16` | Permitted within reusable submodels; explicit ancestor colours must resolve every visible leaf. |
+## Individual checks and exports
 
-Generated refs are flat official `.dat` names, generated `.ldr` names, or namespaced definitions imported through `assets`. Imported classified DAT parts retain their raw geometry, internal primitive transforms, BFC and attribution; they are single physical leaves during assembly/BOM traversal. Loose external models, mirrored/scaled physical parts, model-level raw polygons, textures/data and local colours remain outside the standard generation profile. New part authoring still needs additional geometry/BFC review. Arbitrary **rigid** orientations of real parts are supported with `matrix` and explicit `at`; physical checks have more limited coverage.
-
-`build` serializes using pyldraw3, validates the emitted MPD, runs geometry analysis, and writes atomically only if there are no errors. Existing output needs `--force`; failed builds preserve it. Warnings remain in the report. A successful build does not complete visual/physical review. Keep both plan and generated MPD so fixes are reproducible. Never hand-edit the MPD and then overwrite those fixes by rerunning an old plan.
-
-For loops, procedural repetition, or matrix composition, use the [Python example](../../examples/python_api.py): `.venv/bin/python examples/python_api.py`. `ldraw_tools.builder.load_plan(path)`, `rotation(axis, degrees)`, `build_plan(plan, parts)`, `get_parts()`, and `analyze_geometry(model, parts)` are the small supported Python API. `ldraw.Model`, `Piece`, `Matrix`, and `Vector` remain available from pyldraw3. Run validation on serialized bytes before accepting custom Python output.
-
-## Validate and review
+Use these commands for diagnosis, custom automation or legacy workflows. A normal `review` already runs assembly validation, geometry, BOM, rendering and BOM comparison; a separate `cad-check` repeats its renderer import/export smoke test.
 
 ```sh
 ./ldraw-agent validate output/my-model.mpd --geometry --report output/my-model.validation.json

@@ -1,0 +1,280 @@
+{
+  "id": "40",
+  "model": "10248 Ferrari F40.ldr",
+  "section": "subModel-40.ldr",
+  "parser_section": "subModel-40.ldr",
+  "description": "Detailed engine and triple exhaust",
+  "kind": "submodels",
+  "parent_description": "F40: saved callout, not referenced by the main car",
+  "status": "reference",
+  "assembly_checks_passed": true,
+  "source_sha256": "4dad4d71da85a93456562d58fd2f289b64f98bbdb35ed8d90d7bc6fc2055a5ba",
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 122,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -160.0,
+        -96.8774,
+        -64.0
+      ],
+      "max": [
+        80.001,
+        16.0,
+        64.0
+      ]
+    },
+    "occurrence_count": 122,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": false,
+    "contact_count": null,
+    "contacts": [],
+    "contacts_truncated": false,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": null,
+    "confirmed_component_count": null,
+    "components_truncated": false,
+    "overlap_candidate_count": 247,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "coverage.contacts_skipped",
+        "severity": "warning",
+        "message": "Contacts were not computed. Select a subassembly or request --contacts all; no connectivity conclusion is available.",
+        "line_number": null,
+        "section": null
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  },
+  "contacts_checked": false,
+  "inventory": {
+    "expanded_leaf_count": 122
+  },
+  "size_studs_plates_studs": [
+    12.00005,
+    14.109675,
+    6.4
+  ],
+  "bom_comparison": {
+    "matches": true
+  },
+  "views": [
+    "home"
+  ],
+  "semantic_annotation": {
+    "section": "subModel-40.ldr",
+    "title": "Detailed engine and triple exhaust",
+    "category": "engine",
+    "context_steps": [
+      47
+    ],
+    "lesson": "A static engine display combines angled cylinder-bank shapes, side-stud fittings, ribs, rounded housings and three exhaust outlets.",
+    "declared_parents": [],
+    "declared_children": {
+      "subModel-41.ldr": 1,
+      "subModel-42.ldr": 1,
+      "subModel-44.ldr": 1,
+      "subModel-45.ldr": 2,
+      "subModel-46.ldr": 1,
+      "subModel-47.ldr": 2,
+      "subModel-48.ldr": 1
+    },
+    "reachable_from_main": false,
+    "source_steps": 16
+  },
+  "source_repairs": [
+    {
+      "kind": "normalize_rounded_rotation",
+      "section": "subModel-42.ldr",
+      "source_line": 3586,
+      "before": [
+        [
+          0.7071,
+          0.6381,
+          0.3047
+        ],
+        [
+          -0.7071,
+          0.6381,
+          0.3047
+        ],
+        [
+          0.0,
+          -0.431,
+          0.9024
+        ]
+      ],
+      "after": [
+        [
+          0.707106781,
+          0.63807837,
+          0.304722815
+        ],
+        [
+          -0.707106781,
+          0.63807837,
+          0.304722815
+        ],
+        [
+          0.0,
+          -0.430943138,
+          0.902379084
+        ]
+      ],
+      "max_coefficient_change": 5.686228116552616e-05
+    },
+    {
+      "kind": "normalize_rounded_rotation",
+      "section": "subModel-42.ldr",
+      "source_line": 3588,
+      "before": [
+        [
+          0.7071,
+          0.6381,
+          0.3047
+        ],
+        [
+          -0.7071,
+          0.6381,
+          0.3047
+        ],
+        [
+          0.0,
+          -0.431,
+          0.9024
+        ]
+      ],
+      "after": [
+        [
+          0.707106781,
+          0.63807837,
+          0.304722815
+        ],
+        [
+          -0.707106781,
+          0.63807837,
+          0.304722815
+        ],
+        [
+          0.0,
+          -0.430943138,
+          0.902379084
+        ]
+      ],
+      "max_coefficient_change": 5.686228116552616e-05
+    },
+    {
+      "kind": "normalize_rounded_rotation",
+      "section": "subModel-42.ldr",
+      "source_line": 3590,
+      "before": [
+        [
+          0.7071,
+          0.6381,
+          0.3047
+        ],
+        [
+          -0.7071,
+          0.6381,
+          0.3047
+        ],
+        [
+          0.0,
+          -0.431,
+          0.9024
+        ]
+      ],
+      "after": [
+        [
+          0.707106781,
+          0.63807837,
+          0.304722815
+        ],
+        [
+          -0.707106781,
+          0.63807837,
+          0.304722815
+        ],
+        [
+          0.0,
+          -0.430943138,
+          0.902379084
+        ]
+      ],
+      "max_coefficient_change": 5.686228116552616e-05
+    },
+    {
+      "kind": "normalize_rounded_rotation",
+      "section": "subModel-42.ldr",
+      "source_line": 3592,
+      "before": [
+        [
+          0.7071,
+          0.6381,
+          0.3047
+        ],
+        [
+          -0.7071,
+          0.6381,
+          0.3047
+        ],
+        [
+          0.0,
+          -0.431,
+          0.9024
+        ]
+      ],
+      "after": [
+        [
+          0.707106781,
+          0.63807837,
+          0.304722815
+        ],
+        [
+          -0.707106781,
+          0.63807837,
+          0.304722815
+        ],
+        [
+          0.0,
+          -0.430943138,
+          0.902379084
+        ]
+      ],
+      "max_coefficient_change": 5.686228116552616e-05
+    }
+  ],
+  "visual_review": {
+    "decision": "technique",
+    "views": [
+      "home"
+    ],
+    "note": "Inspected this home image in the labeled section overview contact sheet. Detailed engine and triple exhaust: A static engine display combines angled cylinder-bank shapes, side-stud fittings, ribs, rounded housings and three exhaust outlets. Overview evidence supports the construction role only. Main source step pointers are contextual, not proof of identical placements. Isolated source/geometry checks pass and the rendered BOM matches; contacts and parent clearance are not established by this overview.",
+    "image_sha256": "3cb561d599ba0ad53a488f0a7f0f010d6c8579ef2a32e3087e98fc67a4727516"
+  },
+  "evidence_scope": "Isolated extracted section; contacts not checked. Rendered with bounded rotation normalization where recorded. See visual-review.md for overview inspection.",
+  "physical_validity": "not_proven"
+}

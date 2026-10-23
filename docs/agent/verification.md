@@ -1,5 +1,7 @@
 # Verification record
 
+The [workflow simplification record](../reports/workflow-simplification.md) documents the 2026-10-20 combined `review` command, preserved CLI behavior, shorter agent instructions, failure regressions and real LeoCAD/BOM checks on the bridge and 2,979-placement Alder Court model.
+
 The [spaceship and build-manual implementation record](../reports/spaceship-support-implementation.md) documents the 2026-09-26 extension: general source-step manuals, three spaceship design briefs, eight source studies, six checked reusable entries, 50 inspected images, eight matching rendered BOMs and **211 passing tests**. Two large sources remain explicitly inspiration-only with unresolved source errors.
 
 The [Technic stage-1 implementation record](../reports/technic-stage1-implementation.md) documents the 2026-09-26 structural extension: 34 reviewed part definitions, seating and structural contracts, four reproducible examples, 28 inspected views, matching LeoCAD BOMs and **199 passing tests**. The now-authorized Stage 2 is recorded separately below.

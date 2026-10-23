@@ -1,0 +1,942 @@
+{
+  "id": "00",
+  "model": "10248 Ferrari F40.ldr",
+  "section": "main.ldr",
+  "parser_section": "main.ldr",
+  "description": "Ferrari F40 complete car",
+  "kind": "models",
+  "parent_description": "Complete flattened car",
+  "status": "adaptation_needed",
+  "assembly_checks_passed": false,
+  "source_sha256": "4dad4d71da85a93456562d58fd2f289b64f98bbdb35ed8d90d7bc6fc2055a5ba",
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 1147,
+      "partial": 9,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -172.9805,
+        -160.98624999999998,
+        -180.0
+      ],
+      "max": [
+        172.9805,
+        44.0,
+        504.0
+      ]
+    },
+    "occurrence_count": 1156,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": false,
+    "contact_count": null,
+    "contacts": [],
+    "contacts_truncated": false,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": null,
+    "confirmed_component_count": null,
+    "components_truncated": false,
+    "overlap_candidate_count": 2656,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "connection.invalid_transform",
+        "message": "connection feature 'studO' from /Users/captain/workspaces/workspace-ai/ldraw-nova/data/offLibShadow/p/stud2a.dat:11 rejected under invalid scale or reflection",
+        "severity": "warning",
+        "path": "/Users/captain/workspaces/workspace-ai/ldraw-nova/data/offLibShadow/p/stud2a.dat",
+        "section": null,
+        "line_number": 11,
+        "offending_value": "studO",
+        "suggestions": [],
+        "cause": null
+      },
+      {
+        "code": "connection.invalid_transform",
+        "message": "connection feature 'snap_fgr@L8:I0' from /Users/captain/workspaces/workspace-ai/ldraw-nova/data/offLibShadow/parts/4593.dat:8 rejected under invalid scale or reflection",
+        "severity": "warning",
+        "path": "/Users/captain/workspaces/workspace-ai/ldraw-nova/data/offLibShadow/parts/4593.dat",
+        "section": null,
+        "line_number": 8,
+        "offending_value": "snap_fgr@L8:I0",
+        "suggestions": [],
+        "cause": null
+      },
+      {
+        "code": "connection.invalid_transform",
+        "message": "connection feature 'studO' from /Users/captain/workspaces/workspace-ai/ldraw-nova/data/offLibShadow/p/stud2a.dat:11 rejected under invalid scale or reflection",
+        "severity": "warning",
+        "path": "/Users/captain/workspaces/workspace-ai/ldraw-nova/data/offLibShadow/p/stud2a.dat",
+        "section": null,
+        "line_number": 11,
+        "offending_value": "studO",
+        "suggestions": [],
+        "cause": null
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          532,
+          382
+        ],
+        "penetration": 2.5035800000000066,
+        "sources": [
+          {
+            "part": "3021.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1122,
+            "source_path": [
+              5,
+              1122
+            ]
+          },
+          {
+            "part": "3070b.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 816,
+            "source_path": [
+              5,
+              816
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          534,
+          558
+        ],
+        "penetration": 0.2726338357044753,
+        "sources": [
+          {
+            "part": "63864.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1126,
+            "source_path": [
+              5,
+              1126
+            ]
+          },
+          {
+            "part": "3070b.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1175,
+            "source_path": [
+              5,
+              1175
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          534,
+          533
+        ],
+        "penetration": 0.004888124578272368,
+        "sources": [
+          {
+            "part": "63864.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1126,
+            "source_path": [
+              5,
+              1126
+            ]
+          },
+          {
+            "part": "63864.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1124,
+            "source_path": [
+              5,
+              1124
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          266,
+          267
+        ],
+        "penetration": 0.0026934182165909704,
+        "sources": [
+          {
+            "part": "3022.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 576,
+            "source_path": [
+              5,
+              576
+            ]
+          },
+          {
+            "part": "3024.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 578,
+            "source_path": [
+              5,
+              578
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          277,
+          278
+        ],
+        "penetration": 0.0026934182165909704,
+        "sources": [
+          {
+            "part": "3022.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 598,
+            "source_path": [
+              5,
+              598
+            ]
+          },
+          {
+            "part": "3024.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 600,
+            "source_path": [
+              5,
+              600
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          533,
+          382
+        ],
+        "penetration": 2.4986199999999954,
+        "sources": [
+          {
+            "part": "63864.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1124,
+            "source_path": [
+              5,
+              1124
+            ]
+          },
+          {
+            "part": "3070b.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 816,
+            "source_path": [
+              5,
+              816
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          382,
+          381
+        ],
+        "penetration": 0.001999999999995339,
+        "sources": [
+          {
+            "part": "3070b.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 816,
+            "source_path": [
+              5,
+              816
+            ]
+          },
+          {
+            "part": "3005.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 814,
+            "source_path": [
+              5,
+              814
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          465,
+          1118
+        ],
+        "penetration": 0.39711240209987153,
+        "sources": [
+          {
+            "part": "3460.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 985,
+            "source_path": [
+              5,
+              985
+            ]
+          },
+          {
+            "part": "87079.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2331,
+            "source_path": [
+              5,
+              2331
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          465,
+          1117
+        ],
+        "penetration": 0.39711240209987153,
+        "sources": [
+          {
+            "part": "3460.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 985,
+            "source_path": [
+              5,
+              985
+            ]
+          },
+          {
+            "part": "87079.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2329,
+            "source_path": [
+              5,
+              2329
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          470,
+          475
+        ],
+        "penetration": 0.0039052563656207795,
+        "sources": [
+          {
+            "part": "3460.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 995,
+            "source_path": [
+              5,
+              995
+            ]
+          },
+          {
+            "part": "3024.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1005,
+            "source_path": [
+              5,
+              1005
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          470,
+          472
+        ],
+        "penetration": 0.0039052563656207795,
+        "sources": [
+          {
+            "part": "3460.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 995,
+            "source_path": [
+              5,
+              995
+            ]
+          },
+          {
+            "part": "3024.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 999,
+            "source_path": [
+              5,
+              999
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          1106,
+          1111
+        ],
+        "penetration": 0.0001659415517369922,
+        "sources": [
+          {
+            "part": "3034.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2307,
+            "source_path": [
+              5,
+              2307
+            ]
+          },
+          {
+            "part": "3022.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2317,
+            "source_path": [
+              5,
+              2317
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          1106,
+          1110
+        ],
+        "penetration": 0.0001659415517369922,
+        "sources": [
+          {
+            "part": "3034.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2307,
+            "source_path": [
+              5,
+              2307
+            ]
+          },
+          {
+            "part": "3022.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2315,
+            "source_path": [
+              5,
+              2315
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          1109,
+          1112
+        ],
+        "penetration": 0.0019637270288388464,
+        "sources": [
+          {
+            "part": "3666.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2313,
+            "source_path": [
+              5,
+              2313
+            ]
+          },
+          {
+            "part": "4162.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2319,
+            "source_path": [
+              5,
+              2319
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          1112,
+          1107
+        ],
+        "penetration": 0.0019637270288388464,
+        "sources": [
+          {
+            "part": "4162.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2319,
+            "source_path": [
+              5,
+              2319
+            ]
+          },
+          {
+            "part": "3795.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2309,
+            "source_path": [
+              5,
+              2309
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          1112,
+          1108
+        ],
+        "penetration": 0.0019637270288388464,
+        "sources": [
+          {
+            "part": "4162.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2319,
+            "source_path": [
+              5,
+              2319
+            ]
+          },
+          {
+            "part": "3666.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 2311,
+            "source_path": [
+              5,
+              2311
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          376,
+          488
+        ],
+        "penetration": 2.500620000000005,
+        "sources": [
+          {
+            "part": "3070b.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 804,
+            "source_path": [
+              5,
+              804
+            ]
+          },
+          {
+            "part": "63864.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1032,
+            "source_path": [
+              5,
+              1032
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          376,
+          486
+        ],
+        "penetration": 2.5005799999999923,
+        "sources": [
+          {
+            "part": "3070b.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 804,
+            "source_path": [
+              5,
+              804
+            ]
+          },
+          {
+            "part": "3021.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1028,
+            "source_path": [
+              5,
+              1028
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          488,
+          487
+        ],
+        "penetration": 0.0026977872153430837,
+        "sources": [
+          {
+            "part": "63864.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1032,
+            "source_path": [
+              5,
+              1032
+            ]
+          },
+          {
+            "part": "63864.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1030,
+            "source_path": [
+              5,
+              1030
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          287,
+          290
+        ],
+        "penetration": 0.0009999999999994458,
+        "sources": [
+          {
+            "part": "3021.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 619,
+            "source_path": [
+              5,
+              619
+            ]
+          },
+          {
+            "part": "3022.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 625,
+            "source_path": [
+              5,
+              625
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          287,
+          291
+        ],
+        "penetration": 0.0009999999999994458,
+        "sources": [
+          {
+            "part": "3021.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 619,
+            "source_path": [
+              5,
+              619
+            ]
+          },
+          {
+            "part": "3024.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 627,
+            "source_path": [
+              5,
+              627
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          290,
+          291
+        ],
+        "penetration": 0.0026934182165909704,
+        "sources": [
+          {
+            "part": "3022.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 625,
+            "source_path": [
+              5,
+              625
+            ]
+          },
+          {
+            "part": "3024.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 627,
+            "source_path": [
+              5,
+              627
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          301,
+          302
+        ],
+        "penetration": 0.0026934182165909704,
+        "sources": [
+          {
+            "part": "3022.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 647,
+            "source_path": [
+              5,
+              647
+            ]
+          },
+          {
+            "part": "3024.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 649,
+            "source_path": [
+              5,
+              649
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          284,
+          288
+        ],
+        "penetration": 0.0007929947693199324,
+        "sources": [
+          {
+            "part": "3022.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 613,
+            "source_path": [
+              5,
+              613
+            ]
+          },
+          {
+            "part": "3024.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 621,
+            "source_path": [
+              5,
+              621
+            ]
+          }
+        ]
+      },
+      {
+        "code": "assembly.body_overlap",
+        "severity": "error",
+        "message": "Rectangular brick/plate body envelopes overlap; reposition them.",
+        "line_number": null,
+        "section": null,
+        "instances": [
+          512,
+          487
+        ],
+        "penetration": 0.26705659132662163,
+        "sources": [
+          {
+            "part": "3070b.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1081,
+            "source_path": [
+              5,
+              1081
+            ]
+          },
+          {
+            "part": "63864.dat",
+            "section": "study-4e8c2cc9de69-00-main.ldr",
+            "line_number": 1030,
+            "source_path": [
+              5,
+              1030
+            ]
+          }
+        ]
+      },
+      {
+        "code": "coverage.contacts_skipped",
+        "severity": "warning",
+        "message": "Contacts were not computed. Select a subassembly or request --contacts all; no connectivity conclusion is available.",
+        "line_number": null,
+        "section": null
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  },
+  "contacts_checked": false,
+  "inventory": {
+    "expanded_leaf_count": 1156
+  },
+  "size_studs_plates_studs": [
+    17.29805,
+    25.623281249999998,
+    34.2
+  ],
+  "bom_comparison": {
+    "matches": true
+  },
+  "views": [
+    "home"
+  ],
+  "semantic_annotation": {
+    "section": "main.ldr",
+    "title": "Ferrari F40 complete car",
+    "category": "overview",
+    "context_steps": [],
+    "lesson": "Low sports-car body with sideways panels, opening-panel joints, a detailed rear engine and a Technic frame. The 73 saved callouts are not referenced by this flattened main model.",
+    "declared_parents": [],
+    "declared_children": {},
+    "reachable_from_main": true,
+    "source_steps": 83
+  },
+  "source_repairs": [],
+  "visual_review": {
+    "decision": "technique",
+    "views": [
+      "home"
+    ],
+    "note": "Inspected the bounds-fitted complete-car home image directly. Ferrari F40 complete car: Low sports-car body with sideways panels, opening-panel joints, a detailed rear engine and a Technic frame. The 73 saved callouts are not referenced by this flattened main model. Overview evidence supports the construction role only. Main source step pointers are contextual, not proof of identical placements. The full car has 25 body-overlap errors and remains inspiration requiring preparation.",
+    "image_sha256": "f8ab1a1b4d81e06979aad799ebb110582ac97dfc53d7384dcd24d9262e1a554d"
+  },
+  "evidence_scope": "Isolated extracted section; contacts not checked. Rendered with bounded rotation normalization where recorded. See visual-review.md for overview inspection.",
+  "physical_validity": "not_proven"
+}

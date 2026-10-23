@@ -21,6 +21,7 @@ from .resources import search_spec, search_models, model_sections
 from .validation import validate_file, validate_text
 from .document import study_model, extract_section, physical_context, selected_source
 from .connectivity import connection_report, metadata_summary, snap_report, apply_snap
+from .workflow import build_checked, check_model, model_name, review as review_model
 
 
 def positive(value):
@@ -30,19 +31,19 @@ def positive(value):
     return value
 
 
-def geometry_options(c):
-    c.add_argument("--detail", choices=["summary", "full"], default="full")
+def geometry_options(c, *, detail="full"):
+    c.add_argument("--detail", choices=["summary", "full"], default=detail)
     c.add_argument("--contacts", choices=["auto", "all", "none"], default="auto", help="auto computes contacts for at most 500 physical placements; scope larger models to sections")
     c.add_argument("--limit", type=positive, default=200, help="Maximum instance/contact/pair/component rows (does not limit checks)")
     c.add_argument("--offset", type=int, default=0, help="First physical occurrence to display")
     c.add_argument("--max-instances", type=positive, default=100000, help="Physical expansion budget")
 
 
-def geometry_report(model, parts, args):
+def geometry_settings(args):
     if args.offset < 0:
         raise ValueError("--offset must be nonnegative")
-    return analyze_geometry(model, parts, detail=args.detail, contacts=args.contacts,
-                            output_limit=args.limit, pair_limit=args.limit, offset=args.offset, instance_limit=args.max_instances)
+    return dict(detail=args.detail, contacts=args.contacts, output_limit=args.limit,
+                pair_limit=args.limit, offset=args.offset, instance_limit=args.max_instances)
 
 
 def scope_options(c):
@@ -51,12 +52,23 @@ def scope_options(c):
 
 
 def parser():
-    p = argparse.ArgumentParser(description="Generate, inspect and review LDraw MPD assemblies. All reports are JSON. See docs/agent/tooling.md.")
+    p = argparse.ArgumentParser(
+        description="Build and review LDraw assemblies. Reports are JSON.",
+        epilog="Start: build MODEL.plan.json, then review MODEL.mpd. Or review MODEL.plan.json in one command. See instructions.md.")
     p.add_argument("--library", help="LDraw parts library root (default LDRAW_DIR, then LDRAWDIR)")
     shadows = p.add_mutually_exclusive_group()
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
+    c = commands.add_parser("review", help="Build if needed, check geometry, render and compare BOMs in one folder")
+    c.add_argument("file", help="JSON plan or existing MPD/LDR assembly")
+    c.add_argument("--outdir", help="Dedicated artifact directory (default: SOURCE-review beside input)")
+    c.add_argument("--force", action="store_true", help="Replace an unchanged generated review directory")
+    c.add_argument("--no-render", action="store_true", help="Run Python checks and BOM only; rendering/comparison stay explicitly skipped")
+    c.add_argument("--views", nargs="+", default=["home", "top", "front"])
+    c.add_argument("--timeout", type=positive, default=90)
+    scope_options(c)
+    geometry_options(c, detail="summary")
     c = commands.add_parser("examples", help="Find generated building, vehicle or detail examples")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
@@ -125,66 +137,51 @@ def parser():
     d.add_argument("--placement-notes", required=True)
     d.add_argument("--scale", choices=["minifigure","microscale","display","unknown"], default="unknown")
     d.add_argument("--force", action="store_true")
-    c = commands.add_parser('spaceship', help='Advanced spacecraft design briefs and reusable source constructions')
+    c = commands.add_parser('spaceship', help='SNOT spacecraft briefs, Halcyon design reference and source studies')
     ships = c.add_subparsers(dest='spaceship_command', required=True)
-    ships.add_parser('list', help='List whole-ship construction and inspiration studies')
+    ships.add_parser('list', help='List the default Halcyon reference and whole-ship studies')
     ships.add_parser('details', help='List reusable cockpit, wing, engine and hull studies')
-    d = ships.add_parser('brief', help='Start a spaceship design brief with module and visual-review guidance')
+    d = ships.add_parser('brief', help='Start a SNOT spaceship brief using Halcyon as the default reference')
     d.add_argument('archetype', choices=['starfighter','freighter','capital-ship'])
     d.add_argument('--output')
     d.add_argument('--force', action='store_true')
-    d = ships.add_parser('export', help='Export a reviewed spaceship construction with source and placement plan')
+    d = ships.add_parser('export', help='Copy the Halcyon design or export a reviewed source construction')
     d.add_argument('name')
     d.add_argument('--outdir', required=True)
     d.add_argument('--force', action='store_true')
-    c = commands.add_parser('manual', help='Study any source submodel through build pages and export it for an atlas')
-    m = c.add_subparsers(dest='manual_command', required=True)
-    d = m.add_parser('prepare', help='Extract a source assembly and make attributed step manuals')
-    d.add_argument('file')
-    d.add_argument('--section', required=True)
-    d.add_argument('--outdir', required=True)
-    d.add_argument('--title')
-    d.add_argument('--notes', help='JSON study notes: lesson, construction, interfaces, parent_context, reuse_notes')
-    d.add_argument('--views', nargs='+', default=['home','back'])
-    d.add_argument('--colour', type=int, default=7)
-    d.add_argument('--no-render', action='store_true')
-    d.add_argument('--overview', action='store_true', help='Render completed-model views; keep source step data for selecting smaller studies')
-    d.add_argument('--normalize-rotations', action='store_true')
-    d.add_argument('--repair-bfc-comments', action='store_true')
-    d.add_argument('--force', action='store_true')
-    d.add_argument('--max-instances', type=positive, default=2000)
-    d = m.add_parser('review', help='Record the build pages and final preview actually opened')
-    d.add_argument('directory')
-    d.add_argument('--images', nargs='+', required=True)
-    d.add_argument('--note', required=True)
-    d = m.add_parser('export', help='Copy a visually reviewed study and placement plan for adaptation')
-    d.add_argument('reference', help='Prepared study directory')
-    d.add_argument('--outdir', required=True)
-    d.add_argument('--force', action='store_true')
-    c = commands.add_parser('mechanism', help='Study and reuse mechanisms from source and build pages; no motion analysis')
-    m = c.add_subparsers(dest='mechanism_command', required=True)
-    m.add_parser('list', help='List the curated mechanism studies')
-    d = m.add_parser('prepare', help='Extract a source assembly and make attributed step manuals')
-    d.add_argument('file')
-    d.add_argument('--section', required=True)
-    d.add_argument('--outdir', required=True)
-    d.add_argument('--title')
-    d.add_argument('--operation', help='JSON notes: function, fixed, moving, input, output, parent_context, reuse_notes')
-    d.add_argument('--views', nargs='+', default=['home','back'])
-    d.add_argument('--colour', type=int, default=7)
-    d.add_argument('--no-render', action='store_true')
-    d.add_argument('--normalize-rotations', action='store_true')
-    d.add_argument('--repair-bfc-comments', action='store_true')
-    d.add_argument('--force', action='store_true')
-    d.add_argument('--max-instances', type=positive, default=2000)
-    d = m.add_parser('review', help='Record the build pages and final preview actually opened')
-    d.add_argument('directory')
-    d.add_argument('--images', nargs='+', required=True)
-    d.add_argument('--note', required=True)
-    d = m.add_parser('export', help='Copy a visually reviewed study and placement plan for adaptation')
-    d.add_argument('reference', help='Curated mechanism key or prepared study directory')
-    d.add_argument('--outdir', required=True)
-    d.add_argument('--force', action='store_true')
+    for name, help_text in [
+        ('manual', 'Study any source submodel through build pages and export it for an atlas'),
+        ('mechanism', 'Study and reuse mechanisms from source and build pages; no motion analysis'),
+    ]:
+        c = commands.add_parser(name, help=help_text)
+        m = c.add_subparsers(dest=name + '_command', required=True)
+        if name == 'mechanism':
+            m.add_parser('list', help='List the curated mechanism studies')
+        d = m.add_parser('prepare', help='Extract a source assembly and make attributed step manuals')
+        d.add_argument('file')
+        d.add_argument('--section', required=True)
+        d.add_argument('--outdir', required=True)
+        d.add_argument('--title')
+        if name == 'manual':
+            d.add_argument('--notes', help='JSON study notes: lesson, construction, interfaces, parent_context, reuse_notes')
+            d.add_argument('--overview', action='store_true', help='Render completed-model views; keep source step data for selecting smaller studies')
+        else:
+            d.add_argument('--operation', help='JSON notes: function, fixed, moving, input, output, parent_context, reuse_notes')
+        d.add_argument('--views', nargs='+', default=['home','back'])
+        d.add_argument('--colour', type=int, default=7)
+        d.add_argument('--no-render', action='store_true')
+        d.add_argument('--normalize-rotations', action='store_true')
+        d.add_argument('--repair-bfc-comments', action='store_true')
+        d.add_argument('--force', action='store_true')
+        d.add_argument('--max-instances', type=positive, default=2000)
+        d = m.add_parser('review', help='Record the build pages and final preview actually opened')
+        d.add_argument('directory')
+        d.add_argument('--images', nargs='+', required=True)
+        d.add_argument('--note', required=True)
+        d = m.add_parser('export', help='Copy a visually reviewed study and placement plan for adaptation')
+        d.add_argument('reference', help='Prepared study directory' + (' or curated mechanism key' if name == 'mechanism' else ''))
+        d.add_argument('--outdir', required=True)
+        d.add_argument('--force', action='store_true')
     c = commands.add_parser('technic', help='Reviewed structural parts, plans and joint/brace checks for fixed structures')
     t = c.add_subparsers(dest='technic_command', required=True)
     t.add_parser('list', help='List editable structural recipes')
@@ -285,7 +282,7 @@ def parser():
     c = commands.add_parser("build", help="Build a validated MPD from a JSON plan")
     c.add_argument("--parts-palette", type=Path, help="Restrict parts/colors and quantities using CSV, LDR, XML, or Studio IO")
     c.add_argument("plan")
-    c.add_argument("--output", required=True)
+    c.add_argument("--output", help="MPD path (default: NAME.mpd beside NAME.plan.json or NAME.json)")
     c.add_argument("--report")
     c.add_argument("--force", action="store_true", help="Replace an existing MPD after successful validation")
     geometry_options(c)
@@ -362,6 +359,10 @@ def run(args):
         return search_models(args.query, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
     library = library_path(args.library)
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
+    if args.command == 'review':
+        return review_model(args.file, parts, library, outdir=args.outdir, force=args.force,
+                            section=args.section, colour=args.colour, views=args.views,
+                            renders=not args.no_render, timeout=args.timeout, **geometry_settings(args))
     if args.command == 'spaceship':
         from .spaceships import design_brief, export_spaceship
         if args.spaceship_command in {'list','details'}:
@@ -376,34 +377,26 @@ def run(args):
                 atomic_write(target, dumps(brief)+'\n')
             return brief, 0
         return export_spaceship(args.name, args.outdir, force=args.force), 0
-    if args.command == 'manual':
+    if args.command in {'manual', 'mechanism'}:
         from .manuals import prepare_manual, review_manual, export_manual
-        if args.manual_command == 'prepare':
-            notes = json.loads(Path(args.notes).read_text()) if args.notes else None
-            report = prepare_manual(args.file, args.section, args.outdir, parts, title=args.title,
-                views=args.views, colour=args.colour, notes=notes, renders=not args.no_render,
-                normalize_rotations=args.normalize_rotations, repair_bfc=args.repair_bfc_comments,
-                force=args.force, max_instances=args.max_instances, kind='construction', overview=args.overview)
-            return report, 0 if report['source_checks_passed'] and report['bom_matches'] is not False else 1
-        if args.manual_command == 'review':
-            return review_manual(args.directory, images=args.images, note=args.note), 0
-        return export_manual(args.reference, args.outdir, force=args.force), 0
-    if args.command == 'mechanism':
-        from .manuals import prepare_manual, review_manual, export_manual
-        if args.mechanism_command == 'list':
+        command = getattr(args, args.command + '_command')
+        if command == 'list':
             from .examples import search_examples
             return search_examples(family='mechanism', limit=100), 0
-        if args.mechanism_command == 'prepare':
-            notes = json.loads(Path(args.operation).read_text()) if args.operation else None
+        if command == 'prepare':
+            notes_path = args.notes if args.command == 'manual' else args.operation
+            notes = json.loads(Path(notes_path).read_text()) if notes_path else None
             report = prepare_manual(args.file, args.section, args.outdir, parts, title=args.title,
                 views=args.views, colour=args.colour, notes=notes, renders=not args.no_render,
                 normalize_rotations=args.normalize_rotations, repair_bfc=args.repair_bfc_comments,
-                force=args.force, max_instances=args.max_instances)
+                force=args.force, max_instances=args.max_instances,
+                kind='construction' if args.command == 'manual' else 'mechanism',
+                overview=getattr(args, 'overview', False))
             return report, 0 if report['source_checks_passed'] and report['bom_matches'] is not False else 1
-        if args.mechanism_command == 'review':
+        if command == 'review':
             return review_manual(args.directory, images=args.images, note=args.note), 0
         reference = Path(args.reference)
-        if not reference.is_dir():
+        if args.command == 'mechanism' and not reference.is_dir():
             from .discovery import confined
             reference = confined(ROOT/'examples/mechanism-atlas', args.reference)
         return export_manual(reference, args.outdir, force=args.force), 0
@@ -651,15 +644,15 @@ def run(args):
                     rectangular_profile=profiles().get(code),
                     note="All coordinates are local LDU. Connector inference is evidence; inspect uncertain fits."), 0 if g.complete else 1
     if args.command == "build":
-        target = Path(args.output)
+        target = Path(args.output) if args.output else Path(args.plan).with_name(model_name(args.plan) + '.mpd')
         if target.suffix.casefold() != ".mpd":
             raise ValueError("Output must end in .mpd")
         if target.exists() and not args.force:
             raise ValueError("Output exists; use --force to replace after successful validation")
         plan = load_plan(args.plan)
-        text, model, diagnostics = build_plan(plan, parts, instance_limit=args.max_instances)
-        palette_report = None
-        if args.parts_palette and not any(d["severity"] == "error" for d in diagnostics):
+        text, _, report = build_checked(plan, parts, **geometry_settings(args))
+        report.update(profile="assembly", output=str(target), written=report['checks_passed'])
+        if args.parts_palette and report['checks_passed']:
             from .catalog_inventory import model_inventory
             from .parts_catalog import PartsCatalog
             palette = PartsCatalog.load(args.parts_palette)
@@ -668,20 +661,11 @@ def run(args):
                 candidate.write_text(text, encoding="utf-8")
                 inventory = model_inventory(candidate, library)
             palette.validate(inventory)
-            palette_report = dict(valid=True, allowed_combinations=len(palette.parts),
+            report["parts_palette"] = dict(valid=True, allowed_combinations=len(palette.parts),
                                   physical_parts=sum(inventory.values()))
-        geometry = None
-        if not any(d["severity"] == "error" for d in diagnostics):
-            geometry = geometry_report(model, parts, args)
-            diagnostics += geometry["diagnostics"]
-        passed = not any(d["severity"] == "error" for d in diagnostics)
-        report = dict(profile="assembly", checks_passed=passed, physical_validity="not_proven", output=str(target),
-                      written=passed, diagnostics=diagnostics, geometry=geometry)
-        if palette_report is not None:
-            report["parts_palette"] = palette_report
-        if passed:
+        if report['written']:
             atomic_write(target, text)
-        return report, 0 if passed else 1
+        return report, 0 if report['checks_passed'] else 1
     assembly = args.command == "validate" and args.profile == "assembly"
     model, diagnostics = validate_file(args.file, parts, assembly=assembly, section=args.section, colour=args.colour,
                                        instance_limit=getattr(args,"max_instances",100000))
@@ -731,8 +715,8 @@ def run(args):
                 report.update(checks_passed=False)
                 return report, 1
         elif args.command == "inspect" or (args.command == "validate" and args.geometry):
-            report["geometry"] = geometry_report(model, parts, args)
-            diagnostics += report["geometry"]["diagnostics"]
+            report.update(check_model(model, parts, diagnostics, **geometry_settings(args)))
+            diagnostics = report['diagnostics']
         report["checks_passed"] = not any(d["severity"] == "error" for d in diagnostics)
     failed = not report["checks_passed"] or (getattr(args, "strict", False) and bool(diagnostics))
     return report, 1 if failed else 0

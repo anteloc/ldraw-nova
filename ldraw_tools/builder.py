@@ -243,6 +243,4 @@ def build_plan(plan, parts, *, instance_limit=100000):
     root.submodels = {normalized(m.name): m for m in list(models.values())[1:]}
     text = serialize_mpd(root)
     parsed, diagnostics = validate_text(text, parts, name=names[0], instance_limit=instance_limit)
-    if any(d["severity"] == "error" for d in diagnostics):
-        return text, parsed, diagnostics
     return text, parsed, diagnostics

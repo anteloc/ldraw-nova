@@ -1,0 +1,312 @@
+{
+  "id": "69",
+  "model": "10248 Ferrari F40.ldr",
+  "section": "subModel-69.ldr",
+  "parser_section": "subModel-69.ldr",
+  "description": "Angled front lamp cover B",
+  "kind": "submodels",
+  "parent_description": "F40: saved callout, not referenced by the main car",
+  "status": "reference",
+  "assembly_checks_passed": true,
+  "source_sha256": "4dad4d71da85a93456562d58fd2f289b64f98bbdb35ed8d90d7bc6fc2055a5ba",
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 6,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -40.0,
+        -15.5,
+        -50.0
+      ],
+      "max": [
+        24.7624337468,
+        28.727731059999996,
+        10.0
+      ]
+    },
+    "occurrence_count": 6,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": false,
+    "contact_count": null,
+    "contacts": [],
+    "contacts_truncated": false,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": null,
+    "confirmed_component_count": null,
+    "components_truncated": false,
+    "overlap_candidate_count": 9,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "coverage.contacts_skipped",
+        "severity": "warning",
+        "message": "Contacts were not computed. Select a subassembly or request --contacts all; no connectivity conclusion is available.",
+        "line_number": null,
+        "section": null
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  },
+  "contacts_checked": false,
+  "inventory": {
+    "expanded_leaf_count": 6
+  },
+  "size_studs_plates_studs": [
+    3.23812168734,
+    5.5284663824999996,
+    3.0
+  ],
+  "bom_comparison": {
+    "matches": true
+  },
+  "views": [
+    "home"
+  ],
+  "semantic_annotation": {
+    "section": "subModel-69.ldr",
+    "title": "Angled front lamp cover B",
+    "category": "joints",
+    "context_steps": [
+      73
+    ],
+    "lesson": "The opposing cover has its own angled assembly; preserve the pivot and do not mirror the parts.",
+    "declared_parents": [],
+    "declared_children": {},
+    "reachable_from_main": false,
+    "source_steps": 3
+  },
+  "source_repairs": [
+    {
+      "kind": "normalize_rounded_rotation",
+      "section": "subModel-69.ldr",
+      "source_line": 4352,
+      "before": [
+        [
+          0.0,
+          -0.9135,
+          -0.4067
+        ],
+        [
+          0.0,
+          -0.4067,
+          0.9135
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "after": [
+        [
+          0.0,
+          -0.913551553,
+          -0.406722952
+        ],
+        [
+          0.0,
+          -0.406722952,
+          0.913551553
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "max_coefficient_change": 5.155316875882221e-05
+    },
+    {
+      "kind": "normalize_rounded_rotation",
+      "section": "subModel-69.ldr",
+      "source_line": 4354,
+      "before": [
+        [
+          0.4067,
+          -0.9135,
+          0.0
+        ],
+        [
+          -0.9135,
+          -0.4067,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "after": [
+        [
+          0.406722952,
+          -0.913551553,
+          0.0
+        ],
+        [
+          -0.913551553,
+          -0.406722952,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "max_coefficient_change": 5.155316875882221e-05
+    },
+    {
+      "kind": "normalize_rounded_rotation",
+      "section": "subModel-69.ldr",
+      "source_line": 4357,
+      "before": [
+        [
+          0.4067,
+          -0.9135,
+          0.0
+        ],
+        [
+          -0.9135,
+          -0.4067,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "after": [
+        [
+          0.406722952,
+          -0.913551553,
+          0.0
+        ],
+        [
+          -0.913551553,
+          -0.406722952,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "max_coefficient_change": 5.155316875882221e-05
+    },
+    {
+      "kind": "normalize_rounded_rotation",
+      "section": "subModel-69.ldr",
+      "source_line": 4359,
+      "before": [
+        [
+          0.4067,
+          -0.9135,
+          0.0
+        ],
+        [
+          -0.9135,
+          -0.4067,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "after": [
+        [
+          0.406722952,
+          -0.913551553,
+          0.0
+        ],
+        [
+          -0.913551553,
+          -0.406722952,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "max_coefficient_change": 5.155316875882221e-05
+    },
+    {
+      "kind": "normalize_rounded_rotation",
+      "section": "subModel-69.ldr",
+      "source_line": 4364,
+      "before": [
+        [
+          0.0,
+          -0.9135,
+          0.4067
+        ],
+        [
+          0.0,
+          -0.4067,
+          -0.9135
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "after": [
+        [
+          0.0,
+          -0.913551553,
+          0.406722952
+        ],
+        [
+          0.0,
+          -0.406722952,
+          -0.913551553
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "max_coefficient_change": 5.155316875882221e-05
+    }
+  ],
+  "visual_review": {
+    "decision": "technique",
+    "views": [
+      "home"
+    ],
+    "note": "Inspected this home image in the labeled section overview contact sheet. Angled front lamp cover B: The opposing cover has its own angled assembly; preserve the pivot and do not mirror the parts. Overview evidence supports the construction role only. Main source step pointers are contextual, not proof of identical placements. Isolated source/geometry checks pass and the rendered BOM matches; contacts and parent clearance are not established by this overview.",
+    "image_sha256": "ff254c375b336443440767c1225ffffe702757f6a488a32c638ef3cfe8ebeb0e"
+  },
+  "evidence_scope": "Isolated extracted section; contacts not checked. Rendered with bounded rotation normalization where recorded. See visual-review.md for overview inspection.",
+  "physical_validity": "not_proven"
+}

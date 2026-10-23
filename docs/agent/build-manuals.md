@@ -24,6 +24,8 @@ Keep the **exact returned model filename and submodel section name**, original s
 
 Read sources from `data/models-annotated/`. Inspect the section's physical BOM and parent placements. Skip empty sections, embedded part definitions and unresolved primitive-based pseudo-parts. Keep the original library files unchanged.
 
+For a user-supplied source, inspect that exact file directly. Numbered FILE sections can be saved callouts that the main model never references. Keep declared parent links separate from inferred construction context, and compare variants before claiming a match. The [Ferrari example](../../examples/snot/ferrari-f40/README.md) adds a small role/lesson map to such a file while reusing these same extraction and manual tools; part-name comments alone did not identify assembly roles.
+
 ## 2. Prepare build pages
 
 ```sh

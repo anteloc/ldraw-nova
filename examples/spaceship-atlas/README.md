@@ -1,6 +1,8 @@
 # Spaceships: shape, structure and detail
 
-Study whole ships for their proportions. Study smaller assemblies to learn how to build their cockpits, wings, engines and surface details. The [interactive gallery](index.html) links the images, editable sources and construction notes.
+**Start with [Halcyon](../snot/halcyon/README.md), the default spaceship model to follow. New spaceships use SNOT by default.** Follow its supported core, attached hull skins, axial engines and smooth contours, adapting the silhouette to the new subject.
+
+The source studies below supplement that default: whole ships teach proportions, and smaller assemblies teach cockpit, wing, engine and surface construction. The [interactive gallery](index.html) links those source studies and their construction notes.
 
 | Whole-ship study | Preview | Parts | Use |
 | --- | --- | ---: | --- |
@@ -30,16 +32,19 @@ All **50 images were opened**: 30 step views and 20 final/overview views. All ei
 ./ldraw-agent spaceship list
 ./ldraw-agent spaceship details
 ./ldraw-agent spaceship brief starfighter --output output/my-ship-brief.json
-./ldraw-agent spaceship export b-wing --outdir output/my-ship
-./ldraw-agent build output/my-ship/scene.plan.json --contacts none \
+./ldraw-agent spaceship export halcyon --outdir output/my-ship
+./ldraw-agent build output/my-ship/halcyon.plan.json \
   --output output/my-ship/my-ship.mpd
 ```
 
 `brief` accepts `starfighter`, `freighter` or `capital-ship`. It helps an agent choose a silhouette, palette, modules, defining parts and review views. It is a starting brief; the agent still designs the model and its interfaces.
 
-Export preserves the attributed source, provenance, editable placement plan, images and review. Change the whole-module placement in `scene.plan.json`, or adapt internal parts in `source.mpd`. The copied `generate.py` rebuilds those local files with the toolkit and parts library. It needs no original annotated model. A local origin is a positioning frame, not an asserted connector.
+Halcyon export copies its generator, self-contained plan, MPD, brief, guide and inspected images. Edit the generator, regenerate `halcyon.plan.json`, then build and review the adapted design. Source-study exports such as `b-wing` retain their existing attributed `source.mpd`, provenance and `scene.plan.json` workflow. A local origin is a positioning frame, not an asserted connector.
 
 Follow the [spaceship workflow](../../docs/agent/spaceships.md) for hull design, Technic supports, actual mechanism modules and final visual review. Analytical mechanism verification remains deferred.
+
+For an introduction to SNOT spacecraft construction, use the separate [6208 B-Wing study](../snot/b-wing-6208/README.md): bracket cores, Technic-mounted curved skins, wing-root carriers and independently oriented modules. Its 22 inspected views include two explicit cutaways. This is a learning reference with geometry work deferred, distinct from the checked 75050 B-wing above; it does not add or replace a checked export entry.
+
 
 ## Add more examples
 

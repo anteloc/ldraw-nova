@@ -5,6 +5,7 @@ from tempfile import TemporaryDirectory
 import argparse
 import html
 import json
+from os.path import relpath
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -124,11 +125,12 @@ The placement plan preserves source axes. `source_origin` is a positioning frame
         catalog=dict(version=1,examples=[r for r in rows.values() if r['group']=='examples'],details=[r for r in rows.values() if r['group']=='details'])
         atomic_write(catalog_path,dumps(catalog)+'\n')
         print(f'{key}: {report["physical_placements"]} parts, source checks {report["source_checks_passed"]}, BOM {report["bom_matches"]}',flush=True)
+    default_guide = html.escape(relpath(ROOT/'examples/snot/halcyon/README.md', outdir))
     cards=[]
     for row in rows.values():
         preview=f'<img src="{html.escape(row["preview"])}" alt="">' if row.get('preview') else ''
         cards.append(f'<article><a href="{row["manual"]}">{preview}<h2>{html.escape(row["title"])}</h2></a><p>{html.escape(row["use"])} · {row["physical_placements"]} parts</p><p>{html.escape(row["lesson"])}</p><a href="{row["guide"]}">Construction guide</a></article>')
-    atomic_write(outdir/'index.html','''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Spaceship atlas</title><style>body{font:16px/1.5 system-ui;max-width:1200px;margin:32px auto;padding:0 20px;background:#f6f8fa;color:#20303a}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}article{padding:20px;border:1px solid #ccd5dd;background:white;border-radius:8px}img{width:100%}a{color:#165e9e}h2{font-size:20px}</style><h1>Spaceships: silhouettes, structures and details</h1><p>Study whole ships for proportions. Open smaller constructions to learn their parts and build order. Inspiration entries retain unresolved source errors and cannot be exported as checked assemblies.</p><main>'''+''.join(cards)+'</main></html>')
+    atomic_write(outdir/'index.html','''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Spaceship atlas</title><style>body{font:16px/1.5 system-ui;max-width:1200px;margin:32px auto;padding:0 20px;background:#f6f8fa;color:#20303a}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}article{padding:20px;border:1px solid #ccd5dd;background:white;border-radius:8px}img{width:100%}a{color:#165e9e}h2{font-size:20px}</style><h1>Spaceships: silhouettes, structures and details</h1><p><strong>Spaceships use SNOT by default.</strong> Follow <a href="'''+default_guide+'''">Halcyon</a> for construction and visual quality, then use the source studies below.</p><p>Study whole ships for proportions. Open smaller constructions to learn their parts and build order. Inspiration entries retain unresolved source errors and cannot be exported as checked assemblies.</p><main>'''+''.join(cards)+'</main></html>')
 
 
 if __name__=='__main__':

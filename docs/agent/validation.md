@@ -1,5 +1,7 @@
 # Validation coverage and repairs
 
+Use `review MODEL.plan.json` or `review MODEL.mpd` for the combined assembly/geometry checks, BOM, renders and BOM comparison. It uses the same validators as the individual commands below. See [review artifacts and failure behavior](tooling.md#review-a-model); images still need to be opened and inspected. Use `--no-render` for intermediate checks with rendering/comparison explicitly skipped.
+
 For the authorized [mechanism workflow](mechanisms.md), analytical mechanism verification is deferred. Use `build --contacts none` and `validate --geometry --contacts none` for source-derived mechanism assemblies: normal syntax, references, transforms, duplicate and supported geometry checks remain active; connector analysis is explicitly skipped. Continue BOM comparison and visual inspection. Apply `technic check` only to selected fixed supports, and do not require a whole moving mechanism to satisfy `require_rigid`.
 
 Successful parsing is necessary but insufficient. The tools distinguish file-format checks, constraints for new assemblies, and physical review evidence. `checks_passed` means no reported errors in that selected profile; **it never means a model is proven buildable**.

@@ -54,3 +54,11 @@ The broad gallery also retains problematic sources for inspiration: 26 of its 22
 The default, two-course and seven-course forms pass geometry error checks with one optimistic connection group. Their plans retain the construction-source credits. Unchanged OMR submodels use the shared extractor and placement plans; only selected adaptable constructions need their own generator.
 
 For new searches, preparation and review/export commands, follow the [agent workflow](../../docs/agent/reference-discovery.md).
+
+For a small SNOT lesson, use the separately prepared [Tropical Parrot head](../snot/parrot/README.md): fourteen pieces, seven construction stages, exact sideways offsets and a complete bird for context. Its plans use the same builder and preserve the supplied source credit.
+
+The [Cat studies](../snot/cat/README.md) add single-stud diagonal details, a layered face and a three-piece limb repeated around ball joints. Use these for shaping and articulation; the face is posed upright on a ball joint rather than attached by a fixed perpendicular stud connection.
+
+The [Ferrari F40 reference](../snot/ferrari-f40/README.md) adds a searchable semantic map of 74 sections and five SNOT build studies for vehicle bodywork. The five small studies pass checks; the complete car remains labeled inspiration with overlap errors. Its saved callouts and flattened main car are kept distinct.
+
+The [Halcyon interceptor](../snot/halcyon/README.md) is an original 195-piece spacecraft that combines these SNOT lessons. Its hull core exposes side studs for flank panels and pod stripes, and forward and aft studs for intakes, nozzles and cannons built along their own axes. It passes checks as one connection group.

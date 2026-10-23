@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "studies": [
+    {
+      "key": "body-mount", "section": "subModel-6.ldr", "title": "Five-piece bracket and side-stud body mount",
+      "notes": {
+        "lesson": "Combine perpendicular attachment faces within a small mount before building the body skin.",
+        "construction": "Four source stages add a 99206 bracket, plate stack, clip plate and 87087 side-stud brick. The completed mount has five physical parts.",
+        "interfaces": "Inspect the bracket's underside, exposed sideways studs and clip separately. Stud support and a clip joint serve different roles; this isolated mount does not prove an attached panel's clearance.",
+        "parent_context": "This is an unreferenced saved callout. Its corresponding body area is added at main source step 13. That main step uses 4085c clips while this callout uses 60897, so it is not an exact occurrence of the saved assembly.",
+        "reuse_notes": "Reuse as a small mounting pattern. Preserve the original source credit, inspect the chosen clip variant and validate the receiving panel after composition. Coordinates are source-local. No analytical movement verification is claimed."
+      }
+    },
+    {
+      "key": "door-rail", "section": "subModel-35.ldr", "title": "Repeated brackets behind a narrow door rail",
+      "notes": {
+        "lesson": "A thin visible trim rail can also carry a repeated sideways stud field behind it.",
+        "construction": "Two source stages combine a 6636 tile, two small spacers/caps and three 44728 brackets into a six-piece rail.",
+        "interfaces": "The brackets expose a common perpendicular stud face. Their parent door supplies the remaining panel and hinge stack; the rail alone is not a complete opening door.",
+        "parent_context": "subModel-34.ldr declares this child at [0,-88,0], in source step 7. The complete car's corresponding door is added in main source step 43. Its saved door is a separate callout, not a declared child of main.ldr.",
+        "reuse_notes": "Transfer the repeated-bracket pattern to door trim or another narrow fascia. Keep the original spacing until actual sockets on the new panel have been inspected, then check the combined assembly."
+      }
+    },
+    {
+      "key": "rear-lamp", "section": "subModel-53.ldr", "title": "Rear lamp and grille on perpendicular faces",
+      "notes": {
+        "lesson": "One small bracket-based corner can support two different visible surfaces without a bulky brick core.",
+        "construction": "Four source stages build an eight-piece corner from plate supports, a 99207 bracket, a jumper, a dish lamp and two grille tiles.",
+        "interfaces": "Read both views: the dish and grille occupy perpendicular planes. The underside support and exposed studs must meet the rear clamshell; a rendered lamp does not establish those parent connections.",
+        "parent_context": "subModel-52.ldr declares two placements in its step 10 at [-14,-25,-123] and [-14,-25,137], with their source rotations. The matching rear body area appears in main source step 50. Preserve the distinction between the saved clamshell and the flattened car.",
+        "reuse_notes": "Useful for vehicle lights beside vents, or compact corners with two surface treatments. Reinspect the dish and jumper offsets when changing either part. Keep all original colours unless deliberately redesigning the detail."
+      }
+    },
+    {
+      "key": "window-louver", "section": "subModel-57.ldr", "title": "Repeated sideways rear-window louver",
+      "notes": {
+        "lesson": "Make one small louver module, then place repeats on explicit stepped mounting planes.",
+        "construction": "Three source stages combine a 3666 rail, two 30413 translucent panels and two 87087 side-stud bricks. The module contains five parts.",
+        "interfaces": "The side-stud bricks turn the panel faces perpendicular to the rail. The surrounding clamshell supplies the repeated mounts; the local origin is not an automatically verified connector.",
+        "parent_context": "subModel-52.ldr places three copies in step 15 at [-90,-75,7], [-130,-83,7] and [-170,-91,7], using its declared rotations. Their origins advance 40 LDU longitudinally and 8 LDU vertically in that parent frame.",
+        "reuse_notes": "Transfer the repeated-module approach to vents, glazing or grille blades. The 40-by-8 progression belongs to this assembly, not to every louver design. Preserve joint seating and inspect clearance after changing the pitch."
+      }
+    },
+    {
+      "key": "fascia-core", "section": "subModel-63.ldr", "title": "Compact front fascia mounting core",
+      "notes": {
+        "lesson": "Separate the fascia's sideways stud field from the structural support and decorative skin.",
+        "construction": "Three source stages build a six-piece core from a plate, a 2 x 2 brick, two 32000 Technic bricks and two 99207 brackets.",
+        "interfaces": "The bracket faces accept perpendicular panels while the Technic holes provide a different interface family. Inspect each actual mate; the presence of holes does not establish a functioning axle connection.",
+        "parent_context": "This is an unreferenced saved callout corresponding to the front bumper area at main source step 57. The main car's part orientations differ, so treat it as a construction study rather than an exact replacement module.",
+        "reuse_notes": "A useful small starting point for a bumper, dashboard or grille support. Build the intended visible surface separately, align its sockets and check the combined model before repeating the core."
+      }
+    }
+  ]
+}
