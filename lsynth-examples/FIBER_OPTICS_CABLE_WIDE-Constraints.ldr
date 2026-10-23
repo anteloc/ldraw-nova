@@ -1,7 +1,11 @@
-0 FIBER_OPTICS_CABLE_WIDE-Constraints
+0 Two broad light guides sweep around a compact, symmetrical frame of axle joiners, cross blocks and hanging levers.
 0 Name: FIBER_OPTICS_CABLE_WIDE-Constraints.ldr
 0 Author: Jetro de Chateau
 0 Unofficial Model
+0 // Scene: Blue and yellow loops bend outward from two upper fittings, then turn inward near the lower levers. A horizontal perforated beam spans the small rigid frame behind them.
+0 // Rigid construction: The mirrored fittings combine 6538a joiners, 32062 short axles, 32184 and 32291 cross blocks, 6536 connectors, 2853 crank pieces and a 40490 beam.
+0 // Build lesson: Study the small rigid offset assemblies and their paired layout as ideas for an instrument bracket, cable guide or compact service head.
+0 // Reuse: 4173497.dat is unresolved in the local library, so the larger parent unit is absent from the preview. The visible linkage does not establish the complete device or its operation.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 1 47 0 0 0 -1 0 0 0 1 0 0 0 -1 4173497.dat
@@ -55,6 +59,7 @@
 1 47 70 0 -100 0 0 -1 0 -1 0 -1 0 0 4459.DAT
 0 // Technic Beam  9 (trans_clear)
 1 47 10 0 -90 0 0 -1 1 0 0 0 -1 0 40490.DAT
+0 // Study 1: The blue loop wraps around one side of the frame and returns to a low fitting.
 0 SYNTH BEGIN FIBER_OPTICS_CABLE_WIDE 1
 0 SYNTH SHOW
 1 2 -20 -40 -85 0 0 1 1 0 0 0 1 0 LS02.dat
@@ -63,6 +68,7 @@
 1 1 -70 70 -130.5 0 -1 0 1 0 0 0 0 1 LS02.dat
 1 4 -20 70 -130.5 0 -1 0 1 0 0 0 0 1 LS02.dat
 0 SYNTH END
+0 // Study 2: The yellow loop mirrors the broad route on the other side; the paired rigid brackets are the reusable construction detail.
 0 SYNTH BEGIN FIBER_OPTICS_CABLE_WIDE 14
 0 SYNTH SHOW
 1 2 20 -40 -85 0 0 1 1 0 0 0 1 0 LS02.dat

@@ -14,6 +14,12 @@ The [structural workflow](technic.md) and [mechanism workflow](mechanisms.md)
 remain the implementation paths here; analytical mechanism verification remains
 deferred. No Blender rig or sibling checkout is needed to read these lessons.
 
+For track carriers, pneumatic equipment, cable fittings and shaped frames, use
+the [LSynth construction studies](../../lsynth-examples/README.md) and their
+[industrial assembly lessons](technic-patterns/industrial-assemblies.md). They
+extend the design vocabulary to rigid supports and equipment around flexible
+parts, with source-specific limits recorded beside each useful construction.
+
 ## Choose a construction by function
 
 | Intended feature | Pattern and construction lesson | Starting example |

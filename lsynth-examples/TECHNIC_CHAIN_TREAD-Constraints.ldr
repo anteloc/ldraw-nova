@@ -1,7 +1,11 @@
-0 TECHNIC_CHAIN_TREAD
+0 Two short track units carry broad hinged pads around small and large gear wheels.
 0 Name: TECHNIC_CHAIN_TREAD-Constraints.ldr
 0 Author: Willy Tschager
 0 Unofficial Model
+0 // Scene: One track has a larger, taller oval envelope than the other. Transparent brick rails sit inside the loops, leaving the wheel centres and the underside of the pads visible.
+0 // Rigid construction: 3702 and 3700 Technic bricks, plates and 3749 axle pins provide small carrier frames. The two examples compare 3648b 24-tooth and 3649 40-tooth wheels.
+0 // Build lesson: Build a track module from its carrier rail and wheel centres outward. Track width, end-wheel size and visible pad spacing strongly determine the vehicle silhouette.
+0 // Reuse: These are separate size comparisons, not a finished matched pair of vehicle tracks. Colour 16 is unresolved in one block; drive, axle retention and full chassis attachment need review.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Technic Brick  1 x  8 with Holes (trans_clear)
@@ -28,6 +32,7 @@
 1 47 -40 10 -60 -1 0 0 0 1 0 0 0 -1 3749.DAT
 0 // Technic Axle Pin (trans_clear)
 1 47 -40 10 60 -1 0 0 0 1 0 0 0 -1 3749.DAT
+0 // Study 1: The first loop uses the smaller end wheels on its brick carrier.
 0 SYNTH BEGIN TECHNIC_CHAIN_TREAD 16
 0 SYNTH SHOW
 0 // Technic Gear 24 Tooth with Single Axle Hole (light_grey)
@@ -35,6 +40,7 @@
 0 // Technic Gear 24 Tooth with Single Axle Hole (light_grey)
 1 7 50 10 -60 0 0 1 0 1 0 -1 0 0 3648b.dat
 0 SYNTH END
+0 // Study 2: The second loop uses larger wheels and therefore makes a taller track envelope.
 0 SYNTH BEGIN TECHNIC_CHAIN_TREAD 0
 0 SYNTH SHOW
 0 // Technic Gear 40 Tooth (light_grey)

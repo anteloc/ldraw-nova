@@ -1,7 +1,11 @@
-0 TECHNIC_RIBBED_HOSE-Constraints.ldr
+0 Ribbed hoses form a tall arch, a low U-shaped return and two straight comparison lengths.
 0 Name: TECHNIC_RIBBED_HOSE-Constraints.ldr
 0 Author: Willy Tschager
 0 Unofficial Model
+0 // Scene: Blue and yellow spans meet at the crown of the arch above two small supports. A brown hose turns back near a pin-bearing brick, while orange and purple lengths lie alongside.
+0 // Rigid construction: 2460 tiles with pins and 4730 pin-bearing bricks provide distinct anchoring contexts. A separate 3673 pin appears near the arch base.
+0 // Build lesson: Use repeated ribs as a restrained industrial texture for ducts, machine guards or service loops, with visible rigid supports at the endpoints.
+0 // Reuse: Two rendered spans touching at the arch crown do not establish a connector. Verify the actual end fit and support of each span before treating the arch as one buildable hose.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Tile  2 x  2 with Pin (trans_clear)
@@ -14,6 +18,7 @@
 1 47 140 -16 -20 -1 0 0 0 1 0 0 0 -1 4730.DAT
 0 // Brick  2 x  2 with Pin (trans_clear)
 1 47 140 -16 100 -1 0 0 0 1 0 0 0 -1 4730.DAT
+0 // Study 1: The blue span rises from one pin-supported base toward the top of the arch.
 0 SYNTH BEGIN TECHNIC_RIBBED_HOSE 1
 0 SYNTH SHOW
 1 2 -90 -2 0 0 0 1 0 1 0 -1 0 0 LS02.dat
@@ -21,6 +26,7 @@
 1 1 4.352 -208 18.583 0.207912 -0.978148 0 0 0 1 -0.978148 -0.207912 0 LS02.dat
 1 4 24.892 -208 22.95 0.207912 -0.978148 0 0 0 1 -0.978148 -0.207912 0 LS02.dat
 0 SYNTH END
+0 // Study 2: The yellow span completes the other half of the displayed arch.
 0 SYNTH BEGIN TECHNIC_RIBBED_HOSE 14
 0 SYNTH SHOW
 1 2 25.002 -208 22.91 0.207912 -0.978148 0 0 0 1 -0.978148 -0.207912 0 LS02.dat
@@ -28,6 +34,7 @@
 1 14 140 -65 40 0 0 -1 0 -1 0 -1 0 0 LS02.dat
 1 4 140 -42 40 0 0 -1 0 -1 0 -1 0 0 LS02.dat
 0 SYNTH END
+0 // Study 3: The brown span makes a low return beside a pin-bearing brick.
 0 SYNTH BEGIN TECHNIC_RIBBED_HOSE 6
 0 SYNTH SHOW
 1 2 118 -6 -20 0 1 0 -1 0 0 0 0 1 LS02.dat
@@ -35,6 +42,7 @@
 1 6 100 -6 100 0 -1 0 -1 0 0 0 0 -1 LS02.dat
 1 4 118 -6 100 0 -1 0 -1 0 0 0 0 -1 LS02.dat
 0 SYNTH END
+0 // Study 4: The orange straight length is a comparison sample.
 0 SYNTH BEGIN TECHNIC_RIBBED_HOSE 25
 0 SYNTH SHOW
 1 2 158 -6 -60 0 1 0 -1 0 0 0 0 1 LS02.dat
@@ -42,6 +50,7 @@
 1 25 -70 -6 -60 0 1 0 -1 0 0 0 0 1 LS02.dat
 1 4 -88 -6 -60 0 1 0 -1 0 0 0 0 1 LS02.dat
 0 SYNTH END
+0 // Study 5: The purple straight length provides a second comparison sample.
 0 SYNTH BEGIN TECHNIC_RIBBED_HOSE 22
 0 SYNTH SHOW
 1 2 158 -6 -100 0 1 0 -1 0 0 0 0 1 LS02.dat

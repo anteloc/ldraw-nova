@@ -1,7 +1,11 @@
-0 FIBER_OPTICS_CABLE-Constraints
+0 A four-cylinder V engine is displayed beside an optical distributor, with coloured light guides arcing over its cylinder banks.
 0 Name: FIBER_OPTICS_CABLE-Constraints.ldr
 0 Author: Holly Wood
 0 Unofficial Model
+0 // Scene: One group shows a small box with coloured leads fanning from its face. Beside it, a compact engine has two sloping banks and repeated guide ends above them; loose guide samples lie alongside.
+0 // Rigid construction: The rigid engine uses 2850 cylinder heads, 2851 pistons, 2852 connecting rods and 2853/2854 crank pieces. Cross blocks on retained axles organize the upper row of light-guide ends.
+0 // Build lesson: Combine a legible piston-and-crank core with ordered accessory rails. Repeated fittings and evenly separated routes can make a small engine bay look deliberate and rich.
+0 // Reuse: These are optical guides, not evidence of an ignition or fluid circuit. The constraints inline one 6637 distributor as 14 component placements; the supplied synthesis uses the whole part. Preserve the nested credits and recheck the legacy transforms before reuse.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Technic Brick  1 x  4 with Holes (trans_clear)
@@ -185,12 +189,14 @@
 0
 0 End of Inlined Part
 
+0 // Study 1: The black electrical lead supplies the separate optical-distributor display.
 0 SYNTH BEGIN ELECTRIC_RCX_CABLE 0
 0 SYNTH SHOW
 1 2 0 -63 -63.7 1 0 0 0 1 0 0 0 1 LS09.dat
 1 0 0 -87 -63.7 1 0 0 0 1 0 0 0 1 LS09.dat
 1 4 -40 -127 -101 0.707107 0.707107 0 -0.482246 0.482246 -0.731354 -0.517145 0.517145 0.681998 LS09.dat
 0 SYNTH END
+0 // Study 2: The first group of eight coloured guides fans outward from the distributor to demonstrate its outlet directions.
 0 SYNTH BEGIN FIBER_OPTICS_CABLE 1
 0 SYNTH SHOW
 1 2 -7 -65 -38 1 0 0 0 1 0 0 0 1 LS02.dat
@@ -243,6 +249,7 @@
 1 16 101 -8 20 1 0 0 0 1 0 0 0 1 6640.dat
 0 // Tile  1 x  1 with Clip (trans_clear)
 1 47 100 -2 30 1 0 0 0 1 0 0 0 1 2555.DAT
+0 // Study 10: Two additional loose guide samples show their small collars and end direction beside the main displays.
 0 SYNTH BEGIN FIBER_OPTICS_CABLE 1
 0 SYNTH SHOW
 1 2 130 -8 -60 0 0 -1 1 0 0 0 -1 0 LS02.dat
@@ -272,6 +279,7 @@
 1 47 -210 -96 -30 0 0 1 0 1 0 -1 0 0 2555.DAT
 0 // Tile  1 x  1 with Clip (trans_clear)
 1 47 -150 -96 -30 0 0 1 0 1 0 -1 0 0 2555.DAT
+0 // Study 12: The second black electrical lead belongs to the engine-side optical unit.
 0 SYNTH BEGIN ELECTRIC_RCX_CABLE 0
 0 SYNTH SHOW
 1 2 -180 -74.8 -4 1 0 0 0 0 1 0 -1 0 LS09.dat
@@ -279,6 +287,7 @@
 1 0 -200 -74.8 36 0 1 0 0 0 1 1 0 0 LS09.dat
 1 4 -240 -74.8 36 0 1 0 0 0 1 1 0 0 LS09.dat
 0 SYNTH END
+0 // Study 13: The engine-side group of eight guides forms repeated arches over the two banks; inspect the rigid cross-block rail that holds their ends.
 0 SYNTH BEGIN FIBER_OPTICS_CABLE 1
 0 SYNTH SHOW
 1 2 -173 -49 -38 -1 0 0 0 0 1 0 1 0 LS02.dat

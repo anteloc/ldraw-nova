@@ -1,7 +1,11 @@
-0 STRING_xxL-Constraints
+0 A long measuring-board display compares straight, bowed and hanging strings between small end fittings.
 0 Name: STRING_xxL-Constraints.ldr
 0 Author: Holly-Wood
 0 Unofficial Model
+0 // Scene: Several coloured runs lie above narrow rows of plates like samples on a ruler. Others leave the board in broad curves or climb to a raised end; short axle-mounted details sit nearby.
+0 // Rigid construction: Long plates organize the comparison. Small 572a end-stud references mark the string ends, and short axles illustrate an alternate support context.
+0 // Build lesson: Use visible end fittings and deliberate sag to make ropes legible at model scale; separate a loose cord, a tensioned route and a decorative outline in the design brief.
+0 // Reuse: Length labels are synthesis presets, not measured tension or stock-length certification. This legacy source also places an internal primitive and contains rounded/nonrigid transforms.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Plate  1 x 12 (trans_clear)
@@ -42,6 +46,7 @@
 1 1 -20 -8 800 1 0 0 0 1 0 0 0 1 572a.dat
 0 // ~String End Stud (Obsolete) (blue)
 1 1 -20 -8 0 -1 0 0 0 1 0 0 0 -1 572a.dat
+0 // Study 1: The 41L blue preset is the longest straight sample along the plate board.
 0 SYNTH BEGIN STRING_41L 1
 0 SYNTH SHOW
 1 2 -20 -6 793 -1 0 0 0 0 1 0 1 0 LS04.dat
@@ -51,6 +56,7 @@
 1 14 0 -8 600 1 0 0 0 1 0 0 0 1 572a.dat
 0 // ~String End Stud (Obsolete) (yellow)
 1 14 0 -8 0 -1 0 0 0 1 0 0 0 -1 572a.dat
+0 // Study 2: The 31L yellow preset compares a shorter span along the same layout.
 0 SYNTH BEGIN STRING_31L 14
 0 SYNTH SHOW
 1 2 0 -6 593 -1 0 0 0 0 1 0 1 0 LS04.dat
@@ -60,6 +66,7 @@
 1 6 20 -8 400 1 0 0 0 1 0 0 0 1 572a.dat
 0 // ~String End Stud (Obsolete) (brown)
 1 6 20 -8 0 -1 0 0 0 1 0 0 0 -1 572a.dat
+0 // Study 3: The 21L brown preset shortens the comparison again.
 0 SYNTH BEGIN STRING_21L 6
 0 SYNTH SHOW
 1 2 20 -6 393 -1 0 0 0 0 1 0 1 0 LS04.dat
@@ -69,6 +76,7 @@
 1 25 40 -8 400 1 0 0 0 1 0 0 0 1 572a.dat
 0 // ~String End Stud (Obsolete) (orange)
 1 25 40 -8 0 -1 0 0 0 1 0 0 0 -1 572a.dat
+0 // Study 4: The orange preset introduces grip-style ends.
 0 SYNTH BEGIN PLI_STRING_WITH_GRIPS_21L 25
 0 SYNTH SHOW
 1 2 40 -6 394 -1 0 0 0 0 1 0 1 0 LS09.dat
@@ -78,6 +86,7 @@
 1 20 60 -8 160 1 0 0 0 1 0 0 0 1 572a.dat
 0 // ~String End Stud (Obsolete) (light_violet)
 1 20 60 -8 0 -1 0 0 0 1 0 0 0 -1 572a.dat
+0 // Study 5: Two 11L presets compare short routes near the board.
 0 SYNTH BEGIN STRING_11L 20
 0 SYNTH SHOW
 1 2 60 -6 153 -1 0 0 0 0 1 0 1 0 LS04.dat
@@ -99,6 +108,7 @@
 1 22 160 -8 400 1 0 0 0 1 0 0 0 1 572a.dat
 0 // ~String End Stud (Obsolete) (purple)
 1 22 100 -8 0 -1 0 0 0 1 0 0 0 -1 572a.dat
+0 // Study 7: The later samples leave the straight comparison row to show larger curves and raised endpoints.
 0 SYNTH BEGIN STRING_31L 22
 0 SYNTH SHOW
 1 2 160 -6 393 -1 0 0 0 0 1 0 1 0 LS04.dat
@@ -119,6 +129,7 @@
 1 9 70 -104 630 -1 0 0 0 1 0 0 0 -1 572a.dat
 0 // ~String End Stud (Obsolete) (light_blue)
 1 9 110 -8 400 1 0 0 0 1 0 0 0 1 572a.dat
+0 // Study 8: Grip-style samples demonstrate that the end hardware must be considered separately from the string route.
 0 SYNTH BEGIN STRING_WITH_GRIPS_21L 11
 0 SYNTH SHOW
 1 2 70 -102.5 622 -1 0 0 0 0 1 0 1 0 LS09.dat
@@ -160,6 +171,7 @@
 1 47 354 -8 130 0 0 -1 -1 0 0 0 1 0 3704.DAT
 0 // Technic Axle  2 (trans_clear)
 1 47 250 -8 20 0 0 -1 -1 0 0 0 1 0 3704.DAT
+0 // Study 11: The last 21L sample completes the curved-endpoint comparison.
 0 SYNTH BEGIN STRING_21L 5
 0 SYNTH SHOW
 1 2 360 -6 193 -1 0 0 0 0 1 0 1 0 LS04.dat

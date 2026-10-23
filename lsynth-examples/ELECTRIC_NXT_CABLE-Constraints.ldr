@@ -1,7 +1,11 @@
-0 ELECTRIC_NXT_CABLE-Constraints
+0 A robotics controller sits among three sensors and two motors, linked by loose cables and small coils.
 0 Name: ELECTRIC_NXT_CABLE-Constraints.ldr
 0 Author: Holly Wood
 0 Unofficial Model
+0 // Scene: The central NXT brick faces a scattered bench-top arrangement of touch, light and sound sensors. Two large motors sit apart from it, with long leads looping into the gaps.
+0 // Rigid construction: The rigid modules provide their own port faces and mounting holes. Ten x933c01 cable-end references sit between those modules and the flexible paths.
+0 // Build lesson: Lay out a controller, useful outputs and accessible sensor faces first; then route leads from actual ports without blocking mounting holes or the user controls.
+0 // Reuse: The local library lacks x933c01.dat, so the preview omits those plugs. This is a component-and-routing study, not a mounted robot or a verified pinout.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Electric Mindstorms NXT (Complete) (black)
@@ -10,6 +14,7 @@
 1 7 170.442 12 -79.582 -1 0 0 0 1 0 0 0 -1 53793.dat
 1 0 55 -73 -133 1 0 0 0 1 0 0 0 1 x933c01.dat
 1 0 170.86 -20 -100.024 -1 0 0 0 -1 0 0 0 1 x933c01.dat
+0 // Study 1: The short blue route reaches the nearby touch sensor.
 0 SYNTH BEGIN ELECTRIC_NXT_CABLE 1
 0 SYNTH SHOW
 1 2 55 -72 -136 -1 0 0 0 0 1 0 1 0 LS05.dat
@@ -21,6 +26,7 @@
 1 1 240 12 -250 -0.707107 0 -0.707107 0 1 0 0.707107 0 -0.707107 55969.dat
 1 0 18 -73 -133 1 0 0 0 1 0 0 0 1 x933c01.dat
 1 0 225.858 -19 -264.142 -0.707107 0 0.707107 0 -1 0 0.707107 0 0.707107 x933c01.dat
+0 // Study 2: The brown route bends down toward the light sensor in front of the controller.
 0 SYNTH BEGIN ELECTRIC_NXT_CABLE 6
 0 SYNTH SHOW
 1 2 18 -72 -136 -1 0 0 0 0 1 0 1 0 LS05.dat
@@ -35,6 +41,7 @@
 1 7 -80 12 -350 0 0 1 0 1 0 -1 0 0 55963.dat
 1 0 -18 -73 -133 1 0 0 0 1 0 0 0 1 x933c01.dat
 1 0 -60 -19 -350 0 0 -1 0 -1 0 -1 0 0 x933c01.dat
+0 // Study 3: The yellow lead includes a compact coil on its way to the sound sensor.
 0 SYNTH BEGIN ELECTRIC_NXT_CABLE 14
 0 SYNTH SHOW
 1 2 -18 -72 -136 -1 0 0 0 0 1 0 1 0 LS05.dat
@@ -64,6 +71,7 @@
 1 7 330 -83 -60 -1 0 0 0 1 0 0 0 -1 53787.dat
 1 0 19 -73 132 -1 0 0 0 1 0 0 0 -1 x933c01.dat
 1 0 330 -43 168 1 0 0 0 -1 0 0 0 -1 x933c01.dat
+0 // Study 4: The orange motor lead makes a broad loose loop beside the controller.
 0 SYNTH BEGIN ELECTRIC_NXT_CABLE 25
 0 SYNTH SHOW
 1 2 19 -72 135 1 0 0 0 0 1 0 -1 0 LS05.dat
@@ -85,6 +93,7 @@
 1 7 -250 -83 460 1 0 0 0 1 0 0 0 1 53787.dat
 1 0 -18 -73 132 -1 0 0 0 1 0 0 0 -1 x933c01.dat
 1 0 -250 -43 232 -1 0 0 0 -1 0 0 0 1 x933c01.dat
+0 // Study 5: The white motor lead includes a helical section behind the controller.
 0 SYNTH BEGIN ELECTRIC_NXT_CABLE 15
 0 SYNTH SHOW
 1 2 -18 -72 135 1 0 0 0 0 1 0 -1 0 LS05.dat

@@ -1,7 +1,11 @@
-0 TECHNIC_PNEUMATIC_HOSE-Constraints
+0 A hand pump, a two-port pneumatic cylinder and a lever valve are connected by three looping hoses.
 0 Name: TECHNIC_PNEUMATIC_HOSE-Constraints.ldr
 0 Author: Holly Wood
 0 Unofficial Model
+0 // Scene: Two tall cylinders stand beside a low valve on a small perforated-brick support. Blue, yellow and brown hoses make the connections visible; straight tube samples and a loose ring sit separately in front.
+0 // Rigid construction: 2797c01 is the hand pump, 2793c01 the two-port cylinder and 4694c01 the valve. Technic bricks and friction pins provide part of the mounting context.
+0 // Build lesson: Build a pneumatic machine around accessible controls, the cylinder mounting points and the actual nozzles. Deliberate hose routes can make the air system readable without hiding the mechanism.
+0 // Reuse: The arrangement demonstrates components and routing, not a supported working machine. Preserve pump/valve access, verify each nozzle and cylinder stroke, and separate the loose tube samples from the functional assembly.
 0 ROTATION CENTER 0 0 0 1 "CUSTOM" 
 0 ROTATION CONFIG 0 0
 0 // Technic Brick  1 x  6 with Holes (trans_clear)
@@ -20,6 +24,7 @@
 1 47 -80 -14 0 1 0 0 0 1 0 0 0 1 2797c01.dat
 0 // Technic Pneumatic Cylinder  2 x  2 x  5 with 2 Ports (Retracted) (trans_clear)
 1 47 -20 -14 0 1 0 0 0 1 0 0 0 1 2793c01.dat
+0 // Study 1: The blue route links the pump-side nozzle to the valve area and includes a visible slack loop.
 0 SYNTH BEGIN TECHNIC_PNEUMATIC_HOSE_BEVELED 1
 0 SYNTH SHOW
 1 2 -80 -14 -20 -1 0 0 0 0 1 0 1 0 LS02.dat
@@ -32,6 +37,7 @@
 0 SYNTH END
 0 // Technic Pneumatic Valve (Complete - Neutral Position) (trans_clear)
 1 47 106 -14 -9 0 -1 0 0 0 1 -1 0 0 4694c01.dat
+0 // Study 2: The yellow route runs from the valve area to the upper cylinder port.
 0 SYNTH BEGIN TECHNIC_PNEUMATIC_HOSE_BEVELED 14
 0 SYNTH SHOW
 1 2 91 -14 -19 -1 0 0 0 0 1 0 1 0 LS01.dat
@@ -41,6 +47,7 @@
 1 14 -12 -42 -91 0.00365077 0.190683 -0.981645 0.241828 0.952346 0.185891 0.970312 -0.238068 -0.0426356 LS01.dat
 1 4 -20 -110 -20 0 0 -1 1 0 0 0 -1 0 LS01.dat
 0 SYNTH END
+0 // Study 3: The brown route reaches the other cylinder port by a lower route.
 0 SYNTH BEGIN TECHNIC_PNEUMATIC_HOSE_BEVELED 6
 1 2 69 -14 -19 -1 0 0 0 0 1 0 1 0 LS01.dat
 1 6 45 -26 -41 0 1 0 0 0 1 1 0 0 LS01.dat
@@ -49,16 +56,19 @@
 1 4 -20 -14 -20 1 0 0 0 0 1 0 -1 0 LS01.dat
 0 SYNTH SHOW
 0 SYNTH END
+0 // Study 4: The orange straight sample demonstrates a beveled-end hose form away from the assembly.
 0 SYNTH BEGIN TECHNIC_PNEUMATIC_HOSE_BEVELED 25
 0 SYNTH SHOW
 1 2 120 0 -180 0 1 0 0 0 1 1 0 0 LS01.dat
 1 4 -80 0 -180 0 1 0 0 0 1 1 0 0 LS01.dat
 0 SYNTH END
+0 // Study 5: The white straight sample compares the alternate hose definition.
 0 SYNTH BEGIN TECHNIC_PNEUMATIC_HOSE 15
 0 SYNTH SHOW
 1 2 120 0 -200 0 1 0 0 0 1 1 0 0 LS01.dat
 1 4 -80 0 -200 0 1 0 -1 0 0 0 0 1 LS01.dat
 0 SYNTH END
+0 // Study 6: The tan closed loop is a free shape example, not an additional pneumatic circuit.
 0 SYNTH BEGIN TECHNIC_PNEUMATIC_HOSE 19
 0 SYNTH SHOW
 1 2 120 0 -270 -1 0 0 0 0 1 0 1 0 LS01.dat

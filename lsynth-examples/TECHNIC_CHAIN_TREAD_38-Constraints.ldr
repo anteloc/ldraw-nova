@@ -1,7 +1,11 @@
-0 TECHNIC_CHAIN_TREAD_38
+0 A long track carrier has four large wheels between small end wheels, with a spring-and-link detail at one end.
 0 Name: TECHNIC_CHAIN_TREAD_38-Constraints.ldr
 0 Author: Willy Tschager
 0 Unofficial Model
+0 // Scene: Wide yellow tread pads form a low, elongated loop. A row of large wheels fills the middle, while smaller wheels lift the track slightly at each end; long beams run behind them.
+0 // Rigid construction: Three 32525 beams organize the carrier. 57519 and 57520 sprockets, half bushes, belt wheels and angle connectors build the wheel stack; 731/732 shock parts form the spring detail.
+0 // Build lesson: Study the wheel plane, bush spacing, carrier rails and end-wheel mounting as one assembly. A clear repeated roller rhythm gives tracked industrial machinery a convincing silhouette.
+0 // Reuse: The four middle sprocket placements are repeated on the return route: eight records describe four coincident wheel positions. Count each real wheel once in a new assembly; verify the spring linkage before calling it a tensioner.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Technic Angle Connector #1 (trans_clear)
@@ -46,6 +50,7 @@
 1 47 65 -14 -319 0 0 1 1 0 0 0 1 0 32123.DAT
 0 // Technic Axle  3 with Stud (trans_clear)
 1 47 20 2 -207 -1 0 0 0 1 0 0 0 -1 6587.DAT
+0 // Study 1: The route visits both sides of the carrier. Repeated middle-wheel constraints describe the outgoing and return paths, not extra physical wheels.
 0 SYNTH BEGIN TECHNIC_CHAIN_TREAD_38 16
 0 SYNTH SHOW
 0 // Technic Sprocket Wheel 25.4 (trans_clear)

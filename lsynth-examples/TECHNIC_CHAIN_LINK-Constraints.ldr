@@ -1,7 +1,11 @@
-0 Untitled
+0 Five chain-drive displays compare small gear pairs, a long supported route, a turntable loop and a single gear wrap.
 0 Name: TECHNIC_CHAIN_LINK-Constraints.ldr
 0 Author: Willy Tschager
 0 Unofficial Model
+0 // Scene: Two compact coloured loops sit above a long blue chain run. A pale chain curves around a low turntable assembly, while a separate brown loop hugs one gear.
+0 // Rigid construction: The principal wheels are 4019 16-tooth, 3648a 24-tooth and 3647 8-tooth gears. Technic bricks and axle pins support the long arrangement; the turntable uses 2855 and 2856.
+0 // Build lesson: Show a clear drive route and retain each gear on a supported shaft. Intermediate wheels can reshape the chain envelope without turning the scene into a clutter of unrelated gears.
+0 // Reuse: The fourth legacy route gives a tangent warning in the current synthesizer. Tooth engagement, link closure, shaft support and tension still need checking after selecting a smaller study.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Technic Axle  3 (trans_clear)
@@ -18,6 +22,7 @@
 1 47 0 24 40 1 0 0 0 1 0 0 0 1 3701.DAT
 0 // Technic Brick  1 x 14 with Holes (trans_clear)
 1 47 0 0 40 1 0 0 0 1 0 0 0 1 32018.DAT
+0 // Study 1: A yellow capsule-shaped loop joins two 16-tooth gears.
 0 SYNTH BEGIN TECHNIC_CHAIN_LINK 14
 0 SYNTH SHOW
 0 // Technic Gear 16 Tooth (light_grey)
@@ -25,6 +30,7 @@
 0 // Technic Gear 16 Tooth (light_grey)
 1 7 70 -102 -20 1 0 0 0 1 0 0 0 1 4019.DAT
 0 SYNTH END
+0 // Study 2: An orange loop compares a second pair at another spacing and angle.
 0 SYNTH BEGIN TECHNIC_CHAIN_LINK 25
 0 SYNTH SHOW
 0 // Technic Gear 16 Tooth (light_grey)
@@ -32,6 +38,7 @@
 0 // Technic Gear 16 Tooth (light_grey)
 1 7 -90 -118 0 1 0 0 0 1 0 0 0 1 4019.DAT
 0 SYNTH END
+0 // Study 3: The blue supported route passes around large end gears and two smaller intermediate gears; the brick rail supplies the mounting context.
 0 SYNTH BEGIN TECHNIC_CHAIN_LINK 1
 0 SYNTH SHOW
 0 // Technic Gear 24 Tooth with 3 Axleholes (main_colour)
@@ -47,6 +54,7 @@
 0 SYNTH END
 0 // Technic Turntable Type 1 Bottom (light_grey)
 1 7 -80 104 -110 1 0 0 0 1 0 0 0 1 2856.DAT
+0 // Study 4: The pale chain follows a turntable and a separate gear in a different plane; inspect this problematic legacy route before reuse.
 0 SYNTH BEGIN TECHNIC_CHAIN_LINK 15
 0 SYNTH SHOW
 0 // Technic Turntable Type 1 Top (light_grey)
@@ -54,6 +62,7 @@
 0 // Technic Gear 16 Tooth (light_grey)
 1 7 60 113 -110 1 0 0 0 0 1 0 -1 0 4019.DAT
 0 SYNTH END
+0 // Study 5: The brown single-gear loop is a wrap sample rather than a complete transmission.
 0 SYNTH BEGIN TECHNIC_CHAIN_LINK 6
 0 SYNTH SHOW
 0 // Technic Gear 24 Tooth with 3 Axleholes (light_grey)

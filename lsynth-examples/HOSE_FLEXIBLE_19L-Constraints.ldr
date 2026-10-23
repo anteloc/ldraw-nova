@@ -1,7 +1,11 @@
-0 HOSE_FLEXIBLE_19L-Constraints
+0 A science-fiction platform pairs a curved ribbed barrier with a raised turret carrying a dish and short barrel.
 0 Name: HOSE_FLEXIBLE_19L-Constraints.ldr
 0 Author: Holly Wood
 0 Unofficial Model
+0 // Scene: Angular wall pieces form a low enclosure on one side. A thick column supports a broad equipment head on the other, while a dark segmented strip bows around the front; straight hose samples lie apart from the platform.
+0 // Rigid construction: System slopes and corner plates shape the platform. Large 6259 cylinders, a turntable, side-stud bricks, a dish, clips and small cylindrical fittings build the elevated head.
+0 // Build lesson: Use a few large industrial shapes - plinth, column, equipment head and perimeter rail - then add smaller fittings at visible interfaces.
+0 // Reuse: The bowed strip is a hose-shape demonstration, not a certified railing. The supplied synthesis references missing 57539a/b geometry, so its hose-detail preview is incomplete.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Plate  6 x  6 (trans_clear)
@@ -202,12 +206,14 @@
 1 47 180 -182 -60 -1 0 0 0 0 -1 0 -1 0 577.DAT
 0 // Hose Flexible 19L (light_grey)
 1 7 300 0 190 0 0 1 0 1 0 -1 0 0 57539.dat
+0 // Study 1: The dark curved run follows the low enclosure, reading as a perimeter barrier in the scene.
 0 SYNTH BEGIN HOSE_FLEXIBLE_19L 0
 0 SYNTH SHOW
 1 2 30 -38 -20 -1 0 0 0 0 1 0 1 0 LS102.dat
 1 6 90 -9 -110 0 -1 0 0 0 1 -1 0 0 LS02.dat
 1 4 150 -14 8 1 0 0 0 0 1 0 -1 0 LS102.dat
 0 SYNTH END
+0 // Study 2: The straight blue run is a comparison sample beside the loose stock hose, not a second machine assembly.
 0 SYNTH BEGIN HOSE_FLEXIBLE_19L 1
 0 SYNTH SHOW
 1 2 330 0 190 -1 0 0 0 0 1 0 1 0 LS102.dat

@@ -29,6 +29,7 @@ Use the appropriate guide as the design requires it:
 | Sideways studs, SNOT cores and offsets | [SNOT](docs/agent/snot.md) |
 | Vehicles or spaceships | [Vehicles](docs/agent/vehicles.md), [spaceships](docs/agent/spaceships.md) |
 | Fixed Technic structures | [Technic](docs/agent/technic.md), [design patterns](docs/agent/technic-design.md) |
+| Track carriers, pneumatic equipment and industrial fittings | [Construction studies](lsynth-examples/README.md), [assembly lessons](docs/agent/technic-patterns/industrial-assemblies.md) |
 | Moving mechanisms | [Mechanisms](docs/agent/mechanisms.md) |
 | Hoses, cables, rubber bands, chains and treads | [Flexible parts with LSynth](docs/agent/flexible-parts.md) |
 | Finding or adapting source constructions | [Discovery](docs/agent/reference-discovery.md), [build manuals](docs/agent/build-manuals.md) |

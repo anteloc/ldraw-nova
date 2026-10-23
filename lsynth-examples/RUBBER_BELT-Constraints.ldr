@@ -1,7 +1,12 @@
-0 RUBBER_BAND-Constraints.ldr
+0 A row of flat-belt displays compares two-wheel, triangular and multi-wheel loops around small rims.
 0 Name: RUBBER_BELT-Constraints.ldr
 0 Author: Willy Tschager
 0 Unofficial Model
+0 // Scene: Narrow blue and brown belts run between pairs of wheels. Yellow and orange belts take longer routes around intermediate wheels; an isolated dark ring sits around a single rim.
+0 // Rigid construction: Most routes use 3482 axle-hole rims, with a 30155 rim in the final sample. There is no shared chassis or complete shaft-retention structure.
+0 // Build lesson: Plan wheel centres and supporting shafts as one layout before adding a belt. Different silhouettes can suggest a conveyor, compact drive or guide roller assembly.
+0 // Reuse: The fourth legacy route produces a tangent warning in the current synthesizer. A rim that looks suitable is not automatically a mechanically compatible pulley.
+0 // Study 1: The blue belt forms a simple narrow loop around two aligned rims.
 0 SYNTH BEGIN RUBBER_BELT 1
 0 SYNTH SHOW
 0 ROTATION CENTER 0 0 0 1 "Custom" 
@@ -11,6 +16,7 @@
 0 // Wheel Rim  8 x 17.5 with Axlehole (trans_clear)
 1 47 0 104 0 -1 0 0 0 1 0 0 0 -1 3482.DAT
 0 SYNTH END
+0 // Study 2: The yellow belt takes a triangular route with an intermediate change of direction.
 0 SYNTH BEGIN RUBBER_BELT 14
 0 SYNTH SHOW
 0 // Wheel Rim  8 x 17.5 with Axlehole (trans_clear)
@@ -20,6 +26,7 @@
 0 // Wheel Rim  8 x 17.5 with Axlehole (trans_clear)
 1 47 100 56 0 1 0 0 0 1 0 0 0 1 3482.DAT
 0 SYNTH END
+0 // Study 3: The brown belt compares another two-rim span.
 0 SYNTH BEGIN RUBBER_BELT 6
 0 SYNTH SHOW
 0 // Wheel Rim  8 x 17.5 with Axlehole (trans_clear)
@@ -31,6 +38,7 @@
 1 47 200 56 0 1 0 0 0 1 0 0 0 1 3482.DAT
 0 SYNTH INSIDE
 0 SYNTH END
+0 // Study 4: The orange multi-wheel route explores a more complex return path; retain it as a layout study until its tangent problem is resolved.
 0 SYNTH BEGIN RUBBER_BELT 25
 0 SYNTH SHOW
 0 // Wheel Rim  8 x 17.5 with Axlehole (trans_clear)
@@ -48,6 +56,7 @@
 0 // Wheel Rim  8 x 17.5 with Axlehole (trans_clear)
 1 47 340 8 0 1 0 0 0 1 0 0 0 1 3482.DAT
 0 SYNTH END
+0 // Study 5: The black single-rim loop is a fit sample, not a complete drive.
 0 SYNTH BEGIN RUBBER_BELT 0
 0 SYNTH SHOW
 0 // Wheel Rim  8 x 18 with 12 Spokes and Peghole (trans_clear)

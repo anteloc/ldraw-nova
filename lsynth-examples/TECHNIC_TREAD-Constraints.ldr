@@ -1,7 +1,11 @@
-0 Untitled
+0 Three rubber-track layouts compare a bent lower run, a straight carrier and an angled wheel frame.
 0 Name: TECHNIC_TREAD-Constraints.ldr
 0 Author: Willy Tschager
 0 Unofficial Model
+0 // Scene: Broad black, inherited-colour and blue loops sit side by side. Their interiors expose different axle arrangements: a low deflected run, three aligned wheels and a compact angled carrier.
+0 // Rigid construction: Long Technic bricks, short liftarms, angled liftarms, axles and bushes support 32007 sprocket wheels and thin 32089 variants. The bushes show where wheel position is retained along each shaft.
+0 // Build lesson: Design wheel support and axial retention before drawing the tread. Compare the complete return path and frame clearance when changing a track module profile.
+0 // Reuse: These are continuous-tread layouts. The supplied synthesis hides all nine wheel constraints as MLCAD HIDE records, so use this source to inspect wheel placement. Verify full support, tread fit and the inherited colour before adapting one into a vehicle.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Technic Axle  6 (trans_clear)
@@ -80,6 +84,7 @@
 1 47 54.597 20.08 270 0 0.866025 0.5 0 0.5 -0.866025 -1 0 0 32073.DAT
 0 // Technic Axle  3 (trans_clear)
 1 47 -72.048 39.071 270 0 0.390731 0.920505 0 0.920505 -0.390731 -1 0 0 4519.DAT
+0 // Study 1: The black loop follows three wheels with the middle wheel lowered, showing a deflected run and its link supports.
 0 SYNTH BEGIN TECHNIC_TREAD 0
 0 SYNTH SHOW
 0 // Technic Tread Sprocket Wheel (trans_clear)
@@ -89,6 +94,7 @@
 0 // Technic Tread Sprocket Wheel (trans_clear)
 1 47 -120 10 -60 1 0 0 0 1 0 0 0 1 32007.DAT
 0 SYNTH END
+0 // Study 2: The second loop uses three aligned wheels on a long brick carrier.
 0 SYNTH BEGIN PLI_TECHNIC_TREAD 16
 0 SYNTH SHOW
 0 // Technic Tread Sprocket Wheel (trans_clear)
@@ -98,6 +104,7 @@
 0 // Technic Tread Sprocket Wheel (trans_clear)
 1 47 -120 10 110 0.566406 -0.824126 0 0.824126 0.566406 0 0 0 1 32007.DAT
 0 SYNTH END
+0 // Study 3: The blue loop uses thin sprockets on angled liftarms; its rigid carrier differs from the straight examples.
 0 SYNTH BEGIN TECHNIC_TREAD 1
 0 SYNTH SHOW
 0 // Technic Tread Sprocket Wheel 20 Tooth Thin (trans_clear)

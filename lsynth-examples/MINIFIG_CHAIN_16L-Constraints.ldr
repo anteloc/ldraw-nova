@@ -1,7 +1,11 @@
-0 Untitled
+0 A square display board carries colourful chains stretched between studs, draped in curves and raised into loops.
 0 Name: MINIFIG_CHAIN_16L-Constraints.ldr
 0 Author: Willy Tschager
 0 Unofficial Model
+0 // Scene: Short end fittings dot the baseplate. Long chains outline its edges, while other runs cross the centre, hang between raised ends or stand in tall display poses.
+0 // Rigid construction: A 16 x 16 baseplate provides the layout and 208 chain-end pieces mark the attachment points. Each coloured run is a pose of a complete minifigure chain.
+0 // Build lesson: Small chains can make readable barriers, restrained cargo, hanging details and miniature industrial hardware when their two anchors are clearly shown.
+0 // Reuse: Vertical and floating poses are demonstrations, not gravity or load tests. Do not substitute these chains for Technic drive links or assume the path preserves manufactured length.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Baseplate 16 x 16 (trans_clear)
@@ -10,6 +14,7 @@
 1 1 -20 -8 -11 -1 0 0 0 1 0 0 0 -1 208.dat
 0 // Minifig Chain End for Chain  6L and 17L (blue)
 1 1 -20 -8 -310 1 0 0 0 1 0 0 0 1 208.dat
+0 // Study 1: The first blue run establishes a long perimeter connection between two end fittings.
 0 SYNTH BEGIN PLI_MINIFIG_CHAIN_16L 1
 0 SYNTH SHOW
 1 1 -20 -6 -30 -1 0 0 0 0 1 0 1 0 LS08.dat
@@ -20,6 +25,7 @@
 1 14 -50 -8 -11 -1 0 0 0 1 0 0 0 -1 208.dat
 0 // Minifig Chain End for Chain  6L and 17L (yellow)
 1 14 -50 -8 -290 1 0 0 0 1 0 0 0 1 208.dat
+0 // Study 2: The yellow run explores a curved path between nearby board positions.
 0 SYNTH BEGIN MINIFIG_CHAIN_16L 14
 0 SYNTH SHOW
 1 14 -50 -6 -30 -1 0 0 0 -0.5 0.866025 0 0.866025 0.5 LS08.dat
@@ -30,6 +36,7 @@
 1 6 -80 -8 -11 -1 0 0 0 1 0 0 0 -1 208.dat
 0 // Minifig Chain End for Chain  6L and 17L (brown)
 1 6 -80 -8 -290 1 0 0 0 1 0 0 0 1 208.dat
+0 // Study 3: The following runs compare sweeps, raised ends and vertical poses; read the paired end fittings before copying a chain.
 0 SYNTH BEGIN MINIFIG_CHAIN_16L 6
 0 SYNTH SHOW
 1 6 -80 -6 -30 -1 0 0 0 -0.5 0.866025 0 0.866025 0.5 LS08.dat
@@ -111,6 +118,7 @@
 1 23 -270 -8 -191 -1 0 0 0 1 0 0 0 -1 208.dat
 0 // Minifig Chain End for Chain  6L and 17L (dark_blue_violet)
 1 23 -190 16 -360 0 0 -1 0 1 0 1 0 0 208.dat
+0 // Study 11: The final run completes the pose sampler; choose a supported hanging or resting shape for a new model.
 0 SYNTH BEGIN MINIFIG_CHAIN_16L 23
 0 SYNTH SHOW
 1 23 -270 -6 -210 -1 0 0 0 0 1 0 1 0 LS08.dat

@@ -1,7 +1,11 @@
-0 TECHNIC_FLEX-SYSTEM-Constraints
+0 A tall open linkage frame carries crossed thin cables, a curved outer guide and a small clipped rail display at its foot.
 0 Name: TECHNIC_FLEX-SYSTEM-Constraints.ldr
 0 Author: Holly Wood
 0 Unofficial Model
+0 // Scene: Two long side members lean slightly between top and bottom rails. Blue and yellow diagonals cross the opening; a brown sleeve bows along one side with an orange cable emerging near its ends.
+0 // Rigid construction: Technic brick rails, 2900 Flex-System connectors, axle pins, bushes and 2825 levers form the main rig. Clips and mechanical arms demonstrate separate ways to hold thin tubes below it.
+0 // Build lesson: Distinguish a cable end, a guide-sleeve mount and a lever pivot. Purposeful brackets and visible termination points make a remote-control linkage more convincing than a loose curve.
+0 // Reuse: The crossing cables do not certify structural bracing, and the outer sleeve does not prove a working push-pull linkage. Check pivots, end retention, relative travel and fixed sleeve mounts.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Technic Brick  1 x 12 with Holes (trans_clear)
@@ -32,6 +36,7 @@
 1 47 -68.557 69.386 35 0.679441 0 -0.73373 0.73373 0 0.679441 0 -1 0 2900.DAT
 0 // Technic Bush  1/2 Type 1 (trans_clear)
 1 47 -68.557 69.386 45 0.142629 0.989776 0 -0.989776 0.142629 0 0 0 1 4265A.DAT
+0 // Study 1: The blue diagonal spans between pin-hole end connectors on opposite sides of the frame.
 0 SYNTH BEGIN TECHNIC_FLEX-SYSTEM_CABLE 1
 0 SYNTH SHOW
 1 2 88.071 240.986 35 -0.728969 0.684547 0 0.684547 0.728969 0 0 0 -1 LS02.dat
@@ -50,6 +55,7 @@
 1 47 68.557 69.385 35 -0.666532 0 -0.745476 0.745476 0 -0.666532 0 -1 0 2900.DAT
 0 // Technic Bush  1/2 Type 1 (trans_clear)
 1 47 68.557 69.385 45 0.142629 -0.989776 0 0.989776 0.142629 0 0 0 1 4265A.DAT
+0 // Study 2: The yellow diagonal crosses the blue one at a slightly different depth.
 0 SYNTH BEGIN TECHNIC_FLEX-SYSTEM_CABLE 14
 0 SYNTH SHOW
 1 2 62.56 76.098 35 0.745476 0.666532 0 0.666532 -0.745476 0 0 0 -1 LS02.dat
@@ -76,6 +82,7 @@
 1 47 10 -32 -30 0 0 -1 0 1 0 1 0 0 3700.DAT
 0 // Technic Pin  1/2 (trans_clear)
 1 47 20 -22 -30 1 0 0 0 1 0 0 0 1 4274.DAT
+0 // Study 3: The brown outer sleeve runs between two rigid guide mounts beside the frame.
 0 SYNTH BEGIN TECHNIC_FLEX-SYSTEM_HOSE 6
 0 SYNTH SHOW
 1 2 24 -22 -30 0 -1 0 1 0 0 0 0 1 LS02.dat
@@ -99,6 +106,7 @@
 1 47 -51.879 -29.166 -30 0.985703 0 0.168489 0.168489 0 -0.985703 0 1 0 2900.DAT
 0 // Technic Bush  1/2 Type 1 (trans_clear)
 1 47 -51.879 -29.166 -6 0.979222 -0.202787 0 0.202787 0.979222 0 0 0 1 4265A.DAT
+0 // Study 4: The orange inner cable continues beyond the sleeve toward the small levers; distinguish the moving cable from its fixed guides.
 0 SYNTH BEGIN TECHNIC_FLEX-SYSTEM_CABLE 25
 0 SYNTH SHOW
 1 2 -44.001 -27.822 -30 -0.0103221 -0.985648 -0.168489 -0.00176438 -0.16848 0.985704 -0.999944 0.0104717 0 LS02.dat
@@ -126,16 +134,19 @@
 1 47 50 304 -110 0 0 1 0 1 0 -1 0 0 2555.DAT
 0 // Tile  1 x  1 with Clip (trans_clear)
 1 47 -70 304 -110 0 0 1 0 1 0 -1 0 0 2555.DAT
+0 // Study 5: The grey lower tube demonstrates clip-mounted support near the foot of the frame.
 0 SYNTH BEGIN TECHNIC_FLEX-SYSTEM_HOSE 7
 0 SYNTH SHOW
 1 2 88 298 -70 0 1 0 1 0 0 0 0 -1 LS02.dat
 1 4 -108 298 -70 0 1 0 1 0 0 0 0 -1 LS02.dat
 0 SYNTH END
+0 // Study 6: The purple tube passes through a row of mechanical-arm clips, illustrating repeated hangers.
 0 SYNTH BEGIN TECHNIC_FLEX-SYSTEM_HOSE 22
 0 SYNTH SHOW
 1 2 88 258 -70 0 1 0 0 0 1 1 0 0 LS02.dat
 1 4 -108 258 -70 0 1 0 0 0 1 1 0 0 LS02.dat
 0 SYNTH END
+0 // Study 7: The green straight tube is another clipped support sample in front of the frame.
 0 SYNTH BEGIN TECHNIC_FLEX-SYSTEM_HOSE 10
 0 SYNTH SHOW
 1 2 60 298 -110 0 1 0 0 0 1 1 0 0 LS02.dat

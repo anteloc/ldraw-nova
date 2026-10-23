@@ -2,6 +2,8 @@
 
 Use **lsynth-nova** to shape hoses, cables, strings, flexible axles, rubber bands and treads, or to lay out separate chain links. Keep the constraints as editable source, generate an MPD asset, then use the normal plan and review commands. The adapter uses the Python port's CLI; it does not implement another curve or belt solver.
 
+For the rigid construction around those paths, start with the [26 annotated construction studies](../../lsynth-examples/README.md) and [industrial assembly lessons](technic-patterns/industrial-assemblies.md): track carriers, pneumatic controls, cable terminations and shaped frames. Their supplied synthesis scenes are visual references; the smaller examples below are easier starting inputs for generation.
+
 ## Install and try
 
 Keep the `lsynth-nova` checkout beside this repository:

@@ -1,7 +1,12 @@
-0 RUBBER_BAND-Constraints.ldr
+0 Six small pulley arrangements show rubber bands running straight, crossing, turning around idlers and wrapping a single wheel.
 0 Name: RUBBER_BAND-Constraints.ldr
 0 Author: Willy Tschager
 0 Unofficial Model
+0 // Scene: Several triangular loops use one large wheel and smaller guides. A blue loop crosses itself, a brown loop reaches a tiny motor pulley, and a dark ring hugs one isolated wheel.
+0 // Rigid construction: Wedge-belt wheels, bushes and small guides define the routes. One assembly pairs the 2986c01 micromotor with its 2983 pulley and a larger 3736 pulley wheel.
+0 // Build lesson: Study shaft spacing, pulley planes and the distinction between a driven wheel and a guide; a visible belt route can explain a machine at a glance.
+0 // Reuse: These rigs lack complete bearing frames. The motor-side legacy case warns about an unsolvable tangent in the current synthesizer; do not copy every displayed loop as a valid belt drive.
+0 // Study 1: The tan triangular route wraps a large wheel and two small guides, with crossings specified in the source.
 0 SYNTH BEGIN RUBBER_BAND 19
 0 SYNTH SHOW
 0 ROTATION CENTER 0 0 0 1 "Custom" 
@@ -15,6 +20,7 @@
 1 47 -160 -120 4 1 0 0 0 1 0 0 0 1 4185.DAT
 0 SYNTH CROSS
 0 SYNTH END
+0 // Study 2: The orange arrangement uses another combination of small guides beside a large pulley.
 0 SYNTH BEGIN RUBBER_BAND 25
 0 SYNTH SHOW
 0 // Technic Wedge Belt Wheel - Not Reinforced (trans_clear)
@@ -26,6 +32,7 @@
 1 47 -90 -64 8 0 0 -1 0 1 0 1 0 0 2736.DAT
 0 SYNTH CROSS
 0 SYNTH END
+0 // Study 3: The yellow loop is an uncomplicated triangular outline around two small guides and a large wheel.
 0 SYNTH BEGIN RUBBER_BAND 14
 0 SYNTH SHOW
 0 // Technic Wedge Belt Wheel - Not Reinforced (trans_clear)
@@ -35,6 +42,7 @@
 0 // Technic Bush  1/2 Smooth with Axle Hole Reduced (trans_clear)
 1 47 70 -64 4 -1 0 0 0 1 0 0 0 -1 32123.dat
 0 SYNTH END
+0 // Study 4: The blue three-wheel arrangement crosses its two long runs.
 0 SYNTH BEGIN RUBBER_BAND 1
 0 SYNTH SHOW
 0 // Technic Wedge Belt Wheel - Not Reinforced (trans_clear)
@@ -48,6 +56,7 @@
 0 SYNTH END
 0 // Electric Technic Micromotor (Complete) (trans_clear)
 1 47 60 56 20 1 0 0 0 0 -1 0 1 0 2986c01.dat
+0 // Study 5: The brown route illustrates a micromotor-sized pulley beside a larger wheel; this legacy arrangement needs correction before reuse.
 0 SYNTH BEGIN RUBBER_BAND 6
 0 SYNTH SHOW
 0 // Electric Technic Micromotor Pulley (trans_clear)
@@ -55,6 +64,7 @@
 0 // Technic Pulley Wheel 5D (trans_clear)
 1 47 -30 56 4 1 0 0 0 1 0 0 0 1 3736.DAT
 0 SYNTH END
+0 // Study 6: The black ring wraps one wheel and is a cross-section/fit illustration rather than a transmission.
 0 SYNTH BEGIN RUBBER_BAND 0
 0 SYNTH SHOW
 0 // Technic Wedge Belt Wheel - Not Reinforced (trans_clear)

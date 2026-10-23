@@ -1,7 +1,11 @@
-0 ELECTRIC_POWER_FUNCTION_CABLE_HALF-Constraints
+0 A lighting lead reaches a small junction box and splits into two thinner branches ending in lamp heads.
 0 Name: ELECTRIC_POWER_FUNCTION_CABLE_HALF-Constraints.ldr
 0 Author: J.C. Tchang
 0 Unofficial Model
+0 // Scene: The broad blue cable makes a shallow wave between a plug and a rectangular middle box. Yellow and brown branches leave the box separately, ending in differently oriented lights.
+0 // Rigid construction: The rigid pieces are a 58124c02 connector, a 62501c01 light middle box, and horizontal- and vertical-cable light-head variants 62498c02 and 62498c01.
+0 // Build lesson: Use real junction and lamp parts to make work lights, inspection lights or a machine headlight pair; leave space for both cable exits.
+0 // Reuse: This is a lamp assembly laid out for inspection. Design clips or sockets for the light heads and a secure mount for the middle box in the final model.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Electric Power Functions Connector with 9V Bottom (trans_clear)
@@ -12,6 +16,7 @@
 1 47 240 -50 -12 0 0 -1 0 1 0 1 0 0 62498c02.dat
 0 // Electric Power Functions Light with Cable Vertical (trans_clear)
 1 47 240 -50 -116 0 0 -1 0 1 0 1 0 0 62498c01.dat
+0 // Study 1: The full-width blue cable enters the middle box from the separate connector.
 0 SYNTH BEGIN ELECTRIC_POWER_FUNCTIONS_CABLE 1
 0 SYNTH SHOW
 1 2 -140 7 10 0 -1 0 0 0 -1 1 0 0 LS06.dat
@@ -19,12 +24,14 @@
 1 1 -15.924 -31.481 -21 0 -0.382683 0.92388 0 -0.92388 -0.382683 1 0 0 LS06.dat
 1 4 74 -36 -70 0 -1 0 0 0 -1 1 0 0 LS06.dat
 0 SYNTH END
+0 // Study 2: A thinner yellow branch bows toward the light with a horizontal cable entry.
 0 SYNTH BEGIN ELECTRIC_POWER_FUNCTIONS_CABLE_HALF 14
 0 SYNTH SHOW
 1 2 106 -36 -67.5 0 -1 0 0 0 -1 1 0 0 LS07.dat
 1 14 162 -56 -9 0 -1 0 1 0 0 0 0 1 LS07.dat
 1 4 221 -35.2 -12 0 -1 0 0 0 -1 1 0 0 LS07.dat
 0 SYNTH END
+0 // Study 3: A thinner brown branch approaches the light with a vertical cable entry.
 0 SYNTH BEGIN ELECTRIC_POWER_FUNCTIONS_CABLE_HALF 6
 0 SYNTH SHOW
 1 2 106 -36 -72.5 0 -1 0 0 0 -1 1 0 0 LS07.dat

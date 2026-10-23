@@ -1,7 +1,11 @@
-0 Untitled
+0 Small winch and pulley displays show cord wound around shafts, lowered to hooks and looped over wheels.
 0 Name: STRING_HOSE-Constraints.ldr
 0 Author: Willy Tschager
 0 Unofficial Model
+0 // Scene: A blue cord leaves a reel and passes around a large hanging hook block. Beside it, a yellow line descends from a wound shaft to a smaller hook, and another shaft carries a short brown winding.
+0 // Rigid construction: The rigid pieces include a 32012 reel, 4185 sheaves, a large 30 hook, a 3127 plate-mounted hook and short axles. Other samples compare closed and open cord routes.
+0 // Build lesson: A crane needs recognizable rope hardware: drum, sheave, hook block and supports. Follow the continuous line through those parts before designing the surrounding boom.
+0 // Reuse: The display leaves shafts and upper supports unframed; rope anchoring, a brake and mechanical advantage remain unproven. The supplied synthesis contains only the first three studies; the three later STRING_BAND routes are present only in these constraints.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Technic Hook Large Metallic (trans_clear)
@@ -12,6 +16,7 @@
 1 47 0 -128 0 1 0 0 0 1 0 0 0 1 32012.dat
 0 // Technic Axle  2 (trans_clear)
 1 47 0 -20 0 0 0 1 0 1 0 -1 0 0 3704.DAT
+0 // Study 1: The blue cord winds across the reel and drops around the large hook pulley; keep the drum and hook block distinct.
 0 SYNTH BEGIN STRING_HOSE 1
 0 SYNTH SHOW
 1 2 2 -124 4 -1 0 0 0 0.573577 0.819152 0 0.819152 -0.573577 LS04.dat
@@ -47,6 +52,7 @@
 1 47 0 -128 -60 1 0 0 0 1 0 0 0 1 3705.DAT
 0 // Plate  1 x  2 with Crane Hook Left (trans_clear)
 1 47 14 -39 -71 0 0 1 1 0 0 0 1 0 3127.DAT
+0 // Study 2: The yellow winding descends to the small plate-mounted hook and folds back at its attachment.
 0 SYNTH BEGIN STRING_HOSE 14
 0 SYNTH SHOW
 1 2 4 -128 -67 -1 0 0 0 -1 0 0 0 1 LS04.dat
@@ -69,6 +75,7 @@
 0 SYNTH END
 0 // Technic Axle  4 (trans_clear)
 1 47 0 -128 -100 1 0 0 0 1 0 0 0 1 3705.DAT
+0 // Study 3: The brown sample shows a few turns around a bare axle with a free end.
 0 SYNTH BEGIN STRING_HOSE 6
 0 SYNTH SHOW
 1 2 4 -128 -107 -1 0 0 0 -1 0 0 0 1 LS04.dat
@@ -86,6 +93,7 @@
 1 6 16 -128 -107 -1 0 0 0 -1 0 0 0 1 LS04.dat
 1 4 16 -104 -107 -1 0 0 0 -1 0 0 0 1 LS04.dat
 0 SYNTH END
+0 // Study 4: The orange route is a closed loop around two sheaves.
 0 SYNTH BEGIN STRING_BAND 25
 0 SYNTH SHOW
 0 // Technic Wedge Belt Wheel - Not Reinforced (trans_clear)
@@ -93,6 +101,7 @@
 0 // Technic Wedge Belt Wheel - Not Reinforced (trans_clear)
 1 47 0 -124 70 1 0 0 0 1 0 0 0 1 4185.DAT
 0 SYNTH END
+0 // Study 5: The tan route passes around one sheave between two path markers; the markers are not real anchors.
 0 SYNTH BEGIN STRING_BAND 19
 0 SYNTH SHOW
 1 2 30 -120 110 0 0 -1 0 -1 0 -1 0 0 LS04.dat
@@ -100,6 +109,7 @@
 1 47 0 -20 110 1 0 0 0 1 0 0 0 1 4185.DAT
 1 4 -30 -120 110 0 0 1 0 1 0 -1 0 0 LS04.dat
 0 SYNTH END
+0 // Study 6: The light-blue open route uses path markers without a wheel, demonstrating a free span rather than supported machinery.
 0 SYNTH BEGIN STRING_BAND 9
 0 SYNTH SHOW
 1 2 30 -120 150 0 1 0 0 0 1 1 0 0 LS04.dat

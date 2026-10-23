@@ -1,7 +1,11 @@
-0 ELECTRIC_NXT_CABLE-Constraints
+0 A battery box and two receivers feed a bench-top cluster of four Power Functions motors.
 0 Name: ELECTRIC_POWER_FUNCTION_CABLE-Constraints.ldr
 0 Author: Holly Wood
 0 Unofficial Model
+0 // Scene: The tall battery box stands behind two smaller receiver units. Large rounded motors and slimmer rectangular motors spread outward, joined by straight leads, slack loops and coils.
+0 // Rigid construction: 58119 is the battery box, 58123 the receiver, 58121 the XL motor and 58120 the medium motor. Separate 58124c01 plugs make the cable interfaces visible.
+0 // Build lesson: Give an industrial model a readable power layout: battery access, receiver access, purposeful motor placement and restrained cable routing around the frame.
+0 // Reuse: The scattered modules still need mounts, output couplings and a chassis. Cable display colours do not identify voltage, polarity or electrical channels.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Electric Power Functions 9V Battery Box (Complete) (black)
@@ -10,6 +14,7 @@
 1 7 -40 0 -90 -1 0 0 0 1 0 0 0 -1 58123.dat
 0 // Electric Power Functions Connector with PF Bottom (light_grey)
 1 7 -30 -126 210 0 0 1 0 1 0 -1 0 0 58124c01.dat
+0 // Study 1: The green lead connects the battery-side area to one receiver.
 0 SYNTH BEGIN ELECTRIC_POWER_FUNCTIONS_CABLE 2
 0 SYNTH SHOW
 1 2 -30 -119 180 -1 0 0 0 0 1 0 1 0 LS06.dat
@@ -22,6 +27,7 @@
 1 7 40 0 -90 -1 0 0 0 1 0 0 0 -1 58123.dat
 0 // Electric Power Functions Connector with PF Bottom (light_grey)
 1 7 -30 -142 210 0 0 1 0 1 0 -1 0 0 58124c01.dat
+0 // Study 2: The tan lead supplies the other receiver area beside it.
 0 SYNTH BEGIN ELECTRIC_POWER_FUNCTIONS_CABLE 19
 0 SYNTH SHOW
 1 2 -30 -135 180 -1 0 0 0 0 1 0 1 0 LS06.dat
@@ -33,6 +39,7 @@
 1 7 317.782 -24 -172.218 -0.707107 0 -0.707107 0 1 0 0.707107 0 -0.707107 58121.dat
 0 // Electric Power Functions Connector with PF Bottom (light_grey)
 1 7 20 -16 -110 0 0 1 0 1 0 -1 0 0 58124c01.dat
+0 // Study 3: A brown route runs from the receiver cluster toward a large motor.
 0 SYNTH BEGIN ELECTRIC_POWER_FUNCTIONS_CABLE 6
 0 SYNTH SHOW
 1 2 20 -9 -140 -1 0 0 0 0 1 0 1 0 LS06.dat
@@ -46,6 +53,7 @@
 1 0 -180 0 -350 0 0 1 0 1 0 -1 0 0 58120.dat
 0 // Electric Power Functions Connector with PF Bottom (light_grey)
 1 7 -20 -16 -110 0 0 1 0 1 0 -1 0 0 58124c01.dat
+0 // Study 4: A yellow route adds a tight coil before reaching a compact motor.
 0 SYNTH BEGIN ELECTRIC_POWER_FUNCTIONS_CABLE 14
 0 SYNTH SHOW
 1 2 -20 -9 -140 -1 0 0 0 0 1 0 1 0 LS06.dat
@@ -75,6 +83,7 @@
 1 1 290 -24 160 -1 0 0 0 1 0 0 0 -1 58121.dat
 0 // Electric Power Functions Connector with PF Bottom (light_grey)
 1 7 60 -16 -110 0 0 1 0 1 0 -1 0 0 58124c01.dat
+0 // Study 5: An orange lead leaves a broad loop near the other large motor.
 0 SYNTH BEGIN ELECTRIC_POWER_FUNCTIONS_CABLE 25
 0 SYNTH SHOW
 1 2 60 -9 -140 -1 0 0 0 0 1 0 1 0 LS06.dat
@@ -98,6 +107,7 @@
 1 0 -260 0 290 -1 0 0 0 1 0 0 0 -1 58120.dat
 0 // Electric Power Functions Connector with PF Bottom (light_grey)
 1 7 -60 -16 -110 0 0 1 0 1 0 -1 0 0 58124c01.dat
+0 // Study 6: A white lead uses a helical slack section on its way to the other compact motor.
 0 SYNTH BEGIN ELECTRIC_POWER_FUNCTIONS_CABLE 15
 0 SYNTH SHOW
 1 2 -60 -9 -140 -1 0 0 0 0 1 0 1 0 LS06.dat

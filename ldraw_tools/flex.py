@@ -123,7 +123,8 @@ def rigid_links(segments):
     for index, line in enumerate(segments):
         fields = line.split(None, 14)
         matrix = np.array([float(v) for v in fields[5:14]]).reshape(3, 3)
-        if np.isfinite(matrix).all() and np.linalg.det(matrix) > 0 and not np.allclose(matrix.T @ matrix, np.eye(3), atol=1e-4, rtol=0):
+        # Match the strictest consumer (technic review, atol=1e-6): four-decimal links can miss it by ~1e-4.
+        if np.isfinite(matrix).all() and np.linalg.det(matrix) > 0 and not np.allclose(matrix.T @ matrix, np.eye(3), atol=1e-6, rtol=0):
             u, _, vt = np.linalg.svd(matrix)
             corrected = u @ vt
             # Each original coefficient was rounded by LSynth to nearest 0.0001.

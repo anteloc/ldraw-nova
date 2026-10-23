@@ -1,7 +1,11 @@
-0 ELECTRIC_RCX_CABLE-Constraints
+0 An RCX robotics brick is surrounded by two touch sensors, a light sensor and two small motors.
 0 Name: ELECTRIC_RCX_CABLE-Constraints.ldr
 0 Author: Holly Wood
 0 Unofficial Model
+0 // Scene: Black studded plugs sit on the yellow-and-grey controller and its outlying devices. Blue and brown leads curve directly outward; yellow, orange and white leads add conspicuous slack and coils.
+0 // Rigid construction: The source combines an 884 RCX assembly, 879 touch sensors, a 2982c01 light sensor, 71427c01 motors and 5306 wire-end bricks.
+0 // Build lesson: Treat the controller, sensor faces, motor shafts and electrical plugs as distinct interfaces; they suggest serviceable test benches and small automated machines.
+0 // Reuse: Several references are obsolete aliases, and the controller inherits colour 16. Resolve actual library replacements and mounting geometry before building a new circuit or chassis.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // ~Electric Mindstorms RCX (Complete Assembly Shortcut) (Obsolete) (main_colour)
@@ -12,6 +16,7 @@
 1 0 40 -8 -60 1 0 0 0 1 0 0 0 1 5306.DAT
 0 // ~Electric Brick  2 x  2 x  0.667 with Wire End (Obsolete) (black)
 1 0 215.736 56 -11.809 -0.62932 0 0.777146 0 1 0 -0.777146 0 -0.62932 5306.DAT
+0 // Study 1: The blue lead runs to the touch sensor beside the controller.
 0 SYNTH BEGIN ELECTRIC_RCX_CABLE 1
 0 SYNTH SHOW
 1 2 56 -2.7 -60 0 -1 0 0 0 1 -1 0 0 LS07.dat
@@ -25,6 +30,7 @@
 1 0 -40 -8 -60 -1 0 0 0 1 0 0 0 -1 5306.DAT
 0 // ~Electric Brick  2 x  2 x  0.667 with Wire End (Obsolete) (black)
 1 0 -90 56 -310 1 0 0 0 1 0 0 0 1 5306.DAT
+0 // Study 2: The yellow lead includes a long coil before reaching the second touch sensor.
 0 SYNTH BEGIN ELECTRIC_RCX_CABLE 14
 0 SYNTH SHOW
 1 2 -56 -2.7 -60 0 1 0 0 0 1 1 0 0 LS07.dat
@@ -54,6 +60,7 @@
 1 1 200 88 -180 0.587785 0 -0.809017 0 1 0 0.809017 0 0.587785 2982C01.DAT
 0 // ~Electric Brick  2 x  2 x  0.667 with Wire End (Obsolete) (black)
 1 0 0 -8 -60 0 0 1 0 1 0 -1 0 0 5306.DAT
+0 // Study 3: The brown lead bends around toward the low light-sensor brick.
 0 SYNTH BEGIN ELECTRIC_RCX_CABLE 6
 0 SYNTH SHOW
 1 2 0 -2.8 -76 -1 0 0 0 0 1 0 1 0 LS07.dat
@@ -71,6 +78,7 @@
 1 0 40 -8 40 1 0 0 0 1 0 0 0 1 5306.DAT
 0 // ~Electric Brick  2 x  2 x  0.667 with Wire End (Obsolete) (black)
 1 0 170 24 250 0 0 1 0 1 0 -1 0 0 5306.DAT
+0 // Study 4: The orange motor lead lies in a broad loose coil.
 0 SYNTH BEGIN ELECTRIC_RCX_CABLE 25
 0 SYNTH SHOW
 1 2 56 -2.6 40 0 -1 0 0 0 1 -1 0 0 LS07.dat
@@ -93,6 +101,7 @@
 1 0 -40 -8 40 -1 0 0 0 1 0 0 0 -1 5306.DAT
 0 // ~Electric Brick  2 x  2 x  0.667 with Wire End (Obsolete) (black)
 1 0 -190 24 230 0 0 1 0 1 0 -1 0 0 5306.DAT
+0 // Study 5: The white motor lead has a tighter spring-like coil; this is cable slack, not a suspension spring.
 0 SYNTH BEGIN ELECTRIC_RCX_CABLE 15
 0 SYNTH SHOW
 1 2 -56 -2.6 40 0 1 0 0 0 1 1 0 0 LS07.dat

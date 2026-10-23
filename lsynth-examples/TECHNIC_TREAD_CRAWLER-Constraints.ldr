@@ -1,7 +1,11 @@
-0 Untitled
+0 A vintage crawler display compares low, stepped and upright tracks plus two single-wheel wraps.
 0 Name: TECHNIC_TREAD_CRAWLER-Constraints.ldr
 0 Author: Holly Wood
 0 Unofficial Model
+0 // Scene: A small blue oval sits above a wider yellow loop. A brown loop climbs between unequal wheels on a tall brick support, while orange and black rings surround isolated wheels beside them.
+0 // Rigid construction: 7049 bearing bricks with integral axle bushes carry older 7039, 715 and 35 wheel assemblies. Ordinary bricks raise and offset some wheel positions.
+0 // Build lesson: A dedicated bearing brick and matching wheel pack can define a compact undercarriage. Learn the support interface before choosing the track outline or substituting newer wheels.
+0 // Reuse: These old cylindrical-axle wheel assemblies are not generic modern cross-axle wheels. Single-wheel legacy routes generate tangent warnings; the display does not prove tread size, tension or a complete drivetrain.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Brick  2 x  4 with 4 Red Axle Bushes and Trans-Clear Underside (trans_clear)
@@ -28,6 +32,7 @@
 1 47 0 0 0 1 0 0 0 1 0 0 0 1 7049.dat
 0 // Brick  2 x  4 with 4 Red Axle Bushes and Trans-Clear Underside (trans_clear)
 1 47 80 0 0 1 0 0 0 1 0 0 0 1 7049.dat
+0 // Study 1: The blue loop wraps two small equal wheels carried by bearing bricks.
 0 SYNTH BEGIN TECHNIC_TREAD_CRAWLER 1
 0 SYNTH SHOW
 0 // Wheel Rim  8 x 18 with 4 Studs and Cylindrical Axle (trans_clear)
@@ -35,6 +40,7 @@
 0 // Wheel Rim  8 x 18 with 4 Studs and Cylindrical Axle (trans_clear)
 1 47 80 10 -30 1 0 0 0 1 0 0 0 1 7039.dat
 0 SYNTH END
+0 // Study 2: The yellow layout uses two larger end wheels and a raised small guide wheel, producing a stepped upper run.
 0 SYNTH BEGIN PLI_TECHNIC_CRAWLER 14
 0 SYNTH SHOW
 0 // Wheel Rim  8 x 35 with 12 Studs with Axle (Complete) (trans_clear)
@@ -46,6 +52,7 @@
 1 47 40 66 -30 1 0 0 0 1 0 0 0 1 7039.dat
 0 SYNTH INSIDE
 0 SYNTH END
+0 // Study 3: The brown track spans unequal wheels on a taller brick-built support.
 0 SYNTH BEGIN TECHNIC_TREAD_CRAWLER 6
 0 SYNTH SHOW
 0 // Wheel Rim  8 x 18 with 4 Studs and Cylindrical Axle (trans_clear)
@@ -53,11 +60,13 @@
 0 // Wheel Rim  8 x 35 with 12 Studs with Axle (Complete) (trans_clear)
 1 47 240 114 -30 1 0 0 0 1 0 0 0 1 715.dat
 0 SYNTH END
+0 // Study 4: The orange loop wraps one small wheel as a fit sample; it is not an independent track module.
 0 SYNTH BEGIN TECHNIC_TREAD_CRAWLER 25
 0 SYNTH SHOW
 0 // Wheel Rim  8 x 18 with 4 Studs and Cylindrical Axle (trans_clear)
 1 47 370 18 -30 1 0 0 0 1 0 0 0 1 7039.dat
 0 SYNTH END
+0 // Study 5: The black loop wraps one larger wheel as another fit sample.
 0 SYNTH BEGIN TECHNIC_TREAD_CRAWLER 0
 0 SYNTH SHOW
 0 // Wheel Rim  8 x 35 with 12 Studs with Axle (Complete) (trans_clear)

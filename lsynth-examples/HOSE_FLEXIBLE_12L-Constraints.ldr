@@ -1,7 +1,11 @@
-0 HOSE_FLEXIBLE_12L-Constraints
+0 A small three-wheeled exploration rover has a bubble cockpit, chunky wheels and corrugated hoses along its sides.
 0 Name: HOSE_FLEXIBLE_12L-Constraints.ldr
 0 Author: Holly Wood
 0 Unofficial Model
+0 // Scene: The rounded canopy dominates a low, angular chassis. Three exposed wheels spread around it, while blue and yellow ribbed hoses climb from the front edges toward equipment behind the cockpit.
+0 // Rigid construction: 30324 wheels connect to a System-and-Technic chassis with liftarms, axle pins and towball pins. Slopes, clips, grilles, an antenna and the 30083 hinged dome supply the vehicle detail.
+0 // Build lesson: Make an industrial rover recognizable through wheel stance, cockpit volume and an equipment cluster; route hoses around that composition instead of filling every surface with detail.
+0 // Reuse: 3020a.dat is missing locally. Inspect all wheel mounts, canopy clearance and hose-end fittings in a complete dependency-resolved model before adapting the chassis.
 0 ROTATION CENTER 0 0 0 1 "Custom" 
 0 ROTATION CONFIG 0 0
 0 // Brick  1 x  1 Round with Hollow Stud (trans_clear)
@@ -186,6 +190,7 @@
 1 47 70 -54 -66 1 0 0 0 0 -1 0 1 0 6141.DAT
 0 // ~Hose Flexible 12L End  1 x  1 x  0.667 with Stud (dark_grey)
 1 8 70 -54 -58 1 0 0 0 0 -1 0 1 0 757.dat
+0 // Study 1: The blue corrugated run frames one cockpit edge and connects front and rear equipment areas.
 0 SYNTH BEGIN HOSE_FLEXIBLE_12L 1
 0 SYNTH SHOW
 1 2 30 -40 70 -1 0 0 0 1 0 0 0 -1 LS101.dat
@@ -196,6 +201,7 @@
 1 8 30 -24 70 1 0 0 0 -1 0 0 0 -1 757.dat
 0 // ~Hose Flexible 12L End  1 x  1 x  0.667 with Stud (dark_grey)
 1 8 -70 -54 -58 1 0 0 0 0 -1 0 1 0 757.dat
+0 // Study 2: The yellow run balances the other side of the canopy; the two hoses act as strong silhouette lines.
 0 SYNTH BEGIN PLI_HOSE_FLEXIBLE_12L 14
 0 SYNTH SHOW
 1 2 -30 -40 70 -1 0 0 0 1 0 0 0 -1 LS101.dat
