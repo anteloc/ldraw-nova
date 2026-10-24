@@ -141,9 +141,14 @@ def package(text, cfg, parts_dir, namespace):
     lines, generated, records = [], [], []
     active = None
     synthesizing = False
+    section = None
+    piece_count = 0
     for line in text.splitlines():
         tokens = line.split()
         upper = [s.upper() for s in tokens]
+        if upper[:2] == ["0", "FILE"]:
+            section = line.split(None, 2)[2]
+            piece_count = 0
         if upper[:3] == ["0", "SYNTH", "BEGIN"]:
             product = cfg.find_product(tokens[3])
             method = (product.method if product else tokens[3]).upper()
@@ -158,6 +163,7 @@ def package(text, cfg, parts_dir, namespace):
             if not segments:
                 raise ValueError(f"LSynth produced no geometry for {active['token']}")
             linked = active["method"] in LINK_TYPES
+            active.update(section=section, first_piece=piece_count)
             if linked:
                 segments, changes = rigid_links(segments)
                 active["rotation_roundoff_repairs"] = changes
@@ -172,6 +178,7 @@ def package(text, cfg, parts_dir, namespace):
                 lines.append(f"1 {active['colour']} 0 0 0 1 0 0 0 1 0 0 0 1 {name}")
                 active["part"] = name
             records.append(dict(**active, representation="links" if linked else "posed_part", segment_count=len(segments)))
+            piece_count += len(segments) if linked else 1
             active = None
         elif synthesizing:
             if tokens[:1] == ["1"]:
@@ -186,6 +193,8 @@ def package(text, cfg, parts_dir, namespace):
                 continue  # SHOW markers are authoring aids, not physical pieces.
             # Hidden constraint comments remain as provenance, never physical pieces.
             lines.append(line)
+            if part:
+                piece_count += 1
 
     if not any(line.split()[:2] == ["0", "FILE"] for line in lines):
         root = f"{namespace}.ldr"
@@ -193,6 +202,9 @@ def package(text, cfg, parts_dir, namespace):
             f"0 Name: {root}" if line.split()[:2] == ["0", "Name:"] else line for line in lines]]
     else:
         root = next(line.split(None, 2)[2] for line in lines if line.split()[:2] == ["0", "FILE"])
+    for record in records:
+        if record['section'] is None:
+            record['section'] = root
 
     # Embed only bundled geometry actually used, including transitive LS references.
     bundled = {normalized(p.name): p for p in parts_dir.glob("*.dat")}

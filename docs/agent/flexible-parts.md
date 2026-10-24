@@ -2,6 +2,13 @@
 
 Use **lsynth-nova** to shape hoses, cables, strings, flexible axles, rubber bands and treads, or to lay out separate chain links. Keep the constraints as editable source, generate an MPD asset, then use the normal plan and review commands. The adapter uses the Python port's CLI; it does not implement another curve or belt solver.
 
+**When designing or repairing a flexible part, read the [constraint authoring guide](flex-constraints.md)
+and run `flex guide TYPE`.** It provides the family-specific process, endpoint and
+wheel helpers, actual-output checks, repair decisions and executable experiments.
+Author good constraints, synthesize early, inspect locally, then repair the
+reported defect. Agents should use these shared tools instead of writing another
+curve approximation or routing optimizer during a model build.
+
 For the rigid construction around those paths, start with the [26 annotated construction studies](../../lsynth-examples/README.md) and [industrial assembly lessons](technic-patterns/industrial-assemblies.md): track carriers, pneumatic controls, cable terminations and shaped frames. Their supplied synthesis scenes are visual references; the smaller examples below are easier starting inputs for generation.
 
 ## Install and try
@@ -11,13 +18,16 @@ Keep the `lsynth-nova` checkout beside this repository:
 ```sh
 ./setup.sh --with-lsynth
 ./ldraw-agent flex types
+./ldraw-agent flex guide TECHNIC_PNEUMATIC_HOSE_BEVELED
+./ldraw-agent flex check examples/flex/hose.ldr
 ./ldraw-agent flex build examples/flex/hose.ldr --output output/flex/hose.mpd
+./ldraw-agent flex check examples/flex/hose.ldr --asset output/flex/hose.mpd
 ./ldraw-agent review output/flex/hose.mpd --contacts none
 ```
 
 Open the review's previews. [Small examples](../../examples/flex/README.md) cover a hose, a rubber band and a chain. Copy a constraint file into your own `output/` directory before editing it. `doctor` reports whether the optional package is installed. `LSYNTH_SOURCE=/path/to/lsynth-nova ./setup.sh --with-lsynth` accepts another checkout location. Ordinary setup and builds do not require LSynth; `uv sync` may remove this optional installation, so use the setup flag again afterward.
 
-Only synthesis needs LSynth installed. Generated assets embed the required LSynth geometry and work with the ordinary LDraw library, including in LeoCAD. Do not run `lsynth --install-parts` for this workflow: the adapter leaves the parts library unchanged.
+Authoring, constraint checks and synthesis need LSynth installed. Generated assets embed the required LSynth geometry and work with the ordinary LDraw library, including in LeoCAD, without that installation. Do not run `lsynth --install-parts` for this workflow: the adapter leaves the parts library unchanged.
 
 ## Describe a path
 
@@ -73,6 +83,12 @@ The normal prohibition on stretching, shearing or mirroring complete parts remai
 Check every route's bend radius as well as its endpoints. Fixed-segment types such as `TECHNIC_RIBBED_HOSE` place separate rigid rings about 5.5 LDU apart, and those rings open visible gaps once neighbours turn more than about 7°. LSynth's stiff curves can also form near-hairpins when waypoints sit close together. Stretched types such as pneumatic hose stay continuous, but can still bend too tightly or cross another hose.
 
 The [pneumatic press](../../examples/flex/pneumatic-press/README.md) places hose ends on the nozzle frames from each part's shadow data. Its test measures sleeve seating, minimum bend radius, tube-to-tube distance and part clearance; reuse those checks for new routes.
+
+Use the shared `flex check --asset` for new routes and read its explicit coverage.
+Unlike the press's original fixture-specific tests, it never omits whole end
+zones from pair/obstacle inspection, and `--block` includes neighbouring hoses.
+The [constraint lab](../../examples/flex/constraint-lab/README.md) measures real
+LSynth output for bends, return loops and bundles, including a deliberately bad bend.
 
 Start flex studies with `review --contacts none`. Bounds, source checks, previews and BOM comparison still run, but connectivity and material clearance are not established. Posed parts have no verified connector metadata, stock length, tension, minimum bend radius or elasticity. Inspect the route, endpoint seating, obstructions and link engagement in the actual assembly; generic AABB overlaps cannot certify these. `physical_validity` stays `not_proven`.
 

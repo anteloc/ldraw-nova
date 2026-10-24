@@ -1,5 +1,9 @@
 # Small LSynth examples
 
+Start with the [constraint authoring and repair guide](../../docs/agent/flex-constraints.md).
+The [executable constraint lab](constraint-lab/README.md) teaches bends, return
+loops and bundles by measuring actual synthesis, including a failing tight bend.
+
 These editable examples exercise three different physical boundaries. Install with `./setup.sh --with-lsynth`, then run from the repository root:
 
 ```sh

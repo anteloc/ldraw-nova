@@ -63,6 +63,33 @@ def parser():
     c = commands.add_parser("flex", help="Synthesize flexible MPD assets with optional lsynth-nova")
     flex = c.add_subparsers(dest="flex_command", required=True)
     flex.add_parser("types", help="List synthesis types, products and constraint parts")
+    f = flex.add_parser('guide', help='Family-specific authoring, inspection and repair guidance')
+    f.add_argument('type', nargs='?')
+    f = flex.add_parser('hose', help='Author visible constraints from two outward-facing endpoints')
+    f.add_argument('--start', nargs=3, type=float, required=True)
+    f.add_argument('--start-direction', nargs=3, type=float, required=True)
+    f.add_argument('--end', nargs=3, type=float, required=True)
+    f.add_argument('--end-direction', nargs=3, type=float, required=True)
+    f.add_argument('--lead', type=float, default=0, help='Straight fitting departure at both ends, in LDU')
+    f.add_argument('--via', nargs=3, type=float, action='append', default=[])
+    f.add_argument('--up', nargs=3, type=float, help='Consistent local Z for flat cables; not parallel to travel')
+    f.add_argument('--type', default='TECHNIC_PNEUMATIC_HOSE_BEVELED')
+    f.add_argument('--colour', type=int, default=4)
+    f.add_argument('--output', required=True)
+    f.add_argument('--force', action='store_true')
+    f = flex.add_parser('check', help='Diagnose constraints and optionally their actual synthesized asset')
+    f.add_argument('file')
+    f.add_argument('--asset', help='Generated MPD with its matching flex manifest')
+    f.add_argument('--block', type=positive, help='Measure one SYNTH block (1-based); source checks still cover all')
+    f.add_argument('--min-radius', type=float, help='Explicit geometric bend limit, LDU; not a material certification')
+    f.add_argument('--max-turn', type=float, help='Maximum adjacent segment turn, degrees (useful for ribbed hose)')
+    f.add_argument('--tube-radius', type=float, help='Measured round cross-section radius for clearance checks')
+    f.add_argument('--min-separation', type=float, help='Minimum centreline separation between routes, LDU')
+    f.add_argument('--length', type=float, help='Target segment-origin polyline length for a single hose, LDU')
+    f.add_argument('--length-tolerance', type=float, default=1)
+    f.add_argument('--obstacles', help='Rigid MPD/LDR in the constraints coordinate frame; conservative box checks')
+    f.add_argument('--obstacle-section', help='Review this obstacle submodel in its local frame')
+    f.add_argument('--report', help='Save the JSON diagnostic report')
     f = flex.add_parser("build", help="Generate an MPD from visible LSynth constraints")
     f.add_argument("file")
     f.add_argument("--output", required=True)
@@ -346,6 +373,37 @@ def run(args):
     if args.command == "flex" and args.flex_command == "types":
         from .flex import definitions
         return definitions(), 0
+    if args.command == 'flex' and args.flex_command == 'guide':
+        from .flex_knowledge import guide
+        return guide(args.type), 0
+    if args.command == 'flex' and args.flex_command == 'hose':
+        from .flex_authoring import Endpoint, Waypoint, document, hose
+        output = Path(args.output)
+        if output.exists() and not args.force:
+            raise ValueError('Constraint output exists; use --force to replace it')
+        source = document(hose(Endpoint(args.start, args.start_direction, args.lead, args.up),
+            Endpoint(args.end, args.end_direction, args.lead, args.up),
+            via=[Waypoint(v, up=args.up) for v in args.via], method=args.type,
+            colour=args.colour, name=output.stem), name=output.name)
+        from .flex_constraints import check_text
+        report = check_text(source)
+        if report['checks_passed']:
+            atomic_write(output, source)
+        return dict(**report, output=str(output)), 0 if report['checks_passed'] else 1
+    if args.command == 'flex' and args.flex_command == 'check':
+        from .flex_constraints import check
+        from .flex_review import check_asset
+        report = check(args.file)
+        if args.asset:
+            parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow) if args.obstacles else None
+            report = check_asset(args.file, args.asset, source_report=report, block=args.block,
+                min_radius=args.min_radius, max_turn=args.max_turn, tube_radius=args.tube_radius,
+                min_separation=args.min_separation, length=args.length, length_tolerance=args.length_tolerance,
+                obstacles=args.obstacles, obstacle_section=args.obstacle_section, parts=parts)
+        elif any(v is not None for v in (args.block, args.min_radius, args.max_turn, args.tube_radius,
+                                        args.min_separation, args.length, args.obstacles, args.obstacle_section)):
+            raise ValueError('Geometry options require --asset; run flex build first')
+        return report, 0 if report['checks_passed'] else 1
     if args.command == "examples":
         from .examples import search_examples
         if args.details and args.scale:raise ValueError('--scale applies to building examples')

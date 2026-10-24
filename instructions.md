@@ -36,6 +36,11 @@ Use the appropriate guide as the design requires it:
 
 For semantic discovery, perform the [Jev availability check](docs/agent/reference-discovery.md#check-jev-availability-before-searching) first. If unavailable, report why and use `discover search parts|models|submodels ... --engine fts`, catalogs and examples. Do not keep retrying a failed service. Rankings suggest candidates; actual dimensions, connectors and parent context determine suitability. Preserve authorship and extraction manifests when reusing source.
 
+When flexible parts are needed, read [constraint authoring and repair](docs/agent/flex-constraints.md)
+and run `flex guide TYPE`. Use measured endpoints or mounted wheels, `flex check`
+before synthesis and `flex check --asset` afterward, then inspect contextual views.
+Use the shared helpers and diagnostics; preserve unresolved physical limitations.
+
 ## 2. Build the smallest useful module
 
 Use a JSON plan directly. Add a Python generator when loops, calculations or conditional patterns make it clearer; a separate generator is optional. The [bridge plan](examples/bridge.plan.json) is a small complete example. See the [plan guide](docs/agent/plans.md) for the format and advanced placements.
