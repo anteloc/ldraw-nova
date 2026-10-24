@@ -36,7 +36,7 @@ def blocks(text, cfg=None):
         elif line.startswith('0 //'):
             label = line[4:].strip()
         elif u[:3] == ['0', 'SYNTH', 'BEGIN']:
-            _, definition, kind = resolve(t[3])
+            _, definition, kind = resolve(t[3], cfg)
             current = dict(index=len(result) + 1, name=label or f'route-{len(result)+1}',
                            section=section, line=number, token=t[3], method=definition.type,
                            kind=kind, colour=t[4], constraints=[], controls=[], hidden=False)

@@ -141,22 +141,47 @@ def fit(first, second):
                 friction=male.profile.friction)
 
 
+def nearby_ports(inspection):
+    """Conservative broad phase for seating and contact checks.
+
+    A pair whose axial spans touch must have centres within their combined
+    half-lengths (plus tolerance). Filter in NumPy; retain the exact fit rules.
+    Include incompatible families here so seating review can diagnose them.
+    """
+    males, holes = [], []
+    for item in inspection.occurrences:
+        for feature in item.connections:
+            if managed(feature):
+                (males if feature.kind in MALE else holes).append((item, feature))
+    if not holes:
+        return
+    centres = np.array([jsonable(f.position) for _, f in holes])
+    lengths = np.array([f.length for _, f in holes])
+    for owner, male in males:
+        delta = centres - jsonable(male.position)
+        reach = (male.length + lengths) / 2 + 2 * TOL
+        for index in np.flatnonzero(np.einsum('ij,ij->i', delta, delta) <= reach * reach):
+            receiver, hole = holes[index]
+            if owner.index != receiver.index:
+                yield owner, male, receiver, hole
+
+
 def contacts(inspection):
     """Only reviewed port pairs; other connection families are handled upstream."""
-    items = inspection.occurrences
-    for i, first in enumerate(items):
-        for second in items[i+1:]:
-            for a in first.connections:
-                if not managed(a):
-                    continue
-                for b in second.connections:
-                    details = fit(a, b)
-                    if details is None:
-                        continue
-                    male = a if a.kind in MALE else b
-                    yield ConnectionContact(first, second, a, b, connection_residual(a, b),
-                        Status.POTENTIAL if male.kind is Kind.PIN and details['engagement'] < male.length-TOL
-                        else Status.CONFIRMED)
+    order = {o.index: i for i, o in enumerate(inspection.occurrences)}
+    ports = {id(f): i for o in inspection.occurrences for i, f in enumerate(o.connections)}
+    found = []
+    for owner, male, receiver, hole in nearby_ports(inspection):
+        details = fit(male, hole)
+        if details is None:
+            continue
+        first, a, second, b = (owner, male, receiver, hole) if order[owner.index] < order[receiver.index] else (receiver, hole, owner, male)
+        contact = ConnectionContact(first, second, a, b, connection_residual(a, b),
+            Status.POTENTIAL if male.kind is Kind.PIN and details['engagement'] < male.length-TOL
+            else Status.CONFIRMED)
+        found.append(((order[first.index], order[second.index], ports[id(a)], ports[id(b)]), contact))
+    # Preserve the original occurrence/feature order for reports and consumers.
+    yield from (contact for _, contact in sorted(found, key=lambda row: row[0]))
 
 
 def endpoints(contact):

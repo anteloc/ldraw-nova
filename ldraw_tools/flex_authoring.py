@@ -100,16 +100,8 @@ class Waypoint:
     up: object = None
 
 
-def hose(start, end, *, via=(), method='TECHNIC_PNEUMATIC_HOSE_BEVELED', colour=4, name='hose'):
-    """One editable SYNTH block; directions at the final fitting are reversed here.
-
-Leads are explicit because fittings and end-piece lengths differ between families.
-No curve approximation, radius promise or automatic obstacle routing is performed.
-"""
-    from .flex_knowledge import resolve
-    _, definition, kind = resolve(method)
-    if kind != 'hose':
-        raise ValueError(f'{method} uses wheel constraints; use band()')
+def hose_waypoints(start, end, via=()):
+    """Expand fitting leads and infer intermediate tangents in one coordinate frame."""
     if not isinstance(start, Endpoint) or not isinstance(end, Endpoint):
         raise ValueError('start and end must be Endpoint instances')
     points = [Waypoint(start.at, start.outward, start.up)]
@@ -122,12 +114,27 @@ No curve approximation, radius promise or automatic obstacle routing is performe
     coords = [vector(w.at) for w in points]
     if any(np.linalg.norm(b - a) < 1e-6 for a, b in zip(coords, coords[1:])):
         raise ValueError('Consecutive constraints coincide; remove the duplicate or shorten the lead')
-    rows = []
+    result = []
     for i, w in enumerate(points):
         direction = w.direction
         if direction is None:
             direction = unit(coords[i] - coords[i - 1]) + unit(coords[i + 1] - coords[i])
-        rows.append(placement('LS01.dat', w.at, marker_matrix(direction, w.up), colour))
+        result.append(Waypoint(coords[i], unit(direction), w.up))
+    return result
+
+
+def hose(start, end, *, via=(), method='TECHNIC_PNEUMATIC_HOSE_BEVELED', colour=4, name='hose'):
+    """One editable SYNTH block; fitting directions point outward at both ends.
+
+    Leads are explicit because fittings and end-piece lengths differ. No curve
+    approximation, radius promise or automatic obstacle routing is performed.
+    """
+    from .flex_knowledge import resolve
+    _, _, kind = resolve(method)
+    if kind != 'hose':
+        raise ValueError(f'{method} uses wheel constraints; use band()')
+    rows = [placement('LS01.dat', w.at, marker_matrix(w.direction, w.up), colour)
+            for w in hose_waypoints(start, end, via)]
     return block(method, colour, rows, name=name)
 
 

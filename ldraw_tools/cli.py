@@ -51,6 +51,24 @@ def scope_options(c):
     c.add_argument("--colour", type=int, help="Explicit inherited colour for a selected subassembly")
 
 
+def flex_check_options(c):
+    c.add_argument('--block', type=positive, help='Measure one SYNTH block (1-based); source checks still cover all')
+    c.add_argument('--min-radius', type=float, help='Explicit geometric bend limit, LDU; not a material certification')
+    c.add_argument('--max-turn', type=float, help='Maximum adjacent segment turn, degrees (useful for ribbed hose)')
+    c.add_argument('--tube-radius', type=float, help='Measured round cross-section radius for clearance checks')
+    c.add_argument('--min-separation', type=float, help='Minimum centreline separation between routes, LDU')
+    c.add_argument('--length', type=float, help='Target segment-origin polyline length for a single hose, LDU')
+    c.add_argument('--length-tolerance', type=float, default=1)
+    c.add_argument('--obstacles', help='Rigid MPD/LDR in the constraints coordinate frame; conservative box checks')
+    c.add_argument('--obstacle-section', help='Review this obstacle submodel in its local frame')
+
+
+def flex_settings(args):
+    return {key: getattr(args, key) for key in (
+        'block', 'min_radius', 'max_turn', 'tube_radius', 'min_separation',
+        'length', 'length_tolerance', 'obstacles', 'obstacle_section')}
+
+
 def parser():
     p = argparse.ArgumentParser(
         description="Build and review LDraw assemblies. Reports are JSON.",
@@ -80,22 +98,17 @@ def parser():
     f = flex.add_parser('check', help='Diagnose constraints and optionally their actual synthesized asset')
     f.add_argument('file')
     f.add_argument('--asset', help='Generated MPD with its matching flex manifest')
-    f.add_argument('--block', type=positive, help='Measure one SYNTH block (1-based); source checks still cover all')
-    f.add_argument('--min-radius', type=float, help='Explicit geometric bend limit, LDU; not a material certification')
-    f.add_argument('--max-turn', type=float, help='Maximum adjacent segment turn, degrees (useful for ribbed hose)')
-    f.add_argument('--tube-radius', type=float, help='Measured round cross-section radius for clearance checks')
-    f.add_argument('--min-separation', type=float, help='Minimum centreline separation between routes, LDU')
-    f.add_argument('--length', type=float, help='Target segment-origin polyline length for a single hose, LDU')
-    f.add_argument('--length-tolerance', type=float, default=1)
-    f.add_argument('--obstacles', help='Rigid MPD/LDR in the constraints coordinate frame; conservative box checks')
-    f.add_argument('--obstacle-section', help='Review this obstacle submodel in its local frame')
+    flex_check_options(f)
     f.add_argument('--report', help='Save the JSON diagnostic report')
-    f = flex.add_parser("build", help="Generate an MPD from visible LSynth constraints")
+    f = flex.add_parser("build", help="Check constraints, synthesize and measure an MPD asset")
     f.add_argument("file")
-    f.add_argument("--output", required=True)
+    f.add_argument("--output", help="Default: SOURCE.mpd (SOURCE-flex.mpd for MPD input)")
     f.add_argument("--namespace", help="Unique asset prefix (default: output filename stem)")
     f.add_argument("--force", action="store_true")
     f.add_argument("--timeout", type=positive, default=90)
+    f.add_argument("--no-cache", action="store_true", help="Run LSynth again even when synthesis inputs are unchanged")
+    f.add_argument("--report", help="Save the JSON diagnostic report")
+    flex_check_options(f)
     c = commands.add_parser("review", help="Build if needed, check geometry, render and compare BOMs in one folder")
     c.add_argument("file", help="JSON plan or existing MPD/LDR assembly")
     c.add_argument("--outdir", help="Dedicated artifact directory (default: SOURCE-review beside input)")
@@ -396,10 +409,7 @@ def run(args):
         report = check(args.file)
         if args.asset:
             parts = get_parts(library_path(args.library), shadows=[] if args.no_shadow else args.shadow) if args.obstacles else None
-            report = check_asset(args.file, args.asset, source_report=report, block=args.block,
-                min_radius=args.min_radius, max_turn=args.max_turn, tube_radius=args.tube_radius,
-                min_separation=args.min_separation, length=args.length, length_tolerance=args.length_tolerance,
-                obstacles=args.obstacles, obstacle_section=args.obstacle_section, parts=parts)
+            report = check_asset(args.file, args.asset, source_report=report, parts=parts, **flex_settings(args))
         elif any(v is not None for v in (args.block, args.min_radius, args.max_turn, args.tube_radius,
                                         args.min_separation, args.length, args.obstacles, args.obstacle_section)):
             raise ValueError('Geometry options require --asset; run flex build first')
@@ -431,8 +441,11 @@ def run(args):
     library = library_path(args.library)
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
     if args.command == "flex":
-        from .flex import build
-        return build(args.file, args.output, parts, namespace=args.namespace, force=args.force, timeout=args.timeout), 0
+        from .flex_workflow import build
+        source = Path(args.file)
+        output = args.output or (source.with_name(source.stem + '-flex.mpd') if source.suffix.lower() == '.mpd' else source.with_suffix('.mpd'))
+        return build(source, output, parts, namespace=args.namespace, force=args.force,
+                     timeout=args.timeout, cache=not args.no_cache, checks=flex_settings(args)), 0
     if args.command == 'review':
         return review_model(args.file, parts, library, outdir=args.outdir, force=args.force,
                             section=args.section, colour=args.colour, views=args.views,
@@ -543,10 +556,11 @@ def run(args):
                 return dict(written=False, diagnostics=diagnostics, structure=review), 1
             import hashlib
             contract['model_sha256'] = hashlib.sha256(model.to_ldraw().encode()).hexdigest()
+            plan['sections'][0]['structure'] = contract_path.name
             atomic_write(target, dumps(plan)+'\n')
             atomic_write(contract_path, dumps(contract)+'\n')
             return dict(plan=str(target), contract=str(contract_path), scope='technic-structure',
-                        next='Build, validate, technic check with the contract, render and review insertion access.'), 0
+                        next=f'Review with: ldraw-agent review {target}; open the previews and inspect insertion access.'), 0
         source, _ = selected_source(args.file, args.section, args.colour)
         model, diagnostics = validate_text(source, parts, assembly=True, instance_limit=args.max_instances)
         contract = json.loads(Path(args.contract).read_text()) if args.contract else None

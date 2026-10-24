@@ -6,6 +6,7 @@ separate links remain assembly placements, subject to ordinary rigid checks.
 from __future__ import annotations
 
 import hashlib
+import json
 import math
 import re
 import subprocess
@@ -16,7 +17,7 @@ from pathlib import Path
 import numpy as np
 from ldraw import parse_model_result
 
-from .common import atomic_write, dumps, normalized
+from .common import CACHE, atomic_write, dumps, normalized
 from .validation import validate_text
 
 # These definitions produce separate physical pieces, not sections of one item.
@@ -248,7 +249,38 @@ def package(text, cfg, parts_dir, namespace):
     return "\r\n".join(output) + "\r\n", dict(root=root, blocks=records, embedded_sources=sources)
 
 
-def build(source, output, parts, *, namespace=None, force=False, timeout=90):
+def synthesis_key(text, config):
+    """Key only synthesis inputs; packaging and library validation always rerun."""
+    import lsynth_nova
+    root = Path(lsynth_nova.__file__).parent
+    digest = hashlib.sha256(text.encode('utf-8'))
+    for value in (config.read_bytes(), str(sys.version_info[:3]).encode(), dumps(availability()).encode()):
+        digest.update(b'\0' + value)
+    # Editable engine checkouts can change without a version bump.
+    for path in sorted(root.rglob('*.py')):
+        digest.update(b'\0' + str(path.relative_to(root)).encode() + b'\0' + path.read_bytes())
+    return digest.hexdigest()
+
+
+def synthesize(text, config, *, timeout, cache):
+    key = synthesis_key(text, config)
+    path = CACHE / 'flex-synthesis' / (key + '.json')
+    if cache:
+        try:
+            saved = json.loads(path.read_text())
+            output = saved['text']
+            if saved['key'] == key and saved['sha256'] == hashlib.sha256(output.encode()).hexdigest():
+                return output, path, key, True
+        except (OSError, ValueError, KeyError, TypeError, AttributeError):
+            pass  # A missing or damaged disposable cache is a cache miss.
+    result = subprocess.run([sys.executable, '-m', 'lsynth_nova', '-c', str(config), '-'],
+                            input=text, text=True, capture_output=True, timeout=timeout)
+    if result.returncode or 'warning:' in result.stderr.casefold():
+        raise ValueError('LSynth did not complete cleanly: ' + result.stderr.strip())
+    return result.stdout, path, key, False
+
+
+def build(source, output, parts, *, namespace=None, force=False, timeout=90, cache=False):
     source, output = Path(source).resolve(), Path(output).resolve()
     manifest = output.with_suffix(".manifest.json")
     if output.suffix.lower() != ".mpd":
@@ -266,12 +298,8 @@ def build(source, output, parts, *, namespace=None, force=False, timeout=90):
     raw = source.read_bytes()
     text = raw.decode("utf-8-sig")
     count = preflight(text, cfg)
-    # Invoke this exact installed port, not an unrelated executable on PATH.
-    result = subprocess.run([sys.executable, "-m", "lsynth_nova", "-c", str(config), "-"],
-                            input=text, text=True, capture_output=True, timeout=timeout)
-    if result.returncode or "warning:" in result.stderr.casefold():
-        raise ValueError("LSynth did not complete cleanly: " + result.stderr.strip())
-    mpd, report = package(result.stdout, cfg, parts_dir, namespace)
+    synthesized, cache_path, key, hit = synthesize(text, config, timeout=timeout, cache=cache)
+    mpd, report = package(synthesized, cfg, parts_dir, namespace)
     if len(report["blocks"]) != count:
         raise ValueError("LSynth output is missing synthesis blocks")
     _, diagnostics = validate_text(mpd, parts, name=output.name)
@@ -279,12 +307,17 @@ def build(source, output, parts, *, namespace=None, force=False, timeout=90):
     if errors:
         raise ValueError("Synthesized asset failed assembly validation: " + dumps(errors[:8]))
     report.update(engine=availability(), source=str(source), source_sha256=hashlib.sha256(raw).hexdigest(),
+                  synthesis_key=key, cache_hit=hit,
                   source_credits=[line for line in text.splitlines() if line.startswith(("0 Author:", "0 !LICENSE"))],
                   config_sha256=hashlib.sha256(config.read_bytes()).hexdigest(), output=str(output),
                   model_sha256=hashlib.sha256(mpd.encode()).hexdigest(), diagnostics=diagnostics,
                   physical_validity="not_proven", review_required=True,
                   limitations=["Posed parts have no verified length, stock identity, bend radius or connector metadata.",
                                "Synthesis does not prove tension, material clearance, link engagement or motion."])
+    if source.read_bytes() != raw:
+        raise ValueError('Constraints changed during synthesis; rerun on the saved revision')
+    if cache and not hit:
+        atomic_write(cache_path, dumps(dict(key=key, sha256=hashlib.sha256(synthesized.encode()).hexdigest(), text=synthesized)))
     atomic_write(output, mpd)
     atomic_write(manifest, dumps(report) + "\n")
     return dict(**report, manifest=str(manifest))

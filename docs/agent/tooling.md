@@ -12,23 +12,14 @@ The supplied `data/offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overri
 
 ## Review a model
 
-For flexible geometry, use the [constraint authoring and repair workflow](flex-constraints.md):
+Plans can [declare flexible sources and structural contracts](plans.md#generated-flexible-assets). Review prepares the sources and runs their checks automatically. For a standalone flexible asset:
 
 ```sh
 ./ldraw-agent flex guide TECHNIC_PNEUMATIC_HOSE_BEVELED
-./ldraw-agent flex check CONSTRAINTS.ldr
 ./ldraw-agent flex build CONSTRAINTS.ldr --output output/asset.mpd
-./ldraw-agent flex check CONSTRAINTS.ldr --asset output/asset.mpd --report output/flex-check.json
 ```
 
-`flex hose` writes visible constraints from endpoints and optional waypoints;
-`ldraw_tools.flex_authoring` supplies the same endpoint, marker and wheel helpers
-for Python generators. `flex check --asset` measures actual output and verifies
-matching provenance. Explicit limits, block selection and conservative obstacle
-checks are listed by `flex check --help`; read the report's coverage and warnings.
-Install the optional sibling port with `./setup.sh --with-lsynth`. Generated MPDs
-use normal review and plan assets; see [flexible parts](flexible-parts.md) for
-installation, BOM boundaries and limitations.
+`flex build` checks source and generated geometry, accepts the geometric options from `flex check --asset`, and reuses unchanged synthesis inputs. `--no-cache` reruns the engine. `flex hose` and `ldraw_tools.flex_authoring` supply endpoint, marker and wheel helpers. Install the optional engine with `./setup.sh --with-lsynth`. Read [constraint authoring](flex-constraints.md) for choosing limits and repairing routes; [flexible parts](flexible-parts.md) covers installation and BOM boundaries.
 
 ```sh
 ./ldraw-agent review output/my-model.plan.json
@@ -46,8 +37,9 @@ The default output is `NAME-review/` beside `NAME.plan.json`, `NAME.json`, `NAME
 | Artifact | Contents |
 |---|---|
 | `review.json` | Stage outcomes, diagnostics, physical count, source/model hashes and artifact hashes |
-| `model.mpd` | Exact assembly reviewed; emitted only after source and geometry checks pass |
-| `validation.json` | Assembly and geometry diagnostics, coverage, contacts and truncation flags |
+| `model.mpd` | Exact assembly reviewed; emitted only after source, geometry and declared checks pass |
+| `validation.json` | Assembly/geometry diagnostics; declared flex and structure checks, coverage and truncation flags |
+| `flex/`, `structure/` | Frozen constraints, generated assets/manifests and structural contracts when declared |
 | `bom.json` | Python physical parts list and model hash |
 | `bom-comparison.json` | Exact Python/LeoCAD comparison and model hash |
 | `previews/` | Requested PNG views and `leocad-bom.csv` |
@@ -70,7 +62,7 @@ Useful variations:
 
 Section selection applies to existing MPD/LDR inputs; build a JSON plan first to select one of its sections. `--colour` requires `--section`. General geometry options are unchanged: `--contacts auto|all|none`, `--max-instances`, `--limit`, `--offset`, and `--detail summary|full`. Review defaults to summary; all selected checks still run. Auto contacts skip above 500 placements and report that limitation. `--timeout` defaults to 90 seconds per external command.
 
-Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM comparison failed; 2 means input/dependency/execution failure. `--no-render` can return 0 with rendering and comparison explicitly skipped. Full review still reports visual inspection as required and `physical_validity: not_proven`. Run family-specific `vehicle check` or `technic check` as appropriate; general review does not replace them. See [validation coverage](validation.md).
+Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM comparison failed; 2 means input/dependency/execution failure. `--no-render` can return 0 with rendering and comparison explicitly skipped. Full review still reports visual inspection as required and `physical_validity: not_proven`. Plans with section `structure` contracts run Technic checks automatically, even with `--contacts none`. Existing MPDs and old plans still need `technic check --contract`; run `vehicle check` when applicable. See [validation coverage](validation.md).
 
 ## Build manuals for any atlas
 
@@ -109,8 +101,7 @@ Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM
 ./ldraw-agent technic list
 ./ldraw-agent technic parts 2780
 ./ldraw-agent technic plan frame-tower --levels 2 --output output/tower.plan.json
-./ldraw-agent build output/tower.plan.json --output output/tower.mpd
-./ldraw-agent technic check output/tower.mpd --contract output/tower.plan.structure.json
+./ldraw-agent review output/tower.plan.json
 ./ldraw-agent examples --family technic
 ./ldraw-agent discover search submodels 'braced frame' --construction technic-structure --engine fts
 ```

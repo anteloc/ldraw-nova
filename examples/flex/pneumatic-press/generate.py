@@ -18,7 +18,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import subprocess
 import sys
 from pathlib import Path
 
@@ -31,6 +30,7 @@ for parent in HERE.parents:
         break
 
 from ldraw_tools.builder import rotation  # noqa: E402
+from ldraw_tools.flex_authoring import Endpoint, Waypoint, hose_waypoints, marker_matrix as route_matrix  # noqa: E402
 
 AUTHOR = 'Pneumatic press generator (Claude Code, Claude Opus 5.5) for anteloc'
 
@@ -192,23 +192,16 @@ HOSES = [
 
 
 def marker_matrix(direction):
-    """Proper rotation whose local -Y is the hose's direction of travel."""
-    y = -np.array(direction, float)
-    y /= np.linalg.norm(y)
-    helper = np.array([0, 0, 1.0]) if abs(y[2]) < 0.9 else np.array([1.0, 0, 0])
-    x = np.cross(y, helper)
-    x /= np.linalg.norm(x)
-    r = np.column_stack([x, y, np.cross(x, y)])
-    assert np.isclose(np.linalg.det(r), 1)
-    return r
+    """Retain the reviewed fixture's roll while using the shared frame helper."""
+    d = np.asarray(direction, float) / np.linalg.norm(direction)
+    return route_matrix(d, up=(0, 0, 1) if abs(d[2]) < 0.9 else (1, 0, 0))
 
 
 def hose_markers(start, end, via):
     p0, a0 = nozzle(start)
     p1, a1 = nozzle(end)
-    points = [(p0, a0), (p0 + a0 * LEAD, a0)]
-    points += [(np.array(p, float), np.array(d, float) / np.linalg.norm(d)) for p, d in via]
-    return points + [(p1 + a1 * LEAD, -a1), (p1, -a1)]
+    return [(w.at, w.direction) for w in hose_waypoints(
+        Endpoint(p0, a0, LEAD), Endpoint(p1, a1, LEAD), [Waypoint(p, d) for p, d in via])]
 
 
 def hose_source():
@@ -239,9 +232,16 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--output', type=Path, default=HERE / 'press.plan.json')
     parser.add_argument('--hoses', type=Path, default=HERE / 'hoses.ldr')
+    parser.add_argument('--automatic', action='store_true', help='Declare hose source and limits in the plan; review builds the asset')
     args = parser.parse_args()
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(build(), indent=1) + '\n')
+    plan = build()
+    if args.automatic:
+        import os
+        plan['assets'] = [dict(source=os.path.relpath(args.hoses.resolve(), args.output.parent.resolve()),
+                              namespace='press-hoses', checks=dict(min_radius=15, min_separation=10))]
+    args.output.write_text(json.dumps(plan, indent=1) + '\n')
+    args.hoses.parent.mkdir(parents=True, exist_ok=True)
     args.hoses.write_bytes(hose_source().encode())
     print(args.output)
     print(args.hoses)

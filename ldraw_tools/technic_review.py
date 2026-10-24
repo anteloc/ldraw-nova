@@ -14,7 +14,7 @@ from .common import DATA, jsonable
 from .connectivity import inspect_connections
 from .connection_adapter import connection_contacts
 from .technic import (definition, canonical, registry, managed, endpoints, fit,
-                      conflicts, Kind, MALE, HOLES, TOL)
+                      conflicts, nearby_ports, Kind, MALE, HOLES, TOL)
 
 MECHANISMS = re.compile(r'\b(gear|differential|universal joint|motor|actuator|pneumatic|shock absorber|steering)\b', re.I)
 
@@ -36,7 +36,7 @@ def review_structure(model, parts, *, contract=None, instance_limit=500):
     return review_inspection(inspection, contract=contract)
 
 
-def review_inspection(inspection, *, contract=None, seating_only=False):
+def review_inspection(inspection, *, contract=None, seating_only=False, found=None):
     contract = contract or {}
     diagnostics = []
 
@@ -61,7 +61,7 @@ def review_inspection(inspection, *, contract=None, seating_only=False):
               'error' if contract.get('require_rigid') else 'warning')
     if mechanism_parts:
         issue('technic.mechanism_scope', 'This check is for fixed structures. Use mechanism studies for moving assemblies; their function is outside structural review.', mechanism_parts, 'error')
-    found = connection_contacts(inspection)
+    found = connection_contacts(inspection) if found is None else found
     joints, male_spans, shaft_contacts, member_links = [], defaultdict(list), defaultdict(list), defaultdict(list)
     tech = [c for c in found if managed(c.first) and managed(c.second)]
     for c in tech:
@@ -89,25 +89,20 @@ def review_inspection(inspection, *, contract=None, seating_only=False):
 
     valid_pairs = {tuple(sorted((c.first_occurrence.index, c.second_occurrence.index))) for c in tech}
     # Diagnose almost-mates without interpreting every nearby bounding box as a hole.
-    for i, a in items.items():
-        for j, b in items.items():
-            if i == j or tuple(sorted((i, j))) in valid_pairs:
-                continue
-            close = []
-            for male in a.connections:
-                if not managed(male) or male.kind not in MALE:
-                    continue
-                for hole in b.connections:
-                    if not managed(hole) or hole.kind not in HOLES:
-                        continue
-                    delta = hole.position-male.position
-                    along = delta.dot(male.axis)
-                    radial = abs(delta-male.axis*along)
-                    overlap = min(male.length/2, along+hole.length/2)-max(-male.length/2, along-hole.length/2)
-                    if radial <= TOL and abs(male.axis.dot(hole.axis)) > .9999 and overlap >= -TOL:
-                        close.append((male.feature_id, hole.feature_id))
-            if close:
-                issue('technic.invalid_seating', 'Aligned interfaces fail seating, engagement, family or keyed-roll rules.', [i, j], 'error', ports=close)
+    close = defaultdict(list)
+    for owner, male, receiver, hole in nearby_ports(inspection):
+        i, j = owner.index, receiver.index
+        if tuple(sorted((i, j))) in valid_pairs:
+            continue
+        delta = hole.position-male.position
+        along = delta.dot(male.axis)
+        radial = abs(delta-male.axis*along)
+        overlap = min(male.length/2, along+hole.length/2)-max(-male.length/2, along-hole.length/2)
+        if radial <= TOL and abs(male.axis.dot(hole.axis)) > .9999 and overlap >= -TOL:
+            close[i, j].append((male.feature_id, hole.feature_id))
+    order = {index: n for n, index in enumerate(items)}
+    for (i, j), ports in sorted(close.items(), key=lambda row: tuple(order[k] for k in row[0])):
+        issue('technic.invalid_seating', 'Aligned interfaces fail seating, engagement, family or keyed-roll rules.', [i, j], 'error', ports=ports)
 
     if seating_only:
         return [d for d in diagnostics if d['severity'] == 'error' and d['code'] != 'technic.mechanism_scope']

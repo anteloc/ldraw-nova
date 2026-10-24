@@ -38,7 +38,14 @@
       "type": "array",
       "maxItems": 200,
       "items": {
-        "$ref": "#/$defs/text"
+        "oneOf": [
+          {
+            "$ref": "#/$defs/text"
+          },
+          {
+            "$ref": "#/$defs/flex_asset"
+          }
+        ]
       },
       "uniqueItems": true
     }
@@ -108,6 +115,9 @@
           "additionalProperties": {
             "$ref": "#/$defs/frame"
           }
+        },
+        "structure": {
+          "$ref": "#/$defs/text"
         }
       }
     },
@@ -418,6 +428,71 @@
         },
         "matrix": {
           "$ref": "#/$defs/placement/properties/matrix"
+        }
+      }
+    },
+    "flex_asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "namespace"
+      ],
+      "properties": {
+        "source": {
+          "$ref": "#/$defs/text"
+        },
+        "namespace": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_-]*$",
+          "maxLength": 100
+        },
+        "checks": {
+          "$ref": "#/$defs/flex_checks"
+        },
+        "timeout": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "flex_checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min_radius": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_turn": {
+          "type": "number",
+          "minimum": 0
+        },
+        "min_separation": {
+          "type": "number",
+          "minimum": 0
+        },
+        "length": {
+          "type": "number",
+          "minimum": 0
+        },
+        "length_tolerance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "tube_radius": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "block": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "obstacles": {
+          "$ref": "#/$defs/text"
+        },
+        "obstacle_section": {
+          "$ref": "#/$defs/text"
         }
       }
     }

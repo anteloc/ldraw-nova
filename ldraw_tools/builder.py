@@ -44,9 +44,17 @@ def load_plan(path):
             section.setdefault("author",plan["author"])
             if plan.get("license"):
                 section.setdefault("license",plan["license"])
+            if section.get('structure'):
+                section['structure'] = str((path.parent / section['structure']).resolve())
             sections.append(section)
         for asset in plan.get("assets",[]):
-            asset = str((path.parent / asset).resolve())
+            if isinstance(asset, str):
+                asset = str((path.parent / asset).resolve())
+            else:
+                asset = copy.deepcopy(asset)
+                asset['source'] = str((path.parent / asset['source']).resolve())
+                if asset.get('checks', {}).get('obstacles'):
+                    asset['checks']['obstacles'] = str((path.parent / asset['checks']['obstacles']).resolve())
             if asset not in assets:
                 assets.append(asset)
         for child in plan.get("includes",[]):
@@ -154,7 +162,7 @@ def snap_placement(entry, model, models, placed, parts, matrix, instance_limit):
     return Vector(*local['at']), Matrix(local['matrix'])
 
 
-def build_plan(plan, parts, *, instance_limit=100000):
+def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None):
     check_schema(plan)
     from .catalog import resolve_plan
     plan = resolve_plan(plan, parts)
@@ -166,6 +174,12 @@ def build_plan(plan, parts, *, instance_limit=100000):
     models = {s["name"]: Model(name=s["name"]) for s in plan["sections"]}
     from .document import parse_source, section_table
     for asset in plan.get("assets", []):
+        if isinstance(asset, dict):
+            from .flex_workflow import prepare_asset
+            report = prepare_asset(asset, parts)
+            if asset_reports is not None:
+                asset_reports.append(report)
+            asset = report['output']
         for sub in section_table(parse_source(asset)).values():
             if normalized(sub.name) in {normalized(n) for n in models}:
                 raise ValueError(f"Duplicate section {sub.name}; extract assets with unique namespaces")

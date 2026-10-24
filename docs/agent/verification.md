@@ -1,5 +1,7 @@
 # Verification record
 
+The [Technic and LSynth simplification record](../reports/technic-flex-simplification.md) documents the 2026-10-24 automatic asset/contract workflow, checked synthesis reuse, preserved example bytes, contact-search equivalence and real LeoCAD/BOM checks.
+
 The [LSynth integration assessment](../reports/lsynth-integration.md) documents the optional flexible-parts workflow, the 26-source sweep, four rendered models with matching BOMs, inspected previews, compatibility findings and regression coverage.
 
 The [workflow simplification record](../reports/workflow-simplification.md) documents the 2026-10-20 combined `review` command, preserved CLI behavior, shorter agent instructions, failure regressions and real LeoCAD/BOM checks on the bridge and 2,979-placement Alder Court model.

@@ -26,11 +26,18 @@ Give an agent your model idea and [instructions.md](instructions.md). The workin
 4. Deliver the editable MPD, source, checks and reviewed images.
 
 ```sh
-./ldraw-agent build output/my-model.plan.json
-./ldraw-agent review output/my-model.mpd
+./ldraw-agent review output/my-model.plan.json
 ```
 
-`build` infers `output/my-model.mpd` and writes only after source/geometry checks pass. You can also run `review output/my-model.plan.json` to build and review in one command. Use `--force` for a deliberate rebuild or replacement of a generated review. Keep editable source and visual-review notes outside the generated review directory.
+`review` builds the plan and writes checks, BOMs and previews to `output/my-model-review/`. Use `build` when you only need the MPD; it infers `output/my-model.mpd` and writes after checks pass. Use `--force` to replace generated output. Keep editable source and visual-review notes outside the generated review directory.
+
+Technic and LSynth use the same loop. `technic plan` links its structural contract into the plan, so `review PLAN` checks the required joints and assembly order automatically. Flexible assets can declare their editable source directly:
+
+```json
+"assets": [{"source": "hoses.ldr", "namespace": "my-hoses", "checks": {"min_radius": 15}}]
+```
+
+`build` and `review` check the constraints, synthesize the asset and measure the result before using it. Unchanged synthesis inputs reuse cached LSynth output; packaging and checks still run. Choose bend limits for the actual route. See the [plan guide](docs/agent/plans.md#generated-flexible-assets) and the [pneumatic press](examples/flex/pneumatic-press/README.md) for complete examples.
 
 Existing JSON plans, `build --output`, individual check/render commands and shell wrappers remain supported. Successful checks provide evidence, not proof of physical buildability; warnings, skipped checks and required visual inspection stay explicit.
 

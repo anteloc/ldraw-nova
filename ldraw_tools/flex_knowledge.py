@@ -81,8 +81,8 @@ def family(name):
     raise ValueError(f'No reviewed family guidance for {name}; inspect the new engine definition before using it')
 
 
-def resolve(token):
-    cfg, _, _ = engine()
+def resolve(token, cfg=None):
+    cfg = cfg if cfg is not None else engine()[0]
     product = next((p for p in cfg.products if token.casefold() in {p.name.casefold(), p.nickname.casefold()}), None)
     method = product.method if product else token
     h, b = cfg.hose_type(method), cfg.band_type(method)
@@ -97,8 +97,8 @@ def guide(token=None):
         return dict(engine=availability(), families=FAMILIES,
                     methods=[dict(name=t.type, family=family(t.type), kind=k) for k, ts in
                              [('hose', cfg.hose_types), ('band', cfg.band_types)] for t in ts],
-                    workflow=['flex guide TYPE', 'author visible constraints', 'flex check SOURCE',
-                              'flex build SOURCE --output ASSET.mpd', 'flex check SOURCE --asset ASSET.mpd',
+                    workflow=['flex guide TYPE', 'author visible constraints',
+                              'declare the source in plan assets, or flex build SOURCE',
                               'review the asset in its assembly and open the images'])
     cfg, t, kind = resolve(token)
     data = dict(engine=availability(), requested=token, method=t.type, kind=kind,

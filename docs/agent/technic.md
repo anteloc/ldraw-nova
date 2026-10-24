@@ -1,6 +1,6 @@
 # Build Technic structures
 
-Stage 1 supports **static structural assemblies**: frames, chassis, supports, retained structural axles and mounts for System bodies. Stage 2 is now authorized through the [mechanism workflow](mechanisms.md): study source assemblies and build pages, then reuse or adapt them. Analytical mechanism verification is deferred at the user's request. Keep this guide's fixed-member contracts scoped to the stationary structure.
+Use structural contracts for **static assemblies**: frames, chassis, supports, retained axles and mounts for System bodies. For moving assemblies, use the [mechanism workflow](mechanisms.md). Keep fixed-member contracts scoped to the stationary structure; analytical mechanism verification remains deferred.
 
 Use this guide with [instructions.md](../../instructions.md), the [Technic atlas](../../examples/technic-atlas/README.md) and the [research assessment](../reports/technic-structure-readiness.md). Keep the normal design, validation, BOM and visual review loop.
 
@@ -18,16 +18,13 @@ Record the silhouette, support/load direction, dimensions, palette and body atta
 ./ldraw-agent technic parts 2780
 ./ldraw-agent examples --family technic
 ./ldraw-agent technic plan box-chassis --output output/chassis.plan.json
-./ldraw-agent build output/chassis.plan.json --output output/chassis.mpd
-./ldraw-agent validate output/chassis.mpd --geometry
-./ldraw-agent technic check output/chassis.mpd \
-  --contract output/chassis.plan.structure.json --report output/chassis.structure-review.json
-./ldraw-agent render output/chassis.mpd --outdir output/chassis-review \
+./ldraw-agent review output/chassis.plan.json \
   --views home front back right left top bottom
-./ldraw-agent compare-bom output/chassis.mpd --csv output/chassis-review/leocad-bom.csv
 ```
 
-`technic plan` exports a normal assembly plan and a sibling `.structure.json` contract. Use `--force` to replace either. `--colour` and `--accent` change the palette; `--levels 1|2|3` changes the tower. [technic_recipes.py](../../ldraw_tools/technic_recipes.py) exposes placements and mounting pairs for adaptation. These constructions teach techniques; they do not limit the subjects an agent can build.
+`technic plan` exports an assembly plan and a sibling `.structure.json` contract, linked by the section's `structure` property. `build` and `review` run that contract automatically. Review puts the results in `validation.json` under `structure`, with a frozen contract copy. Open the previews. Use `review PLAN --no-render --force` for intermediate checks after edits; finish with rendered review.
+
+Use `--force` to replace an exported plan and contract. `--colour` and `--accent` change the palette; `--levels 1|2|3` changes the tower. [technic_recipes.py](../../ldraw_tools/technic_recipes.py) exposes placements and mounting pairs for adaptation. Existing plans can add `"structure": "frame.structure.json"` to the relevant section. Standalone `technic check MODEL --contract CONTRACT` remains available for MPDs, selected sections and old plans.
 
 ## Use measured ports and real lengths
 

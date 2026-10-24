@@ -19,9 +19,7 @@ Keep the `lsynth-nova` checkout beside this repository:
 ./setup.sh --with-lsynth
 ./ldraw-agent flex types
 ./ldraw-agent flex guide TECHNIC_PNEUMATIC_HOSE_BEVELED
-./ldraw-agent flex check examples/flex/hose.ldr
 ./ldraw-agent flex build examples/flex/hose.ldr --output output/flex/hose.mpd
-./ldraw-agent flex check examples/flex/hose.ldr --asset output/flex/hose.mpd
 ./ldraw-agent review output/flex/hose.mpd --contacts none
 ```
 
@@ -49,13 +47,21 @@ Use explicit colours in each SYNTH BEGIN. Keep the original visible constraints 
 
 ## Generate and reuse
 
+For a model plan, [declare the constraints directly in `assets`](plans.md#generated-flexible-assets). Then `review PLAN` handles constraint checks, synthesis, measurements, model validation and previews. The [pneumatic press](../../examples/flex/pneumatic-press/README.md) demonstrates this complete loop. Keep editable constraints beside the plan and use the same measured fitting/wheel placements for both rigid geometry and routes.
+
+For a standalone asset:
+
 ```sh
-./ldraw-agent flex build output/my-hose.ldr --output output/my-hose.mpd
+./ldraw-agent flex build output/my-hose.ldr
 # After changing the original constraints:
-./ldraw-agent flex build output/my-hose.ldr --output output/my-hose.mpd --force
+./ldraw-agent flex build output/my-hose.ldr --force
 ```
 
-This writes the MPD and a `.manifest.json` with source/configuration hashes, engine version, source credits, embedded geometry provenance, each synthesized block and any recorded compatibility repairs. Unknown types, warnings from LSynth, empty synthesis and assembly validation errors fail without replacing an existing asset. `--timeout` bounds the subprocess. `--namespace` changes the generated part prefix; it defaults to the output filename stem. The source is never overwritten.
+`flex build` runs source checks before synthesis and measures the generated result before publishing the MPD and manifest. It accepts the same geometric options as `flex check --asset`, such as `--min-radius 15` or `--min-separation 10`; select limits for the actual material and layout. Reports include coverage, measurements and warnings. Standalone `flex check` remains useful for diagnosis without generation or to inspect an existing asset.
+
+Unchanged inputs reuse cached LSynth output. The key covers source, configuration, engine code/version and Python version. Packaging, library validation and measurements still run. `--no-cache` reruns the engine; `--force` permits replacing output after successful checks. Neither bypasses checks. `--timeout` bounds the synthesis subprocess.
+
+The `.manifest.json` retains source/configuration hashes, engine version, source credits, embedded geometry provenance, each synthesized block and recorded compatibility repairs, and adds the geometry report. Unknown types, source errors, LSynth warnings, empty synthesis, assembly errors and failed geometric limits leave the previous MPD and manifest intact. `--namespace` sets the generated prefix; it defaults to the output filename stem. Original constraints are never overwritten.
 
 Import it through the existing plan format. Place the `root` returned by `flex build`:
 

@@ -12,12 +12,13 @@ The [integration guide](flexible-parts.md) covers installation and MPD assets.
    properties must be checked. A curve, a fixed-length item and a moving circuit
    have different acceptance conditions.
 2. Place the rigid hardware, including mounts, shafts, retainers and plugs. Read
-   its actual local interfaces with `part PART` or `connections MODEL`. Reserve
+   its actual local interfaces with `part PART` or `connectors MODEL --occurrence N`. Reserve
    a passage and end approaches before adding nearby bodywork.
-3. Write visible constraints for one route or interacting group. Run `flex check`
-   to catch source and layout mistakes before synthesis.
-4. Run `flex build` immediately. Run `flex check --asset` on the actual result,
-   then render it with its fittings and neighbouring geometry. Open the images.
+3. Write visible constraints for one route or interacting group. Declare them in
+   the [plan assets](plans.md#generated-flexible-assets), with the needed geometric limits.
+4. Run `review PLAN`: it checks constraints, synthesizes, measures the result and
+   renders the assembly. For a standalone route, use `flex build SOURCE` with
+   the same limits, then review it with its fittings. Open the images.
 5. Repair the reported span or fitting. Recheck nearby routes. If two corrections
    leave the same defect, change the passage, loop or hardware orientation.
    Preserve the last accepted route; broad random parameter searches are not the
@@ -83,9 +84,7 @@ The CLI is convenient for simple paths:
 ./ldraw-agent flex hose --start 0 0 0 --start-direction 1 0 0 \
   --end 160 0 0 --end-direction -1 0 0 --lead 22 \
   --output output/lead.ldr
-./ldraw-agent flex check output/lead.ldr
-./ldraw-agent flex build output/lead.ldr --output output/lead.mpd
-./ldraw-agent flex check output/lead.ldr --asset output/lead.mpd \
+./ldraw-agent flex build output/lead.ldr \
   --min-radius 15 --tube-radius 5 --report output/lead-check.json
 ./ldraw-agent review output/lead.mpd --contacts none
 ```

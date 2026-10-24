@@ -15,7 +15,7 @@ These editable examples exercise three different physical boundaries. Install wi
 ./ldraw-agent review output/flex/chain.mpd --contacts none --views home top
 ```
 
-Use `--force` to replace generated outputs after editing. Open the previews before reusing the geometry.
+`flex build` checks both the constraints and the actual generated asset. Use `--force` to replace generated outputs after editing; unchanged synthesis is reused, with checks rerun. Open the previews before reusing the geometry. For complete models, [declare constraint sources in plan assets](../../docs/agent/plans.md#generated-flexible-assets) and run `review PLAN` once. The pneumatic press below demonstrates that path.
 
 | Source | Construction lesson | Expected physical count |
 |---|---|---:|

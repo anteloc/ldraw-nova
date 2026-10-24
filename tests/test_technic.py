@@ -164,3 +164,35 @@ def test_structural_discovery_uses_selected_content_not_parent_theme():
     assert not structural_candidate(dict(row, description='Motor and gearbox'))
     assert structural_candidate({'kind': 'parts', 'part': '2780.dat'})
     assert not structural_candidate({'kind': 'parts', 'part': '3648.dat'})
+
+
+@pytest.mark.parametrize('angle', [0, 17.4, 90])
+def test_filtered_contacts_match_exhaustive_search_with_transformed_and_misaligned_parts(official, angle):
+    from ldraw.connection_types import connection_residual
+    from ldraw.inspection import ConnectionContact
+    from ldraw_tools.technic import contacts, fit, MALE, Kind, Status, TOL
+    from ldraw_tools.technic_recipes import structure_plan
+    from ldraw_tools.builder import build_plan
+    plan, _ = structure_plan('frame-tower', levels=2)
+    _, original, _ = build_plan(plan, official)
+    r = rotation('x', angle) * rotation('z', angle)
+    pieces = [Piece.place(p.reference, colour=p.colour, position=r*p.position+Vector(-500, 60, -140), matrix=r*p.matrix)
+              for p in original.pieces]
+    # Include wrong seating and long, partially engaged axles near tolerances.
+    pieces += [Piece.place(code, colour=4, position=Vector(*at), matrix=matrix) for code, at, matrix in [
+        ('32523.dat', (0, 0, 0), I), ('2780.dat', (0, 30.1, 0), PIN_Y),
+        ('3705.dat', (0, 0, 40), AXLE_Z), ('3713.dat', (0, 0, 75.19), I)]]
+    inspection = inspect_connections(Model.from_pieces(pieces, name='all.ldr'), official)
+    expected = []
+    for i, first in enumerate(inspection.occurrences):
+        for second in inspection.occurrences[i+1:]:
+            for a in first.connections:
+                for b in second.connections:
+                    details = fit(a, b)
+                    if details is None:
+                        continue
+                    male = a if a.kind in MALE else b
+                    expected.append(ConnectionContact(first, second, a, b, connection_residual(a, b),
+                        Status.POTENTIAL if male.kind is Kind.PIN and details['engagement'] < male.length-TOL
+                        else Status.CONFIRMED))
+    assert list(contacts(inspection)) == expected

@@ -10,6 +10,7 @@ import hashlib
 import json
 import shutil
 import subprocess
+from dataclasses import replace
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -18,8 +19,8 @@ from ldraw import BoundingBox, Vector
 from ldraw.errors import PartError
 
 from .builder import build_plan, load_plan
-from .common import atomic_write, dumps, jsonable
-from .document import physical_context, selected_source
+from .common import atomic_write, dumps, jsonable, normalized
+from .document import dependency_closure, physical_context, selected_source
 from .external import compare_bom, render
 from .geometry import analyze_geometry
 from .validation import validate_file
@@ -44,8 +45,34 @@ def check_model(model, parts, diagnostics, **geometry_options):
 
 def build_checked(plan, parts, **geometry_options):
     """The same source and geometry checks used by both build and review."""
-    text, model, diagnostics = build_plan(plan, parts, instance_limit=geometry_options.get('instance_limit', 100000))
-    return text, model, check_model(model, parts, diagnostics, **geometry_options)
+    assets = []
+    text, model, diagnostics = build_plan(plan, parts, instance_limit=geometry_options.get('instance_limit', 100000),
+                                         asset_reports=assets)
+    report = check_model(model, parts, diagnostics, **geometry_options)
+    if assets:
+        report['flex'] = assets
+        report['diagnostics'].extend(d for asset in assets for d in asset['validation']['diagnostics'])
+    if report['checks_passed']:
+        from .technic_review import review_structure
+        for section in plan['sections']:
+            if not section.get('structure'):
+                continue
+            path = Path(section['structure'])
+            raw = path.read_bytes()
+            contract = json.loads(raw)
+            # Hash the source model, including embedded part definitions. Physical
+            # expansion happens inside the reviewer, after revision validation.
+            scoped = model
+            if normalized(section['name']) != normalized(model.name):
+                closure = dependency_closure(model, section['name'])
+                scoped = replace(closure[0], submodels={normalized(s.name): s for s in closure[1:]})
+            checked = review_structure(scoped, parts, contract=contract,
+                                       instance_limit=geometry_options.get('instance_limit', 100000))
+            checked.update(contract=str(path), contract_sha256=hashlib.sha256(raw).hexdigest())
+            report.setdefault('structure', {})[section['name']] = checked
+            report['diagnostics'].extend(dict(d, section=section['name']) for d in checked['diagnostics'])
+            report['checks_passed'] &= checked['checks_passed']
+    return text, model, report
 
 
 def sha256(path):
@@ -137,6 +164,21 @@ def review(source, parts, library, *, outdir=None, force=False, section=None, co
                                if section and validation['checks_passed'] else snapshot.read_bytes())
             validation.update(file=str(source), section=section, profile='assembly')
             validation['model_sha256'] = hashlib.sha256(model_bytes).hexdigest()
+            # Freeze the generated dependencies and their evidence with this review.
+            # The editable originals and disposable cache can change afterward.
+            for i, asset in enumerate(validation.get('flex', []), 1):
+                folder = work / 'flex' / str(i)
+                folder.mkdir(parents=True)
+                for key, name in [('source', 'constraints.ldr'), ('output', 'asset.mpd'), ('manifest', 'asset.manifest.json')]:
+                    shutil.copyfile(asset[key], folder / name)
+                if sha256(folder / 'constraints.ldr') != asset['source_sha256'] or sha256(folder / 'asset.mpd') != asset['model_sha256']:
+                    raise ValueError('Flexible asset changed during review; rerun on the saved revision')
+            for i, checked in enumerate(validation.get('structure', {}).values(), 1):
+                target = work / 'structure' / f'{i}.json'
+                target.parent.mkdir(exist_ok=True)
+                shutil.copyfile(checked['contract'], target)
+                if sha256(target) != checked['contract_sha256']:
+                    raise ValueError('Structure contract changed during review; rerun on the saved revision')
             atomic_write(work / 'validation.json', dumps(validation) + '\n')
             report['stages']['validation'] = 'passed' if validation['checks_passed'] else 'failed'
             report['diagnostics'] = validation['diagnostics']

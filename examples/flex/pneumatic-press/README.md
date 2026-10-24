@@ -14,11 +14,12 @@ This model is inspired by lsynth-nova's `TECHNIC_PNEUMATIC_HOSE` example (pump, 
 | Review | No errors; Python and LeoCAD BOMs match |
 
 ```sh
-.venv/bin/python examples/flex/pneumatic-press/generate.py
-./ldraw-agent flex build examples/flex/pneumatic-press/hoses.ldr \
-  --output examples/flex/pneumatic-press/hoses.mpd --namespace press-hoses --force
-./ldraw-agent review examples/flex/pneumatic-press/press.plan.json --outdir output/press-review --contacts all
+.venv/bin/python examples/flex/pneumatic-press/generate.py --automatic \
+  --output output/press/press.plan.json --hoses output/press/hoses.ldr
+./ldraw-agent review output/press/press.plan.json --contacts all
 ```
+
+`--automatic` declares the hose source, namespace and geometric limits in the plan. Review builds and checks the hoses before composing the press; later runs reuse unchanged synthesis. Use `--force` on review after edits. The result reproduces the supplied reviewed MPD byte for byte. The generator's original mode and prebuilt `hoses.mpd` remain supported; run without `--automatic` to reproduce those source fixtures.
 
 ## How the hoses are placed
 

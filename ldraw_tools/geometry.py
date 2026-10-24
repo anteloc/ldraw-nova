@@ -139,7 +139,7 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
     from .technic import managed
     if contact_mode == 'all' and any(managed(f) for o in inspection.occurrences for f in o.connections):
         from .technic_review import review_inspection
-        problems.extend(review_inspection(inspection, seating_only=True))
+        problems.extend(review_inspection(inspection, seating_only=True, found=contact_results))
     mating_pairs = {}
     for contact in contact_results:
         pair = tuple(sorted((contact.first_occurrence.index, contact.second_occurrence.index)))
