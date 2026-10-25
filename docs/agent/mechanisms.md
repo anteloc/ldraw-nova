@@ -1,6 +1,6 @@
 # Build models with mechanisms
 
-Stage 2 is authorized for **construction from studied examples**: discover mechanisms, understand their parts and intended operation, then reuse or adapt them in new LDraw models. **Analytical mechanism verification is deferred at the user's request.** Do not require motion simulation, transmission calculations or physical testing to finish this workflow. Keep normal file, part, transform, geometry, BOM and visual checks, and describe operation as intended or inferred rather than verified.
+For **construction from studied examples**, discover mechanisms, understand their parts and intended operation, then reuse or adapt them in new LDraw models. Analytical verification remains optional for that construction-only workflow. For animation or advanced-machine work, follow the [constraint workflow](advanced-mechanisms.md) and [RCVJ study](../../examples/technic-studies/rcvj/README.md); the user has requested explicit motion checks for that scope. Keep normal file, part, transform, geometry, BOM and visual checks, and distinguish intended operation from tested motion.
 
 Start with the [mechanism atlas](../../examples/mechanism-atlas/README.md). Its six studies cover gears, a worm drive, a steering rack, a piston/crank, a differential and a driven turntable. They include attributed source, build pages, per-step parts, parent placements, operation notes and an editable placement plan. The [structural workflow](technic.md) still applies to fixed chassis and supports.
 
@@ -104,4 +104,4 @@ Prefer adapting external mounts, the supporting frame and bodywork before changi
 
 `--contacts none` deliberately leaves connector analysis out of this mechanism workflow while retaining ordinary source/geometry checks. Run `technic check` on separately selected fixed structural modules where applicable; applying a fixed-member restraint contract to the whole moving mechanism is inappropriate. Existing System and structural defaults are unchanged.
 
-Deliver the editable MPD and plan, operation/adaptation notes, attribution, BOM comparison and inspected images. Record **analytical verification: deferred** once in the build notes. Functional certification, simulation and load testing are outside the current scope and should not block delivery.
+For construction-only deliveries, include the editable MPD and plan, operation/adaptation notes, attribution, BOM comparison and inspected images. Record **analytical verification: deferred** when it was not performed. Animation requests additionally follow the [constraint workflow](advanced-mechanisms.md); construction checks alone do not verify motion.

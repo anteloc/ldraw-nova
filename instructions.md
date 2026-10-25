@@ -28,6 +28,7 @@ Read the relevant guide when its construction is needed:
 | Vehicles or spaceships | [Vehicles](docs/agent/vehicles.md), [spaceships](docs/agent/spaceships.md) |
 | Fixed Technic frames and mounts | [Technic](docs/agent/technic.md), [design patterns](docs/agent/technic-design.md) |
 | Moving mechanisms | [Mechanisms](docs/agent/mechanisms.md) |
+| Advanced mechanisms and animation constraints | [Mechanism construction](docs/agent/advanced-mechanisms.md), [parts catalog](docs/agent/technic-catalog.md) |
 | Hoses, cables, bands, chains or treads | [Flex constraints](docs/agent/flex-constraints.md), `flex guide TYPE` |
 | Source constructions or build manuals | [Discovery](docs/agent/reference-discovery.md), [manuals](docs/agent/build-manuals.md) |
 

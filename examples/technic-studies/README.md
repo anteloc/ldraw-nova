@@ -1,5 +1,10 @@
 # Technic construction studies from ldraw-mecha
 
+For advanced animation work, start with the [RCVJ study](rcvj/README.md) and
+[constraint workflow](../../docs/agent/advanced-mechanisms.md). They add a
+preserved source, measured shaft interfaces and regression evidence for a
+double-gimbal CV joint; the complete RCVJ rig remains unresolved.
+
 These local study notes adapt Technic knowledge from the sibling project's
 `docs/` and `examples/` as of **2026-10-08**. Start with the
 [design guide](../../docs/agent/technic-design.md), then read the relevant

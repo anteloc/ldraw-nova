@@ -231,9 +231,18 @@ def parser():
         d.add_argument('reference', help='Prepared study directory' + (' or curated mechanism key' if name == 'mechanism' else ''))
         d.add_argument('--outdir', required=True)
         d.add_argument('--force', action='store_true')
-    c = commands.add_parser('technic', help='Reviewed structural parts, plans and joint/brace checks for fixed structures')
+    c = commands.add_parser('technic', help='Mechanism parts catalog, structural plans and joint/brace checks')
     t = c.add_subparsers(dest='technic_command', required=True)
     t.add_parser('list', help='List editable structural recipes')
+    d = t.add_parser('catalog', help='Inventory mechanism parts, aliases, availability and review gaps')
+    d.add_argument('query', nargs='?', default='')
+    from .mechanism_catalog import FAMILIES
+    d.add_argument('--family', choices=sorted(FAMILIES))
+    d.add_argument('--model', help='Report every physical part reference used by this MPD/LDR')
+    d.add_argument('--connectors', action='store_true', help='Include local connector evidence for every selected part; may be slower for the full catalog')
+    d.add_argument('--limit', type=positive, default=20, help='Displayed rows; --output always saves all selected rows')
+    d.add_argument('--output', help='Save the complete selected inventory JSON')
+    d.add_argument('--force', action='store_true')
     d = t.add_parser('parts', help='Inspect reviewed nominal ports and geometry fingerprints')
     d.add_argument('code', nargs='?')
     d = t.add_parser('plan', help='Export a structural plan and required-joint contract')
@@ -535,6 +544,19 @@ def run(args):
             return export_example(index,args.id,args.catalog,args.output,title=args.title,lesson=args.lesson,
                                   placement_notes=args.placement_notes,scale=args.scale,force=args.force),0
     if args.command == 'technic':
+        if args.technic_command == 'catalog':
+            from .mechanism_catalog import catalog
+            target = Path(args.output) if args.output else None
+            if target and target.exists() and not args.force:
+                raise ValueError('Catalog output exists; use --force')
+            if target and args.model and target.resolve() == Path(args.model).resolve():
+                raise ValueError('Catalog output must not replace the model')
+            report = catalog(parts, args.query, family=args.family, model=args.model, connectors=args.connectors)
+            if target:
+                atomic_write(target, dumps(report) + '\n')
+            return {**report, 'parts': report['parts'][:args.limit],
+                    'truncated': report['selected'] > args.limit,
+                    'output': str(target) if target else None}, 0
         from .technic import parts_report
         from .technic_recipes import RECIPES, structure_plan
         from .technic_review import review_structure
