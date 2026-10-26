@@ -102,7 +102,7 @@ def closest_segments(a, b, *, self_gap=None):
 
 def check_asset(source, asset, *, source_report=None, block=None, min_radius=None, max_turn=None,
                 tube_radius=None, min_separation=None, length=None, length_tolerance=1,
-                obstacles=None, obstacle_section=None, parts=None):
+                obstacles=None, obstacle_section=None, parts=None, curves_out=None):
     for name, v in dict(min_radius=min_radius, max_turn=max_turn, tube_radius=tube_radius,
                         min_separation=min_separation, length=length, length_tolerance=length_tolerance).items():
         if v is not None and (not np.isfinite(v) or v < 0):
@@ -194,13 +194,15 @@ def check_asset(source, asset, *, source_report=None, block=None, min_radius=Non
             if min_radius is not None:
                 if radius is not None and radius < min_radius:
                     add('bend', f'Sampled bend radius {radius:.3f} is below {min_radius:g} LDU.',
-                        'Inspect this bend; change its approach or increase free space, then synthesize again.', at=row['radius_at'])
+                        'Inspect this bend; change its approach or increase free space, then synthesize again.',
+                        at=row['radius_at'], measured_radius_ldu=radius, required_radius_ldu=min_radius)
                 elif radius is None and row['max_segment_turn_degrees'] > 1e-3:
                     add('bend_unresolved', 'Route is too short for the sampled bend window.',
                         'Inspect the segment turns and end geometry; do not treat missing radius as a passing bend.')
             if max_turn is not None and row['max_segment_turn_degrees'] > max_turn:
                 add('segment_turn', f'Adjacent segments turn {row["max_segment_turn_degrees"]:.3f} degrees.',
-                    'Use a broader route; inspect ring gaps and end transitions.', at=row['turn_at'])
+                    'Use a broader route; inspect ring gaps and end transitions.', at=row['turn_at'],
+                    measured_degrees=row['max_segment_turn_degrees'], maximum_degrees=max_turn)
             # These end sleeves have independently checked geometric conventions in the press fixture.
             if route['method'] == 'TECHNIC_PNEUMATIC_HOSE_BEVELED':
                 row['endpoint_check'] = 'generated sleeves against source marker frames; physical nozzle placement still requires inspection'
@@ -229,7 +231,8 @@ def check_asset(source, asset, *, source_report=None, block=None, min_radius=Non
         actual = rows[0]['polyline_length_ldu']
         if abs(actual-length) > length_tolerance:
             diagnostics.append(diagnostic('length', f'Polyline length {actual:.3f} differs from target {length:g}.',
-                'Adjust the slack route, keeping the actual physical endpoints fixed; this measurement excludes end offsets.', block=rows[0]['block']))
+                'Adjust the slack route, keeping the actual physical endpoints fixed; this measurement excludes end offsets.',
+                block=rows[0]['block'], measured_length_ldu=actual, target_length_ldu=length, tolerance_ldu=length_tolerance))
     separations = []
     required = min_separation if min_separation is not None else (2*tube_radius if tube_radius is not None else None)
     for i, (a, pa, _) in enumerate(curves):
@@ -265,6 +268,8 @@ def check_asset(source, asset, *, source_report=None, block=None, min_radius=Non
         coverage['obstacles'] = 'conservative oriented boxes, sampled at <=1 LDU; potential overlaps require inspection'
     elif obstacle_section:
         raise ValueError('--obstacle-section requires --obstacles')
+    if curves_out is not None:
+        curves_out.extend(curves)
     return dict(**{k:v for k,v in report.items() if k not in {'checks_passed','coverage'}},
                 checks_passed=not any(d['severity']=='error' for d in diagnostics), coverage=coverage,
                 asset=str(path.resolve()), model_sha256=digest, measurements=rows, separations=separations,
@@ -282,7 +287,6 @@ def check_asset(source, asset, *, source_report=None, block=None, min_radius=Non
 
 
 def obstacle_boxes(source, section, parts, curves, radius):
-    from .collision import oriented_box
     from .connectivity import inspect_connections
     from .document import physical_context
     model = parse_source(source)
@@ -291,11 +295,19 @@ def obstacle_boxes(source, section, parts, curves, radius):
     from .geometry import geometry_complete
     if not geometry_complete(inspection):
         raise ValueError('Obstacle geometry is incomplete; resolve missing parts first')
+    return obstacle_candidates(inspection, curves, radius)
+
+
+def obstacle_candidates(inspection, curves, radius, *, exclude=()):
+    """Shared conservative obstacle measurement in the inspection's frame."""
+    from .collision import oriented_box
     hits = []
     for route, pts, run in curves:
         samples = np.unique(np.r_[np.arange(0,run[-1],1.0),run[-1]])
         p = np.column_stack([np.interp(samples,run,pts[:,k]) for k in range(3)])
         for item in inspection.occurrences:
+            if item.index in exclude:
+                continue
             box = oriented_box(item)
             if box is None:
                 raise ValueError(f'Obstacle {item.index} has no usable rigid bounds')

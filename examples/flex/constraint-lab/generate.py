@@ -22,17 +22,16 @@ sys.path.insert(0,str(ROOT))
 
 from ldraw_tools import flex  # noqa: E402
 from ldraw_tools.common import get_parts  # noqa: E402
-from ldraw_tools.flex_authoring import Endpoint, Waypoint, band, document, hose, placement  # noqa: E402
+from ldraw_tools.flex_authoring import Endpoint, Waypoint, band, document, hose, placement, corner_waypoints, return_waypoints  # noqa: E402
 from ldraw_tools.flex_constraints import check  # noqa: E402
 from ldraw_tools.flex_review import check_asset  # noqa: E402
 
 
 def corner(radius=32, *, midpoint=False, z=0, method='TECHNIC_PNEUMATIC_HOSE_BEVELED', name='corner'):
     r=radius
-    via=[Waypoint((0,0,z),(1,0,0),(0,0,1))]
+    via=corner_waypoints(radius, at=(0,0,z))
     if midpoint:
-        via.append(Waypoint((r/np.sqrt(2),-r+r/np.sqrt(2),z),(1,-1,0),(0,0,1)))
-    via.append(Waypoint((r,-r,z),(0,-1,0),(0,0,1)))
+        via.insert(1,Waypoint((r/np.sqrt(2),-r+r/np.sqrt(2),z),(1,-1,0),(0,0,1)))
     return hose(Endpoint((-60,0,z),(1,0,0),up=(0,0,1)),
                 Endpoint((r,-r-60,z),(0,1,0),up=(0,0,1)),via=via,method=method,name=name)
 
@@ -44,9 +43,7 @@ def cases():
     yield 'corner-32-midpoint',corner(32,midpoint=True)
     yield 'bundle',corner(48,name='lower')+corner(48,z=12,name='upper')
     yield 'return',hose(Endpoint((-60,0,0),(1,0,0),up=(0,0,1)),
-        Endpoint((-60,-96,0),(1,0,0),up=(0,0,1)),via=[
-            Waypoint((0,0,0),(1,0,0),(0,0,1)),Waypoint((48,-48,0),(0,-1,0),(0,0,1)),
-            Waypoint((0,-96,0),(-1,0,0),(0,0,1))],name='return')
+        Endpoint((-60,-96,0),(1,0,0),up=(0,0,1)),via=return_waypoints(),name='return')
 
 
 def family_cases():

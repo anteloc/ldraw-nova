@@ -11,7 +11,10 @@ for an assembly with real fittings and supports, and the
   --outdir output/flex-lab/corner-32/review --contacts none
 ```
 
-Open the generated views. Each experiment retains its constraints, generated
+Open the generated views. The corner and return layouts use shared `corner_waypoints` and
+`return_waypoints` helpers from `ldraw_tools.flex_authoring`; `offset_waypoints`
+translates a control layout for a parallel route. These helpers do not predict
+the synthesized radius. Each experiment retains its constraints, generated
 asset and manifest, constraint report and actual-geometry report. `results.json`
 collects the measurements. Use a new output directory, or explicitly `--force`
 to overwrite generated experiment files. An expected failed geometric check

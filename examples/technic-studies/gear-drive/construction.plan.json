@@ -1,0 +1,385 @@
+{
+  "version": 1,
+  "author": "LDraw Nova / Mecha original example",
+  "sections": [
+    {
+      "name": "gear-drive.ldr",
+      "description": "Supported 8:24 spur reduction; one input drives a slower reverse output on two retained shafts",
+      "steps": [
+        [
+          {
+            "id": "frame",
+            "ref": "frame.ldr",
+            "colour": 16,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "Fixed base and two bearing rails"
+          }
+        ],
+        [
+          {
+            "id": "input",
+            "ref": "input.ldr",
+            "colour": 16,
+            "at": [
+              0,
+              -62,
+              0
+            ],
+            "purpose": "8-tooth input shaft"
+          },
+          {
+            "id": "output",
+            "ref": "output.ldr",
+            "colour": 16,
+            "at": [
+              40,
+              -62,
+              0
+            ],
+            "purpose": "24-tooth output shaft; half-tooth phase preserves cross-hole alignment",
+            "matrix": [
+              [
+                0.991444861374,
+                -0.13052619222,
+                0.0
+              ],
+              [
+                0.13052619222,
+                0.991444861374,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "frame.ldr",
+      "description": "Fixed base, stacked rails, four round bearings and bonded top caps; holes have centres at Y -62 and Z +/-40",
+      "steps": [
+        [
+          {
+            "id": "base",
+            "ref": "3958.dat",
+            "colour": 71,
+            "at": [
+              20,
+              0,
+              0
+            ],
+            "purpose": "6 x 6 base"
+          }
+        ],
+        [
+          {
+            "id": "rail_-24_-40",
+            "ref": "3009.dat",
+            "colour": 1,
+            "at": [
+              20,
+              -24,
+              -40
+            ],
+            "purpose": "1 x 6 rail bonded across both bearing towers"
+          },
+          {
+            "id": "rail_-24_40",
+            "ref": "3009.dat",
+            "colour": 1,
+            "at": [
+              20,
+              -24,
+              40
+            ],
+            "purpose": "1 x 6 rail bonded across both bearing towers"
+          }
+        ],
+        [
+          {
+            "id": "rail_-48_-40",
+            "ref": "3009.dat",
+            "colour": 1,
+            "at": [
+              20,
+              -48,
+              -40
+            ],
+            "purpose": "1 x 6 rail bonded across both bearing towers"
+          },
+          {
+            "id": "rail_-48_40",
+            "ref": "3009.dat",
+            "colour": 1,
+            "at": [
+              20,
+              -48,
+              40
+            ],
+            "purpose": "1 x 6 rail bonded across both bearing towers"
+          }
+        ],
+        [
+          {
+            "id": "bearing_0_-40",
+            "ref": "3700.dat",
+            "colour": 1,
+            "at": [
+              0,
+              -72,
+              -40
+            ],
+            "purpose": "Round bearing; axle may rotate, hole centre is Y + 10"
+          },
+          {
+            "id": "bearing_40_-40",
+            "ref": "3700.dat",
+            "colour": 1,
+            "at": [
+              40,
+              -72,
+              -40
+            ],
+            "purpose": "Round bearing; axle may rotate, hole centre is Y + 10"
+          },
+          {
+            "id": "bearing_0_40",
+            "ref": "3700.dat",
+            "colour": 1,
+            "at": [
+              0,
+              -72,
+              40
+            ],
+            "purpose": "Round bearing; axle may rotate, hole centre is Y + 10"
+          },
+          {
+            "id": "bearing_40_40",
+            "ref": "3700.dat",
+            "colour": 1,
+            "at": [
+              40,
+              -72,
+              40
+            ],
+            "purpose": "Round bearing; axle may rotate, hole centre is Y + 10"
+          }
+        ],
+        [
+          {
+            "id": "cap_-40",
+            "ref": "3666.dat",
+            "colour": 1,
+            "at": [
+              20,
+              -80,
+              -40
+            ],
+            "purpose": "1 x 6 cap binds the two bearing bricks"
+          },
+          {
+            "id": "cap_40",
+            "ref": "3666.dat",
+            "colour": 1,
+            "at": [
+              20,
+              -80,
+              40
+            ],
+            "purpose": "1 x 6 cap binds the two bearing bricks"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "input.ldr",
+      "description": "Rigid shaft with keyed gear, two inner gear stops and two outer retaining bushes",
+      "steps": [
+        [
+          {
+            "id": "axle",
+            "ref": "3707.dat",
+            "colour": 0,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "8L keyed shaft along Z",
+            "matrix": [
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "gear",
+            "ref": "3647.dat",
+            "colour": 7,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "Keyed spur gear, tooth midplane Z = 0"
+          },
+          {
+            "id": "inner_-15",
+            "ref": "32123a.dat",
+            "colour": 14,
+            "at": [
+              0,
+              0,
+              -15
+            ],
+            "purpose": "Half bush retains gear against its 20-LDU hub"
+          },
+          {
+            "id": "inner_15",
+            "ref": "32123a.dat",
+            "colour": 14,
+            "at": [
+              0,
+              0,
+              15
+            ],
+            "purpose": "Half bush retains gear against its 20-LDU hub"
+          },
+          {
+            "id": "outer_-60",
+            "ref": "3713.dat",
+            "colour": 4,
+            "at": [
+              0,
+              0,
+              -60
+            ],
+            "purpose": "Full bush retains shaft outside bearing rail"
+          },
+          {
+            "id": "outer_60",
+            "ref": "3713.dat",
+            "colour": 4,
+            "at": [
+              0,
+              0,
+              60
+            ],
+            "purpose": "Full bush retains shaft outside bearing rail"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "output.ldr",
+      "description": "Rigid shaft with keyed gear, two inner gear stops and two outer retaining bushes",
+      "steps": [
+        [
+          {
+            "id": "axle",
+            "ref": "3707.dat",
+            "colour": 0,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "8L keyed shaft along Z",
+            "matrix": [
+              [
+                0,
+                0,
+                -1
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "id": "gear",
+            "ref": "3648b.dat",
+            "colour": 7,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "Keyed spur gear, tooth midplane Z = 0"
+          },
+          {
+            "id": "inner_-15",
+            "ref": "32123a.dat",
+            "colour": 14,
+            "at": [
+              0,
+              0,
+              -15
+            ],
+            "purpose": "Half bush retains gear against its 20-LDU hub"
+          },
+          {
+            "id": "inner_15",
+            "ref": "32123a.dat",
+            "colour": 14,
+            "at": [
+              0,
+              0,
+              15
+            ],
+            "purpose": "Half bush retains gear against its 20-LDU hub"
+          },
+          {
+            "id": "outer_-60",
+            "ref": "3713.dat",
+            "colour": 4,
+            "at": [
+              0,
+              0,
+              -60
+            ],
+            "purpose": "Full bush retains shaft outside bearing rail"
+          },
+          {
+            "id": "outer_60",
+            "ref": "3713.dat",
+            "colour": 4,
+            "at": [
+              0,
+              0,
+              60
+            ],
+            "purpose": "Full bush retains shaft outside bearing rail"
+          }
+        ]
+      ]
+    }
+  ]
+}

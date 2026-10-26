@@ -99,6 +99,39 @@ class Waypoint:
     direction: object = None
     up: object = None
 
+    def to_dict(self):
+        return {k: vector(v, k).tolist() for k, v in
+                dict(at=self.at, direction=self.direction, up=self.up).items() if v is not None}
+
+
+def corner_waypoints(radius=32, *, at=(0, 0, 0), matrix=None):
+    """Two control tangents for the calibrated quarter-turn fixture, in LDU.
+
+    Radius describes the control layout, not a promised synthesized bend radius.
+    Attach real endpoint leads and measure the generated route.
+    """
+    if not np.isfinite(radius) or radius <= 0:
+        raise ValueError('Control radius must be finite and positive')
+    r = rigid(np.eye(3) if matrix is None else matrix)
+    origin = vector(at)
+    return [Waypoint(origin + r @ p, r @ d, r @ np.array([0, 0, 1]))
+            for p, d in [(np.array([0, 0, 0]), np.array([1, 0, 0])),
+                         (np.array([radius, -radius, 0]), np.array([0, -1, 0]))]]
+
+
+def return_waypoints(radius=48, *, at=(0, 0, 0), matrix=None):
+    """Three control tangents for the tested return layout; LSynth owns the curve."""
+    points = corner_waypoints(radius, at=at, matrix=matrix)
+    r = rigid(np.eye(3) if matrix is None else matrix)
+    points.append(Waypoint(vector(at) + r @ np.array([0, -2 * radius, 0]),
+                           r @ np.array([-1, 0, 0]), r @ np.array([0, 0, 1])))
+    return points
+
+
+def offset_waypoints(points, offset):
+    """A parallel control lane; check synthesized separation with its neighbours."""
+    return [Waypoint(vector(p.at) + vector(offset), p.direction, p.up) for p in points]
+
 
 def hose_waypoints(start, end, via=()):
     """Expand fitting leads and infer intermediate tangents in one coordinate frame."""

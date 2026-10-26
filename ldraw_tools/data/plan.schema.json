@@ -117,7 +117,14 @@
           }
         },
         "structure": {
-          "$ref": "#/$defs/text"
+          "oneOf": [
+            {
+              "$ref": "#/$defs/text"
+            },
+            {
+              "$ref": "#/$defs/named_structure"
+            }
+          ]
         }
       }
     },
@@ -126,7 +133,6 @@
       "additionalProperties": false,
       "required": [
         "id",
-        "ref",
         "colour"
       ],
       "properties": {
@@ -269,12 +275,16 @@
               "$ref": "#/$defs/text"
             }
           }
+        },
+        "flex": {
+          "$ref": "#/$defs/inline_flex"
         }
       },
       "oneOf": [
         {
           "required": [
-            "at"
+            "at",
+            "ref"
           ],
           "not": {
             "anyOf": [
@@ -297,13 +307,19 @@
                 "required": [
                   "snap"
                 ]
+              },
+              {
+                "required": [
+                  "flex"
+                ]
               }
             ]
           }
         },
         {
           "required": [
-            "on"
+            "on",
+            "ref"
           ],
           "not": {
             "anyOf": [
@@ -326,13 +342,19 @@
                 "required": [
                   "snap"
                 ]
+              },
+              {
+                "required": [
+                  "flex"
+                ]
               }
             ]
           }
         },
         {
           "required": [
-            "attach"
+            "attach",
+            "ref"
           ],
           "not": {
             "anyOf": [
@@ -370,13 +392,19 @@
                 "required": [
                   "snap"
                 ]
+              },
+              {
+                "required": [
+                  "flex"
+                ]
               }
             ]
           }
         },
         {
           "required": [
-            "snap"
+            "snap",
+            "ref"
           ],
           "not": {
             "anyOf": [
@@ -393,6 +421,65 @@
               {
                 "required": [
                   "attach"
+                ]
+              },
+              {
+                "required": [
+                  "offset_studs"
+                ]
+              },
+              {
+                "required": [
+                  "repeat"
+                ]
+              },
+              {
+                "required": [
+                  "flex"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "flex"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "ref"
+                ]
+              },
+              {
+                "required": [
+                  "at"
+                ]
+              },
+              {
+                "required": [
+                  "on"
+                ]
+              },
+              {
+                "required": [
+                  "attach"
+                ]
+              },
+              {
+                "required": [
+                  "snap"
+                ]
+              },
+              {
+                "required": [
+                  "yaw"
+                ]
+              },
+              {
+                "required": [
+                  "matrix"
                 ]
               },
               {
@@ -495,6 +582,366 @@
           "$ref": "#/$defs/text"
         }
       }
+    },
+    "named_structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "require_rigid": {
+          "type": "boolean"
+        },
+        "required_joints": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "between"
+            ],
+            "properties": {
+              "between": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+                },
+                "minItems": 2,
+                "maxItems": 2,
+                "uniqueItems": true
+              },
+              "minimum": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 100
+              }
+            }
+          }
+        },
+        "assembly": {
+          "type": "array",
+          "maxItems": 10000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "connector",
+              "before"
+            ],
+            "properties": {
+              "connector": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+              },
+              "before": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              }
+            }
+          }
+        },
+        "scope": {
+          "enum": [
+            "structure",
+            "joints"
+          ]
+        },
+        "retained_axles": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 10000,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "scope": {
+                "const": "joints"
+              }
+            },
+            "required": [
+              "scope"
+            ]
+          },
+          "then": {
+            "properties": {
+              "require_rigid": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "flex_endpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "part"
+      ],
+      "properties": {
+        "part": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+        },
+        "port": {
+          "$ref": "#/$defs/text"
+        },
+        "feature": {
+          "$ref": "#/$defs/text"
+        },
+        "at": {
+          "$ref": "#/$defs/vector"
+        },
+        "outward": {
+          "$ref": "#/$defs/vector"
+        },
+        "up": {
+          "$ref": "#/$defs/vector"
+        },
+        "lead": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1000000
+        }
+      },
+      "oneOf": [
+        {
+          "required": [
+            "port"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "feature"
+                ]
+              },
+              {
+                "required": [
+                  "at"
+                ]
+              },
+              {
+                "required": [
+                  "outward"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "feature"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "port"
+                ]
+              },
+              {
+                "required": [
+                  "at"
+                ]
+              },
+              {
+                "required": [
+                  "outward"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "at",
+            "outward"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "port"
+                ]
+              },
+              {
+                "required": [
+                  "feature"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "flex_waypoint": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/vector"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "at"
+          ],
+          "properties": {
+            "at": {
+              "$ref": "#/$defs/vector"
+            },
+            "direction": {
+              "$ref": "#/$defs/vector"
+            },
+            "up": {
+              "$ref": "#/$defs/vector"
+            }
+          }
+        }
+      ]
+    },
+    "inline_flex_checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min_radius": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max_turn": {
+          "type": "number",
+          "minimum": 0
+        },
+        "min_separation": {
+          "type": "number",
+          "minimum": 0
+        },
+        "length": {
+          "type": "number",
+          "minimum": 0
+        },
+        "length_tolerance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "tube_radius": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "inline_flex": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method"
+      ],
+      "properties": {
+        "method": {
+          "$ref": "#/$defs/text"
+        },
+        "from": {
+          "$ref": "#/$defs/flex_endpoint"
+        },
+        "to": {
+          "$ref": "#/$defs/flex_endpoint"
+        },
+        "via": {
+          "type": "array",
+          "maxItems": 200,
+          "items": {
+            "$ref": "#/$defs/flex_waypoint"
+          }
+        },
+        "wheels": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 200,
+          "items": {
+            "oneOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "control"
+                ],
+                "properties": {
+                  "control": {
+                    "enum": [
+                      "INSIDE",
+                      "OUTSIDE",
+                      "CROSS"
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "checks": {
+          "$ref": "#/$defs/inline_flex_checks"
+        },
+        "timeout": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "oneOf": [
+        {
+          "required": [
+            "from",
+            "to"
+          ],
+          "not": {
+            "required": [
+              "wheels"
+            ]
+          }
+        },
+        {
+          "required": [
+            "wheels"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "from"
+                ]
+              },
+              {
+                "required": [
+                  "to"
+                ]
+              },
+              {
+                "required": [
+                  "via"
+                ]
+              }
+            ]
+          }
+        }
+      ]
     }
   }
 }

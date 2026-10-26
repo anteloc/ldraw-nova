@@ -67,6 +67,14 @@ Use colour 16 inside reusable submodels only when an explicit ancestor colour re
 
 Use `extract --section NAME --namespace UNIQUE --output output/assets/NAME.mpd` to copy an attributed dependency closure from a reference. Keep its `.manifest.json` and use the returned `root` name in the plan. Extraction may retain invalid source for review: check its diagnostics before reuse. Explicit BFC/rotation repairs are recorded changes, not physical certification.
 
+## Named connections and inline flexible parts
+
+For new Technic/flex authoring, the [named authoring guide](authoring.md) describes
+inline `structure` contracts and `flex` placements that follow actual fittings
+and wheels. Existing placement modes and external assets remain supported.
+`review PLAN --section NAME` checks a selected dependency closure; finish with
+whole-model review.
+
 ## Generated flexible assets
 
 Declare original LSynth constraints in `assets`; `build` and `review` prepare them automatically:

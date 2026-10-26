@@ -184,7 +184,11 @@ def test_invalid_plan_produces_failure_manifest_without_model(plan, parts):
     report, status = review(plan, parts, parts.path.parent, renders=False)
     assert status == 2 and report['error_type'] == 'ValidationError'
     assert report['stages']['validation'] == 'failed'
-    assert report['artifacts'] == {}
+    assert set(report['artifacts']) == {'validation.json'}
+    validation = json.loads((Path(report['output']) / 'validation.json').read_text())
+    assert validation['geometry'] is None and not validation['checks_passed']
+    assert validation['failed_stage'] == 'schema'
+    assert not (Path(report['output']) / 'model.mpd').exists()
     assert (Path(report['output']) / 'review.json').exists()
 
 

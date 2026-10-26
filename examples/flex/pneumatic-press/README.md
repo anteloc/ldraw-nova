@@ -13,6 +13,17 @@ This model is inspired by lsynth-nova's `TECHNIC_PNEUMATIC_HOSE` example (pump, 
 | Pneumatic parts | `2797c01-f1` pump, `4694c01-f1` valve, `74981-f2` cylinder (extended) |
 | Review | No errors; Python and LeoCAD BOMs match |
 
+The [named JSON version](named.plan.json) keeps the same rigid geometry and BOM,
+with nozzle references and mounting contracts in the plan:
+
+```sh
+cp examples/flex/pneumatic-press/named.plan.json output/press.plan.json
+./ldraw-agent review output/press.plan.json --views home front back top
+```
+
+See [named authoring](../../../docs/agent/authoring.md) to move fittings or repair
+routes. The original generator and fixture remain compatibility evidence:
+
 ```sh
 .venv/bin/python examples/flex/pneumatic-press/generate.py --automatic \
   --output output/press/press.plan.json --hoses output/press/hoses.ldr
@@ -47,10 +58,16 @@ The plan and the constraint source come from the same frames, so moving a part a
 
 The 30 LDU end zones are needed because the valve's three nozzles sit 11–22 LDU apart, so its hoses leave it side by side.
 
-The contact graph has 7 groups: one rigid structure plus six single parts. Three of those are the posed hoses, which carry no connector data. The other three are checker gaps, and the test verifies each one geometrically instead:
+The current reviewed registry resolves the cylinder's two mounting eyes and the
+pump's four bottom stud sockets. The contact graph now has four groups: the
+connected rigid assembly and three posed hoses without connector data. The named
+plan checks both cylinder pins, all four pump mounts and both valve mounts
+through normal `review`; moving a fitting away from its supports fails its
+required joint even if the hose follows it.
 
-- **Cylinder connholes:** the cylinder's mount ring and rod-end ring are not matched by the checker. Both `3673` pins are exactly coaxial with them and fill half of each ring.
-- **Pump base:** its sockets are modeled as pin holes. All four sit exactly on bench studs.
+The original report had seven groups because those cylinder/pump interfaces
+were checker gaps. Independent geometric fixture assertions remain in the tests
+as historical evidence; original MPD and source geometry are unchanged.
 
 ## Limits
 

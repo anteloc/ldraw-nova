@@ -1,0 +1,248 @@
+{
+  "format": "ldraw-nova-review",
+  "version": 1,
+  "source": {
+    "path": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+    "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2",
+    "section": null,
+    "colour": null
+  },
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/authoring-simplification/press",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "visual_review": "required: open and inspect the images",
+  "model_sha256": "2b21bb66b901e8d623c617470907a4f5d5cea79dc81fe12032f77dcc860afa15",
+  "stages": {
+    "validation": "passed",
+    "bom": "passed",
+    "render": "passed",
+    "bom_comparison": "passed"
+  },
+  "artifacts": {
+    "bom-comparison.json": "ae356836b756d82aba85770bd742e269c97a08d8846b12de80768a6fce43a4d1",
+    "bom.json": "658130130d9fd94a563eb7c10098a9e4a7afbac6e029a92c95d7985a7715c066",
+    "flex/1/asset.manifest.json": "6f8fbd583632a2dff98d14e05a2cfd4da3138037bc00edd1b573f72b42ae34bb",
+    "flex/1/asset.mpd": "71b8da73abe814273802920521dc735541499b8cba0bb6ae25bd77e9fa1e4762",
+    "flex/1/constraints.ldr": "f2a52e62c9b7109361fe4ab0a8e49d531b3ed676a5b233b130e222d9317f04d0",
+    "flex/2/asset.manifest.json": "5e2a185ee0ceebab7057491841fe3673e9e511db4a434f2be5111e5b48ae0460",
+    "flex/2/asset.mpd": "e0aa060a063634a7de6b14af641f10be15d6ce3e2710013c70f1ba88ab9bbfc8",
+    "flex/2/constraints.ldr": "b891a3c7068e63cacc43adfcb5b00c88a4dcb3c0161b37cb3c8fa8720b8fe70b",
+    "flex/3/asset.manifest.json": "15b69864867c422c1ffb3542f9dda4f7e78652251dca9ac023939faa63bc48dc",
+    "flex/3/asset.mpd": "744674a49609f1a10287f73624a25198689a438dd155d2b02fcf43c6030fdd4f",
+    "flex/3/constraints.ldr": "ef4a4f600d168cacf57a9f8c4d6d106d522a3f2ed964eec8afcbf25d831d3eb5",
+    "model.mpd": "2b21bb66b901e8d623c617470907a4f5d5cea79dc81fe12032f77dcc860afa15",
+    "previews/back.png": "1a0ad696ca91b3e06a11d93e115581bf9dd0083d6508b12b923b172a038891d3",
+    "previews/front.png": "febe5b1d22f835c33d527d26e43bd5096d8c93900e5248725cef3545736433c0",
+    "previews/home.png": "084695eb02b790ab99a004e04144f03c7cd63533a621f832cd99c5a5a733027e",
+    "previews/leocad-bom.csv": "cb0b75cd548d2db47490d110254920bc38aa68a7d902bb6ff497b7ed5700d514",
+    "previews/top.png": "cc51c8bced3a3d84cda75036a2b52f6efb500ad2716f6afaf226b9e436d8b2f7",
+    "sources/1.json": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2",
+    "structure/1.json": "52b6d5bd005a10619f227f11a7db34de50ff8468bc445648c66958afea591a85",
+    "validation.json": "82afce43bc970c9201cab1a68fb6a4624ec31631d1d730b3802eb017b1d2c848"
+  },
+  "coverage": {
+    "scope": "model",
+    "section": null,
+    "final_model_review": true
+  },
+  "diagnostics": [
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 4
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "supply",
+      "obstacle": "controls/pump",
+      "placements": [
+        {
+          "index": 36,
+          "path": "controls/pump",
+          "part": "2797c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/0"
+        }
+      ],
+      "block": 1,
+      "occurrence": 36,
+      "part": "2797c01-f1.dat",
+      "at": [
+        -84.0,
+        -14.0,
+        -20.0
+      ],
+      "sampled_box_surface_distance_ldu": 0.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "supply",
+      "obstacle": "controls/valve",
+      "placements": [
+        {
+          "index": 37,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/1"
+        }
+      ],
+      "block": 1,
+      "occurrence": 37,
+      "part": "4694c01-f1.dat",
+      "at": [
+        34.0,
+        -30.0,
+        -84.0
+      ],
+      "sampled_box_surface_distance_ldu": 2.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "line-up",
+      "obstacle": "ram/cylinder",
+      "placements": [
+        {
+          "index": 31,
+          "path": "ram/cylinder",
+          "part": "74981-f2.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/3/steps/0/0"
+        }
+      ],
+      "block": 1,
+      "occurrence": 31,
+      "part": "74981-f2.dat",
+      "at": [
+        26.0,
+        -196.0,
+        30.0
+      ],
+      "sampled_box_surface_distance_ldu": 0.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "line-up",
+      "obstacle": "controls/valve",
+      "placements": [
+        {
+          "index": 37,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/1"
+        }
+      ],
+      "block": 1,
+      "occurrence": 37,
+      "part": "4694c01-f1.dat",
+      "at": [
+        40.0,
+        -41.0,
+        -84.0
+      ],
+      "sampled_box_surface_distance_ldu": 2.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "line-down",
+      "obstacle": "ram/cylinder",
+      "placements": [
+        {
+          "index": 31,
+          "path": "ram/cylinder",
+          "part": "74981-f2.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/3/steps/0/0"
+        }
+      ],
+      "block": 1,
+      "occurrence": 31,
+      "part": "74981-f2.dat",
+      "at": [
+        26.0,
+        -146.0,
+        30.0
+      ],
+      "sampled_box_surface_distance_ldu": 0.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "line-down",
+      "obstacle": "controls/valve",
+      "placements": [
+        {
+          "index": 37,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/1"
+        }
+      ],
+      "block": 1,
+      "occurrence": 37,
+      "part": "4694c01-f1.dat",
+      "at": [
+        40.0,
+        -19.0,
+        -84.0
+      ],
+      "sampled_box_surface_distance_ldu": 2.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "technic.unreviewed_parts",
+      "message": "These Technic parts or geometry revisions lack reviewed structural interfaces.",
+      "severity": "warning",
+      "instances": [
+        37
+      ],
+      "placements": [
+        {
+          "index": 37,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/1"
+        }
+      ],
+      "section": "press.ldr"
+    },
+    {
+      "code": "technic.assembly_access_unreviewed",
+      "message": "No connector-before-closure steps supplied; insertion paths need review.",
+      "severity": "warning",
+      "instances": [],
+      "section": "press.ldr"
+    }
+  ],
+  "physical_placements": 41,
+  "exit_code": 0
+}

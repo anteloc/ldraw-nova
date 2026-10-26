@@ -1,8 +1,15 @@
 # Build a mechanism before animating it
 
 Start with physical interfaces and a small number of independent inputs. Every
-gear does not get its own animation control. The [RCVJ study](../../examples/technic-studies/rcvj/README.md)
-shows why a plausible arrangement of rotating parts can still be mechanically wrong.
+gear does not get its own animation control. Start with the reproducible
+[gear-drive starter](../../examples/technic-studies/gear-drive/README.md), then
+add one checked coupling at a time.
+
+For supported parallel spur drives, Mecha's `transmission.port`, `shaft` and
+`mesh` helpers emit the existing motion plan: one rigid group per keyed shaft,
+finite bearing checks and one derived follower angle. The starter's motion
+recipe demonstrates the whole path. Unknown or crown/bevel/worm contacts need
+their own measured relation; catalog membership does not grant solver support.
 
 ## Find parts and inspect occupied interfaces
 
@@ -98,7 +105,7 @@ centring mechanism must actually enforce it.
 The independent `ldraw-mecha` project provides `linkages.gear_pair`,
 `differential`, `universal_joint` and `double_cardan`. They emit ordinary plan
 signals. The double-Cardan helper assumes a fixed articulation and correct fork
-phase; it does not solve RCVJ's centring linkage automatically.
+phase; its centring linkage must be modelled and checked separately.
 
 ## Check geometry as well as expressions
 
@@ -116,9 +123,11 @@ A gear signal agreeing with its own driver proves only program execution.
 ```
 
 Check off-grid angles, both signs, multiple revolutions and asymmetric inputs.
+Mecha's Blender workflow checks off-grid poses and samples the saved timeline
+with animation active; opening the animation remains part of visual review.
 Deliberately break one known coupling and require a failure. Default/rest pose
-alone is insufficient: the previous RCVJ animation passed at rest and failed
-every tested nonzero phase once shaft constraints were added.
+alone is insufficient: a gear animated independently of its keyed axle can pass
+at rest and fail immediately when driven.
 
 `--require-constrained` detects bodies without a cross-body check; it does not
 prove sufficient constraints. Inspect the complete demonstration, reopen it in

@@ -19,7 +19,8 @@ from ldraw import BoundingBox, Vector
 from ldraw.errors import PartError
 
 from .builder import build_plan, load_plan
-from .common import atomic_write, dumps, jsonable, normalized
+from .common import CACHE, atomic_write, dumps, jsonable, normalized
+from .identity import BuildError, annotate, named_contract
 from .document import dependency_closure, physical_context, selected_source
 from .external import compare_bom, render
 from .geometry import analyze_geometry
@@ -39,16 +40,32 @@ def check_model(model, parts, diagnostics, **geometry_options):
     if model is not None and not any(d['severity'] == 'error' for d in diagnostics):
         geometry = analyze_geometry(model, parts, **geometry_options)
         diagnostics.extend(geometry['diagnostics'])
-    return dict(checks_passed=model is not None and not any(d['severity'] == 'error' for d in diagnostics),
-                physical_validity='not_proven', diagnostics=diagnostics, geometry=geometry)
+    report = dict(checks_passed=model is not None and not any(d['severity'] == 'error' for d in diagnostics),
+                  physical_validity='not_proven', diagnostics=diagnostics, geometry=geometry)
+    if not report['checks_passed']:
+        report['failed_stage'] = 'source' if geometry is None else 'geometry'
+    return report
 
 
 def build_checked(plan, parts, **geometry_options):
     """The same source and geometry checks used by both build and review."""
-    assets = []
+    assets, context = [], {}
     text, model, diagnostics = build_plan(plan, parts, instance_limit=geometry_options.get('instance_limit', 100000),
-                                         asset_reports=assets)
+                                         asset_reports=assets, context=context)
     report = check_model(model, parts, diagnostics, **geometry_options)
+    identity = context['identity']
+    source_map = identity.map(model, parts, instance_limit=geometry_options.get('instance_limit', 100000)) if model else []
+    report['source_map'] = source_map
+    report['diagnostics'] = annotate(report['diagnostics'], source_map)
+    if context.get('curves') and report['checks_passed']:
+        from .flex_plan import review_routes
+        interactions = review_routes(model, parts, source_map, context['curves'],
+                                     instance_limit=geometry_options.get('instance_limit', 100000))
+        report['flex_interactions'] = interactions
+        report['diagnostics'].extend(interactions['diagnostics'])
+        report['checks_passed'] &= interactions['checks_passed']
+        if not interactions['checks_passed']:
+            report['failed_stage'] = 'flex.interactions'
     if assets:
         report['flex'] = assets
         report['diagnostics'].extend(d for asset in assets for d in asset['validation']['diagnostics'])
@@ -57,21 +74,35 @@ def build_checked(plan, parts, **geometry_options):
         for section in plan['sections']:
             if not section.get('structure'):
                 continue
-            path = Path(section['structure'])
-            raw = path.read_bytes()
-            contract = json.loads(raw)
             # Hash the source model, including embedded part definitions. Physical
             # expansion happens inside the reviewer, after revision validation.
             scoped = model
             if normalized(section['name']) != normalized(model.name):
                 closure = dependency_closure(model, section['name'])
                 scoped = replace(closure[0], submodels={normalized(s.name): s for s in closure[1:]})
+            scoped_map = identity.map(scoped, parts, instance_limit=geometry_options.get('instance_limit', 100000))
+            if isinstance(section['structure'], dict):
+                try:
+                    contract = named_contract(section['structure'], scoped_map, scoped)
+                except ValueError as exc:
+                    raise BuildError(str(exc), stage='structure', section=section['name'],
+                                     **identity.sources.get(normalized(section['name']), {})) from exc
+                raw = (dumps(contract) + '\n').encode()
+                path = CACHE / 'contracts' / (hashlib.sha256(raw).hexdigest() + '.json')
+                atomic_write(path, raw.decode())
+            else:
+                path = Path(section['structure'])
+                raw = path.read_bytes()
+                contract = json.loads(raw)
             checked = review_structure(scoped, parts, contract=contract,
                                        instance_limit=geometry_options.get('instance_limit', 100000))
+            checked['diagnostics'] = annotate(checked['diagnostics'], scoped_map)
             checked.update(contract=str(path), contract_sha256=hashlib.sha256(raw).hexdigest())
             report.setdefault('structure', {})[section['name']] = checked
             report['diagnostics'].extend(dict(d, section=section['name']) for d in checked['diagnostics'])
             report['checks_passed'] &= checked['checks_passed']
+            if not checked['checks_passed']:
+                report['failed_stage'] = 'structure'
     return text, model, report
 
 
@@ -118,14 +149,13 @@ def review(source, parts, library, *, outdir=None, force=False, section=None, co
         raise ValueError('Review expects a JSON plan or an MPD/LDR assembly')
     if colour is not None and section is None:
         raise ValueError('--colour requires --section')
-    if source.suffix.casefold() == '.json' and section is not None:
-        raise ValueError('Build the plan first to review an individual --section of its MPD')
     if not views or len(set(views)) != len(views) or any(v not in
             {'home', 'top', 'front', 'back', 'left', 'right', 'bottom'} for v in views):
         raise ValueError('Choose distinct supported viewpoints')
     if geometry_options.get('offset', 0) < 0:
         raise ValueError('--offset must be nonnegative')
-    outdir = Path(outdir or source.with_name(model_name(source) + '-review')).expanduser()
+    suffix = '-' + Path(section).stem if section else ''
+    outdir = Path(outdir or source.with_name(model_name(source) + suffix + '-review')).expanduser()
     if outdir.is_symlink():
         raise ValueError('Review output must not be a symlink')
     outdir = outdir.resolve()
@@ -139,6 +169,8 @@ def review(source, parts, library, *, outdir=None, force=False, section=None, co
                   visual_review='not_rendered', model_sha256=None,
                   stages=dict(validation='not_run', bom='not_run', render='not_run', bom_comparison='not_run'),
                   artifacts={})
+    report['coverage'] = dict(scope='section' if section else 'model', section=section,
+                              final_model_review=section is None)
     status = 2
     with TemporaryDirectory(prefix='.review-', dir=outdir.parent) as temp:
         work = Path(temp) / 'bundle'
@@ -147,10 +179,22 @@ def review(source, parts, library, *, outdir=None, force=False, section=None, co
         try:
             if source.suffix.casefold() == '.json':
                 plan = load_plan(source)
+                if section:
+                    from .builder import select_plan
+                    plan = select_plan(plan, section, colour=colour)
                 if sha256(source) != source_hash:
                     raise ValueError('Source changed while loading the plan; rerun on the saved revision')
                 text, model, validation = build_checked(plan, parts, **geometry_options)
                 model_bytes = text.encode('utf-8')
+                sources = {s['file']: s['sha256'] for key, s in plan.sources.items()
+                           if key in {normalized(s['name']) for s in plan['sections']}}
+                for i, (path, digest) in enumerate(sorted(sources.items()), 1):
+                    frozen = work / 'sources' / f'{i}.json'
+                    frozen.parent.mkdir(exist_ok=True)
+                    shutil.copyfile(path, frozen)
+                    if sha256(frozen) != digest:
+                        raise ValueError(f'Plan dependency changed during review: {path}; rerun on the saved revision')
+                validation['source_dependencies'] = sources
             else:
                 # Freeze input before parsing, scoping or invoking an external renderer.
                 snapshot = Path(temp) / source.name
@@ -182,6 +226,8 @@ def review(source, parts, library, *, outdir=None, force=False, section=None, co
             atomic_write(work / 'validation.json', dumps(validation) + '\n')
             report['stages']['validation'] = 'passed' if validation['checks_passed'] else 'failed'
             report['diagnostics'] = validation['diagnostics']
+            if not validation['checks_passed']:
+                report['failed_stage'] = validation.get('failed_stage', 'validation')
             status = 1
             if validation['checks_passed']:
                 model_path = work / 'model.mpd'
@@ -214,6 +260,20 @@ def review(source, parts, library, *, outdir=None, force=False, section=None, co
             status = 2
             report['stages'][stage] = 'failed'
             report.update(error=str(exc), error_type=type(exc).__name__)
+            if isinstance(exc, BuildError):
+                report.update(failed_stage=exc.stage, diagnostics=exc.diagnostics)
+                atomic_write(work / 'validation.json', dumps(dict(checks_passed=False,
+                    physical_validity='not_proven', geometry=None, failed_stage=exc.stage,
+                    diagnostics=exc.diagnostics)) + '\n')
+            elif isinstance(exc, jsonschema.ValidationError):
+                report.update(error=exc.message, failed_stage='schema')
+                report['diagnostics'] = [dict(code='plan.schema', severity='error',
+                    message=exc.message, file=getattr(exc, 'nova_file', str(source)),
+                    pointer='/' + '/'.join(map(str, exc.absolute_path)),
+                    action='Correct this plan field using the plan schema.')]
+                atomic_write(work / 'validation.json', dumps(dict(checks_passed=False,
+                    physical_validity='not_proven', geometry=None, failed_stage='schema',
+                    diagnostics=report['diagnostics'])) + '\n')
             if stage == 'render':
                 shutil.rmtree(work / 'previews', ignore_errors=True)
         report.update(checks_passed=status == 0, exit_code=status)

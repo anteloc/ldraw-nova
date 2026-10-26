@@ -14,7 +14,7 @@ from .common import DATA, jsonable
 from .connectivity import inspect_connections
 from .connection_adapter import connection_contacts
 from .technic import (definition, canonical, registry, managed, endpoints, fit,
-                      conflicts, nearby_ports, Kind, MALE, HOLES, TOL)
+                      conflicts, nearby_ports, Kind, MALE, TOL)
 
 MECHANISMS = re.compile(r'\b(gear|differential|universal joint|motor|actuator|pneumatic|shock absorber|steering)\b', re.I)
 
@@ -25,6 +25,7 @@ def contract_check(contract, model, count):
         raise ValueError('Structure contract belongs to a different model revision')
     indices = [i for j in contract.get('required_joints', []) for i in j['between']]
     indices += [i for step in contract.get('assembly', []) for i in [step['connector'], *step['before']]]
+    indices += contract.get('retained_axles', [])
     if any(i >= count for i in indices):
         raise ValueError('Structure contract references an absent physical occurrence')
 
@@ -39,6 +40,7 @@ def review_structure(model, parts, *, contract=None, instance_limit=500):
 def review_inspection(inspection, *, contract=None, seating_only=False, found=None):
     contract = contract or {}
     diagnostics = []
+    joints_only = contract.get("scope") == "joints"
 
     def issue(code, message, instances=(), severity='warning', **extra):
         diagnostics.append(dict(code=code, message=message, severity=severity,
@@ -59,7 +61,7 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
     if unknown:
         issue('technic.unreviewed_parts', 'These Technic parts or geometry revisions lack reviewed structural interfaces.', unknown,
               'error' if contract.get('require_rigid') else 'warning')
-    if mechanism_parts:
+    if mechanism_parts and not joints_only:
         issue('technic.mechanism_scope', 'This check is for fixed structures. Use mechanism studies for moving assemblies; their function is outside structural review.', mechanism_parts, 'error')
     found = connection_contacts(inspection) if found is None else found
     joints, male_spans, shaft_contacts, member_links = [], defaultdict(list), defaultdict(list), defaultdict(list)
@@ -110,6 +112,7 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
     # Axles need actual stops on both sides of their supported stack.
     # Retainer parts are keyed to the shaft; they do not create structural edges
     # between otherwise unrestrained members merely by being nearby.
+    retention_checked = set()
     for owner, mates in shaft_contacts.items():
         if not any(mf.kind is Kind.AXLE for _, _, mf, _ in mates):
             continue
@@ -119,12 +122,16 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
             supports = [d['interval'] for h, hf, d in selected if definitions[h.index]['role'] != 'retainer']
             stops = [d['interval'] for h, hf, d in selected if definitions[h.index]['role'] == 'retainer']
             if supports:
+                retention_checked.add(owner)
                 low, high = min(s[0] for s in supports), max(s[1] for s in supports)
                 retained = any(abs(s[1]-low) <= TOL for s in stops) and any(abs(s[0]-high) <= TOL for s in stops)
                 if not retained:
-                    issue('technic.axial_retention', 'Axle support lacks reviewed stops against both ends of the supported stack.', [owner])
+                    issue('technic.axial_retention', 'Axle support lacks reviewed stops against both ends of the supported stack.', [owner], 'error' if owner in contract.get('retained_axles', []) else 'warning')
                 if any(d['behavior'] == 'bearing' for h, hf, d in selected):
                     issue('technic.bearing_rotation', 'A round-hole bearing permits shaft rotation; this is not a fixed keyed joint.', [owner])
+
+    for owner in set(contract.get('retained_axles', [])) - retention_checked:
+        issue('technic.axial_retention', 'Required retained axle has no reviewed receiving supports.', [owner], 'error')
 
     members = {i for i, entry in definitions.items() if entry and entry['role'] == 'member'}
     # A pin body may span several layers/ports: count its axis only once per pair.
@@ -156,11 +163,11 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
     for member in sorted(members):
         groups[find(member)].append(member)
     unresolved = [p for p in pivots if find(p['members'][0]) != find(p['members'][1])]
-    if unresolved:
+    if unresolved and not joints_only:
         issue('technic.pivot_support', 'Single pin axes leave relative rotation; add another spaced attachment or reviewed bracing.', sorted({i for p in unresolved for i in p['members']}))
-    if len(unresolved) >= len(groups) and len(groups) > 1:
+    if len(unresolved) >= len(groups) and len(groups) > 1 and not joints_only:
         issue('technic.unbraced_loop', 'A loop of pin joints is connected but has no recognized rigid corner or bracing pattern.', sorted(members))
-    if len(groups) > 1:
+    if len(groups) > 1 and not joints_only:
         issue('technic.structural_restraint', 'The multiple-pin rule does not establish restraint between all structural members.', sorted(members),
               'error' if contract.get('require_rigid') else 'warning')
     for required in contract.get('required_joints', []):
@@ -168,7 +175,9 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
         matching = [c for c in found if tuple(sorted((c.first_occurrence.index, c.second_occurrence.index))) == pair]
         unique = {(c.first.feature_id, c.second.feature_id) for c in matching}
         if len(unique) < required.get('minimum', 1):
-            issue('technic.missing_required_joint', 'A declared mounting connection is absent.', pair, 'error')
+            issue('technic.missing_required_joint', 'A declared mounting connection is absent.', pair, 'error',
+                  required_contacts=required.get('minimum', 1), observed_contacts=len(unique),
+                  action='Inspect these named parts and their local mating interfaces; restore seating or the required attachment count.')
     for step in contract.get('assembly', []):
         index = step['connector']
         if not any(managed(f) and f.kind in MALE for f in items[index].connections):
@@ -180,15 +189,15 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
         issue('technic.assembly_access_unreviewed', 'No connector-before-closure steps supplied; insertion paths need review.')
     if not contract.get('required_joints'):
         issue('technic.mounts_undeclared', 'No required mounting pairs supplied; partial attachment can still connect the whole graph.')
-    if not members:
+    if not members and not joints_only:
         issue('technic.no_structural_members', 'No reviewed structural members were found.')
-    return dict(scope='technic-structure', checks_passed=inspection.complete and not any(d['severity']=='error' for d in diagnostics),
+    return dict(scope='technic-joints' if joints_only else 'technic-structure', checks_passed=inspection.complete and not any(d['severity']=='error' for d in diagnostics),
         complete=inspection.complete, physical_validity='not_proven', occurrence_count=len(items),
         coverage=dict(reviewed_occurrences=sum(v is not None for v in definitions.values()),
                       unknown_technic=unknown, required_joints=len(contract.get('required_joints', [])),
                       assembly_constraints=len(contract.get('assembly', [])),
                       insertion_paths='manual_review_required', material_collisions='interface_seating_only'),
-        joint_count=len(joints), joints=joints, restrained_groups=list(groups.values()),
+        joint_count=len(joints), joints=joints, restrained_groups=[] if joints_only else list(groups.values()),
         locked_member_pairs=locked, pivot_member_pairs=pivots, diagnostics=diagnostics,
         limitations=['Multiple spaced pins provide a conservative restraint pattern, not a general rigidity proof.',
                      'No stress, stiffness, load capacity, manufacturing tolerance or mechanism simulation.',

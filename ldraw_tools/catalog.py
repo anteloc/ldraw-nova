@@ -89,7 +89,7 @@ def resolve_plan(plan, parts):
     for section in result['sections']:
         for step in section['steps']:
             for p in step:
-                if p['ref'].startswith('@'):
+                if p.get('ref', '').startswith('@'):
                     symbol=p['ref']
                     if symbol not in references:
                         references[symbol] = resolve_part(symbol,parts)

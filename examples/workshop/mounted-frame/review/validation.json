@@ -1,0 +1,3074 @@
+{
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "diagnostics": [
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 5
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 55,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -70.0,
+        -142.0,
+        -150.0
+      ],
+      "max": [
+        70.0,
+        70.0,
+        170.0
+      ]
+    },
+    "occurrence_count": 55,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": true,
+    "contact_count": 148,
+    "contacts": [],
+    "contacts_truncated": true,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": 5,
+    "confirmed_component_count": 11,
+    "components_truncated": true,
+    "overlap_candidate_count": 70,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 5
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  },
+  "source_map": [
+    {
+      "index": 0,
+      "path": "core-side--1",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 7,
+      "part": "64179.dat",
+      "position": [
+        -60.0,
+        0.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "core-side--1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/0/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "path": "pin-0",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 10,
+      "part": "2780.dat",
+      "position": [
+        -50.0,
+        -60.0,
+        -40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-0",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "path": "pin-2",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 12,
+      "part": "2780.dat",
+      "position": [
+        -50.0,
+        -60.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-2",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/1/1",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "path": "pin-4",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 14,
+      "part": "2780.dat",
+      "position": [
+        -50.0,
+        60.0,
+        -40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-4",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/1/2",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "path": "pin-6",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 16,
+      "part": "2780.dat",
+      "position": [
+        -50.0,
+        60.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-6",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/1/3",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "path": "core-level--1",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 19,
+      "part": "64179.dat",
+      "position": [
+        0.0,
+        -60.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "core-level--1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/2/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "path": "core-level-1",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 21,
+      "part": "64179.dat",
+      "position": [
+        0.0,
+        60.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "core-level-1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/2/1",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "path": "pin-1",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 24,
+      "part": "2780.dat",
+      "position": [
+        50.0,
+        -60.0,
+        -40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/3/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "path": "pin-10",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 26,
+      "part": "2780.dat",
+      "position": [
+        40.0,
+        -70.0,
+        -60.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-10",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/3/1",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "path": "pin-11",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 28,
+      "part": "2780.dat",
+      "position": [
+        40.0,
+        -70.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-11",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/3/2",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "path": "pin-3",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 30,
+      "part": "2780.dat",
+      "position": [
+        50.0,
+        -60.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-3",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/3/3",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "path": "pin-5",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 32,
+      "part": "2780.dat",
+      "position": [
+        50.0,
+        60.0,
+        -40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-5",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/3/4",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "path": "pin-7",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 34,
+      "part": "2780.dat",
+      "position": [
+        50.0,
+        60.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-7",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/3/5",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "path": "pin-8",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 36,
+      "part": "2780.dat",
+      "position": [
+        -40.0,
+        -70.0,
+        -60.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-8",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/3/6",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "path": "pin-9",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 38,
+      "part": "2780.dat",
+      "position": [
+        -40.0,
+        -70.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "pin-9",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/3/7",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "path": "core-side-1",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 41,
+      "part": "64179.dat",
+      "position": [
+        60.0,
+        0.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "core-side-1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/4/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "path": "rail--1",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 44,
+      "part": "32278.dat",
+      "position": [
+        -40.0,
+        -80.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "rail--1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/5/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "path": "rail-1",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 46,
+      "part": "32278.dat",
+      "position": [
+        40.0,
+        -80.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "rail-1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/5/1",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "path": "mount--1--100",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 49,
+      "part": "4274.dat",
+      "position": [
+        -40.0,
+        -90.0,
+        -100.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "mount--1--100",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/6/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "path": "mount--1--40",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 51,
+      "part": "4274.dat",
+      "position": [
+        -40.0,
+        -90.0,
+        -40.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "mount--1--40",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/6/1",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "path": "mount--1-100",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 53,
+      "part": "4274.dat",
+      "position": [
+        -40.0,
+        -90.0,
+        100.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "mount--1-100",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/6/2",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "path": "mount--1-40",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 55,
+      "part": "4274.dat",
+      "position": [
+        -40.0,
+        -90.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "mount--1-40",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/6/3",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "path": "mount-1--100",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 57,
+      "part": "4274.dat",
+      "position": [
+        40.0,
+        -90.0,
+        -100.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "mount-1--100",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/6/4",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "path": "mount-1--40",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 59,
+      "part": "4274.dat",
+      "position": [
+        40.0,
+        -90.0,
+        -40.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "mount-1--40",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/6/5",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "path": "mount-1-100",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 61,
+      "part": "4274.dat",
+      "position": [
+        40.0,
+        -90.0,
+        100.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "mount-1-100",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/6/6",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "path": "mount-1-40",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 63,
+      "part": "4274.dat",
+      "position": [
+        40.0,
+        -90.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "mount-1-40",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/6/7",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "path": "deck-front",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 66,
+      "part": "3036.dat",
+      "position": [
+        10.0,
+        -98.0,
+        -70.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-front",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/7/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "path": "deck-rear",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 68,
+      "part": "3036.dat",
+      "position": [
+        10.0,
+        -98.0,
+        90.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-rear",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/7/1",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "path": "deck-tile--30--10",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 71,
+      "part": "3068b.dat",
+      "position": [
+        -30.0,
+        -106.0,
+        -10.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile--30--10",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "path": "deck-tile--30--130",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 73,
+      "part": "3068b.dat",
+      "position": [
+        -30.0,
+        -106.0,
+        -130.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile--30--130",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/1",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "path": "deck-tile--30--50",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 75,
+      "part": "3068b.dat",
+      "position": [
+        -30.0,
+        -106.0,
+        -50.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile--30--50",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/2",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "path": "deck-tile--30--90",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 77,
+      "part": "3068b.dat",
+      "position": [
+        -30.0,
+        -106.0,
+        -90.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile--30--90",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/3",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "path": "deck-tile-10--10",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 79,
+      "part": "3068b.dat",
+      "position": [
+        10.0,
+        -106.0,
+        -10.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile-10--10",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/4",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "path": "deck-tile-10--130",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 81,
+      "part": "3068b.dat",
+      "position": [
+        10.0,
+        -106.0,
+        -130.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile-10--130",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/5",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "path": "deck-tile-10--50",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 83,
+      "part": "3068b.dat",
+      "position": [
+        10.0,
+        -106.0,
+        -50.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile-10--50",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/6",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "path": "deck-tile-10--90",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 85,
+      "part": "3068b.dat",
+      "position": [
+        10.0,
+        -106.0,
+        -90.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile-10--90",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/7",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "path": "deck-tile-50--10",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 87,
+      "part": "3068b.dat",
+      "position": [
+        50.0,
+        -106.0,
+        -10.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile-50--10",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/8",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "path": "deck-tile-50--130",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 89,
+      "part": "3068b.dat",
+      "position": [
+        50.0,
+        -106.0,
+        -130.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile-50--130",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/9",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "path": "deck-tile-50--50",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 91,
+      "part": "3068b.dat",
+      "position": [
+        50.0,
+        -106.0,
+        -50.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile-50--50",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/10",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "path": "deck-tile-50--90",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 93,
+      "part": "3068b.dat",
+      "position": [
+        50.0,
+        -106.0,
+        -90.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "deck-tile-50--90",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/11",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "path": "housing-end-160",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 95,
+      "part": "3010.dat",
+      "position": [
+        10.0,
+        -122.0,
+        160.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "housing-end-160",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/12",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "path": "housing-end-20",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 97,
+      "part": "3010.dat",
+      "position": [
+        10.0,
+        -122.0,
+        20.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "housing-end-20",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/13",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "path": "housing-side--40",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 99,
+      "part": "3008.dat",
+      "position": [
+        -40.0,
+        -122.0,
+        90.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "housing-side--40",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/14",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "path": "housing-side-60",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 101,
+      "part": "3008.dat",
+      "position": [
+        60.0,
+        -122.0,
+        90.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "housing-side-60",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/8/15",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "path": "housing-roof",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 104,
+      "part": "3036.dat",
+      "position": [
+        10.0,
+        -130.0,
+        90.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "housing-roof",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/9/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "path": "beacon--40-160",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 107,
+      "part": "6141.dat",
+      "position": [
+        -40.0,
+        -138.0,
+        160.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "beacon--40-160",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/0",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "path": "beacon--40-20",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 109,
+      "part": "6141.dat",
+      "position": [
+        -40.0,
+        -138.0,
+        20.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "beacon--40-20",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/1",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "path": "beacon-60-160",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 111,
+      "part": "6141.dat",
+      "position": [
+        60.0,
+        -138.0,
+        160.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "beacon-60-160",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/2",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "path": "beacon-60-20",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 113,
+      "part": "6141.dat",
+      "position": [
+        60.0,
+        -138.0,
+        20.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "beacon-60-20",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/3",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "path": "roof-vent-100",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 115,
+      "part": "2412b.dat",
+      "position": [
+        10.0,
+        -138.0,
+        100.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "roof-vent-100",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/4",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "path": "roof-vent-120",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 117,
+      "part": "2412b.dat",
+      "position": [
+        10.0,
+        -138.0,
+        120.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "roof-vent-120",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/5",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "path": "roof-vent-140",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 119,
+      "part": "2412b.dat",
+      "position": [
+        10.0,
+        -138.0,
+        140.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "roof-vent-140",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/6",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "path": "roof-vent-40",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 121,
+      "part": "2412b.dat",
+      "position": [
+        10.0,
+        -138.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "roof-vent-40",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/7",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "path": "roof-vent-60",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 123,
+      "part": "2412b.dat",
+      "position": [
+        10.0,
+        -138.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "roof-vent-60",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/8",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "path": "roof-vent-80",
+      "authored": true,
+      "section": "service-platform.ldr",
+      "line_number": 125,
+      "part": "2412b.dat",
+      "position": [
+        10.0,
+        -138.0,
+        80.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "service-platform.ldr",
+          "placement": "roof-vent-80",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+          "pointer": "/sections/0/steps/10/9",
+          "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+        }
+      ]
+    }
+  ],
+  "structure": {
+    "service-platform.ldr": {
+      "scope": "technic-structure",
+      "checks_passed": true,
+      "complete": true,
+      "physical_validity": "not_proven",
+      "occurrence_count": 55,
+      "coverage": {
+        "reviewed_occurrences": 26,
+        "unknown_technic": [],
+        "required_joints": 40,
+        "assembly_constraints": 20,
+        "insertion_paths": "manual_review_required",
+        "material_collisions": "interface_seating_only"
+      },
+      "joint_count": 32,
+      "joints": [
+        {
+          "connector": 1,
+          "port": "technic:grip-0",
+          "receiver": 0,
+          "hole": "technic:hole-0",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -60.0,
+            -60.0,
+            -40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 2,
+          "port": "technic:grip-0",
+          "receiver": 0,
+          "hole": "technic:hole-13",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -60.0,
+            -60.0,
+            40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 3,
+          "port": "technic:grip-0",
+          "receiver": 0,
+          "hole": "technic:hole-6",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -60.0,
+            60.0,
+            -40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 4,
+          "port": "technic:grip-0",
+          "receiver": 0,
+          "hole": "technic:hole-19",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -60.0,
+            60.0,
+            40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 1,
+          "port": "technic:grip-1",
+          "receiver": 5,
+          "hole": "technic:hole-1",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -40.0,
+            -60.0,
+            -40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 2,
+          "port": "technic:grip-1",
+          "receiver": 5,
+          "hole": "technic:hole-5",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -40.0,
+            -60.0,
+            40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 3,
+          "port": "technic:grip-1",
+          "receiver": 6,
+          "hole": "technic:hole-1",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -40.0,
+            60.0,
+            -40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 4,
+          "port": "technic:grip-1",
+          "receiver": 6,
+          "hole": "technic:hole-5",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -40.0,
+            60.0,
+            40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 7,
+          "port": "technic:grip-0",
+          "receiver": 5,
+          "hole": "technic:hole-14",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            40.0,
+            -60.0,
+            -40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 8,
+          "port": "technic:grip-1",
+          "receiver": 5,
+          "hole": "technic:hole-13",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            40.0,
+            -60.0,
+            -60.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 9,
+          "port": "technic:grip-1",
+          "receiver": 5,
+          "hole": "technic:hole-19",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            40.0,
+            -60.0,
+            60.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 10,
+          "port": "technic:grip-0",
+          "receiver": 5,
+          "hole": "technic:hole-18",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            40.0,
+            -60.0,
+            40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 13,
+          "port": "technic:grip-1",
+          "receiver": 5,
+          "hole": "technic:hole-0",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -40.0,
+            -60.0,
+            -60.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 14,
+          "port": "technic:grip-1",
+          "receiver": 5,
+          "hole": "technic:hole-6",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -40.0,
+            -60.0,
+            60.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 11,
+          "port": "technic:grip-0",
+          "receiver": 6,
+          "hole": "technic:hole-14",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            40.0,
+            60.0,
+            -40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 12,
+          "port": "technic:grip-0",
+          "receiver": 6,
+          "hole": "technic:hole-18",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            40.0,
+            60.0,
+            40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 7,
+          "port": "technic:grip-1",
+          "receiver": 15,
+          "hole": "technic:hole-0",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            60.0,
+            -60.0,
+            -40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 8,
+          "port": "technic:grip-0",
+          "receiver": 17,
+          "hole": "technic:hole-4",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            40.0,
+            -80.0,
+            -60.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 9,
+          "port": "technic:grip-0",
+          "receiver": 17,
+          "hole": "technic:hole-10",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            40.0,
+            -80.0,
+            60.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 10,
+          "port": "technic:grip-1",
+          "receiver": 15,
+          "hole": "technic:hole-13",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            60.0,
+            -60.0,
+            40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 11,
+          "port": "technic:grip-1",
+          "receiver": 15,
+          "hole": "technic:hole-6",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            60.0,
+            60.0,
+            -40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 12,
+          "port": "technic:grip-1",
+          "receiver": 15,
+          "hole": "technic:hole-19",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            60.0,
+            60.0,
+            40.0
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 13,
+          "port": "technic:grip-0",
+          "receiver": 16,
+          "hole": "technic:hole-4",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -40.0,
+            -80.0,
+            -60.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 14,
+          "port": "technic:grip-0",
+          "receiver": 16,
+          "hole": "technic:hole-10",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": true,
+          "position": [
+            -40.0,
+            -80.0,
+            60.0
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 18,
+          "port": "technic:grip",
+          "receiver": 16,
+          "hole": "technic:hole-2",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            -40.0,
+            -80.0,
+            -100.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 19,
+          "port": "technic:grip",
+          "receiver": 16,
+          "hole": "technic:hole-5",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            -40.0,
+            -80.0,
+            -40.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 20,
+          "port": "technic:grip",
+          "receiver": 16,
+          "hole": "technic:hole-12",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            -40.0,
+            -80.0,
+            100.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 21,
+          "port": "technic:grip",
+          "receiver": 16,
+          "hole": "technic:hole-9",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            -40.0,
+            -80.0,
+            40.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 22,
+          "port": "technic:grip",
+          "receiver": 17,
+          "hole": "technic:hole-2",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            40.0,
+            -80.0,
+            -100.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 23,
+          "port": "technic:grip",
+          "receiver": 17,
+          "hole": "technic:hole-5",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            40.0,
+            -80.0,
+            -40.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 24,
+          "port": "technic:grip",
+          "receiver": 17,
+          "hole": "technic:hole-12",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            40.0,
+            -80.0,
+            100.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        {
+          "connector": 25,
+          "port": "technic:grip",
+          "receiver": 17,
+          "hole": "technic:hole-9",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            40.0,
+            -80.0,
+            40.0
+          ],
+          "axis": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      ],
+      "restrained_groups": [
+        [
+          0,
+          5,
+          6,
+          15,
+          16,
+          17
+        ]
+      ],
+      "locked_member_pairs": [
+        {
+          "members": [
+            0,
+            5
+          ],
+          "connectors": [
+            1,
+            2
+          ]
+        },
+        {
+          "members": [
+            0,
+            6
+          ],
+          "connectors": [
+            3,
+            4
+          ]
+        },
+        {
+          "members": [
+            5,
+            15
+          ],
+          "connectors": [
+            7,
+            10
+          ]
+        },
+        {
+          "members": [
+            5,
+            17
+          ],
+          "connectors": [
+            8,
+            9
+          ]
+        },
+        {
+          "members": [
+            5,
+            16
+          ],
+          "connectors": [
+            13,
+            14
+          ]
+        },
+        {
+          "members": [
+            6,
+            15
+          ],
+          "connectors": [
+            11,
+            12
+          ]
+        }
+      ],
+      "pivot_member_pairs": [],
+      "diagnostics": [],
+      "limitations": [
+        "Multiple spaced pins provide a conservative restraint pattern, not a general rigidity proof.",
+        "No stress, stiffness, load capacity, manufacturing tolerance or mechanism simulation.",
+        "STEP constraints check ordering, not swept insertion paths; inspect hidden joints and build order.",
+        "Run normal geometry validation too; hole seating does not waive unrelated material overlaps."
+      ],
+      "contract": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/contracts/261243b6398e93f5a206b4c732a23863e31a2997b5f2a9b7a60668ecbb433d56.json",
+      "contract_sha256": "261243b6398e93f5a206b4c732a23863e31a2997b5f2a9b7a60668ecbb433d56"
+    }
+  },
+  "source_dependencies": {
+    "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d"
+  },
+  "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+  "section": null,
+  "profile": "assembly",
+  "model_sha256": "1a4da42ba87b08fa4c04ee29ed43227a654037229f264e04a14814c1f4d6c3b2"
+}

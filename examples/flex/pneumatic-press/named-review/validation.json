@@ -1,0 +1,3244 @@
+{
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "diagnostics": [
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 4
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "supply",
+      "obstacle": "controls/pump",
+      "placements": [
+        {
+          "index": 36,
+          "path": "controls/pump",
+          "part": "2797c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/0"
+        }
+      ],
+      "block": 1,
+      "occurrence": 36,
+      "part": "2797c01-f1.dat",
+      "at": [
+        -84.0,
+        -14.0,
+        -20.0
+      ],
+      "sampled_box_surface_distance_ldu": 0.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "supply",
+      "obstacle": "controls/valve",
+      "placements": [
+        {
+          "index": 37,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/1"
+        }
+      ],
+      "block": 1,
+      "occurrence": 37,
+      "part": "4694c01-f1.dat",
+      "at": [
+        34.0,
+        -30.0,
+        -84.0
+      ],
+      "sampled_box_surface_distance_ldu": 2.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "line-up",
+      "obstacle": "ram/cylinder",
+      "placements": [
+        {
+          "index": 31,
+          "path": "ram/cylinder",
+          "part": "74981-f2.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/3/steps/0/0"
+        }
+      ],
+      "block": 1,
+      "occurrence": 31,
+      "part": "74981-f2.dat",
+      "at": [
+        26.0,
+        -196.0,
+        30.0
+      ],
+      "sampled_box_surface_distance_ldu": 0.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "line-up",
+      "obstacle": "controls/valve",
+      "placements": [
+        {
+          "index": 37,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/1"
+        }
+      ],
+      "block": 1,
+      "occurrence": 37,
+      "part": "4694c01-f1.dat",
+      "at": [
+        40.0,
+        -41.0,
+        -84.0
+      ],
+      "sampled_box_surface_distance_ldu": 2.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "line-down",
+      "obstacle": "ram/cylinder",
+      "placements": [
+        {
+          "index": 31,
+          "path": "ram/cylinder",
+          "part": "74981-f2.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/3/steps/0/0"
+        }
+      ],
+      "block": 1,
+      "occurrence": 31,
+      "part": "74981-f2.dat",
+      "at": [
+        26.0,
+        -146.0,
+        30.0
+      ],
+      "sampled_box_surface_distance_ldu": 0.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "line-down",
+      "obstacle": "controls/valve",
+      "placements": [
+        {
+          "index": 37,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/1"
+        }
+      ],
+      "block": 1,
+      "occurrence": 37,
+      "part": "4694c01-f1.dat",
+      "at": [
+        40.0,
+        -19.0,
+        -84.0
+      ],
+      "sampled_box_surface_distance_ldu": 2.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "technic.unreviewed_parts",
+      "message": "These Technic parts or geometry revisions lack reviewed structural interfaces.",
+      "severity": "warning",
+      "instances": [
+        37
+      ],
+      "placements": [
+        {
+          "index": 37,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/1"
+        }
+      ],
+      "section": "press.ldr"
+    },
+    {
+      "code": "technic.assembly_access_unreviewed",
+      "message": "No connector-before-closure steps supplied; insertion paths need review.",
+      "severity": "warning",
+      "instances": [],
+      "section": "press.ldr"
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 38,
+      "partial": 0,
+      "none": 3
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -160.0,
+        -228.0,
+        -160.0
+      ],
+      "max": [
+        160.0,
+        16.0,
+        160.0
+      ]
+    },
+    "occurrence_count": 41,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": true,
+    "contact_count": 386,
+    "contacts": [],
+    "contacts_truncated": true,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": 4,
+    "confirmed_component_count": 7,
+    "components_truncated": true,
+    "overlap_candidate_count": 60,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 4
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  },
+  "source_map": [
+    {
+      "index": 0,
+      "path": "bench/bench-1",
+      "authored": true,
+      "section": "press-bench.ldr",
+      "line_number": 33,
+      "part": "92438.dat",
+      "position": [
+        0.0,
+        8.0,
+        -80.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "bench",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-bench.ldr",
+          "placement": "bench-1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/1/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "path": "bench/bench-1-rear",
+      "authored": true,
+      "section": "press-bench.ldr",
+      "line_number": 35,
+      "part": "92438.dat",
+      "position": [
+        0.0,
+        8.0,
+        80.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "bench",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-bench.ldr",
+          "placement": "bench-1-rear",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/1/steps/0/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "path": "bench/bench-2-mid",
+      "authored": true,
+      "section": "press-bench.ldr",
+      "line_number": 38,
+      "part": "92438.dat",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "bench",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-bench.ldr",
+          "placement": "bench-2-mid",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/1/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "path": "bench/bench-2-front-l",
+      "authored": true,
+      "section": "press-bench.ldr",
+      "line_number": 40,
+      "part": "3035.dat",
+      "position": [
+        -80.0,
+        0.0,
+        -120.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "bench",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-bench.ldr",
+          "placement": "bench-2-front-l",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/1/steps/1/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "path": "bench/bench-2-front-r",
+      "authored": true,
+      "section": "press-bench.ldr",
+      "line_number": 42,
+      "part": "3035.dat",
+      "position": [
+        80.0,
+        0.0,
+        -120.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "bench",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-bench.ldr",
+          "placement": "bench-2-front-r",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/1/steps/1/2",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "path": "bench/bench-2-rear-l",
+      "authored": true,
+      "section": "press-bench.ldr",
+      "line_number": 44,
+      "part": "3035.dat",
+      "position": [
+        -80.0,
+        0.0,
+        120.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "bench",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-bench.ldr",
+          "placement": "bench-2-rear-l",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/1/steps/1/3",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "path": "bench/bench-2-rear-r",
+      "authored": true,
+      "section": "press-bench.ldr",
+      "line_number": 46,
+      "part": "3035.dat",
+      "position": [
+        80.0,
+        0.0,
+        120.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "bench",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-bench.ldr",
+          "placement": "bench-2-rear-r",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/1/steps/1/4",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "path": "frame/column-l0",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 54,
+      "part": "3003.dat",
+      "position": [
+        -60.0,
+        -24.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-l0",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "path": "frame/column-r0",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 56,
+      "part": "3003.dat",
+      "position": [
+        60.0,
+        -24.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-r0",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/0/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "path": "frame/column-l1",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 59,
+      "part": "3003.dat",
+      "position": [
+        -60.0,
+        -48.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-l1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "path": "frame/column-r1",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 61,
+      "part": "3003.dat",
+      "position": [
+        60.0,
+        -48.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-r1",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/1/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "path": "frame/column-l2",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 64,
+      "part": "3003.dat",
+      "position": [
+        -60.0,
+        -72.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-l2",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/2/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "path": "frame/column-r2",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 66,
+      "part": "3003.dat",
+      "position": [
+        60.0,
+        -72.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-r2",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/2/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "path": "frame/column-l3",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 69,
+      "part": "3003.dat",
+      "position": [
+        -60.0,
+        -96.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-l3",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/3/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "path": "frame/column-r3",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 71,
+      "part": "3003.dat",
+      "position": [
+        60.0,
+        -96.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-r3",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/3/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "path": "frame/column-l4",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 74,
+      "part": "3003.dat",
+      "position": [
+        -60.0,
+        -120.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-l4",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/4/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "path": "frame/column-r4",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 76,
+      "part": "3003.dat",
+      "position": [
+        60.0,
+        -120.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-r4",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/4/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "path": "frame/column-l5",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 79,
+      "part": "3003.dat",
+      "position": [
+        -60.0,
+        -144.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-l5",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/5/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "path": "frame/column-r5",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 81,
+      "part": "3003.dat",
+      "position": [
+        60.0,
+        -144.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-r5",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/5/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "path": "frame/column-l6",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 84,
+      "part": "3003.dat",
+      "position": [
+        -60.0,
+        -168.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-l6",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/6/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "path": "frame/column-r6",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 86,
+      "part": "3003.dat",
+      "position": [
+        60.0,
+        -168.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-r6",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/6/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "path": "frame/column-l7",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 89,
+      "part": "3003.dat",
+      "position": [
+        -60.0,
+        -192.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-l7",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/7/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "path": "frame/column-r7",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 91,
+      "part": "3003.dat",
+      "position": [
+        60.0,
+        -192.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "column-r7",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/7/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "path": "frame/beam",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 94,
+      "part": "3702.dat",
+      "position": [
+        0.0,
+        -216.0,
+        50.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "beam",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/8/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "path": "frame/cap-l",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 96,
+      "part": "3004.dat",
+      "position": [
+        -60.0,
+        -216.0,
+        70.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "cap-l",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/8/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "path": "frame/cap-r",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 98,
+      "part": "3004.dat",
+      "position": [
+        60.0,
+        -216.0,
+        70.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "cap-r",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/8/2",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "path": "frame/top",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 101,
+      "part": "3034.dat",
+      "position": [
+        0.0,
+        -224.0,
+        60.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "top",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/9/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "path": "frame/anvil-a",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 104,
+      "part": "3001.dat",
+      "position": [
+        0.0,
+        -24.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "anvil-a",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/10/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "path": "frame/anvil-b",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 106,
+      "part": "3001.dat",
+      "position": [
+        0.0,
+        -48.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "anvil-b",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/10/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "path": "frame/anvil-plate",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 108,
+      "part": "3020.dat",
+      "position": [
+        0.0,
+        -56.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "anvil-plate",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/10/2",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "path": "frame/anvil-face",
+      "authored": true,
+      "section": "press-frame.ldr",
+      "line_number": 110,
+      "part": "87079.dat",
+      "position": [
+        0.0,
+        -64.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "frame",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-frame.ldr",
+          "placement": "anvil-face",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/2/steps/10/3",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "path": "ram/cylinder",
+      "authored": true,
+      "section": "press-ram.ldr",
+      "line_number": 118,
+      "part": "74981-f2.dat",
+      "position": [
+        0.0,
+        -206.0,
+        30.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "ram",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/2/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-ram.ldr",
+          "placement": "cylinder",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/3/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "path": "ram/mount-pin",
+      "authored": true,
+      "section": "press-ram.ldr",
+      "line_number": 120,
+      "part": "3673.dat",
+      "position": [
+        0.0,
+        -206.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "ram",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/2/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-ram.ldr",
+          "placement": "mount-pin",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/3/steps/0/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "path": "ram/head",
+      "authored": true,
+      "section": "press-ram.ldr",
+      "line_number": 123,
+      "part": "3701.dat",
+      "position": [
+        0.0,
+        -100.0,
+        50.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "ram",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/2/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-ram.ldr",
+          "placement": "head",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/3/steps/1/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "path": "ram/head-pin",
+      "authored": true,
+      "section": "press-ram.ldr",
+      "line_number": 125,
+      "part": "3673.dat",
+      "position": [
+        0.0,
+        -90.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "ram",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/2/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-ram.ldr",
+          "placement": "head-pin",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/3/steps/1/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "path": "ram/die",
+      "authored": true,
+      "section": "press-ram.ldr",
+      "line_number": 128,
+      "part": "3020.dat",
+      "position": [
+        0.0,
+        -76.0,
+        40.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "ram",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/2/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-ram.ldr",
+          "placement": "die",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/3/steps/2/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "path": "controls/pump",
+      "authored": true,
+      "section": "press-controls.ldr",
+      "line_number": 136,
+      "part": "2797c01-f1.dat",
+      "position": [
+        -120.0,
+        -14.0,
+        -20.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "controls",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/3/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-controls.ldr",
+          "placement": "pump",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "path": "controls/valve",
+      "authored": true,
+      "section": "press-controls.ldr",
+      "line_number": 138,
+      "part": "4694c01-f1.dat",
+      "position": [
+        40.0,
+        -56.0,
+        -110.0
+      ],
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "controls",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/3/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        },
+        {
+          "section": "press-controls.ldr",
+          "placement": "valve",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/4/steps/0/1",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "path": "supply/@0",
+      "authored": false,
+      "section": "route-e8c880158836619b.ldr",
+      "line_number": 150,
+      "part": "route-e8c880158836619b-flex-01.dat",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "supply",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/4/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ],
+      "inline_route": {
+        "section": "press.ldr",
+        "placement": "supply",
+        "path": "supply",
+        "at": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "index": 39,
+      "path": "line-up/@0",
+      "authored": false,
+      "section": "route-8a9c27749e252068.ldr",
+      "line_number": 256,
+      "part": "route-8a9c27749e252068-flex-01.dat",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "line-up",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/5/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ],
+      "inline_route": {
+        "section": "press.ldr",
+        "placement": "line-up",
+        "path": "line-up",
+        "at": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    },
+    {
+      "index": 40,
+      "path": "line-down/@0",
+      "authored": false,
+      "section": "route-8869bb380eddd979.ldr",
+      "line_number": 539,
+      "part": "route-8869bb380eddd979-flex-01.dat",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "press.ldr",
+          "placement": "line-down",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+          "pointer": "/sections/0/steps/6/0",
+          "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+        }
+      ],
+      "inline_route": {
+        "section": "press.ldr",
+        "placement": "line-down",
+        "path": "line-down",
+        "at": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      }
+    }
+  ],
+  "flex_interactions": {
+    "checks_passed": true,
+    "coordinate_space": "reviewed assembly",
+    "separations": [
+      {
+        "routes": [
+          "supply",
+          "line-up"
+        ],
+        "distance_ldu": 12.529964086141668,
+        "required_ldu": 10
+      },
+      {
+        "routes": [
+          "supply",
+          "line-down"
+        ],
+        "distance_ldu": 12.52943398317593,
+        "required_ldu": 10
+      },
+      {
+        "routes": [
+          "line-up",
+          "line-down"
+        ],
+        "distance_ldu": 11.200137768452914,
+        "required_ldu": 10
+      }
+    ],
+    "diagnostics": [
+      {
+        "code": "flex.obstacle_bounds",
+        "severity": "warning",
+        "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+        "route": "supply",
+        "obstacle": "controls/pump",
+        "placements": [
+          {
+            "index": 36,
+            "path": "controls/pump",
+            "part": "2797c01-f1.dat",
+            "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+            "pointer": "/sections/4/steps/0/0"
+          }
+        ],
+        "block": 1,
+        "occurrence": 36,
+        "part": "2797c01-f1.dat",
+        "at": [
+          -84.0,
+          -14.0,
+          -20.0
+        ],
+        "sampled_box_surface_distance_ldu": 0.0,
+        "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+      },
+      {
+        "code": "flex.obstacle_bounds",
+        "severity": "warning",
+        "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+        "route": "supply",
+        "obstacle": "controls/valve",
+        "placements": [
+          {
+            "index": 37,
+            "path": "controls/valve",
+            "part": "4694c01-f1.dat",
+            "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+            "pointer": "/sections/4/steps/0/1"
+          }
+        ],
+        "block": 1,
+        "occurrence": 37,
+        "part": "4694c01-f1.dat",
+        "at": [
+          34.0,
+          -30.0,
+          -84.0
+        ],
+        "sampled_box_surface_distance_ldu": 2.0,
+        "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+      },
+      {
+        "code": "flex.obstacle_bounds",
+        "severity": "warning",
+        "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+        "route": "line-up",
+        "obstacle": "ram/cylinder",
+        "placements": [
+          {
+            "index": 31,
+            "path": "ram/cylinder",
+            "part": "74981-f2.dat",
+            "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+            "pointer": "/sections/3/steps/0/0"
+          }
+        ],
+        "block": 1,
+        "occurrence": 31,
+        "part": "74981-f2.dat",
+        "at": [
+          26.0,
+          -196.0,
+          30.0
+        ],
+        "sampled_box_surface_distance_ldu": 0.0,
+        "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+      },
+      {
+        "code": "flex.obstacle_bounds",
+        "severity": "warning",
+        "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+        "route": "line-up",
+        "obstacle": "controls/valve",
+        "placements": [
+          {
+            "index": 37,
+            "path": "controls/valve",
+            "part": "4694c01-f1.dat",
+            "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+            "pointer": "/sections/4/steps/0/1"
+          }
+        ],
+        "block": 1,
+        "occurrence": 37,
+        "part": "4694c01-f1.dat",
+        "at": [
+          40.0,
+          -41.0,
+          -84.0
+        ],
+        "sampled_box_surface_distance_ldu": 2.0,
+        "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+      },
+      {
+        "code": "flex.obstacle_bounds",
+        "severity": "warning",
+        "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+        "route": "line-down",
+        "obstacle": "ram/cylinder",
+        "placements": [
+          {
+            "index": 31,
+            "path": "ram/cylinder",
+            "part": "74981-f2.dat",
+            "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+            "pointer": "/sections/3/steps/0/0"
+          }
+        ],
+        "block": 1,
+        "occurrence": 31,
+        "part": "74981-f2.dat",
+        "at": [
+          26.0,
+          -146.0,
+          30.0
+        ],
+        "sampled_box_surface_distance_ldu": 0.0,
+        "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+      },
+      {
+        "code": "flex.obstacle_bounds",
+        "severity": "warning",
+        "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+        "route": "line-down",
+        "obstacle": "controls/valve",
+        "placements": [
+          {
+            "index": 37,
+            "path": "controls/valve",
+            "part": "4694c01-f1.dat",
+            "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+            "pointer": "/sections/4/steps/0/1"
+          }
+        ],
+        "block": 1,
+        "occurrence": 37,
+        "part": "4694c01-f1.dat",
+        "at": [
+          40.0,
+          -19.0,
+          -84.0
+        ],
+        "sampled_box_surface_distance_ldu": 2.0,
+        "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+      }
+    ],
+    "coverage": {
+      "route_instances": 3,
+      "measured_pairs": 3,
+      "pairs_without_limit": 0,
+      "obstacles_checked": [
+        "supply",
+        "line-up",
+        "line-down"
+      ],
+      "band_closure": "manual: inspect the seam and engagement",
+      "material_collision": "conservative bounds only; inspect candidates"
+    }
+  },
+  "flex": [
+    {
+      "root": "route-e8c880158836619b.ldr",
+      "blocks": [
+        {
+          "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+          "colour": "0",
+          "token": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+          "product_hint": null,
+          "section": "route-e8c880158836619b.ldr",
+          "first_piece": 0,
+          "part": "route-e8c880158836619b-flex-01.dat",
+          "representation": "posed_part",
+          "segment_count": 34
+        }
+      ],
+      "embedded_sources": [
+        {
+          "name": "ls22.dat",
+          "embedded_as": "route-e8c880158836619b-ls22.dat",
+          "sha256": "de9d9925e741931b8d7b60e3b0ad19ffbdf4f1db88fec3a03475e5fae3c16faa",
+          "changes": [
+            "Transcoded Latin-1 header to UTF-8"
+          ]
+        },
+        {
+          "name": "ls23.dat",
+          "embedded_as": "route-e8c880158836619b-ls23.dat",
+          "sha256": "a4685434ddf689693634a4ceab1c4962283ff9766a005f74d425d3b13b368fa5",
+          "changes": []
+        }
+      ],
+      "engine": {
+        "available": true,
+        "version": "3.1.0"
+      },
+      "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/f2a52e62c9b7109361fe4ab0a8e49d531b3ed676a5b233b130e222d9317f04d0/constraints.ldr",
+      "source_sha256": "f2a52e62c9b7109361fe4ab0a8e49d531b3ed676a5b233b130e222d9317f04d0",
+      "synthesis_key": "084cb867001f30df4a9411ff1bfaec312b77d75840f6489069fcdd99b91c0746",
+      "cache_hit": true,
+      "source_credits": [
+        "0 Author: Pneumatic press generator (Claude Code, Claude Opus 5.5) for anteloc"
+      ],
+      "config_sha256": "d92c074bc22e6e70ce0d3056ed999d87fdf3583c6ae6c52a345c3fe5fc5a0118",
+      "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/f2a52e62c9b7109361fe4ab0a8e49d531b3ed676a5b233b130e222d9317f04d0/asset.mpd",
+      "model_sha256": "71b8da73abe814273802920521dc735541499b8cba0bb6ae25bd77e9fa1e4762",
+      "diagnostics": [],
+      "physical_validity": "not_proven",
+      "review_required": true,
+      "limitations": [
+        "Posed parts have no verified length, stock identity, bend radius or connector metadata.",
+        "Synthesis does not prove tension, material clearance, link engagement or motion."
+      ],
+      "manifest": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/f2a52e62c9b7109361fe4ab0a8e49d531b3ed676a5b233b130e222d9317f04d0/asset.manifest.json",
+      "checks_passed": true,
+      "validation": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/f2a52e62c9b7109361fe4ab0a8e49d531b3ed676a5b233b130e222d9317f04d0/constraints.ldr",
+        "source_sha256": "f2a52e62c9b7109361fe4ab0a8e49d531b3ed676a5b233b130e222d9317f04d0",
+        "routes": [
+          {
+            "block": 1,
+            "name": "supply",
+            "section": null,
+            "line": 6,
+            "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+            "kind": "hose",
+            "family": "pneumatic",
+            "constraint_count": 4,
+            "hidden_wheels": false,
+            "frames": [
+              {
+                "line": 7,
+                "at": [
+                  -100.0,
+                  -14.0,
+                  -20.0
+                ],
+                "direction": [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              },
+              {
+                "line": 8,
+                "at": [
+                  -78.0,
+                  -14.0,
+                  -20.0
+                ],
+                "direction": [
+                  1.0,
+                  -0.0,
+                  -0.0
+                ]
+              },
+              {
+                "line": 9,
+                "at": [
+                  34.0,
+                  -30.0,
+                  -78.0
+                ],
+                "direction": [
+                  -0.0,
+                  -0.0,
+                  -1.0
+                ]
+              },
+              {
+                "line": 10,
+                "at": [
+                  34.0,
+                  -30.0,
+                  -100.0
+                ],
+                "direction": [
+                  -0.0,
+                  -0.0,
+                  -1.0
+                ]
+              }
+            ]
+          }
+        ],
+        "diagnostics": [],
+        "physical_validity": "not_proven",
+        "checks_passed": true,
+        "coverage": {
+          "constraint_structure": "checked",
+          "synthesized_geometry": "measured actual placements in each source section frame",
+          "fittings": "not_checked",
+          "obstacles": "not_checked",
+          "stock_length": "not_proven: polyline length is not manufactured material length",
+          "motion": "not_checked",
+          "bend": "explicit geometric limit checked on selected hoses",
+          "self_intersection": "nonlocal round-tube spans checked; near neighbours require bend/turn review",
+          "separation": "selected hoses and same-section neighbours checked",
+          "band_closure": "not_measured: file order is not traversal; inspect link engagement and physical closure"
+        },
+        "asset": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/f2a52e62c9b7109361fe4ab0a8e49d531b3ed676a5b233b130e222d9317f04d0/asset.mpd",
+        "model_sha256": "71b8da73abe814273802920521dc735541499b8cba0bb6ae25bd77e9fa1e4762",
+        "measurements": [
+          {
+            "block": 1,
+            "name": "supply",
+            "section": null,
+            "line": 6,
+            "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+            "representation": "posed_part",
+            "generated_segments": 34,
+            "measurement_basis": "successive generated segment origins (end offsets excluded)",
+            "polyline_length_ldu": 145.86124879030137,
+            "minimum_sampled_radius_ldu": 20.208620006943192,
+            "radius_at": [
+              33.55661492520304,
+              -29.913924504932265,
+              -74.17188506791766
+            ],
+            "bend_sampling": "2 LDU arc-length samples, 12 LDU circumradius window; sharp segment turns reported separately",
+            "max_segment_turn_degrees": 5.6363634070653,
+            "turn_at": [
+              33.8215,
+              -29.9653,
+              -75.5623
+            ],
+            "segment_spacing_ldu": {
+              "min": 0.8879284374317467,
+              "max": 12.599066210636405
+            },
+            "first": [
+              -84.0,
+              -14.0,
+              -20.0
+            ],
+            "last": [
+              34.0,
+              -30.0,
+              -84.0
+            ],
+            "endpoint_check": "generated sleeves against source marker frames; physical nozzle placement still requires inspection",
+            "self_separation_ldu": 31.13408864396066,
+            "self_neighbour_exclusion_ldu": 31.41592653589793
+          }
+        ],
+        "separations": [],
+        "measured_hose_pairs": 0,
+        "obstacle_candidates": [],
+        "visual_review": "required: open contextual images; this command does not render",
+        "settings": {
+          "block": null,
+          "min_radius": 15,
+          "max_turn": null,
+          "tube_radius": 5,
+          "min_separation": 10,
+          "length": null,
+          "length_tolerance": 1,
+          "obstacles": null,
+          "obstacle_section": null,
+          "obstacles_sha256": null
+        },
+        "measurement_limits": [
+          "Segment-origin polylines omit family-specific end offsets and non-round cross sections.",
+          "Bend sampling is finite; inspect sharp local turns too.",
+          "Different MPD sections are different local frames; pair checks do not compare them.",
+          "Band placement order is not loop traversal; no band length, curvature or closure metric is inferred.",
+          "No physical bend, tension, elasticity, stock-length or motion certification."
+        ]
+      },
+      "placement": {
+        "section": "press.ldr",
+        "placement": "supply",
+        "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+        "pointer": "/sections/0/steps/4/0",
+        "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+      }
+    },
+    {
+      "root": "route-8a9c27749e252068.ldr",
+      "blocks": [
+        {
+          "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+          "colour": "4",
+          "token": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+          "product_hint": null,
+          "section": "route-8a9c27749e252068.ldr",
+          "first_piece": 0,
+          "part": "route-8a9c27749e252068-flex-01.dat",
+          "representation": "posed_part",
+          "segment_count": 211
+        }
+      ],
+      "embedded_sources": [
+        {
+          "name": "ls22.dat",
+          "embedded_as": "route-8a9c27749e252068-ls22.dat",
+          "sha256": "de9d9925e741931b8d7b60e3b0ad19ffbdf4f1db88fec3a03475e5fae3c16faa",
+          "changes": [
+            "Transcoded Latin-1 header to UTF-8"
+          ]
+        },
+        {
+          "name": "ls23.dat",
+          "embedded_as": "route-8a9c27749e252068-ls23.dat",
+          "sha256": "a4685434ddf689693634a4ceab1c4962283ff9766a005f74d425d3b13b368fa5",
+          "changes": []
+        }
+      ],
+      "engine": {
+        "available": true,
+        "version": "3.1.0"
+      },
+      "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/b891a3c7068e63cacc43adfcb5b00c88a4dcb3c0161b37cb3c8fa8720b8fe70b/constraints.ldr",
+      "source_sha256": "b891a3c7068e63cacc43adfcb5b00c88a4dcb3c0161b37cb3c8fa8720b8fe70b",
+      "synthesis_key": "eb8b29dfe1c8568d680aed0f17126b37410cbfc6a68a7fea69f24fbb4bdaf0e0",
+      "cache_hit": true,
+      "source_credits": [
+        "0 Author: Pneumatic press generator (Claude Code, Claude Opus 5.5) for anteloc"
+      ],
+      "config_sha256": "d92c074bc22e6e70ce0d3056ed999d87fdf3583c6ae6c52a345c3fe5fc5a0118",
+      "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/b891a3c7068e63cacc43adfcb5b00c88a4dcb3c0161b37cb3c8fa8720b8fe70b/asset.mpd",
+      "model_sha256": "e0aa060a063634a7de6b14af641f10be15d6ce3e2710013c70f1ba88ab9bbfc8",
+      "diagnostics": [],
+      "physical_validity": "not_proven",
+      "review_required": true,
+      "limitations": [
+        "Posed parts have no verified length, stock identity, bend radius or connector metadata.",
+        "Synthesis does not prove tension, material clearance, link engagement or motion."
+      ],
+      "manifest": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/b891a3c7068e63cacc43adfcb5b00c88a4dcb3c0161b37cb3c8fa8720b8fe70b/asset.manifest.json",
+      "checks_passed": true,
+      "validation": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/b891a3c7068e63cacc43adfcb5b00c88a4dcb3c0161b37cb3c8fa8720b8fe70b/constraints.ldr",
+        "source_sha256": "b891a3c7068e63cacc43adfcb5b00c88a4dcb3c0161b37cb3c8fa8720b8fe70b",
+        "routes": [
+          {
+            "block": 1,
+            "name": "line-up",
+            "section": null,
+            "line": 6,
+            "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+            "kind": "hose",
+            "family": "pneumatic",
+            "constraint_count": 5,
+            "hidden_wheels": false,
+            "frames": [
+              {
+                "line": 7,
+                "at": [
+                  40.0,
+                  -41.0,
+                  -100.0
+                ],
+                "direction": [
+                  -0.0,
+                  -0.0,
+                  1.0
+                ]
+              },
+              {
+                "line": 8,
+                "at": [
+                  40.0,
+                  -41.0,
+                  -78.0
+                ],
+                "direction": [
+                  -0.0,
+                  -0.0,
+                  1.0
+                ]
+              },
+              {
+                "line": 9,
+                "at": [
+                  80.0,
+                  -120.0,
+                  -30.0
+                ],
+                "direction": [
+                  0.176090181265,
+                  -0.880450906326,
+                  0.440225453163
+                ]
+              },
+              {
+                "line": 10,
+                "at": [
+                  32.0,
+                  -196.0,
+                  30.0
+                ],
+                "direction": [
+                  -1.0,
+                  -0.0,
+                  -0.0
+                ]
+              },
+              {
+                "line": 11,
+                "at": [
+                  10.0,
+                  -196.0,
+                  30.0
+                ],
+                "direction": [
+                  -1.0,
+                  -0.0,
+                  -0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "diagnostics": [],
+        "physical_validity": "not_proven",
+        "checks_passed": true,
+        "coverage": {
+          "constraint_structure": "checked",
+          "synthesized_geometry": "measured actual placements in each source section frame",
+          "fittings": "not_checked",
+          "obstacles": "not_checked",
+          "stock_length": "not_proven: polyline length is not manufactured material length",
+          "motion": "not_checked",
+          "bend": "explicit geometric limit checked on selected hoses",
+          "self_intersection": "nonlocal round-tube spans checked; near neighbours require bend/turn review",
+          "separation": "selected hoses and same-section neighbours checked",
+          "band_closure": "not_measured: file order is not traversal; inspect link engagement and physical closure"
+        },
+        "asset": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/b891a3c7068e63cacc43adfcb5b00c88a4dcb3c0161b37cb3c8fa8720b8fe70b/asset.mpd",
+        "model_sha256": "e0aa060a063634a7de6b14af641f10be15d6ce3e2710013c70f1ba88ab9bbfc8",
+        "measurements": [
+          {
+            "block": 1,
+            "name": "line-up",
+            "section": null,
+            "line": 6,
+            "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+            "representation": "posed_part",
+            "generated_segments": 211,
+            "measurement_basis": "successive generated segment origins (end offsets excluded)",
+            "polyline_length_ldu": 234.94820750097753,
+            "minimum_sampled_radius_ldu": 19.817443576485076,
+            "radius_at": [
+              40.4836728835152,
+              -41.7389098796544,
+              -72.08793037941805
+            ],
+            "bend_sampling": "2 LDU arc-length samples, 12 LDU circumradius window; sharp segment turns reported separately",
+            "max_segment_turn_degrees": 5.5210985657962235,
+            "turn_at": [
+              34.8547,
+              -195.8505,
+              29.8593
+            ],
+            "segment_spacing_ldu": {
+              "min": 0.7605048060334667,
+              "max": 6.0
+            },
+            "first": [
+              40.0,
+              -41.0,
+              -84.0
+            ],
+            "last": [
+              26.0,
+              -196.0,
+              30.0
+            ],
+            "endpoint_check": "generated sleeves against source marker frames; physical nozzle placement still requires inspection",
+            "self_separation_ldu": 29.949647953022755,
+            "self_neighbour_exclusion_ldu": 31.41592653589793
+          }
+        ],
+        "separations": [],
+        "measured_hose_pairs": 0,
+        "obstacle_candidates": [],
+        "visual_review": "required: open contextual images; this command does not render",
+        "settings": {
+          "block": null,
+          "min_radius": 15,
+          "max_turn": null,
+          "tube_radius": 5,
+          "min_separation": 10,
+          "length": null,
+          "length_tolerance": 1,
+          "obstacles": null,
+          "obstacle_section": null,
+          "obstacles_sha256": null
+        },
+        "measurement_limits": [
+          "Segment-origin polylines omit family-specific end offsets and non-round cross sections.",
+          "Bend sampling is finite; inspect sharp local turns too.",
+          "Different MPD sections are different local frames; pair checks do not compare them.",
+          "Band placement order is not loop traversal; no band length, curvature or closure metric is inferred.",
+          "No physical bend, tension, elasticity, stock-length or motion certification."
+        ]
+      },
+      "placement": {
+        "section": "press.ldr",
+        "placement": "line-up",
+        "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+        "pointer": "/sections/0/steps/5/0",
+        "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+      }
+    },
+    {
+      "root": "route-8869bb380eddd979.ldr",
+      "blocks": [
+        {
+          "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+          "colour": "1",
+          "token": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+          "product_hint": null,
+          "section": "route-8869bb380eddd979.ldr",
+          "first_piece": 0,
+          "part": "route-8869bb380eddd979-flex-01.dat",
+          "representation": "posed_part",
+          "segment_count": 207
+        }
+      ],
+      "embedded_sources": [
+        {
+          "name": "ls22.dat",
+          "embedded_as": "route-8869bb380eddd979-ls22.dat",
+          "sha256": "de9d9925e741931b8d7b60e3b0ad19ffbdf4f1db88fec3a03475e5fae3c16faa",
+          "changes": [
+            "Transcoded Latin-1 header to UTF-8"
+          ]
+        },
+        {
+          "name": "ls23.dat",
+          "embedded_as": "route-8869bb380eddd979-ls23.dat",
+          "sha256": "a4685434ddf689693634a4ceab1c4962283ff9766a005f74d425d3b13b368fa5",
+          "changes": []
+        }
+      ],
+      "engine": {
+        "available": true,
+        "version": "3.1.0"
+      },
+      "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/ef4a4f600d168cacf57a9f8c4d6d106d522a3f2ed964eec8afcbf25d831d3eb5/constraints.ldr",
+      "source_sha256": "ef4a4f600d168cacf57a9f8c4d6d106d522a3f2ed964eec8afcbf25d831d3eb5",
+      "synthesis_key": "6930ced2fa5f27549673dc8eb5baee5fa05692e5b66bed7a878502321e25e505",
+      "cache_hit": true,
+      "source_credits": [
+        "0 Author: Pneumatic press generator (Claude Code, Claude Opus 5.5) for anteloc"
+      ],
+      "config_sha256": "d92c074bc22e6e70ce0d3056ed999d87fdf3583c6ae6c52a345c3fe5fc5a0118",
+      "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/ef4a4f600d168cacf57a9f8c4d6d106d522a3f2ed964eec8afcbf25d831d3eb5/asset.mpd",
+      "model_sha256": "744674a49609f1a10287f73624a25198689a438dd155d2b02fcf43c6030fdd4f",
+      "diagnostics": [],
+      "physical_validity": "not_proven",
+      "review_required": true,
+      "limitations": [
+        "Posed parts have no verified length, stock identity, bend radius or connector metadata.",
+        "Synthesis does not prove tension, material clearance, link engagement or motion."
+      ],
+      "manifest": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/ef4a4f600d168cacf57a9f8c4d6d106d522a3f2ed964eec8afcbf25d831d3eb5/asset.manifest.json",
+      "checks_passed": true,
+      "validation": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/ef4a4f600d168cacf57a9f8c4d6d106d522a3f2ed964eec8afcbf25d831d3eb5/constraints.ldr",
+        "source_sha256": "ef4a4f600d168cacf57a9f8c4d6d106d522a3f2ed964eec8afcbf25d831d3eb5",
+        "routes": [
+          {
+            "block": 1,
+            "name": "line-down",
+            "section": null,
+            "line": 6,
+            "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+            "kind": "hose",
+            "family": "pneumatic",
+            "constraint_count": 5,
+            "hidden_wheels": false,
+            "frames": [
+              {
+                "line": 7,
+                "at": [
+                  40.0,
+                  -19.0,
+                  -100.0
+                ],
+                "direction": [
+                  -0.0,
+                  -0.0,
+                  1.0
+                ]
+              },
+              {
+                "line": 8,
+                "at": [
+                  40.0,
+                  -19.0,
+                  -78.0
+                ],
+                "direction": [
+                  -0.0,
+                  -0.0,
+                  1.0
+                ]
+              },
+              {
+                "line": 9,
+                "at": [
+                  74.0,
+                  -80.0,
+                  -36.0
+                ],
+                "direction": [
+                  0.176090181265,
+                  -0.880450906326,
+                  0.440225453163
+                ]
+              },
+              {
+                "line": 10,
+                "at": [
+                  32.0,
+                  -146.0,
+                  30.0
+                ],
+                "direction": [
+                  -1.0,
+                  -0.0,
+                  -0.0
+                ]
+              },
+              {
+                "line": 11,
+                "at": [
+                  10.0,
+                  -146.0,
+                  30.0
+                ],
+                "direction": [
+                  -1.0,
+                  -0.0,
+                  -0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "diagnostics": [],
+        "physical_validity": "not_proven",
+        "checks_passed": true,
+        "coverage": {
+          "constraint_structure": "checked",
+          "synthesized_geometry": "measured actual placements in each source section frame",
+          "fittings": "not_checked",
+          "obstacles": "not_checked",
+          "stock_length": "not_proven: polyline length is not manufactured material length",
+          "motion": "not_checked",
+          "bend": "explicit geometric limit checked on selected hoses",
+          "self_intersection": "nonlocal round-tube spans checked; near neighbours require bend/turn review",
+          "separation": "selected hoses and same-section neighbours checked",
+          "band_closure": "not_measured: file order is not traversal; inspect link engagement and physical closure"
+        },
+        "asset": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/ef4a4f600d168cacf57a9f8c4d6d106d522a3f2ed964eec8afcbf25d831d3eb5/asset.mpd",
+        "model_sha256": "744674a49609f1a10287f73624a25198689a438dd155d2b02fcf43c6030fdd4f",
+        "measurements": [
+          {
+            "block": 1,
+            "name": "line-down",
+            "section": null,
+            "line": 6,
+            "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+            "representation": "posed_part",
+            "generated_segments": 207,
+            "measurement_basis": "successive generated segment origins (end offsets excluded)",
+            "polyline_length_ldu": 211.0489555383406,
+            "minimum_sampled_radius_ldu": 21.711512540922566,
+            "radius_at": [
+              37.00028570882439,
+              -145.6242528221528,
+              29.502970138659176
+            ],
+            "bend_sampling": "2 LDU arc-length samples, 12 LDU circumradius window; sharp segment turns reported separately",
+            "max_segment_turn_degrees": 5.641557415928857,
+            "turn_at": [
+              34.9712,
+              -145.8688,
+              29.8258
+            ],
+            "segment_spacing_ldu": {
+              "min": 0.6264505247822858,
+              "max": 6.0
+            },
+            "first": [
+              40.0,
+              -19.0,
+              -84.0
+            ],
+            "last": [
+              26.0,
+              -146.0,
+              30.0
+            ],
+            "endpoint_check": "generated sleeves against source marker frames; physical nozzle placement still requires inspection",
+            "self_separation_ldu": 29.841959780483588,
+            "self_neighbour_exclusion_ldu": 31.41592653589793
+          }
+        ],
+        "separations": [],
+        "measured_hose_pairs": 0,
+        "obstacle_candidates": [],
+        "visual_review": "required: open contextual images; this command does not render",
+        "settings": {
+          "block": null,
+          "min_radius": 15,
+          "max_turn": null,
+          "tube_radius": 5,
+          "min_separation": 10,
+          "length": null,
+          "length_tolerance": 1,
+          "obstacles": null,
+          "obstacle_section": null,
+          "obstacles_sha256": null
+        },
+        "measurement_limits": [
+          "Segment-origin polylines omit family-specific end offsets and non-round cross sections.",
+          "Bend sampling is finite; inspect sharp local turns too.",
+          "Different MPD sections are different local frames; pair checks do not compare them.",
+          "Band placement order is not loop traversal; no band length, curvature or closure metric is inferred.",
+          "No physical bend, tension, elasticity, stock-length or motion certification."
+        ]
+      },
+      "placement": {
+        "section": "press.ldr",
+        "placement": "line-down",
+        "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+        "pointer": "/sections/0/steps/6/0",
+        "sha256": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+      }
+    }
+  ],
+  "structure": {
+    "press.ldr": {
+      "scope": "technic-joints",
+      "checks_passed": true,
+      "complete": true,
+      "physical_validity": "not_proven",
+      "occurrence_count": 41,
+      "coverage": {
+        "reviewed_occurrences": 6,
+        "unknown_technic": [
+          37
+        ],
+        "required_joints": 6,
+        "assembly_constraints": 0,
+        "insertion_paths": "manual_review_required",
+        "material_collisions": "interface_seating_only"
+      },
+      "joint_count": 4,
+      "joints": [
+        {
+          "connector": 32,
+          "port": "technic:grip-0",
+          "receiver": 23,
+          "hole": "technic:hole-3",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            0.0,
+            -206.0,
+            50.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        },
+        {
+          "connector": 32,
+          "port": "technic:grip-1",
+          "receiver": 31,
+          "hole": "technic:base-eye",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            0.0,
+            -206.0,
+            30.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        },
+        {
+          "connector": 34,
+          "port": "technic:grip-1",
+          "receiver": 31,
+          "hole": "technic:rod-eye",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            0.0,
+            -90.0,
+            30.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        },
+        {
+          "connector": 34,
+          "port": "technic:grip-0",
+          "receiver": 33,
+          "hole": "technic:hole-1",
+          "interval": [
+            -10.0,
+            10.0
+          ],
+          "engagement": 20.0,
+          "behavior": "pin",
+          "friction": false,
+          "position": [
+            0.0,
+            -90.0,
+            50.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            -1.0
+          ]
+        }
+      ],
+      "restrained_groups": [],
+      "locked_member_pairs": [],
+      "pivot_member_pairs": [],
+      "diagnostics": [
+        {
+          "code": "technic.unreviewed_parts",
+          "message": "These Technic parts or geometry revisions lack reviewed structural interfaces.",
+          "severity": "warning",
+          "instances": [
+            37
+          ],
+          "placements": [
+            {
+              "index": 37,
+              "path": "controls/valve",
+              "part": "4694c01-f1.dat",
+              "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+              "pointer": "/sections/4/steps/0/1"
+            }
+          ]
+        },
+        {
+          "code": "technic.assembly_access_unreviewed",
+          "message": "No connector-before-closure steps supplied; insertion paths need review.",
+          "severity": "warning",
+          "instances": []
+        }
+      ],
+      "limitations": [
+        "Multiple spaced pins provide a conservative restraint pattern, not a general rigidity proof.",
+        "No stress, stiffness, load capacity, manufacturing tolerance or mechanism simulation.",
+        "STEP constraints check ordering, not swept insertion paths; inspect hidden joints and build order.",
+        "Run normal geometry validation too; hole seating does not waive unrelated material overlaps."
+      ],
+      "contract": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/contracts/52b6d5bd005a10619f227f11a7db34de50ff8468bc445648c66958afea591a85.json",
+      "contract_sha256": "52b6d5bd005a10619f227f11a7db34de50ff8468bc445648c66958afea591a85"
+    }
+  },
+  "source_dependencies": {
+    "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json": "3f41cc377601bbb3c51b60bee11897a91a6bd2ee36c1badf11127170604e16a2"
+  },
+  "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/flex/pneumatic-press/named.plan.json",
+  "section": null,
+  "profile": "assembly",
+  "model_sha256": "2b21bb66b901e8d623c617470907a4f5d5cea79dc81fe12032f77dcc860afa15"
+}

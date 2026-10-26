@@ -75,14 +75,14 @@ def test_build_matches_reviewed_model_and_groups(built):
     assert report['occurrence_count'] == 41
     instances = {i['index']: i['part'] for i in report['instances']}
     singles = sorted(instances[g[0]] for g in report['optimistic_components'] if len(g) == 1)
-    # One rigid structure; posed hoses carry no connectors; the rest are documented checker gaps below.
-    assert report['optimistic_component_count'] == 7
-    assert singles == ['2797c01-f1.dat', '74981-f2.dat', 'press-hoses-flex-01.dat',
+    # Reviewed pump sockets and cylinder eyes now join the complete rigid structure.
+    assert report['optimistic_component_count'] == 4
+    assert singles == ['press-hoses-flex-01.dat',
                        'press-hoses-flex-02.dat', 'press-hoses-flex-03.dat']
 
 
-def test_unmatched_rigid_joints_are_exactly_aligned(built, official):
-    """The checker leaves the cylinder's connholes and the pump's base sockets unmatched; check them here."""
+def test_curated_rigid_joints_are_independently_aligned(built, official):
+    """Keep the original geometric assertions independently of contact classification."""
     g = generator()
     _, model, _, _ = built
     occurrences = inspect_connections(model, official).occurrences
@@ -102,7 +102,7 @@ def test_unmatched_rigid_joints_are_exactly_aligned(built, official):
         assert np.linalg.norm((p - h) - ((p - h) @ ha) * ha) < 1e-9       # coaxial
         assert abs((p - h) @ ha) == pytest.approx(10)                      # pin half fills the 20 LDU ring
     (pump,) = by_part['2797c01-f1']
-    sockets = [vec(f.position) for f in pump.connections if str(f.kind) == 'pin_hole' and abs(vec(f.axis)[1]) == 1]
+    sockets = [vec(f.position) for f in pump.connections if str(f.kind) == 'stud_receptacle' and abs(vec(f.axis)[1]) == 1]
     studs = [vec(f.position) for o in by_part['92438'] + by_part['3035'] for f in o.connections if str(f.kind) == 'stud']
     assert len(sockets) == 4
     for socket in sockets:

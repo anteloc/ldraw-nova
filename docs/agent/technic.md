@@ -8,6 +8,15 @@ For more varied subjects and functional layouts, use the [Technic design guide](
 
 The [Technic atlas mechanism studies](../../examples/technic-atlas/README.md#mechanisms-from-ldraw-mecha) provide six editable constructions with build pages and operation notes. Query `examples --family technic --limit 20` for both structures and mechanisms. Use their directory with `mechanism export`; fixed structural contracts apply to their supports only.
 
+## Named authoring
+
+The [named authoring path](authoring.md) keeps structural intent inline and uses
+placement paths instead of numeric occurrence indices. The [workshop starters](../../examples/workshop/README.md)
+include complete mounts and flexible routes. `scope: joints` checks declared
+connections in a static mechanism pose; fixed structure checks retain their
+existing default. New reviewed interfaces cover the selected pump, cylinder,
+chain wheel and crank; the catalogue remains a broader discovery inventory.
+
 ## Start from the structure and its mounting points
 
 Record the silhouette, support/load direction, dimensions, palette and body attachment locations. Design the skeleton and visible body together; filling the body first can leave inaccessible joints.
@@ -28,7 +37,7 @@ Use `--force` to replace an exported plan and contract. `--colour` and `--accent
 
 ## Use measured ports and real lengths
 
-The initial registry covers **34 definitions plus aliases**: common Technic bricks, straight beams, a thin beam, a rectangular frame, an axle/pin cross block, ordinary and long pins, axle-pins, a stud-ended half pin, axles and bushes. `technic parts` lists exact IDs, nominal ports, part roles and `geometry_matches`. Coordinates are **local LDU**.
+The initial registry covers the original **34 definitions plus aliases**, plus the measured workshop interfaces: common Technic bricks, straight beams, a thin beam, a rectangular frame, an axle/pin cross block, ordinary and long pins, axle-pins, a stud-ended half pin, axles and bushes. `technic parts` lists exact IDs, nominal ports, part roles and `geometry_matches`. Coordinates are **local LDU**.
 
 Each entry fingerprints its expanded geometry. Changed or unreviewed definitions do not receive curated ports. Do not update a hash without measuring and reviewing the new part. Additional connector blocks, bent/flexible members, panels and hubs need interface curation before a strict structural contract can rely on them.
 

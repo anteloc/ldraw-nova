@@ -1,0 +1,730 @@
+{
+  "format": "ldraw-nova-review",
+  "version": 1,
+  "source": {
+    "path": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+    "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce",
+    "section": null,
+    "colour": null
+  },
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/authoring-simplification/workshop",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "visual_review": "required: open and inspect the images",
+  "model_sha256": "6cd8bf9e7a8e7b421b4be9cb3c166c513457448f61b9f8373c4475807d092158",
+  "stages": {
+    "validation": "passed",
+    "bom": "passed",
+    "render": "passed",
+    "bom_comparison": "passed"
+  },
+  "artifacts": {
+    "bom-comparison.json": "c92a4618773fe83a138d9b1330d9acd650ea17d371a878f7fed963cb1e91c7f5",
+    "bom.json": "2c1f0cf6efeb721bc16a1f83d3a8e154407548e6568e4ec6c0323fc8e93d31cd",
+    "flex/1/asset.manifest.json": "3b3c7716178534d2e36090e5f07debad7c83301b11d7e6ffc8fb601613e4729b",
+    "flex/1/asset.mpd": "6e82fed46f772f45c12373a7f671d9eee550cf24dc7a050bb600d23ca8adabba",
+    "flex/1/constraints.ldr": "f4f5e4072a5647cfc0608750063462be6f866aee2daffc111642b1e971460c44",
+    "flex/2/asset.manifest.json": "19e0ef72538c7ef56bb0d42318f28570604f95c088a4f8748cac924354b134f1",
+    "flex/2/asset.mpd": "508d36d78763138d2d26206b753ca04df1eafde8d83e569def227e843b195241",
+    "flex/2/constraints.ldr": "2be46608fc46ee887a27b220586bb06badeded545f11b22431c3df274f42551d",
+    "flex/3/asset.manifest.json": "ac4db1d75111b221726e3038ca7448238ba46a14f77f2dd940f921f4a9f34891",
+    "flex/3/asset.mpd": "ad63762f9745c79e5f3ea1e215344a898e2374898870cf38bbaadfad32dfc03e",
+    "flex/3/constraints.ldr": "b76a028d9c44e8b90271e4712ee6052487b80cdf52add52f630d2aa4d676ffef",
+    "flex/4/asset.manifest.json": "99d217f531518564fb858ac10e641d3e1d133d8916034bc8aeb71c02f7e76563",
+    "flex/4/asset.mpd": "cf6b2fd76b6b6d0762428d757cd3adbf2c1920e300c48705f158838c02e737bc",
+    "flex/4/constraints.ldr": "4cc2d456f61c4a734524899e6714849f1e8f4ea21025279cfccaf3dbcae01109",
+    "model.mpd": "6cd8bf9e7a8e7b421b4be9cb3c166c513457448f61b9f8373c4475807d092158",
+    "previews/back.png": "e9d3d2dc787e237e164a0a9377983b1cb6eca0c55ba0943dd696a9f235ca3a80",
+    "previews/bottom.png": "021feec2c365bae36e146bcbec08a98cc776c5931d168a85fb9e5d02afe12a1c",
+    "previews/front.png": "ad5700ec1fb39021b39f7639ae7f02e24e7ce95c31b4a33a77ad1b4579b7adbc",
+    "previews/home.png": "bef37450c2380ce61df8ddda7d9574b218bca6f346b81d2d8b6fe439a6a23c25",
+    "previews/leocad-bom.csv": "ca3dccd3bfad7fddeba864067e848d091cdb5c77ce384507d9a2f508d2ea98c7",
+    "previews/right.png": "86bf60f8853f51efdd4a1685170056fcddda31da65b9b2a9d379042c238b1faf",
+    "previews/top.png": "854f29fc7c53f03fefecbe9fe9bb81bef4fc3056ad83792509426c8c5d7790e0",
+    "sources/1.json": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce",
+    "structure/1.json": "39a3e54a3eee8fc2b47f3eedc0a61f2283b8460d9bc869b448c997db17acdf4b",
+    "structure/2.json": "d242f5f6a5959441ccdea6f24e513c6ec7253f4b040d604af608da2f82af759b",
+    "structure/3.json": "2c06016aea61067b486d88dc69bdc5321af88c9909ed0b9f96a8bc96db127edc",
+    "validation.json": "3040a53f0286bd97bfa5a7e44fb987ae7d16005c6cf74cda3b791cbdbe3aa27a"
+  },
+  "coverage": {
+    "scope": "model",
+    "section": null,
+    "final_model_review": true
+  },
+  "diagnostics": [
+    {
+      "code": "part.alias_or_internal",
+      "severity": "warning",
+      "message": "Inspect this alias/internal part and prefer a current physical part.",
+      "line_number": 331,
+      "section": "controls.ldr",
+      "placements": [
+        {
+          "index": 149,
+          "path": "controls/valve-pad",
+          "part": "3023.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/6/steps/1/1"
+        }
+      ]
+    },
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 29
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "supply",
+      "obstacle": "controls/pump",
+      "placements": [
+        {
+          "index": 150,
+          "path": "controls/pump",
+          "part": "2797c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/6/steps/2/0"
+        }
+      ],
+      "block": 1,
+      "occurrence": 150,
+      "part": "2797c01-f1.dat",
+      "at": [
+        -84.0,
+        -46.0,
+        -20.0
+      ],
+      "sampled_box_surface_distance_ldu": 0.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "supply",
+      "obstacle": "controls/valve",
+      "placements": [
+        {
+          "index": 151,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/6/steps/2/1"
+        }
+      ],
+      "block": 1,
+      "occurrence": 151,
+      "part": "4694c01-f1.dat",
+      "at": [
+        34.0,
+        -62.0,
+        -84.0
+      ],
+      "sampled_box_surface_distance_ldu": 2.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "raise",
+      "obstacle": "ram/cylinder",
+      "placements": [
+        {
+          "index": 141,
+          "path": "ram/cylinder",
+          "part": "74981-f2.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/5/steps/0/0"
+        }
+      ],
+      "block": 1,
+      "occurrence": 141,
+      "part": "74981-f2.dat",
+      "at": [
+        26.0,
+        -228.0,
+        30.0
+      ],
+      "sampled_box_surface_distance_ldu": 0.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "raise",
+      "obstacle": "controls/valve",
+      "placements": [
+        {
+          "index": 151,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/6/steps/2/1"
+        }
+      ],
+      "block": 1,
+      "occurrence": 151,
+      "part": "4694c01-f1.dat",
+      "at": [
+        40.0,
+        -73.0,
+        -84.0
+      ],
+      "sampled_box_surface_distance_ldu": 2.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "lower",
+      "obstacle": "ram/cylinder",
+      "placements": [
+        {
+          "index": 141,
+          "path": "ram/cylinder",
+          "part": "74981-f2.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/5/steps/0/0"
+        }
+      ],
+      "block": 1,
+      "occurrence": 141,
+      "part": "74981-f2.dat",
+      "at": [
+        26.0,
+        -178.0,
+        30.0
+      ],
+      "sampled_box_surface_distance_ldu": 0.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "flex.obstacle_bounds",
+      "severity": "warning",
+      "message": "Route envelope overlaps a rigid part bounding box; mating regions and holes are included.",
+      "route": "lower",
+      "obstacle": "controls/valve",
+      "placements": [
+        {
+          "index": 151,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/6/steps/2/1"
+        }
+      ],
+      "block": 1,
+      "occurrence": 151,
+      "part": "4694c01-f1.dat",
+      "at": [
+        40.0,
+        -51.0,
+        -84.0
+      ],
+      "sampled_box_surface_distance_ldu": 2.0,
+      "action": "Inspect this part and route in context; this candidate is not a proven material collision."
+    },
+    {
+      "code": "technic.unreviewed_parts",
+      "message": "These Technic parts or geometry revisions lack reviewed structural interfaces.",
+      "severity": "warning",
+      "instances": [
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        151
+      ],
+      "placements": [
+        {
+          "index": 93,
+          "path": "conveyor/chain/@0",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 94,
+          "path": "conveyor/chain/@1",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 95,
+          "path": "conveyor/chain/@2",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 96,
+          "path": "conveyor/chain/@3",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 97,
+          "path": "conveyor/chain/@4",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 98,
+          "path": "conveyor/chain/@5",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 99,
+          "path": "conveyor/chain/@6",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 100,
+          "path": "conveyor/chain/@7",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 101,
+          "path": "conveyor/chain/@8",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 102,
+          "path": "conveyor/chain/@9",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 103,
+          "path": "conveyor/chain/@10",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 104,
+          "path": "conveyor/chain/@11",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 105,
+          "path": "conveyor/chain/@12",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 106,
+          "path": "conveyor/chain/@13",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 107,
+          "path": "conveyor/chain/@14",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 108,
+          "path": "conveyor/chain/@15",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 109,
+          "path": "conveyor/chain/@16",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 110,
+          "path": "conveyor/chain/@17",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 111,
+          "path": "conveyor/chain/@18",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 112,
+          "path": "conveyor/chain/@19",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 113,
+          "path": "conveyor/chain/@20",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 114,
+          "path": "conveyor/chain/@21",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 115,
+          "path": "conveyor/chain/@22",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 116,
+          "path": "conveyor/chain/@23",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 151,
+          "path": "controls/valve",
+          "part": "4694c01-f1.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/6/steps/2/1"
+        }
+      ],
+      "section": "workshop.ldr"
+    },
+    {
+      "code": "technic.bearing_rotation",
+      "message": "A round-hole bearing permits shaft rotation; this is not a fixed keyed joint.",
+      "severity": "warning",
+      "instances": [
+        70
+      ],
+      "placements": [
+        {
+          "index": 70,
+          "path": "conveyor/drive-axle",
+          "part": "3737.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/5/0"
+        }
+      ],
+      "section": "workshop.ldr"
+    },
+    {
+      "code": "technic.bearing_rotation",
+      "message": "A round-hole bearing permits shaft rotation; this is not a fixed keyed joint.",
+      "severity": "warning",
+      "instances": [
+        78
+      ],
+      "placements": [
+        {
+          "index": 78,
+          "path": "conveyor/idler-axle",
+          "part": "3707.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/7/0"
+        }
+      ],
+      "section": "workshop.ldr"
+    },
+    {
+      "code": "technic.unreviewed_parts",
+      "message": "These Technic parts or geometry revisions lack reviewed structural interfaces.",
+      "severity": "warning",
+      "instances": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "placements": [
+        {
+          "index": 34,
+          "path": "chain/@0",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 35,
+          "path": "chain/@1",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 36,
+          "path": "chain/@2",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 37,
+          "path": "chain/@3",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 38,
+          "path": "chain/@4",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 39,
+          "path": "chain/@5",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 40,
+          "path": "chain/@6",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 41,
+          "path": "chain/@7",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 42,
+          "path": "chain/@8",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 43,
+          "path": "chain/@9",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 44,
+          "path": "chain/@10",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 45,
+          "path": "chain/@11",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 46,
+          "path": "chain/@12",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 47,
+          "path": "chain/@13",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 48,
+          "path": "chain/@14",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 49,
+          "path": "chain/@15",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 50,
+          "path": "chain/@16",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 51,
+          "path": "chain/@17",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 52,
+          "path": "chain/@18",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 53,
+          "path": "chain/@19",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 54,
+          "path": "chain/@20",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 55,
+          "path": "chain/@21",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 56,
+          "path": "chain/@22",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        },
+        {
+          "index": 57,
+          "path": "chain/@23",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/11/0"
+        }
+      ],
+      "section": "chain-drive.ldr"
+    },
+    {
+      "code": "technic.bearing_rotation",
+      "message": "A round-hole bearing permits shaft rotation; this is not a fixed keyed joint.",
+      "severity": "warning",
+      "instances": [
+        11
+      ],
+      "placements": [
+        {
+          "index": 11,
+          "path": "drive-axle",
+          "part": "3737.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/5/0"
+        }
+      ],
+      "section": "chain-drive.ldr"
+    },
+    {
+      "code": "technic.bearing_rotation",
+      "message": "A round-hole bearing permits shaft rotation; this is not a fixed keyed joint.",
+      "severity": "warning",
+      "instances": [
+        19
+      ],
+      "placements": [
+        {
+          "index": 19,
+          "path": "idler-axle",
+          "part": "3707.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/7/0"
+        }
+      ],
+      "section": "chain-drive.ldr"
+    }
+  ],
+  "physical_placements": 160,
+  "exit_code": 0
+}

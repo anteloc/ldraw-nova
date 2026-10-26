@@ -1,0 +1,783 @@
+{
+  "version": 1,
+  "author": "Pneumatic press generator (Claude Code, Claude Opus 5.5) for anteloc",
+  "sections": [
+    {
+      "name": "press.ldr",
+      "description": "Pneumatic press: pump, valve and cylinder joined by three hoses",
+      "steps": [
+        [
+          {
+            "id": "bench",
+            "ref": "press-bench.ldr",
+            "colour": 16,
+            "at": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "frame",
+            "ref": "press-frame.ldr",
+            "colour": 16,
+            "at": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "ram",
+            "ref": "press-ram.ldr",
+            "colour": 16,
+            "at": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "controls",
+            "ref": "press-controls.ldr",
+            "colour": 16,
+            "at": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "supply",
+            "colour": 0,
+            "flex": {
+              "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+              "from": {
+                "part": "controls/pump",
+                "port": "outlet",
+                "lead": 22,
+                "up": [
+                  1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "to": {
+                "part": "controls/valve",
+                "port": "inlet",
+                "lead": 22,
+                "up": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ]
+              },
+              "checks": {
+                "min_radius": 15,
+                "tube_radius": 5,
+                "min_separation": 10
+              }
+            }
+          }
+        ],
+        [
+          {
+            "id": "line-up",
+            "colour": 4,
+            "flex": {
+              "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+              "from": {
+                "part": "controls/valve",
+                "port": "upper",
+                "lead": 22,
+                "up": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ]
+              },
+              "to": {
+                "part": "ram/cylinder",
+                "port": "base",
+                "lead": 22,
+                "up": [
+                  -1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "checks": {
+                "min_radius": 15,
+                "tube_radius": 5,
+                "min_separation": 10
+              },
+              "via": [
+                {
+                  "at": [
+                    80,
+                    -120,
+                    -30
+                  ],
+                  "direction": [
+                    0.2,
+                    -1,
+                    0.5
+                  ],
+                  "up": [
+                    0,
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        [
+          {
+            "id": "line-down",
+            "colour": 1,
+            "flex": {
+              "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+              "from": {
+                "part": "controls/valve",
+                "port": "lower",
+                "lead": 22,
+                "up": [
+                  0.0,
+                  0.0,
+                  -1.0
+                ]
+              },
+              "to": {
+                "part": "ram/cylinder",
+                "port": "rod",
+                "lead": 22,
+                "up": [
+                  -1.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "checks": {
+                "min_radius": 15,
+                "tube_radius": 5,
+                "min_separation": 10
+              },
+              "via": [
+                {
+                  "at": [
+                    74,
+                    -80,
+                    -36
+                  ],
+                  "direction": [
+                    0.2,
+                    -1,
+                    0.5
+                  ],
+                  "up": [
+                    0,
+                    0,
+                    1
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      ],
+      "structure": {
+        "scope": "joints",
+        "required_joints": [
+          {
+            "between": [
+              "ram/mount-pin",
+              "ram/cylinder"
+            ],
+            "minimum": 1
+          },
+          {
+            "between": [
+              "ram/mount-pin",
+              "frame/beam"
+            ],
+            "minimum": 1
+          },
+          {
+            "between": [
+              "ram/head-pin",
+              "ram/cylinder"
+            ],
+            "minimum": 1
+          },
+          {
+            "between": [
+              "ram/head-pin",
+              "ram/head"
+            ],
+            "minimum": 1
+          },
+          {
+            "between": [
+              "controls/pump",
+              "bench/bench-2-mid"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "controls/valve",
+              "bench/bench-2-front-r"
+            ],
+            "minimum": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "press-bench.ldr",
+      "description": "Press bench: two bonded plate layers",
+      "steps": [
+        [
+          {
+            "id": "bench-1",
+            "ref": "92438.dat",
+            "colour": 72,
+            "at": [
+              0.0,
+              8.0,
+              -80.0
+            ]
+          },
+          {
+            "id": "bench-1-rear",
+            "ref": "92438.dat",
+            "colour": 72,
+            "at": [
+              0.0,
+              8.0,
+              80.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "bench-2-mid",
+            "ref": "92438.dat",
+            "colour": 72,
+            "at": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "purpose": "Bridges the lower seam"
+          },
+          {
+            "id": "bench-2-front-l",
+            "ref": "3035.dat",
+            "colour": 72,
+            "at": [
+              -80.0,
+              0.0,
+              -120.0
+            ]
+          },
+          {
+            "id": "bench-2-front-r",
+            "ref": "3035.dat",
+            "colour": 72,
+            "at": [
+              80.0,
+              0.0,
+              -120.0
+            ]
+          },
+          {
+            "id": "bench-2-rear-l",
+            "ref": "3035.dat",
+            "colour": 72,
+            "at": [
+              -80.0,
+              0.0,
+              120.0
+            ]
+          },
+          {
+            "id": "bench-2-rear-r",
+            "ref": "3035.dat",
+            "colour": 72,
+            "at": [
+              80.0,
+              0.0,
+              120.0
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "name": "press-frame.ldr",
+      "description": "Press frame: columns, Technic crossbeam, top plate and anvil",
+      "steps": [
+        [
+          {
+            "id": "column-l0",
+            "ref": "3003.dat",
+            "colour": 71,
+            "at": [
+              -60.0,
+              -24.0,
+              60.0
+            ]
+          },
+          {
+            "id": "column-r0",
+            "ref": "3003.dat",
+            "colour": 71,
+            "at": [
+              60.0,
+              -24.0,
+              60.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "column-l1",
+            "ref": "3003.dat",
+            "colour": 14,
+            "at": [
+              -60.0,
+              -48.0,
+              60.0
+            ]
+          },
+          {
+            "id": "column-r1",
+            "ref": "3003.dat",
+            "colour": 14,
+            "at": [
+              60.0,
+              -48.0,
+              60.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "column-l2",
+            "ref": "3003.dat",
+            "colour": 71,
+            "at": [
+              -60.0,
+              -72.0,
+              60.0
+            ]
+          },
+          {
+            "id": "column-r2",
+            "ref": "3003.dat",
+            "colour": 71,
+            "at": [
+              60.0,
+              -72.0,
+              60.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "column-l3",
+            "ref": "3003.dat",
+            "colour": 14,
+            "at": [
+              -60.0,
+              -96.0,
+              60.0
+            ]
+          },
+          {
+            "id": "column-r3",
+            "ref": "3003.dat",
+            "colour": 14,
+            "at": [
+              60.0,
+              -96.0,
+              60.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "column-l4",
+            "ref": "3003.dat",
+            "colour": 71,
+            "at": [
+              -60.0,
+              -120.0,
+              60.0
+            ]
+          },
+          {
+            "id": "column-r4",
+            "ref": "3003.dat",
+            "colour": 71,
+            "at": [
+              60.0,
+              -120.0,
+              60.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "column-l5",
+            "ref": "3003.dat",
+            "colour": 14,
+            "at": [
+              -60.0,
+              -144.0,
+              60.0
+            ]
+          },
+          {
+            "id": "column-r5",
+            "ref": "3003.dat",
+            "colour": 14,
+            "at": [
+              60.0,
+              -144.0,
+              60.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "column-l6",
+            "ref": "3003.dat",
+            "colour": 71,
+            "at": [
+              -60.0,
+              -168.0,
+              60.0
+            ]
+          },
+          {
+            "id": "column-r6",
+            "ref": "3003.dat",
+            "colour": 71,
+            "at": [
+              60.0,
+              -168.0,
+              60.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "column-l7",
+            "ref": "3003.dat",
+            "colour": 14,
+            "at": [
+              -60.0,
+              -192.0,
+              60.0
+            ]
+          },
+          {
+            "id": "column-r7",
+            "ref": "3003.dat",
+            "colour": 14,
+            "at": [
+              60.0,
+              -192.0,
+              60.0
+            ]
+          }
+        ],
+        [
+          {
+            "id": "beam",
+            "ref": "3702.dat",
+            "colour": 71,
+            "at": [
+              0.0,
+              -216.0,
+              50.0
+            ],
+            "purpose": "Technic crossbeam; the cylinder hangs from its centre hole"
+          },
+          {
+            "id": "cap-l",
+            "ref": "3004.dat",
+            "colour": 71,
+            "at": [
+              -60.0,
+              -216.0,
+              70.0
+            ],
+            "purpose": "Column cap beside the beam"
+          },
+          {
+            "id": "cap-r",
+            "ref": "3004.dat",
+            "colour": 71,
+            "at": [
+              60.0,
+              -216.0,
+              70.0
+            ],
+            "purpose": "Column cap beside the beam"
+          }
+        ],
+        [
+          {
+            "id": "top",
+            "ref": "3034.dat",
+            "colour": 14,
+            "at": [
+              0.0,
+              -224.0,
+              60.0
+            ],
+            "purpose": "Bonds beam and column caps"
+          }
+        ],
+        [
+          {
+            "id": "anvil-a",
+            "ref": "3001.dat",
+            "colour": 0,
+            "at": [
+              0.0,
+              -24.0,
+              40.0
+            ]
+          },
+          {
+            "id": "anvil-b",
+            "ref": "3001.dat",
+            "colour": 0,
+            "at": [
+              0.0,
+              -48.0,
+              40.0
+            ]
+          },
+          {
+            "id": "anvil-plate",
+            "ref": "3020.dat",
+            "colour": 71,
+            "at": [
+              0.0,
+              -56.0,
+              40.0
+            ]
+          },
+          {
+            "id": "anvil-face",
+            "ref": "87079.dat",
+            "colour": 71,
+            "at": [
+              0.0,
+              -64.0,
+              40.0
+            ],
+            "purpose": "Smooth anvil face"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "press-ram.ldr",
+      "description": "Press ram: extended cylinder, pins, head and die",
+      "steps": [
+        [
+          {
+            "id": "cylinder",
+            "ref": "74981-f2.dat",
+            "colour": 71,
+            "at": [
+              0.0,
+              -206.0,
+              30.0
+            ],
+            "matrix": [
+              [
+                0.0,
+                0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                -1.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "purpose": "Extended 1 x 1 cylinder, rod down"
+          },
+          {
+            "id": "mount-pin",
+            "ref": "3673.dat",
+            "colour": 0,
+            "at": [
+              0.0,
+              -206.0,
+              40.0
+            ],
+            "matrix": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                -1.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "purpose": "Mount ring to beam hole"
+          }
+        ],
+        [
+          {
+            "id": "head",
+            "ref": "3701.dat",
+            "colour": 14,
+            "at": [
+              0.0,
+              -100.0,
+              50.0
+            ],
+            "purpose": "Press head"
+          },
+          {
+            "id": "head-pin",
+            "ref": "3673.dat",
+            "colour": 0,
+            "at": [
+              0.0,
+              -90.0,
+              40.0
+            ],
+            "matrix": [
+              [
+                0.0,
+                0.0,
+                1.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                -1.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "purpose": "Rod end to head hole"
+          }
+        ],
+        [
+          {
+            "id": "die",
+            "ref": "3020.dat",
+            "colour": 0,
+            "at": [
+              0.0,
+              -76.0,
+              40.0
+            ],
+            "purpose": "Die plate under the head; 4 LDU above the anvil face"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "press-controls.ldr",
+      "description": "Press controls: hand pump and valve",
+      "steps": [
+        [
+          {
+            "id": "pump",
+            "ref": "2797c01-f1.dat",
+            "colour": 71,
+            "at": [
+              -120.0,
+              -14.0,
+              -20.0
+            ],
+            "matrix": [
+              [
+                0.0,
+                0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "purpose": "Hand pump on a 2 x 2 stud pad"
+          },
+          {
+            "id": "valve",
+            "ref": "4694c01-f1.dat",
+            "colour": 71,
+            "at": [
+              40.0,
+              -56.0,
+              -110.0
+            ],
+            "matrix": [
+              [
+                0.0,
+                0.0,
+                -1.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                1.0,
+                0.0,
+                0.0
+              ]
+            ],
+            "purpose": "Valve; nozzles toward the press, lever to the right"
+          }
+        ]
+      ]
+    }
+  ]
+}

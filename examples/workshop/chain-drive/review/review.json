@@ -1,0 +1,299 @@
+{
+  "format": "ldraw-nova-review",
+  "version": 1,
+  "source": {
+    "path": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+    "sha256": "f6c6f4827be254c372922bf3bf570a7c20cb2db67ce977938bf93c341779650e",
+    "section": null,
+    "colour": null
+  },
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/authoring-simplification/chain-drive",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "visual_review": "required: open and inspect the images",
+  "model_sha256": "a8e8a2147c1eadbcca8cb419a7ae98be6dd517e7a14185fe731b6da2a913bddb",
+  "stages": {
+    "validation": "passed",
+    "bom": "passed",
+    "render": "passed",
+    "bom_comparison": "passed"
+  },
+  "artifacts": {
+    "bom-comparison.json": "a0115d06161a6e48190f53037af54da72e4c1e9dadffdb46d3b935e84b5275a4",
+    "bom.json": "5b299a93f2aa580e7cbd8277f8d5637e6a31d4a23b0ea91b4bb8113cd48de7e8",
+    "flex/1/asset.manifest.json": "3b3c7716178534d2e36090e5f07debad7c83301b11d7e6ffc8fb601613e4729b",
+    "flex/1/asset.mpd": "6e82fed46f772f45c12373a7f671d9eee550cf24dc7a050bb600d23ca8adabba",
+    "flex/1/constraints.ldr": "f4f5e4072a5647cfc0608750063462be6f866aee2daffc111642b1e971460c44",
+    "model.mpd": "a8e8a2147c1eadbcca8cb419a7ae98be6dd517e7a14185fe731b6da2a913bddb",
+    "previews/back.png": "e3114d402676b3695c2dd9a5fdf0539a263fa0cd36c8956892a5c8df9c87c511",
+    "previews/front.png": "4189578594ea827c0a8f8d399fbd0f338fef090ba1d52c3d6219c0dc4258bb21",
+    "previews/home.png": "276a3393778b72dba2b224b6c001aafeea342d6f379fb0360cd2828932820b7f",
+    "previews/leocad-bom.csv": "8878af9c96078bad2d6d830d33a18a204062aa339a6c4c41fa55d3ffa07aaa5b",
+    "previews/top.png": "0799e4bca995f0afd908bdc18d17f9996e189263797acaa43ba2b2d17020d5dc",
+    "sources/1.json": "f6c6f4827be254c372922bf3bf570a7c20cb2db67ce977938bf93c341779650e",
+    "structure/1.json": "2c06016aea61067b486d88dc69bdc5321af88c9909ed0b9f96a8bc96db127edc",
+    "validation.json": "3dd99da54fca9e8205ef005722d108394552cb9634271abfd0bf1ed32b4d0ec9"
+  },
+  "coverage": {
+    "scope": "model",
+    "section": null,
+    "final_model_review": true
+  },
+  "diagnostics": [
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 26
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    },
+    {
+      "code": "technic.unreviewed_parts",
+      "message": "These Technic parts or geometry revisions lack reviewed structural interfaces.",
+      "severity": "warning",
+      "instances": [
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "placements": [
+        {
+          "index": 34,
+          "path": "chain/@0",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 35,
+          "path": "chain/@1",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 36,
+          "path": "chain/@2",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 37,
+          "path": "chain/@3",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 38,
+          "path": "chain/@4",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 39,
+          "path": "chain/@5",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 40,
+          "path": "chain/@6",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 41,
+          "path": "chain/@7",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 42,
+          "path": "chain/@8",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 43,
+          "path": "chain/@9",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 44,
+          "path": "chain/@10",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 45,
+          "path": "chain/@11",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 46,
+          "path": "chain/@12",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 47,
+          "path": "chain/@13",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 48,
+          "path": "chain/@14",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 49,
+          "path": "chain/@15",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 50,
+          "path": "chain/@16",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 51,
+          "path": "chain/@17",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 52,
+          "path": "chain/@18",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 53,
+          "path": "chain/@19",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 54,
+          "path": "chain/@20",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 55,
+          "path": "chain/@21",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 56,
+          "path": "chain/@22",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        },
+        {
+          "index": 57,
+          "path": "chain/@23",
+          "part": "3711.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/11/0"
+        }
+      ],
+      "section": "chain-drive.ldr"
+    },
+    {
+      "code": "technic.bearing_rotation",
+      "message": "A round-hole bearing permits shaft rotation; this is not a fixed keyed joint.",
+      "severity": "warning",
+      "instances": [
+        11
+      ],
+      "placements": [
+        {
+          "index": 11,
+          "path": "drive-axle",
+          "part": "3737.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/5/0"
+        }
+      ],
+      "section": "chain-drive.ldr"
+    },
+    {
+      "code": "technic.bearing_rotation",
+      "message": "A round-hole bearing permits shaft rotation; this is not a fixed keyed joint.",
+      "severity": "warning",
+      "instances": [
+        19
+      ],
+      "placements": [
+        {
+          "index": 19,
+          "path": "idler-axle",
+          "part": "3707.dat",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/chain-drive/model.plan.json",
+          "pointer": "/sections/0/steps/7/0"
+        }
+      ],
+      "section": "chain-drive.ldr"
+    }
+  ],
+  "physical_placements": 58,
+  "exit_code": 0
+}

@@ -2673,6 +2673,466 @@
       ],
       "role": "shaft",
       "evidence": "Installed LDraw geometry and authored connhole/axleHole frames; checked for nominal pitch and bore depth. See docs/reports/technic-structure-readiness.md."
+    },
+    "4019": {
+      "description": "Technic Gear 16 Tooth",
+      "bounds": {
+        "min": [
+          -21.64,
+          -21.64,
+          -10.0
+        ],
+        "max": [
+          21.64,
+          21.64,
+          10.0
+        ]
+      },
+      "geometry_sha256": "3c4e175fb5da445fa2e7d254879356c080be1fd340b9c29983428272ced4446e",
+      "ports": [
+        {
+          "id": "axle",
+          "kind": "axle_hole",
+          "at": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        }
+      ],
+      "role": "equipment",
+      "evidence": "Installed expanded geometry and authored connector profiles; cylinder eyes have 16 LDU bore plus two 2 LDU retaining recesses, pump bottom sockets accept 4 LDU studs. Scoped interfaces only. See docs/reports/authoring-simplification.md."
+    },
+    "74981-f2": {
+      "description": "Technic Pneumatic Cylinder 1 x 1 with 2 Ports (Extended)",
+      "bounds": {
+        "min": [
+          -10.000255161,
+          -126.0,
+          -26.0
+        ],
+        "max": [
+          10.000255161,
+          10.0,
+          10.000255161
+        ]
+      },
+      "geometry_sha256": "3fd5cd7c546c17dcf3c0019335b4217f458efb23ad78905010b09c7c50cad6b1",
+      "ports": [
+        {
+          "id": "base-eye",
+          "kind": "pin_hole",
+          "at": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            1,
+            0,
+            0
+          ],
+          "length": 20
+        },
+        {
+          "id": "rod-eye",
+          "kind": "pin_hole",
+          "at": [
+            0,
+            -116,
+            0
+          ],
+          "axis": [
+            -1,
+            0,
+            0
+          ],
+          "length": 20
+        }
+      ],
+      "role": "equipment",
+      "evidence": "Installed expanded geometry and authored connector profiles; cylinder eyes have 16 LDU bore plus two 2 LDU retaining recesses, pump bottom sockets accept 4 LDU studs. Scoped interfaces only. See docs/reports/authoring-simplification.md."
+    },
+    "2797c01-f1": {
+      "description": "Technic Pneumatic Pump 2 x 2 x 5 with Large Knob (Retracted)",
+      "bounds": {
+        "min": [
+          -20.00052563,
+          -152.0,
+          -36.0
+        ],
+        "max": [
+          20.00052563,
+          14.0,
+          20.00052563
+        ]
+      },
+      "geometry_sha256": "9461ae4fd223bc609084e4d2f5052448bbe22a043c5b978c255e0cae020e5a92",
+      "ports": [
+        {
+          "id": "socket--10--10",
+          "kind": "stud_receptacle",
+          "at": [
+            -10,
+            14,
+            -10
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "length": 4
+        },
+        {
+          "id": "socket--10-10",
+          "kind": "stud_receptacle",
+          "at": [
+            -10,
+            14,
+            10
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "length": 4
+        },
+        {
+          "id": "socket-10--10",
+          "kind": "stud_receptacle",
+          "at": [
+            10,
+            14,
+            -10
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "length": 4
+        },
+        {
+          "id": "socket-10-10",
+          "kind": "stud_receptacle",
+          "at": [
+            10,
+            14,
+            10
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "length": 4
+        }
+      ],
+      "role": "equipment",
+      "evidence": "Installed expanded geometry and authored connector profiles; cylinder eyes have 16 LDU bore plus two 2 LDU retaining recesses, pump bottom sockets accept 4 LDU studs. Scoped interfaces only. See docs/reports/authoring-simplification.md."
+    },
+    "6632": {
+      "description": "Technic Beam 3 x 0.5 Liftarm",
+      "bounds": {
+        "min": [
+          -9.0,
+          -5.0,
+          -9.0
+        ],
+        "max": [
+          9.0,
+          5.0,
+          49.0
+        ]
+      },
+      "geometry_sha256": "f94d863e23030dddedc04111b23c2b1166b25260a88b27f49148077735ad5253",
+      "role": "equipment",
+      "ports": [
+        {
+          "id": "axle-0",
+          "kind": "axle_hole",
+          "at": [
+            0,
+            0,
+            0
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "length": 10
+        },
+        {
+          "id": "axle-40",
+          "kind": "axle_hole",
+          "at": [
+            0,
+            0,
+            40
+          ],
+          "axis": [
+            0,
+            1,
+            0
+          ],
+          "length": 10
+        }
+      ],
+      "evidence": "Two nominal 10 LDU end cross-holes at local Z=0 and 40, measured from expanded part geometry and axleHole primitives. Middle round bore intentionally outside this recipe interface subset."
+    },
+    "3703": {
+      "description": "Technic Brick 1 x 16 with Holes",
+      "bounds": {
+        "min": [
+          -160.0,
+          -4.0,
+          -10.0
+        ],
+        "max": [
+          160.0,
+          24.0,
+          10.0
+        ]
+      },
+      "geometry_sha256": "2a238c9c11bc1a1508de8ff35ccdba3f2a882bf92dbf2db8ea5c06750dba0926",
+      "role": "member",
+      "ports": [
+        {
+          "id": "hole-0",
+          "kind": "pin_hole",
+          "at": [
+            -140,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-1",
+          "kind": "pin_hole",
+          "at": [
+            -120,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-2",
+          "kind": "pin_hole",
+          "at": [
+            -100,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-3",
+          "kind": "pin_hole",
+          "at": [
+            -80,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-4",
+          "kind": "pin_hole",
+          "at": [
+            -60,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-5",
+          "kind": "pin_hole",
+          "at": [
+            -40,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-6",
+          "kind": "pin_hole",
+          "at": [
+            -20,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-7",
+          "kind": "pin_hole",
+          "at": [
+            0,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-8",
+          "kind": "pin_hole",
+          "at": [
+            20,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-9",
+          "kind": "pin_hole",
+          "at": [
+            40,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-10",
+          "kind": "pin_hole",
+          "at": [
+            60,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-11",
+          "kind": "pin_hole",
+          "at": [
+            80,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-12",
+          "kind": "pin_hole",
+          "at": [
+            100,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-13",
+          "kind": "pin_hole",
+          "at": [
+            120,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        },
+        {
+          "id": "hole-14",
+          "kind": "pin_hole",
+          "at": [
+            140,
+            10,
+            0
+          ],
+          "axis": [
+            0,
+            0,
+            1
+          ],
+          "length": 20
+        }
+      ],
+      "evidence": "15 holes directly measured from installed connhole frames; pitch 20 LDU, Y=10, nominal receiving span 20 LDU. Existing 3702 rules applied to actual 3703 geometry, not a scaled part."
     }
   },
   "aliases": {

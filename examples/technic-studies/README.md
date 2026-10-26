@@ -1,19 +1,19 @@
 # Technic construction studies from ldraw-mecha
 
-For advanced animation work, start with the [RCVJ study](rcvj/README.md) and
-[constraint workflow](../../docs/agent/advanced-mechanisms.md). They add a
-preserved source, measured shaft interfaces and regression evidence for a
-double-gimbal CV joint; the complete RCVJ rig remains unresolved.
+For new animated mechanisms, start with the [gear drive](gear-drive/README.md)
+and [constraint workflow](../../docs/agent/advanced-mechanisms.md). The original
+starter includes fixed supports, keyed shafts, bearings and a coupled gear pair.
 
 These local study notes adapt Technic knowledge from the sibling project's
 `docs/` and `examples/` as of **2026-10-08**. Start with the
 [design guide](../../docs/agent/technic-design.md), then read the relevant
 pattern. The notes and three retained previews are usable without that checkout.
 
-These are construction references, not additions to `mechanism export` or new
+The imported studies below are construction references, not additions to `mechanism export` or new
 verified builds. Use the [mechanism atlas](../mechanism-atlas/README.md) for its
 six reviewed build manuals and the [structural atlas](../technic-atlas/README.md)
-for fixed-frame recipes. Analytical mechanism verification remains deferred.
+for fixed-frame recipes. Analytical verification remains outside those imported
+construction studies; the original gear-drive starter above includes motion checks.
 
 For actual editable source and build pages drawn from these lessons, use the
 [six new Technic-atlas mechanisms](../technic-atlas/README.md#mechanisms-from-ldraw-mecha).

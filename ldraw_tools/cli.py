@@ -745,6 +745,11 @@ def run(args):
         code = (resolve_part(args.code,parts) if args.code.startswith('@') else args.code).casefold().removesuffix(".dat")
         part = parts.part(code=code)
         g = parts.geometry(code)
+        from .flex_plan import ports
+        try:
+            flex_ports = dict(geometry_matches=True, ports=ports(parts, code))
+        except ValueError as exc:
+            flex_ports = dict(geometry_matches=False, ports={}, note=str(exc))
         return dict(code=code + ".dat", path=str(part.path.resolve()), metadata=jsonable(part.metadata),
                     complete=g.complete, bounds=jsonable(g.bounds), size=jsonable(g.bounds.size) if g.bounds else None,
                     stud_positions=[jsonable(s.position) for s in g.top_studs],
@@ -752,6 +757,7 @@ def run(args):
                     connectors_truncated=len(g.connections) > args.limit, diagnostics=jsonable(g.diagnostics),
                     connection_metadata=metadata_summary(g.connection_metadata),
                     rectangular_profile=profiles().get(code),
+                    flex_ports=flex_ports,
                     note="All coordinates are local LDU. Connector inference is evidence; inspect uncertain fits."), 0 if g.complete else 1
     if args.command == "build":
         target = Path(args.output) if args.output else Path(args.plan).with_name(model_name(args.plan) + '.mpd')
@@ -827,6 +833,9 @@ def main():
         report, status = run(args)
     except (OSError, ValueError, PartError, RecursionError, sqlite3.Error, subprocess.SubprocessError, jsonschema.ValidationError) as exc:
         report, status = dict(checks_passed=False, error=str(exc), error_type=type(exc).__name__), 2
+        from .identity import BuildError
+        if isinstance(exc, BuildError):
+            report.update(failed_stage=exc.stage, diagnostics=exc.diagnostics)
     text = dumps(report) + "\n"
     if getattr(args, "report", None):
         atomic_write(args.report, text)

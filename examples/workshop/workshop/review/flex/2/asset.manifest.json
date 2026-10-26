@@ -1,0 +1,208 @@
+{
+  "root": "route-19072f9b25fe9bcd.ldr",
+  "blocks": [
+    {
+      "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+      "colour": "0",
+      "token": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+      "product_hint": null,
+      "section": "route-19072f9b25fe9bcd.ldr",
+      "first_piece": 0,
+      "part": "route-19072f9b25fe9bcd-flex-01.dat",
+      "representation": "posed_part",
+      "segment_count": 98
+    }
+  ],
+  "embedded_sources": [
+    {
+      "name": "ls22.dat",
+      "embedded_as": "route-19072f9b25fe9bcd-ls22.dat",
+      "sha256": "de9d9925e741931b8d7b60e3b0ad19ffbdf4f1db88fec3a03475e5fae3c16faa",
+      "changes": [
+        "Transcoded Latin-1 header to UTF-8"
+      ]
+    },
+    {
+      "name": "ls23.dat",
+      "embedded_as": "route-19072f9b25fe9bcd-ls23.dat",
+      "sha256": "a4685434ddf689693634a4ceab1c4962283ff9766a005f74d425d3b13b368fa5",
+      "changes": []
+    }
+  ],
+  "engine": {
+    "available": true,
+    "version": "3.1.0"
+  },
+  "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/2be46608fc46ee887a27b220586bb06badeded545f11b22431c3df274f42551d/constraints.ldr",
+  "source_sha256": "2be46608fc46ee887a27b220586bb06badeded545f11b22431c3df274f42551d",
+  "synthesis_key": "976599b589059b12941ba69a53ac3aa2f3d0c1b7a19b49bb7eb10f0a5496d3d5",
+  "cache_hit": true,
+  "source_credits": [
+    "0 Author: LDraw Nova workshop constructions"
+  ],
+  "config_sha256": "d92c074bc22e6e70ce0d3056ed999d87fdf3583c6ae6c52a345c3fe5fc5a0118",
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/2be46608fc46ee887a27b220586bb06badeded545f11b22431c3df274f42551d/asset.mpd",
+  "model_sha256": "508d36d78763138d2d26206b753ca04df1eafde8d83e569def227e843b195241",
+  "diagnostics": [],
+  "physical_validity": "not_proven",
+  "review_required": true,
+  "limitations": [
+    "Posed parts have no verified length, stock identity, bend radius or connector metadata.",
+    "Synthesis does not prove tension, material clearance, link engagement or motion."
+  ],
+  "checks_passed": true,
+  "validation": {
+    "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/2be46608fc46ee887a27b220586bb06badeded545f11b22431c3df274f42551d/constraints.ldr",
+    "source_sha256": "2be46608fc46ee887a27b220586bb06badeded545f11b22431c3df274f42551d",
+    "routes": [
+      {
+        "block": 1,
+        "name": "supply",
+        "section": null,
+        "line": 6,
+        "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+        "kind": "hose",
+        "family": "pneumatic",
+        "constraint_count": 4,
+        "hidden_wheels": false,
+        "frames": [
+          {
+            "line": 7,
+            "at": [
+              -100.0,
+              -46.0,
+              -20.0
+            ],
+            "direction": [
+              1.0,
+              -0.0,
+              -0.0
+            ]
+          },
+          {
+            "line": 8,
+            "at": [
+              -78.0,
+              -46.0,
+              -20.0
+            ],
+            "direction": [
+              1.0,
+              -0.0,
+              -0.0
+            ]
+          },
+          {
+            "line": 9,
+            "at": [
+              34.0,
+              -62.0,
+              -78.0
+            ],
+            "direction": [
+              -0.0,
+              -0.0,
+              -1.0
+            ]
+          },
+          {
+            "line": 10,
+            "at": [
+              34.0,
+              -62.0,
+              -100.0
+            ],
+            "direction": [
+              -0.0,
+              -0.0,
+              -1.0
+            ]
+          }
+        ]
+      }
+    ],
+    "diagnostics": [],
+    "physical_validity": "not_proven",
+    "checks_passed": true,
+    "coverage": {
+      "constraint_structure": "checked",
+      "synthesized_geometry": "measured actual placements in each source section frame",
+      "fittings": "not_checked",
+      "obstacles": "not_checked",
+      "stock_length": "not_proven: polyline length is not manufactured material length",
+      "motion": "not_checked",
+      "bend": "explicit geometric limit checked on selected hoses",
+      "self_intersection": "nonlocal round-tube spans checked; near neighbours require bend/turn review",
+      "separation": "selected hoses and same-section neighbours checked",
+      "band_closure": "not_measured: file order is not traversal; inspect link engagement and physical closure"
+    },
+    "asset": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/inline-flex/2be46608fc46ee887a27b220586bb06badeded545f11b22431c3df274f42551d/asset.mpd",
+    "model_sha256": "508d36d78763138d2d26206b753ca04df1eafde8d83e569def227e843b195241",
+    "measurements": [
+      {
+        "block": 1,
+        "name": "supply",
+        "section": null,
+        "line": 6,
+        "method": "TECHNIC_PNEUMATIC_HOSE_BEVELED",
+        "representation": "posed_part",
+        "generated_segments": 98,
+        "measurement_basis": "successive generated segment origins (end offsets excluded)",
+        "polyline_length_ldu": 145.872608150166,
+        "minimum_sampled_radius_ldu": 20.11534258534435,
+        "radius_at": [
+          33.55548607987821,
+          -61.91376140300237,
+          -74.16085273692322
+        ],
+        "bend_sampling": "2 LDU arc-length samples, 12 LDU circumradius window; sharp segment turns reported separately",
+        "max_segment_turn_degrees": 5.386518050840775,
+        "turn_at": [
+          33.8436,
+          -61.9696,
+          -75.719
+        ],
+        "segment_spacing_ldu": {
+          "min": 0.8873702778434605,
+          "max": 6.0
+        },
+        "first": [
+          -84.0,
+          -46.0,
+          -20.0
+        ],
+        "last": [
+          34.0,
+          -62.0,
+          -84.0
+        ],
+        "endpoint_check": "generated sleeves against source marker frames; physical nozzle placement still requires inspection",
+        "self_separation_ldu": 30.870425893239627,
+        "self_neighbour_exclusion_ldu": 31.41592653589793
+      }
+    ],
+    "separations": [],
+    "measured_hose_pairs": 0,
+    "obstacle_candidates": [],
+    "visual_review": "required: open contextual images; this command does not render",
+    "settings": {
+      "block": null,
+      "min_radius": 15,
+      "max_turn": null,
+      "tube_radius": 5,
+      "min_separation": 10,
+      "length": null,
+      "length_tolerance": 1,
+      "obstacles": null,
+      "obstacle_section": null,
+      "obstacles_sha256": null
+    },
+    "measurement_limits": [
+      "Segment-origin polylines omit family-specific end offsets and non-round cross sections.",
+      "Bend sampling is finite; inspect sharp local turns too.",
+      "Different MPD sections are different local frames; pair checks do not compare them.",
+      "Band placement order is not loop traversal; no band length, curvature or closure metric is inferred.",
+      "No physical bend, tension, elasticity, stock-length or motion certification."
+    ]
+  }
+}

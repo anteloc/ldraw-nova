@@ -6,6 +6,10 @@ definition and gives the relevant family, endpoint/segment parts, constraints,
 design rules, inspection points and reference. `flex guide` lists all families.
 The [integration guide](flexible-parts.md) covers installation and MPD assets.
 
+For routes tied to a plan, use [inline flex placements](authoring.md#connect-actual-fittings)
+to follow named fittings and mounted wheels. The low-level constraints below
+remain useful for external assets and deliberate routing experiments.
+
 ## The working loop
 
 1. Pick the actual family and fittings. Define the delivered poses and which

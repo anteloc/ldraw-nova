@@ -280,3 +280,16 @@ Shell examples that redirect output intentionally retain the command's exit stat
 Plans accept `@category.Symbol` refs (including nested categories such as `@minifig.heads.Symbol`) and `@colours.Name`. Resolution checks the installed library and leaves editable plans intact. Current `LDConfig.ldr` controls colour properties. `design palettes` exposes roles and composition guidance; it is not an inventory compatibility database. `design details` lists authored recipes, or writes an ordinary JSON plan with `--output`; existing output requires `--force`. Include the resulting sections using the usual module workflow.
 
 `part-board` renders 1–12 candidates through LeoCAD and creates an offline `index.html` and `board.json`, measured bounds, individual MPDs and images. Cards are framed independently; compare listed dimensions to judge scale. Read the [visual design guide](visual-design.md) and actually inspect the candidates. These tools support choices and visual iteration; they do not assign a beauty score.
+
+## Named authoring and scoped plan review
+
+`review PLAN --section NAME` now accepts JSON plans and checks only the selected
+section dependency closure, including its declared contracts and flexible routes.
+Its default output is `PLAN-SECTION-review/`; coverage explicitly requires a
+whole-model review before delivery. `--colour` resolves inherited preview colours.
+
+[Named authoring](authoring.md) adds inline structure contracts and flexible
+placements. Reports retain named paths and original JSON locations; failed
+flex checks retain structured measurements and repair guidance. Successful plan
+reviews freeze declaring JSON sources under `sources/`, alongside the existing
+flex and structural evidence. Public CLI exit meanings and legacy commands remain.

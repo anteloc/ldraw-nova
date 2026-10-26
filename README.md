@@ -49,7 +49,7 @@ Existing JSON plans, `build --output`, individual check/render commands and shel
 | Geometry checks and limitations | [Validation](docs/agent/validation.md) |
 | Flexible hoses, cables, bands, chains and treads | [Constraint authoring and repair](docs/agent/flex-constraints.md), [LSynth integration](docs/agent/flexible-parts.md), [examples](examples/flex/README.md) |
 | Technic supports, equipment and industrial assemblies | [Design guide](docs/agent/technic-design.md), [annotated construction studies](lsynth-examples/README.md) |
-| Advanced mechanisms and animation | [Constraint workflow](docs/agent/advanced-mechanisms.md), [RCVJ study](examples/technic-studies/rcvj/README.md), [mechanical parts catalog](docs/agent/technic-catalog.md) |
+| Advanced mechanisms and animation | [Constraint workflow](docs/agent/advanced-mechanisms.md), [gear-drive starter](examples/technic-studies/gear-drive/README.md), [mechanical parts catalog](docs/agent/technic-catalog.md) |
 | Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/snot.md), [parrot core](examples/snot/parrot/README.md), [cat details and joints](examples/snot/cat/README.md), [Halcyon original interceptor](examples/snot/halcyon/README.md) |
 | Spaceships: SNOT by default | [Halcyon default model](examples/snot/halcyon/README.md), [spaceship guide](docs/agent/spaceships.md) |
 | Reusable constructions and model examples | [Reference atlas](examples/reference-atlas/README.md), `./ldraw-agent examples --help` |

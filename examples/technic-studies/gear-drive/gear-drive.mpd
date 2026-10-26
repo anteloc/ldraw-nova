@@ -1,0 +1,85 @@
+0 FILE gear-drive.ldr
+0 DESCRIPTION Supported 8:24 spur reduction; one input drives a slower reverse output on two retained shafts
+0 Supported 8:24 spur reduction; one input drives a slower reverse output on two retained shafts
+0 Name: gear-drive.ldr
+0 Author: LDraw Nova / Mecha original example
+0 !LDRAW_ORG Model
+0 // frame: Fixed base and two bearing rails
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 frame.ldr
+0 STEP
+0 // input: 8-tooth input shaft
+1 16 0 -62 0 1 0 0 0 1 0 0 0 1 input.ldr
+0 // output: 24-tooth output shaft; half-tooth phase preserves cross-hole alignment
+1 16 40 -62 0 0.991444861374 -0.13052619222 0 0.13052619222 0.991444861374 0 0 0 1 output.ldr
+0 NOFILE
+0 FILE frame.ldr
+0 DESCRIPTION Fixed base, stacked rails, four round bearings and bonded top caps; holes have centres at Y -62 and Z +/-40
+0 Fixed base, stacked rails, four round bearings and bonded top caps; holes have centres at Y -62 and Z +/-40
+0 Name: frame.ldr
+0 Author: LDraw Nova / Mecha original example
+0 !LDRAW_ORG Model
+0 // base: 6 x 6 base
+1 71 20 0 0 1 0 0 0 1 0 0 0 1 3958.dat
+0 STEP
+0 // rail_-24_-40: 1 x 6 rail bonded across both bearing towers
+1 1 20 -24 -40 1 0 0 0 1 0 0 0 1 3009.dat
+0 // rail_-24_40: 1 x 6 rail bonded across both bearing towers
+1 1 20 -24 40 1 0 0 0 1 0 0 0 1 3009.dat
+0 STEP
+0 // rail_-48_-40: 1 x 6 rail bonded across both bearing towers
+1 1 20 -48 -40 1 0 0 0 1 0 0 0 1 3009.dat
+0 // rail_-48_40: 1 x 6 rail bonded across both bearing towers
+1 1 20 -48 40 1 0 0 0 1 0 0 0 1 3009.dat
+0 STEP
+0 // bearing_0_-40: Round bearing; axle may rotate, hole centre is Y + 10
+1 1 0 -72 -40 1 0 0 0 1 0 0 0 1 3700.dat
+0 // bearing_40_-40: Round bearing; axle may rotate, hole centre is Y + 10
+1 1 40 -72 -40 1 0 0 0 1 0 0 0 1 3700.dat
+0 // bearing_0_40: Round bearing; axle may rotate, hole centre is Y + 10
+1 1 0 -72 40 1 0 0 0 1 0 0 0 1 3700.dat
+0 // bearing_40_40: Round bearing; axle may rotate, hole centre is Y + 10
+1 1 40 -72 40 1 0 0 0 1 0 0 0 1 3700.dat
+0 STEP
+0 // cap_-40: 1 x 6 cap binds the two bearing bricks
+1 1 20 -80 -40 1 0 0 0 1 0 0 0 1 3666.dat
+0 // cap_40: 1 x 6 cap binds the two bearing bricks
+1 1 20 -80 40 1 0 0 0 1 0 0 0 1 3666.dat
+0 NOFILE
+0 FILE input.ldr
+0 DESCRIPTION Rigid shaft with keyed gear, two inner gear stops and two outer retaining bushes
+0 Rigid shaft with keyed gear, two inner gear stops and two outer retaining bushes
+0 Name: input.ldr
+0 Author: LDraw Nova / Mecha original example
+0 !LDRAW_ORG Model
+0 // axle: 8L keyed shaft along Z
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 3707.dat
+0 // gear: Keyed spur gear, tooth midplane Z = 0
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3647.dat
+0 // inner_-15: Half bush retains gear against its 20-LDU hub
+1 14 0 0 -15 1 0 0 0 1 0 0 0 1 32123a.dat
+0 // inner_15: Half bush retains gear against its 20-LDU hub
+1 14 0 0 15 1 0 0 0 1 0 0 0 1 32123a.dat
+0 // outer_-60: Full bush retains shaft outside bearing rail
+1 4 0 0 -60 1 0 0 0 1 0 0 0 1 3713.dat
+0 // outer_60: Full bush retains shaft outside bearing rail
+1 4 0 0 60 1 0 0 0 1 0 0 0 1 3713.dat
+0 NOFILE
+0 FILE output.ldr
+0 DESCRIPTION Rigid shaft with keyed gear, two inner gear stops and two outer retaining bushes
+0 Rigid shaft with keyed gear, two inner gear stops and two outer retaining bushes
+0 Name: output.ldr
+0 Author: LDraw Nova / Mecha original example
+0 !LDRAW_ORG Model
+0 // axle: 8L keyed shaft along Z
+1 0 0 0 0 0 0 -1 0 1 0 1 0 0 3707.dat
+0 // gear: Keyed spur gear, tooth midplane Z = 0
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3648b.dat
+0 // inner_-15: Half bush retains gear against its 20-LDU hub
+1 14 0 0 -15 1 0 0 0 1 0 0 0 1 32123a.dat
+0 // inner_15: Half bush retains gear against its 20-LDU hub
+1 14 0 0 15 1 0 0 0 1 0 0 0 1 32123a.dat
+0 // outer_-60: Full bush retains shaft outside bearing rail
+1 4 0 0 -60 1 0 0 0 1 0 0 0 1 3713.dat
+0 // outer_60: Full bush retains shaft outside bearing rail
+1 4 0 0 60 1 0 0 0 1 0 0 0 1 3713.dat
+0 NOFILE

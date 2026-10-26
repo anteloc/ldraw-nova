@@ -1,0 +1,56 @@
+{
+  "format": "ldraw-nova-review",
+  "version": 1,
+  "source": {
+    "path": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/mounted-frame/model.plan.json",
+    "sha256": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d",
+    "section": null,
+    "colour": null
+  },
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/authoring-simplification/mounted-frame",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "visual_review": "required: open and inspect the images",
+  "model_sha256": "1a4da42ba87b08fa4c04ee29ed43227a654037229f264e04a14814c1f4d6c3b2",
+  "stages": {
+    "validation": "passed",
+    "bom": "passed",
+    "render": "passed",
+    "bom_comparison": "passed"
+  },
+  "artifacts": {
+    "bom-comparison.json": "af064e91a9576d06aace8fdf2ec3062bf57ca494d852a8da4713332fcba2ed65",
+    "bom.json": "ff554f00b69a8f16312b20cb62eaa8020d3cf0f66512242fbc24a3c105de4dbc",
+    "model.mpd": "1a4da42ba87b08fa4c04ee29ed43227a654037229f264e04a14814c1f4d6c3b2",
+    "previews/home.png": "4dfb3396e60df7802e782497c41542a786951494deedc30ed5cb7d45ee60947d",
+    "previews/leocad-bom.csv": "dcb5bfa156bdc5a5b75cebd4413148bf81cc6413f846e04a01a4ab9d15a494eb",
+    "previews/top.png": "31e4debe37535d221c5c82a977ac2caa64c064f0c846c83f5f55fabfa0dc97df",
+    "sources/1.json": "aa1786b771cb7d92439b518529557e3adb55563dd10f1ce24541ec2008afcd5d",
+    "structure/1.json": "261243b6398e93f5a206b4c732a23863e31a2997b5f2a9b7a60668ecbb433d56",
+    "validation.json": "e38e6077681feb7a94654ed8379bd52f646529e6a42c02ae4c8789ddedbb5861"
+  },
+  "coverage": {
+    "scope": "model",
+    "section": null,
+    "final_model_review": true
+  },
+  "diagnostics": [
+    {
+      "code": "assembly.disconnected_evidence",
+      "severity": "warning",
+      "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+      "line_number": null,
+      "section": null,
+      "component_count": 5
+    },
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "physical_placements": 55,
+  "exit_code": 0
+}
