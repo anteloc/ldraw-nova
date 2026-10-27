@@ -1,0 +1,447 @@
+{
+  "trial": "frame-drive",
+  "completed": true,
+  "outcome": "success",
+  "start_utc": "2026-10-27T05:58:16Z",
+  "end_utc": "2026-10-27T11:01:42.515664+00:00",
+  "active_elapsed_seconds": 432.9030829999974,
+  "infrastructure_pauses": [
+    {
+      "start_utc": "2026-10-27T06:00:19.387419Z",
+      "end_utc": "2026-10-27T10:56:33Z",
+      "seconds": 17773.612581,
+      "boundary": "estimated; last completed timed command to first resumption clock read"
+    }
+  ],
+  "repair_cycles": 1,
+  "interventions": 0,
+  "commands": [
+    {
+      "started": "2026-10-27T05:58:28.764142+00:00",
+      "command": [
+        "./ldraw-agent",
+        "doctor"
+      ],
+      "seconds": 0.18022600002586842,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T05:58:42.517098+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-c",
+        "import json; from pathlib import Path\nfor name in [\"mounted-frame\", \"chain-drive\", \"workshop\"]:\n p=json.loads(Path(\"examples/workshop/\"+name+\"/model.plan.json\").read_text()); print(\"PLAN\",name)\n for s in p[\"sections\"]:\n  print(\"SECTION\",s[\"name\"])\n  for i,step in enumerate(s[\"steps\"]):\n   print(\"STEP\",i+1, json.dumps(step, separators=(\",\",\":\")))\n  print(\"STRUCTURE\",json.dumps(s.get(\"structure\"),separators=(\",\",\":\")))"
+      ],
+      "seconds": 0.028775374870747328,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T05:58:42.515926+00:00",
+      "command": [
+        "./ldraw-agent",
+        "part",
+        "3700"
+      ],
+      "seconds": 0.8107718331739306,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T05:58:42.519583+00:00",
+      "command": [
+        "jev-rerank",
+        "--db",
+        "data/ldraw-info.db",
+        "--table-field",
+        "PARTS_DESCRIPTIONS_JEV.full_description",
+        "--query",
+        "brick",
+        "--top",
+        "1",
+        "--candidates",
+        "1",
+        "--model",
+        "jev-1.13.0",
+        "--no-score-cache",
+        "--timeout",
+        "10",
+        "--retries",
+        "0",
+        "--json"
+      ],
+      "seconds": 1.0517260420601815,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T06:00:19.364120+00:00",
+      "command": [
+        ".venv/bin/python",
+        "output/trials/frame-drive/generate.py"
+      ],
+      "seconds": 0.023298541083931923,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:56:53.892755+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-c",
+        "import json; from pathlib import Path; p=Path(\"output/trials/frame-drive\"); state={\"start_utc\":\"2026-10-27T05:58:16Z\",\"infrastructure_pause\":{\"start_utc\":\"2026-10-27T06:00:19.387419Z\",\"end_utc\":\"2026-10-27T10:56:33Z\",\"seconds\":17773.612581,\"boundary\":\"estimated; last completed timed command to first resumption clock read\"},\"pre_pause_active_seconds\":123.387419,\"repair_cycles\":0}; (p/\"trial-state.json\").write_text(json.dumps(state,indent=2)+\"\\n\"); (p/\"notes.md\").open(\"a\").write(\"\\nInfrastructure interruption: estimated 2026-10-27T06:00:19.387419Z to 2026-10-27T10:56:33Z (17,773.612581 s), excluded from active budget per resumed instructions. Boundary is estimated from last completed timed command to resumption clock read. Prior active elapsed: 123.387419 s. Original absolute deadline superseded by active-time budget.\\n\")"
+      ],
+      "seconds": 0.019082375103607774,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:56:53.932687+00:00",
+      "command": [
+        "./ldraw-agent",
+        "review",
+        "output/trials/frame-drive/model.plan.json",
+        "--outdir",
+        "output/trials/frame-drive/review",
+        "--views",
+        "home",
+        "front",
+        "back",
+        "right",
+        "left",
+        "top",
+        "bottom",
+        "--contacts",
+        "all"
+      ],
+      "seconds": 5.446392250014469,
+      "exit_code": 1
+    },
+    {
+      "started": "2026-10-27T10:57:35.419722+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-c",
+        "import json; from pathlib import Path; p=Path(\"output/trials/frame-drive/review/validation.json\"); d=json.loads(p.read_text()); print(\"keys\", list(d)); print(\"geometry\", json.dumps({k:v for k,v in d.items() if k not in [\"source_map\", \"structure\", \"flex\", \"geometry\"]},indent=2)[:12000])"
+      ],
+      "seconds": 0.02231762488372624,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:57:35.419716+00:00",
+      "command": [
+        "./ldraw-agent",
+        "part",
+        "3008"
+      ],
+      "seconds": 0.7843739171512425,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:57:35.419716+00:00",
+      "command": [
+        "./ldraw-agent",
+        "part",
+        "3036"
+      ],
+      "seconds": 0.8046540420036763,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:57:56.970212+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-"
+      ],
+      "seconds": 0.029137250036001205,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:57:57.021569+00:00",
+      "command": [
+        ".venv/bin/python",
+        "output/trials/frame-drive/generate.py"
+      ],
+      "seconds": 0.020806875079870224,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:57:57.063837+00:00",
+      "command": [
+        "./ldraw-agent",
+        "review",
+        "output/trials/frame-drive/model.plan.json",
+        "--outdir",
+        "output/trials/frame-drive/review",
+        "--views",
+        "home",
+        "front",
+        "back",
+        "right",
+        "left",
+        "top",
+        "bottom",
+        "--contacts",
+        "all",
+        "--force"
+      ],
+      "seconds": 15.95859016594477,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:58:20.574277+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-"
+      ],
+      "seconds": 0.030564416898414493,
+      "exit_code": 1
+    },
+    {
+      "started": "2026-10-27T10:58:26.337126+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-"
+      ],
+      "seconds": 0.01845016609877348,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:59:00.919854+00:00",
+      "command": [
+        "./ldraw-agent",
+        "inspect",
+        "--help"
+      ],
+      "seconds": 0.2857284159399569,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:59:01.232546+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-"
+      ],
+      "seconds": 0.01976970792748034,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:59:05.915666+00:00",
+      "command": [
+        "./ldraw-agent",
+        "inspect",
+        "output/trials/frame-drive/review/model.mpd",
+        "--detail",
+        "full",
+        "--contacts",
+        "all",
+        "--limit",
+        "1000",
+        "--report",
+        "output/trials/frame-drive/inspection.json"
+      ],
+      "seconds": 2.769336000084877,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:59:21.293583+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-"
+      ],
+      "seconds": 0.021965417079627514,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:59:56.825993+00:00",
+      "command": [
+        "./ldraw-agent",
+        "part",
+        "6141"
+      ],
+      "seconds": 0.6160076251253486,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T10:59:57.464110+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-"
+      ],
+      "seconds": 0.019918042002245784,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T11:01:26.183849+00:00",
+      "command": [
+        ".venv/bin/python",
+        "output/trials/frame-drive/finalize.py"
+      ],
+      "seconds": 0.024116249987855554,
+      "exit_code": 0
+    }
+  ],
+  "command_count": 22,
+  "command_seconds_sum": 28.986008332576603,
+  "tool_seconds": {
+    "wrapper_measured_subprocess_seconds_sum": 28.986008332576603,
+    "other_tools": "not individually measured; included in active elapsed wall time"
+  },
+  "timing_notes": [
+    "Command durations are copied from commands.jsonl; sums may overlap where independent commands ran concurrently.",
+    "Filesystem reads/writes outside wrapper, image tool calls and reasoning are not individually timed.",
+    "Infrastructure pause boundaries are estimated from last completed command and resumption clock read.",
+    "Final bookkeeping timestamp refresh is unwrapped and labeled, not fabricated."
+  ],
+  "artifact_paths": {
+    "source": "model.plan.json",
+    "generator": "generate.py",
+    "source_inputs": [
+      "source-inputs/mounted-frame.plan.json",
+      "source-inputs/chain-drive.plan.json"
+    ],
+    "source_changes": "source-changes.json",
+    "editable_mpd": "review/model.mpd",
+    "review": "review/review.json",
+    "validation": "review/validation.json",
+    "full_inspection": "inspection.json",
+    "asset_manifest": "review/flex/1/asset.manifest.json",
+    "chain_constraints": "review/flex/1/constraints.ldr",
+    "chain_asset": "review/flex/1/asset.mpd",
+    "python_bom": "review/bom.json",
+    "leocad_bom": "review/previews/leocad-bom.csv",
+    "bom_comparison": "review/bom-comparison.json",
+    "visual_review": "visual-review.json",
+    "notes": "notes.md",
+    "timings": "commands.jsonl",
+    "failed_review": "review-01-failed.json"
+  },
+  "artifact_path_base": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/authoring-candidate/output/trials/frame-drive",
+  "features": {
+    "mounted_assembly": "Deck/base named joint passes; 48 stud contacts. Both lower rails each have eight base contacts.",
+    "changed_layout": "Drive translated to [0,-106,-70] and rotated +90 degrees about Y over service-platform front deck; original workshop conveyor was [0,-8,40] with identity orientation.",
+    "frame": "Original braced service-platform geometry and rigidity contract retained; 40 required joints and 20 insertion constraints pass.",
+    "drive": "Original 120 LDU wheel spacing, 4019 wheels, 24 chain links, paired bearings, keyed crank and all shaft spacers/stops retained.",
+    "step_reorder": "Frame STEP 2 four independent pins reversed; drive STEP 4 four independent bearings reversed, preserving original later insertion STEPs.",
+    "joint_preservation": "All 65 original intended joints retained. Twelve support-stack joints and one whole-assembly mount joint added and pass.",
+    "retention": "Original drive, idler and handle retained-axle requirements pass.",
+    "bom": "101 placements in Python and LeoCAD, zero differences.",
+    "source_repair": "Drive base shifted by 10 LDU locally to align original lower rails with actual stud rows; mechanism geometry unchanged."
+  },
+  "checks": {
+    "review": {
+      "validation": "passed",
+      "bom": "passed",
+      "render": "passed",
+      "bom_comparison": "passed"
+    },
+    "structural_scopes": {
+      "frame-drive.ldr": {
+        "checks_passed": true,
+        "coverage": {
+          "reviewed_occurrences": 53,
+          "unknown_technic": [
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100
+          ],
+          "required_joints": 1,
+          "assembly_constraints": 0,
+          "insertion_paths": "manual_review_required",
+          "material_collisions": "interface_seating_only"
+        }
+      },
+      "service-platform.ldr": {
+        "checks_passed": true,
+        "coverage": {
+          "reviewed_occurrences": 26,
+          "unknown_technic": [],
+          "required_joints": 40,
+          "assembly_constraints": 20,
+          "insertion_paths": "manual_review_required",
+          "material_collisions": "interface_seating_only"
+        }
+      },
+      "chain-drive.ldr": {
+        "checks_passed": true,
+        "coverage": {
+          "reviewed_occurrences": 27,
+          "unknown_technic": [
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57
+          ],
+          "required_joints": 37,
+          "assembly_constraints": 3,
+          "insertion_paths": "manual_review_required",
+          "material_collisions": "interface_seating_only"
+        }
+      }
+    },
+    "bom": {
+      "matches": true,
+      "physical_placements": 101,
+      "leocad_placements": 101,
+      "differences": [],
+      "model_sha256": "826d5c8c078ab6cfea00f0fc0cd865987d346a68630e7b884de63140d2078524"
+    }
+  },
+  "images_opened": [
+    "review/previews/home.png",
+    "review/previews/front.png",
+    "review/previews/back.png",
+    "review/previews/right.png",
+    "review/previews/left.png",
+    "review/previews/top.png",
+    "review/previews/bottom.png"
+  ],
+  "source_images_opened": [
+    "examples/workshop/mounted-frame/review/previews/home.png",
+    "examples/workshop/chain-drive/review/previews/top.png"
+  ],
+  "missing_requested_features": [],
+  "limitations": [
+    "Static authored pose; physical strength, stability, clutch and general motion are not proven.",
+    "Twenty-four chain links lack reviewed structural interfaces; chain closure and tooth engagement were visually inspected, not certified.",
+    "Four original round roof beacons are visually seated, but their classified pin-hole interface leaves them separate in generic connection evidence.",
+    "Contact checks cover all 101 placements, but 142 bounds candidates are not exact material intersection checks.",
+    "Automated insertion-path simulation is unavailable; named insertion constraints pass and accessible final placement was inspected."
+  ]
+}

@@ -482,7 +482,7 @@
             "at": [
               0,
               -8,
-              40
+              50
             ]
           }
         ],
@@ -880,6 +880,20 @@
           },
           {
             "between": [
+              "conveyor/base",
+              "bench/upper--80-120"
+            ],
+            "minimum": 8
+          },
+          {
+            "between": [
+              "conveyor/base",
+              "bench/upper-80-120"
+            ],
+            "minimum": 8
+          },
+          {
+            "between": [
               "controls/pump",
               "controls/pump-pad"
             ],
@@ -947,6 +961,69 @@
               "ram/head"
             ],
             "minimum": 1
+          },
+          {
+            "between": [
+              "ram/head",
+              "ram/stop"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "gantry/foot--140",
+              "bench/upper-middle"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "gantry/foot-140",
+              "bench/upper-middle"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "control-guard",
+              "bench/upper--80--120"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "control-guard",
+              "bench/upper-80--120"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "guard-tile--60",
+              "control-guard"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "guard-tile--20",
+              "control-guard"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "guard-tile-20",
+              "control-guard"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "guard-tile-60",
+              "control-guard"
+            ],
+            "minimum": 2
           }
         ],
         "assembly": [
@@ -1893,7 +1970,7 @@
             "at": [
               0,
               0,
-              0
+              10
             ],
             "colour": 71
           }
@@ -2344,6 +2421,90 @@
         "required_joints": [
           {
             "between": [
+              "base",
+              "rail--40--24"
+            ],
+            "minimum": 8
+          },
+          {
+            "between": [
+              "rail--40--24",
+              "rail--40--48"
+            ],
+            "minimum": 8
+          },
+          {
+            "between": [
+              "rail--40--48",
+              "bearing--60--40"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "bearing--60--40",
+              "cap--40"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "rail--40--48",
+              "bearing-60--40"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "bearing-60--40",
+              "cap--40"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "base",
+              "rail-40--24"
+            ],
+            "minimum": 8
+          },
+          {
+            "between": [
+              "rail-40--24",
+              "rail-40--48"
+            ],
+            "minimum": 8
+          },
+          {
+            "between": [
+              "rail-40--48",
+              "bearing--60-40"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "bearing--60-40",
+              "cap-40"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "rail-40--48",
+              "bearing-60-40"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "bearing-60-40",
+              "cap-40"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
               "drive-axle",
               "drive-gear"
             ]
@@ -2791,7 +2952,187 @@
             "colour": 14
           }
         ]
-      ]
+      ],
+      "structure": {
+        "scope": "joints",
+        "required_joints": [
+          {
+            "between": [
+              "foot--140",
+              "column--140-0"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column--140-0",
+              "column--140-1"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column--140-1",
+              "column--140-2"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column--140-2",
+              "column--140-3"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column--140-3",
+              "column--140-4"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column--140-4",
+              "column--140-5"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column--140-5",
+              "column--140-6"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column--140-6",
+              "column--140-7"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column--140-7",
+              "column--140-8"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column--140-8",
+              "beam"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "column--140-8",
+              "cap--140"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "cap--140",
+              "top"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "foot-140",
+              "column-140-0"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column-140-0",
+              "column-140-1"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column-140-1",
+              "column-140-2"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column-140-2",
+              "column-140-3"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column-140-3",
+              "column-140-4"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column-140-4",
+              "column-140-5"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column-140-5",
+              "column-140-6"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column-140-6",
+              "column-140-7"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column-140-7",
+              "column-140-8"
+            ],
+            "minimum": 4
+          },
+          {
+            "between": [
+              "column-140-8",
+              "beam"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "column-140-8",
+              "cap-140"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "cap-140",
+              "top"
+            ],
+            "minimum": 2
+          },
+          {
+            "between": [
+              "beam",
+              "top"
+            ],
+            "minimum": 16
+          }
+        ]
+      }
     },
     {
       "name": "stop-ram.ldr",

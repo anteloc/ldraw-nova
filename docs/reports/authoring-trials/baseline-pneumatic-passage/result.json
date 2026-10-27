@@ -1,0 +1,194 @@
+{
+  "trial": "pneumatic-passage",
+  "completed": true,
+  "outcome": "success",
+  "start_utc": "2026-10-26T15:41:52+00:00",
+  "end_utc": "2026-10-26T20:32:02.776351+00:00",
+  "active_elapsed_seconds": 620.776,
+  "active_elapsed_timing_basis": "Estimate: wall-clock elapsed including active tool waits minus infrastructure pause; exact interruption instant was not measured. Pause start rounded to the second following the last completed command. Final result-write command duration and image-view API durations are not separately measured.",
+  "budget_seconds": 1800,
+  "repair_cycles": 1,
+  "failed_review_source_correction_cycles": 1,
+  "visual_refinement_cycles": 1,
+  "interventions": 0,
+  "infrastructure_pause": {
+    "start_utc_estimated": "2026-10-26T15:46:03+00:00",
+    "resume_utc": "2026-10-26T20:25:53+00:00",
+    "excluded_seconds_estimated": 16790.0,
+    "reason": "Platform usage-limit interruption; parent instructed resuming same trial and excluding infrastructure pause.",
+    "counts_as_workflow_failure": false
+  },
+  "commands": {
+    "path": "commands.jsonl",
+    "count": 37,
+    "summed_command_seconds": 84.06294375052676,
+    "nonzero_exit_count": 2,
+    "timing_source": "run.py subprocess wall-clock timings; parallel commands are summed, so this is not active elapsed wall time."
+  },
+  "tool_seconds": {
+    "measured_subprocess_seconds": 84.06294375052676,
+    "image_view_seconds": null,
+    "filesystem_read_and_tool_orchestration_seconds": null,
+    "unmeasured_time_label": "Routine document/report reads, image viewing, tool orchestration, reasoning, and final result metadata writing were not separately instrumented; included in estimated active wall time."
+  },
+  "artifact_paths": {
+    "editable_mpd": "pneumatic-passage.mpd",
+    "generator": "generate.py",
+    "plan": "press.plan.json",
+    "rigid_plan": "rigid.plan.json",
+    "rigid_obstacle_mpd": "rigid.mpd",
+    "hose_constraints": "hoses.ldr",
+    "review": "press-review/review.json",
+    "validation": "press-review/validation.json",
+    "python_bom": "press-review/bom.json",
+    "leocad_bom": "press-review/previews/leocad-bom.csv",
+    "bom_comparison": "press-review/bom-comparison.json",
+    "flex_manifest": "press-review/flex/1/asset.manifest.json",
+    "flex_asset": "press-review/flex/1/asset.mpd",
+    "previews": "press-review/previews",
+    "visual_review": "visual-review.md",
+    "images_opened": "images-opened.json",
+    "repair_log": "repair-log.md",
+    "commands": "commands.jsonl",
+    "reproducibility": "reproducibility.json",
+    "full_assembly_inspection": "assembly-inspect.json",
+    "frame_technic_scan": "frame-technic.json",
+    "pump_connectors": "pump-connectors.json",
+    "valve_connectors": "valve-connectors.json",
+    "cylinder_connectors": "cylinder-connectors.json",
+    "source_credits": "source-credits.json",
+    "readme": "README.md"
+  },
+  "features": {
+    "physical_placements": 47,
+    "rigid_placements": 44,
+    "posed_hoses": 3,
+    "mounted_pump": true,
+    "mounted_valve": true,
+    "extended_pinned_cylinder": true,
+    "retained_mounted_system_guard": true,
+    "guard_parts": 6,
+    "all_six_sleeves_inspected": true,
+    "all_conservative_flex_obstacle_candidates_inspected": true,
+    "conservative_flex_obstacle_candidate_count": 6,
+    "final_guard_flex_obstacle_candidates": 0,
+    "minimum_sampled_bend_radius_ldu": 19.817443576485076,
+    "minimum_inter_hose_separation_ldu": 11.057230836214215,
+    "required_limits": {
+      "min_radius": 15,
+      "tube_radius": 5,
+      "min_separation": 10
+    },
+    "checks_relaxed": false,
+    "fitting_transform_changes": [
+      {
+        "fitting": "pump",
+        "from_at": [
+          -120,
+          -14,
+          -20
+        ],
+        "to_at": [
+          -120,
+          -14,
+          -80
+        ],
+        "translation_ldu": 60,
+        "from_yaw": -90,
+        "to_yaw": -180,
+        "upright_axis_rotation_degrees": -90
+      },
+      {
+        "fitting": "valve",
+        "from_at": [
+          40,
+          -56,
+          -110
+        ],
+        "to_at": [
+          60,
+          -56,
+          -110
+        ],
+        "translation_ldu": 20,
+        "from_yaw": -90,
+        "to_yaw": -90
+      }
+    ]
+  },
+  "checks": {
+    "review_stages": {
+      "validation": "passed",
+      "bom": "passed",
+      "render": "passed",
+      "bom_comparison": "passed"
+    },
+    "full_contacts": "all; 47 placements; no contact auto-skip",
+    "flex": true,
+    "source_and_mpd_reproducible": true,
+    "frame_technic_scan": "passed with narrow coverage: one reviewed occurrence, zero required joints/insertion contracts; see report",
+    "physical_validity": "not_proven"
+  },
+  "images_opened": [
+    {
+      "path": "press-review/previews/home.png",
+      "sha256": "190994a4bd72c2805c275c195c27dae507d7700c3fa585790d7c96ef42d549a8",
+      "opened": true,
+      "method": "tools.view_image",
+      "timing": "not separately measured"
+    },
+    {
+      "path": "press-review/previews/front.png",
+      "sha256": "606fda92400abb66ac2d2548fe5607c70e5807afad46e54be9381aaa9042ce6a",
+      "opened": true,
+      "method": "tools.view_image",
+      "timing": "not separately measured"
+    },
+    {
+      "path": "press-review/previews/top.png",
+      "sha256": "23d7a2a2097c3602c04cc47737acba525a3aa4868fb3b9fd1060acc2fbe608a7",
+      "opened": true,
+      "method": "tools.view_image",
+      "timing": "not separately measured"
+    },
+    {
+      "path": "press-review/previews/back.png",
+      "sha256": "819b6ffb478eae65f644ba9ba61de27ad35ebe08b5ed4d1d4d8bc26869383adb",
+      "opened": true,
+      "method": "tools.view_image",
+      "timing": "not separately measured"
+    },
+    {
+      "path": "press-review/previews/left.png",
+      "sha256": "cfbbfc5d8e689006fa0b5a9c4080089bc5542cbed5541be9cc836d2cfad49745",
+      "opened": true,
+      "method": "tools.view_image",
+      "timing": "not separately measured"
+    },
+    {
+      "path": "press-review/previews/right.png",
+      "sha256": "a6727ad21eadc5518e0ffe8edf323ab3f66a862fc418470b8c22fce8ce1bc5d7",
+      "opened": true,
+      "method": "tools.view_image",
+      "timing": "not separately measured"
+    },
+    {
+      "path": "press-review/previews/bottom.png",
+      "sha256": "e41726846455be20a1bb9ac8d9ae81a6bba24d3ef4c7d5f392124cee67f7219d",
+      "opened": true,
+      "method": "tools.view_image",
+      "timing": "not separately measured"
+    }
+  ],
+  "missing_features": [],
+  "limitations": [
+    "Physical validity remains not_proven; no strength, pressure, clutch, elasticity, motion or stock-length proof.",
+    "Finite bend/obstacle sampling and conservative bounding boxes do not prove arbitrary continuous material collision freedom.",
+    "Automatic fitting check reports not_checked; actual nozzle frames, sleeves and mounting were reviewed manually using existing connector reports and seven contextual images.",
+    "Pump sockets and cylinder ring mounts remain generic connector-graph gaps; manual world-coordinate and image evidence is recorded.",
+    "No strict fixed-structure mounting/insertion contract; supplemental Technic scan has explicitly narrow coverage.",
+    "Colour availability and insertion swept paths are not established.",
+    "Infrastructure pause boundary is estimated, not an exact measured platform suspension timestamp."
+  ],
+  "scope_notes": "Only trial sources/generators/notes/artifacts authored. Toolkit, shipped examples, tests, docs and installed libraries unchanged. No subagents or outside expert repairs. Normal toolkit caches were used by existing build/review commands."
+}

@@ -35,8 +35,11 @@ waypoints to reserve a clear corridor. Sources and generated files stay separate
 The chain recipe uses `4019.dat` wheels at **120 LDU spacing**, supported on
 round `3700.dat` bearings. Its 10L drive shaft and 8L idler use contiguous
 spacers and retaining bushes. A 3L thin crank carries a retained handle axle.
-The mounting checks cover keyed engagement and the bearings; intended bearing
-rotation is reported. Do not stretch links or change the spacing arbitrarily.
+The mounting checks cover the plate-to-rail foundation, rail courses, bearing
+blocks, caps, keyed engagement and retention; intended bearing rotation is reported.
+The base plate is at local `[0,0,10]` so its stud rows engage the single-row rails.
+Use its actual socket grid when mounting the module; the workshop places the
+module at `[0,-8,50]` to engage the bench and preserve the hose passage. Do not stretch links or change the spacing arbitrarily.
 
 The pneumatic stop uses the **extended `74981-f2` pose**, with 116 LDU between
 mounting eyes. Its nozzle frames and the pump/valve frames are measured and

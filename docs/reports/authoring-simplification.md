@@ -1,9 +1,11 @@
 # Model authoring simplification: verification record
 
-The candidate workflow uses ordinary JSON plans, named placement paths, inline
+The default workflow now uses ordinary JSON plans, named placement paths, inline
 joint contracts and inline LSynth routes. It keeps the existing `review` loop,
 pyldraw3 parser/writer, LSynth engine, external sources and numeric contracts.
-The default entry guide remains unchanged until the independent trials pass.
+The [entry guide](../../instructions.md) was promoted only after compatibility,
+render/BOM checks, all six comparative trials and a fresh corrected-starter trial
+passed. The user's existing mechanism work and Mecha handoff are preserved.
 
 ## Implemented evidence
 
@@ -39,8 +41,11 @@ limits were retained throughout repair.
 
 The original [constraint experiments](../../examples/flex/constraint-lab/README.md)
 cover straight, corner, return and parallel routes with measured synthesis.
-Their corner/return constructions now use shared waypoint helpers. The tight
-corner remains an expected failure. Existing original fixtures and attribution
+Their corner/return constructions now use shared waypoint helpers. All eight
+constraint sources are byte-identical to the baseline; the four archived assets
+also reproduce their original hashes. The tight corner remains an expected
+failure (5.83 LDU sampled radius); corner-32 measures 20.59 LDU, and the return
+and parallel routes measure 38.68 LDU. Existing original fixtures and attribution
 are retained.
 
 The reviewed interface registry now covers the starter pump's four bottom stud
@@ -58,7 +63,7 @@ mounts, invalid transforms, geometry fingerprints, inline endpoint transforms,
 wheel planes/ownership, rigid-link counting, route crossings in assembly space,
 scoped coverage, included-schema diagnostics and structured synthesis failures.
 Existing tests retain byte regressions, stricter cache-hit checks, dependency
-failures and atomic publication/artifact protection. The final full suite passed **451 tests in 188.60 seconds**, using the installed
+failures and atomic publication/artifact protection. The final full suite passed **452 tests in 190.89 seconds**, using the installed
 official library and LSynth. Targeted lint and `git diff --check` pass. The new
 schema-failure report intentionally adds `validation.json` with `geometry: null`
 instead of publishing only an opaque exception. Its regression asserts that no
@@ -76,4 +81,72 @@ every requested feature. Time, repair cycles and interventions are recorded
 separately. These six cases are descriptive comparisons, not a statistically
 established completion rate.
 
-Trial results are pending; the candidate is not yet promoted as the default.
+The [fixed briefs](authoring-trials/briefs.json) and frozen toolkit fingerprints
+([baseline](authoring-trials/baseline-toolkit.json),
+[candidate](authoring-trials/candidate-toolkit.json)) are retained. Platform usage
+limits interrupted the trials. Agents retained their original task/context;
+pauses are recorded separately with estimated boundaries from command completion
+and resumption. They are excluded from active-work budgets and are not counted
+as workflow failures or expert repairs. Tool time means instrumented subprocess
+wall time; image/read/orchestration time is included in active elapsed estimates
+but is not separately fabricated.
+
+All six comparative trials delivered reproducible source, editable MPDs, passing
+applicable checks, matching BOMs and inspected images within their budgets.
+Every delivered bundle was audited; the source, review and image hashes were
+checked. No trial received an expert repair or modified toolkit code.
+
+| Brief | Budget | Baseline active minutes | Candidate active minutes | Baseline / candidate subprocess seconds | Reported repair cycles | Interventions |
+|---|---:|---:|---:|---:|---:|---:|
+| Frame and retained drive | 30 min | 14.0 | 7.2 | 91.2 / 29.0 | 1 / 1 | 0 / 0 |
+| Pneumatic fitting/passage adaptation | 30 min | 10.3 | 9.0 | 84.1 / 85.9 | 1 / 1 | 0 / 0 |
+| Complete workshop machine | 90 min | 20.1 | 10.3 | 117.8 / 84.1 | 5 / 1 | 0 / 0 |
+
+[Machine-readable results](authoring-trials/results.json) link to each raw result,
+command log and audit. Repair definitions are retained rather than flattened:
+the baseline frame repair was visual, the candidate frame repair followed an
+automatic missing-mount error, and the candidate machine repair followed a
+connectivity/visual inspection despite its initial selected checks passing.
+Both pneumatic trials also recorded a separate post-pass cleanup/refinement.
+
+The candidate used 22, 19 and 19 timed commands; the baseline used 34, 37 and 48.
+These count instrumented commands, not every tool interaction. All runs used the
+same shared machine; some independent work ran concurrently. Timing is descriptive
+and includes estimated pause boundaries. Both workflows completed these briefs;
+this is not a statistically established improvement in completion rate.
+
+Coverage also differs. Baseline mechanical trials needed separate shaft witnesses
+with moving parts omitted; baseline fitting mounts used manual coordinate/visual
+evidence. The baseline complete machine did not select hose obstacle measurement.
+The candidate reviews integrated named mounts, retained shafts and assembly-frame
+route interactions. Manual physical and motion limits remain in every result.
+
+The six original trial records remain unchanged. The additional corrected-starter
+trial below passed before the new entry guide became the default.
+
+
+## Starter defect found by the independent trial
+
+Both candidate mechanical trials independently found that the supplied drive rails lay between
+the base plate's stud rows. The initial contract checked shafts and gears but
+omitted that foundation interface. The agent independently moved the base by
+half a stud and added twelve support-stack joints, then delivered a passing
+101-part assembly. No expert repair was supplied to that trial.
+
+The shared recipe now carries the same base offset and checks both eight-stud
+rail mounts, both courses, all bearings and caps. The workshop module is moved
+to preserve its bench grid and clear the hoses. Its base-to-bench seams, gantry
+feet/columns, stop face and control guard now also have explicit mount checks.
+A regression recreates the old half-stud error and displaces the whole drive;
+both fail named mount checks. The corrected examples were rendered and inspected
+again with unchanged BOM counts and hose limits. Original fixtures remain intact.
+The earlier machine trial remains frozen. An additional fresh agent completed
+the same brief against the [corrected snapshot](authoring-trials/candidate-v2-toolkit.json),
+with the same model/settings, restrictions and 90-minute active budget. Its
+[173-part delivery](authoring-trials/candidate-v2-complete-machine/result.json)
+passed whole-model review, four structural scopes, matching BOMs and seven
+opened final contextual views in **543.89 active seconds** (about 9.1 minutes),
+with one bodywork repair and zero expert interventions. Its saved generator
+reproduced the reviewed plan byte for byte during the independent audit. The
+corrected foundation remained intact. This additional starter regression trial
+is retained separately; it does not replace or erase the original result.

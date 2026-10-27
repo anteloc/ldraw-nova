@@ -1,0 +1,229 @@
+{
+  "trial": "complete-machine",
+  "completed": true,
+  "outcome": "success_with_documented_static_pose_limits",
+  "start_utc": "2026-10-26T15:41:58+00:00",
+  "end_utc": "2026-10-27T11:02:13.057911+00:00",
+  "active_elapsed_seconds": 1205.526,
+  "active_elapsed_is_estimate": true,
+  "budget_seconds": 5400,
+  "infrastructure_pause_seconds": 68409.532,
+  "infrastructure_pauses": [
+    {
+      "start_utc_estimate": "2026-10-26T15:45:36.897902+00:00",
+      "end_utc": "2026-10-26T20:26:20+00:00",
+      "basis": "Last completed timed command to first resumed clock reading; platform usage interruption reported by parent."
+    },
+    {
+      "start_utc_estimate": "2026-10-26T20:32:23.154104+00:00",
+      "end_utc": "2026-10-27T05:54:15+00:00",
+      "basis": "Last completed timed command to resumed clock reading; second platform usage interruption reported by parent."
+    },
+    {
+      "start_utc_estimate": "2026-10-27T05:58:50.415675+00:00",
+      "end_utc": "2026-10-27T10:56:25+00:00",
+      "basis": "Last completed timed command to resumed clock reading; third platform usage interruption. Some unwrapped report reading and reasoning followed that command; its timestamp is unavailable, so this pause estimate slightly overstates pause time and the derived active elapsed is approximate."
+    }
+  ],
+  "repair_cycles": 5,
+  "repair_cycles_breakdown": {
+    "automatic_failed_review_to_source_correction": 3,
+    "visual_or_interface_review_to_source_correction": 2
+  },
+  "interventions": 0,
+  "commands": {
+    "log": "commands.jsonl",
+    "count": 48,
+    "failed_exit_count": 5,
+    "total_seconds": 117.795984,
+    "seconds_by_program": {
+      "./ldraw-agent": 115.79266704223119,
+      ".venv/bin/python": 2.0033166254870594
+    }
+  },
+  "tool_seconds": 117.795984,
+  "tool_seconds_scope": "Timed subprocess durations from commands.jsonl only; external orchestration, image display, file reads/edits and reasoning were not separately timed. No tool latency was fabricated.",
+  "unmeasured_tool_seconds": null,
+  "physical_placements": 173,
+  "physical_validity": "not_proven",
+  "artifacts": {
+    "mpd": "workshop-conveyor.mpd",
+    "source": "generate.py",
+    "plan": "machine.plan.json",
+    "reference_source": "press_reference.py",
+    "hoses": "hoses.ldr",
+    "chain": "chain.ldr",
+    "base_contract": "base.structure.json",
+    "shaft_plan": "shafts.plan.json",
+    "shaft_contract": "shafts.structure.json",
+    "review": "machine-review/review.json",
+    "validation": "machine-review/validation.json",
+    "python_bom": "machine-review/bom.json",
+    "leocad_bom": "machine-review/previews/leocad-bom.csv",
+    "bom_comparison": "machine-review/bom-comparison.json",
+    "shaft_review": "shafts-review/review.json",
+    "shaft_validation": "shafts-review/validation.json",
+    "visual_notes": "visual-notes.md",
+    "visual_review": "visual-review.json",
+    "reuse_manifest": "reuse-manifest.json",
+    "reproduction": "reproduction.json",
+    "repair_log": "repair-log.md",
+    "command_log": "commands.jsonl",
+    "timing_notes": "timing-notes.json",
+    "readme": "README.md"
+  },
+  "artifact_sha256": {
+    "mpd": "05620f10d348668a67492a2831c45d8703b30131b7ef4c7c5ba89c413fd8128e",
+    "source": "5c5b4d235f33958dd7432159a8c98db0133a97096f4c863791003f5b89828f18",
+    "plan": "f705de8c34c0b37aeaf108d9e692406bbed2f4c0dc62c0f0d20ec167c63c9119",
+    "reference_source": "493a5c55f157837680f1399f9fd9e809beca314496f984b2a8b80dda21f846c8",
+    "hoses": "53ce3808ea668f865c0787d6af0319ad5048b9497cf18dad571b0e366cb34373",
+    "chain": "21272c04e1b97d7e892c59ae3935803318658c94b65ffa5b877a0bf32ae9b24b",
+    "base_contract": "dbed6710f2de7a53c52b087e3bf42084a8b118f8987eb187dbe7cae05e6f7b74",
+    "shaft_plan": "54525cd8dd10504efc48cdc4fdf46dae5e420ed4bafe2ecbeba1c605eb76704a",
+    "shaft_contract": "a452b42409856d4697994bcad8c3806cebb74dcc9224c0e2dadeeee850bceb5a",
+    "review": "4415f852f45ddced5899e68ae71cde6450df082bf12d4edeb45a43b07575c452",
+    "validation": "104a7ddf1f2b59a034931db9c73e2003c3247d6fa6b63ec2049088af87e47b83",
+    "python_bom": "940b27036bd42fdaa348f767a3bbf00485fe2a8e926d4ee668215e813ef553ce",
+    "leocad_bom": "da867c07b8d11c96906d876d0f6123bb29179ca6118f87ce6565f3ad0f902eb0",
+    "bom_comparison": "3c5eda386c87d8aecc9798961508fed3903d5cef0486470ceb987e34b3740605",
+    "shaft_review": "85425b714877d75161504f7acd800a566fcce38ae5c5eaa6cb9bcf774505538c",
+    "shaft_validation": "e941a25b6c122c045e46c4f4bf6879171fecb624d8d93d5a60bcc4362e9043ef",
+    "visual_notes": "9c4af4817db1218f03a2ea079fe3efd1ed91f9ae673238812385522105956c0c",
+    "visual_review": "4fc2f203e5cc00db011127a0603bb22a039b31dbb6ab381ccefcb915ef672fd2",
+    "reuse_manifest": "23f12254e308112fc34243d72536c2078873d161f0488824b9e4a3e252c62ebf",
+    "reproduction": "ddfe44f783ec2c7ee42a5a357e7611a6c6b706648808d8771d098f66dd182d2b",
+    "repair_log": "ed1b6e779069c2a2d48b1cdb646015f26c53e847ddbde8dedfc333c545b3151f",
+    "command_log": "0698787aae310a087a08ab24cf356cfb929cb86f90f28a133ccc7043616a85d1",
+    "timing_notes": "7b257aeaebcc80b7aac6a45065059086abf59ecd91e1420350c3fd55c2399e2d",
+    "readme": "6173c4b6dd294dd9e079ed22e0e76a4b472db7087b6aefbf68d49507d52b8ac9"
+  },
+  "features": {
+    "braced_supporting_frame": true,
+    "attached_workbench": true,
+    "supported_axially_retained_shafts": 2,
+    "bearings": 4,
+    "compatible_chain_loop": {
+      "links": 36,
+      "link": "273.dat",
+      "sprocket": "569.dat",
+      "sprockets": 2
+    },
+    "accessible_hand_crank": true,
+    "mounted_pump_valve_cylinder": true,
+    "cylinder_pose": "74981-f2, extended 116 LDU",
+    "three_hose_circuit": true,
+    "mounted_system_bodywork": "Dark Blue 272 with Orange 25 safety accents",
+    "stop_clearance_ldu": 8,
+    "sample_workpiece": true
+  },
+  "checks": {
+    "assembly_review_passed": true,
+    "bom_matches": true,
+    "base_contract_passed": true,
+    "shaft_contract_passed": true,
+    "flex_passed": true,
+    "hose_settings": {
+      "block": null,
+      "min_radius": 15,
+      "max_turn": null,
+      "tube_radius": 5,
+      "min_separation": 10,
+      "length": null,
+      "length_tolerance": 1,
+      "obstacles": null,
+      "obstacle_section": null,
+      "obstacles_sha256": null
+    },
+    "hose_minimum_sampled_radii_ldu": [
+      16.17216672801987,
+      19.817443576484784,
+      21.805395947453114
+    ],
+    "hose_minimum_pair_separation_ldu": 11.200236916011207,
+    "reproducible_source_byte_identical": true,
+    "delivery_mpd_matches_rendered_revision": true
+  },
+  "images_opened": [
+    {
+      "path": "machine-review/previews/home.png",
+      "sha256": "f37646b9db5a6fecfad5ce45befe5ad3274a14d35aefe1c580a2115670fa6fb0",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "05620f10d348668a67492a2831c45d8703b30131b7ef4c7c5ba89c413fd8128e"
+    },
+    {
+      "path": "machine-review/previews/front.png",
+      "sha256": "61c01bbb0a4a69d6a33c5316751fe3e4bc68d4faca0a9990422de341f52c6369",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "05620f10d348668a67492a2831c45d8703b30131b7ef4c7c5ba89c413fd8128e"
+    },
+    {
+      "path": "machine-review/previews/back.png",
+      "sha256": "cda0c75064f1a3bb532bcf3aec26cc34589ac8036b9312078ca594565982e036",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "05620f10d348668a67492a2831c45d8703b30131b7ef4c7c5ba89c413fd8128e"
+    },
+    {
+      "path": "machine-review/previews/right.png",
+      "sha256": "1bed47172525ea71efb623d2d426a19d3baef2c90bf0d59adb2206edd364fc5e",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "05620f10d348668a67492a2831c45d8703b30131b7ef4c7c5ba89c413fd8128e"
+    },
+    {
+      "path": "machine-review/previews/left.png",
+      "sha256": "11cf6d4e955ddcca4c04de5d06c25b44c8a1fa691e1cef3f695646f1494ac900",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "05620f10d348668a67492a2831c45d8703b30131b7ef4c7c5ba89c413fd8128e"
+    },
+    {
+      "path": "machine-review/previews/top.png",
+      "sha256": "3277a09dd4be46bf608955bb987f9cbcaec54490ba3363648d424ba20836e9dd",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "05620f10d348668a67492a2831c45d8703b30131b7ef4c7c5ba89c413fd8128e"
+    },
+    {
+      "path": "machine-review/previews/bottom.png",
+      "sha256": "03c1eed7d5c86f018c53b7ba2cf75ca81cf2159a1bd294cea5284c732362e242",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "05620f10d348668a67492a2831c45d8703b30131b7ef4c7c5ba89c413fd8128e"
+    },
+    {
+      "path": "shafts-review/previews/home.png",
+      "sha256": "d413692a4be2c48590731fda3fbd56e82207270241fa2fd0a25a1cff334f1bb8",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "bf73d1488041e5ea0034bab61d4d7a6c3c337dab04c02dcfb53e2e3c92063e9b"
+    },
+    {
+      "path": "shafts-review/previews/front.png",
+      "sha256": "f626b14644ce7d8c0f3b39927ba9d2bd76ec11b6f2d5f1a696d06ffea153807e",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "bf73d1488041e5ea0034bab61d4d7a6c3c337dab04c02dcfb53e2e3c92063e9b"
+    },
+    {
+      "path": "shafts-review/previews/back.png",
+      "sha256": "8d479738c0c2f8e44764e572a3b69e91f3e2c0cfb4db092e4371db043e131cc5",
+      "opened": true,
+      "method": "functions view_image; image content displayed and inspected in the authoring conversation",
+      "revision": "bf73d1488041e5ea0034bab61d4d7a6c3c337dab04c02dcfb53e2e3c92063e9b"
+    }
+  ],
+  "missing_features": [],
+  "limitations": [
+    "Static pose only; no verified motion, strength, pressure behavior or chain tension.",
+    "Finite sampled hose geometry; no stock length or manufactured material certification.",
+    "Hose obstacle checks were not selected; contextual visual inspection performed.",
+    "Legacy gear shadow connector warnings and incomplete pneumatic/chain contact metadata remain; no general solid collision proof.",
+    "Whole-machine insertion paths and assembly sequence are not fully validated; scoped base and shaft closure constraints passed.",
+    "Part/colour inventory availability and manufacturing fit were not checked.",
+    "Pause boundaries are estimates from completed timed commands; third pause includes a small unmeasured interval of report reading/reasoning, so active elapsed is approximate."
+  ]
+}

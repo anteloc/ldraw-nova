@@ -34,13 +34,23 @@ def chain_drive(*, colour=71, accent=14):
     """Two retained shafts and a 24-link loop, with a supported hand crank."""
     shaft_matrix = rotation('y', -90)
     crank_matrix = rotation('x', 90)
-    steps = [[part('base', '3036', [0, 0, 0], colour)]]
+    # The even-width plate has half-stud rows; offset it so the 1-wide rails
+    # at z=+/-40 actually engage its studs. Keep this socket offset at the mount.
+    steps = [[part('base', '3036', [0, 0, 10], colour)]]
     for y in (-24, -48):
         steps.append([part(f'rail-{z}-{y}', '3008', [0, y, z], colour) for z in (-40, 40)])
     steps.append([part(f'bearing-{x}-{z}', '3700', [x, -72, z], accent)
                   for x in (-60, 60) for z in (-40, 40)])
     steps.append([part(f'cap-{z}', '3460', [0, -80, z], colour) for z in (-40, 40)])
     required = []
+    for z in (-40, 40):
+        lower, upper = f'rail-{z}--24', f'rail-{z}--48'
+        required += [dict(between=['base', lower], minimum=8),
+                     dict(between=[lower, upper], minimum=8)]
+        for x in (-60, 60):
+            bearing = f'bearing-{x}-{z}'
+            required += [dict(between=[upper, bearing], minimum=2),
+                         dict(between=[bearing, f'cap-{z}'], minimum=2)]
     for label, x in [('drive', -60), ('idler', 60)]:
         axle = label + '-axle'
         steps.append([part(axle, '3737' if label == 'drive' else '3707', [x, -62, 0], 0, shaft_matrix)])
@@ -83,7 +93,19 @@ def workshop_plan(*, colour=71, accent=14):
     bridge_steps.append([part('beam', '3703', [0, -240, 50], colour),
                          *[part(f'cap-{x}', '3004', [x, -240, 70], accent) for x in (-140, 140)]])
     bridge_steps.append([part('top', '4282', [0, -248, 60], accent)])
-    bridge = dict(name='stop-frame.ldr', description='Wide bonded gantry clears the conveyor shafts', steps=bridge_steps)
+    bridge_joints = []
+    for x in (-140, 140):
+        previous = f'foot-{x}'
+        for row in range(9):
+            current = f'column-{x}-{row}'
+            bridge_joints.append(dict(between=[previous, current], minimum=4))
+            previous = current
+        bridge_joints += [dict(between=[previous, 'beam'], minimum=2),
+                          dict(between=[previous, f'cap-{x}'], minimum=2),
+                          dict(between=[f'cap-{x}', 'top'], minimum=2)]
+    bridge_joints.append(dict(between=['beam', 'top'], minimum=16))
+    bridge = dict(name='stop-frame.ldr', description='Wide bonded gantry clears the conveyor shafts', steps=bridge_steps,
+                  structure=dict(scope='joints', required_joints=bridge_joints))
     cylinder_matrix = [[0, 0, -1], [0, -1, 0], [-1, 0, 0]]
     ram = dict(name='stop-ram.ldr', description='Extended cylinder with both eyes pinned and a stop face', steps=[[
         part('cylinder', '74981-f2', [0, -230, 30], colour, cylinder_matrix),
@@ -107,12 +129,13 @@ def workshop_plan(*, colour=71, accent=14):
                 required += [dict(between=[name, f'trestle-{x}/rail-{side}']),
                              dict(between=[name, 'bench/lower-' + ('front' if z < 0 else 'rear')])]
     root_steps += [pins, [dict(id='bench', ref=bench['name'], colour=72, at=[0, 0, 0])],
-                   [dict(id='conveyor', ref='chain-drive.ldr', colour=colour, at=[0, -8, 40])],
+                   [dict(id='conveyor', ref='chain-drive.ldr', colour=colour, at=[0, -8, 50])],
                    [dict(id='gantry', ref=bridge['name'], colour=colour, at=[0, -8, 0])],
                    [dict(id='ram', ref=ram['name'], colour=colour, at=[0, -8, 0]),
                     dict(id='controls', ref=controls['name'], colour=colour, at=[0, 0, 0])]]
     required += [dict(between=pair, minimum=n) for pair, n in [
         (['conveyor/base', 'bench/upper-middle'], 4),
+        *[(['conveyor/base', f'bench/upper-{x}-120'], 8) for x in (-80, 80)],
         (['controls/pump', 'controls/pump-pad'], 4),
         (['controls/pump-pad', 'controls/pump-base'], 4),
         (['controls/pump-base', 'bench/upper-middle'], 4),
@@ -120,7 +143,11 @@ def workshop_plan(*, colour=71, accent=14):
         (['controls/valve-pad', 'controls/valve-base'], 2),
         (['controls/valve-base', 'bench/upper-80--120'], 2),
         (['ram/mount-pin', 'ram/cylinder'], 1), (['ram/mount-pin', 'gantry/beam'], 1),
-        (['ram/head-pin', 'ram/cylinder'], 1), (['ram/head-pin', 'ram/head'], 1)]]
+        (['ram/head-pin', 'ram/cylinder'], 1), (['ram/head-pin', 'ram/head'], 1),
+        (['ram/head', 'ram/stop'], 4),
+        *[([f'gantry/foot-{x}', 'bench/upper-middle'], 4) for x in (-140, 140)],
+        *[(['control-guard', f'bench/upper-{x}--120'], 4) for x in (-80, 80)],
+        *[([f'guard-tile-{x}', 'control-guard'], 2) for x in (-60, -20, 20, 60)]]]
     for name, colour_, start, end, via in [
         ('supply', 0, ('controls/pump', 'outlet'), ('controls/valve', 'inlet'), []),
         ('raise', 4, ('controls/valve', 'upper'), ('ram/cylinder', 'base'), [dict(at=[80, -152, -30], direction=[0.2, -1, 0.5])]),

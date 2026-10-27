@@ -1,0 +1,273 @@
+{
+  "trial": "complete-machine",
+  "completed": true,
+  "outcome": "success_with_documented_static_pose_and_coverage_limits",
+  "start_utc": "2026-10-27T11:00:00+00:00",
+  "end_utc": "2026-10-27T16:50:42.977084+00:00",
+  "active_elapsed_seconds": 615.571194,
+  "active_elapsed_seconds_is_estimate": true,
+  "budget_seconds": 5400,
+  "timing": {
+    "start_boundary": "Conservative estimated 11:00:00 UTC budget origin; exact first action unmeasured. First clock observation 11:00:37 UTC followed initial reads.",
+    "infrastructure_pauses": [
+      {
+        "start_utc": "2026-10-27T11:04:16.594110+00:00",
+        "end_utc": "2026-10-27T16:44:44+00:00",
+        "seconds": 20427.40589,
+        "boundaries_estimated": true,
+        "reason": "Platform usage interruption; last completed command to first resumed clock observation; excluded from active time."
+      }
+    ],
+    "commands_log": "commands.jsonl",
+    "command_count": 19,
+    "commands_seconds": 84.10806475067511,
+    "tool_seconds": 84.10806475067511,
+    "tool_seconds_scope": "Cumulative subprocess wall seconds measured by run.py, including generator, CLI and report-reading commands; concurrent command durations may overlap. Not total elapsed time.",
+    "unmeasured_tool_seconds": null,
+    "uninstrumented_time": "Tool overhead, initial reads, other read-only shell inspection, editing, image opening, reasoning and final result bookkeeping were not individually measured; they are included in estimated active wall time. No durations are fabricated for those operations."
+  },
+  "repair_cycles": 1,
+  "repair_cycle_definition": "Failed manual evidence review followed by model source correction, even when the selected CLI checks returned exit 0.",
+  "repairs": [
+    {
+      "cycle": 1,
+      "finding": "The conveyor lower rails were half a stud off the base stud rows; full inspection showed a separate 33-part rigid conveyor group.",
+      "correction": "Translate every conveyor rigid placement except the mounted base by +10 LDU in Z; chain follows wheels; add two eight-stud base-to-rail required joints.",
+      "result": "Final full contact report has one 143-part rigid group, 24 chain-link groups and three hose groups."
+    }
+  ],
+  "interventions": 0,
+  "toolkit_modified": false,
+  "checks": {
+    "review_checks_passed": true,
+    "stages": {
+      "validation": "passed",
+      "bom": "passed",
+      "render": "passed",
+      "bom_comparison": "passed"
+    },
+    "contacts": "all; no skipped coverage",
+    "required_joint_counts": {
+      "workshop.ldr": 61,
+      "box-chassis.ldr": 24,
+      "chain-drive.ldr": 27
+    },
+    "physical_placements": 170,
+    "leocad_placements": 170,
+    "bom_matches": true,
+    "model_sha256": "83ddc50892f63865dab337320eed3262b8bd95288313a04298cb1d78e8bd5ec3",
+    "source_sha256": "a085a59e8d312287e7e7b280c9234b987af221c6c766999d2035789f65639b48",
+    "hose_limits": {
+      "min_radius_ldu": 15,
+      "tube_radius_ldu": 5,
+      "min_separation_ldu": 10
+    },
+    "sampled_hose_radii_ldu": {
+      "supply": 20.11534258534435,
+      "raise": 19.817443576484784,
+      "lower": 21.805395947453114
+    },
+    "hose_pair_separations": [
+      {
+        "routes": [
+          "supply",
+          "raise"
+        ],
+        "distance_ldu": 12.529964086141668,
+        "required_ldu": 10
+      },
+      {
+        "routes": [
+          "supply",
+          "lower"
+        ],
+        "distance_ldu": 12.52943398317593,
+        "required_ldu": 10
+      },
+      {
+        "routes": [
+          "raise",
+          "lower"
+        ],
+        "distance_ldu": 11.200236916011214,
+        "required_ldu": 10
+      }
+    ]
+  },
+  "features": {
+    "braced_supporting_frame": "Two box-chassis trestles; preserved fixed-structure contracts pass.",
+    "attached_workbench": "Bonded two-course System bench, retained pin-to-frame and pin-to-deck joint checks.",
+    "supported_retained_shafts": "Two bearings per shaft; 10L drive, 8L idler; contiguous spacer/stops and retention checks; 120 LDU wheel spacing unchanged.",
+    "compatible_chain": "24 synthesized 3711 links around two supported 4019 wheels; final home/top close-up images inspected.",
+    "hand_crank": "Keyed thin crank with retained handle axle and accessible external grip.",
+    "pneumatic_stop": "Mounted 74981-f2 extended cylinder with 116 LDU eye separation and pinned stop face; mounted pump and valve.",
+    "three_hose_circuit": "Pump outlet to valve inlet; valve upper to cylinder base; valve lower to cylinder rod; actual hose checks retained and passed.",
+    "custom_bodywork": "Dark-blue System guard/bodywork, orange accents, new mounted side guards and safety tiles with explicit attachment checks.",
+    "contextual_images": "Final home, front, rear (back), top and underside (bottom) opened, plus final chain home and top.",
+    "reproducible_editable_source": "generate.py and ordinary machine.plan.json; embedded final-review/model.mpd."
+  },
+  "missing_features": [],
+  "snapshot_root": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/authoring-candidate",
+  "artifact_root": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/authoring-candidate/output/trials/complete-machine",
+  "artifacts": {
+    "source_plan": "machine.plan.json",
+    "generator": "generate.py",
+    "editable_mpd": "final-review/model.mpd",
+    "review": "final-review/review.json",
+    "validation": "final-review/validation.json",
+    "python_bom": "final-review/bom.json",
+    "leocad_bom": "final-review/previews/leocad-bom.csv",
+    "bom_comparison": "final-review/bom-comparison.json",
+    "flex_assets_and_manifests": "final-review/flex",
+    "frozen_source": "final-review/sources/1.json",
+    "structural_contracts": "final-review/structure",
+    "previews": "final-review/previews",
+    "chain_closeup_review": "chain-review/review.json",
+    "notes": "notes.md",
+    "command_timings": "commands.jsonl",
+    "previous_revision_source": "revision-1.plan.json",
+    "previous_revision_review": "revision-1-review",
+    "previous_revision_full_inspection": "revision-1-inspection.json"
+  },
+  "images_opened": [
+    {
+      "path": "revision-1-review/previews/home.png",
+      "revision": 1,
+      "view": "home",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "743a5badfe1e2d4e07553a9b15683d4c6b2500ea7bb052433dc08927080146be"
+    },
+    {
+      "path": "revision-1-review/previews/front.png",
+      "revision": 1,
+      "view": "front",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "d0510441f2098d75b84bcc074cf02bc1b9df7938b26ff895ffdfc0b07cabc995"
+    },
+    {
+      "path": "revision-1-review/previews/back.png",
+      "revision": 1,
+      "view": "back",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "fd2b4995e5bffc86f594a6e52f2578fb287e85de175695808eaeb36ca106dd19"
+    },
+    {
+      "path": "revision-1-review/previews/top.png",
+      "revision": 1,
+      "view": "top",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "a38bc53a82b720966bfabbe1ea593f472144e71208fbb4396915c4f705082115"
+    },
+    {
+      "path": "revision-1-review/previews/bottom.png",
+      "revision": 1,
+      "view": "bottom",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "223d3448c2016d1aaff905663a38b4146e57698d39038baa31404f4016b45d3a"
+    },
+    {
+      "path": "revision-1-chain-review/previews/home.png",
+      "revision": 1,
+      "view": "home",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "b6063629c2bcb13937a795ad7462f6843c98177ae845dcc80dcb804eb279a1c0"
+    },
+    {
+      "path": "revision-1-chain-review/previews/front.png",
+      "revision": 1,
+      "view": "front",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "a8db353218f88090da9ddeabd4b5154fea90cec02dc16915cc00887a0e580d11"
+    },
+    {
+      "path": "revision-1-chain-review/previews/back.png",
+      "revision": 1,
+      "view": "back",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "1d3fdaaf5a2c908c8c9d5fde9f017a7b98ad473ac9f2737e18e0d14b57d6a1c8"
+    },
+    {
+      "path": "revision-1-chain-review/previews/top.png",
+      "revision": 1,
+      "view": "top",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "f032a7764a759e275a62705080c27148cf6acca2d25857b0d4d7d5684a06b057"
+    },
+    {
+      "path": "final-review/previews/home.png",
+      "revision": 2,
+      "view": "home",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "9b489965d11242af089edb29c33c34e95edfddfb2241c81866f6bd480e8561e2"
+    },
+    {
+      "path": "final-review/previews/front.png",
+      "revision": 2,
+      "view": "front",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "5fd4c7d2ddf9cc2091404e99e60cb9b1efa7b80b0120030ff83c0f75e6b36e0c"
+    },
+    {
+      "path": "final-review/previews/back.png",
+      "revision": 2,
+      "view": "back",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "517be61c14714b102b14ee44d32af5bbbc51dcffa6fec83bb9ad73826cc320b0"
+    },
+    {
+      "path": "final-review/previews/top.png",
+      "revision": 2,
+      "view": "top",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "c40dca9f93db4d983b972e90c47d345f9d43b5f264342061d211a8b7d873f198"
+    },
+    {
+      "path": "final-review/previews/bottom.png",
+      "revision": 2,
+      "view": "bottom",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "111a10e778c8b7e63fce60411d4677265ed1615a0cb93df8bd8150bc28920f47"
+    },
+    {
+      "path": "chain-review/previews/home.png",
+      "revision": 2,
+      "view": "home",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "5bd999fed699e7ba20e8a33d9bb8913154bc597d42712dfecc248b35b4701d44"
+    },
+    {
+      "path": "chain-review/previews/top.png",
+      "revision": 2,
+      "view": "top",
+      "opened": true,
+      "open_method": "functions tools.view_image; actual image content inspected",
+      "sha256": "aec7a228e091ff99da6f0db8a4ae423c763802cd947087e52b6edfad97414ffe"
+    }
+  ],
+  "limitations": [
+    "One extended static pose only. No verified motion, pressure circuit simulation, transport performance, strength, stability, chain tension, changing hose slack or physical buildability.",
+    "Finite sampled hose geometry is not a manufactured hose-length or full material-intersection proof.",
+    "Chain closure and tooth engagement were visually inspected; no analytical closure or dynamic engagement certification exists.",
+    "Final disconnected-evidence warning corresponds to 24 synthesized chain links and three hoses outside one connected 143-part rigid group.",
+    "Unknown Technic structural taxonomy remains for the chain links and valve; actual valve mount and named hose endpoints have separate checks.",
+    "Six hose obstacle bounds candidates are fitting endpoint regions; sleeves inspected in context. Conservative bounds include voids, so general collision freedom is not certified.",
+    "Inherited 3023 valve pad is an inspected alias resolving to 3023b, with geometry and connector metadata complete; preserved in matching BOMs.",
+    "Real commercial part/colour availability and physical insertion swept paths are not certified.",
+    "Timing origin and infrastructure pause boundaries are estimated; individually unmeasured tool time is explicitly not reported as measured."
+  ]
+}

@@ -18,28 +18,35 @@ Open the PNGs in `output/bridge-review/previews/`. The same folder contains the 
 
 ## Build your own model
 
-Give an agent your model idea and [instructions.md](instructions.md). The working loop is:
+Give an agent your model idea and [instructions.md](instructions.md). Follow one sequence:
 
-1. Choose a design and inspect the parts or example constructions it needs.
-2. Write a [JSON plan](docs/agent/plans.md); use Python when calculations or loops help.
-3. Run `review`, open the previews, repair the source and repeat.
-4. Deliver the editable MPD, source, checks and reviewed images.
+1. **Choose a starter** matching the subject; [workshop examples](examples/workshop/README.md) include a frame, retained drive, pneumatic station and complete machine.
+2. **Assemble supports** in an ordinary [JSON plan](docs/agent/plans.md), keeping required joints beside the geometry.
+3. **Route services** between named fittings or mounted wheels.
+4. **Add bodywork** on actual attachment points.
+5. **Review and deliver** the editable MPD, source, matching BOMs and inspected images.
 
 ```sh
-./ldraw-agent review output/my-model.plan.json
+cp examples/workshop/workshop/model.plan.json output/machine.plan.json
+./ldraw-agent review output/machine.plan.json --views home front back top bottom
 ```
 
-`review` builds the plan and writes checks, BOMs and previews to `output/my-model-review/`. Use `build` when you only need the MPD; it infers `output/my-model.mpd` and writes after checks pass. Use `--force` to replace generated output. Keep editable source and visual-review notes outside the generated review directory.
+Edit the source and rerun with `--force`. For local repairs, use `review PLAN --section chain-drive.ldr --no-render`; final delivery still needs a rendered whole-model review. Keep visual notes outside generated review directories. Use Python when calculations or loops help; it emits the same plan dictionaries.
 
-Technic and LSynth use the same loop. `technic plan` links its structural contract into the plan, so `review PLAN` checks the required joints and assembly order automatically. Flexible assets can declare their editable source directly:
+Technic joints and flexible routes use placement paths such as `controls/pump` or `conveyor/drive-axle`. Reordering parts keeps the intended joints; moving or rotating fittings updates their hose endpoints. An ordinary plan step can contain:
 
 ```json
-"assets": [{"source": "hoses.ldr", "namespace": "my-hoses", "checks": {"min_radius": 15}}]
+{"id":"supply", "colour":0, "flex":{
+  "method":"TECHNIC_PNEUMATIC_HOSE_BEVELED",
+  "from":{"part":"controls/pump", "port":"outlet", "lead":22},
+  "to":{"part":"controls/valve", "port":"inlet", "lead":22},
+  "checks":{"min_radius":15, "tube_radius":5, "min_separation":10}
+}}
 ```
 
-`build` and `review` check the constraints, synthesize the asset and measure the result before using it. Unchanged synthesis inputs reuse cached LSynth output; packaging and checks still run. Choose bend limits for the actual route. See the [plan guide](docs/agent/plans.md#generated-flexible-assets) and the [pneumatic press](examples/flex/pneumatic-press/README.md) for complete examples.
+Those limits belong to the pneumatic starter. `review` checks actual synthesized geometry and route interactions; unchanged inputs reuse raw synthesis while current checks run again. See [named authoring](docs/agent/authoring.md) for supported ports, wheel ownership, inline contracts and repair diagnostics.
 
-Existing JSON plans, `build --output`, individual check/render commands and shell wrappers remain supported. Successful checks provide evidence, not proof of physical buildability; warnings, skipped checks and required visual inspection stay explicit.
+Existing plans, numeric external contracts, `.ldr` flex sources, prebuilt assets, Python helpers, CLI commands and Mecha handoff remain supported. `technic plan` still exports the original structural recipes; `build` still writes an MPD after checks pass. Successful checks provide evidence, not proof of physical strength, manufactured hose length or general motion correctness. The [verification record](docs/reports/authoring-simplification.md) includes compatibility checks, opened renders and independent trials.
 
 | Need | Read |
 |---|---|

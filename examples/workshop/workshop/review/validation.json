@@ -24,7 +24,7 @@
       "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
       "line_number": null,
       "section": null,
-      "component_count": 29
+      "component_count": 28
     },
     {
       "code": "coverage.collision_review",
@@ -672,6 +672,13 @@
         }
       ],
       "section": "chain-drive.ldr"
+    },
+    {
+      "code": "technic.assembly_access_unreviewed",
+      "message": "No connector-before-closure steps supplied; insertion paths need review.",
+      "severity": "warning",
+      "instances": [],
+      "section": "stop-frame.ldr"
     }
   ],
   "geometry": {
@@ -692,7 +699,7 @@
       "max": [
         160.0,
         176.0,
-        194.5
+        204.5
       ]
     },
     "occurrence_count": 160,
@@ -701,15 +708,15 @@
     "instances": [],
     "instances_truncated": true,
     "contacts_checked": true,
-    "contact_count": 591,
+    "contact_count": 607,
     "contacts": [],
     "contacts_truncated": true,
     "confirmed_components": null,
     "optimistic_components": null,
-    "optimistic_component_count": 29,
+    "optimistic_component_count": 28,
     "confirmed_component_count": 46,
     "components_truncated": true,
-    "overlap_candidate_count": 265,
+    "overlap_candidate_count": 244,
     "overlaps": [],
     "overlaps_truncated": true,
     "diagnostics": [
@@ -719,7 +726,7 @@
         "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
         "line_number": null,
         "section": null,
-        "component_count": 29
+        "component_count": 28
       },
       {
         "code": "coverage.collision_review",
@@ -771,14 +778,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "core-side--1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -817,14 +824,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-0",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/1/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -863,14 +870,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-2",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/1/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -909,14 +916,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-4",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/1/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -955,14 +962,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-6",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/1/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1001,14 +1008,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "core-level--1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1047,14 +1054,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "core-level-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/2/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1093,14 +1100,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1139,14 +1146,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-10",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1185,14 +1192,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-11",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1231,14 +1238,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-3",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1277,14 +1284,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-5",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/4",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1323,14 +1330,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-7",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/5",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1369,14 +1376,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-8",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/6",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1415,14 +1422,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-9",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/7",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1461,14 +1468,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "core-side-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1507,14 +1514,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "rail--1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/5/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1553,14 +1560,14 @@
           "placement": "trestle--80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "rail-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/5/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1599,14 +1606,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "core-side--1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1645,14 +1652,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-0",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/1/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1691,14 +1698,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-2",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/1/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1737,14 +1744,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-4",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/1/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1783,14 +1790,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-6",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/1/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1829,14 +1836,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "core-level--1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1875,14 +1882,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "core-level-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/2/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1921,14 +1928,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -1967,14 +1974,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-10",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2013,14 +2020,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-11",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2059,14 +2066,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-3",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2105,14 +2112,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-5",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/4",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2151,14 +2158,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-7",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/5",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2197,14 +2204,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-8",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/6",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2243,14 +2250,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "pin-9",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/3/7",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2289,14 +2296,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "core-side-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2335,14 +2342,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "rail--1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/5/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2381,14 +2388,14 @@
           "placement": "trestle-80",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "box-chassis.ldr",
           "placement": "rail-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/1/steps/5/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2427,7 +2434,7 @@
           "placement": "mount--80--1--100",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2466,7 +2473,7 @@
           "placement": "mount--80--1--40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2505,7 +2512,7 @@
           "placement": "mount--80--1-40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2544,7 +2551,7 @@
           "placement": "mount--80--1-100",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2583,7 +2590,7 @@
           "placement": "mount--80-1--100",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/4",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2622,7 +2629,7 @@
           "placement": "mount--80-1--40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/5",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2661,7 +2668,7 @@
           "placement": "mount--80-1-40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/6",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2700,7 +2707,7 @@
           "placement": "mount--80-1-100",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/7",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2739,7 +2746,7 @@
           "placement": "mount-80--1--100",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/8",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2778,7 +2785,7 @@
           "placement": "mount-80--1--40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/9",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2817,7 +2824,7 @@
           "placement": "mount-80--1-40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/10",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2856,7 +2863,7 @@
           "placement": "mount-80--1-100",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/11",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2895,7 +2902,7 @@
           "placement": "mount-80-1--100",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/12",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2934,7 +2941,7 @@
           "placement": "mount-80-1--40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/13",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -2973,7 +2980,7 @@
           "placement": "mount-80-1-40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/14",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3012,7 +3019,7 @@
           "placement": "mount-80-1-100",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/1/15",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3051,14 +3058,14 @@
           "placement": "bench",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "workbench.ldr",
           "placement": "lower-front",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/2/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3097,14 +3104,14 @@
           "placement": "bench",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "workbench.ldr",
           "placement": "lower-rear",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/2/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3143,14 +3150,14 @@
           "placement": "bench",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "workbench.ldr",
           "placement": "upper-middle",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/2/steps/1/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3189,14 +3196,14 @@
           "placement": "bench",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "workbench.ldr",
           "placement": "upper--80--120",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/2/steps/1/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3235,14 +3242,14 @@
           "placement": "bench",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "workbench.ldr",
           "placement": "upper--80-120",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/2/steps/1/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3281,14 +3288,14 @@
           "placement": "bench",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "workbench.ldr",
           "placement": "upper-80--120",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/2/steps/1/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3327,14 +3334,14 @@
           "placement": "bench",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "workbench.ldr",
           "placement": "upper-80-120",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/2/steps/1/4",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3348,7 +3355,7 @@
       "position": [
         0.0,
         -8.0,
-        40.0
+        60.0
       ],
       "matrix": [
         [
@@ -3373,14 +3380,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "base",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3394,7 +3401,7 @@
       "position": [
         0.0,
         -32.0,
-        0.0
+        10.0
       ],
       "matrix": [
         [
@@ -3419,14 +3426,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "rail--40--24",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/1/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3440,7 +3447,7 @@
       "position": [
         0.0,
         -32.0,
-        80.0
+        90.0
       ],
       "matrix": [
         [
@@ -3465,14 +3472,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "rail-40--24",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/1/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3486,7 +3493,7 @@
       "position": [
         0.0,
         -56.0,
-        0.0
+        10.0
       ],
       "matrix": [
         [
@@ -3511,14 +3518,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "rail--40--48",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3532,7 +3539,7 @@
       "position": [
         0.0,
         -56.0,
-        80.0
+        90.0
       ],
       "matrix": [
         [
@@ -3557,14 +3564,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "rail-40--48",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/2/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3578,7 +3585,7 @@
       "position": [
         -60.0,
         -80.0,
-        0.0
+        10.0
       ],
       "matrix": [
         [
@@ -3603,14 +3610,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "bearing--60--40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3624,7 +3631,7 @@
       "position": [
         -60.0,
         -80.0,
-        80.0
+        90.0
       ],
       "matrix": [
         [
@@ -3649,14 +3656,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "bearing--60-40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/3/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3670,7 +3677,7 @@
       "position": [
         60.0,
         -80.0,
-        0.0
+        10.0
       ],
       "matrix": [
         [
@@ -3695,14 +3702,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "bearing-60--40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/3/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3716,7 +3723,7 @@
       "position": [
         60.0,
         -80.0,
-        80.0
+        90.0
       ],
       "matrix": [
         [
@@ -3741,14 +3748,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "bearing-60-40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/3/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3762,7 +3769,7 @@
       "position": [
         0.0,
         -88.0,
-        0.0
+        10.0
       ],
       "matrix": [
         [
@@ -3787,14 +3794,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "cap--40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3808,7 +3815,7 @@
       "position": [
         0.0,
         -88.0,
-        80.0
+        90.0
       ],
       "matrix": [
         [
@@ -3833,14 +3840,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "cap-40",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/4/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3854,7 +3861,7 @@
       "position": [
         -60.0,
         -70.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -3879,14 +3886,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "drive-axle",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/5/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3900,7 +3907,7 @@
       "position": [
         -60.0,
         -70.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -3925,14 +3932,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "drive-gear",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/6/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3946,7 +3953,7 @@
       "position": [
         -60.0,
         -70.0,
-        15.0
+        25.0
       ],
       "matrix": [
         [
@@ -3971,14 +3978,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "drive-spacer--25",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/6/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -3992,7 +3999,7 @@
       "position": [
         -60.0,
         -70.0,
-        25.0
+        35.0
       ],
       "matrix": [
         [
@@ -4017,14 +4024,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "drive-spacer--15",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/6/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4038,52 +4045,6 @@
       "position": [
         -60.0,
         -70.0,
-        55.0
-      ],
-      "matrix": [
-        [
-          1.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.0,
-          1.0,
-          0.0
-        ],
-        [
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "sources": [
-        {
-          "section": "workshop.ldr",
-          "placement": "conveyor",
-          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
-          "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
-        },
-        {
-          "section": "chain-drive.ldr",
-          "placement": "drive-spacer-15",
-          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
-          "pointer": "/sections/3/steps/6/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
-        }
-      ]
-    },
-    {
-      "index": 75,
-      "path": "conveyor/drive-spacer-25",
-      "authored": true,
-      "section": "chain-drive.ldr",
-      "line_number": 191,
-      "part": "32123a.dat",
-      "position": [
-        -60.0,
-        -70.0,
         65.0
       ],
       "matrix": [
@@ -4109,14 +4070,60 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
+        },
+        {
+          "section": "chain-drive.ldr",
+          "placement": "drive-spacer-15",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/6/3",
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "path": "conveyor/drive-spacer-25",
+      "authored": true,
+      "section": "chain-drive.ldr",
+      "line_number": 191,
+      "part": "32123a.dat",
+      "position": [
+        -60.0,
+        -70.0,
+        75.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "workshop.ldr",
+          "placement": "conveyor",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/0/steps/3/0",
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "drive-spacer-25",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/6/4",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4130,7 +4137,7 @@
       "position": [
         -60.0,
         -70.0,
-        -20.0
+        -10.0
       ],
       "matrix": [
         [
@@ -4155,14 +4162,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "drive-stop--60",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/6/5",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4176,7 +4183,7 @@
       "position": [
         -60.0,
         -70.0,
-        100.0
+        110.0
       ],
       "matrix": [
         [
@@ -4201,14 +4208,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "drive-stop-60",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/6/6",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4222,7 +4229,7 @@
       "position": [
         60.0,
         -70.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -4247,14 +4254,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "idler-axle",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/7/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4268,7 +4275,7 @@
       "position": [
         60.0,
         -70.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -4293,14 +4300,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "idler-gear",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/8/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4310,52 +4317,6 @@
       "authored": true,
       "section": "chain-drive.ldr",
       "line_number": 203,
-      "part": "32123a.dat",
-      "position": [
-        60.0,
-        -70.0,
-        15.0
-      ],
-      "matrix": [
-        [
-          1.0,
-          0.0,
-          0.0
-        ],
-        [
-          0.0,
-          1.0,
-          0.0
-        ],
-        [
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "sources": [
-        {
-          "section": "workshop.ldr",
-          "placement": "conveyor",
-          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
-          "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
-        },
-        {
-          "section": "chain-drive.ldr",
-          "placement": "idler-spacer--25",
-          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
-          "pointer": "/sections/3/steps/8/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
-        }
-      ]
-    },
-    {
-      "index": 81,
-      "path": "conveyor/idler-spacer--15",
-      "authored": true,
-      "section": "chain-drive.ldr",
-      "line_number": 205,
       "part": "32123a.dat",
       "position": [
         60.0,
@@ -4385,28 +4346,28 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
-          "placement": "idler-spacer--15",
+          "placement": "idler-spacer--25",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
-          "pointer": "/sections/3/steps/8/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "pointer": "/sections/3/steps/8/1",
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
     {
-      "index": 82,
-      "path": "conveyor/idler-spacer-15",
+      "index": 81,
+      "path": "conveyor/idler-spacer--15",
       "authored": true,
       "section": "chain-drive.ldr",
-      "line_number": 207,
+      "line_number": 205,
       "part": "32123a.dat",
       "position": [
         60.0,
         -70.0,
-        55.0
+        35.0
       ],
       "matrix": [
         [
@@ -4431,23 +4392,23 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
-          "placement": "idler-spacer-15",
+          "placement": "idler-spacer--15",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
-          "pointer": "/sections/3/steps/8/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "pointer": "/sections/3/steps/8/2",
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
     {
-      "index": 83,
-      "path": "conveyor/idler-spacer-25",
+      "index": 82,
+      "path": "conveyor/idler-spacer-15",
       "authored": true,
       "section": "chain-drive.ldr",
-      "line_number": 209,
+      "line_number": 207,
       "part": "32123a.dat",
       "position": [
         60.0,
@@ -4477,14 +4438,60 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
+        },
+        {
+          "section": "chain-drive.ldr",
+          "placement": "idler-spacer-15",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/3/steps/8/3",
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "path": "conveyor/idler-spacer-25",
+      "authored": true,
+      "section": "chain-drive.ldr",
+      "line_number": 209,
+      "part": "32123a.dat",
+      "position": [
+        60.0,
+        -70.0,
+        75.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "sources": [
+        {
+          "section": "workshop.ldr",
+          "placement": "conveyor",
+          "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
+          "pointer": "/sections/0/steps/3/0",
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "idler-spacer-25",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/8/4",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4498,7 +4505,7 @@
       "position": [
         60.0,
         -70.0,
-        -20.0
+        -10.0
       ],
       "matrix": [
         [
@@ -4523,14 +4530,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "idler-stop--60",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/8/5",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4544,7 +4551,7 @@
       "position": [
         60.0,
         -70.0,
-        100.0
+        110.0
       ],
       "matrix": [
         [
@@ -4569,14 +4576,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "idler-stop-60",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/8/6",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4590,7 +4597,7 @@
       "position": [
         -60.0,
         -70.0,
-        115.0
+        125.0
       ],
       "matrix": [
         [
@@ -4615,14 +4622,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "crank",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/9/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4636,7 +4643,7 @@
       "position": [
         -60.0,
         -70.0,
-        130.0
+        140.0
       ],
       "matrix": [
         [
@@ -4661,14 +4668,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "crank-stop",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/9/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4682,7 +4689,7 @@
       "position": [
         -60.0,
         -110.0,
-        145.0
+        155.0
       ],
       "matrix": [
         [
@@ -4707,14 +4714,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "handle-axle",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/9/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4728,7 +4735,7 @@
       "position": [
         -60.0,
         -110.0,
-        105.0
+        115.0
       ],
       "matrix": [
         [
@@ -4753,14 +4760,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "handle-inner",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/10/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4774,7 +4781,7 @@
       "position": [
         -60.0,
         -110.0,
-        130.0
+        140.0
       ],
       "matrix": [
         [
@@ -4799,14 +4806,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "handle-grip-90",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/10/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4820,7 +4827,7 @@
       "position": [
         -60.0,
         -110.0,
-        150.0
+        160.0
       ],
       "matrix": [
         [
@@ -4845,14 +4852,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "handle-grip-110",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/10/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4866,7 +4873,7 @@
       "position": [
         -60.0,
         -110.0,
-        170.0
+        180.0
       ],
       "matrix": [
         [
@@ -4891,14 +4898,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "handle-grip-130",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/10/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -4912,7 +4919,7 @@
       "position": [
         -44.0,
         -52.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -4937,14 +4944,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -4954,7 +4961,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -4985,7 +4992,7 @@
       "position": [
         -29.0,
         -52.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5010,14 +5017,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5027,7 +5034,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5058,7 +5065,7 @@
       "position": [
         -14.0,
         -52.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5083,14 +5090,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5100,7 +5107,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5131,7 +5138,7 @@
       "position": [
         1.0,
         -52.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5156,14 +5163,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5173,7 +5180,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5204,7 +5211,7 @@
       "position": [
         16.0,
         -52.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5229,14 +5236,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5246,7 +5253,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5277,7 +5284,7 @@
       "position": [
         31.0,
         -52.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5302,14 +5309,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5319,7 +5326,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5350,7 +5357,7 @@
       "position": [
         46.0,
         -52.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5375,14 +5382,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5392,7 +5399,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5423,7 +5430,7 @@
       "position": [
         61.0,
         -52.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5448,14 +5455,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5465,7 +5472,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5496,7 +5503,7 @@
       "position": [
         -60.0,
         -52.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5521,14 +5528,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5538,7 +5545,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5569,7 +5576,7 @@
       "position": [
         -74.073,
         -58.7772,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5594,14 +5601,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5611,7 +5618,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5642,7 +5649,7 @@
       "position": [
         -77.5487,
         -74.0054,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5667,14 +5674,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5684,7 +5691,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5715,7 +5722,7 @@
       "position": [
         -67.8099,
         -86.2174,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5740,14 +5747,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5757,7 +5764,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5788,7 +5795,7 @@
       "position": [
         44.0,
         -88.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5813,14 +5820,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5830,7 +5837,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5861,7 +5868,7 @@
       "position": [
         29.0,
         -88.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5886,14 +5893,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5903,7 +5910,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -5934,7 +5941,7 @@
       "position": [
         14.0,
         -88.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -5959,14 +5966,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -5976,7 +5983,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6007,7 +6014,7 @@
       "position": [
         -1.0,
         -88.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -6032,14 +6039,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -6049,7 +6056,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6080,7 +6087,7 @@
       "position": [
         -16.0,
         -88.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -6105,14 +6112,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -6122,7 +6129,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6153,7 +6160,7 @@
       "position": [
         -31.0,
         -88.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -6178,14 +6185,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -6195,7 +6202,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6226,7 +6233,7 @@
       "position": [
         -46.0,
         -88.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -6251,14 +6258,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -6268,7 +6275,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6299,7 +6306,7 @@
       "position": [
         -61.0,
         -88.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -6324,14 +6331,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -6341,7 +6348,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6372,7 +6379,7 @@
       "position": [
         60.0,
         -88.0,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -6397,14 +6404,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -6414,7 +6421,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6445,7 +6452,7 @@
       "position": [
         74.073,
         -81.2228,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -6470,14 +6477,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -6487,7 +6494,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6518,7 +6525,7 @@
       "position": [
         77.5487,
         -65.99459999999999,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -6543,14 +6550,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -6560,7 +6567,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6591,7 +6598,7 @@
       "position": [
         67.8099,
         -53.7826,
-        40.0
+        50.0
       ],
       "matrix": [
         [
@@ -6616,14 +6623,14 @@
           "placement": "conveyor",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "chain-drive.ldr",
           "placement": "chain",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/3/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -6633,7 +6640,7 @@
         "at": [
           0.0,
           -8.0,
-          40.0
+          50.0
         ],
         "matrix": [
           [
@@ -6689,14 +6696,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "foot--140",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -6735,14 +6742,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "foot-140",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -6781,14 +6788,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column--140-0",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/1/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -6827,14 +6834,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column-140-0",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/1/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -6873,14 +6880,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column--140-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -6919,14 +6926,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column-140-1",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/2/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -6965,14 +6972,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column--140-2",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7011,14 +7018,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column-140-2",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/3/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7057,14 +7064,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column--140-3",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7103,14 +7110,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column-140-3",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/4/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7149,14 +7156,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column--140-4",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/5/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7195,14 +7202,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column-140-4",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/5/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7241,14 +7248,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column--140-5",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/6/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7287,14 +7294,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column-140-5",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/6/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7333,14 +7340,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column--140-6",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/7/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7379,14 +7386,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column-140-6",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/7/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7425,14 +7432,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column--140-7",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/8/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7471,14 +7478,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column-140-7",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/8/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7517,14 +7524,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column--140-8",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/9/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7563,14 +7570,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "column-140-8",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/9/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7609,14 +7616,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "beam",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/10/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7655,14 +7662,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "cap--140",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/10/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7701,14 +7708,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "cap-140",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/10/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7747,14 +7754,14 @@
           "placement": "gantry",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/4/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-frame.ldr",
           "placement": "top",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/4/steps/11/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7793,14 +7800,14 @@
           "placement": "ram",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-ram.ldr",
           "placement": "cylinder",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/5/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7839,14 +7846,14 @@
           "placement": "ram",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-ram.ldr",
           "placement": "mount-pin",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/5/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7885,14 +7892,14 @@
           "placement": "ram",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-ram.ldr",
           "placement": "head-pin",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/5/steps/1/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7931,14 +7938,14 @@
           "placement": "ram",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-ram.ldr",
           "placement": "head",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/5/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -7977,14 +7984,14 @@
           "placement": "ram",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "stop-ram.ldr",
           "placement": "stop",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/5/steps/3/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8023,14 +8030,14 @@
           "placement": "controls",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "controls.ldr",
           "placement": "pump-base",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/6/steps/0/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8069,14 +8076,14 @@
           "placement": "controls",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "controls.ldr",
           "placement": "valve-base",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/6/steps/0/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8115,14 +8122,14 @@
           "placement": "controls",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "controls.ldr",
           "placement": "pump-pad",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/6/steps/1/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8161,14 +8168,14 @@
           "placement": "controls",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "controls.ldr",
           "placement": "valve-pad",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/6/steps/1/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8207,14 +8214,14 @@
           "placement": "controls",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "controls.ldr",
           "placement": "pump",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/6/steps/2/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8253,14 +8260,14 @@
           "placement": "controls",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/5/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         },
         {
           "section": "controls.ldr",
           "placement": "valve",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/6/steps/2/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8299,7 +8306,7 @@
           "placement": "supply",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/6/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -8365,7 +8372,7 @@
           "placement": "raise",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/7/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -8431,7 +8438,7 @@
           "placement": "lower",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/8/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ],
       "inline_route": {
@@ -8497,7 +8504,7 @@
           "placement": "control-guard",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/9/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8536,7 +8543,7 @@
           "placement": "guard-tile--60",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/10/0",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8575,7 +8582,7 @@
           "placement": "guard-tile--20",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/10/1",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8614,7 +8621,7 @@
           "placement": "guard-tile-20",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/10/2",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     },
@@ -8653,7 +8660,7 @@
           "placement": "guard-tile-60",
           "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
           "pointer": "/sections/0/steps/10/3",
-          "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+          "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
         }
       ]
     }
@@ -9240,7 +9247,7 @@
         "placement": "chain",
         "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
         "pointer": "/sections/3/steps/11/0",
-        "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+        "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
       }
     },
     {
@@ -9456,7 +9463,7 @@
         "placement": "supply",
         "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
         "pointer": "/sections/0/steps/6/0",
-        "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+        "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
       }
     },
     {
@@ -9685,7 +9692,7 @@
         "placement": "raise",
         "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
         "pointer": "/sections/0/steps/7/0",
-        "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+        "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
       }
     },
     {
@@ -9914,7 +9921,7 @@
         "placement": "lower",
         "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
         "pointer": "/sections/0/steps/8/0",
-        "sha256": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+        "sha256": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
       }
     }
   ],
@@ -9954,7 +9961,7 @@
           116,
           151
         ],
-        "required_joints": 43,
+        "required_joints": 54,
         "assembly_constraints": 16,
         "insertion_paths": "manual_review_required",
         "material_collisions": "interface_seating_only"
@@ -11448,7 +11455,7 @@
           "position": [
             -60.0,
             -70.0,
-            0.0
+            10.0
           ],
           "axis": [
             0.0,
@@ -11471,7 +11478,7 @@
           "position": [
             -60.0,
             -70.0,
-            80.0
+            90.0
           ],
           "axis": [
             0.0,
@@ -11494,7 +11501,7 @@
           "position": [
             60.0,
             -70.0,
-            0.0
+            10.0
           ],
           "axis": [
             0.0,
@@ -11517,7 +11524,7 @@
           "position": [
             60.0,
             -70.0,
-            80.0
+            90.0
           ],
           "axis": [
             0.0,
@@ -11540,7 +11547,7 @@
           "position": [
             -60.0,
             -70.0,
-            40.0
+            50.0
           ],
           "axis": [
             0.0,
@@ -11563,7 +11570,7 @@
           "position": [
             -60.0,
             -70.0,
-            15.0
+            25.0
           ],
           "axis": [
             0.0,
@@ -11586,7 +11593,7 @@
           "position": [
             -60.0,
             -70.0,
-            25.0
+            35.0
           ],
           "axis": [
             0.0,
@@ -11609,7 +11616,7 @@
           "position": [
             -60.0,
             -70.0,
-            55.0
+            65.0
           ],
           "axis": [
             0.0,
@@ -11632,7 +11639,7 @@
           "position": [
             -60.0,
             -70.0,
-            65.0
+            75.0
           ],
           "axis": [
             0.0,
@@ -11655,7 +11662,7 @@
           "position": [
             -60.0,
             -70.0,
-            -20.0
+            -10.0
           ],
           "axis": [
             0.0,
@@ -11678,7 +11685,7 @@
           "position": [
             -60.0,
             -70.0,
-            100.0
+            110.0
           ],
           "axis": [
             0.0,
@@ -11701,7 +11708,7 @@
           "position": [
             -60.0,
             -70.0,
-            115.0
+            125.0
           ],
           "axis": [
             0.0,
@@ -11724,7 +11731,7 @@
           "position": [
             -60.0,
             -70.0,
-            130.0
+            140.0
           ],
           "axis": [
             0.0,
@@ -11747,7 +11754,7 @@
           "position": [
             60.0,
             -70.0,
-            40.0
+            50.0
           ],
           "axis": [
             0.0,
@@ -11770,7 +11777,7 @@
           "position": [
             60.0,
             -70.0,
-            15.0
+            25.0
           ],
           "axis": [
             0.0,
@@ -11793,7 +11800,7 @@
           "position": [
             60.0,
             -70.0,
-            25.0
+            35.0
           ],
           "axis": [
             0.0,
@@ -11816,7 +11823,7 @@
           "position": [
             60.0,
             -70.0,
-            55.0
+            65.0
           ],
           "axis": [
             0.0,
@@ -11839,7 +11846,7 @@
           "position": [
             60.0,
             -70.0,
-            65.0
+            75.0
           ],
           "axis": [
             0.0,
@@ -11862,7 +11869,7 @@
           "position": [
             60.0,
             -70.0,
-            -20.0
+            -10.0
           ],
           "axis": [
             0.0,
@@ -11885,7 +11892,7 @@
           "position": [
             60.0,
             -70.0,
-            100.0
+            110.0
           ],
           "axis": [
             0.0,
@@ -11908,7 +11915,7 @@
           "position": [
             -60.0,
             -110.0,
-            115.0
+            125.0
           ],
           "axis": [
             0.0,
@@ -11931,7 +11938,7 @@
           "position": [
             -60.0,
             -110.0,
-            105.0
+            115.0
           ],
           "axis": [
             0.0,
@@ -11954,7 +11961,7 @@
           "position": [
             -60.0,
             -110.0,
-            130.0
+            140.0
           ],
           "axis": [
             0.0,
@@ -11977,7 +11984,7 @@
           "position": [
             -60.0,
             -110.0,
-            150.0
+            160.0
           ],
           "axis": [
             0.0,
@@ -12000,7 +12007,7 @@
           "position": [
             -60.0,
             -110.0,
-            170.0
+            180.0
           ],
           "axis": [
             0.0,
@@ -12476,8 +12483,8 @@
         "STEP constraints check ordering, not swept insertion paths; inspect hidden joints and build order.",
         "Run normal geometry validation too; hole seating does not waive unrelated material overlaps."
       ],
-      "contract": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/contracts/39a3e54a3eee8fc2b47f3eedc0a61f2283b8460d9bc869b448c997db17acdf4b.json",
-      "contract_sha256": "39a3e54a3eee8fc2b47f3eedc0a61f2283b8460d9bc869b448c997db17acdf4b"
+      "contract": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/contracts/2f96a8cc25b311d499067b9ccf3b8a3f19478322ca8d91459aa7c32fb9cc6940.json",
+      "contract_sha256": "2f96a8cc25b311d499067b9ccf3b8a3f19478322ca8d91459aa7c32fb9cc6940"
     },
     "box-chassis.ldr": {
       "scope": "technic-structure",
@@ -13165,7 +13172,7 @@
           56,
           57
         ],
-        "required_joints": 25,
+        "required_joints": 37,
         "assembly_constraints": 3,
         "insertion_paths": "manual_review_required",
         "material_collisions": "interface_seating_only"
@@ -13994,15 +14001,51 @@
         "STEP constraints check ordering, not swept insertion paths; inspect hidden joints and build order.",
         "Run normal geometry validation too; hole seating does not waive unrelated material overlaps."
       ],
-      "contract": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/contracts/2c06016aea61067b486d88dc69bdc5321af88c9909ed0b9f96a8bc96db127edc.json",
-      "contract_sha256": "2c06016aea61067b486d88dc69bdc5321af88c9909ed0b9f96a8bc96db127edc"
+      "contract": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/contracts/81cac05654a375b74a6cc7bba227e78f55399e4976a25ace1f3fff441240730f.json",
+      "contract_sha256": "81cac05654a375b74a6cc7bba227e78f55399e4976a25ace1f3fff441240730f"
+    },
+    "stop-frame.ldr": {
+      "scope": "technic-joints",
+      "checks_passed": true,
+      "complete": true,
+      "physical_validity": "not_proven",
+      "occurrence_count": 24,
+      "coverage": {
+        "reviewed_occurrences": 1,
+        "unknown_technic": [],
+        "required_joints": 25,
+        "assembly_constraints": 0,
+        "insertion_paths": "manual_review_required",
+        "material_collisions": "interface_seating_only"
+      },
+      "joint_count": 0,
+      "joints": [],
+      "restrained_groups": [],
+      "locked_member_pairs": [],
+      "pivot_member_pairs": [],
+      "diagnostics": [
+        {
+          "code": "technic.assembly_access_unreviewed",
+          "message": "No connector-before-closure steps supplied; insertion paths need review.",
+          "severity": "warning",
+          "instances": []
+        }
+      ],
+      "limitations": [
+        "Multiple spaced pins provide a conservative restraint pattern, not a general rigidity proof.",
+        "No stress, stiffness, load capacity, manufacturing tolerance or mechanism simulation.",
+        "STEP constraints check ordering, not swept insertion paths; inspect hidden joints and build order.",
+        "Run normal geometry validation too; hole seating does not waive unrelated material overlaps."
+      ],
+      "contract": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/contracts/01e6269e6774a5a8c8ecbd28d290c194a7d8755d187cd0fdc6f5690f1468c04f.json",
+      "contract_sha256": "01e6269e6774a5a8c8ecbd28d290c194a7d8755d187cd0fdc6f5690f1468c04f"
     }
   },
   "source_dependencies": {
-    "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json": "361633b69a10d2b5aaf2199e86a1da105d02b03c98292ae12ef711c852fe07ce"
+    "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json": "85b172afe22a6f589e6db473db5602ada411e696927b838700c439156502a81e"
   },
   "file": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/workshop/workshop/model.plan.json",
   "section": null,
   "profile": "assembly",
-  "model_sha256": "6cd8bf9e7a8e7b421b4be9cb3c166c513457448f61b9f8373c4475807d092158"
+  "model_sha256": "9528c6b36e4486279a0f04012312ed51e35839fa269c806f821ff10c31f0074a"
 }

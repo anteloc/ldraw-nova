@@ -1,0 +1,90 @@
+{
+  "comparison": "Descriptive fixed briefs, same inherited agent model/settings, no model overrides. No statistical completion-rate claim.",
+  "timing": "Active time includes tool waits and excludes separately recorded estimated infrastructure pauses. Subprocess times are summed; concurrent commands may overlap. Other tool latency is not fabricated.",
+  "trials": [
+    {
+      "workflow": "baseline",
+      "brief": "frame-drive",
+      "completed": true,
+      "audited": true,
+      "active_seconds": 837.9355970000033,
+      "measured_subprocess_seconds": 91.16802216740325,
+      "timed_commands": 34,
+      "repair_cycles_as_reported": 1,
+      "interventions": 0,
+      "record": "baseline-frame-drive/result.json"
+    },
+    {
+      "workflow": "baseline",
+      "brief": "pneumatic-passage",
+      "completed": true,
+      "audited": true,
+      "active_seconds": 620.776,
+      "measured_subprocess_seconds": 84.06294375052676,
+      "timed_commands": 37,
+      "repair_cycles_as_reported": 1,
+      "interventions": 0,
+      "record": "baseline-pneumatic-passage/result.json"
+    },
+    {
+      "workflow": "baseline",
+      "brief": "complete-machine",
+      "completed": true,
+      "audited": true,
+      "active_seconds": 1205.526,
+      "measured_subprocess_seconds": 117.79598366771825,
+      "timed_commands": 48,
+      "repair_cycles_as_reported": 5,
+      "interventions": 0,
+      "record": "baseline-complete-machine/result.json"
+    },
+    {
+      "workflow": "candidate",
+      "brief": "frame-drive",
+      "completed": true,
+      "audited": true,
+      "active_seconds": 432.9030829999974,
+      "measured_subprocess_seconds": 28.986008332576603,
+      "timed_commands": 22,
+      "repair_cycles_as_reported": 1,
+      "interventions": 0,
+      "record": "candidate-frame-drive/result.json"
+    },
+    {
+      "workflow": "candidate",
+      "brief": "pneumatic-passage",
+      "completed": true,
+      "audited": true,
+      "active_seconds": 540.7813590000005,
+      "measured_subprocess_seconds": 85.93350112787448,
+      "timed_commands": 19,
+      "repair_cycles_as_reported": 1,
+      "interventions": 0,
+      "record": "candidate-pneumatic-passage/result.json"
+    },
+    {
+      "workflow": "candidate",
+      "brief": "complete-machine",
+      "completed": true,
+      "audited": true,
+      "active_seconds": 615.571194,
+      "measured_subprocess_seconds": 84.10806475067511,
+      "timed_commands": 19,
+      "repair_cycles_as_reported": 1,
+      "interventions": 0,
+      "record": "candidate-complete-machine/result.json"
+    },
+    {
+      "workflow": "candidate-v2",
+      "brief": "complete-machine",
+      "completed": true,
+      "audited": true,
+      "active_seconds": 543.8923949999989,
+      "measured_subprocess_seconds": 90.03161079296842,
+      "timed_commands": 18,
+      "repair_cycles_as_reported": 1,
+      "interventions": 0,
+      "record": "candidate-v2-complete-machine/result.json"
+    }
+  ]
+}

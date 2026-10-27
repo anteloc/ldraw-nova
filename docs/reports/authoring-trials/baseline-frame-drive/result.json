@@ -1,0 +1,265 @@
+{
+  "trial": "frame-drive",
+  "variant": "baseline",
+  "completed": true,
+  "outcome": "completed_with_documented_coverage_limits",
+  "start_utc": "2026-10-26T15:41:45+00:00",
+  "end_utc": "2026-10-27T05:57:46.911841+00:00",
+  "wall_elapsed_seconds": 51361.911841,
+  "active_elapsed_seconds": 837.9355970000033,
+  "active_budget_seconds": 1800,
+  "infrastructure_pauses": [
+    {
+      "start_utc": "2026-10-26T15:46:30Z",
+      "end_utc": "2026-10-26T20:26:19Z",
+      "seconds": 16789.0
+    },
+    {
+      "start_utc": "2026-10-26T20:31:59.023756Z",
+      "end_utc": "2026-10-27T05:54:14Z",
+      "seconds": 33734.976244
+    }
+  ],
+  "active_periods": [
+    {
+      "start_utc": "2026-10-26T15:41:45+00:00",
+      "end_utc": "2026-10-26T15:46:30Z",
+      "seconds": 285.0
+    },
+    {
+      "start_utc": "2026-10-26T20:26:19Z",
+      "end_utc": "2026-10-26T20:31:59.023756Z",
+      "seconds": 340.023756
+    },
+    {
+      "start_utc": "2026-10-27T05:54:14Z",
+      "end_utc": "2026-10-27T05:57:46.911841+00:00",
+      "seconds": 212.911841
+    }
+  ],
+  "repair_cycles": 1,
+  "automatic_review_source_repair_cycles": 0,
+  "visual_review_source_repair_cycles": 1,
+  "interventions": 0,
+  "toolkit_changes": false,
+  "physical_placements": 57,
+  "commands": {
+    "path": "commands.jsonl",
+    "count": 34,
+    "total_seconds": 91.16802216740325,
+    "failed_count": 5,
+    "note": "Summed measured subprocess wall seconds; concurrent commands overlap and this is not active elapsed time."
+  },
+  "tool_seconds": {
+    "measured_subprocess_seconds": 91.16802216740325,
+    "other_tool_seconds": null,
+    "unmeasured": "Read-only shell searches/report reads, file edits, metadata/report writing, view_image calls, clock calls, orchestration and reasoning were not separately timed; no duration is fabricated."
+  },
+  "artifact_root": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/authoring-baseline/output/trials/frame-drive",
+  "artifacts": {
+    "editable_mpd": "frame-drive.mpd",
+    "generator": "generate.py",
+    "main_plan": "scene.plan.json",
+    "fixed_frame_plan": "frame.plan.json",
+    "flexible_constraint_source": "chain.ldr",
+    "fixed_structure_contract": "frame.structure.json",
+    "shaft_support_plan": "shaft-supports.plan.json",
+    "shaft_support_contract": "shaft-supports.structure.json",
+    "source_manifest": "source-manifest.json",
+    "reorder_map": "reorder-map.json",
+    "adaptation_notes": "adaptation.md",
+    "review": "scene-review/review.json",
+    "validation": "scene-review/validation.json",
+    "build_report": "build-report.json",
+    "fixed_frame_review": "frame-review/review.json",
+    "shaft_support_review": "shaft-supports-review/review.json",
+    "python_bom": "scene-review/bom.json",
+    "leocad_bom": "scene-review/previews/leocad-bom.csv",
+    "bom_comparison": "scene-review/bom-comparison.json",
+    "flex_asset_manifest": "scene-review/flex/1/asset.manifest.json",
+    "flex_asset": "scene-review/flex/1/asset.mpd",
+    "previews": "scene-review/previews",
+    "manual": "frame-manual/index.html",
+    "manual_metadata": "frame-manual/manual.json",
+    "manual_extraction_manifest": "frame-manual/extraction.json",
+    "visual_notes": "visual-review.md",
+    "visual_record": "visual-review.json",
+    "repair_log": "repair-log.md",
+    "command_timings": "commands.jsonl"
+  },
+  "features": {
+    "mounted_single_assembly": true,
+    "frame": "Original moulded 64179 frame and four crossmembers, plus two doubly pinned 32278 bearing rails",
+    "source_layout_changed": {
+      "source": "examples/flex/chain.ldr",
+      "rotation": "Y -90 degrees",
+      "translation_ldu": [
+        100,
+        0,
+        -20
+      ],
+      "source_wheel_centres": [
+        [
+          -60,
+          0,
+          0
+        ],
+        [
+          60,
+          0,
+          0
+        ]
+      ],
+      "final_wheel_centres": [
+        [
+          100,
+          0,
+          -80
+        ],
+        [
+          100,
+          0,
+          40
+        ]
+      ]
+    },
+    "preserved_chain_dimensions": {
+      "wheel": "4019.dat",
+      "wheel_count": 2,
+      "wheel_teeth": 16,
+      "centre_spacing_ldu": 120,
+      "synthesis_radius_ldu": 18,
+      "rigid_links": 24
+    },
+    "paired_shaft_supports": {
+      "rail_centres_x": [
+        -60,
+        60
+      ],
+      "shaft_centres_z": [
+        -80,
+        40
+      ],
+      "shaft": "3708.dat",
+      "shaft_length_ldu": 240
+    },
+    "axial_retention": "Both shafts stopped at both outer bearing faces; half bushes trap sprocket hubs; added outer half bush retains the keyed hand knob.",
+    "hand_input": "Red keyed 32072 four-lobed knob on the input shaft",
+    "reordered_steps": [
+      2,
+      3,
+      4
+    ],
+    "retained_fixed_required_joints": 24,
+    "insertion_constraints": 12,
+    "retention_witness_required_joints": 32,
+    "physical_envelope_ldu": [
+      240,
+      60,
+      298
+    ]
+  },
+  "checks": {
+    "main_review_passed": true,
+    "main_validation_passed": true,
+    "fixed_frame_passed": true,
+    "shaft_support_passed": true,
+    "flex_source_and_asset_passed": true,
+    "bom_matches": true,
+    "python_bom_count": 57,
+    "leocad_bom_count": 57,
+    "named_mpd_sha256": "6b4befd5a661dda9aab3ee65e404ec12605af36ec210ce9baa0fe97eb2207669",
+    "reviewed_mpd_sha256": "6b4befd5a661dda9aab3ee65e404ec12605af36ec210ce9baa0fe97eb2207669",
+    "physical_validity": "not_proven",
+    "analytical_motion_verification": "deferred"
+  },
+  "images_opened": [
+    {
+      "path": "scene-review/previews/home.png",
+      "sha256": "78e59a06acf8871c80d53b87aa14449d02c1c783dd6739c0da1b4e6ea37b7f03"
+    },
+    {
+      "path": "scene-review/previews/front.png",
+      "sha256": "b6db0a374f83f9290cd41f30944802ada338c13951138667462569574a75b0a1"
+    },
+    {
+      "path": "scene-review/previews/back.png",
+      "sha256": "a2477bbefd9343df39f933e82ebbc297bcc18d49dfd2a6a26d1ac1039c9537b4"
+    },
+    {
+      "path": "scene-review/previews/right.png",
+      "sha256": "e60189ad9ffe59ab78438f1356a0f1b52d9e956a4765b8f771147db8b9073a2c"
+    },
+    {
+      "path": "scene-review/previews/left.png",
+      "sha256": "c6ec1036996fc3b2f56ccc01621fa34fb97c5eef5c179ab5ed1e7969f986cba9"
+    },
+    {
+      "path": "scene-review/previews/top.png",
+      "sha256": "cea3a51a1d3e42ffc5600622122fac8a7bb5078940a7861c4bf7832c8ee8ca7c"
+    },
+    {
+      "path": "scene-review/previews/bottom.png",
+      "sha256": "fd835d830dc6908dd0c7b245242d28fd0d664737cca10eb86b31703aac58ea13"
+    },
+    {
+      "path": "frame-review/previews/home.png",
+      "sha256": "2037c615e7559f9a9c6735301b0db4bf70c21c04aee5a20e6c8afec45d1330ef"
+    },
+    {
+      "path": "frame-review/previews/bottom.png",
+      "sha256": "f0784244c6925f085d4abfbf4601490dd1c74682da63adfae4b5e96eeabb24ac"
+    },
+    {
+      "path": "frame-review/previews/left.png",
+      "sha256": "880571caad35dc6a7015b10a1ac6aacb9b85e7288123353999419e46cfb0865e"
+    },
+    {
+      "path": "frame-manual/manual/00/step-001-home.png",
+      "sha256": "17c85e172debed393ec54ddd8a67c729e2a6d498c25485d310eea030e97d33bd"
+    },
+    {
+      "path": "frame-manual/manual/00/step-001-bottom.png",
+      "sha256": "4faece9ba87664f22a4236a5ad62b506adbdbff35a80f2b2c8722095087f3be0"
+    },
+    {
+      "path": "frame-manual/manual/00/step-002-home.png",
+      "sha256": "4073a3c194d11f61fdaab2846c09930068b5ddc84ed3860c7984bb4ae9e02ed2"
+    },
+    {
+      "path": "frame-manual/manual/00/step-002-bottom.png",
+      "sha256": "31eaf57818511b45fc75a0bd65035a27ca117add34e6439e1da49e5c8a5e4314"
+    },
+    {
+      "path": "frame-manual/manual/00/step-003-home.png",
+      "sha256": "3994533e0d8c9f99b1f2ac9ff32353cefacea24c7f4dbefdac7b734c7c5200d4"
+    },
+    {
+      "path": "frame-manual/manual/00/step-003-bottom.png",
+      "sha256": "c06db378df3af18daba45fbf85627a8fe6e0549c949a44be22cce38785d11d50"
+    },
+    {
+      "path": "frame-manual/manual/00/step-004-home.png",
+      "sha256": "44ece402bb4de6f4ac64b16105fa5d728191f79985a00dbef385ce7612e38004"
+    },
+    {
+      "path": "frame-manual/manual/00/step-004-bottom.png",
+      "sha256": "1a4b8f1d13433c2aff8ed4525e607c38a0d93541fda5a829aea60e432e5bd53c"
+    },
+    {
+      "path": "frame-manual/renders/home.png",
+      "sha256": "d4e0c50ffd15a053cda0f83a1534ced61310045fc4512430459051d0c800503c"
+    }
+  ],
+  "images_opened_count": 19,
+  "missing_features": [],
+  "limitations": [
+    "Physical validity is not proven; strength, fit, complete collision freedom and swept insertion paths are not certified.",
+    "Analytical motion verification is deferred; chain tension, exact seam fit and dynamic tooth/link engagement remain unproven.",
+    "Full-assembly contacts are skipped under the documented mechanism workflow. Fixed frame and actual shaft-support witness receive separate existing structural/contact checks.",
+    "The shaft-support witness omits moving sprockets, chain and knob to respect fixed-structure checker scope; their placement and retaining stacks were inspected in source and final images.",
+    "No dedicated supported hand-chain starter was present in this snapshot; the reinforced-frame, simple chain fixture and supported gear-drive lesson were combined and attributed explicitly.",
+    "Retail availability of colour/part combinations was not checked.",
+    "Infrastructure pause intervals are estimates based on the last completed tool/command and resumption, not continuous activity telemetry."
+  ]
+}

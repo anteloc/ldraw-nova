@@ -1,0 +1,578 @@
+{
+  "trial": "complete-machine",
+  "completed": true,
+  "outcome": "success: all requested static model features delivered, applicable selected checks passed, BOMs match and contextual images opened",
+  "start_utc": "2026-10-27T16:56:09+00:00",
+  "end_utc": "2026-10-27T22:01:10.843084+00:00",
+  "active_elapsed_seconds": 543.8923949999989,
+  "active_elapsed_basis": "UTC wall time including command/tool waits, less estimated infrastructure pause; one-second start/resume clock resolution",
+  "budget_seconds": 5400,
+  "infrastructure_pause": {
+    "start_utc_estimate": "2026-10-27T17:00:17.049311+00:00",
+    "end_utc_estimate": "2026-10-27T21:56:15+00:00",
+    "excluded_seconds_estimate": 17757.950689,
+    "reason": "platform usage interruption; resumed by parent instruction",
+    "basis": "last completed pre-pause wrapped command to first resumed clock reading; exact platform pause boundaries unavailable"
+  },
+  "repair_cycles": 1,
+  "repair_cycle_definition": "failed review followed by a source correction; first bodywork tile on-placement failure corrected to measured explicit coordinates",
+  "aesthetic_revisions": 1,
+  "interventions": 0,
+  "interventions_note": "No outside model repairs, subagents, toolkit modifications or weakened checks; infrastructure resumption recorded separately.",
+  "command_count": 18,
+  "command_seconds": 90.03161079296842,
+  "commands": [
+    {
+      "started": "2026-10-27T16:56:14.423353+00:00",
+      "command": [
+        "./ldraw-agent",
+        "doctor"
+      ],
+      "seconds": 0.5898130000568926,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:56:23.835319+00:00",
+      "command": [
+        ".venv/bin/python",
+        "-c",
+        "import os,shutil,pathlib; print({\"jev_executable\":shutil.which(\"jev-rerank\"),\"database_present\":pathlib.Path(\"data/ldraw-info.db\").is_file(),\"api_key_present\":bool(os.getenv(\"TYPESAFE_API_KEY\"))})"
+      ],
+      "seconds": 0.02225516689941287,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:56:31.883561+00:00",
+      "command": [
+        "jev-rerank",
+        "--db",
+        "data/ldraw-info.db",
+        "--table-field",
+        "PARTS_DESCRIPTIONS_JEV.full_description",
+        "--query",
+        "brick",
+        "--top",
+        "1",
+        "--candidates",
+        "1",
+        "--model",
+        "jev-1.13.0",
+        "--no-score-cache",
+        "--timeout",
+        "10",
+        "--retries",
+        "0",
+        "--json"
+      ],
+      "seconds": 0.9937168329488486,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:57:46.362864+00:00",
+      "command": [
+        ".venv/bin/python",
+        "output/trials/complete-machine/generate.py"
+      ],
+      "seconds": 0.28273637499660254,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:58:18.279565+00:00",
+      "command": [
+        "./ldraw-agent",
+        "part",
+        "3004"
+      ],
+      "seconds": 0.7242989579681307,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:58:18.279565+00:00",
+      "command": [
+        "./ldraw-agent",
+        "catalog",
+        "colours",
+        "dark blue"
+      ],
+      "seconds": 1.3675131250638515,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:57:46.666907+00:00",
+      "command": [
+        "./ldraw-agent",
+        "review",
+        "output/trials/complete-machine/machine.plan.json",
+        "--views",
+        "home",
+        "front",
+        "back",
+        "right",
+        "left",
+        "top",
+        "bottom",
+        "--contacts",
+        "all",
+        "--outdir",
+        "output/trials/complete-machine/initial-review"
+      ],
+      "seconds": 32.98247425002046,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:58:19.029638+00:00",
+      "command": [
+        "./ldraw-agent",
+        "part",
+        "3069b"
+      ],
+      "seconds": 0.6349546669516712,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:58:19.673859+00:00",
+      "command": [
+        "./ldraw-agent",
+        "catalog",
+        "colours",
+        "orange"
+      ],
+      "seconds": 1.1127257919870317,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:59:25.328866+00:00",
+      "command": [
+        ".venv/bin/python",
+        "output/trials/complete-machine/generate.py"
+      ],
+      "seconds": 0.29702708404511213,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:59:25.647360+00:00",
+      "command": [
+        "./ldraw-agent",
+        "review",
+        "output/trials/complete-machine/machine.plan.json",
+        "--views",
+        "home",
+        "front",
+        "back",
+        "right",
+        "left",
+        "top",
+        "bottom",
+        "--contacts",
+        "all",
+        "--outdir",
+        "output/trials/complete-machine/final-review"
+      ],
+      "seconds": 0.6361511249560863,
+      "exit_code": 2
+    },
+    {
+      "started": "2026-10-27T16:59:47.836668+00:00",
+      "command": [
+        ".venv/bin/python",
+        "output/trials/complete-machine/generate.py"
+      ],
+      "seconds": 0.26520787505432963,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T16:59:48.123484+00:00",
+      "command": [
+        "./ldraw-agent",
+        "review",
+        "output/trials/complete-machine/machine.plan.json",
+        "--views",
+        "home",
+        "front",
+        "back",
+        "right",
+        "left",
+        "top",
+        "bottom",
+        "--contacts",
+        "all",
+        "--outdir",
+        "output/trials/complete-machine/final-review"
+      ],
+      "seconds": 28.925827166065574,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T21:56:42.754095+00:00",
+      "command": [
+        "./ldraw-agent",
+        "part",
+        "3023"
+      ],
+      "seconds": 1.0977221250068396,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T21:56:42.754096+00:00",
+      "command": [
+        "./ldraw-agent",
+        "review",
+        "output/trials/complete-machine/machine.plan.json",
+        "--section",
+        "chain-drive.ldr",
+        "--views",
+        "home",
+        "front",
+        "back",
+        "top",
+        "bottom",
+        "--contacts",
+        "all",
+        "--outdir",
+        "output/trials/complete-machine/chain-detail-review"
+      ],
+      "seconds": 12.713285374920815,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T21:58:20.043795+00:00",
+      "command": [
+        "./ldraw-agent",
+        "inspect",
+        "output/trials/complete-machine/final-review/model.mpd",
+        "--contacts",
+        "all",
+        "--detail",
+        "full",
+        "--limit",
+        "1000"
+      ],
+      "seconds": 7.106315542012453,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T21:58:47.204664+00:00",
+      "command": [
+        ".venv/bin/python",
+        "output/trials/complete-machine/generate.py"
+      ],
+      "seconds": 0.2737372920382768,
+      "exit_code": 0
+    },
+    {
+      "started": "2026-10-27T21:58:47.500757+00:00",
+      "command": [
+        "cmp",
+        "output/trials/complete-machine/machine.plan.json",
+        "output/trials/complete-machine/final-review/sources/1.json"
+      ],
+      "seconds": 0.005849041976034641,
+      "exit_code": 0
+    }
+  ],
+  "commands_log": "output/trials/complete-machine/commands.jsonl",
+  "tool_seconds": {
+    "wrapped_subprocess_total": 90.03161079296842,
+    "image_and_orchestration_seconds": null,
+    "note": "Only subprocess command seconds are instrumented by run.py. Other tool/read/edit/reasoning/bookkeeping durations are unmeasured individually and included in active_elapsed_seconds. Concurrent command durations are summed, not deduplicated."
+  },
+  "artifact_paths": {
+    "generator": "output/trials/complete-machine/generate.py",
+    "editable_plan": "output/trials/complete-machine/machine.plan.json",
+    "editable_mpd": "output/trials/complete-machine/final-review/model.mpd",
+    "review": "output/trials/complete-machine/final-review/review.json",
+    "validation": "output/trials/complete-machine/final-review/validation.json",
+    "python_bom": "output/trials/complete-machine/final-review/bom.json",
+    "leocad_bom": "output/trials/complete-machine/final-review/previews/leocad-bom.csv",
+    "bom_comparison": "output/trials/complete-machine/final-review/bom-comparison.json",
+    "flex_manifests": [
+      "output/trials/complete-machine/final-review/flex/1/asset.manifest.json",
+      "output/trials/complete-machine/final-review/flex/2/asset.manifest.json",
+      "output/trials/complete-machine/final-review/flex/3/asset.manifest.json",
+      "output/trials/complete-machine/final-review/flex/4/asset.manifest.json"
+    ],
+    "structural_contracts": "output/trials/complete-machine/final-review/structure",
+    "previews": "output/trials/complete-machine/final-review/previews",
+    "chain_detail": "output/trials/complete-machine/chain-detail-review",
+    "geometry_detail": "output/trials/complete-machine/geometry-detail.json",
+    "notes": "output/trials/complete-machine/design-notes.md",
+    "readme": "output/trials/complete-machine/README.md",
+    "failed_review_evidence": "output/trials/complete-machine/failed-review-01"
+  },
+  "features": {
+    "braced_supporting_frame": {
+      "present": true,
+      "evidence": "Two box-chassis trestles with preserved rigid structural contract; passed."
+    },
+    "attached_workbench": {
+      "present": true,
+      "evidence": "Bonded 320 x 320 LDU plate deck with 16 pin mounts; named root joints and insertion STEP requirements passed."
+    },
+    "supported_retained_shafts": {
+      "present": true,
+      "count": 2,
+      "evidence": "Drive 10L and idler 8L, each with two round bearings, contiguous gear spacers and axial stops; retained axle checks preserved and passed."
+    },
+    "compatible_chain_loop": {
+      "present": true,
+      "wheel_part": "4019.dat",
+      "chain_link_part": "3711.dat",
+      "links": 24,
+      "wheel_spacing_ldu": 120,
+      "evidence": "Generated geometry checks passed; close chain home/top/front/back/bottom images opened; no analytical closure or tension proof."
+    },
+    "accessible_hand_crank": {
+      "present": true,
+      "evidence": "Keyed 3L crank with retained handle axle and grip, visible on open crank side."
+    },
+    "mounted_pump_valve_cylinder": {
+      "present": true,
+      "pump": "2797c01-f1.dat",
+      "valve": "4694c01-f1.dat",
+      "cylinder": "74981-f2.dat",
+      "cylinder_pose": "extended static, 116 LDU eye spacing",
+      "evidence": "Named mounts and cylinder eye pins preserved; applicable joints passed."
+    },
+    "three_hose_circuit": {
+      "present": true,
+      "routes": [
+        "supply",
+        "raise",
+        "lower"
+      ],
+      "limits_ldu": {
+        "min_radius": 15,
+        "tube_radius": 5,
+        "min_separation": 10
+      },
+      "sampled_minimum_radii_ldu": {
+        "supply": 20.11534258534435,
+        "raise": 19.817443576484784,
+        "lower": 21.805395947453114
+      },
+      "pair_separations": [
+        {
+          "routes": [
+            "supply",
+            "raise"
+          ],
+          "distance_ldu": 12.529964086141668,
+          "required_ldu": 10
+        },
+        {
+          "routes": [
+            "supply",
+            "lower"
+          ],
+          "distance_ldu": 12.52943398317593,
+          "required_ldu": 10
+        },
+        {
+          "routes": [
+            "raise",
+            "lower"
+          ],
+          "distance_ldu": 11.200236916011214,
+          "required_ldu": 10
+        }
+      ],
+      "checks_passed": true
+    },
+    "mounted_system_bodywork": {
+      "present": true,
+      "dominant_colour": 272,
+      "accent_colour": 25,
+      "customization": "Dark-blue frame and bodywork, restrained orange gantry bands, full-width front fascia and low right return with orange/black tiles. Added 13 real System parts with named mounting requirements."
+    }
+  },
+  "checks": {
+    "selected_review_passed": true,
+    "stages": {
+      "validation": "passed",
+      "bom": "passed",
+      "render": "passed",
+      "bom_comparison": "passed"
+    },
+    "contacts_requested": "all",
+    "contacts_checked": true,
+    "structure_scopes_passed": {
+      "workshop.ldr": true,
+      "box-chassis.ldr": true,
+      "chain-drive.ldr": true,
+      "stop-frame.ldr": true
+    },
+    "bom_matches": true,
+    "physical_placements": 173,
+    "leocad_placements": 173,
+    "source_reproduction": "Regenerated plan compared byte-identical to final-review/sources/1.json using cmp, exit 0.",
+    "model_sha256": "508484f696a64e353d67988753ca24175f66bb4fae7238df608a5a75a1c17b6c",
+    "source_sha256": "eb631264c794bc4ec35c4a446bb3a6d4bd29a6000fea82dcd5db3f3118277d3e"
+  },
+  "images_opened": [
+    {
+      "path": "output/trials/complete-machine/initial-review/previews/home.png",
+      "view": "home",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "60879558222389ba971e3ecd1c1cffba79ee731a74d93366625aa184b15d5c8c"
+    },
+    {
+      "path": "output/trials/complete-machine/initial-review/previews/front.png",
+      "view": "front",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "f2f2c5a9c820b8809b42ba5c0183be9e582668c7415ed15a0050a67c33ef6342"
+    },
+    {
+      "path": "output/trials/complete-machine/initial-review/previews/back.png",
+      "view": "back",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "23b6ad4f463b432c648dd0443ae38c32d4ee6ced9dae029b57737856661a10ef"
+    },
+    {
+      "path": "output/trials/complete-machine/initial-review/previews/bottom.png",
+      "view": "bottom",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "51a07264cefe67afd1f2464775e47d12e847570b73982a635a56cae3d4bd3544"
+    },
+    {
+      "path": "output/trials/complete-machine/initial-review/previews/top.png",
+      "view": "top",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "1056ce8aebb930cdf55d485c262f286b86b8882f25f5bff7679f3de0c3da2667"
+    },
+    {
+      "path": "output/trials/complete-machine/initial-review/previews/left.png",
+      "view": "left",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "a509715fbf0485ebee083329f5e235bedfd159cfa06ee4ce9eca855d73a19f13"
+    },
+    {
+      "path": "output/trials/complete-machine/initial-review/previews/right.png",
+      "view": "right",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "637835f020e87346e396129cb40e34f4442674897e71b4267f57f43a1096cc6d"
+    },
+    {
+      "path": "output/trials/complete-machine/final-review/previews/home.png",
+      "view": "home",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": true,
+      "sha256": "1c0c61753ef5a5f726fa533954f761a60153476b324e8b2fcab036461ce0cf7e"
+    },
+    {
+      "path": "output/trials/complete-machine/final-review/previews/front.png",
+      "view": "front",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": true,
+      "sha256": "10f86b0c55b73288a3d5efa4ef38b8c35b8ea5f4e44d967e1dc3d4dabf08657c"
+    },
+    {
+      "path": "output/trials/complete-machine/final-review/previews/back.png",
+      "view": "back",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": true,
+      "sha256": "477c5adecf498ad173814f871888aec9b8004fdf3c1b87a3ca6617c52690bd13"
+    },
+    {
+      "path": "output/trials/complete-machine/final-review/previews/bottom.png",
+      "view": "bottom",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": true,
+      "sha256": "079b9d95b64246b79b7962bd2e4fe546caedabfa9707720a24d04e3432bccd9d"
+    },
+    {
+      "path": "output/trials/complete-machine/final-review/previews/top.png",
+      "view": "top",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": true,
+      "sha256": "00aab713ce26f0fec4590d8d81d77ab4670908f0590b37fc41fb9cf9dc15f69a"
+    },
+    {
+      "path": "output/trials/complete-machine/final-review/previews/left.png",
+      "view": "left",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": true,
+      "sha256": "4116ef510e67ef0ccc7d0e2258bbbf9d5e6fd4b8288ea661153760fa19365712"
+    },
+    {
+      "path": "output/trials/complete-machine/final-review/previews/right.png",
+      "view": "right",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": true,
+      "sha256": "b618a80a41e0efd4bcb8d096b68465871c0a55ff761c08f30db8c3bba9dd519e"
+    },
+    {
+      "path": "output/trials/complete-machine/chain-detail-review/previews/home.png",
+      "view": "home",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "2277678f9e30704f0cb60476c6661d11d8ac114f65571f6feb06c8b89202930e"
+    },
+    {
+      "path": "output/trials/complete-machine/chain-detail-review/previews/front.png",
+      "view": "front",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "1e53eb6e8bb14187ade4e148fd9083e14371ce547d11039b276482f74ea3f27c"
+    },
+    {
+      "path": "output/trials/complete-machine/chain-detail-review/previews/back.png",
+      "view": "back",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "856112ef0bfd5a0646fa0e05242b817b87a125f909f5fcdbd546fb945ffb7247"
+    },
+    {
+      "path": "output/trials/complete-machine/chain-detail-review/previews/top.png",
+      "view": "top",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "2606f9debfa2431fa993406500a91e8ce41f03bb74159e2c67d88a3137fe0e6b"
+    },
+    {
+      "path": "output/trials/complete-machine/chain-detail-review/previews/bottom.png",
+      "view": "bottom",
+      "opened": true,
+      "method": "functions tools.view_image, actual displayed PNG inspected",
+      "final_whole_model": false,
+      "sha256": "fe44154c15076192b3e6cdf01c4d91651d159d4845e17da76677c337f804b6ec"
+    }
+  ],
+  "missing_requested_features": [],
+  "limitations": [
+    "Static extended-cylinder pose only; no verified movement, strength, transport, pressure behavior, hose slack through travel or manufactured hose length.",
+    "Chain closure, tension and tooth engagement are visually assessed only; the lower run is partly occluded and LSynth does not certify closure.",
+    "General material collision freedom is unproven. Nonrectangular geometry has incomplete material checks; six hose bounds candidates are inspected fitting sleeves.",
+    "Connector coverage yields 28 optimistic components: one main rigid assembly, 24 chain links and three hose parts. Flexible parts lack complete connector metadata; confirmed graph is more conservative.",
+    "Gantry and general swept insertion paths remain manually reviewed rather than certified.",
+    "3023 valve pad is an inspected official moved alias to 3023b, preserved from the starter and included consistently in both BOMs.",
+    "Finite sampled hose geometry and segment-origin measures retain reported end-offset and sampling limits.",
+    "Real part/colour manufacturing availability has not been checked.",
+    "Generator depends on this existing repository toolkit and installed LDraw library; the review snapshots source, MPD, constraints and asset manifests but not the full Python/tool/library environment.",
+    "Infrastructure pause duration is estimated from command completion and resumption; unwrapped activity is not individually timed."
+  ]
+}

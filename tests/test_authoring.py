@@ -301,3 +301,21 @@ def test_inline_synthesis_failure_has_named_unavailable_evidence(official, monke
     assert failed.value.stage == 'flex.synthesis'
     assert failed.value.diagnostics[0]['placement'] == 'hose'
     assert failed.value.diagnostics[0]['measurement'] == 'unavailable'
+
+
+def test_drive_foundation_and_workshop_attachment_cannot_float(official):
+    from ldraw_tools.workshop import chain_drive, workshop_plan
+    # Regression from the independent trial: the rails can sit between the
+    # plate's stud rows even though every shaft joint still seats correctly.
+    drive = chain_drive()
+    drive['sections'][0]['steps'][0][0]['at'][2] -= 10
+    _, _, bad = build_checked(drive, official, contacts='all')
+    failures = [d for d in bad['diagnostics'] if d['code'] == 'technic.missing_required_joint']
+    assert any({'base', 'rail--40--24'} <= {p['path'] for p in d['placements']} for d in failures)
+    # A correct internal drive still needs to engage the actual workbench.
+    machine = workshop_plan()
+    conveyor = next(p for step in machine['sections'][0]['steps'] for p in step if p['id'] == 'conveyor')
+    conveyor['at'][2] -= 10
+    _, _, bad = build_checked(machine, official, contacts='all')
+    assert any(d['code'] == 'technic.missing_required_joint'
+               and any(p['path'] == 'conveyor/base' for p in d['placements']) for d in bad['diagnostics'])

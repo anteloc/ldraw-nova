@@ -1,0 +1,302 @@
+{
+  "trial_id": "pneumatic-passage",
+  "completed": true,
+  "outcome": "success",
+  "start_utc": "2026-10-27T05:54:28+00:00",
+  "end_utc": "2026-10-27T11:00:11.087185+00:00",
+  "active_elapsed_seconds": 540.7813590000005,
+  "wall_elapsed_seconds": 18343.087185,
+  "budget_seconds": 1800,
+  "infrastructure_pauses": [
+    {
+      "reason": "Platform usage interruption; resumed by parent instruction",
+      "start_utc": "2026-10-27T05:59:57.694174+00:00",
+      "end_utc": "2026-10-27T10:56:40+00:00",
+      "seconds": 17802.305826,
+      "boundary_quality": "estimated: last completed wrapped command end to first resumption clock reading",
+      "excluded_from_active_budget": true
+    }
+  ],
+  "repair_cycles": 1,
+  "repair_cycle_definition": "Failed review followed by source correction; initial supply radius failure repaired once.",
+  "failed_review_count": 1,
+  "post_success_warning_cleanup_revisions": 1,
+  "interventions": 0,
+  "commands": {
+    "path": "commands.jsonl",
+    "count": 19,
+    "seconds": 85.93350112787448,
+    "failed_count": 1
+  },
+  "command_seconds": 85.93350112787448,
+  "tool_seconds": {
+    "wrapped_subprocess_seconds": 85.93350112787448,
+    "image_view_seconds_measured_outside_wrapper": 0.042,
+    "other_tool_seconds": null
+  },
+  "timing_limitations": [
+    "Pause boundaries are estimated from last wrapped command completion and first resumption clock reading.",
+    "File reads, notes/report writing, other tool overhead and reasoning were not individually instrumented; included in active elapsed time.",
+    "Image view tool durations are separately measured JavaScript wall times; visual reasoning time is included only in active elapsed."
+  ],
+  "artifact_root": "/Users/captain/workspaces/workspace-ai/ldraw-nova/.cache/authoring-candidate/output/trials/pneumatic-passage",
+  "artifacts": {
+    "reproducible_source": "generate.py",
+    "source_baseline": "starter.plan.json",
+    "editable_plan": "model.plan.json",
+    "editable_mpd": "review/model.mpd",
+    "review": "review/review.json",
+    "validation": "review/validation.json",
+    "python_bom": "review/bom.json",
+    "leocad_bom": "review/previews/leocad-bom.csv",
+    "bom_comparison": "review/bom-comparison.json",
+    "notes": "NOTES.md",
+    "repair_log": "repair-log.md",
+    "images_opened": "images-opened.json",
+    "asset_manifests": [
+      "review/flex/1/asset.manifest.json",
+      "review/flex/2/asset.manifest.json",
+      "review/flex/3/asset.manifest.json"
+    ],
+    "frozen_constraints": [
+      "review/flex/1/constraints.ldr",
+      "review/flex/2/constraints.ldr",
+      "review/flex/3/constraints.ldr"
+    ],
+    "failure_evidence": "review-1.log",
+    "final_review_log": "review-final.log",
+    "timings": "commands.jsonl",
+    "pause": "infrastructure-pause.json"
+  },
+  "features": {
+    "pump": {
+      "part": "2797c01-f1.dat",
+      "starter_position": [
+        -120,
+        -14,
+        -20
+      ],
+      "final_position": [
+        -100,
+        -14,
+        -20
+      ],
+      "translation_ldu": [
+        20,
+        0,
+        0
+      ],
+      "upright_yaw_change_degrees": 90,
+      "starter_matrix": [
+        [
+          0,
+          0,
+          -1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "final_matrix": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "required_stud_mount_count": 4,
+      "mount_check_passed": true
+    },
+    "valve": {
+      "part": "4694c01-f1.dat",
+      "starter_position": [
+        40,
+        -56,
+        -110
+      ],
+      "final_position": [
+        40,
+        -56,
+        -150
+      ],
+      "translation_ldu": [
+        0,
+        0,
+        -40
+      ],
+      "rotation_changed": false,
+      "required_stud_mount_count": 2,
+      "mount_check_passed": true
+    },
+    "extended_cylinder": {
+      "part": "74981-f2.dat",
+      "pose_preserved": true,
+      "eye_spacing_ldu": 116,
+      "four_required_pin_joints_passed": true
+    },
+    "guard": {
+      "retained": true,
+      "brick": "3004.dat",
+      "cap": "3023b.dat",
+      "position": [
+        -40,
+        -24,
+        -130
+      ],
+      "cap_position": [
+        -40,
+        -32,
+        -130
+      ],
+      "both_two_stud_mounts_passed": true,
+      "passage_clearance_visually_reviewed": true,
+      "sampled_hose_obstacle_candidate": false
+    },
+    "hoses": {
+      "count": 3,
+      "required_min_radius_ldu": 15,
+      "tube_radius_ldu": 5,
+      "required_min_separation_ldu": 10,
+      "checks_not_relaxed": true,
+      "measurements": [
+        {
+          "route": "supply",
+          "minimum_sampled_radius_ldu": 20.68554921198767,
+          "polyline_length_ldu": 177.033768689264
+        },
+        {
+          "route": "line-up",
+          "minimum_sampled_radius_ldu": 22.621092845973152,
+          "polyline_length_ldu": 257.5322062487635
+        },
+        {
+          "route": "line-down",
+          "minimum_sampled_radius_ldu": 21.779886640134684,
+          "polyline_length_ldu": 235.40861957485632
+        }
+      ],
+      "pair_separations": [
+        {
+          "routes": [
+            "supply",
+            "line-up"
+          ],
+          "distance_ldu": 12.529964086141668,
+          "required_ldu": 10
+        },
+        {
+          "routes": [
+            "supply",
+            "line-down"
+          ],
+          "distance_ldu": 12.518146583067567,
+          "required_ldu": 10
+        },
+        {
+          "routes": [
+            "line-up",
+            "line-down"
+          ],
+          "distance_ldu": 16.356726646568802,
+          "required_ldu": 10
+        }
+      ]
+    },
+    "whole_model": {
+      "checks_passed": true,
+      "stages": {
+        "validation": "passed",
+        "bom": "passed",
+        "render": "passed",
+        "bom_comparison": "passed"
+      },
+      "required_joints": 8,
+      "python_bom_placements": 43,
+      "leocad_bom_placements": 43,
+      "bom_matches": true,
+      "source_sha256": "f44557a7fccc1e1f6e9c0e1a5e3ac082609222ee629a0e6d0754595e8237f4bc",
+      "model_sha256": "c4b103671d7c2a7a3520f7b2b14371d2672f4a8fd5897b38e1f0137eff5d70ea"
+    },
+    "visual_inspection": {
+      "all_final_images_opened": true,
+      "fitting_obstacle_candidates_reviewed": 6,
+      "all_geometry_candidates_reviewed": 64,
+      "candidates_with_intended_connections": 42,
+      "remaining_candidates_reviewed": 22,
+      "detail_untruncated": true,
+      "evidence": "NOTES.md"
+    }
+  },
+  "images_opened": [
+    {
+      "path": "review/previews/home.png",
+      "opened_utc": "2026-10-27T10:57:09.361Z",
+      "tool_seconds": 0.015,
+      "revision": "final"
+    },
+    {
+      "path": "review/previews/top.png",
+      "opened_utc": "2026-10-27T10:57:09.372Z",
+      "tool_seconds": 0.005,
+      "revision": "final"
+    },
+    {
+      "path": "review/previews/front.png",
+      "opened_utc": "2026-10-27T10:57:09.376Z",
+      "tool_seconds": 0.004,
+      "revision": "final"
+    },
+    {
+      "path": "review/previews/right.png",
+      "opened_utc": "2026-10-27T10:57:09.380Z",
+      "tool_seconds": 0.004,
+      "revision": "final"
+    },
+    {
+      "path": "review/previews/back.png",
+      "opened_utc": "2026-10-27T10:57:18.238Z",
+      "tool_seconds": 0.004,
+      "revision": "final"
+    },
+    {
+      "path": "review/previews/left.png",
+      "opened_utc": "2026-10-27T10:57:18.243Z",
+      "tool_seconds": 0.005,
+      "revision": "final"
+    },
+    {
+      "path": "review/previews/bottom.png",
+      "opened_utc": "2026-10-27T10:57:18.248Z",
+      "tool_seconds": 0.005,
+      "revision": "final"
+    }
+  ],
+  "missing_requested_features": [],
+  "limitations": [
+    "Static extended-cylinder pose; motion, pressure circuit operation, strength, elasticity, stock hose identity and manufactured hose length are not certified.",
+    "Collision coverage is conservative and finite; visual inspection does not prove complete material collision freedom.",
+    "Valve lacks reviewed Technic structural-interface registry coverage; its required generic two-stud mounting check passes.",
+    "Synthesized hoses lack connector metadata; connection analysis reports one rigid group and three hose groups.",
+    "Starter has no automated connector-before-closure constraints; accessible pin insertion was visually reviewed, without swept insertion-path analysis.",
+    "Infrastructure pause duration is an estimate and is excluded from active budget."
+  ],
+  "toolkit_or_dependency_modifications": false,
+  "outside_expert_repairs": false
+}
