@@ -34,8 +34,7 @@ def availability():
 
 def engine():
     if not availability()["available"]:
-        raise ValueError("LSynth is optional and is not installed. Run ./setup.sh --with-lsynth "
-                         "with the lsynth-nova checkout beside this repository.")
+        raise ValueError("LSynth is optional and is not installed. Run ./setup.sh --with-lsynth.")
     from lsynth_nova.config import DEFAULT_CONFIG, load_config
     from lsynth_nova.cli import PARTS_DIR
     return load_config(), DEFAULT_CONFIG, PARTS_DIR
@@ -88,7 +87,7 @@ def preflight(text, cfg):
         elif upper[:3] in (["0", "SYNTH", "HOSE_RES"], ["0", "SYNTH", "BAND_RES"]):
             # The port, like the C program, expects resolution before a block.
             raise ValueError(f"Line {number}: custom resolution is not supported by this adapter: "
-                             "lsynth-nova 3.1.0 reads the wrong argument positions. Use the default resolution.")
+                             "Use the default resolution.")
         if tokens[:1] == ["1"]:
             part = parse_type1(line)
             if part is None or len(line.split(None, 14)) != 15 or not all(math.isfinite(v) for v in [*part.offset, *(v for row in part.orient for v in row)]):

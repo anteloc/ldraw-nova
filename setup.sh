@@ -12,21 +12,18 @@ if [ "$#" -gt 1 ]; then
   echo "Usage: ./setup.sh [--with-lsynth]" >&2
   exit 2
 fi
-lsynth_source=${LSYNTH_SOURCE:-../lsynth-nova}
-if "$with_lsynth" && [ ! -f "$lsynth_source/pyproject.toml" ]; then
-  echo "Missing lsynth-nova checkout: $lsynth_source (override with LSYNTH_SOURCE)" >&2
-  exit 2
-fi
 if command -v uv >/dev/null 2>&1; then
-  uv sync --locked --extra test
   if "$with_lsynth"; then
-    uv pip install --python .venv/bin/python "$lsynth_source"
+    uv sync --locked --extra test --extra lsynth
+  else
+    uv sync --locked --extra test
   fi
 else
   python3 -m venv .venv
-  .venv/bin/python -m pip install -e '.[test]'
   if "$with_lsynth"; then
-    .venv/bin/python -m pip install "$lsynth_source"
+    .venv/bin/python -m pip install -e '.[test,lsynth]'
+  else
+    .venv/bin/python -m pip install -e '.[test]'
   fi
 fi
 ./ldraw-agent doctor

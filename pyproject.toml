@@ -11,6 +11,7 @@ dependencies = ["pyldraw3==1.7.0", "numpy==2.5.2", "jsonschema==4.26.0"]
 
 [project.optional-dependencies]
 test = ["pytest==9.1.1"]
+lsynth = ["lsynth-nova @ https://github.com/anteloc/lsynth-nova/releases/download/v0.5.0/lsynth_nova-0.5.0-py3-none-any.whl"]
 
 [project.scripts]
 ldraw-agent = "ldraw_tools.cli:main"

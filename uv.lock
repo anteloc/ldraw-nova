@@ -216,6 +216,9 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
+lsynth = [
+    { name = "lsynth-nova" },
+]
 test = [
     { name = "pytest" },
 ]
@@ -223,9 +226,28 @@ test = [
 [package.metadata]
 requires-dist = [
     { name = "jsonschema", specifier = "==4.26.0" },
+    { name = "lsynth-nova", marker = "extra == 'lsynth'", url = "https://github.com/anteloc/lsynth-nova/releases/download/v0.5.0/lsynth_nova-0.5.0-py3-none-any.whl" },
     { name = "numpy", specifier = "==2.5.2" },
     { name = "pyldraw3", specifier = "==1.7.0" },
     { name = "pytest", marker = "extra == 'test'", specifier = "==9.1.1" },
+]
+provides-extras = ["test", "lsynth"]
+
+[[package]]
+name = "lsynth-nova"
+version = "0.5.0"
+source = { url = "https://github.com/anteloc/lsynth-nova/releases/download/v0.5.0/lsynth_nova-0.5.0-py3-none-any.whl" }
+dependencies = [
+    { name = "numpy" },
+]
+wheels = [
+    { url = "https://github.com/anteloc/lsynth-nova/releases/download/v0.5.0/lsynth_nova-0.5.0-py3-none-any.whl", hash = "sha256:2801a57bc3a7c15e13e3e8601a7c3d64c19ec88058fa6e7f1335375979f137a9" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "numpy", specifier = ">=2" },
+    { name = "pytest", marker = "extra == 'test'", specifier = ">=8" },
 ]
 provides-extras = ["test"]
 

@@ -13,7 +13,7 @@ For the rigid construction around those paths, start with the [26 annotated cons
 
 ## Install and try
 
-Keep the `lsynth-nova` checkout beside this repository:
+Install the pinned **lsynth-nova 0.5.0** release wheel from `anteloc/lsynth-nova` (no separate checkout needed). Setup uses uv when available, with pip as a fallback:
 
 ```sh
 ./setup.sh --with-lsynth
@@ -23,7 +23,7 @@ Keep the `lsynth-nova` checkout beside this repository:
 ./ldraw-agent review output/flex/hose.mpd --contacts none
 ```
 
-Open the review's previews. [Small examples](../../examples/flex/README.md) cover a hose, a rubber band and a chain. Copy a constraint file into your own `output/` directory before editing it. `doctor` reports whether the optional package is installed. `LSYNTH_SOURCE=/path/to/lsynth-nova ./setup.sh --with-lsynth` accepts another checkout location. Ordinary setup and builds do not require LSynth; `uv sync` may remove this optional installation, so use the setup flag again afterward.
+Open the review's previews. [Small examples](../../examples/flex/README.md) cover a hose, a rubber band and a chain. Copy a constraint file into your own `output/` directory before editing it. `doctor` reports whether the optional package is installed. Ordinary setup and builds do not require LSynth. When syncing directly, use `uv sync --locked --extra test --extra lsynth` to retain both testing and synthesis tooling; syncing without the `lsynth` extra removes it.
 
 Authoring, constraint checks and synthesis need LSynth installed. Generated assets embed the required LSynth geometry and work with the ordinary LDraw library, including in LeoCAD, without that installation. Do not run `lsynth --install-parts` for this workflow: the adapter leaves the parts library unchanged.
 
@@ -98,6 +98,6 @@ LSynth output for bends, return loops and bundles, including a deliberately bad 
 
 Start flex studies with `review --contacts none`. Bounds, source checks, previews and BOM comparison still run, but connectivity and material clearance are not established. Posed parts have no verified connector metadata, stock length, tension, minimum bend radius or elasticity. Inspect the route, endpoint seating, obstructions and link engagement in the actual assembly; generic AABB overlaps cannot certify these. `physical_validity` stays `not_proven`.
 
-The tested port is **lsynth-nova 3.1.0**, with its bundled definitions. This adapter currently uses default resolution: that version reads the wrong argument positions for `HOSE_RES` and `BAND_RES`, so custom resolution records are rejected. GHOST inputs are also unsupported. The standalone LSynth CLI remains available for other workflows; its raw output needs separate review before reuse here.
+The pinned port is **lsynth-nova 0.5.0**, with its bundled definitions. This adapter supports default resolution only; custom `HOSE_RES` and `BAND_RES` records are rejected. GHOST inputs are also unsupported. The standalone LSynth CLI remains available for other workflows; its raw output needs separate review before reuse here.
 
 Legacy compatibility is confined to embedded copies: LS22's Latin-1 author header becomes UTF-8, and LS50/LS51's invalid `BFC CERTIFY INVERTNEXT` becomes `BFC INVERTNEXT`. Original hashes and changes are recorded; authorship, licence notices and geometry remain. Some bundled examples also contain missing legacy parts, nonrigid source placements or impossible pulley routes. A successful LSynth exit alone does not make those assemblies valid.
