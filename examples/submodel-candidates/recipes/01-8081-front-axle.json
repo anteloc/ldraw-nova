@@ -1,0 +1,49 @@
+{
+  "source": "../../../data/models-annotated/8081-1.mpd",
+  "section": "8081 - Front Axle.ldr",
+  "title": "8081 Front Axle: steerable Technic axle whose pinion lives in the parent",
+  "panels": [
+    {
+      "label": "Parent 8081 Frame, ghosted: axle highlighted; 8T pinion 3647 belongs to the frame",
+      "view": "home",
+      "parent": "8081 - Frame.ldr",
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section"
+        },
+        {
+          "layer": "ghost"
+        }
+      ]
+    },
+    {
+      "label": "Isolated axle, front view: symmetric suspension arms, steering links and shock",
+      "view": "front"
+    },
+    {
+      "label": "Source step 6: suspension arms pivot on the 1x6 Technic brick",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Source step 11: rack housing and both steering links added",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            11
+          ]
+        }
+      ]
+    }
+  ]
+}

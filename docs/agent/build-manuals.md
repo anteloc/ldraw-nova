@@ -119,47 +119,21 @@ For an atlas addition:
 
 Do not create a second parser or a Python translation of every source placement just to preserve an unchanged submodel. Keep the original attributed MPD and use the shared tooling. Parameterize dimensions, layouts or part families when there is a real design benefit.
 
-## Optional inspection mosaics
+## Inspection boards
 
-Use `manual mosaic` (or `mechanism mosaic`) to compose existing renders into a labeled PNG. This is optional: use individual images when a mosaic would hide small connections. It needs neither LeoCAD nor a parts library, and does not regenerate images or mark them reviewed.
+To see a submodel in its parent, see through it, map its stud directions or sweep a pivot, use [ldraw-xray boards](submodel-inspection.md). They render the views and compose them in one step.
+
+To compose renders you already have, such as these build pages, use `./ldraw-xray mosaic`. It needs neither LeoCAD nor a parts library:
 
 ```sh
-./ldraw-agent manual mosaic output/study/panels.json \
-  --output output/study/comparison.png --columns 2 --panel-width 800
+./ldraw-xray mosaic output/study/panels.json --output output/study/comparison.png
 ```
 
-Image paths resolve relative to the panel manifest. Panels appear in list order, left to right then top to bottom. Choose 2–9 panels and 1–3 columns; four panels are a useful default. Labels should identify the view, step or inspection state. For example:
+The manifest lists 2–12 panels, each with an `image` path relative to the manifest and a `label`, plus an optional `title` and `mode`. Panels fill the board left to right in 1–4 columns. Images keep their aspect ratio on a light backdrop and are never cropped. A JSON file beside the PNG records each panel's input hash and rectangle, and any near-duplicate panels.
 
-```json
-{
-  "title": "Bow: context and construction",
-  "mode": "views",
-  "panels": [
-    {"image": "parent-highlight/view.png", "label": "Parent: selected bow highlighted"},
-    {"image": "home.png", "label": "Isolated bow: source orientation"},
-    {"image": "steps/view04.png", "label": "Source step 4: exposed core"},
-    {"image": "core/view.png", "label": "Synthetic inspection: transparent shell, highlighted core"}
-  ]
-}
-```
+| Mode | Panels | Board says |
+|---|---|---|
+| `views` (default) | any viewpoints, framing and steps | not to common scale |
+| `analysis` | the same `subject`, the same `camera` object and identical image sizes | aligned by the supplied camera metadata |
 
-`views` accepts different viewpoints, framing and construction states, and labels the board as not to common scale. Images retain their aspect ratio and are padded, never cropped. Original images remain unchanged. The companion JSON records panel labels, original paths, input hashes, original dimensions and panel rectangles. Keep it with the PNG to trace details back to full-resolution evidence. Existing files require `--force`; inputs can never be overwritten by outputs.
-
-For **analytical comparisons at exactly the same position and orientation**, use `"mode": "analysis"`. Every panel must supply the same nonempty `subject` identifier and identical nonempty `camera` object, and images must have identical dimensions. A camera object should record the actual position, target, up vector, projection and field of view used to render. Include model placement/coordinate-frame information in the subject identity when comparing isolated and parent views. For example, add these fields to every panel:
-
-```json
-"subject": "42039 steeringrack occurrence in frontaxle coordinates",
-"camera": {
-  "position_ldraw": [490, -394, 607],
-  "target_ldraw": [0, -30, 40],
-  "up_ldraw": [0, -1, 0],
-  "projection": "perspective",
-  "fov": 30
-}
-```
-
-Render all variants with this same explicit camera and output dimensions. Do not independently auto-frame a transparent variant or a smaller step: `--viewpoint home` alone does not guarantee equal framing. The compositor checks supplied metadata and dimensions; it cannot establish camera accuracy from pixels or align independently rendered images. A shared camera does not compensate for rotating/repositioning the model between renders.
-
-Useful analytical panels include original-color context, less-faded context, transparent context, and a selected construction step. Always highlight the selected submodel in parent views, using magenta `--highlight-color '#FFFF00FF' --line-width 2`. Label synthetic step subdivisions and transparent inspection copies explicitly. Mosaic generation does not implement these rendering transformations; supply the corresponding inspection renders.
-
-Mosaics supplement the existing manual/review workflow. They do not replace required source image reviews, update `manual.json`, or certify connections. Retain the individual images for zooming and connection checks.
+Boards and mosaics supplement this workflow. They do not replace the required image review, update `manual.json`, or certify connections. Keep the individual images for zooming and connection checks.

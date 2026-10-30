@@ -68,7 +68,7 @@ Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM
 
 ```sh
 ./ldraw-agent manual prepare FILE --section NAME --outdir output/study --views home top --notes NOTES.json
-./ldraw-agent manual mosaic output/study/panels.json --output output/study/mosaic.png
+./ldraw-xray mosaic output/study/panels.json --output output/study/mosaic.png
 ./ldraw-agent manual review output/study --images IMAGE ... --note 'What was inspected and learned'
 ./ldraw-agent manual export output/study --outdir output/my-example
 ./ldraw-agent spaceship list
@@ -77,7 +77,7 @@ Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM
 ./ldraw-agent spaceship export halcyon --outdir output/my-ship
 ```
 
-`manual` shares the mechanism step renderer but uses construction notes: lesson, construction, interfaces, parent context and reuse notes. `--overview` renders completed-model views and retains source step data; `--no-render` leaves rendered evidence pending. Existing mechanism commands retain their operation-specific notes and review requirements. See [build manuals and atlas additions](build-manuals.md) and [spaceship design](spaceships.md).
+`manual` shares the mechanism step renderer but uses construction notes: lesson, construction, interfaces, parent context and reuse notes. `--overview` renders completed-model views and retains source step data; `--no-render` leaves rendered evidence pending. Existing mechanism commands retain their operation-specific notes and review requirements. See [build manuals and atlas additions](build-manuals.md) and [spaceship design](spaceships.md). `./ldraw-xray` renders inspection boards (parent context, x-ray, stud maps, pivots) and composes mosaics; see [submodel inspection](submodel-inspection.md).
 
 ## Mechanism studies and reuse
 

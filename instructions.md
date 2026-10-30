@@ -118,6 +118,9 @@ handoff, use `./prepare-glb.sh --file MODEL.mpd MODEL.glb`.
   [parts catalog](docs/agent/technic-catalog.md), [flex families](docs/agent/flex-constraints.md).
 - [Validation](docs/agent/validation.md), [CLI options](docs/agent/tooling.md),
   [build-step views](docs/agent/build-manuals.md), [LDraw reference](docs/agent/ldraw-reference.md).
+- [Submodel inspection](docs/agent/submodel-inspection.md): `./ldraw-xray` boards show a
+  section in its parent, by steps, see-through, by stud direction or posed;
+  reviewed [submodel candidates](examples/submodel-candidates/README.md).
 - [Discovery](docs/agent/reference-discovery.md): check Jev availability once;
   if unavailable, report why and use FTS/catalogs/examples. Preserve attribution
   and extraction manifests. Search the local specification with `spec QUERY`.

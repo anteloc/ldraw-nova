@@ -1,0 +1,54 @@
+{
+  "source": "../../../data/models-annotated/10258-1.mpd",
+  "section": "10258 - roof.ldr",
+  "title": "10258 London bus roof: rounded edges from curved bricks on their sides",
+  "panels": [
+    {
+      "label": "Parent bus deck, ghosted: roof highlighted",
+      "view": "home",
+      "parent": "10258 - deck.ldr",
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section"
+        },
+        {
+          "layer": "ghost"
+        }
+      ]
+    },
+    {
+      "label": "Source step 3: sixteen red brackets along both long edges, studs out",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Source step 6: twelve 2x4 curved-top bricks on their sides form the rounded edges",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Map: top up (lilac), rounded edges +X rose and -X vermilion; synthetic colours",
+      "view": "front",
+      "layers": [
+        {
+          "layer": "stud_map"
+        }
+      ]
+    }
+  ]
+}

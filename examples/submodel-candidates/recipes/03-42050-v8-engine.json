@@ -1,0 +1,47 @@
+{
+  "source": "../../../data/models-annotated/42050-1.mpd",
+  "section": "42050 - engine.ldr",
+  "title": "42050 V8: crank train hidden under the cylinder banks",
+  "panels": [
+    {
+      "label": "Parent drag racer, ghosted: engine highlighted at the front",
+      "view": "right",
+      "parent": "42050 - Drag Racer.ldr",
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section"
+        },
+        {
+          "layer": "ghost"
+        }
+      ]
+    },
+    {
+      "label": "Isolated engine: finished look, crank train hidden",
+      "view": "home"
+    },
+    {
+      "label": "Source step 3: pistons, rods and crankshafts added under the cylinders",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Inspection copy: all but step 3 trans-clear; V banks over one crank",
+      "view": "front",
+      "layers": [
+        {
+          "layer": "xray",
+          "select": "!step:3"
+        }
+      ]
+    }
+  ]
+}

@@ -223,12 +223,6 @@ def parser():
         d.add_argument('--repair-bfc-comments', action='store_true')
         d.add_argument('--force', action='store_true')
         d.add_argument('--max-instances', type=positive, default=2000)
-        d = m.add_parser('mosaic', help='Compose labeled views or aligned analytical renders into an optional PNG board')
-        d.add_argument('manifest', help='JSON panel list; image paths are relative to this file')
-        d.add_argument('--output', required=True)
-        d.add_argument('--columns', type=positive, default=2)
-        d.add_argument('--panel-width', type=positive, default=800)
-        d.add_argument('--force', action='store_true')
         d = m.add_parser('review', help='Record the build pages and final preview actually opened')
         d.add_argument('directory')
         d.add_argument('--images', nargs='+', required=True)
@@ -398,10 +392,6 @@ def parser():
 
 
 def run(args):
-    if args.command in {'manual', 'mechanism'} and getattr(args, args.command + '_command') == 'mosaic':
-        from .mosaic import compose_mosaic
-        return compose_mosaic(args.manifest, args.output, columns=args.columns,
-                              panel_width=args.panel_width, force=args.force), 0
     if args.command == "flex" and args.flex_command == "types":
         from .flex import definitions
         return definitions(), 0
@@ -440,7 +430,7 @@ def run(args):
     if args.command == "doctor":
         from .flex import availability
         library = library_path(args.library)
-        report = dict(python=sys.version.split()[0], packages={n: version(n) for n in ["pyldraw3", "numpy", "jsonschema"]},
+        report = dict(python=sys.version.split()[0], packages={n: version(n) for n in ["pyldraw3", "numpy", "jsonschema", "ldraw-xray"]},
                       library=str(library), library_present=(library / "parts").is_dir(),
                       models=str(models_path()), database=str(database_path()), pdf=str(ROOT / "docs/ldraw-specs.pdf"),
                       shadow_sources=jsonable(shadow_paths([] if args.no_shadow else args.shadow)),

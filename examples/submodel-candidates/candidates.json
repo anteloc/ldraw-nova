@@ -1,0 +1,393 @@
+[
+  {
+    "id": "01-8081-front-axle",
+    "number": "1",
+    "family": "Technic chassis",
+    "model": "data/models-annotated/8081-1.mpd",
+    "section": "8081 - Front Axle.ldr",
+    "source_sha256": "3fef02705debc0930762955a5dd92465cb09a2fe4d1f1eccdf7e9d6b20b2699e",
+    "parent": "8081 - Frame.ldr",
+    "lesson": "The steering rack's pinion lives in the parent",
+    "recipes": [
+      "recipes/01-8081-front-axle.json"
+    ]
+  },
+  {
+    "id": "02-42075-rear-axle",
+    "number": "2",
+    "family": "Technic chassis",
+    "model": "data/models-annotated/42075-1.mpd",
+    "section": "42075 - rearaxle.ldr",
+    "source_sha256": "1b44ac7315a873ff5658ccfd75080273fa95d3ce3d541623a2d8feec2ed7bb2c",
+    "parent": "42075 - vehicle.ldr",
+    "lesson": "Differential axle; the parent sets its tilt",
+    "recipes": [
+      "recipes/02-42075-rear-axle.json"
+    ]
+  },
+  {
+    "id": "03-42050-v8-engine",
+    "number": "3",
+    "family": "Technic mechanism",
+    "model": "data/models-annotated/42050-1.mpd",
+    "section": "42050 - engine.ldr",
+    "source_sha256": "35f18ae53fcac3fa08109c468245d7fad4351435437708f7f69048f8586173e6",
+    "parent": "42050 - Drag Racer.ldr",
+    "lesson": "The crank train is hidden; steps and a see-through copy reveal it",
+    "recipes": [
+      "recipes/03-42050-v8-engine.json"
+    ]
+  },
+  {
+    "id": "04-42078-headlight",
+    "number": "4",
+    "family": "Technic-to-System SNOT",
+    "model": "data/models-annotated/42078-1.mpd",
+    "section": "42078 - light1.ldr",
+    "source_sha256": "3dc932db5957805ac0aa592c1bdfe16c0da7f17471d54c68335af07539965be1",
+    "parent": "42078 - tractor.ldr",
+    "lesson": "A sideways lamp on a Technic mount; the parent explains the orientation",
+    "recipes": [
+      "recipes/04-42078-headlight.json"
+    ]
+  },
+  {
+    "id": "05-10269-headlight-nacelle",
+    "number": "5",
+    "family": "Vehicle SNOT",
+    "model": "data/models-annotated/10269-1.mpd",
+    "section": "10269 - step199-212.ldr",
+    "source_sha256": "c2c1a05aaea52e217d020c6f10452bee081ac65f7815ea16c00d275289eadb6c",
+    "parent": "10269 - main.ldr",
+    "lesson": "A sideways round disc; the parent corrects a wrong DB description",
+    "recipes": [
+      "recipes/05-10269-headlight-nacelle.json"
+    ]
+  },
+  {
+    "id": "06-10283-shuttle-framework",
+    "number": "6",
+    "family": "Spaceship SNOT",
+    "model": "data/models-annotated/10283-1.mpd",
+    "section": "10283 - shuttle-421-451.ldr",
+    "source_sha256": "19bbbc644ca8c24548ffbfd8b483096318864ca0b09d4b4ccceda3352288613f",
+    "parent": "10283 - shuttle.ldr",
+    "lesson": "A colour-coded SNOT core under a hinged shell; steps beat transparency",
+    "recipes": [
+      "recipes/06-10283-shuttle-framework.json"
+    ]
+  },
+  {
+    "id": "07-75060-cockpit-base",
+    "number": "7",
+    "family": "Spaceship mechanism",
+    "model": "data/models-annotated/75060-1.mpd",
+    "section": "75060 - step84.ldr",
+    "source_sha256": "0bf76c215fe21b44e614fa22d28c655a624b5899c15e6d2996c2b669fd74ddd3",
+    "parent": "75060 - main.ldr",
+    "lesson": "A cockpit pod on a revolute pivot; shows how a pivot is marked",
+    "recipes": [
+      "recipes/07-75060-cockpit-base.json",
+      "recipes/07-75060-cockpit-base-poses.json"
+    ]
+  },
+  {
+    "id": "08-7784-bat-hull",
+    "number": "8",
+    "family": "Vehicle shaping",
+    "model": "data/models-annotated/7784-1.mpd",
+    "section": "7784 - Bat.ldr",
+    "source_sha256": "495724c03f1645d73619cc5c82117027ef0581972b3f84ead27ea3f268a0decf",
+    "parent": "7784 - Batmobile.ldr",
+    "lesson": "Built flat, stood upright about 98° on a pin mount",
+    "recipes": [
+      "recipes/08-7784-bat-hull.json"
+    ]
+  },
+  {
+    "id": "10-10182-roof-tower",
+    "number": "9",
+    "family": "Building",
+    "model": "data/models-annotated/10182-1.mpd",
+    "section": "10182 - Second floor - Roof tower.ldr",
+    "source_sha256": "42164d93e442d125195d722cc2e3fa6cc116b2d5c410a2a3bfdeab0b36f54c11",
+    "parent": "10182 - Second floor.ldr",
+    "lesson": "Corner tower: parrot gargoyles, hinged pyramid roof",
+    "recipes": [
+      "recipes/10-10182-roof-tower.json"
+    ]
+  },
+  {
+    "id": "s01-10298-vespa-front",
+    "number": "S1",
+    "family": "Vehicle body",
+    "model": "data/models-annotated/10298-1.mpd",
+    "section": "10298 - front.ldr",
+    "source_sha256": "4e93be56fd86770a2ae7e16ede8110eec5c85aa23297691738fdfe4beba7c185",
+    "parent": "10298 - vespa.ldr",
+    "lesson": "Studs-forward Technic-brick column, tile skin, tilted 23°",
+    "recipes": [
+      "recipes/s01-10298-vespa-front.json"
+    ]
+  },
+  {
+    "id": "s02-21307-caterham-nose",
+    "number": "S2",
+    "family": "Vehicle mechanical detail",
+    "model": "data/models-annotated/21307-1.mpd",
+    "section": "21307 - 21307 Step 71-82 Submodel.ldr",
+    "source_sha256": "cb81c162429e7c06f2a53f830ba2176aa08c220bc058d05eb3949eb9d8783ac7",
+    "parent": "21307 - Car.ldr",
+    "lesson": "Engine with a sideways exhaust manifold made of revolvers (DB says \"nose\")",
+    "recipes": [
+      "recipes/s02-21307-caterham-nose.json"
+    ]
+  },
+  {
+    "id": "s03-21319-central-perk-wall",
+    "number": "S3",
+    "family": "Building pattern",
+    "model": "data/models-annotated/21319-1.mpd",
+    "section": "21319 - Steps 110 to 118.ldr",
+    "source_sha256": "ce8497bcfd0135029f8d8ebe6dfd0beaa4fdc89fe83652379f815d161c6e7b5e",
+    "parent": "21319 - Central Perk.ldr",
+    "lesson": "Floor pattern from plate edges (DB says \"wall\")",
+    "recipes": [
+      "recipes/s03-21319-central-perk-wall.json"
+    ]
+  },
+  {
+    "id": "s04-21309-saturn-module",
+    "number": "S4",
+    "family": "Round body",
+    "model": "data/models-annotated/21309-1.mpd",
+    "section": "21309 - 16-22.ldr",
+    "source_sha256": "fca920c256ac2ccdfecc6c168f656cdcf3568a1c40c164292ab7f68d8bcbb3e2",
+    "parent": "21309 - main.ldr",
+    "lesson": "Radial clip hub carrying eight spoke panels by their handles",
+    "recipes": [
+      "recipes/s04-21309-saturn-module.json"
+    ]
+  },
+  {
+    "id": "s05-41627-yoda",
+    "number": "S5",
+    "family": "Character",
+    "model": "data/models-annotated/41627-1.mpd",
+    "section": "41627 - Yoda.ldr",
+    "source_sha256": "dcfc71b1af5915d498fdbe595eadd1ee4d1c4db49981e70288e0687bdee6203d",
+    "parent": "41627 - Yoda and Luke Skywalker.ldr",
+    "lesson": "BrickHeadz face on a side-stud core; head side is a flat panel built separately and turned",
+    "recipes": [
+      "recipes/s05-41627-yoda.json"
+    ]
+  },
+  {
+    "id": "s06-10278-door-column",
+    "number": "S6",
+    "family": "Building ornament",
+    "model": "data/models-annotated/10278-1.mpd",
+    "section": "10278 - doorcolumn2f.ldr",
+    "source_sha256": "708b1d2c15e25bc3a8a44986a2d2a00598ee8de4acd8c60465e8efad7ff33f84",
+    "parent": "10278 - 2ndfloor.ldr",
+    "lesson": "Sideways stone column; vines on clip bars from handle plates",
+    "recipes": [
+      "recipes/s06-10278-door-column.json"
+    ]
+  },
+  {
+    "id": "s07-10272-rooftop-box",
+    "number": "S7",
+    "family": "Building glazing",
+    "model": "data/models-annotated/10272-1.mpd",
+    "section": "10272 - stretford-end-step186-198.ldr",
+    "source_sha256": "aa866e738cc2403e316d8f3bcca85c722e779be0ecd4c3baabba872da26fe082",
+    "parent": "10272 - stretford-end.ldr",
+    "lesson": "Glazed wall built in a convenient frame, rotated to +X and tilted 13° (DB says \"rooftop box\")",
+    "recipes": [
+      "recipes/s07-10272-rooftop-box.json"
+    ]
+  },
+  {
+    "id": "s08-10267-christmas-tree",
+    "number": "S8",
+    "family": "Round/conical",
+    "model": "data/models-annotated/10267-1.mpd",
+    "section": "10267 - christmas-tree.ldr",
+    "source_sha256": "5b02847de56fb081daf87fb98c027055588a4d3da118f41a565082fd8a5fd773",
+    "parent": "10267 - main.ldr",
+    "lesson": "Four identical faces on a four-sided stud core",
+    "recipes": [
+      "recipes/s08-10267-christmas-tree.json"
+    ]
+  },
+  {
+    "id": "s09-10258-bus-roof",
+    "number": "S9",
+    "family": "Vehicle body",
+    "model": "data/models-annotated/10258-1.mpd",
+    "section": "10258 - roof.ldr",
+    "source_sha256": "160ecddf6c38a4e0b0b8ff97c473c5c7f50f44adc1b787d02cc76d207ff47de0",
+    "parent": "10258 - deck.ldr",
+    "lesson": "Rounded roof edges from curved bricks on their sides, on 16 brackets",
+    "recipes": [
+      "recipes/s09-10258-bus-roof.json"
+    ]
+  },
+  {
+    "id": "s10-21046-empire-corner",
+    "number": "S10",
+    "family": "Building facade",
+    "model": "data/models-annotated/21046-1.mpd",
+    "section": "21046 - step49-55.ldr",
+    "source_sha256": "cd8131b740b424668ae6fd447d4069bfb3c58e0db8f4968b265acc83d55f68c5",
+    "parent": "21046 - main.ldr",
+    "lesson": "Recessed entrance in a sideways fin facade (DB says \"corner\")",
+    "recipes": [
+      "recipes/s10-21046-empire-corner.json"
+    ]
+  },
+  {
+    "id": "s11-10226-radial-engine",
+    "number": "S11",
+    "family": "Aircraft control surface",
+    "model": "data/models-annotated/10226-1.mpd",
+    "section": "10226 - step66.ldr",
+    "source_sha256": "2903c00bd3f1e0af46d47af2e09bd8ccb423eced0588947cc0fb9bd14ac20511",
+    "parent": "10226 - main.ldr",
+    "lesson": "Striped tail rudder built sideways on side-stud bricks, handle as hinge point (DB says \"radial engine\")",
+    "recipes": [
+      "recipes/s11-10226-radial-engine.json"
+    ]
+  },
+  {
+    "id": "s13-40412-buckbeak-body",
+    "number": "S13",
+    "family": "Animal head",
+    "model": "data/models-annotated/40412-1.mpd",
+    "section": "40412 - Buckbeak - Steps 15 to 35.ldr",
+    "source_sha256": "6c82cd637cf6def17916abbfb3425836c4cf62549e51668ad9212203d50a56ad",
+    "parent": "40412 - Buckbeak.ldr",
+    "lesson": "Studs-forward face on a hidden colour-coded core (DB says \"body and wings\")",
+    "recipes": [
+      "recipes/s13-40412-buckbeak-body.json"
+    ]
+  },
+  {
+    "id": "s14-21303-walle-eye",
+    "number": "S14",
+    "family": "Robot character",
+    "model": "data/models-annotated/21303-1.mpd",
+    "section": "21303 - Oeil gauche.ldr",
+    "source_sha256": "c33e5baf1157dd1b68229942103de5c4ee70c46053b66033bb029b007073107b",
+    "parent": "21303 - Tete A.ldr",
+    "lesson": "Densest mixed-direction SNOT; ribbed hoses as cables; parent turns it 180° and tilts 10°",
+    "recipes": [
+      "recipes/s14-21303-walle-eye.json"
+    ]
+  },
+  {
+    "id": "s15-10183-underbody",
+    "number": "S15",
+    "family": "Train underbody",
+    "model": "data/models-annotated/10183-1.mpd",
+    "section": "10183 - 1 - underside details.ldr",
+    "source_sha256": "6e8be34eece2b74cfec73957749f3301a217203366ee586a49b86d7588f55177",
+    "parent": "10183 - 1 - Swiss crocodile.ldr",
+    "lesson": "A real upside-down build: inverted curved bricks give a rounded belly",
+    "recipes": [
+      "recipes/s15-10183-underbody.json"
+    ]
+  },
+  {
+    "id": "s16-30050-shuttle-fuselage",
+    "number": "S16",
+    "family": "Micro spaceship",
+    "model": "data/models-annotated/30050-1.mpd",
+    "section": "30050 - m-1.ldr",
+    "source_sha256": "76661f19abe3250f0e0c5f2ff443590926f1a76df3da2e00f227db7426682d01",
+    "parent": "30050 - Republic Attack Shuttle.ldr",
+    "lesson": "Micro-scale SNOT; a wing child turned 90° about Z on a clip",
+    "recipes": [
+      "recipes/s16-30050-shuttle-fuselage.json"
+    ]
+  },
+  {
+    "id": "s17-10294-titanic-hull",
+    "number": "S17",
+    "family": "Ship hull",
+    "model": "data/models-annotated/10294-1.mpd",
+    "section": "10294 - Titanic - 2.11.1.ldr",
+    "source_sha256": "4c016c7c4d24144b38059c39ab8728bafc205a4579fa506290f8eac9d9a0d6b8",
+    "parent": "10294 - Titanic - Box 1.ldr",
+    "lesson": "Lower hull wall built flat, stood studs +X and angled 9.4°; curved-top bricks make the bilge",
+    "recipes": [
+      "recipes/s17-10294-titanic-hull.json"
+    ]
+  },
+  {
+    "id": "s17b-10294-titanic-hull-cabins",
+    "number": "S17b",
+    "family": "Ship hull",
+    "model": "data/models-annotated/10294-1.mpd",
+    "section": "10294 - Titanic - 3.15.1.ldr",
+    "source_sha256": "4c016c7c4d24144b38059c39ab8728bafc205a4579fa506290f8eac9d9a0d6b8",
+    "parent": "10294 - Titanic - 3.0 Funnel & Main Cabins.ldr",
+    "lesson": "Black hull wall built flat; portholes from open-stud plates; 17 counter-rotated child units end up upright",
+    "recipes": [
+      "recipes/s17b-10294-titanic-hull-cabins.json"
+    ]
+  },
+  {
+    "id": "s18-75276-tie-mount",
+    "number": "S18",
+    "family": "Helmet detail",
+    "model": "data/models-annotated/75276-1.mpd",
+    "section": "75276 - 211-222.ldr",
+    "source_sha256": "87bb2655044e2816d87c60214b6497b6fb91d4767cae94adc4ada60be0191059",
+    "parent": "75276 - main.ldr",
+    "lesson": "Stormtrooper mouth vent: offset plates centre a grille; a car mudguard is the arch (DB says \"mounting module\")",
+    "recipes": [
+      "recipes/s18-75276-tie-mount.json"
+    ]
+  },
+  {
+    "id": "s19-31031-chameleon",
+    "number": "S19",
+    "family": "Animal",
+    "model": "data/models-annotated/31031-1_Chameleon.mpd",
+    "section": "31031 - Cameleon.ldr",
+    "source_sha256": "7967458da7624289a6b4728b1ec16b3ebcf1997053515dd21bc748dc49c61a34",
+    "parent": "31031 - Main.ldr",
+    "lesson": "Flank stripes on side studs; turret eyes from sideways convex slopes; limbs on hinges",
+    "recipes": [
+      "recipes/s19-31031-chameleon.json"
+    ]
+  },
+  {
+    "id": "s20-21325-blacksmith",
+    "number": "S20",
+    "family": "Tree",
+    "model": "data/models-annotated/21325-1.mpd",
+    "section": "21325 - Steps 70 to 90.ldr",
+    "source_sha256": "afc7ccfde6ba9fc47916e11c4e6746416a3c2f0ad87a3f0a448632619504c706",
+    "parent": "21325 - Medieval Blacksmith.ldr",
+    "lesson": "Trunk built lying down and stood up 90°; animal tails as roots (DB description empty)",
+    "recipes": [
+      "recipes/s20-21325-blacksmith.json"
+    ]
+  },
+  {
+    "id": "s22-10030-isd-tower",
+    "number": "S22",
+    "family": "Micro spaceship",
+    "model": "data/models-annotated/10030-1.mpd",
+    "section": "10030 - subModel-127.ldr",
+    "source_sha256": "b101947efa8e265689470e048d3382728d49336f232f42237758157bb8156358",
+    "parent": "10030 - main.ldr",
+    "lesson": "Micro Tantive IV built sideways along its length on four-sided-stud bricks (DB says \"command tower\")",
+    "recipes": [
+      "recipes/s22-10030-isd-tower.json"
+    ]
+  }
+]

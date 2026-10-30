@@ -1,0 +1,97 @@
+{
+  "source": "../../../data/models-annotated/21309-1.mpd",
+  "section": "21309 - 16-22.ldr",
+  "title": "21309 Saturn V: radial clip hub carrying eight spoke panels",
+  "panels": [
+    {
+      "label": "Parent close-up, ghosted: hub at the centre of the rocket body, level with the ribbed band",
+      "parent": "21309 - main.ldr",
+      "camera": {
+        "position": [
+          392.59818304894554,
+          -573.5589098293673,
+          -392.59818304894554
+        ],
+        "target": [
+          0,
+          -338,
+          0
+        ],
+        "up": [
+          0,
+          -1,
+          0
+        ],
+        "fov": 30
+      },
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section"
+        },
+        {
+          "layer": "ghost"
+        }
+      ]
+    },
+    {
+      "label": "Source step 5: eight 1x2 clip plates on the four side faces",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Hub and its eight 103-107 panels in the ghosted parent, top: panels clipped by their handles",
+      "view": "top",
+      "parent": "21309 - main.ldr",
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "line:98,242,243,244,245,247,248,249,250",
+          "scope": "parent"
+        },
+        {
+          "layer": "ghost"
+        },
+        {
+          "layer": "closeup",
+          "select": "line:98,242,243,244,245,247,248,249,250",
+          "scope": "parent",
+          "view": "top"
+        }
+      ]
+    },
+    {
+      "label": "Hub and its eight 103-107 panels in the ghosted parent, top: stud directions in parent coordinates, panels angled (violet)",
+      "view": "top",
+      "parent": "21309 - main.ldr",
+      "layers": [
+        {
+          "layer": "stud_map",
+          "select": "line:98,242,243,244,245,247,248,249,250",
+          "scope": "parent"
+        },
+        {
+          "layer": "highlight",
+          "select": "line:98,242,243,244,245,247,248,249,250",
+          "scope": "parent"
+        },
+        {
+          "layer": "ghost"
+        },
+        {
+          "layer": "closeup",
+          "select": "line:98,242,243,244,245,247,248,249,250",
+          "scope": "parent",
+          "view": "top"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "source": "../../../data/models-annotated/75060-1.mpd",
+  "section": "75060 - step84.ldr",
+  "title": "75060 Slave I cockpit: pilot pod on a marked pivot",
+  "panels": [
+    {
+      "label": "Parent Slave I, ghosted: pod highlighted; neon-green rod is the pivot axis",
+      "parent": "75060 - main.ldr",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section"
+        },
+        {
+          "layer": "ghost"
+        },
+        {
+          "layer": "axis",
+          "point": [
+            0,
+            -18,
+            0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "length": 340,
+          "radius": 5
+        }
+      ]
+    },
+    {
+      "label": "Source step 9: four curved arches loop over the seat as the canopy frame",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            9
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Inspection copy: pins and bearings in magenta; neon-green rod is the axis",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "axis",
+          "point": [
+            0,
+            -18,
+            0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "length": 230,
+          "radius": 2
+        },
+        {
+          "layer": "highlight",
+          "select": "part:43093|part:3894"
+        }
+      ]
+    },
+    {
+      "label": "Inspection copy turned 90 degrees about the axis; bearings fixed",
+      "layers": [
+        {
+          "layer": "pose",
+          "select": "!part:3894",
+          "point": [
+            0,
+            -18,
+            0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "angle": 90
+        },
+        {
+          "layer": "axis",
+          "point": [
+            0,
+            -18,
+            0
+          ],
+          "direction": [
+            0,
+            0,
+            1
+          ],
+          "length": 230,
+          "radius": 2
+        },
+        {
+          "layer": "highlight",
+          "select": "part:43093|part:3894"
+        }
+      ],
+      "camera": {
+        "position": [
+          258.659,
+          -298.322,
+          -268.986
+        ],
+        "target": [
+          -10.327,
+          -29.336,
+          0.0
+        ],
+        "up": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "fov": 30
+      }
+    }
+  ]
+}

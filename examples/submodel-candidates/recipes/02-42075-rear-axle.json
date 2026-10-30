@@ -1,0 +1,49 @@
+{
+  "source": "../../../data/models-annotated/42075-1.mpd",
+  "section": "42075 - rearaxle.ldr",
+  "title": "42075 rear axle: differential, U-joints and tilted suspension mount",
+  "panels": [
+    {
+      "label": "Parent 42075 vehicle, ghosted: axle tilted under the rear; shock leans to the body",
+      "view": "home",
+      "parent": "42075 - vehicle.ldr",
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section"
+        },
+        {
+          "layer": "ghost"
+        }
+      ]
+    },
+    {
+      "label": "Isolated axle: differential in open frame, shock absorber, hub ends",
+      "view": "home"
+    },
+    {
+      "label": "Source step 3 (back): input bevel and U-joint enter the differential",
+      "view": "back",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Source step 5: hub frames and outgoing half-shafts added on both sides",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            5
+          ]
+        }
+      ]
+    }
+  ]
+}

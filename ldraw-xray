@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+task_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ ! -x "$task_dir/.venv/bin/python" ]; then
+  echo 'Run ./setup.sh first.' >&2
+  exit 2
+fi
+# Same shadow default as ldraw-agent; --shadow and --no-shadow still override it.
+if [ -z "${LDRAW_SHADOW:-}" ] && [ -d "$task_dir/data/offLibShadow" ]; then
+  LDRAW_SHADOW="$task_dir/data/offLibShadow"
+  export LDRAW_SHADOW
+fi
+exec "$task_dir/.venv/bin/python" -m ldraw_xray "$@"
