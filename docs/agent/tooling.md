@@ -68,6 +68,7 @@ Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM
 
 ```sh
 ./ldraw-agent manual prepare FILE --section NAME --outdir output/study --views home top --notes NOTES.json
+./ldraw-agent manual mosaic output/study/panels.json --output output/study/mosaic.png
 ./ldraw-agent manual review output/study --images IMAGE ... --note 'What was inspected and learned'
 ./ldraw-agent manual export output/study --outdir output/my-example
 ./ldraw-agent spaceship list
