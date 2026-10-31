@@ -4,6 +4,11 @@ Use whole models for proportions, palettes and a module checklist; use submodels
 
 ## Check Jev availability before searching
 
+For a broad starting selection, the [cross-category reference additions](../../examples/reference-atlas/EXPANSION.md)
+include rail, architecture, aircraft, spacecraft, industrial vehicles and furniture.
+Their inspected boards show parent context; their guides identify missing host parts
+and correct misleading source descriptions before reuse.
+
 Before the first Jev search in a task, check that the global `jev-rerank` executable is on `PATH`, `data/ldraw-info.db` exists and `TYPESAFE_API_KEY` is nonempty. Check the key's presence without printing its value. If those prerequisites exist, verify authentication and service access with one bounded, uncached query from the repository root:
 
 ```sh

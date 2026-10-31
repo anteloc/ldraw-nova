@@ -1,0 +1,288 @@
+{
+  "version": 1,
+  "cache_key": "6fe380c058f29826ecb384267d86629c90ec9be62be8a83f3fe46f625f54d776",
+  "id": "submodel-dde7c7038b72544ef35bb32f",
+  "kind": "submodels",
+  "model": "6745-1_Harrier-Jet.mpd",
+  "section": "6745 - Landing Gear.ldr",
+  "parser_section": "6745 - Landing Gear.ldr",
+  "description": "Retractable main landing gear strut using Technic angle connectors, an axle, and pins to mount a rubber tyred wheel.",
+  "parent_description": "Complete Harrier Jet model combining a fuselage, cockpit, swept wings with hardpoints, twin vertical tail, exhaust nozzles, and retractable landing gear into a VTOL fighter aircraft.",
+  "theme": "",
+  "source": {
+    "path": "/Users/captain/workspaces/workspace-ai/ldraw-nova/data/models-annotated/6745-1_Harrier-Jet.mpd",
+    "sha256": "1e976e3365226aa7a454e82e434698ba37487b5ff324caf583dbd16de6346a38",
+    "field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+    "start_line": 474
+  },
+  "source_root": "ref-dde7c7038b72544e-00-6745---Landing-Gear.ldr",
+  "preview_colour": 7,
+  "inventory": {
+    "source_sha256": "1e976e3365226aa7a454e82e434698ba37487b5ff324caf583dbd16de6346a38",
+    "parser_section": "6745 - Landing Gear.ldr",
+    "physical_placements": 7,
+    "expanded_leaf_count": 7,
+    "physical_accounting_complete": true,
+    "nonphysical_or_unresolved_leaves": [],
+    "raw_geometry_sections": [],
+    "bom": [
+      {
+        "part": "2780.dat",
+        "count": 1,
+        "description": "Technic Pin with Friction and Slots",
+        "physical_index_entry": true
+      },
+      {
+        "part": "32013.dat",
+        "count": 2,
+        "description": "Technic Angle Connector #1",
+        "physical_index_entry": true
+      },
+      {
+        "part": "32062.dat",
+        "count": 1,
+        "description": "Technic Axle  2 Notched",
+        "physical_index_entry": true
+      },
+      {
+        "part": "3673.dat",
+        "count": 1,
+        "description": "Technic Pin",
+        "physical_index_entry": true
+      },
+      {
+        "part": "42610.dat",
+        "count": 1,
+        "description": "Wheel Rim  8 x 11.2 with Centre Groove",
+        "physical_index_entry": true
+      },
+      {
+        "part": "51011.dat",
+        "count": 1,
+        "description": "Tyre  6.4/ 75 x  8 Shallow Offset Tread",
+        "physical_index_entry": true
+      }
+    ],
+    "technic_named_placements": 5,
+    "technic_share": 0.7142857142857143,
+    "legacy_parts": [],
+    "shape_fingerprint": "57fb404ae4498c3dcd2c39e5108df293d9ded621338d8541b42be08f7be401c6",
+    "recipe_fingerprint": "7b8162cdd9b29c7663f61dfd477fda7ec3a860d0492bc327852916cda01561ca",
+    "fingerprint_note": "Shape comparison ignores colour and global translation; rotations and mirrored geometry remain distinct.",
+    "parents": [
+      {
+        "section": "6745 - Jet.ldr",
+        "at": [
+          -50.0,
+          -0.42,
+          50.84
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.695,
+            0.719
+          ],
+          [
+            0.0,
+            -0.719,
+            0.695
+          ]
+        ],
+        "colour": 71
+      },
+      {
+        "section": "6745 - Jet.ldr",
+        "at": [
+          50.0,
+          -0.42,
+          50.84
+        ],
+        "matrix": [
+          [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.695,
+            0.719
+          ],
+          [
+            0.0,
+            0.719,
+            0.695
+          ]
+        ],
+        "colour": 71
+      }
+    ],
+    "dependencies": [
+      {
+        "section": "6745 - Landing Gear.ldr",
+        "kind": "assembly",
+        "author": "Marc Giraudet [Mad_Marc]",
+        "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+      }
+    ],
+    "reachable": true
+  },
+  "attribution": [
+    {
+      "section": "6745 - Landing Gear.ldr",
+      "author": "Marc Giraudet [Mad_Marc]",
+      "license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"
+    }
+  ],
+  "bounds": {
+    "min": [
+      -30.0,
+      -21.9198,
+      -39.0
+    ],
+    "max": [
+      30.0,
+      21.9198,
+      51.919799999999995
+    ]
+  },
+  "size_ldu": [
+    60.0,
+    43.8396,
+    90.9198
+  ],
+  "size_studs_plates_studs": [
+    3.0,
+    5.47995,
+    4.54599
+  ],
+  "mesh_complete": true,
+  "mesh_diagnostics": [],
+  "raw_assembly_checks_passed": true,
+  "raw_diagnostic_counts": {
+    "header.missing": 1
+  },
+  "assembly_checks_passed": true,
+  "diagnostics": [
+    {
+      "code": "header.missing",
+      "severity": "warning",
+      "message": "Add a descriptive Name: header.",
+      "line_number": null,
+      "section": "preview-submodel-dde7c7038b72544ef35bb32f.ldr"
+    }
+  ],
+  "repairs": [],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 6,
+      "partial": 1,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -30.0,
+        -21.9198,
+        -39.0
+      ],
+      "max": [
+        30.0,
+        21.9198,
+        51.919799999999995
+      ]
+    },
+    "occurrence_count": 7,
+    "detail": "summary",
+    "instance_offset": 0,
+    "instances": [],
+    "instances_truncated": true,
+    "contacts_checked": true,
+    "contact_count": 1,
+    "contacts": [],
+    "contacts_truncated": true,
+    "confirmed_components": null,
+    "optimistic_components": null,
+    "optimistic_component_count": 6,
+    "confirmed_component_count": 6,
+    "components_truncated": true,
+    "overlap_candidate_count": 8,
+    "overlaps": [],
+    "overlaps_truncated": true,
+    "diagnostics": [
+      {
+        "code": "assembly.disconnected_evidence",
+        "severity": "warning",
+        "message": "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.",
+        "line_number": null,
+        "section": null,
+        "component_count": 6
+      },
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  },
+  "contacts_checked": true,
+  "bom_comparison": {
+    "matches": true,
+    "physical_placements": 7,
+    "leocad_placements": 7,
+    "differences": []
+  },
+  "views": [
+    "home",
+    "front",
+    "right",
+    "top"
+  ],
+  "artifacts": {
+    "source": "source.mpd",
+    "preview": "preview.mpd",
+    "manifest": "extraction.json"
+  },
+  "status": "reference",
+  "visual_review": {
+    "decision": "adapt",
+    "note": "Home and the context/right-view board show the wheel, two-connector strut and separate mounting pin, with both installed occurrences visible through the ghosted aircraft.",
+    "views": [
+      "home"
+    ]
+  },
+  "physical_validity": "not_proven",
+  "limitations": [
+    "Bounds describe the source local axes, including protrusions; they are not connection frames.",
+    "Preview colour resolves inherited 16; extraction retains original colours and authorship.",
+    "Passing checks or matching a BOM does not prove connectivity, stability or fit in a new model."
+  ],
+  "artifact_hashes": {
+    "source.mpd": "e1511d49532342accb4c19b6cf61c7555f393970a7c62b7ee0e680f88f25315c",
+    "preview.mpd": "a6849d4f565ffa20a4a74e9ea1a67280300ab6a5ce64ffff05be72f29fbe31ee",
+    "extraction.json": "55912ec220641102c307e1faa603b53df85c41c1c9c644d5944092c781dddfa7",
+    "renders/leocad-bom.csv": "e37d7d2b615b6ff81cd94cc9f0317ec7dc93db0024fe9e3a5d50c0c04d10b4b0",
+    "renders/home.png": "5433cfc2e92b84feec46e12703884d564562290cfac92326979cbfc546a17e6b",
+    "renders/front.png": "7985d9725d7b80e6e5192fef70fdb4531ebfb06f4f8c093cdf13868d5e03c28d",
+    "renders/right.png": "304e5e6c5c5c796009a9e6956abfa4654992e49e15066256b76362837357d453",
+    "renders/top.png": "52c7460bc6d3b0b708dfc8fd20ec41db8439db053c2b293a8d3a03bbed39755d",
+    "board/mosaic.png": "3daa4a66b446dfb983bca6308016de33c63523442b3a11a4672eabf6dc8f3d52",
+    "board/recipe.json": "b0780288e4e107331df0864bbfbec00d3bc25a0d6d74e598ac1f9e4b9f96e15f",
+    "board/provenance.json": "ea623446310ce14846e9d929800ee39a5240700c7f5739c5b752046e2ea1b485"
+  }
+}

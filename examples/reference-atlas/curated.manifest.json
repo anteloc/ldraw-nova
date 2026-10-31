@@ -610,6 +610,211 @@
           "right"
         ]
       }
+    },
+    {
+      "id": "submodel-ae9e41326e4cf5448a3a38c6",
+      "source_sha256": "f94688107cbcd7a6fbab0d79965a11ec81cde188bfbecaeec84d3a75c902b9c6",
+      "directory": "rail-bogie",
+      "title": "Two-axle train bogie with buffers and magnetic coupling",
+      "model": "10183-1_Switcher.mpd",
+      "section": "10183 - 17 - wheels back.ldr",
+      "contacts": "all",
+      "views": [
+        "home",
+        "front",
+        "right",
+        "top"
+      ],
+      "role": "rail transport",
+      "scale": "minifigure",
+      "lesson": "Combine two wheelsets, a bogie pivot and a coupling on one supported undercarriage; minifigure heads become buffer faces.",
+      "placement_notes": "The locomotive chassis and receiving mount for the bogie pin. The parent turns this assembly 90 degrees about Y and places it at [-170, 56, 0]. It does not provide a motor or powered transmission for this bogie. Keep the wheelsets, pin and coupling stack together. Reserve turning space around the bogie and buffer faces; do not assume clearance on a different chassis or track curve.",
+      "visual_review": {
+        "decision": "adapt",
+        "note": "Home and the context/right-view board show both wheelsets, the central mounting pin, magnetic coupling and paired round buffer faces.",
+        "views": [
+          "home"
+        ]
+      },
+      "construction": "Two 2878c02 wheelsets sit at local Z = -60 and +60. The 4092b short-pin bogie plate supplies the upward pivot. The buffer beam, coupling and magnet are included.",
+      "description_check": "The database says single-axle; the section actually contains two single-axle wheelset assemblies, making a two-axle bogie.",
+      "discovery": {
+        "engine": "jev",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "Rear wheel bogie — single-axle train wheelset, minifig-head buffers, buffer beam, magnetic coupling, coupler and bogie plate",
+        "parent_description": "Red and dark-red diesel switcher locomotive on a 6x28 train base: grille-vented sides with hinged body panels, glazed cab with windscreen and opening train doors, double-curved dark-bluish-grey roof, headlight and tail-light round plates, interior minifig seat and turntable, underside underframe detail, and two magnetic-coupled single-axle wheel bogies"
+      }
+    },
+    {
+      "id": "submodel-4188bcbe0163f77bb60902bb",
+      "source_sha256": "20f6887edaefc9d2a08233d49fc114d74fd8f2e89bf19c8e7be54047d621efca",
+      "directory": "dormer-balcony",
+      "title": "Balcony facade with door, dormer and planted railing",
+      "model": "10270-1.mpd",
+      "section": "10270 - Building-2_First_Floor_Balcony.ldr",
+      "contacts": "all",
+      "views": [
+        "home",
+        "front",
+        "right",
+        "top"
+      ],
+      "role": "building facade",
+      "scale": "minifigure",
+      "lesson": "Integrate a balcony floor, door threshold, decorative railing and sloped roof window into a layered facade module.",
+      "placement_notes": "The building below, side/rear enclosure and surrounding roof. The complete-model parent places this section at [78, -185, 120], rotated 180 degrees about Y. Its plate underside needs support across the host building. Preserve the door opening and plate support grid. Rebuild wall courses when changing width; do not stretch the roof window, fencing or glazing.",
+      "visual_review": {
+        "decision": "adapt",
+        "note": "Home and the context/right-view board show the projecting balcony, sloping dormer glazing, wall and door. The side view exposes the thin wall and floor that need the parent building.",
+        "views": [
+          "home"
+        ]
+      },
+      "construction": "A tan plate floor carries a turquoise wall with door and glazing. Dark-blue slopes frame a dedicated 60806 roof window; fences and brown trim form the balcony edge.",
+      "description_check": "The description is broadly accurate, but this is a facade/floor fragment, not a complete room or self-supporting building.",
+      "discovery": {
+        "engine": "jev",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "First-floor balcony - turquoise brick railing with dark-blue slopes forming a dormered bay, a white roof-window, brown door and trim, plus small floral accents on a tan/white plate base.",
+        "parent_description": "Complete Bookshop diorama - a two-building street scene featuring a tan/turquoise bookshop with dormer windows and a dark-red mansard roof, a neighbouring white/turquoise townhouse with a bay window and balcony, plus an ornamental tree, lampposts, a pendulum clock, bookshelves, and two minifigures."
+      }
+    },
+    {
+      "id": "submodel-dde7c7038b72544ef35bb32f",
+      "source_sha256": "1e976e3365226aa7a454e82e434698ba37487b5ff324caf583dbd16de6346a38",
+      "directory": "aircraft-undercarriage",
+      "title": "Compact aircraft landing strut with matched wheel and tyre",
+      "model": "6745-1_Harrier-Jet.mpd",
+      "section": "6745 - Landing Gear.ldr",
+      "contacts": "all",
+      "views": [
+        "home",
+        "front",
+        "right",
+        "top"
+      ],
+      "role": "aircraft Technic",
+      "scale": "minifigure",
+      "lesson": "Use a short axle and two angle connectors to separate the fuselage mounting pin from a freely mounted wheel.",
+      "placement_notes": "The fuselage Technic receiving bricks and the placement angle. The parent contains two differently rotated occurrences at X = -50 and +50; the extracted strut is not already in its installed orientation. Keep the wheel/tyre pair and pin roles. Measure the host receiving hole before placement and review the complete fuselage clearance. Six optimistic connection groups remain for seven placements: this is a geometry study, not a verified mechanical core.",
+      "visual_review": {
+        "decision": "adapt",
+        "note": "Home and the context/right-view board show the wheel, two-connector strut and separate mounting pin, with both installed occurrences visible through the ghosted aircraft.",
+        "views": [
+          "home"
+        ]
+      },
+      "construction": "Two 32013 angle connectors are joined by a 32062 axle. A 2780 friction pin supplies the host attachment, while a 3673 pin carries the 42610 rim and 51011 tyre.",
+      "description_check": "The description calls it retractable. The source shows one pose only; retraction travel, locking and wheel clearance have not been demonstrated.",
+      "discovery": {
+        "engine": "jev",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "Retractable main landing gear strut using Technic angle connectors, an axle, and pins to mount a rubber tyred wheel.",
+        "parent_description": "Complete Harrier Jet model combining a fuselage, cockpit, swept wings with hardpoints, twin vertical tail, exhaust nozzles, and retractable landing gear into a VTOL fighter aircraft."
+      }
+    },
+    {
+      "id": "submodel-e41fd31856846b8a3374c853",
+      "source_sha256": "ac3df5b53a19dafc1626c2cf6a87f020614f8a2acfa69065b6897d332bda03cd",
+      "directory": "spacecraft-hatch",
+      "title": "Hinged spacecraft side hatch with bracket-mounted engine cone",
+      "model": "924-1.mpd",
+      "section": "924 - Space Ship - Hatch Left.ldr",
+      "contacts": "all",
+      "views": [
+        "home",
+        "front",
+        "right",
+        "top"
+      ],
+      "role": "spacecraft hatch SNOT",
+      "scale": "minifigure",
+      "lesson": "Carry an engine cone, fin and layered side shell on a hinged module while leaving the mating hinge half in the hull.",
+      "placement_notes": "The mating 3830 hinge top: the hull places it at [-60, -128, 240], beside the hatch occurrence at [-60, -72, 240]. The opposite hatch is a separately authored section, not permission to reflect rigid parts. Copy or rebuild the hull-side hinge support before claiming an attached hatch. Preserve hinge alignment and reserve the swept space; opening travel is not checked by this static source.",
+      "visual_review": {
+        "decision": "adapt",
+        "note": "Home and the context/right-view board show the exposed hinge fingers, sideways cone, fin and layered hatch positioned at the rear of the spacecraft.",
+        "views": [
+          "home"
+        ]
+      },
+      "construction": "A 3831 hinge base is bonded into plates and inverted slopes. A 3956 bracket presents a perpendicular attachment for the 3943b cone. The fin and cap complete the side silhouette.",
+      "description_check": "The description identifies the visible elements correctly but omits the critical mating hinge half in the parent.",
+      "discovery": {
+        "engine": "jev",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "A blue left-side hatch assembly mirroring the right, with inverted slopes, a hinge base, bracket, tail fin, and a light grey engine cone.",
+        "parent_description": "A classic LEGO Space Cruiser composed of a grey-winged spaceship, two blue hinged side hatches, a trans-yellow cockpit canopy, a wheeled grey forklift with a white container, and two Classic Space minifigures (red and white)."
+      }
+    },
+    {
+      "id": "submodel-ca24ebebdcc47c9f49b5652a",
+      "source_sha256": "ae997383ce765767e34c76c9d3b528f90c3abd5bc1783d6a26be2bcf470ddfd8",
+      "directory": "warehouse-forklift",
+      "title": "Small warehouse forklift with dedicated lifting mast",
+      "model": "6375-1.mpd",
+      "section": "6375 - forklift.ldr",
+      "contacts": "all",
+      "views": [
+        "home",
+        "front",
+        "right",
+        "top"
+      ],
+      "colour": 4,
+      "role": "industrial vehicle",
+      "scale": "minifigure",
+      "lesson": "Build a complete small service vehicle around a dedicated mast rather than inventing a lifting linkage from loose parts.",
+      "placement_notes": "Cargo, a cart, the aircraft and minifigures are separate scene objects. No structural part of this forklift is supplied by the parent. Its inherited body colour is red (4); the isolated xray board uses its default yellow for inherited colour. Preserve the mast and matched wheel/tyre pairs. Change surrounding bodywork and palette, then check ground contact and fork clearance. Cargo fit, load stability and lift travel remain unverified.",
+      "visual_review": {
+        "decision": "adapt",
+        "note": "The red home preview and context/right-view board show four wheels, tall mast, raised forks and operator controls. The ghosted parent confirms this is a separate vehicle, not a disconnected component of the airplane.",
+        "views": [
+          "home"
+        ]
+      },
+      "construction": "Wheel-pin plates support four wheels, with larger tyres beside the mast. The 3430c01 shortcut includes the mast and raised black forks; two controls and a handle complete the operator area.",
+      "description_check": "The database description is broadly accurate. The lifting function belongs to a dedicated complete-part shortcut; the MPD represents its raised pose, not an actuated mechanism.",
+      "discovery": {
+        "engine": "fts",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "A small forklift vehicle with wheels, a forklift mast, and a control stick for lifting cargo.",
+        "parent_description": "An airport service set featuring an airplane, a forklift, a cargo cart, a shipping case, and two minifigure characters."
+      }
+    },
+    {
+      "id": "submodel-f4179fdc3ef35f963aeab0e4",
+      "source_sha256": "6951d254fb667992beb4c3f49407fdb3ce7486399dac6c5a903ecae78d359814",
+      "directory": "swivel-armchair",
+      "title": "Seven-part swivel armchair with sideways tiled armrests",
+      "model": "10297-1.mpd",
+      "section": "10297 - armchair.ldr",
+      "contacts": "all",
+      "views": [
+        "home",
+        "front",
+        "right",
+        "top"
+      ],
+      "role": "furniture SNOT",
+      "scale": "minifigure",
+      "lesson": "Turn a moulded seat into a compact armchair using opposing brackets, sideways tiles and a complete turntable pair.",
+      "placement_notes": "Only the room/floor context; both turntable halves are included. The source places the chair at an angle through a proper Y rotation, rather than changing its internal construction. Keep the bracket offsets and turntable pair. Recolour or place the whole chair, leaving room around its armrests; verify floor attachment separately when mounting it.",
+      "visual_review": {
+        "decision": "adapt",
+        "note": "Home and the context/right-view board show a complete seat with two smooth vertical armrests in a furnished room. The single optimistic connection group supports selection, not physical certification.",
+        "views": [
+          "home"
+        ]
+      },
+      "construction": "A 3680 base and 3679 turntable top support two opposing 99207 brackets, a 4079 seat and two vertical 3068b armrest tiles.",
+      "description_check": "The short description is accurate but undersells the construction: the two brackets and vertical tiles form the armrests, and the turntable includes both halves.",
+      "discovery": {
+        "engine": "fts",
+        "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
+        "description": "A small black armchair built on a turntable base with brackets and a minifig seat.",
+        "parent_description": "Assorted accessories including suitcases, a crowbar, and decorative dishes for the hotel lobby display."
+      }
     }
   ]
 }

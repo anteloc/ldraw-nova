@@ -1,0 +1,25 @@
+{
+  "source": {
+    "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/data/models-annotated/10270-1.mpd",
+    "source_sha256": "20f6887edaefc9d2a08233d49fc114d74fd8f2e89bf19c8e7be54047d621efca",
+    "section": "10270 - Building-2_First_Floor_Balcony.ldr",
+    "section_first_line": 5090,
+    "steps": 9,
+    "empty_leading_steps": 0,
+    "parents": {
+      "10270 - Complete.ldr": [
+        "1 15 78 -185 120 -1 0 0 0 1 0 0 0 -1 10270 - Building-2_First_Floor_Balcony.ldr"
+      ]
+    }
+  },
+  "versions": {
+    "ldraw_xray": "0.1.0",
+    "pyldraw3": "1.7.0",
+    "python": "3.14.6",
+    "leocad": "25.09"
+  },
+  "reviewed": true,
+  "note": "Home and the context/right-view board show the projecting balcony, sloping dormer glazing, wall and door. The side view exposes the thin wall and floor that need the parent building.",
+  "synthetic": "Magenta highlights and ghosted context are inspection aids. Panels are independently framed; isolated inherited colour can differ from the parent.",
+  "replay": "./ldraw-xray board run examples/reference-atlas/dormer-balcony/board/recipe.json --output output/boards/dormer-balcony"
+}

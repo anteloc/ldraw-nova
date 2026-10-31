@@ -1,6 +1,11 @@
 # Reference atlas
 
-Start with the [offline example gallery](index.html): **21 inspected source constructions**, with seven rendered views each, editable placement plans, measured cards and specific adaptation notes. Two [parameterized recipes](#parameterized-recipes) demonstrate rebuilding a construction for a different height and palette.
+Start with the [offline example gallery](index.html): **27 inspected source constructions**, with editable placement plans, measured cards and specific adaptation notes. The original 21 have seven rendered views each; the six [cross-category additions](EXPANSION.md) have four views plus inspected parent-context boards. Two [parameterized recipes](#parameterized-recipes) demonstrate rebuilding a construction for a different height and palette.
+
+The new selection covers a train bogie, balcony facade, aircraft landing strut,
+spacecraft hatch, warehouse forklift and swivel armchair. Their guides distinguish
+the extracted construction from the parts supplied by its parent. They are studies
+for adaptation, not certified mechanical cores.
 
 The broader [library manifest](library.manifest.json) selects **200 submodels and 20 whole models** across architecture, street fittings, foliage, vehicles, aircraft, boats and trains. Its generated [220-reference gallery](../../output/reference-library/index.html) uses home/front/right/top by default. The large gallery is generated into ignored `output/`; the curated examples and their images are retained here.
 

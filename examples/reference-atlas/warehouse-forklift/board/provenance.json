@@ -1,0 +1,25 @@
+{
+  "source": {
+    "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/data/models-annotated/6375-1.mpd",
+    "source_sha256": "ae997383ce765767e34c76c9d3b528f90c3abd5bc1783d6a26be2bcf470ddfd8",
+    "section": "6375 - forklift.ldr",
+    "section_first_line": 353,
+    "steps": 6,
+    "empty_leading_steps": 0,
+    "parents": {
+      "6375 - main.ldr": [
+        "1 4 213.201 -40 -140.008 -0.866 0 -0.5 0 1 0 0.5 0 -0.866 6375 - forklift.ldr"
+      ]
+    }
+  },
+  "versions": {
+    "ldraw_xray": "0.1.0",
+    "pyldraw3": "1.7.0",
+    "python": "3.14.6",
+    "leocad": "25.09"
+  },
+  "reviewed": true,
+  "note": "The red home preview and context/right-view board show four wheels, tall mast, raised forks and operator controls. The ghosted parent confirms this is a separate vehicle, not a disconnected component of the airplane.",
+  "synthetic": "Magenta highlights and ghosted context are inspection aids. Panels are independently framed; isolated inherited colour can differ from the parent.",
+  "replay": "./ldraw-xray board run examples/reference-atlas/warehouse-forklift/board/recipe.json --output output/boards/warehouse-forklift"
+}
