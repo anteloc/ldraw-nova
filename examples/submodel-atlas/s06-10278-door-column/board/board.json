@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s06-10278-door-column.json",
+      "recipe_sha256": "21856c8147faf7bde4ad823631f5c89d1ea556c0ecf4dc9fd7afa85a1207df1a",
+      "image": "board/mosaic.png",
+      "image_sha256": "6a918ad388a48be1014bc77b2e7b4e3535bb20c218648c20b431de527ccd2c6d",
+      "title": "10278 Police Station door column: sideways stone column with clipped vines",
+      "mode": "views",
+      "source": {
+        "model": "10278-1.mpd",
+        "section": "10278 - doorcolumn2f.ldr",
+        "sha256": "708b1d2c15e25bc3a8a44986a2d2a00598ee8de4acd8c60465e8efad7ff33f84",
+        "steps": 6,
+        "parents": {
+          "10278 - 2ndfloor.ldr": [
+            "1 2 -160 -108 -8 1 0 0 0 1 0 0 0 1 10278 - doorcolumn2f.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent second floor, ghosted: column beside the door",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 1: bracket, tan plates and five 1x1 round plates with side handles",
+          "view": "home",
+          "step": 1,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                1
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 5: five clip bars stand out from the column for the vine leaves",
+          "view": "home",
+          "step": 5,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                5
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: column studs forward (aqua), leaves angled (violet); synthetic, non-LEGO colours",
+          "view": "front",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "-z": 30,
+                "up": 1,
+                "-x": 7,
+                "angled": 15
+              },
+              "total": 53
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s06-10278-door-column.json --output output/boards/s06-10278-door-column"
+    }
+  ]
+}

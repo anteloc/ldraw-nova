@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s18-75276-tie-mount.json",
+      "recipe_sha256": "7f6221bdedabe43f5ce497732db2171b663cc33e0b53fb674709b35e752495ac",
+      "image": "board/mosaic.png",
+      "image_sha256": "5ade4d5f2d5ea9a64b12e9cc334cf9e175e423e642c4e2e9e9a374f878ebba8d",
+      "title": "75276 Stormtrooper helmet mouth vent (DB says TIE mount)",
+      "mode": "views",
+      "source": {
+        "model": "75276-1.mpd",
+        "section": "75276 - 211-222.ldr",
+        "sha256": "87bb2655044e2816d87c60214b6497b6fb91d4767cae94adc4ada60be0191059",
+        "steps": 12,
+        "parents": {
+          "75276 - main.ldr": [
+            "1 16 0 48 -80 1 0 0 0 1 0 0 0 1 75276 - 211-222.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Stormtrooper helmet: the mouth vent highlighted under the face",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 7: two 1x3 offset plates stand studs-forward on brackets",
+          "view": "home",
+          "step": 7,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                7
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 11: grille child, two grille slopes on an offset plate, half-stud centred",
+          "view": "home",
+          "step": 11,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                11
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Source step 12: a car mudguard is the arch over the vent",
+          "view": "home",
+          "step": 12,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                12
+              ]
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s18-75276-tie-mount.json --output output/boards/s18-75276-tie-mount"
+    }
+  ]
+}

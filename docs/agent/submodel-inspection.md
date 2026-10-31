@@ -33,9 +33,9 @@ stateDiagram-v2
   Overview --> Targeted: question still open
   Overview --> Record: construction and parent role are clear
   Targeted --> Record: board answers it
-  Record --> Review: recipe and README row in examples/submodel-candidates
+  Record --> Review: recipe and candidate row in examples/submodel-atlas
   Review --> Find: user drops it
-  Review --> Promote: kept, then manual prepare, review, export and atlas
+  Review --> Promote: kept, then generate.py, manual review and catalog refresh
   Promote --> [*]
 ```
 
@@ -114,7 +114,7 @@ right side, from −X.
 
 ## What the candidate reviews taught
 
-These come from the 30 reviewed [submodel candidates](../../examples/submodel-candidates/README.md):
+These come from the 30 reviewed entries of the [submodel atlas](../../examples/submodel-atlas/README.md):
 
 - **Check the parent before trusting a description.**
   - Four of five DB descriptions were wrong in the second batch, and many SNOT
@@ -135,25 +135,53 @@ These come from the 30 reviewed [submodel candidates](../../examples/submodel-ca
 - **Moving parts get the three-pose sweep.** Mark the axis, and render 0°, 45°
   and 90° with one fixed camera in `analysis` mode.
 
-## Record a candidate
+## Record and promote a candidate
 
-Add a kept candidate to [`examples/submodel-candidates`](../../examples/submodel-candidates/README.md):
+The [submodel atlas](../../examples/submodel-atlas/README.md) holds both stages.
+Its `selections.json` is the single source of truth, and agents find promoted
+entries with `./ldraw-agent examples --family submodel [--details] QUERY`.
 
-1. Copy the board's `recipe.json` to `recipes/<id>.json`.
+**Record** a candidate you inspected:
+
+1. Copy the board's `recipe.json` to `examples/submodel-atlas/recipes/<key>.json`.
    - Make `source` relative to the recipe, e.g.
      `../../../data/models-annotated/42075-1.mpd`.
    - Keep only the panels that taught something.
    - Write labels that say what to look at.
-2. Add a `candidates.json` row with the source, section, SHA-256, parent, family,
-   lesson and recipe paths.
-3. Add a README entry: construction, what the parent supplies, the corrected
-   description, and what remains unverified.
+2. Add a `selections.json` row with `status: "candidate"` and its `key`,
+   basename `model`, `section`, SHA-256, `parent`, family tag (`category`),
+   `discovery` id and `recipes`.
 
-`tests/test_submodel_candidates.py` checks that every source still matches its
-hash and that every recipe loads.
+**Promote** it once the user keeps it:
 
-Promotion into an atlas follows [build manuals §4](build-manuals.md#4-review-export-and-add-to-an-atlas).
-xray boards supplement that review; they do not replace it.
+1. Write its five study notes (`lesson`, `construction`, `interfaces`,
+   `parent_context`, `reuse_notes`) and guide fields (`parent_supplies`,
+   `corrected_description`, `board_reading`, `limits`). Check every step number
+   against the build pages; board labels count `0 ROTSTEP` as a step.
+2. Set `status: "promoted"`, then run `generate.py --probe`. Use `adapt` when
+   the source checks pass and `inspiration` when they do not.
+3. Run `generate.py --name KEY`. It writes the build pages, renders the board
+   into `board/`, and hashes the board as a final image.
+4. Open every step page and board, then record `./ldraw-agent manual review`
+   with every image `manual.json` names.
+5. Run `generate.py --refresh-catalog`, then `pytest tests/test_submodel_atlas.py`.
+
+```mermaid
+flowchart LR
+  R["recipes/KEY.json<br/>(reviewed panels)"] -->|generate.py renders| B["KEY/board/mosaic.png<br/>+ board.json"]
+  S["selections.json row<br/>(notes, guide)"] -->|prepare_manual| M["KEY/manual.json<br/>(build pages, BOM)"]
+  B -->|hashed into final_images| M
+  M -->|manual review lists every image| V["KEY/visual-review.json"]
+  S -->|refresh-catalog| G["KEY/GUIDE.md"]
+  M & V -->|refresh-catalog| C["catalog.json<br/>examples --family submodel"]
+```
+
+`tests/test_submodel_atlas.py` checks each source hash, parent, discovery id
+and recipe. It also checks catalog paths, board provenance and review status, and
+rebuilds every `adapt` plan against its LeoCAD BOM.
+
+xray boards supplement the build-page review; they do not replace it. For other
+atlases, follow [build manuals §4](build-manuals.md#4-review-export-and-add-to-an-atlas).
 
 ## Limits
 

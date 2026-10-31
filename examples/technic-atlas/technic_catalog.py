@@ -1,10 +1,9 @@
 """Publish structural recipes and mechanism studies in one Technic atlas."""
 from pathlib import Path
 import html
-import json
 
 from ldraw_tools.common import atomic_write, dumps
-from ldraw_tools.manuals import current_manual, sha
+from ldraw_tools.manuals import current_manual, current_review
 
 
 def write_catalog(outdir, rows):
@@ -16,21 +15,11 @@ def write_catalog(outdir, rows):
             row.pop('visual_review', None)
             row['visual_review_status'] = 'pending'
             folder = outdir / Path(row['manual']).parent
-            try:
+            if current_review(folder) is not None:
                 _, manual = current_manual(folder)
-                review = json.loads((folder / 'visual-review.json').read_text())
-                images = {p for s in manual['sections'] for step in s['steps']
-                          for p in step['images'].values()}
-                images.update(manual['final_images'])
-                if (manual['source_checks_passed'] and manual['bom_matches'] is True
-                        and review.get('status') == 'visually_reviewed'
-                        and review.get('manual_sha256') == sha(folder / 'manual.json')
-                        and set(review.get('viewed_images', [])) == images
-                        and review.get('note', '').strip()):
+                if manual['source_checks_passed'] and manual['bom_matches'] is True:
                     row['visual_review_status'] = 'visually_reviewed'
                     row['visual_review'] = str(Path(row['manual']).parent / 'visual-review.json')
-            except (OSError, ValueError, KeyError):
-                pass
         entries.append(row)
     atomic_write(outdir / 'catalog.json', dumps(dict(
         version=1, scope='technic-construction', examples=entries, details=[])) + '\n')

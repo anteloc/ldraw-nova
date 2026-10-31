@@ -98,4 +98,6 @@ First perform the [Jev availability check](reference-discovery.md#check-jev-avai
 
 When unavailable, use `--engine fts`, the local catalogs and examples. Identify offline keyword ranking explicitly. The construction filter considers the selected description and actual BOM, excludes obvious mechanism contents, and allows static sections from mechanism-bearing parents. It does not prove every axle in a “chassis” is structural. Inspect parent support, mounting interfaces and build order; preserve attribution and extraction manifests.
 
+The [submodel atlas](../../examples/submodel-atlas/README.md) shows reviewed Technic sections whose parents supply what the section lacks: the pinion for a steering rack (01) and the tilt of a differential axle (02). It also shows a System lamp cluster on a Technic mount (04).
+
 Keep the skeleton's main lines clear, control its palette and reserve real mounts for panels or System cladding. Expose structure where it explains the subject; organize connector clutter elsewhere. Compare all seven views and a thumbnail. Fix proportions and unsupported mounts before adding decoration. Deliver the MPD, plan/generator, contract, checks, BOM comparison and visual review of the final revision.

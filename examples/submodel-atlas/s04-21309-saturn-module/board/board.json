@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s04-21309-saturn-module.json",
+      "recipe_sha256": "b5bb37fd1e3f3b9dc2f93b58208a565333b79eaf803daa30edd5a61d79552d4c",
+      "image": "board/mosaic.png",
+      "image_sha256": "be7f79fe4939632852416c58adb69a9bb86b3e0dfd50eea28c5d47bf94e47c0a",
+      "title": "21309 Saturn V: radial clip hub carrying eight spoke panels",
+      "mode": "views",
+      "source": {
+        "model": "21309-1.mpd",
+        "section": "21309 - 16-22.ldr",
+        "sha256": "fca920c256ac2ccdfecc6c168f656cdcf3568a1c40c164292ab7f68d8bcbb3e2",
+        "steps": 7,
+        "parents": {
+          "21309 - main.ldr": [
+            "1 70 0 -328 0 1 0 0 0 1 0 0 0 1 21309 - 16-22.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent close-up, ghosted: hub at the centre of the rocket body, level with the ribbed band",
+          "view": "camera",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 5: eight 1x2 clip plates on the four side faces",
+          "view": "home",
+          "step": 5,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                5
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Hub and its eight 103-107 panels in the ghosted parent, top: panels clipped by their handles",
+          "view": "top",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "line:98,242,243,244,245,247,248,249,250",
+              "scope": "parent",
+              "count": 9
+            },
+            {
+              "layer": "ghost"
+            },
+            {
+              "layer": "closeup",
+              "select": "line:98,242,243,244,245,247,248,249,250",
+              "scope": "parent",
+              "view": "top"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Hub and its eight 103-107 panels in the ghosted parent, top: stud directions in parent coordinates, panels angled (violet)",
+          "view": "top",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "line:98,242,243,244,245,247,248,249,250",
+              "scope": "parent",
+              "frame": "parent coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 6,
+                "+x": 5,
+                "+z": 5,
+                "-x": 5,
+                "-z": 5,
+                "angled": 136
+              },
+              "total": 162
+            },
+            {
+              "layer": "highlight",
+              "select": "line:98,242,243,244,245,247,248,249,250",
+              "scope": "parent",
+              "count": 162
+            },
+            {
+              "layer": "ghost"
+            },
+            {
+              "layer": "closeup",
+              "select": "line:98,242,243,244,245,247,248,249,250",
+              "scope": "parent",
+              "view": "top"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s04-21309-saturn-module.json --output output/boards/s04-21309-saturn-module"
+    }
+  ]
+}

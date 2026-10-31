@@ -55,6 +55,8 @@ For a review copy of the entire Bookshop:
 
 Extraction writes a review artifact even when syntax checks fail and then returns 1. It does not silently delete bad placements. In this Bookshop, the repaired copy exposes a duplicated `3010.dat` at world `(148,-129,0)` in the townhouse ground floor. Its geometry check correctly fails. Do not treat this reference as a golden physically valid fixture.
 
+The [submodel atlas](../../examples/submodel-atlas/README.md) records, for 30 real sections, what the parent supplies and where the database description is wrong. Its building entries include a hinged corner roof (10), a patterned floor (S03), a clipped-vine column (S06), a glazed wall built in its own frame (S07) and a recessed entrance (S10).
+
 ## 3. Define module contracts
 
 Before populating parts, record each module's purpose, approximate envelope, local origin, attachment frames, inherited palette, construction steps, and review status. For a building, start with the street/base, then separate each floor, façade detail, roof, interior and landscaping. Keep the main section short enough to read in one screen.

@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s08-10267-christmas-tree.json",
+      "recipe_sha256": "62bdb09f3177c91fa9a844dac6b5abc345080c4d825f813ab09d10f8ffd80cc9",
+      "image": "board/mosaic.png",
+      "image_sha256": "d75ce2d225d72c158cf977fc3c3bdfe59d14a5238e7245eff622fdbcb578f867",
+      "title": "10267 Christmas tree: four identical faces on a four-sided stud core",
+      "mode": "views",
+      "source": {
+        "model": "10267-1.mpd",
+        "section": "10267 - christmas-tree.ldr",
+        "sha256": "5b02847de56fb081daf87fb98c027055588a4d3da118f41a565082fd8a5fd773",
+        "steps": 8,
+        "parents": {
+          "10267 - main.ldr": [
+            "1 15 -380 -16 -450 1 0 0 0 1 0 0 0 1 10267 - christmas-tree.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Gingerbread House, right side: tree highlighted beside the house",
+          "view": "right",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 4: a 1x1 brick with studs on four sides on the trunk",
+          "view": "home",
+          "step": 4,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                4
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 6: two face children added on opposite sides",
+          "view": "home",
+          "step": 6,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                6
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: four face directions in four colours, star angled; synthetic, non-LEGO colours",
+          "view": "front",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 15,
+                "+x": 11,
+                "-x": 11,
+                "-z": 12,
+                "+z": 12,
+                "angled": 9
+              },
+              "total": 70
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s08-10267-christmas-tree.json --output output/boards/s08-10267-christmas-tree"
+    }
+  ]
+}

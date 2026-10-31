@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s17-10294-titanic-hull.json",
+      "recipe_sha256": "c989d53e8890c56a10e714b1814424edd94449e00bc7571b15f619c1bb58b78d",
+      "image": "board/mosaic.png",
+      "image_sha256": "e8320971eb25ff3bbdc552fa10e7b51cb27e2a09633b9d6d82bc429b35f45598",
+      "title": "10294 Titanic lower hull wall: built flat, stood on its side",
+      "mode": "views",
+      "source": {
+        "model": "10294-1.mpd",
+        "section": "10294 - Titanic - 2.11.1.ldr",
+        "sha256": "4c016c7c4d24144b38059c39ab8728bafc205a4579fa506290f8eac9d9a0d6b8",
+        "steps": 15,
+        "parents": {
+          "10294 - Titanic - Box 1.ldr": [
+            "1 0 75.052 -22 -140.391 0 -0.986 0.164 1 0 0 0 0.164 0.986 10294 - Titanic - 2.11.1.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Titanic bow box: the red lower hull wall highlighted",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 7: ten 2x6 tiles skin the wall, which is built lying flat, studs up",
+          "view": "home",
+          "step": 7,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                7
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 11: seven 2x4 curved-top bricks along one edge make the rounded bilge",
+          "view": "home",
+          "step": 11,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                11
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Finished wall: all 93 studs up in its own frame; the parent turns it 90 degrees to face +X",
+          "view": "home",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s17-10294-titanic-hull.json --output output/boards/s17-10294-titanic-hull"
+    }
+  ]
+}

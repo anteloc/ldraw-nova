@@ -43,6 +43,8 @@ Use [build pages](build-manuals.md) when layers or hidden interfaces are hard to
 
 The [6208 B-Wing SNOT study](../../examples/snot/b-wing-6208/README.md) supplies a complementary introduction with 22 inspected views and two exposed-core selections. It uses the supplied 6208 source, distinct from the atlas's 75050 B-Wing. Geometry and flexible-part verification are deferred for that learning study.
 
+The [submodel atlas](../../examples/submodel-atlas/README.md) adds a shuttle OMS pod with a colour-coded SNOT core under a hinged shell (06), a cockpit pod on a revolute pivot with its axis marked (07), and two micro ships: wings stood on edge on clips (S16) and a hull built sideways along its length (S22). Find them with `./ldraw-agent examples --family submodel --details spaceship`.
+
 Halcyon's generator, exposed-core images, module views and visual review show the complete workflow. Read its [attachment map](../../examples/snot/halcyon/README.md#3-module-topology) before adapting the local frames and panel mounts.
 
 ## Build surfaces in their own local grids

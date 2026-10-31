@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/06-10283-shuttle-framework.json",
+      "recipe_sha256": "7469e44c6734f6c99264603885d87206c2762895924a36d9498c08cd3237c8fd",
+      "image": "board/mosaic.png",
+      "image_sha256": "c2103b3faa67167555ab78e3f17ad319e5a8089c28f230075b90e60e01dadb9d",
+      "title": "10283 OMS pod: coloured SNOT core under a hinged white shell",
+      "mode": "views",
+      "source": {
+        "model": "10283-1.mpd",
+        "section": "10283 - shuttle-421-451.ldr",
+        "sha256": "19bbbc644ca8c24548ffbfd8b483096318864ca0b09d4b4ccceda3352288613f",
+        "steps": 24,
+        "parents": {
+          "10283 - shuttle.ldr": [
+            "1 15 90 -142 -40 0 -0.707 0.707 0 0.707 0.707 -1 0 0 10283 - shuttle-421-451.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent 10283 shuttle, ghosted: one rear OMS engine pod, placed at 45 degrees on its side",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Isolated pod: white curved shell (DB calls it the main body with an internal framework)",
+          "view": "home",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 9: coloured core of side-stud plates, studs-on-side bricks, brackets and a hinge base",
+          "view": "home",
+          "step": 9,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                9
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Source step 15: curved top panels, one of them hinged, close over the core",
+          "view": "home",
+          "step": 15,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                15
+              ]
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/06-10283-shuttle-framework.json --output output/boards/06-10283-shuttle-framework"
+    }
+  ]
+}

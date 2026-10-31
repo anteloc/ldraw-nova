@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s01-10298-vespa-front.json",
+      "recipe_sha256": "14c528b498b8fbe93f59a4e5f569c6d83766261f63a7ba9f5bc94de97ad9fec6",
+      "image": "board/mosaic.png",
+      "image_sha256": "2cae592310e3b8fc82614e49e231212fc362cfea9e578877ae30d1136242e428",
+      "title": "10298 Vespa front shield: studs-forward column under a smooth skin",
+      "mode": "views",
+      "source": {
+        "model": "10298-1.mpd",
+        "section": "10298 - front.ldr",
+        "sha256": "4e93be56fd86770a2ae7e16ede8110eec5c85aa23297691738fdfe4beba7c185",
+        "steps": 11,
+        "parents": {
+          "10298 - vespa.ldr": [
+            "1 71 0 -207.078 -195.412 1 0 0 0 0.923 0.385 0 -0.385 0.923 10298 - front.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Vespa, ghosted: front leg shield highlighted, tilted about 23 degrees",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 3: twelve 1x2 Technic bricks stacked on their sides, studs forward",
+          "view": "home",
+          "step": 3,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                3
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 9: 2x4 tiles and plates skin the forward studs (step 8 skins the left side)",
+          "view": "home",
+          "step": 9,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                9
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Stud-direction map (synthetic, non-LEGO colours): up lilac, +X rose, -X vermilion, +Z blue, -Z aqua; nothing faces up",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "-z": 47,
+                "+x": 8,
+                "-x": 8
+              },
+              "total": 63
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s01-10298-vespa-front.json --output output/boards/s01-10298-vespa-front"
+    }
+  ]
+}

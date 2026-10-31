@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "evidence": "interpretation_of_source_and_images",
+  "construction": "29 parts in 11 source steps. Step 6: suspension arms pivot on a 1×6 Technic brick, with towball ends. Step 9: the shock absorber. Step 10: two `8081 - Front Axle S10` hub children (steering arm, axle and bush). Step 11: the gear rack with towball and both 6L steering links.",
+  "interfaces": "The parent places the axle at `0 -10 -120` with an identity matrix, so axle axes are frame axes. In axle coordinates the rack's toothed face is at y = −22 and the parent's pinion sits at y = −30, which matches the 10 LDU pitch radius of an 8T gear.",
+  "lesson": "A steerable, sprung Technic front axle carries the steering rack, but the 8T pinion that drives the rack is placed in the parent frame.",
+  "parent_context": "The front axle of the 8081 chassis (`8081 - Frame.ldr`).",
+  "reuse_notes": "Reuse it with its drive: copy the 8T pinion `3647` and its steering axle from the parent, or add an equivalent input. Without them the rack has nothing to move it. Keep the two hub children and the links together; they set the steering geometry."
+}

@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s15-10183-underbody.json",
+      "recipe_sha256": "cc2d5421189dfdd61bb3ae369c572c9cd8a75d21bc74384bdbf9fab1edd05d2f",
+      "image": "board/mosaic.png",
+      "image_sha256": "12002b4cf674e35d917a249861965d16d5494d97b0ccbaecaf1f3095e996c6fd",
+      "title": "10183 Swiss Crocodile underbody: a real upside-down build",
+      "mode": "views",
+      "source": {
+        "model": "10183-1.mpd",
+        "section": "10183 - 1 - underside details.ldr",
+        "sha256": "6e8be34eece2b74cfec73957749f3301a217203366ee586a49b86d7588f55177",
+        "steps": 10,
+        "parents": {
+          "10183 - 1 - Swiss crocodile.ldr": [
+            "1 0 -20 44 0 0 0 -1 0 1 0 1 0 0 10183 - 1 - underside details.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent locomotive, ghosted: underbody highlighted between the bogies",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source steps 1-2: 2x4 curved-top bricks upside down give a rounded belly",
+          "view": "home",
+          "step": 2,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                2
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 8: door-rail and handle plates as underframe details",
+          "view": "home",
+          "step": 8,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                8
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: studs down (lime) in the parent too; handles and bars sideways; synthetic colours",
+          "view": "front",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "down": 14,
+                "+z": 3,
+                "+x": 2,
+                "-x": 2,
+                "up": 4,
+                "-z": 3
+              },
+              "total": 28
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s15-10183-underbody.json --output output/boards/s15-10183-underbody"
+    }
+  ]
+}

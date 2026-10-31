@@ -65,6 +65,9 @@ Study the complete route: control/column → gear train → pinion → sliding r
 → two tie rods → knuckle steering arms. The
 [local rack carriage](../../../examples/mechanism-atlas/steering-rack/GUIDE.md)
 omits its parent's pinion; it cannot teach the whole route alone.
+The [8081 front axle](../../../examples/submodel-atlas/01-8081-front-axle/GUIDE.md)
+shows the same gap with measured numbers: its rack face sits at y = −22 and the
+frame's 8T pinion at y = −30, matching the gear's 10 LDU pitch radius.
 
 The Defender has nominal 100-LDU tie rods and roughly 40-LDU steering arms.
 Each rod closes on its own knuckle, so the two wheel angles need not be equal.

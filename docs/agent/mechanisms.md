@@ -31,6 +31,8 @@ The same source-step method can grow every atlas. See the [general build-manual 
 
 Open the example's `index.html` to move through steps and switch viewpoints. Open its `GUIDE.md` and `operation.json` before reuse. Compare its size, input/output locations, support frame, shaft directions and available attachment space with the new model's brief. A rack carriage may need a pinion from its parent; a gearbox section may expose interfaces whose roles are only clear in the complete transmission.
 
+The [submodel atlas](../../examples/submodel-atlas/README.md) adds a cockpit pod on a revolute pivot (07). Its axis is derived from connector data, marked on the board and shown as a three-pose sweep, which is the default way to show moving parts. Its 8081 steering axle (01) is a measured case of a pinion supplied by the parent.
+
 For other subjects, first perform the [Jev availability check](reference-discovery.md#check-jev-availability-before-searching), then query one role at a time:
 
 ```sh

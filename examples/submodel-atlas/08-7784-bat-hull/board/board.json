@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/08-7784-bat-hull.json",
+      "recipe_sha256": "60b41d7bd3f33e1f1028b5200cacc1b8d64478adee8e4f6d4a690a9f815ed34d",
+      "image": "board/mosaic.png",
+      "image_sha256": "74bff6d159efc9de918a739a9766cc88f38e4672332f64b8132747c691f1121f",
+      "title": "7784 Batmobile bat grille: built flat, stood upright on a pin mount",
+      "mode": "views",
+      "source": {
+        "model": "7784-1.mpd",
+        "section": "7784 - Bat.ldr",
+        "sha256": "495724c03f1645d73619cc5c82117027ef0581972b3f84ead27ea3f268a0decf",
+        "steps": 8,
+        "parents": {
+          "7784 - Batmobile.ldr": [
+            "1 72 0 -73.242 -955.849 1 0 0 0 -0.139 -0.99 0 0.99 -0.139 7784 - Bat.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent 7784 Batmobile, ghosted: bat-shaped grille highlighted at the nose",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Parent right side: the grille rises at the front, tilted about 98 degrees from its build orientation",
+          "view": "right",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 1: built face-down on a 10x9 boat-bow plate",
+          "view": "home",
+          "step": 1,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                1
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Source step 8: pin-and-connector mount added on the back",
+          "view": "home",
+          "step": 8,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                8
+              ]
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/08-7784-bat-hull.json --output output/boards/08-7784-bat-hull"
+    }
+  ]
+}

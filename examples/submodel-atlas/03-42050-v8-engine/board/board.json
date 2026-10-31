@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/03-42050-v8-engine.json",
+      "recipe_sha256": "1e76a6e698650b31c05991c7f3c079ddb69f9510ad872eea4ec675ba4b10c6e1",
+      "image": "board/mosaic.png",
+      "image_sha256": "06b6c2478c8e2627f731438ea5c8bab3c81d7b392d1449f2d2ce43031a6f6d9d",
+      "title": "42050 V8: crank train hidden under the cylinder banks",
+      "mode": "views",
+      "source": {
+        "model": "42050-1.mpd",
+        "section": "42050 - engine.ldr",
+        "sha256": "35f18ae53fcac3fa08109c468245d7fad4351435437708f7f69048f8586173e6",
+        "steps": 8,
+        "parents": {
+          "42050 - Drag Racer.ldr": [
+            "1 0 0 -202.02 132.082 1 0 0 0 0.998 -0.072 0 0.072 0.998 42050 - engine.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent drag racer, ghosted: engine highlighted at the front",
+          "view": "right",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Isolated engine: finished look, crank train hidden",
+          "view": "home",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 3: pistons, rods and crankshafts added under the cylinders",
+          "view": "home",
+          "step": 3,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                3
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Inspection copy: all but step 3 trans-clear; V banks over one crank",
+          "view": "front",
+          "step": null,
+          "layers": [
+            {
+              "layer": "xray",
+              "select": "!step:3",
+              "scope": "section",
+              "colour": 47,
+              "count": 44
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/03-42050-v8-engine.json --output output/boards/03-42050-v8-engine"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/01-8081-front-axle.json",
+      "recipe_sha256": "e26e674b4fa4668ef3f08ce14698e7b823bc32d4ade8198a9d2b800257777630",
+      "image": "board/mosaic.png",
+      "image_sha256": "d9b15067b6da24e6ab38ec7c3290d5d55dea82098cc409f89cf9a9e69921d8a0",
+      "title": "8081 Front Axle: steerable Technic axle whose pinion lives in the parent",
+      "mode": "views",
+      "source": {
+        "model": "8081-1.mpd",
+        "section": "8081 - Front Axle.ldr",
+        "sha256": "3fef02705debc0930762955a5dd92465cb09a2fe4d1f1eccdf7e9d6b20b2699e",
+        "steps": 11,
+        "parents": {
+          "8081 - Frame.ldr": [
+            "1 0 0 -10 -120 1 0 0 0 1 0 0 0 1 8081 - Front Axle.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent 8081 Frame, ghosted: axle highlighted; 8T pinion 3647 belongs to the frame",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Isolated axle, front view: symmetric suspension arms, steering links and shock",
+          "view": "front",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 6: suspension arms pivot on the 1x6 Technic brick",
+          "view": "home",
+          "step": 6,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                6
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Source step 11: rack housing and both steering links added",
+          "view": "home",
+          "step": 11,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                11
+              ]
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/01-8081-front-axle.json --output output/boards/01-8081-front-axle"
+    }
+  ]
+}

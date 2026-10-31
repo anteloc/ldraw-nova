@@ -49,6 +49,10 @@ support frame, accessible input, head clearance and contrasting but restrained
 palette. Removing the other banks also removes their supports and drive context;
 replace the needed bearings and mounts deliberately.
 
+For a smaller V8, see the [42050 engine](../../../examples/submodel-atlas/03-42050-v8-engine/GUIDE.md):
+its whole crank train goes in one step between the cylinder banks, and its
+board's x-ray copy shows both banks in a V over one crank.
+
 ## Cam followers
 
 The Defender inline-six uses liftarm cams lifting guided axle followers. It has

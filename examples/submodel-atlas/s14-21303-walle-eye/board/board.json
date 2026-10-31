@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s14-21303-walle-eye.json",
+      "recipe_sha256": "9ebcf5cc93ffa2603f26f24c26678cdd1a815234ff030277cd155329407f135c",
+      "image": "board/mosaic.png",
+      "image_sha256": "1c2d719030b300d391b210fa207ac43bc09946a2666b9ba94b6b7f00805e8265",
+      "title": "21303 WALL-E left eye: sideways eye contour with ribbed-hose cables",
+      "mode": "views",
+      "source": {
+        "model": "21303-1.mpd",
+        "section": "21303 - Oeil gauche.ldr",
+        "sha256": "c33e5baf1157dd1b68229942103de5c4ee70c46053b66033bb029b007073107b",
+        "steps": 15,
+        "parents": {
+          "21303 - Tete A.ldr": [
+            "1 0 68.501 -2.88 10 -0.984808 -0.173648 0 -0.173648 0.984808 0 0 0 -1 21303 - Oeil gauche.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent head, ghosted: left eye highlighted",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 4: Technic brick, pin and a jumper plate start the side face",
+          "view": "home",
+          "step": 4,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                4
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 8: an SNOT eye-contour child (bricks, curved slopes, bracket)",
+          "view": "home",
+          "step": 8,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                8
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: all directions plus angled hose segments (violet); synthetic colours",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 33,
+                "-z": 19,
+                "-x": 21,
+                "down": 5,
+                "+x": 1,
+                "+z": 19,
+                "angled": 21
+              },
+              "total": 119
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s14-21303-walle-eye.json --output output/boards/s14-21303-walle-eye"
+    }
+  ]
+}

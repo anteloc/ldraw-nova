@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s13-40412-buckbeak-body.json",
+      "recipe_sha256": "3b9793e44d8c251f64e4e5353e3c05948ab1101f6d58384e937f41c748316c02",
+      "image": "board/mosaic.png",
+      "image_sha256": "c0822df2bb1bfd7ed92fa1e1b126a283bd5b007eb4a655dbe33fd3a18e392735",
+      "title": "40412 Buckbeak head: forward face on a hidden side-stud core",
+      "mode": "views",
+      "source": {
+        "model": "40412-1.mpd",
+        "section": "40412 - Buckbeak - Steps 15 to 35.ldr",
+        "sha256": "6c82cd637cf6def17916abbfb3425836c4cf62549e51668ad9212203d50a56ad",
+        "steps": 16,
+        "parents": {
+          "40412 - Buckbeak.ldr": [
+            "1 16 0 -106 -40 1 0 0 0 1 0 0 0 1 40412 - buckbeak - steps 15 to 35.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Buckbeak, ghosted: the section is the head (DB: feathered body and wings)",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 5: six white 1x2x1 2/3 side-stud bricks close around the pink core child added in step 4",
+          "view": "home",
+          "step": 5,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                5
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 9: curved slopes with cutouts shape the brow and crest",
+          "view": "home",
+          "step": 9,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                9
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: face and beak studs forward (aqua), cheeks sideways; synthetic colours",
+          "view": "front",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 28,
+                "-z": 20,
+                "-x": 4,
+                "+x": 4,
+                "+z": 3
+              },
+              "total": 59
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s13-40412-buckbeak-body.json --output output/boards/s13-40412-buckbeak-body"
+    }
+  ]
+}

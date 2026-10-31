@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s02-21307-caterham-nose.json",
+      "recipe_sha256": "21c6f4bfcfe2b8e822db03fc6d82786ed79ef1f683d392b2b05dfff2472d68c1",
+      "image": "board/mosaic.png",
+      "image_sha256": "2893ff60975b8435f3bca7cda030bbd11f9b1ba7e42f6dffc343261ad8ce64fe",
+      "title": "21307 Caterham engine: sideways exhaust manifold from revolvers",
+      "mode": "views",
+      "source": {
+        "model": "21307-1.mpd",
+        "section": "21307 - 21307 Step 71-82 Submodel.ldr",
+        "sha256": "cb81c162429e7c06f2a53f830ba2176aa08c220bc058d05eb3949eb9d8783ac7",
+        "steps": 11,
+        "parents": {
+          "21307 - Car.ldr": [
+            "1 72 0 -42 -120 -1 0 0 0 1 0 0 0 -1 21307 - 21307 Step 71-82 Submodel.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Caterham, ghosted: the section is the engine under the bonnet (DB: nose)",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 3: two 1x2-1x2 brackets turn studs sideways",
+          "view": "home",
+          "step": 3,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                3
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 8: studs-on-sides bricks, hinge bases and four revolvers as exhaust pipes",
+          "view": "home",
+          "step": 8,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                8
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Stud-direction map (synthetic, non-LEGO colours): up lilac, +X rose, -X vermilion, +Z blue, -Z aqua, angled violet",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 14,
+                "+x": 9,
+                "-x": 5,
+                "-z": 5,
+                "angled": 4
+              },
+              "total": 37
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s02-21307-caterham-nose.json --output output/boards/s02-21307-caterham-nose"
+    }
+  ]
+}

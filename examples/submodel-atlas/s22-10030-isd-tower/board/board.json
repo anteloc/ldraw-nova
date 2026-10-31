@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s22-10030-isd-tower.json",
+      "recipe_sha256": "4000a7927ef70d06ff405a2e864df26af7f61864217ffdac58ebe00081784113",
+      "image": "board/mosaic.png",
+      "image_sha256": "1d8c26e41d310bd07934fca27bd0aafe6b3c5771c61cbd6059be26c47d2f097b",
+      "title": "10030 micro Tantive IV on its stand (DB says command tower)",
+      "mode": "views",
+      "source": {
+        "model": "10030-1.mpd",
+        "section": "10030 - subModel-127.ldr",
+        "sha256": "b101947efa8e265689470e048d3382728d49336f232f42237758157bb8156358",
+        "steps": 9,
+        "parents": {
+          "10030 - main.ldr": [
+            "1 4 -2465.26 272.825 -330 0 0 1 0 1 0 -1 0 0 10030 - subModel-127.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Star Destroyer: the micro Tantive IV on its stand highlighted",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 5: nose child, cones and tiles on a brick with studs on four sides",
+          "view": "home",
+          "step": 5,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                5
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Finished ship: the wedge side panels are children turned to +X and -X",
+          "view": "home",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: 44 of 79 studs to -Z; the hull is built sideways along its length",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 17,
+                "-z": 44,
+                "+x": 8,
+                "-x": 8,
+                "down": 1,
+                "angled": 1
+              },
+              "total": 79
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s22-10030-isd-tower.json --output output/boards/s22-10030-isd-tower"
+    }
+  ]
+}

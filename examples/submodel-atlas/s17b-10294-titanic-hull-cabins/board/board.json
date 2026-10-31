@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s17b-10294-titanic-hull-cabins.json",
+      "recipe_sha256": "14ea7919b1c8a118135ab176fb65f50efcedeb394d0ff36337f4bc5e67907a45",
+      "image": "board/mosaic.png",
+      "image_sha256": "a5116a6a7514af9f1ea5894d9ae3cb782d7ffc2695678094f8995fa37c4a047d",
+      "title": "10294 Titanic black hull wall: portholes from open studs",
+      "mode": "views",
+      "source": {
+        "model": "10294-1.mpd",
+        "section": "10294 - Titanic - 3.15.1.ldr",
+        "sha256": "4c016c7c4d24144b38059c39ab8728bafc205a4579fa506290f8eac9d9a0d6b8",
+        "steps": 17,
+        "parents": {
+          "10294 - Titanic - 3.0 Funnel & Main Cabins.ldr": [
+            "1 320 -148 -132 -80 0 1 0 -1 0 0 0 0 1 10294 - Titanic - 3.15.1.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent midship box, port side: the black hull wall with porthole pairs highlighted",
+          "view": "right",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 6: tan log bricks and round bricks between white bricks form the wall core",
+          "view": "home",
+          "step": 6,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                6
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 12: round-end 1x2 plates with two open studs on black tiles = portholes",
+          "view": "home",
+          "step": 12,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                12
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: 147 up in the wall frame; 24 rose parts (17 child units) face up in the ship",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 147,
+                "+x": 24
+              },
+              "total": 171
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s17b-10294-titanic-hull-cabins.json --output output/boards/s17b-10294-titanic-hull-cabins"
+    }
+  ]
+}

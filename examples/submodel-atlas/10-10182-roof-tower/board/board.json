@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/10-10182-roof-tower.json",
+      "recipe_sha256": "596cb93af618fa37f561acd2b410ec57bf49deaafab13bc685f7e4383027e728",
+      "image": "board/mosaic.png",
+      "image_sha256": "7e788c105c95378c5a90f98dcac228c26919ba52edcdf06756528d8af0e135d0",
+      "title": "10182 corner roof tower: parrot gargoyles and a hinged pyramid roof",
+      "mode": "views",
+      "source": {
+        "model": "10182-1.mpd",
+        "section": "10182 - Second floor - Roof tower.ldr",
+        "sha256": "42164d93e442d125195d722cc2e3fa6cc116b2d5c410a2a3bfdeab0b36f54c11",
+        "steps": 12,
+        "parents": {
+          "10182 - Second floor.ldr": [
+            "1 16 220 -192 -300 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 10182 - Second floor - Roof tower.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Cafe Corner second floor, ghosted: corner tower turned 45 degrees",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 5: parrots stand in the arch openings as gargoyles",
+          "view": "home",
+          "step": 5,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                5
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 9: four hinge bases set on the cap plate",
+          "view": "home",
+          "step": 9,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                9
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Source step 11: four identical roof-face children, each rotated about 69 degrees onto a hinge",
+          "view": "home",
+          "step": 11,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                11
+              ]
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/10-10182-roof-tower.json --output output/boards/10-10182-roof-tower"
+    }
+  ]
+}

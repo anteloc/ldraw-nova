@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s07-10272-rooftop-box.json",
+      "recipe_sha256": "52ee26098e720d7f583c9702467509e57200671338ba6130cd791c5d57e1aad2",
+      "image": "board/mosaic.png",
+      "image_sha256": "14542d318059947b10e9829a9113a096afb996fa305a0d36ceb5d44b97d531ed",
+      "title": "10272 Old Trafford glazed wall: built in its own frame, turned into the stand",
+      "mode": "views",
+      "source": {
+        "model": "10272-1.mpd",
+        "section": "10272 - stretford-end-step186-198.ldr",
+        "sha256": "aa866e738cc2403e316d8f3bcca85c722e779be0ecd4c3baabba872da26fe082",
+        "steps": 13,
+        "parents": {
+          "10272 - stretford-end.ldr": [
+            "1 15 0 -246 190 0 1 0 -0.229 0 0.973 0.973 0 0.229 10272 - stretford-end-step186-198.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Stretford End, right side: glazed wall highlighted under the roof",
+          "view": "right",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 3: a 1x10x4 windscreen used as a window pane",
+          "view": "home",
+          "step": 3,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                3
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 10: a 1x12 plate and a 1x1-1x1 down bracket",
+          "view": "home",
+          "step": 10,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                10
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: studs down in its own frame (lime); the parent turns them to +X and tilts 13 degrees",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "down": 48,
+                "-x": 8
+              },
+              "total": 56
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s07-10272-rooftop-box.json --output output/boards/s07-10272-rooftop-box"
+    }
+  ]
+}

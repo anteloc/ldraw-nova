@@ -77,6 +77,23 @@ The [cat leg](../../examples/snot/cat/leg.plan.json) is a second small example: 
 
 When cleaning a rounded export, recover the module's local grid first. Re-seat its joint at the intended pivot, then apply a proper rotation to the whole module. Do not round an angled assembly's world coordinates to the nearest stud or integer. The retained [preparation record](../../examples/snot/parrot/preparation.json) accounts for every source placement and correction.
 
+## Learn from real-set submodels
+
+The [submodel atlas](../../examples/submodel-atlas/README.md#pick-an-entry-by-technique) holds 25 reviewed SNOT constructions from real sets, each with build pages, a stud-direction map and a guide. Find them with `./ldraw-agent examples --family submodel --details snot`. Ask where the studs end up and who turns them:
+
+```mermaid
+flowchart TD
+  Q{Where do the studs point in the finished model?}
+  Q -->|"sideways, from connectors inside the section"| C["side-stud bricks, brackets, headlight bricks<br/>S01 S05 S09 S13 S18 05"]
+  Q -->|"sideways, but the section is built in a convenient frame"| F["built flat; the parent's matrix turns it<br/>08 S07 S17 S17b S20"]
+  Q -->|"four ways around a core"| R["radial core with identical faces<br/>S04 S08 S22"]
+  Q -->|"down, in the finished model too"| D["upside-down build<br/>S15"]
+  Q -->|"at odd angles"| A["hinges, clips and turned children<br/>S11 S16 S19 S14"]
+  F -.->|"its stud map in section coordinates shows all up or all down"| P["read the parent placement<br/>in the guide or board"]
+```
+
+The parent often supplies the orientation or missing parts: 04's lamp cluster is unreadable until the parent's axis permutation turns it, and S04's hub carries eight panels placed by its parent. Several database descriptions are wrong; read each guide's *Description check* before choosing an entry.
+
 ## Read the evidence
 
 The head passes source/geometry error checks, has one optimistic connection group and matches LeoCAD's BOM. The complete 66-piece parrot also passes the error checks and BOM comparison, but its automatic graph still has ten groups. The [reference review](../../examples/snot/parrot/visual-review.md) identifies the recessed sockets omitted by the dependency's whole-box entry-face test. Explicit interface evidence accompanies the model; it does not override the checker.

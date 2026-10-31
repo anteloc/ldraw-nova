@@ -57,10 +57,10 @@ Existing plans, numeric external contracts, `.ldr` flex sources, prebuilt assets
 | Flexible hoses, cables, bands, chains and treads | [Constraint authoring and repair](docs/agent/flex-constraints.md), [LSynth integration](docs/agent/flexible-parts.md), [examples](examples/flex/README.md) |
 | Technic supports, equipment and industrial assemblies | [Design guide](docs/agent/technic-design.md), [annotated construction studies](lsynth-examples/README.md) |
 | Advanced mechanisms and animation | [Constraint workflow](docs/agent/advanced-mechanisms.md), [gear-drive starter](examples/technic-studies/gear-drive/README.md), [mechanical parts catalog](docs/agent/technic-catalog.md) |
-| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/snot.md), [parrot core](examples/snot/parrot/README.md), [cat details and joints](examples/snot/cat/README.md), [Halcyon original interceptor](examples/snot/halcyon/README.md) |
+| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/snot.md), [parrot core](examples/snot/parrot/README.md), [cat details and joints](examples/snot/cat/README.md), [Halcyon original interceptor](examples/snot/halcyon/README.md), [SNOT submodels from real sets](examples/submodel-atlas/README.md#pick-an-entry-by-technique) |
 | Spaceships: SNOT by default | [Halcyon default model](examples/snot/halcyon/README.md), [spaceship guide](docs/agent/spaceships.md) |
-| Reusable constructions and model examples | [Reference atlas](examples/reference-atlas/README.md), `./ldraw-agent examples --help` |
-| Visual inspection of source submodels | [Submodel inspection with ldraw-xray](docs/agent/submodel-inspection.md), [reviewed candidates](examples/submodel-candidates/README.md) |
+| Reusable constructions and model examples | [Reference atlas](examples/reference-atlas/README.md), [submodel atlas](examples/submodel-atlas/README.md), `./ldraw-agent examples --help` |
+| Visual inspection of source submodels | [Submodel inspection with ldraw-xray](docs/agent/submodel-inspection.md), [submodel atlas](examples/submodel-atlas/README.md) |
 
 Semantic reference search uses [jev-rerank](https://github.com/anteloc/jev-rerank) and a TypeSafe API key. It is optional: offline catalogs, examples and `discover search ... --engine fts` remain available. Follow the [availability check](docs/agent/reference-discovery.md#check-jev-availability-before-searching) before using the service.
 

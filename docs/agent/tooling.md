@@ -79,6 +79,22 @@ Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM
 
 `manual` shares the mechanism step renderer but uses construction notes: lesson, construction, interfaces, parent context and reuse notes. `--overview` renders completed-model views and retains source step data; `--no-render` leaves rendered evidence pending. Existing mechanism commands retain their operation-specific notes and review requirements. See [build manuals and atlas additions](build-manuals.md) and [spaceship design](spaceships.md). `./ldraw-xray` renders inspection boards (parent context, x-ray, stud maps, pivots) and composes mosaics; see [submodel inspection](submodel-inspection.md).
 
+## Reviewed real-set submodels
+
+```sh
+./ldraw-agent examples --family submodel --details 'curved roof'
+./ldraw-agent examples --family submodel
+./ldraw-agent manual export examples/submodel-atlas/s09-10258-bus-roof --outdir output/my-roof
+```
+
+The [submodel atlas](../../examples/submodel-atlas/README.md) holds 30 reviewed
+constructions, mostly SNOT. Each result names a `guide` (construction, what the
+parent supplies, a corrected description, limits), a `board` image and build
+pages. `--details` lists the 25 modules that need a parent; the default lists 5
+stand-alone objects. `use: adapt` entries export like any reviewed manual;
+`inspiration` entries keep source errors and are for rebuilding the technique.
+`examples` families are discovered from `examples/*-atlas/catalog.json`.
+
 ## Mechanism studies and reuse
 
 ```sh

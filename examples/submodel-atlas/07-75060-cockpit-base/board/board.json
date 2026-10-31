@@ -1,0 +1,366 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/07-75060-cockpit-base.json",
+      "recipe_sha256": "545791431d81024d6c56d4a9da02df1b5568c24d79381dcffdb186e800ac5dc9",
+      "image": "board/mosaic.png",
+      "image_sha256": "b485bcfdc12852162f2edd29d00b8b0c45ccd2fa3b5ea6411c4afccf7958c22b",
+      "title": "75060 Slave I cockpit: pilot pod on a marked pivot",
+      "mode": "views",
+      "source": {
+        "model": "75060-1.mpd",
+        "section": "75060 - step84.ldr",
+        "sha256": "0bf76c215fe21b44e614fa22d28c655a624b5899c15e6d2996c2b669fd74ddd3",
+        "steps": 13,
+        "parents": {
+          "75060 - main.ldr": [
+            "1 72 0 -164 -300 0 0 -1 0 1 0 1 0 0 75060 - step84.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Slave I, ghosted: pod highlighted; neon-green rod is the pivot axis",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            },
+            {
+              "layer": "axis",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "length": 340,
+              "radius": 5,
+              "frame": "section",
+              "in_parent": [
+                {
+                  "point": [
+                    0.0,
+                    -182.0,
+                    -300.0
+                  ],
+                  "direction": [
+                    -1.0,
+                    0.0,
+                    0.0
+                  ]
+                }
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 9: four curved arches loop over the seat as the canopy frame",
+          "view": "home",
+          "step": 9,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                9
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Inspection copy: pins and bearings in magenta; neon-green rod is the axis",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "part:43093|part:3894",
+              "scope": "section",
+              "count": 4
+            },
+            {
+              "layer": "axis",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "length": 230,
+              "radius": 2,
+              "frame": "section"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Inspection copy turned 90 degrees about the axis; bearings fixed",
+          "view": "camera",
+          "step": null,
+          "layers": [
+            {
+              "layer": "pose",
+              "select": "!part:3894",
+              "scope": "section",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "angle": 90.0,
+              "count": 38
+            },
+            {
+              "layer": "highlight",
+              "select": "part:43093|part:3894",
+              "scope": "section",
+              "count": 4
+            },
+            {
+              "layer": "axis",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "length": 230,
+              "radius": 2,
+              "frame": "section"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #39FF14 synthetic axis rod (not a part)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/07-75060-cockpit-base.json --output output/boards/07-75060-cockpit-base"
+    },
+    {
+      "recipe": "recipes/07-75060-cockpit-base-poses.json",
+      "recipe_sha256": "cb30230b735ed6b380b0ff282c6c2eaf3b9fbcc0b4686f3f942958f9a6518026",
+      "image": "board/poses.png",
+      "image_sha256": "fbc3acf6aa06d19d5b49c4bd34b47dc2df687c810bbfcd2b49dd7ebcd9e5f097",
+      "title": "75060 cockpit pivot: synthetic pose sweep about the marked axis",
+      "mode": "analysis",
+      "source": {
+        "model": "75060-1.mpd",
+        "section": "75060 - step84.ldr",
+        "sha256": "0bf76c215fe21b44e614fa22d28c655a624b5899c15e6d2996c2b669fd74ddd3",
+        "steps": 13,
+        "parents": {
+          "75060 - main.ldr": [
+            "1 72 0 -164 -300 0 0 -1 0 1 0 1 0 0 75060 - step84.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Pose 0 deg, bearings fixed",
+          "view": "camera",
+          "step": null,
+          "layers": [
+            {
+              "layer": "pose",
+              "select": "!part:3894",
+              "scope": "section",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "angle": 0.0,
+              "count": 38
+            },
+            {
+              "layer": "highlight",
+              "select": "part:43093|part:3894",
+              "scope": "section",
+              "count": 4
+            },
+            {
+              "layer": "axis",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "length": 230,
+              "radius": 2,
+              "frame": "section"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Pose 45 deg, bearings fixed",
+          "view": "camera",
+          "step": null,
+          "layers": [
+            {
+              "layer": "pose",
+              "select": "!part:3894",
+              "scope": "section",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "angle": 45.0,
+              "count": 38
+            },
+            {
+              "layer": "highlight",
+              "select": "part:43093|part:3894",
+              "scope": "section",
+              "count": 4
+            },
+            {
+              "layer": "axis",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "length": 230,
+              "radius": 2,
+              "frame": "section"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Pose 90 deg, bearings fixed",
+          "view": "camera",
+          "step": null,
+          "layers": [
+            {
+              "layer": "pose",
+              "select": "!part:3894",
+              "scope": "section",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "angle": 90.0,
+              "count": 38
+            },
+            {
+              "layer": "highlight",
+              "select": "part:43093|part:3894",
+              "scope": "section",
+              "count": 4
+            },
+            {
+              "layer": "axis",
+              "point": [
+                0.0,
+                -18.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "length": 230,
+              "radius": 2,
+              "frame": "section"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #39FF14 synthetic axis rod (not a part)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Aligned by supplied camera metadata; one camera for every panel.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/07-75060-cockpit-base-poses.json --output output/boards/07-75060-cockpit-base-poses"
+    }
+  ]
+}

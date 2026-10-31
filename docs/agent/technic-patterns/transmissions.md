@@ -74,6 +74,10 @@ internal mechanism with two independent wheel axles. Study the
 [local differential](../../../examples/mechanism-atlas/differential/GUIDE.md) for
 parts and build order. For a new chassis, adapt the housing/frame mounts while
 preserving the internal bevel arrangement, shaft spacing and escaping-axle stops.
+The [42075 rear axle](../../../examples/submodel-atlas/02-42075-rear-axle/GUIDE.md)
+feeds a differential in an open frame through a U-joint and is tilted by its
+parent's matrix. It is an inspiration entry: its shock child is a generated
+spring mesh.
 
 The Defender's differential examples and suspension example were studied
 separately. The original drivetrain's hub-spin projection is approximate; it

@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s09-10258-bus-roof.json",
+      "recipe_sha256": "11290c99b4331e8ffc568f2825c93a658ef5c046ddb0a11dd4e9d7b875701ba1",
+      "image": "board/mosaic.png",
+      "image_sha256": "12802d6643d5c346b29228ef38627a308d49d2fbcdcc5709246179783d8d85a0",
+      "title": "10258 London bus roof: rounded edges from curved bricks on their sides",
+      "mode": "views",
+      "source": {
+        "model": "10258-1.mpd",
+        "section": "10258 - roof.ldr",
+        "sha256": "160ecddf6c38a4e0b0b8ff97c473c5c7f50f44adc1b787d02cc76d207ff47de0",
+        "steps": 7,
+        "parents": {
+          "10258 - deck.ldr": [
+            "1 71 0 -160 240 1 0 0 0 1 0 0 0 1 10258 - roof.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent bus deck, ghosted: roof highlighted",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 3: sixteen red brackets along both long edges, studs out",
+          "view": "home",
+          "step": 3,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                3
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 6: twelve 2x4 curved-top bricks on their sides form the rounded edges",
+          "view": "home",
+          "step": 6,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                6
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: top up (lilac), rounded edges +X rose and -X vermilion; synthetic colours",
+          "view": "front",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 53,
+                "+x": 20,
+                "-x": 20
+              },
+              "total": 93
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s09-10258-bus-roof.json --output output/boards/s09-10258-bus-roof"
+    }
+  ]
+}

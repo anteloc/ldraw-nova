@@ -223,12 +223,31 @@ def current_manual(folder):
     return folder, manual
 
 
+def review_images(manual):
+    """Every image a complete review must list: each step/view plus the final images."""
+    images = {image for section in manual['sections'] for step in section['steps'] for image in step['images'].values()}
+    images.update(manual.get('final_images',['renders/home.png']))
+    return images
+
+
+def current_review(folder):
+    """The recorded review when it still covers the current evidence, otherwise None."""
+    try:
+        folder, manual = current_manual(folder)
+        review = json.loads((folder/'visual-review.json').read_text())
+    except (OSError, ValueError, KeyError):
+        return None
+    if (review.get('status') != 'visually_reviewed' or review.get('manual_sha256') != sha(folder/'manual.json')
+            or set(review.get('viewed_images', [])) != review_images(manual) or not review.get('note', '').strip()):
+        return None
+    return review
+
+
 def review_manual(folder, *, images, note):
     folder, manual = current_manual(folder)
-    available = {image for section in manual['sections'] for step in section['steps'] for image in step['images'].values()}
-    available.update(manual.get('final_images',['renders/home.png']))
+    available = review_images(manual)
     if not manual['rendered'] or not note.strip() or set(images) != available or len(images) != len(available):
-        raise ValueError('A complete review needs a note and every rendered step/view plus renders/home.png; list only images actually opened')
+        raise ValueError('A complete review needs a note and every rendered step/view plus every final image; list only images actually opened')
     review = dict(status='visually_reviewed', note=note, viewed_images=list(images),
                   manual_sha256=sha(folder/'manual.json'),
                   **({'analytical_verification':'deferred'} if study_kind(manual) == 'mechanism' else {}),
@@ -239,12 +258,7 @@ def review_manual(folder, *, images, note):
 
 def export_manual(folder, outdir, *, force=False):
     folder, manual = current_manual(folder)
-    review_path = folder/'visual-review.json'
-    review = json.loads(review_path.read_text()) if review_path.is_file() else {}
-    images = {p for section in manual['sections'] for step in section['steps'] for p in step['images'].values()}
-    images.update(manual.get('final_images',['renders/home.png']))
-    if (review.get('status') != 'visually_reviewed' or review.get('manual_sha256') != sha(folder/'manual.json')
-            or set(review.get('viewed_images', [])) != images or not review.get('note', '').strip()):
+    if current_review(folder) is None:
         raise ValueError('Record a current visual review before exporting this construction reference')
     if not manual['source_checks_passed'] or manual['bom_matches'] is not True:
         raise ValueError('Export requires passing source checks and a matching rendered BOM')

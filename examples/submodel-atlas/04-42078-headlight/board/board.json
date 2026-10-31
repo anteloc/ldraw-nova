@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/04-42078-headlight.json",
+      "recipe_sha256": "1525b8e42692178617b21a141e440787169ed3145a5391df77bafc76476020ec",
+      "image": "board/mosaic.png",
+      "image_sha256": "532caaa0f95138a471ca52b753abc4c4f784c291e5548832d28947e96e0f43af",
+      "title": "42078 headlight: Technic-to-System sideways lamp cluster",
+      "mode": "views",
+      "source": {
+        "model": "42078-1.mpd",
+        "section": "42078 - light1.ldr",
+        "sha256": "3dc932db5957805ac0aa592c1bdfe16c0da7f17471d54c68335af07539965be1",
+        "steps": 4,
+        "parents": {
+          "42078 - tractor.ldr": [
+            "1 71 -90 -70 -860 0 0 1 1 0 0 0 1 0 42078 - light1.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent 42078 tractor, front: left headlight cluster highlighted in the bumper",
+          "view": "front",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Isolated headlight: source orientation hides its role",
+          "view": "home",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 1: offset-peghole plates, long axle pin and bracket form the Technic mount",
+          "view": "home",
+          "step": 1,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                1
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Source step 2: trans-clear and trans-orange lens plates on a second bracket",
+          "view": "home",
+          "step": 2,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                2
+              ]
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/04-42078-headlight.json --output output/boards/04-42078-headlight"
+    }
+  ]
+}

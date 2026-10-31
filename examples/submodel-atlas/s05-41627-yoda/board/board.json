@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s05-41627-yoda.json",
+      "recipe_sha256": "18f155692b09f51d53a06d2462f097b200eedb2fdd8797845e0598e0245dcfa4",
+      "image": "board/mosaic.png",
+      "image_sha256": "49c8d7d8f38dec83c1b9a6f821b2334f25f28f6df5ea6aeb29646ad8cb899a20",
+      "title": "41627 BrickHeadz Yoda: face and ears built on a side-stud core",
+      "mode": "views",
+      "source": {
+        "model": "41627-1.mpd",
+        "section": "41627 - Yoda.ldr",
+        "sha256": "dcfc71b1af5915d498fdbe595eadd1ee4d1c4db49981e70288e0687bdee6203d",
+        "steps": 24,
+        "parents": {
+          "41627 - Yoda and Luke Skywalker.ldr": [
+            "1 16 -20 86 0 -1 0 0 0 1 0 0 0 -1 41627 - Yoda.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent Yoda and Luke, ghosted: Yoda highlighted",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 6: two 1x1 bricks with studs on two adjacent sides",
+          "view": "home",
+          "step": 6,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                6
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 12: a flat sand-green panel child mounted sideways as the head side",
+          "view": "home",
+          "step": 12,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                12
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Stud-direction map (synthetic, non-LEGO colours): up lilac, +X rose, -X vermilion, +Z blue, -Z aqua; face studs forward, ears sideways",
+          "view": "front",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 41,
+                "+x": 9,
+                "-x": 9,
+                "+z": 9,
+                "-z": 12
+              },
+              "total": 80
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s05-41627-yoda.json --output output/boards/s05-41627-yoda"
+    }
+  ]
+}

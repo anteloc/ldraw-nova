@@ -1,6 +1,6 @@
 # Learn from models, submodels and their actual parts
 
-Use whole models for proportions, palettes and a module checklist; use submodels for construction ideas and details. Compare the source images and measured contents before choosing a construction. The [reference atlas](../../examples/reference-atlas/README.md) contains a reproducible 220-reference catalog manifest, curated examples and selected parameterized recipes.
+Use whole models for proportions, palettes and a module checklist; use submodels for construction ideas and details. Compare the source images and measured contents before choosing a construction. The [reference atlas](../../examples/reference-atlas/README.md) contains a reproducible 220-reference catalog manifest, curated examples and selected parameterized recipes. The [submodel atlas](../../examples/submodel-atlas/README.md) adds 30 reviewed real-set constructions, each with an inspection board and a guide that names what its parent supplies and corrects its database description.
 
 ## Check Jev availability before searching
 
@@ -37,6 +37,7 @@ Select `parts`, `models` or `submodels` and suitable keywords for the current ro
   --limit 6 --report output/engine-parts.json
 ./ldraw-agent discover parts output/lamps.json --limit 12
 ./ldraw-agent examples --family reference --limit 8
+./ldraw-agent examples --family submodel --details 'side studs'
 ```
 
 `discover search` invokes the global `jev-rerank` CLI with model `jev-1.13.0` and its configured credentials. Use `--engine fts` for an explicit offline BM25 search. There is no silent fallback. Natural-language FTS queries use token OR; the older `search models|submodels` commands retain their raw FTS5 syntax, now ranked and paginated with `--offset`.

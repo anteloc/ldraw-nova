@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/s11-10226-radial-engine.json",
+      "recipe_sha256": "b6f5d00a07842ecc8347567b674ad732a448badd8dc64df80deb4e91dbff5005",
+      "image": "board/mosaic.png",
+      "image_sha256": "073028193bd50528750539e47bab2130b84b7ef3b95add6a31c53d2359738991",
+      "title": "10226 Sopwith Camel striped rudder: built sideways, hung on handle bricks",
+      "mode": "views",
+      "source": {
+        "model": "10226-1.mpd",
+        "section": "10226 - step66.ldr",
+        "sha256": "2903c00bd3f1e0af46d47af2e09bd8ccb423eced0588947cc0fb9bd14ac20511",
+        "steps": 9,
+        "parents": {
+          "10226 - main.ldr": [
+            "1 0 610 -156 0 1 0 0 0 1 0 0 0 1 10226 - step66.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent close-up, ghosted: the section is the tail rudder (DB: radial engine)",
+          "view": "camera",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source steps 1-2: blue 1x1 brick with handle and 1x1 brick with one side stud",
+          "view": "home",
+          "step": 2,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                2
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 7: the blue column grows with more side-stud bricks",
+          "view": "home",
+          "step": 7,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                7
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Map: stripes are plates with studs +X (rose); column lilac; synthetic colours",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 21,
+                "+x": 15
+              },
+              "total": 36
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/s11-10226-radial-engine.json --output output/boards/s11-10226-radial-engine"
+    }
+  ]
+}

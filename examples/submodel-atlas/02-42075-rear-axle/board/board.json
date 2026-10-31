@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/02-42075-rear-axle.json",
+      "recipe_sha256": "66672e850707c9975e0f018a80364feb078b78d035a1c104b9442eeea634b94c",
+      "image": "board/mosaic.png",
+      "image_sha256": "dda1ee7e32c09bf5deb97fea018ccfaaa0a55ebac9c303970a6418bb6ca606ce",
+      "title": "42075 rear axle: differential, U-joints and tilted suspension mount",
+      "mode": "views",
+      "source": {
+        "model": "42075-1.mpd",
+        "section": "42075 - rearaxle.ldr",
+        "sha256": "1b44ac7315a873ff5658ccfd75080273fa95d3ce3d541623a2d8feec2ed7bb2c",
+        "steps": 8,
+        "parents": {
+          "42075 - vehicle.ldr": [
+            "1 4 0 76.289 193.183 -1 0 0 0 0.932 -0.363 0 -0.363 -0.932 42075 - rearaxle.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent 42075 vehicle, ghosted: axle tilted under the rear; shock leans to the body",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Isolated axle: differential in open frame, shock absorber, hub ends",
+          "view": "home",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 3 (back): input bevel and U-joint enter the differential",
+          "view": "back",
+          "step": 3,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                3
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Source step 5: hub frames and outgoing half-shafts added on both sides",
+          "view": "home",
+          "step": 5,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                5
+              ]
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.1.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.14.6",
+        "leocad": "25.09"
+      },
+      "replay": "./ldraw-xray board run examples/submodel-atlas/recipes/02-42075-rear-axle.json --output output/boards/02-42075-rear-axle"
+    }
+  ]
+}

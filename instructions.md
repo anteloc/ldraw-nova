@@ -16,7 +16,10 @@ Write down the requested silhouette, dimensions, palette and working features.
 ```
 
 Choose the matching family: `building`, `vehicle`, `spaceship`, `technic` or
-`mechanism`. For a frame, retained drive, pneumatic station or complete machine,
+`mechanism`. For a detail such as a sideways skin, hinged roof, radial core or
+parent-supplied gear, search the reviewed real-set constructions with
+`./ldraw-agent examples --family submodel --details QUERY`; each guide says what
+its parent supplies. For a frame, retained drive, pneumatic station or complete machine,
 copy a [workshop starter](examples/workshop/README.md). Its ordinary JSON plan
 includes supports, named joint checks and routes. Start with the smallest useful
 assembly, preserving its documented mechanical dimensions.
@@ -120,7 +123,7 @@ handoff, use `./prepare-glb.sh --file MODEL.mpd MODEL.glb`.
   [build-step views](docs/agent/build-manuals.md), [LDraw reference](docs/agent/ldraw-reference.md).
 - [Submodel inspection](docs/agent/submodel-inspection.md): `./ldraw-xray` boards show a
   section in its parent, by steps, see-through, by stud direction or posed;
-  reviewed [submodel candidates](examples/submodel-candidates/README.md).
+  the [submodel atlas](examples/submodel-atlas/README.md) holds 30 reviewed constructions.
 - [Discovery](docs/agent/reference-discovery.md): check Jev availability once;
   if unavailable, report why and use FTS/catalogs/examples. Preserve attribution
   and extraction manifests. Search the local specification with `spec QUERY`.
