@@ -148,3 +148,15 @@ def test_promoted_sources_and_relocated_geometry_match_preserved_hashes():
         evidence = json.loads(Path(row['visual_review']).read_text())
         assert row['model_sha256'] == evidence['source_sha256']
         assert len(evidence['sections']) == (6 if name=='boombox' else 18)
+
+
+def test_registered_manual_export_carries_corrected_lesson(tmp_path):
+    from ldraw_tools.manuals import export_manual
+    row = resolve('submodel:s08-10267-christmas-tree')
+    source = Path(row['model']).parent
+    export_manual(source, tmp_path/'tree')
+    readme = (tmp_path/'tree/README.md').read_text()
+    assert 'Two different foliage face children' in readme
+    assert 'repeating one face four times changes this source' in readme
+    assert (tmp_path/'tree/source.mpd').read_bytes() == Path(row['model']).read_bytes()
+    assert (tmp_path/'tree/visual-review.json').read_bytes() == (source/'visual-review.json').read_bytes()

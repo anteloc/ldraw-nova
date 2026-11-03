@@ -21,7 +21,7 @@ Read the registered construction lesson and its linked audit before adapting the
       "examples"
     ],
     "lesson": "Four-speed transmission core plus auxiliary shaft/support child. Driving rings, selector elements and compact gear trains are visible; the child forms one side of its support/shaft arrangement. External selector controls and surrounding driveline are omitted. No ratio or full-cycle validation added.",
-    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength. Prepared manual export remains blocked until every manual page has a recorded visual review; the package audit does not replace that review.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
     "subjects": [
       "Selectable transmissions"

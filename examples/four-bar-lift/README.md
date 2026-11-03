@@ -21,7 +21,7 @@ Read the registered construction lesson and its linked audit before adapting the
       "examples"
     ],
     "lesson": "Partial wing-lift linkage study. Broad wing panel, paired uprights, links and partial surrounding frame are visible. Guide assumes fixed upper pivot and omits full actuator. Do not retrieve as a self-supporting service lift.",
-    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength. Prepared manual export remains blocked until every manual page has a recorded visual review; the package audit does not replace that review.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
     "subjects": [
       "Four-bar linkages"

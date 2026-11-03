@@ -19,7 +19,24 @@
     "manual/00/step-005-top.png",
     "renders/home.png"
   ],
-  "manual_sha256": "24003276cb91f8fa3ba0080bed830def24e202bc15ccdec642c3219f47177e25",
+  "manual_sha256": "58737d745a36399ad6742df17fca565405c023e6065084821a692e3e666036cc",
   "analytical_verification": "deferred",
-  "physical_validity": "not_proven"
+  "physical_validity": "not_proven",
+  "identity_reconciliation": {
+    "date": "2026-11-03",
+    "kind": "metadata_only_identity_reconciliation",
+    "original_commit": "860a509656999fa204b4584a3d7859f9895e6bf7",
+    "original_manual_path": "examples/mechanism-atlas/gear-reduction/manual.json",
+    "original_manual_sha256": "24003276cb91f8fa3ba0080bed830def24e202bc15ccdec642c3219f47177e25",
+    "current_manual_sha256": "58737d745a36399ad6742df17fca565405c023e6065084821a692e3e666036cc",
+    "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+    "changed_artifacts": [
+      {
+        "path": "scene.plan.json",
+        "previous_sha256": "b215afa6d29987ecdbf6db85e38ad6375ef020c56f29c371e33a4d1fee1c607e",
+        "current_sha256": "ddd489413e646b712c15cb7485fd5f0527b9f78189f9e09e6e8017a2bd01edf8",
+        "replacement_count": 1
+      }
+    ]
+  }
 }

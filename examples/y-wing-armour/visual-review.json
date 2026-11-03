@@ -18,6 +18,23 @@
     "manual/00/step-007-top.png",
     "renders/home.png"
   ],
-  "manual_sha256": "d33fc777b089f1cbdb708080d83039a4b5671b20954263675314c2d4ac1d9675",
-  "physical_validity": "not_proven"
+  "manual_sha256": "6653687ce42fa1c0ff8f60211ccd34e802b65652b60290a390e45928afaeecda",
+  "physical_validity": "not_proven",
+  "identity_reconciliation": {
+    "date": "2026-11-03",
+    "kind": "metadata_only_identity_reconciliation",
+    "original_commit": "d00764cd4829d0be61f9eda8740203ef3ce4f714",
+    "original_manual_path": "examples/spaceship-atlas/y-wing-armour/manual.json",
+    "original_manual_sha256": "d33fc777b089f1cbdb708080d83039a4b5671b20954263675314c2d4ac1d9675",
+    "current_manual_sha256": "6653687ce42fa1c0ff8f60211ccd34e802b65652b60290a390e45928afaeecda",
+    "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+    "changed_artifacts": [
+      {
+        "path": "scene.plan.json",
+        "previous_sha256": "370d9f6886c9a3b066a1abdd55a5a3c1c2427fce351c8a01a966335d8fc16dc8",
+        "current_sha256": "474b46f726671ff2065d483bcd45cf67a516f058eba8e96e4072986d412f650d",
+        "replacement_count": 1
+      }
+    ]
+  }
 }

@@ -21,7 +21,7 @@ Read the registered construction lesson and its linked audit before adapting the
       "examples"
     ],
     "lesson": "Paired front/rear suspension studies requiring integration. Whole view visibly contains two separated axle assemblies, four wheel corners, wishbones and shocks; it is not a connected chassis. Explicitly state missing central chassis, guide-link holders and Cardan boundary supports in retrieval excerpt.",
-    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength. Prepared manual export remains blocked until every manual page has a recorded visual review; the package audit does not replace that review.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
     "subjects": [
       "Suspension"

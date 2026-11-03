@@ -232,7 +232,11 @@ def build_catalog(index, manifest, outdir, *, views=DEFAULT_VIEWS, contacts='non
 
 
 def _current_card(index, identity, card_dir):
-    source = confined(card_dir, identity)
+    # A prepared catalog contains ID-named cards; a curated semantic package
+    # owns its card directly. Both retain identical identity/artifact gates.
+    source = Path(card_dir).resolve()
+    if not (source/'card.json').is_file():
+        source = confined(source, identity)
     card = json.loads((source/'card.json').read_text())
     current = index.get(identity)
     if card['id'] != identity or current.get('source_sha256') != card['source']['sha256']:
@@ -261,8 +265,8 @@ def record_review(index, identity, card_dir, *, decision, note, viewed_views):
 def export_example(index, identity, card_dir, output, *, title, lesson, placement_notes, scale='unknown', force=False):
     """Export an inspected source plus an editable placement wrapper and its guide."""
     from .knowledge import check_directory_scope
-    check_directory_scope(card_dir)
     source, card = _current_card(index, identity, card_dir)
+    check_directory_scope(source)
     if (card['status'] != 'reference' or not card['contacts_checked'] or
             not card.get('geometry') or not _passed(card['geometry']['diagnostics'])):
         raise ValueError('Example needs passing source and geometry checks, a matching BOM and a contact inspection')

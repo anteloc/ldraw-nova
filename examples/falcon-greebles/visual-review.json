@@ -10,6 +10,23 @@
     "manual/00/step-003-top.png",
     "renders/home.png"
   ],
-  "manual_sha256": "a8be59dcd735c4e582840ee8a7cdd22d4868606f40669d1ea394cdf46df09a89",
-  "physical_validity": "not_proven"
+  "manual_sha256": "b0b54a1c5bf162628fe3bf8037a868cb106b33d2d3d62b423235cff3d279246f",
+  "physical_validity": "not_proven",
+  "identity_reconciliation": {
+    "date": "2026-11-03",
+    "kind": "metadata_only_identity_reconciliation",
+    "original_commit": "d00764cd4829d0be61f9eda8740203ef3ce4f714",
+    "original_manual_path": "examples/spaceship-atlas/falcon-greebles/manual.json",
+    "original_manual_sha256": "a8be59dcd735c4e582840ee8a7cdd22d4868606f40669d1ea394cdf46df09a89",
+    "current_manual_sha256": "b0b54a1c5bf162628fe3bf8037a868cb106b33d2d3d62b423235cff3d279246f",
+    "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+    "changed_artifacts": [
+      {
+        "path": "scene.plan.json",
+        "previous_sha256": "0dc57d1f27d1b4095b21e3d99315d5842de19341b44ce8e48ae95502a620f55c",
+        "current_sha256": "beab97d0a35325749b89dc55b3e3f31e5ea69564b992a468773d1a207d77c01c",
+        "replacement_count": 1
+      }
+    ]
+  }
 }

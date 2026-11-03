@@ -258,7 +258,7 @@ def review_manual(folder, *, images, note):
 
 def export_manual(folder, outdir, *, force=False):
     from .knowledge import check_directory_scope
-    check_directory_scope(folder)
+    registrations = check_directory_scope(folder)
     folder, manual = current_manual(folder)
     if current_review(folder) is None:
         raise ValueError('Record a current visual review before exporting this construction reference')
@@ -277,9 +277,23 @@ def export_manual(folder, outdir, *, force=False):
         dest = confined(target, name)
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(confined(folder, name), dest)
-    for name in ['README.md', 'GUIDE.md', 'generate.py']:
+    for name in (['generate.py'] if registrations else ['README.md', 'GUIDE.md', 'generate.py']):
         if (folder/name).is_file():
             shutil.copyfile(folder/name, target/name)
+    if registrations:
+        lessons = []
+        for record in registrations:
+            lessons.append('## '+record['title']+'\n\n'+record['lesson']+'\n\n'
+                           +record.get('limits', '')+'\n\nCanonical source: `'+record['id']
+                           +'`; authored README SHA-256: `'+record['source_sha256']+'`.\n')
+        atomic_write(target/'README.md', '# Exported construction study\n\n'
+                     'The current scoped lessons below come from the package README. '
+                     'Frozen manuals and notes preserve their historical wording and artifact identities. '
+                     'Their source/BOM/visual checks do not establish motion, strength or new mounting interfaces.\n\n'
+                     +'\n'.join(lessons)+'\n'
+                     'Build [scene.plan.json](scene.plan.json), inspect the attributed [source](source.mpd) '
+                     'and [opened-image evidence](visual-review.json), then review the composed model. '
+                     'Keep geometry fixes in the editable source; changes invalidate affected evidence.\n')
     return dict(output=str(target), plan=str(target/'scene.plan.json'), source=str(target/'source.mpd'),
                 **({'analytical_verification':'deferred'} if study_kind(manual) == 'mechanism' else {}),
                 next='Build the plan, inspect its interfaces and review the composed model; choose contact and joint scope deliberately.')

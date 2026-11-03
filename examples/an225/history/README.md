@@ -1,6 +1,8 @@
+> Historical generation report; use the [current package lesson](../README.md) for corrected scope and limits. Links to research and iterations refer to the original local `output/` run.
+
 # Antonov An-225 Mriya — 1:100 System-brick model
 
-![Home view](review/home.png)
+![Home view](../evidence/review/home.png)
 
 The world's largest cargo aircraft, parked on all **32 wheels** with its **nose visor
 raised**, its **forward ramp lowered** and two microscale containers in the hold.
@@ -12,27 +14,27 @@ The model:
   **18 MPD sections**;
 - is a System-brick build, with no Technic parts or mechanisms.
 
-![Nose close-up](review/closeups/nose/home.png)
+![Nose close-up](../evidence/review/closeups/nose/home.png)
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| [an225-mriya.mpd](an225-mriya.mpd) | Final editable model (SHA-256 in [manifest.json](manifest.json)) |
-| [generate.py](generate.py) | Generator for the complete plan; all geometry fixes live here |
-| [an225-mriya.plan.json](an225-mriya.plan.json) | Generated version-1 assembly plan (built into the MPD) |
-| [design-brief.md](design-brief.md) | Brief, palette roles, measured interfaces, module checklist |
+| [an225-mriya.mpd](../an225-mriya.mpd) | Final editable model (SHA-256 in [manifest.json](../evidence/manifest.json)) |
+| [generate.py](../generate.py) | Generator for the complete plan; all geometry fixes live here |
+| [an225-mriya.plan.json](../an225-mriya.plan.json) | Generated version-1 assembly plan (built into the MPD) |
+| [design-brief.md](../design-brief.md) | Brief, palette roles, measured interfaces, module checklist |
 | [visual-review.md](visual-review.md) | Opened images, problems found and revisions, per pass |
-| [validation.json](validation.json), [validation.contacts-all.json](validation.contacts-all.json) | Assembly validation (auto mode, and with full contacts) |
-| [gear-main.vehicle.json](gear-main.vehicle.json), [gear-nose.vehicle.json](gear-nose.vehicle.json), [aircraft.vehicle.json](aircraft.vehicle.json) | Vehicle-profile reports |
-| [bom.json](bom.json), [bom-comparison.json](bom-comparison.json), [review/leocad-bom.csv](review/leocad-bom.csv) | Python BOM, LeoCAD BOM and their comparison |
-| [check-model.json](check-model.json) | LeoCAD import/snapshot/BOM smoke test |
-| [review/](review) | Final seven views; [review/closeups/](review/closeups) holds the nose, tail, gear, engines, aft and sponson views |
-| [checks/](checks) | Full and per-module contact inspections, mesh clearance, hinge study, interface contacts |
-| [closeup.py](closeup.py), [components.py](components.py), [mesh_clearance.py](mesh_clearance.py), [hinge_study.py](hinge_study.py) | Review aids: framed renders, connection-group tracing, triangle clearance, hinge-angle study |
-| [research/](research), [shortlists/](shortlists) | Jev part rankings per role and LeoCAD part boards |
-| [tests/](tests) | Hinge connector test (3937/3938 at 0° and 60°) and the clearance-checker control |
-| [iterations/](iterations) | Renders from the earlier design passes cited in the visual review |
+| [validation.json](../evidence/validation.json), [validation.contacts-all.json](../evidence/validation.contacts-all.json) | Assembly validation (auto mode, and with full contacts) |
+| [gear-main.vehicle.json](../evidence/gear-main.vehicle.json), [gear-nose.vehicle.json](../evidence/gear-nose.vehicle.json), [aircraft.vehicle.json](../evidence/aircraft.vehicle.json) | Vehicle-profile reports |
+| [bom.json](../evidence/bom.json), [bom-comparison.json](../evidence/bom-comparison.json), [review/leocad-bom.csv](../evidence/review/leocad-bom.csv) | Python BOM, LeoCAD BOM and their comparison |
+| [check-model.json](../evidence/check-model.json) | LeoCAD import/snapshot/BOM smoke test |
+| [review/](../evidence/review) | Final seven views; [review/closeups/](../evidence/review/closeups) holds the nose, tail, gear, engines, aft and sponson views |
+| [checks/](../evidence/checks) | Full and per-module contact inspections, mesh clearance, hinge study, interface contacts |
+| [closeup.py](../closeup.py), [components.py](../components.py), [mesh_clearance.py](../mesh_clearance.py), [hinge_study.py](../hinge_study.py) | Review aids: framed renders, connection-group tracing, triangle clearance, hinge-angle study |
+| [research/](../../../output/an225-mriya/research), [shortlists/](../../../output/an225-mriya/shortlists) | Jev part rankings per role and LeoCAD part boards |
+| [tests/](../evidence/tests) | Hinge connector test (3937/3938 at 0° and 60°) and the clearance-checker control |
+| [iterations/](../../../output/an225-mriya/iterations) | Renders from the earlier design passes cited in the visual review |
 
 ## Reproduce
 

@@ -1,0 +1,519 @@
+[
+  {
+    "id": "75050-b-wing",
+    "folder": "examples/75050-b-wing",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened home, front, back and top views of the final 434-part model. The long blade, opposed short wings, offset canopy and four orange engine faces remain distinct. Side views expose the thin wing stacks. Source front does not match the new-design -Z convention, so these are source-axis view labels. The three recorded sub-0.00033-LDU copy repairs resolve rounding penetrations without visible silhouette changes. No parts placeholders or clipped extremities are visible. Articulation and mounting to a new display are not established by the images.",
+      "viewed_images": [
+        "renders/home.png",
+        "renders/front.png",
+        "renders/back.png",
+        "renders/top.png"
+      ],
+      "manual_sha256": "0877d097c5ec3798e5ec86b4982198c63487bd54e970125fc07c517407dc0f7c",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "d00764cd4829d0be61f9eda8740203ef3ce4f714",
+      "original_manual_path": "examples/spaceship-atlas/b-wing/manual.json",
+      "original_manual_sha256": "0877d097c5ec3798e5ec86b4982198c63487bd54e970125fc07c517407dc0f7c",
+      "current_manual_sha256": "40c6682f7215b315d3aa27f1f2a9eb37361102b570fe8c371a73e02066312680",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "source-checks.json",
+          "previous_sha256": "5ef09186dd80027ed5ab39d8bfbf05a89c147483d0ca81313a959dee4e973f73",
+          "current_sha256": "f9203e80aedc48ee2bd4cf4be890ec6aef77c1c1f698e43704a28e0979255541",
+          "replacement_count": 46
+        },
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "c1ee02bca19bf3b942e539d91dc0d702f419d50c2fa631796b565d2a545b7104",
+          "current_sha256": "545fdc0a44a495fdc5091984775470eb1ba3eaa3f7101ef99231bf4d7959a168",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "cam-follower-engine",
+    "folder": "examples/cam-follower-engine",
+    "found": false,
+    "reason": "No complete-page visual review is present in the package."
+  },
+  {
+    "id": "canopy-cockpit",
+    "folder": "examples/canopy-cockpit",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened the root and all three child assembly pages from home/top, plus the final home view. The real octagonal transparent canopy halves reveal the pilot; the separate rear glazing/hinge section and pilot/helmet callouts expose otherwise hidden pieces. Each section has one STEP group, so these pages show assembly levels rather than a fine insertion sequence. Legacy minifigure parts and aliases remain attributed. The source canopy vocabulary is useful; a changed seat, occupant or canopy requires a new fit review.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-top.png",
+        "manual/01/step-001-home.png",
+        "manual/01/step-001-top.png",
+        "manual/02/step-001-home.png",
+        "manual/02/step-001-top.png",
+        "manual/03/step-001-home.png",
+        "manual/03/step-001-top.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "a696095d1d4e6baf2c5dd041c018368a98552f4212fcacac1f1910ac47bf8e9b",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "d00764cd4829d0be61f9eda8740203ef3ce4f714",
+      "original_manual_path": "examples/spaceship-atlas/canopy-cockpit/manual.json",
+      "original_manual_sha256": "a696095d1d4e6baf2c5dd041c018368a98552f4212fcacac1f1910ac47bf8e9b",
+      "current_manual_sha256": "50817dac2d996d93aabbe7b452ec141b50f73dc2705e3a9d73c76ff385a37479",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "source-checks.json",
+          "previous_sha256": "6709ba8acb642d1384f0e338a6c0ae925e19944c3169a55ae57a19e3dd5267cc",
+          "current_sha256": "475f4c475baf65997b2f541b56245fb69ef8d48ebb0aba1e725f7788442ba74f",
+          "replacement_count": 8
+        },
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "6774c5f3abdb5409a85c43d66c47e820c52e6ddc5b17b3767a67bec8f8edde9c",
+          "current_sha256": "20e0b630830063b5dc33814a8304c243c5967fcd46f9c0a41e452ae4bbf30882",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "differential",
+    "folder": "examples/differential",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened all four steps from home and back plus the final preview. The frame is built before the carrier and axle outputs, followed by the drive gearing and longer exterior mounts. Home exposes internal bevel gears through the carrier opening; back shows the transverse output axis but hides depth. Read the source for obscured internals added in the same STEP group. No missing-part placeholders or clipped geometry are visible; wheel connections remain in the parent axle.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-back.png",
+        "manual/00/step-002-home.png",
+        "manual/00/step-002-back.png",
+        "manual/00/step-003-home.png",
+        "manual/00/step-003-back.png",
+        "manual/00/step-004-home.png",
+        "manual/00/step-004-back.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "e84ce68a13f22c309ac2fccad556ec94f618c87c0a522cf621534bc27af3fbda",
+      "analytical_verification": "deferred",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "860a509656999fa204b4584a3d7859f9895e6bf7",
+      "original_manual_path": "examples/mechanism-atlas/differential/manual.json",
+      "original_manual_sha256": "e84ce68a13f22c309ac2fccad556ec94f618c87c0a522cf621534bc27af3fbda",
+      "current_manual_sha256": "c78d816ebf29f39074b5ed7b41630d73d312772cf28efdaecf8517fb1fce6485",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "92bf6ae9a28ccdf9f6fc413978e47df43c9ba45b8c79a3042889b3f51ec7fac2",
+          "current_sha256": "7e52b5ba3562ea9214c18864eb1fdcd4f0a5a7d55747769d71b95e63e9241317",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "double-cardan-shaft",
+    "folder": "examples/double-cardan-shaft",
+    "found": false,
+    "reason": "No complete-page visual review is present in the package."
+  },
+  {
+    "id": "driven-turntable",
+    "folder": "examples/driven-turntable",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened all three steps from home and bottom plus the final preview. The frame and drive gear are present before the front mounts and two turntable halves. Home shows the toothed ring and upper attachment pins; bottom shows the support rails, rear drive and underside of the turntable. The upper model and continued input drive belong to the parent. No missing-part placeholders or clipped geometry are visible.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-bottom.png",
+        "manual/00/step-002-home.png",
+        "manual/00/step-002-bottom.png",
+        "manual/00/step-003-home.png",
+        "manual/00/step-003-bottom.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "4b93830afd5525bcad4a6572d68205ff3d436061b403cb5402ca3ff2ef965c50",
+      "analytical_verification": "deferred",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "860a509656999fa204b4584a3d7859f9895e6bf7",
+      "original_manual_path": "examples/mechanism-atlas/driven-turntable/manual.json",
+      "original_manual_sha256": "4b93830afd5525bcad4a6572d68205ff3d436061b403cb5402ca3ff2ef965c50",
+      "current_manual_sha256": "2340d8f086d3cc4fd420b591882568f1c147f73a94c985c122799194b792bd5e",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "a8b8237a79103509087b5a7a1350e98a2cf04cf41b61d800a5178dfb66e2d384",
+          "current_sha256": "0622161144f8add845550685f947aa22661ac89a3f482438733d97584b54022f",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "falcon-greebles",
+    "folder": "examples/falcon-greebles",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened all three source steps from home/top and final home. The wedge base, domes and brackets precede the bars/antenna, followed by the lever and loudhailer fittings. They read as a contained service bay. Protruding bars require clearance above the receiving hull; its parent recess is not included. No missing-part placeholders or clipping are visible.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-top.png",
+        "manual/00/step-002-home.png",
+        "manual/00/step-002-top.png",
+        "manual/00/step-003-home.png",
+        "manual/00/step-003-top.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "a8be59dcd735c4e582840ee8a7cdd22d4868606f40669d1ea394cdf46df09a89",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "d00764cd4829d0be61f9eda8740203ef3ce4f714",
+      "original_manual_path": "examples/spaceship-atlas/falcon-greebles/manual.json",
+      "original_manual_sha256": "a8be59dcd735c4e582840ee8a7cdd22d4868606f40669d1ea394cdf46df09a89",
+      "current_manual_sha256": "b0b54a1c5bf162628fe3bf8037a868cb106b33d2d3d62b423235cff3d279246f",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "0dc57d1f27d1b4095b21e3d99315d5842de19341b44ce8e48ae95502a620f55c",
+          "current_sha256": "beab97d0a35325749b89dc55b3e3f31e5ea69564b992a468773d1a207d77c01c",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "four-bar-lift",
+    "folder": "examples/four-bar-lift",
+    "found": false,
+    "reason": "No complete-page visual review is present in the package."
+  },
+  {
+    "id": "four-cylinder-bank",
+    "folder": "examples/four-cylinder-bank",
+    "found": false,
+    "reason": "No complete-page visual review is present in the package."
+  },
+  {
+    "id": "four-speed-gearbox",
+    "folder": "examples/four-speed-gearbox",
+    "found": false,
+    "reason": "No complete-page visual review is present in the package."
+  },
+  {
+    "id": "gear-and-axle-module",
+    "folder": "examples/gear-and-axle-module",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened all five source steps from home, back and top plus the final preview. Yellow additions distinguish the initial pinned beam, paired gears, axle joiners, upper clutch gear and final mounting connectors. Top views expose the shaft stacks; back views separate the gear faces. No missing-part placeholders or framing cuts remain. The upper clutch connection and complete power path require the parent gearbox; these images establish the source pose, not operation.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-back.png",
+        "manual/00/step-001-top.png",
+        "manual/00/step-002-home.png",
+        "manual/00/step-002-back.png",
+        "manual/00/step-002-top.png",
+        "manual/00/step-003-home.png",
+        "manual/00/step-003-back.png",
+        "manual/00/step-003-top.png",
+        "manual/00/step-004-home.png",
+        "manual/00/step-004-back.png",
+        "manual/00/step-004-top.png",
+        "manual/00/step-005-home.png",
+        "manual/00/step-005-back.png",
+        "manual/00/step-005-top.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "24003276cb91f8fa3ba0080bed830def24e202bc15ccdec642c3219f47177e25",
+      "analytical_verification": "deferred",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "860a509656999fa204b4584a3d7859f9895e6bf7",
+      "original_manual_path": "examples/mechanism-atlas/gear-reduction/manual.json",
+      "original_manual_sha256": "24003276cb91f8fa3ba0080bed830def24e202bc15ccdec642c3219f47177e25",
+      "current_manual_sha256": "58737d745a36399ad6742df17fca565405c023e6065084821a692e3e666036cc",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "b215afa6d29987ecdbf6db85e38ad6375ef020c56f29c371e33a4d1fee1c607e",
+          "current_sha256": "ddd489413e646b712c15cb7485fd5f0527b9f78189f9e09e6e8017a2bd01edf8",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "paired-suspension-axles",
+    "folder": "examples/paired-suspension-axles",
+    "found": false,
+    "reason": "No complete-page visual review is present in the package."
+  },
+  {
+    "id": "piston-crank",
+    "folder": "examples/piston-crank",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened all four steps from home and right plus the final preview after correcting embedded-DAT preservation. The dedicated cylinder is now rendered with its fins and bore rather than a placeholder. Mounting cross blocks, bushes and the closing beam remain distinguishable. Step 2 groups the crank, rod, piston and cylinder, concealing some internals immediately; use its exact part list and source to study those pieces. The parent kart supplies the drivetrain and chassis. No motion or insertion sequence is inferred from these static pages.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-right.png",
+        "manual/00/step-002-home.png",
+        "manual/00/step-002-right.png",
+        "manual/00/step-003-home.png",
+        "manual/00/step-003-right.png",
+        "manual/00/step-004-home.png",
+        "manual/00/step-004-right.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "548a3269d30e13c32c7efd9337d940d3eb3f0d69878d6e4683588245bebbe672",
+      "analytical_verification": "deferred",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "860a509656999fa204b4584a3d7859f9895e6bf7",
+      "original_manual_path": "examples/mechanism-atlas/piston-crank/manual.json",
+      "original_manual_sha256": "548a3269d30e13c32c7efd9337d940d3eb3f0d69878d6e4683588245bebbe672",
+      "current_manual_sha256": "3052aa091d466457525e7c50aaa683c5090527574fc49f82d46bf50443c14edf",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "32f7470b8003b9d8dcd95ee98828da99fb26db8921991f4e5717cca06e16a753",
+          "current_sha256": "e3917357b60fb2238642f36109d207388fad5060d9b010b21e60ce064ba8365d",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "steering-rack",
+    "folder": "examples/steering-rack",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened all three steps from home and top plus the final preview. The pinned lower beam, mirrored axle mounts and toothed rack arrive in separate groups, and both views preserve their spacing. The extracted module has no driving pinion: the parent provides the drive and wheel connections. No missing-part placeholders or framing cuts are visible.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-top.png",
+        "manual/00/step-002-home.png",
+        "manual/00/step-002-top.png",
+        "manual/00/step-003-home.png",
+        "manual/00/step-003-top.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "c7e6522b7e3a319300c2d4c8ce47cdb68b3778b13ea827cb4a09dbb594a3a6ac",
+      "analytical_verification": "deferred",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "860a509656999fa204b4584a3d7859f9895e6bf7",
+      "original_manual_path": "examples/mechanism-atlas/steering-rack/manual.json",
+      "original_manual_sha256": "c7e6522b7e3a319300c2d4c8ce47cdb68b3778b13ea827cb4a09dbb594a3a6ac",
+      "current_manual_sha256": "aafaebaa6446e025c9d37f508d179a8e97d4ccaf4b0a4dab3897a0786dfb5424",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "4b7d6b6552b20590fee9ed0e825894d0e6d9093f4343498dd1e1b454f234e0ad",
+          "current_sha256": "5d97719bc2e30d421611d4fd4f7c4c4f15998cc738e808de663f7d7c3ac137b1",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "worm-drive",
+    "folder": "examples/worm-drive",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened all three steps from home and top plus the final preview. The blue supports precede the worm shaft and driven gear; the thin front beam closes the visible support stack. Home reveals the worm and gear better than the narrow top view. The winding drum, cable and surrounding tower are supplied by the parent. No missing-part placeholders or clipped geometry are visible.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-top.png",
+        "manual/00/step-002-home.png",
+        "manual/00/step-002-top.png",
+        "manual/00/step-003-home.png",
+        "manual/00/step-003-top.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "eddfddaeaa7b4faf0c4eef3e092dba8795e4c1ec3ee8c92aea565378cfdd9fb4",
+      "analytical_verification": "deferred",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "860a509656999fa204b4584a3d7859f9895e6bf7",
+      "original_manual_path": "examples/mechanism-atlas/worm-drive/manual.json",
+      "original_manual_sha256": "eddfddaeaa7b4faf0c4eef3e092dba8795e4c1ec3ee8c92aea565378cfdd9fb4",
+      "current_manual_sha256": "ca26d061a13746246954255f201510d56a08544526bd2890289b95f04099e318",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "50ce90850c560f15cee1942a3e4a4e2eee24117e83667982738ef2a725ab99b1",
+          "current_sha256": "de1db293256a11bcc1d11b1458f79229e0bd120a7e81e093868c89b529906038",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "x-wing-nacelle",
+    "folder": "examples/x-wing-nacelle",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened its single STEP group from home/top and the final home image. Dedicated cylinder sections, red inner round parts, long concentric core and transverse mounting axles are visible. The source axis is vertical in these local views. All pieces arrive in one group; its part list and source are required to study internal stacking because no intermediate assembly sequence is supplied.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-top.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "cee7c4adbe5872aa69f0fd4be5c0f3d2cf7042c5fe8cd4f116f54ef34d45c851",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "d00764cd4829d0be61f9eda8740203ef3ce4f714",
+      "original_manual_path": "examples/spaceship-atlas/x-wing-nacelle/manual.json",
+      "original_manual_sha256": "cee7c4adbe5872aa69f0fd4be5c0f3d2cf7042c5fe8cd4f116f54ef34d45c851",
+      "current_manual_sha256": "c3ce43dfdc21852595aa6f8be11a881296f73041d22caf1eca7cab123b0e8345",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "9d01a966e0387ce087d88e294065c7cb867387fe1feebcf883645ced4ef6bf0f",
+          "current_sha256": "3c9849088aa3b8c050fae52608cbef170b6ea304cccf870abb45703d80224e95",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "x-wing-wing",
+    "folder": "examples/x-wing-wing",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened home, front, back and top of the complete lower port wing. The thin plate surface, shaped white/red/tan panel, engine pod and long tip cannon are distinguishable. Front/back expose wing thickness and the engine section. Top shows the long projections and native axis directions. Retain its root mounting stack; the matching wings and articulation belong to the parent. Overview images are not step pages.",
+      "viewed_images": [
+        "renders/home.png",
+        "renders/front.png",
+        "renders/back.png",
+        "renders/top.png"
+      ],
+      "manual_sha256": "fc73be120e9afeecdcc2c8ef7d0ff06c7c5c7cc08dbe82d28a4767092590c46e",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "d00764cd4829d0be61f9eda8740203ef3ce4f714",
+      "original_manual_path": "examples/spaceship-atlas/x-wing-wing/manual.json",
+      "original_manual_sha256": "fc73be120e9afeecdcc2c8ef7d0ff06c7c5c7cc08dbe82d28a4767092590c46e",
+      "current_manual_sha256": "1ab11a28960b433a447479243412491d8878216bff0570bf28b4b93791684f05",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "source-checks.json",
+          "previous_sha256": "d5a2b80b4d93fe30d8fde7cd963f232cbbaf9ff209236bcdea876e15741d1937",
+          "current_sha256": "58d43c8b2330c5ad75c993cb5065f1ca0c0e75fc41c6c9a705fbdf9c6f88fd14",
+          "replacement_count": 8
+        },
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "89f3452c5addfded25ce5060aa32566636b676b2e5bfe0124cdd808e3090a691",
+          "current_sha256": "25545a44f6b9ad8e54b27eeb17020c888df4440f9502b692d20da8867e8421c7",
+          "replacement_count": 1
+        }
+      ]
+    }
+  },
+  {
+    "id": "y-wing-armour",
+    "folder": "examples/y-wing-armour",
+    "found": true,
+    "original_review": {
+      "status": "visually_reviewed",
+      "note": "Opened all seven source steps from home and top, plus final home. The short base gains a long spine, end plates and vent strips, hinges, outer slopes, a central rod and a few upper fittings. The quiet sloping border remains distinct from the denser centre. Both views are framed consistently and show the added parts. Parent support and opposite panels still need inspection before mounting it to another hull.",
+      "viewed_images": [
+        "manual/00/step-001-home.png",
+        "manual/00/step-001-top.png",
+        "manual/00/step-002-home.png",
+        "manual/00/step-002-top.png",
+        "manual/00/step-003-home.png",
+        "manual/00/step-003-top.png",
+        "manual/00/step-004-home.png",
+        "manual/00/step-004-top.png",
+        "manual/00/step-005-home.png",
+        "manual/00/step-005-top.png",
+        "manual/00/step-006-home.png",
+        "manual/00/step-006-top.png",
+        "manual/00/step-007-home.png",
+        "manual/00/step-007-top.png",
+        "renders/home.png"
+      ],
+      "manual_sha256": "d33fc777b089f1cbdb708080d83039a4b5671b20954263675314c2d4ac1d9675",
+      "physical_validity": "not_proven"
+    },
+    "reconciliation": {
+      "date": "2026-11-03",
+      "kind": "metadata_only_identity_reconciliation",
+      "original_commit": "d00764cd4829d0be61f9eda8740203ef3ce4f714",
+      "original_manual_path": "examples/spaceship-atlas/y-wing-armour/manual.json",
+      "original_manual_sha256": "d33fc777b089f1cbdb708080d83039a4b5671b20954263675314c2d4ac1d9675",
+      "current_manual_sha256": "6653687ce42fa1c0ff8f60211ccd34e802b65652b60290a390e45928afaeecda",
+      "verified_change": "Exact byte substitution ldraw-astra -> ldraw-nova in plan author and diagnostic paths only. All other manifest fields and artifact hashes, including models, images, BOM and notes, are unchanged. Existing image observations are carried forward; no new visual or physical verification is claimed.",
+      "changed_artifacts": [
+        {
+          "path": "scene.plan.json",
+          "previous_sha256": "370d9f6886c9a3b066a1abdd55a5a3c1c2427fce351c8a01a966335d8fc16dc8",
+          "current_sha256": "474b46f726671ff2065d483bcd45cf67a516f058eba8e96e4072986d412f650d",
+          "replacement_count": 1
+        }
+      ]
+    }
+  }
+]

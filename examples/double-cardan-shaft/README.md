@@ -21,7 +21,7 @@ Read the registered construction lesson and its linked audit before adapting the
       "examples"
     ],
     "lesson": "Unsupported paired-joint shaft study, not ready-to-mount drive module. Seven-piece extract shows two universal joints and intermediate axle but no bearings, adjoining axles or retention. Preserve phase and measured positioning frame; add supports during adaptation.",
-    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength. Prepared manual export remains blocked until every manual page has a recorded visual review; the package audit does not replace that review.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
     "subjects": [
       "Universal joints"
