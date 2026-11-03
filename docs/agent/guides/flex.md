@@ -2,7 +2,7 @@
 
 Start with the actual material family, rigid fittings and required poses. Run `./ldraw-agent flex guide TYPE` for installed definitions and family limits. For new plans, use [named endpoints and wheels](../reference/flex.md); external constraints remain supported. Install the optional pinned engine with `./setup.sh --with-lsynth`.
 
-Study the [portal-frame pneumatic press](../../../examples/flex/pneumatic-press/README.md), [retained chain drive](../../../examples/workshop/chain-drive/README.md) or [complete workshop](../../../examples/workshop/workshop/README.md) for mounted static routes. The small hose/band/chain files teach syntax and BOM ownership. The [constraint lab](../../../examples/flex/constraint-lab/README.md) is diagnostic; the [legacy LSynth corpus](../../../lsynth-examples/README.md) is optional research with family-specific missing hardware and invalid-source cases.
+Study the [portal-frame pneumatic press](../../../examples/pneumatic-press/README.md), [retained chain drive](../../../examples/retained-chain-drive/README.md) or [complete workshop](../../../examples/workshop-machine/README.md) for mounted static routes. The small hose/band/chain files teach syntax and BOM ownership. The [constraint lab](../../../tests/fixtures/flex-constraints/README.md) is diagnostic; the [legacy LSynth corpus](../../../lsynth-examples/README.md) is optional research with family-specific missing hardware and invalid-source cases.
 
 ## The working loop
 
@@ -70,7 +70,7 @@ substituting a wheel requires checking its engagement, radius and mounting stack
 
 ## Learn from actual synthesis
 
-The [constraint lab](../../../examples/flex/constraint-lab/README.md) contains
+The [constraint lab](../../../tests/fixtures/flex-constraints/README.md) contains
 executable straight, bend, return and bundle experiments plus a deliberately
 failing tight bend. It calibrates through actual LSynth output, not a duplicate
 curve algorithm. Change one feature, synthesize and compare measurements and
@@ -79,7 +79,7 @@ marker orientation, cross section or crowded assembly.
 
 For a new family, run its guide and a small isolated route first; then seat it on
 the actual fittings and inspect it in context. Reuse the complete
-[pneumatic press](../../../examples/flex/pneumatic-press/README.md) for the latter
+[pneumatic press](../../../examples/pneumatic-press/README.md) for the latter
 step. Complete the normal assembly/BOM/image review after the last route edit.
 
 For multiple poses, preserve the physical part identities and required lengths,

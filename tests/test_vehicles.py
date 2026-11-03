@@ -2,6 +2,7 @@
 import copy
 import hashlib
 import json
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -162,7 +163,8 @@ def test_saved_examples_are_reproducible_and_reports_match_current_revision(offi
     assert {row['key'] for row in catalog['details']}==set(DETAILS)
     for name in [*DESIGNS,*DETAILS]:
         is_detail=name in DETAILS
-        folder=atlas/'details'/name if is_detail else atlas/name
+        from ldraw_tools.knowledge import resolve
+        folder=Path(resolve(name, family='vehicle')['model']).parent
         plan=detail_plan(name) if is_detail else vehicle_plan(name)
         assert json.loads((folder/'scene.plan.json').read_text())==plan
         text,_,ds=build_plan(plan,official)

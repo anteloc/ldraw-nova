@@ -11,7 +11,7 @@ You need Python 3.12+, an installed LDraw parts library, Poppler (`pdftotext`) a
 ```sh
 export LDRAW_DIR=/path/to/ldraw
 ./setup.sh
-./ldraw-agent review examples/bridge.plan.json --outdir output/bridge-review
+./ldraw-agent review examples/plan-basics/bridge.plan.json --outdir output/bridge-review
 ```
 
 Open the PNGs in `output/bridge-review/previews/`. The same folder contains the model, validation report, Python BOM, LeoCAD BOM comparison and a manifest tying artifacts to the model revision. `review --no-render` runs intermediate Python checks when previews are not needed. `./ldraw-agent doctor` reports local dependencies.
@@ -27,7 +27,7 @@ Give an agent your model idea and [instructions.md](instructions.md). Follow one
 5. **Review and deliver** the editable MPD, source, matching BOMs and inspected images.
 
 ```sh
-cp examples/workshop/workshop/model.plan.json output/machine.plan.json
+cp examples/workshop-machine/model.plan.json output/machine.plan.json
 ./ldraw-agent review output/machine.plan.json --views home front back top bottom
 ```
 
@@ -56,9 +56,9 @@ Existing plans, numeric external contracts, `.ldr` flex sources, prebuilt assets
 | Geometry checks and limitations | [Validation](docs/agent/reference/validation.md) |
 | Flexible hoses, cables, bands, chains and treads | [Constraint authoring and repair](docs/agent/guides/flex.md), [LSynth integration](docs/agent/reference/flex.md), [examples](examples/flex/README.md) |
 | Technic supports, equipment and industrial assemblies | [Design guide](docs/agent/guides/technic.md), [annotated construction studies](lsynth-examples/README.md) |
-| Advanced mechanisms and animation | [Constraint workflow](docs/agent/guides/mechanisms.md), [gear-drive starter](examples/technic-studies/gear-drive/README.md), [mechanical parts catalog](docs/agent/reference/technic.md) |
-| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/guides/snot.md), [parrot core](examples/snot/parrot/README.md), [cat details and joints](examples/snot/cat/README.md), [Halcyon original interceptor](examples/snot/halcyon/README.md), [SNOT submodels from real sets](examples/submodel-atlas/README.md#pick-an-entry-by-technique) |
-| Spaceships: SNOT by default | [Halcyon default model](examples/snot/halcyon/README.md), [spaceship guide](docs/agent/guides/design-models.md) |
+| Advanced mechanisms and animation | [Constraint workflow](docs/agent/guides/mechanisms.md), [gear-drive starter](examples/gear-drive/README.md), [mechanical parts catalog](docs/agent/reference/technic.md) |
+| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/guides/snot.md), [parrot core](examples/parrot/README.md), [cat details and joints](examples/cat/README.md), [Halcyon original interceptor](examples/halcyon/README.md), [SNOT submodels from real sets](examples/submodel-atlas/README.md#pick-an-entry-by-technique) |
+| Spaceships: SNOT by default | [Halcyon default model](examples/halcyon/README.md), [spaceship guide](docs/agent/guides/design-models.md) |
 | Reusable constructions and model examples | [Reference atlas](examples/reference-atlas/README.md), [submodel atlas](examples/submodel-atlas/README.md), `./ldraw-agent examples --help` |
 | Visual inspection of source submodels | [Submodel inspection with ldraw-xray](docs/agent/guides/review-models.md), [submodel atlas](examples/submodel-atlas/README.md) |
 

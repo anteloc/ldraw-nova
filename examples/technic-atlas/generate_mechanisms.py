@@ -23,6 +23,8 @@ from technic_catalog import write_catalog
 
 def generate(outdir, *, names=None, renders=True):
     outdir = Path(outdir)
+    if outdir.resolve() == Path(__file__).resolve().parent:
+        raise ValueError('Legacy source preparation requires a separate --outdir; reproduce the current semantic packages instead.')
     seeds = json.loads((HERE / 'mechanism-selections.json').read_text())['references']
     if names and set(names) - {s['key'] for s in seeds}:
         raise ValueError('Unknown Technic mechanism selection')

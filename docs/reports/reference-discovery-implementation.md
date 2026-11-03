@@ -50,7 +50,7 @@ These are retrieval smoke tests, not exhaustive corpus searches or an A/B benchm
 ./ldraw-agent discover parts output/lamps.json --limit 12
 .venv/bin/python examples/reference-atlas/generate.py --jobs 3
 ./ldraw-agent examples --family reference aircraft --limit 5
-./ldraw-agent build examples/reference-atlas/airliner-engine/scene.plan.json \
+./ldraw-agent build examples/airliner-engine/scene.plan.json \
   --output output/airliner-engine-example.mpd
 .venv/bin/python -m pytest -q
 ```

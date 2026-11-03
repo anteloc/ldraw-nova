@@ -10,7 +10,7 @@ from ldraw_tools.builder import build_plan, load_plan
 from ldraw_tools.common import ROOT
 from ldraw_tools.geometry import analyze_geometry
 
-EXAMPLE = ROOT / 'examples/snot/halcyon'
+EXAMPLE = ROOT / 'examples/halcyon'
 
 # (module section, mount section, mount part): seated stud/socket contacts. The intake, exhaust
 # and cannon sections are placed twice, so their counts cover both placements.

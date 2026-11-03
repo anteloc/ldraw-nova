@@ -55,7 +55,7 @@ The wheels are existing rigid placements, including their actual rotations.
 Routing copies are hidden automatically: each wheel appears once in the BOM.
 Interleave `{"control":"INSIDE"}`, `OUTSIDE` or `CROSS` when required by a
 studied layout. Do not append the first wheel to close the loop. The
-[chain drive](../../../examples/workshop/chain-drive/model.plan.json) supplies the
+[chain drive](../../../examples/retained-chain-drive/model.plan.json) supplies the
 bearings, spacers, stops and hand crank missing from an isolated loop fixture.
 
 Wheel planes and source controls are checked before synthesis. Link rotations
@@ -219,7 +219,7 @@ Install the pinned **lsynth-nova 0.5.0** release wheel from `anteloc/lsynth-nova
 ./setup.sh --with-lsynth
 ./ldraw-agent flex types
 ./ldraw-agent flex guide TECHNIC_PNEUMATIC_HOSE_BEVELED
-./ldraw-agent flex build examples/flex/hose.ldr --output output/flex/hose.mpd
+./ldraw-agent flex build examples/flex-basics/hose.ldr --output output/flex/hose.mpd
 ./ldraw-agent review output/flex/hose.mpd --contacts none
 ```
 
@@ -247,7 +247,7 @@ Use explicit colours in each SYNTH BEGIN. Keep the original visible constraints 
 
 ## Generate and reuse
 
-For a model plan, [declare the constraints directly in `assets`](flex.md#generated-flexible-assets). Then `review PLAN` handles constraint checks, synthesis, measurements, model validation and previews. The [pneumatic press](../../../examples/flex/pneumatic-press/README.md) demonstrates this complete loop. Keep editable constraints beside the plan and use the same measured fitting/wheel placements for both rigid geometry and routes.
+For a model plan, [declare the constraints directly in `assets`](flex.md#generated-flexible-assets). Then `review PLAN` handles constraint checks, synthesis, measurements, model validation and previews. The [pneumatic press](../../../examples/pneumatic-press/README.md) demonstrates this complete loop. Keep editable constraints beside the plan and use the same measured fitting/wheel placements for both rigid geometry and routes.
 
 For a standalone asset:
 
@@ -288,12 +288,12 @@ The normal prohibition on stretching, shearing or mirroring complete parts remai
 
 Check every route's bend radius as well as its endpoints. Fixed-segment types such as `TECHNIC_RIBBED_HOSE` place separate rigid rings about 5.5 LDU apart, and those rings open visible gaps once neighbours turn more than about 7°. LSynth's stiff curves can also form near-hairpins when waypoints sit close together. Stretched types such as pneumatic hose stay continuous, but can still bend too tightly or cross another hose.
 
-The [pneumatic press](../../../examples/flex/pneumatic-press/README.md) places hose ends on the nozzle frames from each part's shadow data. Its test measures sleeve seating, minimum bend radius, tube-to-tube distance and part clearance; reuse those checks for new routes.
+The [pneumatic press](../../../examples/pneumatic-press/README.md) places hose ends on the nozzle frames from each part's shadow data. Its test measures sleeve seating, minimum bend radius, tube-to-tube distance and part clearance; reuse those checks for new routes.
 
 Use the shared `flex check --asset` for new routes and read its explicit coverage.
 Unlike the press's original fixture-specific tests, it never omits whole end
 zones from pair/obstacle inspection, and `--block` includes neighbouring hoses.
-The [constraint lab](../../../examples/flex/constraint-lab/README.md) measures real
+The [constraint lab](../../../tests/fixtures/flex-constraints/README.md) measures real
 LSynth output for bends, return loops and bundles, including a deliberately bad bend.
 
 Start flex studies with `review --contacts none`. Bounds, source checks, previews and BOM comparison still run, but connectivity and material clearance are not established. Posed parts have no verified connector metadata, stock length, tension, minimum bend radius or elasticity. Inspect the route, endpoint seating, obstructions and link engagement in the actual assembly; generic AABB overlaps cannot certify these. `physical_validity` stays `not_proven`.
@@ -325,7 +325,7 @@ For a single-section LDR source, the root is `NAMESPACE.ldr`. MPD sources retain
 
 Constraints are checked before synthesis. The actual generated asset is validated and measured afterward; failed checks prevent the model build. Results live under `.cache/flex-assets/`. Synthesis reuse depends on source, configuration, engine code/version and Python version; the current library and geometric limits are checked every time. A damaged synthesis cache is rebuilt. Delete `.cache/flex-synthesis/` to discard cached synthesis, or use standalone `flex build --no-cache` for a diagnostic run.
 
-Review records these results in `validation.json` under `flex`, and copies constraints, MPDs and manifests into `flex/` in its output bundle. Keep your editable sources beside the plan. See the [complete pneumatic press](../../../examples/flex/pneumatic-press/README.md) and [constraint authoring](../guides/flex.md).
+Review records these results in `validation.json` under `flex`, and copies constraints, MPDs and manifests into `flex/` in its output bundle. Keep your editable sources beside the plan. See the [complete pneumatic press](../../../examples/pneumatic-press/README.md) and [constraint authoring](../guides/flex.md).
 
 Existing `"assets": ["hoses.mpd"]` entries remain portable and do not require LSynth. For manual generation, `flex build hoses.ldr` writes `hoses.mpd` and its manifest after the same checks.
 

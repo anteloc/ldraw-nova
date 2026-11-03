@@ -62,14 +62,14 @@ def test_promoted_notes_are_complete(row):
 
 
 def test_catalog_lists_every_promoted_entry_in_its_group():
-    assert [e['key'] for e in ENTRIES] == [r['key'] for r in PROMOTED if r['catalog_group'] == 'examples'] + \
-        [r['key'] for r in PROMOTED if r['catalog_group'] == 'details']
+    assert len(ENTRIES) == len(PROMOTED)
+    assert {e['key']: e['group'] for e in ENTRIES} == {r['key']: r['catalog_group'] for r in PROMOTED}
     assert all(e['group'] == 'examples' for e in CATALOG['examples'])
 
 
 @pytest.mark.parametrize('entry', ENTRIES, ids=[e['key'] for e in ENTRIES])
 def test_entry_evidence_is_current(entry):
-    folder = ATLAS / entry['key']
+    folder = (ATLAS / entry['model']).parent
     seed = next(r for r in PROMOTED if r['key'] == entry['key'])
     for key in PATHS:
         if key in entry:
@@ -97,7 +97,7 @@ def test_entry_evidence_is_current(entry):
 def test_reusable_plans_rebuild_with_matching_bom_and_attribution(official, entry):
     from ldraw_tools.builder import build_plan, load_plan
     from ldraw_tools.external import compare_bom
-    folder = ATLAS / entry['key']
+    folder = (ATLAS / entry['model']).parent
     text, model, diagnostics = build_plan(load_plan(folder / 'scene.plan.json'), official)
     assert not [d for d in diagnostics if d['severity'] == 'error']
     assert compare_bom(model, official, folder / 'renders/leocad-bom.csv')['matches']

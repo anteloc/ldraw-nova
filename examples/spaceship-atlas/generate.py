@@ -39,6 +39,8 @@ def adapted_source(seed, source, temp):
 
 def generate(outdir, *, names=None, renders=True):
     outdir = Path(outdir)
+    if outdir.resolve() == Path(__file__).resolve().parent:
+        raise ValueError('Legacy source preparation requires a separate --outdir; reproduce current packages with their bundled plans/generators. Refresh browsing from README registrations.')
     seeds = json.loads(Path(__file__).with_name('selections.json').read_text())['references']
     if names and set(names)-{s['key'] for s in seeds}:
         raise ValueError('Unknown spaceship selection')
@@ -125,7 +127,7 @@ The placement plan preserves source axes. `source_origin` is a positioning frame
         catalog=dict(version=1,examples=[r for r in rows.values() if r['group']=='examples'],details=[r for r in rows.values() if r['group']=='details'])
         atomic_write(catalog_path,dumps(catalog)+'\n')
         print(f'{key}: {report["physical_placements"]} parts, source checks {report["source_checks_passed"]}, BOM {report["bom_matches"]}',flush=True)
-    default_guide = html.escape(relpath(ROOT/'examples/snot/halcyon/README.md', outdir))
+    default_guide = html.escape(relpath(ROOT/'examples/halcyon/README.md', outdir))
     cards=[]
     for row in rows.values():
         preview=f'<img src="{html.escape(row["preview"])}" alt="">' if row.get('preview') else ''

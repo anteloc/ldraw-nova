@@ -34,7 +34,9 @@ def test_inspiration_sources_cannot_be_exported_as_checked_assemblies(tmp_path, 
     import json
     monkeypatch.setattr('ldraw_tools.spaceships.ROOT',tmp_path)
     atlas=tmp_path/'examples/spaceship-atlas';atlas.mkdir(parents=True)
-    (atlas/'catalog.json').write_text(json.dumps(dict(examples=[dict(key='star-destroyer-study',use='inspiration')],details=[])))
+    row = dict(id='star-destroyer-study', title='Inspiration ship', scope='inspiration',
+               lesson='Shape only', aliases=['spaceship:star-destroyer-study'], families=['spaceship'])
+    (atlas/'README.md').write_text('```ldraw-knowledge\n'+json.dumps([row])+'\n```\n')
     with pytest.raises(ValueError,match='inspiration'):
         export_spaceship('star-destroyer-study',tmp_path/'ship')
     assert not (tmp_path/'ship').exists()

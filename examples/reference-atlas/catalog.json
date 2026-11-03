@@ -1,781 +1,1214 @@
 {
-  "version": 1,
+  "version": 2,
+  "generated_from": "package README registrations",
+  "family": "reference",
   "examples": [
     {
-      "key": "winter-lamp",
-      "title": "Winter lamp with wreath",
-      "category": "street lighting",
-      "scale": "minifigure",
-      "lesson": "A dish shade, transparent round light and green life ring create a readable seasonal lamp with seven parts.",
-      "placement_notes": "The thin post has no pavement footing. Design its support before installation, and keep the wreath clear of pedestrians and nearby walls. Connection analysis leaves 3 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "winter-lamp/preview.mpd",
-      "plan": "winter-lamp/scene.plan.json",
-      "guide": "winter-lamp/README.md",
-      "preview": "winter-lamp/renders/home.png",
-      "reference_id": "submodel-00f6a6967412bb88c4bae4f8",
-      "source_sha256": "677641d1c3d9e67be403bec21ec4d146bd925400f467c9e7eed4ff93cc827fc6",
-      "visual_review": "winter-lamp/card.json"
-    },
-    {
-      "key": "ornamental-lamp",
-      "title": "Ornamental globe lamp",
-      "category": "street lighting",
-      "scale": "minifigure",
-      "lesson": "An inverted transparent globe and a sideways foliage sprig give a street fitting a distinctive silhouette.",
-      "placement_notes": "Reserve the round four-stud base and the asymmetric foliage envelope. Check the bar, globe and sprig interfaces when adapting its height. Connection analysis leaves 9 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "ornamental-lamp/preview.mpd",
-      "plan": "ornamental-lamp/scene.plan.json",
-      "guide": "ornamental-lamp/README.md",
-      "preview": "ornamental-lamp/renders/home.png",
-      "reference_id": "submodel-1355a88e70f5307c9a5856a4",
-      "source_sha256": "580d1030ab844804744377319a9a645da9eec92cfc9f63d4d6459a2a62eeac6a",
-      "visual_review": "ornamental-lamp/card.json"
-    },
-    {
-      "key": "small-ornamental-tree",
-      "title": "Small ornamental tree",
-      "category": "foliage",
-      "scale": "unknown",
-      "lesson": "Stacked brown cones and differently angled foliage produce a tapered trunk and a compact organic crown.",
-      "placement_notes": "Treat this as a narrow ornamental plant or a small tree at the chosen scene scale. Add a ground attachment; the source does not include a landscape base. Connection analysis leaves 7 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "small-ornamental-tree/preview.mpd",
-      "plan": "small-ornamental-tree/scene.plan.json",
-      "guide": "small-ornamental-tree/README.md",
-      "preview": "small-ornamental-tree/renders/home.png",
-      "reference_id": "submodel-9c5e5af47f71f6aacf101650",
-      "source_sha256": "909c27e1e5732a9b76596a7a742f03cb18fead047bc372e502a7e37ad329737e",
-      "visual_review": "small-ornamental-tree/card.json"
-    },
-    {
-      "key": "layered-tree",
-      "title": "Layered woodland tree",
-      "category": "foliage",
-      "scale": "minifigure",
-      "lesson": "Round trunk courses and rotated foliage layers create a broad canopy with irregular edges.",
-      "placement_notes": "The green base is four studs square, but foliage spreads about 11.6 studs. Reserve that canopy envelope and adjust layer angles instead of simply scaling the source. Connection analysis leaves 5 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "layered-tree/preview.mpd",
-      "plan": "layered-tree/scene.plan.json",
-      "guide": "layered-tree/README.md",
-      "preview": "layered-tree/renders/home.png",
-      "reference_id": "submodel-ce73620dee16067b5b2544be",
-      "source_sha256": "c98e2a9cf4062cf40b5fb4964b3ead943d87babbed597568004d48047bb8fddd",
-      "visual_review": "layered-tree/card.json"
-    },
-    {
-      "key": "moulded-staircase",
-      "title": "Moulded staircase and landing",
-      "category": "stairs",
-      "scale": "minifigure",
-      "lesson": "A dedicated staircase provides thin risers and an open underside with far fewer parts than stacked solid bricks.",
-      "placement_notes": "Reserve four studs across the stair and a twelve-stud source depth including the narrow upper landing. Match the actual landing height to the floor; add handrails where the brief needs them.",
-      "model": "moulded-staircase/preview.mpd",
-      "plan": "moulded-staircase/scene.plan.json",
-      "guide": "moulded-staircase/README.md",
-      "preview": "moulded-staircase/renders/home.png",
-      "reference_id": "submodel-cdb2e127819d9dbe948ceb77",
-      "source_sha256": "7e67a2326230795ca09ad35becc1fcca777d5889d92ab2e8a40cc5709c08bfad",
-      "visual_review": "moulded-staircase/card.json"
-    },
-    {
-      "key": "arched-clip-panel",
-      "title": "Arched panel with side clips",
-      "category": "architectural openings",
-      "scale": "minifigure",
-      "lesson": "A small arch, grooved top edge and side clips combine a shaped opening with a useful attachment vocabulary.",
-      "placement_notes": "This is a narrow roof-notch wall insert, not a complete dormer. Preserve the side-clip clearance and source orientation, and inspect the adjoining roof before attaching a new panel.",
-      "model": "arched-clip-panel/preview.mpd",
-      "plan": "arched-clip-panel/scene.plan.json",
-      "guide": "arched-clip-panel/README.md",
-      "preview": "arched-clip-panel/renders/home.png",
-      "reference_id": "submodel-534cea0292d9bda90a801c5c",
-      "source_sha256": "dfa7b53ac065177872fa0e97a0b0d5b40de1e1484353aca574f82ff840647e99",
-      "visual_review": "arched-clip-panel/card.json"
-    },
-    {
-      "key": "truck-loading-ramp",
-      "title": "Two-track loading ramp",
-      "category": "vehicle loading",
-      "scale": "minifigure",
-      "lesson": "Two wheel tracks, hinge fingers and a small grille communicate a functional loading surface while keeping the centre open.",
-      "placement_notes": "Measure the mating hinge in the host truck and match its finger spacing. Check both deployed and folded clearance; the source image shows only its stored local pose.",
-      "model": "truck-loading-ramp/preview.mpd",
-      "plan": "truck-loading-ramp/scene.plan.json",
-      "guide": "truck-loading-ramp/README.md",
-      "preview": "truck-loading-ramp/renders/home.png",
-      "reference_id": "submodel-bfdd04acfe38c87e3e43112f",
-      "source_sha256": "25710fb2de0692cb2e8b51a56dc0d1aceeb3c38531a1a60a60b2092e11453e50",
-      "visual_review": "truck-loading-ramp/card.json"
-    },
-    {
-      "key": "shuttered-window",
-      "title": "Opening window with shutters",
-      "category": "windows",
-      "scale": "minifigure",
-      "lesson": "Dedicated window leaves and louvred shutters add depth and a recognizable opening mechanism to a facade.",
-      "placement_notes": "Use the frame footprint for the wall opening, not the approximately 7.5-stud open-shutter envelope. Reserve front and side sweep and preserve the leaf pivots. Connection analysis leaves 3 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "shuttered-window/preview.mpd",
-      "plan": "shuttered-window/scene.plan.json",
-      "guide": "shuttered-window/README.md",
-      "preview": "shuttered-window/renders/home.png",
-      "reference_id": "submodel-57da3b6cb8bc2568b648dda3",
-      "source_sha256": "5d2bd263e0c633e64f41ee400b2f4c1cfb8974456de5ea032a43bc3f3917cf5d",
-      "visual_review": "shuttered-window/card.json"
-    },
-    {
-      "key": "timbered-wall",
-      "title": "Timbered wall and projecting arches",
-      "category": "walls",
-      "scale": "minifigure",
-      "lesson": "Patterned timber panels, a shutter and paired arches create strong architectural identity in a small wall section.",
-      "placement_notes": "The arches project well beyond the upright wall. Preserve their roof-support relationship, inspect the source base, and adapt the red palette deliberately to the new building.",
-      "model": "timbered-wall/preview.mpd",
-      "plan": "timbered-wall/scene.plan.json",
-      "guide": "timbered-wall/README.md",
-      "preview": "timbered-wall/renders/home.png",
-      "reference_id": "submodel-b7361465bea1ab77de22f0a9",
-      "source_sha256": "38f96e65856b92ae6caac8c57746374c284744e50df9856fe3b6b7447d0bb9c0",
-      "visual_review": "timbered-wall/card.json"
-    },
-    {
-      "key": "airliner-engine",
-      "title": "Airliner engine and pylon",
-      "category": "aircraft engines",
-      "scale": "minifigure",
-      "lesson": "A dedicated cylindrical engine casing, turbine face and exhaust create a convincing nacelle with a thin brick-built pylon.",
-      "placement_notes": "Reserve the four-stud engine diameter and eleven-stud source length. Match the pylon top studs to the wing and check fan and exhaust clearances before repeating the module. Connection analysis leaves 7 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "airliner-engine/preview.mpd",
-      "plan": "airliner-engine/scene.plan.json",
-      "guide": "airliner-engine/README.md",
-      "preview": "airliner-engine/renders/home.png",
-      "reference_id": "submodel-9dd2ac5bcbd1c1dabf67779c",
-      "source_sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
-      "visual_review": "airliner-engine/card.json"
-    },
-    {
-      "key": "sloped-tail-fin",
-      "title": "Sloped tail fin with beacon",
-      "category": "aircraft tails",
-      "scale": "unknown",
-      "lesson": "A sequence of slopes, a thin contrasting base and a transparent tip make a small fin recognizable from a distance.",
-      "placement_notes": "Use the six-stud long, narrow source profile as a scale reference. Side studs protrude beyond the nominal one-stud thickness; align the base to the fuselage and retain clearance.",
-      "model": "sloped-tail-fin/preview.mpd",
-      "plan": "sloped-tail-fin/scene.plan.json",
-      "guide": "sloped-tail-fin/README.md",
-      "preview": "sloped-tail-fin/renders/home.png",
-      "reference_id": "submodel-e44ddd541795e599710ea752",
-      "source_sha256": "0ab60c96ec0f18b0d0d1270ca11a519cdc1034088ce2519c23800924bd6d7dc5",
-      "visual_review": "sloped-tail-fin/card.json"
-    },
-    {
-      "key": "hinged-wing",
-      "title": "Tapered wing with hinge root",
-      "category": "aircraft wings",
-      "scale": "unknown",
-      "lesson": "Wedge plates establish a taper while hinge fingers, a grille and a small light give the wing a clear root and tip.",
-      "placement_notes": "The source is the left wing. Inspect the matching right assembly rather than assuming reflection preserves connectors; reserve the root hinge sweep and approximately 12.8-stud span.",
-      "model": "hinged-wing/preview.mpd",
-      "plan": "hinged-wing/scene.plan.json",
-      "guide": "hinged-wing/README.md",
-      "preview": "hinged-wing/renders/home.png",
-      "reference_id": "submodel-c5ba5b655fe01b038d865fa3",
-      "source_sha256": "0ab60c96ec0f18b0d0d1270ca11a519cdc1034088ce2519c23800924bd6d7dc5",
-      "visual_review": "hinged-wing/card.json"
-    },
-    {
-      "key": "classic-truck-cab",
-      "title": "Classic compact truck tractor",
-      "category": "truck cabs",
-      "scale": "minifigure",
-      "lesson": "A moulded windscreen, doors, grille, lights and antenna make a compact truck read as a vehicle rather than a box.",
-      "placement_notes": "This source includes wheels and rear chassis as well as the cab. Inspect its coupling and wheel envelope before attaching a trailer; retain or replace the branded panel deliberately. Connection analysis leaves 8 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "classic-truck-cab/preview.mpd",
-      "plan": "classic-truck-cab/scene.plan.json",
-      "guide": "classic-truck-cab/README.md",
-      "preview": "classic-truck-cab/renders/home.png",
-      "reference_id": "submodel-eb104986186459218ec6b232",
-      "source_sha256": "9715060bed68242a1b96d2ecead49c8a4aa6533b5835544505772b86d21cf6e0",
-      "visual_review": "classic-truck-cab/card.json"
-    },
-    {
-      "key": "mini-truck-cab",
-      "title": "Mini construction truck cab",
-      "category": "truck cabs",
-      "scale": "microscale",
-      "lesson": "A narrow windscreen, shaped roof, grille and small wheel assemblies convey construction-vehicle character at a compact scale.",
-      "placement_notes": "The cab body is only two studs wide with tyres extending beyond it. Use its actual dimensions instead of assuming minifigure seating, and build the rear body around the exposed chassis.",
-      "model": "mini-truck-cab/preview.mpd",
-      "plan": "mini-truck-cab/scene.plan.json",
-      "guide": "mini-truck-cab/README.md",
-      "preview": "mini-truck-cab/renders/home.png",
-      "reference_id": "submodel-3038a742034a696753eb880b",
-      "source_sha256": "69eb06b65a4d8b8b7e6da4839aaca419d4b8e041b0a7d0934cc37b7c0efe5025",
-      "visual_review": "mini-truck-cab/card.json"
-    },
-    {
-      "key": "spacecraft-wheel-module",
-      "title": "Spacecraft wheel module",
-      "category": "spacecraft landing gear",
-      "scale": "unknown",
-      "lesson": "Wheel-pin plates, a tall bracket and small exhaust and grille fittings give a compact wheeled module a mechanical identity.",
-      "placement_notes": "The original parent calls this landing gear; its isolated appearance also suggests rover ideas. Preserve the hinge and bracket interfaces and test deployed clearance in the parent before reuse. Connection analysis leaves 7 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "spacecraft-wheel-module/preview.mpd",
-      "plan": "spacecraft-wheel-module/scene.plan.json",
-      "guide": "spacecraft-wheel-module/README.md",
-      "preview": "spacecraft-wheel-module/renders/home.png",
-      "reference_id": "submodel-6a39cb3c7dcadeb0dde97dab",
-      "source_sha256": "0971ed1f3ddefde855ad584d3a1f342047a2f9ffa51a6e6f9c020e21d1cacf62",
-      "visual_review": "spacecraft-wheel-module/card.json"
-    },
-    {
-      "key": "airliner-wheel-bogie",
-      "title": "Airliner wheel bogie",
-      "category": "aircraft landing gear",
-      "scale": "minifigure",
-      "lesson": "Small wheel carriers and a compact upright mounting pair create aircraft landing gear with a clear silhouette.",
-      "placement_notes": "This System aircraft fitting contains a few Technic connector pieces. Match the upper mounting interface and tyre ground plane to the host aircraft; this is not a retracting mechanism recipe. Connection analysis leaves 5 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "airliner-wheel-bogie/preview.mpd",
-      "plan": "airliner-wheel-bogie/scene.plan.json",
-      "guide": "airliner-wheel-bogie/README.md",
-      "preview": "airliner-wheel-bogie/renders/home.png",
-      "reference_id": "submodel-8c004489e1f4ececee31c06d",
-      "source_sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
-      "visual_review": "airliner-wheel-bogie/card.json"
-    },
-    {
-      "key": "faceted-ship-bow",
-      "title": "Faceted research-ship bow",
-      "category": "boat hulls",
-      "scale": "microscale",
-      "lesson": "Side-stud bricks and small slopes shape a compact ship bow in multiple directions without scaling any physical part.",
-      "placement_notes": "The source axes do not present the bow as a complete horizontal hull. Consult the parent placement matrix before orienting it, and continue its red, dark blue and grey bands into the adjoining hull. Connection analysis leaves 3 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "faceted-ship-bow/preview.mpd",
-      "plan": "faceted-ship-bow/scene.plan.json",
-      "guide": "faceted-ship-bow/README.md",
-      "preview": "faceted-ship-bow/renders/home.png",
-      "reference_id": "submodel-c5151f19163974e61079f916",
-      "source_sha256": "e5ee45cade5e7f25b24792a8dcc628f4f36bd45f3434ddc41c89a9f9307f9c47",
-      "visual_review": "faceted-ship-bow/card.json"
-    },
-    {
-      "key": "rounded-cockpit-shell",
+      "id": "10212-rounded-side-covers",
       "title": "Rounded cockpit shell",
-      "category": "vehicle bodywork",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:rounded-cockpit-shell"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Rename paired rounded body-side covers. Non-ghost parent view places these around the wing mechanism beside the body; cockpit/nose identity is incorrect. Curved-skin reuse elsewhere must be described as adaptation. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
       "scale": "display",
-      "lesson": "Repeated curved roof pieces form a smooth shell while narrow side ledges leave space for a cockpit or nose insert.",
-      "placement_notes": "The source shell is six studs wide and open at one end and underneath. Preserve the ledges and rear opening, then build the glazing, floor and host attachments for the new model.",
-      "model": "rounded-cockpit-shell/preview.mpd",
-      "plan": "rounded-cockpit-shell/scene.plan.json",
-      "guide": "rounded-cockpit-shell/README.md",
-      "preview": "rounded-cockpit-shell/renders/home.png",
-      "reference_id": "submodel-c55fec61074667d8a602aa17",
+      "subjects": [
+        "vehicle bodywork"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../10212-rounded-side-covers/preview.mpd",
+      "plan": "../10212-rounded-side-covers/scene.plan.json",
+      "preview": "../10212-rounded-side-covers/renders/home.png",
+      "visual_review": "../10212-rounded-side-covers/card.json",
+      "model_sha256": "62831a996f973733dfa03dbf7e6da998442a670ab78fe0a7242224582d6d0f26",
+      "audit_pointer": "/items/16",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../10212-rounded-side-covers/README.md",
       "source_sha256": "12a745a72a2da534093ecb4e4e020fcdc789b37497e96ff9358f42689b3dd9e0",
-      "visual_review": "rounded-cockpit-shell/card.json"
+      "key": "rounded-cockpit-shell",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "dd3649e9761ca2257ed581ea07f2536c19b963c9c23d18e97a7ce0064ec0e5cd",
+      "category": "vehicle bodywork",
+      "reference_id": "submodel-c55fec61074667d8a602aa17",
+      "source_checks_passed": true,
+      "bom_matches": true
     },
     {
-      "key": "fire-escape-railing",
-      "title": "Fire-escape railing insert",
-      "category": "exterior railings",
+      "id": "4915-tractor-unit",
+      "title": "Mini construction truck cab",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:mini-truck-cab"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Rename complete compact four-wheel tractor unit with rear hitch; geometry extends beyond cab. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "microscale",
+      "subjects": [
+        "truck cabs"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../4915-tractor-unit/preview.mpd",
+      "plan": "../4915-tractor-unit/scene.plan.json",
+      "preview": "../4915-tractor-unit/renders/home.png",
+      "visual_review": "../4915-tractor-unit/card.json",
+      "model_sha256": "09e92741746184e39e46701bdc468676cf73361860b6e2259fac857e4912bab6",
+      "audit_pointer": "/items/11",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../4915-tractor-unit/README.md",
+      "source_sha256": "69eb06b65a4d8b8b7e6da4839aaca419d4b8e041b0a7d0934cc37b7c0efe5025",
+      "key": "mini-truck-cab",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "30ffa483b17cf640c6882db93fff077d1d8696eb0309a7dff5bd4347ea8942cb",
+      "category": "truck cabs",
+      "reference_id": "submodel-3038a742034a696753eb880b",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "5980-buggy-chassis",
+      "title": "Spacecraft wheel module",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:spacecraft-wheel-module"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Rename small vehicle chassis/wheel module. Whole-source view shows separate wheeled buggy in multi-object scene, not spacecraft landing gear. Remove deployed-landing-clearance guidance. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "unknown",
+      "subjects": [
+        "spacecraft landing gear"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../5980-buggy-chassis/preview.mpd",
+      "plan": "../5980-buggy-chassis/scene.plan.json",
+      "preview": "../5980-buggy-chassis/renders/home.png",
+      "visual_review": "../5980-buggy-chassis/card.json",
+      "model_sha256": "54ba749780582886136a049f2003f11e95767dda1b4c354dd38b5e672063e0b5",
+      "audit_pointer": "/items/21",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../5980-buggy-chassis/README.md",
+      "source_sha256": "0971ed1f3ddefde855ad584d3a1f342047a2f9ffa51a6e6f9c020e21d1cacf62",
+      "key": "spacecraft-wheel-module",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "69f1938ec1e808db48e072ce4942ca26c0c02c43fde24f4ce44ec475c3af9dca",
+      "category": "spacecraft landing gear",
+      "reference_id": "submodel-6a39cb3c7dcadeb0dde97dab",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "6594-tractor-unit",
+      "title": "Classic compact truck tractor",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:classic-truck-cab"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Rename to complete compact tractor unit: white cab, red stripe, green grille, four-wheel chassis and rear turntable. Not just a cab. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
       "scale": "minifigure",
-      "lesson": "Bars and articulated small elements produce thin open ironwork that reads more delicately than stacked wall bricks.",
-      "placement_notes": "This is a railing insert and support strip from a larger fire escape, not a complete stair. Preserve the angled bar connections and locate the strip in its floor or balcony context.",
-      "model": "fire-escape-railing/preview.mpd",
-      "plan": "fire-escape-railing/scene.plan.json",
-      "guide": "fire-escape-railing/README.md",
-      "preview": "fire-escape-railing/renders/home.png",
-      "reference_id": "submodel-0ed326e2fb072cd2e5d27122",
-      "source_sha256": "b812c6a958fe683f150f4f1c9e48013bbb02cd507470ff8773617ee55136cb88",
-      "visual_review": "fire-escape-railing/card.json"
+      "subjects": [
+        "truck cabs"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../6594-tractor-unit/preview.mpd",
+      "plan": "../6594-tractor-unit/scene.plan.json",
+      "preview": "../6594-tractor-unit/renders/home.png",
+      "visual_review": "../6594-tractor-unit/card.json",
+      "model_sha256": "931abff5800d56683115749063df2cc97f1ad024ccbe6153d4b0c63d29f6a38e",
+      "audit_pointer": "/items/4",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../6594-tractor-unit/README.md",
+      "source_sha256": "9715060bed68242a1b96d2ecead49c8a4aa6533b5835544505772b86d21cf6e0",
+      "key": "classic-truck-cab",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "2fbba701bbbbb037487192826f93092d778c658cf218fae44409df21382f0eb4",
+      "category": "truck cabs",
+      "reference_id": "submodel-eb104986186459218ec6b232",
+      "source_checks_passed": true,
+      "bom_matches": true
     },
     {
-      "key": "classical-arch-bay",
-      "title": "Classical arch and cornice",
-      "category": "architectural arches",
-      "scale": "display",
-      "lesson": "A moulded arch, grooved masonry and round plates under the cornice create shadow lines in a shallow facade bay.",
-      "placement_notes": "The source is only one stud deep and has two separate pier feet. Tie both piers into the host base and continue the cornice rhythm; use the parameterized arcade recipe for another height.",
-      "model": "classical-arch-bay/preview.mpd",
-      "plan": "classical-arch-bay/scene.plan.json",
-      "guide": "classical-arch-bay/README.md",
-      "preview": "classical-arch-bay/renders/home.png",
-      "reference_id": "submodel-6f7b4658bd2bddeb4e7427a6",
-      "source_sha256": "da47a085c8a0aa39d61414b7009a9bab68a07f93f552ec0f04d4e88d0584f4db",
-      "visual_review": "classical-arch-bay/card.json"
-    },
-    {
-      "key": "park-bench",
-      "title": "Park bench with shaped back",
-      "category": "seating",
-      "scale": "minifigure",
-      "lesson": "Dedicated shaped back elements and a mostly tiled seat create a recognizable bench with a low part count.",
-      "placement_notes": "Reserve eight studs of width and the backrest overhang beyond the two-stud seat. Attach the two white feet to the pavement and keep the seat studs accessible if adding figures.",
-      "model": "park-bench/preview.mpd",
-      "plan": "park-bench/scene.plan.json",
-      "guide": "park-bench/README.md",
-      "preview": "park-bench/renders/home.png",
-      "reference_id": "submodel-6d418370f3204dfbd7c1f6b9",
-      "source_sha256": "f3eaeac9fb9555965dcaa318b9220b957daf59666072acb802f15a9d1c54d47a",
-      "visual_review": "park-bench/card.json"
-    },
-    {
-      "key": "arcade-bay",
-      "title": "Arcade Bay recipe",
-      "category": "parameterized construction",
-      "scale": "display",
-      "lesson": "Change height and palette using real brick courses; preserve the assembly interfaces.",
-      "model": "recipes/arcade-bay/arcade-bay.mpd",
-      "plan": "recipes/arcade-bay/scene.plan.json",
-      "guide": "recipes/arcade-bay/README.md",
-      "preview": "recipes/arcade-bay/renders/home.png",
-      "generator": "recipes/arcade-bay/generate.py"
-    },
-    {
-      "key": "street-lantern",
-      "title": "Street Lantern recipe",
-      "category": "parameterized construction",
-      "scale": "minifigure",
-      "lesson": "Change height and palette using real brick courses; preserve the assembly interfaces.",
-      "model": "recipes/street-lantern/street-lantern.mpd",
-      "plan": "recipes/street-lantern/scene.plan.json",
-      "guide": "recipes/street-lantern/README.md",
-      "preview": "recipes/street-lantern/renders/home.png",
-      "generator": "recipes/street-lantern/generate.py"
-    },
-    {
-      "key": "rail-bogie",
-      "title": "Two-axle train bogie with buffers and magnetic coupling",
-      "category": "rail transport",
-      "scale": "minifigure",
-      "lesson": "Combine two wheelsets, a bogie pivot and a coupling on one supported undercarriage; minifigure heads become buffer faces.",
-      "placement_notes": "The locomotive chassis and receiving mount for the bogie pin. The parent turns this assembly 90 degrees about Y and places it at [-170, 56, 0]. It does not provide a motor or powered transmission for this bogie. Keep the wheelsets, pin and coupling stack together. Reserve turning space around the bogie and buffer faces; do not assume clearance on a different chassis or track curve.",
-      "model": "rail-bogie/preview.mpd",
-      "plan": "rail-bogie/scene.plan.json",
-      "guide": "rail-bogie/README.md",
-      "preview": "rail-bogie/renders/home.png",
-      "reference_id": "submodel-ae9e41326e4cf5448a3a38c6",
-      "source_sha256": "f94688107cbcd7a6fbab0d79965a11ec81cde188bfbecaeec84d3a75c902b9c6",
-      "board": "rail-bogie/board/mosaic.png",
-      "visual_review": "rail-bogie/card.json"
-    },
-    {
-      "key": "dormer-balcony",
-      "title": "Balcony facade with door, dormer and planted railing",
-      "category": "building facade",
-      "scale": "minifigure",
-      "lesson": "Integrate a balcony floor, door threshold, decorative railing and sloped roof window into a layered facade module.",
-      "placement_notes": "The building below, side/rear enclosure and surrounding roof. The complete-model parent places this section at [78, -185, 120], rotated 180 degrees about Y. Its plate underside needs support across the host building. Preserve the door opening and plate support grid. Rebuild wall courses when changing width; do not stretch the roof window, fencing or glazing.",
-      "model": "dormer-balcony/preview.mpd",
-      "plan": "dormer-balcony/scene.plan.json",
-      "guide": "dormer-balcony/README.md",
-      "preview": "dormer-balcony/renders/home.png",
-      "reference_id": "submodel-4188bcbe0163f77bb60902bb",
-      "source_sha256": "20f6887edaefc9d2a08233d49fc114d74fd8f2e89bf19c8e7be54047d621efca",
-      "board": "dormer-balcony/board/mosaic.png",
-      "visual_review": "dormer-balcony/card.json"
-    },
-    {
-      "key": "aircraft-undercarriage",
+      "id": "aircraft-undercarriage",
       "title": "Compact aircraft landing strut with matched wheel and tyre",
-      "category": "aircraft Technic",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "reference:aircraft-undercarriage"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Wheel-strut geometry in one source pose; retractable is not demonstrated. Preserve parent mounts; no checked travel claim.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
       "scale": "minifigure",
-      "lesson": "Use a short axle and two angle connectors to separate the fuselage mounting pin from a freely mounted wheel.",
-      "placement_notes": "The fuselage Technic receiving bricks and the placement angle. The parent contains two differently rotated occurrences at X = -50 and +50; the extracted strut is not already in its installed orientation. Keep the wheel/tyre pair and pin roles. Measure the host receiving hole before placement and review the complete fuselage clearance. Six optimistic connection groups remain for seven placements: this is a geometry study, not a verified mechanical core.",
-      "model": "aircraft-undercarriage/preview.mpd",
-      "plan": "aircraft-undercarriage/scene.plan.json",
-      "guide": "aircraft-undercarriage/README.md",
-      "preview": "aircraft-undercarriage/renders/home.png",
-      "reference_id": "submodel-dde7c7038b72544ef35bb32f",
+      "subjects": [
+        "aircraft Technic"
+      ],
+      "model": "../aircraft-undercarriage/preview.mpd",
+      "plan": "../aircraft-undercarriage/scene.plan.json",
+      "preview": "../aircraft-undercarriage/renders/home.png",
+      "board": "../aircraft-undercarriage/board/mosaic.png",
+      "visual_review": "../aircraft-undercarriage/card.json",
+      "model_sha256": "a6849d4f565ffa20a4a74e9ea1a67280300ab6a5ce64ffff05be72f29fbe31ee",
+      "audit_pointer": "/items/0",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../aircraft-undercarriage/README.md",
       "source_sha256": "1e976e3365226aa7a454e82e434698ba37487b5ff324caf583dbd16de6346a38",
-      "board": "aircraft-undercarriage/board/mosaic.png",
-      "visual_review": "aircraft-undercarriage/card.json"
+      "key": "aircraft-undercarriage",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "5334ef1764e68048ec4af23249b33b632929b231fe3c39fe27d1155e93eb6264",
+      "category": "aircraft Technic",
+      "reference_id": "submodel-dde7c7038b72544ef35bb32f",
+      "source_checks_passed": true,
+      "bom_matches": true
     },
     {
-      "key": "spacecraft-hatch",
+      "id": "airliner-engine",
+      "title": "Airliner engine and pylon",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:airliner-engine"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Fan housing and long thin pylon; four parent placements clarify attachment. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "aircraft engines"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../airliner-engine/preview.mpd",
+      "plan": "../airliner-engine/scene.plan.json",
+      "preview": "../airliner-engine/renders/home.png",
+      "visual_review": "../airliner-engine/card.json",
+      "model_sha256": "72c4462e668332a6c6a540c04c31ec796b68b0f71646eda652c9fb373c290f05",
+      "audit_pointer": "/items/1",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../airliner-engine/README.md",
+      "source_sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
+      "key": "airliner-engine",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "858638d7fc56c74289078d230871e60abdbee77661df232c38acce0cf8bc4a8b",
+      "category": "aircraft engines",
+      "reference_id": "submodel-9dd2ac5bcbd1c1dabf67779c",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "airliner-wheel-bogie",
+      "title": "Airliner wheel bogie",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:airliner-wheel-bogie"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Four-wheel, two-axle bogie and short upright mount with two parent placements. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "aircraft landing gear"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../airliner-wheel-bogie/preview.mpd",
+      "plan": "../airliner-wheel-bogie/scene.plan.json",
+      "preview": "../airliner-wheel-bogie/renders/home.png",
+      "visual_review": "../airliner-wheel-bogie/card.json",
+      "model_sha256": "623fcc3cfab937710d54ad22223d8f715b7124a37e9dc6427414187e75e82e0e",
+      "audit_pointer": "/items/2",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../airliner-wheel-bogie/README.md",
+      "source_sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
+      "key": "airliner-wheel-bogie",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "4112a84818921b91017c0a28aa4fa887ed9512b59990f9eed1c50b38322fac73",
+      "category": "aircraft landing gear",
+      "reference_id": "submodel-8c004489e1f4ececee31c06d",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "arched-clip-panel",
+      "title": "Arched panel with side clips",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:arched-clip-panel"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Arched opening, Technic holes and paired clips as roof-panel detail. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "architectural openings"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../arched-clip-panel/preview.mpd",
+      "plan": "../arched-clip-panel/scene.plan.json",
+      "preview": "../arched-clip-panel/renders/home.png",
+      "visual_review": "../arched-clip-panel/card.json",
+      "model_sha256": "979c732006d25e460dad5e5fca5193a3329e040bfb43b2434b4be16f2ceefc6c",
+      "audit_pointer": "/items/3",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../arched-clip-panel/README.md",
+      "source_sha256": "dfa7b53ac065177872fa0e97a0b0d5b40de1e1484353aca574f82ff840647e99",
+      "key": "arched-clip-panel",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "62b779d615cdb969d420288150eb965cd75091f419c7f5f5977f176cccc10248",
+      "category": "architectural openings",
+      "reference_id": "submodel-534cea0292d9bda90a801c5c",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "classical-arch-bay#adjustable-recipe",
+      "title": "Arcade Bay recipe",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "reference:arcade-bay"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Fresh home view shows narrow tan arch, tall piers, round spacers and cornice. Keep adjustable-height recipe beside classical-arch-bay source; articulated means architectural detail, not motion.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "display",
+      "subjects": [
+        "parameterized construction"
+      ],
+      "model": "../classical-arch-bay/arcade-bay/arcade-bay.mpd",
+      "plan": "../classical-arch-bay/arcade-bay/scene.plan.json",
+      "generator": "../classical-arch-bay/arcade-bay/generate.py",
+      "preview": "../classical-arch-bay/arcade-bay/renders/home.png",
+      "model_sha256": "4f60baebbd9cb3552ef7c68a0448985bfb00100c27645fa797aa35874a1d969d",
+      "audit_pointer": "/recipes/0",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../classical-arch-bay/README.md",
+      "source_sha256": "4f60baebbd9cb3552ef7c68a0448985bfb00100c27645fa797aa35874a1d969d",
+      "key": "arcade-bay",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "882c87c9943957d91e9567ba164f56f078dd8c0df14efb4f5129e381625c9b07",
+      "category": "parameterized construction",
+      "checks_passed": true
+    },
+    {
+      "id": "classical-arch-bay#source-study",
+      "title": "Classical arch and cornice",
+      "scope": "hold",
+      "kind": "detail",
+      "aliases": [
+        "reference:classical-arch-bay"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Narrow textured tan arch with round-spacer cornice; merge source with arcade-bay recipe. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "display",
+      "subjects": [
+        "architectural arches"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../classical-arch-bay/classical-arch-bay/preview.mpd",
+      "plan": "../classical-arch-bay/classical-arch-bay/scene.plan.json",
+      "preview": "../classical-arch-bay/classical-arch-bay/renders/home.png",
+      "visual_review": "../classical-arch-bay/classical-arch-bay/card.json",
+      "model_sha256": "80a3d0e8e7f307f229d98ddad5c67b4b9a2eef68a2c787826fb9606c00ed6c64",
+      "audit_pointer": "/items/5",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../classical-arch-bay/README.md",
+      "source_sha256": "da47a085c8a0aa39d61414b7009a9bab68a07f93f552ec0f04d4e88d0584f4db",
+      "key": "classical-arch-bay",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "882c87c9943957d91e9567ba164f56f078dd8c0df14efb4f5129e381625c9b07",
+      "category": "architectural arches",
+      "reference_id": "submodel-6f7b4658bd2bddeb4e7427a6",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "dormer-balcony",
+      "title": "Balcony facade with door, dormer and planted railing",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "reference:dormer-balcony"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Sloped blue dormer/window bay, turquoise wall and black ornamental railing with brown top. Correct turquoise-railing description.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "building facade"
+      ],
+      "model": "../dormer-balcony/preview.mpd",
+      "plan": "../dormer-balcony/scene.plan.json",
+      "preview": "../dormer-balcony/renders/home.png",
+      "board": "../dormer-balcony/board/mosaic.png",
+      "visual_review": "../dormer-balcony/card.json",
+      "model_sha256": "9dfd94d7b1e0311b5eb36fe1341949ece9eda603f2dd7f090ccd2650aabf8e52",
+      "audit_pointer": "/items/6",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../dormer-balcony/README.md",
+      "source_sha256": "20f6887edaefc9d2a08233d49fc114d74fd8f2e89bf19c8e7be54047d621efca",
+      "key": "dormer-balcony",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "3cd0492a64e8bea5785e4a2712b11933b5e78b22258b29b248495757668fa613",
+      "category": "building facade",
+      "reference_id": "submodel-4188bcbe0163f77bb60902bb",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "faceted-ship-bow",
+      "title": "Faceted research-ship bow",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:faceted-ship-bow"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Faceted red/blue bow. Include parent orientation: isolated view appears upright. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "microscale",
+      "subjects": [
+        "boat hulls"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../faceted-ship-bow/preview.mpd",
+      "plan": "../faceted-ship-bow/scene.plan.json",
+      "preview": "../faceted-ship-bow/renders/home.png",
+      "visual_review": "../faceted-ship-bow/card.json",
+      "model_sha256": "6d7bdea4d0b5efb5eea91b669b33d8596894e7d14c8c5f8def11c3b46b2e17a7",
+      "audit_pointer": "/items/7",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../faceted-ship-bow/README.md",
+      "source_sha256": "e5ee45cade5e7f25b24792a8dcc628f4f36bd45f3434ddc41c89a9f9307f9c47",
+      "key": "faceted-ship-bow",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "a248391a27af5f32c351005ed997a286ba650a4df271c9ec0f29080d7f1a81a4",
+      "category": "boat hulls",
+      "reference_id": "submodel-c5151f19163974e61079f916",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "fire-escape-railing",
+      "title": "Fire-escape railing insert",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:fire-escape-railing"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Platform/rail detail with long support plate and bar/clip railing; not a complete stair flight. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "exterior railings"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../fire-escape-railing/preview.mpd",
+      "plan": "../fire-escape-railing/scene.plan.json",
+      "preview": "../fire-escape-railing/renders/home.png",
+      "visual_review": "../fire-escape-railing/card.json",
+      "model_sha256": "487d1277cda48235d99e4e7b1b45882d7c03c9402b0c66de79c04d4ce5e5658d",
+      "audit_pointer": "/items/8",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../fire-escape-railing/README.md",
+      "source_sha256": "b812c6a958fe683f150f4f1c9e48013bbb02cd507470ff8773617ee55136cb88",
+      "key": "fire-escape-railing",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "142f16e260de4af248f541524d63b68c4990007abbe44d20d2bfe736d738e11a",
+      "category": "exterior railings",
+      "reference_id": "submodel-0ed326e2fb072cd2e5d27122",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "hinged-wing",
+      "title": "Tapered wing with hinge root",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:hinged-wing"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Tapered wing with actual bar/clip root: 60478 handle plates, not hinge fingers. No validated sweep claim. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "unknown",
+      "subjects": [
+        "aircraft wings"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../hinged-wing/preview.mpd",
+      "plan": "../hinged-wing/scene.plan.json",
+      "preview": "../hinged-wing/renders/home.png",
+      "visual_review": "../hinged-wing/card.json",
+      "model_sha256": "a2112d85b7808db8f2dcd0c8c5cbf4d5e84018af256732a2229ed1ba1b8e2ffd",
+      "audit_pointer": "/items/9",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../hinged-wing/README.md",
+      "source_sha256": "0ab60c96ec0f18b0d0d1270ca11a519cdc1034088ce2519c23800924bd6d7dc5",
+      "key": "hinged-wing",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "9bfb23ec8d34616a3e17ef39a588b8bb69cfe6623fac306791ae45df09f8b8b7",
+      "category": "aircraft wings",
+      "reference_id": "submodel-c5ba5b655fe01b038d865fa3",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "layered-tree",
+      "title": "Layered woodland tree",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:layered-tree"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Round brown trunk, three foliage layers and base as landscaping lesson. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "foliage"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../layered-tree/preview.mpd",
+      "plan": "../layered-tree/scene.plan.json",
+      "preview": "../layered-tree/renders/home.png",
+      "visual_review": "../layered-tree/card.json",
+      "model_sha256": "22c2fd0c5aa1a50be31c92cfd515fe19eda013463ad21bf42e8c02779382dd80",
+      "audit_pointer": "/items/10",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../layered-tree/README.md",
+      "source_sha256": "c98e2a9cf4062cf40b5fb4964b3ead943d87babbed597568004d48047bb8fddd",
+      "key": "layered-tree",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "988820af1034f771b411fe5a48635855ccde6dd6656ce9261f9b6c6809ccc3c5",
+      "category": "foliage",
+      "reference_id": "submodel-ce73620dee16067b5b2544be",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "moulded-staircase",
+      "title": "Moulded staircase and landing",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:moulded-staircase"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Moulded stairs and landing with actual floor opening shown in parent. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "stairs"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../moulded-staircase/preview.mpd",
+      "plan": "../moulded-staircase/scene.plan.json",
+      "preview": "../moulded-staircase/renders/home.png",
+      "visual_review": "../moulded-staircase/card.json",
+      "model_sha256": "50217ba7bb0f7dffccc7b6bb8fea92c79a0f8e94127d9e16a46731ea56eb9eb7",
+      "audit_pointer": "/items/12",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../moulded-staircase/README.md",
+      "source_sha256": "7e67a2326230795ca09ad35becc1fcca777d5889d92ab2e8a40cc5709c08bfad",
+      "key": "moulded-staircase",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "d8775329f33b1dd74e678fea23685e9d1b2df1e1169df852277ceeb887f2c875",
+      "category": "stairs",
+      "reference_id": "submodel-cdb2e127819d9dbe948ceb77",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "ornamental-lamp",
+      "title": "Ornamental globe lamp",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:ornamental-lamp"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "White base, grey post, clear cup/yellow bulb and green/red decoration alongside post. Decoration is not on top. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "street lighting"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../ornamental-lamp/preview.mpd",
+      "plan": "../ornamental-lamp/scene.plan.json",
+      "preview": "../ornamental-lamp/renders/home.png",
+      "visual_review": "../ornamental-lamp/card.json",
+      "model_sha256": "1118d481587469c19c5ff021f0a43d314939e6abf220299588f4e8475c933af3",
+      "audit_pointer": "/items/13",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../ornamental-lamp/README.md",
+      "source_sha256": "580d1030ab844804744377319a9a645da9eec92cfc9f63d4d6459a2a62eeac6a",
+      "key": "ornamental-lamp",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "76a9d1d06d38bce838273a313f8fe9c210f3177db95454d0b5ffbb25b3378c70",
+      "category": "street lighting",
+      "reference_id": "submodel-1355a88e70f5307c9a5856a4",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "park-bench",
+      "title": "Park bench with shaped back",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:park-bench"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Dark-blue seat/back and white feet as small furniture lesson. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "seating"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../park-bench/preview.mpd",
+      "plan": "../park-bench/scene.plan.json",
+      "preview": "../park-bench/renders/home.png",
+      "visual_review": "../park-bench/card.json",
+      "model_sha256": "0cb89243cbcca6f3c7835947af6aa0cf26ab55aa3c8cff72f94f66fae0d2ce7f",
+      "audit_pointer": "/items/14",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../park-bench/README.md",
+      "source_sha256": "f3eaeac9fb9555965dcaa318b9220b957daf59666072acb802f15a9d1c54d47a",
+      "key": "park-bench",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "f29dfe9617d4bfe717eb0c7de76da2fcc6fa1eb4c5242d205aa16b2e0b80fc4d",
+      "category": "seating",
+      "reference_id": "submodel-6d418370f3204dfbd7c1f6b9",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "rail-bogie",
+      "title": "Two-axle train bogie with buffers and magnetic coupling",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "reference:rail-bogie"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Two-axle bogie, central pivot, buffers and coupling. Correct single-axle source/card descriptions: two single-axle parts form one bogie.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "rail transport"
+      ],
+      "model": "../rail-bogie/preview.mpd",
+      "plan": "../rail-bogie/scene.plan.json",
+      "preview": "../rail-bogie/renders/home.png",
+      "board": "../rail-bogie/board/mosaic.png",
+      "visual_review": "../rail-bogie/card.json",
+      "model_sha256": "4662b664674955ef8a5f1e746c9dd4d5504fddeb5ba7a3aac7ffffe600c3e2ab",
+      "audit_pointer": "/items/15",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../rail-bogie/README.md",
+      "source_sha256": "f94688107cbcd7a6fbab0d79965a11ec81cde188bfbecaeec84d3a75c902b9c6",
+      "key": "rail-bogie",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "6c982b6bc32d47b9e23dcebc73e0f38c505682dbf1bda2a790b4f9dcc23978bf",
+      "category": "rail transport",
+      "reference_id": "submodel-ae9e41326e4cf5448a3a38c6",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "shuttered-window",
+      "title": "Opening window with shutters",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:shuttered-window"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Brown frame, grey shutters and blue open frames; avoid calling open frames glass panes. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "windows"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../shuttered-window/preview.mpd",
+      "plan": "../shuttered-window/scene.plan.json",
+      "preview": "../shuttered-window/renders/home.png",
+      "visual_review": "../shuttered-window/card.json",
+      "model_sha256": "d4a3e23b581fe2b304137c753a72d3dd73313a68d5fe90745fccb3ce834f094b",
+      "audit_pointer": "/items/17",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../shuttered-window/README.md",
+      "source_sha256": "5d2bd263e0c633e64f41ee400b2f4c1cfb8974456de5ea032a43bc3f3917cf5d",
+      "key": "shuttered-window",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "ba0d5c94c0130a87e25e1da523b148f6602131397f15a0cc222f5badd5e02b1d",
+      "category": "windows",
+      "reference_id": "submodel-57da3b6cb8bc2568b648dda3",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "sloped-tail-fin",
+      "title": "Sloped tail fin with beacon",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:sloped-tail-fin"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Thin black fin, yellow plate and translucent-red top; parent role agrees. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "unknown",
+      "subjects": [
+        "aircraft tails"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../sloped-tail-fin/preview.mpd",
+      "plan": "../sloped-tail-fin/scene.plan.json",
+      "preview": "../sloped-tail-fin/renders/home.png",
+      "visual_review": "../sloped-tail-fin/card.json",
+      "model_sha256": "0a37e3ab2145cadeeed59a3eb687ca6bf227d1a4ab66424241dc8b4b6523c030",
+      "audit_pointer": "/items/18",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../sloped-tail-fin/README.md",
+      "source_sha256": "0ab60c96ec0f18b0d0d1270ca11a519cdc1034088ce2519c23800924bd6d7dc5",
+      "key": "sloped-tail-fin",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "4f5e4f307b8aa9c91df24b4afa2dbe259ea8649270dee50ae284d665f858705b",
+      "category": "aircraft tails",
+      "reference_id": "submodel-e44ddd541795e599710ea752",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "small-ornamental-tree",
+      "title": "Small ornamental tree",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:small-ornamental-tree"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Cone/round trunk and large leaf blades as a distinct small tree construction. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "unknown",
+      "subjects": [
+        "foliage"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../small-ornamental-tree/preview.mpd",
+      "plan": "../small-ornamental-tree/scene.plan.json",
+      "preview": "../small-ornamental-tree/renders/home.png",
+      "visual_review": "../small-ornamental-tree/card.json",
+      "model_sha256": "2d6dcd2dcf40d7417af74ad19d82211865a848f44ebc167363a3b76ba50e6f27",
+      "audit_pointer": "/items/19",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../small-ornamental-tree/README.md",
+      "source_sha256": "909c27e1e5732a9b76596a7a742f03cb18fead047bc372e502a7e37ad329737e",
+      "key": "small-ornamental-tree",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "57c42389defe0a0bbd9ae8b92f8cd8ea6fd82f731fc0c53d2e89c2e723050f2b",
+      "category": "foliage",
+      "reference_id": "submodel-9c5e5af47f71f6aacf101650",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "spacecraft-hatch",
       "title": "Hinged spacecraft side hatch with bracket-mounted engine cone",
-      "category": "spacecraft hatch SNOT",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "reference:spacecraft-hatch"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Blue hinged rear hatch with nozzle/fin. Inherited colour differs between preview and parent. One pose does not certify travel.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
       "scale": "minifigure",
-      "lesson": "Carry an engine cone, fin and layered side shell on a hinged module while leaving the mating hinge half in the hull.",
-      "placement_notes": "The mating 3830 hinge top: the hull places it at [-60, -128, 240], beside the hatch occurrence at [-60, -72, 240]. The opposite hatch is a separately authored section, not permission to reflect rigid parts. Copy or rebuild the hull-side hinge support before claiming an attached hatch. Preserve hinge alignment and reserve the swept space; opening travel is not checked by this static source.",
-      "model": "spacecraft-hatch/preview.mpd",
-      "plan": "spacecraft-hatch/scene.plan.json",
-      "guide": "spacecraft-hatch/README.md",
-      "preview": "spacecraft-hatch/renders/home.png",
-      "reference_id": "submodel-e41fd31856846b8a3374c853",
+      "subjects": [
+        "spacecraft hatch SNOT"
+      ],
+      "model": "../spacecraft-hatch/preview.mpd",
+      "plan": "../spacecraft-hatch/scene.plan.json",
+      "preview": "../spacecraft-hatch/renders/home.png",
+      "board": "../spacecraft-hatch/board/mosaic.png",
+      "visual_review": "../spacecraft-hatch/card.json",
+      "model_sha256": "71b57d325368b01dfa637213ef1293a30426081381927f24683866e13b8d25d5",
+      "audit_pointer": "/items/20",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../spacecraft-hatch/README.md",
       "source_sha256": "ac3df5b53a19dafc1626c2cf6a87f020614f8a2acfa69065b6897d332bda03cd",
-      "board": "spacecraft-hatch/board/mosaic.png",
-      "visual_review": "spacecraft-hatch/card.json"
+      "key": "spacecraft-hatch",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "fa89c9dd43188ddca64ed9f0791eb960f65e41a2b2a1c7803d27ce82fb2e921a",
+      "category": "spacecraft hatch SNOT",
+      "reference_id": "submodel-e41fd31856846b8a3374c853",
+      "source_checks_passed": true,
+      "bom_matches": true
     },
     {
-      "key": "warehouse-forklift",
-      "title": "Small warehouse forklift with dedicated lifting mast",
-      "category": "industrial vehicle",
+      "id": "street-lantern",
+      "title": "Street Lantern recipe",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "reference:street-lantern"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Fresh home view shows narrow round-brick post, open collar, translucent yellow lamp, inverted dish cap and square foot. Keep adjustable-height recipe.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
       "scale": "minifigure",
-      "lesson": "Build a complete small service vehicle around a dedicated mast rather than inventing a lifting linkage from loose parts.",
-      "placement_notes": "Cargo, a cart, the aircraft and minifigures are separate scene objects. No structural part of this forklift is supplied by the parent. Its inherited body colour is red (4); the isolated xray board uses its default yellow for inherited colour. Preserve the mast and matched wheel/tyre pairs. Change surrounding bodywork and palette, then check ground contact and fork clearance. Cargo fit, load stability and lift travel remain unverified.",
-      "model": "warehouse-forklift/preview.mpd",
-      "plan": "warehouse-forklift/scene.plan.json",
-      "guide": "warehouse-forklift/README.md",
-      "preview": "warehouse-forklift/renders/home.png",
-      "reference_id": "submodel-ca24ebebdcc47c9f49b5652a",
-      "source_sha256": "ae997383ce765767e34c76c9d3b528f90c3abd5bc1783d6a26be2bcf470ddfd8",
-      "board": "warehouse-forklift/board/mosaic.png",
-      "visual_review": "warehouse-forklift/card.json"
+      "subjects": [
+        "parameterized construction"
+      ],
+      "model": "../street-lantern/street-lantern.mpd",
+      "plan": "../street-lantern/scene.plan.json",
+      "generator": "../street-lantern/generate.py",
+      "preview": "../street-lantern/renders/home.png",
+      "model_sha256": "f471460690ce9202147f9e27f6319a7ab3588e0dba900ff723b043617350a240",
+      "audit_pointer": "/recipes/1",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../street-lantern/README.md",
+      "source_sha256": "f471460690ce9202147f9e27f6319a7ab3588e0dba900ff723b043617350a240",
+      "key": "street-lantern",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "3635108a4f5cdc4c6c42046edb4b208f1fe1897853a129fd4e60181f25be2e8d",
+      "category": "parameterized construction",
+      "checks_passed": true
     },
     {
-      "key": "swivel-armchair",
+      "id": "swivel-armchair",
       "title": "Seven-part swivel armchair with sideways tiled armrests",
-      "category": "furniture SNOT",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "reference:swivel-armchair"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Compact black chair and turntable mount. Static-pose scope only; swivel clearance not verified.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
       "scale": "minifigure",
-      "lesson": "Turn a moulded seat into a compact armchair using opposing brackets, sideways tiles and a complete turntable pair.",
-      "placement_notes": "Only the room/floor context; both turntable halves are included. The source places the chair at an angle through a proper Y rotation, rather than changing its internal construction. Keep the bracket offsets and turntable pair. Recolour or place the whole chair, leaving room around its armrests; verify floor attachment separately when mounting it.",
-      "model": "swivel-armchair/preview.mpd",
-      "plan": "swivel-armchair/scene.plan.json",
-      "guide": "swivel-armchair/README.md",
-      "preview": "swivel-armchair/renders/home.png",
-      "reference_id": "submodel-f4179fdc3ef35f963aeab0e4",
+      "subjects": [
+        "furniture SNOT"
+      ],
+      "model": "../swivel-armchair/preview.mpd",
+      "plan": "../swivel-armchair/scene.plan.json",
+      "preview": "../swivel-armchair/renders/home.png",
+      "board": "../swivel-armchair/board/mosaic.png",
+      "visual_review": "../swivel-armchair/card.json",
+      "model_sha256": "606fb135f0f2727975835e04f52ab5ce051f7ef5bf3fd5e3931b8c50fc3e17aa",
+      "audit_pointer": "/items/22",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../swivel-armchair/README.md",
       "source_sha256": "6951d254fb667992beb4c3f49407fdb3ce7486399dac6c5a903ecae78d359814",
-      "board": "swivel-armchair/board/mosaic.png",
-      "visual_review": "swivel-armchair/card.json"
+      "key": "swivel-armchair",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "fb39e8ef40d088bb527e538f45df969437ed2bf6af5fdbe42ceb27f7e7cf4f2a",
+      "category": "furniture SNOT",
+      "reference_id": "submodel-f4179fdc3ef35f963aeab0e4",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "timbered-wall",
+      "title": "Timbered wall and projecting arches",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:timbered-wall"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Printed corner panels, window and arched roof supports as facade detail. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "walls"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../timbered-wall/preview.mpd",
+      "plan": "../timbered-wall/scene.plan.json",
+      "preview": "../timbered-wall/renders/home.png",
+      "visual_review": "../timbered-wall/card.json",
+      "model_sha256": "be1f5daf6ba16a417cb42e2c90fc4899f800c248f6a4e838e41c5df0221e6bc8",
+      "audit_pointer": "/items/23",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../timbered-wall/README.md",
+      "source_sha256": "38f96e65856b92ae6caac8c57746374c284744e50df9856fe3b6b7447d0bb9c0",
+      "key": "timbered-wall",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "d70241d419e6177330b046573f15494424b03b4f645ff8abf5acb1b93c180a65",
+      "category": "walls",
+      "reference_id": "submodel-b7361465bea1ab77de22f0a9",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "truck-loading-ramp",
+      "title": "Two-track loading ramp",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:truck-loading-ramp"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Paired wheel tracks and bar ends; parent shows upright stowed ramp behind truck. No checked-motion claim. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "vehicle loading"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../truck-loading-ramp/preview.mpd",
+      "plan": "../truck-loading-ramp/scene.plan.json",
+      "preview": "../truck-loading-ramp/renders/home.png",
+      "visual_review": "../truck-loading-ramp/card.json",
+      "model_sha256": "d3f1ae8be73072129c2dd42b033e7cbd9b1179caca06f1e948066b99dbdb65a7",
+      "audit_pointer": "/items/24",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../truck-loading-ramp/README.md",
+      "source_sha256": "25710fb2de0692cb2e8b51a56dc0d1aceeb3c38531a1a60a60b2092e11453e50",
+      "key": "truck-loading-ramp",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "a70763c6215f6529c394373b7e22de8d4704fd0e64b83cb26337ec37f7363bc6",
+      "category": "vehicle loading",
+      "reference_id": "submodel-bfdd04acfe38c87e3e43112f",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "warehouse-forklift",
+      "title": "Small warehouse forklift with dedicated lifting mast",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "reference:warehouse-forklift"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Complete minifigure forklift: mast, forks, seat, levers, wheels. Isolated inherited colour may differ from source parent. No validated working-lift claim.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "industrial vehicle"
+      ],
+      "model": "../warehouse-forklift/preview.mpd",
+      "plan": "../warehouse-forklift/scene.plan.json",
+      "preview": "../warehouse-forklift/renders/home.png",
+      "board": "../warehouse-forklift/board/mosaic.png",
+      "visual_review": "../warehouse-forklift/card.json",
+      "model_sha256": "4b8a925017d7f8b863c39d6242f4d4ed837c0d62828bf33fe1d4b733ea70deba",
+      "audit_pointer": "/items/25",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../warehouse-forklift/README.md",
+      "source_sha256": "ae997383ce765767e34c76c9d3b528f90c3abd5bc1783d6a26be2bcf470ddfd8",
+      "key": "warehouse-forklift",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "ac877f5685f45f66a2251d98c5bbd130e16aa5e9cc6a1bdba84634d09299fa7d",
+      "category": "industrial vehicle",
+      "reference_id": "submodel-ca24ebebdcc47c9f49b5652a",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "winter-lamp",
+      "title": "Winter lamp with wreath",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:winter-lamp"
+      ],
+      "families": [
+        "reference"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Thin black post, yellow light, inverted shade and green wreath/red accent. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "street lighting"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../winter-lamp/preview.mpd",
+      "plan": "../winter-lamp/scene.plan.json",
+      "preview": "../winter-lamp/renders/home.png",
+      "visual_review": "../winter-lamp/card.json",
+      "model_sha256": "7530276aed3c513a231ddc7a8bbd9dcc42de132438a1ceaffc6b7f94af96ac8e",
+      "audit_pointer": "/items/26",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../winter-lamp/README.md",
+      "source_sha256": "677641d1c3d9e67be403bec21ec4d146bd925400f467c9e7eed4ff93cc827fc6",
+      "key": "winter-lamp",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "26896d3ac4d91f3c5c237796cdef71337a110f5b934ac49df62cd103fa28f57a",
+      "category": "street lighting",
+      "reference_id": "submodel-00f6a6967412bb88c4bae4f8",
+      "source_checks_passed": true,
+      "bom_matches": true
     }
   ],
-  "details": [
-    {
-      "key": "winter-lamp",
-      "title": "Winter lamp with wreath",
-      "category": "street lighting",
-      "scale": "minifigure",
-      "lesson": "A dish shade, transparent round light and green life ring create a readable seasonal lamp with seven parts.",
-      "placement_notes": "The thin post has no pavement footing. Design its support before installation, and keep the wreath clear of pedestrians and nearby walls. Connection analysis leaves 3 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "winter-lamp/preview.mpd",
-      "plan": "winter-lamp/scene.plan.json",
-      "guide": "winter-lamp/README.md",
-      "preview": "winter-lamp/renders/home.png",
-      "reference_id": "submodel-00f6a6967412bb88c4bae4f8",
-      "source_sha256": "677641d1c3d9e67be403bec21ec4d146bd925400f467c9e7eed4ff93cc827fc6",
-      "visual_review": "winter-lamp/card.json"
-    },
-    {
-      "key": "ornamental-lamp",
-      "title": "Ornamental globe lamp",
-      "category": "street lighting",
-      "scale": "minifigure",
-      "lesson": "An inverted transparent globe and a sideways foliage sprig give a street fitting a distinctive silhouette.",
-      "placement_notes": "Reserve the round four-stud base and the asymmetric foliage envelope. Check the bar, globe and sprig interfaces when adapting its height. Connection analysis leaves 9 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "ornamental-lamp/preview.mpd",
-      "plan": "ornamental-lamp/scene.plan.json",
-      "guide": "ornamental-lamp/README.md",
-      "preview": "ornamental-lamp/renders/home.png",
-      "reference_id": "submodel-1355a88e70f5307c9a5856a4",
-      "source_sha256": "580d1030ab844804744377319a9a645da9eec92cfc9f63d4d6459a2a62eeac6a",
-      "visual_review": "ornamental-lamp/card.json"
-    },
-    {
-      "key": "small-ornamental-tree",
-      "title": "Small ornamental tree",
-      "category": "foliage",
-      "scale": "unknown",
-      "lesson": "Stacked brown cones and differently angled foliage produce a tapered trunk and a compact organic crown.",
-      "placement_notes": "Treat this as a narrow ornamental plant or a small tree at the chosen scene scale. Add a ground attachment; the source does not include a landscape base. Connection analysis leaves 7 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "small-ornamental-tree/preview.mpd",
-      "plan": "small-ornamental-tree/scene.plan.json",
-      "guide": "small-ornamental-tree/README.md",
-      "preview": "small-ornamental-tree/renders/home.png",
-      "reference_id": "submodel-9c5e5af47f71f6aacf101650",
-      "source_sha256": "909c27e1e5732a9b76596a7a742f03cb18fead047bc372e502a7e37ad329737e",
-      "visual_review": "small-ornamental-tree/card.json"
-    },
-    {
-      "key": "layered-tree",
-      "title": "Layered woodland tree",
-      "category": "foliage",
-      "scale": "minifigure",
-      "lesson": "Round trunk courses and rotated foliage layers create a broad canopy with irregular edges.",
-      "placement_notes": "The green base is four studs square, but foliage spreads about 11.6 studs. Reserve that canopy envelope and adjust layer angles instead of simply scaling the source. Connection analysis leaves 5 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "layered-tree/preview.mpd",
-      "plan": "layered-tree/scene.plan.json",
-      "guide": "layered-tree/README.md",
-      "preview": "layered-tree/renders/home.png",
-      "reference_id": "submodel-ce73620dee16067b5b2544be",
-      "source_sha256": "c98e2a9cf4062cf40b5fb4964b3ead943d87babbed597568004d48047bb8fddd",
-      "visual_review": "layered-tree/card.json"
-    },
-    {
-      "key": "moulded-staircase",
-      "title": "Moulded staircase and landing",
-      "category": "stairs",
-      "scale": "minifigure",
-      "lesson": "A dedicated staircase provides thin risers and an open underside with far fewer parts than stacked solid bricks.",
-      "placement_notes": "Reserve four studs across the stair and a twelve-stud source depth including the narrow upper landing. Match the actual landing height to the floor; add handrails where the brief needs them.",
-      "model": "moulded-staircase/preview.mpd",
-      "plan": "moulded-staircase/scene.plan.json",
-      "guide": "moulded-staircase/README.md",
-      "preview": "moulded-staircase/renders/home.png",
-      "reference_id": "submodel-cdb2e127819d9dbe948ceb77",
-      "source_sha256": "7e67a2326230795ca09ad35becc1fcca777d5889d92ab2e8a40cc5709c08bfad",
-      "visual_review": "moulded-staircase/card.json"
-    },
-    {
-      "key": "arched-clip-panel",
-      "title": "Arched panel with side clips",
-      "category": "architectural openings",
-      "scale": "minifigure",
-      "lesson": "A small arch, grooved top edge and side clips combine a shaped opening with a useful attachment vocabulary.",
-      "placement_notes": "This is a narrow roof-notch wall insert, not a complete dormer. Preserve the side-clip clearance and source orientation, and inspect the adjoining roof before attaching a new panel.",
-      "model": "arched-clip-panel/preview.mpd",
-      "plan": "arched-clip-panel/scene.plan.json",
-      "guide": "arched-clip-panel/README.md",
-      "preview": "arched-clip-panel/renders/home.png",
-      "reference_id": "submodel-534cea0292d9bda90a801c5c",
-      "source_sha256": "dfa7b53ac065177872fa0e97a0b0d5b40de1e1484353aca574f82ff840647e99",
-      "visual_review": "arched-clip-panel/card.json"
-    },
-    {
-      "key": "truck-loading-ramp",
-      "title": "Two-track loading ramp",
-      "category": "vehicle loading",
-      "scale": "minifigure",
-      "lesson": "Two wheel tracks, hinge fingers and a small grille communicate a functional loading surface while keeping the centre open.",
-      "placement_notes": "Measure the mating hinge in the host truck and match its finger spacing. Check both deployed and folded clearance; the source image shows only its stored local pose.",
-      "model": "truck-loading-ramp/preview.mpd",
-      "plan": "truck-loading-ramp/scene.plan.json",
-      "guide": "truck-loading-ramp/README.md",
-      "preview": "truck-loading-ramp/renders/home.png",
-      "reference_id": "submodel-bfdd04acfe38c87e3e43112f",
-      "source_sha256": "25710fb2de0692cb2e8b51a56dc0d1aceeb3c38531a1a60a60b2092e11453e50",
-      "visual_review": "truck-loading-ramp/card.json"
-    },
-    {
-      "key": "shuttered-window",
-      "title": "Opening window with shutters",
-      "category": "windows",
-      "scale": "minifigure",
-      "lesson": "Dedicated window leaves and louvred shutters add depth and a recognizable opening mechanism to a facade.",
-      "placement_notes": "Use the frame footprint for the wall opening, not the approximately 7.5-stud open-shutter envelope. Reserve front and side sweep and preserve the leaf pivots. Connection analysis leaves 3 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "shuttered-window/preview.mpd",
-      "plan": "shuttered-window/scene.plan.json",
-      "guide": "shuttered-window/README.md",
-      "preview": "shuttered-window/renders/home.png",
-      "reference_id": "submodel-57da3b6cb8bc2568b648dda3",
-      "source_sha256": "5d2bd263e0c633e64f41ee400b2f4c1cfb8974456de5ea032a43bc3f3917cf5d",
-      "visual_review": "shuttered-window/card.json"
-    },
-    {
-      "key": "timbered-wall",
-      "title": "Timbered wall and projecting arches",
-      "category": "walls",
-      "scale": "minifigure",
-      "lesson": "Patterned timber panels, a shutter and paired arches create strong architectural identity in a small wall section.",
-      "placement_notes": "The arches project well beyond the upright wall. Preserve their roof-support relationship, inspect the source base, and adapt the red palette deliberately to the new building.",
-      "model": "timbered-wall/preview.mpd",
-      "plan": "timbered-wall/scene.plan.json",
-      "guide": "timbered-wall/README.md",
-      "preview": "timbered-wall/renders/home.png",
-      "reference_id": "submodel-b7361465bea1ab77de22f0a9",
-      "source_sha256": "38f96e65856b92ae6caac8c57746374c284744e50df9856fe3b6b7447d0bb9c0",
-      "visual_review": "timbered-wall/card.json"
-    },
-    {
-      "key": "airliner-engine",
-      "title": "Airliner engine and pylon",
-      "category": "aircraft engines",
-      "scale": "minifigure",
-      "lesson": "A dedicated cylindrical engine casing, turbine face and exhaust create a convincing nacelle with a thin brick-built pylon.",
-      "placement_notes": "Reserve the four-stud engine diameter and eleven-stud source length. Match the pylon top studs to the wing and check fan and exhaust clearances before repeating the module. Connection analysis leaves 7 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "airliner-engine/preview.mpd",
-      "plan": "airliner-engine/scene.plan.json",
-      "guide": "airliner-engine/README.md",
-      "preview": "airliner-engine/renders/home.png",
-      "reference_id": "submodel-9dd2ac5bcbd1c1dabf67779c",
-      "source_sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
-      "visual_review": "airliner-engine/card.json"
-    },
-    {
-      "key": "sloped-tail-fin",
-      "title": "Sloped tail fin with beacon",
-      "category": "aircraft tails",
-      "scale": "unknown",
-      "lesson": "A sequence of slopes, a thin contrasting base and a transparent tip make a small fin recognizable from a distance.",
-      "placement_notes": "Use the six-stud long, narrow source profile as a scale reference. Side studs protrude beyond the nominal one-stud thickness; align the base to the fuselage and retain clearance.",
-      "model": "sloped-tail-fin/preview.mpd",
-      "plan": "sloped-tail-fin/scene.plan.json",
-      "guide": "sloped-tail-fin/README.md",
-      "preview": "sloped-tail-fin/renders/home.png",
-      "reference_id": "submodel-e44ddd541795e599710ea752",
-      "source_sha256": "0ab60c96ec0f18b0d0d1270ca11a519cdc1034088ce2519c23800924bd6d7dc5",
-      "visual_review": "sloped-tail-fin/card.json"
-    },
-    {
-      "key": "hinged-wing",
-      "title": "Tapered wing with hinge root",
-      "category": "aircraft wings",
-      "scale": "unknown",
-      "lesson": "Wedge plates establish a taper while hinge fingers, a grille and a small light give the wing a clear root and tip.",
-      "placement_notes": "The source is the left wing. Inspect the matching right assembly rather than assuming reflection preserves connectors; reserve the root hinge sweep and approximately 12.8-stud span.",
-      "model": "hinged-wing/preview.mpd",
-      "plan": "hinged-wing/scene.plan.json",
-      "guide": "hinged-wing/README.md",
-      "preview": "hinged-wing/renders/home.png",
-      "reference_id": "submodel-c5ba5b655fe01b038d865fa3",
-      "source_sha256": "0ab60c96ec0f18b0d0d1270ca11a519cdc1034088ce2519c23800924bd6d7dc5",
-      "visual_review": "hinged-wing/card.json"
-    },
-    {
-      "key": "classic-truck-cab",
-      "title": "Classic compact truck tractor",
-      "category": "truck cabs",
-      "scale": "minifigure",
-      "lesson": "A moulded windscreen, doors, grille, lights and antenna make a compact truck read as a vehicle rather than a box.",
-      "placement_notes": "This source includes wheels and rear chassis as well as the cab. Inspect its coupling and wheel envelope before attaching a trailer; retain or replace the branded panel deliberately. Connection analysis leaves 8 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "classic-truck-cab/preview.mpd",
-      "plan": "classic-truck-cab/scene.plan.json",
-      "guide": "classic-truck-cab/README.md",
-      "preview": "classic-truck-cab/renders/home.png",
-      "reference_id": "submodel-eb104986186459218ec6b232",
-      "source_sha256": "9715060bed68242a1b96d2ecead49c8a4aa6533b5835544505772b86d21cf6e0",
-      "visual_review": "classic-truck-cab/card.json"
-    },
-    {
-      "key": "mini-truck-cab",
-      "title": "Mini construction truck cab",
-      "category": "truck cabs",
-      "scale": "microscale",
-      "lesson": "A narrow windscreen, shaped roof, grille and small wheel assemblies convey construction-vehicle character at a compact scale.",
-      "placement_notes": "The cab body is only two studs wide with tyres extending beyond it. Use its actual dimensions instead of assuming minifigure seating, and build the rear body around the exposed chassis.",
-      "model": "mini-truck-cab/preview.mpd",
-      "plan": "mini-truck-cab/scene.plan.json",
-      "guide": "mini-truck-cab/README.md",
-      "preview": "mini-truck-cab/renders/home.png",
-      "reference_id": "submodel-3038a742034a696753eb880b",
-      "source_sha256": "69eb06b65a4d8b8b7e6da4839aaca419d4b8e041b0a7d0934cc37b7c0efe5025",
-      "visual_review": "mini-truck-cab/card.json"
-    },
-    {
-      "key": "spacecraft-wheel-module",
-      "title": "Spacecraft wheel module",
-      "category": "spacecraft landing gear",
-      "scale": "unknown",
-      "lesson": "Wheel-pin plates, a tall bracket and small exhaust and grille fittings give a compact wheeled module a mechanical identity.",
-      "placement_notes": "The original parent calls this landing gear; its isolated appearance also suggests rover ideas. Preserve the hinge and bracket interfaces and test deployed clearance in the parent before reuse. Connection analysis leaves 7 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "spacecraft-wheel-module/preview.mpd",
-      "plan": "spacecraft-wheel-module/scene.plan.json",
-      "guide": "spacecraft-wheel-module/README.md",
-      "preview": "spacecraft-wheel-module/renders/home.png",
-      "reference_id": "submodel-6a39cb3c7dcadeb0dde97dab",
-      "source_sha256": "0971ed1f3ddefde855ad584d3a1f342047a2f9ffa51a6e6f9c020e21d1cacf62",
-      "visual_review": "spacecraft-wheel-module/card.json"
-    },
-    {
-      "key": "airliner-wheel-bogie",
-      "title": "Airliner wheel bogie",
-      "category": "aircraft landing gear",
-      "scale": "minifigure",
-      "lesson": "Small wheel carriers and a compact upright mounting pair create aircraft landing gear with a clear silhouette.",
-      "placement_notes": "This System aircraft fitting contains a few Technic connector pieces. Match the upper mounting interface and tyre ground plane to the host aircraft; this is not a retracting mechanism recipe. Connection analysis leaves 5 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "airliner-wheel-bogie/preview.mpd",
-      "plan": "airliner-wheel-bogie/scene.plan.json",
-      "guide": "airliner-wheel-bogie/README.md",
-      "preview": "airliner-wheel-bogie/renders/home.png",
-      "reference_id": "submodel-8c004489e1f4ececee31c06d",
-      "source_sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
-      "visual_review": "airliner-wheel-bogie/card.json"
-    },
-    {
-      "key": "faceted-ship-bow",
-      "title": "Faceted research-ship bow",
-      "category": "boat hulls",
-      "scale": "microscale",
-      "lesson": "Side-stud bricks and small slopes shape a compact ship bow in multiple directions without scaling any physical part.",
-      "placement_notes": "The source axes do not present the bow as a complete horizontal hull. Consult the parent placement matrix before orienting it, and continue its red, dark blue and grey bands into the adjoining hull. Connection analysis leaves 3 optimistic groups; inspect those unresolved interfaces during adaptation.",
-      "model": "faceted-ship-bow/preview.mpd",
-      "plan": "faceted-ship-bow/scene.plan.json",
-      "guide": "faceted-ship-bow/README.md",
-      "preview": "faceted-ship-bow/renders/home.png",
-      "reference_id": "submodel-c5151f19163974e61079f916",
-      "source_sha256": "e5ee45cade5e7f25b24792a8dcc628f4f36bd45f3434ddc41c89a9f9307f9c47",
-      "visual_review": "faceted-ship-bow/card.json"
-    },
-    {
-      "key": "rounded-cockpit-shell",
-      "title": "Rounded cockpit shell",
-      "category": "vehicle bodywork",
-      "scale": "display",
-      "lesson": "Repeated curved roof pieces form a smooth shell while narrow side ledges leave space for a cockpit or nose insert.",
-      "placement_notes": "The source shell is six studs wide and open at one end and underneath. Preserve the ledges and rear opening, then build the glazing, floor and host attachments for the new model.",
-      "model": "rounded-cockpit-shell/preview.mpd",
-      "plan": "rounded-cockpit-shell/scene.plan.json",
-      "guide": "rounded-cockpit-shell/README.md",
-      "preview": "rounded-cockpit-shell/renders/home.png",
-      "reference_id": "submodel-c55fec61074667d8a602aa17",
-      "source_sha256": "12a745a72a2da534093ecb4e4e020fcdc789b37497e96ff9358f42689b3dd9e0",
-      "visual_review": "rounded-cockpit-shell/card.json"
-    },
-    {
-      "key": "fire-escape-railing",
-      "title": "Fire-escape railing insert",
-      "category": "exterior railings",
-      "scale": "minifigure",
-      "lesson": "Bars and articulated small elements produce thin open ironwork that reads more delicately than stacked wall bricks.",
-      "placement_notes": "This is a railing insert and support strip from a larger fire escape, not a complete stair. Preserve the angled bar connections and locate the strip in its floor or balcony context.",
-      "model": "fire-escape-railing/preview.mpd",
-      "plan": "fire-escape-railing/scene.plan.json",
-      "guide": "fire-escape-railing/README.md",
-      "preview": "fire-escape-railing/renders/home.png",
-      "reference_id": "submodel-0ed326e2fb072cd2e5d27122",
-      "source_sha256": "b812c6a958fe683f150f4f1c9e48013bbb02cd507470ff8773617ee55136cb88",
-      "visual_review": "fire-escape-railing/card.json"
-    },
-    {
-      "key": "classical-arch-bay",
-      "title": "Classical arch and cornice",
-      "category": "architectural arches",
-      "scale": "display",
-      "lesson": "A moulded arch, grooved masonry and round plates under the cornice create shadow lines in a shallow facade bay.",
-      "placement_notes": "The source is only one stud deep and has two separate pier feet. Tie both piers into the host base and continue the cornice rhythm; use the parameterized arcade recipe for another height.",
-      "model": "classical-arch-bay/preview.mpd",
-      "plan": "classical-arch-bay/scene.plan.json",
-      "guide": "classical-arch-bay/README.md",
-      "preview": "classical-arch-bay/renders/home.png",
-      "reference_id": "submodel-6f7b4658bd2bddeb4e7427a6",
-      "source_sha256": "da47a085c8a0aa39d61414b7009a9bab68a07f93f552ec0f04d4e88d0584f4db",
-      "visual_review": "classical-arch-bay/card.json"
-    },
-    {
-      "key": "park-bench",
-      "title": "Park bench with shaped back",
-      "category": "seating",
-      "scale": "minifigure",
-      "lesson": "Dedicated shaped back elements and a mostly tiled seat create a recognizable bench with a low part count.",
-      "placement_notes": "Reserve eight studs of width and the backrest overhang beyond the two-stud seat. Attach the two white feet to the pavement and keep the seat studs accessible if adding figures.",
-      "model": "park-bench/preview.mpd",
-      "plan": "park-bench/scene.plan.json",
-      "guide": "park-bench/README.md",
-      "preview": "park-bench/renders/home.png",
-      "reference_id": "submodel-6d418370f3204dfbd7c1f6b9",
-      "source_sha256": "f3eaeac9fb9555965dcaa318b9220b957daf59666072acb802f15a9d1c54d47a",
-      "visual_review": "park-bench/card.json"
-    },
-    {
-      "key": "arcade-bay",
-      "title": "Arcade Bay recipe",
-      "category": "parameterized construction",
-      "scale": "display",
-      "lesson": "Change height and palette using real brick courses; preserve the assembly interfaces.",
-      "model": "recipes/arcade-bay/arcade-bay.mpd",
-      "plan": "recipes/arcade-bay/scene.plan.json",
-      "guide": "recipes/arcade-bay/README.md",
-      "preview": "recipes/arcade-bay/renders/home.png",
-      "generator": "recipes/arcade-bay/generate.py"
-    },
-    {
-      "key": "street-lantern",
-      "title": "Street Lantern recipe",
-      "category": "parameterized construction",
-      "scale": "minifigure",
-      "lesson": "Change height and palette using real brick courses; preserve the assembly interfaces.",
-      "model": "recipes/street-lantern/street-lantern.mpd",
-      "plan": "recipes/street-lantern/scene.plan.json",
-      "guide": "recipes/street-lantern/README.md",
-      "preview": "recipes/street-lantern/renders/home.png",
-      "generator": "recipes/street-lantern/generate.py"
-    }
-  ]
+  "details": []
 }

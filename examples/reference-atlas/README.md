@@ -1,69 +1,20 @@
-# Reference atlas
+# Reference compatibility index
 
-Start with the [offline example gallery](index.html): **27 inspected source constructions**, with editable placement plans, measured cards and specific adaptation notes. The original 21 have seven rendered views each; the six [cross-category additions](EXPANSION.md) have four views plus inspected parent-context boards. Two [parameterized recipes](#parameterized-recipes) demonstrate rebuilding a construction for a different height and palette.
-
-The new selection covers a train bogie, balcony facade, aircraft landing strut,
-spacecraft hatch, warehouse forklift and swivel armchair. Their guides distinguish
-the extracted construction from the parts supplied by its parent. They are studies
-for adaptation, not certified mechanical cores.
-
-The broader [library manifest](library.manifest.json) selects **200 submodels and 20 whole models** across architecture, street fittings, foliage, vehicles, aircraft, boats and trains. Its generated [220-reference gallery](../../output/reference-library/index.html) uses home/front/right/top by default. The large gallery is generated into ignored `output/`; the curated examples and their images are retained here.
+Current lessons live in semantic packages. [Browse the generated index](index.html), or use:
 
 ```sh
-./ldraw-agent examples --family reference --limit 8
-./ldraw-agent examples --family reference 'aircraft' --limit 5
-./ldraw-agent examples --family reference --scale microscale
-.venv/bin/python examples/reference-atlas/generate.py --jobs 3
+./ldraw-agent examples --family reference
+./ldraw-agent knowledge show reference:KEY
 ```
 
-The shared generator resumes completed cards. Use `--views home front back right left top bottom` for seven views of the library, or `--manifest curated.manifest.json` with a separate `--outdir` for the smaller selection. Run from the repository root and use the complete manifest path, for example `examples/reference-atlas/curated.manifest.json`. Preparing the library requires the original annotated sources, the installed parts and LeoCAD; rebuilding a retained example plan uses its local attributed source copy.
+The package README owns the lesson, scope, corrected descriptions and limits. The generated `catalog.json` retains explicit non-default scopes for compatibility; the gallery shows default-eligible lessons. Old aliases continue to resolve. Retired, held, diagnostic and inspiration sources require deliberate selection and cannot bypass export checks.
 
-## Choose a useful construction
-
-| Need | Examples | What to learn |
-|---|---|---|
-| Street details | [Winter lamp](winter-lamp/README.md), [globe lamp](ornamental-lamp/README.md), [bench](park-bench/README.md) | Thin posts, transparent lights, decorative part reuse and shaped seating |
-| Organic shapes | [Small tree](small-ornamental-tree/README.md), [woodland tree](layered-tree/README.md) | Tapered trunks, angled foliage and canopy clearance |
-| Architecture | [Stairs](moulded-staircase/README.md), [window](shuttered-window/README.md), [timbered wall](timbered-wall/README.md), [arch](classical-arch-bay/README.md) | Dedicated moulds, open profiles, shutters and cornice shadow lines |
-| Exterior interfaces | [Clip panel](arched-clip-panel/README.md), [railing](fire-escape-railing/README.md), [loading ramp](truck-loading-ramp/README.md) | Small clips, bars and hinges; inspect the adjoining construction |
-| Aircraft | [Engine](airliner-engine/README.md), [wing](hinged-wing/README.md), [fin](sloped-tail-fin/README.md), [wheel bogie](airliner-wheel-bogie/README.md) | Turbine detail, tapered planforms, thin fins and compact wheel fittings |
-| Road and space vehicles | [Classic truck](classic-truck-cab/README.md), [mini truck](mini-truck-cab/README.md), [wheel module](spacecraft-wheel-module/README.md), [cockpit shell](rounded-cockpit-shell/README.md) | Distinct scales, dedicated glazing, open chassis and curved bodywork |
-| Boats | [Research-ship bow](faceted-ship-bow/README.md) | Sideways slopes and coordinated colour bands around a small hull |
-
-Open the images, then read the guide and `card.json`. Each source example includes its actual part inventory, local bounds, parent placement matrices, source hash, author/licence headers, repair log, connection analysis and visual review. The recorded review names only the views actually inspected; rendering seven images does not mean seven were reviewed.
+Legacy selection files and atlas generators are historical preparation inputs. Use the current package's editable plan/generator to reproduce a lesson. Legacy source preparation goes to a separate `--outdir` and does not admit its output. To refresh browsing from current metadata:
 
 ```sh
-./ldraw-agent build examples/reference-atlas/airliner-engine/scene.plan.json \
-  --output output/airliner-engine-example.mpd
-./ldraw-agent inspect output/airliner-engine-example.mpd --contacts all
+.venv/bin/python -c "from ldraw_tools.knowledge import write_compat_catalog; write_compat_catalog('reference', 'examples/reference-atlas')"
 ```
 
-To integrate a reference, include its plan and place its first section, or import its namespaced `source.mpd` as a plan asset. The `source_origin` frame is a positioning aid. It is not an inferred mechanical connector. Preserve the source author and licence; measure any new attachment and check the combined model. Images are framed independently, so compare dimensions rather than apparent image size.
+## Details
 
-All 21 exported plans were rebuilt, passed assembly and geometry error checks, and matched the recorded LeoCAD BOM. Eleven have one optimistic connection group; ten retain multiple groups that their guides explicitly identify. These examples teach construction and visual design; contact coverage, material clearance, strength and stability still need review in the new model. See [verification.json](verification.json).
-
-The broad gallery also retains problematic sources for inspiration: 26 of its 220 entries need preparation, and three have a Python/LeoCAD BOM discrepancy. Their cards show these failures. Eight of the 36 candidates inspected with contacts had geometry errors and were excluded from the curated atlas. This keeps useful visual precedents available without presenting them as ready assemblies.
-
-## Parameterized recipes
-
-- [Arcade bay](recipes/arcade-bay/README.md): change the pier height and cornice colours, preserving a four-stud arch and a shared foot plate.
-- [Street lantern](recipes/street-lantern/README.md): change round-brick post courses and palette, retaining the centred base, open-stud collar and transparent light.
-
-```sh
-.venv/bin/python examples/reference-atlas/recipes/arcade-bay/generate.py \
-  --height 5 --render --outdir output/taller-arcade
-.venv/bin/python examples/reference-atlas/recipes/street-lantern/generate.py \
-  --height 7 --colour 0 --accent 71 --render --outdir output/taller-lantern
-```
-
-The default, two-course and seven-course forms pass geometry error checks with one optimistic connection group. Their plans retain the construction-source credits. Unchanged OMR submodels use the shared extractor and placement plans; only selected adaptable constructions need their own generator.
-
-For new searches, preparation and review/export commands, follow the [agent workflow](../../docs/agent/guides/find-references.md).
-
-For a small SNOT lesson, use the separately prepared [Tropical Parrot head](../snot/parrot/README.md): fourteen pieces, seven construction stages, exact sideways offsets and a complete bird for context. Its plans use the same builder and preserve the supplied source credit.
-
-The [Cat studies](../snot/cat/README.md) add single-stud diagonal details, a layered face and a three-piece limb repeated around ball joints. Use these for shaping and articulation; the face is posed upright on a ball joint rather than attached by a fixed perpendicular stud connection.
-
-The [Ferrari F40 reference](../snot/ferrari-f40/README.md) adds a searchable semantic map of 74 sections and five SNOT build studies for vehicle bodywork. The five small studies pass checks; the complete car remains labeled inspiration with overlap errors. Its saved callouts and flattened main car are kept distinct.
-
-The [Halcyon interceptor](../snot/halcyon/README.md) is an original 195-piece spacecraft that combines these SNOT lessons. Its hull core exposes side studs for flank panels and pod stripes, and forward and aft studs for intakes, nozzles and cannons built along their own axes. It passes checks as one connection group.
+Use `examples --details` with this family, or a role-specific knowledge query.

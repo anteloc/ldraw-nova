@@ -43,13 +43,13 @@ solver or a required Nova verification step. Copying the studied source pose is
 preferable to inventing unmeasured rod angles.
 
 To build a compact engine stand, start from the
-[local piston/crank manual](../../../../examples/mechanism-atlas/piston-crank/GUIDE.md)
+[local piston/crank manual](../../../../examples/piston-crank/GUIDE.md)
 or one of the W16 banks. Preserve the crank/piston core, then design a new
 support frame, accessible input, head clearance and contrasting but restrained
 palette. Removing the other banks also removes their supports and drive context;
 replace the needed bearings and mounts deliberately.
 
-For a smaller V8, see the [42050 engine](../../../../examples/submodel-atlas/03-42050-v8-engine/GUIDE.md):
+For a smaller V8, see the [42050 engine](../../../../examples/42050-v8-engine/GUIDE.md):
 its whole crank train goes in one step between the cylinder banks, and its
 board's x-ray copy shows both banks in a V over one crank.
 

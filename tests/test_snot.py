@@ -16,7 +16,7 @@ from ldraw_tools.connectivity import inspect_connections, snap_report, apply_sna
 from ldraw_tools.document import parse_source
 from ldraw_tools.geometry import analyze_geometry, components
 
-REFERENCE = ROOT / 'examples/snot/parrot'
+REFERENCE = ROOT / 'examples/parrot'
 
 
 @pytest.mark.parametrize('code,height', [('22885',40), ('67329',40), ('47457',16)])

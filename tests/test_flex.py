@@ -25,7 +25,7 @@ def test_missing_optional_dependency_is_actionable(monkeypatch):
 
 
 def test_controls_reject_incomplete_and_unsafe_sources(cfg):
-    source = (ROOT / "examples/flex/hose.ldr").read_text()
+    source = (ROOT / "examples/flex-basics/hose.ldr").read_text()
     for text, error in [
         (source.replace("TECHNIC_PNEUMATIC_HOSE_BEVELED", "NOT_A_TYPE"), "unknown synthesis type"),
         (source.replace("0 SYNTH END", ""), "Missing SYNTH END"),
@@ -45,7 +45,7 @@ def test_controls_reject_incomplete_and_unsafe_sources(cfg):
 @pytest.mark.parametrize("name,expected", [("hose", 1), ("band", 3), ("chain", 26)])
 def test_assets_are_portable_and_count_physical_items(cfg, official, tmp_path, name, expected):
     output = tmp_path / f"{name}.mpd"
-    report = flex.build(ROOT / f"examples/flex/{name}.ldr", output, official)
+    report = flex.build(ROOT / f"examples/flex-basics/{name}.ldr", output, official)
     raw = output.read_bytes()
     assert b"\n" not in raw.replace(b"\r\n", b"")
     model, diagnostics = validate_file(output, official)
@@ -63,14 +63,14 @@ def test_assets_are_portable_and_count_physical_items(cfg, official, tmp_path, n
     else:
         assert report['blocks'][0]['representation'] == 'links'
         assert not report['embedded_sources']
-    flex.build(ROOT / f"examples/flex/{name}.ldr", output, official, force=True)
+    flex.build(ROOT / f"examples/flex-basics/{name}.ldr", output, official, force=True)
     assert output.read_bytes() == raw
     assert json.loads(output.with_suffix('.manifest.json').read_text())['review_required']
 
 
 def test_constraints_and_previous_output_survive_failure(cfg, official, tmp_path):
     source = tmp_path / 'source.ldr'
-    source.write_bytes((ROOT / 'examples/flex/hose.ldr').read_bytes())
+    source.write_bytes((ROOT / 'examples/flex-basics/hose.ldr').read_bytes())
     output = tmp_path / 'hose.mpd'
     flex.build(source, output, official)
     old = output.read_bytes(), output.with_suffix('.manifest.json').read_bytes()
@@ -89,13 +89,13 @@ def test_constraints_and_previous_output_survive_failure(cfg, official, tmp_path
 def test_lsynth_warning_is_a_failure_even_with_exit_zero(cfg, official, tmp_path, monkeypatch):
     monkeypatch.setattr(flex.subprocess, 'run', lambda *a, **k: subprocess.CompletedProcess(a, 0, '', 'lsynth: warning: no tangent'))
     with pytest.raises(ValueError, match='no tangent'):
-        flex.build(ROOT / 'examples/flex/band.ldr', tmp_path / 'bad.mpd', official)
+        flex.build(ROOT / 'examples/flex-basics/band.ldr', tmp_path / 'bad.mpd', official)
     assert not list(tmp_path.iterdir())
 
 
 def test_generated_roundoff_does_not_allow_stretched_complete_parts(cfg, official, tmp_path):
     source = tmp_path / 'stretched.ldr'
-    source.write_text((ROOT / 'examples/flex/hose.ldr').read_text() + '\n1 4 0 0 100 2 0 0 0 1 0 0 0 1 3001.dat\n')
+    source.write_text((ROOT / 'examples/flex-basics/hose.ldr').read_text() + '\n1 4 0 0 100 2 0 0 0 1 0 0 0 1 3001.dat\n')
     with pytest.raises(ValueError, match='assembly.nonrigid'):
         flex.build(source, tmp_path / 'asset.mpd', official)
     # A different four-place rotation exceeds the existing validator's tolerance.
@@ -112,7 +112,7 @@ def test_generated_roundoff_does_not_allow_stretched_complete_parts(cfg, officia
 
 def test_mpd_submodel_and_existing_plan_assets(cfg, official, tmp_path):
     source = tmp_path / 'source.mpd'
-    hose = (ROOT / 'examples/flex/hose.ldr').read_text().replace('hose.ldr', 'hose with spaces.ldr')
+    hose = (ROOT / 'examples/flex-basics/hose.ldr').read_text().replace('hose.ldr', 'hose with spaces.ldr')
     source.write_text('0 FILE scene.ldr\n0 Scene\n0 Name: scene.ldr\n0 Author: Test\n'
                       '1 4 0 0 0 1 0 0 0 1 0 0 0 1 hose with spaces.ldr\n'
                       '1 4 0 0 100 1 0 0 0 1 0 0 0 1 hose with spaces.ldr\n'
@@ -132,14 +132,14 @@ def test_mpd_submodel_and_existing_plan_assets(cfg, official, tmp_path):
 
 def test_source_cannot_override_bundled_geometry(cfg, official, tmp_path):
     source = tmp_path / 'source.mpd'
-    source.write_text('0 FILE hose.ldr\n' + (ROOT / 'examples/flex/hose.ldr').read_text()
+    source.write_text('0 FILE hose.ldr\n' + (ROOT / 'examples/flex-basics/hose.ldr').read_text()
                       + '0 FILE LS23.dat\n0 My alternate geometry\n0 !LDRAW_ORG Unofficial_Part\n')
     with pytest.raises(ValueError, match='overrides bundled LSynth geometry'):
         flex.build(source, tmp_path / 'asset.mpd', official)
 
 
 def test_bundled_legacy_headers_are_preserved_and_repairs_recorded(cfg, official, tmp_path):
-    hose = (ROOT / 'examples/flex/hose.ldr').read_text().replace('LS01.dat', 'LS02.dat')
+    hose = (ROOT / 'examples/flex-basics/hose.ldr').read_text().replace('LS01.dat', 'LS02.dat')
     for method, names in [('TECHNIC_PNEUMATIC_HOSE_BEVELED', {'ls22.dat'}), ('TECHNIC_FLEX-SYSTEM_HOSE', {'ls50.dat', 'ls51.dat'})]:
         source = tmp_path / 'source.ldr'
         source.write_text(hose.replace('TECHNIC_PNEUMATIC_HOSE_BEVELED', method))

@@ -6,7 +6,7 @@ Search roles, compare different constructions and inspect actual part dimensions
 
 ## Architecture
 
-Use architecture-specific motifs only for buildings. Record massing, storey heights, entrance hierarchy, roof shapes, recessed glazing, supported projections and a legible street/landscape relationship. Keep quieter walls beside focal details. The [Copper Lane brief](../../../examples/modular-street/design-brief.json) and [review](../../../examples/modular-street/visual-review.md) are one worked example, not a universal design.
+Use architecture-specific motifs only for buildings. Record massing, storey heights, entrance hierarchy, roof shapes, recessed glazing, supported projections and a legible street/landscape relationship. Keep quieter walls beside focal details. The [Copper Lane brief](../../../examples/copper-lane/design-brief.json) and [review](../../../examples/copper-lane/visual-review.md) are one worked example, not a universal design.
 
 `design details` exports editable architectural fittings. The legacy key `flower-planter` describes a tree on a plinth with flower accents, not a low planter. Reserve openings and remove conflicting core geometry before adding fittings. Exact symbol syntax belongs in the [plan reference](../reference/plans.md).
 
@@ -63,7 +63,7 @@ colour availability. Change the brief and source together. Use current knowledge
 
 Search [model and submodel references](find-references.md) as well as individual parts. Compare whole vehicles for silhouette, then query one cab, bogie, wing, engine or hull role at a time. `discover parts SAVED_SEARCH.json` exposes the actual fittings used in matched constructions. Inspect parent subject, dimensions, preview images and Technic content before reusing them; a spacecraft module may teach a technique without fitting a passenger aircraft directly.
 
-The [Ferrari F40 section gallery and studies](../../../examples/snot/ferrari-f40/README.md) provide a large sports-car precedent and five checked SNOT details. Study the complete silhouette, then inspect a small body mount, door rail, lamp corner, louver or fascia core. The full source retains overlap errors, and its saved callouts are separate constructions rather than declared children of the flattened car.
+The [Ferrari F40 section gallery and studies](../../../examples/ferrari-f40/README.md) provide a large sports-car precedent and five checked SNOT details. Study the complete silhouette, then inspect a small body mount, door rail, lamp corner, louver or fascia core. The full source retains overlap errors, and its saved callouts are separate constructions rather than declared children of the flattened car.
 
 The [submodel atlas](../../../examples/submodel-atlas/README.md) adds reviewed vehicle details from real sets, each with a guide and an inspection board: a studs-forward tiled leg shield (S01), rounded roof edges on brackets (S09), a sideways round drive cover (05), a grille built flat and stood on a pin mount (08), a sideways exhaust manifold (S02), an upside-down train belly (S15) and a Technic-mounted lamp cluster (04). Find them with `./ldraw-agent examples --family submodel --details vehicle`.
 
@@ -184,11 +184,11 @@ Inspect dedicated canopies and windscreens with their mating rims, printed instr
 
 Use [build pages](review-models.md) when layers or hidden interfaces are hard to read. The atlas includes manuals for an X-wing nacelle, an enclosed canopy cockpit, a UCS Y-wing armour panel and a Millennium Falcon service cluster. Its larger wing study includes source sections that can be expanded into manuals when needed.
 
-The [6208 B-Wing SNOT study](../../../examples/snot/b-wing-6208/README.md) supplies a complementary introduction with 22 inspected views and two exposed-core selections. It uses the supplied 6208 source, distinct from the atlas's 75050 B-Wing. Geometry and flexible-part verification are deferred for that learning study.
+The [6208 B-Wing SNOT study](../../../examples/b-wing-6208/README.md) supplies a complementary introduction with 22 inspected views and two exposed-core selections. It uses the supplied 6208 source, distinct from the atlas's 75050 B-Wing. Geometry and flexible-part verification are deferred for that learning study.
 
 The [submodel atlas](../../../examples/submodel-atlas/README.md) adds a shuttle OMS pod with a colour-coded SNOT core under a hinged shell (06), a cockpit pod on a revolute pivot with its axis marked (07), and two micro ships: wings stood on edge on clips (S16) and a hull built sideways along its length (S22). Find them with `./ldraw-agent examples --family submodel --details spaceship`.
 
-Halcyon's generator, exposed-core images, module views and visual review show the complete workflow. Read its [attachment map](../../../examples/snot/halcyon/README.md#3-module-topology) before adapting the local frames and panel mounts.
+Halcyon's generator, exposed-core images, module views and visual review show the complete workflow. Read its [attachment map](../../../examples/halcyon/README.md#3-module-topology) before adapting the local frames and panel mounts.
 
 ### Build surfaces in their own local grids
 

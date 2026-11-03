@@ -7,6 +7,9 @@ from ldraw_tools.manuals import current_manual, current_review
 
 
 def write_catalog(outdir, rows):
+    if Path(outdir).resolve() == Path(__file__).resolve().parent:
+        from ldraw_tools.knowledge import write_compat_catalog
+        return write_compat_catalog('technic', outdir)
     outdir = Path(outdir)
     entries = []
     for original in rows:

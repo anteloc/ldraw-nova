@@ -70,6 +70,8 @@ def artifacts(outdir, relative, name, plan, parts, *, renders=False, profile=Non
 
 def generate(outdir, *, renders=False, names=None, details=None):
     outdir = Path(outdir)
+    if outdir.resolve() == Path(__file__).resolve().parent:
+        raise ValueError('Legacy recipe generation requires a separate --outdir; use current package plans for maintained examples.')
     parts = get_parts()
     all_examples = names is None and details is None
     rows, detail_rows = [], []

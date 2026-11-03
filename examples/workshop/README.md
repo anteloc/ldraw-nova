@@ -6,10 +6,10 @@ routes. Read the [authoring guide](../../docs/agent/guides/build-model.md), copy
 
 | Starter | What it supplies |
 |---|---|
-| [Mounted frame](mounted-frame/model.plan.json) | The existing braced service platform and eight System deck mounts, with inline named structural intent. Its MPD geometry is unchanged. |
-| [Retained chain drive](chain-drive/model.plan.json) | Two bearings per shaft, gear spacers, axial stops, a keyed hand crank and a 24-link chain loop. |
-| [Pneumatic station](../flex/pneumatic-press/named.plan.json) | The existing mounted pump, valve and extended cylinder, three hoses, named nozzle endpoints and automatic mount checks. |
-| [Workshop machine](workshop/model.plan.json) | Two braced trestles, bonded workbench, hand-cranked conveyor, gantry-mounted pneumatic stop, controls, three hoses and a mounted control guard. |
+| [Mounted frame](../mounted-service-frame/model.plan.json) | The existing braced service platform and eight System deck mounts, with inline named structural intent. Its MPD geometry is unchanged. |
+| [Retained chain drive](../retained-chain-drive/model.plan.json) | Two bearings per shaft, gear spacers, axial stops, a keyed hand crank and a 24-link chain loop. |
+| [Pneumatic station](../pneumatic-press/named.plan.json) | The existing mounted pump, valve and extended cylinder, three hoses, named nozzle endpoints and automatic mount checks. |
+| [Workshop machine](../workshop-machine/model.plan.json) | Two braced trestles, bonded workbench, hand-cranked conveyor, gantry-mounted pneumatic stop, controls, three hoses and a mounted control guard. |
 
 ```sh
 .venv/bin/python examples/workshop/generate.py workshop --output output/machine.plan.json

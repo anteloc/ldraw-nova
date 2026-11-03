@@ -67,7 +67,8 @@ def test_named_roof_anchor_uses_body_plane(official):
 
 @pytest.mark.parametrize('key',list(atlas.DESIGNS))
 def test_each_building_is_reproducible_resolved_and_on_its_site_grid(official,key):
-    folder=ATLAS/key
+    from ldraw_tools.knowledge import resolve
+    folder=Path(resolve(key, family='building')['model']).parent
     generated=atlas.DESIGNS[key]['factory']().plan()
     saved=json.loads((folder/'scene.plan.json').read_text())
     assert generated==saved
@@ -93,7 +94,7 @@ def test_each_building_is_reproducible_resolved_and_on_its_site_grid(official,ke
 def test_catalog_covers_each_family_and_only_current_artifacts():
     manifest=json.loads((ATLAS/'catalog.json').read_text())
     assert {r['key'] for r in manifest['examples']}==set(atlas.DESIGNS)
-    assert len({r['category'] for r in manifest['examples']})==21
+    assert all(r['scope'] in {'construction', 'hold', 'archive'} for r in manifest['examples'])
     assert len(manifest['details'])>=18
     for row in manifest['examples']+manifest['details']:
         source=ATLAS/row['model'];sha=hashlib.sha256(source.read_bytes()).hexdigest()

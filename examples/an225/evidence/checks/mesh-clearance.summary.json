@@ -1,0 +1,103 @@
+{
+ "pairs_checked": 1256,
+ "pairs_with_crossings": 8,
+ "crossing_pairs": [
+  {
+   "parts": [
+    "3937.dat",
+    "3938.dat"
+   ],
+   "sections": [
+    "an225-cockpit.ldr",
+    "an225-visor.ldr"
+   ],
+   "crossing_edges": 88,
+   "max_penetration_ldu": 0.038
+  },
+  {
+   "parts": [
+    "44302a.dat",
+    "44301a.dat"
+   ],
+   "sections": [
+    "an225-hold.ldr",
+    "an225-ramp.ldr"
+   ],
+   "crossing_edges": 8,
+   "max_penetration_ldu": 0.432
+  },
+  {
+   "parts": [
+    "3937.dat",
+    "3938.dat"
+   ],
+   "sections": [
+    "an225-cockpit.ldr",
+    "an225-visor.ldr"
+   ],
+   "crossing_edges": 88,
+   "max_penetration_ldu": 0.038
+  },
+  {
+   "parts": [
+    "44302a.dat",
+    "44301a.dat"
+   ],
+   "sections": [
+    "an225-hold.ldr",
+    "an225-ramp.ldr"
+   ],
+   "crossing_edges": 8,
+   "max_penetration_ldu": 0.432
+  },
+  {
+   "parts": [
+    "3937.dat",
+    "3938.dat"
+   ],
+   "sections": [
+    "an225-cockpit.ldr",
+    "an225-visor.ldr"
+   ],
+   "crossing_edges": 88,
+   "max_penetration_ldu": 0.038
+  },
+  {
+   "parts": [
+    "44302a.dat",
+    "44301a.dat"
+   ],
+   "sections": [
+    "an225-hold.ldr",
+    "an225-ramp.ldr"
+   ],
+   "crossing_edges": 8,
+   "max_penetration_ldu": 0.432
+  },
+  {
+   "parts": [
+    "3937.dat",
+    "3938.dat"
+   ],
+   "sections": [
+    "an225-cockpit.ldr",
+    "an225-visor.ldr"
+   ],
+   "crossing_edges": 88,
+   "max_penetration_ldu": 0.038
+  },
+  {
+   "parts": [
+    "44302a.dat",
+    "44301a.dat"
+   ],
+   "sections": [
+    "an225-hold.ldr",
+    "an225-ramp.ldr"
+   ],
+   "crossing_edges": 8,
+   "max_penetration_ldu": 0.432
+  }
+ ],
+ "interpretation": "Only the hinge pairs cross. 3937/3938 at the chosen -70 deg: crossings lie on the hinge-pin cylinder (radius ~4 LDU) at <=0.038 LDU; across the 0..-90 deg sweep they stay <=0.076 LDU and vanish at 0, -45 and -90 deg where the polygon facets realign, i.e. faceted coincident cylinders turned against each other. 44301a/44302a at the 22.5 deg detent: 0.432 LDU, the same count and depth as the designed flat pose at 0 deg (checks/hinge-study.json). No other candidate pair interpenetrates."
+}

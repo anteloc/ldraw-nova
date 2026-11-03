@@ -58,7 +58,7 @@ Reproduce the main workflows from the repository root:
 .venv/bin/python -m pytest -q
 ./ldraw-agent technic plan box-chassis --output output/chassis.plan.json
 ./ldraw-agent review output/chassis.plan.json
-.venv/bin/python examples/flex/pneumatic-press/generate.py --automatic \
+.venv/bin/python examples/pneumatic-press/generate.py --automatic \
   --output output/press/press.plan.json --hoses output/press/hoses.ldr
 ./ldraw-agent review output/press/press.plan.json --contacts all
 ```

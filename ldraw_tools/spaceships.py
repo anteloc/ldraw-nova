@@ -5,6 +5,7 @@ Fictional propulsion is a design vocabulary, not an engineering simulation.
 from copy import deepcopy
 import json
 import os
+import re
 from pathlib import Path
 import shutil
 
@@ -15,7 +16,7 @@ from .manuals import export_manual
 
 def default_reference():
     """Compatibility accessor for the explicitly selected Halcyon study."""
-    folder = Path(resolve('halcyon', family='spaceship')['guide']).parent
+    folder = Path(resolve('halcyon', family='spaceship', root=ROOT)['guide']).parent
     return dict(key='halcyon', title='Halcyon SNOT interceptor', category='starfighter',
         use='design-reference', default=False, construction='SNOT',
         lesson='Build a supported core with sideways hull skins and axial engine modules in their own local frames; use smooth contours and thin wings.',
@@ -81,7 +82,7 @@ def design_brief(archetype):
 
 
 def export_spaceship(key, outdir, *, force=False):
-    row = require_exportable(resolve(key, family='spaceship'))
+    row = require_exportable(resolve(key, family='spaceship', root=ROOT))
     if row['id'] == 'halcyon':
         reference = default_reference()
         source = Path(reference['guide']).parent.resolve()
@@ -96,7 +97,14 @@ def export_spaceship(key, outdir, *, force=False):
                      'modules.png', 'skins.png', 'views.png']:
             shutil.copyfile(source/name, target/name)
         guide = target/'README.md'
-        guide.write_text(guide.read_text().replace('](../../../', ']('+os.path.relpath(ROOT, target)+'/'))
+        def link(match):
+            destination, separator, anchor = match[1].partition('#')
+            if not destination or re.match(r'\w+:|//', destination):
+                return match[0]
+            original = (source/destination).resolve()
+            resolved = target/original.relative_to(source) if original.is_relative_to(source) else original
+            return ']('+os.path.relpath(resolved, target)+(separator+anchor if separator else '')+')'
+        guide.write_text(re.sub(r'\]\(([^\s)]+)\)', link, guide.read_text()))
         return dict(output=str(target), title=reference['title'], scope='design-reference',
             plan=str(target/'halcyon.plan.json'), source=str(target/'halcyon.mpd'),
             next='Adapt the generator and plan to the new SNOT spacecraft; build and review the resulting model.')

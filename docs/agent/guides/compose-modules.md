@@ -13,8 +13,8 @@ Use `study FILE --detail full` for hierarchy, reachability, actual parts and sou
 3. **Scene:** validate the complete assembly, check cross-module duplicates/body overlaps, compare BOMs, and render home/top/front plus relevant rear/side views. Module checks alone cannot detect collisions introduced when composing modules.
 
 ```sh
-.venv/bin/python examples/modular-street/generate.py
-./ldraw-agent build examples/modular-street/scene.plan.json --output output/copper-lane.mpd \
+.venv/bin/python examples/copper-lane/generate.py
+./ldraw-agent build examples/copper-lane/scene.plan.json --output output/copper-lane.mpd \
   --detail summary --report output/copper-lane.build.json
 ./ldraw-agent inspect output/copper-lane.mpd --section lane-ground.ldr --colour 19 \
   --contacts all --detail summary --report output/ground-inspection.json

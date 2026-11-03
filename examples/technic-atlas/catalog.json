@@ -1,248 +1,506 @@
 {
-  "version": 1,
-  "scope": "technic-construction",
+  "version": 2,
+  "generated_from": "package README registrations",
+  "family": "technic",
   "examples": [
     {
-      "key": "workshop-machine",
-      "title": "Hand-cranked workshop conveyor with pneumatic stop",
-      "category": "Complete workshop starter",
-      "lesson": "Braced supports, retained shafts, a compatible chain loop, three mounted hoses and attached System bodywork.",
-      "model": "../workshop/workshop/review/model.mpd",
-      "plan": "../workshop/workshop/model.plan.json",
-      "guide": "../workshop/README.md",
-      "generator": "../workshop/generate.py",
-      "preview": "../workshop/workshop/review/previews/home.png",
-      "visual_review": "../workshop/workshop/visual-review.json",
-      "physical_placements": 160,
-      "source_sha256": "9528c6b36e4486279a0f04012312ed51e35839fa269c806f821ff10c31f0074a",
-      "checks_passed": true,
-      "physical_validity": "not_proven"
-    },
-    {
-      "key": "mounted-frame-named",
-      "title": "Braced frame with named System mounts",
-      "category": "Complete workshop starter",
-      "lesson": "A service platform with inline named joints and insertion order; original geometry preserved.",
-      "model": "../workshop/mounted-frame/review/model.mpd",
-      "plan": "../workshop/mounted-frame/model.plan.json",
-      "guide": "../workshop/README.md",
-      "generator": "../workshop/generate.py",
-      "preview": "../workshop/mounted-frame/review/previews/home.png",
-      "visual_review": "../workshop/mounted-frame/visual-review.json",
-      "physical_placements": 55,
-      "source_sha256": "1a4da42ba87b08fa4c04ee29ed43227a654037229f264e04a14814c1f4d6c3b2",
-      "checks_passed": true,
-      "physical_validity": "not_proven"
-    },
-    {
-      "key": "retained-chain-drive",
-      "title": "Supported retained shaft and chain drive",
-      "category": "Complete workshop starter",
-      "lesson": "Two supported retained shafts, hand crank and 24 individual links; named joints and inline wheel routing.",
-      "model": "../workshop/chain-drive/review/model.mpd",
-      "plan": "../workshop/chain-drive/model.plan.json",
-      "guide": "../workshop/README.md",
-      "generator": "../workshop/generate.py",
-      "preview": "../workshop/chain-drive/review/previews/home.png",
-      "visual_review": "../workshop/chain-drive/visual-review.json",
-      "physical_placements": 58,
-      "source_sha256": "7106f60b311aaf61e3673f5fd158ff2d2d55c5ef4d4782da1b936a1b27dd63ff",
-      "checks_passed": true,
-      "physical_validity": "not_proven"
-    },
-    {
-      "key": "reinforced-frame",
-      "title": "Reinforced mounting frame",
-      "category": "Technic structure",
-      "lesson": "Four crossmembers, each attached at two separated points, reinforce a moulded frame.",
-      "physical_placements": 13,
-      "model": "reinforced-frame/reinforced-frame.mpd",
-      "plan": "reinforced-frame/scene.plan.json",
-      "generator": "reinforced-frame/generate.py",
-      "guide": "reinforced-frame/GUIDE.md",
-      "structure_contract": "reinforced-frame/structure.json",
-      "source_sha256": "5adb4bec0c0bb444afe9ee8936e905b9bbc5f80eaebaf3cab2cb2143a646c31a",
-      "checks_passed": true,
-      "physical_validity": "not_proven",
-      "preview": "reinforced-frame/home.png",
-      "visual_review": "reinforced-frame/visual-review.json"
-    },
-    {
-      "key": "box-chassis",
+      "id": "box-chassis",
       "title": "Box chassis",
-      "category": "Technic structure",
-      "lesson": "Perpendicular frames and two long rails establish structure in three dimensions.",
-      "physical_placements": 18,
-      "model": "box-chassis/box-chassis.mpd",
-      "plan": "box-chassis/scene.plan.json",
-      "generator": "box-chassis/generate.py",
-      "guide": "box-chassis/GUIDE.md",
-      "structure_contract": "box-chassis/structure.json",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:box-chassis"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Compact box-frame/trestle lesson with paired long upper rails. Same role visible as the two workshop supports. Retain geometry/structural check scope and expose usable stud-ended mounts.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/structural-audit.json",
+      "subjects": [
+        "Technic structure"
+      ],
+      "model": "../box-chassis/box-chassis.mpd",
+      "plan": "../box-chassis/scene.plan.json",
+      "generator": "../box-chassis/generate.py",
+      "preview": "../box-chassis/home.png",
+      "visual_review": "../box-chassis/visual-review.json",
+      "model_sha256": "939934608f422cd4cab8aecb1232f392f33d39282eb51da04c2c3672e84fd708",
+      "audit_pointer": "/items/4",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/structural-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../box-chassis/README.md",
       "source_sha256": "939934608f422cd4cab8aecb1232f392f33d39282eb51da04c2c3672e84fd708",
-      "checks_passed": true,
-      "physical_validity": "not_proven",
-      "preview": "box-chassis/home.png",
-      "visual_review": "box-chassis/visual-review.json"
+      "key": "box-chassis",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "1967700352108036a5c870a42f66776efcb7a2a33d3bd5b2cc87293e437e5681",
+      "category": "Technic structure"
     },
     {
-      "key": "frame-tower",
-      "title": "Frame tower",
-      "category": "Technic structure",
-      "lesson": "Repeated box cells joined with overlapping beams and shared three-layer pins.",
-      "physical_placements": 36,
-      "model": "frame-tower/frame-tower.mpd",
-      "plan": "frame-tower/scene.plan.json",
-      "generator": "frame-tower/generate.py",
-      "guide": "frame-tower/GUIDE.md",
-      "structure_contract": "frame-tower/structure.json",
-      "source_sha256": "570e01297b7ed08d6379e7145d528bfb6b67481c856b8376f1793d40992be892",
-      "checks_passed": true,
-      "physical_validity": "not_proven",
-      "preview": "frame-tower/home.png",
-      "visual_review": "frame-tower/visual-review.json"
-    },
-    {
-      "key": "service-platform",
-      "title": "Service platform",
-      "category": "Technic structure",
-      "lesson": "A System equipment body and tiled deck mount on a Technic skeleton through eight stud-ended pins.",
-      "physical_placements": 55,
-      "model": "service-platform/service-platform.mpd",
-      "plan": "service-platform/scene.plan.json",
-      "generator": "service-platform/generate.py",
-      "guide": "service-platform/GUIDE.md",
-      "structure_contract": "service-platform/structure.json",
-      "source_sha256": "1a4da42ba87b08fa4c04ee29ed43227a654037229f264e04a14814c1f4d6c3b2",
-      "checks_passed": true,
-      "physical_validity": "not_proven",
-      "preview": "service-platform/home.png",
-      "visual_review": "service-platform/visual-review.json"
-    },
-    {
-      "key": "four-cylinder-bank",
-      "kind": "mechanism",
-      "title": "Four-cylinder crank engine bank",
-      "category": "Crank engines",
-      "lesson": "Repeat a compact piston/rod/crank construction while preserving cylinder guides, phase and the geared input.",
-      "model": "mechanisms/four-cylinder-bank/source.mpd",
-      "plan": "mechanisms/four-cylinder-bank/scene.plan.json",
-      "guide": "mechanisms/four-cylinder-bank/GUIDE.md",
-      "generator": "mechanisms/four-cylinder-bank/generate.py",
-      "manual": "mechanisms/four-cylinder-bank/index.html",
-      "operation": "mechanisms/four-cylinder-bank/operation.json",
-      "physical_placements": 34,
-      "source_sha256": "08be58bada85635d22bdf4480541a788ba5e420967c4967474694a1c9c743748",
-      "source_checks_passed": true,
-      "bom_matches": true,
-      "analytical_verification": "deferred",
-      "physical_validity": "not_proven",
-      "preview": "mechanisms/four-cylinder-bank/renders/home.png",
-      "visual_review_status": "pending"
-    },
-    {
-      "key": "cam-follower-engine",
-      "kind": "mechanism",
+      "id": "cam-follower-engine",
       "title": "Cam-driven inline-six followers",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:cam-follower-engine"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Root plus both child constructions together. Six axle followers sit above phased liftarm cams; one follower is raised. Label children guided-follower-block and camshaft-with-support-links, replacing generic piston-engine descriptions. Retained source geometry does not prove gravity return or full-cycle contact.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Cam followers"
+      ],
+      "model": "../cam-follower-engine/source.mpd",
+      "plan": "../cam-follower-engine/scene.plan.json",
+      "generator": "../cam-follower-engine/generate.py",
+      "preview": "../cam-follower-engine/renders/home.png",
+      "manual": "../cam-follower-engine/index.html",
+      "operation": "../cam-follower-engine/operation.json",
+      "model_sha256": "5d477bb908ccff1fd206a856d69d7e4884cbfe106a014f10d9fa43923ae96352",
+      "audit_pointer": "/items/6",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../cam-follower-engine/README.md",
+      "source_sha256": "5d477bb908ccff1fd206a856d69d7e4884cbfe106a014f10d9fa43923ae96352",
+      "key": "cam-follower-engine",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "8d23c2f26de1b38a2afa73856fd8dbd571ab24826b6b35d47c7d4ac95d753c5f",
       "category": "Cam followers",
-      "lesson": "Combine phased liftarm cams with a separate guided follower block and preserve the source rest offset.",
-      "model": "mechanisms/cam-follower-engine/source.mpd",
-      "plan": "mechanisms/cam-follower-engine/scene.plan.json",
-      "guide": "mechanisms/cam-follower-engine/GUIDE.md",
-      "generator": "mechanisms/cam-follower-engine/generate.py",
-      "manual": "mechanisms/cam-follower-engine/index.html",
-      "operation": "mechanisms/cam-follower-engine/operation.json",
-      "physical_placements": 55,
-      "source_sha256": "85ab5c80c58ce6c1b82db4c4fa2177d1bc3cab326f1cdac473b4b9b36e733b14",
       "source_checks_passed": true,
       "bom_matches": true,
-      "analytical_verification": "deferred",
-      "physical_validity": "not_proven",
-      "preview": "mechanisms/cam-follower-engine/renders/home.png",
       "visual_review_status": "pending"
     },
     {
-      "key": "double-cardan-shaft",
-      "kind": "mechanism",
+      "id": "double-cardan-shaft",
       "title": "Paired Cardan drive shaft",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:double-cardan-shaft"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Unsupported paired-joint shaft study, not ready-to-mount drive module. Seven-piece extract shows two universal joints and intermediate axle but no bearings, adjoining axles or retention. Preserve phase and measured positioning frame; add supports during adaptation.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Universal joints"
+      ],
+      "model": "../double-cardan-shaft/source.mpd",
+      "plan": "../double-cardan-shaft/scene.plan.json",
+      "generator": "../double-cardan-shaft/generate.py",
+      "preview": "../double-cardan-shaft/renders/home.png",
+      "manual": "../double-cardan-shaft/index.html",
+      "operation": "../double-cardan-shaft/operation.json",
+      "model_sha256": "5f7179de8e9f042fccee1f18fa780efc45b649e8a80e13ca2db39732ac230be3",
+      "audit_pointer": "/items/7",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../double-cardan-shaft/README.md",
+      "source_sha256": "5f7179de8e9f042fccee1f18fa780efc45b649e8a80e13ca2db39732ac230be3",
+      "key": "double-cardan-shaft",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "bbc880c6d1adac630178bbd7b9e77bb2316e73ff4dd8c6952ef17c1270e7a92b",
       "category": "Universal joints",
-      "lesson": "Route an offset drive through two yokes-and-crosses joints while retaining the intermediate fork phase.",
-      "model": "mechanisms/double-cardan-shaft/source.mpd",
-      "plan": "mechanisms/double-cardan-shaft/scene.plan.json",
-      "guide": "mechanisms/double-cardan-shaft/GUIDE.md",
-      "generator": "mechanisms/double-cardan-shaft/generate.py",
-      "manual": "mechanisms/double-cardan-shaft/index.html",
-      "operation": "mechanisms/double-cardan-shaft/operation.json",
-      "physical_placements": 7,
-      "source_sha256": "64923a35383837e8748e94878b7aae70806688ed9ecd8edaa9198df08aee8d96",
       "source_checks_passed": true,
       "bom_matches": true,
-      "analytical_verification": "deferred",
-      "physical_validity": "not_proven",
-      "preview": "mechanisms/double-cardan-shaft/renders/home.png",
       "visual_review_status": "pending"
     },
     {
-      "key": "four-speed-gearbox",
-      "kind": "mechanism",
-      "title": "Four-speed driving-ring gearbox",
-      "category": "Selectable transmissions",
-      "lesson": "Study constant-mesh gear trains, two alternating driving rings and the separate rotary selector.",
-      "model": "mechanisms/four-speed-gearbox/source.mpd",
-      "plan": "mechanisms/four-speed-gearbox/scene.plan.json",
-      "guide": "mechanisms/four-speed-gearbox/GUIDE.md",
-      "generator": "mechanisms/four-speed-gearbox/generate.py",
-      "manual": "mechanisms/four-speed-gearbox/index.html",
-      "operation": "mechanisms/four-speed-gearbox/operation.json",
-      "physical_placements": 66,
-      "source_sha256": "e5fdf0c10388c3e66bdeb70851b7ab412dd7f1c02ee702cb878f0547fbd7a93b",
-      "source_checks_passed": true,
-      "bom_matches": true,
-      "analytical_verification": "deferred",
-      "physical_validity": "not_proven",
-      "preview": "mechanisms/four-speed-gearbox/renders/home.png",
-      "visual_review_status": "pending"
-    },
-    {
-      "key": "four-bar-lift",
-      "kind": "mechanism",
+      "id": "four-bar-lift",
       "title": "Orientation-preserving four-bar lift",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:four-bar-lift"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Partial wing-lift linkage study. Broad wing panel, paired uprights, links and partial surrounding frame are visible. Guide assumes fixed upper pivot and omits full actuator. Do not retrieve as a self-supporting service lift.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Four-bar linkages"
+      ],
+      "model": "../four-bar-lift/source.mpd",
+      "plan": "../four-bar-lift/scene.plan.json",
+      "generator": "../four-bar-lift/generate.py",
+      "preview": "../four-bar-lift/renders/home.png",
+      "manual": "../four-bar-lift/index.html",
+      "operation": "../four-bar-lift/operation.json",
+      "model_sha256": "568abd3bfc638b489e9cc1ff827aa6e25c2f6826dad91751306916eb770910de",
+      "audit_pointer": "/items/8",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../four-bar-lift/README.md",
+      "source_sha256": "568abd3bfc638b489e9cc1ff827aa6e25c2f6826dad91751306916eb770910de",
+      "key": "four-bar-lift",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "c284e2574b8b1e26f3a91fcb64a39b24619fb6d020d04968f6c03843e03beae2",
       "category": "Four-bar linkages",
-      "lesson": "Use equal cranks and matched pivot spacing to lift a panel while retaining its orientation.",
-      "model": "mechanisms/four-bar-lift/source.mpd",
-      "plan": "mechanisms/four-bar-lift/scene.plan.json",
-      "guide": "mechanisms/four-bar-lift/GUIDE.md",
-      "generator": "mechanisms/four-bar-lift/generate.py",
-      "manual": "mechanisms/four-bar-lift/index.html",
-      "operation": "mechanisms/four-bar-lift/operation.json",
-      "physical_placements": 119,
-      "source_sha256": "e978e97ddb0fb19aa67856b09879abebea8e39f5c97b391649bbae905530c686",
       "source_checks_passed": true,
       "bom_matches": true,
-      "analytical_verification": "deferred",
-      "physical_validity": "not_proven",
-      "preview": "mechanisms/four-bar-lift/renders/home.png",
       "visual_review_status": "pending"
     },
     {
-      "key": "independent-suspension",
-      "kind": "mechanism",
-      "title": "Independent wishbone suspension",
-      "category": "Suspension",
-      "lesson": "Study four wheel corners, parallel wishbones, guide links, matching half-shafts and paired shocks with their mounting frame.",
-      "model": "mechanisms/independent-suspension/source.mpd",
-      "plan": "mechanisms/independent-suspension/scene.plan.json",
-      "guide": "mechanisms/independent-suspension/GUIDE.md",
-      "generator": "mechanisms/independent-suspension/generate.py",
-      "manual": "mechanisms/independent-suspension/index.html",
-      "operation": "mechanisms/independent-suspension/operation.json",
-      "physical_placements": 259,
-      "source_sha256": "30c62143630438e51b3a6bfa83b78fffc4f8fe06b6b6898b3904944d5f33fc16",
+      "id": "four-cylinder-bank",
+      "title": "Four-cylinder crank engine bank",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:four-cylinder-bank"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Four-cylinder core with alternating piston heights, shared crankshaft and end drive gear. No freestanding support frame. Parent central drive and other banks are required for the source engine role.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Crank engines"
+      ],
+      "model": "../four-cylinder-bank/source.mpd",
+      "plan": "../four-cylinder-bank/scene.plan.json",
+      "generator": "../four-cylinder-bank/generate.py",
+      "preview": "../four-cylinder-bank/renders/home.png",
+      "manual": "../four-cylinder-bank/index.html",
+      "operation": "../four-cylinder-bank/operation.json",
+      "model_sha256": "bc9ba43d82f4a75d8eb1e8fb34a744581a4c5943985812bc6bb04116207e8f1c",
+      "audit_pointer": "/items/9",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../four-cylinder-bank/README.md",
+      "source_sha256": "bc9ba43d82f4a75d8eb1e8fb34a744581a4c5943985812bc6bb04116207e8f1c",
+      "key": "four-cylinder-bank",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "758b7be7818bc3b77ff807290b39e7879ad81284957d046bcc94b66643098d78",
+      "category": "Crank engines",
       "source_checks_passed": true,
       "bom_matches": true,
-      "analytical_verification": "deferred",
-      "physical_validity": "not_proven",
-      "preview": "mechanisms/independent-suspension/renders/home.png",
       "visual_review_status": "pending"
+    },
+    {
+      "id": "four-speed-gearbox",
+      "title": "Four-speed driving-ring gearbox",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:four-speed-gearbox"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Four-speed transmission core plus auxiliary shaft/support child. Driving rings, selector elements and compact gear trains are visible; the child forms one side of its support/shaft arrangement. External selector controls and surrounding driveline are omitted. No ratio or full-cycle validation added.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Selectable transmissions"
+      ],
+      "model": "../four-speed-gearbox/source.mpd",
+      "plan": "../four-speed-gearbox/scene.plan.json",
+      "generator": "../four-speed-gearbox/generate.py",
+      "preview": "../four-speed-gearbox/renders/home.png",
+      "manual": "../four-speed-gearbox/index.html",
+      "operation": "../four-speed-gearbox/operation.json",
+      "model_sha256": "f5f21613f9f6805a99fbd16e1e6f931066f8bfcbd629179d6c0366ea8701ad0a",
+      "audit_pointer": "/items/10",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../four-speed-gearbox/README.md",
+      "source_sha256": "f5f21613f9f6805a99fbd16e1e6f931066f8bfcbd629179d6c0366ea8701ad0a",
+      "key": "four-speed-gearbox",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "19595efcd3bf6bb0f77ef70825bb7688ba420ce6e73a54ab65f40fe1587aa109",
+      "category": "Selectable transmissions",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "frame-tower",
+      "title": "Frame tower",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:frame-tower"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Stacked frame tower: rectangular rings, opposed vertical frames and side connectors clearly express repeated bracing. No load rating.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/structural-audit.json",
+      "subjects": [
+        "Technic structure"
+      ],
+      "model": "../frame-tower/frame-tower.mpd",
+      "plan": "../frame-tower/scene.plan.json",
+      "generator": "../frame-tower/generate.py",
+      "preview": "../frame-tower/home.png",
+      "visual_review": "../frame-tower/visual-review.json",
+      "model_sha256": "570e01297b7ed08d6379e7145d528bfb6b67481c856b8376f1793d40992be892",
+      "audit_pointer": "/items/5",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/structural-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../frame-tower/README.md",
+      "source_sha256": "570e01297b7ed08d6379e7145d528bfb6b67481c856b8376f1793d40992be892",
+      "key": "frame-tower",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "71281d13f8d44e8869e8f05c66617be7b4c25ecc792d637c10873ab52a9ca9ff",
+      "category": "Technic structure"
+    },
+    {
+      "id": "mounted-service-frame",
+      "title": "Braced frame with named System mounts",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:mounted-frame-named",
+        "technic:service-platform"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Named-plan version as canonical service-platform starter. Technic box frame, System deck, trim and upper cover match original service-platform geometry; consolidate duplicate catalog entry.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/structural-audit.json",
+      "subjects": [
+        "Complete workshop starter"
+      ],
+      "model": "../mounted-service-frame/review/model.mpd",
+      "plan": "../mounted-service-frame/model.plan.json",
+      "generator": "../workshop/generate.py",
+      "preview": "../mounted-service-frame/review/previews/home.png",
+      "visual_review": "../mounted-service-frame/visual-review.json",
+      "model_sha256": "1a4da42ba87b08fa4c04ee29ed43227a654037229f264e04a14814c1f4d6c3b2",
+      "audit_pointer": "/items/1",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/structural-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../mounted-service-frame/README.md",
+      "source_sha256": "1a4da42ba87b08fa4c04ee29ed43227a654037229f264e04a14814c1f4d6c3b2",
+      "key": "mounted-frame-named",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "a73aae90e1d27a72053900f321471c70a1cb8e08a179454bec3e8f6561ecf4b8",
+      "category": "Complete workshop starter",
+      "checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "paired-suspension-axles",
+      "title": "Independent wishbone suspension",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:independent-suspension"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Paired front/rear suspension studies requiring integration. Whole view visibly contains two separated axle assemblies, four wheel corners, wishbones and shocks; it is not a connected chassis. Explicitly state missing central chassis, guide-link holders and Cardan boundary supports in retrieval excerpt.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Suspension"
+      ],
+      "model": "../paired-suspension-axles/source.mpd",
+      "plan": "../paired-suspension-axles/scene.plan.json",
+      "generator": "../paired-suspension-axles/generate.py",
+      "preview": "../paired-suspension-axles/renders/home.png",
+      "manual": "../paired-suspension-axles/index.html",
+      "operation": "../paired-suspension-axles/operation.json",
+      "model_sha256": "147794920518be966b7ec0efb96d02c4085ec906754a37f7c0630f42ec22b8ac",
+      "audit_pointer": "/items/11",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../paired-suspension-axles/README.md",
+      "source_sha256": "147794920518be966b7ec0efb96d02c4085ec906754a37f7c0630f42ec22b8ac",
+      "key": "independent-suspension",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "f3f3a64420450bed8b5bfacc09e42eeb8c471575fc44da045bdbe50ec0c38324",
+      "category": "Suspension",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "reinforced-frame",
+      "title": "Reinforced mounting frame",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:reinforced-frame"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Small pin-and-frame lesson: four yellow crossmembers span moulded frame with two-point attachment. Home and underside agree with description. No load-capacity claim.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/structural-audit.json",
+      "subjects": [
+        "Technic structure"
+      ],
+      "model": "../reinforced-frame/reinforced-frame.mpd",
+      "plan": "../reinforced-frame/scene.plan.json",
+      "generator": "../reinforced-frame/generate.py",
+      "preview": "../reinforced-frame/home.png",
+      "visual_review": "../reinforced-frame/visual-review.json",
+      "model_sha256": "5adb4bec0c0bb444afe9ee8936e905b9bbc5f80eaebaf3cab2cb2143a646c31a",
+      "audit_pointer": "/items/3",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/structural-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../reinforced-frame/README.md",
+      "source_sha256": "5adb4bec0c0bb444afe9ee8936e905b9bbc5f80eaebaf3cab2cb2143a646c31a",
+      "key": "reinforced-frame",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "8fba5ff87737ca31a165fe328e8bcf61358e8b9d09bf4247912cc5efb29cc4c6",
+      "category": "Technic structure"
+    },
+    {
+      "id": "retained-chain-drive",
+      "title": "Supported retained shaft and chain drive",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:retained-chain-drive"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Supported static chain-loop starter: side rails and bearing caps, shaft spacers/stops, hand crank and complete synthesized loop are visible. Preserve wheel spacing and mounting grid. No running tension, wear or cargo-transport test.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/structural-audit.json",
+      "subjects": [
+        "Complete workshop starter"
+      ],
+      "model": "../retained-chain-drive/review/model.mpd",
+      "plan": "../retained-chain-drive/model.plan.json",
+      "generator": "../workshop/generate.py",
+      "preview": "../retained-chain-drive/review/previews/home.png",
+      "visual_review": "../retained-chain-drive/visual-review.json",
+      "model_sha256": "7106f60b311aaf61e3673f5fd158ff2d2d55c5ef4d4782da1b936a1b27dd63ff",
+      "audit_pointer": "/items/2",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/structural-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../retained-chain-drive/README.md",
+      "source_sha256": "7106f60b311aaf61e3673f5fd158ff2d2d55c5ef4d4782da1b936a1b27dd63ff",
+      "key": "retained-chain-drive",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "8101e11b0184d88eb3db2b56b3ef5ca5e6f85d5c3c4fb33c52168be0507ee290",
+      "category": "Complete workshop starter",
+      "checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "workshop-machine",
+      "title": "Hand-cranked workshop conveyor with pneumatic stop",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "technic:workshop-machine"
+      ],
+      "families": [
+        "technic"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Complete static integration starter. Two box trestles support bonded workbench; retained hand-cranked chain module sits under portal-mounted extended cylinder; separate pump/valve pads and three fitted hoses are visible. All ten children/routes reviewed alone and in parent, including chain inside its bearing frame. Calling it a conveyor describes intent; cargo transport, actuator travel and hose slack across travel remain untested.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/structural-audit.json",
+      "subjects": [
+        "Complete workshop starter"
+      ],
+      "model": "../workshop-machine/review/model.mpd",
+      "plan": "../workshop-machine/model.plan.json",
+      "generator": "../workshop/generate.py",
+      "preview": "../workshop-machine/review/previews/home.png",
+      "visual_review": "../workshop-machine/visual-review.json",
+      "model_sha256": "9528c6b36e4486279a0f04012312ed51e35839fa269c806f821ff10c31f0074a",
+      "audit_pointer": "/items/0",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/structural-findings.md",
+      "techniques": [
+        "technic"
+      ],
+      "guide": "../workshop-machine/README.md",
+      "source_sha256": "9528c6b36e4486279a0f04012312ed51e35839fa269c806f821ff10c31f0074a",
+      "key": "workshop-machine",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "38c17aa9f09f7f75da198926c42dffc4e19587ffcc10c36deda3812218480e2c",
+      "category": "Complete workshop starter",
+      "checks_passed": true,
+      "bom_matches": true
     }
   ],
   "details": []

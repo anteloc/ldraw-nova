@@ -1,0 +1,582 @@
+{
+  "id": "an225",
+  "source": "output/an225-mriya/an225-mriya.mpd",
+  "source_sha256": "a454e81b53c115d874fc5d4dadd6a378564cee5f623111416f7f142f77b20c7a",
+  "sections": [
+    {
+      "name": "an225-mriya.ldr",
+      "kind": "model",
+      "first_line": 2,
+      "placements": 23,
+      "steps": 4,
+      "empty_leading_steps": 0,
+      "parents": [],
+      "render_directory": "output/kb-visual-audit/next-native/an225-00",
+      "visual_observation": "Recognizable long six-engine high-wing cargo aircraft with twin-fin tail and raised nose/loading ramp. Retain as scoped System airframe and loading-pose study; stepped nose/belly and flat wing remain explicit simplifications.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-00/manifest.json",
+        "manifest_sha256": "1aa178aad92ae35591c48a547818eab69827e751f1439fb8a566e63c9f08a122",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-00/panels/01-an225-mriya-ldr-isolated.png",
+            "sha256": "8d58fb2cbc807efb5bb44c7641a2c7bffe700fe9087715115a8656a7aed8959a"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-00/panels/01-an225-mriya-ldr-isolated.png",
+          "sha256": "8d58fb2cbc807efb5bb44c7641a2c7bffe700fe9087715115a8656a7aed8959a"
+        }
+      }
+    },
+    {
+      "name": "an225-keel.ldr",
+      "kind": "model",
+      "first_line": 57,
+      "placements": 106,
+      "steps": 3,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-01",
+      "visual_observation": "Long layered plate keel with widened centre and gear mounting strips. Parent locates it beneath fuselage; visual bonding is not a strength rating.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-01/manifest.json",
+        "manifest_sha256": "d1d910f69bd652f89ac352528cd168e557c45bc82a0e897cde8c7026180d1cae",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-01/panels/01-an225-keel-ldr-isolated.png",
+            "sha256": "0dcf6f2bcc3c5528da1e4b3e38a86b09e624e23af2557d17fb9d2095ae51cf25"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-01/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "4242a7e6fffb77557052f8dc86667669acd523a4b2262301eff25145a4b267f0"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-01/mosaic.png",
+          "sha256": "490043b0a255de8ee0b5722f3e111f55bb5814c41bb9fa455c764277f9041343"
+        }
+      }
+    },
+    {
+      "name": "an225-fuselage.ldr",
+      "kind": "model",
+      "first_line": 277,
+      "placements": 277,
+      "steps": 6,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-02",
+      "visual_observation": "Long hollow-sided fuselage shell with curved roof edges, blue/yellow stripe and open forward loading end; wing and tail mounting areas interrupt the roof finish.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-02/manifest.json",
+        "manifest_sha256": "6a51b0d670e57ed3ecefeb9fad5f314d07c80fe97613e8c54e872bb5f74d7785",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-02/panels/01-an225-fuselage-ldr-isolated.png",
+            "sha256": "0d96c05362be5273bcdd8231e2fbd5aa0794a70abd36291bac02036e8f23e48b"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-02/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "222382e33321f8a4d6505051795e5f82ae5fe48353e894e7455d33f04c47607b"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-02/mosaic.png",
+          "sha256": "bda1fb9db5f650009fd7d0731e57fa3db01f556d31a33dde81da0c77c86c3f5d"
+        }
+      }
+    },
+    {
+      "name": "an225-sponsons.ldr",
+      "kind": "model",
+      "first_line": 842,
+      "placements": 54,
+      "steps": 1,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-03",
+      "visual_observation": "Two separate long rounded-top side fairings around main gear. Logical pair in one section, not one independently connected module.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-03/manifest.json",
+        "manifest_sha256": "801da16f1bceda5e2fb915bb5b54bf21224b7c9c529ce419957e062f0663e9ce",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-03/panels/01-an225-sponsons-ldr-isolated.png",
+            "sha256": "e9af8cf00954d71ad3a4a94e9b8d1ed5c96256f358f3067dbd263dd029c146f5"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-03/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "18e74e5c2055b5fb024f4687233befe62b8ba8d6a2633bdc71f39ae12ac3f385"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-03/mosaic.png",
+          "sha256": "dcfc189ffdab5de927eef6f2bbd8e97714a2fe1dda7fcb2124cf80af44423aa3"
+        }
+      }
+    },
+    {
+      "name": "an225-aft.ldr",
+      "kind": "model",
+      "first_line": 956,
+      "placements": 85,
+      "steps": 3,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-04",
+      "visual_observation": "Stepped curved belly pieces and blunt tail closure, located beneath aft fuselage. Section is an incremental shell group, not a complete standalone rear fuselage.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-04/manifest.json",
+        "manifest_sha256": "e4ac265e928eb2aa01224164690bedfc357e0c87d5cf96aa120b090bfc0b06ba",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-04/panels/01-an225-aft-ldr-isolated.png",
+            "sha256": "f6cbeb15ea3aa187e5283dba9065fd3d255ab954b2cf41558540146031c44a80"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-04/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "e11d41fa61d2b1d7c2de13e2b0413f20b9e9bcad23ba7568df20ed0879dcf454"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-04/mosaic.png",
+          "sha256": "2c705079dc10c64b9892476b5d0355a8d6eb0fa315a9184fff9546bf1c132a8d"
+        }
+      }
+    },
+    {
+      "name": "an225-cockpit.ldr",
+      "kind": "model",
+      "first_line": 1134,
+      "placements": 15,
+      "steps": 3,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-05",
+      "visual_observation": "Upper front glazing, roof strip and visor hinge bases. No seats, controls or complete cockpit interior; describe as glazing and hinge support.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-05/manifest.json",
+        "manifest_sha256": "63210ee7c87461c928808179ece3a42bbb68a5b5bcb3c09f00e2b379eb00b06a",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-05/panels/01-an225-cockpit-ldr-isolated.png",
+            "sha256": "d2444f6f2f857ee74188e11854ccd8f8057732b4a17e330705f217f122429a00"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-05/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "56ff28e12ade2ad2c73dd2ff89c844cd0083cfede59e1a84f761bc4163631c26"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-05/mosaic.png",
+          "sha256": "70e951366e0b4b365227eb31f142b2ee390031c4095f1df6f1d40fb606d6adcc"
+        }
+      }
+    },
+    {
+      "name": "an225-hold.ldr",
+      "kind": "model",
+      "first_line": 1172,
+      "placements": 20,
+      "steps": 2,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-06",
+      "visual_observation": "Tiled floor strip, yellow threshold and ramp hinge bases. Describe as hold floor/threshold trim; enclosing walls belong to fuselage.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-06/manifest.json",
+        "manifest_sha256": "f6ffa7009e6d3c3c6bde703a57dc3e9f9221148f594f9e9b18ff3d2cd52719f5",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-06/panels/01-an225-hold-ldr-isolated.png",
+            "sha256": "9bfb418a44516d0ce8ca816df3a1d448431ecca8e20c999f8e716f11364a8e49"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-06/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "4b48e069980023198e684448cd644ef2e30ff6c916729cfc0a6cb133f3ed8711"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-06/mosaic.png",
+          "sha256": "be655599970fb1730715b7f2eab6f1c019b6cf6ce4932aa19772cd2e52db77b9"
+        }
+      }
+    },
+    {
+      "name": "an225-container-orange.ldr",
+      "kind": "model",
+      "first_line": 1219,
+      "placements": 11,
+      "steps": 1,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-07",
+      "visual_observation": "Solid orange brick cargo placeholder inside forward hold, not a hollow container with opening doors.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-07/manifest.json",
+        "manifest_sha256": "af375d4f9e76e34264b36e713642edf486341153065bdc2d5ea2fd1f51952de5",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-07/panels/01-an225-container-orange-ldr-isolated.png",
+            "sha256": "dc4ded0ceab8b8b5a130d9291125a24ce2e43333366e44f9424a3febb962176f"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-07/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "0c09f03890626771c3c48e3fe072b2695677f069ca27ce0ee1fb8b21356122a3"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-07/mosaic.png",
+          "sha256": "89f508ec6a91a6365df8d721d4b8379d07fa964e4ac3b1281a2243a2daf2ab93"
+        }
+      }
+    },
+    {
+      "name": "an225-container-green.ldr",
+      "kind": "model",
+      "first_line": 1247,
+      "placements": 11,
+      "steps": 1,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-08",
+      "visual_observation": "Solid sand-green brick cargo placeholder farther aft in hold; same lesson as orange variant, no second search result.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-08/manifest.json",
+        "manifest_sha256": "93bd39c49203b9300524c792cb7ebded8b286755d8497a3e42832e31188a463c",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-08/panels/01-an225-container-green-ldr-isolated.png",
+            "sha256": "eadf3e8cc98a1aea80c066d6f4440f93d003605ca65ab3495d56c600a4ab85c8"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-08/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "cf0429fac12aafb01037edc5673ff7e932478845b7e5b0f36f268306f404cc43"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-08/mosaic.png",
+          "sha256": "51edc901671090be43e35655e943325534b8295365703b20a0857a12815b1361"
+        }
+      }
+    },
+    {
+      "name": "an225-main-gear.ldr",
+      "kind": "model",
+      "first_line": 1275,
+      "placements": 11,
+      "steps": 2,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-09",
+      "visual_observation": "Seven classic two-wheel axles joined by a longitudinal top beam; two mirrored-position parent instances make main landing gear. No retraction or steering demonstrated.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-09/manifest.json",
+        "manifest_sha256": "d84508175a1dc37b605bcd870142d85a7e653039693ea4a13127eb8093a89034",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-09/panels/01-an225-main-gear-ldr-isolated.png",
+            "sha256": "54c9a6fcfa146be703068bafd317735ee801dca2e480c21344b99e5f33f57c1f"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-09/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "ddf50c90cd7cce6df7b9c8d1e1247da831c9cc1d822b975d19d25812562248d0"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-09/mosaic.png",
+          "sha256": "eadd0b3eab14a8a635e2850d8d0f8b32e534e187978dcaad972390b62c4e8871"
+        }
+      }
+    },
+    {
+      "name": "axle-classic.ldr",
+      "kind": "model",
+      "first_line": 1304,
+      "placements": 5,
+      "steps": 1,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-main-gear.ldr",
+        "an225-nose-leg.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-10",
+      "visual_observation": "Classic System wheel holder, two rims and tyres; repeated seven times in main bogie and once per nose-leg section. Both actual immediate parents reviewed.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-10/manifest.json",
+        "manifest_sha256": "55c8413ec7feed83c7a331864f62a658e4032a45f56c403bf72988c84ede1f2f",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-10/panels/01-axle-classic-ldr-isolated.png",
+            "sha256": "e156c0c940517a8fb2bf715f629b815516c5af1d8872267dc771275cd0ddbd3a"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-10/panels/02-in-an225-main-gear-ldr.png",
+            "sha256": "ff37cd6189a0f647b82c8fdc744f7bd68a14f2ef87f9b00f6cd2d602560f3cea"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-10/panels/03-in-an225-nose-leg-ldr.png",
+            "sha256": "2e79b8515cfd33e58b2c557a70123a4ad514e326ce02511010a9852e0bb385eb"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-10/mosaic.png",
+          "sha256": "f31034eeac40e502f38add351881839ddb9405a49590543f6495213b1010c72f"
+        }
+      }
+    },
+    {
+      "name": "an225-nose-leg.ldr",
+      "kind": "model",
+      "first_line": 1320,
+      "placements": 3,
+      "steps": 1,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-11",
+      "visual_observation": "Single two-wheel axle with stacked upper mounting plates, used twice beneath forward fuselage. Not a complete road vehicle or kneeling mechanism.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-11/manifest.json",
+        "manifest_sha256": "42505a3b1cbb54f6f5f3f386531bfc8339e28deab390c4a9bceddb9eeb3473e4",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-11/panels/01-an225-nose-leg-ldr-isolated.png",
+            "sha256": "892d0d00cfcffe36ae6cbb6fe8805a05e73a50f2e689a007629661641a226969"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-11/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "4287b3bc6582e27943d6ffce2734ee69eebee42489c84019ebba09d50f0c9f3f"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-11/mosaic.png",
+          "sha256": "d33773369dc6339b864de5a76089a03822c9cd3eb24a62fada87509bf519b3c0"
+        }
+      }
+    },
+    {
+      "name": "an225-wing.ldr",
+      "kind": "model",
+      "first_line": 1332,
+      "placements": 144,
+      "steps": 3,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-12",
+      "visual_observation": "One complete swept, flat plate-built wing spanning both sides, with tiled central fields and studded wedge margins. No anhedral or load test.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-12/manifest.json",
+        "manifest_sha256": "afbcaa9eddea397e3dd0882a440ac353cd675df39b7aded595b0f44c6961c531",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-12/panels/01-an225-wing-ldr-isolated.png",
+            "sha256": "9c6641f3b1a4c27a8dc7cb1b69f2154e4edcc84c4cb05511c97e13a8f5148dbc"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-12/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "be335fa00d0265db3e2df6de6377747da209ceae61fe326b8ebc88b031099b5c"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-12/mosaic.png",
+          "sha256": "e9a9caf24a5dde94a5f63642048cd462a5de3b4512a294752277e439d09d0c6d"
+        }
+      }
+    },
+    {
+      "name": "an225-engine.ldr",
+      "kind": "model",
+      "first_line": 1628,
+      "placements": 3,
+      "steps": 1,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-13",
+      "visual_observation": "Purpose-made jet nacelle with plate pylon and tile, repeated six times below wing. Composition lesson, not a brick-built engine mechanism.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-13/manifest.json",
+        "manifest_sha256": "fecc5d633bfffa94011da68fb05fafe373bfcc091ee7fc61fc4983dd0b35a4ce",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-13/panels/01-an225-engine-ldr-isolated.png",
+            "sha256": "69783f0abf63d3a5dd278c084d1fdaacd1343f4a73f98c48414699b4aefb1c98"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-13/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "5b64ce4aff30dcea4f3601528498d2840279b2dece3ef032e69dfde222fb402d"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-13/mosaic.png",
+          "sha256": "53210fe729675064c4b5618e33ac4a0f030cadeb51a986ae15799393fcce32c4"
+        }
+      }
+    },
+    {
+      "name": "an225-tail.ldr",
+      "kind": "model",
+      "first_line": 1640,
+      "placements": 56,
+      "steps": 3,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-14",
+      "visual_observation": "Complete horizontal stabiliser and paired purpose-made vertical fins, with blue/yellow caps. No separate moving rudders/elevators shown.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-14/manifest.json",
+        "manifest_sha256": "e9ae4e7c152369ed0dbd869458f6731e6c3aeee5b821dbbfe77b450fd982d80e",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-14/panels/01-an225-tail-ldr-isolated.png",
+            "sha256": "f33aa6992b8dc9e1e62864a4e953655e7f0d2bb30a4db7550cd7e0716738f768"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-14/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "888a0280536c3b972db35ca416d919cb795905c0382070fa2a13a57dc6baeded"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-14/mosaic.png",
+          "sha256": "3eab3f60efffb4a847f390d7bef625e69e8dfcfa9fb6da766c8792e3d2ccffe9"
+        }
+      }
+    },
+    {
+      "name": "an225-details.ldr",
+      "kind": "model",
+      "first_line": 1760,
+      "placements": 4,
+      "steps": 1,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-15",
+      "visual_observation": "Four separated round mounting posts on dorsal fuselage; logical detail group for Buran mounting motif, not a connected assembly or supplied payload.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-15/manifest.json",
+        "manifest_sha256": "e8c47390c3871b68782cfc4ed70c7e7e517342e41b7dfb71181dbe5ea876203b",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-15/panels/01-an225-details-ldr-isolated.png",
+            "sha256": "1a6aa0dfd0c947f2714e8ff61d4ab5e90a7508d45f7c7fe133abe65bd34827f4"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-15/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "2cf5afe0a82a91a58a5db89dbcb09941a9b6f76997d31db997dd696c832423a5"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-15/mosaic.png",
+          "sha256": "cd441b39f82aafe230ae64d2575abbb4321eeadc2c9157ba8e288ad0e79efbc3"
+        }
+      }
+    },
+    {
+      "name": "an225-visor.ldr",
+      "kind": "model",
+      "first_line": 1774,
+      "placements": 103,
+      "steps": 10,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-16",
+      "visual_observation": "Stepped layered brick nose shell, placed raised ahead of cockpit. Preserve actual hinge orientation and static pose; do not claim tested opening travel or friction.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-16/manifest.json",
+        "manifest_sha256": "499824cc883f092130d6fc04fca48d3394b276560022ffc87fa93dd5b0d13f1d",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-16/panels/01-an225-visor-ldr-isolated.png",
+            "sha256": "3dff29c77c64d623abb5b8f5915b28b78a024efc20a276722d4c51b12e30102a"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-16/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "3058de94bca0dd9a26f3c10810000993ef688f9d088a38a5e411a10dc6b7acc4"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-16/mosaic.png",
+          "sha256": "7a54c9e6adc631bab2fc16cc8124565d0be02786c87f46f2a58433585ebc3201"
+        }
+      }
+    },
+    {
+      "name": "an225-ramp.ldr",
+      "kind": "model",
+      "first_line": 1995,
+      "placements": 15,
+      "steps": 2,
+      "empty_leading_steps": 0,
+      "parents": [
+        "an225-mriya.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/an225-17",
+      "visual_observation": "Tiled flat ramp with yellow side borders and click-hinge tops, installed lowered at nose. Recorded toe remains 6 LDU above ground; not a flush or load-tested ramp.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/an225-17/manifest.json",
+        "manifest_sha256": "c91e37561ae83b181be9f3a195ffdbf51f249b569922c6f9263937714325d82a",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/an225-17/panels/01-an225-ramp-ldr-isolated.png",
+            "sha256": "8c0b84ffc0a95d60c78b3e71c52f3383b0e11ba8754224c6e59a19f75d66f479"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/an225-17/panels/02-in-an225-mriya-ldr.png",
+            "sha256": "fee7242f38561c2b8e382fd68bd7e8317dc8be3e33f7efacbccca279628f023b"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/an225-17/mosaic.png",
+          "sha256": "1017e3dfc33b1545a815a7f49fa96225f1a7766a9522094e9faff683d6a9923f"
+        }
+      }
+    }
+  ]
+}

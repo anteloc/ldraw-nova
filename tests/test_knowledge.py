@@ -93,3 +93,58 @@ def test_cli_knowledge_does_not_initialize_parts(monkeypatch):
     result,code=run(args)
     assert code==0 and result['engine']=='sqlite-fts5-bm25' and result['results']
     assert parser().parse_args(['examples']).family is None
+
+
+def test_subject_heading_is_kept_for_sections_with_empty_parents(tmp_path):
+    docs = tmp_path/'docs/agent/guides'; docs.mkdir(parents=True)
+    (docs/'design.md').write_text('# Design\n## Vehicles\n### Shape\nBonnet cabin wheelbase.\n')
+    result = search('wheelbase', root=tmp_path)['results'][0]
+    assert result['headings'] == ['Design', 'Vehicles', 'Shape']
+    assert result['line'] == 3
+
+
+def test_export_aliases_and_directory_cannot_bypass_scope(tmp_path):
+    from ldraw_tools.knowledge import check_directory_scope, export_directory
+    register(tmp_path, 'held', scope='hold', aliases=['mechanism:old-name'])
+    with pytest.raises(ValueError, match='blocked'):
+        export_directory('old-name', family='mechanism', root=tmp_path)
+    with pytest.raises(ValueError, match='blocked'):
+        check_directory_scope(tmp_path/'examples/held', root=tmp_path)
+    register(tmp_path, 'current')
+    assert export_directory('test:current', root=tmp_path) == tmp_path/'examples/current'
+
+
+def test_grouped_lessons_export_their_actual_source_directory(tmp_path):
+    from ldraw_tools.knowledge import export_directory
+    source = tmp_path/'examples/group/detail/source.mpd'
+    source.parent.mkdir(parents=True); source.write_text('stable source')
+    register(tmp_path, 'group', model='examples/group/detail/source.mpd',
+             model_sha256=hashlib.sha256(source.read_bytes()).hexdigest())
+    assert export_directory('group', root=tmp_path) == source.parent
+
+
+def test_generated_gallery_does_not_readmit_archived_examples(tmp_path):
+    from ldraw_tools.knowledge import write_compat_catalog
+    register(tmp_path, 'current', lesson='Sideways panel attachment')
+    register(tmp_path, 'retired', scope='archive', lesson='Old template')
+    out = tmp_path/'catalog'; out.mkdir()
+    write_compat_catalog('test', out, root=tmp_path)
+    catalog = json.loads((out/'catalog.json').read_text())
+    rows = catalog['examples'] + catalog['details']
+    assert {r['id']: r['scope'] for r in rows} == {'current':'construction', 'retired':'archive'}
+    html = (out/'index.html').read_text()
+    assert 'Sideways panel attachment' in html and 'Old template' not in html
+
+
+def test_promoted_sources_and_relocated_geometry_match_preserved_hashes():
+    root = Path(__file__).resolve().parents[1]
+    manifest = json.loads((root/'docs/plans/knowledge-base-overhaul/package-relocations.json').read_text())
+    for row in manifest['files']:
+        if Path(row['path']).suffix.lower() in {'.mpd', '.ldr', '.dat', '.png', '.jpg'}:
+            assert hashlib.sha256((root/row['path']).read_bytes()).hexdigest() == row['sha256'], row['path']
+    for name in ['boombox','an225']:
+        row = resolve(name,root=root)
+        assert row['scope'] == 'construction'
+        evidence = json.loads(Path(row['visual_review']).read_text())
+        assert row['model_sha256'] == evidence['source_sha256']
+        assert len(evidence['sections']) == (6 if name=='boombox' else 18)

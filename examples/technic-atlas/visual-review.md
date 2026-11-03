@@ -6,25 +6,25 @@ The views were checked for silhouette, aligned holes and layer stacks, visible p
 
 ## Reinforced frame
 
-[Home](reinforced-frame/home.png) · [Bottom](reinforced-frame/bottom.png) · [Review record](reinforced-frame/visual-review.json)
+[Home](../reinforced-frame/home.png) · [Bottom](../reinforced-frame/bottom.png) · [Review record](../reinforced-frame/visual-review.json)
 
 The four yellow crossmembers read clearly against the grey moulded frame. Each has two spaced pins; the underside shows the retaining ends and the members sit against the frame without a visible gap. The compact outline leaves the construction easy to inspect.
 
 ## Box chassis
 
-[Home](box-chassis/home.png) · [Bottom](box-chassis/bottom.png) · [Review record](box-chassis/visual-review.json)
+[Home](../box-chassis/home.png) · [Bottom](../box-chassis/bottom.png) · [Review record](../box-chassis/visual-review.json)
 
 Perpendicular frames form a readable three-dimensional skeleton. Paired connections are visible at the corners and beneath the two white body rails. The rail overhangs are intentional mounting space; their strength under load has not been assessed. Side views retain an open centre for later module placement.
 
 ## Frame tower
 
-[Home](frame-tower/home.png) · [Bottom](frame-tower/bottom.png) · [Review record](frame-tower/visual-review.json)
+[Home](../frame-tower/home.png) · [Bottom](../frame-tower/bottom.png) · [Review record](../frame-tower/visual-review.json)
 
 Two box cells share a consistent width and alignment. External yellow beams bridge the deliberate 20-LDU gap between cells; blue long pins occupy the three-layer joints. Views from both sides and below show the bridge members meeting their supports without apparent penetration. A loaded physical tower may need a wider base; the restrained-member result does not establish overturning stability.
 
 ## Service platform
 
-[Home](service-platform/home.png) · [Bottom](service-platform/bottom.png) · [Review record](service-platform/visual-review.json)
+[Home](../../tests/fixtures/service-platform-numeric/home.png) · [Bottom](../../tests/fixtures/service-platform-numeric/bottom.png) · [Review record](../../tests/fixtures/service-platform-numeric/visual-review.json)
 
 The white equipment body, yellow roof, black vents and clear lamps give the skeleton a visible purpose. The front tiled deck provides a quiet surface. The bottom view exposes the rail-to-deck mounts: eight stud-ended half pins support the two plates. The deck's 10-LDU X/Z offset is intentional registration between the System and Technic grids; its asymmetry is not placement drift.
 

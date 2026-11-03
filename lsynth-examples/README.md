@@ -1,3 +1,5 @@
+> Optional raw-source research. Start new mounted routes with the [current flex guide](../docs/agent/guides/flex.md). These legacy scenes retain missing hardware, invalid-source and unverified-operation limits; research registration does not admit them as construction examples.
+
 # LSynth construction studies
 
 These 26 examples are useful references for **the rigid construction around
@@ -132,3 +134,583 @@ These examples are sufficient to broaden the construction vocabulary now.
 Before calling a derived model correct, complete its supports and interfaces
 and run the normal source, geometry, BOM and visual review. This study is not
 a physical or functional certification.
+
+
+## Research registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "lsynth-research#brick_arc-constraints",
+    "title": "BRICK_ARC",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:BRICK_ARC"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Four coloured curled fingers emerge from a stepped cylindrical wrist. Treat as silhouette demonstration; no articulated or legal-brick-joint claim. Installed engine reflection failure remains blocking for derived construction.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/BRICK_ARC-Constraints.dat",
+    "model_sha256": "cc0062b8ecf9948cb9f2dbff7ad255752614ea7304ff2ac3593c993e7b684ab2",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/0"
+  },
+  {
+    "id": "lsynth-research#electric_cable-constraints",
+    "title": "ELECTRIC_CABLE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:ELECTRIC_CABLE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Tall girder workshop lamp with side arm, broad dish shade and coiled lead. Distill mounting and cable-entry lesson, preserving lead-family roll and access.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/ELECTRIC_CABLE-Constraints.ldr",
+    "model_sha256": "04bcde46cbacbf09c75443d5eb7f3a1b3b9ed5b64cb13fed0151f6054eba4a75",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/1"
+  },
+  {
+    "id": "lsynth-research#electric_nxt_cable-constraints",
+    "title": "ELECTRIC_NXT_CABLE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:ELECTRIC_NXT_CABLE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Controller surrounded by sensors and two motors, coloured cables and slack loops. x933c01 plug geometry is missing; no complete connector-fit lesson until resolved.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/ELECTRIC_NXT_CABLE-Constraints.ldr",
+    "model_sha256": "10e3b40c6ea556998b7197a83151d6c5e52beeeeda25c8186e53c2085a55aaee",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/2"
+  },
+  {
+    "id": "lsynth-research#electric_power_function_cable-constraints",
+    "title": "ELECTRIC_POWER_FUNCTION_CABLE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:ELECTRIC_POWER_FUNCTION_CABLE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Battery box, receivers and four separate motors form a component bench. Useful for plug/control/output access; lacks a shared mounting chassis.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/ELECTRIC_POWER_FUNCTION_CABLE-Constraints.ldr",
+    "model_sha256": "c64fb070dabb8f1f7d2af1aac435f73109de64cefadd03cfa4e1d934ac4847de",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/3"
+  },
+  {
+    "id": "lsynth-research#electric_power_function_cable_half-constraints",
+    "title": "ELECTRIC_POWER_FUNCTION_CABLE_HALF",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:ELECTRIC_POWER_FUNCTION_CABLE_HALF"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Plug connects through middle junction to two small lamp heads. Distill explicit branching at actual hardware; two separate routes cannot substitute for missing junction.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/ELECTRIC_POWER_FUNCTION_CABLE_HALF-Constraints.ldr",
+    "model_sha256": "64d90b15632208fbea6fef47c2147a9463ffc820782500e962ce12fad0b3a1db",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/4"
+  },
+  {
+    "id": "lsynth-research#electric_rcx_cable-constraints",
+    "title": "ELECTRIC_RCX_CABLE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:ELECTRIC_RCX_CABLE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "RCX controller with peripheral sensors/motors on a bench. Keep as legacy interface reference, not default current-part palette.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/ELECTRIC_RCX_CABLE-Constraints.ldr",
+    "model_sha256": "0f7ac9c86723eb1396a027f81750fd94f05544e0cc82eb5527b9ccafa4c4f2da",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/5"
+  },
+  {
+    "id": "lsynth-research#fiber_optics_cable-constraints",
+    "title": "FIBER_OPTICS_CABLE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:FIBER_OPTICS_CABLE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Four-cylinder V engine with curved optical fan-out, separate distributor assembly and loose guide samples. Front view confirms two cylinder banks; preserve distinction between inlined distributor geometry and assembly BOM.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/FIBER_OPTICS_CABLE-Constraints.ldr",
+    "model_sha256": "4761607b2e1a459e480ca662cd92f0724302b339b8d42724bd4a77f578dab2f6",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/6"
+  },
+  {
+    "id": "lsynth-research#fiber_optics_cable_wide-constraints",
+    "title": "FIBER_OPTICS_CABLE_WIDE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:FIBER_OPTICS_CABLE_WIDE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Two broad guides around compact mirrored cross-block/lever frame. Missing 4173497 parent prevents identifying a complete device or certifying its mounts.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/FIBER_OPTICS_CABLE_WIDE-Constraints.ldr",
+    "model_sha256": "b716d441ebdfb22e51ba93db1c8b320bbdf5cb244ae7ed769e97e70c54dbc9ba",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/7"
+  },
+  {
+    "id": "lsynth-research#hose_flexible_12l-constraints",
+    "title": "HOSE_FLEXIBLE_12L",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:HOSE_FLEXIBLE_12L"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Three-wheel rover with clear bubble canopy, Technic wheel supports and System body. Missing 3020a remains explicit; retain as mixed-construction composition candidate, not a ready hose-generation recipe.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/HOSE_FLEXIBLE_12L-Constraints.ldr",
+    "model_sha256": "3f72e52a0a4f5aeaabaa265f84490f6b2306e93346021e96ca98bf43dead993d",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/8"
+  },
+  {
+    "id": "lsynth-research#hose_flexible_19l-constraints",
+    "title": "HOSE_FLEXIBLE_19L",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:HOSE_FLEXIBLE_19L"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Raised cylindrical equipment turret and separate curved barrier/straight samples. Missing 57539a and 57539b leave some hose geometry absent; no complete hose path acceptance.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/HOSE_FLEXIBLE_19L-Constraints.ldr",
+    "model_sha256": "47c3413da193b2223a7fba6999c2622a1cb0c0a324b5f27dfeda2d1766a00ba6",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/9"
+  },
+  {
+    "id": "lsynth-research#hose_flexible_8.5l-constraints",
+    "title": "HOSE_FLEXIBLE_8.5L",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:HOSE_FLEXIBLE_8.5L"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Pipe mounting board with upright loop, broad arch and straight samples. Distill end fitting orientations and coherent single route; whole board is a comparison fixture.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/HOSE_FLEXIBLE_8.5L-Constraints.ldr",
+    "model_sha256": "77abba8676445e059c71b5448e70e5467bab44815b96efdb6f912252de4cfb5a",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/10"
+  },
+  {
+    "id": "lsynth-research#minifig_chain_16l-constraints",
+    "title": "MINIFIG_CHAIN_16L",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:MINIFIG_CHAIN_16L"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Many coloured chain poses on square board, with visible eye/end fittings. Useful end-link vocabulary; gravity, tautness and legal spans not established.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/MINIFIG_CHAIN_16L-Constraints.ldr",
+    "model_sha256": "728128462441a56d6e83f5f5e39976dc86470212d49be79b80ebb98c71617667",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/11"
+  },
+  {
+    "id": "lsynth-research#rubber_band-constraints",
+    "title": "RUBBER_BAND",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:RUBBER_BAND"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Triangular, crossed and two-wheel/micromotor arrangements. Preserve known tangent warnings and visibly questionable routes; prefer mounted tested starter for generation.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/RUBBER_BAND-Constraints.ldr",
+    "model_sha256": "1a0287bb0c3a74c858b183c4cf40e1ad3c3affb84a18edd3426b169e9063a6f4",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/12"
+  },
+  {
+    "id": "lsynth-research#rubber_belt-constraints",
+    "title": "RUBBER_BELT",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:RUBBER_BELT"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Two-wheel and multi-wheel flat belt wraps. Rim/pulley family compatibility and tangent warnings need per-route repair; do not copy arbitrary wheels.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/RUBBER_BELT-Constraints.ldr",
+    "model_sha256": "ed56fce579ea97964db0222496d647831e9daa295947a7c9ad5bbe86cb77f2a7",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/13"
+  },
+  {
+    "id": "lsynth-research#string_hose-constraints",
+    "title": "STRING_HOSE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:STRING_HOSE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Wound shafts, large reel and two suspended hook arrangements. Drums and hook blocks are identifiable but bearing frame/anchors are incomplete. Do not infer winding dynamics or tension.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/STRING_HOSE-Constraints.ldr",
+    "model_sha256": "ad72aedb1a6cabfadd6516edeee6184d9c0b66df755046c4e409adf35ac38c78",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/14"
+  },
+  {
+    "id": "lsynth-research#string_xxl-constraints",
+    "title": "STRING_xxL",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:STRING_xxL"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Measuring-board strings include straight and curved spans with ends. Only first three of six source studies are represented by supplied synthesis; later STRING_BAND blocks have no visual approval here.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/STRING_xxL-Constraints.ldr",
+    "model_sha256": "6f9e70e97fcf3c5373e34b5708723101cbb1cb632eea09ad8a50ecc04f309e7a",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/15"
+  },
+  {
+    "id": "lsynth-research#technic_axle_flexible-constraints",
+    "title": "TECHNIC_AXLE_FLEXIBLE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_AXLE_FLEXIBLE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Swept open frame with angular upper rails and curved blue/yellow lower edges. Distill joiner/angle-connector interfaces and envelope; not a verified rotating transmission.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_AXLE_FLEXIBLE-Constraints.ldr",
+    "model_sha256": "8170e2045d80e892b0b9fdd6a47d4aa94208242e4456dd48899344e58ebb923b",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/16"
+  },
+  {
+    "id": "lsynth-research#technic_chain_link-constraints",
+    "title": "TECHNIC_CHAIN_LINK",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_CHAIN_LINK"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Supported long small-link chain route plus gear-pair, triangular and single-wheel comparisons. Preserve tangent-warning scope and distinguish support rail from unsupported wrap samples.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_CHAIN_LINK-Constraints.ldr",
+    "model_sha256": "3ffa558bd71cd33ea4df0a683c15db57c38c1556b80d42dac7b1732bd0f5fd8f",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/17"
+  },
+  {
+    "id": "lsynth-research#technic_chain_link_with_two_studs-constraints",
+    "title": "TECHNIC_CHAIN_LINK_WITH_TWO_STUDS",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_CHAIN_LINK_WITH_TWO_STUDS"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Studded rigid-link loops around coarse-toothed wheels; potential conveyor-flight vocabulary. Retain exact wheel/link family, closure and support checks as prerequisites.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_CHAIN_LINK_WITH_TWO_STUDS-Constraints.ldr",
+    "model_sha256": "f2f36099b1b3f34cf184ab448604d772a8c52780c1f984f34d832ac05d07cd6b",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/18"
+  },
+  {
+    "id": "lsynth-research#technic_chain_tread-constraints",
+    "title": "TECHNIC_CHAIN_TREAD",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_CHAIN_TREAD"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Two separate hinged-tread sizes on carrier blocks. Distill compatible wheel/link and axle support layout; they are not a single vehicle or interchangeable track family.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_CHAIN_TREAD-Constraints.ldr",
+    "model_sha256": "ac9cba681381ee5d8ff2fece7caf167c74f653ef11414004d0457b7df5ff2fa4",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/19"
+  },
+  {
+    "id": "lsynth-research#technic_chain_tread_38-constraints",
+    "title": "TECHNIC_CHAIN_TREAD_38",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_CHAIN_TREAD_38"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Long beam carrier with four large middle wheels, small end wheels and spring detail. Repeated route-wheel records must not create duplicate physical wheels.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_CHAIN_TREAD_38-Constraints.ldr",
+    "model_sha256": "448e24a66dc782d3a22095d983bf312d0bfebcee544812301a21780eb0374d3b",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/20"
+  },
+  {
+    "id": "lsynth-research#technic_flex-system-constraints",
+    "title": "TECHNIC_FLEX-SYSTEM",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_FLEX-SYSTEM"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Tall frame has crossed inner cables, broad outer sleeve and lower clip/lever samples. Distinguish cable ends, fixed sleeve supports and pivots; no demonstrated actuation.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_FLEX-SYSTEM-Constraints.ldr",
+    "model_sha256": "f8aee4cdd0268286d4fe7a31b229751dbd63b0f206c258db72c80cd3bd2e58b8",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/21"
+  },
+  {
+    "id": "lsynth-research#technic_pneumatic_hose-constraints",
+    "title": "TECHNIC_PNEUMATIC_HOSE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_PNEUMATIC_HOSE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Pump, lever valve and two-port cylinder with three working-layout hoses plus loose material samples. Prefer modern mounted press lesson; preserve hardware-before-routing principle.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_PNEUMATIC_HOSE-Constraints.ldr",
+    "model_sha256": "dda9552d3dec24bc30e7429fa15eba4e0ec8420d555f92be8737546b9fb4eef0",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/22"
+  },
+  {
+    "id": "lsynth-research#technic_ribbed_hose-constraints",
+    "title": "TECHNIC_RIBBED_HOSE",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_RIBBED_HOSE"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Broad arch, low return and straight ribbed spans seated on support bricks. Distill correct supports and broad curvature; touching segments do not establish a joint.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_RIBBED_HOSE-Constraints.ldr",
+    "model_sha256": "eec04acdf47ce14cd34bc756ea2746992582e692c88d72aee61b1362e79d05b0",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/23"
+  },
+  {
+    "id": "lsynth-research#technic_tread-constraints",
+    "title": "TECHNIC_TREAD",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_TREAD"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Three continuous rubber-track carriers; supplemental view reveals all nine wheels omitted by hidden synthesis controls. One owner per physical wheel, separate from route constraints.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_TREAD-Constraints.ldr",
+    "model_sha256": "03fe00dd8d2ee415e38274e22166beaf3a0d443d0decf23bbc0088dfd4ff9e92",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/24"
+  },
+  {
+    "id": "lsynth-research#technic_tread_crawler-constraints",
+    "title": "TECHNIC_TREAD_CRAWLER",
+    "scope": "research",
+    "kind": "source",
+    "families": [
+      "flex"
+    ],
+    "aliases": [
+      "lsynth-legacy:TECHNIC_TREAD_CRAWLER"
+    ],
+    "subjects": [],
+    "techniques": [
+      "flex"
+    ],
+    "lesson": "Vintage low, stepped and upright crawler layouts plus isolated wheel wraps. Dedicated cylindrical-axle wheel/bearing family; tangent warnings and support gaps remain.",
+    "limits": "Legacy source research only. Use the current family guide and actual-output checks; missing hardware, invalid source and synthesis failures remain unresolved unless explicitly recorded.",
+    "model": "lsynth-examples/TECHNIC_TREAD_CRAWLER-Constraints.ldr",
+    "model_sha256": "9f012242f6986a2203776f08e1c53fb15e8fe361f5b6cf361b8b634b9b5e0839",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/lsynth-legacy-audit.json",
+    "audit_pointer": "/items/25"
+  }
+]
+```

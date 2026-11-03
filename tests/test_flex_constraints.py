@@ -18,7 +18,7 @@ from ldraw_tools.flex_review import check_asset, closest_segments, shape
 
 @lru_cache
 def lab():
-    spec=importlib.util.spec_from_file_location('flex_constraint_lab',ROOT/'examples/flex/constraint-lab/generate.py')
+    spec=importlib.util.spec_from_file_location('flex_constraint_lab',ROOT/'tests/fixtures/flex-constraints/generate.py')
     module=importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
@@ -251,7 +251,7 @@ def test_repeated_geometry_checks_do_not_pollute_source_diagnostics(tmp_path,off
 
 
 def test_existing_press_is_a_geometry_regression(tmp_path,official):
-    s=ROOT/'examples/flex/pneumatic-press/hoses.ldr'
+    s=ROOT/'examples/pneumatic-press/hoses.ldr'
     dst=tmp_path/'press.mpd'
     flex.build(s,dst,official)
     r=check_asset(s,dst,min_radius=15,min_separation=10)

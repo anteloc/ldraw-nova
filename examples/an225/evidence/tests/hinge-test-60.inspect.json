@@ -1,0 +1,561 @@
+{
+  "file": "output/an225-mriya/tests/hinge-test-60.mpd",
+  "section": null,
+  "profile": "syntax",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "diagnostics": [
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "geometry": {
+    "complete": true,
+    "connection_coverage": {
+      "complete": 4,
+      "partial": 0,
+      "none": 0
+    },
+    "collision_method": "AABB broad phase, oriented bounds separation, curated rectangular body SAT",
+    "physical_validity": "not_proven",
+    "bounds": {
+      "min": [
+        -40.0,
+        -31.660254037839998,
+        -10.0
+      ],
+      "max": [
+        40.0,
+        8.0,
+        22.052558615136
+      ]
+    },
+    "occurrence_count": 4,
+    "detail": "full",
+    "instance_offset": 0,
+    "instances": [
+      {
+        "index": 0,
+        "part": "3710.dat",
+        "description": "Plate 1 x 4",
+        "colour": {
+          "code": 72,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -40.0,
+            -4.0,
+            -10.0
+          ],
+          "max": [
+            40.0,
+            8.0,
+            10.0
+          ]
+        },
+        "section": "hinge-test-60.ldr",
+        "line_number": 7,
+        "source_path": [
+          7
+        ],
+        "step": 1,
+        "body_profile": true,
+        "connector_count": 11,
+        "placement_path": [
+          0
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 1,
+        "part": "3937.dat",
+        "description": "Hinge 1 x 2 Base",
+        "colour": {
+          "code": 72,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          -24.0,
+          0.0
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -20.0,
+            -22.0,
+            -10.0
+          ],
+          "max": [
+            20.0,
+            0.0,
+            10.0
+          ]
+        },
+        "section": "hinge-test-60.ldr",
+        "line_number": 9,
+        "source_path": [
+          9
+        ],
+        "step": 1,
+        "body_profile": false,
+        "connector_count": 3,
+        "placement_path": [
+          1
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 1,
+          "recognized_record_count": 2,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 2,
+        "part": "3938.dat",
+        "description": "Hinge 1 x 2 Top",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          -19.0,
+          8.660254
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.866025403784
+          ],
+          [
+            0.0,
+            -0.866025403784,
+            0.5
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -20.0,
+            -27.660254037839998,
+            -5.948825261176225
+          ],
+          "max": [
+            20.0,
+            -8.051174776663775,
+            15.124355615136
+          ]
+        },
+        "section": "hinge-test-60.ldr",
+        "line_number": 12,
+        "source_path": [
+          12
+        ],
+        "step": 2,
+        "body_profile": false,
+        "connector_count": 5,
+        "placement_path": [
+          2
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 2,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      },
+      {
+        "index": 3,
+        "part": "3710.dat",
+        "description": "Plate 1 x 4",
+        "colour": {
+          "code": 15,
+          "name": null,
+          "rgb": null,
+          "alpha": null,
+          "colour_attributes": null
+        },
+        "position": [
+          0.0,
+          -23.0,
+          15.588457
+        ],
+        "matrix": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.866025403784
+          ],
+          [
+            0.0,
+            -0.866025403784,
+            0.5
+          ]
+        ],
+        "bounds": {
+          "min": [
+            -40.0,
+            -31.660254037839998,
+            3.6602537697279995
+          ],
+          "max": [
+            40.0,
+            -10.33974596216,
+            22.052558615136
+          ]
+        },
+        "section": "hinge-test-60.ldr",
+        "line_number": 14,
+        "source_path": [
+          14
+        ],
+        "step": 2,
+        "body_profile": true,
+        "connector_count": 11,
+        "placement_path": [
+          3
+        ],
+        "connection_metadata": {
+          "coverage": "complete",
+          "source_count": 3,
+          "recognized_record_count": 3,
+          "unsupported_record_count": 0,
+          "invalid_record_count": 0,
+          "diagnostics": []
+        }
+      }
+    ],
+    "instances_truncated": false,
+    "contacts_checked": true,
+    "contact_count": 5,
+    "contacts": [
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R1/studC",
+          "snap_cyl@L8:I0"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 22.0
+        }
+      },
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "s/3710s01@R0/stug-1x4@R3/stud@R2/studC",
+          "snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 0.0,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 0.0,
+          "penetration": 22.0
+        }
+      },
+      {
+        "instances": [
+          1,
+          2
+        ],
+        "status": "confirmed",
+        "kinds": [
+          "hinge",
+          "hinge"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "ldcad_shadow"
+        ],
+        "confidence": [
+          1.0,
+          1.0
+        ],
+        "feature_ids": [
+          "snap_fgr@L9:I0",
+          "snap_fgr@L8:I0"
+        ],
+        "residual": {
+          "distance": 3.783999957818196e-08,
+          "axial_gap": 0.0,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": null,
+          "penetration": null
+        }
+      },
+      {
+        "instances": [
+          2,
+          3
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud2@R1/studO@L9:I0",
+          "snap_cyl@L8:I2"
+        ],
+        "residual": {
+          "distance": 1.151359994012051e-07,
+          "axial_gap": 1.9942140074300607e-07,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 1.994214011702411e-07,
+          "penetration": 11.9999998005786
+        }
+      },
+      {
+        "instances": [
+          2,
+          3
+        ],
+        "status": "potential",
+        "kinds": [
+          "stud",
+          "stud_receptacle"
+        ],
+        "sources": [
+          "ldcad_shadow",
+          "heuristic"
+        ],
+        "confidence": [
+          1.0,
+          0.8
+        ],
+        "feature_ids": [
+          "stud2@R2/studO@L9:I0",
+          "snap_cyl@L8:I1"
+        ],
+        "residual": {
+          "distance": 1.151359994012051e-07,
+          "axial_gap": 1.9942140074300607e-07,
+          "alignment": 1.0,
+          "roll_alignment": 1.0,
+          "entry_face_gap": 1.994214011702411e-07,
+          "penetration": 11.9999998005786
+        }
+      }
+    ],
+    "contacts_truncated": false,
+    "confirmed_components": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "optimistic_components": [
+      [
+        0,
+        1,
+        2,
+        3
+      ]
+    ],
+    "optimistic_component_count": 1,
+    "confirmed_component_count": 3,
+    "components_truncated": false,
+    "overlap_candidate_count": 4,
+    "overlaps": [
+      {
+        "instances": [
+          0,
+          1
+        ],
+        "depths": [
+          40.0,
+          4.0,
+          20.0
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          3,
+          1
+        ],
+        "depths": [
+          40.0,
+          11.66025403784,
+          6.3397462302720005
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 0
+      },
+      {
+        "instances": [
+          3,
+          2
+        ],
+        "depths": [
+          40.0,
+          17.320508075679996,
+          11.464101845408
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 2
+      },
+      {
+        "instances": [
+          1,
+          2
+        ],
+        "depths": [
+          40.0,
+          13.948825223336225,
+          15.948825261176225
+        ],
+        "status": "review_oriented_bounds",
+        "body_penetration": null,
+        "connection_count": 1
+      }
+    ],
+    "overlaps_truncated": false,
+    "diagnostics": [
+      {
+        "code": "coverage.collision_review",
+        "severity": "warning",
+        "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+        "line_number": null,
+        "section": null
+      }
+    ],
+    "limitations": [
+      "AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
+      "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
+      "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."
+    ]
+  }
+}

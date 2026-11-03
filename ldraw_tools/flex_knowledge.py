@@ -11,7 +11,7 @@ FAMILIES = {
                 'Reserve straight departures and choose port orientation before dressing the machine.',
                 'Use actual tees for branches; preserve circuit connections and account for slack.'],
         inspect=['End sleeves seated on the nozzles', 'Tight bends, crossings and neighbouring machinery'],
-        example='examples/flex/pneumatic-press/README.md'),
+        example='examples/pneumatic-press/README.md'),
     'electrical': dict(purpose='Electrical cables, including flat cables and branched light leads.',
         design=['Model and mount real plugs, motors, controllers and branch boxes separately.',
                 'Keep the cable cross-section orientation consistent; set waypoint up vectors for flat cables.',
@@ -54,13 +54,13 @@ FAMILIES = {
                 'Order wheels around the loop; INSIDE/OUTSIDE choose wrap side and CROSS toggles it for subsequent wheels, including closure.',
                 'Configured wheel radii do not establish traction, stock length or tension.'],
         inspect=['Both loop runs', 'Wheel ownership', 'Twist, tension and wheel engagement'],
-        example='examples/flex/band.ldr'),
+        example='examples/flex-basics/band.ldr'),
     'linked_track': dict(purpose='Separate rigid chain/tread links around a compatible wheel family.',
         design=['Install shafts, bearings and retention before wrapping the chain or tread.',
                 'Match actual link and wheel families; the global wheel table is not a compatibility table.',
                 'Adjust wheel spacing or the layout to close the loop; never stretch rigid links.'],
         inspect=['Closure seam', 'Link spacing and engagement', 'Return-run clearance and duplicate wheels'],
-        example='examples/flex/chain.ldr'),
+        example='examples/flex-basics/chain.ldr'),
 }
 
 

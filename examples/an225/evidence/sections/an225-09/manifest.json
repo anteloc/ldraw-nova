@@ -1,0 +1,382 @@
+{
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/kb-visual-audit/next-native/an225-09",
+  "recipe": "recipe.json",
+  "manifest": "manifest.json",
+  "title": "an225: an225-main-gear.ldr",
+  "mode": "views",
+  "panels": [
+    {
+      "image": "panels/01-an225-main-gear-ldr-isolated.png",
+      "view": "home",
+      "step": null,
+      "camera": {
+        "view": "home",
+        "position": [
+          259.55548291800784,
+          -281.05548291800784,
+          -119.55548291800784
+        ],
+        "target": [
+          0.0,
+          -21.5,
+          140.0
+        ],
+        "up": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "fov": 30.0,
+        "orthographic": false,
+        "note": "fitted to part corners"
+      },
+      "scene": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/an225-mriya/an225-mriya.mpd",
+        "section": "an225-main-gear.ldr",
+        "parent": null
+      },
+      "layers": [],
+      "legend": [],
+      "notes": [],
+      "synthetic_sha256": "4579c3ce4e58eca3564b7667b6e1bf629641dd76fe8ed57392eca6b4eaa0f933",
+      "raw_sha256": "b3db7364f216fe8f85fd5711c87f9a79e574cd2dc6c46e9841990777f1cf2080",
+      "image_sha256": "54c9a6fcfa146be703068bafd317735ee801dca2e480c21344b99e5f33f57c1f",
+      "submodel": "an225-main-gear.ldr",
+      "parent_placements": [],
+      "materialized_parts": {},
+      "coverage": 0.2372,
+      "argv": [
+        "/Users/captain/bin/leocad",
+        "-l",
+        "<tmp>/library",
+        "-i",
+        "<tmp>/out/0.png",
+        "-w",
+        "1200",
+        "-h",
+        "900",
+        "--aa-samples",
+        "4",
+        "--shading",
+        "full",
+        "--line-width",
+        "2",
+        "--stud-style",
+        "6",
+        "--highlight-color",
+        "#FFFF00FF",
+        "--fade-steps-color",
+        "#40C0C0C0",
+        "-aec",
+        "-cc",
+        "1",
+        "-ldv",
+        "0.5",
+        "--fov",
+        "30",
+        "--camera-position-ldraw",
+        "259.5555",
+        "-281.0555",
+        "-119.5555",
+        "0.0000",
+        "-21.5000",
+        "140.0000",
+        "0.0000",
+        "-1.0000",
+        "0.0000",
+        "--submodel",
+        "an225-main-gear.ldr",
+        "--no-highlight",
+        "--no-fade-steps",
+        "<tmp>/xray-render.mpd"
+      ],
+      "warnings": [],
+      "style": {
+        "width": 1200,
+        "height": 900,
+        "stud_style": 6,
+        "auto_edges": true,
+        "edge_contrast": 1.0,
+        "light_dark": 0.5,
+        "line_width": 2,
+        "aa_samples": 4,
+        "shading": "full",
+        "highlight": "#FFFF00FF",
+        "fade": "#40C0C0C0",
+        "backdrop": "#EEF1F4",
+        "outline": "#2A2F36",
+        "outline_width": 2
+      },
+      "label": "an225-main-gear.ldr isolated",
+      "subject": "an225-main-gear.ldr:isolated"
+    },
+    {
+      "image": "panels/02-in-an225-mriya-ldr.png",
+      "view": "home",
+      "step": null,
+      "camera": {
+        "view": "home",
+        "position": [
+          1874.6980690499645,
+          -2102.1980690499645,
+          -1903.6830674264563
+        ],
+        "target": [
+          0.0,
+          -227.5,
+          -28.98499837649183
+        ],
+        "up": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "fov": 30.0,
+        "orthographic": false,
+        "note": "fitted to part corners"
+      },
+      "scene": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/an225-mriya/an225-mriya.mpd",
+        "section": "an225-main-gear.ldr",
+        "parent": "an225-mriya.ldr"
+      },
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section",
+          "scope": "parent",
+          "count": 2
+        },
+        {
+          "layer": "ghost"
+        }
+      ],
+      "legend": [],
+      "notes": [],
+      "synthetic_sha256": "816cf0c3dd8a3a331d2cd44c651d9940d5d468a41da85a3aefa071c99014e46a",
+      "raw_sha256": "a1c289a3a69b29a03199b6eb9e4b2ea4163dc6ab1f579ea467f983b4016d15bc",
+      "image_sha256": "ddf50c90cd7cce6df7b9c8d1e1247da831c9cc1d822b975d19d25812562248d0",
+      "submodel": "an225-mriya.ldr",
+      "parent_placements": [
+        "1 16 -80 0 -260 1 0 0 0 1 0 0 0 1 an225-main-gear.ldr",
+        "1 16 80 0 -260 1 0 0 0 1 0 0 0 1 an225-main-gear.ldr"
+      ],
+      "materialized_parts": {},
+      "coverage": 0.2246,
+      "argv": [
+        "/Users/captain/bin/leocad",
+        "-l",
+        "<tmp>/library",
+        "-i",
+        "<tmp>/out/0.png",
+        "-w",
+        "1200",
+        "-h",
+        "900",
+        "--aa-samples",
+        "4",
+        "--shading",
+        "full",
+        "--line-width",
+        "2",
+        "--stud-style",
+        "6",
+        "--highlight-color",
+        "#FFFF00FF",
+        "--fade-steps-color",
+        "#40C0C0C0",
+        "-aec",
+        "-cc",
+        "1",
+        "-ldv",
+        "0.5",
+        "--fov",
+        "30",
+        "--camera-position-ldraw",
+        "1874.6981",
+        "-2102.1981",
+        "-1903.6831",
+        "0.0000",
+        "-227.5000",
+        "-28.9850",
+        "0.0000",
+        "-1.0000",
+        "0.0000",
+        "--submodel",
+        "an225-mriya.ldr",
+        "--from",
+        "2",
+        "--to",
+        "2",
+        "--highlight",
+        "--fade-steps",
+        "<tmp>/xray-render.mpd"
+      ],
+      "warnings": [],
+      "style": {
+        "width": 1200,
+        "height": 900,
+        "stud_style": 6,
+        "auto_edges": true,
+        "edge_contrast": 1.0,
+        "light_dark": 0.5,
+        "line_width": 2,
+        "aa_samples": 4,
+        "shading": "full",
+        "highlight": "#FFFF00FF",
+        "fade": "#40C0C0C0",
+        "backdrop": "#EEF1F4",
+        "outline": "#2A2F36",
+        "outline_width": 2
+      },
+      "label": "In an225-mriya.ldr",
+      "subject": "an225-main-gear.ldr:an225-mriya.ldr"
+    }
+  ],
+  "versions": {
+    "ldraw_xray": "0.1.0",
+    "pyldraw3": "1.7.0",
+    "python": "3.13.9",
+    "leocad": "25.09"
+  },
+  "source": {
+    "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/an225-mriya/an225-mriya.mpd",
+    "source_sha256": "a454e81b53c115d874fc5d4dadd6a378564cee5f623111416f7f142f77b20c7a",
+    "section": "an225-main-gear.ldr",
+    "section_first_line": 1275,
+    "steps": 2,
+    "empty_leading_steps": 0,
+    "parents": {
+      "an225-mriya.ldr": [
+        "1 16 -80 0 -260 1 0 0 0 1 0 0 0 1 an225-main-gear.ldr",
+        "1 16 80 0 -260 1 0 0 0 1 0 0 0 1 an225-main-gear.ldr"
+      ]
+    }
+  },
+  "style": {
+    "width": 1200,
+    "height": 900,
+    "stud_style": 6,
+    "auto_edges": true,
+    "edge_contrast": 1.0,
+    "light_dark": 0.5,
+    "line_width": 2,
+    "aa_samples": 4,
+    "shading": "full",
+    "highlight": "#FFFF00FF",
+    "fade": "#40C0C0C0",
+    "backdrop": "#EEF1F4",
+    "outline": "#2A2F36",
+    "outline_width": 2
+  },
+  "legend": [
+    "Magenta edges: highlighted parts, or parts added in the source step."
+  ],
+  "config": {
+    "library": "/Users/captain/workspaces/workspace-ai/ldraw-lib/ldraw",
+    "shadows": []
+  },
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "mosaic": {
+    "version": 1,
+    "output": "mosaic.png",
+    "mode": "views",
+    "title": "an225: an225-main-gear.ldr",
+    "size": [
+      1648,
+      850
+    ],
+    "columns": 2,
+    "panels": [
+      {
+        "panel": 1,
+        "label": "an225-main-gear.ldr isolated",
+        "image": "panels/01-an225-main-gear-ldr-isolated.png",
+        "sha256": "54c9a6fcfa146be703068bafd317735ee801dca2e480c21344b99e5f33f57c1f",
+        "size": [
+          1200,
+          900
+        ],
+        "camera": {
+          "view": "home",
+          "position": [
+            259.55548291800784,
+            -281.05548291800784,
+            -119.55548291800784
+          ],
+          "target": [
+            0.0,
+            -21.5,
+            140.0
+          ],
+          "up": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "fov": 30.0,
+          "orthographic": false,
+          "note": "fitted to part corners"
+        },
+        "subject": "an225-main-gear.ldr:isolated",
+        "state": null,
+        "image_box": [
+          16,
+          96,
+          800,
+          600
+        ]
+      },
+      {
+        "panel": 2,
+        "label": "In an225-mriya.ldr",
+        "image": "panels/02-in-an225-mriya-ldr.png",
+        "sha256": "ddf50c90cd7cce6df7b9c8d1e1247da831c9cc1d822b975d19d25812562248d0",
+        "size": [
+          1200,
+          900
+        ],
+        "camera": {
+          "view": "home",
+          "position": [
+            1874.6980690499645,
+            -2102.1980690499645,
+            -1903.6830674264563
+          ],
+          "target": [
+            0.0,
+            -227.5,
+            -28.98499837649183
+          ],
+          "up": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "fov": 30.0,
+          "orthographic": false,
+          "note": "fitted to part corners"
+        },
+        "subject": "an225-main-gear.ldr:an225-mriya.ldr",
+        "state": null,
+        "image_box": [
+          832,
+          96,
+          800,
+          600
+        ]
+      }
+    ],
+    "legend": [
+      "Magenta edges: highlighted parts, or parts added in the source step."
+    ],
+    "duplicates": [],
+    "note": "Views independently framed; not to common scale.",
+    "manifest": null,
+    "manifest_sha256": null,
+    "image_sha256": "eadd0b3eab14a8a635e2850d8d0f8b32e534e187978dcaad972390b62c4e8871",
+    "limitations": [
+      "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+    ]
+  }
+}

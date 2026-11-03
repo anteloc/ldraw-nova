@@ -13,7 +13,7 @@ from ldraw_tools.common import ROOT, jsonable
 from ldraw_tools.connectivity import inspect_connections
 from ldraw_tools.geometry import analyze_geometry
 
-EXAMPLE = ROOT / 'examples/flex/pneumatic-press'
+EXAMPLE = ROOT / 'examples/pneumatic-press'
 TUBE_RADIUS = 5            # LS23 cross-section; LS22 end sleeves are r=6 and 16 LDU long
 MIN_BEND_RADIUS = 15
 END_ZONE = 30              # hoses leave the valve side by side; spacing there is set by its nozzles

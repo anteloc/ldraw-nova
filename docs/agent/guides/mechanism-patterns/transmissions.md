@@ -42,7 +42,7 @@ Separate the drum, ratchet, pawl, rope and hook roles in the brief. The source
 demonstrates drum rotation while the rope/hook and pawl remain static. It does
 not establish winding, holding a load or one-way engagement. For a new crane or
 winch, supply those parts and describe any unreviewed action honestly. The
-[local worm study](../../../../examples/mechanism-atlas/worm-drive/GUIDE.md) likewise
+[local worm study](../../../../examples/worm-drive/GUIDE.md) likewise
 needs its parent's winding assembly.
 
 ## Worm-driven adjustment
@@ -71,10 +71,10 @@ That explains the layout; it does not establish traction or torque distribution.
 
 Do not glue all three shafts together because they are coaxial, or replace the
 internal mechanism with two independent wheel axles. Study the
-[local differential](../../../../examples/mechanism-atlas/differential/GUIDE.md) for
+[local differential](../../../../examples/differential/GUIDE.md) for
 parts and build order. For a new chassis, adapt the housing/frame mounts while
 preserving the internal bevel arrangement, shaft spacing and escaping-axle stops.
-The [42075 rear axle](../../../../examples/submodel-atlas/02-42075-rear-axle/GUIDE.md)
+The [42075 rear axle](../../../../examples/42075-differential-axle/GUIDE.md)
 feeds a differential in an open frame through a U-joint and is tilted by its
 parent's matrix. It is an inspiration entry: its shock child is a generated
 spring mesh.

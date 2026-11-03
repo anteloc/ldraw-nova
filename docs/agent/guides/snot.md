@@ -1,17 +1,17 @@
 # Build with studs facing sideways
 
-Start with the [14-piece parrot head](../../../examples/snot/parrot/README.md). Its seven stages expose a small SNOT core, sideways eyes, jumper offsets and a shaped beak. The [complete parrot](../../../examples/snot/parrot/parrot.plan.json) supplies the surrounding body and articulated connections. Both use ordinary JSON plans and the existing builder.
+Start with the [14-piece parrot head](../../../examples/parrot/README.md). Its seven stages expose a small SNOT core, sideways eyes, jumper offsets and a shaped beak. The [complete parrot](../../../examples/parrot/parrot.plan.json) supplies the surrounding body and articulated connections. Both use ordinary JSON plans and the existing builder.
 
-Then use the [cat studies](../../../examples/snot/cat/README.md) for single-stud diagonal details and a repeated three-piece limb. The cat's face is a flat panel posed on a ball joint; its brow bracket's sideways studs remain exposed. It broadens the shaping and articulation vocabulary without supplying another fixed perpendicular stud interface.
+Then use the [cat studies](../../../examples/cat/README.md) for single-stud diagonal details and a repeated three-piece limb. The cat's face is a flat panel posed on a ball joint; its brow bracket's sideways studs remain exposed. It broadens the shaping and articulation vocabulary without supplying another fixed perpendicular stud interface.
 
-For vehicle bodywork, use the [Ferrari F40 reference](../../../examples/snot/ferrari-f40/README.md): a searchable map of 74 sections and five small build studies covering body mounts, door trim, lamp/grille corners, window louvers and fascia supports. Its flattened main car and saved callouts differ; use the checked small studies and their parent notes when adapting a construction.
+For vehicle bodywork, use the [Ferrari F40 reference](../../../examples/ferrari-f40/README.md): a searchable map of 74 sections and five small build studies covering body mounts, door trim, lamp/grille corners, window louvers and fascia supports. Its flattened main car and saved callouts differ; use the checked small studies and their parent notes when adapting a construction.
 
-For spacecraft, use the [6208 B-Wing study](../../../examples/snot/b-wing-6208/README.md). Its exposed bracket core, opposing curved skins and wing-root carrier show how to combine System surfaces with Technic attachments. This is a source-and-image learning reference; geometry and flexible-part verification were deferred for this study.
+For spacecraft, use the [6208 B-Wing study](../../../examples/b-wing-6208/README.md). Its exposed bracket core, opposing curved skins and wing-root carrier show how to combine System surfaces with Technic attachments. This is a source-and-image learning reference; geometry and flexible-part verification were deferred for this study.
 
-The [Halcyon interceptor](../../../examples/snot/halcyon/README.md) is a scoped core-and-skin construction example. Choose techniques and silhouette from the new brief. Fifteen `30414` side-stud bricks in one hull course expose stud faces to port, starboard, forward and aft. Flank panels, pod stripes, intakes, nozzles and cannons are each built upright in their own section and seated with `stud - R * socket`. The 195-piece model forms one automatic connection group, and its test checks every SNOT interface's contact count.
+The [Halcyon interceptor](../../../examples/halcyon/README.md) is a scoped core-and-skin construction example. Choose techniques and silhouette from the new brief. Fifteen `30414` side-stud bricks in one hull course expose stud faces to port, starboard, forward and aft. Flank panels, pod stripes, intakes, nozzles and cannons are each built upright in their own section and seated with `stud - R * socket`. The 195-piece model forms one automatic connection group, and its test checks every SNOT interface's contact count.
 
 ```sh
-./ldraw-agent review examples/snot/parrot/head.plan.json --outdir output/snot-head
+./ldraw-agent review examples/parrot/head.plan.json --outdir output/snot-head
 ```
 
 Open the previews. To see the core before it is covered:
@@ -65,17 +65,17 @@ These coordinates belong to these inspected parts. Do not turn them into univers
 
 The cat's round-ended `35480` ears attach to the face at one socket each. This allows an in-plane angle while the free end leaves the rectangular grid. The quarter-round nose uses the same principle on a jumper stud. This is a useful way to form diagonal trim, markings and small curved silhouettes.
 
-Use the same `origin = target - R*socket` calculation. In the flat [cat face plan](../../../examples/snot/cat/head.plan.json), the left ear's socket `[10,8,0]` meets the support at `[-30,0,10]`. With `yaw: 45`, the required origin is `[-37.071067812,-8,17.071067812]`. Those fractional coordinates express a real diagonal; independently rounding them would break the seating. A two-stud connection usually fixes the in-plane angle, so do not apply this freedom to an assembly attached at two separate studs.
+Use the same `origin = target - R*socket` calculation. In the flat [cat face plan](../../../examples/cat/head.plan.json), the left ear's socket `[10,8,0]` meets the support at `[-30,0,10]`. With `yaw: 45`, the required origin is `[-37.071067812,-8,17.071067812]`. Those fractional coordinates express a real diagonal; independently rounding them would break the seating. A two-stud connection usually fixes the in-plane angle, so do not apply this freedom to an assembly attached at two separate studs.
 
-Build the attachment before covering it with decoration. The [cat's eight stages](../../../examples/snot/cat/README.md#read-the-face-before-the-eyes-cover-it) reveal the ear pivots before the eyes hide them. Inspect neighbouring material and rear support as well as the visible outline; coincident connectors alone do not establish clearance or strength.
+Build the attachment before covering it with decoration. The [cat's eight stages](../../../examples/cat/README.md#read-the-face-before-the-eyes-cover-it) reveal the ear pivots before the eyes hide them. Inspect neighbouring material and rear support as well as the visible outline; coincident connectors alone do not establish clearance or strength.
 
 ## Keep articulation separate
 
 The parrot's wing panels have exact local stud grids. Their ball centres define the module origins; a rigid placement supplies the pose. The tail rotates around handle/clip axes and the neck uses a turntable. Study these joints separately from the fixed SNOT connections in the head. A plausible pose or coincident joint centre does not establish the permitted movement range.
 
-The [cat leg](../../../examples/snot/cat/leg.plan.json) is a second small example: a socket plate, clip plate and curved cover form one rigid module with its origin at the hip socket. The full model repeats that module four times, then places each paw at its ankle bar. Pose a child at its own joint when its orientation must stay independent of its parent: turning an entire leg-and-paw copy around would also turn the paw backward.
+The [cat leg](../../../examples/cat/leg.plan.json) is a second small example: a socket plate, clip plate and curved cover form one rigid module with its origin at the hip socket. The full model repeats that module four times, then places each paw at its ankle bar. Pose a child at its own joint when its orientation must stay independent of its parent: turning an entire leg-and-paw copy around would also turn the paw backward.
 
-When cleaning a rounded export, recover the module's local grid first. Re-seat its joint at the intended pivot, then apply a proper rotation to the whole module. Do not round an angled assembly's world coordinates to the nearest stud or integer. The retained [preparation record](../../../examples/snot/parrot/preparation.json) accounts for every source placement and correction.
+When cleaning a rounded export, recover the module's local grid first. Re-seat its joint at the intended pivot, then apply a proper rotation to the whole module. Do not round an angled assembly's world coordinates to the nearest stud or integer. The retained [preparation record](../../../examples/parrot/preparation.json) accounts for every source placement and correction.
 
 ## Learn from real-set submodels
 
@@ -86,7 +86,7 @@ flowchart TD
   Q{Where do the studs point in the finished model?}
   Q -->|"sideways, from connectors inside the section"| C["side-stud bricks, brackets, headlight bricks<br/>S01 S05 S09 S13 S18 05"]
   Q -->|"sideways, but the section is built in a convenient frame"| F["built flat; the parent's matrix turns it<br/>08 S07 S17 S17b S20"]
-  Q -->|"four ways around a core"| R["radial core with identical faces<br/>S04 S08 S22"]
+  Q -->|"four ways around a core"| R["radial core with repeated or paired faces<br/>S04 S08 S22"]
   Q -->|"down, in the finished model too"| D["upside-down build<br/>S15"]
   Q -->|"at odd angles"| A["hinges, clips and turned children<br/>S11 S16 S19 S14"]
   F -.->|"its stud map in section coordinates shows all up or all down"| P["read the parent placement<br/>in the guide or board"]
@@ -96,11 +96,11 @@ The parent often supplies the orientation or missing parts: 04's lamp cluster is
 
 ## Read the evidence
 
-The head passes source/geometry error checks, has one optimistic connection group and matches LeoCAD's BOM. The complete 66-piece parrot also passes the error checks and BOM comparison, but its automatic graph still has ten groups. The [reference review](../../../examples/snot/parrot/visual-review.md) identifies the recessed sockets omitted by the dependency's whole-box entry-face test. Explicit interface evidence accompanies the model; it does not override the checker.
+The head passes source/geometry error checks, has one optimistic connection group and matches LeoCAD's BOM. The complete 66-piece parrot also passes the error checks and BOM comparison, but its automatic graph still has ten groups. The [reference review](../../../examples/parrot/visual-review.md) identifies the recessed sockets omitted by the dependency's whole-box entry-face test. Explicit interface evidence accompanies the model; it does not override the checker.
 
 The adapter handles the inspected deep underside sockets of `22885`, `67329` and `47457` as potential stud evidence. Reported source metadata is unchanged. Other unsupported interfaces require their own inspection; do not increase global tolerances to make a model pass.
 
-The cat's head and leg each have one optimistic group, while its complete model has four. Its [review](../../../examples/snot/cat/visual-review.md) documents recessed `14417` sockets and the tail axle's mixed reviewed/unreviewed Technic ports. Reference-specific evidence accompanies those interfaces; the general checker is unchanged.
+The cat's head and leg each have one optimistic group, while its complete model has four. Its [review](../../../examples/cat/visual-review.md) documents recessed `14417` sockets and the tail axle's mixed reviewed/unreviewed Technic ports. Reference-specific evidence accompanies those interfaces; the general checker is unchanged.
 
 The torus is useful later for larger shapes, orientation variety and repetition. Its flat export does not supply a construction sequence or verified physical structure. Start new SNOT constructions from the small reviewed connections, then check the combined model's clearances and support.
 

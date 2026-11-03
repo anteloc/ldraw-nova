@@ -23,7 +23,7 @@ def flex_env(tmp_path, monkeypatch):
     monkeypatch.setattr(flex, 'CACHE', tmp_path / 'cache')
     monkeypatch.setattr(flex_workflow, 'CACHE', tmp_path / 'cache')
     source = tmp_path / 'route.ldr'
-    source.write_bytes((ROOT / 'examples/flex/hose.ldr').read_bytes())
+    source.write_bytes((ROOT / 'examples/flex-basics/hose.ldr').read_bytes())
     calls = []
     original = flex.subprocess.run
 
@@ -135,7 +135,7 @@ def test_cached_synthesis_does_not_bypass_library_validation(flex_env, official,
 def test_declared_flex_matches_existing_builder(flex_env, official, name):
     from ldraw_tools.flex import build
     source, output, _ = flex_env
-    source.write_bytes((ROOT / f'examples/flex/{name}.ldr').read_bytes())
+    source.write_bytes((ROOT / f'examples/flex-basics/{name}.ldr').read_bytes())
     build(source, output, official, namespace='route')
     legacy = assembly()
     legacy['assets'] = [str(output)]
@@ -167,12 +167,12 @@ def test_review_freezes_constraints_and_flex_evidence(flex_env, official):
 
 
 def test_press_automatic_assets_keep_reviewed_model_byte_for_byte(flex_env, official):
-    plan = load_plan(ROOT / 'examples/flex/pneumatic-press/press.plan.json')
-    plan['assets'] = [dict(source=str(ROOT / 'examples/flex/pneumatic-press/hoses.ldr'),
+    plan = load_plan(ROOT / 'examples/pneumatic-press/press.plan.json')
+    plan['assets'] = [dict(source=str(ROOT / 'examples/pneumatic-press/hoses.ldr'),
                           namespace='press-hoses', checks=dict(min_radius=15, min_separation=10))]
     text, _, report = build_checked(plan, official, contacts='none')
     assert report['checks_passed']
-    assert text.encode() == (ROOT / 'examples/flex/pneumatic-press/press.mpd').read_bytes()
+    assert text.encode() == (ROOT / 'examples/pneumatic-press/press.mpd').read_bytes()
 
 
 def test_technic_export_reviews_contract_automatically(tmp_path, official, monkeypatch):

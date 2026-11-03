@@ -17,10 +17,10 @@ Verified on 2026-09-26. Stage 1 now supports **static Technic structures and the
 
 | Example | Placements | Reviewed mechanical contacts | Restrained member groups | Python/LeoCAD BOM |
 | --- | ---: | ---: | ---: | --- |
-| [Reinforced frame](../../examples/technic-atlas/reinforced-frame/GUIDE.md) | 13 | 16 | 1 | Match |
-| [Box chassis](../../examples/technic-atlas/box-chassis/GUIDE.md) | 18 | 24 | 1 | Match |
-| [Frame tower](../../examples/technic-atlas/frame-tower/GUIDE.md) | 36 | 56 | 1 | Match |
-| [Service platform](../../examples/technic-atlas/service-platform/GUIDE.md) | 55 | 32 | 1 | Match |
+| [Reinforced frame](../../examples/reinforced-frame/GUIDE.md) | 13 | 16 | 1 | Match |
+| [Box chassis](../../examples/box-chassis/GUIDE.md) | 18 | 24 | 1 | Match |
+| [Frame tower](../../examples/frame-tower/GUIDE.md) | 36 | 56 | 1 | Match |
+| [Service platform](../../tests/fixtures/service-platform-numeric/GUIDE.md) | 55 | 32 | 1 | Match |
 
 Each includes its MPD, plan, generator, mounting contract, geometry report, structural report, BOM comparison and seven rendered views. All pass geometry checks without errors and their structural contracts without diagnostics. Mechanical-contact counts exclude the service platform's ordinary stud connections; its contract also checks the eight pin-to-deck mounts.
 

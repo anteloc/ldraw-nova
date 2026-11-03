@@ -7,7 +7,7 @@ MPD adapter and review process. It does not add a competing curve generator or
 require a model-specific optimizer.
 
 Start with the [agent guide](../agent/guides/flex.md). The
-[constraint lab](../../examples/flex/constraint-lab/README.md) supplies executable
+[constraint lab](../../tests/fixtures/flex-constraints/README.md) supplies executable
 experiments and inspected images. Instructions route agents to these when
 flexible parts are required.
 
@@ -21,7 +21,7 @@ flexible parts are required.
 | Diagnose visible source, control records, marker frames and effective wheel planes | `flex check SOURCE` |
 | Measure generated hoses, check explicit geometric limits and identify local repairs | `flex check SOURCE --asset ASSET` |
 | Flag potential rigid-obstacle overlaps, with no endpoint exclusions | `--obstacles RIGID_MODEL --tube-radius R` |
-| Repeat straight, bend, return, bundle and all-definition synthesis experiments | `examples/flex/constraint-lab/generate.py` |
+| Repeat straight, bend, return, bundle and all-definition synthesis experiments | `tests/fixtures/flex-constraints/generate.py` |
 
 Diagnostics identify the route, source line or measured location and suggest an
 action. Actual-output checks require matching source, asset and configuration
@@ -71,7 +71,7 @@ fails the dedicated bend check: neither review replaces the other.
 Home and top views of the tight corner, larger corner, return and pair were
 opened. Top views are edge-on to these XY routes and cannot establish bend
 quality alone. The retained images and source/asset/image hashes are in the
-lab's [visual record](../../examples/flex/constraint-lab/visual-review.json).
+lab's [visual record](../../tests/fixtures/flex-constraints/visual-review.json).
 The existing pneumatic press supplies the mounted-fitting reference; the new
 experiments deliberately isolate geometry effects.
 

@@ -611,6 +611,8 @@ def desert():
 
 
 def generate(keys=None, outdir=ROOT, *, snapshots=False, views=('home','front','top')):
+    if Path(outdir).resolve() == Path(__file__).resolve().parent:
+        raise ValueError('Legacy recipes require a separate --outdir; use current package plans for maintained examples.')
     outdir=Path(outdir);outdir.mkdir(parents=True,exist_ok=True)
     parts=get_parts();library=library_path();records=[]
     for key in keys or DESIGNS:
@@ -660,6 +662,8 @@ def detail_factories():
 
 
 def generate_details(outdir=ROOT, *, snapshots=False):
+    if Path(outdir).resolve() == Path(__file__).resolve().parent:
+        raise ValueError('Legacy recipes require a separate --outdir; use current package plans for maintained fittings.')
     from ldraw import inspect_model
     parts=get_parts();library=library_path();records=[]
     for key,factory in detail_factories().items():

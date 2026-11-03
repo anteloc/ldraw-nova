@@ -63,9 +63,9 @@ the input interfaces when adapting a corner into a new model.
 
 Study the complete route: control/column → gear train → pinion → sliding rack
 → two tie rods → knuckle steering arms. The
-[local rack carriage](../../../../examples/mechanism-atlas/steering-rack/GUIDE.md)
+[local rack carriage](../../../../examples/steering-rack/GUIDE.md)
 omits its parent's pinion; it cannot teach the whole route alone.
-The [8081 front axle](../../../../examples/submodel-atlas/01-8081-front-axle/GUIDE.md)
+The [8081 front axle](../../../../examples/8081-front-axle/GUIDE.md)
 shows the same gap with measured numbers: its rack face sits at y = −22 and the
 frame's 8T pinion at y = −30, matching the gear's 10 LDU pitch radius.
 

@@ -1,0 +1,382 @@
+{
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/kb-visual-audit/next-native/boombox-05",
+  "recipe": "recipe.json",
+  "manifest": "manifest.json",
+  "title": "boombox: boombox-knob.ldr",
+  "mode": "views",
+  "panels": [
+    {
+      "image": "panels/01-boombox-knob-ldr-isolated.png",
+      "view": "home",
+      "step": null,
+      "camera": {
+        "view": "home",
+        "position": [
+          88.93553651499856,
+          -112.93553651499856,
+          -88.93553651499856
+        ],
+        "target": [
+          0.0,
+          -24.0,
+          0.0
+        ],
+        "up": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "fov": 30.0,
+        "orthographic": false,
+        "note": "fitted to part corners"
+      },
+      "scene": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/boombox/boombox.mpd",
+        "section": "boombox-knob.ldr",
+        "parent": null
+      },
+      "layers": [],
+      "legend": [],
+      "notes": [],
+      "synthetic_sha256": "b82e502acc4e83e39ef9202fc2896146e35aa5bec2d78a08e136e0ebc0d13e50",
+      "raw_sha256": "ea211006b8a14596b946d0cb4b68128871a6d6680f94a5824be0ee99675f83c3",
+      "image_sha256": "5398ac26a00cb0df9e6211ec563211f85b60c945d1d8de6b088f44b86fdeb9a2",
+      "submodel": "boombox-knob.ldr",
+      "parent_placements": [],
+      "materialized_parts": {},
+      "coverage": 0.2515,
+      "argv": [
+        "/Users/captain/bin/leocad",
+        "-l",
+        "<tmp>/library",
+        "-i",
+        "<tmp>/out/0.png",
+        "-w",
+        "1200",
+        "-h",
+        "900",
+        "--aa-samples",
+        "4",
+        "--shading",
+        "full",
+        "--line-width",
+        "2",
+        "--stud-style",
+        "6",
+        "--highlight-color",
+        "#FFFF00FF",
+        "--fade-steps-color",
+        "#40C0C0C0",
+        "-aec",
+        "-cc",
+        "1",
+        "-ldv",
+        "0.5",
+        "--fov",
+        "30",
+        "--camera-position-ldraw",
+        "88.9355",
+        "-112.9355",
+        "-88.9355",
+        "0.0000",
+        "-24.0000",
+        "0.0000",
+        "0.0000",
+        "-1.0000",
+        "0.0000",
+        "--submodel",
+        "boombox-knob.ldr",
+        "--no-highlight",
+        "--no-fade-steps",
+        "<tmp>/xray-render.mpd"
+      ],
+      "warnings": [],
+      "style": {
+        "width": 1200,
+        "height": 900,
+        "stud_style": 6,
+        "auto_edges": true,
+        "edge_contrast": 1.0,
+        "light_dark": 0.5,
+        "line_width": 2,
+        "aa_samples": 4,
+        "shading": "full",
+        "highlight": "#FFFF00FF",
+        "fade": "#40C0C0C0",
+        "backdrop": "#EEF1F4",
+        "outline": "#2A2F36",
+        "outline_width": 2
+      },
+      "label": "boombox-knob.ldr isolated",
+      "subject": "boombox-knob.ldr:isolated"
+    },
+    {
+      "image": "panels/02-in-boombox-fascia-ldr.png",
+      "view": "home",
+      "step": null,
+      "camera": {
+        "view": "home",
+        "position": [
+          505.8770817072659,
+          -525.8770817072659,
+          -385.8770817072659
+        ],
+        "target": [
+          0.0,
+          -20.0,
+          120.0
+        ],
+        "up": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "fov": 30.0,
+        "orthographic": false,
+        "note": "fitted to part corners"
+      },
+      "scene": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/boombox/boombox.mpd",
+        "section": "boombox-knob.ldr",
+        "parent": "boombox-fascia.ldr"
+      },
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section",
+          "scope": "parent",
+          "count": 2
+        },
+        {
+          "layer": "ghost"
+        }
+      ],
+      "legend": [],
+      "notes": [],
+      "synthetic_sha256": "a7bc842ffbdf2d80a954ce773a286965e1a163079cf9dcb7cd663fb382ebb060",
+      "raw_sha256": "e7285aef01741368182fa6d24fa14e16d085e8d834d79c7855639917aa7de474",
+      "image_sha256": "a3f2c7574c1acd5688a3cea54fcbb922e9f972c8b0995dd5481631a28f5049f8",
+      "submodel": "boombox-fascia.ldr",
+      "parent_placements": [
+        "1 0 -60 0 160 1 0 0 0 1 0 0 0 1 boombox-knob.ldr",
+        "1 0 60 0 160 1 0 0 0 1 0 0 0 1 boombox-knob.ldr"
+      ],
+      "materialized_parts": {},
+      "coverage": 0.302,
+      "argv": [
+        "/Users/captain/bin/leocad",
+        "-l",
+        "<tmp>/library",
+        "-i",
+        "<tmp>/out/0.png",
+        "-w",
+        "1200",
+        "-h",
+        "900",
+        "--aa-samples",
+        "4",
+        "--shading",
+        "full",
+        "--line-width",
+        "2",
+        "--stud-style",
+        "6",
+        "--highlight-color",
+        "#FFFF00FF",
+        "--fade-steps-color",
+        "#40C0C0C0",
+        "-aec",
+        "-cc",
+        "1",
+        "-ldv",
+        "0.5",
+        "--fov",
+        "30",
+        "--camera-position-ldraw",
+        "505.8771",
+        "-525.8771",
+        "-385.8771",
+        "0.0000",
+        "-20.0000",
+        "120.0000",
+        "0.0000",
+        "-1.0000",
+        "0.0000",
+        "--submodel",
+        "boombox-fascia.ldr",
+        "--from",
+        "2",
+        "--to",
+        "2",
+        "--highlight",
+        "--fade-steps",
+        "<tmp>/xray-render.mpd"
+      ],
+      "warnings": [],
+      "style": {
+        "width": 1200,
+        "height": 900,
+        "stud_style": 6,
+        "auto_edges": true,
+        "edge_contrast": 1.0,
+        "light_dark": 0.5,
+        "line_width": 2,
+        "aa_samples": 4,
+        "shading": "full",
+        "highlight": "#FFFF00FF",
+        "fade": "#40C0C0C0",
+        "backdrop": "#EEF1F4",
+        "outline": "#2A2F36",
+        "outline_width": 2
+      },
+      "label": "In boombox-fascia.ldr",
+      "subject": "boombox-knob.ldr:boombox-fascia.ldr"
+    }
+  ],
+  "versions": {
+    "ldraw_xray": "0.1.0",
+    "pyldraw3": "1.7.0",
+    "python": "3.13.9",
+    "leocad": "25.09"
+  },
+  "source": {
+    "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/boombox/boombox.mpd",
+    "source_sha256": "0f7d917aa9e53d46f522e17ff184c1ff620919326fee236f01dd4792b4122e2f",
+    "section": "boombox-knob.ldr",
+    "section_first_line": 804,
+    "steps": 1,
+    "empty_leading_steps": 0,
+    "parents": {
+      "boombox-fascia.ldr": [
+        "1 0 -60 0 160 1 0 0 0 1 0 0 0 1 boombox-knob.ldr",
+        "1 0 60 0 160 1 0 0 0 1 0 0 0 1 boombox-knob.ldr"
+      ]
+    }
+  },
+  "style": {
+    "width": 1200,
+    "height": 900,
+    "stud_style": 6,
+    "auto_edges": true,
+    "edge_contrast": 1.0,
+    "light_dark": 0.5,
+    "line_width": 2,
+    "aa_samples": 4,
+    "shading": "full",
+    "highlight": "#FFFF00FF",
+    "fade": "#40C0C0C0",
+    "backdrop": "#EEF1F4",
+    "outline": "#2A2F36",
+    "outline_width": 2
+  },
+  "legend": [
+    "Magenta edges: highlighted parts, or parts added in the source step."
+  ],
+  "config": {
+    "library": "/Users/captain/workspaces/workspace-ai/ldraw-lib/ldraw",
+    "shadows": []
+  },
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "mosaic": {
+    "version": 1,
+    "output": "mosaic.png",
+    "mode": "views",
+    "title": "boombox: boombox-knob.ldr",
+    "size": [
+      1648,
+      850
+    ],
+    "columns": 2,
+    "panels": [
+      {
+        "panel": 1,
+        "label": "boombox-knob.ldr isolated",
+        "image": "panels/01-boombox-knob-ldr-isolated.png",
+        "sha256": "5398ac26a00cb0df9e6211ec563211f85b60c945d1d8de6b088f44b86fdeb9a2",
+        "size": [
+          1200,
+          900
+        ],
+        "camera": {
+          "view": "home",
+          "position": [
+            88.93553651499856,
+            -112.93553651499856,
+            -88.93553651499856
+          ],
+          "target": [
+            0.0,
+            -24.0,
+            0.0
+          ],
+          "up": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "fov": 30.0,
+          "orthographic": false,
+          "note": "fitted to part corners"
+        },
+        "subject": "boombox-knob.ldr:isolated",
+        "state": null,
+        "image_box": [
+          16,
+          96,
+          800,
+          600
+        ]
+      },
+      {
+        "panel": 2,
+        "label": "In boombox-fascia.ldr",
+        "image": "panels/02-in-boombox-fascia-ldr.png",
+        "sha256": "a3f2c7574c1acd5688a3cea54fcbb922e9f972c8b0995dd5481631a28f5049f8",
+        "size": [
+          1200,
+          900
+        ],
+        "camera": {
+          "view": "home",
+          "position": [
+            505.8770817072659,
+            -525.8770817072659,
+            -385.8770817072659
+          ],
+          "target": [
+            0.0,
+            -20.0,
+            120.0
+          ],
+          "up": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "fov": 30.0,
+          "orthographic": false,
+          "note": "fitted to part corners"
+        },
+        "subject": "boombox-knob.ldr:boombox-fascia.ldr",
+        "state": null,
+        "image_box": [
+          832,
+          96,
+          800,
+          600
+        ]
+      }
+    ],
+    "legend": [
+      "Magenta edges: highlighted parts, or parts added in the source step."
+    ],
+    "duplicates": [],
+    "note": "Views independently framed; not to common scale.",
+    "manifest": null,
+    "manifest_sha256": null,
+    "image_sha256": "b008fc69e5d23ce851a0550b55192272cfab24793ffb06704608613c34bc407c",
+    "limitations": [
+      "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+    ]
+  }
+}

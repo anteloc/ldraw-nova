@@ -16,7 +16,7 @@ from ldraw_tools.connectivity import inspect_connections
 from ldraw_tools.document import parse_source
 from ldraw_tools.geometry import analyze_geometry, components
 
-REFERENCE = ROOT / 'examples/snot/cat'
+REFERENCE = ROOT / 'examples/cat'
 
 
 @pytest.mark.parametrize('name,count,groups', [('head',16,1), ('leg',3,1), ('cat',55,4)])

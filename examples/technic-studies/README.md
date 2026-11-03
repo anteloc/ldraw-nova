@@ -1,6 +1,6 @@
 # Technic construction studies from ldraw-mecha
 
-For new animated mechanisms, start with the [gear drive](gear-drive/README.md)
+For new animated mechanisms, start with the [gear drive](../gear-drive/README.md)
 and [constraint workflow](../../docs/agent/guides/mechanisms.md). The original
 starter includes fixed supports, keyed shafts, bearings and a coupled gear pair.
 

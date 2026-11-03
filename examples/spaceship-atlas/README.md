@@ -1,60 +1,20 @@
-# Spaceships: shape, structure and detail
+# Spaceship compatibility index
 
-**Start with [Halcyon](../snot/halcyon/README.md), the default spaceship model to follow. New spaceships use SNOT by default.** Follow its supported core, attached hull skins, axial engines and smooth contours, adapting the silhouette to the new subject.
-
-The source studies below supplement that default: whole ships teach proportions, and smaller assemblies teach cockpit, wing, engine and surface construction. The [interactive gallery](index.html) links those source studies and their construction notes.
-
-| Whole-ship study | Preview | Parts | Use |
-| --- | --- | ---: | --- |
-| [B-wing starfighter](b-wing/GUIDE.md) | [![B-wing](b-wing/renders/home.png)](b-wing/index.html) | 434 | Checked, editable source construction |
-| [UCS Y-wing](ucs-y-wing-study/GUIDE.md) | [![UCS Y-wing](ucs-y-wing-study/renders/home.png)](ucs-y-wing-study/index.html) | 1,493 | Inspiration: twin engines, exposed machinery and narrow spine |
-| [Imperial Star Destroyer](star-destroyer-study/GUIDE.md) | [![Star Destroyer](star-destroyer-study/renders/home.png)](star-destroyer-study/index.html) | 1,335 | Inspiration: wedge hull, recessed edges and layered superstructure |
-
-The Y-wing and Star Destroyer retain source errors and **cannot be exported as checked constructions**. Their guides explain how to study their useful forms. The B-wing passes source and geometry checks after three precisely recorded corrections to rounded positions in a copied wing stack; its original library file is unchanged.
-
-## Reusable constructions
-
-| Construction | Parts | Study format | What to learn |
-| --- | ---: | --- | --- |
-| [UCS X-wing lower port wing](x-wing-wing/GUIDE.md) | 125 | Four completed views and source section data | Thin plate layers, a mounted nacelle and long tip detail |
-| [UCS X-wing nacelle](x-wing-nacelle/GUIDE.md) | 41 | One source group, two views | Concentric cylinders, a long core and transverse mounts |
-| [Enclosed canopy cockpit](canopy-cockpit/GUIDE.md) | 49 | Root and three child sections, two views each | Real octagonal canopy halves, hinge interfaces, rear glazing and pilot |
-| [UCS Y-wing armour panel](y-wing-armour/GUIDE.md) | 31 | Seven steps, two views each | Layered support, clean sloping edges, vents and a central detail strip |
-| [Millennium Falcon service cluster](falcon-greebles/GUIDE.md) | 15 | Three steps, two views each | Small moulded fittings arranged as a contained machinery bay |
-
-All five constructions pass source/geometry checks and match their rendered BOMs. The cockpit retains legacy part aliases and its pilot; inspect those before substituting newer parts. A source with a single STEP group supplies one construction state, not an invented sequence of insertions.
-
-All **50 images were opened**: 30 step views and 20 final/overview views. All eight Python/LeoCAD BOM comparisons match. The [visual review](visual-review.md) records what was inspected and learned.
-
-## Start a spacecraft
+Current lessons live in semantic packages. [Browse the generated index](index.html), or use:
 
 ```sh
-./ldraw-agent spaceship list
-./ldraw-agent spaceship details
-./ldraw-agent spaceship brief starfighter --output output/my-ship-brief.json
-./ldraw-agent spaceship export halcyon --outdir output/my-ship
-./ldraw-agent build output/my-ship/halcyon.plan.json \
-  --output output/my-ship/my-ship.mpd
+./ldraw-agent examples --family spaceship
+./ldraw-agent knowledge show spaceship:KEY
 ```
 
-`brief` accepts `starfighter`, `freighter` or `capital-ship`. It helps an agent choose a silhouette, palette, modules, defining parts and review views. It is a starting brief; the agent still designs the model and its interfaces.
+The package README owns the lesson, scope, corrected descriptions and limits. The generated `catalog.json` retains explicit non-default scopes for compatibility; the gallery shows default-eligible lessons. Old aliases continue to resolve. Retired, held, diagnostic and inspiration sources require deliberate selection and cannot bypass export checks.
 
-Halcyon export copies its generator, self-contained plan, MPD, brief, guide and inspected images. Edit the generator, regenerate `halcyon.plan.json`, then build and review the adapted design. Source-study exports such as `b-wing` retain their existing attributed `source.mpd`, provenance and `scene.plan.json` workflow. A local origin is a positioning frame, not an asserted connector.
-
-Follow the [spaceship workflow](../../docs/agent/guides/design-models.md) for hull design, Technic supports, actual mechanism modules and final visual review. Analytical mechanism verification remains deferred.
-
-For an introduction to SNOT spacecraft construction, use the separate [6208 B-Wing study](../snot/b-wing-6208/README.md): bracket cores, Technic-mounted curved skins, wing-root carriers and independently oriented modules. Its 22 inspected views include two explicit cutaways. This is a learning reference with geometry work deferred, distinct from the checked 75050 B-wing above; it does not add or replace a checked export entry.
-
-
-## Add more examples
-
-Follow the [build-manual and atlas workflow](../../docs/agent/guides/review-models.md). It explains how to preserve exact source identities, turn source steps into pages, study parent interfaces, review the images and select useful new entries for any atlas.
-
-[selections.json](selections.json) pins these eight sources and their discovery evidence. [generate.py](generate.py) recreates them:
+Legacy selection files and atlas generators are historical preparation inputs. Use the current package's editable plan/generator to reproduce a lesson. Legacy source preparation goes to a separate `--outdir` and does not admit its output. To refresh browsing from current metadata:
 
 ```sh
-.venv/bin/python examples/spaceship-atlas/generate.py
-.venv/bin/python examples/spaceship-atlas/generate.py --name y-wing-armour
+.venv/bin/python -c "from ldraw_tools.knowledge import write_compat_catalog; write_compat_catalog('spaceship', 'examples/spaceship-atlas')"
 ```
 
-Regeneration checks source hashes and clears the affected visual reviews. Reopen the new images before recording review again. `--no-render` leaves rendered evidence pending. Original authors and licences are retained; these are attributed source studies and adaptations, not newly claimed original spacecraft designs.
+## Details
+
+Use `examples --details` with this family, or a role-specific knowledge query.

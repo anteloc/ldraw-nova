@@ -7,7 +7,9 @@ changed source cannot leave a stale on-disk search result.
 from __future__ import annotations
 
 import hashlib
+import html
 import json
+import os
 import re
 import sqlite3
 from pathlib import Path
@@ -32,7 +34,9 @@ def examples(root=None):
     records = []
     identities = set()
     aliases = set()
-    for path in sorted((root / 'examples').rglob('README.md')):
+    paths = [path for base in ('examples', 'tests/fixtures', 'lsynth-examples')
+             for path in (root/base).rglob('README.md')]
+    for path in sorted(paths):
         text = path.read_text(encoding='utf-8')
         matches = list(_METADATA.finditer(text))
         if not matches:
@@ -50,6 +54,10 @@ def examples(root=None):
                 raise ValueError(f'Invalid knowledge entry text: {path}')
             if entry['scope'] not in SCOPES[1:-1]:
                 raise ValueError(f'Invalid knowledge scope: {path}')
+            if path.is_relative_to(root/'tests/fixtures') and entry['scope'] != 'diagnostic':
+                raise ValueError(f'Test fixtures must retain diagnostic scope: {path}')
+            if path.is_relative_to(root/'lsynth-examples') and entry['scope'] != 'research':
+                raise ValueError(f'Raw LSynth sources must retain research scope: {path}')
             for key in ('aliases', 'families', 'subjects', 'techniques', 'legacy_groups'):
                 if key in entry and (not isinstance(entry[key], list) or any(not isinstance(v, str) or not v for v in entry[key])):
                     raise ValueError(f'Invalid {key}: {path}')
@@ -109,15 +117,77 @@ def require_exportable(record):
 
 def export_directory(identity, *, family=None, root=None):
     record = require_exportable(resolve(identity, family=family, root=root))
-    return Path(record['guide']).parent
+    return Path(record.get('model', record['guide'])).parent
 
 
 def check_directory_scope(folder, *, root=None):
     """Explicit directory exports must not bypass a registered hold."""
     folder = Path(folder).resolve()
-    rows = [r for r in examples(root) if Path(r['guide']).parent == folder]
+    rows = [r for r in examples(root) if Path(r.get('model', r['guide'])).parent == folder]
     for row in rows:
         require_exportable(row)
+    return rows
+
+
+def write_compat_catalog(family, directory, *, root=None):
+    """Regenerate legacy browsing views from README owners and frozen evidence.
+
+    The JSON retains explicit non-default scopes for old callers. The gallery
+    shows only default-eligible lessons; neither output grants export approval.
+    """
+    from .common import atomic_write
+    from .manuals import current_manual, current_review
+    directory = Path(directory).resolve()
+    rows = []
+    for entry in examples(root):
+        aliases = [a for a in entry['aliases'] if a.startswith(family + ':')]
+        if not aliases:
+            continue
+        row = dict(entry, key=aliases[0].split(':', 1)[1],
+                   group='examples' if 'examples' in entry.get('legacy_groups', []) else 'details',
+                   use='adapt' if entry['scope'] in DEFAULT_SCOPES else 'inspiration')
+        folder = Path(entry.get('model', entry['guide'])).parent
+        row['readme_sha256'] = row['source_sha256']
+        if 'model_sha256' in row:
+            row['source_sha256'] = row['model_sha256']
+        row['category'] = ', '.join(entry.get('subjects', [])) or entry.get('kind', 'study')
+        if (folder/'card.json').is_file():
+            card = json.loads((folder/'card.json').read_text())
+            row['reference_id'] = card['id']
+            row['source_sha256'] = card['source']['sha256']
+            row['source_checks_passed'] = card['assembly_checks_passed']
+            row['bom_matches'] = card['bom_comparison']['matches']
+        elif (folder/'validation.json').is_file():
+            validation = json.loads((folder/'validation.json').read_text())
+            row['checks_passed'] = validation.get('checks_passed', False)
+            if (folder/'bom-comparison.json').is_file():
+                row['bom_matches'] = json.loads((folder/'bom-comparison.json').read_text()).get('matches', False)
+        if (folder/'manual.json').is_file():
+            _, manual = current_manual(folder)
+            row.update(source_checks_passed=manual['source_checks_passed'], bom_matches=manual['bom_matches'],
+                       visual_review_status='visually_reviewed' if current_review(folder) else 'pending')
+        for field in (*PATH_FIELDS, 'guide'):
+            if field in row:
+                row[field] = os.path.relpath(row[field], directory)
+        rows.append(row)
+    catalog = dict(version=2, generated_from='package README registrations', family=family,
+                   examples=[r for r in rows if r['group']=='examples'],
+                   details=[r for r in rows if r['group']=='details'])
+    atomic_write(directory/'catalog.json', json.dumps(catalog, indent=2, ensure_ascii=False)+'\n')
+    cards = []
+    for row in rows:
+        if row['scope'] not in DEFAULT_SCOPES:
+            continue
+        preview = row.get('board', row.get('preview'))
+        picture = f'<img src="{html.escape(preview, quote=True)}" alt="">' if preview else ''
+        cards.append(f'<article><h2><a href="{html.escape(row["guide"], quote=True)}">{html.escape(row["title"])}</a></h2>'
+                     +picture+'<p>'+html.escape(row['lesson'])+'</p><p>'+html.escape(row.get('limits',''))+'</p></article>')
+    atomic_write(directory/'index.html', '<!doctype html><html lang="en"><meta charset="utf-8">'
+                 '<meta name="viewport" content="width=device-width,initial-scale=1"><title>Construction lessons</title>'
+                 '<style>body{font:16px/1.5 system-ui;max-width:900px;margin:2rem auto;padding:0 1rem}img{max-width:100%}article{margin:2rem 0}</style>'
+                 '<h1>'+html.escape(family)+' construction lessons</h1><p>Generated from package READMEs. '
+                 'Inspiration, held, diagnostic and retired sources require explicit knowledge search scopes.</p>'
+                 +''.join(cards)+'</html>\n')
     return rows
 
 
@@ -145,9 +215,12 @@ def _sections(text):
         yield heading, anchor, start, '\n'.join(body)
 
 
-def documents(root=None):
+def documents(root=None, *, include_research=False):
     root = Path(root or ROOT)
-    for path in sorted((root / 'docs/agent').rglob('*.md')):
+    paths = list((root/'docs/agent').rglob('*.md'))
+    if include_research:
+        paths += list((root/'docs/reports').glob('*.md'))
+    for path in sorted(paths):
         # Historical verification is not current guidance; relocated reports are
         # outside this allowlisted root. Redirect stubs do not duplicate results.
         if path.name == 'verification.md': continue
@@ -155,9 +228,23 @@ def documents(root=None):
         if '<!-- knowledge-redirect -->' in text: continue
         relative = path.relative_to(root).as_posix()
         title = next((s[2:].strip() for s in text.splitlines() if s.startswith('# ')), path.stem)
+        contexts = {}; stack = []; fence = None
+        for number, line_text in enumerate(text.splitlines(), 1):
+            marker = re.match(r'^\s*(`{3,}|~{3,})', line_text)
+            if marker:
+                char = marker[1][0]
+                fence = None if fence == char else char if fence is None else fence
+                continue
+            heading = re.match(r'^(#{1,6})\s+(.+?)\s*#*$', line_text) if fence is None else None
+            if heading:
+                depth = len(heading[1])
+                stack = [(d, h) for d, h in stack if d < depth] + [(depth, heading[2])]
+                contexts[number] = [h for _, h in stack]
         for heading, anchor, line, body in _sections(text):
-            yield dict(id=relative + ('#' + anchor if anchor else ''), title=f'{title}: {heading}',
-                       scope='guidance', kind='guide', guide=str(path.resolve()), anchor=anchor,
+            context = contexts.get(line, [title, heading])
+            yield dict(id=relative + ('#' + anchor if anchor else ''), title=' > '.join(context), headings=context,
+                       scope='research' if path.is_relative_to(root/'docs/reports') else 'guidance',
+                       kind='report' if path.is_relative_to(root/'docs/reports') else 'guide', guide=str(path.resolve()), anchor=anchor,
                        line=line, lesson=body, source_sha256=hashlib.sha256(text.encode()).hexdigest())
 
 
@@ -166,7 +253,7 @@ def search(query='', *, limit=5, scope='default', family=None, kind=None,
     if scope not in SCOPES: raise ValueError('Unknown knowledge scope: ' + scope)
     if limit <= 0: raise ValueError('limit must be positive')
     records = examples(root)
-    if not only_examples: records.extend(documents(root))
+    if not only_examples: records.extend(documents(root, include_research=scope in ('research','all')))
     eligible = []
     for row in records:
         if scope == 'default' and row['scope'] not in DEFAULT_SCOPES: continue

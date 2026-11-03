@@ -1,7 +1,7 @@
 # Mechanism authoring and animation workflow — 2026-10-25
 
 The agent path now starts with a small original
-[supported gear drive](../../examples/technic-studies/gear-drive/README.md),
+[supported gear drive](../../examples/gear-drive/README.md),
 then extends measured connections. Construction and motion keep their ordinary
 JSON formats. The broad [parts catalog](../agent/reference/technic.md), finite
 interfaces and [mechanism guidance](../agent/guides/mechanisms.md) remain
@@ -28,7 +28,7 @@ Final full-suite results: **431 Nova tests** and **487 Mecha tests** passed.
 The original starter reproduces byte-for-byte in both repositories; the saved
 motion plan exactly matches the current recipe. New guide/example links resolve.
 
-See the starter's [validation record](../../examples/technic-studies/gear-drive/validation.md)
+See the starter's [validation record](../../examples/gear-drive/validation.md)
 for source identity, BOM/visual review, 25 mechanical checks, saved animation,
 finite sampling and collision-diagnostic limits. The broad catalog remains a
 discovery inventory; its unknown motion profiles are deliberately explicit.

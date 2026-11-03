@@ -187,8 +187,8 @@ def test_changed_named_port_geometry_fails(official, monkeypatch):
 
 def test_named_press_preserves_rigid_geometry_and_closes_mount_gaps(official):
     from ldraw_tools.common import ROOT
-    original = load_plan(ROOT / 'examples/flex/pneumatic-press/press.plan.json')
-    named = load_plan(ROOT / 'examples/flex/pneumatic-press/named.plan.json')
+    original = load_plan(ROOT / 'examples/pneumatic-press/press.plan.json')
+    named = load_plan(ROOT / 'examples/pneumatic-press/named.plan.json')
     _, _, before = build_checked(original, official)
     _, _, after = build_checked(named, official)
     assert before['checks_passed'] and after['checks_passed']

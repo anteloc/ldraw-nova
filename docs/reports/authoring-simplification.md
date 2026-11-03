@@ -27,10 +27,10 @@ passed. The user's existing mechanism work and Mecha handoff are preserved.
 
 | Construction | Physical placements | Evidence |
 |---|---:|---|
-| Named service platform | 55 | [Plan](../../examples/workshop/mounted-frame/model.plan.json), [review](../../examples/workshop/mounted-frame/review/review.json), [visual notes](../../examples/workshop/mounted-frame/visual-review.json). MPD byte-identical to the original service platform. |
-| Retained chain drive | 58 | [Plan](../../examples/workshop/chain-drive/model.plan.json), [review](../../examples/workshop/chain-drive/review/review.json), [visual notes](../../examples/workshop/chain-drive/visual-review.json). Two actual wheels and 24 individual links. |
-| Named pneumatic press | 41 | [Plan](../../examples/flex/pneumatic-press/named.plan.json), [review](../../examples/flex/pneumatic-press/named-review/review.json), [visual notes](../../examples/flex/pneumatic-press/named-visual-review.json). Rigid geometry and BOM match the original fixture. |
-| Workshop conveyor and pneumatic stop | 160 | [Plan](../../examples/workshop/workshop/model.plan.json), [review](../../examples/workshop/workshop/review/review.json), [visual notes](../../examples/workshop/workshop/visual-review.json). Real LeoCAD previews and matching BOMs. |
+| Named service platform | 55 | [Plan](../../examples/mounted-service-frame/model.plan.json), [review](../../examples/mounted-service-frame/review/review.json), [visual notes](../../examples/mounted-service-frame/visual-review.json). MPD byte-identical to the original service platform. |
+| Retained chain drive | 58 | [Plan](../../examples/retained-chain-drive/model.plan.json), [review](../../examples/retained-chain-drive/review/review.json), [visual notes](../../examples/retained-chain-drive/visual-review.json). Two actual wheels and 24 individual links. |
+| Named pneumatic press | 41 | [Plan](../../examples/pneumatic-press/named.plan.json), [review](../../examples/pneumatic-press/named-review/review.json), [visual notes](../../examples/pneumatic-press/named-visual-review.json). Rigid geometry and BOM match the original fixture. |
+| Workshop conveyor and pneumatic stop | 160 | [Plan](../../examples/workshop-machine/model.plan.json), [review](../../examples/workshop-machine/review/review.json), [visual notes](../../examples/workshop-machine/visual-review.json). Real LeoCAD previews and matching BOMs. |
 
 The machine's three sampled minimum bend radii are 20.12, 19.82 and 21.81 LDU,
 against 15 LDU. Pair separations are 12.53, 12.53 and 11.20 LDU, against 10 LDU.
@@ -39,7 +39,7 @@ contextual home/front/back/underside views were opened. The initial layout
 needed higher control mounts to clear the chain base and preserve hose spacing;
 limits were retained throughout repair.
 
-The original [constraint experiments](../../examples/flex/constraint-lab/README.md)
+The original [constraint experiments](../../tests/fixtures/flex-constraints/README.md)
 cover straight, corner, return and parallel routes with measured synthesis.
 Their corner/return constructions now use shared waypoint helpers. All eight
 constraint sources are byte-identical to the baseline; the four archived assets

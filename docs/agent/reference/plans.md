@@ -32,7 +32,7 @@ With `at`, `repeat: {"count": 8, "step": [40,0,0]}` repeats in the containing se
 
 ## Grow the model when needed
 
-The [bridge](../../../examples/bridge.plan.json) demonstrates reusable colour-inheriting pillars. The [Copper Lane plans](../../../examples/modular-street/scene.plan.json) demonstrate includes, module anchors and a larger scene. Keep module origins and connection surfaces clear, and check each module before composing it with neighbors.
+The [bridge](../../../examples/plan-basics/bridge.plan.json) demonstrates reusable colour-inheriting pillars. The [Copper Lane plans](../../../examples/copper-lane/scene.plan.json) demonstrate includes, module anchors and a larger scene. Keep module origins and connection surfaces clear, and check each module before composing it with neighbors.
 
 Use colour 16 inside reusable submodels only when an explicit ancestor colour resolves every visible leaf. Colour 24 is for edges, not placements. Subassemblies belong in embedded `.ldr` blocks; classified imported `.dat` parts retain geometry, transforms and attribution and count as single physical leaves. Avoid loose external models, library-name shadowing, duplicate placements and dependency cycles.
 
@@ -40,14 +40,14 @@ Use `extract --section NAME --namespace UNIQUE --output output/assets/NAME.mpd` 
 
 ## Use Python for calculations
 
-The [Python example](../../../examples/python_api.py) produces a four-brick tower and preserves its editable plan:
+The [Python example](../../../examples/plan-basics/python_api.py) produces a four-brick tower and preserves its editable plan:
 
 ```sh
-.venv/bin/python examples/python_api.py
+.venv/bin/python examples/plan-basics/python_api.py
 ./ldraw-agent review output/tower.mpd
 ```
 
-For larger procedural patterns, see the [Copper Lane generator](../../../examples/modular-street/generate.py). Generate ordinary dictionaries and lists, keeping geometry fixes in the generator so rebuilding preserves them.
+For larger procedural patterns, see the [Copper Lane generator](../../../examples/copper-lane/generate.py). Generate ordinary dictionaries and lists, keeping geometry fixes in the generator so rebuilding preserves them.
 
 | API | Purpose |
 |---|---|
@@ -109,7 +109,7 @@ This expands to IDs `roof-slope-0` through `roof-slope-7`. `step` is a translati
 Build the supplied example:
 
 ```sh
-./ldraw-agent build examples/shadow-snap.plan.json --output output/shadow-snap.mpd
+./ldraw-agent build examples/plan-basics/shadow-snap.plan.json --output output/shadow-snap.mpd
 ```
 
 Use `snap` as the fourth placement mode alongside `at`, `on`, and `attach`:

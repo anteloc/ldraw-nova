@@ -1,0 +1,380 @@
+{
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/kb-visual-audit/next-native/an225-02",
+  "recipe": "recipe.json",
+  "manifest": "manifest.json",
+  "title": "an225: an225-fuselage.ldr",
+  "mode": "views",
+  "panels": [
+    {
+      "image": "panels/01-an225-fuselage-ldr-isolated.png",
+      "view": "home",
+      "step": null,
+      "camera": {
+        "view": "home",
+        "position": [
+          1625.173690447775,
+          -1784.173720937775,
+          -1555.173690447775
+        ],
+        "target": [
+          0.0,
+          -159.00003049,
+          70.0
+        ],
+        "up": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "fov": 30.0,
+        "orthographic": false,
+        "note": "fitted to part corners"
+      },
+      "scene": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/an225-mriya/an225-mriya.mpd",
+        "section": "an225-fuselage.ldr",
+        "parent": null
+      },
+      "layers": [],
+      "legend": [],
+      "notes": [],
+      "synthetic_sha256": "c8d165986594050c0c11eb8dcd8535f1776ad40bd192be2801026eb1f212f576",
+      "raw_sha256": "4d39f5dee92f179efe5eb3520459ac3c265df2e0a60247f1a71853bcfd2b33d0",
+      "image_sha256": "0d96c05362be5273bcdd8231e2fbd5aa0794a70abd36291bac02036e8f23e48b",
+      "submodel": "an225-fuselage.ldr",
+      "parent_placements": [],
+      "materialized_parts": {},
+      "coverage": 0.1488,
+      "argv": [
+        "/Users/captain/bin/leocad",
+        "-l",
+        "<tmp>/library",
+        "-i",
+        "<tmp>/out/0.png",
+        "-w",
+        "1200",
+        "-h",
+        "900",
+        "--aa-samples",
+        "4",
+        "--shading",
+        "full",
+        "--line-width",
+        "2",
+        "--stud-style",
+        "6",
+        "--highlight-color",
+        "#FFFF00FF",
+        "--fade-steps-color",
+        "#40C0C0C0",
+        "-aec",
+        "-cc",
+        "1",
+        "-ldv",
+        "0.5",
+        "--fov",
+        "30",
+        "--camera-position-ldraw",
+        "1625.1737",
+        "-1784.1737",
+        "-1555.1737",
+        "0.0000",
+        "-159.0000",
+        "70.0000",
+        "0.0000",
+        "-1.0000",
+        "0.0000",
+        "--submodel",
+        "an225-fuselage.ldr",
+        "--no-highlight",
+        "--no-fade-steps",
+        "<tmp>/xray-render.mpd"
+      ],
+      "warnings": [],
+      "style": {
+        "width": 1200,
+        "height": 900,
+        "stud_style": 6,
+        "auto_edges": true,
+        "edge_contrast": 1.0,
+        "light_dark": 0.5,
+        "line_width": 2,
+        "aa_samples": 4,
+        "shading": "full",
+        "highlight": "#FFFF00FF",
+        "fade": "#40C0C0C0",
+        "backdrop": "#EEF1F4",
+        "outline": "#2A2F36",
+        "outline_width": 2
+      },
+      "label": "an225-fuselage.ldr isolated",
+      "subject": "an225-fuselage.ldr:isolated"
+    },
+    {
+      "image": "panels/02-in-an225-mriya-ldr.png",
+      "view": "home",
+      "step": null,
+      "camera": {
+        "view": "home",
+        "position": [
+          1874.6980690499645,
+          -2102.1980690499645,
+          -1903.6830674264563
+        ],
+        "target": [
+          0.0,
+          -227.5,
+          -28.98499837649183
+        ],
+        "up": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "fov": 30.0,
+        "orthographic": false,
+        "note": "fitted to part corners"
+      },
+      "scene": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/an225-mriya/an225-mriya.mpd",
+        "section": "an225-fuselage.ldr",
+        "parent": "an225-mriya.ldr"
+      },
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section",
+          "scope": "parent",
+          "count": 1
+        },
+        {
+          "layer": "ghost"
+        }
+      ],
+      "legend": [],
+      "notes": [],
+      "synthetic_sha256": "aae129da5c90c9cdd556f4258135658933bad5f2317b0c9f7d7b7deca060638b",
+      "raw_sha256": "ce5e9e0c013a936646d9d3cb466c149aedc381acee7ab7857c9d05b04bc6bcf5",
+      "image_sha256": "222382e33321f8a4d6505051795e5f82ae5fe48353e894e7455d33f04c47607b",
+      "submodel": "an225-mriya.ldr",
+      "parent_placements": [
+        "1 16 0 0 0 1 0 0 0 1 0 0 0 1 an225-fuselage.ldr"
+      ],
+      "materialized_parts": {},
+      "coverage": 0.2246,
+      "argv": [
+        "/Users/captain/bin/leocad",
+        "-l",
+        "<tmp>/library",
+        "-i",
+        "<tmp>/out/0.png",
+        "-w",
+        "1200",
+        "-h",
+        "900",
+        "--aa-samples",
+        "4",
+        "--shading",
+        "full",
+        "--line-width",
+        "2",
+        "--stud-style",
+        "6",
+        "--highlight-color",
+        "#FFFF00FF",
+        "--fade-steps-color",
+        "#40C0C0C0",
+        "-aec",
+        "-cc",
+        "1",
+        "-ldv",
+        "0.5",
+        "--fov",
+        "30",
+        "--camera-position-ldraw",
+        "1874.6981",
+        "-2102.1981",
+        "-1903.6831",
+        "0.0000",
+        "-227.5000",
+        "-28.9850",
+        "0.0000",
+        "-1.0000",
+        "0.0000",
+        "--submodel",
+        "an225-mriya.ldr",
+        "--from",
+        "2",
+        "--to",
+        "2",
+        "--highlight",
+        "--fade-steps",
+        "<tmp>/xray-render.mpd"
+      ],
+      "warnings": [],
+      "style": {
+        "width": 1200,
+        "height": 900,
+        "stud_style": 6,
+        "auto_edges": true,
+        "edge_contrast": 1.0,
+        "light_dark": 0.5,
+        "line_width": 2,
+        "aa_samples": 4,
+        "shading": "full",
+        "highlight": "#FFFF00FF",
+        "fade": "#40C0C0C0",
+        "backdrop": "#EEF1F4",
+        "outline": "#2A2F36",
+        "outline_width": 2
+      },
+      "label": "In an225-mriya.ldr",
+      "subject": "an225-fuselage.ldr:an225-mriya.ldr"
+    }
+  ],
+  "versions": {
+    "ldraw_xray": "0.1.0",
+    "pyldraw3": "1.7.0",
+    "python": "3.13.9",
+    "leocad": "25.09"
+  },
+  "source": {
+    "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/an225-mriya/an225-mriya.mpd",
+    "source_sha256": "a454e81b53c115d874fc5d4dadd6a378564cee5f623111416f7f142f77b20c7a",
+    "section": "an225-fuselage.ldr",
+    "section_first_line": 277,
+    "steps": 6,
+    "empty_leading_steps": 0,
+    "parents": {
+      "an225-mriya.ldr": [
+        "1 16 0 0 0 1 0 0 0 1 0 0 0 1 an225-fuselage.ldr"
+      ]
+    }
+  },
+  "style": {
+    "width": 1200,
+    "height": 900,
+    "stud_style": 6,
+    "auto_edges": true,
+    "edge_contrast": 1.0,
+    "light_dark": 0.5,
+    "line_width": 2,
+    "aa_samples": 4,
+    "shading": "full",
+    "highlight": "#FFFF00FF",
+    "fade": "#40C0C0C0",
+    "backdrop": "#EEF1F4",
+    "outline": "#2A2F36",
+    "outline_width": 2
+  },
+  "legend": [
+    "Magenta edges: highlighted parts, or parts added in the source step."
+  ],
+  "config": {
+    "library": "/Users/captain/workspaces/workspace-ai/ldraw-lib/ldraw",
+    "shadows": []
+  },
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "mosaic": {
+    "version": 1,
+    "output": "mosaic.png",
+    "mode": "views",
+    "title": "an225: an225-fuselage.ldr",
+    "size": [
+      1648,
+      850
+    ],
+    "columns": 2,
+    "panels": [
+      {
+        "panel": 1,
+        "label": "an225-fuselage.ldr isolated",
+        "image": "panels/01-an225-fuselage-ldr-isolated.png",
+        "sha256": "0d96c05362be5273bcdd8231e2fbd5aa0794a70abd36291bac02036e8f23e48b",
+        "size": [
+          1200,
+          900
+        ],
+        "camera": {
+          "view": "home",
+          "position": [
+            1625.173690447775,
+            -1784.173720937775,
+            -1555.173690447775
+          ],
+          "target": [
+            0.0,
+            -159.00003049,
+            70.0
+          ],
+          "up": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "fov": 30.0,
+          "orthographic": false,
+          "note": "fitted to part corners"
+        },
+        "subject": "an225-fuselage.ldr:isolated",
+        "state": null,
+        "image_box": [
+          16,
+          96,
+          800,
+          600
+        ]
+      },
+      {
+        "panel": 2,
+        "label": "In an225-mriya.ldr",
+        "image": "panels/02-in-an225-mriya-ldr.png",
+        "sha256": "222382e33321f8a4d6505051795e5f82ae5fe48353e894e7455d33f04c47607b",
+        "size": [
+          1200,
+          900
+        ],
+        "camera": {
+          "view": "home",
+          "position": [
+            1874.6980690499645,
+            -2102.1980690499645,
+            -1903.6830674264563
+          ],
+          "target": [
+            0.0,
+            -227.5,
+            -28.98499837649183
+          ],
+          "up": [
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "fov": 30.0,
+          "orthographic": false,
+          "note": "fitted to part corners"
+        },
+        "subject": "an225-fuselage.ldr:an225-mriya.ldr",
+        "state": null,
+        "image_box": [
+          832,
+          96,
+          800,
+          600
+        ]
+      }
+    ],
+    "legend": [
+      "Magenta edges: highlighted parts, or parts added in the source step."
+    ],
+    "duplicates": [],
+    "note": "Views independently framed; not to common scale.",
+    "manifest": null,
+    "manifest_sha256": null,
+    "image_sha256": "bda1fb9db5f650009fd7d0731e57fa3db01f556d31a33dde81da0c77c86c3f5d",
+    "limitations": [
+      "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+    ]
+  }
+}

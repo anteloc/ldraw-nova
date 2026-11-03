@@ -31,7 +31,7 @@ Plans can [declare flexible sources and structural contracts](flex.md#generated-
 The default output is `NAME-review/` beside `NAME.plan.json`, `NAME.json`, `NAME.mpd` or `NAME.ldr`. Use `--outdir` to choose another dedicated directory. For an example without touching supplied assets:
 
 ```sh
-./ldraw-agent review examples/bridge.plan.json --outdir output/bridge-review
+./ldraw-agent review examples/plan-basics/bridge.plan.json --outdir output/bridge-review
 ```
 
 | Artifact | Contents |
@@ -84,7 +84,7 @@ ldraw-xray mosaic output/study/panels.json --output output/study/mosaic.png
 ```sh
 ./ldraw-agent examples --family submodel --details 'curved roof'
 ./ldraw-agent examples --family submodel
-./ldraw-agent manual export examples/submodel-atlas/s09-10258-bus-roof --outdir output/my-roof
+./ldraw-agent manual export examples/10258-rounded-roof --outdir output/my-roof
 ```
 
 Results come from the package README registrations. Each identifies its lesson, scope, guide, source and available evidence. `--details` selects legacy detail aliases. Default retrieval excludes inspiration, held and retired examples; `--scope inspiration` is explicit. Current manual export checks remain separate from search admission.

@@ -20,6 +20,8 @@ from ldraw_tools.manuals import prepare_manual, regenerate_placement
 
 def generate(outdir, *, names=None, renders=True):
     outdir = Path(outdir)
+    if outdir.resolve() == Path(__file__).resolve().parent:
+        raise ValueError('Legacy source preparation requires a separate --outdir; reproduce current packages with their bundled plans/generators. Refresh browsing from README registrations.')
     seeds = json.loads(Path(__file__).with_name('selections.json').read_text())['references']
     parts = get_parts()
     catalog_path = outdir/'catalog.json'

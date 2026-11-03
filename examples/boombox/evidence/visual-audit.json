@@ -1,0 +1,180 @@
+{
+  "id": "boombox",
+  "source": "output/boombox/boombox.mpd",
+  "source_sha256": "0f7d917aa9e53d46f522e17ff184c1ff620919326fee236f01dd4792b4122e2f",
+  "sections": [
+    {
+      "name": "boombox.ldr",
+      "kind": "model",
+      "first_line": 2,
+      "placements": 211,
+      "steps": 15,
+      "empty_leading_steps": 0,
+      "parents": [],
+      "existing_image": "output/boombox-review/previews/home.png",
+      "image_sha256": "a07cb55f87b202f0bfa444600e9ccc35288eb63b518d83b3a79c9ddf6bc01d7b",
+      "visual_observation": "Recognizable portable stereo: two large round speakers, central cassette/control strip, carry handle and aerial. Retain as scoped SNOT panel-and-shell exemplar, not universal model template.",
+      "status": "visually_reviewed"
+    },
+    {
+      "name": "boombox-fascia.ldr",
+      "kind": "model",
+      "first_line": 444,
+      "placements": 84,
+      "steps": 8,
+      "empty_leading_steps": 0,
+      "parents": [
+        "boombox.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/boombox-01",
+      "visual_observation": "Front panel composed flat in local coordinates and mounted vertically facing outward; two speaker bays, cassette tile, meters, orange tuner strip, controls and azure printed display.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/boombox-01/manifest.json",
+        "manifest_sha256": "0abe8e1d20d2d6ed21f9432e41b887c44dc9189b41d010ec115430d4791de091",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-01/panels/01-boombox-fascia-ldr-isolated.png",
+            "sha256": "320236d1553f8ff291cdb1d277b22f06758d0e325f01e6165056b60f2b8de3e8"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-01/panels/02-in-boombox-ldr.png",
+            "sha256": "a1955154b66364b6db22c7259e9106298dfbb9d4904acc67d802d5f2ba38e39a"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/boombox-01/mosaic.png",
+          "sha256": "755b0d2f5db860571616b2b1675a13b3bb47d31377cbd1ba1f88e4e7dbab61b8"
+        }
+      }
+    },
+    {
+      "name": "boombox-rear.ldr",
+      "kind": "model",
+      "first_line": 625,
+      "placements": 59,
+      "steps": 3,
+      "empty_leading_steps": 0,
+      "parents": [
+        "boombox.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/boombox-02",
+      "visual_observation": "Flat rear panel with central dark battery-door motif, vents and white label. Actual back view confirms placement; no opening door or hinge shown.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/boombox-02/manifest.json",
+        "manifest_sha256": "8bf39a38034932e5b0007c1a0652f9ca8fbb40b7408b34c2d9fb391976fbcb4c",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-02/panels/01-boombox-rear-ldr-isolated.png",
+            "sha256": "14807b28883902cb4afefe0d0d290aeba86e3b1456b8f23ac1d2c8d3aa7abb10"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-02/panels/02-in-boombox-ldr.png",
+            "sha256": "5a5f941b33727b5202823ef3dbd53f8cba99d81bd7f2ee2677d8284e4f4eb1f1"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/boombox-02/mosaic.png",
+          "sha256": "6a86d573d69c8e63a2f7475d75873ee1fbd0cfb59242c6cb9877e9ec65f290ce"
+        }
+      }
+    },
+    {
+      "name": "boombox-speaker.ldr",
+      "kind": "model",
+      "first_line": 751,
+      "placements": 16,
+      "steps": 4,
+      "empty_leading_steps": 0,
+      "parents": [
+        "boombox-fascia.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/boombox-03",
+      "visual_observation": "Raised square bezel around round inverted dish and central cap, used twice in fascia. Preserve recessed socket/upper spacer evidence and do not rely on checker lower-spacer pairing.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/boombox-03/manifest.json",
+        "manifest_sha256": "7e9305890c3e3bc947000c470d394635ed467cbc6bdd7e15cf1b71a855637adb",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-03/panels/01-boombox-speaker-ldr-isolated.png",
+            "sha256": "6f50e32ecbb957ab014bed7b4d6245e6f28cca9cc2be0ce220f81b7ba50efa00"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-03/panels/02-in-boombox-fascia-ldr.png",
+            "sha256": "56e7d3e8416f2f75a8452a9a9a2fea60adbffdaab29e78c82b7c7947e3a2ec85"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/boombox-03/mosaic.png",
+          "sha256": "53e90dc99de7a018d4c6493b43a597983c6ce92fcefc3fe7be6581253e95bbca"
+        }
+      }
+    },
+    {
+      "name": "boombox-tweeter.ldr",
+      "kind": "model",
+      "first_line": 792,
+      "placements": 3,
+      "steps": 1,
+      "empty_leading_steps": 0,
+      "parents": [
+        "boombox-fascia.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/boombox-04",
+      "visual_observation": "Small round brick and printed grille tile form tweeter; two upper fascia instances.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/boombox-04/manifest.json",
+        "manifest_sha256": "d03e9f8b55aa9ce970ecf7e2f3fb165a3e590336439aa9e63d8cfda0f659960f",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-04/panels/01-boombox-tweeter-ldr-isolated.png",
+            "sha256": "a64b2c144a3c89406875ac19ea7a713931d87a6de3528ef90a560e94aa913674"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-04/panels/02-in-boombox-fascia-ldr.png",
+            "sha256": "c9fa28f472270a834e38ee31994dfe9d622c0ac4c21e274b6554299d9b568134"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/boombox-04/mosaic.png",
+          "sha256": "bb69db8914f52725198af0509d078540eb39529bc85788faa768e16b2b411c0f"
+        }
+      }
+    },
+    {
+      "name": "boombox-knob.ldr",
+      "kind": "model",
+      "first_line": 804,
+      "placements": 4,
+      "steps": 1,
+      "empty_leading_steps": 0,
+      "parents": [
+        "boombox-fascia.ldr"
+      ],
+      "render_directory": "output/kb-visual-audit/next-native/boombox-05",
+      "visual_observation": "Flat printed dial tile on round brick/collar stack; two centre fascia instances. Not a domed knob.",
+      "status": "visually_reviewed",
+      "evidence": {
+        "manifest": "output/kb-visual-audit/next-native/boombox-05/manifest.json",
+        "manifest_sha256": "ca2be69774805f5b7a1ca031be5daac73f8b4fdeba8ffae6f0e159a0d2c62cf8",
+        "panels": [
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-05/panels/01-boombox-knob-ldr-isolated.png",
+            "sha256": "5398ac26a00cb0df9e6211ec563211f85b60c945d1d8de6b088f44b86fdeb9a2"
+          },
+          {
+            "path": "output/kb-visual-audit/next-native/boombox-05/panels/02-in-boombox-fascia-ldr.png",
+            "sha256": "a3f2c7574c1acd5688a3cea54fcbb922e9f972c8b0995dd5481631a28f5049f8"
+          }
+        ],
+        "opened_image": {
+          "path": "output/kb-visual-audit/next-native/boombox-05/mosaic.png",
+          "sha256": "b008fc69e5d23ce851a0550b55192272cfab24793ffb06704608613c34bc407c"
+        }
+      }
+    }
+  ]
+}

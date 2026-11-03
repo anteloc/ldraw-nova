@@ -75,7 +75,7 @@ def test_real_stud_connection_not_body_collision(official):
 
 
 def test_real_bridge_example(official):
-    plan=json.loads((ROOT/"examples/bridge.plan.json").read_text())
+    plan=json.loads((ROOT/"examples/plan-basics/bridge.plan.json").read_text())
     _,model,issues=build_plan(plan,official)
     assert not issues
     report=analyze_geometry(model,official)

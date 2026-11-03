@@ -205,6 +205,9 @@ def catalog_row(seed, folder):
 
 def write_catalog(outdir):
     outdir = Path(outdir)
+    if outdir.resolve() == Path(__file__).resolve().parent:
+        from ldraw_tools.knowledge import write_compat_catalog
+        return write_compat_catalog('submodel', outdir)
     rows = []
     for seed in seeds():
         folder = outdir/seed['key']
@@ -265,6 +268,8 @@ def probe(outdir, selected, parts):
 
 def generate(outdir, *, names=None, renders=True):
     outdir = Path(outdir)
+    if outdir.resolve() == Path(__file__).resolve().parent:
+        raise ValueError('Legacy source preparation requires a separate --outdir; reproduce current packages with their bundled plans/generators. Refresh browsing from README registrations.')
     selected = seeds()
     if names and set(names)-{s['key'] for s in selected}:
         raise ValueError('Unknown or unpromoted submodel selection')

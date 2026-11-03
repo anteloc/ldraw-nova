@@ -7,12 +7,12 @@ them. Source MPDs and the database are not edited.
 
 | Construction | Source | Parts | What it adds |
 |---|---|---:|---|
-| [Two-axle bogie](rail-bogie/README.md) | 10183 switcher | 22 | Wheelsets, central pivot, buffers and magnetic coupling |
-| [Dormer and balcony](dormer-balcony/README.md) | 10270 | 86 | Floor support, door, glazing, railing and sloping roof transition |
-| [Aircraft landing strut](aircraft-undercarriage/README.md) | 6745 Harrier alternative | 7 | Compact pin/axle strut and a matched rim/tyre pair |
-| [Spacecraft hatch](spacecraft-hatch/README.md) | 924 | 17 | Hull-side hinge dependency and perpendicular engine-cone mounting |
-| [Warehouse forklift](warehouse-forklift/README.md) | 6375 | 21 | A complete small vehicle around a dedicated lifting-mast part |
-| [Swivel armchair](swivel-armchair/README.md) | 10297 | 7 | Opposing brackets, sideways tiled arms and both turntable halves |
+| [Two-axle bogie](../rail-bogie/README.md) | 10183 switcher | 22 | Wheelsets, central pivot, buffers and magnetic coupling |
+| [Dormer and balcony](../dormer-balcony/README.md) | 10270 | 86 | Floor support, door, glazing, railing and sloping roof transition |
+| [Aircraft landing strut](../aircraft-undercarriage/README.md) | 6745 Harrier alternative | 7 | Compact pin/axle strut and a matched rim/tyre pair |
+| [Spacecraft hatch](../spacecraft-hatch/README.md) | 924 | 17 | Hull-side hinge dependency and perpendicular engine-cone mounting |
+| [Warehouse forklift](../warehouse-forklift/README.md) | 6375 | 21 | A complete small vehicle around a dedicated lifting-mast part |
+| [Swivel armchair](../swivel-armchair/README.md) | 10297 | 7 | Opposing brackets, sideways tiled arms and both turntable halves |
 
 Each guide links an inspection board showing the module highlighted in its
 ghosted parent, an isolated home view and an isolated right view. Magenta edges,
@@ -66,9 +66,9 @@ requirements before composing it into a new model.
 ./ldraw-agent examples --family reference 'bogie'
 ./ldraw-agent examples --family reference 'hatch'
 ./ldraw-agent examples --family reference 'furniture'
-./ldraw-agent build examples/reference-atlas/swivel-armchair/scene.plan.json --output output/chair.mpd
+./ldraw-agent build examples/swivel-armchair/scene.plan.json --output output/chair.mpd
 .venv/bin/python examples/reference-atlas/generate.py --manifest examples/reference-atlas/expansion.manifest.json --outdir output/expansion-refresh --jobs 2
-./ldraw-xray board run examples/reference-atlas/swivel-armchair/board/recipe.json --output output/chair-board
+./ldraw-xray board run examples/swivel-armchair/board/recipe.json --output output/chair-board
 ```
 
 The exported placement plans rebuild from their local attributed `source.mpd`

@@ -283,7 +283,7 @@ def test_real_primitive_snap_without_shadows(official):
 
 def test_supplied_snap_plan(official):
     from ldraw_tools.builder import load_plan
-    _, m, diagnostics = build_plan(load_plan(ROOT/'examples/shadow-snap.plan.json'), official)
+    _, m, diagnostics = build_plan(load_plan(ROOT/'examples/plan-basics/shadow-snap.plan.json'), official)
     assert not diagnostics
     report = analyze_geometry(m, official)
     assert report['occurrence_count']==3 and report['optimistic_component_count']==1

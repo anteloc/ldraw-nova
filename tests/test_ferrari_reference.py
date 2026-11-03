@@ -13,7 +13,7 @@ from ldraw_tools.document import parse_source, section_table, source_blocks
 from ldraw_tools.geometry import analyze_geometry
 from ldraw_tools.manuals import current_manual
 
-REFERENCE = ROOT / 'examples/snot/ferrari-f40'
+REFERENCE = ROOT / 'examples/ferrari-f40'
 ANNOTATE = runpy.run_path(str(REFERENCE / 'prepare.py'))['annotate']
 
 

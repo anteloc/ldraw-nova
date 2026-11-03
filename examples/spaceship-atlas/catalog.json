@@ -1,165 +1,383 @@
 {
-  "version": 1,
+  "version": 2,
+  "generated_from": "package README registrations",
+  "family": "spaceship",
   "examples": [
     {
-      "key": "b-wing",
-      "title": "B-wing starfighter",
-      "category": "starfighter",
-      "lesson": "Build a distinctive asymmetric starfighter around a narrow spine and separate wing masses.",
-      "use": "adapt",
+      "id": "10030-star-destroyer",
+      "title": "Imperial Star Destroyer: layered wedge hull",
+      "scope": "inspiration",
+      "kind": "assembly",
+      "aliases": [
+        "spaceship:star-destroyer-study"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Broad triangular ship with recessed side band, layered superstructure and raised bridge; shape inspiration only, existing 416 non-rigid-transform and 39 overlap errors remain. Main detailed ship section reproduces same whole hull; underside reveals plate/hinge construction but no independent small structural modules. Retain only with whole inspiration package.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "capital-ship"
+      ],
+      "model": "../10030-star-destroyer/source.mpd",
+      "plan": "../10030-star-destroyer/scene.plan.json",
+      "preview": "../10030-star-destroyer/renders/home.png",
+      "manual": "../10030-star-destroyer/index.html",
+      "study_notes": "../10030-star-destroyer/study-notes.json",
+      "visual_review": "../10030-star-destroyer/visual-review.json",
+      "model_sha256": "155b535e6db89919677f9b5fb5de49120deaefb4ce8e78afcae9755209033c2d",
+      "audit_pointer": "/items/6",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "guide": "../10030-star-destroyer/README.md",
+      "source_sha256": "155b535e6db89919677f9b5fb5de49120deaefb4ce8e78afcae9755209033c2d",
+      "key": "star-destroyer-study",
       "group": "examples",
-      "model": "b-wing/source.mpd",
-      "plan": "b-wing/scene.plan.json",
-      "guide": "b-wing/GUIDE.md",
-      "manual": "b-wing/index.html",
-      "study_notes": "b-wing/study-notes.json",
-      "physical_placements": 434,
+      "use": "inspiration",
+      "readme_sha256": "ab357d4afaa1805002480bde6d4ee7aa6b855d89cedbf30d39d8ef102399b297",
+      "category": "capital-ship",
+      "source_checks_passed": false,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "10134-y-wing",
+      "title": "UCS Y-wing: proportions and engine detailing",
+      "scope": "inspiration",
+      "kind": "assembly",
+      "aliases": [
+        "spaceship:ucs-y-wing-study",
+        "spaceship:75181-y-wing"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Whole ship has a narrow detailed spine, long twin nacelles and rear strut cages, white/yellow forward shell and black display stand. Inspiration only; 37 recorded overlaps remain. Tapered canopy is not a bubble enclosure. Flat tiled hull cheek with shaped underside sits beside forward cockpit; preserve model-local orientation.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "starfighter"
+      ],
+      "model": "../10134-y-wing/source.mpd",
+      "plan": "../10134-y-wing/scene.plan.json",
+      "preview": "../10134-y-wing/renders/home.png",
+      "manual": "../10134-y-wing/index.html",
+      "study_notes": "../10134-y-wing/study-notes.json",
+      "visual_review": "../10134-y-wing/visual-review.json",
+      "model_sha256": "9672ecdab2a3ebc10b6234eed450c5723e5f6f9207ca23d29919aa92452fbe42",
+      "audit_pointer": "/items/7",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "guide": "../10134-y-wing/README.md",
+      "source_sha256": "9672ecdab2a3ebc10b6234eed450c5723e5f6f9207ca23d29919aa92452fbe42",
+      "key": "ucs-y-wing-study",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "4d4fae5896cc381d657ae5854dc24f65d615b2c2e186f1d492caae4fbe793b10",
+      "category": "starfighter",
+      "source_checks_passed": false,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "75050-b-wing",
+      "title": "75050 B-wing airframe study",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "spaceship:b-wing"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "The root places one detailed airframe section containing the offset cockpit, three unequal wings and four-nozzle cluster. It does not contain separate wing/fuselage/engine submodels. Retain the three recorded position corrections and source provenance; articulation is untested.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "starfighter"
+      ],
+      "model": "../75050-b-wing/source.mpd",
+      "plan": "../75050-b-wing/scene.plan.json",
+      "generator": "../75050-b-wing/generate.py",
+      "preview": "../75050-b-wing/renders/home.png",
+      "manual": "../75050-b-wing/index.html",
+      "study_notes": "../75050-b-wing/study-notes.json",
+      "visual_review": "../75050-b-wing/visual-review.json",
+      "model_sha256": "91c67fdbea95b99d3067586b8b3c80d103be79417ec62d185833d1b4f148fae5",
+      "audit_pointer": "/items/0",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "guide": "../75050-b-wing/README.md",
+      "source_sha256": "91c67fdbea95b99d3067586b8b3c80d103be79417ec62d185833d1b4f148fae5",
+      "key": "b-wing",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "b53cec3826b9eefb2215a648693c1cb7c20b31cb4671d946681e188718346b50",
+      "category": "starfighter",
       "source_checks_passed": true,
       "bom_matches": true,
-      "visual_review_status": "visually_reviewed",
-      "preview": "b-wing/renders/home.png",
-      "generator": "b-wing/generate.py",
-      "visual_review": "b-wing/visual-review.json"
+      "visual_review_status": "pending"
     },
     {
-      "key": "ucs-y-wing-study",
-      "title": "UCS Y-wing: proportions and engine detailing",
-      "category": "starfighter",
-      "lesson": "Use a long spine and paired nacelles to create an immediately readable heavy starfighter.",
-      "use": "inspiration",
+      "id": "halcyon",
+      "title": "Halcyon core and hull skins",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "snot:halcyon",
+        "spaceship:halcyon"
+      ],
+      "families": [
+        "snot",
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Upright local panels rotate onto the hull’s sideways stud faces; preserve the actual handed layouts and interleaving wing splices. The cockpit section is a canopy only; its floor belongs to the hull. One core-and-skin lesson, not a default spacecraft shape.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/snot-audit.json",
+      "model": "../halcyon/halcyon.mpd",
+      "plan": "../halcyon/halcyon.plan.json",
+      "generator": "../halcyon/generate.py",
+      "model_sha256": "106c4044da850016d95dee60028faee2b207b7b1e7737a62003f13111e682022",
+      "audit_pointer": "/items/2",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/snot-findings.md",
+      "techniques": [
+        "snot"
+      ],
+      "subjects": [
+        "spacecraft"
+      ],
+      "guide": "../halcyon/README.md",
+      "source_sha256": "106c4044da850016d95dee60028faee2b207b7b1e7737a62003f13111e682022",
+      "key": "halcyon",
       "group": "examples",
-      "model": "ucs-y-wing-study/source.mpd",
-      "plan": "ucs-y-wing-study/scene.plan.json",
-      "guide": "ucs-y-wing-study/GUIDE.md",
-      "manual": "ucs-y-wing-study/index.html",
-      "study_notes": "ucs-y-wing-study/study-notes.json",
-      "physical_placements": 1493,
-      "source_checks_passed": false,
-      "bom_matches": true,
-      "visual_review_status": "visually_reviewed",
-      "preview": "ucs-y-wing-study/renders/home.png",
-      "visual_review": "ucs-y-wing-study/visual-review.json"
-    },
-    {
-      "key": "star-destroyer-study",
-      "title": "Imperial Star Destroyer: layered wedge hull",
-      "category": "capital-ship",
-      "lesson": "Layer a broad wedge hull, narrow edge trenches and smaller superstructure to establish capital-ship scale.",
-      "use": "inspiration",
-      "group": "examples",
-      "model": "star-destroyer-study/source.mpd",
-      "plan": "star-destroyer-study/scene.plan.json",
-      "guide": "star-destroyer-study/GUIDE.md",
-      "manual": "star-destroyer-study/index.html",
-      "study_notes": "star-destroyer-study/study-notes.json",
-      "physical_placements": 1335,
-      "source_checks_passed": false,
-      "bom_matches": true,
-      "visual_review_status": "visually_reviewed",
-      "preview": "star-destroyer-study/renders/home.png",
-      "visual_review": "star-destroyer-study/visual-review.json"
+      "use": "adapt",
+      "readme_sha256": "0f5b8a27cd5d2a66b6173bf46ed677e925953a95707ac5c419a020414afe08bc",
+      "category": "spacecraft"
     }
   ],
   "details": [
     {
-      "key": "x-wing-wing",
-      "title": "UCS X-wing lower port wing",
-      "category": "wing",
-      "lesson": "A long spacecraft wing can carry an engine pod and a slender tip feature while retaining a layered, readable silhouette.",
-      "use": "adapt",
-      "group": "details",
-      "model": "x-wing-wing/source.mpd",
-      "plan": "x-wing-wing/scene.plan.json",
-      "guide": "x-wing-wing/GUIDE.md",
-      "manual": "x-wing-wing/index.html",
-      "study_notes": "x-wing-wing/study-notes.json",
-      "physical_placements": 125,
-      "source_checks_passed": true,
-      "bom_matches": true,
-      "visual_review_status": "visually_reviewed",
-      "preview": "x-wing-wing/renders/home.png",
-      "generator": "x-wing-wing/generate.py",
-      "visual_review": "x-wing-wing/visual-review.json"
-    },
-    {
-      "key": "x-wing-nacelle",
-      "title": "UCS X-wing engine nacelle",
-      "category": "engine",
-      "lesson": "Use genuine cylinders and concentric round parts to give an engine a convincing layered profile.",
-      "use": "adapt",
-      "group": "details",
-      "model": "x-wing-nacelle/source.mpd",
-      "plan": "x-wing-nacelle/scene.plan.json",
-      "guide": "x-wing-nacelle/GUIDE.md",
-      "manual": "x-wing-nacelle/index.html",
-      "study_notes": "x-wing-nacelle/study-notes.json",
-      "physical_placements": 41,
-      "source_checks_passed": true,
-      "bom_matches": true,
-      "visual_review_status": "visually_reviewed",
-      "preview": "x-wing-nacelle/renders/home.png",
-      "generator": "x-wing-nacelle/generate.py",
-      "visual_review": "x-wing-nacelle/visual-review.json"
-    },
-    {
-      "key": "y-wing-armour",
-      "title": "UCS Y-wing contoured armour panel",
-      "category": "hull",
-      "lesson": "Combine sloped armour with a small raised vent cluster and a deliberate hinge edge.",
-      "use": "adapt",
-      "group": "details",
-      "model": "y-wing-armour/source.mpd",
-      "plan": "y-wing-armour/scene.plan.json",
-      "guide": "y-wing-armour/GUIDE.md",
-      "manual": "y-wing-armour/index.html",
-      "study_notes": "y-wing-armour/study-notes.json",
-      "physical_placements": 31,
-      "source_checks_passed": true,
-      "bom_matches": true,
-      "visual_review_status": "visually_reviewed",
-      "preview": "y-wing-armour/renders/home.png",
-      "generator": "y-wing-armour/generate.py",
-      "visual_review": "y-wing-armour/visual-review.json"
-    },
-    {
-      "key": "falcon-greebles",
-      "title": "Millennium Falcon service-bay details",
-      "category": "surface-detail",
-      "lesson": "Small familiar LEGO fittings can suggest machinery when arranged in a coherent recessed service bay.",
-      "use": "adapt",
-      "group": "details",
-      "model": "falcon-greebles/source.mpd",
-      "plan": "falcon-greebles/scene.plan.json",
-      "guide": "falcon-greebles/GUIDE.md",
-      "manual": "falcon-greebles/index.html",
-      "study_notes": "falcon-greebles/study-notes.json",
-      "physical_placements": 15,
-      "source_checks_passed": true,
-      "bom_matches": true,
-      "visual_review_status": "visually_reviewed",
-      "preview": "falcon-greebles/renders/home.png",
-      "generator": "falcon-greebles/generate.py",
-      "visual_review": "falcon-greebles/visual-review.json"
-    },
-    {
+      "id": "canopy-cockpit",
+      "title": "Octagonal cockpit enclosure and shaped closure",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "spaceship:canopy-cockpit"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Octagonal side halves frame a shaped central door spanning the top/front. Study enclosure and pilot envelope; the pilot and helmet are nested context, not separate recommended constructions. Hinge motion and clearance remain unverified.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "cockpit"
+      ],
+      "model": "../canopy-cockpit/source.mpd",
+      "plan": "../canopy-cockpit/scene.plan.json",
+      "generator": "../canopy-cockpit/generate.py",
+      "preview": "../canopy-cockpit/renders/home.png",
+      "manual": "../canopy-cockpit/index.html",
+      "study_notes": "../canopy-cockpit/study-notes.json",
+      "visual_review": "../canopy-cockpit/visual-review.json",
+      "model_sha256": "6b882983b13fe53b055e127ecb3973b568e4aa535c1f8e151c0330414ead818d",
+      "audit_pointer": "/items/1",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "guide": "../canopy-cockpit/README.md",
+      "source_sha256": "6b882983b13fe53b055e127ecb3973b568e4aa535c1f8e151c0330414ead818d",
       "key": "canopy-cockpit",
-      "title": "Enclosed octagonal canopy cockpit",
-      "category": "cockpit",
-      "lesson": "Design the cockpit envelope around real canopy halves and hinges before closing the hull.",
-      "use": "adapt",
       "group": "details",
-      "model": "canopy-cockpit/source.mpd",
-      "plan": "canopy-cockpit/scene.plan.json",
-      "guide": "canopy-cockpit/GUIDE.md",
-      "manual": "canopy-cockpit/index.html",
-      "study_notes": "canopy-cockpit/study-notes.json",
-      "physical_placements": 49,
+      "use": "adapt",
+      "readme_sha256": "887f6a84aa01096735d7a3c210f07087ca6b85aa390c887e336c1ee8754fcb05",
+      "category": "cockpit",
       "source_checks_passed": true,
       "bom_matches": true,
-      "visual_review_status": "visually_reviewed",
-      "preview": "canopy-cockpit/renders/home.png",
-      "generator": "canopy-cockpit/generate.py",
-      "visual_review": "canopy-cockpit/visual-review.json"
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "falcon-greebles",
+      "title": "Falcon upper-hull service cluster",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "spaceship:falcon-greebles"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "A localized 15-part service cluster occupies a small right-side upper-hull bay. Study detail composition and the actual mounting context; this is not a lesson about the whole Falcon.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "surface-detail"
+      ],
+      "model": "../falcon-greebles/source.mpd",
+      "plan": "../falcon-greebles/scene.plan.json",
+      "generator": "../falcon-greebles/generate.py",
+      "preview": "../falcon-greebles/renders/home.png",
+      "manual": "../falcon-greebles/index.html",
+      "study_notes": "../falcon-greebles/study-notes.json",
+      "visual_review": "../falcon-greebles/visual-review.json",
+      "model_sha256": "0540d6efedbca2e7d1ad1d041df15e216602c54a5f01e2ba25cd141ad161e4fd",
+      "audit_pointer": "/items/2",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "guide": "../falcon-greebles/README.md",
+      "source_sha256": "0540d6efedbca2e7d1ad1d041df15e216602c54a5f01e2ba25cd141ad161e4fd",
+      "key": "falcon-greebles",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "5d9ad9577e1f944c886712cae354fc44a17fe5bf8f85fb1cca8734d2049e3edc",
+      "category": "surface-detail",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "x-wing-nacelle",
+      "title": "X-wing nacelle-2 and transverse mounts",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "spaceship:x-wing-nacelle"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Concentric engine construction with transverse mounts, reviewed in both actual wing parents. Nacelle-1 has different mounting details and is not an interchangeable duplicate. No new contact or motion certification.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "engine"
+      ],
+      "model": "../x-wing-nacelle/source.mpd",
+      "plan": "../x-wing-nacelle/scene.plan.json",
+      "generator": "../x-wing-nacelle/generate.py",
+      "preview": "../x-wing-nacelle/renders/home.png",
+      "manual": "../x-wing-nacelle/index.html",
+      "study_notes": "../x-wing-nacelle/study-notes.json",
+      "visual_review": "../x-wing-nacelle/visual-review.json",
+      "model_sha256": "6c12514ba6590f7cb23b97e1157f889d7fd55bf67d303c981f370f2474e396ef",
+      "audit_pointer": "/items/3",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "guide": "../x-wing-nacelle/README.md",
+      "source_sha256": "6c12514ba6590f7cb23b97e1157f889d7fd55bf67d303c981f370f2474e396ef",
+      "key": "x-wing-nacelle",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "3d2c3de53a9d4597c912e1f7c6c4656cad6cf5f43c167344e6310e7501e6e662",
+      "category": "engine",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "x-wing-wing",
+      "title": "X-wing lower port wing with engine and tip cannon",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "spaceship:x-wing-wing"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Thin plate wing, nacelle-1, projecting tip cannon and root trim form this local construction. The engine and laser cannon are separate roles. Preserve parent mounting context; the whole X-wing is not a single dish.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "wing"
+      ],
+      "model": "../x-wing-wing/source.mpd",
+      "plan": "../x-wing-wing/scene.plan.json",
+      "generator": "../x-wing-wing/generate.py",
+      "preview": "../x-wing-wing/renders/home.png",
+      "manual": "../x-wing-wing/index.html",
+      "study_notes": "../x-wing-wing/study-notes.json",
+      "visual_review": "../x-wing-wing/visual-review.json",
+      "model_sha256": "09d0daa26aeba02e8a68d1bb35151f63bc20e78ff95de58bd6adc35d3dd80cc0",
+      "audit_pointer": "/items/4",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "guide": "../x-wing-wing/README.md",
+      "source_sha256": "09d0daa26aeba02e8a68d1bb35151f63bc20e78ff95de58bd6adc35d3dd80cc0",
+      "key": "x-wing-wing",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "5c5cde4f1a3ef61fb11180b5e7a10f93337104ad79e7707a0cb48e62b2e95231",
+      "category": "wing",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "y-wing-armour",
+      "title": "Y-wing starboard engine armour panel",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "spaceship:y-wing-armour"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Contoured armour and detail panel on the starboard engine nacelle. Preserve the actual parent transform; it is not a port-side fuselage panel. Static source and image evidence only.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "hull"
+      ],
+      "model": "../y-wing-armour/source.mpd",
+      "plan": "../y-wing-armour/scene.plan.json",
+      "generator": "../y-wing-armour/generate.py",
+      "preview": "../y-wing-armour/renders/home.png",
+      "manual": "../y-wing-armour/index.html",
+      "study_notes": "../y-wing-armour/study-notes.json",
+      "visual_review": "../y-wing-armour/visual-review.json",
+      "model_sha256": "400e59c0758c39c658b68fe14c14c474880e802909b9d30bf5fcfb511be2289e",
+      "audit_pointer": "/items/5",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "guide": "../y-wing-armour/README.md",
+      "source_sha256": "400e59c0758c39c658b68fe14c14c474880e802909b9d30bf5fcfb511be2289e",
+      "key": "y-wing-armour",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "8e06328bbeb9f9fe3c47bd53157b34311f03d63402cbe6b0be2cd157f459ddab",
+      "category": "hull",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
     }
   ]
 }

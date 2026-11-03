@@ -52,6 +52,8 @@ def command_path(path):
 
 def generate(outdir, *, names=None, renders=False, levels=2, colour=71, accent=14):
     outdir = Path(outdir)
+    if outdir.resolve() == Path(__file__).resolve().parent:
+        raise ValueError('Legacy recipe generation requires a separate --outdir; use current package plans for maintained examples.')
     parts = get_parts()
     catalog_path = outdir/'catalog.json'
     old = json.loads(catalog_path.read_text()) if catalog_path.exists() else {'examples': [], 'details': []}

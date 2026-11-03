@@ -1,114 +1,259 @@
 {
-  "version": 1,
-  "scope": "mechanism",
+  "version": 2,
+  "generated_from": "package README registrations",
+  "family": "mechanism",
   "examples": [
     {
-      "key": "gear-reduction",
-      "title": "Gear and axle module",
-      "category": "Gearing",
-      "lesson": "Study gear stacks, axle joiners and the supports that register them to the surrounding gearbox.",
-      "model": "gear-reduction/source.mpd",
-      "plan": "gear-reduction/scene.plan.json",
-      "guide": "gear-reduction/GUIDE.md",
-      "generator": "gear-reduction/generate.py",
-      "manual": "gear-reduction/index.html",
-      "operation": "gear-reduction/operation.json",
-      "physical_placements": 35,
-      "analytical_verification": "deferred",
-      "visual_review_status": "visually_reviewed",
-      "source_sha256": "d53889036ecc71acb2d45de401e2b4d5e2875613a25a3c8959c2173c165c3b35",
-      "preview": "gear-reduction/renders/home.png",
-      "visual_review": "gear-reduction/visual-review.json"
-    },
-    {
-      "key": "worm-drive",
-      "title": "Worm-drive support module",
-      "category": "Worm drive",
-      "lesson": "Keep a worm shaft, its driven gear and retaining pieces together with their supporting layers.",
-      "model": "worm-drive/source.mpd",
-      "plan": "worm-drive/scene.plan.json",
-      "guide": "worm-drive/GUIDE.md",
-      "generator": "worm-drive/generate.py",
-      "manual": "worm-drive/index.html",
-      "operation": "worm-drive/operation.json",
-      "physical_placements": 14,
-      "analytical_verification": "deferred",
-      "visual_review_status": "visually_reviewed",
-      "source_sha256": "418b1b235c01b58a199e34953b5ff55f459188c73f5a4d45c6e8ad62149dee27",
-      "preview": "worm-drive/renders/home.png",
-      "visual_review": "worm-drive/visual-review.json"
-    },
-    {
-      "key": "steering-rack",
-      "title": "Steering rack carriage",
-      "category": "Rack steering",
-      "lesson": "A steering reference may contain the sliding rack and carrier while its driving pinion belongs to the parent.",
-      "model": "steering-rack/source.mpd",
-      "plan": "steering-rack/scene.plan.json",
-      "guide": "steering-rack/GUIDE.md",
-      "generator": "steering-rack/generate.py",
-      "manual": "steering-rack/index.html",
-      "operation": "steering-rack/operation.json",
-      "physical_placements": 10,
-      "analytical_verification": "deferred",
-      "visual_review_status": "visually_reviewed",
-      "source_sha256": "6f62ffdb2eb3fd4d2ff8d4a2faba218ae2a435db83151cdbe14b6b85e936f19a",
-      "preview": "steering-rack/renders/home.png",
-      "visual_review": "steering-rack/visual-review.json"
-    },
-    {
-      "key": "piston-crank",
-      "title": "Single-cylinder piston and crank",
-      "category": "Crank and piston",
-      "lesson": "Use dedicated piston, connecting-rod, crankshaft and cylinder parts; read the source and per-step parts list for internals hidden within a grouped step.",
-      "model": "piston-crank/source.mpd",
-      "plan": "piston-crank/scene.plan.json",
-      "guide": "piston-crank/GUIDE.md",
-      "generator": "piston-crank/generate.py",
-      "manual": "piston-crank/index.html",
-      "operation": "piston-crank/operation.json",
-      "physical_placements": 19,
-      "analytical_verification": "deferred",
-      "visual_review_status": "visually_reviewed",
-      "source_sha256": "b1da23cd1ebfa574d233e0ee042828fb83cdbcb15a967e071a29b5e6738e390d",
-      "preview": "piston-crank/renders/home.png",
-      "visual_review": "piston-crank/visual-review.json"
-    },
-    {
-      "key": "differential",
+      "id": "differential",
       "title": "Differential in an axle frame",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "mechanism:differential"
+      ],
+      "families": [
+        "mechanism"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Differential-plus-axle-frame study. Open carrier, output sides, drive gear and surrounding beam supports are visible; source-parent view shows integration between wheel corners. Static images do not prove differential operation.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Differential"
+      ],
+      "model": "../differential/source.mpd",
+      "plan": "../differential/scene.plan.json",
+      "generator": "../differential/generate.py",
+      "preview": "../differential/renders/home.png",
+      "manual": "../differential/index.html",
+      "operation": "../differential/operation.json",
+      "visual_review": "../differential/visual-review.json",
+      "model_sha256": "dfed1bb8f2b89021fa4a51b755a73b5968a57a03a0a33cc68cfc61d7b14b8993",
+      "audit_pointer": "/items/0",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [],
+      "guide": "../differential/README.md",
+      "source_sha256": "dfed1bb8f2b89021fa4a51b755a73b5968a57a03a0a33cc68cfc61d7b14b8993",
+      "key": "differential",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "d6a5b1cb4eae6d31d00b9c23271e5e9a700f7536b69a43547226ba3857475250",
       "category": "Differential",
-      "lesson": "Inspect the internal bevel gear arrangement through the open carrier and source part list; preserve both axle outputs and their supports.",
-      "model": "differential/source.mpd",
-      "plan": "differential/scene.plan.json",
-      "guide": "differential/GUIDE.md",
-      "generator": "differential/generate.py",
-      "manual": "differential/index.html",
-      "operation": "differential/operation.json",
-      "physical_placements": 29,
-      "analytical_verification": "deferred",
-      "visual_review_status": "visually_reviewed",
-      "source_sha256": "72df8a1a852d6584eeba935320de411b9dc9dc23582177336341af68156469db",
-      "preview": "differential/renders/home.png",
-      "visual_review": "differential/visual-review.json"
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
     },
     {
-      "key": "driven-turntable",
+      "id": "driven-turntable",
       "title": "Geared turntable mount",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "mechanism:driven-turntable"
+      ],
+      "families": [
+        "mechanism"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Paired turntable halves, pin-equipped rotating attachment, drive gear and open base frame as one mounting study. Parent vehicle supplies external drive and attached load. Source pose only.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Turntable"
+      ],
+      "model": "../driven-turntable/source.mpd",
+      "plan": "../driven-turntable/scene.plan.json",
+      "generator": "../driven-turntable/generate.py",
+      "preview": "../driven-turntable/renders/home.png",
+      "manual": "../driven-turntable/index.html",
+      "operation": "../driven-turntable/operation.json",
+      "visual_review": "../driven-turntable/visual-review.json",
+      "model_sha256": "0acdec7ef5cdd0b5846ce8273d2f59e57f8d6a262cc045a33743653dfcaf5081",
+      "audit_pointer": "/items/1",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [],
+      "guide": "../driven-turntable/README.md",
+      "source_sha256": "0acdec7ef5cdd0b5846ce8273d2f59e57f8d6a262cc045a33743653dfcaf5081",
+      "key": "driven-turntable",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "66ad50cc5c7485cffce2d92ca859092486d07bc56436fde3aa70d98f303a5c64",
       "category": "Turntable",
-      "lesson": "Keep the two turntable halves, the driving gear and the base supports together while exposing the rotating attachment face.",
-      "model": "driven-turntable/source.mpd",
-      "plan": "driven-turntable/scene.plan.json",
-      "guide": "driven-turntable/GUIDE.md",
-      "generator": "driven-turntable/generate.py",
-      "manual": "driven-turntable/index.html",
-      "operation": "driven-turntable/operation.json",
-      "physical_placements": 25,
-      "analytical_verification": "deferred",
-      "visual_review_status": "visually_reviewed",
-      "source_sha256": "d9e5e14335324cebdf2204d998cc089ae15b4150193323813b4511d22d8c8239",
-      "preview": "driven-turntable/renders/home.png",
-      "visual_review": "driven-turntable/visual-review.json"
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "gear-and-axle-module",
+      "title": "Gear and axle module",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "mechanism:gear-reduction"
+      ],
+      "families": [
+        "mechanism"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Rename canonical key to gear-and-axle-module to match guide. Red elevated clutch gear and exposed axles depend on surrounding parent transmission. Do not offer as standalone reduction gearbox or infer a complete ratio from this extract.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Gearing"
+      ],
+      "model": "../gear-and-axle-module/source.mpd",
+      "plan": "../gear-and-axle-module/scene.plan.json",
+      "generator": "../gear-and-axle-module/generate.py",
+      "preview": "../gear-and-axle-module/renders/home.png",
+      "manual": "../gear-and-axle-module/index.html",
+      "operation": "../gear-and-axle-module/operation.json",
+      "visual_review": "../gear-and-axle-module/visual-review.json",
+      "model_sha256": "99e74e35d2e4f6a38ee6efb3974516bf6495b0872dc8a574732c2de6277eb51b",
+      "audit_pointer": "/items/2",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [],
+      "guide": "../gear-and-axle-module/README.md",
+      "source_sha256": "99e74e35d2e4f6a38ee6efb3974516bf6495b0872dc8a574732c2de6277eb51b",
+      "key": "gear-reduction",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "96494aaadbadcef3b2b85af3affc624c1736a2494e6fb086c4c21f12a8e4e32c",
+      "category": "Gearing",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "piston-crank",
+      "title": "Single-cylinder piston and crank",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "mechanism:piston-crank"
+      ],
+      "families": [
+        "mechanism"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Single-cylinder display engine: exposed lower crank, rod and geared shaft agree with guide; upper piston is enclosed by the embedded cylinder part. Parent kart provides chassis and drivetrain. No motion or clearance proof.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Crank and piston"
+      ],
+      "model": "../piston-crank/source.mpd",
+      "plan": "../piston-crank/scene.plan.json",
+      "generator": "../piston-crank/generate.py",
+      "preview": "../piston-crank/renders/home.png",
+      "manual": "../piston-crank/index.html",
+      "operation": "../piston-crank/operation.json",
+      "visual_review": "../piston-crank/visual-review.json",
+      "model_sha256": "627ab6794749ab8e30de5fb98eae866be4671666427dc33a8e771b408a520ee4",
+      "audit_pointer": "/items/3",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [],
+      "guide": "../piston-crank/README.md",
+      "source_sha256": "627ab6794749ab8e30de5fb98eae866be4671666427dc33a8e771b408a520ee4",
+      "key": "piston-crank",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "02974409cb00820d281f3e7133119b5a853a748e0050068691ff751c2c70e500",
+      "category": "Crank and piston",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "steering-rack",
+      "title": "Steering rack carriage",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "mechanism:steering-rack"
+      ],
+      "families": [
+        "mechanism"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Rack carriage with beam carrier and steering connections. Driving pinion is absent from the extract and supplied by parent tractor. Search result must state this dependency.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Rack steering"
+      ],
+      "model": "../steering-rack/source.mpd",
+      "plan": "../steering-rack/scene.plan.json",
+      "generator": "../steering-rack/generate.py",
+      "preview": "../steering-rack/renders/home.png",
+      "manual": "../steering-rack/index.html",
+      "operation": "../steering-rack/operation.json",
+      "visual_review": "../steering-rack/visual-review.json",
+      "model_sha256": "d84aa2d79ec31a5c60d2897d83f053e8316755e7b68a5710d69f3fad8a3cdeeb",
+      "audit_pointer": "/items/4",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [],
+      "guide": "../steering-rack/README.md",
+      "source_sha256": "d84aa2d79ec31a5c60d2897d83f053e8316755e7b68a5710d69f3fad8a3cdeeb",
+      "key": "steering-rack",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "8b411395d2af955687ca23974434c5138f6f627a03a728248474edf07b584631",
+      "category": "Rack steering",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "worm-drive",
+      "title": "Worm-drive support module",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "mechanism:worm-drive"
+      ],
+      "families": [
+        "mechanism"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Worm shaft, small driven gear and layered supports. Parent supplies winding assembly; isolated module has no drum/cable and no demonstrated self-locking/load capacity.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
+      "subjects": [
+        "Worm drive"
+      ],
+      "model": "../worm-drive/source.mpd",
+      "plan": "../worm-drive/scene.plan.json",
+      "generator": "../worm-drive/generate.py",
+      "preview": "../worm-drive/renders/home.png",
+      "manual": "../worm-drive/index.html",
+      "operation": "../worm-drive/operation.json",
+      "visual_review": "../worm-drive/visual-review.json",
+      "model_sha256": "413fb5e8a453cd2592be322704781052bafcc15ba8a0bf32b23e35af7d96e7eb",
+      "audit_pointer": "/items/5",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-findings.md",
+      "techniques": [],
+      "guide": "../worm-drive/README.md",
+      "source_sha256": "413fb5e8a453cd2592be322704781052bafcc15ba8a0bf32b23e35af7d96e7eb",
+      "key": "worm-drive",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "c13afa27aa9a10f6aee4dd0cfda5fd1672b3ca2abb5dc5b0ad6c831e1c20a8e6",
+      "category": "Worm drive",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "pending"
     }
   ],
   "details": []

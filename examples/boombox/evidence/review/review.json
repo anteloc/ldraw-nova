@@ -1,0 +1,46 @@
+{
+  "format": "ldraw-nova-review",
+  "version": 1,
+  "source": {
+    "path": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/boombox/boombox.plan.json",
+    "sha256": "3947cf0da2d0f4b79956147a2cdfdf60e5710fc51a06ad8e8c2abc39b78ecbe5",
+    "section": null,
+    "colour": null
+  },
+  "output": "/Users/captain/workspaces/workspace-ai/ldraw-nova/output/boombox-review",
+  "checks_passed": true,
+  "physical_validity": "not_proven",
+  "visual_review": "required: open and inspect the images",
+  "model_sha256": "0f7d917aa9e53d46f522e17ff184c1ff620919326fee236f01dd4792b4122e2f",
+  "stages": {
+    "validation": "passed",
+    "bom": "passed",
+    "render": "passed",
+    "bom_comparison": "passed"
+  },
+  "artifacts": {
+    "bom-comparison.json": "8eaa3613d82f4c55bdcf9cd55ce05184c4ca0132c1aaeae0bbc6892d3c352d65",
+    "bom.json": "f0f7468f49ae6425844422dd285143721c88d1d0dffec8d7e2d01e20741c6254",
+    "model.mpd": "0f7d917aa9e53d46f522e17ff184c1ff620919326fee236f01dd4792b4122e2f",
+    "previews/back.png": "7999c54d63034cb5bb603b87b27e1e940011ed0ea97c3f07e963284b085c84d2",
+    "previews/bottom.png": "a0189be855277a271ede7fee51055eba80b0c7b00167261cea8fc496f4d17748",
+    "previews/front.png": "90bd0ffa9b51f6ef1e5bd87e639bae00d9a3cff41eda191ca2e80fe5a72d7748",
+    "previews/home.png": "a07cb55f87b202f0bfa444600e9ccc35288eb63b518d83b3a79c9ddf6bc01d7b",
+    "previews/left.png": "14e2f93cec625fc2b2497e577465b2454f92d204745efb8dce1879f25e40ce3b",
+    "previews/leocad-bom.csv": "a6d68be400707e126f8df52a2d2e03169c85739b8cfe351197be46b50e090036",
+    "previews/right.png": "c0a005c498e6e20da80de1c449bfc6018779020ac6eaa02b26d9d24d4184d17d",
+    "previews/top.png": "fc32020e0fc164daa37790b2c7d37cc9127cafc48fe7d2a57a4333843c3a845e",
+    "validation.json": "1fce19039c3424c848b15b51d816d76d574f3aef43426ccee364c9b3cf3cb6bd"
+  },
+  "diagnostics": [
+    {
+      "code": "coverage.collision_review",
+      "severity": "warning",
+      "message": "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.",
+      "line_number": null,
+      "section": null
+    }
+  ],
+  "physical_placements": 392,
+  "exit_code": 0
+}
