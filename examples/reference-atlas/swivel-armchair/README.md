@@ -31,3 +31,41 @@ Keep the bracket offsets and turntable pair. Recolour or place the whole chair, 
 These are source construction studies for adaptation, not certified mechanical cores. Original authorship and licences remain in the MPD and extraction manifest.
 
 Recreate the board with `./ldraw-xray board run examples/reference-atlas/swivel-armchair/board/recipe.json --output output/boards/swivel-armchair`. Changed renders require a new inspection; do not reuse this review automatically.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "swivel-armchair",
+    "title": "Seven-part swivel armchair with sideways tiled armrests",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "reference:swivel-armchair"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Compact black chair and turntable mount. Static-pose scope only; swivel clearance not verified.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "furniture SNOT"
+    ],
+    "model": "examples/reference-atlas/swivel-armchair/preview.mpd",
+    "plan": "examples/reference-atlas/swivel-armchair/scene.plan.json",
+    "preview": "examples/reference-atlas/swivel-armchair/renders/home.png",
+    "board": "examples/reference-atlas/swivel-armchair/board/mosaic.png",
+    "visual_review": "examples/reference-atlas/swivel-armchair/card.json",
+    "model_sha256": "606fb135f0f2727975835e04f52ab5ce051f7ef5bf3fd5e3931b8c50fc3e17aa",
+    "audit_pointer": "/items/22",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

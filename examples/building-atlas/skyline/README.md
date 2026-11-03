@@ -32,3 +32,39 @@ Render and inspect one submodel with `--section NAME --colour CODE`; replace NAM
 ```
 
 Change the generator for reproducible structural edits; changing only the emitted MPD loses the change on regeneration. The examples focus on exterior composition and interfaces. Most rooms have no furniture or internal stairs; the skyline is explicitly microscale. No vehicles, minifigures, moving mechanisms or manufacturing inventory are implied. Read the per-view observations and physical scope in the [collection review](../visual-review.md).
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "microscale-skyline",
+    "title": "Three Rivers: two towers and a pavilion",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "building:skyline"
+    ],
+    "families": [
+      "building"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Microscale massing with a stepped tan tower, glazed slab tower and low pavilion on one plinth. Two towers and one pavilion, not three towers; do not transfer its proportions to minifigure-scale buildings.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/building-audit.json",
+    "scale": "microscale",
+    "subjects": [
+      "Microscale architecture and landmarks"
+    ],
+    "model": "examples/building-atlas/skyline/skyline.mpd",
+    "plan": "examples/building-atlas/skyline/scene.plan.json",
+    "preview": "examples/building-atlas/skyline/home.png",
+    "model_sha256": "2cb9ec3a4d5a00516ee632035bd4dd9ca2131e3c891c501208f1d42a0f8307a7",
+    "audit_pointer": "/items/2",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/building-findings.md",
+    "techniques": []
+  }
+]
+```

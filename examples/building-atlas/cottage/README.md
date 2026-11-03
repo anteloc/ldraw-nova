@@ -40,3 +40,39 @@ Render and inspect one submodel with `--section NAME --colour CODE`; replace NAM
 ```
 
 Change the generator for reproducible structural edits; changing only the emitted MPD loses the change on regeneration. The examples focus on exterior composition and interfaces. Most rooms have no furniture or internal stairs; the skyline is explicitly microscale. No vehicles, minifigures, moving mechanisms or manufacturing inventory are implied. Read the per-view observations and physical scope in the [collection review](../visual-review.md).
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "cottage",
+    "title": "Willow Porch Cottage",
+    "scope": "hold",
+    "kind": "assembly",
+    "aliases": [
+      "building:cottage"
+    ],
+    "families": [
+      "building"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "One basic upright shell/roof/site-composition lesson, with scope explicitly unfurnished and introductory. Shell, five windows, closed door, roof/dormer and supported porch read correctly. Sparse tree and blocky bench remain replacement candidates; their nested uses must be updated too. Roof has a continuous underside plate deck; do not imply a usable dormer room or interior access through it.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/building-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "Detached homes and gardens"
+    ],
+    "model": "examples/building-atlas/cottage/cottage.mpd",
+    "plan": "examples/building-atlas/cottage/scene.plan.json",
+    "preview": "examples/building-atlas/cottage/home.png",
+    "model_sha256": "0d2ca147ce56243cc1fa741879d7462804bec772dc077ed0a288eb49ce3b1646",
+    "audit_pointer": "/items/0",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/building-findings.md",
+    "techniques": []
+  }
+]
+```

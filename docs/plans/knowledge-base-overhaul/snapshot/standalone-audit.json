@@ -1,0 +1,2190 @@
+{
+  "items": [
+    {
+      "id": "copper-lane",
+      "source": "examples/modular-street/copper-lane.mpd",
+      "source_sha256": "a3ac48138bb5e3b382b076c289c3bc14741380600ac96f36dbcc994424b97c21",
+      "sections": [
+        {
+          "name": "copper-lane.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 98,
+          "steps": 4,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-00",
+          "second_view": "back",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-01.jpg",
+          "visual_observation": "Three-storey bookshop beside two-storey house; distinct blue dormer roof and red clock-pediment roof, planted pavement and lamps. Retain parameterized facade/composition lesson; no complete circulation plan.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-ground.ldr",
+          "kind": "model",
+          "first_line": 207,
+          "placements": 192,
+          "steps": 12,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-lane.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-01",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-lane.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-01.jpg",
+          "visual_observation": "Open-topped shop storey has green striped awnings, BOOKS sign, glazing and simple bookcase/table interior. Parent places it at bookshop ground level.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-upper.ldr",
+          "kind": "model",
+          "first_line": 608,
+          "placements": 187,
+          "steps": 11,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-lane.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-02",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-lane.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-02-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-02.jpg",
+          "visual_observation": "Tan upper reading-room storey repeats twice above shop; arched flower windows and rear/side glazing frame sparse bookcase/table interior.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-house-ground.ldr",
+          "kind": "model",
+          "first_line": 998,
+          "placements": 199,
+          "steps": 11,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-lane.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-03",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-lane.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-03-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-02.jpg",
+          "visual_observation": "Sand-green house ground floor has traditional entrance, flower windows and same simplified bookcase/table furniture; not a fully furnished dwelling.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-house-upper.ldr",
+          "kind": "model",
+          "first_line": 1412,
+          "placements": 187,
+          "steps": 11,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-lane.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-04",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-lane.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-04-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-03.jpg",
+          "visual_observation": "House upper floor repeats the reading-room furniture, front flower windows and rear/side paired glazing. No staircase is represented.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-roof.ldr",
+          "kind": "model",
+          "first_line": 1802,
+          "placements": 137,
+          "steps": 8,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-lane.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-05",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-lane.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-05-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-03.jpg",
+          "visual_observation": "Bookshop roof has cut-in dormer, slope courses and chimney. Isolated inherited-colour surfaces render yellow; actual parent roof is blue.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-house-roof.ldr",
+          "kind": "model",
+          "first_line": 2089,
+          "placements": 144,
+          "steps": 13,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-lane.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-06",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-lane.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-06-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-04.jpg",
+          "visual_observation": "House roof has stepped clock pediment and chimney; actual parent colour is red, independent of isolated colour fallback.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-window.ldr",
+          "kind": "model",
+          "first_line": 2395,
+          "placements": 4,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "lane-ground.ldr",
+            "lane-upper.ldr",
+            "lane-house-ground.ldr",
+            "lane-house-upper.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-07",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "lane-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-07-00"
+            },
+            {
+              "parent": "lane-upper.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-07-01"
+            },
+            {
+              "parent": "lane-house-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-07-02"
+            },
+            {
+              "parent": "lane-house-upper.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-07-03"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-04.jpg",
+          "extra_context_sheet": "output/kb-visual-audit/standalone-copper-lane-extra-07.jpg",
+          "visual_observation": "Two stacked frame/pane windows form a tall opening. All four distinct storey parents inspected, including repeated instances and parent colours.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-door.ldr",
+          "kind": "model",
+          "first_line": 2409,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "lane-ground.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-08",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "lane-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-08-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-05.jpg",
+          "visual_observation": "Traditional green door in frame at bookshop entrance; frame inherits colour from parent.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-bookcase.ldr",
+          "kind": "model",
+          "first_line": 2419,
+          "placements": 21,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "lane-ground.ldr",
+            "lane-upper.ldr",
+            "lane-house-ground.ldr",
+            "lane-house-upper.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-09",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "lane-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-09-00"
+            },
+            {
+              "parent": "lane-upper.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-09-01"
+            },
+            {
+              "parent": "lane-house-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-09-02"
+            },
+            {
+              "parent": "lane-house-upper.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-09-03"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-05.jpg",
+          "extra_context_sheet": "output/kb-visual-audit/standalone-copper-lane-extra-09.jpg",
+          "visual_observation": "Flat bookcase uses green, blue and red brick rows as books; repeated identically across all four floor types. Keep as simple interior prop, not a varied furnishing pattern.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-table.ldr",
+          "kind": "model",
+          "first_line": 2469,
+          "placements": 5,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "lane-ground.ldr",
+            "lane-upper.ldr",
+            "lane-house-ground.ldr",
+            "lane-house-upper.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-10",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "lane-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-10-00"
+            },
+            {
+              "parent": "lane-upper.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-10-01"
+            },
+            {
+              "parent": "lane-house-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-10-02"
+            },
+            {
+              "parent": "lane-house-upper.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-10-03"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-06.jpg",
+          "extra_context_sheet": "output/kb-visual-audit/standalone-copper-lane-extra-10.jpg",
+          "visual_observation": "Minimal studded tabletop on two block legs; inspected in all four floor types. Keep as a beginner interior prop with repetition explicitly visible.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-house-door.ldr",
+          "kind": "model",
+          "first_line": 2486,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "lane-house-ground.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-11",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "lane-house-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-11-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-06.jpg",
+          "visual_observation": "Traditional brown door in inherited-colour frame at house entrance; same construction family as green shop door.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "detail-arched-window.ldr",
+          "kind": "model",
+          "first_line": 2496,
+          "placements": 14,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "lane-upper.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-12",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "lane-upper.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-12-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-07.jpg",
+          "visual_observation": "White arch surrounds green rectangular frame and flower sill. Above frame is an open arch void, not glazed fanlight.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "detail-striped-awning.ldr",
+          "kind": "model",
+          "first_line": 2530,
+          "placements": 9,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "lane-ground.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-13",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "lane-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-13-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-07.jpg",
+          "visual_observation": "Alternating green/white slopes on rear support beam, repeated over shop glazing. Preserve measured socket offsets from its existing local check.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "detail-flower-planter.ldr",
+          "kind": "model",
+          "first_line": 2555,
+          "placements": 14,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-lane.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-14",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-lane.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-14-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-08.jpg",
+          "visual_observation": "Despite section name, this is a small layered foliage tree on a flowered base, placed at pavement edge. Correct searchable identity to planted tree.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "detail-book-sign.ldr",
+          "kind": "model",
+          "first_line": 2590,
+          "placements": 5,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "lane-ground.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-15",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "lane-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-15-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-08.jpg",
+          "visual_observation": "Printed gold BOOKS tile on green side-stud supports with top cap; actual parent locates it over entrance.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-house-window.ldr",
+          "kind": "model",
+          "first_line": 2606,
+          "placements": 14,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "lane-house-ground.ldr",
+            "lane-house-upper.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-16",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "lane-house-ground.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-16-00"
+            },
+            {
+              "parent": "lane-house-upper.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-16-01"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-09.jpg",
+          "extra_context_sheet": "output/kb-visual-audit/standalone-copper-lane-extra-16.jpg",
+          "visual_observation": "Tan/brown colour variant of arch, frame and flower sill; both house-floor parents inspected. Arch opening above frame is unglazed.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-tall-tree.ldr",
+          "kind": "model",
+          "first_line": 2640,
+          "placements": 16,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-lane.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-17",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-lane.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-17-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-09.jpg",
+          "visual_observation": "Taller round-trunk foliage tree on planted base; same construction family as shorter misnamed flower-planter, with extra trunk height.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "lane-lamp.ldr",
+          "kind": "model",
+          "first_line": 2679,
+          "placements": 6,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-lane.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-lane/section-18",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-lane.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-lane/context-18-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-lane-10.jpg",
+          "visual_observation": "Fluted moulded post with round lantern stack and conical finial, repeated at pavement. Retain as contextual prop with existing connector limits.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed_with_scope_limits",
+      "existing_checks": [
+        {
+          "report": "examples/modular-street/validation.json",
+          "report_sha256": "a12b7e2e59900f448ad857a852f3c36b2b7d5ff256ed509dd36863b3f67ff98c",
+          "checks_passed": true,
+          "source_hash_recorded": "a3ac48138bb5e3b382b076c289c3bc14741380600ac96f36dbcc994424b97c21",
+          "source_hash_matches": true,
+          "contacts_checked": false,
+          "contact_count": null,
+          "optimistic_component_count": null,
+          "physical_validity": "not_proven"
+        }
+      ],
+      "reproduction": {
+        "id": "copper-lane",
+        "generate_returncode": 0,
+        "build_returncode": 0,
+        "source": "examples/modular-street/copper-lane.mpd",
+        "source_sha256": "a3ac48138bb5e3b382b076c289c3bc14741380600ac96f36dbcc994424b97c21",
+        "generated_sha256": "a3ac48138bb5e3b382b076c289c3bc14741380600ac96f36dbcc994424b97c21",
+        "byte_identical": true
+      }
+    },
+    {
+      "id": "copper-bean",
+      "source": "examples/copper-bean/copper-bean.mpd",
+      "source_sha256": "5a4aa4f553f1c21c30972880b0af819b0863828d50688712986d601f7ff0a504",
+      "sections": [
+        {
+          "name": "copper-bean.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 255,
+          "steps": 5,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-00",
+          "second_view": "back",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-01.jpg",
+          "visual_observation": "Three-storey composition: green cafe beneath two tan apartment shells, roof terrace and planted pavement. Correct README which says three apartment storeys above cafe; retain facade/scene assembly scope.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bean-shop.ldr",
+          "kind": "model",
+          "first_line": 522,
+          "placements": 189,
+          "steps": 14,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-01",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-01.jpg",
+          "visual_observation": "Glazed green shop with striped awning. Additional top view confirms rear counter, very abstract block espresso prop, two round pedestal tables and four small stools; no stair/circulation route.",
+          "status": "visually_reviewed_with_scope_limits",
+          "additional_inspection": [
+            "output/kb-visual-audit/standalone/copper-bean/shop-top/panels/01-top-view.png"
+          ]
+        },
+        {
+          "name": "display4-15.ldr",
+          "kind": "model",
+          "first_line": 919,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bean-shop.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-02",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "bean-shop.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-02-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-02.jpg",
+          "visual_observation": "Tall white display frame with clear pane; two actual shop-front instances. Retain fitted glazing lesson with matching part IDs.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "door4-15-15-glazed.ldr",
+          "kind": "model",
+          "first_line": 929,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bean-shop.ldr",
+            "bean-flat-two.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-03",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "bean-shop.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-03-00"
+            },
+            {
+              "parent": "bean-flat-two.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-03-01"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-02.jpg",
+          "extra_context_sheet": "output/kb-visual-audit/standalone-copper-bean-extra-03.jpg",
+          "visual_observation": "White glazed panel door and knob; reviewed in shop front and second-flat front. These are actual instances of same fitted door.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "door4-15-70-traditional.ldr",
+          "kind": "model",
+          "first_line": 939,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bean-shop.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-04",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "bean-shop.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-04-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-03.jpg",
+          "visual_observation": "Brown traditional four-light door in white frame, on shop rear wall. Keep as door-in-frame variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "window4-15-47.ldr",
+          "kind": "model",
+          "first_line": 949,
+          "placements": 3,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bean-shop.ldr",
+            "bean-flat-one.ldr",
+            "bean-flat-two.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-05",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "bean-shop.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-05-00"
+            },
+            {
+              "parent": "bean-flat-one.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-05-01"
+            },
+            {
+              "parent": "bean-flat-two.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-05-02"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-03.jpg",
+          "extra_context_sheet": "output/kb-visual-audit/standalone-copper-bean-extra-05.jpg",
+          "visual_observation": "White four-pane glazing/window frame, repeated across shop and both flat walls. All three distinct parents inspected; one lesson with occurrences.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bean-flat-one.ldr",
+          "kind": "model",
+          "first_line": 961,
+          "placements": 131,
+          "steps": 10,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-06",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-06-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-04.jpg",
+          "visual_observation": "First tan upper-floor shell has flowered front balustrade and perimeter glazing; empty studded room, no furniture, partitions or stairs. Scope to facade and stacking.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bean-flat-two.ldr",
+          "kind": "model",
+          "first_line": 1238,
+          "placements": 121,
+          "steps": 9,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-07",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-07-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-04.jpg",
+          "visual_observation": "Second tan upper-floor shell has front glazed door and perimeter windows; empty studded room, no furniture, partitions or stairs. Scope to facade and stacking.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bean-roof.ldr",
+          "kind": "model",
+          "first_line": 1494,
+          "placements": 77,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-08",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-08-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-05.jpg",
+          "visual_observation": "Flat tiled rooftop with parapet, rectangular chimney/service block and flower box. No stair access shown; roof treatment lesson only.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "flower-box-4.ldr",
+          "kind": "model",
+          "first_line": 1656,
+          "placements": 13,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr",
+            "bean-roof.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-09",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-09-00"
+            },
+            {
+              "parent": "bean-roof.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-09-01"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-05.jpg",
+          "extra_context_sheet": "output/kb-visual-audit/standalone-copper-bean-extra-09.jpg",
+          "visual_observation": "Four red flowers along green round stems behind tan curb; actual pavement and rooftop occurrences reviewed. Colour variant of shared planter.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bean-terrace.ldr",
+          "kind": "model",
+          "first_line": 1688,
+          "placements": 13,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-10",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-10-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-06.jpg",
+          "visual_observation": "Outdoor cafe seating group: three seated figures around square table pierced by green parasol pole. Verify chair/figure/table heights as explicit interfaces; no full furniture family claim.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "cafe-table.ldr",
+          "kind": "model",
+          "first_line": 1721,
+          "placements": 16,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bean-terrace.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-11",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "bean-terrace.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-11-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-06.jpg",
+          "visual_observation": "Square studded table with central opening and four round white legs; actual parasol passes through opening. Keep constrained furniture recipe.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "cafe-chair.ldr",
+          "kind": "model",
+          "first_line": 1761,
+          "placements": 6,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bean-terrace.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-12",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "bean-terrace.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-12-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-07.jpg",
+          "visual_observation": "Block-built white chair with brown tiled seat/back cap. Three occurrences support seated figures; minimal prop, not exemplar of detailed furnishing.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bean-guest-left.ldr",
+          "kind": "model",
+          "first_line": 1779,
+          "placements": 8,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bean-terrace.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-13",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "bean-terrace.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-13-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-07.jpg",
+          "visual_observation": "Seated dark-red figure with brown hair and bent legs, installed at left side of terrace. Same minifigure assembly family as other guests.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bean-guest-right.ldr",
+          "kind": "model",
+          "first_line": 1801,
+          "placements": 8,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bean-terrace.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-14",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "bean-terrace.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-14-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-08.jpg",
+          "visual_observation": "Seated blue figure with ponytail and bent legs, installed at opposite terrace chair. Pose/colour/hair variant, not separate construction lesson.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bean-guest-front.ldr",
+          "kind": "model",
+          "first_line": 1823,
+          "placements": 8,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bean-terrace.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-15",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "bean-terrace.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-15-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-08.jpg",
+          "visual_observation": "Seated orange figure with tousled hair and bent legs, installed at third terrace chair. Pose/colour/hair variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "street-tree-288-5.ldr",
+          "kind": "model",
+          "first_line": 1845,
+          "placements": 15,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-16",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-16-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-09.jpg",
+          "visual_observation": "Stylized round-trunk foliage tree on flowered square base; green and pink top foliage. Shared tree recipe, colour variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "street-tree-2-14.ldr",
+          "kind": "model",
+          "first_line": 1881,
+          "placements": 15,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-17",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-17-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-09.jpg",
+          "visual_observation": "Same round-trunk tree form with green/yellow foliage and yellow base flowers, beside front lamp. Shared recipe variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "fluted-lamp.ldr",
+          "kind": "model",
+          "first_line": 1917,
+          "placements": 6,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-18",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-18-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-10.jpg",
+          "visual_observation": "Fluted dark street lamp with transparent yellow round lantern and cone cap, two pavement occurrences. Record connection-check limits.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bench-70.ldr",
+          "kind": "model",
+          "first_line": 1935,
+          "placements": 6,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-19",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-19-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-10.jpg",
+          "visual_observation": "Simple brown bench with studded seat and back over two dark block feet; two pavement occurrences. Minimal prop scope.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "flower-box-14.ldr",
+          "kind": "model",
+          "first_line": 1953,
+          "placements": 13,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-20",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-20-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-11.jpg",
+          "visual_observation": "Four yellow flowers behind tan curb; two pavement occurrences. Same planter family as red and pink.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "street-tree-2-4.ldr",
+          "kind": "model",
+          "first_line": 1985,
+          "placements": 15,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-21",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-21-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-11.jpg",
+          "visual_observation": "Shared round-trunk tree with green/red foliage and red base flowers at rear corner. Colour variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "street-tree-288-14.ldr",
+          "kind": "model",
+          "first_line": 2021,
+          "placements": 15,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-22",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-22-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-12.jpg",
+          "visual_observation": "Shared round-trunk tree with muted-green/yellow foliage and yellow base flowers, opposite rear planting. Colour variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "flower-box-5.ldr",
+          "kind": "model",
+          "first_line": 2057,
+          "placements": 13,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "copper-bean.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/copper-bean/section-23",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "copper-bean.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/copper-bean/context-23-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-copper-bean-12.jpg",
+          "visual_observation": "Four pink flowers behind tan curb at rear pavement. Same planter family, colour variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed_with_scope_limits",
+      "existing_checks": [
+        {
+          "report": "examples/copper-bean/copper-bean.validation.json",
+          "report_sha256": "72576e01b16367c7f9531a864ea7a7d4e34f5c41ce5c678149166ff414487e6a",
+          "checks_passed": true,
+          "source_hash_recorded": null,
+          "source_hash_matches": null,
+          "contacts_checked": false,
+          "contact_count": null,
+          "optimistic_component_count": null,
+          "physical_validity": "not_proven"
+        },
+        {
+          "report": "examples/copper-bean/copper-bean.inspection.json",
+          "report_sha256": "dfde59d6cef1fde4b6b75608065f47b5f6ccc5c87d8eda46bbd1b66acf85e713",
+          "checks_passed": true,
+          "source_hash_recorded": null,
+          "source_hash_matches": null,
+          "contacts_checked": true,
+          "contact_count": 2868,
+          "optimistic_component_count": 64,
+          "physical_validity": "not_proven"
+        }
+      ],
+      "reproduction": {
+        "id": "copper-bean",
+        "generate_returncode": 0,
+        "build_returncode": 0,
+        "source": "examples/copper-bean/copper-bean.mpd",
+        "source_sha256": "5a4aa4f553f1c21c30972880b0af819b0863828d50688712986d601f7ff0a504",
+        "generated_sha256": "5a4aa4f553f1c21c30972880b0af819b0863828d50688712986d601f7ff0a504",
+        "byte_identical": true
+      }
+    },
+    {
+      "id": "sakura-garden",
+      "source": "examples/sakura-garden/sakura-garden.mpd",
+      "source_sha256": "4880c2bdfc218d85629f9cffacbe52985092cdbe3e397f5ec0b2174e22b399a3",
+      "sections": [
+        {
+          "name": "sakura-garden.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 73,
+          "steps": 7,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-00",
+          "second_view": "top",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-01.jpg",
+          "visual_observation": "Whole square garden combines five-tier pagoda at back right, foreground pond and humped bridge, torii, three blossom trees, pine and bamboo. Top view confirms distinct paths, gravel patch and planting zones. Retain scene decomposition and constrained terrain lesson; no whole-model physical certification.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "garden-ground.ldr",
+          "kind": "model",
+          "first_line": 160,
+          "placements": 411,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-01",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-01.jpg",
+          "visual_observation": "Layered square terrain with blue tiled pond, exposed bridge footing, tan paths, pagoda foundation zone and striped dry-garden tiles. Parent confirms placement beneath all scene modules.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "arched-bridge.ldr",
+          "kind": "model",
+          "first_line": 990,
+          "placements": 33,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-02",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-02-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-02.jpg",
+          "visual_observation": "Two mirrored arched spans meet at central studded landing with short red handrails; gold-capped end posts and brown walking strip. Parent crosses pond, not a generic long-span bridge. Preserve resting-foot and clearance limits.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "torii-gate.ldr",
+          "kind": "model",
+          "first_line": 1064,
+          "placements": 27,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-03",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-03-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-02.jpg",
+          "visual_observation": "Red round-column torii with black upswept cap, lower crossbar and gold side-mounted plaque; parent places it at entrance. Preserve plaque mounting transform.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "stone-lantern.ldr",
+          "kind": "model",
+          "first_line": 1126,
+          "placements": 8,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-04",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-04-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-03.jpg",
+          "visual_observation": "Grey round pedestal lantern with broad dish roof and conical finial, repeated along approach and garden. Simple decorative lamp, not a transparent lit enclosure; retain dish-socket evidence limitations.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "cherry-large.ldr",
+          "kind": "model",
+          "first_line": 1148,
+          "placements": 130,
+          "steps": 5,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-05",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-05-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-03.jpg",
+          "visual_observation": "Largest pink cherry has round trunk and layered circular canopy cores with offset sprigs and pink/white flower carpet. Parent places it behind pond beside pagoda. Retain technique with boundary-aware branch omissions.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "cherry-medium.ldr",
+          "kind": "model",
+          "first_line": 1418,
+          "placements": 69,
+          "steps": 4,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-06",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-06-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-04.jpg",
+          "visual_observation": "Medium blossom tree uses same stepped disc/sprig method, smaller crown and side-specific spread; actual right-front placement checked. Parameter variant, not unrelated lesson.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "cherry-small.ldr",
+          "kind": "model",
+          "first_line": 1565,
+          "placements": 41,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-07",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-07-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-04.jpg",
+          "visual_observation": "Small blossom tree has narrow two-level flower mass and asymmetrical sprigs over round trunk, in front corner. Its omitted outward branches are deliberate for boundary fit.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "garden-pine.ldr",
+          "kind": "model",
+          "first_line": 1655,
+          "placements": 113,
+          "steps": 5,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-08",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-08-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-05.jpg",
+          "visual_observation": "Cloud-pruned pine uses round green canopy pads with raised sprigs and dark-green rosettes around a round trunk. Preserve asymmetrical canopy and actual inset terrain position, not a generic palm recipe.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "temple-plinth.ldr",
+          "kind": "model",
+          "first_line": 1891,
+          "placements": 107,
+          "steps": 5,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-09",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-09-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-05.jpg",
+          "visual_observation": "Despite its name, temple-plinth section includes the entire nested pagoda as well as stone platform. Index it as pagoda-on-plinth assembly, not an isolated foundation part.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "pagoda.ldr",
+          "kind": "model",
+          "first_line": 2115,
+          "placements": 7,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "temple-plinth.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-10",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "temple-plinth.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-10-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-06.jpg",
+          "visual_observation": "Nested pagoda contains five progressively smaller storey/eave modules plus crown and gold spire. Actual parent is temple-plinth; preserve hierarchy and distinguish platform from tower.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "pagoda-storey-0.ldr",
+          "kind": "model",
+          "first_line": 2136,
+          "placements": 260,
+          "steps": 9,
+          "empty_leading_steps": 0,
+          "parents": [
+            "pagoda.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-11",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "pagoda.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-11-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-06.jpg",
+          "additional_inspection": [
+            "output/kb-visual-audit/standalone/sakura-garden/storey-0-front/panels/01-front-view.png"
+          ],
+          "visual_observation": "Storey 0: red lattice wall core with grey swept eaves, gold corner caps and hanging bells; actual level reviewed in pagoda. White side panels remain visible. Front view resolves walls obscured by roof in home/top views; retain as parameterized tier family.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "pagoda-storey-1.ldr",
+          "kind": "model",
+          "first_line": 2670,
+          "placements": 241,
+          "steps": 9,
+          "empty_leading_steps": 0,
+          "parents": [
+            "pagoda.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-12",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "pagoda.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-12-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-07.jpg",
+          "additional_inspection": [
+            "output/kb-visual-audit/standalone/sakura-garden/storey-1-front/panels/01-front-view.png"
+          ],
+          "visual_observation": "Storey 1: red lattice wall core with grey swept eaves, gold corner caps and hanging bells; actual level reviewed in pagoda. White side panels remain visible. Front view resolves walls obscured by roof in home/top views; retain as parameterized tier family.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "pagoda-storey-2.ldr",
+          "kind": "model",
+          "first_line": 3166,
+          "placements": 219,
+          "steps": 9,
+          "empty_leading_steps": 0,
+          "parents": [
+            "pagoda.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-13",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "pagoda.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-13-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-07.jpg",
+          "additional_inspection": [
+            "output/kb-visual-audit/standalone/sakura-garden/storey-2-front/panels/01-front-view.png"
+          ],
+          "visual_observation": "Storey 2: red lattice wall core with grey swept eaves, gold corner caps and hanging bells; actual level reviewed in pagoda. White side panels remain visible. Front view resolves walls obscured by roof in home/top views; retain as parameterized tier family.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "pagoda-storey-3.ldr",
+          "kind": "model",
+          "first_line": 3618,
+          "placements": 170,
+          "steps": 9,
+          "empty_leading_steps": 0,
+          "parents": [
+            "pagoda.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-14",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "pagoda.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-14-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-08.jpg",
+          "additional_inspection": [
+            "output/kb-visual-audit/standalone/sakura-garden/storey-3-front/panels/01-front-view.png"
+          ],
+          "visual_observation": "Storey 3: red lattice wall core with grey swept eaves, gold corner caps and hanging bells; actual level reviewed in pagoda. Narrower red core has no white side panels. Front view resolves walls obscured by roof in home/top views; retain as parameterized tier family.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "pagoda-storey-4.ldr",
+          "kind": "model",
+          "first_line": 3972,
+          "placements": 123,
+          "steps": 9,
+          "empty_leading_steps": 0,
+          "parents": [
+            "pagoda.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-15",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "pagoda.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-15-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-08.jpg",
+          "additional_inspection": [
+            "output/kb-visual-audit/standalone/sakura-garden/storey-4-front/panels/01-front-view.png"
+          ],
+          "visual_observation": "Storey 4: red lattice wall core with grey swept eaves, gold corner caps and hanging bells; actual level reviewed in pagoda. Narrower red core has no white side panels. Front view resolves walls obscured by roof in home/top views; retain as parameterized tier family.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "pagoda-crown.ldr",
+          "kind": "model",
+          "first_line": 4232,
+          "placements": 6,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "pagoda.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-16",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "pagoda.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-16-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-09.jpg",
+          "visual_observation": "Small grey hipped cap bridges the top storey and spire; four exposed upper studs. Not the entire upper roof.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "pagoda-spire.ldr",
+          "kind": "model",
+          "first_line": 4251,
+          "placements": 23,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "pagoda.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-17",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "pagoda.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-17-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-09.jpg",
+          "visual_observation": "Gold ringed spire with stepped conical finial and thin tip; installed above separate crown.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "temple-steps.ldr",
+          "kind": "model",
+          "first_line": 4303,
+          "placements": 11,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-18",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-18-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-10.jpg",
+          "visual_observation": "Five shallow grey tiled treads form approach to pagoda platform; plain stacked stair recipe.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "boulder-72.ldr",
+          "kind": "model",
+          "first_line": 4331,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-19",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-19-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-10.jpg",
+          "visual_observation": "Dark-grey purpose-made rock shell at three terrain sites; keep hidden-support and resting-rim limitations from existing report.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "boulder-71.ldr",
+          "kind": "model",
+          "first_line": 4341,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-20",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-20-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-11.jpg",
+          "visual_observation": "Light-grey variant of same rock-shell detail at three other terrain sites; consolidate colour variants.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "tsukubai.ldr",
+          "kind": "model",
+          "first_line": 4351,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-21",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-21-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-11.jpg",
+          "visual_observation": "Tiny round grey water-basin prop capped by transparent blue round element. Abstract basin rather than detailed hollow vessel.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "garden-bench.ldr",
+          "kind": "model",
+          "first_line": 4361,
+          "placements": 5,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-22",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-22-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-12.jpg",
+          "visual_observation": "Brown slab bench on two dark round supports; deliberately minimal prop.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bamboo-10-10-64219.ldr",
+          "kind": "model",
+          "first_line": 4377,
+          "placements": 11,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-23",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-23-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-12.jpg",
+          "visual_observation": "Tall light-green bamboo with four leaf nodes, varied headings and conical tip; one member of seven-culm grove.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bamboo-8-2-89675.ldr",
+          "kind": "model",
+          "first_line": 4405,
+          "placements": 9,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-24",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-24-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-13.jpg",
+          "visual_observation": "Dark-green bamboo with three leaf nodes and varied headings, actual grove position reviewed.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bamboo-9-2-93053.ldr",
+          "kind": "model",
+          "first_line": 4429,
+          "placements": 10,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-25",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-25-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-13.jpg",
+          "visual_observation": "Tall dark-green bamboo with four leaf nodes; heading variation avoids neighbouring culms in source layout.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bamboo-7-10-51145.ldr",
+          "kind": "model",
+          "first_line": 4455,
+          "placements": 8,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-26",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-26-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-14.jpg",
+          "visual_observation": "Shorter light-green bamboo with two leaf nodes, asymmetrical fans; grove variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bamboo-7-2-53705.ldr",
+          "kind": "model",
+          "first_line": 4477,
+          "placements": 8,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-27",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-27-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-14.jpg",
+          "visual_observation": "Short dark-green bamboo with two leaf nodes; grove variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bamboo-8-2-61408.ldr",
+          "kind": "model",
+          "first_line": 4499,
+          "placements": 9,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-28",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-28-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-15.jpg",
+          "visual_observation": "Dark-green bamboo with three leaf nodes; grove variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bamboo-6-10-63775.ldr",
+          "kind": "model",
+          "first_line": 4523,
+          "placements": 7,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-29",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-29-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-15.jpg",
+          "visual_observation": "Shortest light-green bamboo with two leaf nodes; grove variant. Seven variants together have twenty leaf-bearing nodes.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "visitor-pink-robe.ldr",
+          "kind": "model",
+          "first_line": 4543,
+          "placements": 8,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-30",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-30-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-16.jpg",
+          "visual_observation": "Standing pink-clothed visitor with hair bun, actual bridge-crown placement reviewed. Preserve documented handrail clearance and foot offset.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "gardener.ldr",
+          "kind": "model",
+          "first_line": 4565,
+          "placements": 8,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-31",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-31-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-16.jpg",
+          "visual_observation": "Standing dark-blue gardener with broad conical hat beside dry garden. Shared minifigure assembly family.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "monk.ldr",
+          "kind": "model",
+          "first_line": 4587,
+          "placements": 7,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "sakura-garden.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/sakura-garden/section-32",
+          "second_view": "top",
+          "parent_contexts": [
+            {
+              "parent": "sakura-garden.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/sakura-garden/context-32-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-sakura-garden-17.jpg",
+          "visual_observation": "Standing orange-clothed bald monk on approach beside steps. Role is scene narrative, not a distinct mechanical construction.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed_with_scope_limits",
+      "existing_checks": [
+        {
+          "report": "examples/sakura-garden/sakura-garden.validation.json",
+          "report_sha256": "023bb02812f4d103ff366d3490a638e69dcc75bb8559a121fd4ef7976954ed30",
+          "checks_passed": true,
+          "source_hash_recorded": null,
+          "source_hash_matches": null,
+          "contacts_checked": false,
+          "contact_count": null,
+          "optimistic_component_count": null,
+          "physical_validity": "not_proven"
+        },
+        {
+          "report": "examples/sakura-garden/sakura-garden.inspection.json",
+          "report_sha256": "4ebbfd052dd34b0f1f3c174a0bcb4e5df3e7c04a215af05ec4b83092d8e4bca1",
+          "checks_passed": true,
+          "source_hash_recorded": null,
+          "source_hash_matches": null,
+          "contacts_checked": true,
+          "contact_count": 10452,
+          "optimistic_component_count": 33,
+          "physical_validity": "not_proven"
+        }
+      ],
+      "reproduction": {
+        "id": "sakura-garden",
+        "generate_returncode": 0,
+        "build_returncode": 0,
+        "source": "examples/sakura-garden/sakura-garden.mpd",
+        "source_sha256": "4880c2bdfc218d85629f9cffacbe52985092cdbe3e397f5ec0b2174e22b399a3",
+        "generated_sha256": "4880c2bdfc218d85629f9cffacbe52985092cdbe3e397f5ec0b2174e22b399a3",
+        "byte_identical": true
+      }
+    },
+    {
+      "id": "cathedral-window",
+      "source": "examples/cathedral/window-fit.mpd",
+      "source_sha256": "87aea3982e72c1b33b669e9a74d85b1498b42397e0ed1c982eb8c39c0cce33e4",
+      "sections": [
+        {
+          "name": "cathedral-window-fit.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "render_directory": "output/kb-visual-audit/standalone/cathedral-window/section-00",
+          "second_view": "back",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/standalone-cathedral-window-01.jpg",
+          "visual_observation": "Isolated fit fixture contains one repeated pointed-arch bay. Two rectangular glazed windows sit below a large OPEN upper arch; do not describe fully glazed Gothic window.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "cathedral-window-fit-bay.ldr",
+          "kind": "model",
+          "first_line": 12,
+          "placements": 12,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "cathedral-window-fit.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/cathedral-window/section-01",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "cathedral-window-fit.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/cathedral-window/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-cathedral-window-01.jpg",
+          "visual_observation": "White paired arches, side posts and upper fill surround two tan framed printed panes; actual fixture and four cathedral wall contexts checked. Consolidate as one six-stud bay lesson.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed_with_scope_limits",
+      "existing_checks": [
+        {
+          "report": "examples/cathedral/window-fit.json",
+          "report_sha256": "7bbef532ca4b39eee4b360f1f370b0e8b46bd3dacc0769f139a6ab5d0172698f",
+          "checks_passed": true,
+          "source_hash_recorded": null,
+          "source_hash_matches": null,
+          "contacts_checked": true,
+          "contact_count": 14,
+          "optimistic_component_count": 1,
+          "physical_validity": "not_proven"
+        }
+      ]
+    },
+    {
+      "id": "cathedral-rose",
+      "source": "examples/cathedral/rose-fit.mpd",
+      "source_sha256": "8fe6406dca7263bc3ab5c4d308d730fb1c565a6e8f7b023c494bf7752f32b7ce",
+      "sections": [
+        {
+          "name": "cathedral-rose-fit.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "render_directory": "output/kb-visual-audit/standalone/cathedral-rose/section-00",
+          "second_view": "back",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/standalone-cathedral-rose-01.jpg",
+          "visual_observation": "Rose motif plus rear side-stud support brick; supports a narrow mounting lesson, not a whole cathedral endorsement.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "cathedral-rose.ldr",
+          "kind": "model",
+          "first_line": 12,
+          "placements": 4,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "cathedral-rose-fit.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/cathedral-rose/section-01",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "cathedral-rose-fit.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/cathedral-rose/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-cathedral-rose-01.jpg",
+          "visual_observation": "Transparent blue round backing, white radial dish and transparent amber centre tile; appears above west-front entrance. Decorative applied motif, not a demonstrated through-wall opening.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed_with_scope_limits",
+      "existing_checks": [
+        {
+          "report": "examples/cathedral/rose-fit.json",
+          "report_sha256": "df74a6f456e6daabb5cf3d57823db04ba702fb7e0bd043ea0ef406f58852812c",
+          "checks_passed": true,
+          "source_hash_recorded": null,
+          "source_hash_matches": null,
+          "contacts_checked": true,
+          "contact_count": 14,
+          "optimistic_component_count": 1,
+          "physical_validity": "not_proven"
+        }
+      ]
+    },
+    {
+      "id": "gear-drive",
+      "source": "examples/technic-studies/gear-drive/gear-drive.mpd",
+      "source_sha256": "7dc910cff77cb212741f9dee7bacb6d61afa0c56c35e566108c11b7797885399",
+      "sections": [
+        {
+          "name": "gear-drive.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 3,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "render_directory": "output/kb-visual-audit/standalone/gear-drive/section-00",
+          "second_view": "bottom",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/standalone-gear-drive-01.jpg",
+          "visual_observation": "Supported two-shaft spur pair within bonded blue bearing frame; retain as scoped 8:24 mechanical starter with existing hash-bound motion evidence and its limits.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "frame.ldr",
+          "kind": "model",
+          "first_line": 16,
+          "placements": 11,
+          "steps": 5,
+          "empty_leading_steps": 0,
+          "parents": [
+            "gear-drive.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/gear-drive/section-01",
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "gear-drive.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/gear-drive/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-gear-drive-01.jpg",
+          "visual_observation": "Grey base with paired blue bearing rails and caps; four round bearing holes visible, frame surrounds both shafts.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "input.ldr",
+          "kind": "model",
+          "first_line": 49,
+          "placements": 6,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "gear-drive.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/gear-drive/section-02",
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "gear-drive.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/gear-drive/context-02-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-gear-drive-02.jpg",
+          "visual_observation": "Small 8-tooth gear on axle between yellow half-bush stops and outer red retaining bushes; actual input shaft position checked.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "output.ldr",
+          "kind": "model",
+          "first_line": 68,
+          "placements": 6,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "gear-drive.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/gear-drive/section-03",
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "gear-drive.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/gear-drive/context-03-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-gear-drive-02.jpg",
+          "visual_observation": "Large 24-tooth gear on separate axle with same stop/retainer arrangement; actual output shaft and gear engagement visible. Static views do not independently verify motion.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed_with_scope_limits",
+      "existing_checks": []
+    },
+    {
+      "id": "bridge-tutorial",
+      "source": "examples/bridge.mpd",
+      "source_sha256": "7f9a0a9e808d8b6e6dcf3ddff1ac24b007d0e2b74f4bfc577642b1f6be252138",
+      "sections": [
+        {
+          "name": "bridge-main.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 3,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "render_directory": "output/kb-visual-audit/standalone/bridge-tutorial/section-00",
+          "second_view": "bottom",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/standalone-bridge-tutorial-01.jpg",
+          "visual_observation": "Minimal yellow deck on red and blue pillars. Retain only MPD hierarchy, transforms, steps and colour-inheritance tutorial; exclude aesthetic bridge recommendations.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "bridge-pillar.ldr",
+          "kind": "model",
+          "first_line": 15,
+          "placements": 2,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "bridge-main.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/bridge-tutorial/section-01",
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "bridge-main.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/bridge-tutorial/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-bridge-tutorial-01.jpg",
+          "visual_observation": "Two-part pillar inherits colour 16, shown red and blue in actual parent. Isolated renderer yellow is a display default, not source colour error.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed_with_scope_limits",
+      "existing_checks": []
+    },
+    {
+      "id": "python-api",
+      "source": "output/kb-visual-audit/standalone/python-api/source.mpd",
+      "source_sha256": "f7b394775ec847ab74fdd244b84c1e75dc466d2c1ca6ef4b30d5ab7f33e12687",
+      "recipe_source": "examples/python_api.py",
+      "recipe_sha256": "623f17d5d5e288b5d9fbb8e0c2790746de31ad2156cb5786e33038497110d927",
+      "sections": [
+        {
+          "name": "tower-main.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 4,
+          "steps": 4,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "render_directory": "output/kb-visual-audit/standalone/python-api/section-00",
+          "second_view": "back",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/standalone-python-api-01.jpg",
+          "visual_observation": "Four alternating blue/red 2x2 bricks form a short tower, matching procedural loop and on-previous-brick placement. Retain as API tutorial, excluded from aesthetic model recommendations.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed_with_scope_limits",
+      "existing_checks": []
+    },
+    {
+      "id": "shadow-snap",
+      "source": "output/kb-visual-audit/standalone/shadow-snap/source.mpd",
+      "source_sha256": "5dc056069abafc77f1d54bbf259006d62cd35b1a1c977cefbecffa379af8a302",
+      "recipe_source": "examples/shadow-snap.plan.json",
+      "recipe_sha256": "72d893d69447966fcf21e4c98f444b4e53180bbdd3c75f0cd5a19c9506c03839",
+      "sections": [
+        {
+          "name": "shadow-snap.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 2,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "render_directory": "output/kb-visual-audit/standalone/shadow-snap/section-00",
+          "second_view": "back",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/standalone-shadow-snap-01.jpg",
+          "visual_observation": "A yellow 2x2 brick on an inherited-blue plate is centered on a red 2x4 brick. Retain minimal connector-snapping tutorial.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "cap.ldr",
+          "kind": "model",
+          "first_line": 13,
+          "placements": 2,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "shadow-snap.ldr"
+          ],
+          "render_directory": "output/kb-visual-audit/standalone/shadow-snap/section-01",
+          "second_view": "back",
+          "parent_contexts": [
+            {
+              "parent": "shadow-snap.ldr",
+              "render_directory": "output/kb-visual-audit/standalone/shadow-snap/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/standalone-shadow-snap-01.jpg",
+          "visual_observation": "Two-part cap contains plate plus yellow brick; plate inherits blue in parent. Parent view confirms nested snapping and colour inheritance.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed_with_scope_limits",
+      "existing_checks": []
+    }
+  ],
+  "review_date": "2026-11-02",
+  "scope": "Planning evidence; no tracked refactor. Nine packages, 89 model sections. Colour/size variants are not independent recommended lessons."
+}

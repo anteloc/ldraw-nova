@@ -21,7 +21,7 @@ Open the PNGs in `output/bridge-review/previews/`. The same folder contains the 
 Give an agent your model idea and [instructions.md](instructions.md). Follow one sequence:
 
 1. **Choose a starter** matching the subject; [workshop examples](examples/workshop/README.md) include a frame, retained drive, pneumatic station and complete machine.
-2. **Assemble supports** in an ordinary [JSON plan](docs/agent/plans.md), keeping required joints beside the geometry.
+2. **Assemble supports** in an ordinary [JSON plan](docs/agent/reference/plans.md), keeping required joints beside the geometry.
 3. **Route services** between named fittings or mounted wheels.
 4. **Add bodywork** on actual attachment points.
 5. **Review and deliver** the editable MPD, source, matching BOMs and inspected images.
@@ -44,25 +44,25 @@ Technic joints and flexible routes use placement paths such as `controls/pump` o
 }}
 ```
 
-Those limits belong to the pneumatic starter. `review` checks actual synthesized geometry and route interactions; unchanged inputs reuse raw synthesis while current checks run again. See [named authoring](docs/agent/authoring.md) for supported ports, wheel ownership, inline contracts and repair diagnostics.
+Those limits belong to the pneumatic starter. `review` checks actual synthesized geometry and route interactions; unchanged inputs reuse raw synthesis while current checks run again. See [named authoring](docs/agent/guides/build-model.md) for supported ports, wheel ownership, inline contracts and repair diagnostics.
 
 Existing plans, numeric external contracts, `.ldr` flex sources, prebuilt assets, Python helpers, CLI commands and Mecha handoff remain supported. `technic plan` still exports the original structural recipes; `build` still writes an MPD after checks pass. Successful checks provide evidence, not proof of physical strength, manufactured hose length or general motion correctness. The [verification record](docs/reports/authoring-simplification.md) includes compatibility checks, opened renders and independent trials.
 
 | Need | Read |
 |---|---|
 | Agent workflow and subject-specific guides | [Instructions](instructions.md) |
-| Plan format, placements and Python API | [Plan guide](docs/agent/plans.md) |
-| Commands, review options and artifacts | [Tool reference](docs/agent/tooling.md) |
-| Geometry checks and limitations | [Validation](docs/agent/validation.md) |
-| Flexible hoses, cables, bands, chains and treads | [Constraint authoring and repair](docs/agent/flex-constraints.md), [LSynth integration](docs/agent/flexible-parts.md), [examples](examples/flex/README.md) |
-| Technic supports, equipment and industrial assemblies | [Design guide](docs/agent/technic-design.md), [annotated construction studies](lsynth-examples/README.md) |
-| Advanced mechanisms and animation | [Constraint workflow](docs/agent/advanced-mechanisms.md), [gear-drive starter](examples/technic-studies/gear-drive/README.md), [mechanical parts catalog](docs/agent/technic-catalog.md) |
-| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/snot.md), [parrot core](examples/snot/parrot/README.md), [cat details and joints](examples/snot/cat/README.md), [Halcyon original interceptor](examples/snot/halcyon/README.md), [SNOT submodels from real sets](examples/submodel-atlas/README.md#pick-an-entry-by-technique) |
-| Spaceships: SNOT by default | [Halcyon default model](examples/snot/halcyon/README.md), [spaceship guide](docs/agent/spaceships.md) |
+| Plan format, placements and Python API | [Plan guide](docs/agent/reference/plans.md) |
+| Commands, review options and artifacts | [Tool reference](docs/agent/reference/cli.md) |
+| Geometry checks and limitations | [Validation](docs/agent/reference/validation.md) |
+| Flexible hoses, cables, bands, chains and treads | [Constraint authoring and repair](docs/agent/guides/flex.md), [LSynth integration](docs/agent/reference/flex.md), [examples](examples/flex/README.md) |
+| Technic supports, equipment and industrial assemblies | [Design guide](docs/agent/guides/technic.md), [annotated construction studies](lsynth-examples/README.md) |
+| Advanced mechanisms and animation | [Constraint workflow](docs/agent/guides/mechanisms.md), [gear-drive starter](examples/technic-studies/gear-drive/README.md), [mechanical parts catalog](docs/agent/reference/technic.md) |
+| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/guides/snot.md), [parrot core](examples/snot/parrot/README.md), [cat details and joints](examples/snot/cat/README.md), [Halcyon original interceptor](examples/snot/halcyon/README.md), [SNOT submodels from real sets](examples/submodel-atlas/README.md#pick-an-entry-by-technique) |
+| Spaceships: SNOT by default | [Halcyon default model](examples/snot/halcyon/README.md), [spaceship guide](docs/agent/guides/design-models.md) |
 | Reusable constructions and model examples | [Reference atlas](examples/reference-atlas/README.md), [submodel atlas](examples/submodel-atlas/README.md), `./ldraw-agent examples --help` |
-| Visual inspection of source submodels | [Submodel inspection with ldraw-xray](docs/agent/submodel-inspection.md), [submodel atlas](examples/submodel-atlas/README.md) |
+| Visual inspection of source submodels | [Submodel inspection with ldraw-xray](docs/agent/guides/review-models.md), [submodel atlas](examples/submodel-atlas/README.md) |
 
-Semantic reference search uses [jev-rerank](https://github.com/anteloc/jev-rerank) and a TypeSafe API key. It is optional: offline catalogs, examples and `discover search ... --engine fts` remain available. Follow the [availability check](docs/agent/reference-discovery.md#check-jev-availability-before-searching) before using the service.
+Semantic reference search uses [jev-rerank](https://github.com/anteloc/jev-rerank) and a TypeSafe API key. It is optional: offline catalogs, examples and `discover search ... --engine fts` remain available. Follow the [availability check](docs/agent/reference/cli.md#check-jev-availability-before-searching) before using the service.
 
 ## Run the web app
 
@@ -87,7 +87,7 @@ uv sync --locked --extra test
 .venv/bin/python -m pytest -q
 ```
 
-Tests use a miniature library plus the configured official library for integration cases. Integration tests skip explicitly when the official library is unavailable. Current checks do not certify material collision freedom, strength, motion or real part/colour availability. See the [verification records](docs/agent/verification.md) for tested coverage and historical results.
+Tests use a miniature library plus the configured official library for integration cases. Integration tests skip explicitly when the official library is unavailable. Current checks do not certify material collision freedom, strength, motion or real part/colour availability. See the [verification records](docs/reports/tooling-verification-history.md) for tested coverage and historical results.
 
 Further work includes model quality across more families, generation cost and speed, instruction-manual reconstruction, and VR handling/performance.
 

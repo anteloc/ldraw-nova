@@ -1,0 +1,309 @@
+{
+  "items": [
+    {
+      "id": "body-mount",
+      "source": "examples/snot/ferrari-f40/studies/body-mount/source.mpd",
+      "source_sha256": "dddcad2261c44de04086ad58b3a125629903281ba4923c273113ae34e80fd546",
+      "section": "study-ae800fef8a31-00-subModel-6.ldr",
+      "original_name": "subModel-6.ldr",
+      "parents": [],
+      "images": [
+        "examples/snot/ferrari-f40/studies/body-mount/manual/00/step-004-home.png",
+        "examples/snot/ferrari-f40/studies/body-mount/manual/00/step-004-back.png",
+        "examples/snot/ferrari-f40/studies/body-mount/renders/home.png"
+      ],
+      "artifact_hash_mismatches": [],
+      "notes": {
+        "version": 1,
+        "evidence": "interpretation_of_source_and_images",
+        "construction": "Four source stages add a 99206 bracket, plate stack, clip plate and 87087 side-stud brick. The completed mount has five physical parts.",
+        "interfaces": "Inspect the bracket's underside, exposed sideways studs and clip separately. Stud support and a clip joint serve different roles; this isolated mount does not prove an attached panel's clearance.",
+        "lesson": "Combine perpendicular attachment faces within a small mount before building the body skin.",
+        "parent_context": "This is an unreferenced saved callout. Its corresponding body area is added at main source step 13. That main step uses 4085c clips while this callout uses 60897, so it is not an exact occurrence of the saved assembly.",
+        "reuse_notes": "Reuse as a small mounting pattern. Preserve the original source credit, inspect the chosen clip variant and validate the receiving panel after composition. Coordinates are source-local. No analytical movement verification is claimed."
+      },
+      "status": "visually_reviewed_construction_study",
+      "inspection_sheet": "output/kb-visual-audit/f40-01.jpg",
+      "parent_context_evidence": null,
+      "parent_context_status": "unreferenced_callout_no_exact_parent",
+      "decision": "retain_narrow_study_not_checked_whole_car"
+    },
+    {
+      "id": "door-rail",
+      "source": "examples/snot/ferrari-f40/studies/door-rail/source.mpd",
+      "source_sha256": "a8abb51ee60bb3079919ebbf2ca25824c902357b24f42b334ab28125f24586bb",
+      "section": "study-c81b875a374f-00-subModel-35.ldr",
+      "original_name": "subModel-35.ldr",
+      "parents": [
+        {
+          "section": "subModel-34.ldr",
+          "description": "Door with sideways inner panel A",
+          "at": [
+            0.0,
+            -88.0,
+            0.0
+          ],
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "colour": 4
+        }
+      ],
+      "images": [
+        "examples/snot/ferrari-f40/studies/door-rail/manual/00/step-002-home.png",
+        "examples/snot/ferrari-f40/studies/door-rail/manual/00/step-002-back.png",
+        "examples/snot/ferrari-f40/studies/door-rail/renders/home.png"
+      ],
+      "artifact_hash_mismatches": [],
+      "notes": {
+        "version": 1,
+        "evidence": "interpretation_of_source_and_images",
+        "construction": "Two source stages combine a 6636 tile, two small spacers/caps and three 44728 brackets into a six-piece rail.",
+        "interfaces": "The brackets expose a common perpendicular stud face. Their parent door supplies the remaining panel and hinge stack; the rail alone is not a complete opening door.",
+        "lesson": "A thin visible trim rail can also carry a repeated sideways stud field behind it.",
+        "parent_context": "subModel-34.ldr declares this child at [0,-88,0], in source step 7. The complete car's corresponding door is added in main source step 43. Its saved door is a separate callout, not a declared child of main.ldr.",
+        "reuse_notes": "Transfer the repeated-bracket pattern to door trim or another narrow fascia. Keep the original spacing until actual sockets on the new panel have been inspected, then check the combined assembly."
+      },
+      "status": "visually_reviewed_construction_study",
+      "inspection_sheet": "output/kb-visual-audit/f40-02.jpg",
+      "parent_context_evidence": "output/kb-visual-audit/f40-parent-door-rail/panels/01-home-view.png",
+      "parent_context_status": "actual_declared_parent_inspected",
+      "decision": "retain_narrow_study_not_checked_whole_car"
+    },
+    {
+      "id": "fascia-core",
+      "source": "examples/snot/ferrari-f40/studies/fascia-core/source.mpd",
+      "source_sha256": "30dd7e3c84f03f28ef032090e2527d2b44b769232be634f4ef2baac4bcd0c50a",
+      "section": "study-616236f40e56-00-subModel-63.ldr",
+      "original_name": "subModel-63.ldr",
+      "parents": [],
+      "images": [
+        "examples/snot/ferrari-f40/studies/fascia-core/manual/00/step-003-home.png",
+        "examples/snot/ferrari-f40/studies/fascia-core/manual/00/step-003-back.png",
+        "examples/snot/ferrari-f40/studies/fascia-core/renders/home.png"
+      ],
+      "artifact_hash_mismatches": [],
+      "notes": {
+        "version": 1,
+        "evidence": "interpretation_of_source_and_images",
+        "construction": "Three source stages build a six-piece core from a plate, a 2 x 2 brick, two 32000 Technic bricks and two 99207 brackets.",
+        "interfaces": "The bracket faces accept perpendicular panels while the Technic holes provide a different interface family. Inspect each actual mate; the presence of holes does not establish a functioning axle connection.",
+        "lesson": "Separate the fascia's sideways stud field from the structural support and decorative skin.",
+        "parent_context": "This is an unreferenced saved callout corresponding to the front bumper area at main source step 57. The main car's part orientations differ, so treat it as a construction study rather than an exact replacement module.",
+        "reuse_notes": "A useful small starting point for a bumper, dashboard or grille support. Build the intended visible surface separately, align its sockets and check the combined model before repeating the core."
+      },
+      "status": "visually_reviewed_construction_study",
+      "inspection_sheet": "output/kb-visual-audit/f40-03.jpg",
+      "parent_context_evidence": null,
+      "parent_context_status": "unreferenced_callout_no_exact_parent",
+      "decision": "retain_narrow_study_not_checked_whole_car"
+    },
+    {
+      "id": "rear-lamp",
+      "source": "examples/snot/ferrari-f40/studies/rear-lamp/source.mpd",
+      "source_sha256": "5df4b7cb74475efa03efe674b9db42c3ab3fbbd676d40814f27635fcd9d97c73",
+      "section": "study-0993ca28aada-00-subModel-53.ldr",
+      "original_name": "subModel-53.ldr",
+      "parents": [
+        {
+          "section": "subModel-52.ldr",
+          "description": "Rear clamshell with lamps and louvered window",
+          "at": [
+            -14.0,
+            -25.0,
+            -123.0
+          ],
+          "matrix": [
+            [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "colour": 57
+        },
+        {
+          "section": "subModel-52.ldr",
+          "description": "Rear clamshell with lamps and louvered window",
+          "at": [
+            -14.0,
+            -25.0,
+            137.0
+          ],
+          "matrix": [
+            [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0
+            ]
+          ],
+          "colour": 57
+        }
+      ],
+      "images": [
+        "examples/snot/ferrari-f40/studies/rear-lamp/manual/00/step-004-home.png",
+        "examples/snot/ferrari-f40/studies/rear-lamp/manual/00/step-004-back.png",
+        "examples/snot/ferrari-f40/studies/rear-lamp/renders/home.png"
+      ],
+      "artifact_hash_mismatches": [],
+      "notes": {
+        "version": 1,
+        "evidence": "interpretation_of_source_and_images",
+        "construction": "Four source stages build an eight-piece corner from plate supports, a 99207 bracket, a jumper, a dish lamp and two grille tiles.",
+        "interfaces": "Read both views: the dish and grille occupy perpendicular planes. The underside support and exposed studs must meet the rear clamshell; a rendered lamp does not establish those parent connections.",
+        "lesson": "One small bracket-based corner can support two different visible surfaces without a bulky brick core.",
+        "parent_context": "subModel-52.ldr declares two placements in its step 10 at [-14,-25,-123] and [-14,-25,137], with their source rotations. The matching rear body area appears in main source step 50. Preserve the distinction between the saved clamshell and the flattened car.",
+        "reuse_notes": "Useful for vehicle lights beside vents, or compact corners with two surface treatments. Reinspect the dish and jumper offsets when changing either part. Keep all original colours unless deliberately redesigning the detail."
+      },
+      "status": "visually_reviewed_construction_study",
+      "inspection_sheet": "output/kb-visual-audit/f40-04.jpg",
+      "parent_context_evidence": "output/kb-visual-audit/f40-parent-rear-lamp/panels/01-home-view.png",
+      "parent_context_status": "actual_declared_parent_inspected",
+      "decision": "retain_narrow_study_not_checked_whole_car"
+    },
+    {
+      "id": "window-louver",
+      "source": "examples/snot/ferrari-f40/studies/window-louver/source.mpd",
+      "source_sha256": "9b485812d2bbd91ea7c1f0b7e8453a7af81e0c46f72e14ef4165b062163d9a9a",
+      "section": "study-63f4a91f7c03-00-subModel-57.ldr",
+      "original_name": "subModel-57.ldr",
+      "parents": [
+        {
+          "section": "subModel-52.ldr",
+          "description": "Rear clamshell with lamps and louvered window",
+          "at": [
+            -90.0,
+            -75.0,
+            7.0
+          ],
+          "matrix": [
+            [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              1.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "colour": 0
+        },
+        {
+          "section": "subModel-52.ldr",
+          "description": "Rear clamshell with lamps and louvered window",
+          "at": [
+            -130.0,
+            -83.0,
+            7.0
+          ],
+          "matrix": [
+            [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              1.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "colour": 0
+        },
+        {
+          "section": "subModel-52.ldr",
+          "description": "Rear clamshell with lamps and louvered window",
+          "at": [
+            -170.0,
+            -91.0,
+            7.0
+          ],
+          "matrix": [
+            [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            [
+              1.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "colour": 0
+        }
+      ],
+      "images": [
+        "examples/snot/ferrari-f40/studies/window-louver/manual/00/step-003-home.png",
+        "examples/snot/ferrari-f40/studies/window-louver/manual/00/step-003-back.png",
+        "examples/snot/ferrari-f40/studies/window-louver/renders/home.png"
+      ],
+      "artifact_hash_mismatches": [],
+      "notes": {
+        "version": 1,
+        "evidence": "interpretation_of_source_and_images",
+        "construction": "Three source stages combine a 3666 rail, two 30413 translucent panels and two 87087 side-stud bricks. The module contains five parts.",
+        "interfaces": "The side-stud bricks turn the panel faces perpendicular to the rail. The surrounding clamshell supplies the repeated mounts; the local origin is not an automatically verified connector.",
+        "lesson": "Make one small louver module, then place repeats on explicit stepped mounting planes.",
+        "parent_context": "subModel-52.ldr places three copies in step 15 at [-90,-75,7], [-130,-83,7] and [-170,-91,7], using its declared rotations. Their origins advance 40 LDU longitudinally and 8 LDU vertically in that parent frame.",
+        "reuse_notes": "Transfer the repeated-module approach to vents, glazing or grille blades. The 40-by-8 progression belongs to this assembly, not to every louver design. Preserve joint seating and inspect clearance after changing the pitch."
+      },
+      "status": "visually_reviewed_construction_study",
+      "inspection_sheet": "output/kb-visual-audit/f40-05.jpg",
+      "parent_context_evidence": "output/kb-visual-audit/f40-parent-window-louver/panels/01-home-view.png",
+      "parent_context_status": "actual_declared_parent_inspected",
+      "decision": "retain_narrow_study_not_checked_whole_car"
+    }
+  ]
+}

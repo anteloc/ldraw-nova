@@ -1,6 +1,6 @@
 # Reference discovery implementation — 2026-09-25
 
-The assessment is now implemented as an agent workflow: search whole models, submodels or parts; inspect actual contents; compare rendered candidates; reuse an attributed construction or rebuild its technique at the required scale. The [workflow guide](../agent/reference-discovery.md), [curated atlas](../../examples/reference-atlas/README.md) and [machine-readable evidence](reference-discovery-implementation.json) retain the commands and results.
+The assessment is now implemented as an agent workflow: search whole models, submodels or parts; inspect actual contents; compare rendered candidates; reuse an attributed construction or rebuild its technique at the required scale. The [workflow guide](../agent/guides/find-references.md), [curated atlas](../../examples/reference-atlas/README.md) and [machine-readable evidence](reference-discovery-implementation.json) retain the commands and results.
 
 ## Delivered
 

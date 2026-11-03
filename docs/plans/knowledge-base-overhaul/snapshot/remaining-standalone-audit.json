@@ -1,0 +1,173 @@
+{
+  "date": "2026-11-02",
+  "entries": [
+    {
+      "id": "atlas-root",
+      "source": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/atlas-crane/atlas-crane.mpd",
+        "source_sha256": "c7b792227f5424493edd9b591c72f1ffc25994ce7c13f2d30f5a15cae9f71429",
+        "section": "atc-main.ldr",
+        "section_first_line": 2,
+        "steps": 4,
+        "empty_leading_steps": 0,
+        "parents": {}
+      },
+      "decision": "Hold whole model outside default construction retrieval; source context only for three selected lessons. No recommendation of unreviewed children.",
+      "visual_observation": "Recognizable four-axle crane with raised nested boom, stowed side truss, four deployed outriggers and twin cabs. Rope run visibly uses repeated end fittings; generator string_run distributes length residual as gaps/overlaps. Axle is rigid through-shaft geometry despite steered wording.",
+      "images": [
+        {
+          "path": "output/kb-visual-audit/remaining/atlas-root/panels/01-home-view.png",
+          "sha256": "d960b2f1f82370cd1948c20e575e27d561b661e8f8bcd20a15c5da23805bd097",
+          "notes": [
+            "Bounds skip parts unknown to the library: atc-hook-01-42082---13971.dat, atc-v8-01-42082---18575.dat, atc-v8-04-42082---6143.dat"
+          ],
+          "warnings": []
+        }
+      ],
+      "opened_mosaic": null
+    },
+    {
+      "id": "atlas-frame",
+      "source": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/atlas-crane/atlas-crane.mpd",
+        "source_sha256": "c7b792227f5424493edd9b591c72f1ffc25994ce7c13f2d30f5a15cae9f71429",
+        "section": "atc-frame.ldr",
+        "section_first_line": 74,
+        "steps": 3,
+        "empty_leading_steps": 0,
+        "parents": {
+          "atc-carrier.ldr": [
+            "1 16 0 0 0 1 0 0 0 1 0 0 0 1 atc-frame.ldr"
+          ]
+        }
+      },
+      "decision": "Improve into one scoped frame-composition lesson; document mounting interfaces and source check limits before admission.",
+      "visual_observation": "Long paired deep rails assembled from rectangular Technic frames, longitudinal liftarms and top crossmembers. Parent locates it under carrier deck; does not establish drivetrain or steering.",
+      "images": [
+        {
+          "path": "output/kb-visual-audit/remaining/atlas-frame/panels/01-isolated-construction.png",
+          "sha256": "59240bf4d5f2570a8bd490a3c74e80c701c109819c8e7389fc05dd946fa82c4c",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "path": "output/kb-visual-audit/remaining/atlas-frame/panels/02-actual-parent-placement.png",
+          "sha256": "1af22f1527719cb060dbd5cd3f8bf255e14d7c212d8f534943f0b9debd56ed99",
+          "notes": [
+            "Bounds skip parts unknown to the library: atc-v8-01-42082---18575.dat, atc-v8-04-42082---6143.dat"
+          ],
+          "warnings": []
+        }
+      ],
+      "opened_mosaic": "output/kb-visual-audit/remaining/atlas-frame/mosaic.png"
+    },
+    {
+      "id": "atlas-outrigger",
+      "source": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/atlas-crane/atlas-crane.mpd",
+        "source_sha256": "c7b792227f5424493edd9b591c72f1ffc25994ce7c13f2d30f5a15cae9f71429",
+        "section": "atc-outrigger.ldr",
+        "section_first_line": 1008,
+        "steps": 3,
+        "empty_leading_steps": 0,
+        "parents": {
+          "atc-carrier.ldr": [
+            "1 16 90 -127 -100 1 0 0 0 1 0 0 0 1 atc-outrigger.ldr",
+            "1 16 -90 -127 -100 -1 0 0 0 1 0 0 0 -1 atc-outrigger.ldr",
+            "1 16 90 -127 560 1 0 0 0 1 0 0 0 1 atc-outrigger.ldr",
+            "1 16 -90 -127 560 -1 0 0 0 1 0 0 0 -1 atc-outrigger.ldr"
+          ]
+        }
+      },
+      "decision": "Improve as static outrigger construction study; do not call it a verified telescoping or load-bearing mechanism.",
+      "visual_observation": "Straight layered beam with red outer section, upright actuator and circular foot. Four parent occurrences deploy to both sides. No demonstrated sliding extension, ground load capacity or locking.",
+      "images": [
+        {
+          "path": "output/kb-visual-audit/remaining/atlas-outrigger/panels/01-isolated-construction.png",
+          "sha256": "3f8f6ea52fe51344d99f205541ebbc4f95e59507312c9b6fc9a64ff010264d67",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "path": "output/kb-visual-audit/remaining/atlas-outrigger/panels/02-actual-parent-placement.png",
+          "sha256": "ed6e9085c42cbedb1c6eb4388d7ee07b79756fa30cf9057ef8bfea7a969a9415",
+          "notes": [
+            "Bounds skip parts unknown to the library: atc-v8-01-42082---18575.dat, atc-v8-04-42082---6143.dat"
+          ],
+          "warnings": []
+        }
+      ],
+      "opened_mosaic": "output/kb-visual-audit/remaining/atlas-outrigger/mosaic.png"
+    },
+    {
+      "id": "atlas-boom",
+      "source": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/atlas-crane/atlas-crane.mpd",
+        "source_sha256": "c7b792227f5424493edd9b591c72f1ffc25994ce7c13f2d30f5a15cae9f71429",
+        "section": "atc-boom.ldr",
+        "section_first_line": 1349,
+        "steps": 4,
+        "empty_leading_steps": 0,
+        "parents": {
+          "atc-main.ldr": [
+            "1 16 0 -410 120 1 0 0 0 0.766044 0.642788 0 -0.642788 0.766044 atc-boom.ldr"
+          ]
+        }
+      },
+      "decision": "Improve as boom and 3:4:5 diagonal-layout study; extension, pivot, rope continuity and load capacity remain unverified. Truss is direct geometry within this section, not a separate authored submodel.",
+      "visual_observation": "Three nested rectangular boom stages with head sheave and stowed side lattice truss. Parent shows raised placement and separate actuators/ropes.",
+      "images": [
+        {
+          "path": "output/kb-visual-audit/remaining/atlas-boom/panels/01-isolated-construction.png",
+          "sha256": "9320e2e0c3c10f803617306584e43ef50aab22685931fb9729cbd3e4b9dba6b1",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "path": "output/kb-visual-audit/remaining/atlas-boom/panels/02-actual-parent-placement.png",
+          "sha256": "2b1f5b1f824f1d97075837e036b23ab11d2cb1ae3d21d445a2475e78731fac9a",
+          "notes": [
+            "Bounds skip parts unknown to the library: atc-hook-01-42082---13971.dat, atc-v8-01-42082---18575.dat, atc-v8-04-42082---6143.dat"
+          ],
+          "warnings": []
+        }
+      ],
+      "opened_mosaic": "output/kb-visual-audit/remaining/atlas-boom/mosaic.png"
+    },
+    {
+      "id": "turntable",
+      "source": {
+        "source": "/Users/captain/workspaces/workspace-ai/ldraw-nova/examples/turntable-frame/turntable-frame.mpd",
+        "source_sha256": "e573957b1b5836b2f3494ddfd383cdb123611cc32f5aac9dd7319ff846183c39",
+        "section": "turntable-frame-axle-link.ldr",
+        "section_first_line": 73,
+        "steps": 2,
+        "empty_leading_steps": 0,
+        "parents": {
+          "turntable-frame.ldr": [
+            "1 0 156 48 0 1 0 0 0 1 0 0 0 1 turntable-frame-axle-link.ldr",
+            "1 0 -156 48 0 1 0 0 0 1 0 0 0 1 turntable-frame-axle-link.ldr"
+          ]
+        }
+      },
+      "decision": "Keep only as diagnostic/manual-reconstruction fixture; substitute joiner and four invalid-seating findings must remain visible. Exclude construction recommendations until resolved.",
+      "visual_observation": "Two grey parallel rails, central turntable and paired black bent-leg frames joined at feet. Isolated three-part link shows plain inline joiner with red axle ends and no central cross-hole.",
+      "images": [
+        {
+          "path": "output/kb-visual-audit/remaining/turntable/panels/01-whole-frame-with-both-axle-links-highlighted.png",
+          "sha256": "b72ec6a46c8eb103370e5c5d03c55118fd6dbd9611b8ac7edc82a5db78b76ea4",
+          "notes": [],
+          "warnings": []
+        },
+        {
+          "path": "output/kb-visual-audit/remaining/turntable/panels/02-axle-link-substitute-isolated.png",
+          "sha256": "55e58d3006bbcac6c7500111b10943ae234f5d849cdb832fb0e3ee5a16a1a553",
+          "notes": [],
+          "warnings": []
+        }
+      ],
+      "opened_mosaic": "output/kb-visual-audit/remaining/turntable/mosaic.png"
+    }
+  ],
+  "coverage": "Five candidates, six selected model sections including whole-root triage. Other Atlas children are not admitted. Stadium remains a source-reconciliation hold, not a visually cleared model."
+}

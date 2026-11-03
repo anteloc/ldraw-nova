@@ -11,3 +11,42 @@ The `source_origin` anchor is a positioning frame, not a claimed mechanical conn
 [Editable plan](scene.plan.json) · [Source MPD](source.mpd) · [Preview](renders/home.png) · [Attribution and repairs](extraction.json).
 
 Run `./ldraw-agent build PATH/scene.plan.json --output output/example.mpd`, then inspect the combined assembly and review its renders.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "timbered-wall",
+    "title": "Timbered wall and projecting arches",
+    "scope": "hold",
+    "kind": "assembly",
+    "aliases": [
+      "reference:timbered-wall"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples",
+      "details"
+    ],
+    "lesson": "Printed corner panels, window and arched roof supports as facade detail. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "walls"
+    ],
+    "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+    "model": "examples/reference-atlas/timbered-wall/preview.mpd",
+    "plan": "examples/reference-atlas/timbered-wall/scene.plan.json",
+    "preview": "examples/reference-atlas/timbered-wall/renders/home.png",
+    "visual_review": "examples/reference-atlas/timbered-wall/card.json",
+    "model_sha256": "be1f5daf6ba16a417cb42e2c90fc4899f800c248f6a4e838e41c5df0221e6bc8",
+    "audit_pointer": "/items/23",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

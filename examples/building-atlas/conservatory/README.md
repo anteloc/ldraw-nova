@@ -39,3 +39,39 @@ Render and inspect one submodel with `--section NAME --colour CODE`; replace NAM
 ```
 
 Change the generator for reproducible structural edits; changing only the emitted MPD loses the change on regeneration. The examples focus on exterior composition and interfaces. Most rooms have no furniture or internal stairs; the skyline is explicitly microscale. No vehicles, minifigures, moving mechanisms or manufacturing inventory are implied. Read the per-view observations and physical scope in the [collection review](../visual-review.md).
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "glasshouse-walls",
+    "title": "Fernlight Glasshouse",
+    "scope": "hold",
+    "kind": "assembly",
+    "aliases": [
+      "building:conservatory"
+    ],
+    "families": [
+      "building"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Revise selection: retain glazed wall-shell construction with full-height fixed glazing and framed door; do not recommend the whole scene or current glass-roof assembly. Fresh views show thick multi-course transparent roof largely obscuring sparse repeated flower boxes. This conflicts with the advertised planting-as-interior-focus lesson. Existing visual review already acknowledges roof opacity. Preserve original whole source only as provenance/regression fixture where required.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/building-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "Gardens and recreational buildings"
+    ],
+    "model": "examples/building-atlas/conservatory/conservatory.mpd",
+    "plan": "examples/building-atlas/conservatory/scene.plan.json",
+    "preview": "examples/building-atlas/conservatory/home.png",
+    "model_sha256": "6fe469b202f8468c797dfa5705375d16765124f2753a967bf1ee0613ed616be3",
+    "audit_pointer": "/items/1",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/building-findings.md",
+    "techniques": []
+  }
+]
+```

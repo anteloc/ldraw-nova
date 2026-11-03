@@ -1,7 +1,7 @@
 # Build a complete workshop assembly
 
 These starters use ordinary JSON plans with named joints and inline flexible
-routes. Read the [authoring guide](../../docs/agent/authoring.md), copy a plan to
+routes. Read the [authoring guide](../../docs/agent/guides/build-model.md), copy a plan to
 `output/`, edit it, and run `review`.
 
 | Starter | What it supplies |

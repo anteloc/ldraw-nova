@@ -6,7 +6,7 @@ All **111 documents** in the captured [llms.txt](https://docs.typesafe.ai/llms.t
 
 Scope is the complete set of **indexed Markdown documents**, not every external link reachable from them. Presentation-only React/CSS and encoded playground URLs were normalized for reading. Question examples, cookbook code, output tables and SDK schemas were retained; the confidence/score explorer data and calculations were inspected separately. Embedded videos, external legal agreements, linked datasets, and image-only plot details were not independently audited. No cookbook was rerun and no new paid inference was performed.
 
-The installed [TypeSafe skill](/Users/captain/.agents/skills/typesafe-ai/SKILL.md) was read. Its usual targeted-reading advice was superseded by the user's request to read the full index. The skill provides engineering guidance; it is not an additional inference product or an automatic model-building service.
+The installed [TypeSafe skill](../../../../../.agents/skills/typesafe-ai/SKILL.md) was read. Its usual targeted-reading advice was superseded by the user's request to read the full index. The skill provides engineering guidance; it is not an additional inference product or an automatic model-building service.
 
 | ID | Indexed document — read | Relevance or limitation recorded |
 |---|---|---|

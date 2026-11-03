@@ -3,7 +3,7 @@
 Seven editable designs demonstrate four construction families: road vehicles,
 motorcycles, watercraft and aircraft. Six reusable fitting recipes demonstrate
 actual seats, steering controls, printed instruments, cargo fittings and engines.
-Start with the [vehicle workflow](../../docs/agent/vehicles.md), select the defining
+Start with the [vehicle workflow](../../docs/agent/guides/design-models.md), select the defining
 parts, and build the surrounding structure to their measured interfaces.
 Technic models and mechanisms remain outside this collection.
 

@@ -1,6 +1,6 @@
 # Build manuals and advanced spaceship support
 
-Implemented and verified on 2026-09-26. The [general build-manual workflow](../agent/build-manuals.md) now documents how to discover a submodel, read its source steps as illustrated instructions, inspect its parent interfaces and add a useful construction to any atlas. The [spaceship workflow](../agent/spaceships.md) and [atlas](../../examples/spaceship-atlas/README.md) apply it to advanced spacecraft, including Star Wars examples.
+Implemented and verified on 2026-09-26. The [general build-manual workflow](../agent/guides/review-models.md) now documents how to discover a submodel, read its source steps as illustrated instructions, inspect its parent interfaces and add a useful construction to any atlas. The [spaceship workflow](../agent/guides/design-models.md) and [atlas](../../examples/spaceship-atlas/README.md) apply it to advanced spacecraft, including Star Wars examples.
 
 ## Tooling and agent workflow
 

@@ -43,22 +43,21 @@ def test_inspiration_sources_cannot_be_exported_as_checked_assemblies(tmp_path, 
 
 
 @pytest.mark.parametrize('archetype', ['starfighter', 'freighter', 'capital-ship'])
-def test_all_spaceship_briefs_default_to_snot_and_halcyon(archetype):
+def test_spaceship_briefs_choose_technique_from_brief(archetype):
     brief = design_brief(archetype)
-    assert brief['construction'] == 'SNOT'
-    assert brief['references'][0] == 'halcyon'
-    assert brief['default_reference']['key'] == 'halcyon'
-    for field in ['model', 'plan', 'guide', 'generator', 'preview', 'visual_review']:
-        assert Path(brief['default_reference'][field]).is_file()
+    assert brief['construction'] is None
+    assert brief['default_reference'] is None
+    assert 'halcyon' not in brief['references']
+    assert all(not key.endswith('-study') for key in brief['references'])
     brief['references'].clear()
-    assert design_brief(archetype)['references'][0] == 'halcyon'
+    assert design_brief(archetype)['references']
 
 
-def test_spaceship_discovery_prioritizes_halcyon_and_preserves_detail_search():
-    assert search_examples(family='spaceship', limit=1)['results'][0]['key'] == 'halcyon'
-    result = search_examples('SNOT', family='spaceship')['results']
-    assert result[0]['key'] == 'halcyon' and result[0]['default']
-    assert all(r['key'] != 'halcyon' for r in search_examples(family='spaceship', details=True)['results'])
+def test_spaceship_discovery_keeps_halcyon_explicit_and_inspiration_opt_in():
+    result = search_examples('halcyon', family='spaceship')['results']
+    assert any(r['key'] == 'halcyon' for r in result)
+    assert not default_reference()['default']
+    assert all(r['scope'] != 'inspiration' for r in search_examples(family='spaceship', limit=100)['results'])
     assert search_examples('nacelle', family='spaceship', details=True)['results']
 
 

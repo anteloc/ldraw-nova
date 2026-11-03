@@ -11,3 +11,42 @@ The `source_origin` anchor is a positioning frame, not a claimed mechanical conn
 [Editable plan](scene.plan.json) · [Source MPD](source.mpd) · [Preview](renders/home.png) · [Attribution and repairs](extraction.json).
 
 Run `./ldraw-agent build PATH/scene.plan.json --output output/example.mpd`, then inspect the combined assembly and review its renders.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "hinged-wing",
+    "title": "Tapered wing with hinge root",
+    "scope": "hold",
+    "kind": "assembly",
+    "aliases": [
+      "reference:hinged-wing"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples",
+      "details"
+    ],
+    "lesson": "Tapered wing with actual bar/clip root: 60478 handle plates, not hinge fingers. No validated sweep claim. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "unknown",
+    "subjects": [
+      "aircraft wings"
+    ],
+    "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+    "model": "examples/reference-atlas/hinged-wing/preview.mpd",
+    "plan": "examples/reference-atlas/hinged-wing/scene.plan.json",
+    "preview": "examples/reference-atlas/hinged-wing/renders/home.png",
+    "visual_review": "examples/reference-atlas/hinged-wing/card.json",
+    "model_sha256": "a2112d85b7808db8f2dcd0c8c5cbf4d5e84018af256732a2229ed1ba1b8e2ffd",
+    "audit_pointer": "/items/9",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

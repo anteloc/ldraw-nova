@@ -63,4 +63,4 @@ From the repository root:
   --studies-out output/ferrari-f40-studies
 ```
 
-`--catalog-root output/ferrari-f40-assessment/sections` refreshes the gallery from existing overview evidence without rendering again. After regenerating studies, inspect every image and use the existing [manual review/export workflow](../../../docs/agent/build-manuals.md#4-review-export-and-add-to-an-atlas). A new preparation invalidates the previous image review; the script never records an automatic visual approval.
+`--catalog-root output/ferrari-f40-assessment/sections` refreshes the gallery from existing overview evidence without rendering again. After regenerating studies, inspect every image and use the existing [manual review/export workflow](../../../docs/agent/guides/review-models.md#record-scoped-conclusions). A new preparation invalidates the previous image review; the script never records an automatic visual approval.

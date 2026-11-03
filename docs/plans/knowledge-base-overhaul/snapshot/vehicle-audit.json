@@ -1,0 +1,233 @@
+{
+  "items": [
+    {
+      "id": "touring-motorcycle",
+      "source": "examples/vehicle-atlas/touring-motorcycle/touring-motorcycle.mpd",
+      "source_sha256": "e14c534465178a8043a6f5499ad3eda1dabecc163b09bae4c6fcd4aa43a5a104",
+      "description": "Dedicated motorcycle frame and vintage fairing, separate spoked wheels/tyres and a rear luggage rack.",
+      "sections": [
+        {
+          "name": "touring-motorcycle.ldr",
+          "root": true,
+          "render_directory": "output/kb-visual-audit/vehicles/touring-motorcycle/section-00",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-01.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/touring-motorcycle/section-00/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/touring-motorcycle/section-00/panels/02-bottom-view.png"
+          ]
+        }
+      ],
+      "status": "all_packaged_model_sections_visually_reviewed",
+      "finding": "Keep narrowly as purpose-made motorcycle-part composition: moulded frame/fairing, spoked wheels and rear luggage tray. Good recognizable silhouette, but not a general brick-built vehicle or steering-mechanism lesson.",
+      "curation": "provisional_keep_with_narrow_purpose"
+    },
+    {
+      "id": "harbour-launch",
+      "source": "examples/vehicle-atlas/harbour-launch/harbour-launch.mpd",
+      "source_sha256": "ac0c7b6eb90a7f4f60cfa8125969ba91fdfc1c394d5227d24c2f479ee94cf1b4",
+      "description": "Purpose-made boat hull, open helm with a real seat and steering wheel, navigation lights and life ring.",
+      "sections": [
+        {
+          "name": "harbour-launch.ldr",
+          "root": true,
+          "render_directory": "output/kb-visual-audit/vehicles/harbour-launch/section-00",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-01.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/harbour-launch/section-00/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/harbour-launch/section-00/panels/02-bottom-view.png"
+          ]
+        },
+        {
+          "name": "vehicle-navigation-lights-coastal-delivery.ldr",
+          "root": false,
+          "render_directory": "output/kb-visual-audit/vehicles/harbour-launch/section-01",
+          "parent_render_directory": "output/kb-visual-audit/vehicles/harbour-launch/context-01",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-02.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/harbour-launch/section-01/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/harbour-launch/section-01/panels/02-bottom-view.png",
+            "output/kb-visual-audit/vehicles/harbour-launch/context-01/panels/01-home-view.png"
+          ]
+        }
+      ],
+      "status": "all_packaged_model_sections_visually_reviewed",
+      "finding": "Keep narrowly as moulded-hull open launch with helm, windscreen, lights and lifebuoy. No propulsion mechanism or complex hull-building lesson. Light crossbar reviewed separately and mounted across windscreen.",
+      "curation": "provisional_keep_with_narrow_purpose"
+    },
+    {
+      "id": "courier-jet",
+      "source": "examples/vehicle-atlas/courier-jet/courier-jet.mpd",
+      "source_sha256": "be4286c32e8028fd533c0bcf0e1670c9567fdbea75f7dde4fa32550f4912ea3b",
+      "description": "Matched aircraft nose/glass and tapered rear, swept wings, dedicated engine pods and an equipped cockpit.",
+      "sections": [
+        {
+          "name": "courier-jet.ldr",
+          "root": true,
+          "render_directory": "output/kb-visual-audit/vehicles/courier-jet/section-00",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-02.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/courier-jet/section-00/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/courier-jet/section-00/panels/02-bottom-view.png"
+          ]
+        },
+        {
+          "name": "vehicle-jet-engine-pod-coastal-delivery.ldr",
+          "root": false,
+          "render_directory": "output/kb-visual-audit/vehicles/courier-jet/section-01",
+          "parent_render_directory": "output/kb-visual-audit/vehicles/courier-jet/context-01",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-03.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/courier-jet/section-01/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/courier-jet/section-01/panels/02-bottom-view.png",
+            "output/kb-visual-audit/vehicles/courier-jet/context-01/panels/01-home-view.png"
+          ]
+        }
+      ],
+      "status": "all_packaged_model_sections_visually_reviewed",
+      "finding": "Keep narrowly as compact aircraft assembled from matched nose/glazing, body panels, wings, tail and underwing engines. Large purpose-made elements dominate the shape; exclude as universal aircraft default. No landing gear is present. Repeated engine child reviewed in both wing placements. Fresh see-through home/top views confirm the enclosed seat, controls and instrument panel; no missing-cockpit defect.",
+      "curation": "provisional_keep_with_narrow_purpose",
+      "additional_viewed_images": [
+        "output/kb-visual-audit/courier-cockpit/panels/01-home-view.png",
+        "output/kb-visual-audit/courier-cockpit/panels/02-top-view.png"
+      ]
+    },
+    {
+      "id": "driver-cockpit",
+      "source": "examples/vehicle-atlas/details/driver-cockpit/driver-cockpit.mpd",
+      "source_sha256": "19071e76667222d6fbc35482467949576bb13ef38f7733975fb3ffa3b4e08ecd",
+      "description": "Moulded seat, actual steering stand/wheel and printed dashboard on a two-by-six stud floor.",
+      "sections": [
+        {
+          "name": "vehicle-driver-cockpit-heritage-racing.ldr",
+          "root": true,
+          "render_directory": "output/kb-visual-audit/vehicles/driver-cockpit/section-00",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-03.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/driver-cockpit/section-00/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/driver-cockpit/section-00/panels/02-bottom-view.png"
+          ]
+        }
+      ],
+      "status": "all_packaged_model_sections_visually_reviewed",
+      "finding": "Keep small seat/steering-stand/dashboard layout on two-by-six floor. Explicitly reserve seat-back and canopy space. This is an interior fitting, not a complete vehicle starter.",
+      "curation": "provisional_keep_with_narrow_purpose"
+    },
+    {
+      "id": "pilot-cockpit",
+      "source": "examples/vehicle-atlas/details/pilot-cockpit/pilot-cockpit.mpd",
+      "source_sha256": "2526c5442ddaf34509f4fbb07a9e9b50c6bd9ca5b895d44228e114a617921ccb",
+      "description": "Moulded pilot seat, hinged control stick and printed instrument slope on a two-by-eight stud floor.",
+      "sections": [
+        {
+          "name": "vehicle-pilot-cockpit-heritage-racing.ldr",
+          "root": true,
+          "render_directory": "output/kb-visual-audit/vehicles/pilot-cockpit/section-00",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-04.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/pilot-cockpit/section-00/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/pilot-cockpit/section-00/panels/02-bottom-view.png"
+          ]
+        }
+      ],
+      "status": "all_packaged_model_sections_visually_reviewed",
+      "finding": "Keep small seat/control-stick/instrument-slope layout on two-by-eight floor. Stick in one upright pose; cockpit envelope and canopy must be provided by parent.",
+      "curation": "provisional_keep_with_narrow_purpose"
+    },
+    {
+      "id": "wing-mirror",
+      "source": "examples/vehicle-atlas/details/wing-mirror/wing-mirror.mpd",
+      "source_sha256": "a66b4cba6b10fbbf373beabcb6c26edfcffdf17f18db185d8a31e3ef83ae8600",
+      "description": "Compact side mirror on a headlight-brick mount, with a real sideways tile attachment.",
+      "sections": [
+        {
+          "name": "vehicle-wing-mirror-heritage-racing.ldr",
+          "root": true,
+          "render_directory": "output/kb-visual-audit/vehicles/wing-mirror/section-00",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-04.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/wing-mirror/section-00/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/wing-mirror/section-00/panels/02-bottom-view.png"
+          ]
+        }
+      ],
+      "status": "all_packaged_model_sections_visually_reviewed",
+      "finding": "Keep tiny headlight-brick side-stud tile lesson as fitting snippet. Show mounting orientation and outward-facing mirrored use; no standalone assembly package required if grouped with fittings.",
+      "curation": "provisional_keep_with_narrow_purpose"
+    },
+    {
+      "id": "cargo-chest",
+      "source": "examples/vehicle-atlas/details/cargo-chest/cargo-chest.mpd",
+      "source_sha256": "b4ebddb4df3d448f61b1c0201824404a2d1de6c14e59710eadb8716876512006",
+      "description": "Purpose-made open cargo chest with moulded handles, mounted on a three-by-four stud pallet.",
+      "sections": [
+        {
+          "name": "vehicle-cargo-chest-heritage-racing.ldr",
+          "root": true,
+          "render_directory": "output/kb-visual-audit/vehicles/cargo-chest/section-00",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-05.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/cargo-chest/section-00/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/cargo-chest/section-00/panels/02-bottom-view.png"
+          ]
+        }
+      ],
+      "status": "all_packaged_model_sections_visually_reviewed",
+      "finding": "Keep purpose-made open crate and supporting pallet as fitting snippet. Odd-width placement lattice must be stated; no detailed brick-built cargo-body lesson.",
+      "curation": "provisional_keep_with_narrow_purpose"
+    },
+    {
+      "id": "navigation-lights",
+      "source": "examples/vehicle-atlas/details/navigation-lights/navigation-lights.mpd",
+      "source_sha256": "dedea1a1a946f93d3389f5e5a34afca6b9fedb2116afa87293000cec8b313ab5",
+      "description": "Paired red port and green starboard lights on a slender four-stud crossbar.",
+      "sections": [
+        {
+          "name": "vehicle-navigation-lights-heritage-racing.ldr",
+          "root": true,
+          "render_directory": "output/kb-visual-audit/vehicles/navigation-lights/section-00",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-05.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/navigation-lights/section-00/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/navigation-lights/section-00/panels/02-bottom-view.png"
+          ]
+        }
+      ],
+      "status": "all_packaged_model_sections_visually_reviewed",
+      "finding": "Keep red/green round lights on short plate crossbar as fitting snippet. Source launch shows use across windscreen. Preserve documented forward direction and colour sides.",
+      "curation": "provisional_keep_with_narrow_purpose"
+    },
+    {
+      "id": "jet-engine-pod",
+      "source": "examples/vehicle-atlas/details/jet-engine-pod/jet-engine-pod.mpd",
+      "source_sha256": "6b80c2c22fc74d96d8509d67c9940c07223c34dcbd29cb0abe15ed77ce5e6c28",
+      "description": "Purpose-made cylindrical aircraft engine with matching internal core and top attachment plate.",
+      "sections": [
+        {
+          "name": "vehicle-jet-engine-pod-heritage-racing.ldr",
+          "root": true,
+          "render_directory": "output/kb-visual-audit/vehicles/jet-engine-pod/section-00",
+          "inspection_sheet": "output/kb-visual-audit/vehicle-06.jpg",
+          "status": "fresh_home_underside_and_available_parent_context_reviewed",
+          "viewed_images": [
+            "output/kb-visual-audit/vehicles/jet-engine-pod/section-00/panels/01-home-view.png",
+            "output/kb-visual-audit/vehicles/jet-engine-pod/section-00/panels/02-bottom-view.png"
+          ]
+        }
+      ],
+      "status": "all_packaged_model_sections_visually_reviewed",
+      "finding": "Keep purpose-made engine housing/internal core fitting, with top stud attachment. Source courier jet supplies underside wing sockets. Preserve intake direction and clearance below wing; this is not a brick-built turbine construction.",
+      "curation": "provisional_keep_with_narrow_purpose"
+    }
+  ],
+  "limits": "9 selected packages / 11 model sections reviewed; both nested children reviewed in parent. Four rejected whole vehicles are outside this retained-candidate batch. Static visual review does not prove motion or physical fit. Small fittings should be grouped/linked without duplicating authored descriptions."
+}

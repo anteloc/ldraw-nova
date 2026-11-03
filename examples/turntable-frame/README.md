@@ -8,7 +8,7 @@ A reconstruction of the subassembly on the supplied instruction pages `/tmp/buil
 
 ## Part identification
 
-Each part was described from the callout boxes, then searched with Jev (`discover search parts --construction all`, model jev-1.13.0) and offline FTS (BM25). Reports and queries are in [search/](search/). Visual comparison boards are in [shortlist/](shortlist/).
+Each part was described from the callout boxes, then searched with Jev (`discover search parts --construction all`, model jev-1.13.0) and offline FTS (BM25). Reports and queries are in [search/](search). Visual comparison boards are in [shortlist/](shortlist).
 
 | Step | Seen in manual | Qty | Chosen part | Evidence |
 |---|---|---|---|---|
@@ -85,3 +85,36 @@ The right view confirms that the legs drop to the links and that the ear holes f
 - The black joiner is a substitute without the centre pin hole.
 - The turntable base is shown dropping in from above (step 34), but its lugs must slide onto the already-inserted blue pins along Z. Insertion paths weren't checked beyond the manual's order.
 - Point sampling is not a full mesh-intersection proof. No strength, stability or colour-availability checks were done; `physical_validity` stays `not_proven`.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "turntable-seating",
+    "title": "Turntable",
+    "scope": "diagnostic",
+    "kind": "assembly",
+    "aliases": [
+      "remaining-standalone:turntable"
+    ],
+    "families": [
+      "technic"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Only as diagnostic/manual-reconstruction fixture; substitute joiner and four invalid-seating findings must remain visible. Exclude construction recommendations until resolved.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/remaining-standalone-findings.md",
+    "model": "examples/turntable-frame/turntable-frame.mpd",
+    "plan": "examples/turntable-frame/turntable-frame.plan.json",
+    "generator": "examples/turntable-frame/generate.py",
+    "model_sha256": "e573957b1b5836b2f3494ddfd383cdb123611cc32f5aac9dd7319ff846183c39",
+    "techniques": [
+      "technic"
+    ],
+    "subjects": []
+  }
+]
+```

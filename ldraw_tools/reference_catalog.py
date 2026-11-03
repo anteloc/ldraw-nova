@@ -260,6 +260,8 @@ def record_review(index, identity, card_dir, *, decision, note, viewed_views):
 
 def export_example(index, identity, card_dir, output, *, title, lesson, placement_notes, scale='unknown', force=False):
     """Export an inspected source plus an editable placement wrapper and its guide."""
+    from .knowledge import check_directory_scope
+    check_directory_scope(card_dir)
     source, card = _current_card(index, identity, card_dir)
     if (card['status'] != 'reference' or not card['contacts_checked'] or
             not card.get('geometry') or not _passed(card['geometry']['diagnostics'])):

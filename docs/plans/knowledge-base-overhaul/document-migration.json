@@ -1,0 +1,731 @@
+{
+  "date": "2026-11-03",
+  "sources": {
+    "docs/agent/geometry.md": "c61c41f64f602e775fdd342bea6a848e4793d66cefe1bb62f51d8207fecc076a",
+    "docs/agent/snot.md": "5e37630fb4108fd7835d6756f43e3223acc82336f21eb29ab961e1fd68389dc0",
+    "docs/agent/build-manuals.md": "f44b9e1f1afe63ec9b144a6e1be47581a940878ba4733e5238ea281ff826ea8d",
+    "docs/agent/plans.md": "627c00693995b7a70a267934e7da11935b39c8006c032555b49013a21ffdf367",
+    "docs/agent/vehicles.md": "df08f880954ef2edec7796ee41fd429e630263debfdea9b2298737841b239840",
+    "docs/agent/tooling.md": "dccb65cb060a384c78bdc1c8ed2b930bc543c2656061a006a1f33476d4765981",
+    "docs/agent/flex-constraints.md": "df2159c0bfede6647c3c0b42a19b94e33ecce03ae9ddc7a10ac7295fd531f88c",
+    "docs/agent/specification-map.md": "c08a4874cd4232f879b5bc1b7a506fca777c171f3b0d1328983da7bf9fbb66ae",
+    "docs/agent/submodel-inspection.md": "2bb98e5137836117048494741aacfe9527260208448ab341ea207e7e3b1c9753",
+    "docs/agent/technic.md": "5ff674ad3456111100840cb71cad046b58065fe4c979db109ff9ecce139e66f0",
+    "docs/agent/authoring.md": "22e1065bdef93ecb32f4ad408d9c5bacb16a81d1c8646b96897b429cd41b86b9",
+    "docs/agent/knowledge.md": "148807638683c33ee73287dc4afeccfe0803b382dd727fc9d7998313c16d71a1",
+    "docs/agent/validation.md": "c176a1c1b54d7c30325a583ee87598afdfc81aab694e13a37a0fbe131a7eb51a",
+    "docs/agent/technic-catalog.md": "e5cf2ce25ef4a09a56586fa1f8554dd0f7c1e4c367bbe1451718a36a7ac70f7a",
+    "docs/agent/snapping.md": "236ff267ff89e65befff489f6f8114e1f4d6f4df750f78b86933b19f0c12f667",
+    "docs/agent/reference-discovery.md": "b9a1be956d9332ab99b28c9969568828d836a022b6d16faebce5722d75b80af0",
+    "docs/agent/mechanisms.md": "cfea3bcbae4bf7de2fb1bfe1cbeb530bfba7511b560765d4922d30b5256a42b4",
+    "docs/agent/visual-design.md": "3d80c13b2c325d5bff46bff2b0d5e6159c5872361b210d5295a93b8331f6d472",
+    "docs/agent/verification.md": "f211f1ac6fac29ee431cb219619674f768e0f7d941fff24ecebce3a396ea8828",
+    "docs/agent/flexible-parts.md": "e813c2720425473060b06c656fb53e521627e35de7666f6804677470569ad0e3",
+    "docs/agent/advanced-mechanisms.md": "d9b0b049d57caeddd029e48e2f979fcfd18e3e16f4db363c835dcc80b9677d17",
+    "docs/agent/spaceships.md": "c74ee889735b5485d9fc7d3102de482f4f9f90bea387be5dfde5415dd8b2232d",
+    "docs/agent/complex-models.md": "66ef35e0406fc0691e92c92c9c33a4d6432c8f6f8e86d9633ebaf34f467357b6",
+    "docs/agent/ldraw-reference.md": "4d0466a36b85f36753a3e08b24bdfee00fa1a258b55127dbd9fd80682435afa2",
+    "docs/agent/technic-design.md": "e4f58c131259a2c6c5923fc4bb39297efcac2aa6333397dc2763c875c22d4a2a",
+    "docs/agent/technic-patterns/source-reuse.md": "eb57a5f45f0632343ac8b5b022c8fd51ab83d5e1f2c96e20c100fd830a2d98e4",
+    "docs/agent/technic-patterns/industrial-assemblies.md": "025813888e7065e3476dd34145f8f5c0e44ad612162e5618fc4c56c150e34cff",
+    "docs/agent/technic-patterns/lifts-and-linkages.md": "7bf7ddfb5dcbdb81711fa16d6eb97ab6ff712ff4a2e418bfde8d835a1b05325a",
+    "docs/agent/technic-patterns/transmissions.md": "622cb90e619d074ae3d59e153718c8186705ecc6f59a94ebb199a057bfb4f9ba",
+    "docs/agent/technic-patterns/engines.md": "4d5febecfae3787fb1204f2c1fa87a0e1beee9e5e89f609020fa85071f5a2f15",
+    "docs/agent/technic-patterns/suspension-steering.md": "e06e3ecfebc74e4753b0ac697cc74dc21ce089d7fc697b0f08048603e007eed5"
+  },
+  "destinations": {
+    "docs/agent/plans.md": "docs/agent/reference/plans.md",
+    "docs/agent/complex-models.md": "docs/agent/guides/compose-modules.md",
+    "docs/agent/snapping.md": "docs/agent/reference/connections.md",
+    "docs/agent/geometry.md": "docs/agent/guides/place-parts.md",
+    "docs/agent/snot.md": "docs/agent/guides/snot.md",
+    "docs/agent/ldraw-reference.md": "docs/agent/reference/ldraw.md",
+    "docs/agent/specification-map.md": "docs/agent/reference/ldraw.md",
+    "docs/agent/validation.md": "docs/agent/reference/validation.md",
+    "docs/agent/flex-constraints.md": "docs/agent/guides/flex.md",
+    "docs/agent/authoring.md": "docs/agent/guides/build-model.md",
+    "docs/agent/flexible-parts.md": "docs/agent/reference/flex.md",
+    "docs/agent/technic.md": "docs/agent/guides/technic.md",
+    "docs/agent/technic-design.md": "docs/agent/guides/technic.md",
+    "docs/agent/technic-catalog.md": "docs/agent/reference/technic.md",
+    "docs/agent/advanced-mechanisms.md": "docs/agent/guides/mechanisms.md",
+    "docs/agent/technic-patterns/engines.md": "docs/agent/guides/mechanism-patterns/engines.md",
+    "docs/agent/technic-patterns/transmissions.md": "docs/agent/guides/mechanism-patterns/transmissions.md",
+    "docs/agent/technic-patterns/suspension-steering.md": "docs/agent/guides/mechanism-patterns/suspension-steering.md",
+    "docs/agent/technic-patterns/lifts-and-linkages.md": "docs/agent/guides/mechanism-patterns/lifts-and-linkages.md",
+    "docs/agent/reference-discovery.md": "docs/agent/guides/find-references.md",
+    "docs/agent/technic-patterns/source-reuse.md": "docs/agent/guides/find-references.md",
+    "docs/agent/vehicles.md": "docs/agent/guides/design-models.md",
+    "docs/agent/spaceships.md": "docs/agent/guides/design-models.md",
+    "docs/agent/tooling.md": "docs/agent/reference/cli.md",
+    "docs/agent/knowledge.md": "docs/agent/reference/cli.md",
+    "docs/agent/verification.md": "docs/reports/tooling-verification-history.md",
+    "docs/agent/mechanisms.md": "docs/agent/guides/mechanisms.md",
+    "docs/agent/visual-design.md": "docs/agent/guides/design-models.md",
+    "docs/agent/submodel-inspection.md": "docs/agent/guides/review-models.md",
+    "docs/agent/build-manuals.md": "docs/agent/guides/review-models.md",
+    "docs/agent/technic-patterns/industrial-assemblies.md": "docs/agent/guides/flex.md"
+  },
+  "heading_routes": [
+    {
+      "source": "docs/agent/plans.md",
+      "anchor": "a-complete-small-example",
+      "destination": "docs/agent/guides/build-model.md",
+      "destination_anchor": "a-complete-small-example"
+    },
+    {
+      "source": "docs/agent/plans.md",
+      "anchor": "the-format",
+      "destination": "docs/agent/reference/plans.md",
+      "destination_anchor": "the-format"
+    },
+    {
+      "source": "docs/agent/plans.md",
+      "anchor": "choose-a-placement",
+      "destination": "docs/agent/reference/plans.md",
+      "destination_anchor": "choose-a-placement"
+    },
+    {
+      "source": "docs/agent/plans.md",
+      "anchor": "grow-the-model-when-needed",
+      "destination": "docs/agent/reference/plans.md",
+      "destination_anchor": "grow-the-model-when-needed"
+    },
+    {
+      "source": "docs/agent/plans.md",
+      "anchor": "use-python-for-calculations",
+      "destination": "docs/agent/reference/plans.md",
+      "destination_anchor": "use-python-for-calculations"
+    },
+    {
+      "source": "docs/agent/complex-models.md",
+      "anchor": "3-define-module-contracts",
+      "destination": "docs/agent/reference/plans.md",
+      "destination_anchor": "3-define-module-contracts"
+    },
+    {
+      "source": "docs/agent/complex-models.md",
+      "anchor": "4-compose-plans-and-repeat-structure",
+      "destination": "docs/agent/reference/plans.md",
+      "destination_anchor": "4-compose-plans-and-repeat-structure"
+    },
+    {
+      "source": "docs/agent/snapping.md",
+      "anchor": "reproducible-plans",
+      "destination": "docs/agent/reference/plans.md",
+      "destination_anchor": "reproducible-plans"
+    },
+    {
+      "source": "docs/agent/complex-models.md",
+      "anchor": "5-review-at-three-scales",
+      "destination": "docs/agent/guides/compose-modules.md",
+      "destination_anchor": "5-review-at-three-scales"
+    },
+    {
+      "source": "docs/agent/complex-models.md",
+      "anchor": "example-scope",
+      "destination": "docs/agent/guides/compose-modules.md",
+      "destination_anchor": "example-scope"
+    },
+    {
+      "source": "docs/agent/geometry.md",
+      "anchor": "inspect-before-placing",
+      "destination": "docs/agent/guides/place-parts.md",
+      "destination_anchor": "inspect-before-placing"
+    },
+    {
+      "source": "docs/agent/geometry.md",
+      "anchor": "stacking-ordinary-bricks-and-plates",
+      "destination": "docs/agent/guides/place-parts.md",
+      "destination_anchor": "stacking-ordinary-bricks-and-plates"
+    },
+    {
+      "source": "docs/agent/geometry.md",
+      "anchor": "reuse-subassemblies-and-connection-evidence",
+      "destination": "docs/agent/guides/place-parts.md",
+      "destination_anchor": "reuse-subassemblies-and-connection-evidence"
+    },
+    {
+      "source": "docs/agent/geometry.md",
+      "anchor": "module-interfaces-and-large-scenes",
+      "destination": "docs/agent/guides/place-parts.md",
+      "destination_anchor": "module-interfaces-and-large-scenes"
+    },
+    {
+      "source": "docs/agent/snot.md",
+      "anchor": "start-from-a-real-connection",
+      "destination": "docs/agent/guides/snot.md",
+      "destination_anchor": "start-from-a-real-connection"
+    },
+    {
+      "source": "docs/agent/snot.md",
+      "anchor": "a-concrete-offset-from-the-head",
+      "destination": "docs/agent/guides/snot.md",
+      "destination_anchor": "a-concrete-offset-from-the-head"
+    },
+    {
+      "source": "docs/agent/snot.md",
+      "anchor": "angle-a-detail-around-its-engaged-stud",
+      "destination": "docs/agent/guides/snot.md",
+      "destination_anchor": "angle-a-detail-around-its-engaged-stud"
+    },
+    {
+      "source": "docs/agent/snot.md",
+      "anchor": "keep-articulation-separate",
+      "destination": "docs/agent/guides/snot.md",
+      "destination_anchor": "keep-articulation-separate"
+    },
+    {
+      "source": "docs/agent/snot.md",
+      "anchor": "learn-from-real-set-submodels",
+      "destination": "docs/agent/guides/snot.md",
+      "destination_anchor": "learn-from-real-set-submodels"
+    },
+    {
+      "source": "docs/agent/snot.md",
+      "anchor": "read-the-evidence",
+      "destination": "docs/agent/guides/snot.md",
+      "destination_anchor": "read-the-evidence"
+    },
+    {
+      "source": "docs/agent/ldraw-reference.md",
+      "anchor": "line-records-pdf-pp6368",
+      "destination": "docs/agent/reference/ldraw.md",
+      "destination_anchor": "line-records-pdf-pp6368"
+    },
+    {
+      "source": "docs/agent/ldraw-reference.md",
+      "anchor": "transforms-and-coordinates-pdf-pp6265",
+      "destination": "docs/agent/reference/ldraw.md",
+      "destination_anchor": "transforms-and-coordinates-pdf-pp6265"
+    },
+    {
+      "source": "docs/agent/ldraw-reference.md",
+      "anchor": "colours-pdf-pp68708487",
+      "destination": "docs/agent/reference/ldraw.md",
+      "destination_anchor": "colours-pdf-pp68708487"
+    },
+    {
+      "source": "docs/agent/ldraw-reference.md",
+      "anchor": "mpd-structure-pdf-pp125127",
+      "destination": "docs/agent/reference/ldraw.md",
+      "destination_anchor": "mpd-structure-pdf-pp125127"
+    },
+    {
+      "source": "docs/agent/ldraw-reference.md",
+      "anchor": "bfc-and-other-metadata",
+      "destination": "docs/agent/reference/ldraw.md",
+      "destination_anchor": "bfc-and-other-metadata"
+    },
+    {
+      "source": "docs/agent/snapping.md",
+      "anchor": "configuration-and-coverage",
+      "destination": "docs/agent/reference/connections.md",
+      "destination_anchor": "configuration-and-coverage"
+    },
+    {
+      "source": "docs/agent/snapping.md",
+      "anchor": "discover-and-preview",
+      "destination": "docs/agent/reference/connections.md",
+      "destination_anchor": "discover-and-preview"
+    },
+    {
+      "source": "docs/agent/snapping.md",
+      "anchor": "apply-to-an-mpd-copy",
+      "destination": "docs/agent/reference/connections.md",
+      "destination_anchor": "apply-to-an-mpd-copy"
+    },
+    {
+      "source": "docs/agent/snapping.md",
+      "anchor": "collision-interpretation",
+      "destination": "docs/agent/reference/connections.md",
+      "destination_anchor": "collision-interpretation"
+    },
+    {
+      "source": "docs/agent/snapping.md",
+      "anchor": "pyldraw3-17-compatibility-notes-and-sources",
+      "destination": "docs/agent/reference/connections.md",
+      "destination_anchor": "pyldraw3-17-compatibility-notes-and-sources"
+    },
+    {
+      "source": "docs/agent/validation.md",
+      "anchor": "repair-by-diagnostic",
+      "destination": "docs/agent/reference/validation.md",
+      "destination_anchor": "repair-by-diagnostic"
+    },
+    {
+      "source": "docs/agent/geometry.md",
+      "anchor": "interpret-geometry-reports-honestly",
+      "destination": "docs/agent/reference/validation.md",
+      "destination_anchor": "interpret-geometry-reports-honestly"
+    },
+    {
+      "source": "docs/agent/flex-constraints.md",
+      "anchor": "the-working-loop",
+      "destination": "docs/agent/guides/flex.md",
+      "destination_anchor": "the-working-loop"
+    },
+    {
+      "source": "docs/agent/flex-constraints.md",
+      "anchor": "choose-the-right-kind-of-route",
+      "destination": "docs/agent/guides/flex.md",
+      "destination_anchor": "choose-the-right-kind-of-route"
+    },
+    {
+      "source": "docs/agent/flex-constraints.md",
+      "anchor": "use-diagnostics-to-make-a-local-repair",
+      "destination": "docs/agent/guides/flex.md",
+      "destination_anchor": "use-diagnostics-to-make-a-local-repair"
+    },
+    {
+      "source": "docs/agent/flex-constraints.md",
+      "anchor": "learn-from-actual-synthesis",
+      "destination": "docs/agent/guides/flex.md",
+      "destination_anchor": "learn-from-actual-synthesis"
+    },
+    {
+      "source": "docs/agent/authoring.md",
+      "anchor": "connect-actual-fittings",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "connect-actual-fittings"
+    },
+    {
+      "source": "docs/agent/authoring.md",
+      "anchor": "wrap-mounted-wheels",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "wrap-mounted-wheels"
+    },
+    {
+      "source": "docs/agent/authoring.md",
+      "anchor": "review-the-affected-assembly",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "review-the-affected-assembly"
+    },
+    {
+      "source": "docs/agent/flex-constraints.md",
+      "anchor": "author-hoses-from-interfaces",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "author-hoses-from-interfaces"
+    },
+    {
+      "source": "docs/agent/flex-constraints.md",
+      "anchor": "author-loops-from-the-mounted-wheels",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "author-loops-from-the-mounted-wheels"
+    },
+    {
+      "source": "docs/agent/flex-constraints.md",
+      "anchor": "read-the-checks-coverage",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "read-the-checks-coverage"
+    },
+    {
+      "source": "docs/agent/flexible-parts.md",
+      "anchor": "install-and-try",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "install-and-try"
+    },
+    {
+      "source": "docs/agent/flexible-parts.md",
+      "anchor": "describe-a-path",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "describe-a-path"
+    },
+    {
+      "source": "docs/agent/flexible-parts.md",
+      "anchor": "generate-and-reuse",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "generate-and-reuse"
+    },
+    {
+      "source": "docs/agent/flexible-parts.md",
+      "anchor": "what-the-checks-mean",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "what-the-checks-mean"
+    },
+    {
+      "source": "docs/agent/plans.md",
+      "anchor": "generated-flexible-assets",
+      "destination": "docs/agent/reference/flex.md",
+      "destination_anchor": "generated-flexible-assets"
+    },
+    {
+      "source": "docs/agent/technic.md",
+      "anchor": "start-from-the-structure-and-its-mounting-points",
+      "destination": "docs/agent/guides/technic.md",
+      "destination_anchor": "start-from-the-structure-and-its-mounting-points"
+    },
+    {
+      "source": "docs/agent/technic.md",
+      "anchor": "seat-the-joints-before-closing-the-frame",
+      "destination": "docs/agent/guides/technic.md",
+      "destination_anchor": "seat-the-joints-before-closing-the-frame"
+    },
+    {
+      "source": "docs/agent/technic.md",
+      "anchor": "find-structural-references-and-finish-the-appearance",
+      "destination": "docs/agent/guides/technic.md",
+      "destination_anchor": "find-structural-references-and-finish-the-appearance"
+    },
+    {
+      "source": "docs/agent/technic-design.md",
+      "anchor": "choose-a-construction-by-function",
+      "destination": "docs/agent/guides/technic.md",
+      "destination_anchor": "choose-a-construction-by-function"
+    },
+    {
+      "source": "docs/agent/authoring.md",
+      "anchor": "name-the-intended-connections",
+      "destination": "docs/agent/reference/technic.md",
+      "destination_anchor": "name-the-intended-connections"
+    },
+    {
+      "source": "docs/agent/technic.md",
+      "anchor": "use-measured-ports-and-real-lengths",
+      "destination": "docs/agent/reference/technic.md",
+      "destination_anchor": "use-measured-ports-and-real-lengths"
+    },
+    {
+      "source": "docs/agent/technic.md",
+      "anchor": "check-intended-joints-and-restraint",
+      "destination": "docs/agent/reference/technic.md",
+      "destination_anchor": "check-intended-joints-and-restraint"
+    },
+    {
+      "source": "docs/agent/plans.md",
+      "anchor": "automatic-technic-checks",
+      "destination": "docs/agent/reference/technic.md",
+      "destination_anchor": "automatic-technic-checks"
+    },
+    {
+      "source": "docs/agent/advanced-mechanisms.md",
+      "anchor": "find-parts-and-inspect-occupied-interfaces",
+      "destination": "docs/agent/guides/mechanisms.md",
+      "destination_anchor": "find-parts-and-inspect-occupied-interfaces"
+    },
+    {
+      "source": "docs/agent/advanced-mechanisms.md",
+      "anchor": "partition-by-rigidity-then-choose-inputs",
+      "destination": "docs/agent/guides/mechanisms.md",
+      "destination_anchor": "partition-by-rigidity-then-choose-inputs"
+    },
+    {
+      "source": "docs/agent/advanced-mechanisms.md",
+      "anchor": "write-relations-in-the-correct-frame",
+      "destination": "docs/agent/guides/mechanisms.md",
+      "destination_anchor": "write-relations-in-the-correct-frame"
+    },
+    {
+      "source": "docs/agent/advanced-mechanisms.md",
+      "anchor": "check-geometry-as-well-as-expressions",
+      "destination": "docs/agent/guides/mechanisms.md",
+      "destination_anchor": "check-geometry-as-well-as-expressions"
+    },
+    {
+      "source": "docs/agent/technic-patterns/engines.md",
+      "anchor": "crank-and-connecting-rod-engines",
+      "destination": "docs/agent/guides/mechanism-patterns/engines.md",
+      "destination_anchor": "crank-and-connecting-rod-engines"
+    },
+    {
+      "source": "docs/agent/technic-patterns/engines.md",
+      "anchor": "cam-followers",
+      "destination": "docs/agent/guides/mechanism-patterns/engines.md",
+      "destination_anchor": "cam-followers"
+    },
+    {
+      "source": "docs/agent/technic-patterns/engines.md",
+      "anchor": "appearance-and-integration",
+      "destination": "docs/agent/guides/mechanism-patterns/engines.md",
+      "destination_anchor": "appearance-and-integration"
+    },
+    {
+      "source": "docs/agent/technic-patterns/transmissions.md",
+      "anchor": "parallel-gear-trains",
+      "destination": "docs/agent/guides/mechanism-patterns/transmissions.md",
+      "destination_anchor": "parallel-gear-trains"
+    },
+    {
+      "source": "docs/agent/technic-patterns/transmissions.md",
+      "anchor": "bevel-trains-and-winches",
+      "destination": "docs/agent/guides/mechanism-patterns/transmissions.md",
+      "destination_anchor": "bevel-trains-and-winches"
+    },
+    {
+      "source": "docs/agent/technic-patterns/transmissions.md",
+      "anchor": "worm-driven-adjustment",
+      "destination": "docs/agent/guides/mechanism-patterns/transmissions.md",
+      "destination_anchor": "worm-driven-adjustment"
+    },
+    {
+      "source": "docs/agent/technic-patterns/transmissions.md",
+      "anchor": "differentials",
+      "destination": "docs/agent/guides/mechanism-patterns/transmissions.md",
+      "destination_anchor": "differentials"
+    },
+    {
+      "source": "docs/agent/technic-patterns/transmissions.md",
+      "anchor": "cardan-shafts",
+      "destination": "docs/agent/guides/mechanism-patterns/transmissions.md",
+      "destination_anchor": "cardan-shafts"
+    },
+    {
+      "source": "docs/agent/technic-patterns/transmissions.md",
+      "anchor": "selectors-and-driving-rings",
+      "destination": "docs/agent/guides/mechanism-patterns/transmissions.md",
+      "destination_anchor": "selectors-and-driving-rings"
+    },
+    {
+      "source": "docs/agent/technic-patterns/suspension-steering.md",
+      "anchor": "suspension-corners",
+      "destination": "docs/agent/guides/mechanism-patterns/suspension-steering.md",
+      "destination_anchor": "suspension-corners"
+    },
+    {
+      "source": "docs/agent/technic-patterns/suspension-steering.md",
+      "anchor": "shocks-and-fixed-mounts",
+      "destination": "docs/agent/guides/mechanism-patterns/suspension-steering.md",
+      "destination_anchor": "shocks-and-fixed-mounts"
+    },
+    {
+      "source": "docs/agent/technic-patterns/suspension-steering.md",
+      "anchor": "rack-steering",
+      "destination": "docs/agent/guides/mechanism-patterns/suspension-steering.md",
+      "destination_anchor": "rack-steering"
+    },
+    {
+      "source": "docs/agent/technic-patterns/suspension-steering.md",
+      "anchor": "combining-steering-suspension-and-drive",
+      "destination": "docs/agent/guides/mechanism-patterns/suspension-steering.md",
+      "destination_anchor": "combining-steering-suspension-and-drive"
+    },
+    {
+      "source": "docs/agent/technic-patterns/lifts-and-linkages.md",
+      "anchor": "orientation-preserving-lift",
+      "destination": "docs/agent/guides/mechanism-patterns/lifts-and-linkages.md",
+      "destination_anchor": "orientation-preserving-lift"
+    },
+    {
+      "source": "docs/agent/technic-patterns/lifts-and-linkages.md",
+      "anchor": "paddles-pawls-and-indexing",
+      "destination": "docs/agent/guides/mechanism-patterns/lifts-and-linkages.md",
+      "destination_anchor": "paddles-pawls-and-indexing"
+    },
+    {
+      "source": "docs/agent/technic-patterns/lifts-and-linkages.md",
+      "anchor": "mechanism-surroundings-are-part-of-the-construction",
+      "destination": "docs/agent/guides/mechanism-patterns/lifts-and-linkages.md",
+      "destination_anchor": "mechanism-surroundings-are-part-of-the-construction"
+    },
+    {
+      "source": "docs/agent/reference-discovery.md",
+      "anchor": "compare-actual-images-and-dimensions",
+      "destination": "docs/agent/guides/find-references.md",
+      "destination_anchor": "compare-actual-images-and-dimensions"
+    },
+    {
+      "source": "docs/agent/reference-discovery.md",
+      "anchor": "reuse-adapt-or-study-the-technique",
+      "destination": "docs/agent/guides/find-references.md",
+      "destination_anchor": "reuse-adapt-or-study-the-technique"
+    },
+    {
+      "source": "docs/agent/technic-patterns/source-reuse.md",
+      "anchor": "prefer-the-actual-assembly-over-its-label",
+      "destination": "docs/agent/guides/find-references.md",
+      "destination_anchor": "prefer-the-actual-assembly-over-its-label"
+    },
+    {
+      "source": "docs/agent/technic-patterns/source-reuse.md",
+      "anchor": "keep-selection-frame-and-occurrence-identity-together",
+      "destination": "docs/agent/guides/find-references.md",
+      "destination_anchor": "keep-selection-frame-and-occurrence-identity-together"
+    },
+    {
+      "source": "docs/agent/technic-patterns/source-reuse.md",
+      "anchor": "a-visible-support-may-still-be-an-incomplete-interface",
+      "destination": "docs/agent/guides/find-references.md",
+      "destination_anchor": "a-visible-support-may-still-be-an-incomplete-interface"
+    },
+    {
+      "source": "docs/agent/technic-patterns/source-reuse.md",
+      "anchor": "missing-evidence-is-a-reason-to-inspect",
+      "destination": "docs/agent/guides/find-references.md",
+      "destination_anchor": "missing-evidence-is-a-reason-to-inspect"
+    },
+    {
+      "source": "docs/agent/technic-patterns/source-reuse.md",
+      "anchor": "keep-observation-and-qualification-together",
+      "destination": "docs/agent/guides/find-references.md",
+      "destination_anchor": "keep-observation-and-qualification-together"
+    },
+    {
+      "source": "docs/agent/vehicles.md",
+      "anchor": "start-with-a-silhouette-and-the-defining-parts",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "start-with-a-silhouette-and-the-defining-parts"
+    },
+    {
+      "source": "docs/agent/vehicles.md",
+      "anchor": "choose-dedicated-parts-before-building-substitutes",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "choose-dedicated-parts-before-building-substitutes"
+    },
+    {
+      "source": "docs/agent/vehicles.md",
+      "anchor": "build-from-the-inside-out",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "build-from-the-inside-out"
+    },
+    {
+      "source": "docs/agent/vehicles.md",
+      "anchor": "open-renders-and-make-a-design-revision",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "open-renders-and-make-a-design-revision"
+    },
+    {
+      "source": "docs/agent/spaceships.md",
+      "anchor": "establish-identity-and-scale",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "establish-identity-and-scale"
+    },
+    {
+      "source": "docs/agent/spaceships.md",
+      "anchor": "study-constructions-and-choose-real-parts",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "study-constructions-and-choose-real-parts"
+    },
+    {
+      "source": "docs/agent/spaceships.md",
+      "anchor": "build-surfaces-in-their-own-local-grids",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "build-surfaces-in-their-own-local-grids"
+    },
+    {
+      "source": "docs/agent/spaceships.md",
+      "anchor": "build-from-the-frame-outward",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "build-from-the-frame-outward"
+    },
+    {
+      "source": "docs/agent/spaceships.md",
+      "anchor": "make-the-design-attractive",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "make-the-design-attractive"
+    },
+    {
+      "source": "docs/agent/spaceships.md",
+      "anchor": "inspect-and-deliver",
+      "destination": "docs/agent/guides/design-models.md",
+      "destination_anchor": "inspect-and-deliver"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "setup",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "setup"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "review-a-model",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "review-a-model"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "build-manuals-for-any-atlas",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "build-manuals-for-any-atlas"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "reviewed-real-set-submodels",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "reviewed-real-set-submodels"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "mechanism-studies-and-reuse",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "mechanism-studies-and-reuse"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "discover-and-inspect",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "discover-and-inspect"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "jev-part-discovery",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "jev-part-discovery"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "study-and-extract-complex-references",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "study-and-extract-complex-references"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "generate-from-a-plan",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "generate-from-a-plan"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "individual-checks-and-exports",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "individual-checks-and-exports"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "automation-contract",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "automation-contract"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "category-discovery-and-visual-design",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "category-discovery-and-visual-design"
+    },
+    {
+      "source": "docs/agent/tooling.md",
+      "anchor": "named-authoring-and-scoped-plan-review",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "named-authoring-and-scoped-plan-review"
+    },
+    {
+      "source": "docs/agent/knowledge.md",
+      "anchor": "register-or-maintain-an-example",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "register-or-maintain-an-example"
+    },
+    {
+      "source": "docs/agent/reference-discovery.md",
+      "anchor": "check-jev-availability-before-searching",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "check-jev-availability-before-searching"
+    },
+    {
+      "source": "docs/agent/reference-discovery.md",
+      "anchor": "find-a-few-distinct-constructions",
+      "destination": "docs/agent/reference/cli.md",
+      "destination_anchor": "find-a-few-distinct-constructions"
+    },
+    {
+      "source": "docs/agent/complex-models.md",
+      "anchor": "1-study-structure-before-geometry",
+      "destination": "docs/reports/bookshop-source-audit.md",
+      "destination_anchor": "1-study-structure-before-geometry"
+    },
+    {
+      "source": "docs/agent/complex-models.md",
+      "anchor": "2-learn-from-references-without-inheriting-their-problems",
+      "destination": "docs/reports/bookshop-source-audit.md",
+      "destination_anchor": "2-learn-from-references-without-inheriting-their-problems"
+    }
+  ]
+}

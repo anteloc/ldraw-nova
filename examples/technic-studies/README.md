@@ -1,12 +1,12 @@
 # Technic construction studies from ldraw-mecha
 
 For new animated mechanisms, start with the [gear drive](gear-drive/README.md)
-and [constraint workflow](../../docs/agent/advanced-mechanisms.md). The original
+and [constraint workflow](../../docs/agent/guides/mechanisms.md). The original
 starter includes fixed supports, keyed shafts, bearings and a coupled gear pair.
 
 These local study notes adapt Technic knowledge from the sibling project's
 `docs/` and `examples/` as of **2026-10-08**. Start with the
-[design guide](../../docs/agent/technic-design.md), then read the relevant
+[design guide](../../docs/agent/guides/technic.md), then read the relevant
 pattern. The notes and three retained previews are usable without that checkout.
 
 The imported studies below are construction references, not additions to `mechanism export` or new
@@ -37,8 +37,8 @@ crankshafts despite its V8/two-crank annotation. The image hides the fixed heads
 and frame to expose the construction; the apparent unsupported pistons are
 part of that cutaway presentation.
 
-Read [engines](../../docs/agent/technic-patterns/engines.md) and
-[parallel gears](../../docs/agent/technic-patterns/transmissions.md#parallel-gear-trains).
+Read [engines](../../docs/agent/guides/mechanism-patterns/engines.md) and
+[parallel gears](../../docs/agent/guides/mechanism-patterns/transmissions.md#parallel-gear-trains).
 The local annotated source is available through the existing workflow:
 
 ```sh
@@ -50,7 +50,7 @@ The local annotated source is available through the existing workflow:
 
 This prepares a new study, not an automatic export approval. Populate the
 operation notes, open the resulting build pages, and follow
-[mechanism review/export](../../docs/agent/mechanisms.md). A useful smaller
+[mechanism review/export](../../docs/agent/guides/mechanisms.md). A useful smaller
 adaptation is one bank on a new engine stand, with its missing drive/supports
 supplied deliberately.
 
@@ -61,9 +61,9 @@ Original model: Philippe Hurbain, `42110-1.mpd`, selected section
 belong to this exact selection. Use `sections` and `study` to choose a bounded
 subassembly before preparing build pages.
 
-Read [transmissions](../../docs/agent/technic-patterns/transmissions.md),
-[cam followers](../../docs/agent/technic-patterns/engines.md#cam-followers) and
-[rack steering](../../docs/agent/technic-patterns/suspension-steering.md#rack-steering).
+Read [transmissions](../../docs/agent/guides/mechanism-patterns/transmissions.md),
+[cam followers](../../docs/agent/guides/mechanism-patterns/engines.md#cam-followers) and
+[rack steering](../../docs/agent/guides/mechanism-patterns/suspension-steering.md#rack-steering).
 The source separates front/rear/centre differentials, two internal propshafts,
 four-speed and range/direction selectors, a guided-follower engine, steering
 and a two-mesh bevel winch. Useful adaptations include a service rover chassis,
@@ -81,7 +81,7 @@ The sibling extract `42110-suspension-standalone.ldr` retains 259 physical parts
 in the original car's frame and provides an old-to-new ID map. It is derived
 from Hurbain's 42110 source, with shock shortcuts split for animation.
 
-Read [suspension and steering](../../docs/agent/technic-patterns/suspension-steering.md).
+Read [suspension and steering](../../docs/agent/guides/mechanism-patterns/suspension-steering.md).
 Copy the construction idea—100-LDU outer arms, 80-LDU coupler attachments,
 guided knuckles, matching half-shafts and real shock eyes—after measuring the
 target parts. The imported pose is full droop. Add the omitted rack-side pin
@@ -95,7 +95,7 @@ Its separately studied motion is not a combined steerable, driven suspension.
 The sibling's independent extracts use `42083 - chiron.ldr`, a different frame
 and occurrence namespace from the W16 engine section. The wing's paired
 40-LDU cranks suggest a cargo deck that rises while staying level. Read
-[lifts and linkages](../../docs/agent/technic-patterns/lifts-and-linkages.md)
+[lifts and linkages](../../docs/agent/guides/mechanism-patterns/lifts-and-linkages.md)
 before adaptation: the fixed upper axis is assumed and the platform drifts
 slightly sideways. Its mounts and surrounding clearance still need construction.
 
@@ -109,7 +109,7 @@ the animation nor eight plausible ratios proves an unchanged official gearbox.
 The `10265-1_B-Model.mpd` study connects a knob, axle, single-start worm, 8T
 gear and liftarm cranks. It does not resolve the cranks' contact with the rear
 frame. The audit also shows how rounded rotations can hide many axle contacts.
-Read [source reuse](../../docs/agent/technic-patterns/source-reuse.md) before
+Read [source reuse](../../docs/agent/guides/find-references.md) before
 concluding that a sparse contact graph means the source is disconnected.
 
 ## Provenance and maintenance
@@ -124,7 +124,7 @@ the checks actually performed here.
 
 Supplementary originals, when the sibling checkout is present:
 [reference documentation](../../../ldraw-mecha/docs/reference/README.md) and
-[example artifacts](../../../ldraw-mecha/examples/reference/).
+[example artifacts](../../../ldraw-mecha/examples/reference).
 The source working tree had local edits: individual file hashes, rather than
 the Git revision alone, identify the material used. Some upstream Markdown still
 mentions old `output/` locations; the retained `examples/reference/` paths in

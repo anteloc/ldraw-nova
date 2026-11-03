@@ -1,0 +1,1723 @@
+{
+  "purpose": "Planning inspection artifact; does not change curated eligibility or certify fit/motion. Original-source boards must be distinguished from extracted/generated artifacts.",
+  "date": "2026-10-31",
+  "collection": "submodel-atlas",
+  "items": [
+    {
+      "id": "01-8081-front-axle",
+      "title": "Steerable Technic front axle; the pinion lives in the parent",
+      "lesson": "A steerable, sprung Technic front axle carries the steering rack, but the 8T pinion that drives the rack is placed in the parent frame.",
+      "description": "A steerable, sprung front axle with a steering rack and links. It lacks the pinion, which the parent places.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/01-8081-front-axle/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/01-8081-front-axle/board/mosaic.png",
+          "image_sha256": "d9b15067b6da24e6ab38ec7c3290d5d55dea82098cc409f89cf9a9e69921d8a0",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/8081-1.mpd",
+          "section": "8081 - Front Axle.ldr",
+          "source_sha256": "3fef02705debc0930762955a5dd92465cb09a2fe4d1f1eccdf7e9d6b20b2699e",
+          "source_hash_matches": true,
+          "parents": {
+            "8081 - Frame.ldr": [
+              "1 0 0 -10 -120 1 0 0 0 1 0 0 0 1 8081 - Front Axle.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent 8081 Frame, ghosted: axle highlighted; 8T pinion 3647 belongs to the frame",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Isolated axle, front view: symmetric suspension arms, steering links and shock",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 6: suspension arms pivot on the 1x6 Technic brick",
+              "step": 6,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Source step 11: rack housing and both steering links added",
+              "step": 11,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Front suspension arms, shock and steering links are visible; parent frame supplies the pinion. Keep lesson and parent dependency together; no claim of complete steering mechanism in isolated axle."
+      ],
+      "section_count": 2,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "02-42075-rear-axle",
+      "title": "Differential rear axle with U-joints, mounted tilted",
+      "lesson": "A driven Technic rear axle: a differential in an open frame, U-joints and half-shafts. The parent's matrix sets its tilt.",
+      "description": "A rear axle with a bevel differential, universal joints and multi-link suspension.",
+      "current_use": "inspiration",
+      "guide": "examples/submodel-atlas/02-42075-rear-axle/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/02-42075-rear-axle/board/mosaic.png",
+          "image_sha256": "dda1ee7e32c09bf5deb97fea018ccfaaa0a55ebac9c303970a6418bb6ca606ce",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/42075-1.mpd",
+          "section": "42075 - rearaxle.ldr",
+          "source_sha256": "1b44ac7315a873ff5658ccfd75080273fa95d3ce3d541623a2d8feec2ed7bb2c",
+          "source_hash_matches": true,
+          "parents": {
+            "42075 - vehicle.ldr": [
+              "1 4 0 76.289 193.183 -1 0 0 0 0.932 -0.363 0 -0.363 -0.932 42075 - rearaxle.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent 42075 vehicle, ghosted: axle tilted under the rear; shock leans to the body",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Isolated axle: differential in open frame, shock absorber, hub ends",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 3 (back): input bevel and U-joint enter the differential",
+              "step": 3,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Source step 5: hub frames and outgoing half-shafts added on both sides",
+              "step": 5,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Differential, U-joint input, half-shafts and leaning shock match source lesson and mounted rear location. Keep repair/source-study status because known raw shock geometry errors are not disproved by clean rendering."
+      ],
+      "section_count": 2,
+      "curation_status": "repair_or_inspiration_only_existing_diagnostics_unresolved"
+    },
+    {
+      "id": "03-42050-v8-engine",
+      "title": "V8 engine: crank train hidden under the cylinder banks",
+      "lesson": "A Technic V8 puts its whole crank train in one step between the two cylinder banks, so the finished engine hides it.",
+      "description": "A Technic V-engine with eight cylinders, pistons, rods and crankshafts on a 5\u00d73 brick base.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/03-42050-v8-engine/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/03-42050-v8-engine/board/mosaic.png",
+          "image_sha256": "06b6c2478c8e2627f731438ea5c8bab3c81d7b392d1449f2d2ce43031a6f6d9d",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/42050-1.mpd",
+          "section": "42050 - engine.ldr",
+          "source_sha256": "35f18ae53fcac3fa08109c468245d7fad4351435437708f7f69048f8586173e6",
+          "source_hash_matches": true,
+          "parents": {
+            "42050 - Drag Racer.ldr": [
+              "1 0 0 -202.02 132.082 1 0 0 0 0.998 -0.072 0 0.072 0.998 42050 - engine.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent drag racer, ghosted: engine highlighted at the front",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Isolated engine: finished look, crank train hidden",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 3: pistons, rods and crankshafts added under the cylinders",
+              "step": 3,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Inspection copy: all but step 3 trans-clear; V banks over one crank",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Two cylinder banks and hidden crank are visible in step and transparent views; source role at drag-racer front matches. Static illustration does not establish working motion."
+      ],
+      "section_count": 1,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "04-42078-headlight",
+      "title": "Technic-to-System SNOT headlight cluster",
+      "lesson": "A sideways System lamp cluster sits on a Technic mount; only the parent's axis-permutation matrix explains its orientation.",
+      "description": "Brackets and translucent elements forming a left headlight assembly.",
+      "current_use": "inspiration",
+      "guide": "examples/submodel-atlas/04-42078-headlight/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/04-42078-headlight/board/mosaic.png",
+          "image_sha256": "532caaa0f95138a471ca52b753abc4c4f784c291e5548832d28947e96e0f43af",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/42078-1.mpd",
+          "section": "42078 - light1.ldr",
+          "source_sha256": "3dc932db5957805ac0aa592c1bdfe16c0da7f17471d54c68335af07539965be1",
+          "source_hash_matches": true,
+          "parents": {
+            "42078 - tractor.ldr": [
+              "1 71 -90 -70 -860 0 0 1 1 0 0 0 1 0 42078 - light1.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent 42078 tractor, front: left headlight cluster highlighted in the bumper",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Isolated headlight: source orientation hides its role",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 1: offset-peghole plates, long axle pin and bracket form the Technic mount",
+              "step": 1,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Source step 2: trans-clear and trans-orange lens plates on a second bracket",
+              "step": 2,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Two-colour lens cluster and offset mount match truck bumper position. Retain repair candidate; the previously reported tiny overlap cannot be decided from pixels."
+      ],
+      "section_count": 1,
+      "curation_status": "repair_or_inspiration_only_existing_diagnostics_unresolved"
+    },
+    {
+      "id": "05-10269-headlight-nacelle",
+      "title": "Motorcycle primary-drive cover: a sideways round disc on headlight bricks",
+      "lesson": "A sideways round disc on headlight-brick studs. The parent shows it is a drive cover, not the headlight nacelle the database names.",
+      "description": "The left primary-drive (belt) cover beside the footboard, not a dashboard or headlight nacelle.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/05-10269-headlight-nacelle/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/05-10269-headlight-nacelle/board/mosaic.png",
+          "image_sha256": "4813b24ca4e54a4739eb4f3dfbc72cd957f01e03a3c0a8ec3943a3bbbdc6aba4",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10269-1.mpd",
+          "section": "10269 - step199-212.ldr",
+          "source_sha256": "c2c1a05aaea52e217d020c6f10452bee081ac65f7815ea16c00d275289eadb6c",
+          "source_hash_matches": true,
+          "parents": {
+            "10269 - main.ldr": [
+              "1 71 70 -120 0 0 0 -1 0 1 0 1 0 0 10269 - step199-212.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent 10269 motorcycle: section is the left drive cover, not a headlight nacelle",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Isolated cover, front view: large disc and small dish face-on, shift linkage at the end",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 8: four headlight bricks give sideways studs",
+              "step": 8,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Source step 11: 4x4 round plate ringed by corner round tiles",
+              "step": 11,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Actual parent shows primary-drive cover with shift lever, not front headlight. Four sideways headlight bricks carry the circular panel. Correct semantic package name; catalog lesson already corrected."
+      ],
+      "section_count": 1,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "06-10283-shuttle-framework",
+      "title": "Space Shuttle OMS pod: a colour-coded SNOT core under a hinged white shell",
+      "lesson": "A colour-coded SNOT core carries a hinged white shell. For thick, layered SNOT, source steps explain more than transparency.",
+      "description": "One rear OMS engine pod beside the tail, not the shuttle's main body structure.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/06-10283-shuttle-framework/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/06-10283-shuttle-framework/board/mosaic.png",
+          "image_sha256": "c2103b3faa67167555ab78e3f17ad319e5a8089c28f230075b90e60e01dadb9d",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10283-1.mpd",
+          "section": "10283 - shuttle-421-451.ldr",
+          "source_sha256": "19bbbc644ca8c24548ffbfd8b483096318864ca0b09d4b4ccceda3352288613f",
+          "source_hash_matches": true,
+          "parents": {
+            "10283 - shuttle.ldr": [
+              "1 15 90 -142 -40 0 -0.707 0.707 0 0.707 0.707 -1 0 0 10283 - shuttle-421-451.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent 10283 shuttle, ghosted: one rear OMS engine pod, placed at 45 degrees on its side",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Isolated pod: white curved shell (DB calls it the main body with an internal framework)",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 9: coloured core of side-stud plates, studs-on-side bricks, brackets and a hinge base",
+              "step": 9,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Source step 15: curved top panels, one of them hinged, close over the core",
+              "step": 15,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Actual part is a rear OMS pod with curved hinged white shell on side-stud core; not whole shuttle framework. Good core-to-skin lesson. Nested child inspection still required."
+      ],
+      "section_count": 7,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "07-75060-cockpit-base",
+      "title": "Slave I cockpit pod on a revolute pivot",
+      "lesson": "A pilot pod turns on two pinned axles in Technic-brick bearings. The axis comes from connector data, not from the picture.",
+      "description": "The pilot pod inside the canopy dome, on a pivot; not a generic hinged platform.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/07-75060-cockpit-base/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/07-75060-cockpit-base/board/mosaic.png",
+          "image_sha256": "b485bcfdc12852162f2edd29d00b8b0c45ccd2fa3b5ea6411c4afccf7958c22b",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/75060-1.mpd",
+          "section": "75060 - step84.ldr",
+          "source_sha256": "0bf76c215fe21b44e614fa22d28c655a624b5899c15e6d2996c2b669fd74ddd3",
+          "source_hash_matches": true,
+          "parents": {
+            "75060 - main.ldr": [
+              "1 72 0 -164 -300 0 0 -1 0 1 0 1 0 0 75060 - step84.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Slave I, ghosted: pod highlighted; neon-green rod is the pivot axis",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 9: four curved arches loop over the seat as the canopy frame",
+              "step": 9,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Inspection copy: pins and bearings in magenta; neon-green rod is the axis",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Inspection copy turned 90 degrees about the axis; bearings fixed",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        },
+        {
+          "image": "examples/submodel-atlas/07-75060-cockpit-base/board/poses.png",
+          "image_sha256": "fbc3acf6aa06d19d5b49c4bd34b47dc2df687c810bbfcd2b49dd7ebcd9e5f097",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/75060-1.mpd",
+          "section": "75060 - step84.ldr",
+          "source_sha256": "0bf76c215fe21b44e614fa22d28c655a624b5899c15e6d2996c2b669fd74ddd3",
+          "source_hash_matches": true,
+          "parents": {
+            "75060 - main.ldr": [
+              "1 72 0 -164 -300 0 0 -1 0 1 0 1 0 0 75060 - step84.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Pose 0 deg, bearings fixed",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Pose 45 deg, bearings fixed",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Pose 90 deg, bearings fixed",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Pilot pod, fixed Technic bearing bricks and marked axis are visually consistent. Posed copy demonstrates intended relative transform, not dome clearance or passive self-leveling.",
+        "Additional three-pose board opened: bearings fixed across 0/45/90 degrees. Synthetic pose does not establish full-parent clearance."
+      ],
+      "section_count": 2,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "08-7784-bat-hull",
+      "title": "Batmobile bat grille: built flat, stood upright on a pin mount",
+      "lesson": "Build a silhouette flat on its studs, then stand it in place on a pin mount. The parent's matrix tilts it about 98\u00b0.",
+      "description": "The bat-shaped front grille/nose, not the vehicle's body hull.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/08-7784-bat-hull/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/08-7784-bat-hull/board/mosaic.png",
+          "image_sha256": "74bff6d159efc9de918a739a9766cc88f38e4672332f64b8132747c691f1121f",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/7784-1.mpd",
+          "section": "7784 - Bat.ldr",
+          "source_sha256": "495724c03f1645d73619cc5c82117027ef0581972b3f84ead27ea3f268a0decf",
+          "source_hash_matches": true,
+          "parents": {
+            "7784 - Batmobile.ldr": [
+              "1 72 0 -73.242 -955.849 1 0 0 0 -0.139 -0.99 0 0.99 -0.139 7784 - Bat.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent 7784 Batmobile, ghosted: bat-shaped grille highlighted at the nose",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Parent right side: the grille rises at the front, tilted about 98 degrees from its build orientation",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 1: built face-down on a 10x9 boat-bow plate",
+              "step": 1,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Source step 8: pin-and-connector mount added on the back",
+              "step": 8,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Thin bat silhouette mounts at nose via backside pin connector and is tilted in vehicle. Rename as grille; useful flat-build-to-parent transform lesson."
+      ],
+      "section_count": 4,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "10-10182-roof-tower",
+      "title": "Caf\u00e9 Corner roof tower: parrot gargoyles and a hinged pyramid roof",
+      "lesson": "A pitched corner roof from four identical hinged panels around a pillar, with parrots as gargoyles.",
+      "description": "An ornamental roof tower with parrots, hinged bases and a turntable top.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/10-10182-roof-tower/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/10-10182-roof-tower/board/mosaic.png",
+          "image_sha256": "7e788c105c95378c5a90f98dcac228c26919ba52edcdf06756528d8af0e135d0",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10182-1.mpd",
+          "section": "10182 - Second floor - Roof tower.ldr",
+          "source_sha256": "42164d93e442d125195d722cc2e3fa6cc116b2d5c410a2a3bfdeab0b36f54c11",
+          "source_hash_matches": true,
+          "parents": {
+            "10182 - Second floor.ldr": [
+              "1 16 220 -192 -300 0.707107 0 -0.707107 0 1 0 0.707107 0 0.707107 10182 - Second floor - Roof tower.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Cafe Corner second floor, ghosted: corner tower turned 45 degrees",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 5: parrots stand in the arch openings as gargoyles",
+              "step": 5,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 9: four hinge bases set on the cap plate",
+              "step": 9,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Source step 11: four identical roof-face children, each rotated about 69 degrees onto a hinge",
+              "step": 11,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Parrots within four arches, four hinge bases and pitched repeated roof panels match claimed corner tower. Visible seams are not a measured closure or fit check."
+      ],
+      "section_count": 4,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s01-10298-vespa-front",
+      "title": "Vespa front leg shield: a studs-forward column under a smooth skin",
+      "lesson": "A smooth vehicle panel is a studs-forward column skinned with tiles, then tilted as a whole.",
+      "description": "The Vespa's tiled front leg shield, built studs-forward; more than a chassis section for mounting.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s01-10298-vespa-front/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s01-10298-vespa-front/board/mosaic.png",
+          "image_sha256": "2cae592310e3b8fc82614e49e231212fc362cfea9e578877ae30d1136242e428",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10298-1.mpd",
+          "section": "10298 - front.ldr",
+          "source_sha256": "4e93be56fd86770a2ae7e16ede8110eec5c85aa23297691738fdfe4beba7c185",
+          "source_hash_matches": true,
+          "parents": {
+            "10298 - vespa.ldr": [
+              "1 71 0 -207.078 -195.412 1 0 0 0 0.923 0.385 0 -0.385 0.923 10298 - front.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Vespa, ghosted: front leg shield highlighted, tilted about 23 degrees",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 3: twelve 1x2 Technic bricks stacked on their sides, studs forward",
+              "step": 3,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 9: 2x4 tiles and plates skin the forward studs (step 8 skins the left side)",
+              "step": 9,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Stud-direction map (synthetic, non-LEGO colours): up lilac, +X rose, -X vermilion, +Z blue, -Z aqua; nothing faces up",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Studs-forward column and tiled skin visibly become tilted leg shield on scooter. Keep scoped panel lesson; stud-map uses diagnostic colours."
+      ],
+      "section_count": 1,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s02-21307-caterham-nose",
+      "title": "Caterham engine: a sideways exhaust manifold made of revolvers",
+      "lesson": "Mechanical detail from sideways studs and repurposed parts: four minifigure revolvers become exhaust pipes.",
+      "description": "The engine under the bonnet, with a sideways exhaust manifold; not a front wing or nose.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s02-21307-caterham-nose/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s02-21307-caterham-nose/board/mosaic.png",
+          "image_sha256": "2893ff60975b8435f3bca7cda030bbd11f9b1ba7e42f6dffc343261ad8ce64fe",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/21307-1.mpd",
+          "section": "21307 - 21307 Step 71-82 Submodel.ldr",
+          "source_sha256": "cb81c162429e7c06f2a53f830ba2176aa08c220bc058d05eb3949eb9d8783ac7",
+          "source_hash_matches": true,
+          "parents": {
+            "21307 - Car.ldr": [
+              "1 72 0 -42 -120 -1 0 0 0 1 0 0 0 -1 21307 - 21307 Step 71-82 Submodel.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Caterham, ghosted: the section is the engine under the bonnet (DB: nose)",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 3: two 1x2-1x2 brackets turn studs sideways",
+              "step": 3,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 8: studs-on-sides bricks, hinge bases and four revolvers as exhaust pipes",
+              "step": 8,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Stud-direction map (synthetic, non-LEGO colours): up lilac, +X rose, -X vermilion, +Z blue, -Z aqua, angled violet",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Four revolvers create a static exhaust/manifold texture on the engine under the bonnet, not car nose. Parent and construction steps support current corrected lesson."
+      ],
+      "section_count": 1,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s03-21319-central-perk-wall",
+      "title": "Central Perk floor slab: a pattern from plates turned on edge",
+      "lesson": "An edge-on plate mosaic: bricks and plates laid on their sides show their edges as a high-resolution flat pattern.",
+      "description": "A patterned floor slab, not a wall section.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s03-21319-central-perk-wall/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s03-21319-central-perk-wall/board/mosaic.png",
+          "image_sha256": "5cf510916f0c32b73baf1461f028655191fe1af8b9d5baa457f5d4a6105d2c5e",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/21319-1.mpd",
+          "section": "21319 - Steps 110 to 118.ldr",
+          "source_sha256": "ce8497bcfd0135029f8d8ebe6dfd0beaa4fdc89fe83652379f815d161c6e7b5e",
+          "source_hash_matches": true,
+          "parents": {
+            "21319 - Central Perk.ldr": [
+              "1 16 14 -18 -360 1 0 0 0 1 0 0 0 1 21319 - Steps 110 to 118.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Central Perk, ghosted: patterned floor slab (DB: wall section)",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 2: a brick and two plates laid on their sides",
+              "step": 2,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 7: two 1x1 bricks with a stud on one side",
+              "step": 7,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Stud-direction map (synthetic, non-LEGO colours): up lilac, +X rose, -X vermilion, +Z blue, -Z aqua; top pattern is plate edges",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Edge-on bricks/plates form floor mosaic, not wall. Side studs provide connections visible during construction; orientation map supports plate-edge texture lesson."
+      ],
+      "section_count": 2,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s04-21309-saturn-module",
+      "title": "Saturn V radial clip hub carrying eight spoke panels",
+      "lesson": "A radial hub of jumper and clip plates on four faces carries eight skin panels by their handles.",
+      "description": "A repeating bracket-and-brick module with clip plates for attachment points.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s04-21309-saturn-module/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s04-21309-saturn-module/board/mosaic.png",
+          "image_sha256": "be7f79fe4939632852416c58adb69a9bb86b3e0dfd50eea28c5d47bf94e47c0a",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/21309-1.mpd",
+          "section": "21309 - 16-22.ldr",
+          "source_sha256": "fca920c256ac2ccdfecc6c168f656cdcf3568a1c40c164292ab7f68d8bcbb3e2",
+          "source_hash_matches": true,
+          "parents": {
+            "21309 - main.ldr": [
+              "1 70 0 -328 0 1 0 0 0 1 0 0 0 1 21309 - 16-22.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent close-up, ghosted: hub at the centre of the rocket body, level with the ribbed band",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 5: eight 1x2 clip plates on the four side faces",
+              "step": 5,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Hub and its eight 103-107 panels in the ghosted parent, top: panels clipped by their handles",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Hub and its eight 103-107 panels in the ghosted parent, top: stud directions in parent coordinates, panels angled (violet)",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Eight spoke panels connect around central clip hub in parent cross-section. Isolated exported hub is not the complete eight-panel assembly; keep sibling/parent dependency explicit."
+      ],
+      "section_count": 1,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s05-41627-yoda",
+      "title": "BrickHeadz Yoda: face and ears on a side-stud core",
+      "lesson": "BrickHeadz faces use a side-stud core plus flat panels built separately and turned.",
+      "description": "A brick-built Yoda figure.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s05-41627-yoda/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s05-41627-yoda/board/mosaic.png",
+          "image_sha256": "49c8d7d8f38dec83c1b9a6f821b2334f25f28f6df5ea6aeb29646ad8cb899a20",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/41627-1.mpd",
+          "section": "41627 - Yoda.ldr",
+          "source_sha256": "dcfc71b1af5915d498fdbe595eadd1ee4d1c4db49981e70288e0687bdee6203d",
+          "source_hash_matches": true,
+          "parents": {
+            "41627 - Yoda and Luke Skywalker.ldr": [
+              "1 16 -20 86 0 -1 0 0 0 1 0 0 0 -1 41627 - Yoda.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Yoda and Luke, ghosted: Yoda highlighted",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 6: two 1x1 bricks with studs on two adjacent sides",
+              "step": 6,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 12: a flat sand-green panel child mounted sideways as the head side",
+              "step": 12,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Stud-direction map (synthetic, non-LEGO colours): up lilac, +X rose, -X vermilion, +Z blue, -Z aqua; face studs forward, ears sideways",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Figure and side-stud core support flat panels turned onto head/body. Nested panels must be reviewed individually; source composite includes separate Luke context only."
+      ],
+      "section_count": 7,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s06-10278-door-column",
+      "title": "Police Station door column: a sideways stone column with clipped vines",
+      "lesson": "A stone-texture column built sideways, with vines hung on clip bars from handle plates.",
+      "description": "A decorative door column with vines.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s06-10278-door-column/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s06-10278-door-column/board/mosaic.png",
+          "image_sha256": "6a918ad388a48be1014bc77b2e7b4e3535bb20c218648c20b431de527ccd2c6d",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10278-1.mpd",
+          "section": "10278 - doorcolumn2f.ldr",
+          "source_sha256": "708b1d2c15e25bc3a8a44986a2d2a00598ee8de4acd8c60465e8efad7ff33f84",
+          "source_hash_matches": true,
+          "parents": {
+            "10278 - 2ndfloor.ldr": [
+              "1 2 -160 -108 -8 1 0 0 0 1 0 0 0 1 10278 - doorcolumn2f.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent second floor, ghosted: column beside the door",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 1: bracket, tan plates and five 1x1 round plates with side handles",
+              "step": 1,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 5: five clip bars stand out from the column for the vine leaves",
+              "step": 5,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: column studs forward (aqua), leaves angled (violet); synthetic, non-LEGO colours",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Sideways stone-texture column and projecting bars support the vine lesson; parent location beside doorway matches. Review leaf child separately."
+      ],
+      "section_count": 2,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s07-10272-rooftop-box",
+      "title": "Old Trafford glazed wall: built in its own frame, turned into the stand",
+      "lesson": "Build in a convenient frame, then rotate. Here \"studs down\" is the builder's frame, not a physical upside-down build.",
+      "description": "A glazed window wall under the stand roof, not a rooftop box.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s07-10272-rooftop-box/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s07-10272-rooftop-box/board/mosaic.png",
+          "image_sha256": "14542d318059947b10e9829a9113a096afb996fa305a0d36ceb5d44b97d531ed",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10272-1.mpd",
+          "section": "10272 - stretford-end-step186-198.ldr",
+          "source_sha256": "aa866e738cc2403e316d8f3bcca85c722e779be0ecd4c3baabba872da26fe082",
+          "source_hash_matches": true,
+          "parents": {
+            "10272 - stretford-end.ldr": [
+              "1 15 0 -246 190 0 1 0 -0.229 0 0.973 0.973 0 0.229 10272 - stretford-end-step186-198.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Stretford End, right side: glazed wall highlighted under the roof",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 3: a 1x10x4 windscreen used as a window pane",
+              "step": 3,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 10: a 1x12 plate and a 1x1-1x1 down bracket",
+              "step": 10,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: studs down in its own frame (lime); the parent turns them to +X and tilts 13 degrees",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Windscreen panes form a stand wall; local studs-down frame becomes sideways after parent placement. Retain corrected semantic name and explicitly unverified attachment."
+      ],
+      "section_count": 1,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s08-10267-christmas-tree",
+      "title": "Four-sided Christmas tree: identical faces on a four-sided stud core",
+      "lesson": "A radial core with identical faces, for round or conical shapes.",
+      "description": "A small Christmas tree on four-sided studs.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s08-10267-christmas-tree/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s08-10267-christmas-tree/board/mosaic.png",
+          "image_sha256": "d75ce2d225d72c158cf977fc3c3bdfe59d14a5238e7245eff622fdbcb578f867",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10267-1.mpd",
+          "section": "10267 - christmas-tree.ldr",
+          "source_sha256": "5b02847de56fb081daf87fb98c027055588a4d3da118f41a565082fd8a5fd773",
+          "source_hash_matches": true,
+          "parents": {
+            "10267 - main.ldr": [
+              "1 15 -380 -16 -450 1 0 0 0 1 0 0 0 1 10267 - christmas-tree.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Gingerbread House, right side: tree highlighted beside the house",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 4: a 1x1 brick with studs on four sides on the trunk",
+              "step": 4,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 6: two face children added on opposite sides",
+              "step": 6,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: four face directions in four colours, star angled; synthetic, non-LEGO colours",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Four-sided foliage on stud core visible, but title/lesson/board incorrectly say four identical faces. Source has two different face children, repeated twice each (11 vs 12 parts); guide reuse instruction to repeat one face loses this distinction. Require description correction."
+      ],
+      "section_count": 4,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s09-10258-bus-roof",
+      "title": "London bus roof: rounded edges from curved bricks on their sides",
+      "lesson": "Rounded vehicle body edges from curved-top bricks laid on their sides on brackets.",
+      "description": "The bus's main upper roof with a domed surface.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s09-10258-bus-roof/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s09-10258-bus-roof/board/mosaic.png",
+          "image_sha256": "12802d6643d5c346b29228ef38627a308d49d2fbcdcc5709246179783d8d85a0",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10258-1.mpd",
+          "section": "10258 - roof.ldr",
+          "source_sha256": "160ecddf6c38a4e0b0b8ff97c473c5c7f50f44adc1b787d02cc76d207ff47de0",
+          "source_hash_matches": true,
+          "parents": {
+            "10258 - deck.ldr": [
+              "1 71 0 -160 240 1 0 0 0 1 0 0 0 1 10258 - roof.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent bus deck, ghosted: roof highlighted",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 3: sixteen red brackets along both long edges, studs out",
+              "step": 3,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 6: twelve 2x4 curved-top bricks on their sides form the rounded edges",
+              "step": 6,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: top up (lilac), rounded edges +X rose and -X vermilion; synthetic colours",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Brackets carry sideways curved bricks along both long edges. Roof is visibly rounded and placed atop bus deck; useful body-edge lesson."
+      ],
+      "section_count": 1,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s10-21046-empire-corner",
+      "title": "Empire State entrance: a recessed doorway in a sideways fin facade",
+      "lesson": "A doorway recessed into a sideways rib facade.",
+      "description": "The front entrance, a recessed clear doorway framed by tan fins; not just a sculpted corner.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s10-21046-empire-corner/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s10-21046-empire-corner/board/mosaic.png",
+          "image_sha256": "d638e3c7555af09c58b657e377962ee63adc53258f85ff8044b30bb224b4ce45",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/21046-1.mpd",
+          "section": "21046 - step49-55.ldr",
+          "source_sha256": "cd8131b740b424668ae6fd447d4069bfb3c58e0db8f4968b265acc83d55f68c5",
+          "source_hash_matches": true,
+          "parents": {
+            "21046 - main.ldr": [
+              "1 47 0 -80 -130 1 0 0 0 1 0 0 0 1 21046 - step49-55.ldr",
+              "1 47 0 -80 130 -1 0 0 0 1 0 0 0 -1 21046 - step49-55.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent close-up: the module is the front entrance, framed by the rib facade",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 1: two red 1x2x1 2/3 bricks with studs on one side",
+              "step": 1,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 4: a grey 1x4 brick caps the frame",
+              "step": 4,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: frame studs forward (aqua), fins sideways (rose, vermilion); synthetic colours",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Module is front entrance with recessed glazed doorway in rib facade. Side-stud core and cross-oriented fin children fit corrected lesson, not an unspecified corner."
+      ],
+      "section_count": 3,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s11-10226-radial-engine",
+      "title": "Sopwith Camel striped rudder: built sideways, hung on handle bricks",
+      "lesson": "A flat, striped control surface built sideways, with a handle as the hinge point.",
+      "description": "The blue/white/red striped tail rudder, not a radial-engine cylinder bank.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s11-10226-radial-engine/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s11-10226-radial-engine/board/mosaic.png",
+          "image_sha256": "073028193bd50528750539e47bab2130b84b7ef3b95add6a31c53d2359738991",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10226-1.mpd",
+          "section": "10226 - step66.ldr",
+          "source_sha256": "2903c00bd3f1e0af46d47af2e09bd8ccb423eced0588947cc0fb9bd14ac20511",
+          "source_hash_matches": true,
+          "parents": {
+            "10226 - main.ldr": [
+              "1 0 610 -156 0 1 0 0 0 1 0 0 0 1 10226 - step66.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent close-up, ghosted: the section is the tail rudder (DB: radial engine)",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source steps 1-2: blue 1x1 brick with handle and 1x1 brick with one side stud",
+              "step": 2,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 7: the blue column grows with more side-stud bricks",
+              "step": 7,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: stripes are plates with studs +X (rose); column lilac; synthetic colours",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Striped vertical tail rudder and handle-bearing column are visible in actual parent. No radial engine. Rename semantic package; retain source coordinate and hinge limits."
+      ],
+      "section_count": 1,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s13-40412-buckbeak-body",
+      "title": "Buckbeak head: a studs-forward face on a hidden colour-coded core",
+      "lesson": "An animal face built studs-forward on a hidden core.",
+      "description": "The head, with eyes and a white beak; not the feathered body and wings.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s13-40412-buckbeak-body/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s13-40412-buckbeak-body/board/mosaic.png",
+          "image_sha256": "c0822df2bb1bfd7ed92fa1e1b126a283bd5b007eb4a655dbe33fd3a18e392735",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/40412-1.mpd",
+          "section": "40412 - Buckbeak - Steps 15 to 35.ldr",
+          "source_sha256": "6c82cd637cf6def17916abbfb3425836c4cf62549e51668ad9212203d50a56ad",
+          "source_hash_matches": true,
+          "parents": {
+            "40412 - Buckbeak.ldr": [
+              "1 16 0 -106 -40 1 0 0 0 1 0 0 0 1 40412 - buckbeak - steps 15 to 35.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Buckbeak, ghosted: the section is the head (DB: feathered body and wings)",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 5: six white 1x2x1 2/3 side-stud bricks close around the pink core child added in step 4",
+              "step": 5,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 9: curved slopes with cutouts shape the brow and crest",
+              "step": 9,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: face and beak studs forward (aqua), cheeks sideways; synthetic colours",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Large face/head on side-stud box with hidden pink core; source parent disproves body-and-wings label. Keep head shaping lesson and inspect core/face children."
+      ],
+      "section_count": 4,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s14-21303-walle-eye",
+      "title": "WALL-E left eye: mixed-direction SNOT with ribbed-hose cables",
+      "lesson": "The densest mixed-direction SNOT in the set, with flexible parts as decoration.",
+      "description": "The left eye assembly.",
+      "current_use": "inspiration",
+      "guide": "examples/submodel-atlas/s14-21303-walle-eye/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s14-21303-walle-eye/board/mosaic.png",
+          "image_sha256": "1c2d719030b300d391b210fa207ac43bc09946a2666b9ba94b6b7f00805e8265",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/21303-1.mpd",
+          "section": "21303 - Oeil gauche.ldr",
+          "source_sha256": "c33e5baf1157dd1b68229942103de5c4ee70c46053b66033bb029b007073107b",
+          "source_hash_matches": true,
+          "parents": {
+            "21303 - Tete A.ldr": [
+              "1 0 68.501 -2.88 10 -0.984808 -0.173648 0 -0.173648 0.984808 0 0 0 -1 21303 - Oeil gauche.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent head, ghosted: left eye highlighted",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 4: Technic brick, pin and a jumper plate start the side face",
+              "step": 4,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 8: an SNOT eye-contour child (bricks, curved slopes, bracket)",
+              "step": 8,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: all directions plus angled hose segments (violet); synthetic colours",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Housing, rounded eye contour and ribbed-hose decoration match scene. Retain source/inspiration or repair classification; visually plausible hoses do not resolve 49 nonrigid diagnostics."
+      ],
+      "section_count": 5,
+      "curation_status": "repair_or_inspiration_only_existing_diagnostics_unresolved"
+    },
+    {
+      "id": "s15-10183-underbody",
+      "title": "Swiss Crocodile underbody: a real upside-down build",
+      "lesson": "Inverted curved-top bricks give a rounded belly; the studs point down in the locomotive too.",
+      "description": "Underbody detail with curved bricks, rails and handles.",
+      "current_use": "inspiration",
+      "guide": "examples/submodel-atlas/s15-10183-underbody/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s15-10183-underbody/board/mosaic.png",
+          "image_sha256": "12002b4cf674e35d917a249861965d16d5494d97b0ccbaecaf1f3095e996c6fd",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10183-1.mpd",
+          "section": "10183 - 1 - underside details.ldr",
+          "source_sha256": "6e8be34eece2b74cfec73957749f3301a217203366ee586a49b86d7588f55177",
+          "source_hash_matches": true,
+          "parents": {
+            "10183 - 1 - Swiss crocodile.ldr": [
+              "1 0 -20 44 0 0 0 -1 0 1 0 1 0 0 10183 - 1 - underside details.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent locomotive, ghosted: underbody highlighted between the bogies",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source steps 1-2: 2x4 curved-top bricks upside down give a rounded belly",
+              "step": 2,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 8: door-rail and handle plates as underframe details",
+              "step": 8,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: studs down (lime) in the parent too; handles and bars sideways; synthetic colours",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Curved bricks genuinely inverted under central locomotive body. Retain repair/inspiration classification for four nonrigid transforms; parent view locates assembly but does not prove attachment."
+      ],
+      "section_count": 1,
+      "curation_status": "repair_or_inspiration_only_existing_diagnostics_unresolved"
+    },
+    {
+      "id": "s16-30050-shuttle-fuselage",
+      "title": "Micro Republic Attack Shuttle: wings stood on edge on clips",
+      "lesson": "Micro-scale SNOT: a wing child stands on edge, turned 90\u00b0 about Z on a clip.",
+      "description": "The central fuselage with clip and hinge mechanisms.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s16-30050-shuttle-fuselage/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s16-30050-shuttle-fuselage/board/mosaic.png",
+          "image_sha256": "39149040a5e82651693c1753e2ca8b5a92bd38d266ba515467cdf7cc871b97ed",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/30050-1.mpd",
+          "section": "30050 - m-1.ldr",
+          "source_sha256": "76661f19abe3250f0e0c5f2ff443590926f1a76df3da2e00f227db7426682d01",
+          "source_hash_matches": true,
+          "parents": {
+            "30050 - Republic Attack Shuttle.ldr": [
+              "1 0 0 0 0 1 0 0 0 1 0 0 0 1 30050 - m-1.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent, right side: fuselage highlighted; the tall dark-red wing stands on edge",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 10 (build page 8; xray counts each ROTSTEP): jumper plates and a red handle plate",
+              "step": 10,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 16 (build page 12): the right-wing child mounted turned 90 degrees on a clip",
+              "step": 16,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: wings +X rose and -X vermilion, nose angled violet; synthetic colours",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Whole micro shuttle has two upright clipped wings and angled nose. Current lesson matches but source/build-page step numbering differs due to ROTSTEP; preserve explicit mapping."
+      ],
+      "section_count": 4,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s17-10294-titanic-hull",
+      "title": "Titanic lower hull wall: built flat, stood on its side",
+      "lesson": "A ship's hull side is built as a flat plate-and-tile panel, then stood on its side. The panel's top becomes the hull's outside.",
+      "description": "A lower hull wall built flat and stood on its side; not deck plating.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s17-10294-titanic-hull/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s17-10294-titanic-hull/board/mosaic.png",
+          "image_sha256": "e8320971eb25ff3bbdc552fa10e7b51cb27e2a09633b9d6d82bc429b35f45598",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10294-1.mpd",
+          "section": "10294 - Titanic - 2.11.1.ldr",
+          "source_sha256": "4c016c7c4d24144b38059c39ab8728bafc205a4579fa506290f8eac9d9a0d6b8",
+          "source_hash_matches": true,
+          "parents": {
+            "10294 - Titanic - Box 1.ldr": [
+              "1 0 75.052 -22 -140.391 0 -0.986 0.164 1 0 0 0 0.164 0.986 10294 - Titanic - 2.11.1.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Titanic bow box: the red lower hull wall highlighted",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 7: ten 2x6 tiles skin the wall, which is built lying flat, studs up",
+              "step": 7,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 11: seven 2x4 curved-top bricks along one edge make the rounded bilge",
+              "step": 11,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Finished wall: all 93 studs up in its own frame; the parent turns it 90 degrees to face +X",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Red tiled hull panel lies flat in its local frame and becomes lower bow side in parent; curved bilge edge visible. No evidence here of measured attachment to neighbouring sections."
+      ],
+      "section_count": 1,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s17b-10294-titanic-hull-cabins",
+      "title": "Titanic black hull wall: portholes from open studs",
+      "lesson": "Portholes come from open studs on a wall built flat; children inside a sideways wall are counter-rotated so they end up upright.",
+      "description": "The black hull wall with portholes on the port side. The database text is only the section name.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s17b-10294-titanic-hull-cabins/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s17b-10294-titanic-hull-cabins/board/mosaic.png",
+          "image_sha256": "a5116a6a7514af9f1ea5894d9ae3cb782d7ffc2695678094f8995fa37c4a047d",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10294-1.mpd",
+          "section": "10294 - Titanic - 3.15.1.ldr",
+          "source_sha256": "4c016c7c4d24144b38059c39ab8728bafc205a4579fa506290f8eac9d9a0d6b8",
+          "source_hash_matches": true,
+          "parents": {
+            "10294 - Titanic - 3.0 Funnel & Main Cabins.ldr": [
+              "1 320 -148 -132 -80 0 1 0 -1 0 0 0 0 1 10294 - Titanic - 3.15.1.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent midship box, port side: the black hull wall with porthole pairs highlighted",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 6: tan log bricks and round bricks between white bricks form the wall core",
+              "step": 6,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 12: round-end 1x2 plates with two open studs on black tiles = portholes",
+              "step": 12,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: 147 up in the wall frame; 24 rose parts (17 child units) face up in the ship",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Paired open studs form portholes in port hull wall; child units use a counter-rotation. Lesson supported; inspect nested ring-bearing units separately."
+      ],
+      "section_count": 4,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s18-75276-tie-mount",
+      "title": "Stormtrooper helmet mouth vent: offset plates centre a grille",
+      "lesson": "Offset (jumper) plates centre a 2-wide grille on a face built forward; a car mudguard becomes the sculpted arch.",
+      "description": "The Stormtrooper helmet's mouth vent, not a mounting module.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s18-75276-tie-mount/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s18-75276-tie-mount/board/mosaic.png",
+          "image_sha256": "5ade4d5f2d5ea9a64b12e9cc334cf9e175e423e642c4e2e9e9a374f878ebba8d",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/75276-1.mpd",
+          "section": "75276 - 211-222.ldr",
+          "source_sha256": "87bb2655044e2816d87c60214b6497b6fb91d4767cae94adc4ada60be0191059",
+          "source_hash_matches": true,
+          "parents": {
+            "75276 - main.ldr": [
+              "1 16 0 48 -80 1 0 0 0 1 0 0 0 1 75276 - 211-222.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Stormtrooper helmet: the mouth vent highlighted under the face",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 7: two 1x3 offset plates stand studs-forward on brackets",
+              "step": 7,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 11: grille child, two grille slopes on an offset plate, half-stud centred",
+              "step": 11,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Source step 12: a car mudguard is the arch over the vent",
+              "step": 12,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Actual parent locates mouth vent under Stormtrooper face, not TIE mount. Offset plates and car mudguard support centring/sculpted-arch lesson."
+      ],
+      "section_count": 4,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s19-31031-chameleon",
+      "title": "Chameleon: flank stripes, turret eyes and hinged limbs",
+      "lesson": "Turret eyes from sideways convex slopes; limbs as rotated children on hinges and ball joints.",
+      "description": "The whole chameleon, not just its torso; the torso, limbs and head are children.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s19-31031-chameleon/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s19-31031-chameleon/board/mosaic.png",
+          "image_sha256": "c411e0f23ad85d52f3b1221411769df6a4c7946999f0747621f18ccf9492f985",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/31031-1_Chameleon.mpd",
+          "section": "31031 - Cameleon.ldr",
+          "source_sha256": "7967458da7624289a6b4728b1ec16b3ebcf1997053515dd21bc748dc49c61a34",
+          "source_hash_matches": true,
+          "parents": {
+            "31031 - Main.ldr": [
+              "1 0 0 9.861 5.857 1 0 0 0 1 0 0 0 1 31031 - Cameleon.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Source step 11: two Side children turned 90 degrees put lime slopes on the flanks",
+              "step": 11,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 24: rear-leg child turned studs-sideways, swung 30 degrees on a hinge",
+              "step": 24,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 30: head child; each turret eye is a 2x2 convex slope turned sideways",
+              "step": 30,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: flanks +-X, front leg -Z (aqua), tail and hands at odd angles (violet)",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Full animal with sideways flank stripes, hinged limbs and bulged eyes matches current corrected lesson. Root board does not individually expose all ten children."
+      ],
+      "section_count": 11,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s20-21325-blacksmith",
+      "title": "Blacksmith tree trunk: built lying down, stood up",
+      "lesson": "An organic shape built in a convenient frame, with animal tails as roots.",
+      "description": "The tree trunk beside the well. The database text is only the section name.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s20-21325-blacksmith/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s20-21325-blacksmith/board/mosaic.png",
+          "image_sha256": "8bbc9db19a0e719e5abf49aa3b4c64f93b698f784c71b288eeefdca86f6fd5ad",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/21325-1.mpd",
+          "section": "21325 - Steps 70 to 90.ldr",
+          "source_sha256": "afc7ccfde6ba9fc47916e11c4e6746416a3c2f0ad87a3f0a448632619504c706",
+          "source_hash_matches": true,
+          "parents": {
+            "21325 - Medieval Blacksmith.ldr": [
+              "1 16 0 -92 60 0 1 0 -1 0 0 0 0 1 21325 - Steps 70 to 90.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Blacksmith, side view: the tree trunk beside the well highlighted",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Trunk in its own frame lies along X; brown animal tails are the roots",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Source step 9: 5x5 corner-round curved bricks turned sideways give the bark",
+              "step": 9,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: all six directions plus odd angles; the parent turns it 90 degrees about Z",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Trunk lies horizontally in its own build frame and stands upright beside blacksmith building; brown dinosaur-tail pieces make roots. Tree-branch children require individual review."
+      ],
+      "section_count": 7,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    },
+    {
+      "id": "s22-10030-isd-tower",
+      "title": "Micro Tantive IV: built sideways along its length",
+      "lesson": "A micro ship built sideways along its length on bricks with studs on four sides.",
+      "description": "The micro Tantive IV on its stand, not a command tower or bridge.",
+      "current_use": "adapt",
+      "guide": "examples/submodel-atlas/s22-10030-isd-tower/GUIDE.md",
+      "evidence": [
+        {
+          "image": "examples/submodel-atlas/s22-10030-isd-tower/board/mosaic.png",
+          "image_sha256": "1d8c26e41d310bd07934fca27bd0aafe6b3c5771c61cbd6059be26c47d2f097b",
+          "image_hash_matches": true,
+          "source": "data/models-annotated/10030-1.mpd",
+          "section": "10030 - subModel-127.ldr",
+          "source_sha256": "b101947efa8e265689470e048d3382728d49336f232f42237758157bb8156358",
+          "source_hash_matches": true,
+          "parents": {
+            "10030 - main.ldr": [
+              "1 4 -2465.26 272.825 -330 0 0 1 0 1 0 -1 0 0 10030 - subModel-127.ldr"
+            ]
+          },
+          "panels": [
+            {
+              "panel": 1,
+              "label": "Parent Star Destroyer: the micro Tantive IV on its stand highlighted",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 2,
+              "label": "Source step 5: nose child, cones and tiles on a brick with studs on four sides",
+              "step": 5,
+              "warnings": []
+            },
+            {
+              "panel": 3,
+              "label": "Finished ship: the wedge side panels are children turned to +X and -X",
+              "step": null,
+              "warnings": []
+            },
+            {
+              "panel": 4,
+              "label": "Map: 44 of 79 studs to -Z; the hull is built sideways along its length",
+              "step": null,
+              "warnings": []
+            }
+          ]
+        }
+      ],
+      "visual_status": "source_board_and_all_packaged_model_sections_reviewed",
+      "findings": [
+        "Tiny Tantive IV adjacent to Star Destroyer; sideways fuselage and radial engine pieces, not command tower. Keep microscale shape/orientation lesson under corrected name."
+      ],
+      "section_count": 7,
+      "curation_status": "provisional_requires_metadata_reconciliation_and_scoped_checks"
+    }
+  ]
+}

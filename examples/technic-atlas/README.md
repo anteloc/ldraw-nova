@@ -2,7 +2,7 @@
 
 Four fixed structures and six mechanism studies teach complementary Technic techniques. Open the [interactive gallery](index.html), choose a construction and read its guide before adapting it. Mechanisms include editable source, a placement plan, source build pages, operation notes, provenance and rendered BOM evidence.
 
-Use the [Technic design guide](../../docs/agent/technic-design.md) and [Mecha studies](../technic-studies/README.md) to turn these supports into more varied models with engines, transmissions, suspension or lifts. Keep fixed-frame contracts scoped to the structure.
+Use the [Technic design guide](../../docs/agent/guides/technic.md) and [Mecha studies](../technic-studies/README.md) to turn these supports into more varied models with engines, transmissions, suspension or lifts. Keep fixed-frame contracts scoped to the structure.
 
 ## Fixed structures
 
@@ -18,7 +18,7 @@ These four constructions include a required-joint contract, geometry and structu
 | [![Frame tower](frame-tower/home.png)](frame-tower/GUIDE.md) | [![Service platform](service-platform/home.png)](service-platform/GUIDE.md) |
 | Overlapping members join repeated box cells. | Eight stud-ended pins support a System deck and equipment body. |
 
-Start with the [structural workflow](../../docs/agent/technic.md) and each model's `GUIDE.md`. [Structural visual review](visual-review.md) records what was inspected. These examples use conservative structural checks; physical strength and complete assembly access remain unproven.
+Start with the [structural workflow](../../docs/agent/guides/technic.md) and each model's `GUIDE.md`. [Structural visual review](visual-review.md) records what was inspected. These examples use conservative structural checks; physical strength and complete assembly access remain unproven.
 
 ## Mechanisms from ldraw-mecha
 
@@ -37,7 +37,7 @@ The studies contain **540 physical placements** in total. Each guide distinguish
 
 The four-speed source contained two identical `4519.dat` axle placements at the same transform. The derived atlas input removes source index 43 and retains 39, reducing 67 parts to 66; [its provenance](mechanism-sources/four-speed-gearbox.provenance.json) records the exact repair. Supplied original models remain unchanged. The reconstructed Chiron eight-speed gearbox and incomplete paddle drive were not selected.
 
-Read the [mechanism workflow](../../docs/agent/mechanisms.md) and [mechanism visual review](mechanism-visual-review.md). Analytical verification remains **deferred**; passing source checks, matching BOMs and inspected images do not certify operation or make an incomplete extract self-supporting.
+Read the [mechanism workflow](../../docs/agent/guides/mechanisms.md) and [mechanism visual review](mechanism-visual-review.md). Analytical verification remains **deferred**; passing source checks, matching BOMs and inspected images do not certify operation or make an incomplete extract self-supporting.
 
 ## Find and reuse a study
 

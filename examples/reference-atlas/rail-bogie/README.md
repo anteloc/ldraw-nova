@@ -31,3 +31,41 @@ Keep the wheelsets, pin and coupling stack together. Reserve turning space aroun
 These are source construction studies for adaptation, not certified mechanical cores. Original authorship and licences remain in the MPD and extraction manifest.
 
 Recreate the board with `./ldraw-xray board run examples/reference-atlas/rail-bogie/board/recipe.json --output output/boards/rail-bogie`. Changed renders require a new inspection; do not reuse this review automatically.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "rail-bogie",
+    "title": "Two-axle train bogie with buffers and magnetic coupling",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "reference:rail-bogie"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Two-axle bogie, central pivot, buffers and coupling. Correct single-axle source/card descriptions: two single-axle parts form one bogie.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "rail transport"
+    ],
+    "model": "examples/reference-atlas/rail-bogie/preview.mpd",
+    "plan": "examples/reference-atlas/rail-bogie/scene.plan.json",
+    "preview": "examples/reference-atlas/rail-bogie/renders/home.png",
+    "board": "examples/reference-atlas/rail-bogie/board/mosaic.png",
+    "visual_review": "examples/reference-atlas/rail-bogie/card.json",
+    "model_sha256": "4662b664674955ef8a5f1e746c9dd4d5504fddeb5ba7a3aac7ffffe600c3e2ab",
+    "audit_pointer": "/items/15",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

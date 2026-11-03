@@ -257,6 +257,8 @@ def review_manual(folder, *, images, note):
 
 
 def export_manual(folder, outdir, *, force=False):
+    from .knowledge import check_directory_scope
+    check_directory_scope(folder)
     folder, manual = current_manual(folder)
     if current_review(folder) is None:
         raise ValueError('Record a current visual review before exporting this construction reference')
@@ -275,12 +277,12 @@ def export_manual(folder, outdir, *, force=False):
         dest = confined(target, name)
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(confined(folder, name), dest)
-    for name in ['GUIDE.md', 'generate.py']:
+    for name in ['README.md', 'GUIDE.md', 'generate.py']:
         if (folder/name).is_file():
             shutil.copyfile(folder/name, target/name)
     return dict(output=str(target), plan=str(target/'scene.plan.json'), source=str(target/'source.mpd'),
                 **({'analytical_verification':'deferred'} if study_kind(manual) == 'mechanism' else {}),
-                next='Build the plan, inspect its interfaces and review the composed model; use --contacts none for mechanisms.')
+                next='Build the plan, inspect its interfaces and review the composed model; choose contact and joint scope deliberately.')
 
 
 def regenerate_placement(directory):

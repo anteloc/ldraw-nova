@@ -12,7 +12,7 @@ from ldraw_tools.common import ROOT, jsonable
 from ldraw_tools.connection_adapter import connection_contacts, query_frames
 from ldraw_tools.examples import search_examples
 from ldraw_tools.geometry import analyze_geometry
-from ldraw_tools.vehicle_review import review_vehicle
+from ldraw_tools.vehicle_review import RECIPES, review_vehicle
 from ldraw_tools.vehicles import DESIGNS, WHEEL_PACKS, axle, vehicle_plan, wheel_report
 from ldraw_tools.vehicle_details import DETAILS, detail_plan
 
@@ -28,7 +28,7 @@ def test_vehicle_plans_resolve_without_body_collisions_or_wheel_intrusions(offic
     _, model, diagnostics = build_plan(plan, official)
     geometry = analyze_geometry(model, official, detail='full', output_limit=500)
     profile = DESIGNS[name].get('profile','road')
-    report = review_vehicle(model, official, profile=profile)
+    report = review_vehicle(model, official, profile=profile, recipe=name if name in RECIPES else None)
     assert plan == before
     assert not errors(diagnostics+geometry['diagnostics']+report['diagnostics'])
     assert geometry['complete'] and geometry['contacts_checked']
@@ -122,12 +122,12 @@ def test_no_wheels_is_not_a_successful_vehicle_review(official):
 def test_vehicle_palette_and_family_errors_are_explicit():
     with pytest.raises(ValueError, match='Unknown vehicle'):vehicle_plan('imaginary')
     with pytest.raises(ValueError, match='vehicle palette'):vehicle_plan('pickup','botanical-bookshop')
-    with pytest.raises(ValueError, match='scale'):search_examples(family='vehicle',scale='microscale')
+    assert search_examples(family='vehicle',scale='microscale')['total'] == 0
     with pytest.raises(ValueError, match='Unknown vehicle detail'):detail_plan('imaginary')
     with pytest.raises(ValueError, match='vehicle palette'):detail_plan('driver-cockpit','botanical-bookshop')
 
 
-def test_unknown_wheels_and_technic_parts_are_reported(official):
+def test_unknown_wheels_warn_and_mixed_construction_is_allowed(official):
     plan=vehicle_plan('pickup')
     plan['sections'][0]['steps'][0].extend([
         dict(id='unknown-tyre',ref='11209.dat',colour=0,at=[200,-100,0]),
@@ -136,8 +136,9 @@ def test_unknown_wheels_and_technic_parts_are_reported(official):
     _,model,_=build_plan(plan,official)
     report=review_vehicle(model,official)
     assert report['unreviewed_wheels'][0]['ref']=='11209.dat'
-    assert {'vehicle.unreviewed_wheels','vehicle.technic_part'} <= {d['code'] for d in report['diagnostics']}
-    assert not report['checks_passed']
+    assert 'vehicle.unreviewed_wheels' in {d['code'] for d in report['diagnostics']}
+    assert 'vehicle.technic_part' not in {d['code'] for d in report['diagnostics']}
+    assert report['checks_passed']
 
 
 def test_cli_exports_plan_and_brief_and_protects_both_paths(official, tmp_path, monkeypatch):
@@ -169,7 +170,8 @@ def test_saved_examples_are_reproducible_and_reports_match_current_revision(offi
         sha=hashlib.sha256(text.encode()).hexdigest()
         for report in ['validation','bom','bom-comparison','render-manifest','visual-review']+([] if is_detail else ['vehicle-check']):
             assert json.loads((folder/(report+'.json')).read_text())['source_sha256']==sha
-    assert search_examples('pickup',family='vehicle')['total']==1
+    assert search_examples('pickup',family='vehicle')['total']==0
+    assert search_examples('pickup',family='vehicle',scope='archive')['total']==1
     assert search_examples(family='vehicle',limit=1)['truncated']
     assert search_examples('cockpit',family='vehicle',details=True)['total']==2
 
@@ -210,7 +212,7 @@ def test_family_review_detects_missing_and_misaligned_dedicated_parts(official,n
                 break
         if found:break
     _,model,_=build_plan(plan,official)
-    report=review_vehicle(model,official,profile=DESIGNS[name]['profile'])
+    report=review_vehicle(model,official,profile=DESIGNS[name]['profile'],recipe=name)
     assert not report['checks_passed']
     assert code in {d['code'] for d in report['diagnostics']}
 
@@ -233,3 +235,20 @@ def test_cli_vehicle_details_and_profile_selection(official,tmp_path,monkeypatch
     assert status==0 and report['profile']=='watercraft'
     parsed.profile='road'
     assert cli.run(parsed)[1]==1
+
+
+def test_aircraft_profile_does_not_require_courier_jet_parts(official):
+    plan = {'version': 1, 'author': 'Tests', 'sections': [{
+        'name': 'different-airframe.ldr', 'description': 'Mixed technique interface probe',
+        'steps': [[{'id': 'support', 'ref': '3700.dat', 'colour': 0, 'at': [0, 0, 0]}]]}]}
+    _, model, _ = build_plan(plan, official)
+    report = review_vehicle(model, official, profile='aircraft')
+    assert report['checks_passed']
+    assert report['coverage']['interfaces'] == 'not_checked'
+    assert report['physical_validity'] == 'not_proven'
+    assert report['diagnostics'][-1]['code'] == 'vehicle.interfaces_unreviewed'
+    recipe = review_vehicle(model, official, profile='aircraft', recipe='courier-jet')
+    assert not recipe['checks_passed']
+    assert 'vehicle.family_part' in {d['code'] for d in recipe['diagnostics']}
+    with pytest.raises(ValueError, match='recipe'):
+        review_vehicle(model, official, profile='aircraft', recipe='harbour-launch')

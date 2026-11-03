@@ -104,3 +104,71 @@ Contacts, overlaps and connector graphs are evidence, not a buildability proof.
 No detailed material-intersection pass was run on this model. Retail
 availability of any part in any of these colours is not claimed, and this is an
 original design, not a recreation of any set.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "copper-bean",
+    "title": "Copper bean",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "standalone:copper-bean"
+    ],
+    "families": [
+      "building"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Three-storey composition: green cafe beneath two tan apartment shells, roof terrace and planted pavement. Correct README which says three apartment storeys above cafe; retain facade/scene assembly scope. Glazed green shop with striped awning. Additional top view confirms rear counter, very abstract block espresso prop, two round pedestal tables and four small stools; no stair/circulation route.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/standalone-audit.json",
+    "model": "examples/copper-bean/copper-bean.mpd",
+    "plan": "examples/copper-bean/copper-bean.plan.json",
+    "generator": "examples/copper-bean/generate.py",
+    "model_sha256": "5a4aa4f553f1c21c30972880b0af819b0863828d50688712986d601f7ff0a504",
+    "audit_pointer": "/items/1",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/standalone-findings.md",
+    "techniques": [],
+    "subjects": [
+      "architecture"
+    ]
+  }
+]
+```
+
+## Audited section observations
+
+These observations refer to the source hashes in the registrations. They correct earlier source descriptions and preserve static visual scope; existing numeric and export checks remain separate.
+
+### Copper bean
+
+| Source section | Opened-image observation |
+|---|---|
+| `copper-bean.ldr` | Three-storey composition: green cafe beneath two tan apartment shells, roof terrace and planted pavement. Correct README which says three apartment storeys above cafe; retain facade/scene assembly scope. |
+| `bean-shop.ldr` | Glazed green shop with striped awning. Additional top view confirms rear counter, very abstract block espresso prop, two round pedestal tables and four small stools; no stair/circulation route. |
+| `display4-15.ldr` | Tall white display frame with clear pane; two actual shop-front instances. Retain fitted glazing lesson with matching part IDs. |
+| `door4-15-15-glazed.ldr` | White glazed panel door and knob; reviewed in shop front and second-flat front. These are actual instances of same fitted door. |
+| `door4-15-70-traditional.ldr` | Brown traditional four-light door in white frame, on shop rear wall. Keep as door-in-frame variant. |
+| `window4-15-47.ldr` | White four-pane glazing/window frame, repeated across shop and both flat walls. All three distinct parents inspected; one lesson with occurrences. |
+| `bean-flat-one.ldr` | First tan upper-floor shell has flowered front balustrade and perimeter glazing; empty studded room, no furniture, partitions or stairs. Scope to facade and stacking. |
+| `bean-flat-two.ldr` | Second tan upper-floor shell has front glazed door and perimeter windows; empty studded room, no furniture, partitions or stairs. Scope to facade and stacking. |
+| `bean-roof.ldr` | Flat tiled rooftop with parapet, rectangular chimney/service block and flower box. No stair access shown; roof treatment lesson only. |
+| `flower-box-4.ldr` | Four red flowers along green round stems behind tan curb; actual pavement and rooftop occurrences reviewed. Colour variant of shared planter. |
+| `bean-terrace.ldr` | Outdoor cafe seating group: three seated figures around square table pierced by green parasol pole. Verify chair/figure/table heights as explicit interfaces; no full furniture family claim. |
+| `cafe-table.ldr` | Square studded table with central opening and four round white legs; actual parasol passes through opening. Keep constrained furniture recipe. |
+| `cafe-chair.ldr` | Block-built white chair with brown tiled seat/back cap. Three occurrences support seated figures; minimal prop, not exemplar of detailed furnishing. |
+| `bean-guest-left.ldr` | Seated dark-red figure with brown hair and bent legs, installed at left side of terrace. Same minifigure assembly family as other guests. |
+| `bean-guest-right.ldr` | Seated blue figure with ponytail and bent legs, installed at opposite terrace chair. Pose/colour/hair variant, not separate construction lesson. |
+| `bean-guest-front.ldr` | Seated orange figure with tousled hair and bent legs, installed at third terrace chair. Pose/colour/hair variant. |
+| `street-tree-288-5.ldr` | Stylized round-trunk foliage tree on flowered square base; green and pink top foliage. Shared tree recipe, colour variant. |
+| `street-tree-2-14.ldr` | Same round-trunk tree form with green/yellow foliage and yellow base flowers, beside front lamp. Shared recipe variant. |
+| `fluted-lamp.ldr` | Fluted dark street lamp with transparent yellow round lantern and cone cap, two pavement occurrences. Record connection-check limits. |
+| `bench-70.ldr` | Simple brown bench with studded seat and back over two dark block feet; two pavement occurrences. Minimal prop scope. |
+| `flower-box-14.ldr` | Four yellow flowers behind tan curb; two pavement occurrences. Same planter family as red and pink. |
+| `street-tree-2-4.ldr` | Shared round-trunk tree with green/red foliage and red base flowers at rear corner. Colour variant. |
+| `street-tree-288-14.ldr` | Shared round-trunk tree with muted-green/yellow foliage and yellow base flowers, opposite rear planting. Colour variant. |
+| `flower-box-5.ldr` | Four pink flowers behind tan curb at rear pavement. Same planter family, colour variant. |

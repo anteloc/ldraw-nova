@@ -108,15 +108,14 @@ def test_reusable_plans_rebuild_with_matching_bom_and_attribution(official, entr
 
 def test_examples_search_finds_submodels_with_absolute_boards():
     assert 'submodel' in families()
-    found = search_examples('differential', family='submodel', details=True, limit=50)['results']
+    found = search_examples('differential', family='submodel', details=True, limit=50, scope='inspiration')['results']
     assert [r['key'] for r in found] == ['02-42075-rear-axle']
     snot = search_examples('snot', family='submodel', details=True, limit=50)
     assert snot['total'] >= 15
-    assert {r['key'] for r in search_examples(family='submodel', limit=50)['results']} == \
+    assert {r['key'] for r in search_examples(family='submodel', limit=50, scope='all')['results']} == \
         {r['key'] for r in PROMOTED if r['catalog_group'] == 'examples'}
     assert all(Path(r['board']).is_absolute() and Path(r['board']).is_file() for r in snot['results'])
-    with pytest.raises(ValueError, match='scale'):
-        search_examples(family='submodel', scale='microscale')
+    assert search_examples(family='submodel', scale='microscale')['total'] == 0
 
 
 def test_readme_and_guide_links_resolve():

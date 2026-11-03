@@ -31,3 +31,41 @@ Preserve the mast and matched wheel/tyre pairs. Change surrounding bodywork and 
 These are source construction studies for adaptation, not certified mechanical cores. Original authorship and licences remain in the MPD and extraction manifest.
 
 Recreate the board with `./ldraw-xray board run examples/reference-atlas/warehouse-forklift/board/recipe.json --output output/boards/warehouse-forklift`. Changed renders require a new inspection; do not reuse this review automatically.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "warehouse-forklift",
+    "title": "Small warehouse forklift with dedicated lifting mast",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "reference:warehouse-forklift"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Complete minifigure forklift: mast, forks, seat, levers, wheels. Isolated inherited colour may differ from source parent. No validated working-lift claim.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "industrial vehicle"
+    ],
+    "model": "examples/reference-atlas/warehouse-forklift/preview.mpd",
+    "plan": "examples/reference-atlas/warehouse-forklift/scene.plan.json",
+    "preview": "examples/reference-atlas/warehouse-forklift/renders/home.png",
+    "board": "examples/reference-atlas/warehouse-forklift/board/mosaic.png",
+    "visual_review": "examples/reference-atlas/warehouse-forklift/card.json",
+    "model_sha256": "4b8a925017d7f8b863c39d6242f4d4ed837c0d62828bf33fe1d4b733ea70deba",
+    "audit_pointer": "/items/25",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

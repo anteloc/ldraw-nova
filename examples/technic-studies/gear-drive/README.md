@@ -41,9 +41,57 @@ rebuilding. The shaft/mesh helpers check keyed-group ownership, bearing axes,
 finite insertion, axial displacement, pitch spacing and the signed gear relation.
 They emit the existing plan format; unsupported contact types remain explicit.
 
-Read the [mechanism workflow](../../../docs/agent/advanced-mechanisms.md) for
+Read the [mechanism workflow](../../../docs/agent/guides/mechanisms.md) for
 differentials, carriers, mixed pin/axle sections, Cardan joints and parts with
 unknown metadata. Read [validation notes](validation.md) for the evidence and
 limits of this example. Nominal fit and sampled motion are not a physical
 certification. `--contacts none` leaves source contact discovery explicitly
 skipped; it does not declare the model collision-free.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "gear-drive",
+    "title": "Gear drive",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "standalone:gear-drive"
+    ],
+    "families": [
+      "mechanism",
+      "technic"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Supported two-shaft spur pair within bonded blue bearing frame; retain as scoped 8:24 mechanical starter with existing hash-bound motion evidence and its limits. Grey base with paired blue bearing rails and caps; four round bearing holes visible, frame surrounds both shafts.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/standalone-audit.json",
+    "model": "examples/technic-studies/gear-drive/gear-drive.mpd",
+    "plan": "examples/technic-studies/gear-drive/construction.plan.json",
+    "model_sha256": "7dc910cff77cb212741f9dee7bacb6d61afa0c56c35e566108c11b7797885399",
+    "audit_pointer": "/items/5",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/standalone-findings.md",
+    "techniques": [
+      "technic"
+    ],
+    "subjects": []
+  }
+]
+```
+
+## Audited section observations
+
+These observations refer to the source hashes in the registrations. They correct earlier source descriptions and preserve static visual scope; existing numeric and export checks remain separate.
+
+### Gear drive
+
+| Source section | Opened-image observation |
+|---|---|
+| `gear-drive.ldr` | Supported two-shaft spur pair within bonded blue bearing frame; retain as scoped 8:24 mechanical starter with existing hash-bound motion evidence and its limits. |
+| `frame.ldr` | Grey base with paired blue bearing rails and caps; four round bearing holes visible, frame surrounds both shafts. |
+| `input.ldr` | Small 8-tooth gear on axle between yellow half-bush stops and outer red retaining bushes; actual input shaft position checked. |
+| `output.ldr` | Large 24-tooth gear on separate axle with same stop/retainer arrangement; actual output shaft and gear engagement visible. Static views do not independently verify motion. |

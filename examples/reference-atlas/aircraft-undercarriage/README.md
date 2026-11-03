@@ -31,3 +31,41 @@ Keep the wheel/tyre pair and pin roles. Measure the host receiving hole before p
 These are source construction studies for adaptation, not certified mechanical cores. Original authorship and licences remain in the MPD and extraction manifest.
 
 Recreate the board with `./ldraw-xray board run examples/reference-atlas/aircraft-undercarriage/board/recipe.json --output output/boards/aircraft-undercarriage`. Changed renders require a new inspection; do not reuse this review automatically.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "aircraft-undercarriage",
+    "title": "Compact aircraft landing strut with matched wheel and tyre",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "reference:aircraft-undercarriage"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Wheel-strut geometry in one source pose; retractable is not demonstrated. Preserve parent mounts; no checked travel claim.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "aircraft Technic"
+    ],
+    "model": "examples/reference-atlas/aircraft-undercarriage/preview.mpd",
+    "plan": "examples/reference-atlas/aircraft-undercarriage/scene.plan.json",
+    "preview": "examples/reference-atlas/aircraft-undercarriage/renders/home.png",
+    "board": "examples/reference-atlas/aircraft-undercarriage/board/mosaic.png",
+    "visual_review": "examples/reference-atlas/aircraft-undercarriage/card.json",
+    "model_sha256": "a6849d4f565ffa20a4a74e9ea1a67280300ab6a5ce64ffff05be72f29fbe31ee",
+    "audit_pointer": "/items/0",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

@@ -11,3 +11,42 @@ The `source_origin` anchor is a positioning frame, not a claimed mechanical conn
 [Editable plan](scene.plan.json) · [Source MPD](source.mpd) · [Preview](renders/home.png) · [Attribution and repairs](extraction.json).
 
 Run `./ldraw-agent build PATH/scene.plan.json --output output/example.mpd`, then inspect the combined assembly and review its renders.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "moulded-staircase",
+    "title": "Moulded staircase and landing",
+    "scope": "hold",
+    "kind": "assembly",
+    "aliases": [
+      "reference:moulded-staircase"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples",
+      "details"
+    ],
+    "lesson": "Moulded stairs and landing with actual floor opening shown in parent. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "stairs"
+    ],
+    "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+    "model": "examples/reference-atlas/moulded-staircase/preview.mpd",
+    "plan": "examples/reference-atlas/moulded-staircase/scene.plan.json",
+    "preview": "examples/reference-atlas/moulded-staircase/renders/home.png",
+    "visual_review": "examples/reference-atlas/moulded-staircase/card.json",
+    "model_sha256": "50217ba7bb0f7dffccc7b6bb8fea92c79a0f8e94127d9e16a46731ea56eb9eb7",
+    "audit_pointer": "/items/12",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

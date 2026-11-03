@@ -11,7 +11,7 @@ Keep the existing plan format and run `review PLAN`. Two optional declarations r
 
 `flex build` now performs the complete source/synthesis/measurement sequence and infers its output name. Existing manual commands, string MPD assets and the lower-level Python synthesis adapter remain available, including for diagnostic experiments. Prebuilt assets do not require LSynth.
 
-The [plan guide](../agent/plans.md), [agent instructions](../../instructions.md), [Technic guide](../agent/technic.md) and [flex guide](../agent/flex-constraints.md) lead with this path. The pneumatic press generator's `--automatic` mode declares its hose source and limits. Its default mode still reproduces the original fixtures. Endpoint/lead expansion and marker-frame calculations now use the shared authoring helpers while preserving those fixtures' bytes.
+The [plan guide](../agent/reference/plans.md), [agent instructions](../../instructions.md), [Technic guide](../agent/guides/technic.md) and [flex guide](../agent/guides/flex.md) lead with this path. The pneumatic press generator's `--automatic` mode declares its hose source and limits. Its default mode still reproduces the original fixtures. Endpoint/lead expansion and marker-frame calculations now use the shared authoring helpers while preserving those fixtures' bytes.
 
 ## Correctness and provenance
 

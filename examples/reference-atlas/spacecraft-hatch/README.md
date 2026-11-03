@@ -31,3 +31,41 @@ Copy or rebuild the hull-side hinge support before claiming an attached hatch. P
 These are source construction studies for adaptation, not certified mechanical cores. Original authorship and licences remain in the MPD and extraction manifest.
 
 Recreate the board with `./ldraw-xray board run examples/reference-atlas/spacecraft-hatch/board/recipe.json --output output/boards/spacecraft-hatch`. Changed renders require a new inspection; do not reuse this review automatically.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "spacecraft-hatch",
+    "title": "Hinged spacecraft side hatch with bracket-mounted engine cone",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "reference:spacecraft-hatch"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Blue hinged rear hatch with nozzle/fin. Inherited colour differs between preview and parent. One pose does not certify travel.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "spacecraft hatch SNOT"
+    ],
+    "model": "examples/reference-atlas/spacecraft-hatch/preview.mpd",
+    "plan": "examples/reference-atlas/spacecraft-hatch/scene.plan.json",
+    "preview": "examples/reference-atlas/spacecraft-hatch/renders/home.png",
+    "board": "examples/reference-atlas/spacecraft-hatch/board/mosaic.png",
+    "visual_review": "examples/reference-atlas/spacecraft-hatch/card.json",
+    "model_sha256": "71b57d325368b01dfa637213ef1293a30426081381927f24683866e13b8d25d5",
+    "audit_pointer": "/items/20",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

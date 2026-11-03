@@ -10,7 +10,7 @@ The default path is now **edit a plan → review → inspect images → repair**
 - Consolidated duplicate manual/mechanism CLI setup and dispatch while preserving their notes, study kinds and export behavior.
 - Updated the Python example to use the shared checked build and save its editable plan. Failures use an explicit check rather than an assertion that disappears under `python -O`.
 - Rewrote the README around a runnable local example and the modeling loop. Moved the project history to [background](../background.md), retaining the Docker instructions and acknowledgements.
-- Reduced the main [agent instructions](../../instructions.md) from 2,957 to 1,029 whitespace-delimited words (65%). Specialized guides remain linked by task. The [plan guide](../agent/plans.md) consolidates authoring guidance; the [tool reference](../agent/tooling.md#review-a-model) documents review artifacts and options.
+- Reduced the main [agent instructions](../../instructions.md) from 2,957 to 1,029 whitespace-delimited words (65%). Specialized guides remain linked by task. The [plan guide](../agent/reference/plans.md) consolidates authoring guidance; the [tool reference](../agent/reference/cli.md#review-a-model) documents review artifacts and options.
 
 There is one plan format and one set of validators. Reusing those implementations avoids maintaining a second modeling language or weakening checks to make the workflow appear easier.
 

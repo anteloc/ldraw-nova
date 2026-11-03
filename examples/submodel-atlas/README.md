@@ -142,7 +142,7 @@ stateDiagram-v2
 
 `tests/test_submodel_atlas.py` checks every hash, parent, recipe, catalog path,
 board provenance, review status and link. It also checks that `adapt` plans
-rebuild with matching BOMs. The [inspection guide](../../docs/agent/submodel-inspection.md)
+rebuild with matching BOMs. The [inspection guide](../../docs/agent/guides/review-models.md)
 covers finding and inspecting new candidates.
 
 ## Reading the boards
@@ -196,5 +196,5 @@ and values.
 Renders and sources teach a construction. They do not prove clutch, fit,
 clearance, travel or stability, and poses are rigid re-placements. The reviews
 were recorded after opening every image; step pages were read through contact
-sheets of the exact files. Use nova's [validation](../../docs/agent/validation.md)
+sheets of the exact files. Use nova's [validation](../../docs/agent/reference/validation.md)
 for physical claims about a new model.

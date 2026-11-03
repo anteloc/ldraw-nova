@@ -2,7 +2,7 @@
 
 The Python port in `../lsynth-nova` is useful for agent-authored flexible geometry. Its README, configuration, CLI, synthesis code, bundled parts and 26 constraint examples supply enough information for a first integration. No additional reference models were needed.
 
-The implementation adds `flex types` and `flex build`, optional installation through `setup.sh --with-lsynth`, three small sources under `examples/flex/`, and an [agent guide](../agent/flexible-parts.md). It calls the installed port's CLI with the bundled configuration. Existing parsing, embedded DAT support, plan assets, source validation, rendering and BOM comparison remain the foundations.
+The implementation adds `flex types` and `flex build`, optional installation through `setup.sh --with-lsynth`, three small sources under `examples/flex/`, and an [agent guide](../agent/reference/flex.md). It calls the installed port's CLI with the bundled configuration. Existing parsing, embedded DAT support, plan assets, source validation, rendering and BOM comparison remain the foundations.
 
 ## Physical boundaries
 

@@ -1,0 +1,290 @@
+{
+  "date": "2026-11-02",
+  "press": {
+    "id": "press",
+    "source": "examples/flex/pneumatic-press/named-review/model.mpd",
+    "source_sha256": "2b21bb66b901e8d623c617470907a4f5d5cea79dc81fe12032f77dcc860afa15",
+    "sections": [
+      {
+        "name": "press.ldr",
+        "kind": "model",
+        "first_line": 2,
+        "placements": 7,
+        "steps": 7,
+        "empty_leading_steps": 0,
+        "parents": [],
+        "existing_image": "examples/flex/pneumatic-press/named-review/previews/home.png",
+        "image_sha256": "084695eb02b790ab99a004e04144f03c7cd63533a621f832cd99c5a5a733027e",
+        "visual_observation": "Mounted static pump-valve-cylinder press on plate base; two-column portal frame, not documented C-frame. Three distinct hoses connect actual fittings; no pressure or loaded-stroke claim.",
+        "status": "visually_reviewed"
+      },
+      {
+        "name": "press-bench.ldr",
+        "kind": "model",
+        "first_line": 28,
+        "placements": 7,
+        "steps": 2,
+        "empty_leading_steps": 0,
+        "parents": [
+          "press.ldr"
+        ],
+        "render_directory": "output/kb-visual-audit/next-native/press-01",
+        "visual_observation": "Broad bonded studded plate base beneath all mounts; bench name does not imply a raised table.",
+        "status": "visually_reviewed",
+        "evidence": {
+          "manifest": "output/kb-visual-audit/next-native/press-01/manifest.json",
+          "manifest_sha256": "5e03e4909665040e1999e0dce7debcd81b1843eb425c54c37d56f7e97a3320f2",
+          "panels": [
+            {
+              "path": "output/kb-visual-audit/next-native/press-01/panels/01-press-bench-ldr-isolated.png",
+              "sha256": "4e74b795d415f16cbe77445bf3494f82ae7fc7821dfa6d83997a191ada9e184a"
+            },
+            {
+              "path": "output/kb-visual-audit/next-native/press-01/panels/02-in-press-ldr.png",
+              "sha256": "a69b0e6a27a12f6e9697f6ec81a5e03ff10abc11902382556840fe7059dabe3d"
+            }
+          ],
+          "opened_image": {
+            "path": "output/kb-visual-audit/next-native/press-01/mosaic.png",
+            "sha256": "805373c51e5bf5cf9fd11cfc6250db545987a31e035176aecff7e57c4abba7b4"
+          }
+        }
+      },
+      {
+        "name": "press-frame.ldr",
+        "kind": "model",
+        "first_line": 49,
+        "placements": 24,
+        "steps": 11,
+        "empty_leading_steps": 0,
+        "parents": [
+          "press.ldr"
+        ],
+        "render_directory": "output/kb-visual-audit/next-native/press-02",
+        "visual_observation": "Two brick columns and Technic crossbeam form closed-top portal with a central anvil. Correct C-frame wording.",
+        "status": "visually_reviewed",
+        "evidence": {
+          "manifest": "output/kb-visual-audit/next-native/press-02/manifest.json",
+          "manifest_sha256": "89e6f8c151ead22779c40b82cd79ac029f0e0928c14e0ea5ff75226551a8f48b",
+          "panels": [
+            {
+              "path": "output/kb-visual-audit/next-native/press-02/panels/01-press-frame-ldr-isolated.png",
+              "sha256": "9b654cae6b4a893e457ececd569aa5e978a2004a9b38a571c57e9d1357a3baaa"
+            },
+            {
+              "path": "output/kb-visual-audit/next-native/press-02/panels/02-in-press-ldr.png",
+              "sha256": "e3d19dd47b2ec1417a708ce8846e94266afbe183552143d4b8760bb15dfab10b"
+            }
+          ],
+          "opened_image": {
+            "path": "output/kb-visual-audit/next-native/press-02/mosaic.png",
+            "sha256": "5812161b57339ae8f0674a0973214b523e62510972a6e82fae5cdb4a5edc7568"
+          }
+        }
+      },
+      {
+        "name": "press-ram.ldr",
+        "kind": "model",
+        "first_line": 113,
+        "placements": 5,
+        "steps": 3,
+        "empty_leading_steps": 0,
+        "parents": [
+          "press.ldr"
+        ],
+        "render_directory": "output/kb-visual-audit/next-native/press-03",
+        "visual_observation": "Extended cylinder, upper pin and lower pressing shoe. Parent places it between columns over anvil; loaded gap and travel unproven.",
+        "status": "visually_reviewed",
+        "evidence": {
+          "manifest": "output/kb-visual-audit/next-native/press-03/manifest.json",
+          "manifest_sha256": "66fba575521cceefb50a2986ee0537525d084327503604e8a5f52a9b30e78992",
+          "panels": [
+            {
+              "path": "output/kb-visual-audit/next-native/press-03/panels/01-press-ram-ldr-isolated.png",
+              "sha256": "a19cf7eae5fe49344c30a7fcdec98a151589e6fd02cd0fee342131b166fff426"
+            },
+            {
+              "path": "output/kb-visual-audit/next-native/press-03/panels/02-in-press-ldr.png",
+              "sha256": "050a2b165ce30c806e4cff4a634fdebaba6f6d443a350adddc9a7993056879a6"
+            }
+          ],
+          "opened_image": {
+            "path": "output/kb-visual-audit/next-native/press-03/mosaic.png",
+            "sha256": "57b687309b9ce15d4ee04657c6f4e1b73ec5f13b2cfa27fce3a949e05f0e96fd"
+          }
+        }
+      },
+      {
+        "name": "press-controls.ldr",
+        "kind": "model",
+        "first_line": 131,
+        "placements": 2,
+        "steps": 1,
+        "empty_leading_steps": 0,
+        "parents": [
+          "press.ldr"
+        ],
+        "render_directory": "output/kb-visual-audit/next-native/press-04",
+        "visual_observation": "Separated pump and valve share a logical section; their physical connection is through base mounts and the parent supply hose, not a rigid control module.",
+        "status": "visually_reviewed",
+        "evidence": {
+          "manifest": "output/kb-visual-audit/next-native/press-04/manifest.json",
+          "manifest_sha256": "1158f6feda28a1fa5dd0aa322bbcbadd075f8f2bbcad12059f3f3dd0cac24ade",
+          "panels": [
+            {
+              "path": "output/kb-visual-audit/next-native/press-04/panels/01-press-controls-ldr-isolated.png",
+              "sha256": "a06281709bdecd71e0a1a66bf8742808735188dab6793c41c879bcd37f7c70fc"
+            },
+            {
+              "path": "output/kb-visual-audit/next-native/press-04/panels/02-in-press-ldr.png",
+              "sha256": "50fedc9f1ef4ca2919eb0379ee98bd1ebc4565d9da08d5ae34e50726018b4c18"
+            }
+          ],
+          "opened_image": {
+            "path": "output/kb-visual-audit/next-native/press-04/mosaic.png",
+            "sha256": "221db85ca0abd09f07f620865177260cd21f3f73d1595f934316a840f93aba7a"
+          }
+        }
+      },
+      {
+        "name": "route-e8c880158836619b.ldr",
+        "kind": "model",
+        "first_line": 141,
+        "placements": 1,
+        "steps": 1,
+        "empty_leading_steps": 0,
+        "parents": [
+          "press.ldr"
+        ],
+        "render_directory": "output/kb-visual-audit/next-native/press-05",
+        "visual_observation": "Short black curved supply hose between pump and valve; both end sleeves visible alone and in actual parent.",
+        "status": "visually_reviewed",
+        "evidence": {
+          "manifest": "output/kb-visual-audit/next-native/press-05/manifest.json",
+          "manifest_sha256": "2ee9a033ed9e4a0d5a3eab9609e3c0b82b064d175001c7a4f09ae8158360a636",
+          "panels": [
+            {
+              "path": "output/kb-visual-audit/next-native/press-05/panels/01-route-e8c880158836619b-ldr-isolated.png",
+              "sha256": "b9878456e6811aca93be809bbb0ffb4304c4cd46992725246d3968d3f2d9e373"
+            },
+            {
+              "path": "output/kb-visual-audit/next-native/press-05/panels/02-in-press-ldr.png",
+              "sha256": "dca94df205849478dee741213063f801716f63bc2d514756ebd6c2d83f3d810c"
+            }
+          ],
+          "opened_image": {
+            "path": "output/kb-visual-audit/next-native/press-05/mosaic.png",
+            "sha256": "d3cbf3ccb8948c2744df974258258eee4a3c8b27f98cfb33b1fb5c66a0c808ed"
+          }
+        }
+      },
+      {
+        "name": "route-8a9c27749e252068.ldr",
+        "kind": "model",
+        "first_line": 246,
+        "placements": 1,
+        "steps": 1,
+        "empty_leading_steps": 0,
+        "parents": [
+          "press.ldr"
+        ],
+        "render_directory": "output/kb-visual-audit/next-native/press-06",
+        "visual_observation": "Red route rises from valve to upper cylinder port, with curved upper departure.",
+        "status": "visually_reviewed",
+        "evidence": {
+          "manifest": "output/kb-visual-audit/next-native/press-06/manifest.json",
+          "manifest_sha256": "c01a0d2fbbab37e20388ad74c2310d212cc4e56c31413d7673d1a3569f2301ed",
+          "panels": [
+            {
+              "path": "output/kb-visual-audit/next-native/press-06/panels/01-route-8a9c27749e252068-ldr-isolated.png",
+              "sha256": "ee791017196c39ce8dd797dc163893bb64db82673fc886ebca8a83246840a87d"
+            },
+            {
+              "path": "output/kb-visual-audit/next-native/press-06/panels/02-in-press-ldr.png",
+              "sha256": "576231eb6ed04df0c587a695a07456de50b54b3bb8c0e22b6d44cf563fe68ee0"
+            }
+          ],
+          "opened_image": {
+            "path": "output/kb-visual-audit/next-native/press-06/mosaic.png",
+            "sha256": "f6812a0b33bf1762347e04c28dd304a4577ce48d903396a62021884c64d6f60a"
+          }
+        }
+      },
+      {
+        "name": "route-8869bb380eddd979.ldr",
+        "kind": "model",
+        "first_line": 529,
+        "placements": 1,
+        "steps": 1,
+        "empty_leading_steps": 0,
+        "parents": [
+          "press.ldr"
+        ],
+        "render_directory": "output/kb-visual-audit/next-native/press-07",
+        "visual_observation": "Blue route rises from valve to lower cylinder port; distinct route below red endpoint.",
+        "status": "visually_reviewed",
+        "evidence": {
+          "manifest": "output/kb-visual-audit/next-native/press-07/manifest.json",
+          "manifest_sha256": "b60a9f4bd9e95f7374f9031f362c652a2a6522432441d58de2ed3cb052aac6af",
+          "panels": [
+            {
+              "path": "output/kb-visual-audit/next-native/press-07/panels/01-route-8869bb380eddd979-ldr-isolated.png",
+              "sha256": "a60f0b3cdc972dd218d383c6a6f82ff9944261aa5de50b560ecf7c0f1a1f649c"
+            },
+            {
+              "path": "output/kb-visual-audit/next-native/press-07/panels/02-in-press-ldr.png",
+              "sha256": "e05b690b454810a64dc9ad884a2549d1b38eb53d356ccf6cc1de1a3e06f2964d"
+            }
+          ],
+          "opened_image": {
+            "path": "output/kb-visual-audit/next-native/press-07/mosaic.png",
+            "sha256": "d6bec3ec729854826fa483eab54ee4382477debf201ce704726fbed75b98dfa1"
+          }
+        }
+      }
+    ]
+  },
+  "minimal_examples": [
+    {
+      "id": "hose",
+      "source": "examples/flex/hose.ldr",
+      "source_sha256": "159b54f8933f010c44e65ae09ca349da27276cbe4a3f424905caba70694772e6",
+      "model": "output/flex/hose.mpd",
+      "model_sha256": "416eae2d673df0df555c1fc693cf3cf0ef785f6a4ae92b4345975e0fe908a0fc",
+      "review": "output/flex/hose-review/review.json",
+      "opened_image": "output/flex/hose-review/previews/home.png",
+      "image_sha256": "605f3b890ff5048191fc2adee87097aafe5aac4e6687ee25e1ef57be6f612007",
+      "visual_observation": "Red S-shaped hose with two sleeves, no mounted hardware; syntax, synthesis and BOM smoke only.",
+      "sections_reviewed": 1,
+      "disposition": "retain tutorial, excluded from mounted mechanism recommendations"
+    },
+    {
+      "id": "band",
+      "source": "examples/flex/band.ldr",
+      "source_sha256": "9728eda4a8d212ab7c208cc8377a5a3d2795e27a334bd55cd24f3541298ad49d",
+      "model": "output/flex/band.mpd",
+      "model_sha256": "84e6fccba7cd5595a914777c7ebaaeaae788bf25da912ba77bbe6ea30d65531d",
+      "review": "output/flex/band-review/review.json",
+      "opened_image": "output/flex/band-review/previews/home.png",
+      "image_sha256": "a166219fce7ca0c60c13c3435b915ecd8cf70025594dc2446ae2a7f9c8ec2a5f",
+      "visual_observation": "Continuous red loop around two grey pulleys; no bearing frame or shaft retention.",
+      "sections_reviewed": 1,
+      "disposition": "retain tutorial, excluded from mounted mechanism recommendations"
+    },
+    {
+      "id": "chain",
+      "source": "examples/flex/chain.ldr",
+      "source_sha256": "ee3406f83ea3ae6378fe39e8ca56e5be2821b99984481cefa7f6cac9660c30f3",
+      "model": "output/flex/chain.mpd",
+      "model_sha256": "e987432417632c1fcb8677cac90607a8b153f53caed528f6c04c181063d5ee0a",
+      "review": "output/flex/chain-review/review.json",
+      "opened_image": "output/flex/chain-review/previews/home.png",
+      "image_sha256": "e95d2e40d8106109d3c34fc3999c351135c99156bbf88ec2ad13a05325385736",
+      "visual_observation": "Yellow discrete links around two grey gears; no bearings/supports. Prefer retained-chain-drive for mounted construction.",
+      "sections_reviewed": 1,
+      "disposition": "retain tutorial, excluded from mounted mechanism recommendations"
+    }
+  ],
+  "prior_workshop_evidence": "structural-audit.json",
+  "new_numeric_tests": false
+}

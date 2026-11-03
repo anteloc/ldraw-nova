@@ -11,3 +11,42 @@ The `source_origin` anchor is a positioning frame, not a claimed mechanical conn
 [Editable plan](scene.plan.json) · [Source MPD](source.mpd) · [Preview](renders/home.png) · [Attribution and repairs](extraction.json).
 
 Run `./ldraw-agent build PATH/scene.plan.json --output output/example.mpd`, then inspect the combined assembly and review its renders.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "airliner-engine",
+    "title": "Airliner engine and pylon",
+    "scope": "hold",
+    "kind": "assembly",
+    "aliases": [
+      "reference:airliner-engine"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples",
+      "details"
+    ],
+    "lesson": "Fan housing and long thin pylon; four parent placements clarify attachment. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "aircraft engines"
+    ],
+    "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+    "model": "examples/reference-atlas/airliner-engine/preview.mpd",
+    "plan": "examples/reference-atlas/airliner-engine/scene.plan.json",
+    "preview": "examples/reference-atlas/airliner-engine/renders/home.png",
+    "visual_review": "examples/reference-atlas/airliner-engine/card.json",
+    "model_sha256": "72c4462e668332a6c6a540c04c31ec796b68b0f71646eda652c9fb373c290f05",
+    "audit_pointer": "/items/1",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

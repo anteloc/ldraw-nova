@@ -13,8 +13,8 @@ part annotations remain in place. The matching `*-Synthesis.*` files show the
 supplied generated scenes; they have not been regenerated or edited.
 
 Start with the track carrier, pneumatic controls, Flex-System frame and swept
-axle frame below. Then read the [industrial construction lessons](../docs/agent/technic-patterns/industrial-assemblies.md)
-for applying them to a new model. Use the [LSynth guide](../docs/agent/flexible-parts.md)
+axle frame below. Then read the [industrial construction lessons](../docs/agent/guides/flex.md)
+for applying them to a new model. Use the [LSynth guide](../docs/agent/reference/flex.md)
 for generation commands and the [small flex examples](../examples/flex/README.md)
 for simpler inputs to adapt.
 

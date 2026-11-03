@@ -9,15 +9,15 @@ from pathlib import Path
 import shutil
 
 from .common import ROOT
-from .discovery import confined
+from .knowledge import resolve, require_exportable
 from .manuals import export_manual
 
 
 def default_reference():
-    """The original spacecraft to follow for construction and visual quality."""
-    folder = ROOT/'examples/snot/halcyon'
+    """Compatibility accessor for the explicitly selected Halcyon study."""
+    folder = Path(resolve('halcyon', family='spaceship')['guide']).parent
     return dict(key='halcyon', title='Halcyon SNOT interceptor', category='starfighter',
-        use='design-reference', default=True, construction='SNOT',
+        use='design-reference', default=False, construction='SNOT',
         lesson='Build a supported core with sideways hull skins and axial engine modules in their own local frames; use smooth contours and thin wings.',
         model=str(folder/'halcyon.mpd'), plan=str(folder/'halcyon.plan.json'),
         generator=str(folder/'generate.py'), guide=str(folder/'README.md'),
@@ -59,10 +59,11 @@ def design_brief(archetype):
     if archetype not in ARCHETYPES:
         raise ValueError('Choose starfighter, freighter or capital-ship')
     design = deepcopy(ARCHETYPES[archetype])
-    design['references'].insert(0, 'halcyon')
+    design['inspiration_references'] = [key for key in design['references'] if key.endswith('-study')]
+    design['references'] = [key for key in design['references'] if key not in design['inspiration_references']]
     return dict(version=1, family='spaceship', archetype=archetype, **design,
-        construction='SNOT', default_reference=default_reference(),
-        construction_strategy='Use Halcyon as the default construction and visual-quality reference. Build an internal core with deliberate attachment faces; author hull skins, intakes and nozzles in local frames and seat them on those faces. Use SNOT across the major exterior surfaces, with smooth contours, thin edges and a distinct silhouette. Upright internal stacks remain useful. Adapt the method to the requested ship rather than copying its silhouette.',
+        construction=None, default_reference=None, construction_options=['System', 'SNOT', 'Technic'],
+        construction_strategy='Choose construction techniques from the requested silhouette, scale and interfaces. Establish supported attachment faces and adapt local modules to the brief. Halcyon is an optional core-and-skin lesson, not a default shape.',
         coordinates='X width, -Z forward, negative Y up; choose the hull or stand datum explicitly.',
         scale='Choose minifigure, display or microscale before selecting the canopy and detail sizes.',
         part_queries={
@@ -73,14 +74,15 @@ def design_brief(archetype):
             'surface_detail': 'a small recessed spaceship machinery bay with grilles, bars, clips and dishes',
             'supports': 'a braced frame for long wings, cantilevered engines and a display stand'},
         interfaces='Record each module origin, bounds, exact mounting parts, attachment frames, and parent dependencies. Use proper rotations and real left/right parts.',
-        review=['SNOT hull skins and engine modules seated on real attachment faces', 'smooth exterior contours and thin wing edges', 'front/top silhouette', 'side thickness and cockpit proportions', 'rear engine spacing', 'underside and stand attachments', 'bare frame and exposed wing roots', 'open cockpit or removable hull where interiors matter', 'quiet surfaces beside concentrated detail'],
-        mechanism_scope='Study actual folding-wing, ramp or landing-gear mechanisms using the mechanism workflow when requested; analytical mechanism verification remains deferred.',
+        review=['hull surfaces and engine modules seated on real attachment faces', 'smooth exterior contours and thin wing edges', 'front/top silhouette', 'side thickness and cockpit proportions', 'rear engine spacing', 'underside and stand attachments', 'bare frame and exposed wing roots', 'open cockpit or removable hull where interiors matter', 'quiet surfaces beside concentrated detail'],
+        mechanism_scope='Study folding-wing, ramp or landing-gear mechanisms when requested. Static pose review does not verify motion; use explicit motion checks for animation or movement claims.',
         palette_note='Suggested design roles; inspect actual part/colour availability. Preserve functional and printed colours when adapting a source.',
-        next='Study Halcyon first, choose supporting references, design an original SNOT module layout, build, inspect interfaces, render and refine. A brief is not a generated model.')
+        next='Retrieve relevant constructions for this brief, design its module layout, build, inspect interfaces, render and refine. Inspiration sources require explicit selection. A brief is not a generated model.')
 
 
 def export_spaceship(key, outdir, *, force=False):
-    if key == 'halcyon':
+    row = require_exportable(resolve(key, family='spaceship'))
+    if row['id'] == 'halcyon':
         reference = default_reference()
         source = Path(reference['guide']).parent.resolve()
         target = Path(outdir).resolve()
@@ -98,12 +100,5 @@ def export_spaceship(key, outdir, *, force=False):
         return dict(output=str(target), title=reference['title'], scope='design-reference',
             plan=str(target/'halcyon.plan.json'), source=str(target/'halcyon.mpd'),
             next='Adapt the generator and plan to the new SNOT spacecraft; build and review the resulting model.')
-    atlas = ROOT/'examples/spaceship-atlas'
-    catalog = json.loads((atlas/'catalog.json').read_text())
-    row = next((r for r in [*catalog['examples'],*catalog['details']] if r['key'] == key), None)
-    if row is None:
-        raise ValueError('Unknown spaceship reference; use spaceship list or spaceship details')
-    if row.get('use') == 'inspiration':
-        raise ValueError('This source is an inspiration study with unresolved source errors. Study its guide or export a reusable module instead.')
-    report = export_manual(confined(atlas, key), outdir, force=force)
+    report = export_manual(Path(row['guide']).parent, outdir, force=force)
     return dict(report, title=row['title'], next='Build scene.plan.json, inspect the new mounting interfaces and render the combined spacecraft.')

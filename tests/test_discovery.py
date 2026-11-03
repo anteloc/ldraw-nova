@@ -193,7 +193,7 @@ def test_curated_atlas_has_rebuildable_attributed_plans_and_matching_boms(offici
     catalog=json.loads((atlas/'catalog.json').read_text())
     references=[row for row in catalog['examples'] if 'reference_id' in row]
     assert len(references)>=20
-    assert any(row['key']=='mini-truck-cab' for row in search_examples(family='reference',scale='microscale')['results'])
+    assert any(row['key']=='mini-truck-cab' for row in search_examples(family='reference',scale='microscale',scope='hold')['results'])
     for row in references:
         for key in ['model','plan','guide','preview']:assert (atlas/row[key]).is_file()
         folder=(atlas/row['plan']).parent

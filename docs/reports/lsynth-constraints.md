@@ -6,7 +6,7 @@ and inspect it in its assembly. The implementation extends the existing CLI,
 MPD adapter and review process. It does not add a competing curve generator or
 require a model-specific optimizer.
 
-Start with the [agent guide](../agent/flex-constraints.md). The
+Start with the [agent guide](../agent/guides/flex.md). The
 [constraint lab](../../examples/flex/constraint-lab/README.md) supplies executable
 experiments and inspected images. Instructions route agents to these when
 flexible parts are required.

@@ -2,7 +2,7 @@
 
 **Later scope update:** the user subsequently authorized [Stage 2 construction from mechanism examples](technic-stage2-implementation.md), with analytical mechanism verification deferred. The scope statements below describe the Stage 1 decision at the time of its verification.
 
-Verified on 2026-09-26. Stage 1 now supports **static Technic structures and their System body mounts**. The [structural atlas](../../examples/technic-atlas/README.md) provides four editable examples; the [agent workflow](../agent/technic.md) explains how to adapt them. Stage 2 mechanisms remain gated on the user's explicit decision.
+Verified on 2026-09-26. Stage 1 now supports **static Technic structures and their System body mounts**. The [structural atlas](../../examples/technic-atlas/README.md) provides four editable examples; the [agent workflow](../agent/guides/technic.md) explains how to adapt them. Stage 2 mechanisms remain gated on the user's explicit decision.
 
 ## What changed
 

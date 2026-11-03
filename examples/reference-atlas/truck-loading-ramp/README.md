@@ -11,3 +11,42 @@ The `source_origin` anchor is a positioning frame, not a claimed mechanical conn
 [Editable plan](scene.plan.json) · [Source MPD](source.mpd) · [Preview](renders/home.png) · [Attribution and repairs](extraction.json).
 
 Run `./ldraw-agent build PATH/scene.plan.json --output output/example.mpd`, then inspect the combined assembly and review its renders.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "truck-loading-ramp",
+    "title": "Two-track loading ramp",
+    "scope": "hold",
+    "kind": "assembly",
+    "aliases": [
+      "reference:truck-loading-ramp"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples",
+      "details"
+    ],
+    "lesson": "Paired wheel tracks and bar ends; parent shows upright stowed ramp behind truck. No checked-motion claim. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "vehicle loading"
+    ],
+    "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+    "model": "examples/reference-atlas/truck-loading-ramp/preview.mpd",
+    "plan": "examples/reference-atlas/truck-loading-ramp/scene.plan.json",
+    "preview": "examples/reference-atlas/truck-loading-ramp/renders/home.png",
+    "visual_review": "examples/reference-atlas/truck-loading-ramp/card.json",
+    "model_sha256": "d3f1ae8be73072129c2dd42b033e7cbd9b1179caca06f1e948066b99dbdb65a7",
+    "audit_pointer": "/items/24",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

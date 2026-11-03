@@ -13,7 +13,7 @@ from ldraw_tools.builder import build_plan
 from ldraw_tools.common import atomic_write, dumps, get_parts, library_path
 from ldraw_tools.external import render, compare_bom
 from ldraw_tools.geometry import analyze_geometry
-from ldraw_tools.vehicle_review import review_vehicle
+from ldraw_tools.vehicle_review import RECIPES, review_vehicle
 from ldraw_tools.vehicles import DESIGNS, design_brief, vehicle_plan
 from ldraw_tools.vehicle_details import DETAILS, detail_plan
 from ldraw import inspect_model
@@ -24,7 +24,7 @@ def artifacts(outdir, relative, name, plan, parts, *, renders=False, profile=Non
     text, model, diagnostics = build_plan(plan, parts)
     geometry = analyze_geometry(model, parts, detail='summary')
     diagnostics += geometry['diagnostics']
-    vehicle = review_vehicle(model, parts, profile=profile) if profile else None
+    vehicle = review_vehicle(model, parts, profile=profile, recipe=name if name in RECIPES else None) if profile else None
     if any(d['severity']=='error' for d in diagnostics) or (vehicle and not vehicle['checks_passed']):
         raise ValueError(dumps(dict(assembly=diagnostics, vehicle=vehicle and vehicle['diagnostics'])))
     source = folder/(name+'.mpd')

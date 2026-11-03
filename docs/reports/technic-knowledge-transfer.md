@@ -5,17 +5,17 @@ sibling's documentation and examples to improve model generation here.
 
 ## Delivered knowledge
 
-- [Technic design guide](../agent/technic-design.md): function-led briefs,
+- [Technic design guide](../agent/guides/technic.md): function-led briefs,
   a pattern index, construction/review workflow and six new subject prompts.
-- [Transmission patterns](../agent/technic-patterns/transmissions.md): parallel
+- [Transmission patterns](../agent/guides/mechanism-patterns/transmissions.md): parallel
   and bevel gearing, worm adjustment, differentials, Cardan shafts and selectors.
-- [Engine patterns](../agent/technic-patterns/engines.md): actual W16 inventory,
+- [Engine patterns](../agent/guides/mechanism-patterns/engines.md): actual W16 inventory,
   paired rods, repeated banks, source phase and cam followers.
-- [Suspension and steering](../agent/technic-patterns/suspension-steering.md):
+- [Suspension and steering](../agent/guides/mechanism-patterns/suspension-steering.md):
   measured interfaces, shocks, missing mounts and combined-corner design.
-- [Lifts and linkages](../agent/technic-patterns/lifts-and-linkages.md): four-bar
+- [Lifts and linkages](../agent/guides/mechanism-patterns/lifts-and-linkages.md): four-bar
   geometry, pawl/stepper limitations and surrounding construction.
-- [Source reuse](../agent/technic-patterns/source-reuse.md): selection frames,
+- [Source reuse](../agent/guides/find-references.md): selection frames,
   occurrence identity, part boundaries, incomplete evidence and attribution.
 - [Five worked studies](../../examples/technic-studies/README.md), three unchanged
   source previews, a 53-file provenance ledger and 21 retained report observations.

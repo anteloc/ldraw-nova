@@ -41,14 +41,14 @@ All **50 images were opened**: 30 step views and 20 final/overview views. All ei
 
 Halcyon export copies its generator, self-contained plan, MPD, brief, guide and inspected images. Edit the generator, regenerate `halcyon.plan.json`, then build and review the adapted design. Source-study exports such as `b-wing` retain their existing attributed `source.mpd`, provenance and `scene.plan.json` workflow. A local origin is a positioning frame, not an asserted connector.
 
-Follow the [spaceship workflow](../../docs/agent/spaceships.md) for hull design, Technic supports, actual mechanism modules and final visual review. Analytical mechanism verification remains deferred.
+Follow the [spaceship workflow](../../docs/agent/guides/design-models.md) for hull design, Technic supports, actual mechanism modules and final visual review. Analytical mechanism verification remains deferred.
 
 For an introduction to SNOT spacecraft construction, use the separate [6208 B-Wing study](../snot/b-wing-6208/README.md): bracket cores, Technic-mounted curved skins, wing-root carriers and independently oriented modules. Its 22 inspected views include two explicit cutaways. This is a learning reference with geometry work deferred, distinct from the checked 75050 B-wing above; it does not add or replace a checked export entry.
 
 
 ## Add more examples
 
-Follow the [build-manual and atlas workflow](../../docs/agent/build-manuals.md). It explains how to preserve exact source identities, turn source steps into pages, study parent interfaces, review the images and select useful new entries for any atlas.
+Follow the [build-manual and atlas workflow](../../docs/agent/guides/review-models.md). It explains how to preserve exact source identities, turn source steps into pages, study parent interfaces, review the images and select useful new entries for any atlas.
 
 [selections.json](selections.json) pins these eight sources and their discovery evidence. [generate.py](generate.py) recreates them:
 

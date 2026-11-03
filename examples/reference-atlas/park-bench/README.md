@@ -11,3 +11,42 @@ The `source_origin` anchor is a positioning frame, not a claimed mechanical conn
 [Editable plan](scene.plan.json) · [Source MPD](source.mpd) · [Preview](renders/home.png) · [Attribution and repairs](extraction.json).
 
 Run `./ldraw-agent build PATH/scene.plan.json --output output/example.mpd`, then inspect the combined assembly and review its renders.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "park-bench",
+    "title": "Park bench with shaped back",
+    "scope": "hold",
+    "kind": "assembly",
+    "aliases": [
+      "reference:park-bench"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples",
+      "details"
+    ],
+    "lesson": "Dark-blue seat/back and white feet as small furniture lesson. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "seating"
+    ],
+    "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+    "model": "examples/reference-atlas/park-bench/preview.mpd",
+    "plan": "examples/reference-atlas/park-bench/scene.plan.json",
+    "preview": "examples/reference-atlas/park-bench/renders/home.png",
+    "visual_review": "examples/reference-atlas/park-bench/card.json",
+    "model_sha256": "0cb89243cbcca6f3c7835947af6aa0cf26ab55aa3c8cff72f94f66fae0d2ce7f",
+    "audit_pointer": "/items/14",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

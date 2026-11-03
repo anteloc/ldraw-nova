@@ -31,3 +31,41 @@ Preserve the door opening and plate support grid. Rebuild wall courses when chan
 These are source construction studies for adaptation, not certified mechanical cores. Original authorship and licences remain in the MPD and extraction manifest.
 
 Recreate the board with `./ldraw-xray board run examples/reference-atlas/dormer-balcony/board/recipe.json --output output/boards/dormer-balcony`. Changed renders require a new inspection; do not reuse this review automatically.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "dormer-balcony",
+    "title": "Balcony facade with door, dormer and planted railing",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "reference:dormer-balcony"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Sloped blue dormer/window bay, turquoise wall and black ornamental railing with brown top. Correct turquoise-railing description.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "building facade"
+    ],
+    "model": "examples/reference-atlas/dormer-balcony/preview.mpd",
+    "plan": "examples/reference-atlas/dormer-balcony/scene.plan.json",
+    "preview": "examples/reference-atlas/dormer-balcony/renders/home.png",
+    "board": "examples/reference-atlas/dormer-balcony/board/mosaic.png",
+    "visual_review": "examples/reference-atlas/dormer-balcony/card.json",
+    "model_sha256": "9dfd94d7b1e0311b5eb36fe1341949ece9eda603f2dd7f090ccd2650aabf8e52",
+    "audit_pointer": "/items/6",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```

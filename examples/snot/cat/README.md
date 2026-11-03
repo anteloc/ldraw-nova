@@ -73,3 +73,50 @@ The tail uses two elbows and an axle, plus a towball at each end. One ball meets
 [preparation.json](preparation.json) accounts for all 55 original placements, their source lines, resulting occurrences and transform changes. The source's ankle centres were about 0.19 LDU away from their paw bars. The prepared model seats these exactly while keeping the paws grounded; the body, head and tail move by about 0.185 LDU. Every translation correction is **less than 0.191 LDU**, before a common +30 LDU Z translation centres the body. Ear rotations are preserved and made orthonormal; their positions are solved from the engaged sockets. Six identity aliases `3023.dat` become `3023b.dat`. Part and colour quantities are otherwise unchanged.
 
 All three reviews pass source/geometry error checks and match LeoCAD's BOM. The head and leg each form one automatic optimistic group. **The full cat still reports four groups**: recessed underside sockets and a tail axle crossing the reviewed Technic registry's coverage boundary. [Interface evidence](interface-evidence.json) explains those omissions without changing the checker or its tolerances. The [visual review](visual-review.md) records inspected images, aesthetic lessons and verification limits.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "cat",
+    "title": "Articulated cat with single-stud ear details",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "snot:cat"
+    ],
+    "families": [
+      "snot"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "A flat face stands upright through a ball neck; the brow bracket’s side studs are unused. Ear strips rotate about one engaged stud. Each three-piece leg contains hip socket, shin and ankle clip; paws belong to the parent. Retain the animal silhouette and articulation limits.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/snot-audit.json",
+    "model": "examples/snot/cat/cat.mpd",
+    "model_sha256": "e2f390a32f43b908b656d015c9f861f119f328372217c7398bfb5341177b6045",
+    "audit_pointer": "/items/1",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/snot-findings.md",
+    "techniques": [
+      "snot"
+    ],
+    "subjects": []
+  }
+]
+```
+
+## Audited section observations
+
+These observations refer to the source hashes in the registrations. They correct earlier source descriptions and preserve static visual scope; existing numeric and export checks remain separate.
+
+### Articulated cat with single-stud ear details
+
+| Source section | Opened-image observation |
+|---|---|
+| `cat.ldr` | Large flat face posed upright on small curved body, four legs with separate white paws, raised tail; retain articulation/composition lesson. |
+| `cat-body.ldr` | Curved back with four hip balls and front/rear sockets; inspect sockets before adapting pose. |
+| `cat-tail.ldr` | Raised tail built from bent orange segments and ball interfaces; parent view establishes rear attachment. |
+| `cat-head.ldr` | Flat face on rear neck ball, not a fixed SNOT wall; unused brow bracket side studs and single-stud diagonal ears remain explicit limitations. Fresh step 5 exposes ears before eyes cover them. |
+| `cat-leg.ldr` | Three-piece hip-socket, curved shin and ankle-clip unit; parent has four instances. The paws are separate parent placements, not included in this module. |

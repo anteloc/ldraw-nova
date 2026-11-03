@@ -2,7 +2,7 @@
 
 Implemented and checked on 2026-09-26. Agents can now discover mechanism references, study rendered build pages, describe intended operation and export editable assemblies for new models. **Analytical mechanism verification is deferred at the user's request.** The implementation adds no motion solver, transmission analysis or functional-certification requirement.
 
-Start with the [mechanism atlas](../../examples/mechanism-atlas/README.md) and [agent workflow](../agent/mechanisms.md). The [evidence snapshot](technic-stage2-evidence.json) records exact sources, Jev results, hashes and checks.
+Start with the [mechanism atlas](../../examples/mechanism-atlas/README.md) and [agent workflow](../agent/guides/mechanisms.md). The [evidence snapshot](technic-stage2-evidence.json) records exact sources, Jev results, hashes and checks.
 
 ## What agents can do
 

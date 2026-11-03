@@ -2,7 +2,7 @@
 
 Six small Technic constructions to study, copy and adapt. Each includes the original attributed parts, step-by-step images, parts lists, operation notes and an editable placement plan.
 
-For a wider design vocabulary, see [Mecha construction studies](../technic-studies/README.md) and the [Technic design guide](../../docs/agent/technic-design.md): suspension, multi-crank engines, selectors, Cardan shafts and lifts, with source qualifications and new subject ideas. Those notes complement these six exportable manuals.
+For a wider design vocabulary, see [Mecha construction studies](../technic-studies/README.md) and the [Technic design guide](../../docs/agent/guides/technic.md): suspension, multi-crank engines, selectors, Cardan shafts and lifts, with source qualifications and new subject ideas. Those notes complement these six exportable manuals.
 
 The [Technic atlas](../technic-atlas/README.md#mechanisms-from-ldraw-mecha) now adds six portable mechanism studies with their own build pages: a four-cylinder bank, cam followers, a paired Cardan shaft, four-speed gearbox, four-bar lift and independent suspension. Find them with `examples --family technic`; export their prepared directories using `mechanism export`.
 
@@ -32,11 +32,11 @@ Read the exported guide and manual. Edit `scene.plan.json` to position the whole
 
 These are useful sections of larger models. For example, the steering rack needs its parent's driving pinion, and the worm drive needs the winding assembly. `operation.json` records the fixed structure, intended moving elements, input, output and parent dependencies. Source STEP groups can also add concealed internal parts together with their enclosure; use the per-step list and MPD for those details.
 
-Analytical mechanism verification is deferred at the user's request. The workflow checks source, geometry, parts and images; it describes intended operation without claiming motion simulation or physical certification. Fixed supports can still use the [structural workflow](../../docs/agent/technic.md).
+Analytical mechanism verification is deferred at the user's request. The workflow checks source, geometry, parts and images; it describes intended operation without claiming motion simulation or physical certification. Fixed supports can still use the [structural workflow](../../docs/agent/guides/technic.md).
 
 ## Study another mechanism
 
-Follow the [agent mechanism workflow](../../docs/agent/mechanisms.md). Search with `discover search submodels ... --construction mechanism`, checking Jev availability first and using `--engine fts` when unavailable. `mechanism prepare` creates the source and build pages; `mechanism review` records pages actually inspected; `mechanism export` copies a current reviewed study.
+Follow the [agent mechanism workflow](../../docs/agent/guides/mechanisms.md). Search with `discover search submodels ... --construction mechanism`, checking Jev availability first and using `--engine fts` when unavailable. `mechanism prepare` creates the source and build pages; `mechanism review` records pages actually inspected; `mechanism export` copies a current reviewed study.
 
 [selections.json](selections.json) records the six exact Jev results, source identities, source hashes and study notes. Their source headers retain the original authors and licences.
 

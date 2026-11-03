@@ -119,12 +119,26 @@ def parser():
     scope_options(c)
     geometry_options(c, detail="summary")
     from .examples import families
-    c = commands.add_parser("examples", help="Find atlas examples by family: " + ", ".join(families()))
+    c = commands.add_parser("examples", help="Find curated examples across families")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
-    c.add_argument("--family", choices=families(), default="building")
+    c.add_argument("--family", choices=families())
+    from .knowledge import SCOPES
+    c.add_argument("--scope", choices=SCOPES, default="default")
+    c = commands.add_parser("knowledge", help="Search local agent guidance and registered examples without network access")
+    knowledge = c.add_subparsers(dest="knowledge_command", required=True)
+    k = knowledge.add_parser("search", help="Rank source sections with SQLite BM25")
+    k.add_argument("query")
+    k.add_argument("--limit", type=positive, default=5)
+    k.add_argument("--scope", choices=SCOPES, default="default")
+    k.add_argument("--family")
+    k.add_argument("--subject")
+    k.add_argument("--technique")
+    k = knowledge.add_parser("show", help="Resolve a canonical example ID or qualified legacy alias")
+    k.add_argument("id")
+    k.add_argument("--family")
     c = commands.add_parser("discover", help="Find, measure and visually review parts, source models and submodels")
     discovery = c.add_subparsers(dest="discovery_command", required=True)
     d = discovery.add_parser("index", help="Build a local typed index from the three Jev fields and actual source headers")
@@ -277,6 +291,7 @@ def parser():
     v = vehicle_commands.add_parser("check", help="Review supported vehicle interfaces in a selected family profile")
     v.add_argument("file")
     v.add_argument("--profile", choices=["road", "motorcycle", "watercraft", "aircraft"], default="road")
+    v.add_argument("--recipe", choices=["touring-motorcycle", "harbour-launch", "courier-jet"], help="Opt in to dedicated-part requirements for this exact recipe")
     v.add_argument("--ground-y", type=float, default=0)
     v.add_argument("--report")
     v.add_argument("--limit", type=positive, default=100)
@@ -424,10 +439,16 @@ def run(args):
                                         args.min_separation, args.length, args.obstacles, args.obstacle_section)):
             raise ValueError('Geometry options require --asset; run flex build first')
         return report, 0 if report['checks_passed'] else 1
+    if args.command == "knowledge":
+        from .knowledge import search, resolve
+        if args.knowledge_command == "show":
+            return resolve(args.id, family=args.family), 0
+        return search(args.query, limit=args.limit, scope=args.scope, family=args.family,
+                      subject=args.subject, technique=args.technique), 0
     if args.command == "examples":
         from .examples import search_examples
         if args.details and args.scale:raise ValueError('--scale applies to building examples')
-        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family),0
+        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family,scope=args.scope),0
     if args.command == "doctor":
         from .flex import availability
         library = library_path(args.library)
@@ -493,9 +514,9 @@ def run(args):
         if command == 'review':
             return review_manual(args.directory, images=args.images, note=args.note), 0
         reference = Path(args.reference)
-        if args.command == 'mechanism' and not reference.is_dir():
-            from .discovery import confined
-            reference = confined(ROOT/'examples/mechanism-atlas', args.reference)
+        if not reference.is_dir():
+            from .knowledge import export_directory
+            reference = export_directory(args.reference, family='mechanism' if args.command == 'mechanism' else None)
         return export_manual(reference, args.outdir, force=args.force), 0
     if args.command == "discover":
         from .discovery import DiscoveryIndex, search, part_suggestions
@@ -636,7 +657,7 @@ def run(args):
                                            colour=args.colour, instance_limit=args.max_instances)
         if model is None or any(d['severity']=='error' for d in diagnostics):
             return dict(checks_passed=False, diagnostics=diagnostics), 1
-        report = review_vehicle(model, parts, profile=args.profile, ground_y=args.ground_y, limit=args.limit,
+        report = review_vehicle(model, parts, profile=args.profile, recipe=args.recipe, ground_y=args.ground_y, limit=args.limit,
                                 instance_limit=args.max_instances)
         report['diagnostics'] = diagnostics+report['diagnostics']
         report.update(file=args.file, section=args.section)

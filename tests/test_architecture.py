@@ -104,9 +104,10 @@ def test_catalog_covers_each_family_and_only_current_artifacts():
 
 
 def test_bounded_example_selection_and_scale():
-    r=search_examples('farm',limit=2)
+    assert search_examples('farm', family='building')['total'] == 0
+    r=search_examples('farmstead',limit=2, family='building', scope='archive')
     assert r['total'] and r['results'][0]['key']=='farmstead'
-    r=search_examples(scale='microscale');assert [v['key'] for v in r['results']]==['skyline']
+    r=search_examples(scale='microscale', family='building');assert [v['key'] for v in r['results']]==['skyline']
     assert search_examples('porch',details=True)['total']
     assert len(search_examples(limit=2)['results'])==2
     assert search_examples(limit=2)['truncated']

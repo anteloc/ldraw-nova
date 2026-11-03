@@ -12,6 +12,7 @@ from .vehicles import WHEEL_PACKS
 
 
 PROFILES = ('road', 'motorcycle', 'watercraft', 'aircraft')
+RECIPES = {'touring-motorcycle': 'motorcycle', 'harbour-launch': 'watercraft', 'courier-jet': 'aircraft'}
 
 
 def family_evidence(inspection, profile, diagnostics):
@@ -75,9 +76,11 @@ def family_evidence(inspection, profile, diagnostics):
     return evidence
 
 
-def review_vehicle(model, parts, *, profile='road', ground_y=0.0, limit=100, instance_limit=100000):
+def review_vehicle(model, parts, *, profile='road', recipe=None, ground_y=0.0, limit=100, instance_limit=100000):
     if profile not in PROFILES:
         raise ValueError('Unknown vehicle review profile: '+str(profile))
+    if recipe is not None and (recipe not in RECIPES or RECIPES[recipe] != profile):
+        raise ValueError('Vehicle recipe must match its review profile')
     if not math.isfinite(ground_y):
         raise ValueError('Ground Y must be finite')
     if limit < 1 or instance_limit < 1:
@@ -101,9 +104,6 @@ def review_vehicle(model, parts, *, profile='road', ground_y=0.0, limit=100, ins
         o = item.occurrence
         code = o.part_code.casefold()
         description = parts.by_code.get(code, '')
-        if 'technic' in description.casefold():
-            diagnostics.append(issue('vehicle.technic_part', 'Technic part outside this System vehicle workflow.',
-                                     instance=item.index, ref=o.reference))
         if profile in {'watercraft','aircraft'}:
             continue
         if code not in tyre_packs:
@@ -158,16 +158,19 @@ def review_vehicle(model, parts, *, profile='road', ground_y=0.0, limit=100, ins
             if distance < radius-tolerance:
                 intrusions.append(dict(wheel=item.index, body=other.index, ref=co.reference,
                                        radial_intrusion_ldu=radius-distance))
-    evidence = family_evidence(inspection, profile, diagnostics) if profile!='road' else {}
+    evidence = family_evidence(inspection, profile, diagnostics) if recipe else {}
     if profile in {'watercraft','aircraft'}:
-        return dict(profile=profile, checks_passed=not any(d['severity']=='error' for d in diagnostics),
+        if not recipe:
+            diagnostics.append(issue('vehicle.interfaces_unreviewed',
+                'No recipe-specific interface checks requested; inspect the actual hull or airframe interfaces.', severity='warning'))
+        return dict(profile=profile, recipe=recipe, checks_passed=not any(d['severity']=='error' for d in diagnostics),
                     physical_validity='not_proven', diagnostics=diagnostics,
                     family_parts={k:v[:limit] for k,v in evidence.items()},
                     truncated=any(len(v)>limit for v in evidence.values()),
                     coverage=dict(geometry_complete=inspection.complete, occurrences=len(occurrences),
                                   wheel_review='not_applicable',
-                                  interfaces='Known atlas hull/cockpit inventory' if profile=='watercraft' else 'Known atlas nose/glazing/core transforms and symmetric wing/engine positions'),
-                    limitations=['Profile covers the named atlas part families, not every boat or aircraft.',
+                                  interfaces=('Known recipe hull/cockpit inventory' if profile=='watercraft' else 'Known recipe nose/glazing/core transforms and symmetric wing/engine positions') if recipe else 'not_checked'),
+                    limitations=['Dedicated-part requirements apply only to an explicitly selected recipe.',
                                  'Run assembly geometry/contact checks and open renders; part presence and alignment alone do not prove attachment or clearance.',
                                  'No buoyancy, seaworthiness, flight, balance, landing-gear, strength, minifigure fit or retail colour-availability claim.'])
     if not wheels:
@@ -213,7 +216,7 @@ def review_vehicle(model, parts, *, profile='road', ground_y=0.0, limit=100, ins
         if item.index not in wheel_indices and item.bounds and item.bounds.max.y > ground_y+tolerance:
             diagnostics.append(issue('vehicle.below_road', 'Non-tyre geometry extends below the road plane.',
                                      instance=item.index, ref=item.occurrence.reference))
-    return dict(profile=profile, checks_passed=not any(d['severity']=='error' for d in diagnostics),
+    return dict(profile=profile, recipe=recipe, checks_passed=not any(d['severity']=='error' for d in diagnostics),
                 family_parts={k:v[:limit] for k,v in evidence.items()},
                 physical_validity='not_proven', ground_y=ground_y, diagnostics=diagnostics,
                 wheel_count=len(wheels), axle_count=len(axles),

@@ -21,7 +21,7 @@ cp examples/flex/pneumatic-press/named.plan.json output/press.plan.json
 ./ldraw-agent review output/press.plan.json --views home front back top
 ```
 
-See [named authoring](../../../docs/agent/authoring.md) to move fittings or repair
+See [named authoring](../../../docs/agent/guides/build-model.md) to move fittings or repair
 routes. The original generator and fixture remain compatibility evidence:
 
 ```sh
@@ -83,3 +83,57 @@ LSynth's `hoses.manifest.json` records absolute local paths. Treat it as provena
 ### Why the first attempt failed
 
 A first attempt used ribbed hose on a helmet. It showed visible breaks: LSynth draws ribbed hose as separate rigid rings, and the route turned 36–56° between neighbouring rings. Stretched types such as this pneumatic hose stay continuous, but any route still needs a bend-radius check. The test above includes one.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "pneumatic-press",
+    "title": "Portal-frame press with three fitted hoses",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "mounted-flex:press"
+    ],
+    "families": [
+      "flex",
+      "technic"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Named-plan static press: portal frame, mounted pump/valve/cylinder and three distinct hoses following actual fitting interfaces. Preserve their geometric limits and passage; no tested control circuit, fixed stock length or moving-machine claim.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/mounted-flex-audit.json",
+    "model": "examples/flex/pneumatic-press/named-review/model.mpd",
+    "generator": "examples/flex/pneumatic-press/generate.py",
+    "model_sha256": "2b21bb66b901e8d623c617470907a4f5d5cea79dc81fe12032f77dcc860afa15",
+    "audit_pointer": "/press",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/mounted-flex-findings.md",
+    "plan": "examples/flex/pneumatic-press/named.plan.json",
+    "techniques": [
+      "technic",
+      "flex"
+    ],
+    "subjects": []
+  }
+]
+```
+
+## Audited section observations
+
+These observations refer to the source hashes in the registrations. They correct earlier source descriptions and preserve static visual scope; existing numeric and export checks remain separate.
+
+### Portal-frame press with three fitted hoses
+
+| Source section | Opened-image observation |
+|---|---|
+| `press.ldr` | Mounted static pump-valve-cylinder press on plate base; two-column portal frame, not documented C-frame. Three distinct hoses connect actual fittings; no pressure or loaded-stroke claim. |
+| `press-bench.ldr` | Broad bonded studded plate base beneath all mounts; bench name does not imply a raised table. |
+| `press-frame.ldr` | Two brick columns and Technic crossbeam form closed-top portal with a central anvil. Correct C-frame wording. |
+| `press-ram.ldr` | Extended cylinder, upper pin and lower pressing shoe. Parent places it between columns over anvil; loaded gap and travel unproven. |
+| `press-controls.ldr` | Separated pump and valve share a logical section; their physical connection is through base mounts and the parent supply hose, not a rigid control module. |
+| `route-e8c880158836619b.ldr` | Short black curved supply hose between pump and valve; both end sleeves visible alone and in actual parent. |
+| `route-8a9c27749e252068.ldr` | Red route rises from valve to upper cylinder port, with curved upper departure. |
+| `route-8869bb380eddd979.ldr` | Blue route rises from valve to lower cylinder port; distinct route below red endpoint. |

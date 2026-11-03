@@ -1,129 +1,78 @@
 # Build and review an LDraw model
 
-Deliver reproducible source, an editable MPD, checks, matching BOMs and inspected
-previews. Keep new work in `output/`. Use one loop: **edit the plan → review →
-open the images → repair**.
+Deliver editable source, an MPD, scoped checks, matching BOMs and previews you
+have opened. Keep new work in `output/`. Use one loop: **brief → retrieve → edit
+plan → review → inspect images → repair**.
 
-## 1. Choose a starter
+## Find what this brief needs
 
-Run `./ldraw-agent doctor`. Use `./setup.sh` if needed, adding `--with-lsynth` for
-flexible parts. Set `LDRAW_DIR` to the installed library; LeoCAD supplies previews.
-Write down the requested silhouette, dimensions, palette and working features.
-
-```sh
-./ldraw-agent examples --family technic
-./ldraw-agent part 3700
-```
-
-Choose the matching family: `building`, `vehicle`, `spaceship`, `technic` or
-`mechanism`. For a detail such as a sideways skin, hinged roof, radial core or
-parent-supplied gear, search the reviewed real-set constructions with
-`./ldraw-agent examples --family submodel --details QUERY`; each guide says what
-its parent supplies. For a frame, retained drive, pneumatic station or complete machine,
-copy a [workshop starter](examples/workshop/README.md). Its ordinary JSON plan
-includes supports, named joint checks and routes. Start with the smallest useful
-assembly, preserving its documented mechanical dimensions.
-
-**Spaceships use SNOT by default.** Follow the [Halcyon](examples/snot/halcyon/README.md):
-a supported core, attached sideways skins, axial engines, smooth contours and
-thin wing edges. Adapt its construction to the requested silhouette and scale.
-
-## 2. Assemble supports
-
-Edit the JSON plan. Use placement IDs such as `conveyor/drive-axle` to name parts
-inside modules; keep required joints beside the section's geometry. Names survive
-reordering. Include only intended joints, not every observed contact. Keep
-`scope: joints` on moving assemblies in a static pose; fixed frames retain their
-rigidity contracts. Preserve required axial stops and insertion STEPs.
+Run `./ldraw-agent doctor`. Use `./setup.sh` if necessary, with `--with-lsynth`
+for flexible parts. Write down the requested silhouette, scale, dimensions,
+palette and working features before choosing a construction.
 
 ```sh
-cp examples/workshop/workshop/model.plan.json output/machine.plan.json
-./ldraw-agent review output/machine.plan.json --section chain-drive.ldr --no-render
+./ldraw-agent knowledge search 'mounted pneumatic hoses'
+./ldraw-agent examples 'steering rack'
+./ldraw-agent knowledge show technic:retained-chain-drive
 ```
 
-A scoped review checks that section and its dependencies; it excludes surrounding
-interfaces. Use it to repair locally, then review the complete assembly.
+Search is local and works without Jev or network access. Default results include
+current guidance and selected construction/tutorial lessons. Read the returned
+source, parent requirements, evidence and limits. A matching example is a scoped
+lesson, not an instruction to copy its whole silhouette. Choose System, SNOT,
+Technic or a combination to suit the brief. No building or spaceship template is
+universal. Inspiration, diagnostics and held work require an explicit scope and
+do not silently fill empty searches. See [knowledge retrieval](docs/agent/reference/cli.md).
 
-Negative Y is up. Stud pitch is 20 LDU; brick and plate bodies are 24 and 8 LDU
-high. Prefer `on` for upright stacking. Inspect real part origins and interfaces;
-bounding-box height is not stacking height. Use proper rotations, never stretched
-or reflected rigid parts. Colour 16 needs an explicit ancestor; 24 is for edges.
+Use [source discovery](docs/agent/guides/find-references.md) when the curated KB
+has no suitable construction; inspect the actual source and its parent before
+reuse. Look up real parts and interfaces with `part`, `connectors` and the
+catalog tools. Metadata names and bounding boxes do not establish fit.
 
-## 3. Route services
+## Author and assemble
 
-Place actual fittings or supported wheels first. Add a flex placement in the
-same plan STEP with its own ID, explicit colour, and named endpoints:
+Use an ordinary [JSON plan](docs/agent/reference/plans.md); Python can generate the same
+format for repetition or calculations. Use named placements and
+[joint/route authoring](docs/agent/guides/build-model.md). Keep geometry fixes in the
+editable plan or generator. Use the existing builder/parser and LSynth engine.
 
-```json
-{"id":"supply", "colour":0, "flex":{
-  "method":"TECHNIC_PNEUMATIC_HOSE_BEVELED",
-  "from":{"part":"controls/pump", "port":"outlet", "lead":22},
-  "to":{"part":"controls/valve", "port":"inlet", "lead":22},
-  "checks":{"min_radius":15, "tube_radius":5, "min_separation":10}
-}}
-```
+Negative Y is up. Stud pitch is 20 LDU; brick and plate bodies are 24 and 8 LDU.
+Stack using the upper part's body height, not bounding-box height. Inspect actual
+origins. Use proper rotations; do not stretch or reflect rigid physical parts.
+Colour 16 needs an explicit ancestor; colour 24 belongs to edges.
 
-Those limits belong to the pneumatic starter, not every material. `part PART`
-lists measured nozzle names. Moving or rotating a fitting updates its endpoint;
-edit `via` only when the passage needs repair. Closed routes use existing wheels,
-for example `"wheels":["drive-gear","idler-gear"]`. Routing copies are hidden.
+Build supports and real mating interfaces before skins or flexible routes.
+Preserve bearings, axial stops, insertion order, fitting sleeves and passages.
+Keep fixed-frame rigidity contracts separate from moving assemblies. A static
+pose does not demonstrate motion. For [flex](docs/agent/guides/flex.md),
+mount fittings/wheels first, route from their measured frames, synthesize early
+and inspect actual output. Example bend limits are not universal material limits.
 
-Read [named authoring](docs/agent/authoring.md) for fields, diagnostics and supported
-parts. It links to deeper family details. Existing external `.ldr` constraints,
-prebuilt assets and Python helpers remain available. Python is useful for loops
-or calculations; it should emit the same plans. Use LSynth for curves and the
-existing pyldraw3 builder/parser; do not invent another solver or checking script.
-
-## 4. Add bodywork
-
-Attach System bodywork to actual studs, sockets or reviewed mounts. Reserve room
-for bearings, retaining bushes, fitting sleeves and hose passages. Bond seams,
-keep interfaces accessible, and inspect the underside and rear. Change colour,
-shape and equipment arrangement to suit the brief without silently substituting
-unsupported mechanical parts.
-
-## 5. Review and deliver
+## Review and deliver
 
 ```sh
-./ldraw-agent review output/machine.plan.json --views home front back top bottom
+./ldraw-agent review output/model.plan.json --views home front back top bottom
 ```
 
-Review builds the plan, checks declared joints and actual synthesized geometry,
-measures inline route interactions, writes the BOM, renders with LeoCAD and
-compares its BOM. Read `review.json` and `validation.json`, then **open the images**.
-Failures identify the stage, source and named placement when available. Fix the
-first failed prerequisite. Inspect warned obstacles in context; fitting bounding
-boxes include empty space. After two unsuccessful corrections, isolate the
-module or route and reconsider its available space while retaining the checks.
+Read `review.json` and `validation.json`, then open the images. Fix the first
+failed prerequisite. Intermediate `--no-render` and `--section` reviews exclude
+some delivery evidence; finish with whole-model checks and fresh final images.
+After two unsuccessful corrections, isolate the problem and reconsider space or
+interfaces while preserving the requested features and checks.
 
-Rerun with `--force` after edits. Intermediate `--no-render` or `--section` results
-are incomplete delivery evidence. Finish with a rendered whole-model review and
-fresh image inspection. Exit 0 means selected checks passed; 1 means failed checks
-or mismatching BOMs; 2 means input, dependency or execution failure. Contacts skip
-automatically above 500 placements: review modules or use `--contacts all`.
-Source-derived mechanism studies use their documented `--contacts none` scope.
+Use global `ldraw-xray` for isolated sections and actual parent context. Follow
+its mandatory `../ldraw-xray/README.md` and `../ldraw-xray/AGENTS.md`. Reuse
+source-matched images for unchanged geometry; add views to resolve uncertainty.
+Every retained or improved model/submodel needs visual inspection, not just a
+JSON description. Source-step pages reveal authored assembly stages; posed or
+cutaway views do not prove build order or travel.
 
-Keep visual notes beside the source, outside generated review folders. Record
-images opened, defects repaired and unresolved limits. Deliver source, MPD,
-review/validation, asset manifests, BOMs, previews and notes from the final
-revision. Checks do not prove physical strength, manufactured hose length,
-complete collision freedom or general motion correctness. For semantic GLB
-handoff, use `./prepare-glb.sh --file MODEL.mpd MODEL.glb`.
+Keep explicit skipped coverage: contacts skip automatically above 500 placements;
+select modules or request `--contacts all` when needed. Contact groups, BOM
+agreement and successful rendering each establish different things. None proves
+strength, complete material clearance, stock hose length or unrestricted motion.
 
-## References when needed
-
-- [Plan format](docs/agent/plans.md), [modules](docs/agent/complex-models.md),
-  [snapping](docs/agent/snapping.md), [geometry](docs/agent/geometry.md).
-- [Visual design](docs/agent/visual-design.md), [SNOT](docs/agent/snot.md),
-  [vehicles](docs/agent/vehicles.md), [spaceships](docs/agent/spaceships.md).
-- [Technic details](docs/agent/technic.md), [design patterns](docs/agent/technic-design.md),
-  [mechanisms](docs/agent/mechanisms.md), [advanced mechanisms](docs/agent/advanced-mechanisms.md),
-  [parts catalog](docs/agent/technic-catalog.md), [flex families](docs/agent/flex-constraints.md).
-- [Validation](docs/agent/validation.md), [CLI options](docs/agent/tooling.md),
-  [build-step views](docs/agent/build-manuals.md), [LDraw reference](docs/agent/ldraw-reference.md).
-- [Submodel inspection](docs/agent/submodel-inspection.md): `./ldraw-xray` boards show a
-  section in its parent, by steps, see-through, by stud direction or posed;
-  the [submodel atlas](examples/submodel-atlas/README.md) holds 30 reviewed constructions.
-- [Discovery](docs/agent/reference-discovery.md): check Jev availability once;
-  if unavailable, report why and use FTS/catalogs/examples. Preserve attribution
-  and extraction manifests. Search the local specification with `spec QUERY`.
+Deliver source, model, validation/review reports, manifests, BOMs, final previews
+and notes naming images opened, repairs and unresolved limits. Use `--force` for
+intentional review reruns. See [validation](docs/agent/reference/validation.md) and
+[CLI contracts](docs/agent/reference/cli.md) for diagnostic meanings and exact options.

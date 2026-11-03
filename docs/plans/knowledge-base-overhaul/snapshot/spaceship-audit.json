@@ -1,0 +1,1519 @@
+{
+  "items": [
+    {
+      "id": "b-wing",
+      "source": "examples/spaceship-atlas/b-wing/source.mpd",
+      "source_sha256": "91c67fdbea95b99d3067586b8b3c80d103be79417ec62d185833d1b4f148fae5",
+      "artifact_hash_mismatches": [],
+      "manual_parents": [],
+      "sections": [
+        {
+          "name": "study-773704369559-00-75050---Main.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 1,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "description": "Complete B-Wing starfighter assembled from its wing, fuselage, and engine submodels.",
+          "original_name": "75050 - Main.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/b-wing/section-00",
+          "root": true,
+          "second_view": "bottom",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-b-wing-01.jpg",
+          "visual_observation": "Whole 75050 ship: offset cockpit, three unequal wings, four-nozzle cluster; retained in supplied static pose.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "study-773704369559-01-75050---B-Wing.ldr",
+          "kind": "model",
+          "first_line": 14,
+          "placements": 434,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-773704369559-00-75050---Main.ldr"
+          ],
+          "description": "Large angular B-Wing starfighter featuring inverted slopes, wedge plates, grille detailing, and a technic-brick and pin framework for the folding wing structure.",
+          "original_name": "75050 - B-Wing.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/b-wing/section-01",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-773704369559-00-75050---Main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/b-wing/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-b-wing-01.jpg",
+          "visual_observation": "Single detailed airframe section contains the ship geometry. Root merely places it; metadata must not invent separately stored wing, fuselage and engine submodels.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed",
+      "existing_checks": {
+        "source_checks_passed": true,
+        "physical_validity": "not_proven",
+        "contacts_checked": false,
+        "source_errors": {},
+        "geometry_errors": {}
+      },
+      "decision": "retain_scoped_construction_study_with_metadata_corrections"
+    },
+    {
+      "id": "canopy-cockpit",
+      "source": "examples/spaceship-atlas/canopy-cockpit/source.mpd",
+      "source_sha256": "6b882983b13fe53b055e127ecb3973b568e4aa535c1f8e151c0330414ead818d",
+      "artifact_hash_mismatches": [],
+      "manual_parents": [
+        {
+          "section": "6887 - Spaceship.ldr",
+          "description": "Spaceship",
+          "at": [
+            0.0,
+            48.0,
+            -200.0
+          ],
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "colour": 0
+        }
+      ],
+      "sections": [
+        {
+          "name": "study-81a8902a5014-00-6887---Spaceship---Cockpit.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 31,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "description": "Spaceship - Cockpit",
+          "original_name": "6887 - Spaceship - Cockpit.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/canopy-cockpit/section-00",
+          "root": true,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "6887 - Spaceship.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/canopy-cockpit/original-parent-00",
+              "source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/6887-1.mpd"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-canopy-cockpit-01.jpg",
+          "visual_observation": "Octagonal transparent side halves enclose seated pilot; hinged central glazing closes top/front. Actual parent places cockpit forward of craft. Correct rear-glazing wording.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "study-81a8902a5014-01-6887---Spaceship---Cockpit---Door.ldr",
+          "kind": "model",
+          "first_line": 75,
+          "placements": 8,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-81a8902a5014-00-6887---Spaceship---Cockpit.ldr"
+          ],
+          "description": "Spaceship - Cockpit - Door",
+          "original_name": "6887 - Spaceship - Cockpit - Door.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/canopy-cockpit/section-01",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-81a8902a5014-00-6887---Spaceship---Cockpit.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/canopy-cockpit/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-canopy-cockpit-01.jpg",
+          "visual_observation": "Hinged central canopy closure has transparent shaped panel, cone pair and inward tool-holder detail. Extra right/back context views confirm top/front location, not a rear window.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "study-81a8902a5014-02-6887---Minifig.ldr",
+          "kind": "model",
+          "first_line": 104,
+          "placements": 11,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-81a8902a5014-00-6887---Spaceship---Cockpit.ldr"
+          ],
+          "description": "Minifig",
+          "original_name": "6887 - Minifig.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/canopy-cockpit/section-02",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-81a8902a5014-00-6887---Spaceship---Cockpit.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/canopy-cockpit/context-02-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-canopy-cockpit-02.jpg",
+          "visual_observation": "Seated helmeted pilot with raised visor is inside the cockpit; retained as occupant-envelope context, not independent vehicle structure.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "study-81a8902a5014-03-6887---Minifig---Helmet.ldr",
+          "kind": "model",
+          "first_line": 137,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-81a8902a5014-02-6887---Minifig.ldr"
+          ],
+          "description": "Minifig - Helmet",
+          "original_name": "6887 - Minifig - Helmet.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/canopy-cockpit/section-03",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-81a8902a5014-02-6887---Minifig.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/canopy-cockpit/context-03-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-canopy-cockpit-02.jpg",
+          "visual_observation": "Black helmet and green raised visor; inspected alone and on pilot.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed",
+      "original_source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/6887-1.mpd",
+      "original_source_hash_matches": true,
+      "existing_checks": {
+        "source_checks_passed": true,
+        "physical_validity": "not_proven",
+        "contacts_checked": false,
+        "source_errors": {},
+        "geometry_errors": {}
+      },
+      "decision": "retain_scoped_construction_study_with_metadata_corrections"
+    },
+    {
+      "id": "falcon-greebles",
+      "source": "examples/spaceship-atlas/falcon-greebles/source.mpd",
+      "source_sha256": "0540d6efedbca2e7d1ad1d041df15e216602c54a5f01e2ba25cd141ad161e4fd",
+      "artifact_hash_mismatches": [],
+      "manual_parents": [
+        {
+          "section": "10179 - main.ldr",
+          "description": "LEGO Star Wars Ultimate Collector Series Millennium Falcon (set 10179): a large light-bluish-grey Corellian freighter with a round saucer hull, offset cockpit with connecting corridor, twin forward cargo mandibles and a side docking ring, a top-mounted rotating rectenna sensor dish, four quad laser cannon turrets (two dorsal, two ventral), a ventral boarding ramp and four retractable landing legs, a rear bank of engine nozzles, and a detailed interior (holochess table, bunks and smuggling compartments), plus five minifigures - Han Solo, Chewbacca, Princess Leia, Obi-Wan Kenobi and Luke Skywalker",
+          "at": [
+            400.0,
+            -40.0,
+            140.0
+          ],
+          "matrix": [
+            [
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "colour": 72
+        }
+      ],
+      "sections": [
+        {
+          "name": "study-433ddd068200-00-10179---subModel-43.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 15,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "description": "Upper hull greeble cluster (right): wing panel, domes, control sticks, loudhailer and antenna",
+          "original_name": "10179 - subModel-43.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/falcon-greebles/section-00",
+          "root": true,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "10179 - main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/falcon-greebles/original-parent-00",
+              "source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/10179-1.mpd"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-falcon-greebles-01.jpg",
+          "visual_observation": "Small right-upper-hull wedge plate carries domed/control-stick, loudhailer and antenna details; parent places it in a localized service bay. Do not inherit unsupported whole-parent prose.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed",
+      "original_source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/10179-1.mpd",
+      "original_source_hash_matches": true,
+      "existing_checks": {
+        "source_checks_passed": true,
+        "physical_validity": "not_proven",
+        "contacts_checked": false,
+        "source_errors": {},
+        "geometry_errors": {}
+      },
+      "decision": "retain_scoped_construction_study_with_metadata_corrections"
+    },
+    {
+      "id": "x-wing-nacelle",
+      "source": "examples/spaceship-atlas/x-wing-nacelle/source.mpd",
+      "source_sha256": "6c12514ba6590f7cb23b97e1157f889d7fd55bf67d303c981f370f2474e396ef",
+      "artifact_hash_mismatches": [],
+      "manual_parents": [
+        {
+          "section": "7191 - bottom-stbd-wing.ldr",
+          "description": "Starboard lower wing panel built from angled wing plates, long white plates, and red-tinted detail tiles with stripe accents.",
+          "at": [
+            50.0,
+            -20.0,
+            -126.0
+          ],
+          "matrix": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          ],
+          "colour": 8
+        },
+        {
+          "section": "7191 - top-port-wing.ldr",
+          "description": "Port upper wing surface built from angled left-wing plates, long white plates, and red stripe detail tiles.",
+          "at": [
+            50.0,
+            -20.0,
+            -126.0
+          ],
+          "matrix": [
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              0.0
+            ]
+          ],
+          "colour": 8
+        }
+      ],
+      "sections": [
+        {
+          "name": "study-d883cdec86c9-00-7191---nacelle-2.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 41,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "description": "Cylindrical engine nacelle using Technic cylinders, round red bricks, and axle-connected structural components.",
+          "original_name": "7191 - nacelle-2.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/x-wing-nacelle/section-00",
+          "root": true,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "7191 - bottom-stbd-wing.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/x-wing-nacelle/original-parent-00",
+              "source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/7191-1.mpd"
+            },
+            {
+              "parent": "7191 - top-port-wing.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/x-wing-nacelle/original-parent-01",
+              "source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/7191-1.mpd"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-x-wing-nacelle-01.jpg",
+          "visual_observation": "Long concentric cylindrical engine with red inner round elements, rear nozzle and transverse mounting features. Both original wing-parent placements inspected. This nacelle-2 differs in mounting details from wing package nacelle-1.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed",
+      "original_source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/7191-1.mpd",
+      "original_source_hash_matches": true,
+      "existing_checks": {
+        "source_checks_passed": true,
+        "physical_validity": "not_proven",
+        "contacts_checked": false,
+        "source_errors": {},
+        "geometry_errors": {}
+      },
+      "decision": "retain_scoped_construction_study_with_metadata_corrections"
+    },
+    {
+      "id": "x-wing-wing",
+      "source": "examples/spaceship-atlas/x-wing-wing/source.mpd",
+      "source_sha256": "09d0daa26aeba02e8a68d1bb35151f63bc20e78ff95de58bd6adc35d3dd80cc0",
+      "artifact_hash_mismatches": [],
+      "manual_parents": [
+        {
+          "section": "7191 - x-wing.ldr",
+          "description": "A small detail submodel containing a single light grey 2x2 dish with rim, likely a decorative sensor or cockpit element.",
+          "at": [
+            120.0,
+            -12.0,
+            130.0
+          ],
+          "matrix": [
+            [
+              -1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "colour": 15
+        }
+      ],
+      "sections": [
+        {
+          "name": "study-7f62aaf2edbb-00-7191---bottom-port-wing.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 54,
+          "steps": 13,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "description": "The lower port X-wing wing assembly built from wing panels, long plates, and grooved tiles forming the layered attack-wing surface.",
+          "original_name": "7191 - bottom-port-wing.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/x-wing-wing/section-00",
+          "root": true,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "7191 - x-wing.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/x-wing-wing/original-parent-00",
+              "source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/7191-1.mpd"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-x-wing-wing-01.jpg",
+          "visual_observation": "Thin wedge plate wing with root nacelle and long tip cannon; actual parent is whole X-wing airframe, contradicting metadata calling it a single dish.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "study-7f62aaf2edbb-01-7191---blaster.ldr",
+          "kind": "model",
+          "first_line": 132,
+          "placements": 22,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-7f62aaf2edbb-00-7191---bottom-port-wing.ldr"
+          ],
+          "description": "A large detailed blaster cannon or mechanical greeble assembly built from round bricks, cylinders, gears, axles, a ribbed hose, and an antenna.",
+          "original_name": "7191 - blaster.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/x-wing-wing/section-01",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-7f62aaf2edbb-00-7191---bottom-port-wing.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/x-wing-wing/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-x-wing-wing-01.jpg",
+          "visual_observation": "Long axial tip cannon with cylinder base, gear/ribbed region and projecting bar; parent view establishes tip position.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "study-7f62aaf2edbb-02-7191---nacelle-1.ldr",
+          "kind": "model",
+          "first_line": 189,
+          "placements": 41,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-7f62aaf2edbb-00-7191---bottom-port-wing.ldr"
+          ],
+          "description": "A laser cannon engine nacelle assembly built from Technic cylinders, round bricks, axle-mounted gears, and grille bricks forming the cylindrical engine pod.",
+          "original_name": "7191 - nacelle-1.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/x-wing-wing/section-02",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-7f62aaf2edbb-00-7191---bottom-port-wing.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/x-wing-wing/context-02-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-x-wing-wing-02.jpg",
+          "visual_observation": "Nacelle-1 engine with round red inlet core, cylindrical body and slender exhaust; distinguish engine from separate tip laser and from nacelle-2 mount variant.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "study-7f62aaf2edbb-03-7191---wing-step13-2.ldr",
+          "kind": "model",
+          "first_line": 284,
+          "placements": 11,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-7f62aaf2edbb-00-7191---bottom-port-wing.ldr"
+          ],
+          "description": "Small wing sub-assembly with a mounting bracket, white plates, black grille tiles, and round light grey accent plates.",
+          "original_name": "7191 - wing-step13-2.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/x-wing-wing/section-03",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-7f62aaf2edbb-00-7191---bottom-port-wing.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/x-wing-wing/context-03-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-x-wing-wing-02.jpg",
+          "visual_observation": "Small root trim/support strip of plates, grilles and a perpendicular mount; inspected at inner wing near nacelle.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed",
+      "original_source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/7191-1.mpd",
+      "original_source_hash_matches": true,
+      "existing_checks": {
+        "source_checks_passed": true,
+        "physical_validity": "not_proven",
+        "contacts_checked": false,
+        "source_errors": {},
+        "geometry_errors": {}
+      },
+      "decision": "retain_scoped_construction_study_with_metadata_corrections"
+    },
+    {
+      "id": "y-wing-armour",
+      "source": "examples/spaceship-atlas/y-wing-armour/source.mpd",
+      "source_sha256": "400e59c0758c39c658b68fe14c14c474880e802909b9d30bf5fcfb511be2289e",
+      "artifact_hash_mismatches": [],
+      "manual_parents": [
+        {
+          "section": "75181 - Y-Wing Starfighter - stbd-nacelle.ldr",
+          "description": "Starboard engine nacelle subassembly of the Y-Wing with no direct pieces listed.",
+          "at": [
+            -33.941,
+            -48.0,
+            -33.941
+          ],
+          "matrix": [
+            [
+              -0.707,
+              0.707,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0
+            ],
+            [
+              0.707,
+              0.707,
+              0.0
+            ]
+          ],
+          "colour": 72
+        }
+      ],
+      "sections": [
+        {
+          "name": "study-82f029a5d28a-00-75181---Y-Wing-Starfighter---step254-261.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 31,
+          "steps": 7,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "description": "Angled hull armor panel built from plates, slope bricks, raised grille plates, and a hinge tile forming a contoured body panel with greebled detailing.",
+          "original_name": "75181 - Y-Wing Starfighter - step254-261.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/y-wing-armour/section-00",
+          "root": true,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "75181 - Y-Wing Starfighter - stbd-nacelle.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/y-wing-armour/original-parent-00",
+              "source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/75181-1.mpd"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-y-wing-armour-01.jpg",
+          "visual_observation": "Long rectangular plate-backed panel with straight sloped borders, grille sections and central flex hose detail; mounted on starboard engine nacelle. Correct guide references to wedge plates and curved surface.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed",
+      "original_source": "/Users/captain/workspaces/workspace-ai/ldraw-lib/models-annotated/75181-1.mpd",
+      "original_source_hash_matches": true,
+      "existing_checks": {
+        "source_checks_passed": true,
+        "physical_validity": "not_proven",
+        "contacts_checked": false,
+        "source_errors": {},
+        "geometry_errors": {}
+      },
+      "decision": "retain_scoped_construction_study_with_metadata_corrections"
+    },
+    {
+      "id": "star-destroyer-study",
+      "source": "examples/spaceship-atlas/star-destroyer-study/source.mpd",
+      "source_sha256": "155b535e6db89919677f9b5fb5de49120deaefb4ce8e78afcae9755209033c2d",
+      "artifact_hash_mismatches": [],
+      "manual_parents": [],
+      "sections": [
+        {
+          "name": "study-f3acc2a54bd6-00-75055---Main.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 1,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "description": "Assembly of a large wedge-shaped Imperial Star Destroyer built from layered grey plates, angled wing sections, and click-lock hinge mechanisms.",
+          "original_name": "75055 - Main.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/star-destroyer-study/section-00",
+          "root": true,
+          "second_view": "bottom",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-star-destroyer-study-01.jpg",
+          "visual_observation": "Broad triangular ship with recessed side band, layered superstructure and raised bridge; shape inspiration only, existing 416 non-rigid-transform and 39 overlap errors remain.",
+          "status": "visually_reviewed_with_scope_limits"
+        },
+        {
+          "name": "study-f3acc2a54bd6-01-75055---Imperial-Star-Destroyer.ldr",
+          "kind": "model",
+          "first_line": 22,
+          "placements": 1335,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-f3acc2a54bd6-00-75055---Main.ldr"
+          ],
+          "description": "Large wedge-shaped grey starship hull constructed from hundreds of plates, tiles, and angled left-wing sections forming the iconic triangular silhouette.",
+          "original_name": "75055 - Imperial Star Destroyer.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/star-destroyer-study/section-01",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-f3acc2a54bd6-00-75055---Main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/star-destroyer-study/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-star-destroyer-study-01.jpg",
+          "visual_observation": "Main detailed ship section reproduces same whole hull; underside reveals plate/hinge construction but no independent small structural modules. Retain only with whole inspiration package.",
+          "status": "visually_reviewed_with_scope_limits"
+        }
+      ],
+      "status": "visually_reviewed",
+      "existing_checks": {
+        "source_checks_passed": false,
+        "physical_validity": "not_proven",
+        "contacts_checked": false,
+        "source_errors": {
+          "assembly.nonrigid": 416
+        },
+        "geometry_errors": {
+          "assembly.body_overlap": 39
+        }
+      },
+      "decision": "retain_opt_in_inspiration_only"
+    },
+    {
+      "id": "ucs-y-wing-study",
+      "source": "examples/spaceship-atlas/ucs-y-wing-study/source.mpd",
+      "source_sha256": "9672ecdab2a3ebc10b6234eed450c5723e5f6f9207ca23d29919aa92452fbe42",
+      "artifact_hash_mismatches": [],
+      "manual_parents": [],
+      "sections": [
+        {
+          "name": "study-4de7854b1628-00-10134---main.ldr",
+          "kind": "model",
+          "first_line": 2,
+          "placements": 275,
+          "steps": 30,
+          "empty_leading_steps": 0,
+          "parents": [],
+          "description": "LEGO Star Wars Ultimate Collector Series Y-wing Attack Starfighter (set 10134-1): a Rebel starfighter with a long central fuselage, a tinted bubble cockpit with twin nose laser cannons and an R5-D4 astromech droid, two large ribbed engine nacelles on outrigger struts, and a dorsal sensor/ion-cannon turret, presented on a black display stand with a tiled info plaque",
+          "original_name": "10134 - main.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-00",
+          "root": true,
+          "second_view": "bottom",
+          "parent_contexts": [],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-01.jpg",
+          "visual_observation": "Whole ship has a narrow detailed spine, long twin nacelles and rear strut cages, white/yellow forward shell and black display stand. Inspiration only; 37 recorded overlaps remain. Tapered canopy is not a bubble enclosure.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-01-10134---subModel-1.ldr",
+          "kind": "model",
+          "first_line": 565,
+          "placements": 12,
+          "steps": 4,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Curved hull side panel built from inverted curved slopes, wedges and grooved tiles",
+          "original_name": "10134 - subModel-1.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-01",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-01-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-01.jpg",
+          "visual_observation": "Flat tiled hull cheek with shaped underside sits beside forward cockpit; preserve model-local orientation.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-02-10134---subModel-2.ldr",
+          "kind": "model",
+          "first_line": 605,
+          "placements": 5,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Small bracket mounting block with a round reinforced stud",
+          "original_name": "10134 - subModel-2.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-02",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-02-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-02.jpg",
+          "visual_observation": "Small bracket/plate mounting block with round element sits toward aft central machinery; no strength inference.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-03-10134---subModel-3.ldr",
+          "kind": "model",
+          "first_line": 629,
+          "placements": 6,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Small swivel/sensor mount with a rounded cap on a technic-pin base",
+          "original_name": "10134 - subModel-3.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-03",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-03-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-02.jpg",
+          "visual_observation": "Two Technic bricks with pins carry round cylinder and minifig-head shaped detail on central spine. Do not claim a working swivel or sensor from the decorative shape.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-04-10134---subModel-4.ldr",
+          "kind": "model",
+          "first_line": 656,
+          "placements": 3,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Flat hull strip rail with studs on the side",
+          "original_name": "10134 - subModel-4.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-04",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-04-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-03.jpg",
+          "visual_observation": "Three-part rail presents four sideways studs; two parent instances sit in aft central machinery.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-05-10134---subModel-5.ldr",
+          "kind": "model",
+          "first_line": 675,
+          "placements": 3,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Small grip detail: headlight bricks capped with a handled tile",
+          "original_name": "10134 - subModel-5.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-05",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-05-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-03.jpg",
+          "visual_observation": "Two headlight bricks carry handled tile; parent repeats this handle detail on opposite sides of spine.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-06-10134---subModel-6.ldr",
+          "kind": "model",
+          "first_line": 694,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Clip attachment point: headlight brick with a clip tile",
+          "original_name": "10134 - subModel-6.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-06",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-06-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-04.jpg",
+          "visual_observation": "Headlight brick plus clip tile; four instances around central spine. Retain as dependency with no new connectivity certification.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-07-10134---subModel-7.ldr",
+          "kind": "model",
+          "first_line": 711,
+          "placements": 2,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Wing panel section with a round grille/vent detail tile",
+          "original_name": "10134 - subModel-7.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-07",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-07-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-04.jpg",
+          "visual_observation": "Two-piece wing-shaped plate and printed round grille detail, repeated on aft central spine; not a complete wing assembly.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-09-10134---subModel-R5-D4.ldr",
+          "kind": "model",
+          "first_line": 884,
+          "placements": 4,
+          "steps": 1,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "R5-D4 astromech droid: patterned cylindrical body, domed head and two legs",
+          "original_name": "10134 - subModel-R5-D4.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-08",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-08-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-05.jpg",
+          "visual_observation": "Patterned white/red astromech body, rounded head and two legs; seated behind cockpit in the main body. Preserve source identity rather than using it as a generic mechanism.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-10-10134---subModel-8.ldr",
+          "kind": "model",
+          "first_line": 905,
+          "placements": 46,
+          "steps": 6,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Port engine nacelle rear section: exhaust grilles, copper hoses and control sticks",
+          "original_name": "10134 - subModel-8.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-09",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-09-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-05.jpg",
+          "visual_observation": "Detailed rectangular outrigger between central fuselage and one engine, with copper-coloured hoses, pins and side-stud faces. Source description incorrectly calls this a rear engine nacelle.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-11-10134---subModel-9.ldr",
+          "kind": "model",
+          "first_line": 1012,
+          "placements": 46,
+          "steps": 7,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Starboard engine nacelle rear section: exhaust grilles, copper hoses and control sticks",
+          "original_name": "10134 - subModel-9.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-10",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-10-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-06.jpg",
+          "visual_observation": "Opposite outrigger with similar hose/grille detailing and different handed layout. Source description incorrectly calls this a rear engine nacelle.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-12-10134---subModel-10.ldr",
+          "kind": "model",
+          "first_line": 1120,
+          "placements": 114,
+          "steps": 18,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Long hull/strut assembly with angled inverted-slope cheeks, ventral detail, a sensor dome and an antenna mast",
+          "original_name": "10134 - subModel-10.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-11",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-11-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-06.jpg",
+          "visual_observation": "Main rectangular engine body with long surface hoses, side panels and conical rear nozzle; two instances in whole ship. Correct generic hull/strut and sensor-mast wording.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-13-10134---subModel-11.ldr",
+          "kind": "model",
+          "first_line": 1371,
+          "placements": 5,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-12-10134---subModel-10.ldr"
+          ],
+          "description": "Short axle-and-bush spacer/connector sub-assembly",
+          "original_name": "10134 - subModel-11.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-12",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-12-10134---subModel-10.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-12-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-07.jpg",
+          "visual_observation": "Short transverse axle through paired Technic bricks with bushes; four placements on engine body provide lateral attachment features.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-14-10134---subModel-12.ldr",
+          "kind": "model",
+          "first_line": 1396,
+          "placements": 15,
+          "steps": 5,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-12-10134---subModel-10.ldr"
+          ],
+          "description": "Dorsal rotating sensor/weapon dome turret with mechanical arms, a cone and a trans-neon dish",
+          "original_name": "10134 - subModel-12.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-13",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-12-10134---subModel-10.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-13-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-07.jpg",
+          "visual_observation": "Conical engine nozzle and surrounding clips/arms mounted at rear of engine body. Source description falsely calls it a dorsal rotating sensor/weapon turret.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-15-10134---subModel-13.ldr",
+          "kind": "model",
+          "first_line": 1443,
+          "placements": 12,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-12-10134---subModel-10.ldr"
+          ],
+          "description": "Antenna/sensor mast array with a lance mast, grilles and clip plates",
+          "original_name": "10134 - subModel-13.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-14",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-12-10134---subModel-10.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-14-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-08.jpg",
+          "visual_observation": "Long thin engine-side surface strip with lance-shaped pipe and grille tiles, repeated on opposite engine-body faces. Not an upright antenna mast array.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-16-10134---subModel-14.ldr",
+          "kind": "model",
+          "first_line": 1482,
+          "placements": 9,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Vented side hull panel with grille tiles and pin mounts",
+          "original_name": "10134 - subModel-14.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-15",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-15-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-08.jpg",
+          "visual_observation": "Thin vented strip with underside pins and central handled detail, placed on outer engine sides; scope label to nacelle trim.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-17-10134---subModel-15.ldr",
+          "kind": "model",
+          "first_line": 1515,
+          "placements": 10,
+          "steps": 5,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Engine nacelle front: spoked wheel-cowling, domed hub and ribbed armour runs",
+          "original_name": "10134 - subModel-15.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-16",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-16-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-09.jpg",
+          "visual_observation": "Long open rear engine cage: four ribbed struts terminate in a round wheel-like end ring. Two instances extend aft from nacelles. Source incorrectly calls it engine front/cowling.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-18-10134---subModel-16.ldr",
+          "kind": "model",
+          "first_line": 1547,
+          "placements": 10,
+          "steps": 5,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-17-10134---subModel-15.ldr"
+          ],
+          "description": "Engine axle/connector linkage with angle connectors and notched axles",
+          "original_name": "10134 - subModel-16.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-17",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-17-10134---subModel-15.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-17-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-09.jpg",
+          "visual_observation": "Paired transverse axle/angle-connector brace located at the cage end ring. Static geometry does not establish moving linkage behavior.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-19-10134---subModel-17.ldr",
+          "kind": "model",
+          "first_line": 1583,
+          "placements": 4,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-18-10134---subModel-16.ldr"
+          ],
+          "description": "Small axle-and-bush connector sub-assembly",
+          "original_name": "10134 - subModel-17.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-18",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-18-10134---subModel-16.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-18-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-10.jpg",
+          "visual_observation": "Axle and paired angle connectors with bushes, nested as one crosspiece of end-ring brace.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-20-10134---subModel-18.ldr",
+          "kind": "model",
+          "first_line": 1605,
+          "placements": 29,
+          "steps": 10,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-17-10134---subModel-15.ldr"
+          ],
+          "description": "Engine nacelle ribbed armour/hose run on a long axle",
+          "original_name": "10134 - subModel-18.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-19",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-17-10134---subModel-15.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-19-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-10.jpg",
+          "visual_observation": "Long ribbed strut assembled along an axle line; four copies form the cage. Clarify rear cage strut rather than armour/hose run.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-21-10134---subModel-20.ldr",
+          "kind": "model",
+          "first_line": 1685,
+          "placements": 38,
+          "steps": 15,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Domed housing section with a hinged panel and four side strut/appendage assemblies",
+          "original_name": "10134 - subModel-20.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-20",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-20-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-11.jpg",
+          "visual_observation": "Rounded white forward nacelle housing with yellow stripe, internal core and four decorative side struts; two instances at forward engine ends.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-22-10134---subModel-19.ldr",
+          "kind": "model",
+          "first_line": 1783,
+          "placements": 56,
+          "steps": 12,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-21-10134---subModel-20.ldr"
+          ],
+          "description": "Hinged access panel section with inverted slopes, handles and grilles",
+          "original_name": "10134 - subModel-19.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-21",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-21-10134---subModel-20.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-21-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-11.jpg",
+          "visual_observation": "Substantial box-shaped core inside forward nacelle housing, with pin interfaces, side studs, handles and hinged faces. Not merely a hinged access panel.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-23-10134---subModel-21.ldr",
+          "kind": "model",
+          "first_line": 1919,
+          "placements": 7,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-21-10134---subModel-20.ldr"
+          ],
+          "description": "Small mechanical strut/appendage: bracket, curved bar arm and mechanical torso",
+          "original_name": "10134 - subModel-21.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-22",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-21-10134---subModel-20.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-22-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-12.jpg",
+          "visual_observation": "Two-rod decorative side strut with mechanical-figure pieces at one end; four copies wrap forward nacelle housing. No functional actuator claim.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-24-10134---subModel-22.ldr",
+          "kind": "model",
+          "first_line": 1948,
+          "placements": 135,
+          "steps": 21,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Cockpit and forward fuselage: tinted trans-brown canopy, turntable mount and nose-cannon mount",
+          "original_name": "10134 - subModel-22.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-23",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-23-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-12.jpg",
+          "visual_observation": "White/yellow forward hull and tapered tinted cockpit canopy, side cheek strips, nose projections and raised dorsal twin cannon. Retain as part of inspiration package pending repairs.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-25-10134---subModel-23.ldr",
+          "kind": "model",
+          "first_line": 2244,
+          "placements": 7,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-24-10134---subModel-22.ldr"
+          ],
+          "description": "Small angled hull strip with a curved slope and yellow trim",
+          "original_name": "10134 - subModel-23.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-24",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-24-10134---subModel-22.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-24-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-13.jpg",
+          "visual_observation": "Slim curved/sloped white/yellow cheek rail, repeated along both cockpit sides with local frame transformed into parent.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-26-10134---subModel-24.ldr",
+          "kind": "model",
+          "first_line": 2273,
+          "placements": 6,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-24-10134---subModel-22.ldr"
+          ],
+          "description": "Small hinged detail/barrel sub-assembly with a thin rod and locking hinge",
+          "original_name": "10134 - subModel-24.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-25",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-24-10134---subModel-22.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-25-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-13.jpg",
+          "visual_observation": "Small plate-and-locking-hinge construction at rear edge of canopy; describe canopy mounting/hinge support rather than a barrel.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-27-10134---subModel-25.ldr",
+          "kind": "model",
+          "first_line": 2300,
+          "placements": 9,
+          "steps": 4,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-24-10134---subModel-22.ldr"
+          ],
+          "description": "Twin nose cannon/antenna array: cones on long bars with tap mounts",
+          "original_name": "10134 - subModel-25.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-26",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-24-10134---subModel-22.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-26-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-14.jpg",
+          "visual_observation": "Paired bar-and-cone cannon detail on roof behind canopy. Source calls it twin nose cannon/antenna, but parent proves dorsal position.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-28-10134---subModel-26.ldr",
+          "kind": "model",
+          "first_line": 2334,
+          "placements": 49,
+          "steps": 14,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-00-10134---main.ldr"
+          ],
+          "description": "Black display stand/base structure with model cradles, supports and plaque mount",
+          "original_name": "10134 - subModel-26.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-27",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-00-10134---main.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-27-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-14.jpg",
+          "visual_observation": "Complete black display stand with crossed feet, tall Technic upright, diagonal brace and angled blank tiled plaque. Stability remains unproven.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-29-10134---subModel-27.ldr",
+          "kind": "model",
+          "first_line": 2453,
+          "placements": 14,
+          "steps": 4,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-28-10134---subModel-26.ldr"
+          ],
+          "description": "Display stand support arm/cradle of technic bricks and pins",
+          "original_name": "10134 - subModel-27.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-28",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-28-10134---subModel-26.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-28-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-15.jpg",
+          "visual_observation": "Tall Technic-brick upright placed vertically in stand; top pins form model-support region.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-30-10134---subModel-28.ldr",
+          "kind": "model",
+          "first_line": 2497,
+          "placements": 4,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-28-10134---subModel-26.ldr"
+          ],
+          "description": "Technic support bracket/linkage for the display stand",
+          "original_name": "10134 - subModel-28.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-29",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-28-10134---subModel-26.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-29-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-15.jpg",
+          "visual_observation": "Bent liftarm brace connects low portion of upright to stand base; static bracing, no demonstrated mechanism.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-31-10134---subModel-29.ldr",
+          "kind": "model",
+          "first_line": 2519,
+          "placements": 3,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-30-10134---subModel-28.ldr"
+          ],
+          "description": "Small angled technic liftarm joint",
+          "original_name": "10134 - subModel-29.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-30",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-30-10134---subModel-28.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-30-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-16.jpg",
+          "visual_observation": "Paired short angled liftarms and axle form nested top joint of stand brace.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-32-10134---subModel-30.ldr",
+          "kind": "model",
+          "first_line": 2539,
+          "placements": 3,
+          "steps": 2,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-28-10134---subModel-26.ldr"
+          ],
+          "description": "Hinged mounting cradle/support that holds the model on the stand",
+          "original_name": "10134 - subModel-30.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-31",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-28-10134---subModel-26.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-31-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-16.jpg",
+          "visual_observation": "Small hinged plates appear twice at plaque location on stand base. Correct metadata claiming these directly hold the model: they support the plaque.",
+          "status": "visually_reviewed_inspiration_only"
+        },
+        {
+          "name": "study-4de7854b1628-33-10134---subModel-31.ldr",
+          "kind": "model",
+          "first_line": 2559,
+          "placements": 15,
+          "steps": 3,
+          "empty_leading_steps": 0,
+          "parents": [
+            "study-4de7854b1628-28-10134---subModel-26.ldr"
+          ],
+          "description": "Display stand info plaque/nameplate base with a tiled top",
+          "original_name": "10134 - subModel-31.ldr",
+          "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/section-32",
+          "root": false,
+          "second_view": "bottom",
+          "parent_contexts": [
+            {
+              "parent": "study-4de7854b1628-28-10134---subModel-26.ldr",
+              "render_directory": "output/kb-visual-audit/spaceship/ucs-y-wing-study/context-32-00"
+            }
+          ],
+          "inspection_sheet": "output/kb-visual-audit/spaceship-ucs-y-wing-study-17.jpg",
+          "visual_observation": "Broad black tiled plaque panel on front of stand. No printed information is present in this source; label blank plaque surface.",
+          "status": "visually_reviewed_inspiration_only"
+        }
+      ],
+      "status": "visually_reviewed",
+      "existing_checks": {
+        "source_checks_passed": false,
+        "physical_validity": "not_proven",
+        "contacts_checked": false,
+        "source_errors": {},
+        "geometry_errors": {
+          "assembly.body_overlap": 37
+        }
+      },
+      "decision": "retain_opt_in_inspiration_only"
+    }
+  ],
+  "coverage": {
+    "entries": 8,
+    "model_sections": 48,
+    "opened_contact_sheets": 26,
+    "fresh_render_jobs": 94,
+    "supplementary_render_jobs": 2,
+    "no_render_failures": true,
+    "source_artifacts_missing_or_changed": false
+  }
+}

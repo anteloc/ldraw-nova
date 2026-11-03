@@ -18,7 +18,7 @@
   --outdir output/snot-halcyon-steps/halcyon-hull --views home back
 ```
 
-The generator writes an ordinary plan for the existing builder; it adds no format or library code. Ship axes follow the [spaceship guide](../../../docs/agent/spaceships.md): X is width (starboard +X), -Z is forward, -Y is up. Y=0 is the keel underside. The ship measures 584 × 480 × 140 LDU (about 29 × 24 × 7 studs) without its stand.
+The generator writes an ordinary plan for the existing builder; it adds no format or library code. Ship axes follow the [spaceship guide](../../../docs/agent/guides/design-models.md): X is width (starboard +X), -Z is forward, -Y is up. Y=0 is the keel underside. The ship measures 584 × 480 × 140 LDU (about 29 × 24 × 7 studs) without its stand.
 
 ![Front, back, starboard side and top](views.png)
 
@@ -52,7 +52,7 @@ Each sideways module is authored as an ordinary upright stack, so plates still s
 | `halcyon-aft-cap` | +Z | centre `30414`, Z=240 | 4 |
 | `halcyon-cannon` (×2) | -Z | one `87087` on each wing root | 1 each |
 
-The root computes each origin as `stud - R * socket`, as in the [SNOT guide](../../../docs/agent/snot.md#start-from-a-real-connection). For the starboard exhaust, `R = [[1,0,0],[0,0,1],[0,-1,0]]` sends local up to +Z. The ring's socket `[10,8,-10]` becomes `[10,-10,-8]`. Seated on the stud at `[90,-46,240]`, it gives the origin `[80,-36,248]`. The intake, exhaust and cannon are rotationally symmetric about their own axes, so each is one section placed twice by translation.
+The root computes each origin as `stud - R * socket`, as in the [SNOT guide](../../../docs/agent/guides/snot.md#start-from-a-real-connection). For the starboard exhaust, `R = [[1,0,0],[0,0,1],[0,-1,0]]` sends local up to +Z. The ring's socket `[10,8,-10]` becomes `[10,-10,-8]`. Seated on the stud at `[90,-46,240]`, it gives the origin `[80,-36,248]`. The intake, exhaust and cannon are rotationally symmetric about their own axes, so each is one section placed twice by translation.
 
 The port flank uses the same parts as the starboard one, but a different proper rotation. That rotation sends local Z to the opposite world direction, so the port section puts its accent row at local Z=-10 instead of +10. Nothing is mirrored.
 
@@ -109,3 +109,68 @@ The final review passes source and geometry checks with no errors. Python and Le
 3. Author each skin upright in its own section, then seat it with `stud - R * socket`.
 4. Use real handed parts; let a port section differ in arrangement instead of mirroring.
 5. Stagger seams inside a module so it holds together by itself, not only through its mounts.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "halcyon",
+    "title": "Halcyon core and hull skins",
+    "scope": "construction",
+    "kind": "assembly",
+    "aliases": [
+      "snot:halcyon",
+      "spaceship:halcyon"
+    ],
+    "families": [
+      "snot",
+      "spaceship"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Upright local panels rotate onto the hull’s sideways stud faces; preserve the actual handed layouts and interleaving wing splices. The cockpit section is a canopy only; its floor belongs to the hull. One core-and-skin lesson, not a default spacecraft shape.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/snot-audit.json",
+    "model": "examples/snot/halcyon/halcyon.mpd",
+    "plan": "examples/snot/halcyon/halcyon.plan.json",
+    "generator": "examples/snot/halcyon/generate.py",
+    "model_sha256": "106c4044da850016d95dee60028faee2b207b7b1e7737a62003f13111e682022",
+    "audit_pointer": "/items/2",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/snot-findings.md",
+    "techniques": [
+      "snot"
+    ],
+    "subjects": [
+      "spacecraft"
+    ]
+  }
+]
+```
+
+## Audited section observations
+
+These observations refer to the source hashes in the registrations. They correct earlier source descriptions and preserve static visual scope; existing numeric and export checks remain separate.
+
+### Halcyon core and hull skins
+
+| Source section | Opened-image observation |
+|---|---|
+| `halcyon.ldr` | Long-nose twin-pod interceptor with thin wings and central stand; retain as one specific core-and-skin study, remove universal spaceship default. |
+| `halcyon-hull.ldr` | Plate keel and side-stud brick course carry deck, curved pod tops and twin fins. Fresh step 5 exposes forward, side and aft stud faces. |
+| `halcyon-nose.ldr` | Stepped handed wedge nose under curved cap; plates interleave with keel, so displayed root order is not physical insertion order. |
+| `halcyon-strake-s.ldr` | Starboard thin wedge strake; root position and underside show its relationship with keel. |
+| `halcyon-strake-p.ldr` | Port strake uses opposite-handed geometry; preserve authored construction and proper rotations. |
+| `halcyon-wing-s.ldr` | Starboard tiled wedge wing, inner splice plate, tip fin and forward side-stud cannon mount. |
+| `halcyon-wing-p.ldr` | Port tiled wedge wing with authored handed plate and splice; no reflection needed. |
+| `halcyon-flank-s.ldr` | Starboard flat striped flank is turned upright onto hull side; sockets visible in isolated underside. |
+| `halcyon-flank-p.ldr` | Port striped flank has different local accent arrangement so parent rotation preserves stripe placement. |
+| `halcyon-pod-panel-s.ldr` | Starboard thin stripe panel covers outer pod side; one-row plate underside visible. |
+| `halcyon-pod-panel-p.ldr` | Port thin stripe panel placed on opposite pod side; retain module-local coordinates. |
+| `halcyon-intake.ldr` | Round plate/cylinder/cone intake stack appears twice on forward pod faces. |
+| `halcyon-exhaust.ldr` | Round plate/dish/translucent-detail exhaust stack appears twice on aft pod faces. |
+| `halcyon-aft-cap.ldr` | Compact grille-and-two-lights cap fills centre aft face. |
+| `halcyon-cannon.ldr` | Slim cylinder-stack cannon appears twice at forward wing roots; single-stud interface is not a strength guarantee. |
+| `halcyon-cockpit.ldr` | This section contains only the moulded transparent canopy. Index as canopy placement, not a furnished cockpit. |
+| `halcyon-stand.ldr` | Round column on rounded-square plate supports central underside; balance and clutch strength remain unproven. |

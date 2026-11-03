@@ -3,8 +3,8 @@
 The agent path now starts with a small original
 [supported gear drive](../../examples/technic-studies/gear-drive/README.md),
 then extends measured connections. Construction and motion keep their ordinary
-JSON formats. The broad [parts catalog](../agent/technic-catalog.md), finite
-interfaces and [mechanism guidance](../agent/advanced-mechanisms.md) remain
+JSON formats. The broad [parts catalog](../agent/reference/technic.md), finite
+interfaces and [mechanism guidance](../agent/guides/mechanisms.md) remain
 available independently of any imported model study.
 
 General lessons are executable regressions in Mecha: a gear must carry its

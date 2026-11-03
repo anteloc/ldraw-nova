@@ -11,3 +11,42 @@ The `source_origin` anchor is a positioning frame, not a claimed mechanical conn
 [Editable plan](scene.plan.json) · [Source MPD](source.mpd) · [Preview](renders/home.png) · [Attribution and repairs](extraction.json).
 
 Run `./ldraw-agent build PATH/scene.plan.json --output output/example.mpd`, then inspect the combined assembly and review its renders.
+
+## Knowledge registration
+
+```ldraw-knowledge
+[
+  {
+    "id": "shuttered-window",
+    "title": "Opening window with shutters",
+    "scope": "hold",
+    "kind": "assembly",
+    "aliases": [
+      "reference:shuttered-window"
+    ],
+    "families": [
+      "reference"
+    ],
+    "legacy_groups": [
+      "examples",
+      "details"
+    ],
+    "lesson": "Brown frame, grey shutters and blue open frames; avoid calling open frames glass panes. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+    "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+    "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+    "scale": "minifigure",
+    "subjects": [
+      "windows"
+    ],
+    "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+    "model": "examples/reference-atlas/shuttered-window/preview.mpd",
+    "plan": "examples/reference-atlas/shuttered-window/scene.plan.json",
+    "preview": "examples/reference-atlas/shuttered-window/renders/home.png",
+    "visual_review": "examples/reference-atlas/shuttered-window/card.json",
+    "model_sha256": "d4a3e23b581fe2b304137c753a72d3dd73313a68d5fe90745fccb3ce834f094b",
+    "audit_pointer": "/items/17",
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+    "techniques": []
+  }
+]
+```
