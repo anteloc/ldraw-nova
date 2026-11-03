@@ -6,7 +6,7 @@ Updated 2026-11-03. Retrieval, documentation, package relocation and export inte
 
 ```mermaid
 flowchart TD
-    Entry["instructions.md: brief → retrieve → build → inspect → repair"] --> Guides["docs/agent/guides: task instructions"]
+    Entry["AGENTS.md: brief → retrieve → build → inspect → repair"] --> Guides["docs/agent/guides: task instructions"]
     Entry --> Contracts["docs/agent/reference: formats and CLI contracts"]
     Entry --> Search["knowledge search / show; examples"]
     Guides --> Search
@@ -60,10 +60,36 @@ Six packages still need complete-page manual reviews before manual export: cam-f
 
 Counts and preservation results are in [implementation-checks.json](implementation-checks.json). Original visual artifacts remain under `output/kb-visual-audit/`; promoted packages carry their required evidence. Unchanged geometry was not rerendered.
 
-## Remaining work
+## Entry point and stage closure
 
-1. **Evaluate agent outcomes.** Run the agreed Terra/Luna retrieval comparison with identical tasks and budgets, then three construction pilots. Retain actual outputs, failures, timing and opened-image judgments without expert rescue. Locate or reproduce a usable baseline before claiming a before/after result. Expand to the larger matrix only if pilots justify it.
+The root [AGENTS.md](../../../AGENTS.md) now owns repository instructions: setup,
+local retrieval, plan authoring, visual inspection, delivery and conditional
+tooling/KB maintenance. Task-specific guides remain linked rather than required
+reading for every task. `instructions.md` is a compatibility pointer. README,
+CLI help and the maintained generative-tooling prompt point to the new owner;
+obsolete README claims that spaceships default to SNOT/Halcyon were removed.
+This follows the official [AGENTS.md discovery guidance](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
+and [task-specific instruction guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra).
+
+Entry-point verification: all five documented CLI examples parse, the example
+alias resolves to construction scope, links and anchors in the changed documents
+resolve, and all 13 knowledge tests pass. All 42 planning snapshot hashes remain
+unchanged. No model regeneration or additional agent trial was needed.
+
+Terra and Luna each received the same airport maintenance truck brief and a
+30-minute allowance in `output/kb-agent-trial-20261103T200238Z/`. Both reported
+completion; neither requested assistance. At the user's request, the supervisor
+did not inspect, score or correct their artifacts. The user judged the results
+not very good but sufficient for this stage and requested closure. This was one
+generation trial per model, not a controlled before/after evaluation. The
+planning snapshot and trial artifacts remain preserved.
+
+## Follow-up work
+
+1. **Measure improvement in a future evaluation.** The planned retrieval comparison, broader construction pilots and larger matrix remain unperformed. Use identical tasks/budgets and a usable baseline before claiming a before/after result; preserve independent outputs and failures.
 2. **Keep conditional sources held.** Twenty-one reference origins still differ from their recorded upstream source hashes; unchanged frozen extracts do not waive that provenance gate. Cottage tree/bench repairs, conservatory shell extraction and the three Atlas derivatives remain uncompleted. The lean corpus does not depend on promoting them.
 3. **Complete missing manual-page reviews when needed.** Open every actual manual image, record observations and preserve source identity before exporting the six packages listed above. Use global `ldraw-xray` for new isolated/actual-parent inspection; new geometry requires fresh matching evidence.
 
-The implementation is ready for staged agent evaluation. Test and export success alone do not demonstrate better generated models.
+This overhaul stage is closed with the user's acceptance of the limited trial.
+Conditional holds and the follow-up items above remain explicit; test and export
+success alone do not demonstrate better generated models.

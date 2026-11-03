@@ -1,0 +1,108 @@
+# Working in ldraw-nova
+
+This repository provides LDraw model generation, part/reference discovery,
+geometry checks, rendering and a curated construction knowledge base. Use the
+existing `ldraw-agent` tooling and ordinary JSON plans; Python generators can
+emit the same plans. Run commands below from the repository root.
+
+## Generate a model
+
+Keep each new model, editable sources and evidence in `output/<task>/`. Choose
+dimensions, palette and construction details from the user's brief; resolve
+ordinary design choices yourself. Use this loop: **brief → retrieve → build →
+inspect → repair → deliver**.
+
+1. Establish the subject, silhouette, scale, required features and poses. Run
+   `./ldraw-agent doctor`. If setup is needed, run `./setup.sh`, or
+   `./setup.sh --with-lsynth` for flexible parts. Setup needs Python 3.12+,
+   an LDraw library (`LDRAW_DIR`), Poppler and LeoCAD; see the
+   [setup and CLI contracts](docs/agent/reference/cli.md#setup).
+2. Search for the construction roles the brief needs, then read the returned
+   source sections, parent requirements and limits:
+
+   ```sh
+   ./ldraw-agent knowledge search 'mounted pneumatic hoses'
+   ./ldraw-agent examples 'steering rack'
+   ./ldraw-agent knowledge show technic:retained-chain-drive
+   ```
+
+   Search works locally without Jev or a network connection. Default results
+   include current guidance and admitted construction/tutorial lessons.
+   Inspiration, diagnostic, research, archive and hold scopes require explicit
+   selection; finding a source does not approve its reuse or export. When no
+   suitable lesson exists, use [source discovery](docs/agent/guides/find-references.md).
+3. Author a [JSON plan](docs/agent/reference/plans.md) with named placements.
+   Keep repairs in the plan or generator. Inspect real part origins and mating
+   interfaces with `part` and `connectors`; names and bounding boxes do not prove
+   fit. Build supports and attachments before skins or flexible routes. Choose
+   System, SNOT, Technic or a combination to suit the brief; adapt lessons without
+   copying an example's whole silhouette by default.
+4. Build and review your plan (using `output/my-model/` as an example):
+
+   ```sh
+   ./ldraw-agent build output/my-model/model.plan.json --output output/my-model/model.mpd
+   ./ldraw-agent review output/my-model/model.plan.json --outdir output/my-model/review --views home front back top bottom
+   ```
+
+   Read the reports and open the images. Repair the first failed prerequisite;
+   if repeated corrections fail, isolate the interface and reconsider its
+   construction. `--no-render` and `--section` support intermediate work; finish
+   with a whole-model review. Use `--force` for intentional reruns. Keep authored
+   notes outside the generated review directory, which is replaced as a bundle.
+5. Deliver the editable plan/generator and dependencies, final MPD, validation
+   and review reports, matching BOMs, previews, and a short README with replay
+   commands, images actually inspected and unresolved limits. Evidence must
+   match the delivered model revision. Report incomplete checks explicitly.
+
+## Read guidance for the task at hand
+
+| Task | Guidance |
+|---|---|
+| Plan fields, repetition, includes or Python authoring | [Plan reference](docs/agent/reference/plans.md), [build workflow](docs/agent/guides/build-model.md) |
+| Subject proportions and construction choices | [Design models](docs/agent/guides/design-models.md) |
+| Part frames, mounting and submodel composition | [Place parts](docs/agent/guides/place-parts.md), [compose modules](docs/agent/guides/compose-modules.md) |
+| Sideways construction | [SNOT](docs/agent/guides/snot.md) |
+| Structural frames, joints and moving assemblies | [Technic](docs/agent/guides/technic.md), [mechanisms](docs/agent/guides/mechanisms.md) |
+| Hoses, cables, bands, chains or treads | [Flex authoring](docs/agent/guides/flex.md), [flex contracts](docs/agent/reference/flex.md) |
+| Visual inspection, failures and evidence coverage | [Review models](docs/agent/guides/review-models.md), [validation](docs/agent/reference/validation.md) |
+
+LDraw uses negative Y as up, a 20 LDU stud pitch, and 24/8 LDU brick/plate body
+heights. Stack using body height, not bounding-box height. Use proper rotations;
+do not stretch or reflect rigid parts. Colour 16 needs an explicit ancestor;
+colour 24 is for edges.
+
+## Visual review and evidence
+
+Visually inspect every retained or improved model and submodel, both isolated
+and in its actual parent placement. Open rendered images; text and JSON alone
+are insufficient. Use the **global `ldraw-xray` CLI** for submodel/parent
+inspection. Before using it, read the mandatory
+[`../ldraw-xray/README.md`](../ldraw-xray/README.md) and
+[`../ldraw-xray/AGENTS.md`](../ldraw-xray/AGENTS.md), then run `ldraw-xray doctor`.
+Reuse existing images only when their source hashes and selections match;
+render new views for changed geometry or unresolved questions.
+
+Record skipped coverage. Automatic contacts stop above 500 placements; inspect
+modules or request `--contacts all` when needed. A section review excludes
+parent/sibling interactions. BOM agreement, connectivity, rendered poses and
+material clearance are distinct evidence; none alone proves strength or motion.
+Mount flex endpoints first, synthesize early and inspect the actual output.
+Example bend limits are not universal material limits.
+
+## Change the tooling or knowledge base
+
+For code changes, work in `ldraw_tools/` and use the related tests in `tests/`.
+Run affected tests with `.venv/bin/python -m pytest tests/test_<area>.py -q`;
+use `.venv/bin/python -m pytest -q` for broad changes. `./setup.sh` installs test
+dependencies; flex tests also need `--with-lsynth`. Keep CLI help and the relevant
+`docs/agent/` contract aligned with behavior. Model generation is validated by
+its own review artifacts, not by rerunning the entire software test suite.
+
+For KB changes, package READMEs own `ldraw-knowledge` registrations. Edit those
+owners and regenerate compatibility catalogs using each atlas README's command.
+Keep scopes, aliases, source attribution and source/BOM/visual freshness gates.
+New or changed geometry needs matching visual evidence before admission.
+`docs/reports/` contains historical findings; `data/` and `lsynth-examples/`
+contain source research, not automatically admitted construction lessons.
+Preserve the planning baseline in `docs/plans/knowledge-base-overhaul/snapshot/`;
+record subsequent decisions in the implementation record instead.

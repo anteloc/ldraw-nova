@@ -18,9 +18,11 @@ Open the PNGs in `output/bridge-review/previews/`. The same folder contains the 
 
 ## Build your own model
 
-Give an agent your model idea and [instructions.md](instructions.md). Follow one sequence:
+Start an agent in this repository and give it your model idea. Agents supporting
+the `AGENTS.md` convention load the [repository guidance](AGENTS.md) automatically;
+other clients can read that file directly. Follow one sequence:
 
-1. **Choose a starter** matching the subject; [workshop examples](examples/workshop/README.md) include a frame, retained drive, pneumatic station and complete machine.
+1. **Retrieve relevant lessons** with `./ldraw-agent knowledge search 'construction role'`; choose references that fit the brief and their documented limits.
 2. **Assemble supports** in an ordinary [JSON plan](docs/agent/reference/plans.md), keeping required joints beside the geometry.
 3. **Route services** between named fittings or mounted wheels.
 4. **Add bodywork** on actual attachment points.
@@ -50,15 +52,15 @@ Existing plans, numeric external contracts, `.ldr` flex sources, prebuilt assets
 
 | Need | Read |
 |---|---|
-| Agent workflow and subject-specific guides | [Instructions](instructions.md) |
+| Agent workflow and task-specific guidance | [AGENTS.md](AGENTS.md) |
 | Plan format, placements and Python API | [Plan guide](docs/agent/reference/plans.md) |
 | Commands, review options and artifacts | [Tool reference](docs/agent/reference/cli.md) |
 | Geometry checks and limitations | [Validation](docs/agent/reference/validation.md) |
 | Flexible hoses, cables, bands, chains and treads | [Constraint authoring and repair](docs/agent/guides/flex.md), [LSynth integration](docs/agent/reference/flex.md), [examples](examples/flex/README.md) |
-| Technic supports, equipment and industrial assemblies | [Design guide](docs/agent/guides/technic.md), [annotated construction studies](lsynth-examples/README.md) |
+| Technic supports, equipment and industrial assemblies | [Design guide](docs/agent/guides/technic.md), [curated examples](examples/README.md) |
 | Advanced mechanisms and animation | [Constraint workflow](docs/agent/guides/mechanisms.md), [gear-drive starter](examples/gear-drive/README.md), [mechanical parts catalog](docs/agent/reference/technic.md) |
-| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/guides/snot.md), [parrot core](examples/parrot/README.md), [cat details and joints](examples/cat/README.md), [Halcyon original interceptor](examples/halcyon/README.md), [SNOT submodels from real sets](examples/submodel-atlas/README.md#pick-an-entry-by-technique) |
-| Spaceships: SNOT by default | [Halcyon default model](examples/halcyon/README.md), [spaceship guide](docs/agent/guides/design-models.md) |
+| Studs Not On Top (SNOT) construction | [SNOT guide](docs/agent/guides/snot.md), [parrot core](examples/parrot/README.md), [cat details and joints](examples/cat/README.md), [submodel lessons](examples/submodel-atlas/README.md) |
+| Spaceships: construction chosen for the brief | [Subject design guide](docs/agent/guides/design-models.md), [scoped spaceship lessons](examples/spaceship-atlas/README.md) |
 | Reusable constructions and model examples | [Reference atlas](examples/reference-atlas/README.md), [submodel atlas](examples/submodel-atlas/README.md), `./ldraw-agent examples --help` |
 | Visual inspection of source submodels | [Submodel inspection with ldraw-xray](docs/agent/guides/review-models.md), [submodel atlas](examples/submodel-atlas/README.md) |
 

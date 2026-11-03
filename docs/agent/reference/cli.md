@@ -1,6 +1,6 @@
 # CLI and output contracts
 
-For the normal modeling loop, follow [instructions.md](../../../instructions.md). Use `build` for fast iteration and `review` for the combined automatic checks and previews. Every existing command remains available.
+For the normal modeling loop, follow [AGENTS.md](../../../AGENTS.md). Use `build` for fast iteration and `review` for the combined automatic checks and previews. Every existing command remains available.
 
 ## Setup
 

@@ -2,7 +2,10 @@
 
 From the **LDraw language specification**, located at `docs/ldraw-specs.pdf`, create the required python tooling and resources like e.g. **agentic** reference docs, required for an agent to **generate geometrically, sintactically and semantically correct LDraw models**, expressed as `.mpd` source files.
 
-At the end, rewrite the `./instructions.md`, in order to become a **high-quality prompt** for other agents, even low-end ones, to be instructed into how to generate **new LDraw models** by means of the mentioned **tooling and reference docs**.
+Maintain the root [AGENTS.md](../AGENTS.md) as the concise entry point for agents,
+including lower-capability ones, to generate **new LDraw models** with the tooling
+and reference docs. Put detailed, task-specific guidance in `docs/agent/` and link
+it from that entry point. `instructions.md` is a compatibility pointer only.
 
 ## Resources
 

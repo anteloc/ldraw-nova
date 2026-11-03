@@ -72,7 +72,7 @@ def flex_settings(args):
 def parser():
     p = argparse.ArgumentParser(
         description="Build and review LDraw assemblies. Reports are JSON.",
-        epilog="Start: build MODEL.plan.json, then review MODEL.mpd. Or review MODEL.plan.json in one command. See instructions.md.")
+        epilog="Start: build MODEL.plan.json, then review MODEL.mpd. Or review MODEL.plan.json in one command. See AGENTS.md.")
     p.add_argument("--library", help="LDraw parts library root (default LDRAW_DIR, then LDRAWDIR)")
     shadows = p.add_mutually_exclusive_group()
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
