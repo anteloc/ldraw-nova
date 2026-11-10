@@ -1,6 +1,8 @@
 # Design recognizable, varied models
 
-Start from the requested subject and intended viewing scale. State its distinguishing silhouette, major masses, required functions, palette roles and primary detail. Resolve those choices before adding repeated surface decoration. Part count is not quality. Choose System, SNOT, Technic and flexible techniques by the required form and interface; no subject has a mandatory template.
+Start from the requested subject and intended viewing scale. State its distinguishing silhouette, major masses, required functions, palette roles and primary detail. Resolve those choices before adding repeated surface decoration. Part count is not quality.
+
+Default to [SNOT (Studs Not On Top)](snot.md) construction for new models, planning the core and visible surfaces around inspected sideways connections. Combine conventional studs-up System, Technic and flexible techniques where the required form, structure or function needs them. Follow an explicit user construction preference when supplied. This default does not prescribe a subject's silhouette or a fixed template.
 
 Search roles, compare different constructions and inspect actual part dimensions. Use one example for a specific lesson; do not inherit its complete proportions or part palette. Dedicated parts are useful when they fit the brief, and brick-built alternatives are useful when they do not. Review shape, support and interfaces together.
 

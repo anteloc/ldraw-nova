@@ -12,6 +12,14 @@ dimensions, palette and construction details from the user's brief; resolve
 ordinary design choices yourself. Use this loop: **brief → retrieve → build →
 inspect → repair → deliver**.
 
+Default to **SNOT (Studs Not On Top)** construction for new models. Read the
+[SNOT guide](docs/agent/guides/snot.md) and retrieve relevant SNOT connections
+before planning the core and visible surfaces. Use inspected side-stud bricks,
+brackets or other mating interfaces to support sideways assemblies. Combine
+conventional studs-up System, Technic or flexible techniques where the brief,
+structure or function needs them. An explicit user construction preference
+overrides this default.
+
 1. Establish the subject, silhouette, scale, required features and poses. Run
    `./ldraw-agent doctor`. If setup is needed, run `./setup.sh`, or
    `./setup.sh --with-lsynth` for flexible parts. Setup needs Python 3.12+,
@@ -34,8 +42,8 @@ inspect → repair → deliver**.
 3. Author a [JSON plan](docs/agent/reference/plans.md) with named placements.
    Keep repairs in the plan or generator. Inspect real part origins and mating
    interfaces with `part` and `connectors`; names and bounding boxes do not prove
-   fit. Build supports and attachments before skins or flexible routes. Choose
-   System, SNOT, Technic or a combination to suit the brief; adapt lessons without
+   fit. Build supports and attachments before skins or flexible routes. Use SNOT
+   as the default construction style, with other techniques as needed; adapt lessons without
    copying an example's whole silhouette by default.
 4. Build and review your plan (using `output/my-model/` as an example):
 
