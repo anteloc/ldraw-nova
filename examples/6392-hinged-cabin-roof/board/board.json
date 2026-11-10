@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/6392-hinged-cabin-roof.json",
+      "recipe_sha256": "53720005c5ad7b1889cd5ec1962fee11590d327a36272c6753ba6af4e64388f4",
+      "image": "board/mosaic.png",
+      "image_sha256": "b39dc5253a9231b01fc601881e3332246bde2d4c3d2fd46ed71c8381b115b17d",
+      "title": "6392 Hinged cabin roof of window bricks",
+      "mode": "views",
+      "source": {
+        "model": "6392-1.mpd",
+        "section": "6392 - airplane - subpart.ldr",
+        "sha256": "1d1efecda53a37d4ca23ec28ec737a49fae395b4a0595c9c8f5525c796b363c8",
+        "steps": 3,
+        "parents": {
+          "6392 - airplane.ldr": [
+            "1 16 200 -156 -34.997 -1 0 0 0 1 0 0 0 -1 6392 - airplane - subpart.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent close-up, ghosted: the section highlighted in 6392 - airplane.ldr",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "closeup",
+              "select": "section",
+              "scope": "parent",
+              "view": "home"
+            },
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 1 of 3: the parts added in this step are highlighted",
+          "view": "home",
+          "step": 1,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                1
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 2 of 3: the parts added in this step are highlighted",
+          "view": "home",
+          "step": 2,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                2
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Stud map: synthetic colours by stud direction",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 16
+              },
+              "total": 16
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [
+        {
+          "panels": [
+            2,
+            3
+          ],
+          "difference": 4.0
+        }
+      ],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.5.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.12.12",
+        "leocad": "26.09"
+      },
+      "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/6392-hinged-cabin-roof.json --output output/boards/6392-hinged-cabin-roof"
+    }
+  ]
+}

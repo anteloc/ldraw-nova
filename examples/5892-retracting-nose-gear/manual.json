@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "title": "Retracting nose gear on liftarms, worked by a switch arm in the parent",
+  "scope": "construction-construction-study",
+  "notes_file": "study-notes.json",
+  "image_mode": "steps",
+  "final_images": [
+    "renders/home.png",
+    "board/mosaic.png"
+  ],
+  "source": {
+    "model": "5892-1.mpd",
+    "section": "5892 - Nose gear.ldr",
+    "sha256": "deb0dfcf1657114846d3cb73f93b3fca01f699dfa75e9327279652209fc6b320"
+  },
+  "source_root": "study-ce2a65279ef6-00-5892---Nose-gear.ldr",
+  "preview_colour": 7,
+  "parents": [
+    {
+      "section": "5892 - Airplane.ldr",
+      "description": "Assembled aircraft fuselage with Technic beams, plates, and curved red wedge panels forming the body shell.",
+      "at": [
+        -390.0,
+        -46.0,
+        0.0
+      ],
+      "matrix": [
+        [
+          -0.996195,
+          0.0871557,
+          0.0
+        ],
+        [
+          -0.0871557,
+          -0.996195,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "colour": 16
+    }
+  ],
+  "sections": [
+    {
+      "name": "study-ce2a65279ef6-00-5892---Nose-gear.ldr",
+      "original_name": "5892 - Nose gear.ldr",
+      "description": "Retractable nose landing gear using liftarms, axles, and a small rubber tyre on a grooved wheel rim.",
+      "directory": "manual/00",
+      "steps": [
+        {
+          "number": 1,
+          "added_placements": 12,
+          "parts": [
+            {
+              "ref": "32449.dat",
+              "colour": 72,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Beam  4 x  0.5 Liftarm",
+              "source_section": null
+            },
+            {
+              "ref": "32062.dat",
+              "colour": 4,
+              "quantity": 3,
+              "kind": "part",
+              "description": "Technic Axle  2 Notched",
+              "source_section": null
+            },
+            {
+              "ref": "32140.dat",
+              "colour": 0,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Technic Beam  2 x  4 Liftarm Bent 90",
+              "source_section": null
+            },
+            {
+              "ref": "42610.dat",
+              "colour": 71,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Wheel Rim  8 x 11.2 with Centre Groove",
+              "source_section": null
+            },
+            {
+              "ref": "51011.dat",
+              "colour": 256,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Tyre  6.4/ 75 x  8 Shallow Offset Tread",
+              "source_section": null
+            },
+            {
+              "ref": "41677.dat",
+              "colour": 72,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Beam  2 x  0.5 Liftarm",
+              "source_section": null
+            },
+            {
+              "ref": "43093.dat",
+              "colour": 1,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Technic Axle Pin with Friction",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-001-home.png"
+          }
+        }
+      ]
+    }
+  ],
+  "physical_placements": 12,
+  "views": [
+    "home"
+  ],
+  "rendered": true,
+  "source_checks_passed": true,
+  "bom_matches": true,
+  "physical_validity": "not_proven",
+  "artifact_hashes": {
+    "source.mpd": "ad411b1e25836fe9a698b04cdfa18f452772519cc2fc25b6d3b7c0f74e993c92",
+    "extraction.json": "75ecb2c6d091c345876016e128f281eca16ea3b94d695f3f71e561399d412de8",
+    "source-checks.json": "f2753b98a8f8788c701766e181487d7d2739002df70dd2ef62b3139404388b94",
+    "study-notes.json": "4b34ac03be0d80e2fa8e5b8f99f11c6b94cee06baedb02425c545140280c3736",
+    "bom.json": "fedceaa4349084e98fca178f1b3db65b25e88f0e302bf176cf3fdfcefa1bcdb7",
+    "scene.plan.json": "add081f22094b6abb28c3cb80a348faa27d7f4e101603df46f7ae2521a4253b4",
+    "manual/00/preview.mpd": "e484389a2df42e16935581aeeb96db3369fa173a09e1b71d7421a982cc140671",
+    "manual/00/step-001-home.png": "db94ea9bce66c8b6365b83eb8673a7fcfc38389d1574bd53e8817a070de4053c",
+    "renders/leocad-bom.csv": "540ac3d9f5e3e1acf4d5efc2eadd5a3961a8cddeeadbba265cc84a60fe53da2d",
+    "bom-comparison.json": "629eeb98a2ac8c4ccbd0909eed350b87c7b7ad2ac42001ee50f55636130cf744",
+    "renders/home.png": "eaf5f5d2593d242a1bdedbadeeb1c39ee8720cef46d29b59604dd0b3b1d45c4b",
+    "board/mosaic.png": "1e89b5d9a7b6b4353b6a3b84d3e87fab419befd5f3bb6586d129cfb0aec4c346",
+    "board/board.json": "d5f5aa317d61e4d9440e0c271af360eb8a46a50f38482a078ed05f0cb80f1f19"
+  }
+}

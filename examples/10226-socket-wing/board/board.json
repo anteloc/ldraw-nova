@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/10226-socket-wing.json",
+      "recipe_sha256": "c5e5d2278a3a9d13b4b92dd68ebd6e1746d25e7b388d383c61051b535ec7f603",
+      "image": "board/mosaic.png",
+      "image_sha256": "761633c2dad3f942b4d83138818ee51a52cc73571439d22e3f47fb40856f0bd0",
+      "title": "10226 Planked biplane wing with towball sockets for the struts",
+      "mode": "views",
+      "source": {
+        "model": "10226-1.mpd",
+        "section": "10226 - step53.ldr",
+        "sha256": "2903c00bd3f1e0af46d47af2e09bd8ccb423eced0588947cc0fb9bd14ac20511",
+        "steps": 12,
+        "parents": {
+          "10226 - main.ldr": [
+            "1 0 -170 -212 0 -1 0 0 0 1 0 0 0 -1 10226 - step53.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent close-up, ghosted: the section highlighted in 10226 - main.ldr",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "closeup",
+              "select": "section",
+              "scope": "parent",
+              "view": "home"
+            },
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 4 of 12: the parts added in this step are highlighted",
+          "view": "home",
+          "step": 4,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                4
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 8 of 12: the parts added in this step are highlighted",
+          "view": "home",
+          "step": 8,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                8
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Stud map: synthetic colours by stud direction",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 106,
+                "-z": 16,
+                "angled": 2,
+                "+z": 8,
+                "+x": 4
+              },
+              "total": 136
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.5.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.12.12",
+        "leocad": "26.09"
+      },
+      "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/10226-socket-wing.json --output output/boards/10226-socket-wing"
+    }
+  ]
+}

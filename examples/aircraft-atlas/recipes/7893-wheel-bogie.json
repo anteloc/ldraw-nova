@@ -1,0 +1,44 @@
+{
+  "source": "../../../data/models-annotated/7893-1.mpd",
+  "section": "7893 - wheels.ldr",
+  "title": "7893 Two-axle main-gear bogie on wheel plates",
+  "columns": 2,
+  "panels": [
+    {
+      "label": "Parent close-up, ghosted: the section highlighted in 7893 - plane.ldr",
+      "parent": "7893 - plane.ldr",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "closeup",
+          "select": "section",
+          "margin": 1.8
+        },
+        {
+          "layer": "highlight",
+          "select": "section"
+        },
+        {
+          "layer": "ghost"
+        }
+      ]
+    },
+    {
+      "label": "Isolated section from home",
+      "view": "home"
+    },
+    {
+      "label": "Isolated section from the right (looking from -X)",
+      "view": "right"
+    },
+    {
+      "label": "Stud map: synthetic colours by stud direction",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "stud_map"
+        }
+      ]
+    }
+  ]
+}

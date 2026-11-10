@@ -646,6 +646,31 @@ These retired aliases preserve their source paths and retirement reasons for exp
     "plan": "examples/archive/vehicle-atlas/tipper-truck/scene.plan.json",
     "preview": "examples/archive/vehicle-atlas/tipper-truck/home.png",
     "model_sha256": "cae837786e5cb9c0ab4eb554fa1657454cf1b49c740cff569c4a2d4ffbd918f3"
+  },
+  {
+    "id": "archive/vehicle/an225",
+    "title": "An-225: System airframe in a loading pose (removed)",
+    "scope": "archive",
+    "kind": "assembly",
+    "aliases": [
+      "replacement:an225",
+      "vehicle:an225"
+    ],
+    "families": [
+      "vehicle",
+      "aircraft"
+    ],
+    "legacy_groups": [
+      "examples"
+    ],
+    "lesson": "Removed on 2026-11-10 as a poor aircraft precedent: flat single-layer plate wing, stepped box belly and nose, blunt tail, box visor, no cockpit interior and no retraction. Its generator, plan, model and evidence were deleted from examples/an225; the historical promotion record stays in docs/plans/knowledge-base-overhaul/. Use the aircraft guide and the aircraft atlas packages instead.",
+    "techniques": [
+      "system"
+    ],
+    "subjects": [
+      "vehicle",
+      "aircraft"
+    ]
   }
 ]
 ```

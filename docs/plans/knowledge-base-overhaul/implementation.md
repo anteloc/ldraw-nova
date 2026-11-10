@@ -93,3 +93,7 @@ planning snapshot and trial artifacts remain preserved.
 This overhaul stage is closed with the user's acceptance of the limited trial.
 Conditional holds and the follow-up items above remain explicit; test and export
 success alone do not demonstrate better generated models.
+
+## 2026-11-10: aircraft knowledge and An-225 removal
+
+The promoted An-225 package was deleted from `examples/an225` because its construction (flat plate wing, stepped box belly and nose, blunt tail, box visor) made it a poor aircraft precedent for generation. A retirement tombstone with the old `replacement:an225` alias lives in `examples/archive/README.md`; `promotion-checks.json`, `implementation-checks.json` and the snapshot keep their historical An-225 records unchanged. `courier-jet` moved to archive scope for the same reason; its vehicle recipe and checks are unchanged. Aircraft lessons now come from the `aircraft` family (see `examples/aircraft-atlas/README.md`) and `docs/agent/guides/aircraft.md`.

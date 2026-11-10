@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "title": "Openable cabin roof: hinged double-slope bricks on a window wall",
+  "scope": "construction-construction-study",
+  "notes_file": "study-notes.json",
+  "image_mode": "steps",
+  "final_images": [
+    "renders/home.png",
+    "board/mosaic.png"
+  ],
+  "source": {
+    "model": "6392-1.mpd",
+    "section": "6392 - airplane - subpart.ldr",
+    "sha256": "1d1efecda53a37d4ca23ec28ec737a49fae395b4a0595c9c8f5525c796b363c8"
+  },
+  "source_root": "study-c6e61bfde824-00-6392---airplane---subpart.ldr",
+  "preview_colour": 7,
+  "parents": [
+    {
+      "section": "6392 - airplane.ldr",
+      "description": "Passenger airplane built with large wings, wedge plates, inverted slopes, and cockpit panels.",
+      "at": [
+        200.0,
+        -156.0,
+        -34.997
+      ],
+      "matrix": [
+        [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      ],
+      "colour": 16
+    }
+  ],
+  "sections": [
+    {
+      "name": "study-c6e61bfde824-00-6392---airplane---subpart.ldr",
+      "original_name": "6392 - airplane - subpart.ldr",
+      "description": "Airplane subassembly featuring cockpit windows, transparent glass panes, and hinged slope sections.",
+      "directory": "manual/00",
+      "steps": [
+        {
+          "number": 1,
+          "added_placements": 9,
+          "parts": [
+            {
+              "ref": "4863.dat",
+              "colour": 16,
+              "quantity": 3,
+              "kind": "part",
+              "description": "Window  1 x  4 x  2 Plane",
+              "source_section": null
+            },
+            {
+              "ref": "4862.dat",
+              "colour": 43,
+              "quantity": 6,
+              "kind": "part",
+              "description": "Glass for Window  1 x  2 x  2 Plane",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-001-home.png"
+          }
+        },
+        {
+          "number": 2,
+          "added_placements": 3,
+          "parts": [
+            {
+              "ref": "3024.dat",
+              "colour": 15,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Plate  1 x  1",
+              "source_section": null
+            },
+            {
+              "ref": "3460.dat",
+              "colour": 15,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Plate  1 x  8",
+              "source_section": null
+            },
+            {
+              "ref": "3666.dat",
+              "colour": 15,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Plate  1 x  6",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-002-home.png"
+          }
+        },
+        {
+          "number": 3,
+          "added_placements": 4,
+          "parts": [
+            {
+              "ref": "4857.dat",
+              "colour": 15,
+              "quantity": 4,
+              "kind": "part",
+              "description": "Slope Brick 45  4 x  4 Double with Hinge",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-003-home.png"
+          }
+        }
+      ]
+    }
+  ],
+  "physical_placements": 16,
+  "views": [
+    "home"
+  ],
+  "rendered": true,
+  "source_checks_passed": true,
+  "bom_matches": true,
+  "physical_validity": "not_proven",
+  "artifact_hashes": {
+    "source.mpd": "1c4811a801505829f1188e04fa4c7548569da0d75892ec555aad95272f39c87d",
+    "extraction.json": "336ae49ff77d7ca43fcdaa6a2000eed19c6b4bf019c10906b5f71bad493aca40",
+    "source-checks.json": "81e20d3bdcf2fb1b39cadcbd73bd980a9fc3d25e7f026a9ecf5c49e217dca055",
+    "study-notes.json": "90885415a4a3afe7bfefa5e98b90a56239815f53b03ef9bb39ac1231e7097098",
+    "bom.json": "a94e2c7edf89c8d6aa14eadd25a7e726acbc5b2f1bcae93400ca78a43dba1144",
+    "scene.plan.json": "e6c398d4f1211d462f1d4034044d1d84b6a763318aa73a36ebf3311ed966d9f8",
+    "manual/00/preview.mpd": "635b322500ac379889efb327e4ab0968c6d849856619f9d850261ab9b5462469",
+    "manual/00/step-001-home.png": "f746fdde8eddec329fdc0774b8020a53a133d656ff7243752fd9c81bf6fbada8",
+    "manual/00/step-002-home.png": "500868d9ae226e5faa59d200f803c34a0508b557208a0e218bc16a322d197063",
+    "manual/00/step-003-home.png": "14200267b20f0da55336e13185b9bd83bd4d9475e3155607bb54ff177d418610",
+    "renders/leocad-bom.csv": "d8a3e66334920b1c0fa4b0f388006cd5a13fb317883cbfd0b2f0818734c78d03",
+    "bom-comparison.json": "3f6a25d76206ffa16741d9e070181030bc9d7659443a0d281fca1b948b113a49",
+    "renders/home.png": "7ef750d75d296c93f148f78a2ee3d29c238e0727a17e97d28763d1d418b9225b",
+    "board/mosaic.png": "b39dc5253a9231b01fc601881e3332246bde2d4c3d2fd46ed71c8381b115b17d",
+    "board/board.json": "cecf5a95a27b25e62b78ebdd5668db4474a63c3d6681ec28d452275c94cfef12"
+  }
+}

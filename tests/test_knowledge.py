@@ -142,12 +142,14 @@ def test_promoted_sources_and_relocated_geometry_match_preserved_hashes():
     for row in manifest['files']:
         if Path(row['path']).suffix.lower() in {'.mpd', '.ldr', '.dat', '.png', '.jpg'}:
             assert hashlib.sha256((root/row['path']).read_bytes()).hexdigest() == row['sha256'], row['path']
-    for name in ['boombox','an225']:
-        row = resolve(name,root=root)
-        assert row['scope'] == 'construction'
-        evidence = json.loads(Path(row['visual_review']).read_text())
-        assert row['model_sha256'] == evidence['source_sha256']
-        assert len(evidence['sections']) == (6 if name=='boombox' else 18)
+    row = resolve('boombox',root=root)
+    assert row['scope'] == 'construction'
+    evidence = json.loads(Path(row['visual_review']).read_text())
+    assert row['model_sha256'] == evidence['source_sha256']
+    assert len(evidence['sections']) == 6
+    # The An-225 package was removed on 2026-11-10; only its retirement tombstone remains.
+    tomb = resolve('an225',root=root)
+    assert tomb['scope'] == 'archive' and 'model' not in tomb
 
 
 def test_registered_manual_export_carries_corrected_lesson(tmp_path):

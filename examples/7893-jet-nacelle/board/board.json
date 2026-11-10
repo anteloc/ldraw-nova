@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/7893-jet-nacelle.json",
+      "recipe_sha256": "0384425480482c0fd624f874fbb074f973c42369224c7a2fe3237030609895e7",
+      "image": "board/mosaic.png",
+      "image_sha256": "7ddd3c1bd745e6f7db3977cf978cebedee1265692811661841d5f102e6af3cbc",
+      "title": "7893 Jet nacelle: fan, housing and cone on a thin plate pylon",
+      "mode": "views",
+      "source": {
+        "model": "7893-1.mpd",
+        "section": "7893 - engine.ldr",
+        "sha256": "8d175059a9cf28dcc1097bcff27b170e84b3ffd13b47d46136f44ca1d66876b9",
+        "steps": 2,
+        "parents": {
+          "7893 - plane.ldr": [
+            "1 15 -220 32 -80 1 0 0 0 1 0 0 0 1 7893 - engine.ldr",
+            "1 15 -380 32 0 1 0 0 0 1 0 0 0 1 7893 - engine.ldr",
+            "1 15 220 32 -80 1 0 0 0 1 0 0 0 1 7893 - engine.ldr",
+            "1 15 380 32 0 1 0 0 0 1 0 0 0 1 7893 - engine.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent close-up, ghosted: the section highlighted in 7893 - plane.ldr",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "closeup",
+              "select": "section",
+              "scope": "parent",
+              "view": "home"
+            },
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 4
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Isolated section from home",
+          "view": "home",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Isolated section from the right (looking from -X)",
+          "view": "right",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Stud map: synthetic colours by stud direction",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "-z": 1,
+                "+z": 2,
+                "+x": 4,
+                "up": 5
+              },
+              "total": 12
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.5.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.12.12",
+        "leocad": "26.09"
+      },
+      "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/7893-jet-nacelle.json --output output/boards/7893-jet-nacelle"
+    }
+  ]
+}

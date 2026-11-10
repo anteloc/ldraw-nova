@@ -1,0 +1,44 @@
+{
+  "source": "../../../data/models-annotated/7893-1.mpd",
+  "section": "7893 - plane.ldr",
+  "title": "7893 Passenger airliner from large fuselage sections pinned together",
+  "columns": 3,
+  "panels": [
+    {
+      "label": "Parent 7893 - main.ldr from home, the aircraft section highlighted",
+      "parent": "7893 - main.ldr",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "highlight",
+          "select": "section"
+        }
+      ]
+    },
+    {
+      "label": "Front: span, dihedral and engine spacing",
+      "view": "front"
+    },
+    {
+      "label": "Right side: nose, cabin, wing station and tail arm",
+      "view": "right"
+    },
+    {
+      "label": "Top: wing planform, sweep and tail planform",
+      "view": "top"
+    },
+    {
+      "label": "Bottom: landing gear stance and underside",
+      "view": "bottom"
+    },
+    {
+      "label": "Stud map: synthetic colours by stud direction",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "stud_map"
+        }
+      ]
+    }
+  ]
+}

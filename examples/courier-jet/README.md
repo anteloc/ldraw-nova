@@ -9,7 +9,7 @@ Read the registered construction lesson and its linked audit before adapting the
   {
     "id": "courier-jet",
     "title": "Courier jet",
-    "scope": "construction",
+    "scope": "archive",
     "kind": "assembly",
     "aliases": [
       "vehicle:courier-jet"
@@ -20,7 +20,7 @@ Read the registered construction lesson and its linked audit before adapting the
     "legacy_groups": [
       "examples"
     ],
-    "lesson": "Narrowly as compact aircraft assembled from matched nose/glazing, body panels, wings, tail and underwing engines. Large purpose-made elements dominate the shape; exclude as universal aircraft default. No landing gear is present. Repeated engine child reviewed in both wing placements. Fresh see-through home/top views confirm the enclosed seat, controls and instrument panel; no missing-cockpit defect.",
+    "lesson": "Retired from default retrieval on 2026-11-10 as an aircraft precedent: flat plate wings, a floating T-tail on a thin post, one engine and no landing gear. The vehicle plan recipe courier-jet remains available for the aircraft profile checks only. Narrowly as compact aircraft assembled from matched nose/glazing, body panels, wings, tail and underwing engines. Large purpose-made elements dominate the shape; exclude as universal aircraft default. No landing gear is present. Repeated engine child reviewed in both wing placements. Fresh see-through home/top views confirm the enclosed seat, controls and instrument panel; no missing-cockpit defect.",
     "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/vehicle-audit.json",
     "subjects": [

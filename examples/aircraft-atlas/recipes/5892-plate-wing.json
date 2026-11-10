@@ -1,0 +1,44 @@
+{
+  "source": "../../../data/models-annotated/5892-1.mpd",
+  "section": "5892 - Left wing.ldr",
+  "title": "5892 Studs-up wedge-plate wing on a Technic-brick root",
+  "columns": 2,
+  "panels": [
+    {
+      "label": "Parent close-up, ghosted: the section highlighted in 5892 - Airplane.ldr",
+      "parent": "5892 - Airplane.ldr",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "closeup",
+          "select": "section",
+          "margin": 1.8
+        },
+        {
+          "layer": "highlight",
+          "select": "section"
+        },
+        {
+          "layer": "ghost"
+        }
+      ]
+    },
+    {
+      "label": "Isolated section from home",
+      "view": "home"
+    },
+    {
+      "label": "Isolated section from the right (looking from -X)",
+      "view": "right"
+    },
+    {
+      "label": "Stud map: synthetic colours by stud direction",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "stud_map"
+        }
+      ]
+    }
+  ]
+}

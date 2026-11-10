@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/8855-pontoons.json",
+      "recipe_sha256": "0de44e23488043732e9db726e8eb4e41d0b967b71c1ee097db3f2a98747b408f",
+      "image": "board/mosaic.png",
+      "image_sha256": "cbca5812ebab1fe6affec0a299152087ce53b23e6ef889373d3ad71f2252e205",
+      "title": "8855 Float pontoons on triangle joints",
+      "mode": "views",
+      "source": {
+        "model": "8855-1.mpd",
+        "section": "8855 - Pontoons.ldr",
+        "sha256": "98bb90e07be0a121c13018abd5fc51a2c0a7b1a4a94871b7c4bb92f3a3f04f8f",
+        "steps": 8,
+        "parents": {
+          "8855 - Prop Plane.ldr": [
+            "1 14 0 -0.35 0 1 0 0 0 1 0 0 0 1 8855 - Pontoons.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent close-up, ghosted: the section highlighted in 8855 - Prop Plane.ldr",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "closeup",
+              "select": "section",
+              "scope": "parent",
+              "view": "home"
+            },
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            },
+            {
+              "layer": "ghost"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Source step 3 of 8: the parts added in this step are highlighted",
+          "view": "home",
+          "step": 3,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                3
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Source step 5 of 8: the parts added in this step are highlighted",
+          "view": "home",
+          "step": 5,
+          "layers": [
+            {
+              "layer": "steps",
+              "numbers": [
+                5
+              ]
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Stud map: synthetic colours by stud direction",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 100,
+                "+z": 7,
+                "-x": 4,
+                "angled": 24,
+                "-z": 7,
+                "+x": 4,
+                "down": 7
+              },
+              "total": 153
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.5.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.12.12",
+        "leocad": "26.09"
+      },
+      "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/8855-pontoons.json --output output/boards/8855-pontoons"
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "title": "Two-seat flight deck with instrument slopes",
+  "scope": "construction-construction-study",
+  "notes_file": "study-notes.json",
+  "image_mode": "steps",
+  "final_images": [
+    "renders/home.png",
+    "board/mosaic.png"
+  ],
+  "source": {
+    "model": "7893-1.mpd",
+    "section": "7893 - cabin.ldr",
+    "sha256": "8d175059a9cf28dcc1097bcff27b170e84b3ffd13b47d46136f44ca1d66876b9"
+  },
+  "source_root": "study-a54a3c93c4d0-00-7893---cabin.ldr",
+  "preview_colour": 7,
+  "parents": [
+    {
+      "section": "7893 - plane.ldr",
+      "description": "The main fuselage of a passenger jet built from large curved plane sections, a wide wing, structural bricks, and numerous plates and pins.",
+      "at": [
+        0.0,
+        8.0,
+        -460.0
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "colour": 1
+    }
+  ],
+  "sections": [
+    {
+      "name": "study-a54a3c93c4d0-00-7893---cabin.ldr",
+      "original_name": "7893 - cabin.ldr",
+      "description": "The cockpit interior with two pilot seats, flight control slopes, a radar display, instrument monitor, and console detailing.",
+      "directory": "manual/00",
+      "steps": [
+        {
+          "number": 1,
+          "added_placements": 7,
+          "parts": [
+            {
+              "ref": "3033.dat",
+              "colour": 71,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Plate  6 x 10",
+              "source_section": null
+            },
+            {
+              "ref": "3004.dat",
+              "colour": 4,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Brick  1 x  2",
+              "source_section": null
+            },
+            {
+              "ref": "3009.dat",
+              "colour": 1,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Brick  1 x  6",
+              "source_section": null
+            },
+            {
+              "ref": "30236.dat",
+              "colour": 71,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Brick  1 x  2 with Handle",
+              "source_section": null
+            },
+            {
+              "ref": "3660.dat",
+              "colour": 1,
+              "quantity": 1,
+              "kind": "part",
+              "description": "~Moved to 3660a",
+              "source_section": null
+            },
+            {
+              "ref": "study-a54a3c93c4d0-01-7893---48729a.dat",
+              "colour": 72,
+              "quantity": 2,
+              "kind": "part",
+              "description": "A detailed geometric mesh of cylinders, spheres, claws, and curved surface segments forming a specialized minifig accessory.",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-001-home.png"
+          }
+        },
+        {
+          "number": 2,
+          "added_placements": 15,
+          "parts": [
+            {
+              "ref": "3039pc9.dat",
+              "colour": 15,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Slope Brick 45  2 x  2 with Attitude Indicator and Flight Controls Pattern",
+              "source_section": null
+            },
+            {
+              "ref": "study-a54a3c93c4d0-02-7893---3039pce.dat",
+              "colour": 15,
+              "quantity": 1,
+              "kind": "part",
+              "description": "A patterned slope brick part with printed detail.",
+              "source_section": null
+            },
+            {
+              "ref": "4079.dat",
+              "colour": 4,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Minifig Seat  2 x  2",
+              "source_section": null
+            },
+            {
+              "ref": "2419.dat",
+              "colour": 72,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Plate  3 x  6 without Corners",
+              "source_section": null
+            },
+            {
+              "ref": "3245b.dat",
+              "colour": 15,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Brick  1 x  2 x  2 with Inside Axle Holder",
+              "source_section": null
+            },
+            {
+              "ref": "52107.dat",
+              "colour": 0,
+              "quantity": 2,
+              "kind": "part",
+              "description": "Brick  1 x  2 with Studs on Sides",
+              "source_section": null
+            },
+            {
+              "ref": "2412b.dat",
+              "colour": 15,
+              "quantity": 3,
+              "kind": "part",
+              "description": "Tile  1 x  2 Grille with Groove",
+              "source_section": null
+            },
+            {
+              "ref": "study-a54a3c93c4d0-03-7893---3068bp73.dat",
+              "colour": 15,
+              "quantity": 1,
+              "kind": "part",
+              "description": "A decorated tile featuring an on-off button, screen, and window display pattern.",
+              "source_section": null
+            },
+            {
+              "ref": "3659.dat",
+              "colour": 15,
+              "quantity": 1,
+              "kind": "part",
+              "description": "Arch  1 x  4",
+              "source_section": null
+            }
+          ],
+          "images": {
+            "home": "manual/00/step-002-home.png"
+          }
+        }
+      ]
+    }
+  ],
+  "physical_placements": 22,
+  "views": [
+    "home"
+  ],
+  "rendered": true,
+  "source_checks_passed": true,
+  "bom_matches": true,
+  "physical_validity": "not_proven",
+  "artifact_hashes": {
+    "source.mpd": "dcfdcd484eb9abe5ff36ca82f65b21deeeffa4a1e5b0c0100aa4e594c89f0438",
+    "extraction.json": "9268f55f07430046d3498ebc2ba0f8e15425969b4a0328d425ff3b8c93462650",
+    "source-checks.json": "c364f976fb3c5d553d304e7115f854c29caa7a0970a9d606f5cedcdb07e76493",
+    "study-notes.json": "7a9ba39db286e9f03b7202c9010e450b866943cb3fb8f37d2fe771c0a3d99312",
+    "bom.json": "7219897fdb429c767f91f7c51f4f912c6e223764eb41217caacaa3aed9b8369e",
+    "scene.plan.json": "44550f2d1214c621942ad18221c71fb8b155f6fcabbbe7b64f3880a0d4c52b74",
+    "manual/00/preview.mpd": "530a7c66140ced88a3ea683df9955b94a1badca076315ba401017fdd182ef7af",
+    "manual/00/step-001-home.png": "ca8275d1e3de98020e76ffa741d984be800591f4284a64e8b7a43a5327ecb524",
+    "manual/00/step-002-home.png": "cdc8e7d1b5e6c592aab059c5af259487d695ac3e30b5c915bd50b243205dc0b9",
+    "renders/leocad-bom.csv": "2919733723515b48a07ff6b2e8f782d07ce1a2081cb4344d6b9c3579b9038d20",
+    "bom-comparison.json": "c54403c752f5e3d036785196460232274aceb1e548da57eb9f129edc5cb64851",
+    "renders/home.png": "fe6827804b41548ad9d0baf9899a7eb8e56bb556342b26fd3662773c7ba99f55",
+    "board/mosaic.png": "490a0c07d3bf3584aeb74a4c05d8eca58eddcb8ca2ffbd25996d6a817ed0bdf6",
+    "board/board.json": "10ece36d39a582ebdd702eff6842556832fea74c43d6207b6080dc275de6743b"
+  }
+}

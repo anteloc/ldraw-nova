@@ -1,0 +1,60 @@
+{
+  "source": "../../../data/models-annotated/7893-1.mpd",
+  "section": "7893 - stairs.ldr",
+  "title": "7893 Rolling boarding stairs",
+  "columns": 2,
+  "panels": [
+    {
+      "label": "Parent close-up, ghosted: the section highlighted in 7893 - main.ldr",
+      "parent": "7893 - main.ldr",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "closeup",
+          "select": "section",
+          "margin": 1.8
+        },
+        {
+          "layer": "highlight",
+          "select": "section"
+        },
+        {
+          "layer": "ghost"
+        }
+      ]
+    },
+    {
+      "label": "Source step 1 of 3: the parts added in this step are highlighted",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Source step 2 of 3: the parts added in this step are highlighted",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "steps",
+          "numbers": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Stud map: synthetic colours by stud direction",
+      "view": "home",
+      "layers": [
+        {
+          "layer": "stud_map"
+        }
+      ]
+    }
+  ]
+}
