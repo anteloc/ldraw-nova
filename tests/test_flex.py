@@ -14,13 +14,13 @@ from ldraw_tools.validation import validate_file
 
 @pytest.fixture
 def cfg():
-    pytest.importorskip("lsynth_nova", reason="Optional LSynth integration: ./setup.sh --with-lsynth")
+    pytest.importorskip("lsynth_nova", reason="Install LSynth: ./setup.sh")
     return flex.engine()[0]
 
 
-def test_missing_optional_dependency_is_actionable(monkeypatch):
+def test_missing_dependency_is_actionable(monkeypatch):
     monkeypatch.setattr(flex, "availability", lambda: {"available": False})
-    with pytest.raises(ValueError, match="setup.sh --with-lsynth"):
+    with pytest.raises(ValueError, match="setup.sh"):
         flex.definitions()
 
 

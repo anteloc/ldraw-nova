@@ -1,0 +1,733 @@
+<!doctype html>
+<!--
+  LDraw 3D viewer: buildinginstructions.js ("ldbi", Lasse Deleuran, Unlicense) with
+  library.ldraw.org's LDrawOrg.Model scene (ldraw-org/ldraworg-library, MIT), both
+  fetched by setup.sh into bin/ldbi-viewer/ (served as /vendor/) at a pinned commit.
+  Parts come from this project's LDraw library, data/ldraw (served as /ldraw/ and /ldraw-id/).
+
+  Copied from ldraw-nova-docker's web/viewer/viewer.html and trimmed for the model
+  selector (model-selector/serve.py): no GLB loading, .glb download or animation
+  playback; adds "Copy prompt" ("Use the following model as a construction reference: <path in this repository>").
+
+  Usage: /viewer.html?model=<url of an .ldr/.mpd>&path=<repo-relative path>[&parts=<count>]
+  (`parts` shows a known part count; otherwise the viewer counts them.)
+
+  Rendering: Normal (ldbi's outlined look), High (PBR, the default), Poly (wireframe).
+  Camera: Inspect (orbit, pan, zoom, also into the model) or Walk (first person),
+  the same two modes as the 3D player (player.html).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LDraw Viewer</title>
+<style>
+  :root {
+    --bg: #f2f2f2; --bar: rgba(255,255,255,.92); --fg: #1d1d1f; --muted: #6b6b70;
+    --btn: #fff; --btn-border: #d4d4d8; --btn-active: #1d1d1f; --btn-active-fg: #fff; --danger: #b42318;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bar: rgba(28,28,30,.92); --fg: #f4f4f5; --muted: #a1a1aa;
+      --btn: #2c2c2e; --btn-border: #3f3f46; --btn-active: #f4f4f5; --btn-active-fg: #18181b; --danger: #f97066;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bar: rgba(28,28,30,.92); --fg: #f4f4f5; --muted: #a1a1aa;
+    --btn: #2c2c2e; --btn-border: #3f3f46; --btn-active: #f4f4f5; --btn-active-fg: #18181b; --danger: #f97066;
+  }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg);
+               font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  #stage { position: fixed; inset: 0; }
+  #ldbi-canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+  #bar { position: fixed; top: 0; left: 0; right: 0; display: flex; flex-wrap: wrap; gap: 8px;
+         align-items: center; padding: 8px 12px; background: var(--bar); backdrop-filter: blur(6px);
+         border-bottom: 1px solid var(--btn-border); z-index: 2; }
+  #title { margin-right: auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+  #title strong { font-weight: 600; }
+  #parts { color: var(--muted); }
+  button, a.btn { font: inherit; color: var(--fg); background: var(--btn); border: 1px solid var(--btn-border);
+                  border-radius: 6px; padding: 4px 10px; cursor: pointer; text-decoration: none; }
+  button:disabled { opacity: .5; cursor: default; }
+  .segmented { display: inline-flex; }
+  .segmented button { border-radius: 0; }
+  .segmented button:first-child { border-radius: 6px 0 0 6px; }
+  .segmented button:last-child { border-radius: 0 6px 6px 0; }
+  .segmented button + button { border-left: 0; }
+  button.icon { padding: 4px 6px; display: inline-grid; place-items: center; }
+  button.icon svg { width: 17px; height: 17px; fill: currentColor; display: block; }
+  .segmented button[aria-pressed="true"] { background: var(--btn-active); color: var(--btn-active-fg); border-color: var(--btn-active); }
+  #status { position: fixed; left: 12px; bottom: 10px; color: var(--muted); z-index: 2; }
+  #status.error { color: var(--danger); }
+</style>
+</head>
+<body>
+<div id="bar">
+  <span id="title"><strong id="file">LDraw Viewer</strong><span id="parts"></span></span>
+  <span class="segmented" role="group" aria-label="Rendering">
+    <button data-mode="normal" aria-pressed="false" title="Fast outlined rendering">Normal</button>
+    <button data-mode="high" aria-pressed="true" title="Realistic materials, lighting and shadows">High</button>
+    <button data-mode="poly" aria-pressed="false" title="Wireframe: every triangle, flat colours, no lighting or textures">Poly</button>
+  </span>
+  <span class="segmented" role="group" aria-label="Camera">
+    <button data-camera="inspect" aria-pressed="true" title="Orbit, pan and zoom, also into the model">Inspect</button>
+    <button data-camera="walk" aria-pressed="false" title="First person: mouse to look, W A S D to move">Walk</button>
+  </span>
+  <button id="home" class="icon" title="Reset view" aria-label="Reset view" disabled>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9V5a2 2 0 0 1 2-2h4v2H5v4zm12-6h4a2 2 0 0 1 2 2v4h-2V5h-4zM3 15h2v4h4v2H5a2 2 0 0 1-2-2zm16 0h2v4a2 2 0 0 1-2 2h-4v-2h4zM12 8.5a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"/></svg>
+  </button>
+  <a class="btn" id="download" href="#" download>.mpd</a>
+  <button id="copy-prompt" title="Copy the prompt that animates this model, to paste in the chat">Copy prompt</button>
+</div>
+<div id="stage"><canvas id="ldbi-canvas"></canvas></div>
+<div id="status">Loading…</div>
+
+<script src="/vendor/ldbi/js/three.min.js"></script>
+<script src="/vendor/js/WebGL.js"></script>
+<script src="/vendor/ldbi/js/OrbitControls.js"></script>
+<script src="/vendor/ldbi/js/LDConfig.js"></script>
+<script src="/vendor/ldbi/js/CopyShader.js"></script>
+<script src="/vendor/ldbi/js/Pass.js"></script>
+<script src="/vendor/ldbi/js/OutlinePass.js"></script>
+<script src="/vendor/ldbi/js/ShaderPass.js"></script>
+<script src="/vendor/ldbi/js/RenderPass.js"></script>
+<script src="/vendor/ldbi/js/MaskPass.js"></script>
+<script src="/vendor/ldbi/js/EffectComposer.js"></script>
+<script src="/vendor/js/ldraworgscene.js"></script>
+<script src="/vendor/ldbi/js/ClientStorage.js"></script>
+<script src="/vendor/ldbi/js/LDROptions.js"></script>
+<script src="/vendor/ldbi/js/LDRShaders.js"></script>
+<script src="/vendor/ldbi/js/LDRColorMaterials.js"></script>
+<script src="/vendor/ldbi/js/LDRGeometries.js"></script>
+<script src="/vendor/ldbi/js/LDRBFCGeometries.js"></script>
+<script src="/vendor/ldbi/js/LDRMeasurer.js"></script>
+<script src="/vendor/ldbi/js/LDRLoader.js"></script>
+<script src="/vendor/ldbi/js/LDRGenerator.js"></script>
+<script src="/vendor/ldbi/js/LDRStuds.js"></script>
+<script src="/vendor/ldbi/js/VertexNormalsHelper.js"></script>
+<script>
+// `scene` must be a global: LDrawOrg.Model.onLoad() calls scene.render().
+var scene = null;
+
+(function () {
+  const LIB = '/ldraw';
+  const params = new URLSearchParams(location.search);
+  const modelUrl = params.get('model');
+  const knownParts = params.has('parts') ? parseInt(params.get('parts'), 10) : NaN;
+  const theme = params.get('theme');
+  if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+
+  const status = document.getElementById('status');
+  let restingStatus = { text: 'Loading…', isError: false };     // what to show again after a temporary message
+  const setStatus = (text, isError) => { status.textContent = text; status.classList.toggle('error', !!isError); };
+  const HINTS = {
+    inspect: 'Drag to rotate · Shift+drag to pan · Scroll to zoom, and keep scrolling to go inside',
+    walk: 'Click, then move the mouse to look around (Esc frees it) · W A S D to move · E / Q up and down · Shift to run · Scroll to fly',
+  };
+
+  if (!modelUrl) { setStatus('No model given: add ?model=<url of an .ldr/.mpd file>', true); return; }
+  if (!WEBGL.isWebGLAvailable()) { setStatus('WebGL is not available in this browser.', true); return; }
+
+  const fileName = decodeURIComponent(modelUrl.split('/').pop().split('?')[0]);
+  const modelDir = modelUrl.slice(0, modelUrl.lastIndexOf('/') + 1);
+  document.getElementById('file').textContent = fileName;
+  document.title = fileName + ' · LDraw Viewer';
+  const download = document.getElementById('download');
+  download.href = modelUrl;    // same origin: the download attribute saves it
+  download.setAttribute('download', fileName);
+  download.textContent = '.' + (fileName.split('.').pop() || 'mpd').toLowerCase();
+  download.title = 'Download ' + fileName;
+
+  // Where LDRLoader looks for each referenced file. The model itself is loaded by
+  // its URL; everything else comes from the baked-in library: /ldraw-id/<id>
+  // resolves parts/ -> p/ -> models/ server-side, so there's one request per part.
+  const idToUrl = function (id) {
+    if (id === modelUrl) return [modelUrl];
+    if (/\.(ldr|mpd)$/i.test(id)) return [modelDir + id, `/ldraw-id/${id}`];
+    return [`/ldraw-id/${id}`];
+  };
+  const idToTextureUrl = id => `${LIB}/parts/textures/${id.toLowerCase()}`;
+
+  // Upstream bug: LDRLoader.parseColor's unknown-colour warning references
+  // variables (`i`, `part`) that don't exist in that function, so a single
+  // unknown colour code throws and the model never finishes loading. Same
+  // behaviour minus the crash: warn and draw it black.
+  const unknownColours = new Set();
+  const parseColor = THREE.LDRLoader.prototype.parseColor;
+  THREE.LDRLoader.prototype.parseColor = function (colorID) {
+    const direct = colorID.length === 9 && colorID.substring(0, 3) === '0x2';
+    if (!direct && LDR.Colors[colorID] === undefined) {
+      unknownColours.add(colorID);
+      return 0;
+    }
+    return parseColor.call(this, colorID);
+  };
+
+  LDR.Options.bgColor = 0xF2F2F2;
+  LDR.Colors.envMapPrefix = '/vendor/ldbi/textures/cube/';
+  LDR.Colors.textureMaterialPrefix = '/vendor/ldbi/textures/materials/';
+
+  // Normal mode's conditional lines (LDraw type 5) are drawn when the camera
+  // sees both control points on the same side of the line. ldbi compares clip
+  // coordinates, which is only right for an orthographic camera; with ours
+  // (perspective, see "Camera" below) they have to be divided by w first, or
+  // lines flicker in and out close to the camera, e.g. inside a model.
+  const conditionalShader = LDR.Shader.createConditionalVertexShader;
+  LDR.Shader.createConditionalVertexShader = function () {
+    const src = conditionalShader.call(this);
+    const clip = 'vec2 xp1=gl_Position.xy;vec2 d12=vec4(m*vec4(p2,1.0)).yx-xp1.yx;d12.y=-d12.y;vec2 d13=vec4(m*vec4(p3,1.0)).xy-xp1;vec2 d14=vec4(m*vec4(p4,1.0)).xy-xp1;';
+    const ndc = 'vec2 xp1=gl_Position.xy/gl_Position.w;vec4 q2=m*vec4(p2,1.0);vec4 q3=m*vec4(p3,1.0);vec4 q4=m*vec4(p4,1.0);' +
+                'vec2 d12=q2.yx/q2.w-xp1.yx;d12.y=-d12.y;vec2 d13=q3.xy/q3.w-xp1;vec2 d14=q4.xy/q4.w-xp1;';
+    if (src.includes(clip)) LDR.Shader.COND = src.replace(clip, ndc);
+    else if (!src.includes(ndc)) console.warn('ldbi conditional line shader changed; perspective fix not applied');
+    return LDR.Shader.COND || src;
+  };
+
+  // ---------------------------------------------------------------------------
+  // "High" quality. ldbi's own physical mode (Phong materials, an old cube-map
+  // reflection, lights tuned for the flat default mode) looks dull. High uses
+  // the same per-colour meshes, but with:
+  //   * PBR materials per LDraw material type (ABS, transparent, chrome/metal,
+  //     rubber, pearl, glitter/speckle), colours converted to linear space;
+  //   * image-based lighting from a small procedural studio (three.js's
+  //     RoomEnvironment), prefiltered once with PMREM, plus a key light; sRGB
+  //     output with linear tone mapping (filmic/ACES washes out LEGO colours);
+  //   * LDraw's edge lines, faint, merged into a single draw call, so separate
+  //     bricks stay readable (conditional lines are left out: they'd need the
+  //     per-frame silhouette test of ldbi's own line shader);
+  //   * one soft key-light shadow on an invisible ground plane. The shadow map
+  //     is rendered once per build, not per frame: the model and the light
+  //     never move, only the camera does, so orbiting costs no extra passes.
+  // ---------------------------------------------------------------------------
+  const HQ = { env: null, ground: null, edges: null, materials: {}, saved: null };
+  const HQ_LOOK = { exposure: 0.9, key: 1.5, hemisphere: 0.05, environment: 0.6, edgeOpacity: 0.22 };
+
+  // Physical geometries normally come without edge lines; High wants them.
+  const buildPhysicalGeometries = LDR.LDRGeometry.prototype.buildPhysicalGeometries;
+  LDR.LDRGeometry.prototype.buildPhysicalGeometries = function () {
+    return buildPhysicalGeometries.call(this, true);
+  };
+
+  // Port of three.js examples/jsm/environments/RoomEnvironment.js (MIT, three.js authors), for r139 globals.
+  function roomEnvironment() {
+    const room = new THREE.Scene();
+    const box = new THREE.BoxGeometry();
+    box.deleteAttribute('uv');
+    const wall = new THREE.MeshStandardMaterial({ side: THREE.BackSide });
+    const prop = new THREE.MeshStandardMaterial();
+    const light = new THREE.PointLight(0xffffff, 5.0, 28, 2);
+    light.position.set(0.418, 16.199, 0.300);
+    room.add(light);
+    const add = (material, p, s, ry = 0) => {
+      const m = new THREE.Mesh(box, material);
+      m.position.set(...p); m.scale.set(...s); m.rotation.set(0, ry, 0);
+      room.add(m);
+    };
+    const emitter = intensity => { const m = new THREE.MeshBasicMaterial(); m.color.setScalar(intensity); return m; };
+    add(wall, [-0.757, 13.219, 0.717], [31.713, 28.305, 28.591]);
+    add(prop, [-10.906, 2.009, 1.846], [2.328, 7.905, 4.651], -0.195);
+    add(prop, [-5.607, -0.754, -0.758], [1.970, 1.534, 3.955], 0.994);
+    add(prop, [6.167, 0.857, 7.803], [3.927, 6.285, 3.687], 0.561);
+    add(prop, [-2.017, 0.018, 6.124], [2.002, 4.566, 2.064], 0.333);
+    add(prop, [2.291, -0.756, -2.621], [1.546, 1.552, 1.496], -0.286);
+    add(prop, [-2.193, -0.369, -5.547], [3.875, 3.487, 2.986], 0.516);
+    add(emitter(50), [-16.116, 14.37, 8.208], [0.1, 2.428, 2.739]);
+    add(emitter(50), [-16.109, 18.021, -8.207], [0.1, 2.425, 2.751]);
+    add(emitter(17), [14.904, 12.198, -1.832], [0.15, 4.265, 6.331]);
+    add(emitter(43), [-0.462, 8.89, 14.520], [4.38, 5.441, 0.088]);
+    add(emitter(20), [3.235, 11.486, -12.541], [2.5, 2.0, 0.1]);
+    add(emitter(100), [0.0, 20.0, 0.0], [1.0, 0.1, 1.0]);
+    return room;
+  }
+
+  // ldbi calls this for every colour in physical mode, which High and Poly use.
+  LDR.Colors.buildStandardMaterial = function (colorID, texmap) {
+    if (mode === 'poly') return polyMaterial(colorID);
+    const key = String(colorID);
+    if (!texmap && HQ.materials[key]) return HQ.materials[key];
+    const color = LDR.Colors[colorID < 0 ? (-colorID - 1) : colorID] || LDR.Colors[0];
+    const hex = colorID < 0 ? (color.edge !== undefined ? color.edge : 0x333333) : color.value;
+    const p = {
+      color: new THREE.Color(hex).convertSRGBToLinear(), roughness: 0.28, metalness: 0.0,
+      envMapIntensity: HQ_LOOK.environment,
+      polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1,   // keeps edge lines on top
+    };
+    const kind = String(color.material || '').toUpperCase();
+    if (kind === 'CHROME') { p.metalness = 1.0; p.roughness = 0.12; }
+    else if (kind === 'METAL') { p.metalness = 1.0; p.roughness = 0.35; }
+    else if (kind === 'RUBBER') { p.roughness = 0.85; }
+    else if (kind === 'PEARLESCENT') { p.metalness = 0.45; p.roughness = 0.3; }
+    else if (kind.startsWith('MATERIAL ')) { p.metalness = 0.25; p.roughness = 0.35; }   // glitter, speckle
+    if (texmap) {
+      p.color = new THREE.Color(0xffffff);
+      if (texmap !== true) { texmap.encoding = THREE.sRGBEncoding; p.map = texmap; }
+    }
+    const m = new THREE.MeshStandardMaterial(p);
+    if (color.alpha > 0) {                                   // transparent colours
+      m.transparent = true;
+      m.opacity = Math.max(0.4, color.alpha / 255);
+      m.roughness = 0.05;
+      m.depthWrite = false;
+    }
+    if (color.luminance > 0) { m.emissive = p.color.clone(); m.emissiveIntensity = 0.4; }   // glow in the dark
+    if (texmap) { m.transparent = true; m.depthWrite = false; }
+    else HQ.materials[key] = m;
+    return m;
+  };
+
+  function enableHigh() {
+    const r = scene.renderer;
+    const [key, ...otherLights] = scene.directionalLights;
+    if (!HQ.saved) {
+      HQ.saved = {
+        amb: scene.amblight.intensity, hemi: scene.hemisphereLight.intensity,
+        lights: scene.directionalLights.map(l => ({ l, intensity: l.intensity, position: l.position.clone(), castShadow: l.castShadow })),
+      };
+    }
+    r.outputEncoding = THREE.sRGBEncoding;
+    r.toneMapping = THREE.LinearToneMapping;
+    r.toneMappingExposure = HQ_LOOK.exposure;
+    if (!HQ.env) {
+      const pmrem = new THREE.PMREMGenerator(r);
+      HQ.env = pmrem.fromScene(roomEnvironment(), 0.04).texture;
+      pmrem.dispose();
+    }
+    scene.scene.environment = HQ.env;
+    scene.amblight.intensity = 0;
+    scene.hemisphereLight.intensity = HQ_LOOK.hemisphere;
+
+    // Key light: above, front-left of the model, casting the only shadow.
+    const box = new THREE.Box3().setFromObject(scene.baseObject);
+    const center = box.getCenter(new THREE.Vector3());
+    const size = box.getSize(new THREE.Vector3());
+    const diam = Math.max(size.x, size.y, size.z, 10);
+    key.intensity = HQ_LOOK.key;
+    key.position.set(center.x - 0.5 * diam, center.y + 1.5 * diam, center.z + 0.7 * diam);
+    key.target.position.copy(center);
+    key.target.updateMatrixWorld();
+    key.castShadow = true;
+    const cam = key.shadow.camera;
+    cam.left = cam.bottom = -diam; cam.right = cam.top = diam;
+    cam.near = 0.1 * diam; cam.far = 4 * diam;
+    cam.updateProjectionMatrix();
+    key.shadow.mapSize.set(2048, 2048);
+    key.shadow.bias = -0.0004;
+    key.shadow.normalBias = 0.02 * diam / 100;
+    if (key.shadow.map) { key.shadow.map.dispose(); key.shadow.map = null; }    // re-allocate at 2048
+    otherLights.forEach(l => { l.intensity = 0; l.castShadow = false; });
+    scene.pointLights.forEach(l => { l.castShadow = false; });
+
+    // Invisible ground that only shows the shadow.
+    if (!HQ.ground) {
+      HQ.ground = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.ShadowMaterial({ opacity: 0.2 }));
+      HQ.ground.rotation.x = -Math.PI / 2;
+      HQ.ground.receiveShadow = true;
+    }
+    HQ.ground.scale.set(diam * 4, diam * 4, 1);
+    HQ.ground.position.set(center.x, box.min.y - 0.05, center.z);
+    scene.scene.add(HQ.ground);
+    mergeEdges();
+
+    r.shadowMap.enabled = true;
+    r.shadowMap.type = THREE.PCFSoftShadowMap;
+    r.shadowMap.autoUpdate = false;      // static scene: render the shadow map once...
+    r.shadowMap.needsUpdate = true;      // ...on the next frame
+  }
+
+  // ldbi adds one LineSegments per part; merge the plain edge lines into one
+  // faint object (world space: the model never moves) and drop the rest.
+  function mergeEdges() {
+    if (HQ.edges) { scene.scene.remove(HQ.edges); HQ.edges.geometry.dispose(); HQ.edges = null; }
+    scene.baseObject.updateMatrixWorld(true);
+    const chunks = [];
+    let total = 0;
+    for (const { mesh, conditional } of scene.mc.lineMeshes) {
+      if (!conditional) {
+        const g = mesh.geometry.index ? mesh.geometry.toNonIndexed() : mesh.geometry;
+        const pos = g.getAttribute('position');
+        if (pos && pos.itemSize === 3) {
+          const copy = new THREE.BufferAttribute(new Float32Array(pos.array.subarray(0, pos.count * 3)), 3);
+          copy.applyMatrix4(mesh.matrixWorld);
+          chunks.push(copy.array);
+          total += copy.array.length;
+        }
+      }
+      if (mesh.parent) mesh.parent.remove(mesh);
+    }
+    const merged = new Float32Array(total);
+    let offset = 0;
+    for (const a of chunks) { merged.set(a, offset); offset += a.length; }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(merged, 3));
+    HQ.edges = new THREE.LineSegments(geometry, new THREE.LineBasicMaterial({
+      color: 0x000000, transparent: true, opacity: HQ_LOOK.edgeOpacity, depthWrite: false,
+    }));
+    scene.scene.add(HQ.edges);
+  }
+
+  // ---------------------------------------------------------------------------
+  // "Poly": the bare triangles as a wireframe, in flat colours: no lighting,
+  // textures, shadows or LDraw edge lines. Same per-colour meshes as High.
+  // ---------------------------------------------------------------------------
+  const POLY = { materials: {} };
+
+  function polyMaterial(colorID) {
+    const key = String(colorID);
+    if (!POLY.materials[key]) {
+      const color = LDR.Colors[colorID < 0 ? (-colorID - 1) : colorID] || LDR.Colors[0];
+      const c = new THREE.Color(colorID < 0 ? (color.edge !== undefined ? color.edge : 0x333333) : color.value);
+      const hsl = c.getHSL({});
+      if (hsl.l > 0.82) c.setHSL(hsl.h, hsl.s, 0.62);   // white lines would vanish on the light background
+      POLY.materials[key] = new THREE.MeshBasicMaterial({ color: c, wireframe: true });
+    }
+    return POLY.materials[key];
+  }
+
+  function enablePoly() {
+    enableNormal();                                    // plain renderer: no shadows, environment, tone mapping
+    for (const { mesh } of scene.mc.lineMeshes) if (mesh.parent) mesh.parent.remove(mesh);
+  }
+
+  function enableNormal() {
+    const r = scene.renderer;
+    r.outputEncoding = THREE.LinearEncoding;
+    r.toneMapping = THREE.NoToneMapping;
+    r.shadowMap.enabled = false;         // nothing casts shadows in Normal mode
+    scene.scene.environment = null;
+    if (HQ.ground) scene.scene.remove(HQ.ground);
+    if (HQ.edges) { scene.scene.remove(HQ.edges); HQ.edges.geometry.dispose(); HQ.edges = null; }
+    if (HQ.saved) {
+      scene.amblight.intensity = HQ.saved.amb;
+      scene.hemisphereLight.intensity = HQ.saved.hemi;
+      HQ.saved.lights.forEach(({ l, intensity, position, castShadow }) => {
+        l.intensity = intensity; l.position.copy(position); l.castShadow = castShadow;
+      });
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+
+  // ---------------------------------------------------------------------------
+  // Camera. ldbi's scene has an orthographic camera, which can't go inside a
+  // model; this is a perspective one, with two ways to move it (the same as the
+  // 3D player's, see player.html):
+  //   Inspect: drag to orbit, Shift+drag to pan (OrbitControls), scroll to zoom
+  //     towards the pointer. Close to the orbit point, zooming in keeps flying
+  //     forward, through walls: nothing stops the camera.
+  //   Walk: first person. Click and the mouse looks around (pointer lock, Esc
+  //     frees it; dragging works too); W A S D move level, E/Q up/down, Shift
+  //     runs, scroll flies along the pointer.
+  // Distances scale with the model's size (radius of its bounding sphere).
+  // ---------------------------------------------------------------------------
+  const canvas = document.getElementById('ldbi-canvas');
+  const FOV = 45;
+  const FLY_SPEED = 0.2;                 // model radii per unit of zoom
+  const LOOK_PER_PIXEL = 0.0025;
+  const PITCH_LIMIT = Math.PI / 2 - 0.01;
+  const WALK_KEYS = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'KeyE', 'KeyQ', 'ShiftLeft', 'ShiftRight']);
+  const clamp = THREE.MathUtils.clamp;
+  const view = {
+    mode: 'inspect', framed: false, radius: 100, center: new THREE.Vector3(),
+    yaw: 0, pitch: 0, keys: new Set(), walking: false, last: 0, drag: null, walkStart: null,
+  };
+  const minDistance = () => clamp(view.radius * 0.08, 5, 300);
+  const maxDistance = () => Math.max(view.radius * 30, 1000);
+  const walkSpeed = () => clamp(view.radius * 0.25, 40, 600);   // LDraw units per second
+
+  function usePerspective() {
+    const camera = new THREE.PerspectiveCamera(FOV, 1, 1, 100000);
+    scene.orbitControls?.dispose();
+    scene.camera = camera;
+    const controls = new THREE.OrbitControls(camera, scene.renderer.domElement);
+    controls.addEventListener('change', () => scene.render());
+    controls.screenSpacePanning = true;
+    controls.mouseButtons.RIGHT = -1;    // Shift+drag pans (as do Ctrl/Cmd+drag); right-drag does nothing
+    scene.orbitControls = controls;      // (its wheel zoom never sees the wheel: see onWheel)
+
+    scene.render = function () {
+      updateClipPlanes();
+      if (this.composer) this.composer.render();
+      else this.renderer.render(this.scene, this.camera);
+    };
+    // ldbi's onChange sizes an orthographic view; same job for a perspective one.
+    scene.onChange = function () {
+      if (!this.baseObject) return;      // not built yet
+      const w = this.container.clientWidth, h = this.container.clientHeight;
+      this.renderer.setSize(w, h);
+      camera.aspect = w / Math.max(1, h);
+      camera.updateProjectionMatrix();
+      if (!view.framed) { frameModel(); view.framed = true; }
+      if (view.mode === 'inspect') controls.update();
+      if (this.mc) {
+        this.composer = new THREE.EffectComposer(this.renderer);
+        this.composer.addPass(new THREE.RenderPass(this.scene, camera));
+        if (!this.mc.attachGlowPasses(w, h, this.scene, camera, this.composer)) {
+          this.composer.renderTarget1.dispose();
+          this.composer.renderTarget2.dispose();
+          this.composer = null;
+        }
+      }
+      this.render();
+    };
+  }
+
+  function frameModel() {
+    const box = new THREE.Box3().setFromObject(scene.baseObject);
+    if (box.isEmpty()) return;
+    box.getCenter(view.center);
+    view.radius = Math.max(10, box.getSize(new THREE.Vector3()).length() / 2);
+    resetView();
+  }
+
+  // The whole model, from ldbi's usual viewpoint (front right, above).
+  function resetView() {
+    const camera = scene.camera, controls = scene.orbitControls;
+    const halfV = THREE.MathUtils.degToRad(FOV / 2);
+    const half = Math.min(halfV, Math.atan(Math.tan(halfV) * camera.aspect));
+    const distance = view.radius / Math.sin(half) * 1.02;
+    camera.position.copy(view.center).addScaledVector(new THREE.Vector3(1, 0.7, 1).normalize(), distance);
+    controls.target.copy(view.center);
+    camera.lookAt(view.center);
+    if (view.mode === 'walk') { syncLook(); view.walkStart = pose(); }
+    else controls.update();
+    scene.render();
+  }
+
+  function updateClipPlanes() {
+    const camera = scene.camera;
+    const close = view.mode === 'walk' ? minDistance() : camera.position.distanceTo(scene.orbitControls.target);
+    const near = clamp(close * 0.05, 0.5, 10);
+    const far = Math.max(camera.position.distanceTo(view.center) + view.radius * 2, 1000) + near;
+    if (camera.near !== near || camera.far !== far) {
+      camera.near = near; camera.far = far;
+      camera.updateProjectionMatrix();
+    }
+  }
+
+  // World direction through a point of the canvas (CSS pixels).
+  function rayThrough(x, y) {
+    const camera = scene.camera;
+    camera.updateMatrixWorld();
+    const p = new THREE.Vector3(x / canvas.clientWidth * 2 - 1, 1 - y / canvas.clientHeight * 2, 0.5).unproject(camera);
+    return p.sub(camera.position).normalize();
+  }
+
+  // Scales the view about the point under the pointer on the orbit plane (it
+  // stays put on screen); at the minimum distance, or in Walk, flies instead.
+  function zoomAt(factor, x, y) {
+    const camera = scene.camera, target = scene.orbitControls.target;
+    const ray = rayThrough(x, y);
+    const fly = () => {
+      const step = ray.clone().multiplyScalar(view.radius * FLY_SPEED * (1 - factor));
+      camera.position.add(step);
+      target.add(step);
+    };
+    const distance = camera.position.distanceTo(target);
+    if (view.mode === 'walk' || (factor < 1 && distance <= minDistance() * 1.001)) fly();
+    else {
+      const f = clamp(factor, minDistance() / distance, maxDistance() / distance);
+      const forward = target.clone().sub(camera.position).normalize();
+      const anchor = camera.position.clone().addScaledVector(ray, distance / Math.max(1e-3, ray.dot(forward)));
+      target.sub(anchor).multiplyScalar(f).add(anchor);
+      camera.position.sub(anchor).multiplyScalar(f).add(anchor);
+    }
+    if (view.mode === 'inspect') scene.orbitControls.update();
+    scene.render();
+  }
+
+  function onWheel(e) {
+    if (!scene || !view.framed) return;
+    e.preventDefault();
+    e.stopPropagation();                 // OrbitControls' own zoom stops at its target
+    const delta = e.deltaY * (e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? canvas.clientHeight : 1);
+    const factor = Math.exp(clamp(delta, -400, 400) * (e.ctrlKey ? 0.01 : 0.0015));   // ctrlKey: trackpad pinch
+    const rect = canvas.getBoundingClientRect();
+    zoomAt(factor, e.clientX - rect.left, e.clientY - rect.top);
+  }
+  // Capture phase on the stage: runs before OrbitControls' listener on the canvas.
+  document.getElementById('stage').addEventListener('wheel', onWheel, { capture: true, passive: false });
+
+  // --- Walk ---
+  const pose = () => ({ position: scene.camera.position.clone(), quaternion: scene.camera.quaternion.clone() });
+
+  function syncLook() {
+    const e = new THREE.Euler().setFromQuaternion(scene.camera.quaternion, 'YXZ');
+    view.yaw = e.y;
+    view.pitch = e.x;
+  }
+
+  function look(dx, dy) {
+    view.yaw -= dx * LOOK_PER_PIXEL;
+    view.pitch = clamp(view.pitch - dy * LOOK_PER_PIXEL, -PITCH_LIMIT, PITCH_LIMIT);
+    scene.camera.quaternion.setFromEuler(new THREE.Euler(view.pitch, view.yaw, 0, 'YXZ'));
+    scene.render();
+  }
+
+  function walkStep(now) {
+    const k = view.keys, held = code => (k.has(code) ? 1 : 0);
+    const forward = held('KeyW') - held('KeyS'), right = held('KeyD') - held('KeyA'), up = held('KeyE') - held('KeyQ');
+    if (view.mode !== 'walk' || (!forward && !right && !up)) { view.walking = false; return; }
+    const seconds = view.last ? Math.min(0.1, (now - view.last) / 1000) : 0;
+    view.last = now;
+    const run = k.has('ShiftLeft') || k.has('ShiftRight') ? 3 : 1;
+    // Level, whichever way you look; up is up.
+    const move = new THREE.Vector3(-Math.sin(view.yaw), 0, -Math.cos(view.yaw)).multiplyScalar(forward)
+      .add(new THREE.Vector3(Math.cos(view.yaw), 0, -Math.sin(view.yaw)).multiplyScalar(right))
+      .add(new THREE.Vector3(0, up, 0));
+    scene.camera.position.addScaledVector(move.normalize(), walkSpeed() * run * seconds);
+    scene.render();
+    requestAnimationFrame(walkStep);
+  }
+
+  addEventListener('keydown', e => {
+    if (!WALK_KEYS.has(e.code) || e.ctrlKey || e.metaKey || e.altKey) return;
+    view.keys.add(e.code);
+    if (view.mode === 'walk' && !view.walking) { view.walking = true; view.last = 0; requestAnimationFrame(walkStep); }
+  });
+  addEventListener('keyup', e => view.keys.delete(e.code));
+  addEventListener('blur', () => view.keys.clear());   // keys released while the page wasn't looking
+
+  canvas.addEventListener('pointerdown', e => {
+    if (view.mode !== 'walk' || e.button !== 0) return;
+    view.drag = { x: e.clientX, y: e.clientY };
+    if (e.pointerType !== 'mouse') canvas.setPointerCapture(e.pointerId);
+    else if (document.pointerLockElement !== canvas) {
+      const request = canvas.requestPointerLock();       // if refused, dragging still looks around
+      if (request && request.catch) request.catch(() => {});
+    }
+  });
+  canvas.addEventListener('pointermove', e => {
+    if (view.mode !== 'walk') return;
+    if (document.pointerLockElement === canvas) look(e.movementX, e.movementY);
+    else if (view.drag) {
+      look(e.clientX - view.drag.x, e.clientY - view.drag.y);
+      view.drag = { x: e.clientX, y: e.clientY };
+    }
+  });
+  for (const type of ['pointerup', 'pointercancel']) canvas.addEventListener(type, () => { view.drag = null; });
+
+  // Walk starts where the camera is. Back in Inspect, it orbits a point just
+  // ahead of where you walked to, or the same point as before if you didn't move.
+  function setCameraMode(next) {
+    if (next === view.mode || !scene || !view.framed) return;
+    const camera = scene.camera, controls = scene.orbitControls;
+    if (next === 'walk') {
+      controls.enabled = false;
+      syncLook();
+      view.walkStart = pose();
+    } else {
+      if (document.pointerLockElement === canvas) document.exitPointerLock();
+      view.keys.clear();
+      const start = view.walkStart;
+      if (!start || !camera.position.equals(start.position) || !camera.quaternion.equals(start.quaternion)) {
+        const ahead = camera.getWorldDirection(new THREE.Vector3());
+        controls.target.copy(camera.position).addScaledVector(ahead, minDistance());
+      }
+      controls.enabled = true;
+    }
+    view.mode = next;
+    if (next === 'inspect') controls.update();
+    cameraButtons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.camera === next)));
+    showRestingStatus();
+    scene.render();
+  }
+
+  // ---------------------------------------------------------------------------
+
+  let mode = 'high';
+  let loaded = 0;
+  const missing = new Set();
+  let problems = [];
+  const modeButtons = document.querySelectorAll('button[data-mode]');
+  const cameraButtons = document.querySelectorAll('button[data-camera]');
+  const homeButton = document.getElementById('home');
+
+  function showPartCount() {
+    let n = knownParts;
+    if (!(n >= 0)) {
+      try { n = scene.loader.getMainModel().countParts(scene.loader); } catch (e) { return; }
+    }
+    document.getElementById('parts').textContent = `, ${n.toLocaleString()} part${n === 1 ? '' : 's'}`;
+  }
+
+  function showRestingStatus() {
+    restingStatus = { text: problems.length ? problems.join(' · ') : HINTS[view.mode], isError: problems.length > 0 };
+    setStatus(restingStatus.text, restingStatus.isError);
+  }
+
+  function onBuilt() {
+    ({ high: enableHigh, normal: enableNormal, poly: enablePoly })[mode]();
+    scene.render();
+    showPartCount();
+    [...modeButtons, ...cameraButtons, homeButton].forEach(b => { b.disabled = false; });
+    problems = [];
+    if (missing.size) problems.push(`${missing.size} part(s) not found, shown as boxes: ${[...missing].slice(0, 5).join(', ')}`);
+    if (unknownColours.size) problems.push(`unknown colour code(s) shown black: ${[...unknownColours].join(', ')}`);
+    showRestingStatus();
+  }
+
+  const BUILDING = { normal: 'Building normal view…', high: 'Building high-quality view…', poly: 'Building polygon view…' };
+
+  function setMode(next) {
+    if (next === mode || !scene) return;
+    mode = next;
+    modeButtons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
+    modeButtons.forEach(b => { b.disabled = true; });
+    setStatus(BUILDING[mode]);
+    // Let the status paint before the (synchronous) rebuild. Physical rendering
+    // (High, Poly): age 1 = physical materials without ldbi's "aged plastic" yellowing.
+    setTimeout(() => scene.setPhysicalRenderingAge(mode === 'normal' ? 0 : 1), 30);
+  }
+  modeButtons.forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
+  cameraButtons.forEach(b => b.addEventListener('click', () => { setCameraMode(b.dataset.camera); b.blur(); }));
+  homeButton.addEventListener('click', () => {
+    if (view.framed) resetView();
+  });
+
+  // Copy prompt: what to paste in the chat to animate this model (its path in this repository).
+  const modelPrompt = `Use the following model as a construction reference: ${params.get('path') || fileName}`;
+  const copyButton = document.getElementById('copy-prompt');
+  copyButton.title = `Copy “${modelPrompt}”, to paste in the chat`;
+  // Inside the model selector, its page shows the message (a toast); alone, the status line does.
+  const tell = (text, isError) => {
+    if (window.parent !== window) { window.parent.postMessage({ toast: text, error: isError }, location.origin); return; }
+    setStatus(text, isError);
+    setTimeout(() => setStatus(restingStatus.text, restingStatus.isError), 2000);
+  };
+  copyButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(modelPrompt);
+      tell('Prompt copied to clipboard', false);
+    } catch (e) {
+      tell('Could not copy the prompt: ' + e.message, true);
+    }
+  });
+  [...modeButtons, ...cameraButtons, homeButton].forEach(b => { b.disabled = true; });
+
+  addEventListener('pagehide', event => { if (!event.persisted) scene?.dispose?.(); });
+
+  function loadLDraw() {
+    LDR.Colors.load(() => {
+      scene = new LDrawOrg.Model(canvas, modelUrl, {
+        idToUrl, idToTextureUrl,
+        onProgress: () => { loaded++; if (loaded % 25 === 0) setStatus(`Loading parts… ${loaded}`); },
+        onLoaded: onBuilt,
+        physicalRenderingAge: 1,           // High is the default
+      });
+      scene.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      scene.renderer.shadowMap.enabled = false;
+      usePerspective();
+      scene.loader.onError = e => {
+        if (e && e.subModel) missing.add(e.subModel);
+        if (e && e.subModel === modelUrl) setStatus(`Could not load ${fileName}`, true);
+      };
+      scene.loader.onWarning = () => {};
+      addEventListener('resize', () => scene.onChange());
+    }, () => setStatus('Could not load LDConfig.ldr (colour definitions).', true), `${LIB}/LDConfig.ldr`);
+  }
+
+  loadLDraw();
+})();
+</script>
+</body>
+</html>

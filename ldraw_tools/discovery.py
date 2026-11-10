@@ -14,7 +14,7 @@ from collections import Counter
 from pathlib import Path, PureWindowsPath
 from tempfile import NamedTemporaryFile
 
-from .common import CACHE, atomic_write, database_path, dumps, jsonable, models_path, normalized
+from .common import CACHE, tool_path, atomic_write, database_path, dumps, jsonable, models_path, normalized
 from .document import dependency_closure, is_part, parse_source, physical_context, resolve_section, section_table
 from .resources import model_sections
 
@@ -284,7 +284,7 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
                 temp.replace(snapshot)
             finally:
                 temp.unlink(missing_ok=True)
-        command = ['jev-rerank','--db',str(snapshot),'--table-field','candidates.full_description',
+        command = [tool_path('jev-rerank') or 'jev-rerank','--db',str(snapshot),'--table-field','candidates.full_description',
                    '--query',json.dumps(dict(query=query,yes=yes,no=no)) if yes is not None else query,
                    '--top',str(pool),'--candidates',str(candidates),'--model','jev-1.13.0','--json','--show']
         result = subprocess.run(command, capture_output=True, text=True, timeout=timeout)

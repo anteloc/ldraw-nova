@@ -162,8 +162,9 @@ def test_jev_results_map_stable_keys_and_keep_scores(index,monkeypatch):
         stdout=json.dumps(dict(stats=dict(api_calls=1),exhaustive=False,results=[dict(source=dict(key=dict(id=identity)),score=.81,rank=1)]))
     def execute(command,**kw):commands.append(command);return Result()
     monkeypatch.setattr('ldraw_tools.discovery.subprocess.run',execute)
+    monkeypatch.setattr('ldraw_tools.discovery.tool_path', lambda name: '/project tools/bin/' + name)
     report=search(index,'parts','brick',pool=5,limit=2,candidates=5)
-    assert commands[0][0]=='jev-rerank' and '--project' not in commands[0]
+    assert commands[0][0]=='/project tools/bin/jev-rerank' and '--project' not in commands[0]
     assert report['results'][0]['id']==identity and report['results'][0]['score']==.81
     db=Path(commands[0][commands[0].index('--db')+1])
     with sqlite3.connect(db) as c:

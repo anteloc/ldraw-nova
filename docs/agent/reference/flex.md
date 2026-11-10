@@ -213,17 +213,17 @@ selected limits. Read `coverage` and `diagnostics`, not just `checks_passed`.
 
 ## Install and try
 
-Install the pinned **lsynth-nova 0.5.0** release wheel from `anteloc/lsynth-nova` (no separate checkout needed). Setup uses uv when available, with pip as a fallback:
+Install the pinned **lsynth-nova 0.5.0** release wheel from `anteloc/lsynth-nova` (no separate checkout needed). Standard setup installs the isolated `bin/lsynth` CLI with project-local uv and the same wheel in Nova’s `.venv` for Python integration:
 
 ```sh
-./setup.sh --with-lsynth
+./setup.sh
 ./ldraw-agent flex types
 ./ldraw-agent flex guide TECHNIC_PNEUMATIC_HOSE_BEVELED
 ./ldraw-agent flex build examples/flex-basics/hose.ldr --output output/flex/hose.mpd
 ./ldraw-agent review output/flex/hose.mpd --contacts none
 ```
 
-Open the review's previews. [Small examples](../../../examples/flex/README.md) cover a hose, a rubber band and a chain. Copy a constraint file into your own `output/` directory before editing it. `doctor` reports whether the optional package is installed. Ordinary setup and builds do not require LSynth. When syncing directly, use `uv sync --locked --extra test --extra lsynth` to retain both testing and synthesis tooling; syncing without the `lsynth` extra removes it.
+Open the review's previews. [Small examples](../../../examples/flex/README.md) cover a hose, a rubber band and a chain. Copy a constraint file into your own `output/` directory before editing it. `doctor` reports the package version and standalone CLI path. Standard setup includes both. LSynth is a required Python dependency; `bin/uv sync --locked --extra test` retains testing and synthesis tooling.
 
 Authoring, constraint checks and synthesis need LSynth installed. Generated assets embed the required LSynth geometry and work with the ordinary LDraw library, including in LeoCAD, without that installation. Do not run `lsynth --install-parts` for this workflow: the adapter leaves the parts library unchanged.
 

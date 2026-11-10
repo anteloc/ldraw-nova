@@ -9,6 +9,8 @@ import re
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
+from .common import tool_path
+
 
 def view_camera(bounds, view):
     """Frame the complete assembly with a stable margin in every build step."""
@@ -43,7 +45,7 @@ def render_steps(path, library, outdir, *, steps, views=("home", "back"), timeou
         for view in views:
             target = Path(temp)/f'{view}.png'
             camera = view_camera(bounds, view) if bounds is not None else ['--viewpoint',view]
-            result = subprocess.run(['leocad', '-l', str(lib), '-i', str(target),
+            result = subprocess.run([tool_path('leocad') or 'leocad', '-l', str(lib), '-i', str(target),
                 '--from', str(min(steps)), '--to', str(max(steps)), *camera,
                 '-w', '1000', '-h', '750', '--aa-samples', '4', '--shading', 'full',
                 '--highlight', '--no-fade-steps', '--line-width', '1', str(prepared)],
@@ -215,7 +217,7 @@ def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90,
             if view not in {"home", "front", "back", "left", "right", "top", "bottom"}:
                 raise ValueError(f"Unknown view {view}")
             target = Path(temp) / f"{view}.png"
-            command = ["leocad", "-l", str(library), "-i", str(target), "-w", "1000", "-h", "800",
+            command = [tool_path("leocad") or "leocad", "-l", str(library), "-i", str(target), "-w", "1000", "-h", "800",
                        "--aa-samples", "4", "--shading", "full", "--line-width", "1",
                        "--no-highlight", "--no-fade-steps", str(Path(path).resolve())]
             if bounds is None:
@@ -229,7 +231,7 @@ def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90,
             target.replace(destination)
             results.append(str(destination))
         bom = Path(temp) / "leocad-bom.csv"
-        result = subprocess.run(["leocad", "-l", str(library), "-csv", str(bom), str(Path(path).resolve())], capture_output=True, text=True, timeout=timeout)
+        result = subprocess.run([tool_path("leocad") or "leocad", "-l", str(library), "-csv", str(bom), str(Path(path).resolve())], capture_output=True, text=True, timeout=timeout)
         if result.returncode or not bom.exists():
             raise ValueError(f"LeoCAD BOM failed: {result.stdout}\n{result.stderr}")
         restore_bom_names(bom,embedded_names)

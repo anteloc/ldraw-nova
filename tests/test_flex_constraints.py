@@ -5,7 +5,7 @@ from functools import lru_cache
 import numpy as np
 import pytest
 
-pytest.importorskip('lsynth_nova', reason='Install the optional engine with ./setup.sh --with-lsynth')
+pytest.importorskip('lsynth_nova', reason='Install the engine with ./setup.sh')
 
 from ldraw_tools import flex
 from ldraw_tools.cli import parser, run

@@ -13,6 +13,7 @@ from ldraw_tools.resources import search_models
 
 
 def test_parts_library_precedence_and_missing_configuration(monkeypatch, tmp_path):
+    monkeypatch.setattr(common, 'RESOURCE_DATA', tmp_path / 'data')
     primary = tmp_path / 'primary library'
     fallback = tmp_path / 'fallback library'
     explicit = tmp_path / 'explicit library'
@@ -97,3 +98,55 @@ def test_glb_export_uses_global_converter(parts, tmp_path, monkeypatch):
     prepare_glb(source, tmp_path / 'parts library', target, parts)
     assert calls[0][-1] == str(source)
     assert target.read_bytes() == b'test conversion'
+
+
+def test_library_uses_project_install_without_environment(monkeypatch, tmp_path):
+    monkeypatch.setattr(common, 'RESOURCE_DATA', tmp_path / 'data')
+    monkeypatch.delenv('LDRAW_DIR', raising=False)
+    monkeypatch.delenv('LDRAWDIR', raising=False)
+    library = tmp_path / 'data/ldraw'
+    (library / 'parts').mkdir(parents=True)
+    monkeypatch.chdir(tmp_path.parent)
+    assert common.library_path() == library
+    monkeypatch.setenv('LDRAW_DIR', str(tmp_path / 'explicit'))
+    assert common.library_path() == tmp_path / 'explicit'
+
+
+def test_tool_resolution_local_then_path_and_renderer_override(monkeypatch, tmp_path):
+    project = tmp_path / 'project with spaces'
+    monkeypatch.setattr(common, 'ROOT', project)
+    monkeypatch.delenv('LEOCAD', raising=False)
+    monkeypatch.setattr(common.shutil, 'which', lambda name: '/system/bin/' + name)
+    assert common.tool_path('jev-rerank') == '/system/bin/jev-rerank'
+    local = project / 'bin/jev-rerank'
+    local.parent.mkdir(parents=True)
+    local.write_text('#!/bin/sh\nexit 0\n')
+    local.chmod(0o644)
+    assert common.tool_path('jev-rerank') == '/system/bin/jev-rerank'
+    local.chmod(0o755)
+    assert common.tool_path('jev-rerank') == str(local)
+    renderer = project / 'bin/LeoCAD.app/Contents/MacOS/LeoCAD'
+    renderer.parent.mkdir(parents=True)
+    renderer.write_text('#!/bin/sh\nexit 0\n')
+    renderer.chmod(0o755)
+    assert common.tool_path('leocad') == str(renderer)
+    monkeypatch.setenv('LEOCAD', '/custom path/LeoCAD')
+    assert common.tool_path('leocad') == '/custom path/LeoCAD'
+
+
+def test_glb_wrapper_uses_local_library_without_exports(tmp_path):
+    project = tmp_path / 'project with spaces'
+    (project / 'data/ldraw/parts').mkdir(parents=True)
+    wrapper = project / 'prepare-glb.sh'
+    wrapper.write_text((common.ROOT / 'prepare-glb.sh').read_text())
+    launcher = project / 'ldraw-agent'
+    launcher.write_text('#!/bin/sh\nprintf "%s\\n" "$@"\n')
+    launcher.chmod(0o755)
+    env = dict(os.environ)
+    env.pop('LDRAW_DIR', None)
+    env.pop('LDRAWDIR', None)
+    result = subprocess.run(['sh', str(wrapper), '--part', '3001.dat'],
+                            cwd=tmp_path, env=env, capture_output=True, text=True, check=True)
+    assert result.stdout.splitlines()[:4] == [
+        '--library', str(project / 'data/ldraw'), 'glb',
+        str(project / 'data/ldraw/parts/3001.dat')]

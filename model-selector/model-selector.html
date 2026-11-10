@@ -1,0 +1,346 @@
+<!doctype html>
+<!--
+  LDraw annotated model selector. Served by model-selector/serve.py, which first
+  writes /models-annotated.json: [{name, path, url, description, parts}, ...].
+
+  A search box filters the models as you type (fuzzy: search.js); "Sort by" orders them by
+  best match, fewest or most parts, or name. Each result:
+  View 3D opens viewer.html (three.js/ldbi, Normal/High/Poly) in a modal;
+  Copy prompt copies "Use the following model as a construction reference: <repo-relative path>", for the chat.
+  The viewer is an iframe so ldbi's classic globals (THREE, LDR) stay out of this page.
+  The query and sort are kept in ?q= and ?sort= so a reload or a shared link keeps them.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LDraw Model Selector</title>
+<style>
+  :root {
+    --bg: #f6f5f2; --card: #fff; --fg: #1c1c1e; --muted: #6b6b70; --line: #e6e3dc;
+    --accent: #2563eb; --accent-fg: #fff; --mark: #ffe08a; --mark-fg: inherit; --focus: #f5b301;
+    --ok: #15803d; --danger: #b42318; --backdrop: rgba(0,0,0,.5); --shadow: 0 1px 2px rgba(0,0,0,.04);
+    --brick: #f5b301; --brick-stud: #ffd24d;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141416; --card: #1c1c1f; --fg: #f4f4f5; --muted: #a1a1aa; --line: #2e2e33;
+      --accent: #60a5fa; --accent-fg: #0b1220; --mark: rgba(250,204,21,.32); --mark-fg: #fff; --focus: #facc15;
+      --ok: #4ade80; --danger: #f97066; --backdrop: rgba(0,0,0,.65); --shadow: none;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141416; --card: #1c1c1f; --fg: #f4f4f5; --muted: #a1a1aa; --line: #2e2e33;
+    --accent: #60a5fa; --accent-fg: #0b1220; --mark: rgba(250,204,21,.32); --mark-fg: #fff; --focus: #facc15;
+    --ok: #4ade80; --danger: #f97066; --backdrop: rgba(0,0,0,.65); --shadow: none;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg);
+               font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  /* Header: what this page is for. */
+  header { padding: 40px 0 8px; }
+  h1 { margin: 0; font-size: 28px; line-height: 1.2; display: flex; align-items: center; gap: 12px; }
+  h1 svg { width: 36px; height: 28px; flex: none; }
+  .lead { margin: 10px 0 0; color: var(--muted); max-width: 68ch; }
+  .lead strong { color: var(--fg); }
+
+  /* Search box: sticky so it stays at hand while scrolling the results. */
+  .search { position: sticky; top: 0; z-index: 2; padding: 16px 0 10px;
+            background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); }
+  .box { position: relative; display: flex; align-items: center; }
+  .box > svg { position: absolute; left: 16px; width: 20px; height: 20px; color: var(--muted); pointer-events: none; }
+  #q { width: 100%; font: inherit; font-size: 17px; color: var(--fg); background: var(--card);
+       border: 1px solid var(--line); border-radius: 12px; padding: 13px 48px 13px 46px;
+       box-shadow: var(--shadow); appearance: none; }
+  #q::placeholder { color: var(--muted); }
+  #q::-webkit-search-cancel-button { appearance: none; }
+  #q:focus { outline: none; border-color: var(--focus); box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 30%, transparent); }
+  #clear { position: absolute; right: 12px; border: 0; background: none; color: var(--muted); font-size: 18px; line-height: 1;
+           padding: 6px; border-radius: 6px; cursor: pointer; }
+  #clear:hover { color: var(--fg); }
+  .meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; margin: 8px 2px 0;
+          font-size: 13px; color: var(--muted); }
+  #count { margin: 0; }
+  .meta label { display: flex; align-items: center; gap: 6px; }
+  #sort { font: inherit; color: var(--fg); background: var(--card); border: 1px solid var(--line);
+          border-radius: 6px; padding: 3px 6px; cursor: pointer; }
+
+  /* "Prompt copied to clipboard" */
+  #toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 12px); z-index: 20;
+           background: var(--fg); color: var(--bg); border-radius: 8px; padding: 10px 16px;
+           box-shadow: 0 6px 24px rgba(0,0,0,.25); opacity: 0; pointer-events: none;
+           transition: opacity .15s, transform .15s; max-width: calc(100vw - 32px); }
+  #toast.show { opacity: 1; transform: translate(-50%, 0); }
+  #toast.error { background: var(--danger); color: #fff; }
+
+  /* Results. */
+  ol { list-style: none; margin: 0 0 48px; padding: 0; display: grid; gap: 10px; }
+  .card { display: grid; grid-template-columns: 1fr auto; gap: 8px 20px; align-items: start;
+          background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px;
+          box-shadow: var(--shadow); content-visibility: auto; contain-intrinsic-size: auto 104px;
+          transition: border-color .12s; }
+  .card:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+  .title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; }
+  .name { font-weight: 650; font-size: 15px; overflow-wrap: anywhere; }
+  .parts { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px;
+           padding: 0 8px; white-space: nowrap; }
+  .desc { margin: 4px 0 0; overflow-wrap: anywhere; }
+  mark { background: var(--mark); color: var(--mark-fg); border-radius: 3px; padding: 0 1px; }
+  .actions { display: flex; gap: 8px; }
+  button { font: inherit; font-size: 14px; color: var(--fg); background: var(--card);
+           border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; cursor: pointer;
+           display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+  button:hover { border-color: var(--accent); color: var(--accent); }
+  button svg { width: 16px; height: 16px; flex: none; }
+  button.view { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); font-weight: 600; }
+  button.view:hover { filter: brightness(1.08); color: var(--accent-fg); }
+  @media (max-width: 600px) {
+    header { padding-top: 24px; }
+    h1 { font-size: 23px; }
+    .card { grid-template-columns: 1fr; }
+  }
+
+  /* Empty and error states. */
+  .note { text-align: center; color: var(--muted); padding: 40px 16px; }
+  .note p { margin: 0 0 14px; }
+  #error { color: var(--danger); }
+
+  /* The viewer modal (ldraw-nova's model card / viewer modal, reduced to the 3D view). */
+  #modal { position: fixed; inset: 0; background: var(--backdrop); display: grid; place-items: center; z-index: 10; }
+  #modal[hidden] { display: none; }
+  #modal .box3d { width: min(1400px, 96vw); height: 92vh; background: var(--bg); border-radius: 12px;
+                  display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+  #modal .bar { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-bottom: 1px solid var(--line); }
+  #modal .bar strong { margin-right: auto; font: 14px ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+  #modal iframe { flex: 1; border: 0; width: 100%; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <h1>
+      <svg viewBox="0 0 36 28" aria-hidden="true">
+        <rect x="6" y="1" width="9" height="6" rx="1.5" fill="var(--brick-stud)"/>
+        <rect x="21" y="1" width="9" height="6" rx="1.5" fill="var(--brick-stud)"/>
+        <rect x="1" y="6" width="34" height="21" rx="3" fill="var(--brick)"/>
+      </svg>
+      Choose a model to study
+    </h1>
+    <p class="lead">Find an annotated model, look at it in 3D, then click
+      <strong>Copy prompt</strong> and paste the prompt in the chat to study its construction.</p>
+  </header>
+
+  <div class="search" role="search">
+    <div class="box">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      <label for="q" class="visually-hidden">Search models</label>
+      <input id="q" type="search" autocomplete="off" spellcheck="false" autofocus
+             placeholder="Search by set number or description — e.g. 42110, crane, train">
+      <button id="clear" type="button" aria-label="Clear search" title="Clear search (Esc)" hidden>✕</button>
+    </div>
+    <div class="meta">
+      <p id="count" aria-live="polite"></p>
+      <label>Sort by
+        <select id="sort">
+          <option value="best">Best match</option>
+          <option value="fewest">Fewest parts (simplest)</option>
+          <option value="most">Most parts (most complex)</option>
+          <option value="name">Name</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <ol id="results"></ol>
+
+  <div id="empty" class="note" hidden>
+    <p>No models match “<span id="empty-q"></span>”. Check the spelling or try fewer words.</p>
+    <button id="empty-clear" type="button">Clear search</button>
+  </div>
+  <p id="error" class="note" hidden></p>
+</main>
+
+<div id="modal" hidden>
+  <div class="box3d" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="bar">
+      <strong id="modal-title"></strong>
+      <button id="modal-close" aria-label="Close">✕</button>
+    </div>
+    <iframe id="viewer" title="3D viewer" allow="fullscreen"></iframe>
+  </div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script type="module">
+import { prepare, search } from './search.js';
+
+const ICONS = {
+  view: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>',
+  copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></svg>',
+};
+const $ = id => document.getElementById(id);
+const q = $('q'), sort = $('sort'), results = $('results'), modal = $('modal'), viewer = $('viewer');
+const byName = new Intl.Collator(undefined, { numeric: true }).compare;   // 2531-1 before 10001-1
+const SORTS = {
+  best: hits => hits,                          // search() ranks; ties (and no query) stay by name
+  fewest: hits => hits.sort((a, b) => a.model.parts - b.model.parts || byName(a.model.name, b.model.name)),
+  most: hits => hits.sort((a, b) => b.model.parts - a.model.parts || byName(a.model.name, b.model.name)),
+  name: hits => hits.sort((a, b) => byName(a.model.name, b.model.name)),
+};
+const prompt = m => `Use the following model as a construction reference: ${m.path}`;
+let index = [], hits = [], timer, toastTimer;
+
+function button(cls, icon, label, title) {
+  const b = document.createElement('button');
+  b.className = cls;
+  b.innerHTML = ICONS[icon];
+  b.append(label);
+  b.title = title;
+  return b;
+}
+
+function el(tag, cls, ...children) {
+  const e = document.createElement(tag);
+  e.className = cls;
+  e.append(...children);
+  return e;
+}
+
+// text with the [start, end) ranges wrapped in <mark>; text nodes only, never innerHTML.
+function highlight(text, ranges) {
+  const frag = document.createDocumentFragment();
+  let at = 0;
+  for (const [s, e] of ranges) {
+    frag.append(text.slice(at, s), el('mark', '', text.slice(s, e)));
+    at = e;
+  }
+  frag.append(text.slice(at));
+  return frag;
+}
+
+function render() {
+  const frag = document.createDocumentFragment();
+  hits.forEach((h, i) => {
+    const m = h.model;
+    const parts = el('span', 'parts', `${m.parts.toLocaleString()} part${m.parts === 1 ? '' : 's'}`);
+    parts.title = 'Bigger models take longer to animate.';
+    const li = el('li', 'card',
+      el('div', 'text',
+        el('div', 'title', el('span', 'name mono', highlight(m.name, h.name)), parts),
+        el('p', 'desc', highlight(m.description, h.description))),
+      el('div', 'actions',
+        button('view', 'view', 'View 3D', `Open ${m.name} in the 3D viewer`),
+        button('copy', 'copy', 'Copy prompt', `Copy “${prompt(m)}”, to paste in the chat`)));
+    li.dataset.i = i;
+    frag.append(li);
+  });
+  results.replaceChildren(frag);
+
+  const total = index.length.toLocaleString(), query = q.value.trim();
+  $('count').textContent = query ? `${hits.length.toLocaleString()} of ${total} models` : `${total} models`;
+  $('empty').hidden = !(query && !hits.length);
+  $('empty-q').textContent = query;
+}
+
+function run() {
+  hits = SORTS[sort.value](search(index, q.value));
+  render();
+  const url = new URL(location);
+  if (q.value.trim()) url.searchParams.set('q', q.value.trim()); else url.searchParams.delete('q');
+  if (sort.value !== 'best') url.searchParams.set('sort', sort.value); else url.searchParams.delete('sort');
+  history.replaceState(null, '', url);
+}
+
+function clearSearch() {
+  q.value = '';
+  $('clear').hidden = true;
+  run();
+  q.focus();
+}
+
+function toast(text, isError = false) {
+  const t = $('toast');
+  t.textContent = text;
+  t.classList.toggle('error', isError);
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+async function copyPrompt(m) {
+  try {
+    await navigator.clipboard.writeText(prompt(m));
+    toast('Prompt copied to clipboard');
+  } catch (err) {
+    toast(`Could not copy the prompt: ${err.message}`, true);
+  }
+}
+
+function openViewer(m) {
+  $('modal-title').textContent = m.name;
+  viewer.src = `viewer.html?model=${encodeURIComponent(m.url)}&path=${encodeURIComponent(m.path)}`;
+  modal.hidden = false;
+}
+
+function closeViewer() {
+  modal.hidden = true;
+  viewer.src = 'about:blank';          // stop the 3D scene and free its memory
+}
+
+q.addEventListener('input', () => {
+  $('clear').hidden = !q.value;
+  clearTimeout(timer);
+  timer = setTimeout(run, 80);
+});
+$('clear').addEventListener('click', clearSearch);
+$('empty-clear').addEventListener('click', clearSearch);
+results.addEventListener('click', e => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  const m = hits[b.closest('li').dataset.i].model;
+  if (b.classList.contains('view')) openViewer(m);
+  else copyPrompt(m);
+});
+sort.addEventListener('change', run);
+// The viewer's own Copy prompt button asks this page to show the same message.
+addEventListener('message', e => {
+  if (e.source === viewer.contentWindow && e.data?.toast) toast(e.data.toast, !!e.data.error);
+});
+$('modal-close').addEventListener('click', closeViewer);
+modal.addEventListener('click', e => { if (e.target === modal) closeViewer(); });
+addEventListener('keydown', e => {
+  if (e.key === 'Escape' && !modal.hidden) closeViewer();
+  else if (e.key === 'Escape' && document.activeElement === q && q.value) { e.preventDefault(); clearSearch(); }
+  else if (e.key === '/' && modal.hidden && !e.target.closest('input, textarea, [contenteditable]')) {
+    e.preventDefault();
+    q.focus();
+    q.select();
+  }
+});
+
+const params = new URLSearchParams(location.search);
+q.value = params.get('q') ?? '';
+sort.value = params.get('sort') in SORTS ? params.get('sort') : 'best';
+$('clear').hidden = !q.value;
+
+fetch('/models-annotated.json')
+  .then(r => { if (!r.ok) throw new Error(r.status + ' ' + r.statusText); return r.json(); })
+  .then(data => { index = prepare(data.sort((a, b) => byName(a.name, b.name))); run(); })
+  .catch(err => {
+    const e = $('error');
+    e.textContent = `Could not load the model list (${err.message}). Is serve.py running?`;
+    e.hidden = false;
+  });
+</script>
+</body>
+</html>

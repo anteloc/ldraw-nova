@@ -4,13 +4,13 @@ Run `./ldraw-agent review MODEL.plan.json` or `review MODEL.mpd`. It combines so
 
 Repair the first failed prerequisite, then recheck the affected interface and final whole assembly. A local section excludes parent and sibling interactions. Unsupported geometry is different from invalid LDraw. Choose contact scope deliberately and record skipped coverage; fixed supports and moving joints require different contracts.
 
-## Inspect with global ldraw-xray
+## Inspect with ldraw-xray
 
-Use the globally installed `ldraw-xray` executable. Before use, read the mandatory upstream [README](../../../../ldraw-xray/README.md) and [agent guide](../../../../ldraw-xray/AGENTS.md). Run `ldraw-xray doctor` and consult its current help. Its library, shadow and renderer environment must be checked explicitly; Nova's wrapper defaults do not configure the global executable.
+Use `bin/ldraw-xray` from local setup (PATH fallback only if absent). Before use, read the [xray workflow](xray.md) and [environment setup](../../setup.md). Run `bin/ldraw-xray doctor` and consult its current help. Its library, shadow and renderer environment must be checked explicitly; Nova's defaults do not configure a separately invoked CLI.
 
 ```sh
-ldraw-xray sections data/models-annotated/42075-1.mpd
-ldraw-xray board overview data/models-annotated/42075-1.mpd \
+bin/ldraw-xray sections data/models-annotated/42075-1.mpd
+bin/ldraw-xray board overview data/models-annotated/42075-1.mpd \
   --section '42075 - rearaxle.ldr' --output output/inspect/rear-axle
 ```
 

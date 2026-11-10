@@ -4,9 +4,9 @@ For the normal modeling loop, follow [AGENTS.md](../../../AGENTS.md). Use `build
 
 ## Setup
 
-Run commands from the repository root. `./setup.sh` installs the pinned Python tools into `.venv`, checks source paths, builds a local parts index, and extracts a PDF page to verify Poppler. It needs Python 3.12+ and `pdftotext`; LeoCAD must be available for rendering. `uv sync --locked --extra test` reproduces `uv.lock`. The pip fallback pins direct dependencies; transitive dependencies may differ.
+Run commands from the repository root. `./setup.sh` installs project-local uv, jev-rerank, ldraw-xray, ldraw-annotator and lsynth-nova, downloads the official `complete.zip` into `data/ldraw`, syncs pinned Python dependencies into `.venv`, builds a parts index and checks PDF extraction. Flex synthesis is always included. `doctor.synthesis` reports LSynth availability and version. Poppler and LeoCAD remain prerequisites. See [local setup](../../setup.md) for versions, environment variables, reruns and tool discovery. `bin/uv sync --locked --extra test` reproduces `uv.lock` after setup.
 
-`./ldraw-agent --help` lists the executable interface. Global `--library` and repeatable `--shadow` options go **before** the command. Parts resolve from `--library`, then `LDRAW_DIR`, then `LDRAWDIR` (empty variables are treated as unset). Reference models and descriptions always reside in `data/models-annotated/` and `data/ldraw-info.db`, resolved relative to this repository even when invoked from elsewhere. The local `.cache` directory can be deleted and rebuilt. No library download, database mutation, or global pyldraw configuration is needed.
+`./ldraw-agent --help` lists the executable interface. Global `--library` and repeatable `--shadow` options go **before** the command. Parts resolve from `--library`, then `LDRAW_DIR`, then `LDRAWDIR`, then project-local `data/ldraw` when present (empty variables are treated as unset). Reference models and descriptions always reside in `data/models-annotated/` and `data/ldraw-info.db`, resolved relative to this repository even when invoked from elsewhere. The local `.cache` directory can be deleted and rebuilt. Normal CLI commands do not download libraries or mutate the database; no global pyldraw configuration is needed.
 
 The supplied `data/offLibShadow/` is loaded automatically. `LDRAW_SHADOW` overrides the default; explicit `--shadow` paths replace defaults, and `--no-shadow` disables external shadows. `doctor` reports selected sources. See the [shadow and snapping guide](connections.md) for coverage, connector discovery, candidate application and the pyldraw3 1.7 adapters.
 
@@ -19,7 +19,7 @@ Plans can [declare flexible sources and structural contracts](flex.md#generated-
 ./ldraw-agent flex build CONSTRAINTS.ldr --output output/asset.mpd
 ```
 
-`flex build` checks source and generated geometry, accepts the geometric options from `flex check --asset`, and reuses unchanged synthesis inputs. `--no-cache` reruns the engine. `flex hose` and `ldraw_tools.flex_authoring` supply endpoint, marker and wheel helpers. Install the optional engine with `./setup.sh --with-lsynth`. Read [constraint authoring](../guides/flex.md) for choosing limits and repairing routes; [flexible parts](flex.md) covers installation and BOM boundaries.
+`flex build` checks source and generated geometry, accepts the geometric options from `flex check --asset`, and reuses unchanged synthesis inputs. `--no-cache` reruns the engine. `flex hose` and `ldraw_tools.flex_authoring` supply endpoint, marker and wheel helpers. Standard `./setup.sh` includes the synthesis engine and `bin/lsynth`. Read [constraint authoring](../guides/flex.md) for choosing limits and repairing routes; [flexible parts](flex.md) covers installation and BOM boundaries.
 
 ```sh
 ./ldraw-agent review output/my-model.plan.json
@@ -68,7 +68,7 @@ Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM
 
 ```sh
 ./ldraw-agent manual prepare FILE --section NAME --outdir output/study --views home top --notes NOTES.json
-ldraw-xray mosaic output/study/panels.json --output output/study/mosaic.png
+bin/ldraw-xray mosaic output/study/panels.json --output output/study/mosaic.png
 ./ldraw-agent manual review output/study --images IMAGE ... --note 'What was inspected and learned'
 ./ldraw-agent manual export output/study --outdir output/my-example
 ./ldraw-agent spaceship list
@@ -178,18 +178,18 @@ Model/submodel search reuses the supplied `data/ldraw-info.db` **read-only**, wi
 
 First follow the [Jev availability check](cli.md#check-jev-availability-before-searching). Missing tooling/credentials, rejected API keys and service/network failures should lead the agent to `discover search parts|models|submodels ... --engine fts`. State the fallback and continue using local resources; the CLI does not switch engines automatically.
 
-For the integrated parts/models/submodels workflow, use [reference discovery](../guides/find-references.md): `discover index`, `discover search`, `discover show`, `discover parts`, `discover prepare`, `discover catalog`, `discover review`, `discover example` and `discover recipe`. It consumes the three `full_description` views through a typed local index, repairs single-section header descriptions locally, filters actual contents, diversifies results and supplies measured image cards. The global CLI below also supports direct queries, but its original-table key instructions do not apply to the synthetic row keys returned by the new views.
+For the integrated parts/models/submodels workflow, use [reference discovery](../guides/find-references.md): `discover index`, `discover search`, `discover show`, `discover parts`, `discover prepare`, `discover catalog`, `discover review`, `discover example` and `discover recipe`. It consumes the three `full_description` views through a typed local index, repairs single-section header descriptions locally, filters actual contents, diversifies results and supplies measured image cards. The standalone CLI below also supports direct queries, but its original-table key instructions do not apply to the synthetic row keys returned by the new views.
 
-Use the global `jev-rerank` CLI when the request describes a part's purpose or appearance. From this repository root:
+Use the project-local `bin/jev-rerank` CLI (PATH fallback if absent) when the request describes a part's purpose or appearance. From this repository root:
 
 ```sh
-jev-rerank \
+bin/jev-rerank \
   --db "data/ldraw-info.db" \
   --table-field parts_descriptions.description --top 10 \
   --query 'a wall decoration for a castle' --show --json
 ```
 
-This requires `jev-rerank` on `PATH` and `TYPESAFE_API_KEY` in the environment. No Jev source checkout or `uv run` is needed. The source database is `data/ldraw-info.db` and stays read-only; the reranker maintains its own local index and score cache.
+This requires `bin/jev-rerank` (or a PATH installation) and `TYPESAFE_API_KEY` in the environment. No Jev source checkout or `uv run` is needed. The source database is `data/ldraw-info.db` and stays read-only; the reranker maintains its own local index and score cache.
 
 **Describe a single part in each query.** For example, `a wall decoration for a castle`, `a heraldic shield to hang above a castle gate`, or `a curved slope for the nose of a small spacecraft`. Query each intended role separately. The wording describes what one candidate should be; `--top 10` controls how many alternatives are returned. Do not ask the query to generate a model, list ten parts, or fill the entire model's BOM.
 
@@ -262,9 +262,9 @@ Use these commands for diagnosis, custom automation or legacy workflows. A norma
 
 `render` saves `home.png`, `top.png`, `front.png`, and `leocad-bom.csv`. Override `--views` with any of `home front back left right top bottom`. Supported assemblies use cameras framed from their resolved bounds; other inputs use LeoCAD's preset view framing. Outputs are rendered to unique temporary files first, so stale files cannot count as a successful export. Existing destination images are replaced on successful export. Open the images and inspect them; merely producing a PNG is not visual review. For MPDs with embedded DAT geometry, the adapter writes a temporary dependency library and model view for LeoCAD, then restores original embedded names in the CSV. The originals and installed library remain unchanged. This avoids the supplied LeoCAD omitting embedded parts. Compare the Python BOM with LeoCAD using `compare-bom`. Commands use explicit library paths and per-process timeouts (`--timeout`, default 90 seconds).
 
-`prepare-glb.sh` also retains `--part 3001.dat` and `--model 106-1.mpd`; outputs default to `parts-glb` or `models-glb`. `--model` reads `data/models-annotated/`; `--part` uses `LDRAW_DIR` or its fallback `LDRAWDIR`. `--file` accepts newly generated local models without copying them into OMR. It invokes the global `mpd2glb.sh` with real part descriptions and an optional default-colour preview mapping. GLB is a derived export; the MPD remains authoritative.
+`prepare-glb.sh` also retains `--part 3001.dat` and `--model 106-1.mpd`; outputs default to `parts-glb` or `models-glb`. `--model` reads `data/models-annotated/`; `--part` uses `LDRAW_DIR`, then `LDRAWDIR`, then project-local `data/ldraw`. `--file` accepts newly generated local models without copying them into OMR. It invokes the global `mpd2glb.sh` with real part descriptions and an optional default-colour preview mapping. GLB is a derived export; the MPD remains authoritative.
 
-The global `ldraw-render-steps.sh` is also useful during construction. Read its current help with no arguments, select a submodel and step range, then render several viewpoints to expose misplaced parts, concealed gaps or awkward layering. Open the images, fix the source plan/generator and render again. The [build-page guide](../guides/review-models.md#read-source-steps-when-construction-is-unclear) covers this review loop and the richer `manual prepare` workflow for atlas studies. All rendering calls use the `leocad` CLI on `PATH`.
+The global `ldraw-render-steps.sh` is also useful during construction. Read its current help with no arguments, select a submodel and step range, then render several viewpoints to expose misplaced parts, concealed gaps or awkward layering. Open the images, fix the source plan/generator and render again. The [build-page guide](../guides/review-models.md#read-source-steps-when-construction-is-unclear) covers this review loop and the richer `manual prepare` workflow for atlas studies. Nova's rendering calls resolve LeoCAD via `LEOCAD`, project-local paths, PATH, then the system macOS app; see [setup](../../setup.md#environment-and-tool-discovery). External helper scripts use their own discovery rules.
 
 ## Automation contract
 
@@ -357,10 +357,10 @@ manual/reference export freshness, source and BOM guards remain required.
 
 ## Check Jev availability before searching
 
-Before the first Jev search in a task, check that the global `jev-rerank` executable is on `PATH`, `data/ldraw-info.db` exists and `TYPESAFE_API_KEY` is nonempty. Check the key's presence without printing its value. If those prerequisites exist, verify authentication and service access with one bounded, uncached query from the repository root:
+Before the first Jev search in a task, check that `bin/jev-rerank` exists (or `jev-rerank` is on `PATH`), `data/ldraw-info.db` exists and `TYPESAFE_API_KEY` is nonempty. Check the key's presence without printing its value. If those prerequisites exist, verify authentication and service access with one bounded, uncached query from the repository root:
 
 ```sh
-jev-rerank \
+bin/jev-rerank \
   --db "data/ldraw-info.db" \
   --table-field PARTS_DESCRIPTIONS_JEV.full_description \
   --query 'brick' --top 1 --candidates 1 --model jev-1.13.0 \
@@ -393,9 +393,9 @@ Select `parts`, `models` or `submodels` and suitable keywords for the current ro
 ./ldraw-agent examples --family submodel --details 'side studs'
 ```
 
-`discover search` invokes the global `jev-rerank` CLI with model `jev-1.13.0` and its configured credentials. Use `--engine fts` for an explicit offline BM25 search. There is no silent fallback. Natural-language FTS queries use token OR; the older `search models|submodels` commands retain their raw FTS5 syntax, now ranked and paginated with `--offset`.
+`discover search` invokes `bin/jev-rerank`, falling back to the PATH CLI with model `jev-1.13.0` and its configured credentials. Use `--engine fts` for an explicit offline BM25 search. There is no silent fallback. Natural-language FTS queries use token OR; the older `search models|submodels` commands retain their raw FTS5 syntax, now ranked and paginated with `--offset`.
 
-The source is the three `*_DESCRIPTIONS_JEV.full_description` fields in `data/ldraw-info.db`, with annotated sources in `data/models-annotated/`. A local index resolves their pipe-prefixed identifiers, corrects descriptions against source headers and classifies records. The supplied database and source files remain untouched. Only the parts library is configured externally: `--library`, then `LDRAW_DIR`, then `LDRAWDIR`.
+The source is the three `*_DESCRIPTIONS_JEV.full_description` fields in `data/ldraw-info.db`, with annotated sources in `data/models-annotated/`. A local index resolves their pipe-prefixed identifiers, corrects descriptions against source headers and classifies records. The supplied database and source files remain untouched. Parts resolve from `--library`, then `LDRAW_DIR`, then `LDRAWDIR`, then project-local `data/ldraw`.
 
 Jev searches an eligible local snapshot with a real primary key. Each result returns a stable `id`, exact `model`/`section` or `part`, original indexed text, corrected source text, original field name, source hash, parent description and retrieval score/rank. This avoids persisting Jev's unstable view row numbers. Case/whitespace normalization must resolve unambiguously; paths must remain under the configured roots.
 

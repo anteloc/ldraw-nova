@@ -62,7 +62,7 @@ def test_generator_reproduces_plan_and_constraints(tmp_path):
 
 
 def test_hose_asset_regenerates_byte_for_byte(official, tmp_path):
-    pytest.importorskip('lsynth_nova', reason='Optional LSynth integration: ./setup.sh --with-lsynth')
+    pytest.importorskip('lsynth_nova', reason='Install LSynth: ./setup.sh')
     out = tmp_path / 'hoses.mpd'
     flex.build(EXAMPLE / 'hoses.ldr', out, official, namespace='press-hoses')
     assert out.read_bytes() == (EXAMPLE / 'hoses.mpd').read_bytes()

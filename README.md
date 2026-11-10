@@ -16,6 +16,17 @@ Take a look at [the video](https://youtu.be/YDjjxGqWpgU):
 
 ## Installation
 
+For local CLI and agent use, run `./setup.sh`; see [local setup](docs/setup.md)
+for project-local tools, the official LDraw library and environment variables.
+Agent guides cover [xray inspection](docs/agent/guides/xray.md) and
+[model annotation](docs/agent/guides/annotate-models.md).
+
+Browse local annotated models with `./model-selector.sh` after setup: search,
+preview in 3D, and copy a construction-reference prompt. See the
+[model selector guide](model-selector/README.md).
+
+The Docker web app setup follows below.
+
 
 > [!IMPORTANT]
 > **Tools** used by agents in order to find **suitable parts** and **example models** take advantage of [jev-rerank](https://github.com/anteloc/jev-rerank) (I'm also the author). 

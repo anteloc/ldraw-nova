@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import shutil
 import sqlite3
 import subprocess
 import sys
@@ -14,7 +13,7 @@ import jsonschema
 from ldraw.errors import PartError
 
 from .builder import build_plan, load_plan, rotation
-from .common import ROOT, DATA, atomic_write, database_path, dumps, get_parts, jsonable, library_path, models_path, shadow_paths
+from .common import ROOT, DATA, tool_path, atomic_write, database_path, dumps, get_parts, jsonable, library_path, models_path, shadow_paths
 from .external import cad_check, render, prepare_glb, compare_bom
 from .geometry import analyze_geometry, profiles
 from .resources import search_spec, search_models, model_sections
@@ -73,12 +72,12 @@ def parser():
     p = argparse.ArgumentParser(
         description="Build and review LDraw assemblies. Reports are JSON.",
         epilog="Start: build MODEL.plan.json, then review MODEL.mpd. Or review MODEL.plan.json in one command. See AGENTS.md.")
-    p.add_argument("--library", help="LDraw parts library root (default LDRAW_DIR, then LDRAWDIR)")
+    p.add_argument("--library", help="LDraw parts library root (default LDRAW_DIR, then LDRAWDIR, then data/ldraw)")
     shadows = p.add_mutually_exclusive_group()
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
     commands = p.add_subparsers(dest="command", required=True)
-    c = commands.add_parser("flex", help="Synthesize flexible MPD assets with optional lsynth-nova")
+    c = commands.add_parser("flex", help="Synthesize flexible MPD assets with lsynth-nova")
     flex = c.add_subparsers(dest="flex_command", required=True)
     flex.add_parser("types", help="List synthesis types, products and constraint parts")
     f = flex.add_parser('guide', help='Family-specific authoring, inspection and repair guidance')
@@ -456,8 +455,8 @@ def run(args):
                       library=str(library), library_present=(library / "parts").is_dir(),
                       models=str(models_path()), database=str(database_path()), pdf=str(ROOT / "docs/ldraw-specs.pdf"),
                       shadow_sources=jsonable(shadow_paths([] if args.no_shadow else args.shadow)),
-                      tools={t: shutil.which(t) for t in ["pdftotext", "leocad", "jev-rerank", "mpd2glb.sh", "ldraw-render-steps.sh"]})
-        report["optional"] = {"lsynth-nova": availability()}
+                      tools={t: tool_path(t) for t in ["pdftotext", "leocad", "jev-rerank", "ldraw-xray", "ldraw-annotator", "lsynth", "mpd2glb.sh", "ldraw-render-steps.sh"]})
+        report["synthesis"] = {"lsynth-nova": availability()}
         return report, 0 if report["library_present"] and report["tools"]["pdftotext"] else 2
     if args.command == "spec":
         return search_spec(args.query, args.page, args.limit), 0

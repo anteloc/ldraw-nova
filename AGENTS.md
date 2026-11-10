@@ -21,9 +21,10 @@ structure or function needs them. An explicit user construction preference
 overrides this default.
 
 1. Establish the subject, silhouette, scale, required features and poses. Run
-   `./ldraw-agent doctor`. If setup is needed, run `./setup.sh`, or
-   `./setup.sh --with-lsynth` for flexible parts. Setup needs Python 3.12+,
-   an LDraw library (`LDRAW_DIR`), Poppler and LeoCAD; see the
+   `./ldraw-agent doctor`. If setup is needed, run `./setup.sh` (includes LSynth
+   for flexible parts). Setup installs project-local tools, Python and the
+   official LDraw library.
+   Poppler and LeoCAD are prerequisites; see [local setup](docs/setup.md) and the
    [setup and CLI contracts](docs/agent/reference/cli.md#setup).
 2. Search for the construction roles the brief needs, then read the returned
    source sections, parent requirements and limits:
@@ -72,6 +73,9 @@ overrides this default.
 | Sideways construction | [SNOT](docs/agent/guides/snot.md) |
 | Structural frames, joints and moving assemblies | [Technic](docs/agent/guides/technic.md), [mechanisms](docs/agent/guides/mechanisms.md) |
 | Hoses, cables, bands, chains or treads | [Flex authoring](docs/agent/guides/flex.md), [flex contracts](docs/agent/reference/flex.md) |
+| Browsing annotated models in the local 3D selector | [Model selector](model-selector/README.md) (`./model-selector.sh`) |
+| Annotating unstructured reference models | [Annotator workflow](docs/agent/guides/annotate-models.md) |
+| X-ray, parent context, stud maps and inspection boards | [Xray workflow](docs/agent/guides/xray.md) |
 | Visual inspection, failures and evidence coverage | [Review models](docs/agent/guides/review-models.md), [validation](docs/agent/reference/validation.md) |
 
 LDraw uses negative Y as up, a 20 LDU stud pitch, and 24/8 LDU brick/plate body
@@ -83,10 +87,12 @@ colour 24 is for edges.
 
 Visually inspect every retained or improved model and submodel, both isolated
 and in its actual parent placement. Open rendered images; text and JSON alone
-are insufficient. Use the **global `ldraw-xray` CLI** for submodel/parent
-inspection. Before using it, read the mandatory
-[`../ldraw-xray/README.md`](../ldraw-xray/README.md) and
-[`../ldraw-xray/AGENTS.md`](../ldraw-xray/AGENTS.md), then run `ldraw-xray doctor`.
+are insufficient. Use **`bin/ldraw-xray`** for submodel/parent inspection
+(or a PATH installation if the local tool is absent). Before using it, read
+the [xray workflow](docs/agent/guides/xray.md), configure the environment from
+[local setup](docs/setup.md), then run `bin/ldraw-xray doctor`.
+For annotation, read the [annotator workflow](docs/agent/guides/annotate-models.md)
+and use `bin/ldraw-annotator` with the supplied database read-only.
 Reuse existing images only when their source hashes and selections match;
 render new views for changed geometry or unresolved questions.
 
@@ -102,7 +108,7 @@ Example bend limits are not universal material limits.
 For code changes, work in `ldraw_tools/` and use the related tests in `tests/`.
 Run affected tests with `.venv/bin/python -m pytest tests/test_<area>.py -q`;
 use `.venv/bin/python -m pytest -q` for broad changes. `./setup.sh` installs test
-dependencies; flex tests also need `--with-lsynth`. Keep CLI help and the relevant
+dependencies; standard setup includes LSynth for flex tests. Keep CLI help and the relevant
 `docs/agent/` contract aligned with behavior. Model generation is validated by
 its own review artifacts, not by rerunning the entire software test suite.
 

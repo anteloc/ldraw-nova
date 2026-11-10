@@ -212,14 +212,12 @@ source = { editable = "." }
 dependencies = [
     { name = "jsonschema" },
     { name = "ldraw-xray" },
+    { name = "lsynth-nova" },
     { name = "numpy" },
     { name = "pyldraw3" },
 ]
 
 [package.optional-dependencies]
-lsynth = [
-    { name = "lsynth-nova" },
-]
 test = [
     { name = "pytest" },
 ]
@@ -227,18 +225,18 @@ test = [
 [package.metadata]
 requires-dist = [
     { name = "jsonschema", specifier = "==4.26.0" },
-    { name = "ldraw-xray", url = "https://github.com/anteloc/ldraw-xray/releases/download/v0.1.0/ldraw_xray-0.1.0-py3-none-any.whl" },
-    { name = "lsynth-nova", marker = "extra == 'lsynth'", url = "https://github.com/anteloc/lsynth-nova/releases/download/v0.5.0/lsynth_nova-0.5.0-py3-none-any.whl" },
+    { name = "ldraw-xray", url = "https://github.com/anteloc/ldraw-xray/releases/download/v0.5.0/ldraw_xray-0.5.0-py3-none-any.whl" },
+    { name = "lsynth-nova", url = "https://github.com/anteloc/lsynth-nova/releases/download/v0.5.0/lsynth_nova-0.5.0-py3-none-any.whl" },
     { name = "numpy", specifier = "==2.5.2" },
     { name = "pyldraw3", specifier = "==1.7.0" },
     { name = "pytest", marker = "extra == 'test'", specifier = "==9.1.1" },
 ]
-provides-extras = ["test", "lsynth"]
+provides-extras = ["test"]
 
 [[package]]
 name = "ldraw-xray"
-version = "0.1.0"
-source = { url = "https://github.com/anteloc/ldraw-xray/releases/download/v0.1.0/ldraw_xray-0.1.0-py3-none-any.whl" }
+version = "0.5.0"
+source = { url = "https://github.com/anteloc/ldraw-xray/releases/download/v0.5.0/ldraw_xray-0.5.0-py3-none-any.whl" }
 dependencies = [
     { name = "numpy" },
     { name = "pillow" },
@@ -246,7 +244,7 @@ dependencies = [
     { name = "pyldraw3" },
 ]
 wheels = [
-    { url = "https://github.com/anteloc/ldraw-xray/releases/download/v0.1.0/ldraw_xray-0.1.0-py3-none-any.whl", hash = "sha256:1e96584ee59fbef3b9fe6796251aea7008928c0136c017dae2d4498cf4d6cd1f" },
+    { url = "https://github.com/anteloc/ldraw-xray/releases/download/v0.5.0/ldraw_xray-0.5.0-py3-none-any.whl", hash = "sha256:4f6fa3b3d5872c69322d8ac3b0cfef0642f2e8747007cb2cc5e620161af08d8b" },
 ]
 
 [package.metadata]

@@ -1,6 +1,6 @@
 # Build and repair mounted flexible parts
 
-Start with the actual material family, rigid fittings and required poses. Run `./ldraw-agent flex guide TYPE` for installed definitions and family limits. For new plans, use [named endpoints and wheels](../reference/flex.md); external constraints remain supported. Install the optional pinned engine with `./setup.sh --with-lsynth`.
+Start with the actual material family, rigid fittings and required poses. Run `./ldraw-agent flex guide TYPE` for installed definitions and family limits. For new plans, use [named endpoints and wheels](../reference/flex.md); external constraints remain supported. Standard `./setup.sh` installs the pinned engine in Nova’s environment and the standalone CLI at `bin/lsynth`; see [setup](../../setup.md).
 
 Study the [portal-frame pneumatic press](../../../examples/pneumatic-press/README.md), [retained chain drive](../../../examples/retained-chain-drive/README.md) or [complete workshop](../../../examples/workshop-machine/README.md) for mounted static routes. The small hose/band/chain files teach syntax and BOM ownership. The [constraint lab](../../../tests/fixtures/flex-constraints/README.md) is diagnostic; the [legacy LSynth corpus](../../../lsynth-examples/README.md) is optional research with family-specific missing hardware and invalid-source cases.
 

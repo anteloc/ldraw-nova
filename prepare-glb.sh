@@ -2,6 +2,9 @@
 set -eu
 task_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 task_library=${LDRAW_DIR:-${LDRAWDIR:-}}
+if [ -z "$task_library" ] && [ -d "$task_dir/data/ldraw/parts" ]; then
+  task_library="$task_dir/data/ldraw"
+fi
 task_models="$task_dir/data/models-annotated"
 if [ "$#" -lt 2 ] || [ "$#" -gt 3 ]; then
   echo 'Usage: ./prepare-glb.sh --file local.mpd [output.glb] | --model name.mpd | --part 3001.dat' >&2

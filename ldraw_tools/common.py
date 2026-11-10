@@ -4,6 +4,7 @@ import dataclasses
 import hashlib
 import json
 import os
+import shutil
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 
@@ -18,9 +19,32 @@ DATA = Path(__file__).parent / "data"
 
 def library_path(value=None):
     path = value or os.environ.get("LDRAW_DIR") or os.environ.get("LDRAWDIR")
+    if not path and (RESOURCE_DATA / "ldraw" / "parts").is_dir():
+        path = RESOURCE_DATA / "ldraw"
     if not path:
-        raise ValueError("Set LDRAW_DIR (or LDRAWDIR) to the parts library, or pass --library")
+        raise ValueError("Run ./setup.sh or set LDRAW_DIR (or LDRAWDIR) to the parts library, or pass --library")
     return Path(path).expanduser().resolve()
+
+
+def tool_path(name):
+    """Explicit renderer setting, project-local tool, then PATH/system app."""
+    if name == "leocad" and os.environ.get("LEOCAD"):
+        return os.environ["LEOCAD"]
+    candidates = [ROOT / "bin" / name]
+    if name == "leocad":
+        candidates = [ROOT / "bin/LeoCAD.app/Contents/MacOS/LeoCAD",
+                      ROOT / "bin/leocad/AppRun", *candidates]
+    for candidate in candidates:
+        if candidate.is_file() and os.access(candidate, os.X_OK):
+            return str(candidate)
+    found = shutil.which(name)
+    if found:
+        return found
+    if name == "leocad":
+        app = Path("/Applications/LeoCAD.app/Contents/MacOS/LeoCAD")
+        if app.is_file() and os.access(app, os.X_OK):
+            return str(app)
+    return None
 
 
 def models_path(value=None):

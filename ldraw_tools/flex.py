@@ -1,4 +1,4 @@
-"""Optional LSynth adapter. LSynth owns synthesis; pyldraw3 owns LDraw parsing.
+"""LSynth adapter. LSynth owns synthesis; pyldraw3 owns LDraw parsing.
 
 Continuous material becomes one posed embedded part per SYNTH block. Actual
 separate links remain assembly placements, subject to ordinary rigid checks.
@@ -29,12 +29,12 @@ def availability():
     try:
         return dict(available=True, version=version("lsynth-nova"))
     except PackageNotFoundError:
-        return dict(available=False, install="./setup.sh --with-lsynth")
+        return dict(available=False, install="./setup.sh")
 
 
 def engine():
     if not availability()["available"]:
-        raise ValueError("LSynth is optional and is not installed. Run ./setup.sh --with-lsynth.")
+        raise ValueError("LSynth is not installed. Run ./setup.sh.")
     from lsynth_nova.config import DEFAULT_CONFIG, load_config
     from lsynth_nova.cli import PARTS_DIR
     return load_config(), DEFAULT_CONFIG, PARTS_DIR

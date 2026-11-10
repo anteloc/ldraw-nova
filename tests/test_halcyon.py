@@ -71,7 +71,10 @@ def test_every_placement_is_a_proper_rotation():
 
 def test_reproduces_reviewed_model_as_one_connected_group(reviewed):
     text, diagnostics, report = reviewed
-    assert not diagnostics
+    # Current complete.zip retains these historical wedge IDs as aliases.
+    assert all(d['code'] == 'part.alias_or_internal' and d['severity'] == 'warning'
+               and text.splitlines()[d['line_number'] - 1].split()[-1] in {'41769.dat', '41770.dat'}
+               for d in diagnostics), diagnostics
     assert text.encode() == (EXAMPLE / 'halcyon.mpd').read_bytes()
     assert report['complete']
     assert report['occurrence_count'] == 195
@@ -91,7 +94,10 @@ def test_a_flank_moved_one_ldu_outboard_is_detected(official):
     moved = copy.deepcopy(plan())
     flank = next(e for step in moved['sections'][0]['steps'] for e in step if e['id'] == 'flank-s')
     flank['at'][0] += 1
-    _, diagnostics, report = analyze(official, moved)
-    assert not diagnostics
+    text, diagnostics, report = analyze(official, moved)
+    # Current complete.zip retains these historical wedge IDs as aliases.
+    assert all(d['code'] == 'part.alias_or_internal' and d['severity'] == 'warning'
+               and text.splitlines()[d['line_number'] - 1].split()[-1] in {'41769.dat', '41770.dat'}
+               for d in diagnostics), diagnostics
     assert not interface_contacts(report)['halcyon-flank-s.ldr', 'halcyon-hull.ldr', '30414.dat']
     assert report['optimistic_component_count'] == 2
