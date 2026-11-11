@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/8855-prop-plane.json",
+      "recipe_sha256": "33e1d8e1257519ddd631d7b53b455c986455c12c57e23209e1d928621ef0db85",
+      "image": "board/mosaic.png",
+      "image_sha256": "9a0907fef58f10ecf5c1c28f820e7d969cf85f723a3af7d0ebc7f4c02496991b",
+      "title": "8855 Studded Technic floatplane with articulated wings and a piston engine",
+      "mode": "views",
+      "source": {
+        "model": "8855-1.mpd",
+        "section": "8855 - Prop Plane.ldr",
+        "sha256": "98bb90e07be0a121c13018abd5fc51a2c0a7b1a4a94871b7c4bb92f3a3f04f8f",
+        "steps": 18,
+        "parents": {}
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Completed model from home",
+          "view": "home",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Front: span, dihedral and engine spacing",
+          "view": "front",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Right side: nose, cabin, wing station and tail arm",
+          "view": "right",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Top: wing planform, sweep and tail planform",
+          "view": "top",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 5,
+          "label": "Bottom: landing gear stance and underside",
+          "view": "bottom",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 6,
+          "label": "Stud map: synthetic colours by stud direction",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 408,
+                "+z": 17,
+                "-z": 28,
+                "+x": 8,
+                "angled": 90,
+                "-x": 19,
+                "down": 28
+              },
+              "total": 598
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)"
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.5.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.12.12",
+        "leocad": "26.09"
+      },
+      "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/8855-prop-plane.json --output output/boards/8855-prop-plane"
+    }
+  ]
+}

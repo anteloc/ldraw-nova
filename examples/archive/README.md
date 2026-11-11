@@ -653,8 +653,7 @@ These retired aliases preserve their source paths and retirement reasons for exp
     "scope": "archive",
     "kind": "assembly",
     "aliases": [
-      "replacement:an225",
-      "vehicle:an225"
+      "replacement:an225"
     ],
     "families": [
       "vehicle",

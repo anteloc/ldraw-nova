@@ -116,10 +116,12 @@ Static visual evidence only unless the linked package records specific further c
     "scope": "construction",
     "kind": "detail",
     "aliases": [
-      "vehicle:jet-engine-pod"
+      "vehicle:jet-engine-pod",
+      "aircraft:jet-engine-pod"
     ],
     "families": [
-      "vehicle"
+      "vehicle",
+      "aircraft"
     ],
     "legacy_groups": [
       "details"
@@ -172,10 +174,12 @@ Static visual evidence only unless the linked package records specific further c
     "scope": "construction",
     "kind": "detail",
     "aliases": [
-      "vehicle:pilot-cockpit"
+      "vehicle:pilot-cockpit",
+      "aircraft:pilot-cockpit"
     ],
     "families": [
-      "vehicle"
+      "vehicle",
+      "aircraft"
     ],
     "legacy_groups": [
       "details"

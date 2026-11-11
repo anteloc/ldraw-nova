@@ -23,7 +23,7 @@ Read [GUIDE.md](GUIDE.md) for the construction, what the parent supplies, how to
       "details"
     ],
     "lesson": "A studded Technic empennage: 7×12 wing plates as the tailplane halves on a short Technic-brick block, a one-stud fin of 45° slopes and jumper plates with a red stripe, and a `Tail body` boom of 1×12 and 1×6 Technic bricks; a long axle with toggle joints runs forward along the boom as the elevator control. Use the 7×12 wing plates as one-part tailplane halves and the jumper-plate stack for a thin swept fin; run control axles along the boom inside the Technic bricks.",
-    "limits": "Elevator travel and the axle's bearings in the boom were not checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+    "limits": "Elevator travel and the axle's bearings in the boom were not checked. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for one 3673 pin partly seated in a 1×6 Technic brick as drawn; `manual export`, the plan rebuild and the BOM comparison pass. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
     "subjects": [
       "Aircraft tail",
       "tail",
@@ -51,7 +51,7 @@ Read [GUIDE.md](GUIDE.md) for the construction, what the parent supplies, how to
     "preview": "examples/8855-tail-boom/renders/home.png",
     "board": "examples/8855-tail-boom/board/mosaic.png",
     "visual_review": "examples/8855-tail-boom/visual-review.json",
-    "model_sha256": "6c67ff89f379676b42a5850a8f61e6d9f37844c495d3d17008cac8c62c74b5fa"
+    "model_sha256": "7b586740764973dcc1eaf29f94c2802b9469561a4e955bad3774a32015eae57d"
   }
 ]
 ```

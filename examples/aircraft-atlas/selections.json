@@ -4,7 +4,7 @@
   "references": [
     {
       "key": "10159-city-airliner",
-      "status": "candidate",
+      "status": "promoted",
       "package": "10159-city-airliner",
       "model": "10159-1.mpd",
       "section": "10159 - airplane.ldr",
@@ -39,20 +39,20 @@
         "id": "submodel-40dcf1a3ca24fc40863a935a",
         "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
         "description": "Passenger airplane with a red and white fuselage, swept white wings with blue stripes and twin jet engines, a glazed cockpit windscreen and a row of passenger windows, red tail surfaces and a tail plane, wheeled landing gear and red/green navigation lights",
-        "accuracy": ""
+        "accuracy": "accurate"
       },
       "notes": {
-        "lesson": "",
-        "construction": "",
-        "interfaces": "",
-        "parent_context": "",
-        "reuse_notes": ""
+        "lesson": "The classic City airliner in one studs-up section: a 4-wide brick fuselage with window bricks under an openable double-slope roof, moulded 7×12 wing plates, a T-tail with the printed 4867 tailplane on a brick fin, two 4868a/4869 engine pods on the rear fuselage sides, a wedge-plate nose with a 2437 windscreen, and wheel-plate landing gear. Measured: span 25 studs, length 29, height 14, 121 parts, no Technic.",
+        "construction": "121 parts in 1 step. Fuselage: 4-wide brick rows with 4862/4863 window bricks and the 4857 double-slope roof on 4625 hinge tiles; nose: 4854–4861 wedge plates and slopes with a 2437 windscreen; wings: 3585/3586 7×12 wing plates; tail: a brick fin carrying the 4867px3 printed tailplane; engines: two 4868a shells with 4869 cones either side of the rear fuselage; gear: 4870 wheel plates with 4624 rims, a nose pair and two mains.",
+        "interfaces": "117 studs up; only the two engine pods face sideways. Modules meet on plain studs: the wing plates slide under the fuselage plates, the tailplane sits on the fin, the roof hinges on the cabin walls.",
+        "parent_context": "`10159 - main.ldr` places it at (690, 0, 380) with the identity matrix on the apron beside the terminal; the nose points +Z. The same design appears in 6392 (1985), whose copy keeps five plate overlaps.",
+        "reuse_notes": "Use it for the proportions of a small City airliner: span about equal to length, rear engines, T-tail, a 4-wide cabin with one window per two studs. Inspiration only: the embedded printed tailplane lacks a part classification; use the library 4867 pattern part when rebuilding."
       },
       "guide": {
-        "parent_supplies": "",
-        "corrected_description": "",
-        "board_reading": "",
-        "limits": ""
+        "parent_supplies": "Only the apron position; the plane is complete in itself.",
+        "corrected_description": "Accurate: a red and white airliner with twin rear jet engines, a glazed cockpit, a row of passenger windows, red tail surfaces, wheeled gear and navigation lights.",
+        "board_reading": "Panel 1: the airport scene with the plane highlighted on the apron. Panel 2: LeoCAD's front view, which is this model's tail-on view because the nose points +Z: the level 7×12 wings, the T-tail above and the rear pods either side. Panel 3: right side, the window row, roof line, wedge nose and fin. Panel 4: top, the straight wing plates and the T-tail. Panel 5: bottom, the nose pair and two main wheel plates. Panel 6: the stud map, everything up except the sideways engine pods.",
+        "limits": "Inspiration only: `part.missing_classification` on the embedded 4867px3 tailplane; geometry passes and the BOM comparison matches. Roof hinge and gear clearance not checked."
       },
       "recipes": [
         "recipes/10159-city-airliner.json"
@@ -63,7 +63,7 @@
     },
     {
       "key": "7893-airliner",
-      "status": "candidate",
+      "status": "promoted",
       "package": "7893-airliner",
       "model": "7893-1.mpd",
       "section": "7893 - plane.ldr",
@@ -98,20 +98,20 @@
         "id": "submodel-752f2e4349612186206f84d8",
         "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
         "description": "The main fuselage of a passenger jet built from large curved plane sections, a wide wing, structural bricks, and numerous plates and pins.",
-        "accuracy": ""
+        "accuracy": "accurate"
       },
       "notes": {
-        "lesson": "",
-        "construction": "",
-        "interfaces": "",
-        "parent_context": "",
-        "reuse_notes": ""
+        "lesson": "A minifigure airliner from large moulded sections: the 54092 glazed nose, 54091 cabin sections and the 54701 tail cone pinned end to end with 2780 friction pins, one 54093 wing part each side carrying two nacelles, a two-axle bogie under each wing root and the flight deck dropped into the nose. Measured: span 70 studs, length 64, height 23, 358 parts, 12% Technic.",
+        "construction": "358 parts in 33 steps across 8 sections. The fuselage is a chain of moulded sections (54092p02c01 nose, 54090 and 54091 cabin sections with 4862/4863 window bricks, 54096, 54701p01c01 tail) joined by 2780 pins through their end holes; the wings are the 54093 wing part each side with 54095 fillets and 30355/30356 winglet wedges; the 54094 fin carries the tailplane plates; the `engine` (×4), `wheels` (×2) and `cabin` children plug in; 44568/44570 locking hinges carry the doors.",
+        "interfaces": "272 studs up, 72 sideways, 14 angled. The section joints are pin holes, not studs; the wing's underside anti-studs take the engine pylons; a pin hole under each wing root takes a bogie; the floor studs inside take the seats, service and bar sections from the parent.",
+        "parent_context": "`7893 - main.ldr` places it at (−12, −144, −16) with the identity matrix, nose to −Z, with the boarding stairs at the open forward door and minifigures around it.",
+        "reuse_notes": "Use it when large moulded airliner parts are acceptable: set the cabin length by the number of 54091 sections, keep span about 1.1× length, hang engines from the wing anti-studs and bogies from wing-root pin holes. For a brick-built airliner take the module layout, not the parts."
       },
       "guide": {
-        "parent_supplies": "",
-        "corrected_description": "",
-        "board_reading": "",
-        "limits": ""
+        "parent_supplies": "Nothing structural; the parent adds the stairs, cabin furniture and minifigures.",
+        "corrected_description": "Accurate: the main fuselage of a passenger jet from large curved sections, a wide wing, structural bricks, plates and pins.",
+        "board_reading": "Panel 1: the parent from home with the plane highlighted and the stairs at the door. Panel 2: front, four engines under level wings and the tall fin. Panel 3: right side, the window row, the open door and the two bogies under the wing. Panel 4: top, the swept 54093 wings with winglets and the small tailplane. Panel 5: bottom, engines, bogies and the nose gear along the belly. Panel 6: the stud map, roof and wings lilac, winglets angled.",
+        "limits": "Section pin clutch, door hinges and gear stance were not checked; a static pose. The source places the two bogies 20 LDU off-centre from each other."
       },
       "recipes": [
         "recipes/7893-airliner.json"
@@ -122,7 +122,7 @@
     },
     {
       "key": "5892-sonic-jet",
-      "status": "candidate",
+      "status": "promoted",
       "package": "5892-sonic-jet",
       "model": "5892-1.mpd",
       "section": "5892 - Airplane.ldr",
@@ -160,20 +160,20 @@
         "id": "submodel-18d9164b0a31e18b0ce79ed3",
         "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
         "description": "Assembled aircraft fuselage with Technic beams, plates, and curved red wedge panels forming the body shell.",
-        "accuracy": ""
+        "accuracy": "partly accurate"
       },
       "notes": {
-        "lesson": "",
-        "construction": "",
-        "interfaces": "",
-        "parent_context": "",
-        "reuse_notes": ""
+        "lesson": "A Creator jet: a Technic-brick spine with pins carries a studs-up System skin, delta plate wings with Technic-brick roots, a SNOT nose with a cone spike, a one-stud slope fin, twin 43121 engines side by side at the tail and a retracting nose gear. Measured: span 41 studs, length 50, height 17, 524 parts, 16% Technic.",
+        "construction": "524 parts in 9 steps across 9 sections: `Bottom section` and `Center support` (Technic bricks and plates as the spine), `Nose gear` with its `Switch arm`, `Nose section` (the SNOT nose with the instrument slope), `Left wing` and `Right wing` (mirrored plate deltas), `Tail fin`, plus the 89762 canopy, 54200 cheese slopes along the fuselage edges and the two 43121 engines in the root.",
+        "interfaces": "429 studs up, 84 sideways (nose wedges and fuselage sides), 7 angled. The wings pin to the spine through their 1×2 Technic bricks; the nose stacks on the front plates; the fin's base plate sits on the spine; the canopy sits on the cockpit rim.",
+        "parent_context": "`5892 - main.ldr` places it at the origin with the identity matrix; the nose points −X, so LeoCAD's front view shows the side.",
+        "reuse_notes": "Use it as the template for a mid-size jet: length 1.2× span, delta wings two plates thick, engines at the rear, fin one stud thick. Build the Technic spine first, then hang wings, nose and fin on it before closing the skin."
       },
       "guide": {
-        "parent_supplies": "",
-        "corrected_description": "",
-        "board_reading": "",
-        "limits": ""
+        "parent_supplies": "Nothing; the wrapper only places it.",
+        "corrected_description": "Partly accurate: the fuselage shell with Technic beams, plates and red wedge panels is there, but the section also contains the wings, nose, fin, gear and engines.",
+        "board_reading": "Panel 1: the parent from home with the whole jet highlighted. Panel 2: LeoCAD's front view, which is this model's side because the nose points −X: the cone nose, canopy, fin and rear engines. Panel 3: LeoCAD's right view, the nose-on view: level delta wings, the cone, canopy and fin. Panel 4: top, the delta planform with red stripes and the small tailplanes. Panel 5: bottom, the Technic spine, nose gear and main wheels. Panel 6: the stud map, skin lilac, nose wedges aqua, cone orange.",
+        "limits": "Wing root pin engagement, gear retraction and canopy fit were not checked."
       },
       "recipes": [
         "recipes/5892-sonic-jet.json"
@@ -184,7 +184,7 @@
     },
     {
       "key": "42040-fire-plane",
-      "status": "candidate",
+      "status": "promoted",
       "package": "42040-fire-plane",
       "model": "42040-1.mpd",
       "section": "42040 - Fire Plane.ldr",
@@ -219,20 +219,20 @@
         "id": "submodel-07c1f2ed381b540cf4f4832f",
         "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
         "description": "Technic fire-fighting plane featuring an articulated engine, landing gear with treaded tyres, wings with flaps, and a geared tail boom with horizontal stabilizer.",
-        "accuracy": ""
+        "accuracy": "accurate"
       },
       "notes": {
-        "lesson": "",
-        "construction": "",
-        "interfaces": "",
-        "parent_context": "",
-        "reuse_notes": ""
+        "lesson": "A studless Technic fire plane: three red spar beams carry panel wings, a liftarm fin and a joystick-geared stabiliser; a two-cylinder engine with a three-blade rotor sits in the nose; V-strut landing gear on treaded 61254 tyres hangs under a liftarm belly; the water bay door works on a rubber band. Measured: span 53 studs, length 42, height 23, 570 parts, 94% Technic.",
+        "construction": "570 parts in 114 steps across 20 sections: the root frame with `floor`, `seats`, `leftside` and `rearframe`; the `motor` engine tree in the nose; the `tail` tree (fin, stabiliser, gearing, joystick, both wings and tail sides); two `flap` children; the `rubberBandRound-1` LDCad band and embedded 61254 tyre, 2850b and 33299b parts.",
+        "interfaces": "Studless: 172 sideways and 398 angled placements. Pins and axles throughout; the engine cradle, floor and spar beams meet the front frame; the wings pin to the spars; the gear V struts pin under the floor.",
+        "parent_context": "Root section; nothing places it. Built with the propeller at −Z.",
+        "reuse_notes": "Use it for the layout of a studless Technic prop plane: a floor-and-spar frame, panels as wing and tail skins, and one cockpit lever driving a surface. Inspiration only: the embedded tyres and the rubber band are raw geometry; use the library 61254 and the flex workflow for the band when rebuilding."
       },
       "guide": {
-        "parent_supplies": "",
-        "corrected_description": "",
-        "board_reading": "",
-        "limits": ""
+        "parent_supplies": "None; root section.",
+        "corrected_description": "Accurate: a fire-fighting plane with an articulated engine, treaded landing gear, wings with flaps and a geared tail boom with horizontal stabiliser.",
+        "board_reading": "Panel 1: home, the red-and-white liftarm airframe with the three-blade propeller and gear. Panel 2: front, the panel wings, V-strut gear on treaded tyres and the propeller. Panel 3: right side, the engine cowling, open cockpit, spar beams and fin. Panel 4: top, panel wings and tail. Panel 5: bottom, the belly liftarms and gear. Panel 6: the stud map, entirely sideways and angled: studless.",
+        "limits": "Inspiration only: `coverage.raw_geometry` and `geometry.nonplanar` from the embedded tyres and the rubber band; the BOM comparison matches. No mechanism was checked."
       },
       "recipes": [
         "recipes/42040-fire-plane.json"
@@ -243,7 +243,7 @@
     },
     {
       "key": "8855-prop-plane",
-      "status": "candidate",
+      "status": "promoted",
       "package": "8855-prop-plane",
       "model": "8855-1.mpd",
       "section": "8855 - Prop Plane.ldr",
@@ -278,20 +278,20 @@
         "id": "submodel-16e2578539f8a9c87fe23286",
         "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
         "description": "A large Technic propeller plane with a geared engine, adjustable wings, pontoons, a tail assembly, and an articulated pilot figure.",
-        "accuracy": ""
+        "accuracy": "accurate"
       },
       "notes": {
-        "lesson": "",
-        "construction": "",
-        "interfaces": "",
-        "parent_context": "",
-        "reuse_notes": ""
+        "lesson": "The 1988 studded Technic floatplane: a Technic-brick fuselage with an open cockpit and pilot, a high wing of Technic-brick spars and wing-brick ribs on universal joints, a piston engine behind a three-blade propeller, a tail boom with a 7×12 wing-plate tailplane and jumper-plate fin, and twin floats on an axle truss with wheels inside. Measured: span 72 studs, length 50, height 26, 598 parts, 66% Technic.",
+        "construction": "598 parts in 81 steps across 20 sections: the `Prop Plane` root (fuselage of 1×16 and 1×12 Technic bricks and plates), `Engine block`, `Piston`, `Piston gear`, `Bottom gear` ×2, `Bottom link`, `Bottom back connector`, `Pontoons` with three joint children, `Triangle joint`, `Tail` with `Tail body`, `Wings` with two joints and two flaps, and the `Pilot`.",
+        "interfaces": "327 studs up, 62 sideways, 198 angled. The wing's universal joints and towballs sit on the fuselage cabane; the floats' truss apexes pin under the fuselage; the propeller axle drives the piston through gears.",
+        "parent_context": "Root section; nothing places it. Built with the propeller at +Z, so LeoCAD's front view is the tail-on view.",
+        "reuse_notes": "Use it for the proportions and module layout of a studded Technic floatplane: span 1.4× length, high wing, floats two-thirds of the length. Inspiration only: the author scaled or skewed eight placements to match the strained real model, so rebuild rather than export."
       },
       "guide": {
-        "parent_supplies": "",
-        "corrected_description": "",
-        "board_reading": "",
-        "limits": ""
+        "parent_supplies": "None; root section.",
+        "corrected_description": "Accurate: a large Technic propeller plane with a geared engine, adjustable wings, pontoons, a tail assembly and an articulated pilot figure.",
+        "board_reading": "Panel 1: home, the yellow studded airframe, floats and propeller. Panel 2: LeoCAD's front view, which is tail-on here: the long rib wing above the fuselage and the float truss. Panel 3: right side, cockpit, engine, the wing mid-fuselage and the tail boom. Panel 4: top, the rib wing, flaps and tailplane. Panel 5: bottom, floats, truss and boom. Panel 6: the stud map, mostly up with the truss and propeller angled.",
+        "limits": "Inspiration only: eight skewed placements (`assembly.nonrigid`) in the root and a pontoon joint; the BOM comparison matches. Nothing mechanical was checked."
       },
       "recipes": [
         "recipes/8855-prop-plane.json"
@@ -302,7 +302,7 @@
     },
     {
       "key": "9394-technic-airframe",
-      "status": "candidate",
+      "status": "promoted",
       "package": "9394-technic-airframe",
       "model": "9394-1_Propeller-Plane.mpd",
       "section": "9394 - 9394-2.ldr",
@@ -338,20 +338,20 @@
         "id": "submodel-a195a08f6e4528d0f52a05bf",
         "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
         "description": "Primary structural airframe built predominantly from red Technic liftarms, beams, pins, axles, and cross blocks forming the plane's fuselage and wings.",
-        "accuracy": ""
+        "accuracy": "accurate"
       },
       "notes": {
-        "lesson": "",
-        "construction": "",
-        "interfaces": "",
-        "parent_context": "",
-        "reuse_notes": ""
+        "lesson": "A studless Technic propeller plane kept as one section: a red liftarm fuselage and wings with white panel skins, a 15-long beam as the two-blade propeller on a worm-and-knob gear train, tricycle gear on 42610 wheels plus a tail wheel, and two LSynth flexible axles arcing wingtip to wingtip as the wing leading edges. Measured: span 54 studs, length 60, height 16, 583 placements, 66% Technic.",
+        "construction": "583 placements in 68 steps in one section; the source never splits the airframe. Fuselage: red 32525, 32278 and 32524 beams with cross blocks; wings: beams with 64681/64393 panels; nose: a 4716 worm, 3648 24-tooth gear and 32072 knob gears driving the propeller beam; the LS40/LS41/LS50/LS51 LSynth flex-axle segments as the curved leading edges and cables.",
+        "interfaces": "Studless: 201 up, 137 sideways, 218 angled. The `9394 - Main.ldr` wrapper places the airframe; the flex axles end in connectors at the wing tips; the gear's three wheels sit on pins and axles under the belly.",
+        "parent_context": "`9394 - Main.ldr` places it at the origin with the identity matrix; this is the 9394 Jet Plane's B model, built with the propeller at −Z.",
+        "reuse_notes": "Use it for the layout of a studless Technic trainer: length 1.1× span, low wing, tricycle gear, propeller on a geared nose axle. Inspiration only: the 163 LSynth segments use mirrored matrices, so rebuild the flex leading edges with the flex workflow."
       },
       "guide": {
-        "parent_supplies": "",
-        "corrected_description": "",
-        "board_reading": "",
-        "limits": ""
+        "parent_supplies": "The `Main.ldr` wrapper only.",
+        "corrected_description": "Accurate: the primary airframe of red liftarms, beams, pins, axles and cross blocks forming fuselage and wings.",
+        "board_reading": "Panel 1: the parent from home with the airframe highlighted; the flex axles arc over the wings. Panel 2: front, the low panel wings, flex leading edges and propeller beam. Panel 3: right side, the long fuselage, tall fin and tail wheel. Panel 4: top, the planform with the flex arcs and tailplane. Panel 5: bottom, the belly beams and tricycle gear. Panel 6: the stud map, studless in every direction, flex arcs angled.",
+        "limits": "Inspiration only: 161 `assembly.nonrigid` placements from LSynth segments; the BOM comparison matches. Gear train and gear stance not checked."
       },
       "recipes": [
         "recipes/9394-technic-airframe.json"
@@ -362,7 +362,7 @@
     },
     {
       "key": "10226-sopwith-camel",
-      "status": "candidate",
+      "status": "promoted",
       "package": "10226-sopwith-camel",
       "model": "10226-1.mpd",
       "section": "10226 - main.ldr",
@@ -400,20 +400,20 @@
         "id": "submodel-2b454b8aeafe1ec99d052a1a",
         "source_field": "SUBMODELS_DESCRIPTIONS_JEV.full_description",
         "description": "Sopwith Camel biplane: tan log-brick, metallic-silver corner-round and dark-green/tan/reddish-brown plate, slope, arch and hinge fuselage around a pearl-gold latticed windscreen, mounting the planked wings, tailplane, geared propeller, radial engine, towball-hinged landing gear with wheels and shock absorbers, and the rigging cables and rubber bands",
-        "accuracy": ""
+        "accuracy": "accurate"
       },
       "notes": {
-        "lesson": "",
-        "construction": "",
-        "interfaces": "",
-        "parent_context": "",
-        "reuse_notes": ""
+        "lesson": "The Sopwith Camel display biplane: a fuselage of log bricks, hinge-plate side walls and SNOT panels around a latticed windscreen; two planked wings of 1×3 tile rows on plate spars joined by suspension-arm struts; a radial engine face and geared propeller; a wedge-plate tailplane and striped rudder on handles; towball-hinged ailerons and a shock-absorber landing gear; strings as rigging and rubber bands as tyres. Measured: span 59 studs, length 50, height 23, 811 parts plus string and band segments, 8% Technic.",
+        "construction": "1211 placements in 222 steps across 50 sections named by source step: `step34`/`step35` side walls, `step40` and `step53` wings with `step53-11` sockets and `step53-13` struts, `step47` tailplane, `step58` landing gear with `shock`, `step59`–`step62` ailerons, `step66` rudder, `step69` propeller and engine, ten `string` rigging sections and four `band` sections from LDCad.",
+        "interfaces": "722 studs up, 117 sideways, 362 angled. The wings meet the fuselage through the cabane and the strut arms; control surfaces snap into 63082 sockets; the gear frame pins under the belly; strings run between 572a string-end studs.",
+        "parent_context": "Root section; nothing places it. Built with the propeller at −X, so LeoCAD's front view shows the side and its right view the nose.",
+        "reuse_notes": "Use it for the proportions and module split of a display biplane: span 1.2× length, upper wing above the fuselage top, lower wing at the belly, rudder and ailerons as separate hinged sections. Inspiration only: the string and band sections are LDCad segments; the detail packages from this source (propeller, tailplane, aileron, rudder) are reusable on their own."
       },
       "guide": {
-        "parent_supplies": "",
-        "corrected_description": "",
-        "board_reading": "",
-        "limits": ""
+        "parent_supplies": "None; root section.",
+        "corrected_description": "Accurate: a Sopwith Camel biplane with a log-brick and hinge fuselage, latticed windscreen, planked wings, tailplane, geared propeller, radial engine, towball-hinged landing gear with shocks, rigging cables and rubber bands.",
+        "board_reading": "Panel 1: home, the green biplane with tan planked panels, the roundel rudder and dish wheels. Panel 2: LeoCAD's front view, which is this model's side: both wings, the shock gear and the rudder. Panel 3: LeoCAD's right view, the nose-on view: equal-span wings, the X rigging, radial engine and dish wheels. Panel 4: top, the two full-span wings and the small tailplane. Panel 5: bottom, the tan underside of the lower wing and the gear frame. Panel 6: the stud map, mostly up with rigging and struts angled.",
+        "limits": "Inspiration only: ten string and four band sections keep LDCad segments (`assembly.nonrigid`, `assembly.library_internal`, `coverage.raw_geometry`, `geometry.nonplanar`) and 31 body overlaps are reported; the BOM comparison does not match because the segments are not physical parts. Hinges, gear and rigging tension not checked."
       },
       "recipes": [
         "recipes/10226-sopwith-camel.json"
@@ -519,11 +519,12 @@
       "guide": {
         "parent_supplies": "The pin holes for the pivot, the switch arm that moves the link, and the opening in the nose the wheel swings into.",
         "corrected_description": "Accurate: a retractable nose leg on liftarms with one small wheel. Only the extended pose is drawn.",
-        "board_reading": "Panel 1: a ghosted close-up under the nose with the leg highlighted, hanging down and slightly forward. Panel 2: the isolated leg from home, bent liftarm, link and wheel. Panel 3: from the right, the wheel face-on between the blue axle pins. Panel 4: the stud map, liftarms aqua (−Z) and the bent liftarm blue/orange.",
+        "board_reading": "Panel 1: a ghosted close-up under the nose with the leg highlighted, hanging down and slightly forward. Panel 2: the isolated leg from home, bent liftarm, link and wheel. Panel 3: from the right, the wheel face-on between the blue axle pins. Panel 4: the stud map, liftarms aqua (−Z) and the bent liftarm blue/orange. The pose sweep board turns the leg 0, 45 and 90 degrees about the axle-pin axis (neon-green rod) with the pins fixed: a synthetic sweep, not a checked travel.",
         "limits": "Retraction travel, the switch-arm linkage and the wheel's clearance through the nose were not checked; one pose only."
       },
       "recipes": [
-        "recipes/5892-retracting-nose-gear.json"
+        "recipes/5892-retracting-nose-gear.json",
+        "recipes/5892-retracting-nose-gear-poses.json"
       ]
     },
     {
@@ -1270,7 +1271,7 @@
         "parent_supplies": "The floor, seats, engine cradle, landing gear and the front frame the spar beams pin into.",
         "corrected_description": "Partly accurate: it is a tail boom with trapezium panels and beams, but the section also carries both wings, the horizontal stabiliser, its knob-gear control train and the cockpit joystick.",
         "board_reading": "Panel 1: the ghosted plane with the whole rear airframe highlighted: fin, stabiliser, spar beams and both wings. Panel 2: source step 7, the white stabiliser child on its axle beside the fin and the first red spar. Panel 3: source step 13, the right wing child highlighted on the spar beams with the gearing below. Panel 4: the stud map, beams and panels in every direction.",
-        "limits": "The joystick-to-stabiliser travel and the pin retention of the wings were not checked; one static pose."
+        "limits": "The joystick-to-stabiliser travel and the pin retention of the wings were not checked; one static pose. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for 18 source interfaces (32556 long pins and 2780/6558 friction pins only partly seated in the 11-, 7- and 5-long beams as drawn); `manual export`, the plan rebuild and the BOM comparison pass."
       },
       "recipes": [
         "recipes/42040-geared-tail.json"
@@ -1323,7 +1324,7 @@
         "parent_supplies": "The cabane bricks and towball sockets the wing sits on, and the control gears that meet the 8-tooth gears at the root.",
         "corrected_description": "Partly accurate: wing bricks, long plates, gears and indicator lights are there; it omits the universal joints and towballs that make the wing adjustable and the two flap children.",
         "board_reading": "Panel 1: the ghosted floatplane with the wing highlighted above the fuselage. Panel 2: source step 2, the wing-front bricks going onto the leading spar. Panel 3: source step 4, the 1×8 skin plates and the wing-joint children at the root. Panel 4: the stud map, ribs and plates up, the flaps angled (violet).",
-        "limits": "Wing tilt travel, flap travel and the universal joints' retention were not checked."
+        "limits": "Wing tilt travel, flap travel and the universal joints' retention were not checked. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for the two 6-long axles passing through the 1×2 hole bricks at the root as drawn; `manual export`, the plan rebuild and the BOM comparison pass."
       },
       "recipes": [
         "recipes/8855-universal-joint-wings.json"
@@ -1481,7 +1482,7 @@
         "parent_supplies": "The rear fuselage the boom pins into and the control lever that drives the axle.",
         "corrected_description": "Accurate: a tail unit with left and right wing elements, slope bricks, axles and pin connectors.",
         "board_reading": "Panel 1: the ghosted floatplane with the tail highlighted at the rear. Panel 2: source step 2, the two 7×12 wing plates on the block. Panel 3: source step 3, the long control axle with its toggle joint running forward. Panel 4: the stud map, everything up with the axle angled.",
-        "limits": "Elevator travel and the axle's bearings in the boom were not checked."
+        "limits": "Elevator travel and the axle's bearings in the boom were not checked. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for one 3673 pin partly seated in a 1×6 Technic brick as drawn; `manual export`, the plan rebuild and the BOM comparison pass."
       },
       "recipes": [
         "recipes/8855-tail-boom.json"

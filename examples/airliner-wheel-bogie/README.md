@@ -19,19 +19,21 @@ Run `./ldraw-agent build PATH/scene.plan.json --output output/example.mpd`, then
   {
     "id": "airliner-wheel-bogie",
     "title": "Airliner wheel bogie",
-    "scope": "hold",
+    "scope": "archive",
     "kind": "assembly",
     "aliases": [
-      "reference:airliner-wheel-bogie"
+      "reference:airliner-wheel-bogie",
+      "aircraft:airliner-wheel-bogie-retired"
     ],
     "families": [
-      "reference"
+      "reference",
+      "aircraft"
     ],
     "legacy_groups": [
       "examples",
       "details"
     ],
-    "lesson": "Four-wheel, two-axle bogie and short upright mount with two parent placements. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+    "lesson": "Retired on 2026-11-10: superseded by `7893-wheel-bogie`, extracted from the current corpus with build pages, a board and a review. Four-wheel, two-axle bogie and short upright mount with two parent placements. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
     "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
     "scale": "minifigure",

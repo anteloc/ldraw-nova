@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/7893-airliner.json",
+      "recipe_sha256": "0e22590973169aa75b8d459e53b943e3bdb97e2089784e14d3c1da02bc4d7f69",
+      "image": "board/mosaic.png",
+      "image_sha256": "03dd047c1a81165edd664a7e3087463936092b4f4c818abee19e989dd9621852",
+      "title": "7893 Passenger airliner from large fuselage sections pinned together",
+      "mode": "views",
+      "source": {
+        "model": "7893-1.mpd",
+        "section": "7893 - plane.ldr",
+        "sha256": "8d175059a9cf28dcc1097bcff27b170e84b3ffd13b47d46136f44ca1d66876b9",
+        "steps": 20,
+        "parents": {
+          "7893 - main.ldr": [
+            "1 16 -12 -144 -16 1 0 0 0 1 0 0 0 1 7893 - plane.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent 7893 - main.ldr from home, the aircraft section highlighted",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Front: span, dihedral and engine spacing",
+          "view": "front",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Right side: nose, cabin, wing station and tail arm",
+          "view": "right",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Top: wing planform, sweep and tail planform",
+          "view": "top",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 5,
+          "label": "Bottom: landing gear stance and underside",
+          "view": "bottom",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 6,
+          "label": "Stud map: synthetic colours by stud direction",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 272,
+                "+x": 28,
+                "angled": 14,
+                "-z": 22,
+                "+z": 20,
+                "-x": 2
+              },
+              "total": 358
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.5.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.12.12",
+        "leocad": "26.09"
+      },
+      "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/7893-airliner.json --output output/boards/7893-airliner"
+    }
+  ]
+}

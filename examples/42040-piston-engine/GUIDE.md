@@ -62,4 +62,4 @@ The source and renders teach a construction. They do not prove clutch, fit, clea
 
 Source: `42040-1.mpd` / `42040 - motor.ldr`, SHA-256 `574f72260e19873b2f5d906ea687d1313ac35412c06bd5de4a299ca89dab55db`. Parent: `42040 - Fire Plane.ldr`. Look it up with `./ldraw-agent discover show submodel-90b31f1b8129c7eb92b63e9a`.
 
-Original authors and licences stay in [source.mpd](source.mpd); [extraction.json](extraction.json) records renamed sections and 11 bounded preparation changes. Python and LeoCAD BOMs match. The visual review is recorded separately, after opening the actual images.
+Original authors and licences stay in [source.mpd](source.mpd); [extraction.json](extraction.json) records renamed sections and 15 bounded preparation changes. Python and LeoCAD BOMs match. The visual review is recorded separately, after opening the actual images.

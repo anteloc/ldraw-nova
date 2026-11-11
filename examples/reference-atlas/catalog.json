@@ -177,10 +177,12 @@
       "scope": "construction",
       "kind": "assembly",
       "aliases": [
-        "reference:aircraft-undercarriage"
+        "reference:aircraft-undercarriage",
+        "aircraft:aircraft-undercarriage"
       ],
       "families": [
-        "reference"
+        "reference",
+        "aircraft"
       ],
       "legacy_groups": [
         "examples"
@@ -206,7 +208,7 @@
       "key": "aircraft-undercarriage",
       "group": "examples",
       "use": "adapt",
-      "readme_sha256": "5334ef1764e68048ec4af23249b33b632929b231fe3c39fe27d1155e93eb6264",
+      "readme_sha256": "cb0bad08cdab3a8e7d47686509cecb94807d8fcea24e35ada0954d2d2302a637",
       "category": "aircraft Technic",
       "reference_id": "submodel-dde7c7038b72544ef35bb32f",
       "source_checks_passed": true,
@@ -215,19 +217,21 @@
     {
       "id": "airliner-engine",
       "title": "Airliner engine and pylon",
-      "scope": "hold",
+      "scope": "archive",
       "kind": "assembly",
       "aliases": [
-        "reference:airliner-engine"
+        "reference:airliner-engine",
+        "aircraft:airliner-engine-retired"
       ],
       "families": [
-        "reference"
+        "reference",
+        "aircraft"
       ],
       "legacy_groups": [
         "examples",
         "details"
       ],
-      "lesson": "Fan housing and long thin pylon; four parent placements clarify attachment. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "lesson": "Retired on 2026-11-10: superseded by `7893-jet-nacelle`, extracted from the current corpus with build pages, a board and a review. Fan housing and long thin pylon; four parent placements clarify attachment. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
       "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
       "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
       "scale": "minifigure",
@@ -248,7 +252,7 @@
       "key": "airliner-engine",
       "group": "examples",
       "use": "inspiration",
-      "readme_sha256": "858638d7fc56c74289078d230871e60abdbee77661df232c38acce0cf8bc4a8b",
+      "readme_sha256": "8789e3c736cb9babda23e6d20863a40db03f3ccfe53d5cb9c813e082c920e30a",
       "category": "aircraft engines",
       "reference_id": "submodel-9dd2ac5bcbd1c1dabf67779c",
       "source_checks_passed": true,
@@ -257,19 +261,21 @@
     {
       "id": "airliner-wheel-bogie",
       "title": "Airliner wheel bogie",
-      "scope": "hold",
+      "scope": "archive",
       "kind": "assembly",
       "aliases": [
-        "reference:airliner-wheel-bogie"
+        "reference:airliner-wheel-bogie",
+        "aircraft:airliner-wheel-bogie-retired"
       ],
       "families": [
-        "reference"
+        "reference",
+        "aircraft"
       ],
       "legacy_groups": [
         "examples",
         "details"
       ],
-      "lesson": "Four-wheel, two-axle bogie and short upright mount with two parent placements. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "lesson": "Retired on 2026-11-10: superseded by `7893-wheel-bogie`, extracted from the current corpus with build pages, a board and a review. Four-wheel, two-axle bogie and short upright mount with two parent placements. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
       "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
       "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
       "scale": "minifigure",
@@ -290,7 +296,7 @@
       "key": "airliner-wheel-bogie",
       "group": "examples",
       "use": "inspiration",
-      "readme_sha256": "4112a84818921b91017c0a28aa4fa887ed9512b59990f9eed1c50b38322fac73",
+      "readme_sha256": "003bd3943bd19859b0037a50183023a3dda1f4ffd04cef4e98a7cacb91dffaa6",
       "category": "aircraft landing gear",
       "reference_id": "submodel-8c004489e1f4ececee31c06d",
       "source_checks_passed": true,
@@ -550,10 +556,12 @@
       "scope": "hold",
       "kind": "assembly",
       "aliases": [
-        "reference:hinged-wing"
+        "reference:hinged-wing",
+        "aircraft:hinged-wing"
       ],
       "families": [
-        "reference"
+        "reference",
+        "aircraft"
       ],
       "legacy_groups": [
         "examples",
@@ -580,7 +588,7 @@
       "key": "hinged-wing",
       "group": "examples",
       "use": "inspiration",
-      "readme_sha256": "9bfb23ec8d34616a3e17ef39a588b8bb69cfe6623fac306791ae45df09f8b8b7",
+      "readme_sha256": "d3d3171533b5b4634b82c14b646dda1032af09fbbeba7eb367d2e1e5758c0f80",
       "category": "aircraft wings",
       "reference_id": "submodel-c5ba5b655fe01b038d865fa3",
       "source_checks_passed": true,
@@ -843,10 +851,12 @@
       "scope": "hold",
       "kind": "assembly",
       "aliases": [
-        "reference:sloped-tail-fin"
+        "reference:sloped-tail-fin",
+        "aircraft:sloped-tail-fin"
       ],
       "families": [
-        "reference"
+        "reference",
+        "aircraft"
       ],
       "legacy_groups": [
         "examples",
@@ -873,7 +883,7 @@
       "key": "sloped-tail-fin",
       "group": "examples",
       "use": "inspiration",
-      "readme_sha256": "4f5e4f307b8aa9c91df24b4afa2dbe259ea8649270dee50ae284d665f858705b",
+      "readme_sha256": "ab35d312201ac9077720007dd4bd5b4e4b93f2fd64d099d5c9bbde58b5d54d6d",
       "category": "aircraft tails",
       "reference_id": "submodel-e44ddd541795e599710ea752",
       "source_checks_passed": true,

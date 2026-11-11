@@ -149,7 +149,9 @@ revision before delivery:
 For boats, inspect hull/helm proportions, deck access, hull-side clearance and
 the distinction between floor and waterline. For aircraft, inspect wing span and
 sweep, engine spacing, nose-to-cabin transitions, closed fuselage interfaces and
-tail proportions. For motorcycles, inspect the frame/fairing fit, wheel alignment,
+tail proportions. The [aircraft guide](aircraft.md) maps the brief to six
+construction styles with measured proportions and a reviewed package for every
+airframe role (`./ldraw-agent examples --family aircraft`). For motorcycles, inspect the frame/fairing fit, wheel alignment,
 handlebars, saddle and luggage clearance.
 
 Record image paths, findings and revisions. Automated checks do not measure

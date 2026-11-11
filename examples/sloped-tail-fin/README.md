@@ -22,10 +22,12 @@ Run `./ldraw-agent build PATH/scene.plan.json --output output/example.mpd`, then
     "scope": "hold",
     "kind": "assembly",
     "aliases": [
-      "reference:sloped-tail-fin"
+      "reference:sloped-tail-fin",
+      "aircraft:sloped-tail-fin"
     ],
     "families": [
-      "reference"
+      "reference",
+      "aircraft"
     ],
     "legacy_groups": [
       "examples",

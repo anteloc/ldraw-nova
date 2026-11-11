@@ -6,7 +6,7 @@
       "recipe": "recipes/5892-retracting-nose-gear.json",
       "recipe_sha256": "75ab7ec75ce3c605bbb4ebe1358ef07989e881c6a8197f5900d3e50262b066c0",
       "image": "board/mosaic.png",
-      "image_sha256": "1e89b5d9a7b6b4353b6a3b84d3e87fab419befd5f3bb6586d129cfb0aec4c346",
+      "image_sha256": "e0bd5188d0242af8b2cf90d6b5fee52602732b6f145463d7f673864fda525b6f",
       "title": "5892 Retracting nose gear on liftarms, worked by a switch arm in the parent",
       "mode": "views",
       "source": {
@@ -102,6 +102,187 @@
         "leocad": "26.09"
       },
       "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/5892-retracting-nose-gear.json --output output/boards/5892-retracting-nose-gear"
+    },
+    {
+      "recipe": "recipes/5892-retracting-nose-gear-poses.json",
+      "recipe_sha256": "0f51cddaac75e281803ecd0ef5b8c8042a5e38d8270e63ee509bf7d2a121ae2a",
+      "image": "board/poses.png",
+      "image_sha256": "2c41f033ce462285e5ac7f72b42c60e970ddc61a1849d79eb99a5efe0538d011",
+      "title": "5892 nose gear pivot: synthetic pose sweep about the axle-pin axis",
+      "mode": "analysis",
+      "source": {
+        "model": "5892-1.mpd",
+        "section": "5892 - Nose gear.ldr",
+        "sha256": "deb0dfcf1657114846d3cb73f93b3fca01f699dfa75e9327279652209fc6b320",
+        "steps": 1,
+        "parents": {
+          "5892 - Airplane.ldr": [
+            "1 16 -390 -46 0 -0.996195 0.0871557 0 -0.0871557 -0.996195 0 0 0 1 5892 - Nose gear.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Synthetic pose 0 deg about the axle-pin axis, pins fixed; not a checked travel",
+          "view": "camera",
+          "step": null,
+          "layers": [
+            {
+              "layer": "pose",
+              "select": "!part:43093",
+              "scope": "section",
+              "point": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "angle": 0.0,
+              "count": 10
+            },
+            {
+              "layer": "highlight",
+              "select": "part:43093",
+              "scope": "section",
+              "count": 2
+            },
+            {
+              "layer": "axis",
+              "point": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "length": 120,
+              "radius": 2,
+              "frame": "section"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Synthetic pose 45 deg about the axle-pin axis, pins fixed; not a checked travel",
+          "view": "camera",
+          "step": null,
+          "layers": [
+            {
+              "layer": "pose",
+              "select": "!part:43093",
+              "scope": "section",
+              "point": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "angle": 45.0,
+              "count": 10
+            },
+            {
+              "layer": "highlight",
+              "select": "part:43093",
+              "scope": "section",
+              "count": 2
+            },
+            {
+              "layer": "axis",
+              "point": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "length": 120,
+              "radius": 2,
+              "frame": "section"
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Synthetic pose 90 deg about the axle-pin axis, pins fixed; not a checked travel",
+          "view": "camera",
+          "step": null,
+          "layers": [
+            {
+              "layer": "pose",
+              "select": "!part:43093",
+              "scope": "section",
+              "point": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "angle": 90.0,
+              "count": 10
+            },
+            {
+              "layer": "highlight",
+              "select": "part:43093",
+              "scope": "section",
+              "count": 2
+            },
+            {
+              "layer": "axis",
+              "point": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "direction": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "length": 120,
+              "radius": 2,
+              "frame": "section"
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #39FF14 synthetic axis rod (not a part)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Aligned by supplied camera metadata; one camera for every panel.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.5.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.12.12",
+        "leocad": "26.09"
+      },
+      "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/5892-retracting-nose-gear-poses.json --output output/boards/5892-retracting-nose-gear-poses"
     }
   ]
 }

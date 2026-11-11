@@ -6,7 +6,7 @@ Reusable source construction: source checks pass and the Python and LeoCAD BOMs 
 
 Aircraft landing gear · Creator hybrid · 12 parts · 1 source steps in 1 section
 
-[Build pages](index.html) · [Inspection board](board/mosaic.png) · [Source](source.mpd) · [Editable plan](scene.plan.json) · [Checks](source-checks.json) · [Board provenance](board/board.json)
+[Build pages](index.html) · [Inspection board](board/mosaic.png) · [Pose sweep](board/poses.png) · [Source](source.mpd) · [Editable plan](scene.plan.json) · [Checks](source-checks.json) · [Board provenance](board/board.json)
 
 ![Inspection board](board/mosaic.png)
 
@@ -31,13 +31,14 @@ The pin holes for the pivot, the switch arm that moves the link, and the opening
 
 ## Read the board
 
-Panel 1: a ghosted close-up under the nose with the leg highlighted, hanging down and slightly forward. Panel 2: the isolated leg from home, bent liftarm, link and wheel. Panel 3: from the right, the wheel face-on between the blue axle pins. Panel 4: the stud map, liftarms aqua (−Z) and the bent liftarm blue/orange.
+Panel 1: a ghosted close-up under the nose with the leg highlighted, hanging down and slightly forward. Panel 2: the isolated leg from home, bent liftarm, link and wheel. Panel 3: from the right, the wheel face-on between the blue axle pins. Panel 4: the stud map, liftarms aqua (−Z) and the bent liftarm blue/orange. The pose sweep board turns the leg 0, 45 and 90 degrees about the axle-pin axis (neon-green rod) with the pins fixed: a synthetic sweep, not a checked travel.
 
 Magenta edges mark highlighted parts or the parts added in a source step. Pale grey, see-through parts are ghosted context. A neon-green rod (`#39FF14`) is a synthetic axis marker, not a part. Stud maps recolour each part by where its studs point: up lilac, +X rose, −X vermilion, +Z electric blue, −Z aqua, down lime, odd angle violet. These synthetic colours are ΔE ≥ 16 from every LDraw colour. LDraw −Y is up; LeoCAD `right` shows the model's right side, from −X.
 
 Replay a board into `output/`:
 
     ./ldraw-xray board run examples/aircraft-atlas/recipes/5892-retracting-nose-gear.json --output output/boards/5892-retracting-nose-gear
+    ./ldraw-xray board run examples/aircraft-atlas/recipes/5892-retracting-nose-gear-poses.json --output output/boards/5892-retracting-nose-gear-poses
 
 ## Reuse it
 

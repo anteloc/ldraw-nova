@@ -12,10 +12,12 @@ Read the registered construction lesson and its linked audit before adapting the
     "scope": "construction",
     "kind": "detail",
     "aliases": [
-      "spaceship:canopy-cockpit"
+      "spaceship:canopy-cockpit",
+      "aircraft:canopy-cockpit"
     ],
     "families": [
-      "spaceship"
+      "spaceship",
+      "aircraft"
     ],
     "legacy_groups": [
       "details"

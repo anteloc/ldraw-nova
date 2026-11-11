@@ -51,7 +51,7 @@ Read [GUIDE.md](GUIDE.md) for the construction, what the parent supplies, how to
     "preview": "examples/42040-piston-engine/renders/home.png",
     "board": "examples/42040-piston-engine/board/mosaic.png",
     "visual_review": "examples/42040-piston-engine/visual-review.json",
-    "model_sha256": "b1b2699182be2fa46c0883e6fbfcd58c66581c4e7eeb9fb4ff9a53162e564c1b"
+    "model_sha256": "db1ba31568473d255aa56a8192b19a00751f2f5db602e1ecac7a9f5701cf8b45"
   }
 ]
 ```

@@ -71,6 +71,7 @@ overrides this default.
 | Subject proportions and construction choices | [Design models](docs/agent/guides/design-models.md) |
 | Part frames, mounting and submodel composition | [Place parts](docs/agent/guides/place-parts.md), [compose modules](docs/agent/guides/compose-modules.md) |
 | Sideways construction | [SNOT](docs/agent/guides/snot.md) |
+| Aircraft of any style: airliner, jet, prop plane, biplane, floatplane | [Aircraft](docs/agent/guides/aircraft.md) |
 | Structural frames, joints and moving assemblies | [Technic](docs/agent/guides/technic.md), [mechanisms](docs/agent/guides/mechanisms.md) |
 | Hoses, cables, bands, chains or treads | [Flex authoring](docs/agent/guides/flex.md), [flex contracts](docs/agent/reference/flex.md) |
 | Browsing annotated models in the local 3D selector | [Model selector](model-selector/README.md) (`./model-selector.sh`) |

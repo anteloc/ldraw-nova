@@ -12,10 +12,12 @@ Read the registered construction lesson and its linked audit before adapting the
     "scope": "construction",
     "kind": "detail",
     "aliases": [
-      "submodel:s11-10226-radial-engine"
+      "submodel:s11-10226-radial-engine",
+      "aircraft:10226-striped-rudder"
     ],
     "families": [
-      "submodel"
+      "submodel",
+      "aircraft"
     ],
     "legacy_groups": [
       "details"

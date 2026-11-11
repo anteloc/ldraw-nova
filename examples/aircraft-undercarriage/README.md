@@ -42,10 +42,12 @@ Recreate the board with `./ldraw-xray board run examples/aircraft-undercarriage/
     "scope": "construction",
     "kind": "assembly",
     "aliases": [
-      "reference:aircraft-undercarriage"
+      "reference:aircraft-undercarriage",
+      "aircraft:aircraft-undercarriage"
     ],
     "families": [
-      "reference"
+      "reference",
+      "aircraft"
     ],
     "legacy_groups": [
       "examples"

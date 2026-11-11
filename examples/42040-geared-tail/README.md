@@ -23,7 +23,7 @@ Read [GUIDE.md](GUIDE.md) for the construction, what the parent supplies, how to
       "details"
     ],
     "lesson": "How a studless plane hangs everything behind the cockpit off three parallel 9-long spar beams: a tall liftarm fin, a tilting stabiliser driven by knob gears from a cockpit joystick, trapezium-panel wings pinned to the spars, and panel tail sides. Use it to learn two things: keep the spar beams continuous and hang wings and tail off them, and route a cockpit lever to a tail surface through knob gears on cross axles. Check the stabiliser's travel before closing the tail sides.",
-    "limits": "The joystick-to-stabiliser travel and the pin retention of the wings were not checked; one static pose. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+    "limits": "The joystick-to-stabiliser travel and the pin retention of the wings were not checked; one static pose. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for 18 source interfaces (32556 long pins and 2780/6558 friction pins only partly seated in the 11-, 7- and 5-long beams as drawn); `manual export`, the plan rebuild and the BOM comparison pass. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
     "subjects": [
       "Aircraft tail",
       "tail",
@@ -52,7 +52,7 @@ Read [GUIDE.md](GUIDE.md) for the construction, what the parent supplies, how to
     "preview": "examples/42040-geared-tail/renders/home.png",
     "board": "examples/42040-geared-tail/board/mosaic.png",
     "visual_review": "examples/42040-geared-tail/visual-review.json",
-    "model_sha256": "b2ef52df254a3fd0b3ae3d58fa7e31f99700770e410d574eea206e9a8a5a03fd"
+    "model_sha256": "a7d12ec2ece44b1fd04e4906ec06f845805fda7a62d5a844dd190acec4c9969b"
   }
 ]
 ```

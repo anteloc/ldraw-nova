@@ -196,7 +196,9 @@ def extract_section(path, section, *, namespace, repair_bfc=False, normalize_rot
                 if normalize_rotations and not is_part(sub):
                     matrix = np.array([float(v) for v in tokens[5:14]]).reshape(3, 3)
                     deviation = float(np.max(np.abs(matrix.T @ matrix - np.eye(3))))
-                    if 1e-4 < deviation <= 0.002 and np.linalg.det(matrix) > 0:
+                    # Four-decimal source matrices deviate by about 6e-5; the structural
+                    # check needs 1e-6, so repair everything above that and below 0.002.
+                    if 1e-6 < deviation <= 0.002 and np.linalg.det(matrix) > 0:
                         u, _, vt = np.linalg.svd(matrix)
                         corrected = u @ vt
                         changes.append(dict(kind="normalize_rounded_rotation", section=sub.name, source_line=number,

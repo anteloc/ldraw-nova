@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/42040-fire-plane.json",
+      "recipe_sha256": "e56640ce395f267e8182eeb014c386ae6f888bf9f23f5016524c9df4a4755ac4",
+      "image": "board/mosaic.png",
+      "image_sha256": "51afd6949b451789fa2a306f34c18e343fb986af36b7f1edf818717e287e79c1",
+      "title": "42040 Technic fire plane: studless liftarm airframe with panels and a geared tail",
+      "mode": "views",
+      "source": {
+        "model": "42040-1.mpd",
+        "section": "42040 - Fire Plane.ldr",
+        "sha256": "574f72260e19873b2f5d906ea687d1313ac35412c06bd5de4a299ca89dab55db",
+        "steps": 32,
+        "parents": {}
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Completed model from home",
+          "view": "home",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Front: span, dihedral and engine spacing",
+          "view": "front",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Right side: nose, cabin, wing station and tail arm",
+          "view": "right",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Top: wing planform, sweep and tail planform",
+          "view": "top",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 5,
+          "label": "Bottom: landing gear stance and underside",
+          "view": "bottom",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 6,
+          "label": "Stud map: synthetic colours by stud direction",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "+x": 86,
+                "down": 78,
+                "up": 130,
+                "-x": 88,
+                "+z": 55,
+                "angled": 54,
+                "-z": 79
+              },
+              "total": 570
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)"
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.5.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.12.12",
+        "leocad": "26.09"
+      },
+      "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/42040-fire-plane.json --output output/boards/42040-fire-plane"
+    }
+  ]
+}

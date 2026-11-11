@@ -84,6 +84,7 @@ bin/ldraw-xray mosaic output/study/panels.json --output output/study/mosaic.png
 ```sh
 ./ldraw-agent examples --family submodel --details 'curved roof'
 ./ldraw-agent examples --family submodel
+./ldraw-agent examples --family aircraft --details 'landing gear'
 ./ldraw-agent manual export examples/10258-rounded-roof --outdir output/my-roof
 ```
 

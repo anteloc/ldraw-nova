@@ -103,6 +103,23 @@ def test_rotation_repair_is_bounded_and_opt_in(parts,tmp_path):
     assert not manifest['changes']
 
 
+def test_four_decimal_rotations_are_repaired_to_structural_tolerance(parts,tmp_path):
+    import numpy as np
+    source=tmp_path/'source.mpd'
+    # A 3-degree pitch written with four decimals, as OMR authors do: off by about 6e-5.
+    atomic_write(source,mpd(ref(matrix='1 0 0 0 0.9986 0.0523 0 -0.0523 0.9986')))
+    fixed,manifest=extract_section(source,'main.ldr',namespace='fixed',normalize_rotations=True)
+    assert [c['kind'] for c in manifest['changes']]==['normalize_rounded_rotation']
+    assert manifest['changes'][0]['max_coefficient_change']<1e-3
+    line=next(l for l in fixed.splitlines() if l.startswith('1 '))
+    m=np.array([float(v) for v in line.split()[5:14]]).reshape(3,3)
+    assert np.allclose(m.T@m,np.eye(3),atol=1e-6) and np.linalg.det(m)>0
+    # Exact rotations are left alone.
+    atomic_write(source,mpd(ref(matrix='0 0 1 0 1 0 -1 0 0')))
+    _,manifest=extract_section(source,'main.ldr',namespace='exact',normalize_rotations=True)
+    assert not manifest['changes']
+
+
 def test_selected_section_retains_original_lines(parts,tmp_path):
     source=tmp_path/'source.mpd'
     atomic_write(source,mpd(ref('child.ldr'))+mpd(ref(),'child.ldr')+mpd(ref('absent.dat'),'unused.ldr'))

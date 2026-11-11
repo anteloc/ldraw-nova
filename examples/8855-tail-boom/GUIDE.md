@@ -54,7 +54,7 @@ The placement plan preserves source axes. `source_origin` is a positioning frame
 
 ## Limits
 
-Elevator travel and the axle's bearings in the boom were not checked.
+Elevator travel and the axle's bearings in the boom were not checked. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for one 3673 pin partly seated in a 1×6 Technic brick as drawn; `manual export`, the plan rebuild and the BOM comparison pass.
 
 The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.
 
@@ -62,4 +62,4 @@ The source and renders teach a construction. They do not prove clutch, fit, clea
 
 Source: `8855-1.mpd` / `8855 - Tail.ldr`, SHA-256 `98bb90e07be0a121c13018abd5fc51a2c0a7b1a4a94871b7c4bb92f3a3f04f8f`. Parent: `8855 - Prop Plane.ldr`. Look it up with `./ldraw-agent discover show submodel-5c88e904198d157a6a4a6492`.
 
-Original authors and licences stay in [source.mpd](source.mpd); [extraction.json](extraction.json) records renamed sections and 2 bounded preparation changes. Python and LeoCAD BOMs match. The visual review is recorded separately, after opening the actual images.
+Original authors and licences stay in [source.mpd](source.mpd); [extraction.json](extraction.json) records renamed sections and 25 bounded preparation changes. Python and LeoCAD BOMs match. The visual review is recorded separately, after opening the actual images.

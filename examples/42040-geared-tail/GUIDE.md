@@ -54,7 +54,7 @@ The placement plan preserves source axes. `source_origin` is a positioning frame
 
 ## Limits
 
-The joystick-to-stabiliser travel and the pin retention of the wings were not checked; one static pose.
+The joystick-to-stabiliser travel and the pin retention of the wings were not checked; one static pose. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for 18 source interfaces (32556 long pins and 2780/6558 friction pins only partly seated in the 11-, 7- and 5-long beams as drawn); `manual export`, the plan rebuild and the BOM comparison pass.
 
 The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.
 
@@ -62,4 +62,4 @@ The source and renders teach a construction. They do not prove clutch, fit, clea
 
 Source: `42040-1.mpd` / `42040 - tail.ldr`, SHA-256 `574f72260e19873b2f5d906ea687d1313ac35412c06bd5de4a299ca89dab55db`. Parent: `42040 - Fire Plane.ldr`. Look it up with `./ldraw-agent discover show submodel-0418cb92590727bda30acb0e`.
 
-Original authors and licences stay in [source.mpd](source.mpd); [extraction.json](extraction.json) records renamed sections and 2 bounded preparation changes. Python and LeoCAD BOMs match. The visual review is recorded separately, after opening the actual images.
+Original authors and licences stay in [source.mpd](source.mpd); [extraction.json](extraction.json) records renamed sections and 26 bounded preparation changes. Python and LeoCAD BOMs match. The visual review is recorded separately, after opening the actual images.

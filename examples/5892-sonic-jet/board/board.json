@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "synthetic_note": "Images come from synthetic inspection copies, not buildable models.",
+  "boards": [
+    {
+      "recipe": "recipes/5892-sonic-jet.json",
+      "recipe_sha256": "3c07e6fb17e45824ac0ed73e01f5ee08fd1f3c77b57dc3cf0cdaf93a378b7ff2",
+      "image": "board/mosaic.png",
+      "image_sha256": "65fa8052f98ade7a61de70613be83dd891e0c36a499a6681989fae8780f02415",
+      "title": "5892 Creator jet: Technic frame under a System skin with a SNOT nose",
+      "mode": "views",
+      "source": {
+        "model": "5892-1.mpd",
+        "section": "5892 - Airplane.ldr",
+        "sha256": "deb0dfcf1657114846d3cb73f93b3fca01f699dfa75e9327279652209fc6b320",
+        "steps": 1,
+        "parents": {
+          "5892 - main.ldr": [
+            "1 0 0 0 0 1 0 0 0 1 0 0 0 1 5892 - Airplane.ldr"
+          ]
+        }
+      },
+      "panels": [
+        {
+          "panel": 1,
+          "label": "Parent 5892 - main.ldr from home, the aircraft section highlighted",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "highlight",
+              "select": "section",
+              "scope": "parent",
+              "count": 1
+            }
+          ],
+          "warnings": []
+        },
+        {
+          "panel": 2,
+          "label": "Front: span, dihedral and engine spacing",
+          "view": "front",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 3,
+          "label": "Right side: nose, cabin, wing station and tail arm",
+          "view": "right",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 4,
+          "label": "Top: wing planform, sweep and tail planform",
+          "view": "top",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 5,
+          "label": "Bottom: landing gear stance and underside",
+          "view": "bottom",
+          "step": null,
+          "layers": [],
+          "warnings": []
+        },
+        {
+          "panel": 6,
+          "label": "Stud map: synthetic colours by stud direction",
+          "view": "home",
+          "step": null,
+          "layers": [
+            {
+              "layer": "stud_map",
+              "select": "all",
+              "scope": "section",
+              "frame": "section coordinates; LDraw -Y is up",
+              "counts": {
+                "up": 432,
+                "-x": 21,
+                "+z": 23,
+                "+x": 18,
+                "down": 4,
+                "-z": 26
+              },
+              "total": 524
+            }
+          ],
+          "warnings": []
+        }
+      ],
+      "legend": [
+        "Colours: #FF0078 studs point +X; #FF5500 studs point -X; #0500FF studs point +Z; #00FFE0 studs point -Z; #BCF747 studs point down (+Y); #7C49FF studs at an odd angle",
+        "Colours: #EDD4F7 studs point up (-Y)",
+        "Magenta edges: highlighted parts, or parts added in the source step."
+      ],
+      "note": "Views independently framed; not to common scale.",
+      "duplicates": [],
+      "limitations": [
+        "Boards do not prove fit, clearance or stability; inspect full-resolution panels for small details."
+      ],
+      "versions": {
+        "ldraw_xray": "0.5.0",
+        "pyldraw3": "1.7.0",
+        "python": "3.12.12",
+        "leocad": "26.09"
+      },
+      "replay": "./ldraw-xray board run examples/aircraft-atlas/recipes/5892-sonic-jet.json --output output/boards/5892-sonic-jet"
+    }
+  ]
+}

@@ -2,7 +2,605 @@
   "version": 2,
   "generated_from": "package README registrations",
   "family": "aircraft",
-  "examples": [],
+  "examples": [
+    {
+      "id": "10159-city-airliner",
+      "title": "City airliner from moulded wing, tail and wedge plates",
+      "scope": "inspiration",
+      "kind": "assembly",
+      "aliases": [
+        "aircraft:10159-city-airliner"
+      ],
+      "families": [
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "The classic City airliner in one studs-up section: a 4-wide brick fuselage with window bricks under an openable double-slope roof, moulded 7×12 wing plates, a T-tail with the printed 4867 tailplane on a brick fin, two 4868a/4869 engine pods on the rear fuselage sides, a wedge-plate nose with a 2437 windscreen, and wheel-plate landing gear. Measured: span 25 studs, length 29, height 14, 121 parts, no Technic. Use it for the proportions of a small City airliner: span about equal to length, rear engines, T-tail, a 4-wide cabin with one window per two studs. Inspiration only: the embedded printed tailplane lacks a part classification; use the library 4867 pattern part when rebuilding.",
+      "limits": "Inspiration only: `part.missing_classification` on the embedded 4867px3 tailplane; geometry passes and the BOM comparison matches. Roof hinge and gear clearance not checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "subjects": [
+        "Whole aircraft",
+        "airliner"
+      ],
+      "techniques": [
+        "system"
+      ],
+      "style": "classic City studs-up",
+      "origin": {
+        "model": "10159-1.mpd",
+        "section": "10159 - airplane.ldr",
+        "parent": "10159 - main.ldr",
+        "sha256": "70f2ca3d46b9c0e4a69f149ca2599e1022a3b367b6718d2121b67d454ae069ab",
+        "discovery_id": "submodel-40dcf1a3ca24fc40863a935a",
+        "database_description": "Passenger airplane with a red and white fuselage, swept white wings with blue stripes and twin jet engines, a glazed cockpit windscreen and a row of passenger windows, red tail surfaces and a tail plane, wheeled landing gear and red/green navigation lights",
+        "description_accuracy": "accurate"
+      },
+      "model": "../10159-city-airliner/source.mpd",
+      "plan": "../10159-city-airliner/scene.plan.json",
+      "manual": "../10159-city-airliner/index.html",
+      "study_notes": "../10159-city-airliner/study-notes.json",
+      "study_guide": "examples/10159-city-airliner/GUIDE.md",
+      "preview": "../10159-city-airliner/renders/home.png",
+      "board": "../10159-city-airliner/board/mosaic.png",
+      "visual_review": "../10159-city-airliner/visual-review.json",
+      "model_sha256": "e2112b7488da38a21696d1a7234fdad26944cfcfabe1b6fc3e0beb07e67f48d1",
+      "guide": "../10159-city-airliner/README.md",
+      "source_sha256": "e2112b7488da38a21696d1a7234fdad26944cfcfabe1b6fc3e0beb07e67f48d1",
+      "key": "10159-city-airliner",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "96a0d96d75f5273c595e87131f8f77a985b15c70963a0532a3a535423635268b",
+      "category": "Whole aircraft, airliner",
+      "source_checks_passed": false,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "10226-sopwith-camel",
+      "title": "Sopwith Camel display biplane: SNOT fuselage, planked wings and rigging",
+      "scope": "inspiration",
+      "kind": "assembly",
+      "aliases": [
+        "aircraft:10226-sopwith-camel"
+      ],
+      "families": [
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "The Sopwith Camel display biplane: a fuselage of log bricks, hinge-plate side walls and SNOT panels around a latticed windscreen; two planked wings of 1×3 tile rows on plate spars joined by suspension-arm struts; a radial engine face and geared propeller; a wedge-plate tailplane and striped rudder on handles; towball-hinged ailerons and a shock-absorber landing gear; strings as rigging and rubber bands as tyres. Measured: span 59 studs, length 50, height 23, 811 parts plus string and band segments, 8% Technic. Use it for the proportions and module split of a display biplane: span 1.2× length, upper wing above the fuselage top, lower wing at the belly, rudder and ailerons as separate hinged sections. Inspiration only: the string and band sections are LDCad segments; the detail packages from this source (propeller, tailplane, aileron, rudder) are reusable on their own.",
+      "limits": "Inspiration only: ten string and four band sections keep LDCad segments (`assembly.nonrigid`, `assembly.library_internal`, `coverage.raw_geometry`, `geometry.nonplanar`) and 31 body overlaps are reported; the BOM comparison does not match because the segments are not physical parts. Hinges, gear and rigging tension not checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "subjects": [
+        "Whole aircraft",
+        "biplane"
+      ],
+      "techniques": [
+        "system",
+        "snot",
+        "flex"
+      ],
+      "style": "display SNOT biplane",
+      "origin": {
+        "model": "10226-1.mpd",
+        "section": "10226 - main.ldr",
+        "parent": null,
+        "sha256": "2903c00bd3f1e0af46d47af2e09bd8ccb423eced0588947cc0fb9bd14ac20511",
+        "discovery_id": "submodel-2b454b8aeafe1ec99d052a1a",
+        "database_description": "Sopwith Camel biplane: tan log-brick, metallic-silver corner-round and dark-green/tan/reddish-brown plate, slope, arch and hinge fuselage around a pearl-gold latticed windscreen, mounting the planked wings, tailplane, geared propeller, radial engine, towball-hinged landing gear with wheels and shock absorbers, and the rigging cables and rubber bands",
+        "description_accuracy": "accurate"
+      },
+      "model": "../10226-sopwith-camel/source.mpd",
+      "plan": "../10226-sopwith-camel/scene.plan.json",
+      "manual": "../10226-sopwith-camel/index.html",
+      "study_notes": "../10226-sopwith-camel/study-notes.json",
+      "study_guide": "examples/10226-sopwith-camel/GUIDE.md",
+      "preview": "../10226-sopwith-camel/renders/home.png",
+      "board": "../10226-sopwith-camel/board/mosaic.png",
+      "visual_review": "../10226-sopwith-camel/visual-review.json",
+      "model_sha256": "d439aef2b29f80ac9a1492cfb60bfc20a0a0c6a50b8da8cc77c595dfb93a7b98",
+      "guide": "../10226-sopwith-camel/README.md",
+      "source_sha256": "d439aef2b29f80ac9a1492cfb60bfc20a0a0c6a50b8da8cc77c595dfb93a7b98",
+      "key": "10226-sopwith-camel",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "073d3650f66f64169eb8b430f54250bed7abbadd696ab4d8c59af3b298375132",
+      "category": "Whole aircraft, biplane",
+      "source_checks_passed": false,
+      "bom_matches": false,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "42040-fire-plane",
+      "title": "Technic fire plane: studless liftarm airframe with panels and a geared tail",
+      "scope": "inspiration",
+      "kind": "assembly",
+      "aliases": [
+        "aircraft:42040-fire-plane"
+      ],
+      "families": [
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "A studless Technic fire plane: three red spar beams carry panel wings, a liftarm fin and a joystick-geared stabiliser; a two-cylinder engine with a three-blade rotor sits in the nose; V-strut landing gear on treaded 61254 tyres hangs under a liftarm belly; the water bay door works on a rubber band. Measured: span 53 studs, length 42, height 23, 570 parts, 94% Technic. Use it for the layout of a studless Technic prop plane: a floor-and-spar frame, panels as wing and tail skins, and one cockpit lever driving a surface. Inspiration only: the embedded tyres and the rubber band are raw geometry; use the library 61254 and the flex workflow for the band when rebuilding.",
+      "limits": "Inspiration only: `coverage.raw_geometry` and `geometry.nonplanar` from the embedded tyres and the rubber band; the BOM comparison matches. No mechanism was checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "subjects": [
+        "Whole aircraft",
+        "propeller plane"
+      ],
+      "techniques": [
+        "technic"
+      ],
+      "style": "studless Technic",
+      "origin": {
+        "model": "42040-1.mpd",
+        "section": "42040 - Fire Plane.ldr",
+        "parent": null,
+        "sha256": "574f72260e19873b2f5d906ea687d1313ac35412c06bd5de4a299ca89dab55db",
+        "discovery_id": "submodel-07c1f2ed381b540cf4f4832f",
+        "database_description": "Technic fire-fighting plane featuring an articulated engine, landing gear with treaded tyres, wings with flaps, and a geared tail boom with horizontal stabilizer.",
+        "description_accuracy": "accurate"
+      },
+      "model": "../42040-fire-plane/source.mpd",
+      "plan": "../42040-fire-plane/scene.plan.json",
+      "manual": "../42040-fire-plane/index.html",
+      "study_notes": "../42040-fire-plane/study-notes.json",
+      "study_guide": "examples/42040-fire-plane/GUIDE.md",
+      "preview": "../42040-fire-plane/renders/home.png",
+      "board": "../42040-fire-plane/board/mosaic.png",
+      "visual_review": "../42040-fire-plane/visual-review.json",
+      "model_sha256": "623c36717c266da1726d42d1c9b211d5f75c270e12c1e775b1d4fd062a67e8bb",
+      "guide": "../42040-fire-plane/README.md",
+      "source_sha256": "623c36717c266da1726d42d1c9b211d5f75c270e12c1e775b1d4fd062a67e8bb",
+      "key": "42040-fire-plane",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "b57cd8008507c4f8de4882b49e1b2b6d14b1e56eb5ee3e5db0b447fabe41cc1b",
+      "category": "Whole aircraft, propeller plane",
+      "source_checks_passed": false,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "5892-sonic-jet",
+      "title": "Creator jet: Technic frame under a System skin with a SNOT nose",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "aircraft:5892-sonic-jet"
+      ],
+      "families": [
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "A Creator jet: a Technic-brick spine with pins carries a studs-up System skin, delta plate wings with Technic-brick roots, a SNOT nose with a cone spike, a one-stud slope fin, twin 43121 engines side by side at the tail and a retracting nose gear. Measured: span 41 studs, length 50, height 17, 524 parts, 16% Technic. Use it as the template for a mid-size jet: length 1.2× span, delta wings two plates thick, engines at the rear, fin one stud thick. Build the Technic spine first, then hang wings, nose and fin on it before closing the skin.",
+      "limits": "Wing root pin engagement, gear retraction and canopy fit were not checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "subjects": [
+        "Whole aircraft",
+        "jet"
+      ],
+      "techniques": [
+        "system",
+        "technic",
+        "snot"
+      ],
+      "style": "Creator hybrid (Technic frame, System skin)",
+      "origin": {
+        "model": "5892-1.mpd",
+        "section": "5892 - Airplane.ldr",
+        "parent": "5892 - main.ldr",
+        "sha256": "deb0dfcf1657114846d3cb73f93b3fca01f699dfa75e9327279652209fc6b320",
+        "discovery_id": "submodel-18d9164b0a31e18b0ce79ed3",
+        "database_description": "Assembled aircraft fuselage with Technic beams, plates, and curved red wedge panels forming the body shell.",
+        "description_accuracy": "partly accurate"
+      },
+      "model": "../5892-sonic-jet/source.mpd",
+      "plan": "../5892-sonic-jet/scene.plan.json",
+      "manual": "../5892-sonic-jet/index.html",
+      "study_notes": "../5892-sonic-jet/study-notes.json",
+      "study_guide": "examples/5892-sonic-jet/GUIDE.md",
+      "generator": "../5892-sonic-jet/generate.py",
+      "preview": "../5892-sonic-jet/renders/home.png",
+      "board": "../5892-sonic-jet/board/mosaic.png",
+      "visual_review": "../5892-sonic-jet/visual-review.json",
+      "model_sha256": "184530c466611154c811c30f41e2254b19bec4359e1dba9218c5d51faf1e50bc",
+      "guide": "../5892-sonic-jet/README.md",
+      "source_sha256": "184530c466611154c811c30f41e2254b19bec4359e1dba9218c5d51faf1e50bc",
+      "key": "5892-sonic-jet",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "8179616a228bca54012ffadd0d9bd57311d09af80b7401670fbc5075ca6d51a5",
+      "category": "Whole aircraft, jet",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "7893-airliner",
+      "title": "Passenger airliner from large fuselage sections pinned together",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "aircraft:7893-airliner"
+      ],
+      "families": [
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "A minifigure airliner from large moulded sections: the 54092 glazed nose, 54091 cabin sections and the 54701 tail cone pinned end to end with 2780 friction pins, one 54093 wing part each side carrying two nacelles, a two-axle bogie under each wing root and the flight deck dropped into the nose. Measured: span 70 studs, length 64, height 23, 358 parts, 12% Technic. Use it when large moulded airliner parts are acceptable: set the cabin length by the number of 54091 sections, keep span about 1.1× length, hang engines from the wing anti-studs and bogies from wing-root pin holes. For a brick-built airliner take the module layout, not the parts.",
+      "limits": "Section pin clutch, door hinges and gear stance were not checked; a static pose. The source places the two bogies 20 LDU off-centre from each other. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "subjects": [
+        "Whole aircraft",
+        "airliner"
+      ],
+      "techniques": [
+        "system"
+      ],
+      "style": "special-part System airliner",
+      "origin": {
+        "model": "7893-1.mpd",
+        "section": "7893 - plane.ldr",
+        "parent": "7893 - main.ldr",
+        "sha256": "8d175059a9cf28dcc1097bcff27b170e84b3ffd13b47d46136f44ca1d66876b9",
+        "discovery_id": "submodel-752f2e4349612186206f84d8",
+        "database_description": "The main fuselage of a passenger jet built from large curved plane sections, a wide wing, structural bricks, and numerous plates and pins.",
+        "description_accuracy": "accurate"
+      },
+      "model": "../7893-airliner/source.mpd",
+      "plan": "../7893-airliner/scene.plan.json",
+      "manual": "../7893-airliner/index.html",
+      "study_notes": "../7893-airliner/study-notes.json",
+      "study_guide": "examples/7893-airliner/GUIDE.md",
+      "generator": "../7893-airliner/generate.py",
+      "preview": "../7893-airliner/renders/home.png",
+      "board": "../7893-airliner/board/mosaic.png",
+      "visual_review": "../7893-airliner/visual-review.json",
+      "model_sha256": "09ca9385f7e0629ff25d110308bac91176041a893c01933f6b0a77778c77475f",
+      "guide": "../7893-airliner/README.md",
+      "source_sha256": "09ca9385f7e0629ff25d110308bac91176041a893c01933f6b0a77778c77475f",
+      "key": "7893-airliner",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "a0384a4276eb3659a874a9246b332f6fc2e1d702e1133ba2d114ab888f844535",
+      "category": "Whole aircraft, airliner",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "8855-prop-plane",
+      "title": "Studded Technic floatplane with articulated wings and a piston engine",
+      "scope": "inspiration",
+      "kind": "assembly",
+      "aliases": [
+        "aircraft:8855-prop-plane"
+      ],
+      "families": [
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "The 1988 studded Technic floatplane: a Technic-brick fuselage with an open cockpit and pilot, a high wing of Technic-brick spars and wing-brick ribs on universal joints, a piston engine behind a three-blade propeller, a tail boom with a 7×12 wing-plate tailplane and jumper-plate fin, and twin floats on an axle truss with wheels inside. Measured: span 72 studs, length 50, height 26, 598 parts, 66% Technic. Use it for the proportions and module layout of a studded Technic floatplane: span 1.4× length, high wing, floats two-thirds of the length. Inspiration only: the author scaled or skewed eight placements to match the strained real model, so rebuild rather than export.",
+      "limits": "Inspiration only: eight skewed placements (`assembly.nonrigid`) in the root and a pontoon joint; the BOM comparison matches. Nothing mechanical was checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "subjects": [
+        "Whole aircraft",
+        "floatplane"
+      ],
+      "techniques": [
+        "technic"
+      ],
+      "style": "studded Technic (1988)",
+      "origin": {
+        "model": "8855-1.mpd",
+        "section": "8855 - Prop Plane.ldr",
+        "parent": null,
+        "sha256": "98bb90e07be0a121c13018abd5fc51a2c0a7b1a4a94871b7c4bb92f3a3f04f8f",
+        "discovery_id": "submodel-16e2578539f8a9c87fe23286",
+        "database_description": "A large Technic propeller plane with a geared engine, adjustable wings, pontoons, a tail assembly, and an articulated pilot figure.",
+        "description_accuracy": "accurate"
+      },
+      "model": "../8855-prop-plane/source.mpd",
+      "plan": "../8855-prop-plane/scene.plan.json",
+      "manual": "../8855-prop-plane/index.html",
+      "study_notes": "../8855-prop-plane/study-notes.json",
+      "study_guide": "examples/8855-prop-plane/GUIDE.md",
+      "preview": "../8855-prop-plane/renders/home.png",
+      "board": "../8855-prop-plane/board/mosaic.png",
+      "visual_review": "../8855-prop-plane/visual-review.json",
+      "model_sha256": "ac11e2e472b0dce7a2d193ec4c26c4fbe23ce173009d3c9af0cf8cb5435c1666",
+      "guide": "../8855-prop-plane/README.md",
+      "source_sha256": "ac11e2e472b0dce7a2d193ec4c26c4fbe23ce173009d3c9af0cf8cb5435c1666",
+      "key": "8855-prop-plane",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "33a4ecc7de5c8b713741e486e059776f9ea11ec0ee41ced4f26fcf879f6eeb1a",
+      "category": "Whole aircraft, floatplane",
+      "source_checks_passed": false,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "9394-technic-airframe",
+      "title": "Studless Technic propeller plane built as one airframe section",
+      "scope": "inspiration",
+      "kind": "assembly",
+      "aliases": [
+        "aircraft:9394-technic-airframe"
+      ],
+      "families": [
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "A studless Technic propeller plane kept as one section: a red liftarm fuselage and wings with white panel skins, a 15-long beam as the two-blade propeller on a worm-and-knob gear train, tricycle gear on 42610 wheels plus a tail wheel, and two LSynth flexible axles arcing wingtip to wingtip as the wing leading edges. Measured: span 54 studs, length 60, height 16, 583 placements, 66% Technic. Use it for the layout of a studless Technic trainer: length 1.1× span, low wing, tricycle gear, propeller on a geared nose axle. Inspiration only: the 163 LSynth segments use mirrored matrices, so rebuild the flex leading edges with the flex workflow.",
+      "limits": "Inspiration only: 161 `assembly.nonrigid` placements from LSynth segments; the BOM comparison matches. Gear train and gear stance not checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "subjects": [
+        "Whole aircraft",
+        "propeller plane"
+      ],
+      "techniques": [
+        "technic",
+        "flex"
+      ],
+      "style": "studless Technic",
+      "origin": {
+        "model": "9394-1_Propeller-Plane.mpd",
+        "section": "9394 - 9394-2.ldr",
+        "parent": "9394 - Main.ldr",
+        "sha256": "d87d2975a64c4a8e3abac988b06407ffe1419b4e07289f6289e037dde44953be",
+        "discovery_id": "submodel-a195a08f6e4528d0f52a05bf",
+        "database_description": "Primary structural airframe built predominantly from red Technic liftarms, beams, pins, axles, and cross blocks forming the plane's fuselage and wings.",
+        "description_accuracy": "accurate"
+      },
+      "model": "../9394-technic-airframe/source.mpd",
+      "plan": "../9394-technic-airframe/scene.plan.json",
+      "manual": "../9394-technic-airframe/index.html",
+      "study_notes": "../9394-technic-airframe/study-notes.json",
+      "study_guide": "examples/9394-technic-airframe/GUIDE.md",
+      "preview": "../9394-technic-airframe/renders/home.png",
+      "board": "../9394-technic-airframe/board/mosaic.png",
+      "visual_review": "../9394-technic-airframe/visual-review.json",
+      "model_sha256": "df10bbb3464d16bdaee61c6e0d9fad88453c8bf93417eb437ff0728efc0fa648",
+      "guide": "../9394-technic-airframe/README.md",
+      "source_sha256": "df10bbb3464d16bdaee61c6e0d9fad88453c8bf93417eb437ff0728efc0fa648",
+      "key": "9394-technic-airframe",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "3c1153c434b96429a57f8d8625c2a1ade0a240a3e671ded4d571947fb897dfd8",
+      "category": "Whole aircraft, propeller plane",
+      "source_checks_passed": false,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "aircraft-undercarriage",
+      "title": "Compact aircraft landing strut with matched wheel and tyre",
+      "scope": "construction",
+      "kind": "assembly",
+      "aliases": [
+        "reference:aircraft-undercarriage",
+        "aircraft:aircraft-undercarriage"
+      ],
+      "families": [
+        "reference",
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Wheel-strut geometry in one source pose; retractable is not demonstrated. Preserve parent mounts; no checked travel claim.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "aircraft Technic"
+      ],
+      "model": "../aircraft-undercarriage/preview.mpd",
+      "plan": "../aircraft-undercarriage/scene.plan.json",
+      "preview": "../aircraft-undercarriage/renders/home.png",
+      "board": "../aircraft-undercarriage/board/mosaic.png",
+      "visual_review": "../aircraft-undercarriage/card.json",
+      "model_sha256": "a6849d4f565ffa20a4a74e9ea1a67280300ab6a5ce64ffff05be72f29fbe31ee",
+      "audit_pointer": "/items/0",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../aircraft-undercarriage/README.md",
+      "source_sha256": "1e976e3365226aa7a454e82e434698ba37487b5ff324caf583dbd16de6346a38",
+      "key": "aircraft-undercarriage",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "cb0bad08cdab3a8e7d47686509cecb94807d8fcea24e35ada0954d2d2302a637",
+      "category": "aircraft Technic",
+      "reference_id": "submodel-dde7c7038b72544ef35bb32f",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "airliner-engine",
+      "title": "Airliner engine and pylon",
+      "scope": "archive",
+      "kind": "assembly",
+      "aliases": [
+        "reference:airliner-engine",
+        "aircraft:airliner-engine-retired"
+      ],
+      "families": [
+        "reference",
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Retired on 2026-11-10: superseded by `7893-jet-nacelle`, extracted from the current corpus with build pages, a board and a review. Fan housing and long thin pylon; four parent placements clarify attachment. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "aircraft engines"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../airliner-engine/preview.mpd",
+      "plan": "../airliner-engine/scene.plan.json",
+      "preview": "../airliner-engine/renders/home.png",
+      "visual_review": "../airliner-engine/card.json",
+      "model_sha256": "72c4462e668332a6c6a540c04c31ec796b68b0f71646eda652c9fb373c290f05",
+      "audit_pointer": "/items/1",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../airliner-engine/README.md",
+      "source_sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
+      "key": "airliner-engine-retired",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "8789e3c736cb9babda23e6d20863a40db03f3ccfe53d5cb9c813e082c920e30a",
+      "category": "aircraft engines",
+      "reference_id": "submodel-9dd2ac5bcbd1c1dabf67779c",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "airliner-wheel-bogie",
+      "title": "Airliner wheel bogie",
+      "scope": "archive",
+      "kind": "assembly",
+      "aliases": [
+        "reference:airliner-wheel-bogie",
+        "aircraft:airliner-wheel-bogie-retired"
+      ],
+      "families": [
+        "reference",
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Retired on 2026-11-10: superseded by `7893-wheel-bogie`, extracted from the current corpus with build pages, a board and a review. Four-wheel, two-axle bogie and short upright mount with two parent placements. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "minifigure",
+      "subjects": [
+        "aircraft landing gear"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../airliner-wheel-bogie/preview.mpd",
+      "plan": "../airliner-wheel-bogie/scene.plan.json",
+      "preview": "../airliner-wheel-bogie/renders/home.png",
+      "visual_review": "../airliner-wheel-bogie/card.json",
+      "model_sha256": "623fcc3cfab937710d54ad22223d8f715b7124a37e9dc6427414187e75e82e0e",
+      "audit_pointer": "/items/2",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../airliner-wheel-bogie/README.md",
+      "source_sha256": "10b98f841e6aa4f33014cc417b61e2f09d50d98bf3ef735aa00bf1778719bb18",
+      "key": "airliner-wheel-bogie-retired",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "003bd3943bd19859b0037a50183023a3dda1f4ffd04cef4e98a7cacb91dffaa6",
+      "category": "aircraft landing gear",
+      "reference_id": "submodel-8c004489e1f4ececee31c06d",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "hinged-wing",
+      "title": "Tapered wing with hinge root",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:hinged-wing",
+        "aircraft:hinged-wing"
+      ],
+      "families": [
+        "reference",
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Tapered wing with actual bar/clip root: 60478 handle plates, not hinge fingers. No validated sweep claim. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "unknown",
+      "subjects": [
+        "aircraft wings"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../hinged-wing/preview.mpd",
+      "plan": "../hinged-wing/scene.plan.json",
+      "preview": "../hinged-wing/renders/home.png",
+      "visual_review": "../hinged-wing/card.json",
+      "model_sha256": "a2112d85b7808db8f2dcd0c8c5cbf4d5e84018af256732a2229ed1ba1b8e2ffd",
+      "audit_pointer": "/items/9",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../hinged-wing/README.md",
+      "source_sha256": "0ab60c96ec0f18b0d0d1270ca11a519cdc1034088ce2519c23800924bd6d7dc5",
+      "key": "hinged-wing",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "d3d3171533b5b4634b82c14b646dda1032af09fbbeba7eb367d2e1e5758c0f80",
+      "category": "aircraft wings",
+      "reference_id": "submodel-c5ba5b655fe01b038d865fa3",
+      "source_checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "sloped-tail-fin",
+      "title": "Sloped tail fin with beacon",
+      "scope": "hold",
+      "kind": "assembly",
+      "aliases": [
+        "reference:sloped-tail-fin",
+        "aircraft:sloped-tail-fin"
+      ],
+      "families": [
+        "reference",
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Thin black fin, yellow plate and translucent-red top; parent role agrees. Origin hash differs from current corpus; preserve frozen artifacts and reconcile provenance before reusable export.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
+      "scale": "unknown",
+      "subjects": [
+        "aircraft tails"
+      ],
+      "export_blocker": "Existing discover export rejects stale origin identity; reconcile provenance before enabling export. Frozen artifact agreement does not waive this gate.",
+      "model": "../sloped-tail-fin/preview.mpd",
+      "plan": "../sloped-tail-fin/scene.plan.json",
+      "preview": "../sloped-tail-fin/renders/home.png",
+      "visual_review": "../sloped-tail-fin/card.json",
+      "model_sha256": "0a37e3ab2145cadeeed59a3eb687ca6bf227d1a4ab66424241dc8b4b6523c030",
+      "audit_pointer": "/items/18",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/reference-findings.md",
+      "techniques": [],
+      "guide": "../sloped-tail-fin/README.md",
+      "source_sha256": "0ab60c96ec0f18b0d0d1270ca11a519cdc1034088ce2519c23800924bd6d7dc5",
+      "key": "sloped-tail-fin",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "ab35d312201ac9077720007dd4bd5b4e4b93f2fd64d099d5c9bbde58b5d54d6d",
+      "category": "aircraft tails",
+      "reference_id": "submodel-e44ddd541795e599710ea752",
+      "source_checks_passed": true,
+      "bom_matches": true
+    }
+  ],
   "details": [
     {
       "id": "10226-cowling-side",
@@ -167,6 +765,53 @@
       "category": "Aircraft wing, wing, biplane",
       "source_checks_passed": false,
       "bom_matches": false,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "10226-striped-rudder",
+      "title": "Sopwith Camel striped rudder: built sideways, hung on handle bricks",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "submodel:s11-10226-radial-engine",
+        "aircraft:10226-striped-rudder"
+      ],
+      "families": [
+        "submodel",
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Striped vertical tail rudder and handle-bearing column are visible in actual parent. No radial engine. Rename semantic package; retain source coordinate and hinge limits.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/submodel-audit.json",
+      "subjects": [
+        "Aircraft control surface"
+      ],
+      "techniques": [
+        "snot"
+      ],
+      "model": "../10226-striped-rudder/source.mpd",
+      "plan": "../10226-striped-rudder/scene.plan.json",
+      "generator": "../10226-striped-rudder/generate.py",
+      "preview": "../10226-striped-rudder/renders/home.png",
+      "manual": "../10226-striped-rudder/index.html",
+      "study_notes": "../10226-striped-rudder/study-notes.json",
+      "board": "../10226-striped-rudder/board/mosaic.png",
+      "visual_review": "../10226-striped-rudder/visual-review.json",
+      "model_sha256": "cd6cfe9318b3744762812eac06bd58edf131ca7149167aee71a0fcd32cc6ef4a",
+      "audit_pointer": "/items/19",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md",
+      "guide": "../10226-striped-rudder/README.md",
+      "source_sha256": "cd6cfe9318b3744762812eac06bd58edf131ca7149167aee71a0fcd32cc6ef4a",
+      "key": "10226-striped-rudder",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "4217085c19f1e3e88a8299f67945da6cb7ddc5b4e0b7bf88146b5c3d83bbfacd",
+      "category": "Aircraft control surface",
+      "source_checks_passed": true,
+      "bom_matches": true,
       "visual_review_status": "visually_reviewed"
     },
     {
@@ -346,7 +991,7 @@
         "details"
       ],
       "lesson": "How a studless plane hangs everything behind the cockpit off three parallel 9-long spar beams: a tall liftarm fin, a tilting stabiliser driven by knob gears from a cockpit joystick, trapezium-panel wings pinned to the spars, and panel tail sides. Use it to learn two things: keep the spar beams continuous and hang wings and tail off them, and route a cockpit lever to a tail surface through knob gears on cross axles. Check the stabiliser's travel before closing the tail sides.",
-      "limits": "The joystick-to-stabiliser travel and the pin retention of the wings were not checked; one static pose. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "limits": "The joystick-to-stabiliser travel and the pin retention of the wings were not checked; one static pose. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for 18 source interfaces (32556 long pins and 2780/6558 friction pins only partly seated in the 11-, 7- and 5-long beams as drawn); `manual export`, the plan rebuild and the BOM comparison pass. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
       "subjects": [
         "Aircraft tail",
         "tail",
@@ -375,13 +1020,13 @@
       "preview": "../42040-geared-tail/renders/home.png",
       "board": "../42040-geared-tail/board/mosaic.png",
       "visual_review": "../42040-geared-tail/visual-review.json",
-      "model_sha256": "b2ef52df254a3fd0b3ae3d58fa7e31f99700770e410d574eea206e9a8a5a03fd",
+      "model_sha256": "a7d12ec2ece44b1fd04e4906ec06f845805fda7a62d5a844dd190acec4c9969b",
       "guide": "../42040-geared-tail/README.md",
-      "source_sha256": "b2ef52df254a3fd0b3ae3d58fa7e31f99700770e410d574eea206e9a8a5a03fd",
+      "source_sha256": "a7d12ec2ece44b1fd04e4906ec06f845805fda7a62d5a844dd190acec4c9969b",
       "key": "42040-geared-tail",
       "group": "details",
       "use": "adapt",
-      "readme_sha256": "88c2fcc69a2a20e9564dc1959304a8041131b72c3efb9cc6a5d680dea5001706",
+      "readme_sha256": "e82587c67a3533e4a06f5f84f42c0578ea7b981a869519a06eee10a58e7230e5",
       "category": "Aircraft tail, tail, stabiliser, wing",
       "source_checks_passed": true,
       "bom_matches": true,
@@ -430,13 +1075,13 @@
       "preview": "../42040-piston-engine/renders/home.png",
       "board": "../42040-piston-engine/board/mosaic.png",
       "visual_review": "../42040-piston-engine/visual-review.json",
-      "model_sha256": "b1b2699182be2fa46c0883e6fbfcd58c66581c4e7eeb9fb4ff9a53162e564c1b",
+      "model_sha256": "db1ba31568473d255aa56a8192b19a00751f2f5db602e1ecac7a9f5701cf8b45",
       "guide": "../42040-piston-engine/README.md",
-      "source_sha256": "b1b2699182be2fa46c0883e6fbfcd58c66581c4e7eeb9fb4ff9a53162e564c1b",
+      "source_sha256": "db1ba31568473d255aa56a8192b19a00751f2f5db602e1ecac7a9f5701cf8b45",
       "key": "42040-piston-engine",
       "group": "details",
       "use": "adapt",
-      "readme_sha256": "8a2a0f529aacadfa57466075eb0e28bee207c68fee7704b37acfdc274d79380d",
+      "readme_sha256": "0cb3b87183d3dc38b7ce9dd8465bbbc0da2e4a9c1841da01df6276b07c8c06a9",
       "category": "Aircraft engine, piston engine, propeller",
       "source_checks_passed": true,
       "bom_matches": true,
@@ -1056,7 +1701,7 @@
         "details"
       ],
       "lesson": "A studded Technic empennage: 7×12 wing plates as the tailplane halves on a short Technic-brick block, a one-stud fin of 45° slopes and jumper plates with a red stripe, and a `Tail body` boom of 1×12 and 1×6 Technic bricks; a long axle with toggle joints runs forward along the boom as the elevator control. Use the 7×12 wing plates as one-part tailplane halves and the jumper-plate stack for a thin swept fin; run control axles along the boom inside the Technic bricks.",
-      "limits": "Elevator travel and the axle's bearings in the boom were not checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "limits": "Elevator travel and the axle's bearings in the boom were not checked. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for one 3673 pin partly seated in a 1×6 Technic brick as drawn; `manual export`, the plan rebuild and the BOM comparison pass. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
       "subjects": [
         "Aircraft tail",
         "tail",
@@ -1084,13 +1729,13 @@
       "preview": "../8855-tail-boom/renders/home.png",
       "board": "../8855-tail-boom/board/mosaic.png",
       "visual_review": "../8855-tail-boom/visual-review.json",
-      "model_sha256": "6c67ff89f379676b42a5850a8f61e6d9f37844c495d3d17008cac8c62c74b5fa",
+      "model_sha256": "7b586740764973dcc1eaf29f94c2802b9469561a4e955bad3774a32015eae57d",
       "guide": "../8855-tail-boom/README.md",
-      "source_sha256": "6c67ff89f379676b42a5850a8f61e6d9f37844c495d3d17008cac8c62c74b5fa",
+      "source_sha256": "7b586740764973dcc1eaf29f94c2802b9469561a4e955bad3774a32015eae57d",
       "key": "8855-tail-boom",
       "group": "details",
       "use": "adapt",
-      "readme_sha256": "649965c7a5620e6eeda2bcf0551a064b63cbb4902c97d3570b56d6038faad1a8",
+      "readme_sha256": "974bbe3a9f50fa868fbe45e6f1d1f3fff4ab58ef2cea607a769a9f4d24eac422",
       "category": "Aircraft tail, tail, empennage",
       "source_checks_passed": true,
       "bom_matches": true,
@@ -1111,7 +1756,7 @@
         "details"
       ],
       "lesson": "A studded Technic wing: two 1×16 Technic bricks as leading and trailing spars on 10-long axles, 1×4 wing-front and 1×6 wing-back bricks as ribs, 1×8 plates as skin strips; each root is a universal joint with a towball so the wing can be tilted, and the flaps are 4×10 plates on a Technic-plate hinge with toggle joints. Use the spar-and-rib pattern for any studded Technic wing: Technic-brick spars give the span and pin holes, wing bricks give the profile, plates the skin. Drop the universal joints unless the wing must tilt, and hinge flaps on a Technic plate.",
-      "limits": "Wing tilt travel, flap travel and the universal joints' retention were not checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+      "limits": "Wing tilt travel, flap travel and the universal joints' retention were not checked. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for the two 6-long axles passing through the 1×2 hole bricks at the root as drawn; `manual export`, the plan rebuild and the BOM comparison pass. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
       "subjects": [
         "Aircraft wing",
         "wing"
@@ -1138,17 +1783,139 @@
       "preview": "../8855-universal-joint-wings/renders/home.png",
       "board": "../8855-universal-joint-wings/board/mosaic.png",
       "visual_review": "../8855-universal-joint-wings/visual-review.json",
-      "model_sha256": "157fe709654fe4da4443316d00bb5880f01d9b90cac360c144ccaafd0e374d2e",
+      "model_sha256": "94f0ceab4d69b1f2ecb6407ca0cabfa81bdcd069d5c5ea93bb8f391321e3680a",
       "guide": "../8855-universal-joint-wings/README.md",
-      "source_sha256": "157fe709654fe4da4443316d00bb5880f01d9b90cac360c144ccaafd0e374d2e",
+      "source_sha256": "94f0ceab4d69b1f2ecb6407ca0cabfa81bdcd069d5c5ea93bb8f391321e3680a",
       "key": "8855-universal-joint-wings",
       "group": "details",
       "use": "adapt",
-      "readme_sha256": "ee22c0749b9c4e288ce7c65361c8d6c74e5b10ea95e55dc83f1463a9f40aeeb9",
+      "readme_sha256": "b959bd46ae9f0dfa31209de5ffcbe6d7df2b6bad84636c784153f97678bd5daa",
       "category": "Aircraft wing, wing",
       "source_checks_passed": true,
       "bom_matches": true,
       "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "canopy-cockpit",
+      "title": "Octagonal cockpit enclosure and shaped closure",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "spaceship:canopy-cockpit",
+        "aircraft:canopy-cockpit"
+      ],
+      "families": [
+        "spaceship",
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Octagonal side halves frame a shaped central door spanning the top/front. Study enclosure and pilot envelope; the pilot and helmet are nested context, not separate recommended constructions. Hinge motion and clearance remain unverified.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "cockpit"
+      ],
+      "model": "../canopy-cockpit/source.mpd",
+      "plan": "../canopy-cockpit/scene.plan.json",
+      "generator": "../canopy-cockpit/generate.py",
+      "preview": "../canopy-cockpit/renders/home.png",
+      "manual": "../canopy-cockpit/index.html",
+      "study_notes": "../canopy-cockpit/study-notes.json",
+      "visual_review": "../canopy-cockpit/visual-review.json",
+      "model_sha256": "6b882983b13fe53b055e127ecb3973b568e4aa535c1f8e151c0330414ead818d",
+      "audit_pointer": "/items/1",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "guide": "../canopy-cockpit/README.md",
+      "source_sha256": "6b882983b13fe53b055e127ecb3973b568e4aa535c1f8e151c0330414ead818d",
+      "key": "canopy-cockpit",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "0fdea5277c88d5ff690778ac0abff001d70e9c55b52bc1ba7aab4e6171e0ce87",
+      "category": "cockpit",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "vehicle-fittings#jet-engine-pod",
+      "title": "Jet Engine Pod",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "vehicle:jet-engine-pod",
+        "aircraft:jet-engine-pod"
+      ],
+      "families": [
+        "vehicle",
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Purpose-made engine housing/internal core fitting, with top stud attachment. Source courier jet supplies underside wing sockets. Preserve intake direction and clearance below wing; this is not a brick-built turbine construction.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/vehicle-audit.json",
+      "subjects": [
+        "Vehicle fitting"
+      ],
+      "model": "../vehicle-fittings/jet-engine-pod/jet-engine-pod.mpd",
+      "plan": "../vehicle-fittings/jet-engine-pod/scene.plan.json",
+      "preview": "../vehicle-fittings/jet-engine-pod/home.png",
+      "model_sha256": "6b80c2c22fc74d96d8509d67c9940c07223c34dcbd29cb0abe15ed77ce5e6c28",
+      "audit_pointer": "/items/8",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/vehicle-findings.md",
+      "techniques": [],
+      "guide": "../vehicle-fittings/README.md",
+      "source_sha256": "6b80c2c22fc74d96d8509d67c9940c07223c34dcbd29cb0abe15ed77ce5e6c28",
+      "key": "jet-engine-pod",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "786c4de61fa121c3c154a7d307632bc87767c5a1b66bb58418195e09f0acdb31",
+      "category": "Vehicle fitting",
+      "checks_passed": true,
+      "bom_matches": true
+    },
+    {
+      "id": "vehicle-fittings#pilot-cockpit",
+      "title": "Pilot Cockpit",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "vehicle:pilot-cockpit",
+        "aircraft:pilot-cockpit"
+      ],
+      "families": [
+        "vehicle",
+        "aircraft"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Small seat/control-stick/instrument-slope layout on two-by-eight floor. Stick in one upright pose; cockpit envelope and canopy must be provided by parent.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/vehicle-audit.json",
+      "subjects": [
+        "Vehicle fitting"
+      ],
+      "model": "../vehicle-fittings/pilot-cockpit/pilot-cockpit.mpd",
+      "plan": "../vehicle-fittings/pilot-cockpit/scene.plan.json",
+      "preview": "../vehicle-fittings/pilot-cockpit/home.png",
+      "model_sha256": "2526c5442ddaf34509f4fbb07a9e9b50c6bd9ca5b895d44228e114a617921ccb",
+      "audit_pointer": "/items/4",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/vehicle-findings.md",
+      "techniques": [],
+      "guide": "../vehicle-fittings/README.md",
+      "source_sha256": "2526c5442ddaf34509f4fbb07a9e9b50c6bd9ca5b895d44228e114a617921ccb",
+      "key": "pilot-cockpit",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "786c4de61fa121c3c154a7d307632bc87767c5a1b66bb58418195e09f0acdb31",
+      "category": "Vehicle fitting",
+      "checks_passed": true,
+      "bom_matches": true
     }
   ]
 }

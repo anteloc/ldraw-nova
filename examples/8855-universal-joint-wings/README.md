@@ -23,7 +23,7 @@ Read [GUIDE.md](GUIDE.md) for the construction, what the parent supplies, how to
       "details"
     ],
     "lesson": "A studded Technic wing: two 1×16 Technic bricks as leading and trailing spars on 10-long axles, 1×4 wing-front and 1×6 wing-back bricks as ribs, 1×8 plates as skin strips; each root is a universal joint with a towball so the wing can be tilted, and the flaps are 4×10 plates on a Technic-plate hinge with toggle joints. Use the spar-and-rib pattern for any studded Technic wing: Technic-brick spars give the span and pin holes, wing bricks give the profile, plates the skin. Drop the universal joints unless the wing must tilt, and hinge flaps on a Technic plate.",
-    "limits": "Wing tilt travel, flap travel and the universal joints' retention were not checked. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
+    "limits": "Wing tilt travel, flap travel and the universal joints' retention were not checked. `./ldraw-agent build` of the exported plan reports `technic.invalid_seating` for the two 6-long axles passing through the 1×2 hole bricks at the root as drawn; `manual export`, the plan rebuild and the BOM comparison pass. The source and renders teach a construction. They do not prove clutch, fit, clearance, travel or stability. Boards are rendered from synthetic inspection copies, and poses are rigid re-placements.",
     "subjects": [
       "Aircraft wing",
       "wing"
@@ -50,7 +50,7 @@ Read [GUIDE.md](GUIDE.md) for the construction, what the parent supplies, how to
     "preview": "examples/8855-universal-joint-wings/renders/home.png",
     "board": "examples/8855-universal-joint-wings/board/mosaic.png",
     "visual_review": "examples/8855-universal-joint-wings/visual-review.json",
-    "model_sha256": "157fe709654fe4da4443316d00bb5880f01d9b90cac360c144ccaafd0e374d2e"
+    "model_sha256": "94f0ceab4d69b1f2ecb6407ca0cabfa81bdcd069d5c5ea93bb8f391321e3680a"
   }
 ]
 ```
