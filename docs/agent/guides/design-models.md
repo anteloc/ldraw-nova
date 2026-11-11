@@ -4,6 +4,11 @@ Start from the requested subject and intended viewing scale. State its distingui
 
 Default to [SNOT (Studs Not On Top)](snot.md) construction for new models, planning the core and visible surfaces around inspected sideways connections. Combine conventional studs-up System, Technic and flexible techniques where the required form, structure or function needs them. Follow an explicit user construction preference when supplied. This default does not prescribe a subject's silhouette or a fixed template.
 
+Retrieve construction lessons and examples before choosing individual pieces.
+Adapt documented principles with existing recipes/tools. Use [part information](part-information.md)
+only for specific details, variants, substitutes or dimensions; do not design by
+piece-by-piece search or inspect raw `.dat` definitions.
+
 Search roles, compare different constructions and inspect actual part dimensions. Use one example for a specific lesson; do not inherit its complete proportions or part palette. Dedicated parts are useful when they fit the brief, and brick-built alternatives are useful when they do not. Review shape, support and interfaces together.
 
 ## Architecture

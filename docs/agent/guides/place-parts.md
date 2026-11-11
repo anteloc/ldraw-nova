@@ -1,10 +1,15 @@
 # Place parts on actual interfaces
 
+Start from the documented construction/recipe, then resolve specific part
+questions using [informational sources](part-information.md). Never read or parse
+library `.dat` contents directly. Identify exact filenames first; use cached
+dimensions to narrow choices and existing tools for interface/geometry evidence.
+
 ## Inspect before placing
 
-Run `./ldraw-agent part 3001 --limit 30`. It returns actual library metadata, origin-relative bounds, dimensions, stud positions, connectors, provenance, and completeness. Bounds include decorative geometry and stud height; **bounding-box height is not stacking height**. Do not infer axes from the part description alone.
+After identifying a candidate, run `./ldraw-agent part 3001 --limit 30`. It returns actual library metadata, origin-relative bounds, dimensions, stud positions, connectors, provenance, and completeness. Bounds include decorative geometry and stud height; **bounding-box height is not stacking height**. Do not infer axes from the part description alone.
 
-Use `catalog parts QUERY --category NAME --measure` to discover shapes through the supplied categories and compare cached dimensions with the installed geometry. Category `ldu_y`, `plates_y` and rounded `studs_*` fields describe extents, not connection planes. For example, the supplied `3659` arch cache reports Y=37.41191 LDU while the installed file measures 28. The [visual-design guide](design-models.md) explains selection boards, palettes and supported detail recipes. Reserve openings and overhangs before adding them; a new ornament must be checked in its containing module too.
+Use `catalog parts QUERY --category NAME` for metadata discovery; general categories are fallible hints. Use `dimensions PART...` for cached extents and request `--measure` on a narrowed catalog query when actual geometry comparison is needed. Category `ldu_y`, `plates_y` and rounded `studs_*` fields describe extents, not connection planes. For example, the supplied `3659` arch cache reports Y=37.41191 LDU while the installed file measures 28. The [visual-design guide](design-models.md) explains selection boards, palettes and supported detail recipes. Reserve openings and overhangs before adding them; a new ornament must be checked in its containing module too.
 
 Standard dimensions and origin conventions are in the [LDraw reference](../reference/ldraw.md#dimensions-and-origins).
 

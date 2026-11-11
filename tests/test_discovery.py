@@ -28,6 +28,8 @@ def index(parts, tmp_path):
         c.executemany('INSERT INTO MODELS_DESCRIPTIONS VALUES(?,?)',[('a.mpd','Truck'),('b.mpd','Truck'),('empty.mpd','Nothing'),('single.mpd','Name: tugboat.ldr')])
         c.executemany('INSERT INTO SUBMODELS_DESCRIPTIONS VALUES(?,?,?)',[('a.mpd','cab.ldr','Truck cab'),('b.mpd','cab.ldr','Truck cab')])
         c.executemany('INSERT INTO PARTS_DESCRIPTIONS VALUES(?,?)',[('3001.dat','Brick | rectangular'),('s/internal.dat','Brick internal')])
+        c.execute("CREATE VIRTUAL TABLE PARTS_DESCRIPTIONS_FTS USING fts5(part,description,content='PARTS_DESCRIPTIONS',content_rowid='rowid')")
+        c.execute("INSERT INTO PARTS_DESCRIPTIONS_FTS(PARTS_DESCRIPTIONS_FTS) VALUES('rebuild')")
         for kind,prefix in [('MODELS',"model || '|'"),('SUBMODELS',"model || '|' || submodel || '|'"),('PARTS',"part || '|'")]:
             c.execute(f'CREATE VIEW {kind}_DESCRIPTIONS_JEV AS SELECT {prefix} || description AS full_description FROM {kind}_DESCRIPTIONS')
     instance=DiscoveryIndex(parts,root,database=db,cache=tmp_path/'cache')

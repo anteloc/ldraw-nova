@@ -8,7 +8,21 @@ Search current local knowledge first:
 ./ldraw-agent knowledge search 'spacecraft silhouette' --scope inspiration
 ```
 
-Retrieve a few role-specific lessons, open their source paths, and compare interfaces, scale and limits. Default search includes current guides, construction lessons and tutorials. Inspiration, diagnostics, holds, archives and research need explicit scopes. No match is useful information; do not silently fill the list from a weaker source. See the [search and registration contract](../reference/cli.md#retrieve-construction-knowledge).
+Retrieve a few role-specific lessons, open their construction documentation/model source paths (not library part definitions), and compare interfaces, scale and limits. Default search includes current guides, construction lessons and tutorials. Inspiration, diagnostics, holds, archives and research need explicit scopes. No match is useful information; do not silently fill the list from a weaker source. See the [search and registration contract](../reference/cli.md#retrieve-construction-knowledge).
+
+## Targeted part information within a construction
+
+Retrieve and adapt documented construction principles first. Use part search
+when a lesson or design decision needs a particular reference, variant,
+substitute, accessory, dimension or interface detail. Do not replace the
+construction workflow with piece-by-piece searches or ad-hoc geometry tools.
+
+Choose the method that fits the question: [SQL, regex, FTS/BM25, Jev,
+categories or cached dimensions](part-information.md). These methods are
+complementary and have no mandatory order. Never directly read, search or parse
+library `.dat` contents. Get exact filenames from informational sources before
+rendering or explicit tool inspection. A missing lesson calls for the reference
+workflow below and explicit unresolved limits, not an invented construction claim.
 
 ## Broader raw-source discovery
 

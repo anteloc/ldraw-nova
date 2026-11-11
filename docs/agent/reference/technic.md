@@ -91,21 +91,24 @@ Review saves the results under `structure` in `validation.json` and copies the c
 may take longer for the whole library; search first for routine inspection.
 
 The catalog combines every assignment in supplied `technic.py`, mechanical
-name matches from other supplied categories, installed part names and an
+name matches from other supplied categories, database descriptions and an
 explicit [online watchlist](../../../ldraw_tools/data/mechanism-parts-watchlist.json).
 Python assignments are read as data, without importing the generated module.
 Duplicate sanitized names retain separate source lines and values.
 
-Generate counts from the current library. Inventory includes historical, printed, composite and supplementary parts; these are not unique mould or retail-availability counts. Completeness is bounded by the listed inputs.
+Default catalog counts describe metadata records; installed availability and canonical identity remain unknown. Inventory includes historical, printed, composite and supplementary parts; these are not unique mould or retail-availability counts. Completeness is bounded by the listed inputs.
 
 Model inventory expects a self-contained MPD/LDR. Unresolved external assemblies
 are rejected instead of being counted as one physical part; embed them first.
 
-Rows retain exact references, original descriptions, sanitized symbols and
-source lines, headers, licences, hashes, alias chains/transforms, family tags
-and existing structural-profile keys. Installed means the file exists, not
-complete dependencies or retail colour availability. Missing parts stay visible;
-unofficial watchlist entries are not downloaded automatically.
+Rows retain exact references, DB descriptions, sanitized symbols, source lines,
+family tags and structural-profile keys. Default discovery does not load library
+files. Explicit `--connectors` first narrows by query/family/model, then supplies
+headers, licences, hashes, alias transforms and interface evidence for that
+selection. Installed then means the file exists, not complete dependencies or
+retail colour availability. Unofficial watchlist entries are not downloaded.
+Use [part-information sources](../guides/part-information.md) for targeted queries;
+construction guidance and examples still establish the building method.
 
 `structural_profile` refers to the measured registry; `technic parts/check`
 still enforce its geometry fingerprint. Search families and
@@ -118,8 +121,8 @@ physical boundary and need separate review; installed namesakes do not provide
 their interfaces. Follow the [advanced workflow](../guides/mechanisms.md) to
 establish mobility, torque transfer and constraints.
 
-For new parts, refresh the library through its normal update process and rerun
-the command. Add known missing parts to the watchlist with a dated official
+For new metadata, update the supplied information sources through their normal
+maintenance process. Explicit connector inspection also depends on the installed library. Add known missing parts to the watchlist with a dated official
 LDraw library/tracker URL. Add reviewed local frames only after inspecting the
 exact variant, aliases and geometry; keep fixtures for executable support.
 

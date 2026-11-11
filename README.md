@@ -25,6 +25,12 @@ Browse local annotated models with `./model-selector.sh` after setup: search,
 preview in 3D, and copy a construction-reference prompt. See the
 [model selector guide](model-selector/README.md).
 
+Agents start from documented construction guidance and examples. For specific
+part questions, the [part-information guide](docs/agent/guides/part-information.md)
+explains SQL, regex, FTS, Jev, category and cached-dimension searches. These tools
+support the construction workflow; agents must not read library `.dat` source
+directly or recreate established techniques piece by piece.
+
 The Docker web app setup follows below.
 
 
@@ -112,7 +118,7 @@ The process is as follows:
 
 1. The agent takes a **prompt**.
 2. **Reads** [instructions.md](./instructions.md) and related documents to [LDraw language](https://www.ldraw.org/) and LEGO© models building.
-3. **Plans** how to build the model: required parts, submodels to be created, aesthetics...
+3. **Retrieves construction guidance and examples**, adapts their principles, and plans the structure, submodels and appearance. Part-information searches resolve specific details as needed.
 4. **Iteratively**:
 	1. Renders images from the model/submodel(s)
 	2. Inspects them, adjusts positioning, aesthetics... and back to rendering
@@ -126,33 +132,22 @@ Provided tooling helps the agent in:
 - **Headless rendering** for inspecting current results.
 - and more...
 
-The agent **doesn't actually start with placing parts**, except for things like e.g. prototyping and learning by altering pre-existing example models.
-
-The way it produces models is more like:
-
-- **Collects** the required information, from experimental results, docs and planning.
-- **Builds** one or more **plans**, that fully describe the model and submodels, including its geometry, like e.g. [atlas-crane.plan.json](examples/atlas-crane/atlas-crane.plan.json)
-- And with that plan, it creates one or more **generator scripts** like e.g. [generate.py](examples/atlas-crane/generate.py) 
-- ... that when executed, **produce LDraw source** file(s), a very specialized **3D CAD language**.
-- ... like e.g. [atlas-crane.mpd](examples/atlas-crane/atlas-crane.mpd)
-
-To **summarize**, this is like:
-
-- an **agent** creating a **generator** 
-- ... that produces a **3D model** 
-- ... in an **assembly language** named **LDraw** 🤯
-
-A **compiler** of sorts, so to say 🤓
-
+The agent starts from construction guidance and examples, then authors an editable
+JSON plan using the existing tooling. For example, [Copper Lane](examples/copper-lane/README.md)
+includes its [plan](examples/copper-lane/scene.plan.json), optional
+[Python generator](examples/copper-lane/generate.py), and resulting
+[MPD](examples/copper-lane/copper-lane.mpd). Python can help author plans when
+needed; a new generator is not required for each model.
 
 ```mermaid
 flowchart TD
-    agent([agent]) -- produces --> plan[plan.json]
-    plan -- interpretation --> gen[generator.py]
-    gen -- execution --> model[model.mpd]
-
+    brief[Brief] --> knowledge[Construction guidance and examples]
+    knowledge --> plan[Adapt principles into a JSON plan]
+    plan --> build[Existing build tooling]
+    build --> model[LDraw model]
+    model --> review[Inspect and repair]
+    review --> plan
 ```
-
 
 ## Agent's informational sources
 
@@ -161,16 +156,17 @@ These are some of the guides and references given to the agent in order to make 
 | I want to…                            | Read…                                                                                                              |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | Ask an agent to generate a model      | [Agent instructions](instructions.md)                                                                              |
-| Improve shape, colour and detail      | [Visual design guide](docs/agent/visual-design.md)                                                                 |
-| Build vehicles                        | [Vehicle workflow](docs/agent/vehicles.md) and [examples](examples/vehicle-atlas/README.md)                        |
-| Build advanced spaceships             | [Spaceship workflow](docs/agent/spaceships.md) and [atlas](examples/spaceship-atlas/README.md)                     |
-| Learn a submodel and grow an atlas    | [Build-manual workflow](docs/agent/build-manuals.md)                                                               |
-| Build Technic structures              | [Structural workflow](docs/agent/technic.md) and [examples](examples/technic-atlas/README.md)                      |
-| Build with mechanisms                 | [Mechanism workflow](docs/agent/mechanisms.md) and [build manuals](examples/mechanism-atlas/README.md)             |
-| Find parts and reusable constructions | [Reference discovery](docs/agent/reference-discovery.md) and [reference atlas](examples/reference-atlas/README.md) |
-| Organize a large model                | [Module workflow](docs/agent/complex-models.md) and [Copper Lane example](examples/modular-street/README.md)       |
-| Understand connections and checks     | [Geometry](docs/agent/geometry.md), [snapping](docs/agent/snapping.md) and [validation](docs/agent/validation.md)  |
-| Look up a command or file-format rule | [Tool reference](docs/agent/tooling.md) and [LDraw rules](docs/agent/ldraw-reference.md)                           |
+| Improve shape, colour and detail      | [Visual design guide](docs/agent/guides/design-models.md)                                                                 |
+| Build vehicles                        | [Vehicle workflow](docs/agent/guides/design-models.md#vehicles) and [examples](examples/vehicle-atlas/README.md)                        |
+| Build advanced spaceships             | [Spaceship workflow](docs/agent/guides/design-models.md#spacecraft) and [atlas](examples/spaceship-atlas/README.md)                     |
+| Learn a submodel and grow an atlas    | [Build-manual workflow](docs/agent/guides/review-models.md)                                                               |
+| Build Technic structures              | [Structural workflow](docs/agent/guides/technic.md) and [examples](examples/technic-atlas/README.md)                      |
+| Build with mechanisms                 | [Mechanism workflow](docs/agent/guides/mechanisms.md) and [build manuals](examples/mechanism-atlas/README.md)             |
+| Answer a specific part question | [Part information: SQL, regex, FTS, Jev, categories and dimensions](docs/agent/guides/part-information.md) |
+| Find reusable constructions | [Reference discovery](docs/agent/guides/find-references.md) and [reference atlas](examples/reference-atlas/README.md) |
+| Organize a large model                | [Module workflow](docs/agent/guides/compose-modules.md) and [Copper Lane example](examples/copper-lane/README.md)       |
+| Understand connections and checks     | [Geometry](docs/agent/guides/place-parts.md), [snapping](docs/agent/reference/connections.md) and [validation](docs/agent/reference/validation.md)  |
+| Look up a command or file-format rule | [Tool reference](docs/agent/reference/cli.md) and [LDraw rules](docs/agent/reference/ldraw.md)                           |
 
 ## Development
 

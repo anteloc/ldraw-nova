@@ -1,8 +1,9 @@
 """Discover mechanism parts without mistaking a name for a joint definition.
 
 The supplied Python categories are data, never imported. Every assignment is
-retained, including overwritten names. Installed headers add newer parts and
-explicit aliases; neither discovery source grants kinematic support.
+retained, including overwritten names. Default discovery uses database metadata;
+explicit connector inspection reads only selected parts and their aliases.
+Neither discovery source grants kinematic support.
 """
 
 from __future__ import annotations
@@ -119,11 +120,11 @@ def _header(parts, code):
     )
 
 
-def inventory(parts, *, categories=None, extra_refs=()):
-    """Complete discovery inventory for the supplied categories + this library.
+def inventory(parts, *, categories=None, extra_refs=(), selected_refs=None):
+    """Explicit installed-part evidence, optionally restricted to selected refs.
 
-    Does not expand geometry or connectors: building the catalog is cheap and
-    cannot accidentally declare every detected cylinder to be a joint.
+    Reads part headers and alias transforms; default catalog browsing uses
+    metadata_inventory instead. Does not infer kinematic support.
     """
     root = categories or category_path()
     symbols = defaultdict(list)
@@ -154,6 +155,8 @@ def inventory(parts, *, categories=None, extra_refs=()):
         for c, title in parts.by_code.items()
         if MECHANICAL.search(title) and "/" not in c and "\\" not in c
     )
+    if selected_refs is not None:
+        codes = {normalized(r).removesuffix(".dat") for r in selected_refs}
     headers = {}
 
     def header(code):
@@ -162,7 +165,7 @@ def inventory(parts, *, categories=None, extra_refs=()):
         return headers[code]
 
     # Reverse aliases matter too: a moved file may have no useful title at all.
-    while True:
+    while selected_refs is None:
         previous = len(codes)
         for code, title in parts.by_code.items():
             if (
@@ -264,11 +267,56 @@ def model_inventory(path, *, limit=100000):
     return Counter(occurrences)
 
 
-def catalog(parts, query="", *, family=None, model=None, connectors=False):
+def metadata_inventory(*, extra_refs=()):
+    """Discovery tags and curated notes, without installed-part inspection."""
+    from .catalog import catalog_data
+    from .part_metadata import descriptions
+    from .technic import registry
+    titles = descriptions()
+    symbols = defaultdict(list)
+    entries = catalog_data()[0].values()
+    for entry in (assignment for e in entries for assignment in e.get('assignments', [e])):
+        words = re.sub(r'([a-z])([A-Z])', r'\1 \2', entry['symbol']).replace('_', ' ')
+        if entry['category'] == 'technic' or MECHANICAL.search(words):
+            symbols[entry['code'] + '.dat'].append(dict(symbol=entry['symbol'], source=entry['source'], line=entry['line']))
+    remote = json.loads((DATA / 'mechanism-parts-watchlist.json').read_text())
+    watch = {r['ref']: r for r in remote['parts']}
+    notes = json.loads((DATA / 'mechanism-part-notes.json').read_text())['parts']
+    structural = registry()
+    refs = set(symbols) | set(watch) | set(extra_refs)
+    refs.update(ref for ref, title in titles.items() if '/' not in ref and MECHANICAL.search(title))
+    rows = []
+    for ref in sorted(refs):
+        code = ref.removesuffix('.dat')
+        title = titles.get(ref) or watch.get(ref, {}).get('description', '')
+        if not title and symbols[ref]:
+            title = symbols[ref][0]['symbol']
+        profile = structural['aliases'].get(code, code)
+        row = dict(ref=ref, description=title, canonical_ref=None, canonical_description=None,
+                   installed=None, families=families(title), symbols=symbols[ref], header=None,
+                   alias_chain=None, alias_transform=None, alias_problem=None, shortcut=None,
+                   internal=title.startswith(('~', '=', '_')) or '/' in ref,
+                   structural_profile=profile if profile in structural['parts'] else None,
+                   motion_profile='unreviewed', source='PARTS_DESCRIPTIONS and supplied categories/curated notes')
+        if ref in watch:
+            row['online_record'] = watch[ref]
+        if code in notes:
+            row['mechanism_notes'] = notes[code]
+            row['notes_coordinate_space'] = 'Authored part-local notes; canonical identity and geometry unverified.'
+        rows.append(row)
+    return dict(version=2, scope='Database descriptions, supplied category hints and curated watchlist.',
+                classification='Metadata tags only; installed availability, canonical identity and geometry are unverified.',
+                online_checked=remote['checked'], parts=rows,
+                summary=dict(parts=len(rows), installed=None, unavailable=None, aliases=None, shortcuts=None,
+                             supplied_technic_assignments=sum(s['symbol'].startswith('technic.') for r in rows for s in r['symbols']),
+                             families=dict(sorted(Counter(f for r in rows for f in r['families']).items()))))
+
+
+def catalog(parts=None, query="", *, family=None, model=None, connectors=False):
     if family and family not in FAMILIES:
         raise ValueError("Unknown mechanism family: " + family)
     counts = model_inventory(model) if model else None
-    report = inventory(parts, extra_refs=counts or ())
+    report = metadata_inventory(extra_refs=counts or ())
     rows = report["parts"]
     if counts is not None:
         embedded = {
@@ -285,9 +333,8 @@ def catalog(parts, query="", *, family=None, model=None, connectors=False):
             path=str(model),
             physical_parts=sum(counts.values()),
             distinct_refs=len(counts),
-            missing=[
-                r["ref"] for r in rows if not r["installed"] and not r["embedded"]
-            ],
+            availability_checked=False,
+            missing=None,
             embedded=sorted(embedded & counts.keys()),
             motion_unreviewed=[
                 r["ref"] for r in rows if r["motion_profile"] == "unreviewed"
@@ -304,7 +351,7 @@ def catalog(parts, query="", *, family=None, model=None, connectors=False):
                 [
                     r["ref"],
                     r["description"],
-                    r["canonical_description"],
+                    r["canonical_description"] or "",
                     *[s["symbol"] for s in r["symbols"]],
                 ]
             ).casefold()
@@ -314,6 +361,14 @@ def catalog(parts, query="", *, family=None, model=None, connectors=False):
     report["parts"] = rows
     report["selected"] = len(rows)
     if connectors:
+        if parts is None:
+            raise ValueError('Explicit connector inspection requires the installed library')
+        inspected = {r['ref']: r for r in inventory(parts, selected_refs=[r['ref'] for r in rows])['parts']}
+        for row in rows:
+            row.update(inspected[row['ref']])
+        if counts is not None:
+            report['model']['availability_checked'] = True
+            report['model']['missing'] = [r['ref'] for r in rows if not r['installed'] and not r.get('embedded')]
         for row in rows:
             if not row["installed"] or row.get("embedded"):
                 row["interfaces"] = dict(

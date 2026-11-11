@@ -22,8 +22,8 @@ When motion is requested, build the interface graph below, then use the independ
 ```
 
 The [catalog](../reference/technic.md) includes every supplied Technic assignment,
-newer installed parts, mechanical parts from other categories and an explicit
-online watchlist. Search tags are not motion profiles. Preserve suffixes such
+database descriptions, mechanical parts from other categories and an explicit
+online watchlist. Default browsing is metadata-only; use `--connectors` for targeted installed interface and alias evidence. Search tags are not motion profiles. Preserve suffixes such
 as `3648a`, `3650c` and `85543-f3`; a sanitized Python symbol is an index label.
 
 For each occupied interface record occurrence ID, part-local point and axis,
@@ -46,7 +46,7 @@ image does not identify its world shaft axis.
 
 An alias can change orientation and colour. `6575.dat` wraps `6575a.dat` with a
 180-degree Y rotation. Compose this transform before using canonical frames.
-The catalog retains it rather than silently changing the part number.
+Explicit catalog connector inspection retains it rather than silently changing the part number. Metadata-only browsing leaves canonical identity unknown.
 
 Primitive inference can duplicate features or mistake a hole primitive for a
 male axle. SNAP `rotate`/`slide` flags describe placement metadata; they do not

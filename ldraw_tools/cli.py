@@ -117,13 +117,12 @@ def parser():
     c.add_argument("--timeout", type=positive, default=90)
     scope_options(c)
     geometry_options(c, detail="summary")
-    from .examples import families
     c = commands.add_parser("examples", help="Find curated examples across families")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
-    c.add_argument("--family", choices=families())
+    c.add_argument("--family", help="Example family; validated when examples are searched")
     from .knowledge import SCOPES
     c.add_argument("--scope", choices=SCOPES, default="default")
     c = commands.add_parser("knowledge", help="Search local agent guidance and registered examples without network access")
@@ -317,11 +316,20 @@ def parser():
     c.add_argument("--timeout", type=positive, default=90)
     commands.add_parser("doctor", help="Show dependencies and source paths")
     commands.add_parser("index", help="Refresh the local parts index; source library remains unchanged")
-    c = commands.add_parser("search", help="Search actual library parts or annotated models")
+    c = commands.add_parser("search", help="Search database part descriptions or annotated models")
     c.add_argument("kind", choices=["parts", "models", "submodels"])
     c.add_argument("query")
     c.add_argument("--limit", type=positive, default=10)
-    c.add_argument("--offset", type=int, default=0, help="Model/submodel FTS page offset")
+    c.add_argument("--offset", type=int, default=0, help="Result page offset")
+    c.add_argument('--field', choices=['part', 'description', 'both'], default='both', help='Parts only: fields to match')
+    c.add_argument('--match', choices=['terms', 'exact', 'like'], default='terms', help='Parts only: literal AND terms, equality, or SQL LIKE')
+    c.add_argument('--dimensions', action='store_true', help='Parts only: include cached dimensions')
+    c.add_argument('--min-size', type=float, nargs=3, metavar=('X','Y','Z'), help='Parts only: minimum cached local extents in LDU')
+    c.add_argument('--max-size', type=float, nargs=3, metavar=('X','Y','Z'), help='Parts only: maximum cached local extents in LDU')
+    c = commands.add_parser('dimensions', help='Look up cached dimensions for identified parts, without geometry loading')
+    c.add_argument('refs', nargs='+')
+    c = commands.add_parser('export-parts-descriptions', help='Create the full ignored TSV snapshot for regex search')
+    c.add_argument('--force', action='store_true', help='Replace an existing description snapshot')
     c = commands.add_parser("part", help="Inspect one real part's metadata, local bounds and connectors")
     c.add_argument("code")
     c.add_argument("--limit", type=positive, default=30, help="Connector output limit (total is always reported)")
@@ -406,6 +414,20 @@ def parser():
     return p
 
 
+def mechanism_catalog_command(args, parts=None):
+    from .mechanism_catalog import catalog
+    target = Path(args.output) if args.output else None
+    if target and target.exists() and not args.force:
+        raise ValueError('Catalog output exists; use --force')
+    if target and args.model and target.resolve() == Path(args.model).resolve():
+        raise ValueError('Catalog output must not replace the model')
+    report = catalog(parts, args.query, family=args.family, model=args.model, connectors=args.connectors)
+    if target:
+        atomic_write(target, dumps(report) + '\n')
+    return {**report, 'parts': report['parts'][:args.limit],
+            'truncated': report['selected'] > args.limit, 'output': str(target) if target else None}
+
+
 def run(args):
     if args.command == "flex" and args.flex_command == "types":
         from .flex import definitions
@@ -466,8 +488,41 @@ def run(args):
         return dict(axis=args.axis, degrees=args.degrees, matrix=jsonable(rotation(args.axis, args.degrees))), 0
     if args.command == "profiles":
         return json.loads((DATA / "rectangular-parts.json").read_text()), 0
-    if args.command == "search" and args.kind != "parts":
+    # Informational routes must not initialize an installed parts library.
+    if args.command == 'export-parts-descriptions':
+        from .part_metadata import export_descriptions
+        return export_descriptions(force=args.force), 0
+    if args.command == 'dimensions':
+        from .part_metadata import dimension_records
+        return dimension_records(args.refs), 0
+    if args.command == 'search':
+        if args.kind == 'parts':
+            from .part_metadata import search_parts
+            return search_parts(args.query, field=args.field, match=args.match, limit=args.limit,
+                                offset=args.offset, dimensions=args.dimensions,
+                                min_size=args.min_size, max_size=args.max_size), 0
+        if args.field != 'both' or args.match != 'terms' or args.dimensions or args.min_size or args.max_size:
+            raise ValueError('--field, --match, --dimensions and size filters apply only to search parts')
         return search_models(args.query, limit=args.limit, submodels=args.kind == "submodels", offset=args.offset), 0
+    if args.command == 'catalog' and args.kind != 'colours' and not args.measure:
+        from .catalog import search_catalog
+        return search_catalog(None, args.kind, args.query, category=args.category, limit=args.limit,
+                              include_unavailable=args.include_unavailable, max_size=args.max_size), 0
+    if args.command == 'discover' and ((args.discovery_command == 'search' and args.kind == 'parts') or
+                                     (args.discovery_command == 'show' and args.id.startswith('part-'))):
+        from .discovery import PartDiscoveryIndex, search
+        index = PartDiscoveryIndex()
+        if args.discovery_command == 'show':
+            row = index.get(args.id)
+            return dict(row, inventory=index.inventory(row)), 0
+        if args.all_families and args.construction not in {None, 'all'}:
+            raise ValueError('Choose --construction or --all-families, not conflicting scopes')
+        return search(index, 'parts', args.query, engine=args.engine, limit=args.limit, pool=args.pool,
+                      candidates=args.candidates, system=not args.all_families, construction=args.construction,
+                      min_parts=args.min_parts, max_parts=args.max_parts, max_technic_share=args.max_technic_share,
+                      parent_cap=args.parent_cap, yes=args.yes, no=args.no), 0
+    if args.command == 'technic' and args.technic_command == 'catalog' and not args.connectors:
+        return mechanism_catalog_command(args), 0
     library = library_path(args.library)
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
     if args.command == "flex":
@@ -566,18 +621,7 @@ def run(args):
                                   placement_notes=args.placement_notes,scale=args.scale,force=args.force),0
     if args.command == 'technic':
         if args.technic_command == 'catalog':
-            from .mechanism_catalog import catalog
-            target = Path(args.output) if args.output else None
-            if target and target.exists() and not args.force:
-                raise ValueError('Catalog output exists; use --force')
-            if target and args.model and target.resolve() == Path(args.model).resolve():
-                raise ValueError('Catalog output must not replace the model')
-            report = catalog(parts, args.query, family=args.family, model=args.model, connectors=args.connectors)
-            if target:
-                atomic_write(target, dumps(report) + '\n')
-            return {**report, 'parts': report['parts'][:args.limit],
-                    'truncated': report['selected'] > args.limit,
-                    'output': str(target) if target else None}, 0
+            return mechanism_catalog_command(args, parts), 0
         from .technic import parts_report
         from .technic_recipes import RECIPES, structure_plan
         from .technic_review import review_structure
@@ -750,14 +794,6 @@ def run(args):
         return prepare_glb(args.file, library, args.output, parts, timeout=args.timeout), 0
     if args.command == "index":
         return dict(parts=len(parts.by_code), library=str(library), index=str(parts.path)), 0
-    if args.command == "search":
-        # Match all plain terms; retain original filenames and descriptions.
-        query = args.query.casefold().split()
-        matches = [dict(code=c + ".dat", description=d) for c, d in parts.by_code.items()
-                   if all(t in (c + ".dat " + d).casefold() for t in query)]
-        matches.sort(key=lambda r: (r["code"].casefold().removesuffix(".dat") != args.query.casefold().removesuffix(".dat"),
-                                    r["description"].startswith(("~", "=")), len(r["description"]), r["code"]))
-        return dict(total=len(matches), results=matches[:args.limit]), 0
     if args.command == "colours":
         return [jsonable(c) for k, c in sorted(parts.colours_by_code.items())
                 if args.query.casefold() in (str(k) + " " + (c.name or "")).casefold()], 0

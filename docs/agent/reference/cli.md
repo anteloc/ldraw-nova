@@ -152,9 +152,13 @@ Use `--recipe courier-jet` with `--profile aircraft`, `harbour-launch` with `wat
 
 ### General discovery
 
+Construction guidance and examples remain the starting point for model building.
+Use the [part-information guide](../guides/part-information.md) to choose regex,
+SQL, FTS/BM25, Jev, categories or dimensions for a specific question. Never read
+or independently parse library `.dat` files. Identified parts may be passed to
+existing geometry/connector tools and renderers.
+
 ```sh
-./ldraw-agent doctor
-./ldraw-agent index
 ./ldraw-agent search parts 'brick 2 x 4' --limit 8
 ./ldraw-agent search parts '3001' --limit 1
 ./ldraw-agent part 3001 --limit 30
@@ -169,9 +173,41 @@ Use `--recipe courier-jet` with `--profile aircraft`, `harbour-launch` with `wat
 ./ldraw-agent sections 'data/models-annotated/106-1.mpd' --section '106 - car.ldr'
 ```
 
-Part search uses case-insensitive plain AND terms over actual filenames/descriptions; whitespace within terms is not significant. Numeric dimensions are search hints, not a geometry API. Exact codes rank first; aliases/internal parts rank later. There is no fixed hardcoded palette: `colours` reads `LDConfig.ldr`.
+`search parts` queries `PARTS_DESCRIPTIONS` read-only, without loading the installed
+library. `--field part|description|both` defaults to both; `--match terms|exact|like`
+defaults to literal AND terms. Exact mode accepts filenames with or without `.dat`;
+LIKE exposes SQL `%`/`_`, while terms mode escapes them. Matching uses SQLite's
+ASCII case-insensitive text behavior. Exact codes rank first, then description
+length and filename. Duplicate descriptions retain distinct references. `--limit`
+and `--offset` provide bounded pagination with total/truncation and provenance.
+
+`--dimensions` enriches results with cached evidence. `--min-size X Y Z` and
+`--max-size X Y Z` filter positive local-axis LDU extents, preferring complete DB
+bounding boxes then category estimates. Missing sizes are excluded only when
+filtering. `dimensions PART...` returns both sources separately with completeness
+and missing-value evidence. Numeric words in descriptions are only text hints;
+cached extents are not stacking heights or connection planes.
+
+`export-parts-descriptions [--force]` creates the complete sorted UTF-8 TSV at
+`data/parts-descriptions-full.tsv`, with `part`/`description` headers and standard
+TSV quoting. The Git-ignored snapshot is reused unless explicitly refreshed.
+Use bounded `rg` searches on the explicit file; do not print the full table.
+
+```sh
+./ldraw-agent search parts 3023 --field part --match exact
+./ldraw-agent search parts 'Minifig Shield%' --field description --match like --limit 8
+./ldraw-agent dimensions 3001 3023 3659
+./ldraw-agent export-parts-descriptions
+rg -i -m 20 -- 'minifig.*shield' data/parts-descriptions-full.tsv
+```
+
+Missing DBs or required indexes produce errors, never library scans. There is
+no fixed hardcoded colour palette: `colours` reads `LDConfig.ldr` during explicit
+library colour inspection; the DB `COLORS` table is also available as metadata.
 
 Model/submodel search reuses the supplied `data/ldraw-info.db` **read-only**, with parameterized SQLite FTS5 queries: `wheel`, `wheel OR steering`, `"exact phrase"`, `hing*`. Reports identify the database, modification time, and whether each source exists. Read the actual annotated source before using a result. If the database is absent, a header scan uses simple AND terms instead; it reports this different query language explicitly. `sections` returns original source line numbers, descriptions, or a selected full block; it never strips attribution or packs dependencies for you.
+
+`doctor` checks model-building setup; `index` refreshes the installed library index for geometry tools. Neither is required for database-only part queries.
 
 `part` accepts a code with or without `.dat` and reports current part status/replacement, local coordinates, true expanded bounds, connector count, and a bounded connector list. Use a larger `--limit` if connectors are truncated. If `complete` is false, fix the missing library dependency before trusting its geometry. The generated index is a local symlink view of `parts`, `p`, and `LDConfig.ldr`; file size/mtime signatures automatically rebuild its titles as the library changes.
 
@@ -204,7 +240,7 @@ Read `results` in their returned rank order:
 | `source` / `path` | Source identity; `path` is a SQLite locator, not a part filename. |
 | `exhaustive` / `stats` | Search coverage, scored candidates, cache/API usage, and elapsed time. |
 
-Inspect candidates before putting them into a plan. The description table includes internal pattern segments, subparts, aliases, and sticker shortcuts as well as ordinary parts. Reject primitives/subparts as assembly placements, check status and replacements, and inspect a shortcut's physical meaning. Preserve the original ranks/scores when recording why a candidate was selected or rejected. A high score establishes neither geometric fit nor availability in a particular colour.
+For a specific construction need, identify candidates from informational sources, then use existing inspection tools before putting them into a plan. Never inspect raw `.dat` source. The description table includes internal pattern segments, subparts, aliases, and sticker shortcuts as well as ordinary parts. Reject primitives/subparts as assembly placements, check status and replacements, and inspect a shortcut's physical meaning. Preserve the original ranks/scores when recording why a candidate was selected or rejected. A high score establishes neither geometric fit nor availability in a particular colour.
 
 For example, after selecting these references from the castle query:
 
@@ -289,6 +325,15 @@ Shell examples that redirect output intentionally retain the command's exit stat
 `catalog` reads the provided Python categories as static metadata, without importing `py4bricks` or executing generated modules. Results include source symbols, file/line provenance, installed availability, and dimension hints. Missing/legacy/internal entries are hidden by default (`--include-unavailable` exposes them). `--measure` expands selected results and flags disagreement with the dimension snapshot; `--max-size` is a coarse **snapshot** filter, not a fit guarantee. `LDRAW_CATEGORIES` overrides the category directory. Numeric plans still work without it.
 
 Plans accept `@category.Symbol` refs (including nested categories such as `@minifig.heads.Symbol`) and `@colours.Name`. Resolution checks the installed library and leaves editable plans intact. Current `LDConfig.ldr` controls colour properties. `design palettes` exposes roles and composition guidance; it is not an inventory compatibility database. `design details` lists authored recipes, or writes an ordinary JSON plan with `--output`; existing output requires `--force`. Include the resulting sections using the usual module workflow.
+
+`catalog parts` and `catalog categories` are metadata-only by default. Categories
+are optional, fallible hints; `--category minifig` includes its subgroups.
+Part descriptions come from the DB and installed availability is unknown.
+`--include-unavailable` includes legacy/internal hints without checking files.
+`--measure` explicitly initializes the library to measure selected results;
+`catalog colours` retains its installed-colour behavior. Category-dictionary
+`--max-size` filtering remains a cached hint; `search parts` size filters use the
+DB-first dimension-source selection described above.
 
 `part-board` renders 1–12 candidates through LeoCAD and creates an offline `index.html` and `board.json`, measured bounds, individual MPDs and images. Cards are framed independently; compare listed dimensions to judge scale. Read the [visual design guide](../guides/design-models.md) and actually inspect the candidates. These tools support choices and visual iteration; they do not assign a beauty score.
 
@@ -396,9 +441,21 @@ Select `parts`, `models` or `submodels` and suitable keywords for the current ro
 
 `discover search` invokes `bin/jev-rerank`, falling back to the PATH CLI with model `jev-1.13.0` and its configured credentials. Use `--engine fts` for an explicit offline BM25 search. There is no silent fallback. Natural-language FTS queries use token OR; the older `search models|submodels` commands retain their raw FTS5 syntax, now ranked and paginated with `--offset`.
 
-The source is the three `*_DESCRIPTIONS_JEV.full_description` fields in `data/ldraw-info.db`, with annotated sources in `data/models-annotated/`. A local index resolves their pipe-prefixed identifiers, corrects descriptions against source headers and classifies records. The supplied database and source files remain untouched. Parts resolve from `--library`, then `LDRAW_DIR`, then `LDRAWDIR`, then project-local `data/ldraw`.
+Part discovery reads database descriptions and reuses `PARTS_DESCRIPTIONS_FTS`
+for lexical ranking; Jev uses the existing eligible-snapshot reranking workflow.
+`discover search parts` and `discover show part-ID` neither initialize the library
+nor scan model sources. Part IDs remain stable; source existence/installed
+availability, canonical identity and physical accounting remain unknown until
+explicit inspection. Filename/description filters are metadata hints only.
 
-Jev searches an eligible local snapshot with a real primary key. Each result returns a stable `id`, exact `model`/`section` or `part`, original indexed text, corrected source text, original field name, source hash, parent description and retrieval score/rank. This avoids persisting Jev's unstable view row numbers. Case/whitespace normalization must resolve unambiguously; paths must remain under the configured roots.
+Model/submodel discovery still uses the three description views and annotated
+sources, correcting assembly descriptions against model headers and performing
+its existing content/geometry checks. These are model sources, not permission
+for agents to open library part definitions. The supplied database and sources
+remain unchanged. Explicit geometry tools resolve the library from `--library`,
+`LDRAW_DIR`, `LDRAWDIR`, then project-local `data/ldraw`.
+
+Jev searches an eligible local snapshot with a real primary key. Results retain stable IDs and retrieval score/rank. Part rows provide exact filenames, DB descriptions and classification provenance; assembly rows additionally provide original/corrected text, source hashes and parent descriptions. This avoids persisting Jev's unstable view row numbers. Case/whitespace normalization must resolve unambiguously; paths must remain under the configured roots.
 
 The defaults hide embedded part definitions, empty/raw-geometry-only sections, internal/legacy part candidates and identifiable incompatible product families. Submodel/model candidates are then inventoried to reject nonphysical accounting, apply part-count and Technic-share limits, group matching shapes and cap variants from one parent. Shape grouping ignores colour and global translation; it does not claim mirrored or rotated constructions are identical. Variants retain their own identities and scores.
 

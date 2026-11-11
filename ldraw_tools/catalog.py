@@ -1,7 +1,8 @@
 """Read the supplied generated categories as metadata, without importing py4bricks.
 
 The source tree and its author/licence notices remain untouched. Current library
-records determine availability and colours; cached dimensions are search hints.
+records determine availability only during explicit inspection and colour lookup;
+metadata browsing uses DB descriptions, and cached dimensions remain search hints.
 """
 from __future__ import annotations
 
@@ -46,8 +47,10 @@ def _load(root, stamp):
         for name,value,line in assignments(path):
             if isinstance(value,ast.Constant) and isinstance(value.value,str):
                 symbol = category+'.'+name
-                entries[symbol] = dict(symbol=symbol,category=category,code=value.value.casefold().removesuffix('.dat'),
-                                       source=str(path),line=line,internal_hint=name.startswith('_'))
+                entry = dict(symbol=symbol,category=category,code=value.value.casefold().removesuffix('.dat'),
+                             source=str(path),line=line,internal_hint=name.startswith('_'))
+                history = entries.get(symbol, {}).get('assignments', [])
+                entries[symbol] = dict(entry, assignments=[*history, entry])
     colours = {}
     for name,node,line in assignments(root/'colours.py'):
         if isinstance(node,ast.Call) and isinstance(node.func,ast.Name) and node.func.id=='Colour':
@@ -60,7 +63,8 @@ def _load(root, stamp):
 
 def catalog_data():
     root=category_path()
-    return _load(str(root),signature(root))
+    from .part_metadata import category_data
+    return category_data(root, signature(root))
 
 
 def resolve_part(symbol, parts):
@@ -113,9 +117,11 @@ def search_catalog(parts, kind, query='', *, category=None, limit=12, include_un
     if max_size is not None and (len(max_size) != 3 or any(not math.isfinite(v) or v <= 0 for v in max_size)):
         raise ValueError('Maximum dimensions must be three finite positive LDU values')
     entries,colours,dimensions=catalog_data()
+    if parts is None and (kind == 'colours' or measure):
+        raise ValueError('Colours and explicit measurement require an installed library')
     if kind=='categories':
         return dict(source=str(category_path()),categories=dict(sorted(Counter(e['category'] for e in entries.values()).items())),
-                    note='Counts are category symbols, including legacy entries; search results check the installed library.')
+                    note='Counts are source category symbols, including legacy entries; categories are fallible search hints.')
     rows=[]
     terms=query.casefold().split()
     if kind=='colours':
@@ -126,22 +132,25 @@ def search_catalog(parts, kind, query='', *, category=None, limit=12, include_un
             rows.append(dict(symbol='@'+entry['symbol'],code=entry['code'],available=current is not None,
                              current=jsonable(current) if current else None,source=entry['source'],line=entry['line']))
     else:
+        from .part_metadata import descriptions
+        titles = {k.removesuffix('.dat'): v for k, v in descriptions().items()} if parts is None else parts.by_code
         categories={e['category'] for e in entries.values()}
-        if category and category not in categories:raise ValueError(f'Unknown category {category}; run catalog categories')
+        if category and not any(c == category or c.startswith(category + '.') for c in categories):raise ValueError(f'Unknown category {category}; run catalog categories')
         for symbol,entry in entries.items():
-            if category and entry['category']!=category:continue
+            if category and entry['category'] != category and not entry['category'].startswith(category + '.'):continue
             code=entry['code']
-            title=parts.by_code.get(code,'')
+            title=titles.get(code,'')
             words=re.sub(r'([a-z])([A-Z])',r'\1 \2',symbol).replace('_',' ')
             haystack=(symbol+' '+words+' '+title+' '+code).casefold()
             if not all(re.search(r'(?<![0-9])'+re.escape(t)+r'(?![0-9])',haystack) if t.isdigit() else t in haystack for t in terms):continue
-            available=code in parts.by_code
+            available=code in parts.by_code if parts is not None else None
             legacy=entry['internal_hint'] or title.startswith(('~','=')) or entry['category'] in {'obsoletes','helpers'}
-            if not include_unavailable and (not available or legacy):continue
+            if not include_unavailable and (available is False or legacy):continue
             dims=dimensions.get(code)
             if max_size and (not dims or any(dims.get('ldu_'+axis,float('inf'))>bound for axis,bound in zip('xyz',max_size))):continue
             rows.append(dict(ref='@'+symbol,filename=code+'.dat',description=title or words,
                              category=entry['category'],available=available,legacy_or_internal=legacy,
+                             description_source='PARTS_DESCRIPTIONS' if parts is None and title else 'library' if parts is not None and title else 'category symbol',
                              dimensions_hint=dims,source=entry['source'],line=entry['line']))
         rows.sort(key=lambda r:(r['legacy_or_internal'],not r['available'],len(r['description']),r['ref']))
     selected=rows[:limit]

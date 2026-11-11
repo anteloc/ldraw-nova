@@ -7,12 +7,25 @@ including lower-capability ones, to generate **new LDraw models** with the tooli
 and reference docs. Put detailed, task-specific guidance in `docs/agent/` and link
 it from that entry point. `instructions.md` is a compatibility pointer only.
 
+## Construction and part-information policy
+
+Start with documented construction principles, curated lessons, recipes and
+examples, then adapt them to the brief. Part retrieval answers specific questions
+within that workflow; it must not become piece-by-piece design or reinvention of
+existing construction tools. Never directly read, search or independently parse
+library `.dat` files for information. Use the [part-information guide](../docs/agent/guides/part-information.md)
+to choose SQL, FTS/BM25, Jev, regex over the ignored TSV, categories or cached
+dimensions. Obtain exact filenames before targeted rendering or tool inspection.
+Use established retrieval techniques and compact results rather than ad-hoc
+parsers or new search engines. Missing metadata is not permission to scan `.dat`.
+
 ## Resources
 
 - `./docs/ldraw-specs.pdf` (MANDATORY): the **full LDraw language specification**.
 - `data/models-annotated/`: annotated Official Model Repository (OMR) models, in `.mpd` format.
 - `data/ldraw-info.db`: searchable part, model and submodel descriptions.
-- `data/categories/`: descriptive part and colour catalog.
+- `data/parts-descriptions-full.tsv`: full ignored description snapshot for regex searches; create with `./ldraw-agent export-parts-descriptions`.
+- `data/categories/`: dimension estimates and descriptive symbols; minifigure groups are useful and general classifications are fallible.
 - `data/offLibShadow/`: connector metadata.
 - `LDRAW_DIR`, falling back to `LDRAWDIR` when unset or empty: official LDraw parts library; `.dat` parts are under its `parts/` directory.
 

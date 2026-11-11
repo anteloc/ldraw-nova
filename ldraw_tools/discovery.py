@@ -11,7 +11,7 @@ import re
 import sqlite3
 import subprocess
 from collections import Counter
-from pathlib import Path, PureWindowsPath
+from pathlib import Path, PurePosixPath, PureWindowsPath
 from tempfile import NamedTemporaryFile
 
 from .common import CACHE, tool_path, atomic_write, database_path, dumps, jsonable, models_path, normalized
@@ -215,8 +215,64 @@ class DiscoveryIndex:
         return report
 
 
+class PartDiscoveryIndex:
+    """Database-backed part identities; reuses the supplied FTS index and Jev path."""
+    def __init__(self, *, database=None, cache=None):
+        self.database = database_path(database)
+        self.cache = Path(cache or CACHE / 'part-discovery' / digest(str(self.database))[:16]).resolve()
+        self._rows = None
+        self._stamp = None
+        self._manifest = None
+
+    def ensure(self, *, force=False):
+        from .part_metadata import descriptions
+        # WAL updates need not change the main DB's timestamp.
+        paths = [self.database, Path(str(self.database) + '-wal')]
+        stamp = tuple((str(p), p.stat().st_size, p.stat().st_mtime_ns) for p in paths if p.exists())
+        if self._rows is None or force or stamp != self._stamp:
+            self._rows = []
+            for part, description in descriptions(self.database).items():
+                # Validate identity syntax without resolving or checking any library file.
+                if PureWindowsPath(part).drive or PurePosixPath(normalized(part)).is_absolute() or '..' in PurePosixPath(normalized(part)).parts:
+                    raise ValueError(f'Expected a source-relative filename: {part}')
+                internal = '/' in normalized(part) or description.startswith(('~', '=', '_'))
+                self._rows.append(dict(id=source_id('parts', part=part), kind='parts', part=part,
+                                       description=description, full_description=part + '|' + description,
+                                       source_field='PARTS_DESCRIPTIONS.description', source_record_exists=True,
+                                       source_exists=None, installed=None, canonical_ref=None,
+                                       record_type='internal_or_legacy_part' if internal else 'part_candidate',
+                                       classification_source='database filename/description; not physical validation'))
+            self._stamp = stamp
+            self._manifest = dict(signature=digest(self._rows), source=str(self.database),
+                                  counts={'parts': len(self._rows)},
+                                  note='Database metadata; library availability unverified.')
+        return self._manifest
+
+    def rows(self, kind=None):
+        self.ensure()
+        return self._rows if kind in {None, 'parts'} else []
+
+    def get(self, identity):
+        row = next((r for r in self.rows() if r['id'] == identity), None)
+        if row is None:
+            raise ValueError(f'Unknown reference ID {identity}')
+        return row
+
+    def inventory(self, row):
+        return dict(physical_placements=None, expanded_leaf_count=None, physical_accounting_complete=None,
+                    note='Part metadata only; inspect the identified part explicitly for geometry.')
+
+    def fts_matches(self, expression):
+        from .part_metadata import database
+        with database(self.database) as con:
+            for part, rank in con.execute(
+                'SELECT part, rank FROM PARTS_DESCRIPTIONS_FTS '
+                'WHERE PARTS_DESCRIPTIONS_FTS MATCH ? ORDER BY rank, part', (expression,)):
+                yield source_id('parts', part=part), rank
+
+
 def eligible(row, *, system=True):
-    if not row['source_exists'] or row['record_type'] not in {'assembly', 'physical_part'}:
+    if not (row.get('source_record_exists') or row.get('source_exists')) or row['record_type'] not in {'assembly', 'physical_part', 'part_candidate'}:
         return False
     if system and (re.search(r'\b(duplo|fabuland|znap|bionicle|technic)\b', row.get('theme','').casefold()) or
                    re.match(r'(duplo|fabuland|znap|bionicle|technic)\b', row['description'].casefold())):
@@ -266,6 +322,8 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
         raise ValueError('Unknown construction mode')
     if construction is not None:
         system = construction == 'system'
+    if kind == 'parts' and not isinstance(index, PartDiscoveryIndex):
+        index = PartDiscoveryIndex(database=index.database, cache=index.cache / 'parts')
     manifest = index.ensure()
     allowed = {r['id']:r for r in index.rows(kind) if eligible(r, system=system)
                and (construction != 'technic-structure' or structural_candidate(r))
@@ -303,12 +361,17 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
         expression = ' OR '.join('"'+t+'"' for t in terms if t not in stop)
         if not expression:
             raise ValueError('Query needs a searchable term')
-        with sqlite3.connect(index.path.as_uri()+'?mode=ro', uri=True) as con:
-            for identity, rank in con.execute('SELECT id, rank FROM search WHERE search MATCH ? ORDER BY rank, id', (expression,)):
-                if identity in allowed:
-                    ranked.append(dict(allowed[identity], fts_rank=rank, retrieval_rank=len(ranked)+1))
-                    if len(ranked) >= pool:
-                        break
+        def matches():
+            if isinstance(index, PartDiscoveryIndex):
+                yield from index.fts_matches(expression)
+            else:
+                with sqlite3.connect(index.path.as_uri()+'?mode=ro', uri=True) as con:
+                    yield from con.execute('SELECT id, rank FROM search WHERE search MATCH ? ORDER BY rank, id', (expression,))
+        for identity, rank in matches():
+            if identity in allowed:
+                ranked.append(dict(allowed[identity], fts_rank=rank, retrieval_rank=len(ranked)+1))
+                if len(ranked) >= pool:
+                    break
         stats = dict(eligible_records=len(allowed), shortlisted=len(ranked), query_language='token OR with BM25 ordering')
     kept, rejected, shapes, parents = [], [], {}, Counter()
     for row in ranked:
@@ -340,8 +403,11 @@ def search(index, kind, query, *, engine='jev', limit=10, candidates=500, pool=6
                 row['mechanism_study'] = 'inspect source steps, parts and parent context; analytical mechanism verification is deferred'
         except (OSError, ValueError, RecursionError) as exc:
             rejected.append(dict(id=row['id'], reason='inventory_failed', error=str(exc)))
-    return dict(query=query, kind=kind, engine=engine, source_field=FIELDS[kind], index_signature=manifest['signature'],
-                results=kept[:limit], eligible_after_measurement=len(kept), rejected=rejected, stats=stats,
+    return dict(query=query, kind=kind, engine=engine,
+                source_field='PARTS_DESCRIPTIONS_FTS' if kind == 'parts' and engine == 'fts' else FIELDS[kind],
+                index_signature=manifest['signature'],
+                results=kept[:limit], **{('eligible_candidates' if kind == 'parts' else 'eligible_after_measurement'): len(kept)},
+                rejected=rejected, stats=stats,
                 filters=dict(system=system,construction=construction or ('system' if system else 'all'),min_parts=min_parts,max_parts=max_parts,max_technic_share=max_technic_share,parent_cap=parent_cap),
                 note='Scores describe textual relevance. Results still require geometry, scale and visual review; no hidden fallback or automatic import approval.')
 

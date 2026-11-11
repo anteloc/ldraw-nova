@@ -127,3 +127,13 @@ The generated catalog lives in ignored `output/model-selector/` and is rebuilt
 by setup and each server start. No Bun, Node, GLB converter, account, or API key
 is needed. Library precedence matches Nova (`--library`, `LDRAW_DIR`, `LDRAWDIR`,
 then `data/ldraw`); annotated models always come from this repository.
+
+## Optional description snapshot for regex search
+
+Run `./ldraw-agent export-parts-descriptions` to create the Git-ignored
+`data/parts-descriptions-full.tsv` if absent. It is a complete UTF-8 snapshot of
+`PARTS_DESCRIPTIONS`, not another authoritative source. Existing exports remain
+untouched unless `--force` is supplied; refresh after updating the DB.
+[Part-information methods](agent/guides/part-information.md) cover regex, SQL,
+FTS, Jev, categories and dimensions. Informational part commands require no
+installed LDraw library; explicit geometry inspection and model building do.

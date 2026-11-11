@@ -1,5 +1,10 @@
 # Review, repair and record the final model
 
+For individual-part inspection, first obtain filenames from [part-information sources](part-information.md),
+then render those specific references with existing tools and open the images.
+Do not read raw library `.dat` contents. Review validates the documented
+construction being adapted; part-search results alone cannot establish it.
+
 Run `./ldraw-agent review MODEL.plan.json` or `review MODEL.mpd`. It combines source and geometry checks, declared structural/flex checks, BOM, views and renderer BOM comparison against frozen bytes. Read [diagnostic coverage](../reference/validation.md) and [artifact/exit meanings](../reference/cli.md#review-a-model). `--no-render` is for intermediate checks; skipped stages are not passing evidence.
 
 Repair the first failed prerequisite, then recheck the affected interface and final whole assembly. A local section excludes parent and sibling interactions. Unsupported geometry is different from invalid LDraw. Choose contact scope deliberately and record skipped coverage; fixed supports and moving joints require different contracts.

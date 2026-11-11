@@ -5,12 +5,40 @@ geometry checks, rendering and a curated construction knowledge base. Use the
 existing `ldraw-agent` tooling and ordinary JSON plans; Python generators can
 emit the same plans. Run commands below from the repository root.
 
+## Construction first; part information for specific questions
+
+Follow **brief → retrieve construction guidance and examples → adapt their
+principles → build → inspect → repair → deliver**. Existing documentation,
+lessons, recipes and examples establish how to build. Part retrieval supports
+specific needs such as a variant, substitute, dimension, accessory or attachment;
+do not design an entire model by searching piece by piece or reinvent supported
+constructions with ad-hoc generators or geometry reconstruction.
+
+**NEVER directly read, search or independently parse library `.dat` contents**
+under `data/ldraw/parts/`, `data/ldraw/p/`, or equivalent external library roots
+for part descriptions, structure or geometry. Raw headers often contain
+`~Moved to...` pointers; corrected database descriptions avoid manual alias
+navigation. Equal descriptions for different filenames are intentional.
+
+**Use informational sources and existing tools instead.** Choose SQL/literal
+search, FTS/BM25, Jev ranking, regex over the generated description TSV,
+categories or cached dimensions to answer the particular question. These are
+complementary options, not a mandatory sequence. See the
+[part-information guide](docs/agent/guides/part-information.md) for sources,
+commands, limits and the create-if-missing TSV export. Keep results bounded.
+
+Before visually inspecting parts, obtain their exact filenames from these
+sources, then render those identified parts and open the images. Existing
+`part`, `connectors`, measurement, rendering and validation tools may internally
+read geometry; consume their reports rather than parsing raw definitions.
+A search hit or cached dimension does not prove fit or a construction method.
+
 ## Generate a model
 
 Keep each new model, editable sources and evidence in `output/<task>/`. Choose
 dimensions, palette and construction details from the user's brief; resolve
-ordinary design choices yourself. Use this loop: **brief → retrieve → build →
-inspect → repair → deliver**.
+ordinary design choices yourself. Retrieve construction guidance and examples
+before adapting their principles to the brief.
 
 Default to **SNOT (Studs Not On Top)** construction for new models. Read the
 [SNOT guide](docs/agent/guides/snot.md) and retrieve relevant SNOT connections
@@ -69,6 +97,7 @@ overrides this default.
 |---|---|
 | Plan fields, repetition, includes or Python authoring | [Plan reference](docs/agent/reference/plans.md), [build workflow](docs/agent/guides/build-model.md) |
 | Subject proportions and construction choices | [Design models](docs/agent/guides/design-models.md) |
+| Targeted part questions and search-method selection | [Part information](docs/agent/guides/part-information.md) |
 | Part frames, mounting and submodel composition | [Place parts](docs/agent/guides/place-parts.md), [compose modules](docs/agent/guides/compose-modules.md) |
 | Sideways construction | [SNOT](docs/agent/guides/snot.md) |
 | Aircraft of any style: airliner, jet, prop plane, biplane, floatplane | [Aircraft](docs/agent/guides/aircraft.md) |

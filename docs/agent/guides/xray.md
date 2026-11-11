@@ -12,6 +12,10 @@ Run `bin/ldraw-xray doctor`: `renders: true` means rendering is available.
 Read `errors` otherwise. `sections`, `palette` and `mosaic` do not need LeoCAD.
 Use current `--help` when selecting options.
 
+For a particular part, obtain its exact filename through the [part-information workflow](part-information.md)
+before rendering. Never open or parse library `.dat` contents to identify shapes
+or reconstruct geometry; use the tool's images and structured evidence.
+
 ## Inspect the assembly and its mounting
 
 From this project's root, substitute your source and exact section names:
