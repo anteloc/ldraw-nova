@@ -3,7 +3,8 @@
 Current lessons live in semantic packages. [Browse the generated index](index.html), or use:
 
 ```sh
-./ldraw-agent examples --family spaceship
+./ldraw-agent examples --family spaceship --limit 8
+./ldraw-agent knowledge search "hull attachment" --family spaceship --limit 6
 ./ldraw-agent knowledge show spaceship:KEY
 ```
 
@@ -18,3 +19,23 @@ Legacy selection files and atlas generators are historical preparation inputs. U
 ## Details
 
 Use `examples --details` with this family, or a role-specific knowledge query.
+
+## Select principles for the new brief
+
+No spacecraft is a default template. Define scale, silhouette and proportions,
+then compare at least three suitable source models when available. Record the
+principle borrowed from each, its intended role and evidence limits. Keep the
+new outline grounded in the user's brief. A narrow named-ship study can focus
+on its specific source.
+
+Spaceship searches and this gallery interleave sources; sibling sections no
+longer occupy the whole first page. Search results preserve scores and original
+retrieval ranks. Use `--diversify none` for a focused comparison of sibling details.
+The normal family list includes modules; `--details` narrows it to modules.
+
+The [spacecraft guide](../../docs/agent/guides/design-models.md#compare-construction-sources-before-selecting-one)
+compares brackets and curved skins, hinged shells, clip-mounted wings, offset
+cockpits, concentric nacelles and small hulls. The 6208 studies retain their deferred
+geometry/motion checks. Cross-listed submodel lessons retain their original
+aliases, evidence and export gates. None of these search improvements certifies
+new geometry or motion.

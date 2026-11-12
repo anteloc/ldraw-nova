@@ -68,6 +68,10 @@ overrides this default.
    Inspiration, diagnostic, research, archive and hold scopes require explicit
    selection; finding a source does not approve its reuse or export. When no
    suitable lesson exists, use [source discovery](docs/agent/guides/find-references.md).
+   For new spacecraft, define silhouette and scale before exporting a reference.
+   Compare construction lessons from different source models; see the
+   [spacecraft comparison workflow](docs/agent/guides/design-models.md#compare-construction-sources-before-selecting-one).
+   The SNOT default does not select a default ship or silhouette.
 3. Author a [JSON plan](docs/agent/reference/plans.md) with named placements.
    Keep repairs in the plan or generator. Inspect real part origins and mating
    interfaces with `part` and `connectors`; names and bounding boxes do not prove

@@ -162,3 +162,28 @@ def test_registered_manual_export_carries_corrected_lesson(tmp_path):
     assert 'repeating one face four times changes this source' in readme
     assert (tmp_path/'tree/source.mpd').read_bytes() == Path(row['model']).read_bytes()
     assert (tmp_path/'tree/visual-review.json').read_bytes() == (source/'visual-review.json').read_bytes()
+
+
+def test_source_diversity_interleaves_without_losing_hits_or_scores(tmp_path):
+    for name, group, lesson in [('a1', 'set:a', 'Hull brackets'), ('a2', 'set:a', 'Hull brackets'),
+                                ('a3', 'set:a', 'Hull brackets'), ('b1', 'set:b', 'Hull brackets'),
+                                ('c1', 'set:c', 'Hull brackets')]:
+        register(tmp_path, name, lesson=lesson, source_group=group)
+    register(tmp_path, 'hidden', lesson='Hull brackets', scope='inspiration', source_group='set:d')
+    plain = search('hull', only_examples=True, root=tmp_path, limit=100, diversify='none')
+    varied = search('hull', only_examples=True, root=tmp_path, limit=100, diversify='source')
+    assert [r['id'] for r in varied['results']] == ['a1', 'b1', 'c1', 'a2', 'a3']
+    assert varied['total'] == plain['total'] == 5
+    assert {r['id']: r['score'] for r in varied['results']} == {r['id']: r['score'] for r in plain['results']}
+    assert [r['retrieval_rank'] for r in varied['results']] == [1, 4, 5, 2, 3]
+    first = search('hull', only_examples=True, root=tmp_path, limit=3, diversify='source')
+    assert len({r['source_group'] for r in first['results']}) == 3 and first['truncated']
+    assert search('unmatched', root=tmp_path, diversify='source')['results'] == []
+
+
+def test_invalid_source_group_and_diversification_are_rejected(tmp_path):
+    register(tmp_path, 'bad', source_group=[])
+    with pytest.raises(ValueError, match='source_group'):
+        examples(tmp_path)
+    with pytest.raises(ValueError, match='diversification'):
+        search('hull', root=tmp_path, diversify='random')

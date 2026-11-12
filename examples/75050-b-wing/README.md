@@ -36,7 +36,8 @@ Read the registered construction lesson and its linked audit before adapting the
     "model_sha256": "91c67fdbea95b99d3067586b8b3c80d103be79417ec62d185833d1b4f148fae5",
     "audit_pointer": "/items/0",
     "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
-    "techniques": []
+    "techniques": [],
+    "source_group": "ldraw:75050-1"
   }
 ]
 ```

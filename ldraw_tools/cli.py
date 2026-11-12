@@ -123,6 +123,7 @@ def parser():
     c.add_argument("--scale", choices=["minifigure", "microscale"])
     c.add_argument("--details", action="store_true")
     c.add_argument("--family", help="Example family; validated when examples are searched")
+    c.add_argument('--diversify', choices=['source','none'], help='Spaceship default: interleave source models; none preserves relevance order')
     from .knowledge import SCOPES
     c.add_argument("--scope", choices=SCOPES, default="default")
     c = commands.add_parser("knowledge", help="Search local agent guidance and registered examples without network access")
@@ -134,6 +135,7 @@ def parser():
     k.add_argument("--family")
     k.add_argument("--subject")
     k.add_argument("--technique")
+    k.add_argument('--diversify', choices=['source','none'], help='Spaceship family defaults to source diversity; otherwise relevance order')
     k = knowledge.add_parser("show", help="Resolve a canonical example ID or qualified legacy alias")
     k.add_argument("id")
     k.add_argument("--family")
@@ -199,15 +201,17 @@ def parser():
     d.add_argument("--placement-notes", required=True)
     d.add_argument("--scale", choices=["minifigure","microscale","display","unknown"], default="unknown")
     d.add_argument("--force", action="store_true")
-    c = commands.add_parser('spaceship', help='SNOT spacecraft briefs, Halcyon design reference and source studies')
+    c = commands.add_parser('spaceship', help='Spacecraft briefs and construction studies selected for the requested design')
     ships = c.add_subparsers(dest='spaceship_command', required=True)
-    ships.add_parser('list', help='List the default Halcyon reference and whole-ship studies')
-    ships.add_parser('details', help='List reusable cockpit, wing, engine and hull studies')
-    d = ships.add_parser('brief', help='Start a SNOT spaceship brief using Halcyon as the default reference')
+    for name in ('list', 'details'):
+        d = ships.add_parser(name, help='Compare construction lessons across spacecraft sources' if name == 'list' else 'Compare cockpit, wing, engine and hull lessons across sources')
+        d.add_argument('--limit', type=positive, default=8)
+        d.add_argument('--diversify', choices=['source','none'], default='source')
+    d = ships.add_parser('brief', help='Define spacecraft intent and compare references before selecting construction')
     d.add_argument('archetype', choices=['starfighter','freighter','capital-ship'])
     d.add_argument('--output')
     d.add_argument('--force', action='store_true')
-    d = ships.add_parser('export', help='Copy the Halcyon design or export a reviewed source construction')
+    d = ships.add_parser('export', help='Export an explicitly selected construction; original scope and evidence gates apply')
     d.add_argument('name')
     d.add_argument('--outdir', required=True)
     d.add_argument('--force', action='store_true')
@@ -465,11 +469,11 @@ def run(args):
         if args.knowledge_command == "show":
             return resolve(args.id, family=args.family), 0
         return search(args.query, limit=args.limit, scope=args.scope, family=args.family,
-                      subject=args.subject, technique=args.technique), 0
+                      subject=args.subject, technique=args.technique, diversify=args.diversify), 0
     if args.command == "examples":
         from .examples import search_examples
         if args.details and args.scale:raise ValueError('--scale applies to building examples')
-        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family,scope=args.scope),0
+        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family,scope=args.scope,diversify=args.diversify),0
     if args.command == "doctor":
         from .flex import availability
         library = library_path(args.library)
@@ -523,6 +527,20 @@ def run(args):
                       parent_cap=args.parent_cap, yes=args.yes, no=args.no), 0
     if args.command == 'technic' and args.technic_command == 'catalog' and not args.connectors:
         return mechanism_catalog_command(args), 0
+    if args.command == 'spaceship':
+        from .spaceships import design_brief, export_spaceship
+        if args.spaceship_command in {'list','details'}:
+            from .examples import search_examples
+            return search_examples(family='spaceship', details=args.spaceship_command == 'details', limit=args.limit, diversify=args.diversify), 0
+        if args.spaceship_command == 'brief':
+            brief = design_brief(args.archetype)
+            if args.output:
+                target = Path(args.output)
+                if target.exists() and not args.force:
+                    raise ValueError('Output exists; use --force')
+                atomic_write(target, dumps(brief)+'\n')
+            return brief, 0
+        return export_spaceship(args.name, args.outdir, force=args.force), 0
     library = library_path(args.library)
     parts = get_parts(library, refresh=args.command == "index", shadows=[] if args.no_shadow else args.shadow)
     if args.command == "flex":
@@ -535,20 +553,6 @@ def run(args):
         return review_model(args.file, parts, library, outdir=args.outdir, force=args.force,
                             section=args.section, colour=args.colour, views=args.views,
                             renders=not args.no_render, timeout=args.timeout, **geometry_settings(args))
-    if args.command == 'spaceship':
-        from .spaceships import design_brief, export_spaceship
-        if args.spaceship_command in {'list','details'}:
-            from .examples import search_examples
-            return search_examples(family='spaceship', details=args.spaceship_command == 'details', limit=100), 0
-        if args.spaceship_command == 'brief':
-            brief = design_brief(args.archetype)
-            if args.output:
-                target = Path(args.output)
-                if target.exists() and not args.force:
-                    raise ValueError('Output exists; use --force')
-                atomic_write(target, dumps(brief)+'\n')
-            return brief, 0
-        return export_spaceship(args.name, args.outdir, force=args.force), 0
     if args.command in {'manual', 'mechanism'}:
         from .manuals import prepare_manual, review_manual, export_manual
         command = getattr(args, args.command + '_command')

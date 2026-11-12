@@ -12,10 +12,12 @@ Read the registered construction lesson and its linked audit before adapting the
     "scope": "construction",
     "kind": "assembly",
     "aliases": [
-      "submodel:s22-10030-isd-tower"
+      "submodel:s22-10030-isd-tower",
+      "spaceship:micro-tantive"
     ],
     "families": [
-      "submodel"
+      "submodel",
+      "spaceship"
     ],
     "legacy_groups": [
       "examples"
@@ -39,7 +41,8 @@ Read the registered construction lesson and its linked audit before adapting the
     "visual_review": "examples/10030-micro-tantive/visual-review.json",
     "model_sha256": "26d4af18c2f07088ee1e209c509d2ef81da3fbdd234ac10ce57294d8a03b098e",
     "audit_pointer": "/items/29",
-    "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md"
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md",
+    "source_group": "ldraw:10030-1"
   }
 ]
 ```

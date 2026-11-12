@@ -99,3 +99,44 @@ success alone do not demonstrate better generated models.
 The promoted An-225 package was deleted from `examples/an225` because its construction (flat plate wing, stepped box belly and nose, blunt tail, box visor) made it a poor aircraft precedent for generation. A retirement tombstone with the old `replacement:an225` alias lives in `examples/archive/README.md`; `promotion-checks.json`, `implementation-checks.json` and the snapshot keep their historical An-225 records unchanged. `courier-jet` moved to archive scope for the same reason; its vehicle recipe and checks are unchanged. Aircraft lessons now come from the `aircraft` family (see `examples/aircraft-atlas/README.md`) and `docs/agent/guides/aircraft.md`.
 
 On 2026-11-11 the extraction rotation repair in `ldraw_tools/document.py` was widened from deviations above 1e-4 to above 1e-6 (upper bound 0.002 unchanged, every repair still recorded in `extraction.json`): OMR authors write small rotations with four decimals, which the structural check in `./ldraw-agent build` rejects as `technic.invalid_transform`. The five affected aircraft packages were re-prepared and re-reviewed. Packages extracted earlier keep their frozen sources; `examples/8081-front-axle` and `examples/42050-v8-engine` still fail that CLI build for the same reason until they are re-prepared and re-reviewed, while their `manual export`, plan rebuild and BOM checks pass.
+
+## 2026-11-12: spacecraft reference selection
+
+Removed CLI help that incorrectly called Halcyon the default reference. Agent
+instructions, the maintained prompt and spacecraft/SNOT/discovery guidance now
+require an original spacecraft's scale and silhouette before reference selection,
+then comparison of at least three suitable source models when available. A
+smaller pool is recorded explicitly; named reproductions can focus one source.
+SNOT remains the construction default. Examples supply local principles and
+interfaces rather than an implicit whole-ship silhouette.
+
+Spaceship retrieval now includes modules in the normal family list and uses
+stable source-group round-robin ordering after the existing FTS/BM25 retrieval.
+All matches, scores and original ranks remain available; `--diversify none`
+restores relevance order. Other families retain their previous default ordering.
+No name receives a boost or penalty. Library-independent `spaceship list` and
+`details` return eight results by default and accept `--limit`.
+
+Replaced 13 B-wing 6208 registration placeholders with their existing study
+lessons and evidence-backed technique/role metadata. Cross-listed the OMS pod,
+micro Tantive and micro shuttle in the spaceship family. The SNOT filter now
+finds 12 lessons from five source models instead of only Halcyon. Regenerated
+the spaceship and submodel compatibility catalogs from README owners.
+
+The 25 edited registrations retain identities, existing aliases, scopes, model
+hashes and audit pointers. No geometry, frozen reviews, source databases or
+planning snapshots changed. Reopened all 22 B-wing image views through two
+inspection sheets and the three cross-listed packages' existing inspection
+boards; their hashes match the retained records. This supports descriptive
+metadata, not new certification of fit, strength or motion. The B-wing checks
+remain deferred and its studies do not gain reviewed manual export eligibility.
+
+Retrieval cases, evidence identities, link checks and test output are retained
+locally under `output/spaceship-retrieval/`. No new model-generation trial was
+performed, so these checks establish retrieval behavior rather than a measured
+improvement in generated designs.
+
+Validation: 149 focused tests and the full suite of **731 tests** passed. The
+actual CLI returned eight different source models with a nonexistent library
+path. Changed Markdown links/anchors and `git diff --check` passed. Legacy
+aliases, explicit Halcyon export and scope/freshness restrictions remain covered.

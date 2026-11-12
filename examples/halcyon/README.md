@@ -144,7 +144,8 @@ The final review passes source and geometry checks with no errors. Python and Le
     ],
     "subjects": [
       "spacecraft"
-    ]
+    ],
+    "source_group": "authored:halcyon"
   }
 ]
 ```

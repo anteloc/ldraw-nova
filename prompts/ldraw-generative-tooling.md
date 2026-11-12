@@ -19,6 +19,13 @@ dimensions. Obtain exact filenames before targeted rendering or tool inspection.
 Use established retrieval techniques and compact results rather than ad-hoc
 parsers or new search engines. Missing metadata is not permission to scan `.dat`.
 
+For original spacecraft, establish silhouette and scale before choosing a source.
+Compare suitable construction lessons from at least three source models when
+available, recording a smaller pool when necessary. Use the
+[spacecraft comparison workflow](../docs/agent/guides/design-models.md#compare-construction-sources-before-selecting-one)
+and source-diverse searches to choose principles for particular roles. SNOT is
+the construction default; no example supplies a default spacecraft shape.
+
 ## Resources
 
 - `./docs/ldraw-specs.pdf` (MANDATORY): the **full LDraw language specification**.

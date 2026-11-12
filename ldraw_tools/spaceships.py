@@ -14,8 +14,8 @@ from .knowledge import resolve, require_exportable
 from .manuals import export_manual
 
 
-def default_reference():
-    """Compatibility accessor for the explicitly selected Halcyon study."""
+def halcyon_reference():
+    """Accessor for the explicitly selected Halcyon study."""
     folder = Path(resolve('halcyon', family='spaceship', root=ROOT)['guide']).parent
     return dict(key='halcyon', title='Halcyon SNOT interceptor', category='starfighter',
         use='design-reference', default=False, construction='SNOT',
@@ -23,6 +23,11 @@ def default_reference():
         model=str(folder/'halcyon.mpd'), plan=str(folder/'halcyon.plan.json'),
         generator=str(folder/'generate.py'), guide=str(folder/'README.md'),
         preview=str(folder/'halcyon.png'), visual_review=str(folder/'visual-review.md'))
+
+
+def default_reference():
+    """Legacy API alias; not used to select a design or recommend a default."""
+    return halcyon_reference()
 
 
 ARCHETYPES = {
@@ -64,7 +69,15 @@ def design_brief(archetype):
     design['references'] = [key for key in design['references'] if key not in design['inspiration_references']]
     return dict(version=1, family='spaceship', archetype=archetype, **design,
         construction=None, default_reference=None, construction_options=['System', 'SNOT', 'Technic'],
-        construction_strategy='Choose construction techniques from the requested silhouette, scale and interfaces. Establish supported attachment faces and adapt local modules to the brief. Halcyon is an optional core-and-skin lesson, not a default shape.',
+        construction_strategy='Choose construction techniques from the requested silhouette, scale and interfaces. Establish supported attachment faces and adapt local modules to the brief. Use the repository SNOT default while choosing each interface from the brief. Select lessons by role and evidence; no source model supplies a default shape.',
+        reference_selection={
+            'workflow': 'Define scale, silhouette, proportions and distinguishing masses before exporting a reference. Compare at least three source models when suitable lessons exist; record a smaller pool explicitly.',
+            'queries': ['./ldraw-agent knowledge search "'+role+'" --family spaceship --diversify source --limit 6'
+                        for role in ['hull attachment', 'wing root', 'cockpit engine']],
+            'record': ['candidate source and scale', 'construction principle to borrow', 'suitability and evidence limits', 'features of the new silhouette independent of the source'],
+            'named_references': 'Optional leads, not presets. Search the current knowledge base for the actual brief and combine only compatible interfaces.',
+            'narrow_search': 'Use --diversify none to compare multiple details from one already selected source.',
+        },
         coordinates='X width, -Z forward, negative Y up; choose the hull or stand datum explicitly.',
         scale='Choose minifigure, display or microscale before selecting the canopy and detail sizes.',
         part_queries={
@@ -84,7 +97,7 @@ def design_brief(archetype):
 def export_spaceship(key, outdir, *, force=False):
     row = require_exportable(resolve(key, family='spaceship', root=ROOT))
     if row['id'] == 'halcyon':
-        reference = default_reference()
+        reference = halcyon_reference()
         source = Path(reference['guide']).parent.resolve()
         target = Path(outdir).resolve()
         if target == source or target.is_relative_to(source) or source.is_relative_to(target):

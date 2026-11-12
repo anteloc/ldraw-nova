@@ -7,6 +7,7 @@ changed source cannot leave a stale on-disk search result.
 from __future__ import annotations
 
 import hashlib
+from itertools import zip_longest
 import html
 import json
 import os
@@ -61,6 +62,8 @@ def examples(root=None):
             for key in ('aliases', 'families', 'subjects', 'techniques', 'legacy_groups'):
                 if key in entry and (not isinstance(entry[key], list) or any(not isinstance(v, str) or not v for v in entry[key])):
                     raise ValueError(f'Invalid {key}: {path}')
+            if 'source_group' in entry and (not isinstance(entry['source_group'], str) or not entry['source_group'].strip()):
+                raise ValueError(f'Invalid source_group: {path}')
             if entry['id'] in identities:
                 raise ValueError(f'Duplicate knowledge ID: {entry["id"]}')
             identities.add(entry['id'])
@@ -129,6 +132,19 @@ def check_directory_scope(folder, *, root=None):
     return rows
 
 
+def source_group(row):
+    """Explicit source identity, with a conservative shared-section fallback."""
+    return row.get('source_group', row['id'].split('#', 1)[0])
+
+
+def interleave_sources(rows, *, key=source_group):
+    """Stable round-robin across source groups, without removing any result."""
+    groups = {}
+    for row in rows:
+        groups.setdefault(key(row), []).append(row)
+    return [row for layer in zip_longest(*groups.values()) for row in layer if row is not None]
+
+
 def write_compat_catalog(family, directory, *, root=None):
     """Regenerate legacy browsing views from README owners and frozen evidence.
 
@@ -170,6 +186,8 @@ def write_compat_catalog(family, directory, *, root=None):
             if field in row:
                 row[field] = os.path.relpath(row[field], directory)
         rows.append(row)
+    if family == 'spaceship':
+        rows = interleave_sources(rows)
     catalog = dict(version=2, generated_from='package README registrations', family=family,
                    examples=[r for r in rows if r['group']=='examples'],
                    details=[r for r in rows if r['group']=='details'])
@@ -249,9 +267,11 @@ def documents(root=None, *, include_research=False):
 
 
 def search(query='', *, limit=5, scope='default', family=None, kind=None,
-           subject=None, technique=None, only_examples=False, details=None, scale=None, root=None):
+           subject=None, technique=None, only_examples=False, details=None, scale=None, root=None, diversify=None):
     if scope not in SCOPES: raise ValueError('Unknown knowledge scope: ' + scope)
     if limit <= 0: raise ValueError('limit must be positive')
+    diversify = diversify or ('source' if family == 'spaceship' else 'none')
+    if diversify not in {'source', 'none'}: raise ValueError('Choose source or none diversification')
     records = examples(root)
     if not only_examples: records.extend(documents(root, include_research=scope in ('research','all')))
     eligible = []
@@ -267,7 +287,7 @@ def search(query='', *, limit=5, scope='default', family=None, kind=None,
         eligible.append(row)
     terms = re.findall(r'\w+', query, re.UNICODE)
     if query.strip() and not terms:
-        return dict(total=0, results=[], truncated=False, engine='sqlite-fts5-bm25', scope=scope)
+        return dict(total=0, results=[], truncated=False, engine='sqlite-fts5-bm25', scope=scope, diversification=diversify)
     with sqlite3.connect(':memory:') as db:
         db.execute('CREATE VIRTUAL TABLE knowledge USING fts5(title, metadata, lesson)')
         for row in eligible:
@@ -279,14 +299,19 @@ def search(query='', *, limit=5, scope='default', family=None, kind=None,
             hits = db.execute("SELECT rowid, bm25(knowledge,5,2,1), snippet(knowledge,2,'[',']',' … ',48) FROM knowledge WHERE knowledge MATCH ? ORDER BY 2,rowid", (expression,)).fetchall()
         else:
             hits = [(i + 1, 0.0, row['lesson'][:400]) for i, row in enumerate(eligible)]
+    retrieval_ranks = {hit[0]: rank for rank, hit in enumerate(hits, 1)}
+    if diversify == 'source':
+        # Scopes are already filtered. Keep the original BM25 rank for transparency.
+        hits = interleave_sources(hits, key=lambda hit: source_group(eligible[hit[0] - 1]))
     results = []
     for number, score, excerpt in hits[:limit]:
         row = dict(eligible[number - 1])
         # Full guide sections are available at the returned path/line; bounded
         # excerpts keep routine retrieval small and preserve exact provenance.
         row.pop('lesson', None)
-        row.update(excerpt=excerpt, score=-score)
+        row.update(excerpt=excerpt, score=-score, retrieval_rank=retrieval_ranks[number],
+                   source_group=source_group(row))
         results.append(row)
     return dict(total=len(hits), results=results, truncated=len(hits)>limit,
-                engine='sqlite-fts5-bm25', scope=scope,
+                engine='sqlite-fts5-bm25', scope=scope, diversification=diversify,
                 note='Local curated knowledge only; no automatic research fallback. Read the source and its limits. Search is not export approval.')

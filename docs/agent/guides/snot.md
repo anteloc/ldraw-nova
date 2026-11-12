@@ -6,9 +6,14 @@ Then use the [cat studies](../../../examples/cat/README.md) for single-stud diag
 
 For vehicle bodywork, use the [Ferrari F40 reference](../../../examples/ferrari-f40/README.md): a searchable map of 74 sections and five small build studies covering body mounts, door trim, lamp/grille corners, window louvers and fascia supports. Its flattened main car and saved callouts differ; use the checked small studies and their parent notes when adapting a construction.
 
-For spacecraft, use the [6208 B-Wing study](../../../examples/b-wing-6208/README.md). Its exposed bracket core, opposing curved skins and wing-root carrier show how to combine System surfaces with Technic attachments. This is a source-and-image learning reference; geometry and flexible-part verification were deferred for this study.
-
-The [Halcyon interceptor](../../../examples/halcyon/README.md) is a scoped core-and-skin construction example. Choose techniques and silhouette from the new brief. Fifteen `30414` side-stud bricks in one hull course expose stud faces to port, starboard, forward and aft. Flank panels, pod stripes, intakes, nozzles and cannons are each built upright in their own section and seated with `stud - R * socket`. The 195-piece model forms one automatic connection group, and its test checks every SNOT interface's contact count.
+For spacecraft, [compare sources for the brief](design-models.md#compare-construction-sources-before-selecting-one)
+before selecting a core or silhouette. The [6208 B-Wing](../../../examples/b-wing-6208/README.md)
+shows brackets, Technic-mounted curved skins and unequal wings; the
+[10283 OMS pod](../../../examples/10283-oms-pod/README.md) shows a side-stud core
+under a hinged shell; the [micro Tantive](../../../examples/10030-micro-tantive/README.md)
+uses a lengthwise sideways hull; and [Halcyon](../../../examples/halcyon/README.md)
+shows fixed side-stud panel mounts. Their scales and evidence limits differ.
+The SNOT default chooses an attachment approach, not a particular reference ship.
 
 ```sh
 ./ldraw-agent review examples/parrot/head.plan.json --outdir output/snot-head

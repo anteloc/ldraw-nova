@@ -82,3 +82,55 @@ def test_halcyon_export_preserves_editable_design_and_protects_existing_work(tmp
     export_spaceship('halcyon', destination, force=True)
     with pytest.raises(ValueError, match='separate'):
         export_spaceship('halcyon', Path(reference['guide']).parent, force=True)
+
+
+def test_spaceship_snot_shortlist_exposes_multiple_source_constructions():
+    from ldraw_tools.knowledge import search
+    report = search('hull shell', family='spaceship', technique='snot', limit=6)
+    assert report['diversification'] == 'source'
+    assert len({r['source_group'] for r in report['results'][:4]}) >= 3
+    assert any(r['id'].startswith('b-wing-6208#') for r in report['results'])
+    assert any(r['id'] == '10283-oms-pod' for r in report['results'])
+    assert all('retain_' not in r['excerpt'] for r in report['results'])
+
+
+def test_spaceship_browsing_includes_modules_and_preserves_all_matches():
+    from ldraw_tools.knowledge import search
+    varied = search_examples(family='spaceship', limit=100)
+    plain = search_examples(family='spaceship', limit=100, diversify='none')
+    assert {r['id'] for r in varied['results']} == {r['id'] for r in plain['results']}
+    assert len({r['source_group'] for r in varied['results'][:5]}) == 5
+    assert {'x-wing-nacelle', 'canopy-cockpit', '10283-oms-pod', 'halcyon'} <= {r['id'] for r in varied['results']}
+    for row in search('', family='spaceship', only_examples=True, limit=100)['results']:
+        assert row['source_group']
+        assert not row['excerpt'].startswith('retain_')
+
+
+def test_spaceship_metadata_cli_does_not_initialize_parts_and_has_no_default_help(monkeypatch):
+    import argparse
+    from ldraw_tools.cli import parser, run
+    monkeypatch.setattr('ldraw_tools.cli.get_parts', lambda *a, **k: pytest.fail('parts initialized'))
+    root = parser()
+    subcommands = next(a for a in root._actions if isinstance(a, argparse._SubParsersAction))
+    help_text = subcommands.choices['spaceship'].format_help().lower()
+    assert 'halcyon' not in help_text
+    for command in [['spaceship', 'list', '--limit', '5'], ['spaceship', 'details', '--limit', '5'],
+                    ['spaceship', 'brief', 'starfighter']]:
+        result, status = run(root.parse_args(command))
+        assert status == 0
+        if 'results' in result:
+            assert len({r['source_group'] for r in result['results']}) == 5
+        else:
+            assert result['default_reference'] is None and result['reference_selection']['workflow']
+            assert 'Halcyon' not in result['construction_strategy']
+
+
+def test_cross_listed_lessons_keep_identity_and_scope():
+    from ldraw_tools.knowledge import resolve
+    for old, new in [('submodel:06-10283-shuttle-framework', 'spaceship:oms-pod'),
+                     ('submodel:s22-10030-isd-tower', 'spaceship:micro-tantive'),
+                     ('submodel:s16-30050-shuttle-fuselage', 'spaceship:micro-shuttle')]:
+        a, b = resolve(old), resolve(new)
+        assert a['id'] == b['id'] and a['model_sha256'] == b['model_sha256']
+        assert a['scope'] == b['scope'] == 'construction'
+    assert resolve('spaceship:b-wing-6208-front')['id'] == 'b-wing-6208#front'

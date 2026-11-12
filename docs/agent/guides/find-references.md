@@ -10,6 +10,11 @@ Search current local knowledge first:
 
 Retrieve a few role-specific lessons, open their construction documentation/model source paths (not library part definitions), and compare interfaces, scale and limits. Default search includes current guides, construction lessons and tutorials. Inspiration, diagnostics, holds, archives and research need explicit scopes. No match is useful information; do not silently fill the list from a weaker source. See the [search and registration contract](../reference/cli.md#retrieve-construction-knowledge).
 
+For original spacecraft, use the [source comparison workflow](design-models.md#compare-construction-sources-before-selecting-one).
+`--family spaceship` interleaves matching source models by default, so sibling
+studies do not fill the first page. Compare suitable construction principles
+against the brief before exporting a reference; no ship is the default design.
+
 ## Targeted part information within a construction
 
 Retrieve and adapt documented construction principles first. Use part search

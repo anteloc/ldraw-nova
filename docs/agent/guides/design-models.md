@@ -178,6 +178,44 @@ For new designs use X for width, -Z for forward and negative Y for up. Choose a 
 | Freighter/shuttle | Cargo frame, access corridor, hull panels, ramp, cockpit and landing supports | Hull mass, deliberate asymmetry, readable loading access and restrained weathering accents |
 | Capital ship | Internal truss, lower hull, paired upper panels, bridge, trenches and engine block | Large clean outline, layered silhouette, recessed detail and consistent miniature scale |
 
+### Compare construction sources before selecting one
+
+Write down the requested scale, silhouette, proportions and two or three defining
+masses before opening an editable reference. For a new spacecraft, compare at
+least three different source models when suitable lessons exist. Record the
+smaller pool when they do not; do not substitute unrelated references just to
+reach a number. Several sections from one model count as one source.
+
+For each candidate, record the construction principle it teaches, the role it
+could serve, scale compatibility, and evidence limits. Choose interfaces and
+local lessons deliberately. Keep the new ship's outline, proportions, wing
+arrangement and engine placement grounded in the brief; exporting a complete
+reference must not decide those creative choices implicitly. A request to
+reproduce a named ship can of course select that particular source.
+
+```sh
+./ldraw-agent spaceship list --limit 8
+./ldraw-agent knowledge search 'hull attachment' --family spaceship --diversify source --limit 6
+./ldraw-agent knowledge search 'wing root' --family spaceship --diversify source --limit 6
+./ldraw-agent examples 'cockpit engine' --family spaceship --details --limit 6
+```
+
+Spaceship results interleave source models by default: first the best match from
+each source, then additional lessons from those sources. Scores and original
+retrieval ranks remain visible. `--diversify none` restores relevance order for
+focused study of an already selected source. No example has default status.
+
+| Construction question | Different sources worth comparing |
+|---|---|
+| Curved or perpendicular hull faces | 6208 B-wing bracket/Technic skins; 10283 OMS pod hinged shell; Halcyon fixed side-stud panels |
+| Thin wings and roots | 7191 X-wing root and nacelle; 6208 unequal wings and hinge carrier; 30050 micro shuttle wings on clips |
+| Cockpit shape and support | 6887 octagonal enclosure; 6208 canopy pod and offset support arm |
+| Small hulls with multiple stud directions | 10030 micro Tantive lengthwise core; 30050 micro shuttle; compare the scale before transferring details |
+| Engine and surface detail | 7191 nacelle; 6208 four-nozzle cluster; 75181 armour panel; 10179 service bay |
+
+These are comparison leads, not a prescribed combination. Scope and export gates
+still apply; inspiration-only whole ships require explicit selection.
+
 ### Study constructions and choose real parts
 
 Use Jev only after its availability check; use explicit FTS when unavailable. Search separately for whole-ship proportions and each construction role. Do not restrict useful source parts to the same theme. Spacecraft often combine System skins with Technic frames; `--construction all` helps discover both.
@@ -197,7 +235,7 @@ The [6208 B-Wing SNOT study](../../../examples/b-wing-6208/README.md) supplies a
 
 The [submodel atlas](../../../examples/submodel-atlas/README.md) adds a shuttle OMS pod with a colour-coded SNOT core under a hinged shell (06), a cockpit pod on a revolute pivot with its axis marked (07), and two micro ships: wings stood on edge on clips (S16) and a hull built sideways along its length (S22). Find them with `./ldraw-agent examples --family submodel --details spaceship`.
 
-Halcyon's generator, exposed-core images, module views and visual review show the complete workflow. Read its [attachment map](../../../examples/halcyon/README.md#3-module-topology) before adapting the local frames and panel mounts.
+Open each shortlisted package's guide, images and parent-placement evidence. The [spaceship index](../../../examples/spaceship-atlas/README.md) exposes construction lessons across these sources, including modules also registered in the submodel family.
 
 ### Build surfaces in their own local grids
 
@@ -220,15 +258,20 @@ Reserve the cockpit, cargo volume, engine envelopes and attachment space first. 
 
 Long wings and cantilevered engines need a bonded plate stack or a braced frame. Do not place a wing or pod in space merely because its bounding box touches the hull. Keep a bare-frame or root close-up to inspect the real attachment. Use the [Technic workflow](technic.md) for fixed supports and the [mechanism workflow](mechanisms.md) for actual folding wings, ramps or retracting gear. A static hinge pose does not demonstrate motion; use explicit motion checks when requested.
 
-When the brief calls for Halcyon’s particular core-and-skin construction, export it explicitly:
+After comparing sources, export only the construction you chose. Substitute the
+selected key from the results when its package supports reviewed export:
 
 ```sh
-./ldraw-agent spaceship export halcyon --outdir output/my-starship
-./ldraw-agent build output/my-starship/halcyon.plan.json \
-  --output output/my-starship/my-starship.mpd
+./ldraw-agent spaceship export SELECTED_KEY --outdir output/my-starship/reference
 ```
 
-For Halcyon, edit its generator and rebuild the plan. Other atlas exports supply a placement plan and attributed `source.mpd`; edit the placement plan to position the whole module and the source for internal changes. An origin frame is not a promised connector. Check new interfaces and fixed supports separately. Export remains blocked for inspiration entries with unresolved source errors. Whole-model source studies can contain minifigures, stands or accessories; inspect their section lists.
+Follow the returned package's replay instructions. Some exports supply an editable
+generator, others a placement plan and attributed source. An origin frame is not
+a promised connector. Check new interfaces and fixed supports separately. Export
+remains blocked for inspiration entries with unresolved source errors. Whole-model
+studies may contain stands, minifigures or accessories; inspect their section lists.
+The 6208 image studies teach construction principles but have no reviewed manual
+export; use their guide and retained evidence within the stated deferred checks.
 
 ### Make the design attractive
 

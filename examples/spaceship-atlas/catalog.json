@@ -4,45 +4,52 @@
   "family": "spaceship",
   "examples": [
     {
-      "id": "10030-star-destroyer",
-      "title": "Imperial Star Destroyer: layered wedge hull",
-      "scope": "inspiration",
+      "id": "10030-micro-tantive",
+      "title": "Micro Tantive IV: built sideways along its length",
+      "scope": "construction",
       "kind": "assembly",
       "aliases": [
-        "spaceship:star-destroyer-study"
+        "submodel:s22-10030-isd-tower",
+        "spaceship:micro-tantive"
       ],
       "families": [
+        "submodel",
         "spaceship"
       ],
       "legacy_groups": [
         "examples"
       ],
-      "lesson": "Broad triangular ship with recessed side band, layered superstructure and raised bridge; shape inspiration only, existing 416 non-rigid-transform and 39 overlap errors remain. Main detailed ship section reproduces same whole hull; underside reveals plate/hinge construction but no independent small structural modules. Retain only with whole inspiration package.",
+      "lesson": "Tiny Tantive IV adjacent to Star Destroyer; sideways fuselage and radial engine pieces, not command tower. Keep microscale shape/orientation lesson under corrected name.",
       "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
-      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/submodel-audit.json",
       "subjects": [
-        "capital-ship"
+        "Micro spaceship"
       ],
-      "model": "../10030-star-destroyer/source.mpd",
-      "plan": "../10030-star-destroyer/scene.plan.json",
-      "preview": "../10030-star-destroyer/renders/home.png",
-      "manual": "../10030-star-destroyer/index.html",
-      "study_notes": "../10030-star-destroyer/study-notes.json",
-      "visual_review": "../10030-star-destroyer/visual-review.json",
-      "model_sha256": "155b535e6db89919677f9b5fb5de49120deaefb4ce8e78afcae9755209033c2d",
-      "audit_pointer": "/items/6",
-      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
-      "techniques": [],
-      "guide": "../10030-star-destroyer/README.md",
-      "source_sha256": "155b535e6db89919677f9b5fb5de49120deaefb4ce8e78afcae9755209033c2d",
-      "key": "star-destroyer-study",
+      "techniques": [
+        "snot"
+      ],
+      "model": "../10030-micro-tantive/source.mpd",
+      "plan": "../10030-micro-tantive/scene.plan.json",
+      "generator": "../10030-micro-tantive/generate.py",
+      "preview": "../10030-micro-tantive/renders/home.png",
+      "manual": "../10030-micro-tantive/index.html",
+      "study_notes": "../10030-micro-tantive/study-notes.json",
+      "board": "../10030-micro-tantive/board/mosaic.png",
+      "visual_review": "../10030-micro-tantive/visual-review.json",
+      "model_sha256": "26d4af18c2f07088ee1e209c509d2ef81da3fbdd234ac10ce57294d8a03b098e",
+      "audit_pointer": "/items/29",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md",
+      "source_group": "ldraw:10030-1",
+      "guide": "../10030-micro-tantive/README.md",
+      "source_sha256": "26d4af18c2f07088ee1e209c509d2ef81da3fbdd234ac10ce57294d8a03b098e",
+      "key": "micro-tantive",
       "group": "examples",
-      "use": "inspiration",
-      "readme_sha256": "ab357d4afaa1805002480bde6d4ee7aa6b855d89cedbf30d39d8ef102399b297",
-      "category": "capital-ship",
-      "source_checks_passed": false,
+      "use": "adapt",
+      "readme_sha256": "ca6cbe1a99eb0ba2740a6f6db5274a1a869c89725aea4679c3b3d3221f4ed0e0",
+      "category": "Micro spaceship",
+      "source_checks_passed": true,
       "bom_matches": true,
-      "visual_review_status": "pending"
+      "visual_review_status": "visually_reviewed"
     },
     {
       "id": "10134-y-wing",
@@ -75,12 +82,13 @@
       "audit_pointer": "/items/7",
       "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
       "techniques": [],
+      "source_group": "ldraw:10134-1",
       "guide": "../10134-y-wing/README.md",
       "source_sha256": "9672ecdab2a3ebc10b6234eed450c5723e5f6f9207ca23d29919aa92452fbe42",
       "key": "ucs-y-wing-study",
       "group": "examples",
       "use": "inspiration",
-      "readme_sha256": "4d4fae5896cc381d657ae5854dc24f65d615b2c2e186f1d492caae4fbe793b10",
+      "readme_sha256": "d9a0a4bafede7d813bf7c39f85b694f94aca77013a3e075bc6a8e893c66a21d6",
       "category": "starfighter",
       "source_checks_passed": false,
       "bom_matches": true,
@@ -117,16 +125,59 @@
       "audit_pointer": "/items/0",
       "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
       "techniques": [],
+      "source_group": "ldraw:75050-1",
       "guide": "../75050-b-wing/README.md",
       "source_sha256": "91c67fdbea95b99d3067586b8b3c80d103be79417ec62d185833d1b4f148fae5",
       "key": "b-wing",
       "group": "examples",
       "use": "adapt",
-      "readme_sha256": "b53cec3826b9eefb2215a648693c1cb7c20b31cb4671d946681e188718346b50",
+      "readme_sha256": "b47205e9fa3e5d0c240dd023fcc83a210e529222edb4b5a9f6c6245afad248e9",
       "category": "starfighter",
       "source_checks_passed": true,
       "bom_matches": true,
       "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "b-wing-6208#airframe",
+      "title": "B-wing asymmetric airframe with offset cockpit and unequal wings",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:airframe",
+        "spaceship:b-wing-6208-airframe"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Compose a recognizable asymmetric ship from a central body, one long blade, two smaller wings and an offset cockpit. The dock and pilots belong to the set root, not this airframe.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/airframe/source.mpd",
+      "model_sha256": "8bb8e7c3911a43e0171a9071955bc47dff1a2762cb588e1b37df9f3279ad88c9",
+      "audit_pointer": "/items/0",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "snot",
+        "module-composition"
+      ],
+      "subjects": [
+        "spacecraft",
+        "starfighter",
+        "silhouette",
+        "airframe"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/airframe/README.md",
+      "source_sha256": "8bb8e7c3911a43e0171a9071955bc47dff1a2762cb588e1b37df9f3279ad88c9",
+      "key": "b-wing-6208-airframe",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "0b9e3e955bbadf6e842d428f8255a528d8691426867b75910f64f17a6cb03d01",
+      "category": "spacecraft, starfighter, silhouette, airframe"
     },
     {
       "id": "halcyon",
@@ -159,16 +210,656 @@
       "subjects": [
         "spacecraft"
       ],
+      "source_group": "authored:halcyon",
       "guide": "../halcyon/README.md",
       "source_sha256": "106c4044da850016d95dee60028faee2b207b7b1e7737a62003f13111e682022",
       "key": "halcyon",
       "group": "examples",
       "use": "adapt",
-      "readme_sha256": "0f5b8a27cd5d2a66b6173bf46ed677e925953a95707ac5c419a020414afe08bc",
+      "readme_sha256": "ea5cdb9af218ce4936b9a6f2437be31e05bca6c56a0b36403ab3ac2f1dd6d6bc",
       "category": "spacecraft"
+    },
+    {
+      "id": "10030-star-destroyer",
+      "title": "Imperial Star Destroyer: layered wedge hull",
+      "scope": "inspiration",
+      "kind": "assembly",
+      "aliases": [
+        "spaceship:star-destroyer-study"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples"
+      ],
+      "lesson": "Broad triangular ship with recessed side band, layered superstructure and raised bridge; shape inspiration only, existing 416 non-rigid-transform and 39 overlap errors remain. Main detailed ship section reproduces same whole hull; underside reveals plate/hinge construction but no independent small structural modules. Retain only with whole inspiration package.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "capital-ship"
+      ],
+      "model": "../10030-star-destroyer/source.mpd",
+      "plan": "../10030-star-destroyer/scene.plan.json",
+      "preview": "../10030-star-destroyer/renders/home.png",
+      "manual": "../10030-star-destroyer/index.html",
+      "study_notes": "../10030-star-destroyer/study-notes.json",
+      "visual_review": "../10030-star-destroyer/visual-review.json",
+      "model_sha256": "155b535e6db89919677f9b5fb5de49120deaefb4ce8e78afcae9755209033c2d",
+      "audit_pointer": "/items/6",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "source_group": "ldraw:10030-1",
+      "guide": "../10030-star-destroyer/README.md",
+      "source_sha256": "155b535e6db89919677f9b5fb5de49120deaefb4ce8e78afcae9755209033c2d",
+      "key": "star-destroyer-study",
+      "group": "examples",
+      "use": "inspiration",
+      "readme_sha256": "a0fcc65ffb3590e91fa071d81f19c9ba01443c576ab13effd1645ed9b85db88d",
+      "category": "capital-ship",
+      "source_checks_passed": false,
+      "bom_matches": true,
+      "visual_review_status": "pending"
+    },
+    {
+      "id": "b-wing-6208#center",
+      "title": "B-wing structural hub for independently oriented modules",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:center",
+        "spaceship:b-wing-6208-center"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Use a plate-and-brick core with Technic holes as the hub for independently oriented body, engine and wing-root assemblies.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/center/source.mpd",
+      "model_sha256": "47582f5e12439ba4ed8eebe4fc5142140fb77bd9ace3e4d9f0495242a3127189",
+      "audit_pointer": "/items/1",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "snot",
+        "technic-system"
+      ],
+      "subjects": [
+        "spacecraft",
+        "structural hub",
+        "hull"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/center/README.md",
+      "source_sha256": "47582f5e12439ba4ed8eebe4fc5142140fb77bd9ace3e4d9f0495242a3127189",
+      "key": "b-wing-6208-center",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "895b12456abed536e557477eb62b2ed2fb6537d48acb7a75514d08f6e37994ce",
+      "category": "spacecraft, structural hub, hull"
+    },
+    {
+      "id": "b-wing-6208#cockpit",
+      "title": "B-wing canopy pod with bracket-mounted rear dome",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:cockpit",
+        "spaceship:b-wing-6208-cockpit"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Build the cockpit as its own local tub around the 30384 transparent windscreen, controls and axle core; use a bracket to turn the rear dome sideways. The whole pod has an independent parent orientation.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/cockpit/source.mpd",
+      "model_sha256": "77d4aa83b5bd6ae493bd2a09b980c37c08f2a1b2a30346ad116a59b5e51cf588",
+      "audit_pointer": "/items/2",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "snot",
+        "brackets",
+        "parent-oriented"
+      ],
+      "subjects": [
+        "spacecraft",
+        "cockpit",
+        "canopy"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/cockpit/README.md",
+      "source_sha256": "77d4aa83b5bd6ae493bd2a09b980c37c08f2a1b2a30346ad116a59b5e51cf588",
+      "key": "b-wing-6208-cockpit",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "87cc909c1dd47e01cbd01f4e239718de73be87a3e5fd70b7de4ce39f244da098",
+      "category": "spacecraft, cockpit, canopy"
+    },
+    {
+      "id": "b-wing-6208#cockpit-arm",
+      "title": "B-wing offset cockpit support arm",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:cockpit-arm",
+        "spaceship:b-wing-6208-cockpit-arm"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Give the offset cockpit a dedicated plate-bonded support arm with Technic interfaces and a tapered exterior.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/cockpit-arm/source.mpd",
+      "model_sha256": "48984c2ba00184d7969f420ba7fc697cf984f89e9877f7bacf1646316d33bcee",
+      "audit_pointer": "/items/3",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "plate-layering",
+        "technic-system"
+      ],
+      "subjects": [
+        "spacecraft",
+        "cockpit support",
+        "cantilever"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/cockpit-arm/README.md",
+      "source_sha256": "48984c2ba00184d7969f420ba7fc697cf984f89e9877f7bacf1646316d33bcee",
+      "key": "b-wing-6208-cockpit-arm",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "93146a895c90364b43a338c138cccdddebb6630b13e8ad09e4d3c16d8ef65c24",
+      "category": "spacecraft, cockpit support, cantilever"
+    },
+    {
+      "id": "b-wing-6208#exhaust",
+      "title": "B-wing four-nozzle engine cluster on axle-pin supports",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:exhaust",
+        "spaceship:b-wing-6208-exhaust"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Repeat a round-brick and translucent-dish nozzle on Technic axle-pin supports. Four nozzles form a two-by-two cluster; distinguish this visible construction from the central mechanism.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/exhaust/source.mpd",
+      "model_sha256": "844ad59f935602a0476b83faceaf3fcb123d58519907ef9a3e6fd2e0ee62b9d3",
+      "audit_pointer": "/items/4",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "axle-pin-mounts",
+        "repetition"
+      ],
+      "subjects": [
+        "spacecraft",
+        "engine",
+        "exhaust"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/exhaust/README.md",
+      "source_sha256": "844ad59f935602a0476b83faceaf3fcb123d58519907ef9a3e6fd2e0ee62b9d3",
+      "key": "b-wing-6208-exhaust",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "176a6d69c9ef43a8d0daf997e8461ca2e4336aa4acbbd9218c8b315cce8a8eef",
+      "category": "spacecraft, engine, exhaust"
+    },
+    {
+      "id": "b-wing-6208#front",
+      "title": "B-wing bracket core with hinged nose armour",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:front",
+        "spaceship:b-wing-6208-front"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Combine brackets for perpendicular faces, side-stud bricks for an additional fin cluster, and hinges for oblique armour around the core.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/front/source.mpd",
+      "model_sha256": "efcae4fbbbfe088a09de28f4be918d65da781574d1e778a538fe19ad365532e6",
+      "audit_pointer": "/items/5",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "snot",
+        "brackets",
+        "hinged-panels"
+      ],
+      "subjects": [
+        "spacecraft",
+        "nose",
+        "armour",
+        "hull"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/front/README.md",
+      "source_sha256": "efcae4fbbbfe088a09de28f4be918d65da781574d1e778a538fe19ad365532e6",
+      "key": "b-wing-6208-front",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "3c1c1347c2d58bd05c956947ed446cbbd3ab1dae5e8e7bf4765b3660980a0258",
+      "category": "spacecraft, nose, armour, hull"
+    },
+    {
+      "id": "b-wing-6208#front-core",
+      "title": "B-wing exposed opposing bracket faces",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:front-core",
+        "spaceship:b-wing-6208-front-core"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "An authored cutaway of the 16 core placements exposes four 44728 brackets in opposing pairs and one 2436a bracket. This is a visibility selection, not a source construction step.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/front-core/source.mpd",
+      "model_sha256": "898aad6b5754a40445701ebf9b8345aeae4a2550ef305ec9a8af936a8ac1c614",
+      "audit_pointer": "/items/6",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "snot",
+        "brackets",
+        "cutaway"
+      ],
+      "subjects": [
+        "spacecraft",
+        "attachment",
+        "core"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/front-core/README.md",
+      "source_sha256": "898aad6b5754a40445701ebf9b8345aeae4a2550ef305ec9a8af936a8ac1c614",
+      "key": "b-wing-6208-front-core",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "e1446c67195977022ccf0c956a961d98825eed9822f10a2a485a02a7e4c61d49",
+      "category": "spacecraft, attachment, core"
+    },
+    {
+      "id": "b-wing-6208#front-fins",
+      "title": "B-wing fins and tiled face on side-stud bricks",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:front-fins",
+        "spaceship:b-wing-6208-front-fins"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "A nine-piece visibility selection shows two 52107 side-stud bricks, a tiled face and four fins. Branching attachment faces turn a small stack into a multi-sided detail.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/front-fins/source.mpd",
+      "model_sha256": "97cd7b7bad3e66e8e444191f85983ee0c895ff2972c90d8d77fde34edc47002b",
+      "audit_pointer": "/items/7",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "snot",
+        "side-stud-bricks",
+        "cutaway"
+      ],
+      "subjects": [
+        "spacecraft",
+        "fins",
+        "surface detail"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/front-fins/README.md",
+      "source_sha256": "97cd7b7bad3e66e8e444191f85983ee0c895ff2972c90d8d77fde34edc47002b",
+      "key": "b-wing-6208-front-fins",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "5f5a33208a662a38c7e58716fed8d739ecf1363e96e113a09ffc8bed4d8d8f34",
+      "category": "spacecraft, fins, surface detail"
+    },
+    {
+      "id": "b-wing-6208#side-shell",
+      "title": "B-wing opposing curved hull skins on Technic fittings",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:side-shell",
+        "spaceship:b-wing-6208-side-shell"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Technic axle connectors and round axlehole plates carry two opposing System skins. Curved bricks shape the visible shell around a different internal attachment system.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/side-shell/source.mpd",
+      "model_sha256": "d63cf3ea572654a494bf1ac9f69f71a1006fbf0d144e6f6956ae584f68816ba4",
+      "audit_pointer": "/items/8",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "snot",
+        "technic-system",
+        "curved-skins"
+      ],
+      "subjects": [
+        "spacecraft",
+        "hull",
+        "curved shell",
+        "engine housing"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/side-shell/README.md",
+      "source_sha256": "d63cf3ea572654a494bf1ac9f69f71a1006fbf0d144e6f6956ae584f68816ba4",
+      "key": "b-wing-6208-side-shell",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "742d45f632581b3c7e8faadf3a2bb3d868514d67717425cb2a94d28476640fb7",
+      "category": "spacecraft, hull, curved shell, engine housing"
+    },
+    {
+      "id": "b-wing-6208#wing-1",
+      "title": "B-wing thin wing with reinforced root and tip cannon",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:wing-1",
+        "spaceship:b-wing-6208-wing-1"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Build a thin wing in a convenient local plane, strengthen its root and concentrate the long projecting detail at the tip. The parent supplies its sideways orientation.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/wing-1/source.mpd",
+      "model_sha256": "00a10c451d9083978442aba0374389c7cb2b6b42bbd7672b3397d687b1be394b",
+      "audit_pointer": "/items/9",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "snot",
+        "parent-oriented",
+        "plate-layering"
+      ],
+      "subjects": [
+        "spacecraft",
+        "wing",
+        "wing root"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/wing-1/README.md",
+      "source_sha256": "00a10c451d9083978442aba0374389c7cb2b6b42bbd7672b3397d687b1be394b",
+      "key": "b-wing-6208-wing-1",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "7dd6ba73431f7eb77fd55109bd350adcc202d1102353d392ade477529a10a3d8",
+      "category": "spacecraft, wing, wing root"
+    },
+    {
+      "id": "b-wing-6208#wing-2",
+      "title": "B-wing tapered long blade with local root reinforcement",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:wing-2",
+        "spaceship:b-wing-6208-wing-2"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Use dedicated left/right wedge plates and curved wedges for the long blade's tapered silhouette, with localized root reinforcement.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/wing-2/source.mpd",
+      "model_sha256": "09d66aed8a2dfe663e9943e9d2089943754b958d1dfce31f29a99a6e686303ac",
+      "audit_pointer": "/items/10",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "plate-layering",
+        "wedges"
+      ],
+      "subjects": [
+        "spacecraft",
+        "wing",
+        "long blade"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/wing-2/README.md",
+      "source_sha256": "09d66aed8a2dfe663e9943e9d2089943754b958d1dfce31f29a99a6e686303ac",
+      "key": "b-wing-6208-wing-2",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "b9ff72ec00cf0d19098712395394bc34b0575dd42c6937ba0109cc47d7ac881a",
+      "category": "spacecraft, wing, long blade"
+    },
+    {
+      "id": "b-wing-6208#wing-3",
+      "title": "B-wing opposite-hand wing using actual handed pieces",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:wing-3",
+        "spaceship:b-wing-6208-wing-3"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "Make the opposite wing from actual opposite-hand pieces and its own source placements. It is a separate assembly, not a reflected copy of Wing 1.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/wing-3/source.mpd",
+      "model_sha256": "6a0d029fc25a3c4709ded49bf6fa1bf1a22144154b1155e2a23981bd2454a34f",
+      "audit_pointer": "/items/11",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "handed-parts",
+        "plate-layering"
+      ],
+      "subjects": [
+        "spacecraft",
+        "wing",
+        "handed wing"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/wing-3/README.md",
+      "source_sha256": "6a0d029fc25a3c4709ded49bf6fa1bf1a22144154b1155e2a23981bd2454a34f",
+      "key": "b-wing-6208-wing-3",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "d9b728c6c0fa4e708d7363f7c7815d12f0e18316d351c4edafed881cdb84a573",
+      "category": "spacecraft, wing, handed wing"
+    },
+    {
+      "id": "b-wing-6208#wing-root",
+      "title": "B-wing transverse pin and locking-hinge wing carrier",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "bwing6208:wing-root",
+        "spaceship:b-wing-6208-wing-root"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "examples",
+        "details"
+      ],
+      "lesson": "A narrow local plate stack carries three Technic pins and four locking hinge fingers. It becomes a transverse wing-root module when its parent rotates it.",
+      "limits": "Source and image construction study; geometry, collision, connectivity, rubber-band and motion verification deferred. Cutaways are visibility selections, not independently validated assemblies.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-audit.json",
+      "model": "../b-wing-6208/studies/wing-root/source.mpd",
+      "model_sha256": "5a3d4497e8c29eca3d522dd6ad149e2d9b34781ccd743022a3d292ffd987e415",
+      "audit_pointer": "/items/12",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/bwing6208-findings.md",
+      "techniques": [
+        "parent-oriented",
+        "technic-system",
+        "locking-hinges"
+      ],
+      "subjects": [
+        "spacecraft",
+        "wing root",
+        "attachment"
+      ],
+      "source_group": "ldraw:6208-1",
+      "guide": "../b-wing-6208/studies/wing-root/README.md",
+      "source_sha256": "5a3d4497e8c29eca3d522dd6ad149e2d9b34781ccd743022a3d292ffd987e415",
+      "key": "b-wing-6208-wing-root",
+      "group": "examples",
+      "use": "adapt",
+      "readme_sha256": "dd0c586ed906e1e2c541f75dc5638b1108fd200353972c63cf9370ab39e4fc84",
+      "category": "spacecraft, wing root, attachment"
     }
   ],
   "details": [
+    {
+      "id": "10283-oms-pod",
+      "title": "Space Shuttle OMS pod: a colour-coded SNOT core under a hinged white shell",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "submodel:06-10283-shuttle-framework",
+        "spaceship:oms-pod"
+      ],
+      "families": [
+        "submodel",
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Actual part is a rear OMS pod with curved hinged white shell on side-stud core; not whole shuttle framework. Good core-to-skin lesson. Nested child inspection still required.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/submodel-audit.json",
+      "subjects": [
+        "Spaceship SNOT"
+      ],
+      "techniques": [
+        "snot"
+      ],
+      "model": "../10283-oms-pod/source.mpd",
+      "plan": "../10283-oms-pod/scene.plan.json",
+      "generator": "../10283-oms-pod/generate.py",
+      "preview": "../10283-oms-pod/renders/home.png",
+      "manual": "../10283-oms-pod/index.html",
+      "study_notes": "../10283-oms-pod/study-notes.json",
+      "board": "../10283-oms-pod/board/mosaic.png",
+      "visual_review": "../10283-oms-pod/visual-review.json",
+      "model_sha256": "0ba1ba1b0c3e5a95e64265bed967eca85cf51ccada9e419daa644b398a9525e9",
+      "audit_pointer": "/items/5",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md",
+      "source_group": "ldraw:10283-1",
+      "guide": "../10283-oms-pod/README.md",
+      "source_sha256": "0ba1ba1b0c3e5a95e64265bed967eca85cf51ccada9e419daa644b398a9525e9",
+      "key": "oms-pod",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "735acbaf3c3ef11383f06888d9b93e6ffe6f9131f26eea269f1905551b02f2a6",
+      "category": "Spaceship SNOT",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "30050-micro-shuttle",
+      "title": "Micro Republic Attack Shuttle: wings stood on edge on clips",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "submodel:s16-30050-shuttle-fuselage",
+        "spaceship:micro-shuttle"
+      ],
+      "families": [
+        "submodel",
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Whole micro shuttle has two upright clipped wings and angled nose. Current lesson matches but source/build-page step numbering differs due to ROTSTEP; preserve explicit mapping.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/submodel-audit.json",
+      "subjects": [
+        "Micro spaceship"
+      ],
+      "techniques": [
+        "snot"
+      ],
+      "model": "../30050-micro-shuttle/source.mpd",
+      "plan": "../30050-micro-shuttle/scene.plan.json",
+      "generator": "../30050-micro-shuttle/generate.py",
+      "preview": "../30050-micro-shuttle/renders/home.png",
+      "manual": "../30050-micro-shuttle/index.html",
+      "study_notes": "../30050-micro-shuttle/study-notes.json",
+      "board": "../30050-micro-shuttle/board/mosaic.png",
+      "visual_review": "../30050-micro-shuttle/visual-review.json",
+      "model_sha256": "2c160628b3fa3f2a385d4d5d42c276fa37c858ab36c185414e6412b6c95e4f9f",
+      "audit_pointer": "/items/23",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md",
+      "source_group": "ldraw:30050-1",
+      "guide": "../30050-micro-shuttle/README.md",
+      "source_sha256": "2c160628b3fa3f2a385d4d5d42c276fa37c858ab36c185414e6412b6c95e4f9f",
+      "key": "micro-shuttle",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "86150f106f6982e1219c78d7aa729515d2a03c2f42b7ae1668db50bb68de9784",
+      "category": "Micro spaceship",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
     {
       "id": "canopy-cockpit",
       "title": "Octagonal cockpit enclosure and shaped closure",
@@ -202,12 +893,13 @@
       "audit_pointer": "/items/1",
       "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
       "techniques": [],
+      "source_group": "ldraw:6887-1",
       "guide": "../canopy-cockpit/README.md",
       "source_sha256": "6b882983b13fe53b055e127ecb3973b568e4aa535c1f8e151c0330414ead818d",
       "key": "canopy-cockpit",
       "group": "details",
       "use": "adapt",
-      "readme_sha256": "0fdea5277c88d5ff690778ac0abff001d70e9c55b52bc1ba7aab4e6171e0ce87",
+      "readme_sha256": "ba1da7849d5b54efba149b7f1506d87f6fd0f1f0e686c4ed2f5a6edcaa31e67d",
       "category": "cockpit",
       "source_checks_passed": true,
       "bom_matches": true,
@@ -244,12 +936,13 @@
       "audit_pointer": "/items/2",
       "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
       "techniques": [],
+      "source_group": "ldraw:10179-1",
       "guide": "../falcon-greebles/README.md",
       "source_sha256": "0540d6efedbca2e7d1ad1d041df15e216602c54a5f01e2ba25cd141ad161e4fd",
       "key": "falcon-greebles",
       "group": "details",
       "use": "adapt",
-      "readme_sha256": "5d9ad9577e1f944c886712cae354fc44a17fe5bf8f85fb1cca8734d2049e3edc",
+      "readme_sha256": "d520e835255331cafbbe0656afdcd4aed642d766b8c55c3aa7adead475c5bbbe",
       "category": "surface-detail",
       "source_checks_passed": true,
       "bom_matches": true,
@@ -286,55 +979,14 @@
       "audit_pointer": "/items/3",
       "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
       "techniques": [],
+      "source_group": "ldraw:7191-1",
       "guide": "../x-wing-nacelle/README.md",
       "source_sha256": "6c12514ba6590f7cb23b97e1157f889d7fd55bf67d303c981f370f2474e396ef",
       "key": "x-wing-nacelle",
       "group": "details",
       "use": "adapt",
-      "readme_sha256": "3d2c3de53a9d4597c912e1f7c6c4656cad6cf5f43c167344e6310e7501e6e662",
+      "readme_sha256": "ded026ce7aba1c161045b532bb0c6dcd426a840cc66ba80802cb2985f85ae0bf",
       "category": "engine",
-      "source_checks_passed": true,
-      "bom_matches": true,
-      "visual_review_status": "visually_reviewed"
-    },
-    {
-      "id": "x-wing-wing",
-      "title": "X-wing lower port wing with engine and tip cannon",
-      "scope": "construction",
-      "kind": "detail",
-      "aliases": [
-        "spaceship:x-wing-wing"
-      ],
-      "families": [
-        "spaceship"
-      ],
-      "legacy_groups": [
-        "details"
-      ],
-      "lesson": "Thin plate wing, nacelle-1, projecting tip cannon and root trim form this local construction. The engine and laser cannon are separate roles. Preserve parent mounting context; the whole X-wing is not a single dish.",
-      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
-      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
-      "subjects": [
-        "wing"
-      ],
-      "model": "../x-wing-wing/source.mpd",
-      "plan": "../x-wing-wing/scene.plan.json",
-      "generator": "../x-wing-wing/generate.py",
-      "preview": "../x-wing-wing/renders/home.png",
-      "manual": "../x-wing-wing/index.html",
-      "study_notes": "../x-wing-wing/study-notes.json",
-      "visual_review": "../x-wing-wing/visual-review.json",
-      "model_sha256": "09d0daa26aeba02e8a68d1bb35151f63bc20e78ff95de58bd6adc35d3dd80cc0",
-      "audit_pointer": "/items/4",
-      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
-      "techniques": [],
-      "guide": "../x-wing-wing/README.md",
-      "source_sha256": "09d0daa26aeba02e8a68d1bb35151f63bc20e78ff95de58bd6adc35d3dd80cc0",
-      "key": "x-wing-wing",
-      "group": "details",
-      "use": "adapt",
-      "readme_sha256": "5c5cde4f1a3ef61fb11180b5e7a10f93337104ad79e7707a0cb48e62b2e95231",
-      "category": "wing",
       "source_checks_passed": true,
       "bom_matches": true,
       "visual_review_status": "visually_reviewed"
@@ -370,13 +1022,57 @@
       "audit_pointer": "/items/5",
       "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
       "techniques": [],
+      "source_group": "ldraw:75181-1",
       "guide": "../y-wing-armour/README.md",
       "source_sha256": "400e59c0758c39c658b68fe14c14c474880e802909b9d30bf5fcfb511be2289e",
       "key": "y-wing-armour",
       "group": "details",
       "use": "adapt",
-      "readme_sha256": "8e06328bbeb9f9fe3c47bd53157b34311f03d63402cbe6b0be2cd157f459ddab",
+      "readme_sha256": "0d62278dc36316e857f41d625c04ba99f9a5a5fb800f2fedde13e682102cd72f",
       "category": "hull",
+      "source_checks_passed": true,
+      "bom_matches": true,
+      "visual_review_status": "visually_reviewed"
+    },
+    {
+      "id": "x-wing-wing",
+      "title": "X-wing lower port wing with engine and tip cannon",
+      "scope": "construction",
+      "kind": "detail",
+      "aliases": [
+        "spaceship:x-wing-wing"
+      ],
+      "families": [
+        "spaceship"
+      ],
+      "legacy_groups": [
+        "details"
+      ],
+      "lesson": "Thin plate wing, nacelle-1, projecting tip cannon and root trim form this local construction. The engine and laser cannon are separate roles. Preserve parent mounting context; the whole X-wing is not a single dish.",
+      "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
+      "audit": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-audit.json",
+      "subjects": [
+        "wing"
+      ],
+      "model": "../x-wing-wing/source.mpd",
+      "plan": "../x-wing-wing/scene.plan.json",
+      "generator": "../x-wing-wing/generate.py",
+      "preview": "../x-wing-wing/renders/home.png",
+      "manual": "../x-wing-wing/index.html",
+      "study_notes": "../x-wing-wing/study-notes.json",
+      "visual_review": "../x-wing-wing/visual-review.json",
+      "model_sha256": "09d0daa26aeba02e8a68d1bb35151f63bc20e78ff95de58bd6adc35d3dd80cc0",
+      "audit_pointer": "/items/4",
+      "findings": "docs/plans/knowledge-base-overhaul/snapshot/spaceship-findings.md",
+      "techniques": [],
+      "source_group": "ldraw:7191-1",
+      "guide": "../x-wing-wing/README.md",
+      "source_sha256": "09d0daa26aeba02e8a68d1bb35151f63bc20e78ff95de58bd6adc35d3dd80cc0",
+      "key": "x-wing-wing",
+      "group": "details",
+      "use": "adapt",
+      "readme_sha256": "9122cf55cb577593894fa4b310440e163e3a89455ad117a617f38a7566fa51b3",
+      "category": "wing",
       "source_checks_passed": true,
       "bom_matches": true,
       "visual_review_status": "visually_reviewed"

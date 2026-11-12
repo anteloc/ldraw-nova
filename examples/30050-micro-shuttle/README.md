@@ -12,10 +12,12 @@ Read the registered construction lesson and its linked audit before adapting the
     "scope": "construction",
     "kind": "detail",
     "aliases": [
-      "submodel:s16-30050-shuttle-fuselage"
+      "submodel:s16-30050-shuttle-fuselage",
+      "spaceship:micro-shuttle"
     ],
     "families": [
-      "submodel"
+      "submodel",
+      "spaceship"
     ],
     "legacy_groups": [
       "details"
@@ -39,7 +41,8 @@ Read the registered construction lesson and its linked audit before adapting the
     "visual_review": "examples/30050-micro-shuttle/visual-review.json",
     "model_sha256": "2c160628b3fa3f2a385d4d5d42c276fa37c858ab36c185414e6412b6c95e4f9f",
     "audit_pointer": "/items/23",
-    "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md"
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md",
+    "source_group": "ldraw:30050-1"
   }
 ]
 ```

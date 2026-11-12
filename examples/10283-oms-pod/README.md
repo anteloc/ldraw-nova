@@ -12,10 +12,12 @@ Read the registered construction lesson and its linked audit before adapting the
     "scope": "construction",
     "kind": "detail",
     "aliases": [
-      "submodel:06-10283-shuttle-framework"
+      "submodel:06-10283-shuttle-framework",
+      "spaceship:oms-pod"
     ],
     "families": [
-      "submodel"
+      "submodel",
+      "spaceship"
     ],
     "legacy_groups": [
       "details"
@@ -39,7 +41,8 @@ Read the registered construction lesson and its linked audit before adapting the
     "visual_review": "examples/10283-oms-pod/visual-review.json",
     "model_sha256": "0ba1ba1b0c3e5a95e64265bed967eca85cf51ccada9e419daa644b398a9525e9",
     "audit_pointer": "/items/5",
-    "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md"
+    "findings": "docs/plans/knowledge-base-overhaul/snapshot/submodel-findings.md",
+    "source_group": "ldraw:10283-1"
   }
 ]
 ```

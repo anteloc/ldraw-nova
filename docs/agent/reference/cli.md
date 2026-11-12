@@ -74,8 +74,15 @@ bin/ldraw-xray mosaic output/study/panels.json --output output/study/mosaic.png
 ./ldraw-agent spaceship list
 ./ldraw-agent spaceship details
 ./ldraw-agent spaceship brief starfighter --output output/starfighter-brief.json
-./ldraw-agent spaceship export halcyon --outdir output/my-ship
+./ldraw-agent spaceship export SELECTED_KEY --outdir output/my-ship
 ```
+
+`spaceship list` and `details` return eight lessons by default (`--limit` overrides),
+interleaved across source models. `list` includes relevant modules as well as
+whole assemblies. These informational commands and `brief` do not initialize the
+parts library. Briefs define intent and require reference comparison before an
+export; no ship is a default template. Choose `SELECTED_KEY` from inspected
+results, retaining all scope and evidence gates.
 
 `manual` shares the mechanism step renderer but uses construction notes: lesson, construction, interfaces, parent context and reuse notes. `--overview` renders completed-model views and retains source step data; `--no-render` leaves rendered evidence pending. Existing mechanism commands retain their operation-specific notes and review requirements. See [construction review](../guides/review-models.md) and [spaceship design](../guides/design-models.md). `ldraw-xray` renders inspection boards (parent context, x-ray, stud maps, pivots) and composes mosaics; see [submodel inspection](../guides/review-models.md).
 
@@ -469,3 +476,19 @@ For mechanism discovery, use `--construction mechanism`. It selects mechanism vo
 
 For difficult roles, supply **both** `--yes` and `--no`, for example a criterion for a System aircraft engine pod and one rejecting car engines and spacecraft body slabs. Parent context is shown separately rather than silently added to the scored text. A semantic score is not an import approval.
 
+
+## Source diversity in construction retrieval
+
+`knowledge search` and `examples` accept `--diversify source|none`. The default is
+`source` for `--family spaceship` and `none` otherwise. Source mode interleaves
+the ranked results: the best match per source first, then the next per source.
+It retains every hit, the BM25 score and original `retrieval_rank`; `total` counts
+all matched lessons. Use `none` to compare sibling modules in relevance order.
+No name receives a ranking bonus or penalty, and no non-default scope is admitted.
+
+Package registrations may supply a nonempty `source_group`, shared by lessons
+from the same source model (for example `ldraw:6208-1`). Otherwise the canonical
+ID before `#` is used. Group identity is provenance metadata, not a new taxonomy.
+`examples --family spaceship` includes modules without requiring `--details`;
+`--details` still selects modules specifically. Other families retain their
+existing example/detail selection behavior.
