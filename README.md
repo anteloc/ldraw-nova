@@ -6,7 +6,12 @@ What you get when the building process finishes:
 
 - **Metrics:** total generation time and timing for each stage, including planning, tool execution and agent/model thinking time where exposed by the runtime. Unavailable measurements are identified explicitly.
 - **Visual evidence:** every xray board's `xray/<board>/mosaic.png`, plus stills and previews from different perspectives.
-- **[LDraw](https://www.ldraw.org/) model:** always `ai-generated.mpd`, with contributing agent/model names and versions, `0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt` and `0 !KEYWORDS AI, AI-generated` in the generated sections' headers.
+- **[LDraw](https://www.ldraw.org/) model:** always `ai-generated.mpd`, with `[AI-GENERATED]` prefixed to its internal main-model title, contributing agent/model names and versions, and `0 !KEYWORDS AI, AI-generated` in the generated sections' headers. Each generated section includes these consecutive lines:
+
+  ```text
+  0 !LICENSE CC-BY-NC
+  0 Allows sharing and adapting for noncommercial purposes only, with attribution to the AI that authored the current model.
+  ```
 
 These are the mandatory deliverables for each model. Additional exports or files, such as `.blend`, `.glb` or videos, are produced only when requested. Plans, generators and tool reports remain internal working files. See the [delivery requirements](docs/agent/cards/review.md#deliver).
 

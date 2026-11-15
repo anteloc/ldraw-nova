@@ -41,19 +41,22 @@ If the runtime does not expose thinking time or another measurement, write `unav
 
 ### MPD metadata and final verification
 
-Set the plan's `author` to the actual contributing agent/model names and versions, and `license` to `Redistributable under CCAL version 2.0 : see CAreadme.txt`. Override section authors when contributions differ; include all contributors in the root header. Use the runtime's supplied version/model identifier, never an invented version; explicitly record `version unavailable` if it is not exposed.
+Set the plan's `author` to the actual contributing agent/model names and versions, and `license` to `CC-BY-NC`. Override section authors when contributions differ; include all contributors in the root header. Use the runtime's supplied version/model identifier, never an invented version; explicitly record `version unavailable` if it is not exposed.
+
+Prefix the root section's `description` with `[AI-GENERATED] ` exactly once. This writes the internal main-model title as `0 [AI-GENERATED] <model title>` immediately after its `0 FILE` line. Keep the filename `ai-generated.mpd`, section names, `Name:` fields and references unchanged.
 
 Each AI-generated section's header must contain, before its geometry:
 
 ```text
 0 Author: <agent name and version; model name and version; other contributors as applicable>
-0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+0 !LICENSE CC-BY-NC
+0 Allows sharing and adapting for noncommercial purposes only, with attribution to the AI that authored the current model.
 0 !KEYWORDS AI, AI-generated
 ```
 
 These are section headers inside the MPD, not comments before its first `0 FILE`. Preserve existing authors/licences in imported third-party model or part blocks; do not relabel them as AI-created. The main model and newly generated submodels always receive the required metadata.
 
-The current plan schema supports `author` and `license`, but not `keywords`. Do not add an unsupported plan key. After the final successful build, insert the keywords meta into the generated section headers in `ai-generated.mpd`. Make this finalization repeatable after each rebuild, which otherwise overwrites the added metadata. Do not edit the managed review bundle.
+The current plan schema supports `author`, `license` and section `description`, but not `keywords` or a licence-explanation field. Keep `license` a single-line value; do not embed the comment in it or add unsupported plan keys. After the final successful build, insert the exact explanatory `0` comment immediately below each generated section's `0 !LICENSE CC-BY-NC` line, and insert the keywords meta into those headers in `ai-generated.mpd`. Make this finalization repeatable without duplicate lines after each rebuild, which otherwise overwrites the added metadata. Do not edit the managed review bundle.
 
 Keep the successful plan review for declared structural/flex checks, then review the finalized MPD itself so the final images and reports correspond to the delivered bytes:
 
@@ -62,4 +65,4 @@ Keep the successful plan review for declared structural/flex checks, then review
 bin/ldraw-xray board overview output/TASK/ai-generated.mpd --output output/TASK/xray/final-overview
 ```
 
-An MPD review does not replace plan-declared checks. Open the final previews and mosaics. Verify the filename, headers in every generated section, and byte equality with `final-review/model.mpd`; never deliver an old successful model after a failed rebuild. If the finalized MPD changes, refresh affected evidence before handoff. Check that every board has a nonempty `mosaic.png` and every required file is linked; explicitly report any missing evidence rather than claiming delivery is complete.
+An MPD review does not replace plan-declared checks. Open the final previews and mosaics. Verify the filename, the single `[AI-GENERATED]` prefix on the internal main-model title, the exact licence/comment pair and other headers in every generated section, and byte equality with `final-review/model.mpd`; never deliver an old successful model after a failed rebuild. If the finalized MPD changes, refresh affected evidence before handoff. Check that every board has a nonempty `mosaic.png` and every required file is linked; explicitly report any missing evidence rather than claiming delivery is complete.

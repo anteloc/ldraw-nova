@@ -21,7 +21,7 @@ A plan is a JSON file of named placements; `build` turns it into an MPD. Every f
 
 Each step is a list of placements, and a later placement may refer to an earlier one by `id`. The [recipes](../../../examples/recipes/README.md) are small plans that use every placement mode; `knowledge search` returns them first when one fits.
 
-For a user model, replace the sample author with the contributing agent/model names and versions and add `"license": "Redistributable under CCAL version 2.0 : see CAreadme.txt"`. The [delivery requirements](review.md#deliver) specify section attribution, the required AI keywords meta, final filename and evidence. Plans and generators remain internal unless requested.
+For a user model, replace the sample author with the contributing agent/model names and versions, add `"license": "CC-BY-NC"`, and prefix the root section's `description` with `[AI-GENERATED] ` exactly once. The description becomes the internal model title; keep `name` and submodel references unchanged. The [delivery requirements](review.md#deliver) specify section attribution, the separate comment immediately below the licence, the required AI keywords meta, final filename and evidence. Plans and generators remain internal unless requested.
 
 ## Place a part
 
