@@ -167,13 +167,14 @@ def text(value, indent=0):
     return '[\n' + ',\n'.join(inner + text(v, indent + 1) for v in value) + '\n' + pad + ']'
 
 
-MODES = ('at', 'on', 'attach', 'snap', 'flex')
+MODES = ('at', 'on', 'under', 'attach', 'snap', 'flex')
 EXAMPLE = {
     'at': '"at": [0, -24, 0]', 'on': '"on": "base" or "on": {"to": "core", "face": "-Z"}',
     'attach': '"attach": {"to": "lower", "anchor": "next", "using": "base"}',
     'snap': '"snap": {"to": "base", "near": [0, -8, 0]}', 'ref': '"ref": "3001.dat"',
     'colour': '"colour": 4 or "colour": "@colours.Red"', 'matrix': '"matrix": [[1, 0, 0], [0, 1, 0], [0, 0, 1]]',
     'repeat': '"repeat": {"count": 4, "step": [40, 0, 0]}', 'orient': '"orient": {"up": "-Z"}',
+    'under': '"under": {"to": "deck", "socket": 0}',
     'id': '"id": "wall-left"', 'steps': '"steps": [[{"id": "base", "ref": "3001.dat", "colour": 4, "at": [0, 0, 0]}]]',
 }
 
@@ -184,7 +185,7 @@ def explain_placement(entry):
         return None, None
     present = [m for m in MODES if m in entry]
     if not present:
-        return 'A placement needs exactly one position: at, on, attach, snap or flex.', 'at'
+        return 'A placement needs exactly one position: at, on, under, attach, snap or flex.', 'at'
     if len(present) > 1:
         return f"This placement mixes position modes {', '.join(present)}; keep exactly one.", present[0]
     mode = present[0]

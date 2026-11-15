@@ -17,6 +17,11 @@ uses a lengthwise sideways hull; and [Halcyon](../../../examples/halcyon/README.
 shows fixed side-stud panel mounts. Their scales and evidence limits differ.
 The SNOT default chooses an attachment approach, not a particular reference ship.
 
+Halcyon's flank panels are modules built flat and seated on side studs of bricks inside
+the hull module. As a seat, the starboard flank is
+`"on": {"to": "hull/flank-mount-0-s", "face": "-Z", "stud": 0, "socket_at": [-110, 0, 10], "roll": -90}`;
+a regression test rebuilds both flanks this way and gets the generator's exact MPD.
+
 ```sh
 ./ldraw-agent review examples/parrot/head.plan.json --outdir output/snot-head
 ```

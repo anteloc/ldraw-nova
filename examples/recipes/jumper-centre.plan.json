@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [{
+    "name": "jumper-centre.ldr",
+    "description": "Jumper plate centring a round lens between two studs",
+    "steps": [
+      [{"id": "brick", "ref": "3004.dat", "colour": 15, "at": [0, 0, 0], "purpose": "1 x 2 brick: its studs are 10 LDU either side of the centre"}],
+      [{"id": "jumper", "ref": "3794b.dat", "colour": 15, "on": {"to": "brick"}, "purpose": "Jumper on both studs; its single stud sits on the centre line"}],
+      [{"id": "lens", "ref": "98138.dat", "colour": 36, "on": {"to": "jumper"}, "purpose": "Round tile centred half a stud off the grid"}]
+    ]
+  }]
+}

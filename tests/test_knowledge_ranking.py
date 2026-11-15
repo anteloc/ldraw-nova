@@ -21,6 +21,10 @@ GOLDEN = [
     ('floating group gap', {'docs/agent/cards/checks.md#checks-card',
                             'docs/agent/reference/validation.md#repair-by-diagnostic'}),
     ('seat a module on side studs', {'docs/agent/cards/snot.md#3-build-surfaces-as-modules', 'recipe-side-panels'}),
+    ('technic beam frame pins', {'recipe-technic-pin-frame', 'docs/agent/cards/technic.md#build-frames-that-hold'}),
+    ('pin in a beam hole', {'docs/agent/cards/technic.md#seat-pins-beams-and-axles', 'recipe-technic-pin-frame'}),
+    ('inverted slope under plate', {'recipe-inverted-nose', 'docs/agent/cards/snot.md#4-hang-parts-underneath'}),
+    ('centre a detail half stud', {'recipe-jumper-centre'}),
 ]
 
 

@@ -1,0 +1,25 @@
+0 FILE technic-pin-frame.ldr
+0 Rigid Technic frame: two 7-long beams joined by 3-long cross beams and friction pins
+0 Name: technic-pin-frame.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // rail-left: Long beam along Z; its holes run through its thickness (Y)
+1 71 -20 0 0 1 0 0 0 1 0 0 0 1 32524.dat
+0 // rail-right: Parallel long beam, two studs to the right
+1 71 20 0 0 1 0 0 0 1 0 0 0 1 32524.dat
+0 STEP
+0 // pin-front-left: Friction pin: first half in the rail, second half below it
+1 0 -20 10 -60 0 -1 0 1 0 0 0 0 1 2780.dat
+0 // pin-back-left: Pin at the other end
+1 0 -20 10 60 0 -1 0 1 0 0 0 0 1 2780.dat
+0 STEP
+0 // cross-front: Cross beam on the pin's lower half; roll 90 turns it across the rails
+1 72 0 20 -60 0 0 1 0 1 0 -1 0 0 32523.dat
+0 // cross-back: Second cross beam
+1 72 0 20 60 0 0 1 0 1 0 -1 0 0 32523.dat
+0 STEP
+0 // pin-front-right: Pin through the cross beam's far hole and into the right rail
+1 0 20 10 -60 0 -1 0 1 0 0 0 0 1 2780.dat
+0 // pin-back-right: Closes the rectangle
+1 0 20 10 60 0 -1 0 1 0 0 0 0 1 2780.dat
+0 NOFILE

@@ -36,6 +36,16 @@ Build a panel flat, studs up, in its own section. Then seat the whole section by
 
 `socket_at` is in the section's frame, and its underside faces +Y as with any part built upright. A module has no socket list, so give `roll` or `orient` explicitly.
 
+## 4. Hang parts underneath
+
+Studs that point down, or parts built downward from a surface, use `under`: the placed part's stud goes into a socket of the part above.
+
+```json
+{"id": "chin", "ref": "3665a.dat", "colour": 15, "under": {"to": "deck", "socket": 0}}
+```
+
+`socket` and `socket_face` pick the support's socket (default its underside); `stud` and `face` pick the placed part's stud (default its top). The default turn again covers the most studs.
+
 ## Finish
 
 - Cover studs that face outward with tiles unless they are a deliberate texture; review warns with `appearance.exposed_side_studs`.

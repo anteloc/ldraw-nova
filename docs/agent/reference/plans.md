@@ -18,6 +18,8 @@ Refs can be numeric filenames (`3003.dat`), module names (`pillar.ldr`) or categ
 | `at` | Explicit coordinates in the containing section | `"at": [0, -24, 40]` |
 | `on` (ID) | Stacking curated upright bricks/plates on an earlier placement | `"on": "base"` |
 | `on` (object) | Seating any part by a socket on a stud of another part, on any face | `"on": {"to": "core", "face": "-Z", "stud": 0}` |
+| `on` (Technic) | A reviewed pin or axle in a hole, or a hole on a pin | `"on": {"to": "beam", "hole": "hole-1", "pin": "grip-0"}` |
+| `under` | Hanging any part by a stud in a socket of the part above | `"under": {"to": "deck", "socket": 0}` |
 | `attach` | Aligning authored module anchors | `"attach": {"to": "lower", "anchor": "seat", "using": "base"}` |
 | `snap` | Searching actual connector evidence on a part/submodel | `"snap": {"to": "base", "near": [0, -8, 0]}` |
 
@@ -35,6 +37,8 @@ Orientation: `at` accepts one of `yaw` (degrees about +Y), `orient` or a proper 
 | `socket_at`, `socket_axis` | for a placed section: the point of the section that sits on the stud, and the direction its underside faces (default `+Y`) |
 | `roll` | degrees about the seated socket's axis, right-handed like `yaw`; omitted, the quarter turn that covers the most studs of the support |
 | `orient` (beside `on`) | an explicit orientation instead of `roll`; it must make the socket face the stud |
+
+`on` with Technic ports takes `hole` and `pin` port IDs (as `part` lists them under `technic_ports`; each belongs to whichever part has it), `slide` in LDU along the shared axis, and `roll` about it. The male's centre goes to the hole's centre; the seat must pass the Technic fit rules, and for an axle in a cross hole the builder tries the 45° alternative when `roll` is omitted. `under` mirrors the stud seat: `socket`/`socket_face` pick the support's socket (default `+Y`, its underside) and `stud`/`face` the placed part's stud (default `-Y`, its top); `stud_at`/`stud_axis` seat a section, and `roll` turns about the socket's axis.
 
 The builder computes the origin `stud - R * socket` from connector data (radius-6 studs and sockets after the contact checker's frame adaptation). It fails with the available faces, studs or sockets when a selection does not exist. The complete build report lists each seat under `seats` with `mated`, the number of the support's studs the part covers.
 

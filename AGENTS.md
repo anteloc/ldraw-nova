@@ -54,7 +54,7 @@ Use these only when the brief needs them:
 |---|---|
 | Vehicles, spacecraft, buildings, animals | [Design models](docs/agent/guides/design-models.md) |
 | Aircraft | [Aircraft](docs/agent/guides/aircraft.md) |
-| Technic frames and mechanisms | [Technic](docs/agent/guides/technic.md), [mechanisms](docs/agent/guides/mechanisms.md) |
+| Technic frames and mechanisms | [Technic card](docs/agent/cards/technic.md), [Technic guide](docs/agent/guides/technic.md), [mechanisms](docs/agent/guides/mechanisms.md) |
 | Hoses, cables, chains and treads | [Flex authoring](docs/agent/guides/flex.md) |
 | Large models in modules | [Compose modules](docs/agent/guides/compose-modules.md) |
 | Parts by role or appearance | [Part information](docs/agent/guides/part-information.md) |

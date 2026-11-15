@@ -129,3 +129,71 @@ def test_roll_on_a_top_stud_matches_yaw_for_the_cat_ear(official):
     piece = next(p for p in model.pieces if p.reference.casefold() == '35480.dat' and p.position.x < 0)
     assert np.allclose([piece.position.x, piece.position.y, piece.position.z], ear['at'], atol=1e-8)
     assert np.allclose(piece.matrix.rows, ear['matrix'], atol=1e-8)
+
+
+def test_technic_seats_pin_a_beam_and_hang_a_second_beam_on_the_pin(official):
+    from ldraw_tools.technic_review import review_structure
+    plan = dict(version=1, author='Test', sections=[dict(name='frame.ldr', description='Pinned beams', steps=[
+        [dict(id='upper', ref='32523.dat', colour=71, at=[0, 0, 0])],
+        [dict(id='pin', ref='2780.dat', colour=0, on=dict(to='upper', hole='hole-1', pin='grip-0'))],
+        [dict(id='lower', ref='32523.dat', colour=72, on=dict(to='pin', hole='hole-1', pin='grip-1'))]])])
+    context = {}
+    _, model, diagnostics = build_plan(plan, official, context=context)
+    assert not [d for d in diagnostics if d['severity'] == 'error']
+    pin, lower = model.pieces[1], model.pieces[2]
+    assert np.allclose([pin.position.x, pin.position.y, pin.position.z], [0, 10, 0])
+    assert np.allclose([lower.position.x, lower.position.y, lower.position.z], [0, 20, 0])
+    report = review_structure(model, official)
+    assert report['joint_count'] == 2 and not [d for d in report['diagnostics'] if d['severity'] == 'error']
+    assert [s['behavior'] for s in context['seats']] == ['pin', 'pin']
+
+
+def test_technic_seat_keys_an_axle_and_names_a_wrong_family(official):
+    plan = dict(version=1, author='Test', sections=[dict(name='axle.ldr', description='Keyed axle', steps=[
+        [dict(id='brick', ref='32064a.dat', colour=71, at=[0, 0, 0])],
+        [dict(id='axle', ref='3705.dat', colour=0, on=dict(to='brick', hole='hole-0', pin='shaft', slide=20))]])])
+    context = {}
+    _, model, diagnostics = build_plan(plan, official, context=context)
+    assert not [d for d in diagnostics if d['severity'] == 'error'] and context['seats'][0]['behavior'] == 'keyed'
+    axle = model.pieces[1]
+    assert np.allclose([axle.position.x, axle.position.y, axle.position.z], [0, 10, 20])
+    wrong = copy.deepcopy(plan)
+    wrong['sections'][0]['steps'][1][0].update(ref='2780.dat', on=dict(to='brick', hole='hole-0', pin='grip-0'))
+    with pytest.raises(ValueError, match='family: a pin needs a pin hole'):
+        build_plan(wrong, official)
+    missing = copy.deepcopy(plan)
+    missing['sections'][0]['steps'][1][0]['on']['hole'] = 'hole-9'
+    with pytest.raises(ValueError, match='32064a.dat ports: hole-0'):
+        build_plan(missing, official)
+
+
+def test_under_hangs_an_inverted_slope_by_its_studs(official):
+    plan = dict(version=1, author='Test', sections=[dict(name='nose.ldr', description='Inverted slope', steps=[
+        [dict(id='deck', ref='3023b.dat', colour=15, at=[0, 0, 0])],
+        [dict(id='chin', ref='3665a.dat', colour=15, under=dict(to='deck'))]])])
+    context = {}
+    _, model, diagnostics = build_plan(plan, official, context=context)
+    assert not [d for d in diagnostics if d['severity'] == 'error']
+    chin = model.pieces[1]
+    assert np.isclose(chin.position.y, 8)  # its top sits at the plate's underside
+    assert context['seats'][0]['mode'] == 'under' and context['seats'][0]['mated'] == 2
+
+
+def test_part_facts_list_reviewed_technic_ports(official):
+    beam = facts(official, '32523')
+    assert list(beam['technic_ports']) == ['hole-0', 'hole-1', 'hole-2']
+    assert beam['technic_ports']['hole-1'] == dict(kind='pin_hole', at=[0.0, 0.0, 0.0], axis=[0.0, 1.0, 0.0])
+
+
+def test_connector_seats_reproduce_halcyon_flank_modules(official):
+    """Modules built flat, seated by socket_at on side studs of bricks inside another module."""
+    source = load_plan(ROOT / 'examples/halcyon/halcyon.plan.json')
+    expected, _, _ = build_plan(source, official)
+    seated = copy.deepcopy(source)
+    for identity, mount, stud, side in (('flank-s', 'hull/flank-mount-0-s', 0, 10), ('flank-p', 'hull/flank-mount-0-p', 3, -10)):
+        entry = placement(seated, identity)
+        entry.pop('at'), entry.pop('matrix')
+        entry['on'] = {'to': mount, 'face': '-Z', 'stud': stud, 'socket_at': [-110, 0, side], 'roll': -90}
+    text, _, diagnostics = build_plan(seated, official)
+    assert not [d for d in diagnostics if d['severity'] == 'error']
+    assert text == expected

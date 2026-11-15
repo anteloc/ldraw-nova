@@ -142,9 +142,9 @@ def plan_metrics(plans):
             for step in section.get('steps', []):
                 for entry in step:
                     entries += 1
-                    mode = next((m for m in ('at', 'on', 'attach', 'snap', 'flex') if m in entry), 'other')
+                    mode = next((m for m in ('at', 'on', 'under', 'attach', 'snap', 'flex') if m in entry), 'other')
                     if mode == 'on' and isinstance(entry['on'], dict):
-                        mode = 'on-connector'
+                        mode = 'on-technic' if entry['on'].keys() & {'hole', 'pin'} else 'on-connector'
                     modes[mode] += 1
                     if 'matrix' in entry:
                         matrices[json.dumps(entry['matrix'])] += 1

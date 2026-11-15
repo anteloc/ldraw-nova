@@ -129,12 +129,19 @@ def interfaces(parts, code):
                 for position, axis, source in rows]
 
     from .appearance import body
+    from .technic import managed
     shape = body(item)
     bounds = item.local.bounds
     studs, sockets = collect('stud', 'male'), collect('stud_receptacle', 'female')
     listed = {(r['face'], *r['at']) for r in studs + sockets}
+    technic = [dict(id=f.feature_id.removeprefix('technic:'), kind=f.kind.value,
+                    at=clean([f.position.x, f.position.y, f.position.z], 3),
+                    axis=clean([f.axis.x, f.axis.y, f.axis.z], 6), length=clean_number(f.length, 3))
+               for f in item.connections if managed(f)]
     other = {}
     for feature in item.connections:
+        if managed(feature):
+            continue
         axis = np.round([feature.axis.x, feature.axis.y, feature.axis.z], 6) + 0.0
         position = clean([feature.position.x, feature.position.y, feature.position.z], 3)
         if (face_name(axis), *position) in listed:
@@ -146,7 +153,7 @@ def interfaces(parts, code):
                   bounds=dict(min=clean([bounds.min.x, bounds.min.y, bounds.min.z], 3),
                               max=clean([bounds.max.x, bounds.max.y, bounds.max.z], 3)) if bounds else None,
                   body=dict(min=clean(shape[1], 3), max=clean(shape[2], 3)) if shape else None,
-                  studs=studs, sockets=sockets, other=other, connectors=len(item.connections))
+                  studs=studs, sockets=sockets, technic=technic, other=other, connectors=len(item.connections))
     _INTERFACES[code] = result
     return result
 
@@ -187,6 +194,8 @@ def facts(parts, code):
     result['bounds'] = data['bounds']
     result['studs'] = by_face(data['studs'])
     result['sockets'] = by_face(data['sockets'])
+    if data['technic']:
+        result['technic_ports'] = {p['id']: dict(kind=p['kind'], at=p['at'], axis=p['axis']) for p in data['technic']}
     if data['other']:
         result['other_connectors'] = data['other']
     return result
@@ -239,12 +248,140 @@ def seat(support_frame, support_code, moving_code, options, parts, orientation=N
     return np.round(orientation, 12) + 0.0, np.array(clean(position, 9)), details
 
 
-def mated(support_frame, support_code, moving_frame, moving_code, parts):
-    """Count support studs that coincide with an opposed socket of the moving part."""
+def mated(support_frame, support_code, moving_frame, moving_code, parts, hanging=False):
+    """Count the support's studs (or, hanging, its sockets) that coincide with an
+    opposed socket (or stud) of the moving part."""
     if not moving_code.casefold().endswith('.dat'):
         return None
     support, moving = interfaces(parts, support_code), interfaces(parts, moving_code)
     (rs, ts), (rm, tm) = support_frame, moving_frame
-    studs = [(rs @ np.array(s['at']) + ts, rs @ np.array(s['axis'])) for s in support['studs']]
-    sockets = [(rm @ np.array(s['at']) + tm, rm @ np.array(s['axis'])) for s in moving['sockets']]
-    return sum(any(np.linalg.norm(p - q) < 0.05 and a @ b < -0.999 for q, b in sockets) for p, a in studs)
+    fixed = support['sockets'] if hanging else support['studs']
+    loose = moving['studs'] if hanging else moving['sockets']
+    fixed = [(rs @ np.array(s['at']) + ts, rs @ np.array(s['axis'])) for s in fixed]
+    loose = [(rm @ np.array(s['at']) + tm, rm @ np.array(s['axis'])) for s in loose]
+    return sum(any(np.linalg.norm(p - q) < 0.05 and a @ b < -0.999 for q, b in loose) for p, a in fixed)
+
+
+def hang(support_frame, support_code, moving_code, options, parts, orientation=None):
+    """Pose that pushes a stud of the moving part up (or sideways) into a support socket.
+
+    The mirror of ``seat``: ``socket``/``socket_face`` pick the support's socket
+    (default its underside, +Y) and ``stud``/``face`` the moving part's stud
+    (default its top, -Y). ``roll`` turns about the socket's axis, like ``yaw``
+    for a part hanging under another.
+    """
+    rotation, translation = support_frame
+    support = interfaces(parts, support_code)
+    socket = select(support['sockets'], options.get('socket_face', '+Y'), options.get('socket', 0), 'sockets',
+                    support['code'])
+    target = rotation @ np.array(socket['at']) + translation
+    socket_axis = rotation @ np.array(socket['axis'])
+    if 'stud_at' in options:
+        stud_at = np.array(options['stud_at'], float)
+        stud_axis = direction(options.get('stud_axis', '-Y'), 'under.stud_axis')
+        stud = dict(at=clean(stud_at, 4), axis=clean(stud_axis, 6), face=face_name(stud_axis))
+    else:
+        if not moving_code.casefold().endswith('.dat'):
+            raise ValueError('Hanging a section needs under.stud_at: the point of the section that goes into the socket')
+        moving = interfaces(parts, moving_code)
+        stud = select(moving['studs'], options.get('face', '-Y'), options.get('stud', 0), 'studs', moving['code'])
+        stud_at, stud_axis = np.array(stud['at']), np.array(stud['axis'])
+    roll = options.get('roll')
+    if orientation is None:
+        base = turning(stud_axis, -socket_axis)
+        if roll is None and moving_code.casefold().endswith('.dat'):
+            best = None
+            for turn in (0, 90, 180, 270):
+                candidate = about(socket_axis, turn) @ base
+                origin = target - candidate @ stud_at
+                count = mated(support_frame, support_code, (candidate, origin), moving_code, parts, hanging=True)
+                if best is None or count > best[0]:
+                    best = (count, turn)
+            roll = best[1]
+        orientation = about(socket_axis, roll or 0) @ base
+    elif roll:
+        raise ValueError('Use under.roll or orient, not both')
+    if (orientation @ stud_axis) @ socket_axis > -0.999:
+        raise ValueError(f'orient points the stud toward {face_name(np.round(orientation @ stud_axis, 6))}, but the socket '
+                         f'opens toward {face_name(np.round(socket_axis, 6))}; the stud must point into it. Omit orient.')
+    position = target - orientation @ stud_at
+    details = dict(socket=socket, stud=stud, socket_at=clean(target, 4), facing=face_name(np.round(socket_axis, 6)),
+                   roll=roll)
+    return np.round(orientation, 12) + 0.0, np.array(clean(position, 9)), details
+
+
+def technic_ports(parts, code):
+    ports = {p['id']: p for p in interfaces(parts, code)['technic']}
+    if not ports:
+        raise ValueError(f'{code} has no reviewed Technic ports; use stud seats, snap or at')
+    return ports
+
+
+def technic_seat(support_frame, support_code, moving_code, options, parts, orientation=None):
+    """Pose that puts a pin grip or axle in a hole, or a hole on a pin, of reviewed Technic parts.
+
+    ``hole`` and ``pin`` are port IDs (from ``part``); each belongs to whichever
+    part has it. The male's centre goes to the hole's centre, moved ``slide`` LDU
+    along the shared axis; ``roll`` turns the placed part about that axis. The
+    result must pass the Technic fit rules, which name the rule that fails.
+    """
+    from ldraw import Matrix, Vector
+    from .technic import canonical, fit, fit_failure, local_features, registry
+    if not moving_code.casefold().endswith('.dat'):
+        raise ValueError('Technic seats place a part; seat a section by placing its part first, or use attach')
+    rotation, translation = support_frame
+    hole_id, pin_id = options.get('hole'), options.get('pin')
+    support_ports, moving_ports = technic_ports(parts, support_code), technic_ports(parts, moving_code)
+    if not hole_id or not pin_id:
+        raise ValueError(f"A Technic seat names both hole and pin. {support_code} ports: {', '.join(support_ports)}; "
+                         f"{moving_code} ports: {', '.join(moving_ports)}")
+    if hole_id in support_ports and pin_id in moving_ports:
+        fixed, moved = support_ports[hole_id], moving_ports[pin_id]
+    elif pin_id in support_ports and hole_id in moving_ports:
+        fixed, moved = support_ports[pin_id], moving_ports[hole_id]
+    else:
+        raise ValueError(f"No such port pair. {support_code} ports: {', '.join(support_ports)}; "
+                         f"{moving_code} ports: {', '.join(moving_ports)}")
+    if {fixed['kind'], moved['kind']} & {'pin_hole', 'axle_hole'} == set() or \
+            {fixed['kind'], moved['kind']} & {'pin', 'axle'} == set():
+        raise ValueError(f"{hole_id} and {pin_id} must be a hole and a pin or axle")
+    target = rotation @ np.array(fixed['at']) + translation
+    axis = rotation @ np.array(fixed['axis'])
+    axis = axis / np.linalg.norm(axis)
+    local_axis = np.array(moved['axis'], float)
+    slide = options.get('slide', 0)
+
+    def features(rot, pos):
+        entries = registry()['parts']
+        result = {}
+        for code, frame, port in ((support_code, (rotation, translation), fixed), (moving_code, (rot, pos), moved)):
+            key = canonical(code)
+            feature = next(f for f in local_features(key, entries[key]) if f.feature_id == 'technic:' + port['id'])
+            result[port['id'] if code == support_code else '_moving'] = feature.transformed(
+                position=Vector(*frame[1]), matrix=Matrix(np.asarray(frame[0]).tolist()), inherit=False)
+        return result
+
+    def check(rot):
+        pos = np.array(clean(target + slide * axis - rot @ np.array(moved['at']), 9))
+        pair = features(rot, pos)
+        a, b = pair[fixed['id']], pair['_moving']
+        return pos, fit(a, b), (a, b)
+
+    if orientation is not None:
+        if abs((orientation @ local_axis) @ axis) < 0.999:
+            raise ValueError('orient does not align the port with the hole axis; omit orient or change it')
+        rolls, base = [None], orientation
+    else:
+        base = turning(local_axis, axis) if local_axis @ axis >= 0 else turning(local_axis, -axis)
+        given = options.get('roll')
+        rolls = [given] if given is not None else [0, 45]  # cross axles: the 45 degree alternative keys them
+    last = None
+    for roll in rolls:
+        rot = base if roll is None else about(axis, roll) @ base
+        rot = np.round(rot, 12) + 0.0
+        pos, fitted, pair = check(rot)
+        if fitted is not None:
+            details = dict(hole=hole_id, pin=pin_id, at=clean(target, 4), behavior=fitted['behavior'], roll=roll)
+            return rot, pos, details
+        last = pair
+    raise ValueError('Technic seat fails ' + (fit_failure(*last) or 'the fit rules'))

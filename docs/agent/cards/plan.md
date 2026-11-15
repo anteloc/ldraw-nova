@@ -19,7 +19,7 @@ A plan is a JSON file of named placements; `build` turns it into an MPD. Every f
 }
 ```
 
-Each step is a list of placements, and a later placement may refer to an earlier one by `id`.
+Each step is a list of placements, and a later placement may refer to an earlier one by `id`. The [recipes](../../../examples/recipes/README.md) are small plans that use every placement mode; `knowledge search` returns them first when one fits.
 
 ## Place a part
 
@@ -30,6 +30,8 @@ A placement has an `id`, a `ref` (a part such as `3001.dat`, or a section such a
 | `"at": [x, y, z]` | explicit coordinates in the section, in LDU |
 | `"on": "ID"` | an ordinary brick or plate stacked upright on another; `"offset_studs": [x, z]` shifts it by whole or half studs |
 | `"on": {"to": "ID"}` | any part seated by a socket on a stud of another part, on top by default or on any face: see the [SNOT card](snot.md) |
+| `"under": {"to": "ID"}` | any part hung by one of its studs in a socket of the part above, such as an inverted slope or a chassis plate |
+| `"on": {"to": "ID", "hole": "hole-1", "pin": "grip-0"}` | Technic pins and axles in holes: see the [Technic card](technic.md) |
 | `"attach": {...}` | aligning named module anchors (plan reference) |
 
 Turn a part with `"orient": {"up": "-Z"}`: its studs then point toward -Z. Add `"x": "+Z"` to say where its local +X points. Directions are `+X -X +Y -Y +Z -Z up down`. `"yaw": 90` turns a part about the vertical axis. You never need to write a rotation matrix.

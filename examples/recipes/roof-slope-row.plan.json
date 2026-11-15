@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [{
+    "name": "roof-slope-row.ldr",
+    "description": "Row of 45 degree slopes on a 2 x 8 plate, placed by stud index",
+    "steps": [
+      [{"id": "plate", "ref": "3034.dat", "colour": 72, "at": [0, 0, 0], "purpose": "2 x 8 plate; part lists its studs in x, then z order"}],
+      [{"id": "slope-0", "ref": "3039.dat", "colour": 320, "on": {"to": "plate", "stud": 0}, "purpose": "Slope covering studs 0-3; the origin offset of the slope is the tool's problem"},
+       {"id": "slope-1", "ref": "3039.dat", "colour": 320, "on": {"to": "plate", "stud": 4}},
+       {"id": "slope-2", "ref": "3039.dat", "colour": 320, "on": {"to": "plate", "stud": 8}},
+       {"id": "slope-3", "ref": "3039.dat", "colour": 320, "on": {"to": "plate", "stud": 12}}]
+    ]
+  }]
+}

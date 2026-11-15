@@ -12,7 +12,7 @@ Fix the first error, rebuild and repeat. `--quiet` prints one line and `--report
 | Code | What to do |
 |---|---|
 | `plan.schema` | Fix the field at `pointer`; `example` shows a valid value. |
-| `plan.authoring` | A placement could not be built. The message names it and lists the faces, studs or sockets that exist. |
+| `plan.authoring` | A placement could not be built. The message names it and lists the faces, studs, sockets or Technic ports that exist; a failed Technic seat names the fit rule. |
 | `assembly.body_overlap` | Two bricks or plates share space. Move the second placement by `separation` (the first by the opposite), or rebuild the joint. |
 | `assembly.duplicate` | The same part twice in one place: delete one. |
 | `assembly.floating_group` | These placements touch nothing in the main model. `gap` is how far their box is from the nearest main part, named in `nearest`; seat them on studs. When it says the parts have no connector data, check the render instead. |

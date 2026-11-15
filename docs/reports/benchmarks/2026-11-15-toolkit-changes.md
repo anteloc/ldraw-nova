@@ -46,7 +46,7 @@ The appearance checks cost about 1 second on a cold part cache and about 0.2 sec
 
 ## Placement without arithmetic
 
-`on: {to, face, stud, socket}` and `orient` reproduce hand-derived SNOT placements: the parrot head's sideways jumper and rear plate build byte-identical MPD output, and the cat's 45° ear matches to 1e-8 (tests in `tests/test_placement.py`). Five recipes in `examples/snot-recipes/` use only seats. All five pass review with matching BOMs, and their home views were opened and checked.
+`on: {to, face, stud, socket}` and `orient` reproduce hand-derived SNOT placements. The parrot head's sideways jumper and rear plate, and Halcyon's two flank modules seated on side studs inside the hull module, build byte-identical MPD output; the cat's 45° ear matches to 1e-8 (tests in `tests/test_placement.py`). The same mode seats reviewed Technic pins and axles by port name (`on: {to, hole, pin}`), checked against the Technic fit rules, and `under` hangs parts by their studs from sockets above. Nine recipes in `examples/recipes/` use only seats (stud, hanging and Technic). All nine pass review with matching BOMs, the Technic frame passes `technic check` with eight pin joints, and each preview was opened and checked.
 
 ## Checks that see what people see
 
@@ -72,4 +72,4 @@ An earlier box-based version of the overlap check flagged 86 airliner pairs (hul
 
 ## Tests
 
-The full suite passed with 731 tests before the change and 777 after it, with no failures. One existing review test changed meaning: an unchanged rerun now reuses its bundle instead of demanding `--force`. New test files: `test_appearance.py`, `test_placement.py`, `test_report.py`, `test_knowledge_ranking.py`, `test_cards.py`, `test_cli_reference.py` and `test_bench.py`.
+The full suite passed with 731 tests before the change and 798 after it, with no failures. One existing review test changed meaning: an unchanged rerun now reuses its bundle instead of demanding `--force`. New test files: `test_appearance.py`, `test_placement.py`, `test_report.py`, `test_knowledge_ranking.py`, `test_cards.py`, `test_cli_reference.py`, `test_construction_recipes.py` and `test_bench.py`.

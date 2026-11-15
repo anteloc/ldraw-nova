@@ -225,31 +225,51 @@ def snap_placement(entry, model, models, placed, parts, matrix, instance_limit):
     return Vector(*local['at']), Matrix(local['matrix'])
 
 
+STUD_KEYS = {"face", "stud", "socket", "socket_face", "socket_at", "socket_axis"}
+TECHNIC_KEYS = {"hole", "pin", "slide"}
+
+
 def connector_placement(entry, model, placed, identity, parts, context):
-    """Seat a socket of this part (or a point of a section) on a support's stud."""
-    from .placement import mated, orient, seat
-    options = entry["on"]
+    """Seat this part by a real interface of an earlier part.
+
+    ``on`` puts a socket on a stud (or a Technic pin in a hole, or a hole on a
+    pin); ``under`` pushes a stud into a socket of the part above.
+    """
+    from .placement import hang, mated, orient, seat, technic_seat
+    mode = "under" if "under" in entry else "on"
+    options = entry[mode]
     if "offset_studs" in entry:
-        raise ValueError("on: {to, ...} picks studs by face and index; offset_studs belongs to the on: ID form")
+        raise ValueError(f"{mode}: {{to, ...}} picks studs by face and index; offset_studs belongs to the on: ID form")
+    if mode == "on" and options.keys() & TECHNIC_KEYS and options.keys() & STUD_KEYS:
+        raise ValueError("A seat uses either Technic ports (hole, pin, slide) or studs (face, stud, socket), not both")
     target = options["to"]
     if "/" in target:
         leaf = identity.resolve(model.name, target)
         support_code, frame = leaf["ref"], (np.asarray(leaf["matrix"], float), np.asarray(leaf["at"], float))
     else:
         if target not in placed or placed[target][0] is None:
-            raise ValueError(f"on.to {target!r} must name an earlier placement in this section (or module/part path)")
+            raise ValueError(f"{mode}.to {target!r} must name an earlier placement in this section (or module/part path)")
         piece, support_code = placed[target]
         support_code = piece.reference
         frame = (np.asarray(piece.matrix.rows, float), np.asarray(jsonable(piece.position), float))
     if not support_code.casefold().endswith(".dat"):
-        raise ValueError(f"on.to {target!r} is a section; name a part inside it, e.g. {target}/ID")
+        raise ValueError(f"{mode}.to {target!r} is a section; name a part inside it, e.g. {target}/ID")
     fixed = orient(entry["orient"]["up"], entry["orient"].get("x")) if "orient" in entry else None
-    rotation_matrix, position, details = seat(frame, support_code, entry["ref"], options, parts, orientation=fixed)
-    count = mated(frame, support_code, (rotation_matrix, position), entry["ref"], parts)
+    if mode == "under":
+        rotation_matrix, position, details = hang(frame, support_code, entry["ref"], options, parts, orientation=fixed)
+        count = mated(frame, support_code, (rotation_matrix, position), entry["ref"], parts, hanging=True)
+        record = dict(socket=details["socket_at"], socket_face=details["socket"]["face"], mated=count)
+    elif options.keys() & TECHNIC_KEYS:
+        rotation_matrix, position, details = technic_seat(frame, support_code, entry["ref"], options, parts,
+                                                          orientation=fixed)
+        record = dict(hole=details["hole"], pin=details["pin"], at=details["at"], behavior=details["behavior"])
+    else:
+        rotation_matrix, position, details = seat(frame, support_code, entry["ref"], options, parts, orientation=fixed)
+        count = mated(frame, support_code, (rotation_matrix, position), entry["ref"], parts)
+        record = dict(stud=details["stud_at"], stud_face=details["stud"]["face"], facing=details["facing"], mated=count)
     if context is not None:
-        context.setdefault("seats", []).append(dict(section=model.name, placement=entry["id"], on=target,
-                                                    stud=details["stud_at"], stud_face=details["stud"]["face"],
-                                                    facing=details["facing"], mated=count))
+        context.setdefault("seats", []).append(dict(section=model.name, placement=entry["id"], mode=mode, on=target,
+                                                    **record))
     return Vector(*position), Matrix(rotation_matrix.tolist())
 
 
@@ -307,7 +327,8 @@ def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None, contex
                         placed[entry['id']] = (None, None)
                         identity.add(model.name, entry, None)
                         continue
-                    target = entry.get('on') or entry.get('snap', {}).get('to') or entry.get('attach', {}).get('to')
+                    target = (entry.get('on') or entry.get('under') or entry.get('snap', {}).get('to')
+                              or entry.get('attach', {}).get('to'))
                     if isinstance(target, dict):
                         target = target['to'].split('/')[0]
                     if target in placed and placed[target][0] is None:
@@ -325,7 +346,7 @@ def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None, contex
                         matrix = Matrix(entry["matrix"]) if "matrix" in entry else rotation("y", entry.get("yaw", 0))
                     if "snap" in entry:
                         position, matrix = snap_placement(entry, model, models, placed, parts, matrix, instance_limit)
-                    elif isinstance(entry.get("on"), dict):
+                    elif isinstance(entry.get("on"), dict) or "under" in entry:
                         position, matrix = connector_placement(entry, model, placed, identity, parts, context)
                     elif "on" in entry:
                         support_id = entry["on"]

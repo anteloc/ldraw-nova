@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [{
+    "name": "inverted-nose.ldr",
+    "description": "Inverted slope hung under a plate to shape a nose or chin",
+    "steps": [
+      [{"id": "deck", "ref": "3022.dat", "colour": 4, "at": [0, 0, 0], "purpose": "2 x 2 plate; the slope hangs from its underside"}],
+      [{"id": "chin", "ref": "3660b.dat", "colour": 4, "under": {"to": "deck"}, "purpose": "Inverted slope pushed up into the plate's sockets by its four top studs"}],
+      [{"id": "cap", "ref": "3068b.dat", "colour": 4, "on": {"to": "deck"}, "purpose": "Tile on top for a smooth nose"}]
+    ]
+  }]
+}

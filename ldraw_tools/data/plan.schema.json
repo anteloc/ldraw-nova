@@ -242,6 +242,21 @@
                   "type": "number",
                   "minimum": -360,
                   "maximum": 360
+                },
+                "hole": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]+$",
+                  "maxLength": 64
+                },
+                "pin": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]+$",
+                  "maxLength": 64
+                },
+                "slide": {
+                  "type": "number",
+                  "minimum": -1000,
+                  "maximum": 1000
                 }
               }
             }
@@ -377,6 +392,60 @@
               "$ref": "#/$defs/direction"
             }
           }
+        },
+        "under": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "to"
+          ],
+          "properties": {
+            "to": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+            },
+            "socket": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 999
+            },
+            "socket_face": {
+              "enum": [
+                "+X",
+                "-X",
+                "+Y",
+                "-Y",
+                "+Z",
+                "-Z"
+              ]
+            },
+            "stud": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 999
+            },
+            "face": {
+              "enum": [
+                "+X",
+                "-X",
+                "+Y",
+                "-Y",
+                "+Z",
+                "-Z"
+              ]
+            },
+            "stud_at": {
+              "$ref": "#/$defs/vector"
+            },
+            "stud_axis": {
+              "$ref": "#/$defs/direction"
+            },
+            "roll": {
+              "type": "number",
+              "minimum": -360,
+              "maximum": 360
+            }
+          }
         }
       },
       "oneOf": [
@@ -410,6 +479,11 @@
               {
                 "required": [
                   "flex"
+                ]
+              },
+              {
+                "required": [
+                  "under"
                 ]
               }
             ]
@@ -445,6 +519,11 @@
               {
                 "required": [
                   "flex"
+                ]
+              },
+              {
+                "required": [
+                  "under"
                 ]
               }
             ]
@@ -501,6 +580,11 @@
                 "required": [
                   "orient"
                 ]
+              },
+              {
+                "required": [
+                  "under"
+                ]
               }
             ]
           }
@@ -545,6 +629,11 @@
               {
                 "required": [
                   "orient"
+                ]
+              },
+              {
+                "required": [
+                  "under"
                 ]
               }
             ]
@@ -604,6 +693,66 @@
               {
                 "required": [
                   "orient"
+                ]
+              },
+              {
+                "required": [
+                  "under"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "under",
+            "ref"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "at"
+                ]
+              },
+              {
+                "required": [
+                  "on"
+                ]
+              },
+              {
+                "required": [
+                  "attach"
+                ]
+              },
+              {
+                "required": [
+                  "snap"
+                ]
+              },
+              {
+                "required": [
+                  "flex"
+                ]
+              },
+              {
+                "required": [
+                  "offset_studs"
+                ]
+              },
+              {
+                "required": [
+                  "repeat"
+                ]
+              },
+              {
+                "required": [
+                  "yaw"
+                ]
+              },
+              {
+                "required": [
+                  "matrix"
                 ]
               }
             ]
