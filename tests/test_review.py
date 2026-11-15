@@ -129,11 +129,14 @@ def test_render_failure_keeps_diagnostics_and_removes_partial_previews(source, p
     assert not (folder / 'previews').exists()
 
 
-def test_existing_output_requires_force_and_user_files_are_preserved(source, parts):
+def test_existing_output_is_reused_or_replaced_and_user_files_are_preserved(source, parts):
     report, _ = review(source, parts, parts.path.parent, renders=False)
     folder = Path(report['output'])
-    with pytest.raises(ValueError, match='--force'):
-        review(source, parts, parts.path.parent, renders=False)
+    again, status = review(source, parts, parts.path.parent, renders=False)
+    assert again['reused'] and status == 0 and again['artifacts'] == report['artifacts']
+    atomic_write(source, mpd(ref(colour=1)))
+    changed, status = review(source, parts, parts.path.parent, renders=False)
+    assert status == 0 and not changed.get('reused') and changed['source']['sha256'] != report['source']['sha256']
     note = folder / 'my-notes.md'
     note.write_text('Keep my work')
     with pytest.raises(ValueError, match='user files'):
@@ -304,3 +307,28 @@ def test_shared_manual_cli_keeps_notes_and_study_kind(kind, notes_option, source
     assert status == 0 and captured['notes'] == {'lesson': 'fixture'}
     assert captured['kind'] == ('construction' if kind == 'manual' else 'mechanism')
     assert not captured['renders'] and not captured['overview']
+
+
+def test_draft_review_renders_a_failing_model_without_passing_it(source, parts, renderer):
+    atomic_write(source, mpd(ref() + '\n' + ref(position='10 0 0')))
+    report, status = review(source, parts, parts.path.parent, draft=True)
+    folder = Path(report['output'])
+    assert status == 1 and not report['checks_passed']
+    assert report['stages']['render'] == 'draft' and report['stages']['bom_comparison'] == 'not_run'
+    assert report['visual_review'].startswith('draft:') and not (folder / 'model.mpd').exists()
+    assert (folder / 'draft.mpd').exists() and len(renderer) == 1
+
+
+def test_review_reports_placements_disconnected_by_an_edit(tmp_path, official):
+    plan = tmp_path / 'stack.plan.json'
+    def write(lifted):
+        plan.write_text(json.dumps(dict(version=1, author='Tests', sections=[dict(name='stack.ldr', description='Stack', steps=[
+            [dict(id='base', ref='3001.dat', colour=4, at=[0, 0, 0])],
+            [dict(id='top', ref='3001.dat', colour=1, at=[0, -24 - lifted, 0])]])])))
+    write(0)
+    first, _ = review(plan, official, official.path.parent, renders=False)
+    assert not [d for d in first['diagnostics'] if d['code'] == 'assembly.became_floating']
+    write(8)
+    second, _ = review(plan, official, official.path.parent, renders=False)
+    lost = [d for d in second['diagnostics'] if d['code'] == 'assembly.became_floating']
+    assert len(lost) == 1 and lost[0]['placements'] == [{'path': 'top'}]

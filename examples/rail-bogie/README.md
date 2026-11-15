@@ -50,7 +50,7 @@ Recreate the board with `./ldraw-xray board run examples/rail-bogie/board/recipe
     "legacy_groups": [
       "examples"
     ],
-    "lesson": "Two-axle bogie, central pivot, buffers and coupling. Correct single-axle source/card descriptions: two single-axle parts form one bogie.",
+    "lesson": "Two-axle bogie, central pivot, buffers and coupling: two single-axle parts form one bogie.",
     "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
     "scale": "minifigure",

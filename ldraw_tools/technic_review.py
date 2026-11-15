@@ -13,7 +13,7 @@ import numpy as np
 from .common import DATA, jsonable
 from .connectivity import inspect_connections
 from .connection_adapter import connection_contacts
-from .technic import (definition, canonical, registry, managed, endpoints, fit,
+from .technic import (definition, canonical, registry, managed, endpoints, fit, fit_failure,
                       conflicts, nearby_ports, Kind, MALE, TOL)
 
 MECHANISMS = re.compile(r'\b(gear|differential|universal joint|motor|actuator|pneumatic|shock absorber|steering)\b', re.I)
@@ -101,10 +101,13 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
         radial = abs(delta-male.axis*along)
         overlap = min(male.length/2, along+hole.length/2)-max(-male.length/2, along-hole.length/2)
         if radial <= TOL and abs(male.axis.dot(hole.axis)) > .9999 and overlap >= -TOL:
-            close[i, j].append((male.feature_id, hole.feature_id))
+            close[i, j].append((male.feature_id, hole.feature_id, fit_failure(male, hole)))
     order = {index: n for n, index in enumerate(items)}
-    for (i, j), ports in sorted(close.items(), key=lambda row: tuple(order[k] for k in row[0])):
-        issue('technic.invalid_seating', 'Aligned interfaces fail seating, engagement, family or keyed-roll rules.', [i, j], 'error', ports=ports)
+    for (i, j), found in sorted(close.items(), key=lambda row: tuple(order[k] for k in row[0])):
+        rules = sorted({rule for _, _, rule in found if rule})
+        message = 'Aligned interfaces fail ' + ('; '.join(rules) if rules else
+                                                'seating, engagement, family or keyed-roll rules') + '.'
+        issue('technic.invalid_seating', message, [i, j], 'error', ports=[(m, h) for m, h, _ in found], rules=rules)
 
     if seating_only:
         return [d for d in diagnostics if d['severity'] == 'error' and d['code'] != 'technic.mechanism_scope']

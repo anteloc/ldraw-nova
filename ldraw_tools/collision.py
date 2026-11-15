@@ -24,22 +24,34 @@ def oriented_box(item, profile=None):
     return centre, matrix, (high - low) / 2
 
 
-def penetration(first, second):
-    """15-axis separating-axis test. None means separated or touching."""
+def separation(first, second, tolerance=TOLERANCE):
+    """15-axis separating-axis test returning (depth, unit axis) or None.
+
+    The axis points from the first box toward the second, so moving the second
+    box by depth * axis separates them along the shallowest direction.
+    """
     ca, aa, ha = first
     cb, ab, hb = second
     axes = [*aa.T, *ab.T, *(np.cross(a, b) for a in aa.T for b in ab.T)]
-    depths = []
+    best = None
     for axis in axes:
         length = np.linalg.norm(axis)
         if length < 1e-10:
             continue
         axis = axis / length
-        depth = np.abs(aa.T @ axis) @ ha + np.abs(ab.T @ axis) @ hb - abs((cb-ca) @ axis)
-        if depth <= TOLERANCE:
+        offset = (cb-ca) @ axis
+        depth = np.abs(aa.T @ axis) @ ha + np.abs(ab.T @ axis) @ hb - abs(offset)
+        if depth <= tolerance:
             return None
-        depths.append(float(depth))
-    return min(depths)
+        if best is None or depth < best[0]:
+            best = (float(depth), axis if offset >= 0 else -axis)
+    return best
+
+
+def penetration(first, second, tolerance=TOLERANCE):
+    """15-axis separating-axis test. None means separated or touching."""
+    found = separation(first, second, tolerance)
+    return None if found is None else found[0]
 
 
 def collision_pairs(inspection, regular, *, moving=None):
@@ -65,13 +77,18 @@ def collision_pairs(inspection, regular, *, moving=None):
             if not np.all(depths > TOLERANCE):
                 continue
             indices = [first.index, second.index]
-            status, depth = 'review_aabb_only', None
+            status, depth, oriented, push = 'review_aabb_only', None, None, None
             ba, bb = boxes[first.index], boxes[second.index]
             if ba is not None and bb is not None:
-                status = 'oriented_bounds_separated' if penetration(ba, bb) is None else 'review_oriented_bounds'
+                oriented = penetration(ba, bb)
+                status = 'oriented_bounds_separated' if oriented is None else 'review_oriented_bounds'
             ba, bb = bodies.get(first.index), bodies.get(second.index)
             if status != 'oriented_bounds_separated' and ba is not None and bb is not None:
-                depth = penetration(ba, bb)
+                found = separation(ba, bb)
+                if found is not None:
+                    depth, axis = found
+                    push = [round(float(v), 4) + 0.0 for v in axis * depth]
                 status = 'rectangular_body_overlap' if depth is not None else 'stud_zone_overlap_review_connections'
             yield dict(instances=indices, depths=depths.tolist(), status=status,
-                       body_penetration=depth)
+                       body_penetration=depth, oriented_penetration=oriented,
+                       **({'separation': push} if push is not None else {}))

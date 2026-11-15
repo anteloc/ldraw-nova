@@ -1,5 +1,7 @@
 # Build with studs facing sideways
 
+The [SNOT card](../cards/snot.md) is the short how-to: choose a support with side studs and seat parts on them with `on`. This guide adds worked references and the reasoning behind them.
+
 Start with the [14-piece parrot head](../../../examples/parrot/README.md). Its seven stages expose a small SNOT core, sideways eyes, jumper offsets and a shaped beak. The [complete parrot](../../../examples/parrot/parrot.plan.json) supplies the surrounding body and articulated connections. Both use ordinary JSON plans and the existing builder.
 
 Then use the [cat studies](../../../examples/cat/README.md) for single-stud diagonal details and a repeated three-piece limb. The cat's face is a flat panel posed on a ball joint; its brow bracket's sideways studs remain exposed. It broadens the shaping and articulation vocabulary without supplying another fixed perpendicular stud interface.
@@ -32,14 +34,13 @@ Read the source plan alongside the steps; the placement IDs name the constructio
 
 SNOT changes which face carries the next assembly. Rotating an ordinary part does not create a connection to the neighbouring wall. Choose a side-stud brick, bracket, headlight brick or another inspected connector; locate its actual mating face before adding the visible surface.
 
-The parrot's two `67329` bricks form a core with studs facing up and toward four sides. Each is 40 LDU high: five plate heights equal two stud pitches (`5 × 8 = 2 × 20`). That equality helps plan perpendicular grids, but each connector's offset still matters. The older mini-truck-cab reference is held pending upstream source reconciliation; do not use it as an admitted construction.
+The parrot's two `67329` bricks form a core with studs facing up and toward four sides. Each is 40 LDU high: five plate heights equal two stud pitches (`5 × 8 = 2 × 20`). That equality helps plan perpendicular grids, but each connector's offset still matters.
 
-1. Inspect the support and attached part with `part`, then inspect their connector frames with `connectors` in a small assembly.
-2. Choose the attached part's orientation. LDraw's local up direction is `[0,-1,0]`; multiply it by the placement matrix to see where its studs point. Use proper rotations, never mirrored parts.
-3. Align the actual socket entry with the target stud base. For rotation `R`, local socket position `q` and target position `t`, the part origin is `t - R*q`.
-4. Build and review this small connection before repeating it or covering it with decoration. Use the existing [snap workflow](../reference/connections.md) when its reported coverage supports the interface.
+1. Run `./ldraw-agent part CODE` for the support and the attached part. It lists studs and sockets by the face they point out of.
+2. Seat the attached part with `"on": {"to": "SUPPORT", "face": "-Z", "stud": N, "socket": M}`. The builder turns it so the socket faces the stud and computes the origin `t - R*q` from the real connector positions.
+3. Build and review this small connection before repeating it or covering it with decoration.
 
-The plan's `on` placement is for upright rectangular parts. For sideways work use `at` with a proper `matrix`, or an inspected `snap`. A submodel keeps an entire surface in one local frame; rotate and translate the submodel when placing it on another face.
+A submodel keeps an entire surface in one local frame. Build it upright and seat it with `socket_at`, the point of the section that touches the stud; see the [SNOT card](../cards/snot.md#3-build-surfaces-as-modules). The [snap workflow](../reference/connections.md) remains available for interfaces other than studs.
 
 ## A concrete offset from the head
 
@@ -57,6 +58,15 @@ The head's local origin is at the turntable top, with the beak toward +X. The lo
 
 Its local up maps to +X. Its underside sockets at local `[±10,8,0]` become `[20,-10,±10]`, exactly on the core's front studs. Its single top stud becomes `[28,-10,0]`, centred between those two stud columns. The 8 LDU offset is plate thickness; the 4 LDU stud height adds no gap.
 
+The same placement as a seat, which builds byte-identical MPD output (a regression test checks it):
+
+```json
+{"id": "beak-lower-jumper", "ref": "15573.dat", "colour": 0,
+ "on": {"to": "core-left", "face": "+X", "stud": 1, "socket": 0, "roll": -90}}
+```
+
+The jumper bridges two core bricks, so the quarter turn that covers the most studs of `core-left` alone is ambiguous; `roll` states it.
+
 | Head interface | Core stud-base plane | Attached part origin |
 |---|---|---|
 | Right eye | Z = 20 | `[0,-20,28]` |
@@ -70,7 +80,7 @@ These coordinates belong to these inspected parts. Do not turn them into univers
 
 The cat's round-ended `35480` ears attach to the face at one socket each. This allows an in-plane angle while the free end leaves the rectangular grid. The quarter-round nose uses the same principle on a jumper stud. This is a useful way to form diagonal trim, markings and small curved silhouettes.
 
-Use the same `origin = target - R*socket` calculation. In the flat [cat face plan](../../../examples/cat/head.plan.json), the left ear's socket `[10,8,0]` meets the support at `[-30,0,10]`. With `yaw: 45`, the required origin is `[-37.071067812,-8,17.071067812]`. Those fractional coordinates express a real diagonal; independently rounding them would break the seating. A two-stud connection usually fixes the in-plane angle, so do not apply this freedom to an assembly attached at two separate studs.
+In the flat [cat face plan](../../../examples/cat/head.plan.json), the left ear's socket `[10,8,0]` meets the support at `[-30,0,10]`. With `yaw: 45`, the required origin is `[-37.071067812,-8,17.071067812]`. A seat computes it: `"on": {"to": "face-base", "stud": 1, "socket": 1, "roll": 45}`. On a top stud, `roll` turns the same way as `yaw`. The fractional coordinates express a real diagonal; independently rounding them would break the seating. A two-stud connection usually fixes the in-plane angle, so do not apply this freedom to an assembly attached at two separate studs.
 
 Build the attachment before covering it with decoration. The [cat's eight stages](../../../examples/cat/README.md#read-the-face-before-the-eyes-cover-it) reveal the ear pivots before the eyes hide them. Inspect neighbouring material and rear support as well as the visible outline; coincident connectors alone do not establish clearance or strength.
 
@@ -84,7 +94,7 @@ When cleaning a rounded export, recover the module's local grid first. Re-seat i
 
 ## Learn from real-set submodels
 
-The [submodel atlas](../../../examples/submodel-atlas/README.md#pick-an-entry-by-technique) holds 25 reviewed SNOT constructions from real sets, each with build pages, a stud-direction map and a guide. Find them with `./ldraw-agent examples --family submodel --details snot`. Ask where the studs end up and who turns them:
+The [submodel atlas](../../../examples/submodel-atlas/README.md#pick-an-entry-by-technique) holds reviewed SNOT constructions from real sets, each with build pages, a stud-direction map and a guide. Find them with `./ldraw-agent examples --family submodel --details snot`; entries marked inspiration (S14, S15 and 04 below) need `--scope inspiration`. Ask where the studs end up and who turns them:
 
 ```mermaid
 flowchart TD

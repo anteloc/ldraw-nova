@@ -8,6 +8,7 @@ import numpy as np
 from ldraw import inspect_model
 
 from .common import DATA, issue, jsonable
+from .appearance import DEEP
 from .collision import collision_pairs, oriented_box
 from .connectivity import metadata_summary, placement_path
 from .connection_adapter import connection_contacts
@@ -60,6 +61,41 @@ def components(nodes, edges):
         unseen -= group
         result.append(sorted(group))
     return result
+
+
+def floating_groups(inspection, groups, main_group, *, limit=10):
+    """Name groups outside the largest one, with the nearest main part's box gap.
+
+    The gap is the translation that would make the group's bounding box touch
+    that part's box. Touching boxes are not a connection; it locates the fix.
+    """
+    by_index = {o.index: o for o in inspection.occurrences}
+    main = sorted(main_group)
+    if not main:
+        return []
+    lo = np.array([[by_index[i].bounds.min.x, by_index[i].bounds.min.y, by_index[i].bounds.min.z] for i in main])
+    hi = np.array([[by_index[i].bounds.max.x, by_index[i].bounds.max.y, by_index[i].bounds.max.z] for i in main])
+    others = sorted((g for g in groups if g is not main_group), key=lambda g: (-len(g), g[0]))
+    problems = []
+    for group in others[:limit]:
+        glo = np.min([[by_index[i].bounds.min.x, by_index[i].bounds.min.y, by_index[i].bounds.min.z] for i in group], axis=0)
+        ghi = np.max([[by_index[i].bounds.max.x, by_index[i].bounds.max.y, by_index[i].bounds.max.z] for i in group], axis=0)
+        gap = np.where(lo > ghi, lo - ghi, np.where(glo > hi, -(glo - hi), 0.0))
+        nearest = int(np.argmin(np.linalg.norm(gap, axis=1)))
+        coverage = {str(by_index[i].local.connection_metadata.coverage) if by_index[i].local.connection_metadata else 'none'
+                    for i in group}
+        unknown = coverage == {'none'}
+        message = (f"{len(group)} placement(s) are not connected to the main model. Nearest main part box gap: "
+                   f"{[round(float(v), 1) + 0.0 for v in gap[nearest]]} LDU.")
+        if unknown:
+            message += " These parts have no connector data, so this may be a false report; check the render."
+        problems.append(issue("assembly.floating_group", message, severity="warning",
+                              instances=group[:5], group_size=len(group), nearest_instance=main[nearest],
+                              gap=[round(float(v), 1) + 0.0 for v in gap[nearest]], connector_data=not unknown))
+    if len(others) > limit:
+        problems.append(issue("assembly.floating_group", f"{len(others) - limit} more unconnected groups are not listed.",
+                              severity="warning", count=len(others) - limit))
+    return problems
 
 
 def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
@@ -123,15 +159,23 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
                               connection_metadata=metadata_summary(item.local.connection_metadata)))
     overlaps = []
     overlap_count = 0
+    candidates = []
     by_index = {o.index: o for o in inspection.occurrences}
     for overlap in collision_pairs(inspection, regular):
         overlap_count += 1
         if overlap['status'] == 'rectangular_body_overlap':
-            problems.append(issue("assembly.body_overlap", "Rectangular brick/plate body envelopes overlap; reposition them.",
+            move = overlap.get('separation')
+            problems.append(issue("assembly.body_overlap",
+                f"Rectangular brick/plate bodies overlap by {round(overlap['body_penetration'], 3)} LDU; "
+                + (f"move the second placement by {move} (or the first by the opposite), " if move else "")
+                + "or rebuild this interface.",
                 instances=overlap['instances'], penetration=overlap['body_penetration'],
+                **({'separation': move} if move else {}),
                 sources=[dict(part=by_index[i].occurrence.reference, section=by_index[i].occurrence.source_model.name,
                               line_number=by_index[i].occurrence.source_line,
                               source_path=jsonable(by_index[i].attribution.source_line_path)) for i in overlap['instances']]))
+        if overlap.get('oriented_penetration') is not None and overlap['oriented_penetration'] > DEEP:
+            candidates.append(overlap)
         if len(overlaps) < pair_limit:
             overlaps.append(overlap)
     contact_mode = "all" if contacts == "auto" and len(occurrences) <= 500 else "none" if contacts == "auto" else contacts
@@ -162,10 +206,18 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
     nodes = list(range(inspection.occurrence_count))
     groups = components(nodes, optimistic)
     confirmed_groups = components(nodes, confirmed)
+    main_group = max(groups, key=len) if groups else []
     if contact_mode == "all" and len(groups) > 1:
-        problems.append(issue("assembly.disconnected_evidence", "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.", severity="warning", component_count=len(groups)))
+        problems.append(issue("assembly.disconnected_evidence", "Connection analysis finds multiple groups. Investigate floating parts, missing connector metadata, or intentional separate objects.", severity="warning", component_count=len(groups), main_group=len(main_group)))
+        problems.extend(floating_groups(inspection, groups, main_group))
     if contact_mode == "none":
         problems.append(issue("coverage.contacts_skipped", "Contacts were not computed. Select a subassembly or request --contacts all; no connectivity conclusion is available.", severity="warning"))
+    from .appearance import appearance_issues
+    clear = frozenset(code for code, colour in getattr(parts, 'colours_by_code', {}).items()
+                      if getattr(colour, 'is_transparent', False))
+    appearance, appearance_summary = appearance_issues(inspection, pairs=candidates, contacts=contact_results,
+                                                       contacts_checked=contact_mode == "all", clear=clear)
+    problems.extend(appearance)
     if len(bodies) < len(occurrences):
         problems.append(issue("coverage.collision_review", "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.", severity="warning"))
     return dict(complete=geometry_complete(inspection) and not any(p["code"].startswith("coverage.") and p["severity"] == "error" for p in problems),
@@ -183,7 +235,10 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
                 confirmed_component_count=len(confirmed_groups) if contact_mode == "all" else None,
                 components_truncated=contact_mode == "all" and (detail != "full" or max([len(groups),len(confirmed_groups),*[len(g) for g in groups+confirmed_groups]],default=0) > output_limit),
                 overlap_candidate_count=overlap_count, overlaps=overlaps if detail == "full" else [],
-                overlaps_truncated=overlap_count > (len(overlaps) if detail == "full" else 0), diagnostics=problems,
+                overlaps_truncated=overlap_count > (len(overlaps) if detail == "full" else 0),
+                main_group_size=len(main_group) if contact_mode == "all" else None,
+                outside_main_group=sorted(set(nodes) - set(main_group)) if contact_mode == "all" else None,
+                appearance=appearance_summary, diagnostics=problems,
                 limitations=["AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
                              "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
                              "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."])

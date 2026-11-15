@@ -20,7 +20,7 @@ Read the registered construction lesson and its linked audit before adapting the
     "legacy_groups": [
       "details"
     ],
-    "lesson": "Thin bat silhouette mounts at nose via backside pin connector and is tilted in vehicle. Rename as grille; useful flat-build-to-parent transform lesson.",
+    "lesson": "Thin bat-silhouette grille built flat, mounted at the nose by a backside pin connector and tilted by its parent: a flat-build-to-parent transform lesson.",
     "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/submodel-audit.json",
     "subjects": [

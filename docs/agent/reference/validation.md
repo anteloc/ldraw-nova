@@ -38,15 +38,27 @@ Ordinary filenames containing single spaces and mixed case work. This pinned par
 | `matrix.singular`, `assembly.nonrigid` | Recompute a proper rotation using `matrix` or NumPy. Do not “repair” a mirrored asymmetric part by changing its colour or BFC flag. |
 | `colour.*`, `model.unknown_colour` | Select a real palette code. Replace unresolved root inheritance with an explicit colour. Colour 24 belongs to edges. |
 | `geometry.*` | Fix indicated primitive geometry or unresolved library dependency. Incomplete bounds/contacts cannot justify a pass. |
-| `assembly.body_overlap`, `assembly.duplicate` | Inspect the reported instance IDs and source paths. Remove duplicates; recalculate position/origin/stacking height. |
-| `assembly.disconnected_evidence` | Check stud parity, upper-body height, mating axes and missing metadata. Explain intentionally separate objects in the delivery notes. Never delete the diagnostic to hide a floating part. |
+| `assembly.body_overlap`, `assembly.duplicate` | Inspect the reported placements. Remove duplicates. `separation` is the shortest translation that moves the second body out of the first; recalculate position/origin/stacking height or rebuild the joint. |
+| `assembly.disconnected_evidence`, `assembly.floating_group` | Each floating group names up to five placements, the nearest part of the main group and the box `gap` between them. Check stud parity, upper-body height, mating axes and missing metadata (`connector_data: false` means the group's parts have none). Explain intentionally separate objects in the delivery notes. Never delete the diagnostic to hide a floating part. |
+| `assembly.became_floating` | Review only: placements that were in the main group in the previous bundle and are not now. The last edit disconnected them; restore the support. |
+| `appearance.*` | See [appearance checks](#appearance-checks). |
 | `coverage.contacts_skipped` | Select a module and compute contacts, or deliberately request full-scene contacts. Skipped analysis provides no connectivity conclusion. |
 | `coverage.*` | Simplify to the supported construction or perform and document the missing external checks. A failed coverage check is not a validation pass. |
 | `header.*`, `mpd.unreachable`, `part.alias_or_internal` | Add accurate headers, remove unused assemblies, or inspect the alias/replacement. Preserve original attribution where source is reused. |
 
 If a complex connection remains uncertain, replace it with a simpler inspected assembly and rerun checks. Deliver a specific remaining limitation if it cannot be resolved; do not claim that “the validator guarantees correctness.”
 
-## Geometry report interpretation
+## Appearance checks
+
+These warnings name defects a person sees that the structural checks pass. They use part bounds, vertices and connector positions, not rendered images, so confirm each one in a close-up before changing the model.
+
+| Warning | Rule |
+|---|---|
+| `appearance.deep_overlap` | Each part of a pair has at least two vertices more than 2 LDU inside the other's body. A body is the box of a part's vertices without its stud cylinders, so seated studs never count, and a part sitting inside a hollow shell (seats in a moulded hull, a door in an arch) fails the test in one direction. Pairs with a recognised contact, a male connector inside a coaxial female one, glazing in frames, doors, hinge halves, figure parts, Technic pins and axles, tyres on wheels, flexible parts and foliage on foliage are excluded. |
+| `appearance.exposed_side_studs` | A sideways stud (radius 6, not pointing up or down) with no mated part, whose outward ray clears every other part's box for 400 LDU. |
+| `appearance.glass_obstructed` | A transparent glass, pane, window, windscreen or door part with an opaque part covering half or more of either face within 16 LDU. Frames, seats and figures, and boxes that enclose the pane (moulded shells), do not count. |
+
+Measured on reviewed models: the parrot and cat report none; Halcyon reports a windscreen rim inside two tiles and twelve bare exhaust studs; the airliner reports a 1 x 2 plate inside a 1 x 8 plate that the body check missed because `3023` has no profile.
 
 ## Interpret geometry reports honestly
 

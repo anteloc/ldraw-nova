@@ -23,7 +23,8 @@ Plans can [declare flexible sources and structural contracts](flex.md#generated-
 
 ```sh
 ./ldraw-agent review output/my-model.plan.json
-./ldraw-agent review output/my-model.mpd --force
+./ldraw-agent review output/my-model.plan.json --draft      # also render a model that fails its checks
+./ldraw-agent review output/my-model.mpd --force             # recompute although nothing changed
 ```
 
 `review` accepts a JSON plan or an existing `.mpd`/`.ldr` assembly. A plan is built in memory through the same builder and checks as `build`; an existing assembly is copied before validation. The command then writes a Python BOM, renders LeoCAD views and compares reference/colour/quantity counts. It checks and renders the same frozen model bytes. It does not modify the input or claim to inspect images.
@@ -36,15 +37,17 @@ The default output is `NAME-review/` beside `NAME.plan.json`, `NAME.json`, `NAME
 
 | Artifact | Contents |
 |---|---|
-| `review.json` | Stage outcomes, diagnostics, physical count, source/model hashes and artifact hashes |
+| `review.json` | Stage outcomes, diagnostics, physical count, source/model hashes, artifact hashes and the `inputs` fingerprint used for reuse |
 | `model.mpd` | Exact assembly reviewed; emitted only after source, geometry and declared checks pass |
+| `draft.mpd` | With `--draft` only: the failing model that the previews show |
+| `connectivity.json` | Placements outside the main connected group, used to report `assembly.became_floating` on the next review |
 | `validation.json` | Assembly/geometry diagnostics; declared flex and structure checks, coverage and truncation flags |
 | `flex/`, `structure/` | Frozen constraints, generated assets/manifests and structural contracts when declared |
 | `bom.json` | Python physical parts list and model hash |
 | `bom-comparison.json` | Exact Python/LeoCAD comparison and model hash |
 | `previews/` | Requested PNG views and `leocad-bom.csv` |
 
-Open the images and record your visual observations beside the source. The generated directory is replaceable output: `--force` replaces only an unchanged review bundle. Extra files or edited artifacts are protected even with `--force`; use another directory or move your work out first. A rerun replaces the bundle as a unit, so old images and BOM comparisons cannot masquerade as new evidence. Validation, rendering or comparison failures publish the available reports and return nonzero; failed validation does not publish a model. Input/output preflight failures leave any existing bundle unchanged and report the error on stdout.
+Open the images and record your visual observations beside the source. The generated directory is replaceable output. A rerun with the same inputs (source and dependency hashes, options, toolkit and parts library) returns the existing manifest with `reused: true`; `--force` recomputes it. A rerun with changed inputs replaces a verified generated bundle without `--force`. Extra files or edited artifacts stop the review in both cases; use another directory or move your work out first. Plans with inline flex routes are always recomputed. A rerun replaces the bundle as a unit, so old images and BOM comparisons cannot masquerade as new evidence. Validation, rendering or comparison failures publish the available reports and return nonzero; failed validation does not publish a model. Input/output preflight failures leave any existing bundle unchanged and report the error on stdout.
 
 Useful variations:
 
@@ -56,11 +59,11 @@ Useful variations:
 ./ldraw-agent review output/my-model.mpd --section my-floor.ldr --colour 19 --outdir output/floor-review
 
 # More views for final review, or full diagnostic rows for investigation.
-./ldraw-agent review output/my-model.mpd --views home front back right top bottom --force
-./ldraw-agent review output/my-model.mpd --no-render --detail full --contacts all --force
+./ldraw-agent review output/my-model.mpd --views home front back right top bottom
+./ldraw-agent review output/my-model.mpd --no-render --detail full --contacts all
 ```
 
-Section selection accepts JSON plans and existing MPD/LDR inputs; it reviews only the selected dependency closure. `--colour` requires `--section`. General geometry options are unchanged: `--contacts auto|all|none`, `--max-instances`, `--limit`, `--offset`, and `--detail summary|full`. Review defaults to summary; all selected checks still run. Auto contacts skip above 500 placements and report that limitation. `--timeout` defaults to 90 seconds per external command.
+Stdout is a summary: stage outcomes, errors with placement paths, warnings grouped by code with examples, preview paths and a `next` step. `--full` prints the complete manifest, `--quiet` one line; `review.json` in the bundle is always complete. Section selection accepts JSON plans and existing MPD/LDR inputs; it reviews only the selected dependency closure. `--colour` requires `--section`. General geometry options are unchanged: `--contacts auto|all|none`, `--max-instances`, `--limit`, `--offset`, and `--detail summary|full`. Review defaults to summary; all selected checks still run. Auto contacts skip above 500 placements and report that limitation. `--timeout` defaults to 90 seconds per external command.
 
 Exit 0 means the **selected automatic checks** passed; 1 means validation or BOM comparison failed; 2 means input/dependency/execution failure. `--no-render` can return 0 with rendering and comparison explicitly skipped. Full review still reports visual inspection as required and `physical_validity: not_proven`. Plans with section `structure` contracts run Technic checks automatically, even with `--contacts none`. Existing MPDs and old plans still need `technic check --contract`; run `vehicle check` when applicable. See [validation coverage](validation.md).
 
@@ -168,7 +171,8 @@ existing geometry/connector tools and renderers.
 ```sh
 ./ldraw-agent search parts 'brick 2 x 4' --limit 8
 ./ldraw-agent search parts '3001' --limit 1
-./ldraw-agent part 3001 --limit 30
+./ldraw-agent part 3001
+./ldraw-agent part 3001 --full --limit 30
 ./ldraw-agent colours 'blue'
 ./ldraw-agent colours '148'
 ./ldraw-agent profiles
@@ -282,7 +286,9 @@ See the [plan guide](plans.md) for a complete example, placement modes, modules 
 ./ldraw-agent build output/my-model.plan.json --output output/custom.mpd --report output/my-model.build.json
 ```
 
-Without `--output`, `NAME.plan.json` or `NAME.json` builds to `NAME.mpd` beside the plan. `build` serializes with pyldraw3, validates the emitted source and analyzes geometry. It writes atomically only with no errors; `--force` permits replacing an existing output after successful checks. Failed builds preserve the previous MPD. Warnings remain visible. Keep fixes in the plan/generator so regeneration preserves them.
+Without `--output`, `NAME.plan.json` or `NAME.json` builds to `NAME.mpd` beside the plan. `build` serializes with pyldraw3, validates the emitted source and analyzes geometry. It writes atomically only with no errors; `--force` permits replacing an existing output after successful checks. Failed builds preserve the previous MPD and write `NAME.draft.mpd` for inspection when the plan produced a model. Keep fixes in the plan/generator so regeneration preserves them.
+
+Stdout is a summary of a few kilobytes: `checks_passed`, errors with their placement paths (and `separation`, `gap` or a schema `pointer` and `example` where applicable), warnings grouped by code with example placements, geometry counts including the appearance checks, and a `next` step. `--report FILE` saves the complete report, including the per-placement `source_map` and connector `seats`. `--full` (or `--detail full`) prints the complete report and `--quiet` prints one line.
 
 ## Individual checks and exports
 

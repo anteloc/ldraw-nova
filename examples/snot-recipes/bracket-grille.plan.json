@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [{
+    "name": "bracket-grille.ldr",
+    "description": "Upward bracket on a plate edge carrying a front grille",
+    "steps": [
+      [{"id": "base", "ref": "3020.dat", "colour": 72, "at": [0, 0, 0], "purpose": "2 x 4 plate; front row of studs at z = -10"}],
+      [{"id": "bracket", "ref": "99780.dat", "colour": 72, "on": {"to": "base", "stud": 2}, "purpose": "Bracket on the two middle front studs (stud 2 is x = -10, z = -10); its flange studs face -Z"}],
+      [{"id": "grille", "ref": "2412b.dat", "colour": 0, "on": {"to": "bracket", "face": "-Z"}, "purpose": "Grille tile on both flange studs, facing forward"}]
+    ]
+  }]
+}

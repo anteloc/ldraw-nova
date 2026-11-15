@@ -9,6 +9,23 @@ import numpy as np
 from .common import jsonable, normalized
 
 
+def repeat_offsets(entry):
+    """(id, translation) for each copy of a repeated placement.
+
+    ``count: n`` with one ``step`` vector gives id-0 … id-(n-1). ``count: [n, m]``
+    with two step vectors gives a grid id-i-j, offset i * step[0] + j * step[1].
+    """
+    spec = entry['repeat']
+    count, step = spec['count'], spec['step']
+    grid = isinstance(count, list)
+    if grid != (len(step) == 2 and all(isinstance(s, list) for s in step)):
+        raise ValueError(f"{entry['id']}: repeat.count [n, m] needs two step vectors; a single count needs one")
+    if not grid:
+        return [(f"{entry['id']}-{i}", np.array(step, float) * i) for i in range(count)]
+    first, second = (np.array(s, float) for s in step)
+    return [(f"{entry['id']}-{i}-{j}", first * i + second * j) for i in range(count[0]) for j in range(count[1])]
+
+
 class Plan(dict):
     """An ordinary JSON dictionary with out-of-band source provenance."""
 
@@ -40,8 +57,7 @@ class Identity:
             for ti, step in enumerate(section['steps']):
                 for pi, entry in enumerate(step):
                     where = dict(origin, pointer=f"{origin['pointer']}/steps/{ti}/{pi}")
-                    ids = ([f"{entry['id']}-{i}" for i in range(entry['repeat']['count'])]
-                           if 'repeat' in entry else [entry['id']])
+                    ids = [name for name, _ in repeat_offsets(entry)] if 'repeat' in entry else [entry['id']]
                     for name in ids:
                         if (key, name) in self.origins:
                             raise BuildError(f'Duplicate placement id {name} in {section["name"]}',
@@ -146,5 +162,10 @@ def annotate(diagnostics, source_map):
         if not selected and d.get('line_number') is not None:
             selected = [r for r in source_map if r['line_number'] == d['line_number']
                         and normalized(r['section']) == normalized(d.get('section') or '')]
-        result.append(dict(d, placements=[placement_location(r) for r in selected]) if selected else d)
+        extra = {}
+        if d.get('nearest_instance') in rows:
+            extra['nearest_placement'] = placement_location(rows[d['nearest_instance']])
+        if selected:
+            extra['placements'] = [placement_location(r) for r in selected]
+        result.append(dict(d, **extra) if extra else d)
     return result

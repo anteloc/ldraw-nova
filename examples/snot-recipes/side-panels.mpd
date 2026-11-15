@@ -1,0 +1,24 @@
+0 FILE side-panels.ldr
+0 One panel module built flat, seated on both sides of a studs-on-sides brick
+0 Name: side-panels.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // core: Two studs on -Z and two on +Z
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 52107.dat
+0 STEP
+0 // left: Panel module seated by its left socket on the first -Z stud
+1 4 0 10 -18 1 0 0 0 0 -1 0 1 0 door-panel.ldr
+0 // right: The same module on the +Z face: no matrix, no mirrored copy
+1 4 0 10 18 1 0 0 0 0 1 0 -1 0 door-panel.ldr
+0 NOFILE
+0 FILE door-panel.ldr
+0 Panel built upright: a 1 x 2 plate under a 1 x 2 tile
+0 Name: door-panel.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // plate: Its sockets at (-10, 8, 0) and (10, 8, 0) take the side studs
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 3023b.dat
+0 STEP
+0 // tile: Smooth outer face
+1 16 0 -8 0 1 0 0 0 1 0 0 0 1 3069b.dat
+0 NOFILE

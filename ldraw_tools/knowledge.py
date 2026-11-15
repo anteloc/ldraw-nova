@@ -7,6 +7,7 @@ changed source cannot leave a stale on-disk search result.
 from __future__ import annotations
 
 import hashlib
+from collections import Counter
 from itertools import zip_longest
 import html
 import json
@@ -18,7 +19,10 @@ from pathlib import Path
 from .common import ROOT
 
 SCOPES = ('default', 'construction', 'tutorial', 'inspiration', 'diagnostic', 'research', 'archive', 'hold', 'all')
+SEARCH_SCOPES = (*SCOPES, 'guidance')
 DEFAULT_SCOPES = {'guidance', 'construction', 'tutorial'}
+STOPWORDS = {'a', 'an', 'the', 'to', 'of', 'for', 'and', 'with', 'in', 'into', 'from', 'by', 'is', 'are', 'how'}
+_DIMENSION = re.compile(r'(?<![\w.])(\d+(?:\.\d+)?)\s*[x×]\s*(\d+(?:\.\d+)?)(?:\s*[x×]\s*(\d+(?:\.\d+)?))?(?![\w.])', re.I)
 _METADATA = re.compile(r'^```ldraw-knowledge\s*\n(.*?)\n```\s*$', re.M | re.S)
 PATH_FIELDS = ('model', 'plan', 'generator', 'preview', 'manual', 'operation', 'study_notes', 'board', 'visual_review')
 
@@ -93,8 +97,27 @@ def examples(root=None):
     return records
 
 
+def section(identity, root=None):
+    """A guide section by search ID (path#anchor) or a whole guide by path."""
+    path, _, anchor = identity.partition('#')
+    rows = list(documents(root))
+    if anchor:
+        for row in rows:
+            if row['id'] == identity:
+                return dict(row, kind='guide-section')
+    else:
+        matches = [r for r in rows if r['id'].partition('#')[0] == path]
+        if matches:
+            text = '\n\n'.join(f"{'#' * len(r['headings'])} {r['headings'][-1]}\n{r['lesson']}" if r['anchor'] else r['lesson']
+                               for r in matches)
+            return dict(matches[0], lesson=text, kind='guide')
+    raise ValueError(f'Unknown guide section: {identity}')
+
+
 def resolve(identity, *, family=None, root=None):
     """Resolve explicitly, including held entries; admission/export is separate."""
+    if identity.startswith('docs/') and '.md' in identity:
+        return section(identity, root)
     rows = examples(root)
     canonical = next((r for r in rows if r['id'] == identity), None)
     if canonical and (family is None or family in canonical['families']):
@@ -266,13 +289,33 @@ def documents(root=None, *, include_research=False):
                        line=line, lesson=body, source_sha256=hashlib.sha256(text.encode()).hexdigest())
 
 
+def normalize(text):
+    """Write part dimensions one way: '1 x 2', '1×2' and '1x2' all become '1x2'."""
+    return _DIMENSION.sub(lambda m: 'x'.join(g for g in m.groups() if g), text)
+
+
+def body_text(row, shared=frozenset()):
+    """Entry-specific prose for low-weight matching: a GUIDE.md beside the model,
+    and the README only when it registers this entry alone."""
+    texts = []
+    guide = Path(row['guide'])
+    if guide.name == 'README.md' and guide.is_file() and row['guide'] not in shared:
+        texts.append(_METADATA.sub('', guide.read_text(encoding='utf-8')))
+    folder = Path(row.get('model', row['guide'])).parent
+    if (folder / 'GUIDE.md').is_file():
+        texts.append((folder / 'GUIDE.md').read_text(encoding='utf-8'))
+    return ' '.join(texts)[:20000]
+
+
 def search(query='', *, limit=5, scope='default', family=None, kind=None,
            subject=None, technique=None, only_examples=False, details=None, scale=None, root=None, diversify=None):
-    if scope not in SCOPES: raise ValueError('Unknown knowledge scope: ' + scope)
+    """Rank lessons and guide sections. Documents containing every query word
+    rank first (by BM25), then documents containing some of them."""
+    if scope not in SEARCH_SCOPES: raise ValueError('Unknown knowledge scope: ' + scope)
     if limit <= 0: raise ValueError('limit must be positive')
     diversify = diversify or ('source' if family == 'spaceship' else 'none')
     if diversify not in {'source', 'none'}: raise ValueError('Choose source or none diversification')
-    records = examples(root)
+    records = [] if scope == 'guidance' else examples(root)
     if not only_examples: records.extend(documents(root, include_research=scope in ('research','all')))
     eligible = []
     for row in records:
@@ -285,18 +328,28 @@ def search(query='', *, limit=5, scope='default', family=None, kind=None,
         if scale and scale != row.get('scale'): continue
         if details is not None and ('details' if details else 'examples') not in row.get('legacy_groups', []): continue
         eligible.append(row)
-    terms = re.findall(r'\w+', query, re.UNICODE)
+    terms = re.findall(r'\w+', normalize(query), re.UNICODE)
     if query.strip() and not terms:
         return dict(total=0, results=[], truncated=False, engine='sqlite-fts5-bm25', scope=scope, diversification=diversify)
+    readmes = Counter(row['guide'] for row in records if 'anchor' not in row)
+    shared = frozenset(path for path, count in readmes.items() if count > 1)
     with sqlite3.connect(':memory:') as db:
-        db.execute('CREATE VIRTUAL TABLE knowledge USING fts5(title, metadata, lesson)')
+        db.execute("CREATE VIRTUAL TABLE knowledge USING fts5(title, metadata, lesson, body, tokenize='porter unicode61')")
         for row in eligible:
             metadata = ' '.join([row['id'], *row.get('aliases', []), *row.get('families', []),
                                  *row.get('subjects', []), *row.get('techniques', [])])
-            db.execute('INSERT INTO knowledge(title,metadata,lesson) VALUES(?,?,?)', (row['title'], metadata, row['lesson']))
+            body = body_text(row, shared) if row.get('kind') not in ('guide', 'report') and 'anchor' not in row else ''
+            db.execute('INSERT INTO knowledge(title,metadata,lesson,body) VALUES(?,?,?,?)',
+                       (normalize(row['title']), normalize(metadata), normalize(row['lesson']), normalize(body)))
         if terms:
-            expression = ' OR '.join('"'+t.replace('"', '""')+'"' for t in terms)
-            hits = db.execute("SELECT rowid, bm25(knowledge,5,2,1), snippet(knowledge,2,'[',']',' … ',48) FROM knowledge WHERE knowledge MATCH ? ORDER BY 2,rowid", (expression,)).fetchall()
+            quoted = ['"'+t.replace('"', '""')+'"' for t in terms]
+            required = [q for q, t in zip(quoted, terms) if t.casefold() not in STOPWORDS] or quoted
+            sql = ("SELECT rowid, bm25(knowledge,3,2,1,0.3), snippet(knowledge,2,'[',']',' … ',48) "
+                   "FROM knowledge WHERE knowledge MATCH ? ORDER BY 2,rowid")
+            every = db.execute(sql, (' AND '.join(required),)).fetchall() if len(required) > 1 else []
+            some = db.execute(sql, (' OR '.join(quoted),)).fetchall()
+            seen = {hit[0] for hit in every}
+            hits = every + [hit for hit in some if hit[0] not in seen]
         else:
             hits = [(i + 1, 0.0, row['lesson'][:400]) for i, row in enumerate(eligible)]
     retrieval_ranks = {hit[0]: rank for rank, hit in enumerate(hits, 1)}
@@ -315,3 +368,43 @@ def search(query='', *, limit=5, scope='default', family=None, kind=None,
     return dict(total=len(hits), results=results, truncated=len(hits)>limit,
                 engine='sqlite-fts5-bm25', scope=scope, diversification=diversify,
                 note='Local curated knowledge only; no automatic research fallback. Read the source and its limits. Search is not export approval.')
+
+
+def relative(path, root=None):
+    try:
+        return os.path.relpath(path, Path(root or ROOT))
+    except ValueError:
+        return str(path)
+
+
+def brief(row, root=None):
+    """One search result for an agent: what it is, its gist and where to read more."""
+    result = dict(id=row['id'], title=row['title'])
+    if row.get('scope') not in ('construction', 'guidance', 'tutorial'):
+        result['scope'] = row.get('scope')
+    text = row.get('excerpt') or row.get('lesson') or ''
+    result['gist'] = re.sub(r'\s+', ' ', text).strip()[:240]
+    if 'anchor' in row:
+        result['open'] = f"{relative(row['guide'], root)}:{row['line']}"
+    else:
+        for key in ('plan', 'generator', 'model', 'guide'):
+            if row.get(key):
+                result['open'] = relative(row[key], root)
+                break
+        if row.get('preview') or row.get('board'):
+            result['image'] = relative(row.get('board') or row['preview'], root)
+    return result
+
+
+def detail(row, root=None):
+    """`knowledge show`: the lesson or guide text and its files, without audit bookkeeping."""
+    if row.get('kind') in ('guide', 'guide-section'):
+        return dict(id=row['id'], title=row['title'], open=f"{relative(row['guide'], root)}:{row['line']}",
+                    text=row['lesson'])
+    keep = ('id', 'title', 'scope', 'kind', 'lesson', 'limits', 'families', 'subjects', 'techniques', 'scale',
+            'export_blocker')
+    result = {k: row[k] for k in keep if row.get(k) not in (None, [], '')}
+    files = {k: relative(row[k], root) for k in (*PATH_FIELDS, 'guide') if row.get(k)}
+    if files:
+        result['files'] = files
+    return result

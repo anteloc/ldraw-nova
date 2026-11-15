@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [{
+    "name": "window-wall.ldr",
+    "description": "Window frame and glass between brick columns under a lintel plate",
+    "steps": [
+      [{"id": "sill", "ref": "3710.dat", "colour": 19, "at": [0, 0, 0], "purpose": "1 x 4 plate carrying the window and both columns"}],
+      [{"id": "column-left", "ref": "3005.dat", "colour": 19, "on": {"to": "sill", "stud": 0}, "purpose": "Brick 1 x 1 on stud 0 (x = -30)"},
+       {"id": "column-right", "ref": "3005.dat", "colour": 19, "on": {"to": "sill", "stud": 3}, "purpose": "Brick 1 x 1 on stud 3 (x = 30)"},
+       {"id": "frame", "ref": "60592.dat", "colour": 15, "on": {"to": "sill", "stud": 1}, "purpose": "Window 1 x 2 x 2 on the two middle studs; it is two bricks (48 LDU) tall"}],
+      [{"id": "glass", "ref": "60601.dat", "colour": 47, "at": [0, -48, 0], "purpose": "Glass shares the frame's origin: the frame sits 48 LDU above the sill top"},
+       {"id": "column-left-2", "ref": "3005.dat", "colour": 19, "on": {"to": "column-left"}, "purpose": "Second course"},
+       {"id": "column-right-2", "ref": "3005.dat", "colour": 19, "on": {"to": "column-right"}, "purpose": "Second course"}],
+      [{"id": "lintel", "ref": "3710.dat", "colour": 19, "on": {"to": "frame", "socket": 1}, "purpose": "Plate across the frame and both columns: socket 1 (x = -10) on the frame's first stud"}]
+    ]
+  }]
+}

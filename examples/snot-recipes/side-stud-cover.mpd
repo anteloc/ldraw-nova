@@ -1,0 +1,17 @@
+0 FILE side-stud-cover.ldr
+0 Side-stud course covered by a 1 x 4 tile
+0 Name: side-stud-cover.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // base: 1 x 4 plate under the course
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // core: Four studs facing its -Z face
+1 71 0 -24 0 1 0 0 0 1 0 0 0 1 30414.dat
+0 STEP
+0 // cap: Plate locking the course from above
+1 71 0 -32 0 1 0 0 0 1 0 0 0 1 3710.dat
+0 STEP
+0 // skin: Tile on all four side studs; the default turn covers the most studs
+1 15 0 -14 -18 1 0 0 0 0 -1 0 1 0 2431.dat
+0 NOFILE

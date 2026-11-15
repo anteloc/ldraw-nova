@@ -23,6 +23,11 @@ from .connectivity import connection_report, metadata_summary, snap_report, appl
 from .workflow import build_checked, check_model, model_name, review as review_model
 
 
+SPECIALIST = {"discover", "spaceship", "manual", "mechanism", "catalog", "design", "part-board", "index",
+              "export-parts-descriptions", "spec", "sections", "study", "extract", "matrix", "profiles", "inspect",
+              "bom", "compare-bom", "snap", "connectors", "cad-check", "glb"}
+
+
 def positive(value):
     value = int(value)
     if value <= 0:
@@ -43,6 +48,12 @@ def geometry_settings(args):
         raise ValueError("--offset must be nonnegative")
     return dict(detail=args.detail, contacts=args.contacts, output_limit=args.limit,
                 pair_limit=args.limit, offset=args.offset, instance_limit=args.max_instances)
+
+
+def output_options(c):
+    shown = c.add_mutually_exclusive_group()
+    shown.add_argument("--full", action="store_true", help="Print the complete report instead of the summary (--report always saves it)")
+    shown.add_argument("--quiet", action="store_true", help="Print one line: verdict, counts and the first error")
 
 
 def scope_options(c):
@@ -70,13 +81,14 @@ def flex_settings(args):
 
 def parser():
     p = argparse.ArgumentParser(
-        description="Build and review LDraw assemblies. Reports are JSON.",
-        epilog="Start: build MODEL.plan.json, then review MODEL.mpd. Or review MODEL.plan.json in one command. See AGENTS.md.")
+        description="Build and review LDraw assemblies from JSON plans. Reports are JSON.",
+        epilog="Start with AGENTS.md: build PLAN, then review PLAN --outdir DIR. Specialist commands are hidden "
+               "from this list and documented in their guides: " + ", ".join(sorted(SPECIALIST)) + ".")
     p.add_argument("--library", help="LDraw parts library root (default LDRAW_DIR, then LDRAWDIR, then data/ldraw)")
     shadows = p.add_mutually_exclusive_group()
     shadows.add_argument("--shadow", action="append", help="LDCad directory/zip/csl; repeatable, replaces LDRAW_SHADOW or ./data/offLibShadow")
     shadows.add_argument("--no-shadow", action="store_true", help="Disable external shadow metadata")
-    commands = p.add_subparsers(dest="command", required=True)
+    commands = p.add_subparsers(dest="command", required=True, metavar="COMMAND")
     c = commands.add_parser("flex", help="Synthesize flexible MPD assets with lsynth-nova")
     flex = c.add_subparsers(dest="flex_command", required=True)
     flex.add_parser("types", help="List synthesis types, products and constraint parts")
@@ -111,12 +123,14 @@ def parser():
     c = commands.add_parser("review", help="Build if needed, check geometry, render and compare BOMs in one folder")
     c.add_argument("file", help="JSON plan or existing MPD/LDR assembly")
     c.add_argument("--outdir", help="Dedicated artifact directory (default: SOURCE-review beside input)")
-    c.add_argument("--force", action="store_true", help="Replace an unchanged generated review directory")
+    c.add_argument("--force", action="store_true", help="Recompute even when the source and options are unchanged (a generated bundle is replaced either way)")
     c.add_argument("--no-render", action="store_true", help="Run Python checks and BOM only; rendering/comparison stay explicitly skipped")
+    c.add_argument("--draft", action="store_true", help="Also render a model that fails its checks, to see what is wrong")
     c.add_argument("--views", nargs="+", default=["home", "top", "front"])
     c.add_argument("--timeout", type=positive, default=90)
     scope_options(c)
     geometry_options(c, detail="summary")
+    output_options(c)
     c = commands.add_parser("examples", help="Find curated examples across families")
     c.add_argument("query", nargs="?", default="")
     c.add_argument("--limit", type=positive, default=5)
@@ -124,21 +138,24 @@ def parser():
     c.add_argument("--details", action="store_true")
     c.add_argument("--family", help="Example family; validated when examples are searched")
     c.add_argument('--diversify', choices=['source','none'], help='Spaceship default: interleave source models; none preserves relevance order')
-    from .knowledge import SCOPES
+    from .knowledge import SCOPES, SEARCH_SCOPES
     c.add_argument("--scope", choices=SCOPES, default="default")
+    c.add_argument("--full", action="store_true", help="Every recorded field, including hashes and audit pointers")
     c = commands.add_parser("knowledge", help="Search local agent guidance and registered examples without network access")
     knowledge = c.add_subparsers(dest="knowledge_command", required=True)
-    k = knowledge.add_parser("search", help="Rank source sections with SQLite BM25")
+    k = knowledge.add_parser("search", help="Rank lessons and guide sections; documents with every query word first")
     k.add_argument("query")
     k.add_argument("--limit", type=positive, default=5)
-    k.add_argument("--scope", choices=SCOPES, default="default")
+    k.add_argument("--scope", choices=SEARCH_SCOPES, default="default", help="guidance: guide sections only")
+    k.add_argument("--full", action="store_true", help="Every recorded field, including hashes and audit pointers")
     k.add_argument("--family")
     k.add_argument("--subject")
     k.add_argument("--technique")
     k.add_argument('--diversify', choices=['source','none'], help='Spaceship family defaults to source diversity; otherwise relevance order')
-    k = knowledge.add_parser("show", help="Resolve a canonical example ID or qualified legacy alias")
+    k = knowledge.add_parser("show", help="Read a lesson (ID or qualified alias) or a guide section (path#anchor from search)")
     k.add_argument("id")
     k.add_argument("--family")
+    k.add_argument("--full", action="store_true", help="Every recorded field, including hashes and audit pointers")
     c = commands.add_parser("discover", help="Find, measure and visually review parts, source models and submodels")
     discovery = c.add_subparsers(dest="discovery_command", required=True)
     d = discovery.add_parser("index", help="Build a local typed index from the three Jev fields and actual source headers")
@@ -334,9 +351,10 @@ def parser():
     c.add_argument('refs', nargs='+')
     c = commands.add_parser('export-parts-descriptions', help='Create the full ignored TSV snapshot for regex search')
     c.add_argument('--force', action='store_true', help='Replace an existing description snapshot')
-    c = commands.add_parser("part", help="Inspect one real part's metadata, local bounds and connectors")
+    c = commands.add_parser("part", help="One part's origin, body, and studs/sockets by face (for on: placements)")
     c.add_argument("code")
-    c.add_argument("--limit", type=positive, default=30, help="Connector output limit (total is always reported)")
+    c.add_argument("--full", action="store_true", help="Complete metadata and every connector record")
+    c.add_argument("--limit", type=positive, default=30, help="With --full: connector output limit (total is always reported)")
     c = commands.add_parser("colours", help="Look up codes in the installed LDConfig.ldr")
     c.add_argument("query", nargs="?", default="")
     c = commands.add_parser("spec", help="Search the mandatory PDF or retrieve a 1-based page")
@@ -369,14 +387,23 @@ def parser():
     c.add_argument("--output", help="MPD path (default: NAME.mpd beside NAME.plan.json or NAME.json)")
     c.add_argument("--report")
     c.add_argument("--force", action="store_true", help="Replace an existing MPD after successful validation")
-    geometry_options(c)
+    geometry_options(c, detail="summary")
+    output_options(c)
+    individual = {"validate": "Check an MPD's source and, with --geometry, its assembly geometry",
+                  "inspect": "List placements, contacts and overlap candidates of an MPD",
+                  "bom": "Physical parts list of an MPD",
+                  "compare-bom": "Compare an MPD's parts list with a LeoCAD CSV",
+                  "snap": "Search connector-based poses for one occurrence of an MPD",
+                  "connectors": "List one occurrence's connectors in world coordinates"}
     for command in ["validate", "inspect", "bom", "compare-bom", "snap", "connectors"]:
-        c = commands.add_parser(command)
+        c = commands.add_parser(command, help=individual[command])
         c.add_argument("file")
         c.add_argument("--report")
         scope_options(c)
         if command in {"validate", "inspect"}:
-            geometry_options(c)
+            geometry_options(c, detail="summary" if command == "validate" else "full")
+        if command == "validate":
+            output_options(c)
         if command == "compare-bom":
             c.add_argument("--csv", required=True, help="LeoCAD-exported BOM")
         if command == "validate":
@@ -415,6 +442,8 @@ def parser():
     c.add_argument("file")
     c.add_argument("--output", required=True)
     c.add_argument("--timeout", type=positive, default=180)
+    # Hide specialist commands from the top-level list; they still parse and run.
+    commands._choices_actions = [a for a in commands._choices_actions if a.dest not in SPECIALIST]
     return p
 
 
@@ -465,15 +494,25 @@ def run(args):
             raise ValueError('Geometry options require --asset; run flex build first')
         return report, 0 if report['checks_passed'] else 1
     if args.command == "knowledge":
-        from .knowledge import search, resolve
+        from .knowledge import brief, detail, search, resolve
         if args.knowledge_command == "show":
-            return resolve(args.id, family=args.family), 0
-        return search(args.query, limit=args.limit, scope=args.scope, family=args.family,
-                      subject=args.subject, technique=args.technique, diversify=args.diversify), 0
+            row = resolve(args.id, family=args.family)
+            return (row if args.full else detail(row)), 0
+        found = search(args.query, limit=args.limit, scope=args.scope, family=args.family,
+                       subject=args.subject, technique=args.technique, diversify=args.diversify)
+        if args.full:
+            return found, 0
+        return dict(total=found['total'], engine=found['engine'], results=[brief(r) for r in found['results']],
+                    next='knowledge show ID reads one result; --full lists every field'), 0
     if args.command == "examples":
         from .examples import search_examples
+        from .knowledge import brief
         if args.details and args.scale:raise ValueError('--scale applies to building examples')
-        return search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family,scope=args.scope,diversify=args.diversify),0
+        found = search_examples(args.query,limit=args.limit,scale=args.scale,details=args.details,family=args.family,scope=args.scope,diversify=args.diversify)
+        if args.full:
+            return found, 0
+        return dict(total=found['total'], results=[brief(r) for r in found['results']],
+                    next='knowledge show ID reads one example; --full lists every field'), 0
     if args.command == "doctor":
         from .flex import availability
         library = library_path(args.library)
@@ -552,7 +591,8 @@ def run(args):
     if args.command == 'review':
         return review_model(args.file, parts, library, outdir=args.outdir, force=args.force,
                             section=args.section, colour=args.colour, views=args.views,
-                            renders=not args.no_render, timeout=args.timeout, **geometry_settings(args))
+                            renders=not args.no_render, timeout=args.timeout, draft=args.draft,
+                            **geometry_settings(args))
     if args.command in {'manual', 'mechanism'}:
         from .manuals import prepare_manual, review_manual, export_manual
         command = getattr(args, args.command + '_command')
@@ -805,6 +845,22 @@ def run(args):
         from .catalog import resolve_part
         code = (resolve_part(args.code,parts) if args.code.startswith('@') else args.code).casefold().removesuffix(".dat")
         part = parts.part(code=code)
+        if not args.full:
+            from .placement import facts
+            from .flex_plan import ports
+            result = facts(parts, code)
+            replacement = getattr(part.metadata, 'replacement', None)
+            if replacement or part.description.startswith('~Moved to'):
+                result['moved_to'] = str(replacement or part.description.split()[-1]).removesuffix('.dat') + '.dat'
+            result['on_profile'] = code in profiles()
+            try:
+                found = ports(parts, code)
+                if found:
+                    result['flex_ports'] = found
+            except ValueError:
+                pass
+            result['note'] = 'Local LDU, -Y up. on: {to, face, stud, socket} counts in this order. --full: every connector.'
+            return result, 0
         g = parts.geometry(code)
         from .flex_plan import ports
         try:
@@ -831,6 +887,11 @@ def run(args):
         report.update(profile="assembly", output=str(target), written=report['checks_passed'])
         if report['written']:
             atomic_write(target, text)
+        elif text:
+            # Never replace the delivered MPD with a failing build; keep a draft to render and inspect.
+            draft = target.with_name(target.stem + '.draft.mpd')
+            atomic_write(draft, text)
+            report['draft'] = str(draft)
         return report, 0 if report['checks_passed'] else 1
     assembly = args.command == "validate" and args.profile == "assembly"
     model, diagnostics = validate_file(args.file, parts, assembly=assembly, section=args.section, colour=args.colour,
@@ -888,19 +949,36 @@ def run(args):
     return report, 1 if failed else 0
 
 
+SUMMARIZED = {"build", "review", "validate"}
+
+
 def main():
+    from . import telemetry
+    from .report import one_line, schema_diagnostic, summarize, text
+    start = telemetry.started()
     args = parser().parse_args()
     try:
         report, status = run(args)
-    except (OSError, ValueError, PartError, RecursionError, sqlite3.Error, subprocess.SubprocessError, jsonschema.ValidationError) as exc:
+    except jsonschema.ValidationError as exc:
+        diagnostic = schema_diagnostic(exc, getattr(exc, "nova_file", None))
+        report, status = dict(checks_passed=False, error=diagnostic["message"], error_type=type(exc).__name__,
+                              failed_stage="schema", diagnostics=[diagnostic]), 2
+    except (OSError, ValueError, PartError, RecursionError, sqlite3.Error, subprocess.SubprocessError) as exc:
         report, status = dict(checks_passed=False, error=str(exc), error_type=type(exc).__name__), 2
         from .identity import BuildError
         if isinstance(exc, BuildError):
             report.update(failed_stage=exc.stage, diagnostics=exc.diagnostics)
-    text = dumps(report) + "\n"
+    report = jsonable(report)
     if getattr(args, "report", None):
-        atomic_write(args.report, text)
-    print(text, end="")
+        atomic_write(args.report, text(report) + "\n")
+    shown = report
+    if (args.command in SUMMARIZED and isinstance(report, dict) and not getattr(args, "full", False)
+            and getattr(args, "detail", "summary") != "full"):
+        shown = one_line(report) if getattr(args, "quiet", False) else summarize(report)
+    output = text(shown) + "\n"
+    print(output, end="")
+    telemetry.record(sys.argv[1:], start, stdout_bytes=len(output.encode()), status=status,
+                     error_type=report.get("error_type") if isinstance(report, dict) else None)
     return status
 
 

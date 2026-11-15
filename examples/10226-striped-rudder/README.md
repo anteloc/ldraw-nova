@@ -22,7 +22,7 @@ Read the registered construction lesson and its linked audit before adapting the
     "legacy_groups": [
       "details"
     ],
-    "lesson": "Striped vertical tail rudder and handle-bearing column are visible in actual parent. No radial engine. Rename semantic package; retain source coordinate and hinge limits.",
+    "lesson": "Striped vertical tail rudder built sideways and hung on a handle-bearing column, as in the actual parent. Retain the source coordinates and hinge limits. (The legacy alias names a radial engine; the entry is the rudder.)",
     "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/submodel-audit.json",
     "subjects": [

@@ -7,7 +7,7 @@ dimensions to narrow choices and existing tools for interface/geometry evidence.
 
 ## Inspect before placing
 
-After identifying a candidate, run `./ldraw-agent part 3001 --limit 30`. It returns actual library metadata, origin-relative bounds, dimensions, stud positions, connectors, provenance, and completeness. Bounds include decorative geometry and stud height; **bounding-box height is not stacking height**. Do not infer axes from the part description alone.
+After identifying a candidate, run `./ldraw-agent part 3001`. It states where the origin sits on the body, the body box without studs, the full bounds, and the studs and sockets on each face in the order connector seats count them. `--full` adds library metadata, every connector record, provenance and completeness. Bounds include decorative geometry and stud height; **bounding-box height is not stacking height**. Do not infer axes from the part description alone.
 
 Use `catalog parts QUERY --category NAME` for metadata discovery; general categories are fallible hints. Use `dimensions PART...` for cached extents and request `--measure` on a narrowed catalog query when actual geometry comparison is needed. Category `ldu_y`, `plates_y` and rounded `studs_*` fields describe extents, not connection planes. For example, the supplied `3659` arch cache reports Y=37.41191 LDU while the installed file measures 28. The [visual-design guide](design-models.md) explains selection boards, palettes and supported detail recipes. Reserve openings and overhangs before adding them; a new ornament must be checked in its containing module too.
 
@@ -25,7 +25,7 @@ y_upper = y_lower - height_of_upper_body
 
 A plate placed on a brick at Y=0 goes at Y=-8. A brick placed on that plate goes at Y=-32. Do not subtract the lower part's height or add a 4-LDU gap for the stud. Studs enter the upper part's sockets, so their bounding boxes legitimately overlap.
 
-The plan's `on` field implements this rule for the curated parts in `./ldraw-agent profiles`. `offset_studs: [x,z]` is measured in **the supporting part's local axes**, times 20 LDU. `yaw` describes the new part's orientation in the containing section, independently of the support's yaw. `on` requires an earlier placement ID in the same section and at least one aligned stud grid point. It is not available for unknown part profiles, tiles, slopes, rotated sideways parts, or submodel references; use inspection and explicit `at` coordinates instead.
+The plan's `on: "ID"` form implements this rule for the curated parts in `./ldraw-agent profiles`; `on: {"to": "ID"}` seats any part with sockets on any part with studs, on any face (see the [plan reference](../reference/plans.md#choose-a-placement)). `offset_studs: [x,z]` is measured in **the supporting part's local axes**, times 20 LDU. `yaw` describes the new part's orientation in the containing section, independently of the support's yaw. `on` requires an earlier placement ID in the same section and at least one aligned stud grid point. The ID form is not available for unknown part profiles, tiles, slopes, rotated sideways parts, or submodel references; use the connector form for those.
 
 Half-stud offsets are 10 LDU. A centred 1×1 over a 2×2 needs an X/Z offset to an actual stud, e.g. `[0.5,0.5]`, not `[0,0]`. Side-by-side bricks touching walls have no clutch connection; bridge them with a plate or a correctly mated connector. Place long plates across seams for connected assemblies.
 

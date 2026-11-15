@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [{
+    "name": "headlight-lamp.ldr",
+    "description": "Headlight brick carrying a round lens on its recessed side stud",
+    "steps": [
+      [{"id": "lamp", "ref": "4070.dat", "colour": 15, "at": [0, 0, 0], "purpose": "Headlight brick; its side stud is recessed 4 LDU into the -Z face"}],
+      [{"id": "lens", "ref": "98138.dat", "colour": 46, "on": {"to": "lamp", "face": "-Z"}, "purpose": "Trans-yellow round tile; it sits on the recessed stud, 4 LDU proud of the face"}]
+    ]
+  }]
+}

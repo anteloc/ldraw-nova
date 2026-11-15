@@ -204,7 +204,13 @@ def validate_text(text, parts, *, name="model.mpd", assembly=True, raw=None, ins
                     if "/" in normalized(piece.reference) or str(filetype) not in {"part", "shortcut"}:
                         problems.append(issue("assembly.library_internal", "Place physical library parts, not subparts or primitives.", line=line, section=sub.name))
                     if description.startswith(("~", "=")):
-                        problems.append(issue("part.alias_or_internal", "Inspect this alias/internal part and prefer a current physical part.", line=line, section=sub.name, severity="warning"))
+                        moved = getattr(part.metadata, "replacement", None) or (
+                            description.split()[-1] if description.startswith("~Moved to") else None)
+                        replacement = str(moved).removesuffix(".dat") + ".dat" if moved else None
+                        message = (f"{piece.part}.dat has moved to {replacement}; use {replacement}." if replacement else
+                                   "Inspect this alias/internal part and prefer a current physical part.")
+                        problems.append(issue("part.alias_or_internal", message, line=line, section=sub.name,
+                                              severity="warning", **({"replacement": replacement} if replacement else {})))
     if not any(p["severity"] == "error" for p in problems):
         occurrences = []
         for occurrence in assembly_view(model).iter_occurrences():

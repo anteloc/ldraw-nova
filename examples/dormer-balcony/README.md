@@ -50,7 +50,7 @@ Recreate the board with `./ldraw-xray board run examples/dormer-balcony/board/re
     "legacy_groups": [
       "examples"
     ],
-    "lesson": "Sloped blue dormer/window bay, turquoise wall and black ornamental railing with brown top. Correct turquoise-railing description.",
+    "lesson": "Sloped blue dormer/window bay, turquoise wall and black ornamental railing with brown top.",
     "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/reference-audit.json",
     "scale": "minifigure",

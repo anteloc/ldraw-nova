@@ -16,19 +16,33 @@ Refs can be numeric filenames (`3003.dat`), module names (`pillar.ldr`) or categ
 | Position mode | Use it for | Example |
 |---|---|---|
 | `at` | Explicit coordinates in the containing section | `"at": [0, -24, 40]` |
-| `on` | Stacking supported upright bricks/plates on an earlier placement | `"on": "base"` |
+| `on` (ID) | Stacking curated upright bricks/plates on an earlier placement | `"on": "base"` |
+| `on` (object) | Seating any part by a socket on a stud of another part, on any face | `"on": {"to": "core", "face": "-Z", "stud": 0}` |
 | `attach` | Aligning authored module anchors | `"attach": {"to": "lower", "anchor": "seat", "using": "base"}` |
-| `snap` | Aligning actual connector evidence on a part/submodel | `"snap": {"to": "base", "near": [0, -8, 0]}` |
+| `snap` | Searching actual connector evidence on a part/submodel | `"snap": {"to": "base", "near": [0, -8, 0]}` |
 
-`at`, `on` and `snap` allow `yaw` (degrees about +Y) or a proper 3×3 `matrix`, never both. `attach` sets the orientation itself. Use `./ldraw-agent matrix y 90` or `rotation("y", 90)` to compute rotations. Coordinates use LDU: negative Y is up, stud pitch is 20, brick body height is 24, plate body height is 8.
+Orientation: `at` accepts one of `yaw` (degrees about +Y), `orient` or a proper 3×3 `matrix`. `orient: {"up": D, "x": D}` points the part's studs (local -Y) toward `up` and its local +X toward `x`; directions are `+X -X +Y -Y +Z -Z up down` or vectors, and `x` defaults to +X (or +Z when `up` is along X). `on` (ID) requires upright parts, so only `yaw` applies there. `attach` and connector seats set the orientation themselves; `snap` takes `yaw` or `matrix` as its starting orientation. Coordinates use LDU: negative Y is up, stud pitch is 20, brick body height is 24, plate body height is 8.
 
-`on` only supports the curated upright studded bricks/plates listed by `profiles`. Its optional `offset_studs: [x,z]` uses the support's axes. For example, a 1×1 above a centered 2×2 needs an actual stud offset such as `[0.5,0.5]`. For other parts, inspect their origin and connectors, then use `at`, anchors or snapping.
+`on` (ID) supports only the curated upright studded bricks/plates listed by `profiles`. Its optional `offset_studs: [x,z]` uses the support's axes. For example, a 1×1 above a centered 2×2 needs an actual stud offset such as `[0.5,0.5]`.
 
-`attach` aligns both named frames; optional `offset` is in the supporting anchor's axes. Frames contain `at` and an optional proper `matrix`. Anchors describe intended interfaces, so verify the actual mating parts. The [module guide](plans.md#3-define-module-contracts) has a complete floor-to-floor example.
+`on` (object) seats the placed part on one stud of the support:
+
+| Field | Meaning |
+|---|---|
+| `to` | an earlier placement in this section, or a path such as `module/part` to a part inside a placed module |
+| `face`, `stud` | the support's stud: the face in the support part's own frame (default `-Y`, the top) and its index on that face, in the order `part` lists them (default 0) |
+| `socket`, `socket_face` | the placed part's socket and an optional face filter (default socket 0) |
+| `socket_at`, `socket_axis` | for a placed section: the point of the section that sits on the stud, and the direction its underside faces (default `+Y`) |
+| `roll` | degrees about the seated socket's axis, right-handed like `yaw`; omitted, the quarter turn that covers the most studs of the support |
+| `orient` (beside `on`) | an explicit orientation instead of `roll`; it must make the socket face the stud |
+
+The builder computes the origin `stud - R * socket` from connector data (radius-6 studs and sockets after the contact checker's frame adaptation). It fails with the available faces, studs or sockets when a selection does not exist. The complete build report lists each seat under `seats` with `mated`, the number of the support's studs the part covers.
+
+`attach` aligns both named frames; optional `offset` is in the supporting anchor's axes. Frames contain `at` and an optional proper `matrix`. Anchors describe intended interfaces, so verify the actual mating parts; see [module contracts](#define-module-contracts).
 
 `snap` moves the whole selected part/submodel and checks candidate collisions. It supports explicit leaf/feature selectors and a candidate index; see the [snapping guide](connections.md). Missing metadata or eligible candidates fail explicitly rather than inventing a connection.
 
-With `at`, `repeat: {"count": 8, "step": [40,0,0]}` repeats in the containing section's axes. IDs become `id-0`, `id-1`, etc. For conditional patterns, use Python loops instead.
+With `at`, `repeat: {"count": 8, "step": [40,0,0]}` repeats in the containing section's axes; IDs become `id-0`, `id-1`, and so on. `"count": [n, m]` with two step vectors makes a grid with IDs `id-i-j` at `i * step[0] + j * step[1]`. For conditional patterns, use Python loops instead.
 
 ## Grow the model when needed
 
@@ -62,7 +76,7 @@ For larger procedural patterns, see the [Copper Lane generator](../../../example
 
 The builder emits UTF-8 without BOM, CRLF, headers, comments and steps. It supports rigid placement of real parts, including SNOT orientations; physical verification has narrower coverage. New part geometry, model polygons, textures/data and local colours need the additional review described in [LDraw rules](ldraw.md) and [validation](validation.md).
 
-## 3. Define module contracts
+## Define module contracts
 
 Before populating parts, record each module's purpose, approximate envelope, local origin, attachment frames, inherited palette, construction steps, and review status. For a building, start with the street/base, then separate each floor, façade detail, roof, interior and landscaping. Keep the main section short enough to read in one screen.
 
@@ -89,7 +103,7 @@ A containing section can place a floor and attach another:
 
 The builder solves `T_moving = T_support × A_support × T_offset × inverse(A_moving)`. All matrices act on column vectors. Optional `attach.offset` is in the supporting anchor's axes. The target ID must already exist in this section, including earlier steps. `attach` sets both position and orientation: do not combine it with `at`, `on`, `yaw`, `matrix`, or `repeat`. Anchors are authored assembly interfaces, **not inferred mechanical connectors**. Check the parts at each interface.
 
-## 4. Compose plans and repeat structure
+## Compose plans and repeat structure
 
 A main plan can use `"includes": ["buildings.plan.json"]`; that plan can include `details.plan.json`. Paths resolve relative to the file declaring them, each file loads once, cycles fail, and duplicate section names fail. The first section of the root plan remains the MPD main. Each module retains its own author/licence unless it explicitly supplies section-level values.
 
@@ -104,7 +118,7 @@ For a regular row:
 
 This expands to IDs `roof-slope-0` through `roof-slope-7`. `step` is a translation in the containing section's axes, in LDU; it does not rotate with `yaw`. Repetition is supported with `at` only. Use an included submodel for a repeated multi-part construction. Use a small Python generator for conditional openings, different floor counts, brick bonds and parameterized patterns; serialize through `build_plan`, not a handwritten LDraw parser.
 
-## Reproducible plans
+## Snap in a plan
 
 Build the supplied example:
 
@@ -112,7 +126,7 @@ Build the supplied example:
 ./ldraw-agent build examples/plan-basics/shadow-snap.plan.json --output output/shadow-snap.mpd
 ```
 
-Use `snap` as the fourth placement mode alongside `at`, `on`, and `attach`:
+A plan snap searches connector candidates instead of naming one stud:
 
 ```json
 {"id":"cap", "ref":"cap.ldr", "colour":1,

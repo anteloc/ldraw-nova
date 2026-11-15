@@ -2,7 +2,7 @@
 
 Partition by purpose, interfaces and repair boundaries: chassis/body, core/skin, frame/tool, floor/roof or figure limbs as appropriate. MPD hierarchy is authoring structure; it does not by itself establish rigid bodies or physical connections.
 
-Before filling a module, record its local origin, envelope, mating parts, attachment frames, palette inheritance and review status. Reserve openings and expose the connectors that neighbouring modules need. Keep a parent section readable. [Plan anchors and includes](../reference/plans.md#3-define-module-contracts) compose full frames; aligned anchors are intentions that still need real joints.
+Before filling a module, record its local origin, envelope, mating parts, attachment frames, palette inheritance and review status. Reserve openings and expose the connectors that neighbouring modules need. Keep a parent section readable. [Plan anchors and includes](../reference/plans.md#define-module-contracts) compose full frames; aligned anchors are intentions that still need real joints.
 
 Use `study FILE --detail full` for hierarchy, reachability, actual parts and source diagnostics. Section names and counts can be misleading: see the preserved [Bookshop source audit](../../reports/bookshop-source-audit.md). `study` is informational, so read `source_checks_passed`. Use [reference discovery](find-references.md) for attributed extraction and dependency boundaries.
 

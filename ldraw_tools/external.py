@@ -206,34 +206,49 @@ def prepare_glb(path, library, output, parts, *, timeout=180):
                 note="Preview maps unresolved colour 16 to Pearl Dark Grey. In source, 16 means inherited current colour. MPD remains authoritative.")
 
 
+RENDER_JOBS = 4  # independent LeoCAD processes; each writes its own temporary file
+
+
 def render(path, library, outdir, *, views=("home", "top", "front"), timeout=90, bounds=None):
+    from concurrent.futures import ThreadPoolExecutor
     outdir = Path(outdir).resolve()
     outdir.mkdir(parents=True, exist_ok=True)
-    results = []
+    if any(view not in {"home", "front", "back", "left", "right", "top", "bottom"} for view in views):
+        raise ValueError(f"Unknown view in {list(views)}")
     # Unique temporary outputs ensure an old artifact cannot make a failed run pass.
     with TemporaryDirectory(prefix=".render-", dir=outdir) as temp:
         path,library,embedded_names=cad_source(path,library,temp)
-        for view in views:
-            if view not in {"home", "front", "back", "left", "right", "top", "bottom"}:
-                raise ValueError(f"Unknown view {view}")
+        source = str(Path(path).resolve())
+
+        def image(view):
             target = Path(temp) / f"{view}.png"
             command = [tool_path("leocad") or "leocad", "-l", str(library), "-i", str(target), "-w", "1000", "-h", "800",
                        "--aa-samples", "4", "--shading", "full", "--line-width", "1",
-                       "--no-highlight", "--no-fade-steps", str(Path(path).resolve())]
-            if bounds is None:
-                command += ["--viewpoint", view]
-            if bounds is not None:
-                command += view_camera(bounds, view)
+                       "--no-highlight", "--no-fade-steps", source]
+            command += ["--viewpoint", view] if bounds is None else view_camera(bounds, view)
             result = subprocess.run(command, capture_output=True, text=True, timeout=timeout)
             if result.returncode or not target.exists():
                 raise ValueError(f"LeoCAD render failed: {result.stdout}\n{result.stderr}")
+            return target
+
+        def parts_list():
+            bom = Path(temp) / "leocad-bom.csv"
+            result = subprocess.run([tool_path("leocad") or "leocad", "-l", str(library), "-csv", str(bom), source],
+                                    capture_output=True, text=True, timeout=timeout)
+            if result.returncode or not bom.exists():
+                raise ValueError(f"LeoCAD BOM failed: {result.stdout}\n{result.stderr}")
+            return bom
+
+        with ThreadPoolExecutor(max_workers=RENDER_JOBS) as pool:
+            images = [pool.submit(image, view) for view in views]
+            listed = pool.submit(parts_list)
+            targets = [job.result() for job in images]
+            bom = listed.result()
+        results = []
+        for target in targets:
             destination = outdir / target.name
             target.replace(destination)
             results.append(str(destination))
-        bom = Path(temp) / "leocad-bom.csv"
-        result = subprocess.run([tool_path("leocad") or "leocad", "-l", str(library), "-csv", str(bom), str(Path(path).resolve())], capture_output=True, text=True, timeout=timeout)
-        if result.returncode or not bom.exists():
-            raise ValueError(f"LeoCAD BOM failed: {result.stdout}\n{result.stderr}")
         restore_bom_names(bom,embedded_names)
         bom.replace(outdir / bom.name)
     return dict(images=results, bom=str(outdir / "leocad-bom.csv"), embedded_definitions_materialized=len(embedded_names),

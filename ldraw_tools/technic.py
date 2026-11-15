@@ -141,6 +141,26 @@ def fit(first, second):
                 friction=male.profile.friction)
 
 
+def fit_failure(first, second):
+    """The first fit rule an aligned pair fails, in words an agent can act on."""
+    if not eligible(first, second):
+        return 'family: a pin needs a pin hole; an axle needs an axle hole or a pin hole'
+    male, hole = (first, second) if first.kind in MALE else (second, first)
+    residual = connection_residual(male, hole)
+    if residual.distance > TOL or residual.alignment < math.cos(math.radians(0.5)):
+        return 'alignment: the axes are offset or tilted'
+    if hole.kind is Kind.AXLE_HOLE and residual.roll_alignment < math.cos(math.radians(0.5)):
+        return 'keyed roll: the axle cross does not line up with the cross hole'
+    offset = (hole.position - male.position).dot(male.axis)
+    low, high = offset - hole.length/2, offset + hole.length/2
+    if hole.length <= TOL or low < -male.length/2-TOL or high > male.length/2+TOL:
+        return 'engagement: the hole runs past the end of the pin or axle; move it along the axis or use a longer one'
+    if male.kind is Kind.PIN and not (abs(offset) <= TOL and abs(hole.length-male.length) <= TOL or
+                                      hole.length == 10 and abs(abs(offset)-5) <= TOL):
+        return 'pin grip: centre the pin in a full-depth hole, or use two half-depth layers'
+    return None
+
+
 def nearby_ports(inspection):
     """Conservative broad phase for seating and contact checks.
 

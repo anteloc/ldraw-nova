@@ -123,7 +123,7 @@ original design, not a recreation of any set.
     "legacy_groups": [
       "examples"
     ],
-    "lesson": "Three-storey composition: green cafe beneath two tan apartment shells, roof terrace and planted pavement. Correct README which says three apartment storeys above cafe; retain facade/scene assembly scope. Glazed green shop with striped awning. Additional top view confirms rear counter, very abstract block espresso prop, two round pedestal tables and four small stools; no stair/circulation route.",
+    "lesson": "Three-storey composition: green cafe beneath two tan apartment shells, roof terrace and planted pavement. Glazed green shop with striped awning. Additional top view confirms rear counter, very abstract block espresso prop, two round pedestal tables and four small stools; no stair/circulation route.",
     "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/standalone-audit.json",
     "model": "examples/copper-bean/copper-bean.mpd",
@@ -148,7 +148,7 @@ These observations refer to the source hashes in the registrations. They correct
 
 | Source section | Opened-image observation |
 |---|---|
-| `copper-bean.ldr` | Three-storey composition: green cafe beneath two tan apartment shells, roof terrace and planted pavement. Correct README which says three apartment storeys above cafe; retain facade/scene assembly scope. |
+| `copper-bean.ldr` | Three-storey composition: green cafe beneath two tan apartment shells, roof terrace and planted pavement. |
 | `bean-shop.ldr` | Glazed green shop with striped awning. Additional top view confirms rear counter, very abstract block espresso prop, two round pedestal tables and four small stools; no stair/circulation route. |
 | `display4-15.ldr` | Tall white display frame with clear pane; two actual shop-front instances. Retain fitted glazing lesson with matching part IDs. |
 | `door4-15-15-glazed.ldr` | White glazed panel door and knob; reviewed in shop front and second-flat front. These are actual instances of same fitted door. |

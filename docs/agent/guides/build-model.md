@@ -24,16 +24,17 @@ Save this as `output/stack.plan.json`:
 ```
 
 ```sh
+./ldraw-agent build output/stack.plan.json
 ./ldraw-agent review output/stack.plan.json
 ```
 
-`build` writes `output/stack.mpd`. `review` puts checks, a frozen model copy, BOMs and previews in `output/stack-review/`. You can also run `review output/stack.plan.json` directly. Open the previews before accepting the construction. For a rebuild, add `--force`; explicit `--output` on `build` and `--outdir` on `review` override the defaults.
+`build` writes `output/stack.mpd` and prints a summary; a failing build writes `output/stack.draft.mpd` instead and keeps any earlier `stack.mpd`. `review` rebuilds the plan and puts checks, a frozen model copy, BOMs and previews in `output/stack-review/`. Open the previews before accepting the construction. Rerunning `review` on an unchanged plan reuses its bundle; a changed plan replaces it. Explicit `--output` on `build` and `--outdir` on `review` override the defaults.
 
-The upper plate's body is 8 LDU high, so `on` puts its origin at Y=-8. It does not add stud height. A different upper part requires its own body height; bounding-box height is not a stacking height.
+The upper plate's body is 8 LDU high, so `on` puts its origin at Y=-8. It does not add stud height. For parts outside the curated stacking profiles, and for any sideways part, use a connector seat: `"on": {"to": "base", "face": "-Y", "stud": 0}` (see the [SNOT card](../cards/snot.md)).
 
 ## Iterate with scoped evidence
 
-Build the smallest uncertain interface first. Run `./ldraw-agent review output/model.plan.json --no-render` while editing; use `--section NAME` for a local dependency closure. Repair the first failed prerequisite. After two unsuccessful local corrections, inspect the isolated interface and change the approach or available space.
+Build the smallest uncertain interface first. Run `./ldraw-agent review output/model.plan.json --draft` while editing to see a failing model, or `--no-render` for checks only; use `--section NAME` for a local dependency closure. The [checks card](../cards/checks.md) says what each diagnostic asks you to change. Repair the first failed prerequisite. After two unsuccessful local corrections, inspect the isolated interface and change the approach or available space.
 
 Finish with a whole-model `review` and open its views, including hidden joins and the underside. A section check excludes parent and sibling interactions. Keep the final model, editable source, source-bound reports, BOM comparison and image observations together. See [review models](review-models.md).
 

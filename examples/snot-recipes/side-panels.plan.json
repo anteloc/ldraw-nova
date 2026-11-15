@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [
+    {
+      "name": "side-panels.ldr",
+      "description": "One panel module built flat, seated on both sides of a studs-on-sides brick",
+      "steps": [
+        [{"id": "core", "ref": "52107.dat", "colour": 0, "at": [0, 0, 0], "purpose": "Two studs on -Z and two on +Z"}],
+        [{"id": "left", "ref": "door-panel.ldr", "colour": 4, "on": {"to": "core", "face": "-Z", "stud": 0, "socket_at": [-10, 8, 0], "roll": 0}, "purpose": "Panel module seated by its left socket on the first -Z stud"},
+         {"id": "right", "ref": "door-panel.ldr", "colour": 4, "on": {"to": "core", "face": "+Z", "stud": 0, "socket_at": [-10, 8, 0], "roll": 0}, "purpose": "The same module on the +Z face: no matrix, no mirrored copy"}]
+      ]
+    },
+    {
+      "name": "door-panel.ldr",
+      "description": "Panel built upright: a 1 x 2 plate under a 1 x 2 tile",
+      "steps": [
+        [{"id": "plate", "ref": "3023b.dat", "colour": 16, "at": [0, 0, 0], "purpose": "Its sockets at (-10, 8, 0) and (10, 8, 0) take the side studs"}],
+        [{"id": "tile", "ref": "3069b.dat", "colour": 16, "on": {"to": "plate"}, "purpose": "Smooth outer face"}]
+      ]
+    }
+  ]
+}

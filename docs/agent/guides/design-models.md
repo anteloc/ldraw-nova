@@ -72,7 +72,7 @@ Search [model and submodel references](find-references.md) as well as individual
 
 The [Ferrari F40 section gallery and studies](../../../examples/ferrari-f40/README.md) provide a large sports-car precedent and five checked SNOT details. Study the complete silhouette, then inspect a small body mount, door rail, lamp corner, louver or fascia core. The full source retains overlap errors, and its saved callouts are separate constructions rather than declared children of the flattened car.
 
-The [submodel atlas](../../../examples/submodel-atlas/README.md) adds reviewed vehicle details from real sets, each with a guide and an inspection board: a studs-forward tiled leg shield (S01), rounded roof edges on brackets (S09), a sideways round drive cover (05), a grille built flat and stood on a pin mount (08), a sideways exhaust manifold (S02), an upside-down train belly (S15) and a Technic-mounted lamp cluster (04). Find them with `./ldraw-agent examples --family submodel --details vehicle`.
+The [submodel atlas](../../../examples/submodel-atlas/README.md) adds reviewed vehicle details from real sets, each with a guide and an inspection board: a studs-forward tiled leg shield (S01), rounded roof edges on brackets (S09), a sideways round drive cover (05), a grille built flat and stood on a pin mount (08), a sideways exhaust manifold (S02), an upside-down train belly (S15) and a Technic-mounted lamp cluster (04). Find them with `./ldraw-agent examples --family submodel --details vehicle`; S15 and 04 are inspiration entries, listed with `--scope inspiration`.
 
 Use actual seats, steering wheels, windscreens, mudguards, motorcycle frames,
 boat hulls, aircraft shells, wings, engine housings, printed instruments and cargo
@@ -218,7 +218,7 @@ still apply; inspiration-only whole ships require explicit selection.
 
 ### Study constructions and choose real parts
 
-Use Jev only after its availability check; use explicit FTS when unavailable. Search separately for whole-ship proportions and each construction role. Do not restrict useful source parts to the same theme. Spacecraft often combine System skins with Technic frames; `--construction all` helps discover both.
+Jev is optional: if you use it, check its availability first, and use `--engine fts` when it is unavailable. Search separately for whole-ship proportions and each construction role. Do not restrict useful source parts to the same theme. Spacecraft often combine System skins with Technic frames; `--construction all` helps discover both.
 
 ```sh
 ./ldraw-agent discover search models 'a detailed Star Wars starfighter with wing and engine submodels' \

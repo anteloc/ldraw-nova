@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "harness": "You are working in the ldraw-nova repository; project instructions are in AGENTS.md. Build the model described below as an LDraw MPD with this repository's tools. Work only inside {outdir} (create it). Deliver there: the editable plan or generator, model.mpd, and the final review bundle in {outdir}/review. Do not ask questions: make reasonable design choices and finish within your budget. End with one line: DONE, or INCOMPLETE followed by the reason.",
+  "briefs": [
+    {
+      "id": "radio",
+      "round": 1,
+      "family": "snot-object",
+      "budget": {"minutes": 45, "usd": 6},
+      "prompt": "Build a 1950s-style table radio: roughly 10 studs wide, 6 studs deep and 8 bricks tall, with rounded top edges, a speaker grille and a tuning dial on the front face, and two knobs. Use SNOT where it improves the front face.",
+      "features": [
+        "Reads as a table radio from the front at thumbnail size",
+        "Speaker grille on the front face",
+        "Tuning dial on the front face",
+        "Two knobs",
+        "Rounded top edges"
+      ],
+      "checks": [
+        {"id": "size", "type": "placements", "min": 40, "max": 500},
+        {"id": "connected", "type": "connected", "min": 0.95},
+        {"id": "snot-used", "type": "parts_any", "codes": ["87087", "30414", "4070", "99780", "99781", "11211", "26604", "52107", "67329", "22885", "47457", "32952", "2921", "4733", "4595", "32028"], "min": 1},
+        {"id": "width", "type": "extent", "axis": "x", "unit": "studs", "min": 8, "max": 14},
+        {"id": "depth", "type": "extent", "axis": "z", "unit": "studs", "min": 4, "max": 9},
+        {"id": "height", "type": "extent", "axis": "y", "unit": "ldu", "min": 120, "max": 260}
+      ]
+    },
+    {
+      "id": "city-car",
+      "round": 1,
+      "family": "snot-vehicle",
+      "budget": {"minutes": 45, "usd": 6},
+      "prompt": "Build a compact modern city car at minifigure scale, 6 studs wide, with four wheels, headlights and tail lights, a windscreen and smooth SNOT side panels.",
+      "features": [
+        "Reads as a compact city car, not a box on wheels",
+        "Four wheels standing on the ground",
+        "Headlights and tail lights",
+        "Windscreen",
+        "Smooth side panels built sideways"
+      ],
+      "checks": [
+        {"id": "size", "type": "placements", "min": 60, "max": 450},
+        {"id": "connected", "type": "connected", "min": 0.9},
+        {"id": "tyres", "type": "bom", "pattern": "Tyre|Tire", "min": 4},
+        {"id": "windscreen", "type": "bom", "pattern": "Windscreen|Glass", "min": 1},
+        {"id": "width", "type": "extent", "axis": "x", "unit": "studs", "min": 5.5, "max": 8.5},
+        {"id": "length", "type": "extent", "axis": "z", "unit": "studs", "min": 9, "max": 17},
+        {"id": "stance", "type": "ground", "pattern": "Tyre|Tire", "spread_max": 2}
+      ]
+    },
+    {
+      "id": "bakery",
+      "round": 1,
+      "family": "building",
+      "budget": {"minutes": 60, "usd": 8},
+      "prompt": "Build a two-storey corner bakery at minifigure scale on a 16 x 16 stud footprint: a ground-floor shop window and door, two upper-floor windows, a shop sign, and a simple roof edge. Use SNOT for façade details.",
+      "features": [
+        "Reads as a small shop building",
+        "Ground-floor shop window and a door",
+        "Two upper-floor windows, not blocked by façade parts",
+        "A readable shop sign",
+        "Roof edge or cornice",
+        "Façade detail built sideways, with no bare outward studs"
+      ],
+      "checks": [
+        {"id": "size", "type": "placements", "min": 200, "max": 1500},
+        {"id": "connected", "type": "connected", "min": 0.95},
+        {"id": "windows", "type": "bom", "pattern": "Window|Glass", "min": 3},
+        {"id": "door", "type": "bom", "pattern": "Door", "min": 1},
+        {"id": "footprint-x", "type": "extent", "axis": "x", "unit": "studs", "min": 12, "max": 17},
+        {"id": "footprint-z", "type": "extent", "axis": "z", "unit": "studs", "min": 12, "max": 17},
+        {"id": "storeys", "type": "extent", "axis": "y", "unit": "ldu", "min": 240, "max": 700}
+      ]
+    },
+    {
+      "id": "prop-plane",
+      "round": 1,
+      "family": "aircraft",
+      "budget": {"minutes": 45, "usd": 6},
+      "prompt": "Build a small single-engine propeller aircraft at minifigure scale with an enclosed cockpit, high wings, a tail with a rudder, and fixed landing gear with wheels.",
+      "features": [
+        "Reads as a light aircraft",
+        "Propeller on the nose",
+        "Enclosed cockpit",
+        "High wings, symmetric",
+        "Tail with fin and tailplane",
+        "Fixed landing gear with wheels on the ground plane"
+      ],
+      "checks": [
+        {"id": "size", "type": "placements", "min": 60, "max": 600},
+        {"id": "connected", "type": "connected", "min": 0.9},
+        {"id": "propeller", "type": "bom", "pattern": "Propeller", "min": 1},
+        {"id": "wheels", "type": "bom", "pattern": "Tyre|Tire|Wheel", "min": 2},
+        {"id": "proportion", "type": "ratio", "numerator": "x", "denominator": "z", "min": 0.9, "max": 1.9}
+      ]
+    },
+    {
+      "id": "steering-chassis",
+      "round": 2,
+      "family": "technic",
+      "budget": {"minutes": 60, "usd": 8},
+      "prompt": "Build a Technic chassis with four wheels and working rack-and-pinion steering on the front axle, turned by a knob or steering wheel on top.",
+      "features": [
+        "Four wheels",
+        "Rack-and-pinion steering on the front axle",
+        "Steering input on top",
+        "Rigid frame"
+      ],
+      "checks": [
+        {"id": "size", "type": "placements", "min": 40, "max": 600},
+        {"id": "connected", "type": "connected", "min": 0.9},
+        {"id": "rack", "type": "bom", "pattern": "Rack", "min": 1},
+        {"id": "gear", "type": "bom", "pattern": "Gear", "min": 1},
+        {"id": "tyres", "type": "bom", "pattern": "Tyre|Tire", "min": 4}
+      ]
+    },
+    {
+      "id": "pneumatic-lift",
+      "round": 2,
+      "family": "flex",
+      "budget": {"minutes": 60, "usd": 8},
+      "prompt": "Build a pneumatic lift: a Technic base carrying a pneumatic cylinder that raises an arm, connected by a hose to a hand pump on the base.",
+      "features": [
+        "Technic base",
+        "Pneumatic cylinder that raises an arm",
+        "Hand pump",
+        "Hose routed between pump and cylinder fittings"
+      ],
+      "checks": [
+        {"id": "size", "type": "placements", "min": 20, "max": 600},
+        {"id": "cylinder", "type": "bom", "pattern": "Pneumatic Cylinder|Cylinder", "min": 1},
+        {"id": "pump", "type": "bom", "pattern": "Pump", "min": 1},
+        {"id": "hose", "type": "bom", "pattern": "Hose|Tube", "min": 1}
+      ]
+    }
+  ]
+}

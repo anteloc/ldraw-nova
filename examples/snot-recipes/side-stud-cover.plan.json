@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [{
+    "name": "side-stud-cover.ldr",
+    "description": "Side-stud course covered by a 1 x 4 tile",
+    "steps": [
+      [{"id": "base", "ref": "3710.dat", "colour": 71, "at": [0, 0, 0], "purpose": "1 x 4 plate under the course"}],
+      [{"id": "core", "ref": "30414.dat", "colour": 71, "on": {"to": "base"}, "purpose": "Four studs facing its -Z face"}],
+      [{"id": "cap", "ref": "3710.dat", "colour": 71, "on": {"to": "core"}, "purpose": "Plate locking the course from above"}],
+      [{"id": "skin", "ref": "2431.dat", "colour": 15, "on": {"to": "core", "face": "-Z"}, "purpose": "Tile on all four side studs; the default turn covers the most studs"}]
+    ]
+  }]
+}

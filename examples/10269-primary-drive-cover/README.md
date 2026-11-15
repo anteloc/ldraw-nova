@@ -20,7 +20,7 @@ Read the registered construction lesson and its linked audit before adapting the
     "legacy_groups": [
       "details"
     ],
-    "lesson": "Actual parent shows primary-drive cover with shift lever, not front headlight. Four sideways headlight bricks carry the circular panel. Correct semantic package name; catalog lesson already corrected.",
+    "lesson": "Primary-drive cover with shift lever: four sideways headlight bricks carry a circular panel. (The legacy package name says headlight; the actual parent shows the drive cover.)",
     "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/submodel-audit.json",
     "subjects": [

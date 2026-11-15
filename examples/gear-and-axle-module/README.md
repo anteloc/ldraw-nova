@@ -20,7 +20,7 @@ Read the registered construction lesson and its linked audit before adapting the
     "legacy_groups": [
       "examples"
     ],
-    "lesson": "Rename canonical key to gear-and-axle-module to match guide. Red elevated clutch gear and exposed axles depend on surrounding parent transmission. Do not offer as standalone reduction gearbox or infer a complete ratio from this extract.",
+    "lesson": "Red elevated clutch gear and exposed axles depend on surrounding parent transmission. Do not offer as standalone reduction gearbox or infer a complete ratio from this extract.",
     "limits": "Static visual evidence only unless the linked package records specific further checks. Search eligibility does not certify fit, motion or strength.",
     "audit": "docs/plans/knowledge-base-overhaul/snapshot/mechanical-audit.json",
     "subjects": [

@@ -1,0 +1,14 @@
+0 FILE bracket-grille.ldr
+0 Upward bracket on a plate edge carrying a front grille
+0 Name: bracket-grille.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // base: 2 x 4 plate; front row of studs at z = -10
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+0 // bracket: Bracket on the two middle front studs (stud 2 is x = -10, z = -10); its flange studs face -Z
+1 72 0 -8 -10 1 0 0 0 1 0 0 0 1 99780.dat
+0 STEP
+0 // grille: Grille tile on both flange studs, facing forward
+1 0 0 -10 -32 1 0 0 0 0 -1 0 1 0 2412b.dat
+0 NOFILE

@@ -15,7 +15,7 @@ from ldraw.lines import Comment
 from .common import DATA, normalized, jsonable
 from .geometry import profiles
 from .validation import validate_text
-from .identity import BuildError, Identity, Plan
+from .identity import BuildError, Identity, Plan, repeat_offsets
 
 
 def check_schema(plan):
@@ -146,9 +146,9 @@ def repeated(entries):
         if "repeat" not in entry:
             yield entry
             continue
-        for i in range(entry["repeat"]["count"]):
-            yield {**{k:v for k,v in entry.items() if k != "repeat"}, "id":f"{entry['id']}-{i}",
-                   "at":(np.array(entry["at"]) + i*np.array(entry["repeat"]["step"])).tolist()}
+        for name, offset in repeat_offsets(entry):
+            yield {**{k:v for k,v in entry.items() if k != "repeat"}, "id": name,
+                   "at": (np.array(entry["at"]) + offset).tolist()}
 
 
 def rotation(axis="y", degrees=0):
@@ -225,6 +225,34 @@ def snap_placement(entry, model, models, placed, parts, matrix, instance_limit):
     return Vector(*local['at']), Matrix(local['matrix'])
 
 
+def connector_placement(entry, model, placed, identity, parts, context):
+    """Seat a socket of this part (or a point of a section) on a support's stud."""
+    from .placement import mated, orient, seat
+    options = entry["on"]
+    if "offset_studs" in entry:
+        raise ValueError("on: {to, ...} picks studs by face and index; offset_studs belongs to the on: ID form")
+    target = options["to"]
+    if "/" in target:
+        leaf = identity.resolve(model.name, target)
+        support_code, frame = leaf["ref"], (np.asarray(leaf["matrix"], float), np.asarray(leaf["at"], float))
+    else:
+        if target not in placed or placed[target][0] is None:
+            raise ValueError(f"on.to {target!r} must name an earlier placement in this section (or module/part path)")
+        piece, support_code = placed[target]
+        support_code = piece.reference
+        frame = (np.asarray(piece.matrix.rows, float), np.asarray(jsonable(piece.position), float))
+    if not support_code.casefold().endswith(".dat"):
+        raise ValueError(f"on.to {target!r} is a section; name a part inside it, e.g. {target}/ID")
+    fixed = orient(entry["orient"]["up"], entry["orient"].get("x")) if "orient" in entry else None
+    rotation_matrix, position, details = seat(frame, support_code, entry["ref"], options, parts, orientation=fixed)
+    count = mated(frame, support_code, (rotation_matrix, position), entry["ref"], parts)
+    if context is not None:
+        context.setdefault("seats", []).append(dict(section=model.name, placement=entry["id"], on=target,
+                                                    stud=details["stud_at"], stud_face=details["stud"]["face"],
+                                                    facing=details["facing"], mated=count))
+    return Vector(*position), Matrix(rotation_matrix.tolist())
+
+
 def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None, context=None):
     check_schema(plan)
     from .catalog import resolve_plan
@@ -280,6 +308,8 @@ def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None, contex
                         identity.add(model.name, entry, None)
                         continue
                     target = entry.get('on') or entry.get('snap', {}).get('to') or entry.get('attach', {}).get('to')
+                    if isinstance(target, dict):
+                        target = target['to'].split('/')[0]
                     if target in placed and placed[target][0] is None:
                         raise ValueError('Rigid placements cannot depend on generated flex geometry')
                     ref = entry["ref"]
@@ -288,9 +318,15 @@ def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None, contex
                         raise ValueError(f"Unknown reference {ref}; search/inspect the library first")
                     if entry["colour"] not in parts.colours_by_code or entry["colour"] == 24:
                         raise ValueError(f"Unknown or unsuitable placement colour {entry['colour']}")
-                    matrix = Matrix(entry["matrix"]) if "matrix" in entry else rotation("y", entry.get("yaw", 0))
+                    if "orient" in entry:
+                        from .placement import orient
+                        matrix = Matrix(orient(entry["orient"]["up"], entry["orient"].get("x")).tolist())
+                    else:
+                        matrix = Matrix(entry["matrix"]) if "matrix" in entry else rotation("y", entry.get("yaw", 0))
                     if "snap" in entry:
                         position, matrix = snap_placement(entry, model, models, placed, parts, matrix, instance_limit)
+                    elif isinstance(entry.get("on"), dict):
+                        position, matrix = connector_placement(entry, model, placed, identity, parts, context)
                     elif "on" in entry:
                         support_id = entry["on"]
                         if support_id not in placed:
