@@ -278,7 +278,7 @@ Import it through the existing plan format. Place the `root` returned by `flex b
 }
 ```
 
-Asset paths are relative to the plan. Regenerate after moving endpoints relative to one another; a rigid placement only moves the completed pose. The generated colour remains explicit. Use the normal `build` and `review` commands for the complete assembly, and deliver the constraint source and manifest with it.
+Asset paths are relative to the plan. Regenerate after moving endpoints relative to one another; a rigid placement only moves the completed pose. The generated colour remains explicit. Use the normal `build` and `review` commands for the complete assembly. Retain the constraint source and manifest internally; deliver them only when requested, following the [delivery requirements](../cards/review.md#deliver).
 
 ## What the checks mean
 

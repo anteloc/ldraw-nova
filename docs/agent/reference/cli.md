@@ -47,6 +47,8 @@ The default output is `NAME-review/` beside `NAME.plan.json`, `NAME.json`, `NAME
 | `bom-comparison.json` | Exact Python/LeoCAD comparison and model hash |
 | `previews/` | Requested PNG views and `leocad-bom.csv` |
 
+These are internal tool artifacts, not the user delivery list. For each generated model, deliver `ai-generated.mpd` with the required section metadata, stage timing metrics and visual evidence according to the [review card](../cards/review.md#deliver). The internal `model.mpd` name does not override the mandatory handoff name. Additional exports such as GLB are only for explicit user requests.
+
 Open the images and record your visual observations beside the source. The generated directory is replaceable output. A rerun with the same inputs (source and dependency hashes, options, toolkit and parts library) returns the existing manifest with `reused: true`; `--force` recomputes it. A rerun with changed inputs replaces a verified generated bundle without `--force`. Extra files or edited artifacts stop the review in both cases; use another directory or move your work out first. Plans with inline flex routes are always recomputed. A rerun replaces the bundle as a unit, so old images and BOM comparisons cannot masquerade as new evidence. Validation, rendering or comparison failures publish the available reports and return nonzero; failed validation does not publish a model. Input/output preflight failures leave any existing bundle unchanged and report the error on stdout.
 
 Useful variations:

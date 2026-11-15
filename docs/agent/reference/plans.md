@@ -9,6 +9,8 @@ The [JSON schema](../../../ldraw_tools/data/plan.schema.json) is the complete co
 - A placement has a section-local unique `id`, a real `ref`, a `colour` and exactly one position mode. Add `purpose` when it explains something useful.
 - `includes` imports other JSON plans; `assets` imports MPDs or declares flexible sources (below). A section may link a `structure` contract. Paths are relative to the declaring plan, including inside includes. Names must remain unique across all inputs. Includes are loaded once and preserve their authorship; cycles fail.
 
+The schema's optional licence is a general API rule. AI-generated user models must supply the licence and agent/model attribution required by the [delivery contract](../cards/review.md#deliver), including for generated sections loaded through includes. There is no `keywords` plan field; add the mandatory AI keywords meta during MPD finalization, then review the finalized bytes. The user-facing filename is always `ai-generated.mpd`.
+
 Refs can be numeric filenames (`3003.dat`), module names (`pillar.ldr`) or category symbols (`@arches.Arch1X6X2WithThickTopAndReinforcedUnderside`). Colours can be palette codes or symbols such as `@colours.Tan`. The builder resolves symbols against the installed library without changing the editable plan.
 
 ## Choose a placement

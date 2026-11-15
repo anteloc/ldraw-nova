@@ -70,7 +70,7 @@ Measured on reviewed models: the parrot and cat report none; Halcyon reports a w
 
 The report always says `physical_validity: not_proven`. Visually inspect home/top/front views and any obscured connection. For difficult geometry, render the selected submodel and inspect its construction steps from several viewpoints with the global `ldraw-render-steps.sh`; see [construction review](../guides/review-models.md#read-source-steps-when-construction-is-unclear). Compare suspect regions with the actual part geometry and connector metadata. Record unresolved physical checks and simplify unverified construction where practical.
 
-For a semantic GLB export:
+Only when the user requests a semantic GLB export:
 
 ```sh
 ./prepare-glb.sh --file output/my-model.mpd output/my-model.glb

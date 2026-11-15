@@ -4,7 +4,7 @@ Build LEGO models as LDraw MPD files from JSON plans with `./ldraw-agent`. You c
 
 ## Build a model
 
-1. **Brief.** Write down the subject, scale, silhouette, required features and palette. Run `./ldraw-agent doctor` once; if it reports missing tools, run `./setup.sh`.
+1. **Brief and timing.** Start recording stage timings before planning (see [delivery requirements](docs/agent/cards/review.md#deliver)). Write down the subject, scale, silhouette, required features and palette. Run `./ldraw-agent doctor` once; if it reports missing tools, run `./setup.sh`.
 2. **Find a construction** for each role the brief needs, and read the best result:
 
    ```sh
@@ -17,13 +17,21 @@ Build LEGO models as LDraw MPD files from JSON plans with `./ldraw-agent`. You c
 4. **Build and fix:**
 
    ```sh
-   ./ldraw-agent build output/TASK/model.plan.json
+   ./ldraw-agent build output/TASK/model.plan.json --output output/TASK/ai-generated.mpd
    ./ldraw-agent review output/TASK/model.plan.json --outdir output/TASK/review --draft
    ```
 
-   `build` prints a short summary: errors with the placements they concern, warnings grouped by code, and the next step. A failing build leaves `model.draft.mpd`; `review --draft` renders it so you can see the problem. Read the [checks card](docs/agent/cards/checks.md) to act on a diagnostic. Fix the first error and rebuild.
+   `build` prints a short summary: errors with the placements they concern, warnings grouped by code, and the next step. A failing build leaves `ai-generated.draft.mpd`; `review --draft` renders it so you can see the problem. Read the [checks card](docs/agent/cards/checks.md) to act on a diagnostic. Fix the first error and rebuild.
 5. **Review** with the same command once `build` passes; `--draft` only matters while checks fail. Open the previews and compare them with the brief, and look closely at every placement a warning names. The [review card](docs/agent/cards/review.md) explains how.
-6. **Deliver** in `output/TASK/`: the plan or generator, `model.mpd`, the `review/` bundle and a short README (the review card lists its contents).
+6. **Finalize and deliver** only the three mandatory items below for each model. Follow the [review card](docs/agent/cards/review.md#deliver) to finalize metadata, check the exact delivered bytes and link every required artifact.
+
+## Mandatory model deliverables
+
+- **Metrics:** total generation time and timing for every stage, including planning, research, authoring, tooling execution, validation, repair, rendering, visual review and finalization. Include agent/model thinking time where telemetry exposes it; explicitly mark unavailable measurements and never invent them.
+- **Visual evidence:** every xray board's `xray/<board>/mosaic.png`, plus stills and previews from different perspectives. Open the images before delivery.
+- **Generated model:** always `ai-generated.mpd`. In the main model and every AI-generated submodel's header, include `0 Author:` with the name and version of every contributing agent/model, `0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt`, and `0 !KEYWORDS AI, AI-generated`. Preserve attribution and licences in imported third-party sections.
+
+Plans, generators, logs, manifests, BOMs, check reports and review bundles are internal working files, not additional user deliverables. Do not produce extra exports or deliverables unless the user requests them: no `.blend`, `.glb`, videos, source packages or README handoffs by default. Each model gets its own directory so the required filename never collides.
 
 ## LDraw facts
 

@@ -55,7 +55,9 @@ source, including empty source steps.
 
 `--ghost` requires `--highlight`. `--steps` cannot combine with `--parent`,
 `--highlight` or `--ghost`. `--stud-map` and `--xray` are mutually exclusive.
-More than 12 panels needs `--no-mosaic`. Existing results require a new output
+More than 12 panels needs `--no-mosaic`. For model-generation evidence, split
+larger studies into boards of at most 12 panels so every board has its mandatory
+`mosaic.png`; do not omit the mosaic. Existing results require a new output
 directory or an intentional `--force`.
 
 For motion, get candidate axes with `axes`, then use `board pivot` with explicit
@@ -68,6 +70,10 @@ are not directly comparable.
 ## Evidence and limits
 
 Keep `recipe.json`, `manifest.json`, mosaics and panels under `output/<task>/`.
+Use `xray/<board>/` for each board and deliver every board's `mosaic.png`,
+including research boards, alongside final-model stills and previews. Label
+reference/intermediate evidence clearly. Recipes and manifests stay internal
+unless requested; follow the [delivery requirements](../cards/review.md#deliver).
 Record which images you opened and what they establish. Reuse only evidence
 whose source hash and selections match the current model. Source models and the
 parts library are read-only to xray.
