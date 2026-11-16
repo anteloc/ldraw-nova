@@ -104,8 +104,71 @@ class DocumentParts(Parts):
         return super()._load_part(code)
 
 
+class _LayeredCache(dict):
+    """A document's derived-geometry cache that reads through to its library.
+
+    pyldraw keeps one cache per ``Parts`` object, so every per-document overlay
+    used to expand each library part again. An entry is shared with the library
+    cache only when nothing it resolved is embedded in the document; anything
+    that touches an embedded definition stays local to the overlay.
+    """
+
+    def __init__(self, base, embedded, entries=None):
+        super().__init__()
+        self.base, self.embedded, self.entries = base, embedded, entries
+
+    def shareable(self, key, value=None):
+        if key in self.embedded:
+            return False
+        entry = value if self.entries is None else (self.entries.local(key) or self.entries.base.get(key))
+        codes = getattr(entry, 'resolved_codes', None)
+        return codes is not None and self.embedded.isdisjoint(codes)
+
+    def local(self, key):
+        return dict.get(self, key)
+
+    def get(self, key, default=None):
+        if dict.__contains__(self, key):
+            return dict.__getitem__(self, key)
+        value = self.base.get(key)
+        return value if value is not None and self.shareable(key, value) else default
+
+    def __contains__(self, key):
+        return dict.__contains__(self, key) or (key in self.base and self.shareable(key, self.base.get(key)))
+
+    def __getitem__(self, key):
+        if dict.__contains__(self, key):
+            return dict.__getitem__(self, key)
+        value = self.base[key]
+        if not self.shareable(key, value):
+            raise KeyError(key)
+        return value
+
+    def __setitem__(self, key, value):
+        if self.shareable(key, value):
+            self.base[key] = value
+        else:
+            dict.__setitem__(self, key, value)
+
+
+def share_library_geometry(overlay, base):
+    """Let a document overlay reuse the library's expanded parts (pyldraw 1.7)."""
+    from importlib.metadata import version
+    import ldraw.part_geometry as geometry
+    if version('pyldraw3') != '1.7.0' or overlay in geometry._caches:
+        return
+    embedded = frozenset(overlay.embedded)
+    entries = _LayeredCache(geometry._cache_for(base), embedded)
+    geometry._caches[overlay] = entries
+    geometry._metadata_caches[overlay] = _LayeredCache(geometry._metadata_cache_for(base), embedded, entries)
+
+
 def physical_context(model, parts, section=None, colour=None):
-    overlay = DocumentParts(parts, model) if any(is_part(s) for s in section_table(model).values()) else parts
+    if any(is_part(s) for s in section_table(model).values()):
+        overlay = DocumentParts(parts, model)
+        share_library_geometry(overlay, parts)
+    else:
+        overlay = parts
     return assembly_view(model, section, colour), overlay
 
 

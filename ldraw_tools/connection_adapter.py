@@ -7,8 +7,10 @@ adaptation there. Only temporary query frames change, never library metadata.
 Remove/retest this adapter when changing the pyldraw3 dependency pin.
 """
 from dataclasses import replace
+from importlib.metadata import version
 
-from ldraw import Matrix
+import numpy as np
+from ldraw import Matrix, Vector
 from ldraw.connection_types import (ConnectionKind, ConnectionSource, ConnectionRole,
                                     CylindricalProfile, CylindricalCaps, SectionShape)
 
@@ -79,3 +81,66 @@ def connection_contacts(inspection):
     ordinary = replace(inspection, occurrences=tuple(replace(o, connections=tuple(
         f for f in o.connections if not managed(f))) for o in inspection.occurrences))
     return (*query_frames(ordinary).connection_contacts(), *contacts(inspection))
+
+
+# --- Bounds of an occurrence without a Python loop over every point ---------
+# pyldraw 1.7 transforms each expanded point with a separate Matrix * Vector;
+# a model of a few hundred parts spends most of an inspection there. NumPy
+# finds the extreme points; the few candidates on a rotated axis are then
+# recomputed with the library's own arithmetic, so the box is bit-identical.
+_point_arrays = {}
+_NEAR = 1e-6
+
+
+def _points_array(points):
+    key = id(points)
+    cached = _point_arrays.get(key)
+    if cached is None or cached[0] is not points:
+        array = np.array([(p.x, p.y, p.z) for p in points], float).reshape(-1, 3)
+        cached = (points, array)
+        _point_arrays[key] = cached
+        if len(_point_arrays) > 4096:
+            _point_arrays.pop(next(iter(_point_arrays)))
+    return cached[1]
+
+
+def transformed_bounds(points, *, position, matrix):
+    """Exact world AABB of expanded points; same values as pyldraw's loop."""
+    from ldraw.part_geometry_types import BoundingBox
+    if not isinstance(points, tuple):
+        points = tuple(points)
+    local = _points_array(points)
+    if not len(local):
+        return None
+    rows = np.asarray(matrix.rows, float)
+    origin = (position.x, position.y, position.z)
+    world = local @ rows.T
+    low, high = [], []
+    for axis in range(3):
+        values = world[:, axis]
+        used = np.flatnonzero(rows[axis])
+        least, most = float(values.min()), float(values.max())
+        if len(used) == 1 and abs(rows[axis][used[0]]) == 1.0:
+            # A signed coordinate: the product is exact in both implementations.
+            low.append(least + origin[axis])
+            high.append(most + origin[axis])
+            continue
+
+        def exact(index):
+            point = position + matrix * points[index]
+            return (point.x, point.y, point.z)[axis]
+
+        low.append(min(exact(i) for i in np.flatnonzero(values <= least + _NEAR)))
+        high.append(max(exact(i) for i in np.flatnonzero(values >= most - _NEAR)))
+    return BoundingBox(min=Vector(*low), max=Vector(*high))
+
+
+def install_fast_bounds():
+    """Version-pinned: retest against the library loop when the pin changes."""
+    import ldraw.inspection as inspection
+    if version('pyldraw3') == '1.7.0' and getattr(inspection.transformed_bounds, '__module__', '') != __name__:
+        inspection.library_transformed_bounds = inspection.transformed_bounds
+        inspection.transformed_bounds = transformed_bounds
+
+
+install_fast_bounds()

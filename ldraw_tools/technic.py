@@ -50,14 +50,17 @@ def definition(local):
     entry = registry()['parts'].get(code)
     if entry is None:
         return None
-    key = id(local)
+    # pyldraw builds a new PartGeometry per lookup but shares its points tuple,
+    # so key the fingerprint on the points: one hash per part and process.
+    points = local.points
+    key = id(points)
     cached = _geometry_cache.get(key)
-    if cached is None or cached[0] is not local:
-        digest = hashlib.sha256(json.dumps([jsonable(v) for v in local.points],
+    if cached is None or cached[0] is not points:
+        digest = hashlib.sha256(json.dumps([jsonable(v) for v in points],
                                           separators=(',', ':')).encode()).hexdigest()
-        cached = (local, digest)
+        cached = (points, digest)
         _geometry_cache[key] = cached
-        if len(_geometry_cache) > 128:
+        if len(_geometry_cache) > 512:
             _geometry_cache.popitem(last=False)
     return entry if cached[1] == entry['geometry_sha256'] else None
 
