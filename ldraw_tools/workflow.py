@@ -106,6 +106,28 @@ def build_checked(plan, parts, **geometry_options):
             report['checks_passed'] &= checked['checks_passed']
             if not checked['checks_passed']:
                 report['failed_stage'] = 'structure'
+    if report['checks_passed']:
+        from .mechanism import review as review_mechanism
+        for section in plan['sections']:
+            if not section.get('mechanism'):
+                continue
+            scoped = model
+            if normalized(section['name']) != normalized(model.name):
+                closure = dependency_closure(model, section['name'])
+                scoped = replace(closure[0], submodels={normalized(s.name): s for s in closure[1:]})
+            scoped_map = identity.map(scoped, parts, instance_limit=geometry_options.get('instance_limit', 100000))
+            try:
+                checked = review_mechanism(scoped, parts, section['mechanism'], scoped_map,
+                                           instance_limit=geometry_options.get('instance_limit', 100000))
+            except ValueError as exc:
+                raise BuildError(str(exc), stage='mechanism', section=section['name'],
+                                 **identity.sources.get(normalized(section['name']), {})) from exc
+            checked['diagnostics'] = annotate(checked['diagnostics'], scoped_map)
+            report.setdefault('mechanism', {})[section['name']] = checked
+            report['diagnostics'].extend(dict(d, section=section['name']) for d in checked['diagnostics'])
+            report['checks_passed'] &= checked['checks_passed']
+            if not checked['checks_passed']:
+                report['failed_stage'] = 'mechanism'
     return text, model, report
 
 

@@ -21,8 +21,20 @@ GOLDEN = [
     ('floating group gap', {'docs/agent/cards/checks.md#checks-card',
                             'docs/agent/reference/validation.md#repair-by-diagnostic'}),
     ('seat a module on side studs', {'docs/agent/cards/snot.md#3-build-surfaces-as-modules', 'recipe-side-panels'}),
-    ('technic beam frame pins', {'recipe-technic-pin-frame', 'docs/agent/cards/technic.md#build-frames-that-hold'}),
-    ('pin in a beam hole', {'docs/agent/cards/technic.md#seat-pins-beams-and-axles', 'recipe-technic-pin-frame'}),
+    ('technic beam frame pins', {'recipe-technic-pin-frame', 'docs/agent/cards/technic.md#place-parts-by-their-ports'}),
+    ('pin in a beam hole', {'docs/agent/cards/technic.md#place-parts-by-their-ports', 'recipe-technic-pin-frame'}),
+    # Technic: a copyable seat-based recipe must rank in the top three. A differential has no recipe yet:
+    # its spider gear rides on a post that is not a pin or axle port.
+    ('rack and pinion steering', {'recipe-technic-rack-steering'}),
+    ('technic chassis frame', {'recipe-technic-pin-frame'}),
+    ('gear train', {'recipe-technic-gear-pair'}),
+    ('wheel hub axle', {'recipe-technic-wheel-axle'}),
+    ('liftarm pin joint', {'recipe-technic-pin-frame', 'recipe-technic-suspension-arm'}),
+    ('pneumatic cylinder mount', {'recipe-technic-cylinder-lever'}),
+    ('suspension shock absorber', {'recipe-technic-suspension-arm'}),
+    ('linear actuator', {'recipe-technic-cylinder-lever'}),
+    ('worm gear', {'recipe-technic-worm-drive'}),
+    ('bevel gear corner', {'recipe-technic-bevel-corner'}),
     ('inverted slope under plate', {'recipe-inverted-nose', 'docs/agent/cards/snot.md#4-hang-parts-underneath'}),
     ('centre a detail half stud', {'recipe-jumper-centre'}),
 ]

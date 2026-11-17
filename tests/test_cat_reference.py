@@ -19,7 +19,9 @@ from ldraw_tools.geometry import analyze_geometry, components
 REFERENCE = ROOT / 'examples/cat'
 
 
-@pytest.mark.parametrize('name,count,groups', [('head',16,1), ('leg',3,1), ('cat',55,4)])
+# The tail's axles (32062, 2736) sit in the axle holes of a System elbow (25214). Technic ports used to
+# pair only with other ports, which left the tail as two loose groups; they now mate with it.
+@pytest.mark.parametrize('name,count,groups', [('head',16,1), ('leg',3,1), ('cat',55,2)])
 def test_cat_examples_reproduce_reviewed_models(official, name, count, groups):
     text, model, diagnostics = build_plan(load_plan(REFERENCE/f'{name}.plan.json'),official)
     assert not diagnostics

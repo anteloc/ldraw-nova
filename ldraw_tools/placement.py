@@ -195,9 +195,56 @@ def facts(parts, code):
     result['studs'] = by_face(data['studs'])
     result['sockets'] = by_face(data['sockets'])
     if data['technic']:
-        result['technic_ports'] = {p['id']: dict(kind=p['kind'], at=p['at'], axis=p['axis']) for p in data['technic']}
+        from .technic import canonical, registry
+        listed = {p['id']: p for p in registry()['parts'].get(canonical(data['code']), {}).get('ports', [])}
+        result['technic_ports'] = port_runs([dict(p, **{k: listed.get(p['id'], {}).get(k) for k in ('stops', 'friction')
+                                                       if listed.get(p['id'], {}).get(k)}) for p in data['technic']])
     if data['other']:
         result['other_connectors'] = data['other']
+    return result
+
+
+def port_runs(ports):
+    """Ports as short lines; equally spaced ports of one kind collapse into a run.
+
+    ``hole-0..hole-8: pin_hole axis Y length 20, at [0, 0, -80] then every [0, 0, 20]``
+    """
+    def text(port, step=None):
+        line = f"{port['kind']} axis {face_name(np.array(port['axis'], float))} length {clean_number(port['length'], 3)}, at {clean(port['at'], 3)}"
+        line += f" then every {clean(step, 3)}" if step is not None else ''
+        if port.get('friction'):
+            line += ', friction'
+        if port.get('stops'):
+            line += ', stop at the ' + ' and '.join(port['stops']) + ' end'
+        return line
+
+    def number(port):
+        head, _, tail = port['id'].rpartition('-')
+        return (head, int(tail)) if tail.isdigit() else (port['id'], None)
+
+    result, index = {}, 0
+    while index < len(ports):
+        first = ports[index]
+        head, start = number(first)
+        end = index
+        step = None
+        while start is not None and end + 1 < len(ports):
+            following = ports[end + 1]
+            name, value = number(following)
+            delta = np.array(following['at'], float) - np.array(ports[end]['at'], float)
+            same = (name == head and value == start + (end - index) + 1 and following['kind'] == first['kind']
+                    and following['length'] == first['length'] and np.allclose(following['axis'], first['axis'], atol=1e-6)
+                    and not following.get('stops') and not first.get('stops'))
+            if not same or (step is not None and not np.allclose(delta, step, atol=1e-6)):
+                break
+            step = delta
+            end += 1
+        if end - index >= 2:
+            result[f"{first['id']}..{ports[end]['id']}"] = text(first, step)
+            index = end + 1
+        else:
+            result[first['id']] = text(first)
+            index += 1
     return result
 
 
@@ -313,75 +360,267 @@ def hang(support_frame, support_code, moving_code, options, parts, orientation=N
 def technic_ports(parts, code):
     ports = {p['id']: p for p in interfaces(parts, code)['technic']}
     if not ports:
-        raise ValueError(f'{code} has no reviewed Technic ports; use stud seats, snap or at')
+        raise ValueError(f'{code} has no Technic ports; use stud seats, snap or at')
     return ports
 
 
-def technic_seat(support_frame, support_code, moving_code, options, parts, orientation=None):
-    """Pose that puts a pin grip or axle in a hole, or a hole on a pin, of reviewed Technic parts.
+PIN_COLOURS = {'2780': 0, '6558': 1, '3673': 71, '43093': 1, '3749': 19, '4274': 71, '32054': 0,
+               '32556': 19, '11214': 4, '18651': 0, '32002': 19, '6628': 0}
+MALES, HOLES = ('pin', 'axle'), ('pin_hole', 'axle_hole')
 
-    ``hole`` and ``pin`` are port IDs (from ``part``); each belongs to whichever
-    part has it. The male's centre goes to the hole's centre, moved ``slide`` LDU
-    along the shared axis; ``roll`` turns the placed part about that axis. The
-    result must pass the Technic fit rules, which name the rule that fails.
-    """
+
+def _listed(ports):
+    return ', '.join(f"{name} ({port['kind']})" for name, port in ports.items())
+
+
+def _world_feature(code, port_id, frame):
+    """The checker's own feature for one port of a placed part."""
     from ldraw import Matrix, Vector
-    from .technic import canonical, fit, fit_failure, local_features, registry
-    if not moving_code.casefold().endswith('.dat'):
-        raise ValueError('Technic seats place a part; seat a section by placing its part first, or use attach')
-    rotation, translation = support_frame
-    hole_id, pin_id = options.get('hole'), options.get('pin')
-    support_ports, moving_ports = technic_ports(parts, support_code), technic_ports(parts, moving_code)
-    if not hole_id or not pin_id:
-        raise ValueError(f"A Technic seat names both hole and pin. {support_code} ports: {', '.join(support_ports)}; "
-                         f"{moving_code} ports: {', '.join(moving_ports)}")
-    if hole_id in support_ports and pin_id in moving_ports:
-        fixed, moved = support_ports[hole_id], moving_ports[pin_id]
-    elif pin_id in support_ports and hole_id in moving_ports:
-        fixed, moved = support_ports[pin_id], moving_ports[hole_id]
-    else:
-        raise ValueError(f"No such port pair. {support_code} ports: {', '.join(support_ports)}; "
-                         f"{moving_code} ports: {', '.join(moving_ports)}")
-    if {fixed['kind'], moved['kind']} & {'pin_hole', 'axle_hole'} == set() or \
-            {fixed['kind'], moved['kind']} & {'pin', 'axle'} == set():
-        raise ValueError(f"{hole_id} and {pin_id} must be a hole and a pin or axle")
-    target = rotation @ np.array(fixed['at']) + translation
-    axis = rotation @ np.array(fixed['axis'])
+    from .technic import canonical, local_features, registry
+    key = canonical(code)
+    feature = next(f for f in local_features(key, registry()['parts'][key]) if f.feature_id == 'technic:' + port_id)
+    return feature.transformed(position=Vector(*frame[1]), matrix=Matrix(np.asarray(frame[0]).tolist()), inherit=False)
+
+
+def _along(axis, value, name):
+    """+1 or -1 for a direction that must run along ``axis``."""
+    chosen = direction(value, name)
+    dot = float(chosen @ axis)
+    if abs(dot) < 0.999:
+        raise ValueError(f"{name} {value!r} must run along the hole axis: use {face_name(np.round(axis, 6))} "
+                         f"or {face_name(np.round(-axis, 6))}")
+    return 1.0 if dot > 0 else -1.0
+
+
+def _seat_port(fixed_frame, fixed_code, fixed, moving_code, moved, base, offset, rolls):
+    """Rotation and position that put ``moved`` on ``fixed``, checked by the fit rules.
+
+    ``offset`` moves the placed port along the fixed port's world axis. Each
+    roll in ``rolls`` (degrees about that axis, None for none) is tried in turn;
+    the first that fits wins.
+    """
+    from .technic import fit, fit_failure
+    rotation, translation = fixed_frame
+    target = rotation @ np.array(fixed['at'], float) + translation
+    axis = rotation @ np.array(fixed['axis'], float)
     axis = axis / np.linalg.norm(axis)
-    local_axis = np.array(moved['axis'], float)
-    slide = options.get('slide', 0)
-
-    def features(rot, pos):
-        entries = registry()['parts']
-        result = {}
-        for code, frame, port in ((support_code, (rotation, translation), fixed), (moving_code, (rot, pos), moved)):
-            key = canonical(code)
-            feature = next(f for f in local_features(key, entries[key]) if f.feature_id == 'technic:' + port['id'])
-            result[port['id'] if code == support_code else '_moving'] = feature.transformed(
-                position=Vector(*frame[1]), matrix=Matrix(np.asarray(frame[0]).tolist()), inherit=False)
-        return result
-
-    def check(rot):
-        pos = np.array(clean(target + slide * axis - rot @ np.array(moved['at']), 9))
-        pair = features(rot, pos)
-        a, b = pair[fixed['id']], pair['_moving']
-        return pos, fit(a, b), (a, b)
-
-    if orientation is not None:
-        if abs((orientation @ local_axis) @ axis) < 0.999:
-            raise ValueError('orient does not align the port with the hole axis; omit orient or change it')
-        rolls, base = [None], orientation
-    else:
-        base = turning(local_axis, axis) if local_axis @ axis >= 0 else turning(local_axis, -axis)
-        given = options.get('roll')
-        rolls = [given] if given is not None else [0, 45]  # cross axles: the 45 degree alternative keys them
+    anchor = _world_feature(fixed_code, fixed['id'], fixed_frame)
     last = None
     for roll in rolls:
         rot = base if roll is None else about(axis, roll) @ base
         rot = np.round(rot, 12) + 0.0
-        pos, fitted, pair = check(rot)
+        pos = np.array(clean(target + offset * axis - rot @ np.array(moved['at'], float), 9))
+        placed = _world_feature(moving_code, moved['id'], (rot, pos))
+        fitted = fit(anchor, placed)
         if fitted is not None:
-            details = dict(hole=hole_id, pin=pin_id, at=clean(target, 4), behavior=fitted['behavior'], roll=roll)
-            return rot, pos, details
-        last = pair
+            return rot, pos, fitted, roll
+        last = (anchor, placed)
     raise ValueError('Technic seat fails ' + (fit_failure(*last) or 'the fit rules'))
+
+
+def technic_seat(support_frame, support_code, moving_code, options, parts, orientation=None, resolve=None):
+    """Pose that puts a pin grip or axle in a hole, or a hole on a pin or axle.
+
+    ``hole`` and ``pin`` are port IDs (from ``part``); each belongs to whichever
+    part has it. By default the two port centres coincide. Along the shared axis:
+
+    * ``slide``: LDU along the support port's axis;
+    * ``end`` (+ ``past``): the named end of the pin or axle stands ``past`` LDU
+      beyond the face of the part with the hole (0 is flush);
+    * ``next_to`` + ``side``: a part with a hole sits flush against a neighbour
+      on the same axle, on the named side of it.
+
+    ``side`` on a pin or axle says which way the rest of it extends from the
+    hole; ``flip`` turns a part with a hole end for end; ``roll`` turns the
+    placed part about the axis. The result must pass the Technic fit rules.
+    """
+    if not moving_code.casefold().endswith('.dat'):
+        raise ValueError('Technic seats place a part; place a section with join, attach or at')
+    rotation, translation = support_frame
+    hole_id, pin_id = options.get('hole'), options.get('pin')
+    support_ports, moving_ports = technic_ports(parts, support_code), technic_ports(parts, moving_code)
+    listing = f"{support_code} ports: {_listed(support_ports)}; {moving_code} ports: {_listed(moving_ports)}"
+    if not hole_id or not pin_id:
+        raise ValueError('A Technic seat names both hole and pin. ' + listing)
+    if hole_id in support_ports and pin_id in moving_ports and support_ports[hole_id]['kind'] in HOLES \
+            and moving_ports[pin_id]['kind'] in MALES:
+        fixed, moved = support_ports[hole_id], moving_ports[pin_id]
+    elif pin_id in support_ports and hole_id in moving_ports and support_ports[pin_id]['kind'] in MALES \
+            and moving_ports[hole_id]['kind'] in HOLES:
+        fixed, moved = support_ports[pin_id], moving_ports[hole_id]
+    else:
+        raise ValueError(f'hole {hole_id!r} and pin {pin_id!r} must name a hole on one part and a pin or axle on the other. '
+                         + listing)
+    male = moved['kind'] in MALES
+    axis = rotation @ np.array(fixed['axis'], float)
+    axis = axis / np.linalg.norm(axis)
+    target = rotation @ np.array(fixed['at'], float) + translation
+    local_axis = np.array(moved['axis'], float)
+    moved_at = np.array(moved['at'], float)
+    side, flip = options.get('side'), options.get('flip', False)
+    if sum(key in options for key in ('slide', 'end', 'next_to')) > 1:
+        raise ValueError('Use one of slide, end or next_to to position along the axis')
+    if 'past' in options and 'end' not in options:
+        raise ValueError('past needs end: the end of the pin or axle it measures from')
+    # Along the axis.
+    offset = options.get('slide', 0)
+    half_fixed, half_moved = fixed['length'] / 2, moved['length'] / 2
+    if 'end' in options:
+        sign = _along(axis, options['end'], 'on.end')
+        past = options.get('past', 0)
+        offset = sign * (half_fixed + past - half_moved) if male else sign * (half_fixed - past - half_moved)
+    elif 'next_to' in options:
+        if male:
+            raise ValueError('next_to places a part with a hole along an axle; position a pin or axle with slide or end')
+        if side is None or resolve is None:
+            raise ValueError('next_to needs side: which side of the neighbour this part sits on, along the axle')
+        sign = _along(axis, side, 'on.side')
+        neighbour_code, (nr, nt) = resolve(options['next_to'])
+        faces = []
+        for port in technic_ports(parts, neighbour_code).values():
+            centre = nr @ np.array(port['at'], float) + nt
+            line = centre - target
+            if abs(float((nr @ np.array(port['axis'], float)) @ axis)) > 0.999 and \
+                    np.linalg.norm(line - (line @ axis) * axis) <= 0.5:
+                faces.append(sign * float(line @ axis) + port['length'] / 2)
+        if not faces:
+            raise ValueError(f"next_to {options['next_to']!r} has no hole, pin or axle on this axis; "
+                             f"{neighbour_code} ports: {_listed(technic_ports(parts, neighbour_code))}")
+        offset = sign * (max(faces) + half_moved)
+    # Orientation.
+    if orientation is not None:
+        if side is not None and 'next_to' not in options or flip:
+            raise ValueError('Use orient or side/flip, not both')
+        if abs((orientation @ local_axis) @ axis) < 0.999:
+            raise ValueError('orient does not align the port with the hole axis; omit orient or change it')
+        rolls, base = [None], orientation
+    else:
+        if male and side is not None:
+            centres = np.array([p['at'] for p in moving_ports.values()], float)
+            extent = float((centres.mean(axis=0) - moved_at) @ local_axis)
+            base = turning((-1.0 if extent < -1e-6 else 1.0) * local_axis, _along(axis, side, 'on.side') * axis)
+        else:
+            if side is not None and 'next_to' not in options:
+                raise ValueError('side says which way a pin or axle extends, or where a part sits next_to a neighbour; '
+                                 'turn a part with a hole end for end with flip')
+            toward = axis if local_axis @ axis >= 0 else -axis
+            base = turning(local_axis, -toward if flip else toward)
+        given = options.get('roll')
+        rolls = [given] if given is not None else [0, 45]  # cross axles: the 45 degree alternative keys them
+    rot, pos, fitted, roll = _seat_port(support_frame, support_code, fixed, moving_code, moved, base, offset, rolls)
+    details = dict(hole=hole_id, pin=pin_id, at=clean(target, 4), behavior=fitted['behavior'], roll=roll,
+                   slide=clean_number(offset, 4))
+    return rot, pos, details
+
+
+def join(support_frame, support_code, options, parts, *, moving_code=None, my_port=None):
+    """Pose that lays a part or module on another by matching holes, and the pins that hold it.
+
+    ``options['holes']`` maps holes of the support to holes of the placed
+    object. ``my_port(name)`` returns ``(leaf_code, port, (rotation, position))``
+    for one of the placed object's holes, the frame being the leaf's pose inside
+    the object (identity for a part). Returns ``(rotation, position, pins,
+    details)``; each pin is ``dict(ref, matrix, position, colour)``.
+    """
+    rotation, translation = support_frame
+    support_ports = technic_ports(parts, support_code)
+    if my_port is None:
+        own = technic_ports(parts, moving_code)
+
+        def my_port(name):
+            if name not in own:
+                raise ValueError(f'{moving_code} has no port {name!r}; ports: {_listed(own)}')
+            return moving_code, own[name], (np.eye(3), np.zeros(3))
+    pairs = []
+    for theirs, mine in options['holes'].items():
+        if theirs not in support_ports:
+            raise ValueError(f'{support_code} has no port {theirs!r}; ports: {_listed(support_ports)}')
+        leaf, port, frame = my_port(mine)
+        if support_ports[theirs]['kind'] not in HOLES or port['kind'] not in HOLES:
+            raise ValueError(f'join matches holes; {theirs} is a {support_ports[theirs]["kind"]} and {mine} a {port["kind"]}. '
+                             'Seat a pin or axle with on: {to, hole, pin}')
+        centre = frame[0] @ np.array(port['at'], float) + frame[1]
+        direction_ = frame[0] @ np.array(port['axis'], float)
+        pairs.append(dict(theirs=theirs, mine=mine, support=support_ports[theirs], leaf=leaf, port=port, frame=frame,
+                          at=centre, axis=direction_ / np.linalg.norm(direction_)))
+    first = pairs[0]
+    axis = rotation @ np.array(first['support']['axis'], float)
+    axis = axis / np.linalg.norm(axis)
+    if 'side' not in options:
+        raise ValueError(f"join needs side: which side of {options['to']} the part lies on, "
+                         f"{face_name(np.round(axis, 6))} or {face_name(np.round(-axis, 6))}")
+    normal = _along(axis, options['side'], 'join.side') * axis
+    for pair in pairs:
+        pair['target'] = rotation @ np.array(pair['support']['at'], float) + translation + \
+            normal * (pair['support']['length'] + pair['port']['length']) / 2
+        if abs(float((rotation @ np.array(pair['support']['axis'], float)) @ axis)) < 0.999 or \
+                abs(float(pair['axis'] @ first['axis'])) < 0.999:
+            raise ValueError(f"join holes must be parallel; {pair['theirs']} -> {pair['mine']} is not parallel to "
+                             f"{first['theirs']} -> {first['mine']}")
+    # A hole has no direction: keep the placed object the way up its hole already points
+    # along the joined side, rather than turning it over; flip turns it over on purpose.
+    toward = normal if float(first['axis'] @ normal) >= 0 else -normal
+    base = turning(first['axis'], -toward if options.get('flip') else toward)
+    if len(pairs) > 1:
+        if 'roll' in options:
+            raise ValueError('Two matched holes fix the turn; remove roll')
+        far = max(pairs[1:], key=lambda p: np.linalg.norm(p['at'] - first['at']))
+        own = far['at'] - first['at']
+        own = own - (own @ first['axis']) * first['axis']
+        want = far['target'] - first['target']
+        want = want - (want @ normal) * normal
+        if abs(np.linalg.norm(own) - np.linalg.norm(want)) > 0.2 or np.linalg.norm(own) < 1e-6:
+            raise ValueError(f"{first['theirs']} and {far['theirs']} are {clean_number(np.linalg.norm(want), 2)} LDU apart, "
+                             f"but {first['mine']} and {far['mine']} are {clean_number(np.linalg.norm(own), 2)}; "
+                             'match holes with the same spacing')
+        turned = base @ own
+        angle = math.degrees(math.atan2(float(np.cross(turned, want) @ normal), float(turned @ want)))
+        rot = about(normal, angle) @ base
+    else:
+        rot = about(normal, options.get('roll', 0)) @ base
+    rot = np.round(rot, 12) + 0.0
+    position = np.array(clean(first['target'] - rot @ first['at'], 9))
+    for pair in pairs:
+        miss = np.linalg.norm(rot @ pair['at'] + position - pair['target'])
+        if miss > 0.2:
+            raise ValueError(f"{pair['theirs']} -> {pair['mine']} is {clean_number(miss, 2)} LDU off once the first pair "
+                             'is matched; these holes do not line up together')
+    pins = []
+    chosen = options.get('pins', '2780.dat')
+    if chosen:
+        code = chosen if chosen.casefold().endswith('.dat') else chosen + '.dat'
+        connector = technic_ports(parts, code)
+        males = [p for p in connector.values() if p['kind'] in MALES]
+        if len(males) < 2:
+            raise ValueError(f'{code} cannot join two holes; it has ports: {_listed(connector)}')
+        line = np.array(males[0]['axis'], float)
+        males.sort(key=lambda p: float(np.array(p['at'], float) @ line))
+
+        def suits(port, hole):
+            return (port['kind'] == 'pin' and hole['kind'] == 'pin_hole') or port['kind'] == 'axle'
+
+        for pair in pairs:
+            options_ = [(a, b) for i in range(len(males) - 1) for a, b in ((males[i], males[i + 1]), (males[i + 1], males[i]))
+                        if suits(a, pair['support']) and suits(b, pair['port'])]
+            options_.sort(key=lambda ab: (ab[0]['kind'] == 'axle' and pair['support']['kind'] != 'axle_hole')
+                          + (ab[1]['kind'] == 'axle' and pair['port']['kind'] != 'axle_hole'))
+            if not options_:
+                raise ValueError(f"{code} does not fit {pair['theirs']} ({pair['support']['kind']}) and {pair['mine']} "
+                                 f"({pair['port']['kind']}); a pin needs a pin hole, an axle end an axle hole. "
+                                 'Choose another connector with pins, or pins: false')
+            inner, outer = options_[0]
+            outward = np.array(outer['at'], float) - np.array(inner['at'], float)
+            heading = line if outward @ line > 0 else -line
+            offset = float(axis @ normal) * (pair['support']['length'] - inner['length']) / 2
+            pin_rot, pin_pos, _, _ = _seat_port(support_frame, support_code, pair['support'], code, inner,
+                                                turning(heading, normal), offset, [0, 45])
+            leaf_frame = (rot @ pair['frame'][0], rot @ pair['frame'][1] + position)
+            from .technic import fit, fit_failure
+            ends = (_world_feature(pair['leaf'], pair['port']['id'], leaf_frame), _world_feature(code, outer['id'], (pin_rot, pin_pos)))
+            if fit(*ends) is None:
+                raise ValueError(f"{code} does not hold {pair['mine']}: " + (fit_failure(*ends) or 'the fit rules')
+                                 + '. Choose another connector with pins, or pins: false')
+            pins.append(dict(ref=code, matrix=pin_rot, position=pin_pos,
+                             colour=options.get('pin_colour', PIN_COLOURS.get(code.casefold().removesuffix('.dat'), 0))))
+    details = dict(holes=[(p['theirs'], p['mine']) for p in pairs], side=face_name(np.round(normal, 6)), pins=len(pins))
+    return rot, position, pins, details

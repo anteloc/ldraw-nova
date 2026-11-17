@@ -13,7 +13,7 @@ Build LEGO models as LDraw MPD files from JSON plans with `./ldraw-agent`. You c
    ```
 
    Adapt a lesson's principle to your subject; do not copy a whole example. Look up parts for specific needs, not to design piece by piece.
-3. **Write the plan** in `output/TASK/model.plan.json`, or a `generate.py` that writes it. Read the [plan card](docs/agent/cards/plan.md). Build sideways (SNOT) by default: read the [SNOT card](docs/agent/cards/snot.md). A construction preference stated in the brief overrides this default.
+3. **Write the plan** in `output/TASK/model.plan.json`, or a `generate.py` that writes it. Read the [plan card](docs/agent/cards/plan.md). Build sideways (SNOT) by default: read the [SNOT card](docs/agent/cards/snot.md). For a Technic brief (beams, pins, axles, gears or mechanisms) read the [Technic card](docs/agent/cards/technic.md) instead. A construction preference stated in the brief overrides this default.
 4. **Build and fix:**
 
    ```sh
@@ -62,7 +62,7 @@ Use these only when the brief needs them:
 |---|---|
 | Vehicles, spacecraft, buildings, animals | [Design models](docs/agent/guides/design-models.md) |
 | Aircraft | [Aircraft](docs/agent/guides/aircraft.md) |
-| Technic frames and mechanisms | [Technic card](docs/agent/cards/technic.md), [Technic guide](docs/agent/guides/technic.md), [mechanisms](docs/agent/guides/mechanisms.md) |
+| Technic frames and mechanisms | [Technic card](docs/agent/cards/technic.md), then [Technic guide](docs/agent/guides/technic.md) for construction patterns |
 | Hoses, cables, chains and treads | [Flex authoring](docs/agent/guides/flex.md) |
 | Large models in modules | [Compose modules](docs/agent/guides/compose-modules.md) |
 | Parts by role or appearance | [Part information](docs/agent/guides/part-information.md) |

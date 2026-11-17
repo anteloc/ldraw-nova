@@ -9,7 +9,14 @@ Small plans that place parts by their real interfaces (`on`, `under` and Technic
 | Upward bracket carrying a front grille | [bracket-grille.plan.json](bracket-grille.plan.json) | ![Upward bracket carrying a front grille](bracket-grille.png) |
 | One panel module seated on both sides of a core | [side-panels.plan.json](side-panels.plan.json) | ![One panel module seated on both sides of a core](side-panels.png) |
 | Window frame and glass between brick columns | [window-wall.plan.json](window-wall.plan.json) | ![Window frame and glass between brick columns](window-wall.png) |
-| Rigid Technic frame from beams and friction pins | [technic-pin-frame.plan.json](technic-pin-frame.plan.json) | ![Rigid Technic frame from beams and friction pins](technic-pin-frame.png) |
+| Rigid Technic chassis: rails pinned to an open frame at two holes each | [technic-pin-frame.plan.json](technic-pin-frame.plan.json) | ![Rigid Technic chassis: rails pinned to an open frame at two holes each](technic-pin-frame.png) |
+| Braced 8:24 gear pair: two shafts in two beams, bushed both sides | [technic-gear-pair.plan.json](technic-gear-pair.plan.json) | ![Braced 8:24 gear pair: two shafts in two beams, bushed both sides](technic-gear-pair.png) |
+| Rack-and-pinion steering: kingpin hubs, L-liftarm arms and a 1 x 7 rack | [technic-rack-steering.plan.json](technic-rack-steering.plan.json) | ![Rack-and-pinion steering: kingpin hubs, L-liftarm arms and a 1 x 7 rack](technic-rack-steering.png) |
+| Wheel on an axle carried by two pinned beams | [technic-wheel-axle.plan.json](technic-wheel-axle.plan.json) | ![Wheel on an axle carried by two pinned beams](technic-wheel-axle.png) |
+| Drive turned 90 degrees by two 12-tooth double bevels in an open frame | [technic-bevel-corner.plan.json](technic-bevel-corner.plan.json) | ![Drive turned 90 degrees by two 12-tooth double bevels in an open frame](technic-bevel-corner.png) |
+| Worm driving a 24-tooth gear between two open frames | [technic-worm-drive.plan.json](technic-worm-drive.plan.json) | ![Worm driving a 24-tooth gear between two open frames](technic-worm-drive.png) |
+| Swing arm on a frictionless pin, sprung by a 6.5L shock absorber | [technic-suspension-arm.plan.json](technic-suspension-arm.plan.json) | ![Swing arm on a frictionless pin, sprung by a 6.5L shock absorber](technic-suspension-arm.png) |
+| Lever raised by a pneumatic cylinder to a rigid mount | [technic-cylinder-lever.plan.json](technic-cylinder-lever.plan.json) | ![Lever raised by a pneumatic cylinder to a rigid mount](technic-cylinder-lever.png) |
 | Inverted slope hung under a plate | [inverted-nose.plan.json](inverted-nose.plan.json) | ![Inverted slope hung under a plate](inverted-nose.png) |
 | Jumper plate centring a detail between studs | [jumper-centre.plan.json](jumper-centre.plan.json) | ![Jumper plate centring a detail between studs](jumper-centre.png) |
 | Row of slopes placed by stud index | [roof-slope-row.plan.json](roof-slope-row.plan.json) | ![Row of slopes placed by stud index](roof-slope-row.png) |
@@ -20,7 +27,7 @@ Rebuild and review one:
 ./ldraw-agent review examples/recipes/side-stud-cover.plan.json --outdir output/recipes/side-stud-cover
 ```
 
-Evidence: each recipe passed `review` with matching Python and LeoCAD BOMs, and its preview (the PNG beside the plan) was opened and checked on 2026-11-15. The Technic frame also passed `technic check` with eight pin joints. The MPD beside each plan is the reviewed model.
+Evidence: each recipe passed `review` with matching Python and LeoCAD BOMs, and its preview (the PNG beside the plan) was opened and checked on 2026-11-15. The eight Technic recipes (2026-11-17) also passed every Technic build check and, where they declare one, their mechanism contract. The MPD beside each plan is the reviewed model.
 
 ```ldraw-knowledge
 [
@@ -167,35 +174,6 @@ Evidence: each recipe passed `review` with matching Python and LeoCAD BOMs, and 
   ]
  },
  {
-  "id": "recipe-technic-pin-frame",
-  "title": "Rigid Technic frame from beams and friction pins",
-  "scope": "construction",
-  "kind": "recipe",
-  "aliases": [
-   "recipe:technic-pin-frame"
-  ],
-  "families": [
-   "recipe",
-   "technic"
-  ],
-  "lesson": "Two 7-long beams are joined by 3-long cross beams underneath with four friction pins: on {to: rail, hole: hole-0, pin: grip-0} puts a pin in a beam, and on {to: pin, hole: hole-0, pin: grip-1, roll: 90} hangs the cross beam on the pin. The Technic check reports eight seated pin joints. Parts: 32524, 32523, 2780.",
-  "limits": "Small checked recipe: review passed with matching BOMs and its preview was inspected. It does not certify clutch or strength.",
-  "plan": "examples/recipes/technic-pin-frame.plan.json",
-  "model": "examples/recipes/technic-pin-frame.mpd",
-  "model_sha256": "6b27872e818e8db6073586fe5678e0aee7133e3c80004cd9efbf0b2486549ca6",
-  "preview": "examples/recipes/technic-pin-frame.png",
-  "techniques": [
-   "connector seat",
-   "technic"
-  ],
-  "subjects": [
-   "technic frame",
-   "chassis",
-   "beam frame",
-   "pin joint"
-  ]
- },
- {
   "id": "recipe-inverted-nose",
   "title": "Inverted slope hung under a plate",
   "scope": "construction",
@@ -279,6 +257,274 @@ Evidence: each recipe passed `review` with matching Python and LeoCAD BOMs, and 
    "slope row",
    "bonnet",
    "wedge surface"
+  ]
+ },
+ {
+  "id": "recipe-technic-pin-frame",
+  "title": "Rigid Technic chassis: rails pinned to an open frame at two holes each",
+  "scope": "construction",
+  "kind": "recipe",
+  "aliases": [
+   "recipe:technic-pin-frame"
+  ],
+  "families": [
+   "recipe",
+   "technic"
+  ],
+  "lesson": "join lays one part on another by matching holes and inserts the pins: {\"join\": {\"to\": \"frame\", \"holes\": {\"hole-0\": \"hole-0\", \"hole-6\": \"hole-6\"}, \"side\": \"-Y\"}} pins a 7-long beam (32524) to a 5 x 7 open frame (64179) at two holes. Two spaced pins make a joint rigid; one pin is a hinge, and a rectangle of single-pin joints folds. Parts: 64179, 32524, 2780.",
+  "limits": "Small checked recipe: build passed every Technic check and its mechanism contract, review passed with matching BOMs, and the preview was inspected on 2026-11-17. It shows the built pose; it does not simulate motion or certify strength.",
+  "plan": "examples/recipes/technic-pin-frame.plan.json",
+  "model": "examples/recipes/technic-pin-frame.mpd",
+  "model_sha256": "660d3c3e746939835e0f5638503681966c6f73ead0a11c64d7565c75564ba167",
+  "preview": "examples/recipes/technic-pin-frame.png",
+  "techniques": [
+   "join",
+   "two-pin joint",
+   "technic"
+  ],
+  "subjects": [
+   "technic chassis frame",
+   "technic frame",
+   "chassis",
+   "beam frame",
+   "pin joint",
+   "rigid joint",
+   "liftarm pin joint"
+  ]
+ },
+ {
+  "id": "recipe-technic-gear-pair",
+  "title": "Braced 8:24 gear pair: two shafts in two beams, bushed both sides",
+  "scope": "construction",
+  "kind": "recipe",
+  "aliases": [
+   "recipe:technic-gear-pair"
+  ],
+  "families": [
+   "recipe",
+   "technic",
+   "mechanism"
+  ],
+  "lesson": "8 + 24 teeth mesh 1.25 x (8 + 24) = 40 LDU apart, so the shafts go in holes two apart (hole-1, hole-3). Each shaft runs in two beams; the second beam sits on the shafts with on {to: input, hole: hole-1, pin: shaft, next_to: input-gear, side: +X} plus orient, and a bush outside each beam stops the shafts sliding. The mechanism contract checks that the input turns the output. Parts: 32524, 32073, 3647, 3648b, 3713.",
+  "limits": "Small checked recipe: build passed every Technic check and its mechanism contract, review passed with matching BOMs, and the preview was inspected on 2026-11-17. It shows the built pose; it does not simulate motion or certify strength.",
+  "plan": "examples/recipes/technic-gear-pair.plan.json",
+  "model": "examples/recipes/technic-gear-pair.mpd",
+  "model_sha256": "a78ade93596a846fad839e326458f948271c45ea473a75c617a0e93d3d068ea6",
+  "preview": "examples/recipes/technic-gear-pair.png",
+  "techniques": [
+   "technic seat",
+   "next_to",
+   "mechanism contract"
+  ],
+  "subjects": [
+   "gear train",
+   "gear pair",
+   "spur gears",
+   "gear ratio",
+   "transmission",
+   "gearbox",
+   "reduction"
+  ]
+ },
+ {
+  "id": "recipe-technic-rack-steering",
+  "title": "Rack-and-pinion steering: kingpin hubs, L-liftarm arms and a 1 x 7 rack",
+  "scope": "construction",
+  "kind": "recipe",
+  "aliases": [
+   "recipe:technic-rack-steering"
+  ],
+  "families": [
+   "recipe",
+   "technic",
+   "mechanism"
+  ],
+  "lesson": "Kingpins are 4-long axles turning in the open frame's front corner holes; on each sit a cross block hub (6536, its round hole carries an axle-pin wheel stub), a bush and an L-liftarm steering arm (32140, flip on the left one). The 1 x 7 rack (87761) is pinned to both arms' short ends: a parallelogram. A 12-tooth pinion (32270) on a shaft through both frame ends meshes 20 LDU above the rack; turn the knob at the back, or add a bevel corner to bring it up. Contract: input pinion-shaft moves rack and both hubs, 1 degree of freedom.",
+  "limits": "Small checked recipe: build passed every Technic check and its mechanism contract, review passed with matching BOMs, and the preview was inspected on 2026-11-17. It shows the built pose; it does not simulate motion or certify strength.",
+  "plan": "examples/recipes/technic-rack-steering.plan.json",
+  "model": "examples/recipes/technic-rack-steering.mpd",
+  "model_sha256": "80b7aae758d24cfa07672ba1378f51aa76958baf642a836a8cfdb45fda6aa799",
+  "preview": "examples/recipes/technic-rack-steering.png",
+  "techniques": [
+   "technic seat",
+   "join",
+   "flip",
+   "mechanism contract"
+  ],
+  "subjects": [
+   "rack and pinion steering",
+   "steering",
+   "front axle",
+   "kingpin",
+   "steering rack",
+   "pinion",
+   "tie rod"
+  ]
+ },
+ {
+  "id": "recipe-technic-wheel-axle",
+  "title": "Wheel on an axle carried by two pinned beams",
+  "scope": "construction",
+  "kind": "recipe",
+  "aliases": [
+   "recipe:technic-wheel-axle"
+  ],
+  "families": [
+   "recipe",
+   "technic",
+   "vehicle"
+  ],
+  "lesson": "Two beams on edge pinned side by side (join with two hole pairs) make a two-stud-deep bearing. A 5-long axle runs through both, a bush stops it inside, a half bush spaces the rim (56145) clear and the tyre (55976) goes on with snap: {\"snap\": {\"to\": \"rim\"}}. Parts: 32524, 32073, 3713, 32123a, 56145, 55976.",
+  "limits": "Small checked recipe: build passed every Technic check and its mechanism contract, review passed with matching BOMs, and the preview was inspected on 2026-11-17. It shows the built pose; it does not simulate motion or certify strength.",
+  "plan": "examples/recipes/technic-wheel-axle.plan.json",
+  "model": "examples/recipes/technic-wheel-axle.mpd",
+  "model_sha256": "119e41182f201292a510eeb909763ee2c35b8923baf33382ea128556fab7341f",
+  "preview": "examples/recipes/technic-wheel-axle.png",
+  "techniques": [
+   "technic seat",
+   "join",
+   "snap",
+   "next_to"
+  ],
+  "subjects": [
+   "wheel hub axle",
+   "wheel",
+   "axle bearing",
+   "tyre",
+   "rim",
+   "wheel mount"
+  ]
+ },
+ {
+  "id": "recipe-technic-bevel-corner",
+  "title": "Drive turned 90 degrees by two 12-tooth double bevels in an open frame",
+  "scope": "construction",
+  "kind": "recipe",
+  "aliases": [
+   "recipe:technic-bevel-corner"
+  ],
+  "families": [
+   "recipe",
+   "technic",
+   "mechanism"
+  ],
+  "lesson": "Two 12-tooth double bevels (32270) mesh with each centre 20 LDU from where the shafts cross. The shafts enter the open frame (64179) through a side hole and an end hole, reach 10 LDU short of the crossing, and the gears sit on their inner ends with slide; a bush outside the frame retains each shaft. Each gear is within two studs of its bearing. Parts: 64179, 3705, 32270, 3713.",
+  "limits": "Small checked recipe: build passed every Technic check and its mechanism contract, review passed with matching BOMs, and the preview was inspected on 2026-11-17. It shows the built pose; it does not simulate motion or certify strength.",
+  "plan": "examples/recipes/technic-bevel-corner.plan.json",
+  "model": "examples/recipes/technic-bevel-corner.mpd",
+  "model_sha256": "e9b21c19d714dfa5a99c83efcb9e791f0c0041bdf7f56aa4072fe98526b3e1e4",
+  "preview": "examples/recipes/technic-bevel-corner.png",
+  "techniques": [
+   "technic seat",
+   "slide",
+   "mechanism contract"
+  ],
+  "subjects": [
+   "bevel gears",
+   "right angle drive",
+   "drive around a corner",
+   "perpendicular gears",
+   "double bevel"
+  ]
+ },
+ {
+  "id": "recipe-technic-worm-drive",
+  "title": "Worm driving a 24-tooth gear between two open frames",
+  "scope": "construction",
+  "kind": "recipe",
+  "aliases": [
+   "recipe:technic-worm-drive"
+  ],
+  "families": [
+   "recipe",
+   "technic",
+   "mechanism"
+  ],
+  "lesson": "A worm (4716) meshes a gear whose axis passes 10 + its pitch radius away: 40 LDU for 24 teeth (3648b). Two open frames (64179) stacked two studs apart on spacer beams carry the gear shaft along X and the worm shaft along Z; long friction pins (6558) go through frame, spacer and frame. Bushes back the worm on both sides against its thrust. Parts: 64179, 32524, 6558, 3706, 3707, 3648b, 4716, 3713, 32123a.",
+  "limits": "Small checked recipe: build passed every Technic check and its mechanism contract, review passed with matching BOMs, and the preview was inspected on 2026-11-17. It shows the built pose; it does not simulate motion or certify strength.",
+  "plan": "examples/recipes/technic-worm-drive.plan.json",
+  "model": "examples/recipes/technic-worm-drive.mpd",
+  "model_sha256": "ea3a5241923eab8d0a0e6e6819f89b37b185b188ad7d8ad0aca353382c631602",
+  "preview": "examples/recipes/technic-worm-drive.png",
+  "techniques": [
+   "technic seat",
+   "join",
+   "long pins",
+   "mechanism contract"
+  ],
+  "subjects": [
+   "worm gear",
+   "worm drive",
+   "worm",
+   "slow reduction",
+   "self locking"
+  ]
+ },
+ {
+  "id": "recipe-technic-suspension-arm",
+  "title": "Swing arm on a frictionless pin, sprung by a 6.5L shock absorber",
+  "scope": "construction",
+  "kind": "recipe",
+  "aliases": [
+   "recipe:technic-suspension-arm"
+  ],
+  "families": [
+   "recipe",
+   "technic",
+   "mechanism"
+  ],
+  "lesson": "The arm pivots on one frictionless pin (join pins: 3673.dat). The 6.5L shock (76537) has eyes 110 LDU apart, which never lands on the stud grid, so the arm turns to the angle the triangle needs: with the mount 80 and the arm hole 100 from the pivot, the law of cosines gives 74.41 degrees; the shock's own roll is then read off the build. The contract counts one degree of freedom: the shock slides as the arm swings. Parts: 32524, 32523, 76537, 3673, 2780.",
+  "limits": "Small checked recipe: build passed every Technic check and its mechanism contract, review passed with matching BOMs, and the preview was inspected on 2026-11-17. It shows the built pose; it does not simulate motion or certify strength.",
+  "plan": "examples/recipes/technic-suspension-arm.plan.json",
+  "model": "examples/recipes/technic-suspension-arm.mpd",
+  "model_sha256": "c793fdf20933cf729b83521efbd416dd822861e783ffa49ee8c62a96ad7a5df3",
+  "preview": "examples/recipes/technic-suspension-arm.png",
+  "techniques": [
+   "join",
+   "frictionless pin",
+   "mechanism contract"
+  ],
+  "subjects": [
+   "suspension shock absorber",
+   "suspension",
+   "swing arm",
+   "shock absorber",
+   "pivot",
+   "liftarm pin joint",
+   "hinge"
+  ]
+ },
+ {
+  "id": "recipe-technic-cylinder-lever",
+  "title": "Lever raised by a pneumatic cylinder to a rigid mount",
+  "scope": "construction",
+  "kind": "recipe",
+  "aliases": [
+   "recipe:technic-cylinder-lever"
+  ],
+  "families": [
+   "recipe",
+   "technic",
+   "mechanism"
+  ],
+  "lesson": "A pneumatic cylinder (74981-f2, extended, eyes 116 LDU apart) pins to a lever and to a mount with frictionless pins; the lever pivots on one frictionless pin. The lever angle follows from the triangle: mount 80 and lever hole 100 from the pivot give 79.40 degrees. The contract checks the cylinder moves the lever (1 degree of freedom). Hoses go on afterwards: see the flex guide. Parts: 32524, 32523, 74981-f2, 3673, 2780.",
+  "limits": "Small checked recipe: build passed every Technic check and its mechanism contract, review passed with matching BOMs, and the preview was inspected on 2026-11-17. It shows the built pose; it does not simulate motion or certify strength.",
+  "plan": "examples/recipes/technic-cylinder-lever.plan.json",
+  "model": "examples/recipes/technic-cylinder-lever.mpd",
+  "model_sha256": "f4d22cbfc72e2c251b25c7e62b1599f3d9454e99aa794860bebbe8d2bda34121",
+  "preview": "examples/recipes/technic-cylinder-lever.png",
+  "techniques": [
+   "join",
+   "frictionless pin",
+   "mechanism contract"
+  ],
+  "subjects": [
+   "pneumatic cylinder mount",
+   "linear actuator",
+   "cylinder lift arm",
+   "lever",
+   "pneumatic lift",
+   "actuator mount"
   ]
  }
 ]

@@ -1,0 +1,23 @@
+0 FILE technic-bevel-corner.ldr
+0 Drive turned through 90 degrees by two 12-tooth double bevel gears inside an open frame
+0 Name: technic-bevel-corner.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // frame: 5 x 7 open frame lying flat: side holes run along X, end holes along Z
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 64179.dat
+0 STEP
+0 // shaft-x: Input shaft through the right side, its inner end 10 LDU from the frame centre
+1 0 50 0 0 1 0 0 0 1 0 0 0 1 3705.dat
+0 // shaft-z: Output shaft through the back end, at right angles
+1 0 0 0 50 0 0 -1 0 1 0 1 0 0 3705.dat
+0 STEP
+0 // bush-x: Bush outside the frame
+1 71 60 0 0 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // bush-z: Bush outside the frame
+1 71 0 0 80 1 0 0 0 1 0 0 0 1 3713.dat
+0 STEP
+0 // gear-x: 12-tooth double bevel 20 LDU from where the shafts cross, 20 from its bearing
+1 14 20 0 0 0 0 1 0 1 0 -1 0 0 32270.dat
+0 // gear-z: Its partner, also 20 LDU from the crossing and 40 from its bearing
+1 14 0 0 20 1 0 0 0 1 0 0 0 1 32270.dat
+0 NOFILE

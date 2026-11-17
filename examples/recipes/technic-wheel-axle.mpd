@@ -1,0 +1,30 @@
+0 FILE technic-wheel-axle.ldr
+0 Wheel on an axle carried by two pinned beams, with a bush on the inside
+0 Name: technic-wheel-axle.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // beam-a: Beam on edge along Z; its holes run along X
+1 71 0 0 0 0 -1 0 1 0 0 0 0 1 32524.dat
+0 STEP
+0 // beam-b: Second beam pinned beside the first at both ends: a two-stud-deep bearing
+1 71 20 0 0 0 1 0 -1 0 0 0 0 1 32524.dat
+0 // beam-b-pin-0: 2780.dat
+1 0 10 0 -60 1 0 0 0 1 0 0 0 1 2780.dat
+0 // beam-b-pin-1: 2780.dat
+1 0 10 0 60 1 0 0 0 1 0 0 0 1 2780.dat
+0 STEP
+0 // axle: 5-long axle through both beams, 1 stud out on the inside
+1 0 20 0 0 1 0 0 0 1 0 0 0 1 32073.dat
+0 STEP
+0 // bush: Bush on the inside: the axle cannot slide out
+1 71 -20 0 0 0 0 1 0 1 0 -1 0 0 3713.dat
+0 STEP
+0 // spacer: Half bush keeps the tyre clear of the beam
+1 71 35 0 0 0 0 1 0 1 0 -1 0 0 32123a.dat
+0 STEP
+0 // rim: Rim keyed on the axle end, against the half bush
+1 71 60 0 0 0 0 1 0 1 0 -1 0 0 56145.dat
+0 STEP
+0 // tyre: Off-road tyre on the rim, placed by the rim's tyre seat
+1 0 60 0 0 0 0 1 1 0 0 0 1 0 55976.dat
+0 NOFILE

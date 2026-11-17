@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [
+    {
+      "name": "technic-wheel-axle.ldr",
+      "description": "Wheel on an axle carried by two pinned beams, with a bush on the inside",
+      "mechanism": {
+        "ground": "beam-a",
+        "input": "axle",
+        "outputs": [
+          "rim"
+        ]
+      },
+      "steps": [
+        [
+          {
+            "id": "beam-a",
+            "ref": "32524.dat",
+            "colour": 71,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "orient": {
+              "up": "+X",
+              "x": "+Y"
+            },
+            "purpose": "Beam on edge along Z; its holes run along X"
+          }
+        ],
+        [
+          {
+            "id": "beam-b",
+            "ref": "32524.dat",
+            "colour": 71,
+            "join": {
+              "to": "beam-a",
+              "holes": {
+                "hole-0": "hole-0",
+                "hole-6": "hole-6"
+              },
+              "side": "+X"
+            },
+            "purpose": "Second beam pinned beside the first at both ends: a two-stud-deep bearing"
+          }
+        ],
+        [
+          {
+            "id": "axle",
+            "ref": "32073.dat",
+            "colour": 0,
+            "on": {
+              "to": "beam-a",
+              "hole": "hole-3",
+              "pin": "shaft",
+              "end": "-X",
+              "past": 20
+            },
+            "purpose": "5-long axle through both beams, 1 stud out on the inside"
+          }
+        ],
+        [
+          {
+            "id": "bush",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "axle",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "beam-a",
+              "side": "-X"
+            },
+            "purpose": "Bush on the inside: the axle cannot slide out"
+          }
+        ],
+        [
+          {
+            "id": "spacer",
+            "ref": "32123a.dat",
+            "colour": 71,
+            "on": {
+              "to": "axle",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "beam-b",
+              "side": "+X"
+            },
+            "purpose": "Half bush keeps the tyre clear of the beam"
+          }
+        ],
+        [
+          {
+            "id": "rim",
+            "ref": "56145.dat",
+            "colour": 71,
+            "on": {
+              "to": "axle",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "spacer",
+              "side": "+X"
+            },
+            "purpose": "Rim keyed on the axle end, against the half bush"
+          }
+        ],
+        [
+          {
+            "id": "tyre",
+            "ref": "55976.dat",
+            "colour": 0,
+            "snap": {
+              "to": "rim"
+            },
+            "purpose": "Off-road tyre on the rim, placed by the rim's tyre seat"
+          }
+        ]
+      ]
+    }
+  ]
+}

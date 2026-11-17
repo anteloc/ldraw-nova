@@ -181,8 +181,12 @@ def test_under_hangs_an_inverted_slope_by_its_studs(official):
 
 def test_part_facts_list_reviewed_technic_ports(official):
     beam = facts(official, '32523')
-    assert list(beam['technic_ports']) == ['hole-0', 'hole-1', 'hole-2']
-    assert beam['technic_ports']['hole-1'] == dict(kind='pin_hole', at=[0.0, 0.0, 0.0], axis=[0.0, 1.0, 0.0])
+    # Equally spaced holes print as one run: the IDs, kind, axis, length, first centre and step.
+    assert beam['technic_ports'] == {
+        'hole-0..hole-2': 'pin_hole axis +Y length 20.0, at [0.0, 0.0, -20.0] then every [0.0, 0.0, 20.0]'}
+    pin = facts(official, '2780')['technic_ports']
+    assert pin == {'grip-0': 'pin axis +X length 20.0, at [-10.0, 0.0, 0.0], friction',
+                   'grip-1': 'pin axis +X length 20.0, at [10.0, 0.0, 0.0], friction'}
 
 
 def test_connector_seats_reproduce_halcyon_flank_modules(official):

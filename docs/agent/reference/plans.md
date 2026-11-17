@@ -20,7 +20,8 @@ Refs can be numeric filenames (`3003.dat`), module names (`pillar.ldr`) or categ
 | `at` | Explicit coordinates in the containing section | `"at": [0, -24, 40]` |
 | `on` (ID) | Stacking curated upright bricks/plates on an earlier placement | `"on": "base"` |
 | `on` (object) | Seating any part by a socket on a stud of another part, on any face | `"on": {"to": "core", "face": "-Z", "stud": 0}` |
-| `on` (Technic) | A reviewed pin or axle in a hole, or a hole on a pin | `"on": {"to": "beam", "hole": "hole-1", "pin": "grip-0"}` |
+| `on` (Technic) | A pin or axle in a hole, or a holed part on a pin or axle | `"on": {"to": "beam", "hole": "hole-1", "pin": "grip-0", "side": "+X"}` |
+| `join` | A Technic part or section laid on another by matching holes, with its pins inserted | `"join": {"to": "rail", "holes": {"hole-0": "hole-0", "hole-1": "hole-1"}, "side": "+X"}` |
 | `under` | Hanging any part by a stud in a socket of the part above | `"under": {"to": "deck", "socket": 0}` |
 | `attach` | Aligning authored module anchors | `"attach": {"to": "lower", "anchor": "seat", "using": "base"}` |
 | `snap` | Searching actual connector evidence on a part/submodel | `"snap": {"to": "base", "near": [0, -8, 0]}` |
@@ -40,7 +41,11 @@ Orientation: `at` accepts one of `yaw` (degrees about +Y), `orient` or a proper 
 | `roll` | degrees about the seated socket's axis, right-handed like `yaw`; omitted, the quarter turn that covers the most studs of the support |
 | `orient` (beside `on`) | an explicit orientation instead of `roll`; it must make the socket face the stud |
 
-`on` with Technic ports takes `hole` and `pin` port IDs (as `part` lists them under `technic_ports`; each belongs to whichever part has it), `slide` in LDU along the shared axis, and `roll` about it. The male's centre goes to the hole's centre; the seat must pass the Technic fit rules, and for an axle in a cross hole the builder tries the 45° alternative when `roll` is omitted. `under` mirrors the stud seat: `socket`/`socket_face` pick the support's socket (default `+Y`, its underside) and `stud`/`face` the placed part's stud (default `-Y`, its top); `stud_at`/`stud_axis` seat a section, and `roll` turns about the socket's axis.
+`on` with Technic ports takes `hole` and `pin` port IDs (as `part` lists them under `technic_ports`; each belongs to whichever part has it). By default the two port centres coincide. Along the shared axis, use one of `slide` (LDU along the support port's axis), `end` with `past` (that end of the pin or axle stands `past` LDU beyond the face of the holed part; 0 is flush) or `next_to` with `side` (a holed part sits flush against that neighbour on that side, along the axle). `side` on a pin or axle names the direction the rest of it extends; `flip` turns a holed part end for end; `roll` turns about the axis, and for an axle in a cross hole the builder tries the 45° alternative when `roll` is omitted. The seat must pass the Technic fit rules; a failure names the rule and lists both parts' ports.
+
+`mirror` (`x`, `y` or `z`) on a section placement places a mirrored copy of the section, `NAME-mirror-x.ldr`, built once however often it is placed. LDraw forbids reflected matrices, so each part is placed as its own mirror image: the reflected pose composed with a plane of symmetry of the part (found from its geometry; for shock absorbers and cylinders, from their ports), or its Left/Right partner. A part with a real handedness, such as a worm gear, stops the build. Paths into the copy use the original IDs.
+
+`join` lays a part or a section on an earlier part. `holes` maps holes of `to` to holes of the placed object (`PART/hole-N` inside a section); `side` is the direction from `to` in which the placed object lies, along the hole axis. Two matched pairs fix the turn; with one pair, `roll` sets it. One connector per pair is inserted, named `ID-pin-0`, `ID-pin-1`…: `pins` chooses it (default `2780.dat`; `3673.dat` for a pivot; an axle-pin such as `43093.dat` for an axle hole; `false` for none) and `pin_colour` its colour. `flip` turns the placed object over. `under` mirrors the stud seat: `socket`/`socket_face` pick the support's socket (default `+Y`, its underside) and `stud`/`face` the placed part's stud (default `-Y`, its top); `stud_at`/`stud_axis` seat a section, and `roll` turns about the socket's axis.
 
 The builder computes the origin `stud - R * socket` from connector data (radius-6 studs and sockets after the contact checker's frame adaptation). It fails with the available faces, studs or sockets when a selection does not exist. The complete build report lists each seat under `seats` with `mated`, the number of the support's studs the part covers.
 
@@ -147,5 +152,5 @@ Python entry points are `connection_report`, `snap_report`, and `apply_snap` in 
 
 ## Declared checks and flexible placements
 
-Use named inline [structure contracts](technic.md#name-the-intended-connections) for new work; numeric external contracts remain supported. Both build and review execute declared checks. [Flexible placements and generated assets](flex.md) document named endpoints, mounted-wheel ownership, source paths, caching, output measurements and compatibility with existing MPD assets.
+Use named inline [structure contracts](technic.md#name-the-intended-connections) for new work; numeric external contracts remain supported. A section's `mechanism` (`ground`, `input` or `inputs`, `outputs`, `pivots`, `dof`, all placement paths) declares what should move; `build` checks it against the built pose ([Technic card](../cards/technic.md#declare-what-should-move)). Both build and review execute declared checks. [Flexible placements and generated assets](flex.md) document named endpoints, mounted-wheel ownership, source paths, caching, output measurements and compatibility with existing MPD assets.
 

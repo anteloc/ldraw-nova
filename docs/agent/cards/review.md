@@ -56,7 +56,7 @@ Each AI-generated section's header must contain, before its geometry:
 
 These are section headers inside the MPD, not comments before its first `0 FILE`. Preserve existing authors/licences in imported third-party model or part blocks; do not relabel them as AI-created. The main model and newly generated submodels always receive the required metadata.
 
-The current plan schema supports `author`, `license` and section `description`, but not `keywords` or a licence-explanation field. Keep `license` a single-line value; do not embed the comment in it or add unsupported plan keys. After the final successful build, insert the exact explanatory `0` comment immediately below each generated section's `0 !LICENSE CC-BY-NC` line, and insert the keywords meta into those headers in `ai-generated.mpd`. Make this finalization repeatable without duplicate lines after each rebuild, which otherwise overwrites the added metadata. Do not edit the managed review bundle.
+The plan schema has `author`, `license` and section `description`, but no field for keywords or the licence comment. Keep `license` a single-line value and add no unsupported plan keys. After the final successful build, run `./ldraw-agent finalize output/TASK/ai-generated.mpd`. It adds the comment below each generated section's `0 !LICENSE CC-BY-NC` line and the keywords after it, keeps the CRLF line endings, and checks the title prefix and authors. Run it again after every rebuild; it never duplicates a line. Do not write your own script for this or edit the managed review bundle.
 
 Keep the successful plan review for declared structural/flex checks, then review the finalized MPD itself so the final images and reports correspond to the delivered bytes:
 

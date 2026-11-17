@@ -1,18 +1,57 @@
 {
   "version": 1,
   "author": "ldraw-nova recipe",
-  "sections": [{
-    "name": "technic-pin-frame.ldr",
-    "description": "Rigid Technic frame: two 7-long beams joined by 3-long cross beams and friction pins",
-    "steps": [
-      [{"id": "rail-left", "ref": "32524.dat", "colour": 71, "at": [-20, 0, 0], "purpose": "Long beam along Z; its holes run through its thickness (Y)"},
-       {"id": "rail-right", "ref": "32524.dat", "colour": 71, "at": [20, 0, 0], "purpose": "Parallel long beam, two studs to the right"}],
-      [{"id": "pin-front-left", "ref": "2780.dat", "colour": 0, "on": {"to": "rail-left", "hole": "hole-0", "pin": "grip-0"}, "purpose": "Friction pin: first half in the rail, second half below it"},
-       {"id": "pin-back-left", "ref": "2780.dat", "colour": 0, "on": {"to": "rail-left", "hole": "hole-6", "pin": "grip-0"}, "purpose": "Pin at the other end"}],
-      [{"id": "cross-front", "ref": "32523.dat", "colour": 72, "on": {"to": "pin-front-left", "hole": "hole-0", "pin": "grip-1", "roll": 90}, "purpose": "Cross beam on the pin's lower half; roll 90 turns it across the rails"},
-       {"id": "cross-back", "ref": "32523.dat", "colour": 72, "on": {"to": "pin-back-left", "hole": "hole-0", "pin": "grip-1", "roll": 90}, "purpose": "Second cross beam"}],
-      [{"id": "pin-front-right", "ref": "2780.dat", "colour": 0, "on": {"to": "cross-front", "hole": "hole-2", "pin": "grip-1"}, "purpose": "Pin through the cross beam's far hole and into the right rail"},
-       {"id": "pin-back-right", "ref": "2780.dat", "colour": 0, "on": {"to": "cross-back", "hole": "hole-2", "pin": "grip-1"}, "purpose": "Closes the rectangle"}]
-    ]
-  }]
+  "sections": [
+    {
+      "name": "technic-pin-frame.ldr",
+      "description": "Rigid Technic chassis: two rails pinned to an open frame at two holes each",
+      "steps": [
+        [
+          {
+            "id": "frame",
+            "ref": "64179.dat",
+            "colour": 71,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "5 x 7 open frame lying flat; its corner holes run vertically (Y)"
+          }
+        ],
+        [
+          {
+            "id": "rail-left",
+            "ref": "32524.dat",
+            "colour": 72,
+            "join": {
+              "to": "frame",
+              "holes": {
+                "hole-0": "hole-0",
+                "hole-6": "hole-6"
+              },
+              "side": "-Y"
+            },
+            "purpose": "7-long rail on the frame's left side; two pinned holes make the joint rigid"
+          }
+        ],
+        [
+          {
+            "id": "rail-right",
+            "ref": "32524.dat",
+            "colour": 72,
+            "join": {
+              "to": "frame",
+              "holes": {
+                "hole-13": "hole-0",
+                "hole-19": "hole-6"
+              },
+              "side": "-Y"
+            },
+            "purpose": "Matching rail on the right side"
+          }
+        ]
+      ]
+    }
+  ]
 }

@@ -26,6 +26,9 @@ REPO = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO))
 BRIEFS = Path(__file__).with_name('briefs.json')
 IMAGES = ('.png', '.jpg', '.jpeg', '.gif', '.webp')
+# Counted as defects whatever their severity: seating findings on derived ports are warnings in `build`.
+TECHNIC_ERRORS = {'technic.through_solid', 'technic.cell_overlap', 'technic.invalid_seating', 'technic.occupied_hole',
+                  'technic.occupied_span', 'technic.incomplete_grip'}
 
 
 def brief_by_id(identity):
@@ -84,7 +87,14 @@ def model_metrics(path):
         glass_obstructed=geometry['appearance']['glass_obstructed'],
         body_overlaps=codes.get('assembly.body_overlap', 0),
         alias_warnings=codes.get('part.alias_or_internal', 0),
-        bounds=geometry['bounds'], contacts=contacts)
+        bounds=geometry['bounds'], contacts=contacts,
+        codes=dict(codes))
+    technic = geometry.get('technic')
+    if technic:
+        metrics['technic'] = {k: technic.get(k) for k in ('rigid_groups', 'joints', 'gears', 'meshes', 'pins_and_axles', 'seated')}
+        metrics['technic']['seated_share'] = round(technic['seated'] / technic['pins_and_axles'], 3) \
+            if technic.get('pins_and_axles') else None
+        metrics['technic']['findings'] = {c: n for c, n in codes.items() if c.startswith('technic.')}
     return metrics, geometry
 
 
@@ -123,6 +133,13 @@ def brief_checks(brief, metrics, geometry):
             denominator = extent(metrics['bounds'], check['denominator'])
             value = round(extent(metrics['bounds'], check['numerator']) / denominator, 3) if denominator else None
             passed = value is not None and check['min'] <= value <= check['max']
+        elif kind == 'technic':
+            value = ((metrics.get('technic') or {}).get(check['key']))
+            passed = value is not None and check.get('min', 0) <= value <= check.get('max', float('inf'))
+        elif kind == 'no_codes':
+            found = metrics.get('codes') or {}
+            value = {c: found[c] for c in check['codes'] if found.get(c)}
+            passed = not value
         elif kind == 'ground':
             pattern = re.compile(check['pattern'], re.I)
             lows = [i['bounds']['max'][1] for i in instances if pattern.search(i.get('description') or '')]
@@ -142,7 +159,7 @@ def plan_metrics(plans):
             for step in section.get('steps', []):
                 for entry in step:
                     entries += 1
-                    mode = next((m for m in ('at', 'on', 'under', 'attach', 'snap', 'flex') if m in entry), 'other')
+                    mode = next((m for m in ('at', 'on', 'under', 'join', 'attach', 'snap', 'flex') if m in entry), 'other')
                     if mode == 'on' and isinstance(entry['on'], dict):
                         mode = 'on-technic' if entry['on'].keys() & {'hole', 'pin'} else 'on-connector'
                     modes[mode] += 1
@@ -150,8 +167,10 @@ def plan_metrics(plans):
                         matrices[json.dumps(entry['matrix'])] += 1
                     if 'orient' in entry:
                         modes['orient'] += 1
+    port_based = modes.get('on-technic', 0) + modes.get('join', 0)
     return dict(plans=len(plans), entries=entries, modes=dict(modes),
                 at_share=round(modes.get('at', 0) / entries, 3) if entries else None,
+                technic_seat_share=round(port_based / entries, 3) if entries else None,
                 raw_matrices=sum(matrices.values()), distinct_matrices=len(matrices))
 
 
@@ -229,7 +248,11 @@ def row(score):
                 built=m.get('checks_passed'), placements=m.get('placements'),
                 main=m.get('main_group_ratio'), checks=f"{score['checks_passed']}/{score['checks_total']}",
                 deep=m.get('deep_overlaps'), bare=m.get('exposed_side_studs'), glass=m.get('glass_obstructed'),
-                at=p.get('at_share'), matrices=p.get('raw_matrices'), turns=c.get('turns'),
+                at=p.get('at_share'), ports=p.get('technic_seat_share'), matrices=p.get('raw_matrices'),
+                meshes=(m.get('technic') or {}).get('meshes'), seated=(m.get('technic') or {}).get('seated_share'),
+                technic_errors=sum(n for c, n in ((m.get('technic') or {}).get('findings') or {}).items()
+                                   if c in TECHNIC_ERRORS) if m.get('technic') else None,
+                turns=c.get('turns'),
                 context_k=round(c['max_context'] / 1000) if c.get('max_context') else None,
                 images=c.get('images_opened'), tool_kb=round(t['stdout_bytes'] / 1024) if t.get('available') else None,
                 usd=c.get('usd'), minutes=c.get('minutes'), rubric=rubric.get('mean'))

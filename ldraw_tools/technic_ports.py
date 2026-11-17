@@ -83,9 +83,10 @@ def raw_features(connections):
         position = np.array([feature.position.x, feature.position.y, feature.position.z], float)
         total = float(sum(s.length for s in sections))
         start = position - axis * total / 2 if feature.profile.centered else position
+        radial = np.array([feature.radial.x, feature.radial.y, feature.radial.z], float)
         rows.append(dict(male=feature.role.value == 'male', start=start, axis=axis,
                          sections=[(s.shape.value, float(s.radius), float(s.length)) for s in sections],
-                         group=getattr(feature, 'group', None)))
+                         group=getattr(feature, 'group', None), radial=radial))
     return rows
 
 
@@ -106,7 +107,7 @@ def _classes(sections, male):
             kind = 'axle'
         elif shape == 'round' and 5.4 <= radius <= 6.6:
             kind = 'pin'
-        elif shape == 'round' and 6.6 < radius <= 9.5:
+        elif (shape == 'round' and 6.6 < radius <= 9.5) or (shape == 'square' and not male):
             kind = 'collar'
         elif shape == 'round' and 3.4 <= radius <= 4.6 and male:
             kind = 'nozzle'
@@ -126,6 +127,18 @@ def _male_runs(sections):
     if any(kind == 'skip' and high - low > 1e-6 for kind, low, high in runs) and \
             not any(kind in ('pin', 'axle') for kind, low, high in runs):
         return []
+    # A short smooth length beside an axle (behind a stop collar) is part of that shaft.
+    for index, run in enumerate(runs):
+        if run[0] == 'pin' and run[2] - run[1] < 10 and any(
+                0 <= j < len(runs) and runs[j][0] == 'axle' for j in (index - 1, index + 1)):
+            run[0] = 'axle'
+    merged = []
+    for run in runs:
+        if merged and merged[-1][0] == run[0]:
+            merged[-1][2] = run[2]
+        else:
+            merged.append(list(run))
+    runs = merged
     result = []
     for index, (kind, low, high) in enumerate(runs):
         if kind not in ('pin', 'axle'):
@@ -166,9 +179,11 @@ def _female_runs(sections):
         return []
     low, high = used[0][1], used[-1][2]
     axle = sum(r[2] - r[1] for r in used if r[0] == 'axle')
-    kind = 'axle_hole' if axle >= 5 else 'pin_hole'
+    # A short cross section behind a counterbore still keys an axle (the 14-tooth bevel's is 4 LDU).
+    kind = 'axle_hole' if axle >= 3 else 'pin_hole'
     count = round((high - low) / MODULE)
-    if kind == 'pin_hole' and count >= 2 and abs((high - low) - MODULE * count) <= 2.5:
+    # A long bore receives one module from each end (a joiner), so it is cut like a beam.
+    if count >= 2 and abs((high - low) - MODULE * count) <= 2.5:
         step = (high - low) / count
         return [(kind, low + step * i, low + step * (i + 1), set()) for i in range(count)]
     return [(kind, low, high, set())]
@@ -180,6 +195,29 @@ def nominal(length, female):
     if target >= 10 and abs(length - target) <= (4.5 if female else 2.5):
         return float(target)
     return round(float(length), 3)
+
+
+def snapped(low, high, origin, female):
+    """A run's interval at its nominal length, placed on the part's 10 LDU lattice.
+
+    ``origin`` is the coordinate of the run's zero along its axis. When the
+    nominal length differs from the measured one, the run grows at whichever
+    end (or both) leaves its faces nearest the lattice: an 18 LDU bore from -8
+    to 10 becomes the cell from -10 to 10.
+    """
+    length = nominal(high - low, female)
+    grow = length - (high - low)
+    if abs(grow) < 1e-9:
+        return low, high, length
+
+    def on_lattice(value):
+        world = origin + value
+        return abs(world - round(world / 10) * 10) < 0.01
+
+    # Grow evenly, unless growing one end puts both faces on the lattice and growing evenly does not.
+    options = [(low - grow / 2, high + grow / 2), (low - grow, high), (low, high + grow)]
+    low, high = max(options, key=lambda o: on_lattice(o[0]) + on_lattice(o[1]))
+    return low, high, length
 
 
 def _parallel(a, b):
@@ -200,7 +238,10 @@ def derive(connections):
     """
     ports, nozzles = [], []
     for row in raw_features(connections):
-        if row['group'] or any(shape == 'square' for shape, _, _ in row['sections']):
+        squares = [shape == 'square' for shape, _, _ in row['sections']]
+        # Grouped snaps are rails and joint internals. An all-square cavity is a
+        # stud socket; a square on a male is a rail, not a pin.
+        if row['group'] or all(squares) or (row['male'] and any(squares)):
             continue
         axis, start = row['axis'], row['start']
         if row['male']:
@@ -212,14 +253,13 @@ def derive(connections):
         else:
             runs = _female_runs(row['sections'])
         for kind, low, high, stops in runs:
-            length = nominal(high - low, not row['male'])
+            raw = high - low
+            low, high, length = snapped(low, high, float(start @ axis), not row['male'])
             if length < 7.5:
                 continue
             centre = start + axis * (low + high) / 2
-            if not row['male']:
-                kind = kind  # already pin_hole / axle_hole
             ports.append(dict(kind=kind, at=centre, axis=axis.copy(), length=length,
-                              male=row['male'], stops=set(stops), raw=(high - low)))
+                              male=row['male'], stops=set(stops), raw=raw, radial=row['radial'].copy()))
     # One port per place: prefer an axle hole over a pin hole, the longer over the shorter.
     kept = []
     for port in sorted(ports, key=lambda p: (-p['length'], p['kind'] != 'axle_hole')):
@@ -283,6 +323,31 @@ def _axis_sign(axis):
     return axis
 
 
+def cross_roll(axis, radial):
+    """The cross direction of an axle or axle hole, when it is not the default one for its axis.
+
+    A port frame is built from its axis alone unless it records ``radial``. That
+    default lines a cross up with the part's own axes, which is wrong for a hole
+    on a bent arm (turned by the bend angle) or a cross moulded at 45 degrees.
+    Returns the radial (part-local) or None when the default already matches,
+    to within 0.5 degrees and modulo the cross's quarter turn.
+    """
+    from ldraw import Vector
+    from ldraw.connection_types import frame_for_axis
+    axis = np.asarray(axis, float) / np.linalg.norm(axis)
+    actual = np.asarray(radial, float) - axis * float(np.asarray(radial, float) @ axis)
+    if np.linalg.norm(actual) < 1e-6:
+        return None
+    actual /= np.linalg.norm(actual)
+    x = frame_for_axis(Vector(*axis)) * Vector(1, 0, 0)
+    default = np.array([x.x, x.y, x.z], float)
+    angle = np.degrees(np.arctan2(float(np.cross(default, actual) @ axis), float(default @ actual)))
+    turn = (angle + 45) % 90 - 45
+    if abs(turn) <= 0.5:
+        return None
+    return _vector(actual, 6)
+
+
 def name_ports(ports):
     """Stable IDs: holes ``hole-N``, pin grips ``grip-N``, axles ``shaft`` or ``shaft-N``.
 
@@ -320,6 +385,9 @@ def entry(code, description, connections, bounds=None):
     for identity, port in name_ports(ports):
         row = dict(id=identity, kind=port['kind'], at=_vector(port['at']), axis=_vector(_axis_sign(port['axis']), 6),
                    length=_number(port['length']))
+        turned = cross_roll(row['axis'], port['radial']) if port['kind'] in ('axle', 'axle_hole') else None
+        if turned is not None:
+            row['radial'] = turned
         if port['male']:
             row['friction'] = bool(friction and port['kind'] == 'pin')
             if port['stops']:
@@ -336,3 +404,43 @@ def entry(code, description, connections, bounds=None):
         result['nozzles'] = [dict(id=f'nozzle-{i}', at=_vector(n['at']), outward=_vector(n['outward'], 6))
                              for i, n in enumerate(ordered)]
     return result
+
+
+def candidate_codes(descriptions):
+    """Parts worth deriving: Technic parts, wheels and motors that are not moved."""
+    for code, text in sorted(descriptions.items()):
+        if text.startswith('~Moved'):
+            continue
+        if clean_description(text).startswith(('Technic', 'Wheel', 'Electric')):
+            yield code
+
+
+def moved_aliases(descriptions, known):
+    """Old numbers of moved parts, pointing at an entry that exists."""
+    aliases = {}
+    for code, text in descriptions.items():
+        match = re.match(r'~Moved to (\S+)', text)
+        if match and match.group(1).casefold() in known:
+            aliases[code] = match.group(1).casefold()
+    return aliases
+
+
+def generate(parts, descriptions, *, reviewed=(), progress=None):
+    """Entries for every candidate part that has ports, except reviewed ones."""
+    entries = {}
+    codes = list(candidate_codes(descriptions))
+    for index, code in enumerate(codes):
+        if progress and index % 200 == 0:
+            progress(index, len(codes))
+        if code in reviewed:
+            continue
+        try:
+            geometry = parts.geometry(code)
+        except Exception:  # an unresolvable library file has no ports to offer
+            continue
+        if geometry.diagnostics and geometry.bounds is None:
+            continue
+        made = entry(code, geometry.description or descriptions[code], geometry.connections)
+        if made:
+            entries[code] = made
+    return entries

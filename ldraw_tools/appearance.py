@@ -302,14 +302,16 @@ def obstructed_glass(inspection, clear):
     return found
 
 
-def appearance_issues(inspection, *, pairs, contacts, contacts_checked, clear=frozenset()):
+def appearance_issues(inspection, *, pairs, contacts, contacts_checked, clear=frozenset(), meshes=()):
     """Warnings with occurrence indices; callers attach placement paths.
 
     ``clear`` holds the transparent colour codes of the installed LDConfig.
+    ``meshes`` are pairs of meshing gears, whose teeth interleave by design.
     """
     from .common import issue
     by_index = {o.index: o for o in inspection.occurrences}
     connected = {tuple(sorted((c.first_occurrence.index, c.second_occurrence.index))) for c in contacts}
+    connected |= {tuple(sorted(pair)) for pair in meshes}
     mated = frozenset((occ.index, feature.feature_id) for c in contacts
                       for occ, feature in ((c.first_occurrence, c.first), (c.second_occurrence, c.second)))
     problems = []

@@ -1,0 +1,28 @@
+0 FILE technic-suspension-arm.ldr
+0 Swing arm on a frictionless pin, sprung by a 6.5L shock absorber to a rigid mount
+0 Name: technic-suspension-arm.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // frame: Frame beam lying flat along Z; holes run along Y
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 32524.dat
+0 STEP
+0 // mount: Shock mount: a 3-long beam pinned to the frame at two holes, so it is rigid
+1 72 0 -20 40 1 0 0 0 1 0 0 0 1 32523.dat
+0 // mount-pin-0: 2780.dat
+1 0 0 -10 40 0 1 0 -1 0 0 0 0 1 2780.dat
+0 // mount-pin-1: 2780.dat
+1 0 0 -10 60 0 1 0 -1 0 0 0 0 1 2780.dat
+0 STEP
+0 // arm: Swing arm on one frictionless pin; turned so its sixth hole is 110 LDU from the mount
+1 4 57.792569249 -20 -43.874897224 0.26875171294 0 0.963209487491 0 1 0 -0.963209487491 0 0.26875171294 32524.dat
+0 // arm-pin-0: 3673.dat
+1 71 0 -10 -60 0 1 0 -1 0 0 0 0 1 3673.dat
+0 STEP
+0 // shock: 6.5L shock absorber: eyes 110 LDU apart, from the arm to the mount
+1 0 96.320948749 -40 -33.124828706 0.482976759048 -0.875633171036 0 0 0 -1 0.875633171036 0.482976759048 0 76537.dat
+0 // shock-pin-0: 3673.dat
+1 71 96.320948749 -30 -33.124828706 0 1 0 -1 0 0 0 0 1 3673.dat
+0 STEP
+0 // shock-pin: Frictionless pin through the shock top eye into the mount
+1 71 0.001299935 -30 20.002614789 0 -1 0 1 0 0 0 0 1 3673.dat
+0 NOFILE

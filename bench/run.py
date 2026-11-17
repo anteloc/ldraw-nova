@@ -149,7 +149,8 @@ def main(argv=None):
     p.add_argument('--ref', help='Git revision to benchmark (default: HEAD plus the uncommitted working tree)')
     p.add_argument('--model', action='append', help='Repeatable, e.g. haiku, sonnet, opus (required unless --clean)')
     p.add_argument('--brief', action='append', help='Brief ID (default: every brief in --round)')
-    p.add_argument('--round', type=int, default=1, help='Brief round; round 2 adds Technic and flex')
+    p.add_argument('--round', type=int, default=1, help='Brief round; round 2 adds Technic and flex, round 3 the Technic suite')
+    p.add_argument('--family', action='append', help='Only briefs of this family (repeatable), e.g. technic')
     p.add_argument('--repeats', type=int, default=2)
     p.add_argument('--jobs', type=int, default=1, help='Concurrent agents; parallel heavy runs exhaust usage quotas')
     p.add_argument('--effort', default='medium')
@@ -166,7 +167,7 @@ def main(argv=None):
         p.error('--model is required')
     data = json.loads(BRIEFS.read_text())
     briefs = [b for b in data['briefs'] if (args.brief and b['id'] in args.brief) or
-              (not args.brief and b['round'] <= args.round)]
+              (not args.brief and b['round'] <= args.round and (not args.family or b['family'] in args.family))]
     if args.brief and len(briefs) != len(set(args.brief)):
         p.error('Unknown brief ID; see bench/briefs.json')
     results = REPO / 'output/bench' / args.suite

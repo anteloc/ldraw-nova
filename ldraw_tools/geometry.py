@@ -181,9 +181,13 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
     contact_mode = "all" if contacts == "auto" and len(occurrences) <= 500 else "none" if contacts == "auto" else contacts
     contact_results = connection_contacts(inspection) if contact_mode == "all" else []
     from .technic import managed
+    technic_summary = None
     if contact_mode == 'all' and any(managed(f) for o in inspection.occurrences for f in o.connections):
         from .technic_review import review_inspection
         problems.extend(review_inspection(inspection, seating_only=True, found=contact_results))
+        from .technic_checks import review as technic_review
+        technic_problems, technic_summary = technic_review(inspection, contact_results)
+        problems.extend(technic_problems)
     mating_pairs = {}
     for contact in contact_results:
         pair = tuple(sorted((contact.first_occurrence.index, contact.second_occurrence.index)))
@@ -216,7 +220,8 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
     clear = frozenset(code for code, colour in getattr(parts, 'colours_by_code', {}).items()
                       if getattr(colour, 'is_transparent', False))
     appearance, appearance_summary = appearance_issues(inspection, pairs=candidates, contacts=contact_results,
-                                                       contacts_checked=contact_mode == "all", clear=clear)
+                                                       contacts_checked=contact_mode == "all", clear=clear,
+                                                       meshes=(technic_summary or {}).pop('mesh_pairs', ()))
     problems.extend(appearance)
     if len(bodies) < len(occurrences):
         problems.append(issue("coverage.collision_review", "Some parts lack rectangular body checks; oriented bounds refine candidates, while remaining overlaps require material review.", severity="warning"))
@@ -238,7 +243,7 @@ def analyze_geometry(model, parts, *, pair_limit=200, instance_limit=100000,
                 overlaps_truncated=overlap_count > (len(overlaps) if detail == "full" else 0),
                 main_group_size=len(main_group) if contact_mode == "all" else None,
                 outside_main_group=sorted(set(nodes) - set(main_group)) if contact_mode == "all" else None,
-                appearance=appearance_summary, diagnostics=problems,
+                appearance=appearance_summary, technic=technic_summary, diagnostics=problems,
                 limitations=["AABB candidates do not prove collisions; stud/socket bounding boxes normally overlap.",
                              "Connector matches, including 'confirmed', are computational evidence, not buildability certification.",
                              "No material intersection, clutch strength, stability, legal connection stress, or real colour availability proof."])

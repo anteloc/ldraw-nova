@@ -1,6 +1,8 @@
-# Construct mechanisms and verify requested motion
+# Mechanism relations and optional motion studies
 
-For construction studies, select a mechanism by input/output role, scale and available mounting space. Inspect its exact parts, parent-supplied interfaces and intended operation. Preserve source, geometry, BOM and opened-image checks. Intended operation is distinct from tested motion.
+A model's mechanisms are built and checked in the toolkit, in their delivered pose: place parts by their ports ([Technic card](../cards/technic.md)), declare a section's `mechanism` contract, and read `./ldraw-agent technic trace PLAN`. The build reports locked or uncoupled inputs, gears off their mesh distance, shafts without bearings and axles that can slide out. That is enough for a model that must be built correctly; it does not have to move.
+
+This guide is for the rarer study that must show motion: its interface graph, gear and joint relations, and the separate `ldraw-mecha` project that animates them.
 
 Start with `./ldraw-agent knowledge search 'worm drive support'` or `./ldraw-agent examples --family mechanism`. Read the returned lesson and limits. A rack carriage can need a parent pinion; a gearbox cutaway can lack surrounding bearings. Raw discovery and manual preparation are documented in [find references](find-references.md) and the [CLI reference](../reference/cli.md).
 
@@ -8,7 +10,7 @@ Use the focused patterns for [engines](mechanism-patterns/engines.md), [transmis
 
 ## Construction and motion branches
 
-For a static construction, review its delivered pose, connections, supports, clearance and assembly sequence. Record input, output, intended transfer, missing parent hardware and unverified effects. Scope fixed-rigidity contracts to stationary supports; joint scope can test named moving-part mounts in one pose. Do not require a complete mechanism to be rigid.
+For a static construction, review its delivered pose, connections, supports, clearance and assembly sequence with the build's checks and `technic trace`. Scope fixed-rigidity contracts to stationary supports; joint scope can test named moving-part mounts in one pose. Do not require a complete mechanism to be rigid.
 
 When motion is requested, build the interface graph below, then use the independent `ldraw-mecha` workflow from that project's directory and current documentation. Test off-rest configurations and asymmetric inputs. Rendered poses alone do not verify travel, engagement or strength.
 

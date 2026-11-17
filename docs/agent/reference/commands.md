@@ -156,9 +156,12 @@ Inventory mechanism parts, aliases, availability and review gaps
 
 #### `technic parts`
 
-Inspect reviewed nominal ports and geometry fingerprints
+Technic parts with ports: one in full, or the most used by role or words
 
 - `CODE`
+- `--role {member,connector,shaft,retainer,gear,wheel,equipment,bridge}`
+- `--query`: Words that must appear in the description, e.g. "beam bent" or "cross block"
+- `--top` (default 40): Rows to list, most used in official sets first
 
 #### `technic plan`
 
@@ -170,6 +173,19 @@ Export a structural plan and required-joint contract
 - `--accent` (default 14)
 - `--output` (required)
 - `--force`
+
+#### `technic gears`
+
+Tooth counts, pitch radii and the centre distances at which gears mesh
+
+- `TEETH`: Tooth counts to tabulate (default: the common spur and bevel sizes)
+
+#### `technic trace`
+
+Rigid groups, turning joints and gear meshes of a plan or MPD; checks its mechanism contracts
+
+- `FILE`: JSON plan or MPD/LDR
+- `--section`: Read only this section and what it places
 
 #### `technic check`
 
@@ -254,9 +270,9 @@ Look up cached dimensions for identified parts, without geometry loading
 
 ### `part`
 
-One part's origin, body, and studs/sockets by face (for on: placements)
+Origin, body, studs/sockets by face and Technic ports of one or more parts
 
-- `CODE`
+- `CODE`: Part codes; several are answered in one call
 - `--full`: Complete metadata and every connector record
 - `--limit` (default 30): With --full: connector output limit (total is always reported)
 
@@ -265,6 +281,13 @@ One part's origin, body, and studs/sockets by face (for on: placements)
 Look up codes in the installed LDConfig.ldr
 
 - `QUERY` (default )
+
+### `finalize`
+
+Add the licence comment and AI keywords to a built MPD and check its delivery metadata
+
+- `MODEL`: Built MPD, usually ai-generated.mpd; finalized in place unless --output is given
+- `--output`: Write the finalized MPD here instead
 
 ### `build`
 

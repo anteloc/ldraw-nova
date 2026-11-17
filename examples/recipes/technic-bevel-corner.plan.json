@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [
+    {
+      "name": "technic-bevel-corner.ldr",
+      "description": "Drive turned through 90 degrees by two 12-tooth double bevel gears inside an open frame",
+      "mechanism": {
+        "ground": "frame",
+        "input": "shaft-x",
+        "outputs": [
+          "shaft-z"
+        ]
+      },
+      "steps": [
+        [
+          {
+            "id": "frame",
+            "ref": "64179.dat",
+            "colour": 71,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "5 x 7 open frame lying flat: side holes run along X, end holes along Z"
+          }
+        ],
+        [
+          {
+            "id": "shaft-x",
+            "ref": "3705.dat",
+            "colour": 0,
+            "on": {
+              "to": "frame",
+              "hole": "hole-16",
+              "pin": "shaft",
+              "end": "+X",
+              "past": 40
+            },
+            "purpose": "Input shaft through the right side, its inner end 10 LDU from the frame centre"
+          },
+          {
+            "id": "shaft-z",
+            "ref": "3705.dat",
+            "colour": 0,
+            "on": {
+              "to": "frame",
+              "hole": "hole-10",
+              "pin": "shaft",
+              "end": "+Z",
+              "past": 20
+            },
+            "purpose": "Output shaft through the back end, at right angles"
+          }
+        ],
+        [
+          {
+            "id": "bush-x",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "shaft-x",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame",
+              "side": "+X"
+            },
+            "purpose": "Bush outside the frame"
+          },
+          {
+            "id": "bush-z",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "shaft-z",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame",
+              "side": "+Z"
+            },
+            "purpose": "Bush outside the frame"
+          }
+        ],
+        [
+          {
+            "id": "gear-x",
+            "ref": "32270.dat",
+            "colour": 14,
+            "on": {
+              "to": "shaft-x",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "slide": -30
+            },
+            "purpose": "12-tooth double bevel 20 LDU from where the shafts cross, 20 from its bearing"
+          },
+          {
+            "id": "gear-z",
+            "ref": "32270.dat",
+            "colour": 14,
+            "on": {
+              "to": "shaft-z",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "slide": -30
+            },
+            "purpose": "Its partner, also 20 LDU from the crossing and 40 from its bearing"
+          }
+        ]
+      ]
+    }
+  ]
+}

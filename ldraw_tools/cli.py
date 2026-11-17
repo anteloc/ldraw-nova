@@ -277,8 +277,11 @@ def parser():
     d.add_argument('--limit', type=positive, default=20, help='Displayed rows; --output always saves all selected rows')
     d.add_argument('--output', help='Save the complete selected inventory JSON')
     d.add_argument('--force', action='store_true')
-    d = t.add_parser('parts', help='Inspect reviewed nominal ports and geometry fingerprints')
+    d = t.add_parser('parts', help='Technic parts with ports: one in full, or the most used by role or words')
     d.add_argument('code', nargs='?')
+    d.add_argument('--role', choices=['member', 'connector', 'shaft', 'retainer', 'gear', 'wheel', 'equipment', 'bridge'])
+    d.add_argument('--query', help='Words that must appear in the description, e.g. "beam bent" or "cross block"')
+    d.add_argument('--top', type=positive, default=40, help='Rows to list, most used in official sets first')
     d = t.add_parser('plan', help='Export a structural plan and required-joint contract')
     d.add_argument('name')
     d.add_argument('--levels', type=positive, default=2)
@@ -286,6 +289,11 @@ def parser():
     d.add_argument('--accent', type=int, default=14)
     d.add_argument('--output', required=True)
     d.add_argument('--force', action='store_true')
+    d = t.add_parser('gears', help='Tooth counts, pitch radii and the centre distances at which gears mesh')
+    d.add_argument('teeth', nargs='*', type=positive, help='Tooth counts to tabulate (default: the common spur and bevel sizes)')
+    d = t.add_parser('trace', help='Rigid groups, turning joints and gear meshes of a plan or MPD; checks its mechanism contracts')
+    d.add_argument('file', help='JSON plan or MPD/LDR')
+    d.add_argument('--section', help='Read only this section and what it places')
     d = t.add_parser('check', help='Review seated joints, restraints, required mounts and assembly order')
     d.add_argument('file')
     d.add_argument('--contract')
@@ -351,8 +359,8 @@ def parser():
     c.add_argument('refs', nargs='+')
     c = commands.add_parser('export-parts-descriptions', help='Create the full ignored TSV snapshot for regex search')
     c.add_argument('--force', action='store_true', help='Replace an existing description snapshot')
-    c = commands.add_parser("part", help="One part's origin, body, and studs/sockets by face (for on: placements)")
-    c.add_argument("code")
+    c = commands.add_parser("part", help="Origin, body, studs/sockets by face and Technic ports of one or more parts")
+    c.add_argument("code", nargs="+", help="Part codes; several are answered in one call")
     c.add_argument("--full", action="store_true", help="Complete metadata and every connector record")
     c.add_argument("--limit", type=positive, default=30, help="With --full: connector output limit (total is always reported)")
     c = commands.add_parser("colours", help="Look up codes in the installed LDConfig.ldr")
@@ -382,6 +390,9 @@ def parser():
     c.add_argument("axis", choices=["x", "y", "z"])
     c.add_argument("degrees", type=float)
     commands.add_parser("profiles", help="List curated ordinary brick/plate dimensions for on placement")
+    c = commands.add_parser("finalize", help="Add the licence comment and AI keywords to a built MPD and check its delivery metadata")
+    c.add_argument("model", help="Built MPD, usually ai-generated.mpd; finalized in place unless --output is given")
+    c.add_argument("--output", help="Write the finalized MPD here instead")
     c = commands.add_parser("build", help="Build a validated MPD from a JSON plan")
     c.add_argument("plan")
     c.add_argument("--output", help="MPD path (default: NAME.mpd beside NAME.plan.json or NAME.json)")
@@ -523,6 +534,10 @@ def run(args):
                       tools={t: tool_path(t) for t in ["pdftotext", "leocad", "jev-rerank", "ldraw-xray", "ldraw-annotator", "lsynth", "mpd2glb.sh", "ldraw-render-steps.sh"]})
         report["synthesis"] = {"lsynth-nova": availability()}
         return report, 0 if report["library_present"] and report["tools"]["pdftotext"] else 2
+    if args.command == "finalize":
+        from .finalize import finalize
+        report = finalize(args.model, args.output)
+        return report, 0 if report['checks_passed'] else 1
     if args.command == "spec":
         return search_spec(args.query, args.page, args.limit), 0
     if args.command == "sections":
@@ -671,9 +686,16 @@ def run(args):
         from .technic_review import review_structure
         if args.technic_command == 'list':
             return RECIPES, 0
+        if args.technic_command == 'gears':
+            from .mechanism import gear_guide
+            return gear_guide(args.teeth), 0
+        if args.technic_command == 'trace':
+            from .mechanism import trace
+            report = trace(args.file, parts, section=args.section)
+            return report, 0 if report['checks_passed'] else 1
         if args.technic_command == 'parts':
-            report = parts_report(parts, args.code)
-            return report, 0 if all(p['geometry_matches'] for p in report['parts']) else 1
+            report = parts_report(parts, args.code, role=args.role, query=args.query, top=args.top)
+            return report, 0 if all(not isinstance(p, dict) or p.get('geometry_matches', True) for p in report['parts']) else 1
         if args.technic_command == 'plan':
             target = Path(args.output)
             contract_path = target.with_suffix('.structure.json')
@@ -841,8 +863,23 @@ def run(args):
     if args.command == "colours":
         return [jsonable(c) for k, c in sorted(parts.colours_by_code.items())
                 if args.query.casefold() in (str(k) + " " + (c.name or "")).casefold()], 0
+    if args.command == "part" and len(args.code) > 1:
+        if args.full:
+            raise ValueError('--full describes one part; ask for several without it')
+        rows, status = [], 0
+        for one in args.code:
+            try:
+                result, code_status = run(argparse.Namespace(**{**vars(args), 'code': [one]}))
+            except (ValueError, PartError) as exc:
+                result, code_status = dict(part=one, error=str(exc)), 1
+            result.pop('note', None)
+            rows.append(result)
+            status = max(status, code_status)
+        return dict(parts=rows, note='Local LDU, -Y up. Stud seats: on: {to, face, stud, socket}. '
+                                     'Technic seats: on: {to, hole, pin} and join: {to, holes, side}.'), status
     if args.command == "part":
         from .catalog import resolve_part
+        args.code = args.code[0]
         code = (resolve_part(args.code,parts) if args.code.startswith('@') else args.code).casefold().removesuffix(".dat")
         part = parts.part(code=code)
         if not args.full:
@@ -859,7 +896,16 @@ def run(args):
                     result['flex_ports'] = found
             except ValueError:
                 pass
-            result['note'] = 'Local LDU, -Y up. on: {to, face, stud, socket} counts in this order. --full: every connector.'
+            if 'technic_ports' in result:
+                from .technic import canonical, registry
+                entry = registry()['parts'].get(canonical(code), {})
+                result['role'] = entry.get('role')
+                if entry.get('nozzles'):
+                    result['hose_nozzles'] = {n['id']: f"at {n['at']} outward {n['outward']}" for n in entry['nozzles']}
+                result['note'] = ('Local LDU, -Y up. Technic seats name these ports: on: {to, hole, pin} or '
+                                  'join: {to, holes, side}. --full: every connector.')
+            else:
+                result['note'] = 'Local LDU, -Y up. on: {to, face, stud, socket} counts in this order. --full: every connector.'
             return result, 0
         g = parts.geometry(code)
         from .flex_plan import ports

@@ -17,10 +17,18 @@ An inline flex placement goes into the same `steps` arrays as rigid parts:
 }
 ```
 
-`part PART` lists the measured named ports and whether their geometry matches.
-The initial set covers pump `2797c01-f1` (`outlet`), valve `4694c01-f1`
-(`upper`, `inlet`, `lower`) and extended cylinder `74981-f2` (`base`, `rod`).
-Names describe fitting locations, not a verified pneumatic control circuit.
+`part PART` lists a part's hose fittings under `hose_nozzles` (or `flex_ports`). Measured names cover pump
+`2797c01-f1` (`outlet`), valve `4694c01-f1` (`upper`, `inlet`, `lower`) and extended cylinder `74981-f2`
+(`base`, `rod`); every other pneumatic part, about 60 in all, has nozzles `nozzle-0`, `nozzle-1`… read from its
+LDCad metadata (base point and outward direction). Names describe fitting locations, not a verified pneumatic
+control circuit.
+
+A pneumatic hose route runs with at least `min_radius` 15 and `min_separation` 10 LDU even when the plan gives no
+checks; a plan may raise them but not lower them, because a tighter limit accepts kinked or touching hoses.
+A pneumatic endpoint without `lead` leaves its fitting straight for 22 LDU before the hose may bend.
+Before synthesis, a route between two fittings warns `flex.ports_face_away` when a fitting points away from
+the other end (the hose must loop) and `flex.ports_too_close` when the fittings are closer than two bend radii
+plus the leads.
 
 Use `feature` instead of `port` for an explicitly inspected library connector.
 For a measured interface without metadata, use `at` and `outward` instead;

@@ -226,7 +226,44 @@ def snap_placement(entry, model, models, placed, parts, matrix, instance_limit):
 
 
 STUD_KEYS = {"face", "stud", "socket", "socket_face", "socket_at", "socket_axis"}
-TECHNIC_KEYS = {"hole", "pin", "slide"}
+TECHNIC_KEYS = {"hole", "pin", "slide", "side", "next_to", "end", "past", "flip"}
+
+
+def leaf_frame(target, model, placed, identity, mode):
+    """(part code, (rotation, position)) of an earlier part named by ID or module/part path."""
+    if "/" in target:
+        leaf = identity.resolve(model.name, target)
+        return leaf["ref"], (np.asarray(leaf["matrix"], float), np.asarray(leaf["at"], float))
+    if target not in placed or placed[target][0] is None:
+        raise ValueError(f"{mode} {target!r} must name an earlier placement in this section (or module/part path)")
+    piece = placed[target][0]
+    if not piece.reference.casefold().endswith(".dat"):
+        raise ValueError(f"{mode} {target!r} is a section; name a part inside it, e.g. {target}/ID")
+    return piece.reference, (np.asarray(piece.matrix.rows, float), np.asarray(jsonable(piece.position), float))
+
+
+def join_placement(entry, model, placed, identity, parts, context, known):
+    """Lay a part or module on an earlier part by matching holes; returns its pose and the pins."""
+    from .placement import join, technic_ports
+    options = entry["join"]
+    support_code, frame = leaf_frame(options["to"], model, placed, identity, "join.to")
+    ref = entry["ref"]
+    my_port = None
+    if normalized(ref) in known and not ref.casefold().endswith(".dat"):
+        def my_port(name):
+            path, _, port_id = name.rpartition("/")
+            if not path:
+                raise ValueError(f"{ref} is a section: name its hole as PART/hole, e.g. mount/{name}")
+            leaf = identity.resolve(ref, path)
+            ports = technic_ports(parts, leaf["ref"])
+            if port_id not in ports:
+                raise ValueError(f"{leaf['ref']} ({path}) has no port {port_id!r}; ports: {', '.join(ports)}")
+            return leaf["ref"], ports[port_id], (np.asarray(leaf["matrix"], float), np.asarray(leaf["at"], float))
+    rotation_matrix, position, pins, details = join(frame, support_code, options, parts, moving_code=ref, my_port=my_port)
+    if context is not None:
+        context.setdefault("seats", []).append(dict(section=model.name, placement=entry["id"], mode="join",
+                                                    on=options["to"], **details))
+    return Vector(*position), Matrix(rotation_matrix.tolist()), pins
 
 
 def connector_placement(entry, model, placed, identity, parts, context):
@@ -260,8 +297,9 @@ def connector_placement(entry, model, placed, identity, parts, context):
         count = mated(frame, support_code, (rotation_matrix, position), entry["ref"], parts, hanging=True)
         record = dict(socket=details["socket_at"], socket_face=details["socket"]["face"], mated=count)
     elif options.keys() & TECHNIC_KEYS:
-        rotation_matrix, position, details = technic_seat(frame, support_code, entry["ref"], options, parts,
-                                                          orientation=fixed)
+        rotation_matrix, position, details = technic_seat(
+            frame, support_code, entry["ref"], options, parts, orientation=fixed,
+            resolve=lambda name: leaf_frame(name, model, placed, identity, "on.next_to"))
         record = dict(hole=details["hole"], pin=details["pin"], at=details["at"], behavior=details["behavior"])
     else:
         rotation_matrix, position, details = seat(frame, support_code, entry["ref"], options, parts, orientation=fixed)
@@ -303,6 +341,7 @@ def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None, contex
     anchors = {normalized(s["name"]): {name:frame(value) for name,value in s.get("anchors",{}).items()} for s in plan["sections"]}
     regular = profiles()
     pending = []
+    made_mirrors = {}
     for section in dependency_order(plan["sections"]):
         model = models[section["name"]]
         model.set_header(description=section["description"], name=model.name, author=section.get("author",plan["author"]), ldraw_org="Model")
@@ -328,7 +367,7 @@ def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None, contex
                         identity.add(model.name, entry, None)
                         continue
                     target = (entry.get('on') or entry.get('under') or entry.get('snap', {}).get('to')
-                              or entry.get('attach', {}).get('to'))
+                              or entry.get('attach', {}).get('to') or entry.get('join', {}).get('to'))
                     if isinstance(target, dict):
                         target = target['to'].split('/')[0]
                     if target in placed and placed[target][0] is None:
@@ -339,13 +378,28 @@ def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None, contex
                         raise ValueError(f"Unknown reference {ref}; search/inspect the library first")
                     if entry["colour"] not in parts.colours_by_code or entry["colour"] == 24:
                         raise ValueError(f"Unknown or unsuitable placement colour {entry['colour']}")
+                    if "mirror" in entry:
+                        if ref.casefold().endswith(".dat") or normalized(ref) not in known:
+                            raise ValueError("mirror applies to a section placement: build the module once and place "
+                                             "it again with \"mirror\": \"x\"")
+                        from .mirror import mirror_model
+                        source = next(m for n, m in models.items() if normalized(n) == normalized(ref))
+                        mirrored = mirror_model(source, entry["mirror"], models, parts, made_mirrors)
+                        for made in made_mirrors.values():
+                            identity.mirror(made.name, made_mirrors)
+                        known.update(map(normalized, made_mirrors))
+                        ref = mirrored.name
+                        entry = dict(entry, ref=ref)
                     if "orient" in entry:
                         from .placement import orient
                         matrix = Matrix(orient(entry["orient"]["up"], entry["orient"].get("x")).tolist())
                     else:
                         matrix = Matrix(entry["matrix"]) if "matrix" in entry else rotation("y", entry.get("yaw", 0))
+                    pins = []
                     if "snap" in entry:
                         position, matrix = snap_placement(entry, model, models, placed, parts, matrix, instance_limit)
+                    elif "join" in entry:
+                        position, matrix, pins = join_placement(entry, model, placed, identity, parts, context, known)
                     elif isinstance(entry.get("on"), dict) or "under" in entry:
                         position, matrix = connector_placement(entry, model, placed, identity, parts, context)
                     elif "on" in entry:
@@ -390,6 +444,16 @@ def build_plan(plan, parts, *, instance_limit=100000, asset_reports=None, contex
                     model.add(piece)
                     placed[entry["id"]] = (piece, code)
                     identity.add(model.name, entry, piece)
+                    for number, pin in enumerate(pins):
+                        name = f"{entry['id']}-pin-{number}"
+                        if name in placed:
+                            raise ValueError(f"Duplicate placement id {name} in {model.name}")
+                        model.add(Comment(f"// {name}: {pin['ref']}"))
+                        pin_piece = Piece.place(pin["ref"], colour=pin["colour"], position=Vector(*pin["position"]),
+                                                matrix=Matrix(np.asarray(pin["matrix"]).tolist()))
+                        model.add(pin_piece)
+                        placed[name] = (pin_piece, pin["ref"].casefold().removesuffix(".dat"))
+                        identity.add(model.name, dict(id=name), pin_piece)
                 except BuildError:
                     raise
                 except ValueError as exc:

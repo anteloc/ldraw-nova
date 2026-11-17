@@ -11,12 +11,19 @@ import jsonschema
 import numpy as np
 
 from .common import DATA, jsonable
+from .validation import ROTATION_TOLERANCE
 from .connectivity import inspect_connections
 from .connection_adapter import connection_contacts
 from .technic import (definition, canonical, registry, managed, endpoints, fit, fit_failure,
                       conflicts, nearby_ports, Kind, MALE, TOL)
 
 MECHANISMS = re.compile(r'\b(gear|differential|universal joint|motor|actuator|pneumatic|shock absorber|steering)\b', re.I)
+# Seating rules whose failure is a warning: a pin off-centre or part-way into a hole, with at least a
+# plate's depth of it inside (see review_inspection).
+SOFT_RULES = ('pin grip:', 'engagement: the hole runs past the end of the pin')
+SOFT_DEPTH = 7.5
+# Seating findings that `build` reports whatever their severity.
+SEATING = ('technic.invalid_seating', 'technic.incomplete_grip', 'technic.occupied_hole', 'technic.occupied_span')
 
 
 def contract_check(contract, model, count):
@@ -52,7 +59,9 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
     for i, o in items.items():
         title = o.local.description
         matrix = np.asarray(o.occurrence.matrix.rows)
-        if not np.isfinite(matrix).all() or not np.allclose(matrix.T @ matrix, np.eye(3), atol=1e-6) or np.linalg.det(matrix) < 0:
+        # The same tolerance as the general `assembly.nonrigid` check: six-place rounding is not scaling.
+        if not np.isfinite(matrix).all() or not np.allclose(matrix.T @ matrix, np.eye(3), atol=ROTATION_TOLERANCE, rtol=0) \
+                or np.linalg.det(matrix) < 0:
             issue('technic.invalid_transform', 'Structural placements require finite proper rotations without scaling or reflection.', [i], 'error')
         if MECHANISMS.search(title):
             mechanism_parts.append(i)
@@ -61,8 +70,9 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
     if unknown:
         issue('technic.unreviewed_parts', 'These Technic parts or geometry revisions lack reviewed structural interfaces.', unknown,
               'error' if contract.get('require_rigid') else 'warning')
-    if mechanism_parts and not joints_only:
-        issue('technic.mechanism_scope', 'This check is for fixed structures. Use mechanism studies for moving assemblies; their function is outside structural review.', mechanism_parts, 'error')
+    if mechanism_parts and not joints_only and contract.get('require_rigid'):
+        issue('technic.mechanism_scope', 'require_rigid asks for one rigid structure, but this section holds moving parts. '
+              'Use "scope": "joints" for its mounts and a "mechanism" contract for what should move.', mechanism_parts, 'error')
     found = connection_contacts(inspection) if found is None else found
     joints, male_spans, shaft_contacts, member_links = [], defaultdict(list), defaultdict(list), defaultdict(list)
     tech = [c for c in found if managed(c.first) and managed(c.second)]
@@ -73,8 +83,16 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
                            **details, position=jsonable(hf.position), axis=jsonable(mf.axis)))
         male_spans[m.index, mf.feature_id].append(details['interval'])
         shaft_contacts[m.index].append((h, hf, mf, details))
+    def proven(instances):
+        """Errors need hand-reviewed ports on every part involved; derived ports give warnings.
+
+        On official sets the derived ports' seating findings fire above the 1 per 1,000 placements
+        that an error may (scripts/technic_corpus.py checks)."""
+        return all(definitions.get(i) and 'geometry_sha256' in definitions[i] for i in instances)
+
     for conflict in conflicts(found):
-        issue(conflict['code'], 'Two parts occupy the same receiving hole or shaft span.', conflict['instances'], 'error', port=conflict['port'])
+        issue(conflict['code'], 'Two parts occupy the same receiving hole or shaft span.', conflict['instances'],
+              'error' if proven(conflict['instances']) else 'warning', port=conflict['port'])
 
     # A pin grip split over thin layers is retained only after their union fills it.
     for (owner, port), spans in male_spans.items():
@@ -87,11 +105,13 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
                 break
             cursor = max(cursor, high)
         if cursor < f.length/2-TOL:
-            issue('technic.incomplete_grip', 'A pin grip is only partly supported; complete the layer stack and retaining seat.', [owner], 'error', port=port)
+            # A warning: studded Technic legitimately grips pins in plates and bricks of other depths.
+            issue('technic.incomplete_grip', 'A pin grip is only partly supported; complete the layer stack and retaining seat.', [owner], 'warning', port=port)
 
     valid_pairs = {tuple(sorted((c.first_occurrence.index, c.second_occurrence.index))) for c in tech}
     # Diagnose almost-mates without interpreting every nearby bounding box as a hole.
     close = defaultdict(list)
+    grips_in = defaultdict(set)
     for owner, male, receiver, hole in nearby_ports(inspection):
         i, j = owner.index, receiver.index
         if tuple(sorted((i, j))) in valid_pairs:
@@ -100,17 +120,32 @@ def review_inspection(inspection, *, contract=None, seating_only=False, found=No
         along = delta.dot(male.axis)
         radial = abs(delta-male.axis*along)
         overlap = min(male.length/2, along+hole.length/2)-max(-male.length/2, along-hole.length/2)
+        # A pin resting tip-down on a hole is an unseated pin; a seated pin end that merely
+        # touches the face of the next hole along its axis is not.
+        if overlap <= TOL and (owner.index, male.feature_id) in male_spans:
+            continue
         if radial <= TOL and abs(male.axis.dot(hole.axis)) > .9999 and overlap >= -TOL:
-            close[i, j].append((male.feature_id, hole.feature_id, fit_failure(male, hole)))
+            close[i, j].append((male.feature_id, hole.feature_id, fit_failure(male, hole), overlap))
+            if male.kind is Kind.PIN and overlap > TOL:
+                grips_in[j, hole.feature_id].add((i, male.feature_id))
     order = {index: n for n, index in enumerate(items)}
     for (i, j), found in sorted(close.items(), key=lambda row: tuple(order[k] for k in row[0])):
-        rules = sorted({rule for _, _, rule in found if rule})
+        rules = sorted({rule for _, _, rule, _ in found if rule})
         message = 'Aligned interfaces fail ' + ('; '.join(rules) if rules else
                                                 'seating, engagement, family or keyed-roll rules') + '.'
-        issue('technic.invalid_seating', message, [i, j], 'error', ports=[(m, h) for m, h, _ in found], rules=rules)
+        # A pin part-way into a hole, or off-centre in it, still holds when a plate's depth of it is
+        # inside: plates (8 LDU) on bricks (20 LDU) do this throughout official studded sets. A pin
+        # barely touching a hole, a hole across both grips (the collar in the bore), a cross out of
+        # line, a tilted axis or a pin in an axle hole cannot be built.
+        soft = bool(rules) and all(rule and rule.startswith(SOFT_RULES) and overlap >= SOFT_DEPTH - TOL
+                                   and len({g for g in grips_in[j, h] if g[0] == i}) <= 1
+                                   for _, h, rule, overlap in found)
+        issue('technic.invalid_seating', message, [i, j], 'error' if not soft and proven([i, j]) else 'warning',
+              ports=[(m, h) for m, h, _, _ in found], rules=rules)
 
     if seating_only:
-        return [d for d in diagnostics if d['severity'] == 'error' and d['code'] != 'technic.mechanism_scope']
+        return [d for d in diagnostics if d['code'] != 'technic.mechanism_scope' and
+                (d['severity'] == 'error' or d['code'] in SEATING)]
 
     # Axles need actual stops on both sides of their supported stack.
     # Retainer parts are keyed to the shaft; they do not create structural edges

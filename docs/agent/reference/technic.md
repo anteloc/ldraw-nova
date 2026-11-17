@@ -20,7 +20,7 @@ Put the structural intent directly on the section:
 }
 ```
 
-This checks the two actual joints and requires an earlier STEP for the pin.
+This checks the two actual joints and requires an earlier STEP for the pin. `require_rigid` asks for one rigid structure, so it fails on a section with moving parts (`technic.mechanism_scope`); use `"scope": "joints"` for the mounts of a mechanism and a `mechanism` contract for what should move.
 The existing Technic seating, occupied-span and restraint rules still apply.
 Use `"retained_axles": ["drive-axle"]` when both axial stops are required;
 a still-engaged bush with a gap against its supported stack then fails review.
@@ -35,9 +35,18 @@ identify one physical joint: select its actual mating part.
 
 ## Use measured ports and real lengths
 
-The initial registry covers the original **34 definitions plus aliases**, plus the measured workshop interfaces: common Technic bricks, straight beams, a thin beam, a rectangular frame, an axle/pin cross block, ordinary and long pins, axle-pins, a stud-ended half pin, axles and bushes. `technic parts` lists exact IDs, nominal ports, part roles and `geometry_matches`. Coordinates are **local LDU**.
+Ports come from two tables, merged by `technic.registry()`:
 
-Each entry fingerprints its expanded geometry. Changed or unreviewed definitions do not receive curated ports. Do not update a hash without measuring and reviewing the new part. Additional connector blocks, bent/flexible members, panels and hubs need interface curation before a strict structural contract can rely on them.
+- **Reviewed** (`ldraw_tools/data/technic-parts.json`): 39 hand-measured parts (common Technic bricks, straight beams, a thin beam, a rectangular frame, an axle/pin cross block, pins, axle-pins, a half pin, axles, bushes, a 16-tooth gear, a pneumatic cylinder). Each entry fingerprints its expanded geometry. They override the derived table.
+- **Derived** (`ldraw_tools/data/technic-ports.json`, written by `scripts/technic_ports.py`): about 1,600 Technic parts, wheels and motors, read from the authored `SNAP_CYL` cylinders of the LDCad shadow library. A male is cut at its collars and where it changes between pin and axle, long pins into 20 LDU grips; long bores into 20 LDU cells; lengths snap to the 10 LDU module. A cross that is not square to the part's own axes (the end hole of a bent liftarm, turned by the bend) records its `radial` direction. Each entry fingerprints the connector metadata it was made from, so a changed library part loses its ports instead of keeping stale ones. The derivation reproduces all 150 reviewed ports (`tests/test_technic_ports.py`).
+
+`scripts/technic_corpus.py ports` seats every derived pin and axle of the official Technic sets in `data/models-annotated`: a port that seats in fewer than half of its uses is withheld from the tools (`withheld` in the table) and re-measured on the next run. On the current corpus the table covers 98% of the Technic placements of 215 Technic-heavy sets, and 94% of their pins and axles seat. `technic parts` lists parts by role and use; `part CODE` lists one part's ports. Coordinates are **local LDU**.
+
+An axle may stop partway into a hole: it keys or bears on what it fills if it fills a whole module, less the 2.5 LDU by which nominal lengths can exceed a blind bore. A cross keys within 5° of roll. A pin grip seats when it sits wholly in its hole, or two half-depth layers fill it.
+
+`technic.invalid_seating` reports a pair that cannot be built: tilted or offset axes, a cross out of line, a pin in an axle hole, an axle with too little inside the hole, a pin barely touching a hole, or one hole across both grips of a pin (the collar in the bore). It also reports a pin that sits off-centre or part-way into a hole with at least 7.5 LDU (a plate's depth) inside. Studded sets do that with plates on bricks, so that case is always a warning. A half-filled grip is the warning `technic.incomplete_grip`. Neighbours on one shaft may seem to overlap by up to 3 LDU, because derived lengths round thin parts (7–8 LDU) up to 10; only larger overlaps are `technic.occupied_span`.
+
+Seating findings (`invalid_seating`, `occupied_hole`, `occupied_span`) are errors only when every part involved has reviewed ports. With a derived port they are warnings, because on official sets the derived ports' findings fire above the one-per-1,000-placements rate an error may have. Fix them all the same.
 
 - Hole pitch is normally 20 LDU. Brick/plate body heights are 24/8. Two plates between studded Technic bricks produce a 40-LDU hole separation.
 - Three beam holes span 40 LDU between their end centres. Solid bounds are not nominal placement dimensions.
@@ -46,6 +55,14 @@ Each entry fingerprints its expanded geometry. Changed or unreviewed definitions
 - Cross holes constrain axle roll; suitable round holes act as bearings. Neither establishes axial retention by itself.
 
 Pins have separate grips; mixed connectors have separate pin and axle ends. Friction comes from reviewed part identity, not colour or LDCad's editor `slide` flag. This repository-owned registry remains active when external shadows are disabled.
+
+## Check mechanisms in the built pose
+
+Every build that contains Technic ports runs `technic_checks.review`: solid-cell collisions, pins in the air, axles that can slide out, unbacked worms, and the findings of the kinematic graph in `mechanism.py` (rigid groups by union of studs, friction pins and keyed axle fits; revolute joints at frictionless pins and axles in round holes; gear, bevel, worm and rack couplings at the distances measured in the official sets, `ldraw_tools/data/technic-gears.json`). The [Technic card](../cards/technic.md#what-the-build-checks) lists the codes and their fixes.
+
+Each rule was run on the official sets before it was enabled (`scripts/technic_corpus.py checks`; results in `docs/reports/benchmarks/technic-corpus.json`). Errors fire on fewer than 0.2 placements in 1,000 of correct official models. A gear held at an axle end only by its cross hole is how LEGO builds, so it is not reported.
+
+A section's `mechanism` contract runs an instantaneous mobility analysis: the rank of the joint and gear constraints with the frame held still. It reports whether each input can move, which outputs move with it, which pivots are locked and the degrees of freedom of the working parts (pins that only spin are not counted). It ignores play, travel limits and strength, can mislead at a singular pose, and treats ball joints and telescoping parts as rigid. `technic trace PLAN` prints the graph.
 
 ## Check intended joints and restraint
 

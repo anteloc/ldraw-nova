@@ -6,7 +6,10 @@
       "id": "radio",
       "round": 1,
       "family": "snot-object",
-      "budget": {"minutes": 45, "usd": 6},
+      "budget": {
+        "minutes": 45,
+        "usd": 6
+      },
       "prompt": "Build a 1950s-style table radio: roughly 10 studs wide, 6 studs deep and 8 bricks tall, with rounded top edges, a speaker grille and a tuning dial on the front face, and two knobs. Use SNOT where it improves the front face.",
       "features": [
         "Reads as a table radio from the front at thumbnail size",
@@ -16,19 +19,74 @@
         "Rounded top edges"
       ],
       "checks": [
-        {"id": "size", "type": "placements", "min": 40, "max": 500},
-        {"id": "connected", "type": "connected", "min": 0.95},
-        {"id": "snot-used", "type": "parts_any", "codes": ["87087", "30414", "4070", "99780", "99781", "11211", "26604", "52107", "67329", "22885", "47457", "32952", "2921", "4733", "4595", "32028"], "min": 1},
-        {"id": "width", "type": "extent", "axis": "x", "unit": "studs", "min": 8, "max": 14},
-        {"id": "depth", "type": "extent", "axis": "z", "unit": "studs", "min": 4, "max": 9},
-        {"id": "height", "type": "extent", "axis": "y", "unit": "ldu", "min": 120, "max": 260}
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 40,
+          "max": 500
+        },
+        {
+          "id": "connected",
+          "type": "connected",
+          "min": 0.95
+        },
+        {
+          "id": "snot-used",
+          "type": "parts_any",
+          "codes": [
+            "87087",
+            "30414",
+            "4070",
+            "99780",
+            "99781",
+            "11211",
+            "26604",
+            "52107",
+            "67329",
+            "22885",
+            "47457",
+            "32952",
+            "2921",
+            "4733",
+            "4595",
+            "32028"
+          ],
+          "min": 1
+        },
+        {
+          "id": "width",
+          "type": "extent",
+          "axis": "x",
+          "unit": "studs",
+          "min": 8,
+          "max": 14
+        },
+        {
+          "id": "depth",
+          "type": "extent",
+          "axis": "z",
+          "unit": "studs",
+          "min": 4,
+          "max": 9
+        },
+        {
+          "id": "height",
+          "type": "extent",
+          "axis": "y",
+          "unit": "ldu",
+          "min": 120,
+          "max": 260
+        }
       ]
     },
     {
       "id": "city-car",
       "round": 1,
       "family": "snot-vehicle",
-      "budget": {"minutes": 45, "usd": 6},
+      "budget": {
+        "minutes": 45,
+        "usd": 6
+      },
       "prompt": "Build a compact modern city car at minifigure scale, 6 studs wide, with four wheels, headlights and tail lights, a windscreen and smooth SNOT side panels.",
       "features": [
         "Reads as a compact city car, not a box on wheels",
@@ -38,20 +96,61 @@
         "Smooth side panels built sideways"
       ],
       "checks": [
-        {"id": "size", "type": "placements", "min": 60, "max": 450},
-        {"id": "connected", "type": "connected", "min": 0.9},
-        {"id": "tyres", "type": "bom", "pattern": "Tyre|Tire", "min": 4},
-        {"id": "windscreen", "type": "bom", "pattern": "Windscreen|Glass", "min": 1},
-        {"id": "width", "type": "extent", "axis": "x", "unit": "studs", "min": 5.5, "max": 8.5},
-        {"id": "length", "type": "extent", "axis": "z", "unit": "studs", "min": 9, "max": 17},
-        {"id": "stance", "type": "ground", "pattern": "Tyre|Tire", "spread_max": 2}
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 60,
+          "max": 450
+        },
+        {
+          "id": "connected",
+          "type": "connected",
+          "min": 0.9
+        },
+        {
+          "id": "tyres",
+          "type": "bom",
+          "pattern": "Tyre|Tire",
+          "min": 4
+        },
+        {
+          "id": "windscreen",
+          "type": "bom",
+          "pattern": "Windscreen|Glass",
+          "min": 1
+        },
+        {
+          "id": "width",
+          "type": "extent",
+          "axis": "x",
+          "unit": "studs",
+          "min": 5.5,
+          "max": 8.5
+        },
+        {
+          "id": "length",
+          "type": "extent",
+          "axis": "z",
+          "unit": "studs",
+          "min": 9,
+          "max": 17
+        },
+        {
+          "id": "stance",
+          "type": "ground",
+          "pattern": "Tyre|Tire",
+          "spread_max": 2
+        }
       ]
     },
     {
       "id": "bakery",
       "round": 1,
       "family": "building",
-      "budget": {"minutes": 60, "usd": 8},
+      "budget": {
+        "minutes": 60,
+        "usd": 8
+      },
       "prompt": "Build a two-storey corner bakery at minifigure scale on a 16 x 16 stud footprint: a ground-floor shop window and door, two upper-floor windows, a shop sign, and a simple roof edge. Use SNOT for façade details.",
       "features": [
         "Reads as a small shop building",
@@ -62,20 +161,63 @@
         "Façade detail built sideways, with no bare outward studs"
       ],
       "checks": [
-        {"id": "size", "type": "placements", "min": 200, "max": 1500},
-        {"id": "connected", "type": "connected", "min": 0.95},
-        {"id": "windows", "type": "bom", "pattern": "Window|Glass", "min": 3},
-        {"id": "door", "type": "bom", "pattern": "Door", "min": 1},
-        {"id": "footprint-x", "type": "extent", "axis": "x", "unit": "studs", "min": 12, "max": 17},
-        {"id": "footprint-z", "type": "extent", "axis": "z", "unit": "studs", "min": 12, "max": 17},
-        {"id": "storeys", "type": "extent", "axis": "y", "unit": "ldu", "min": 240, "max": 700}
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 200,
+          "max": 1500
+        },
+        {
+          "id": "connected",
+          "type": "connected",
+          "min": 0.95
+        },
+        {
+          "id": "windows",
+          "type": "bom",
+          "pattern": "Window|Glass",
+          "min": 3
+        },
+        {
+          "id": "door",
+          "type": "bom",
+          "pattern": "Door",
+          "min": 1
+        },
+        {
+          "id": "footprint-x",
+          "type": "extent",
+          "axis": "x",
+          "unit": "studs",
+          "min": 12,
+          "max": 17
+        },
+        {
+          "id": "footprint-z",
+          "type": "extent",
+          "axis": "z",
+          "unit": "studs",
+          "min": 12,
+          "max": 17
+        },
+        {
+          "id": "storeys",
+          "type": "extent",
+          "axis": "y",
+          "unit": "ldu",
+          "min": 240,
+          "max": 700
+        }
       ]
     },
     {
       "id": "prop-plane",
       "round": 1,
       "family": "aircraft",
-      "budget": {"minutes": 45, "usd": 6},
+      "budget": {
+        "minutes": 45,
+        "usd": 6
+      },
       "prompt": "Build a small single-engine propeller aircraft at minifigure scale with an enclosed cockpit, high wings, a tail with a rudder, and fixed landing gear with wheels.",
       "features": [
         "Reads as a light aircraft",
@@ -86,18 +228,47 @@
         "Fixed landing gear with wheels on the ground plane"
       ],
       "checks": [
-        {"id": "size", "type": "placements", "min": 60, "max": 600},
-        {"id": "connected", "type": "connected", "min": 0.9},
-        {"id": "propeller", "type": "bom", "pattern": "Propeller", "min": 1},
-        {"id": "wheels", "type": "bom", "pattern": "Tyre|Tire|Wheel", "min": 2},
-        {"id": "proportion", "type": "ratio", "numerator": "x", "denominator": "z", "min": 0.9, "max": 1.9}
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 60,
+          "max": 600
+        },
+        {
+          "id": "connected",
+          "type": "connected",
+          "min": 0.9
+        },
+        {
+          "id": "propeller",
+          "type": "bom",
+          "pattern": "Propeller",
+          "min": 1
+        },
+        {
+          "id": "wheels",
+          "type": "bom",
+          "pattern": "Tyre|Tire|Wheel",
+          "min": 2
+        },
+        {
+          "id": "proportion",
+          "type": "ratio",
+          "numerator": "x",
+          "denominator": "z",
+          "min": 0.9,
+          "max": 1.9
+        }
       ]
     },
     {
       "id": "steering-chassis",
       "round": 2,
       "family": "technic",
-      "budget": {"minutes": 60, "usd": 8},
+      "budget": {
+        "minutes": 60,
+        "usd": 8
+      },
       "prompt": "Build a Technic chassis with four wheels and working rack-and-pinion steering on the front axle, turned by a knob or steering wheel on top.",
       "features": [
         "Four wheels",
@@ -106,18 +277,63 @@
         "Rigid frame"
       ],
       "checks": [
-        {"id": "size", "type": "placements", "min": 40, "max": 600},
-        {"id": "connected", "type": "connected", "min": 0.9},
-        {"id": "rack", "type": "bom", "pattern": "Rack", "min": 1},
-        {"id": "gear", "type": "bom", "pattern": "Gear", "min": 1},
-        {"id": "tyres", "type": "bom", "pattern": "Tyre|Tire", "min": 4}
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 40,
+          "max": 600
+        },
+        {
+          "id": "connected",
+          "type": "connected",
+          "min": 0.9
+        },
+        {
+          "id": "rack",
+          "type": "bom",
+          "pattern": "Rack",
+          "min": 1
+        },
+        {
+          "id": "gear",
+          "type": "bom",
+          "pattern": "Gear",
+          "min": 1
+        },
+        {
+          "id": "tyres",
+          "type": "bom",
+          "pattern": "Tyre|Tire",
+          "min": 4
+        },
+        {
+          "id": "meshes",
+          "type": "technic",
+          "key": "meshes",
+          "min": 1
+        },
+        {
+          "id": "technic-defects",
+          "type": "no_codes",
+          "codes": [
+            "technic.through_solid",
+            "technic.cell_overlap",
+            "technic.invalid_seating",
+            "technic.gear_gap",
+            "technic.gear_clash",
+            "technic.locked_shaft"
+          ]
+        }
       ]
     },
     {
       "id": "pneumatic-lift",
       "round": 2,
-      "family": "flex",
-      "budget": {"minutes": 60, "usd": 8},
+      "family": "technic",
+      "budget": {
+        "minutes": 60,
+        "usd": 8
+      },
       "prompt": "Build a pneumatic lift: a Technic base carrying a pneumatic cylinder that raises an arm, connected by a hose to a hand pump on the base.",
       "features": [
         "Technic base",
@@ -126,10 +342,286 @@
         "Hose routed between pump and cylinder fittings"
       ],
       "checks": [
-        {"id": "size", "type": "placements", "min": 20, "max": 600},
-        {"id": "cylinder", "type": "bom", "pattern": "Pneumatic Cylinder|Cylinder", "min": 1},
-        {"id": "pump", "type": "bom", "pattern": "Pump", "min": 1},
-        {"id": "hose", "type": "bom", "pattern": "Hose|Tube", "min": 1}
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 20,
+          "max": 600
+        },
+        {
+          "id": "cylinder",
+          "type": "bom",
+          "pattern": "Pneumatic Cylinder|Cylinder",
+          "min": 1
+        },
+        {
+          "id": "pump",
+          "type": "bom",
+          "pattern": "Pump",
+          "min": 1
+        },
+        {
+          "id": "hose",
+          "type": "bom",
+          "pattern": "Hose|Tube",
+          "min": 1
+        }
+      ]
+    },
+    {
+      "id": "winch-crane",
+      "round": 3,
+      "family": "technic",
+      "budget": {
+        "minutes": 60,
+        "usd": 8
+      },
+      "prompt": "Build a Technic crane: a turntable base, a boom raised by a worm drive, and a winch drum turned by a crank that lifts a hook on a string.",
+      "features": [
+        "Turntable or slewing base",
+        "Boom raised by a worm drive",
+        "Winch drum turned by a crank",
+        "Hook hanging from the boom tip",
+        "Rigid base and boom"
+      ],
+      "checks": [
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 40,
+          "max": 700
+        },
+        {
+          "id": "connected",
+          "type": "connected",
+          "min": 0.85
+        },
+        {
+          "id": "worm",
+          "type": "parts_any",
+          "codes": [
+            "4716",
+            "27938",
+            "15457"
+          ],
+          "min": 1
+        },
+        {
+          "id": "meshes",
+          "type": "technic",
+          "key": "meshes",
+          "min": 1
+        },
+        {
+          "id": "technic-defects",
+          "type": "no_codes",
+          "codes": [
+            "technic.through_solid",
+            "technic.cell_overlap",
+            "technic.invalid_seating",
+            "technic.gear_gap",
+            "technic.gear_clash",
+            "technic.locked_shaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "twin-engine",
+      "round": 3,
+      "family": "technic",
+      "budget": {
+        "minutes": 60,
+        "usd": 8
+      },
+      "prompt": "Build a Technic two-cylinder engine block: a crankshaft turned by a crank on the side, two pistons with connecting rods moving in their cylinders, all held in a rigid frame.",
+      "features": [
+        "Crankshaft with two throws",
+        "Two pistons with connecting rods",
+        "Cylinders or guides for the pistons",
+        "Crank input on the side",
+        "Rigid frame"
+      ],
+      "checks": [
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 30,
+          "max": 500
+        },
+        {
+          "id": "connected",
+          "type": "connected",
+          "min": 0.85
+        },
+        {
+          "id": "pistons",
+          "type": "bom",
+          "pattern": "Piston|Cylinder",
+          "min": 2
+        },
+        {
+          "id": "technic-defects",
+          "type": "no_codes",
+          "codes": [
+            "technic.through_solid",
+            "technic.cell_overlap",
+            "technic.invalid_seating",
+            "technic.gear_gap",
+            "technic.gear_clash",
+            "technic.locked_shaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differential-axle",
+      "round": 3,
+      "family": "technic",
+      "budget": {
+        "minutes": 60,
+        "usd": 8
+      },
+      "prompt": "Build a Technic rear axle with a differential: a drive shaft from the front turns the differential, which drives two half shafts to the wheels.",
+      "features": [
+        "Differential",
+        "Drive shaft from the front meshing with the differential",
+        "Two half shafts with wheels",
+        "Shafts carried in bearings"
+      ],
+      "checks": [
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 25,
+          "max": 500
+        },
+        {
+          "id": "differential",
+          "type": "bom",
+          "pattern": "Differential",
+          "min": 1
+        },
+        {
+          "id": "tyres",
+          "type": "bom",
+          "pattern": "Tyre|Tire",
+          "min": 2
+        },
+        {
+          "id": "meshes",
+          "type": "technic",
+          "key": "meshes",
+          "min": 1
+        },
+        {
+          "id": "technic-defects",
+          "type": "no_codes",
+          "codes": [
+            "technic.through_solid",
+            "technic.cell_overlap",
+            "technic.invalid_seating",
+            "technic.gear_gap",
+            "technic.gear_clash",
+            "technic.locked_shaft"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "micro-gearbox",
+      "round": 3,
+      "family": "technic",
+      "budget": {
+        "minutes": 15,
+        "usd": 3
+      },
+      "prompt": "Build a small Technic reduction gearbox: an input shaft with a crank, a reduction of at least 3:1 through spur gears, and an output shaft. Carry both shafts in two beams.",
+      "features": [
+        "Input shaft with a crank",
+        "Spur gear reduction of 3:1 or more",
+        "Output shaft",
+        "Both shafts in two bearings"
+      ],
+      "checks": [
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 8,
+          "max": 120
+        },
+        {
+          "id": "gears",
+          "type": "bom",
+          "pattern": "Gear",
+          "min": 2
+        },
+        {
+          "id": "meshes",
+          "type": "technic",
+          "key": "meshes",
+          "min": 1
+        },
+        {
+          "id": "technic-defects",
+          "type": "no_codes",
+          "codes": [
+            "technic.through_solid",
+            "technic.cell_overlap",
+            "technic.invalid_seating",
+            "technic.gear_gap",
+            "technic.gear_clash",
+            "technic.locked_shaft",
+            "technic.loose_axle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "micro-swing-arm",
+      "round": 3,
+      "family": "technic",
+      "budget": {
+        "minutes": 15,
+        "usd": 3
+      },
+      "prompt": "Build a Technic swing arm that pivots on a frame and is sprung by a shock absorber between the arm and the frame.",
+      "features": [
+        "Frame",
+        "Arm pivoting on the frame",
+        "Shock absorber from the arm to the frame"
+      ],
+      "checks": [
+        {
+          "id": "size",
+          "type": "placements",
+          "min": 5,
+          "max": 120
+        },
+        {
+          "id": "shock",
+          "type": "bom",
+          "pattern": "Shock Absorber",
+          "min": 1
+        },
+        {
+          "id": "joints",
+          "type": "technic",
+          "key": "joints",
+          "min": 2
+        },
+        {
+          "id": "technic-defects",
+          "type": "no_codes",
+          "codes": [
+            "technic.through_solid",
+            "technic.cell_overlap",
+            "technic.invalid_seating",
+            "technic.gear_gap",
+            "technic.gear_clash",
+            "technic.locked_shaft"
+          ]
+        }
       ]
     }
   ]

@@ -11,11 +11,18 @@ from .flex_authoring import Endpoint, Waypoint, band, document, hose, placement
 
 
 def ports(parts, ref):
-    """Named fitting interfaces apply only to the measured geometry revision."""
+    """Named hose fittings: measured ones first, then the nozzles derived from shadow metadata.
+
+    Both apply only to the geometry or metadata revision they were made from.
+    """
     catalog = json.loads((DATA / 'flex-ports.json').read_text())['parts']
     code = ref.casefold().removesuffix('.dat')
     record = catalog.get(code)
     if record is None:
+        from .technic import canonical, definition, registry
+        entry = registry()['parts'].get(canonical(code))
+        if entry and entry.get('nozzles') and definition(parts.geometry(code)) is not None:
+            return {n['id']: dict(at=n['at'], outward=n['outward']) for n in entry['nozzles']}
         raise ValueError(f'No named flex ports on {ref}; select an inspected feature or measured local frame')
     local = parts.geometry(code)
     digest = hashlib.sha256(json.dumps([jsonable(v) for v in local.points], separators=(',', ':')).encode()).hexdigest()
@@ -24,9 +31,56 @@ def ports(parts, ref):
     return record['ports']
 
 
-def endpoint(spec, identity, section, parts):
+# Smallest bend radius and tube spacing that keep a pneumatic hose round and its tubes apart (LDU).
+PNEUMATIC_FLOOR = dict(min_radius=15, min_separation=10)
+# Straight run out of a pneumatic fitting before the hose may bend (LDU), unless the plan sets `lead`:
+# the value the tested pneumatic example uses at pump, valve and cylinder fittings.
+PNEUMATIC_LEAD = 22
+
+
+def default_lead(method):
+    return PNEUMATIC_LEAD if 'PNEUMATIC' in method.upper() else 0
+
+
+def route_checks(method, given):
+    """The checks a route runs: pneumatic hoses get floors that a plan may raise but not lower."""
+    checks = dict(given or {})
+    if 'PNEUMATIC' not in method.upper():
+        return checks
+    for key, floor in PNEUMATIC_FLOOR.items():
+        if key in checks and checks[key] < floor:
+            raise ValueError(f'{key} {checks[key]:g} is below the {floor} LDU pneumatic hose floor. A tighter limit '
+                             'would accept a kinked or touching hose; widen the bend or move a fitting instead.')
+        checks.setdefault(key, floor)
+    return checks
+
+
+def feasibility(start, end, checks):
+    """Warnings about a route's two fittings before anything is synthesized."""
+    rows = []
+    a, b = np.asarray(start.at, float), np.asarray(end.at, float)
+    da, db = np.asarray(start.outward, float), np.asarray(end.outward, float)
+    gap = b - a
+    distance = float(np.linalg.norm(gap))
+    radius = (checks or {}).get('min_radius', 0)
+    if distance > 1e-6:
+        away = [name for name, d, toward in (('start', da, gap), ('end', db, -gap)) if float(d @ toward) < -0.2 * distance]
+        if away:
+            rows.append(dict(code='flex.ports_face_away', severity='warning', distance_ldu=round(distance, 2),
+                             message=f"The {' and '.join(away)} fitting points away from the other end, so the hose "
+                                     'must loop back. Turn the fitting toward the other end, or add a via point that '
+                                     'leads round a wide loop.'))
+    if radius and distance < 2 * radius + start.lead + end.lead:
+        rows.append(dict(code='flex.ports_too_close', severity='warning', distance_ldu=round(distance, 2),
+                         message=f'The fittings are {distance:.1f} LDU apart, less than two bend radii plus the leads '
+                                 f'({2 * radius + start.lead + end.lead:g}); the hose cannot turn that tightly. Move a '
+                                 'fitting further away.'))
+    return rows
+
+
+def endpoint(spec, identity, section, parts, *, lead=0):
     pose = identity.resolve(section, spec['part'])
-    options = dict(lead=spec.get('lead', 0), local_up=spec.get('up'))
+    options = dict(lead=spec.get('lead', lead), local_up=spec.get('up'))
     if 'port' in spec:
         available = ports(parts, pose['ref'])
         if spec['port'] not in available:
@@ -53,18 +107,26 @@ def prepare_inline(section, entry, identity, parts, *, author):
                 rows.append(placement(pose['ref'], pose['at'], pose['matrix']))
         block = band(rows, method=route['method'], colour=entry['colour'], name=entry['id'], hide=True)
     else:
-        start = endpoint(route['from'], identity, section, parts)
-        end = endpoint(route['to'], identity, section, parts)
+        lead = default_lead(route['method'])
+        start = endpoint(route['from'], identity, section, parts, lead=lead)
+        end = endpoint(route['to'], identity, section, parts, lead=lead)
         via = [Waypoint(**w) if isinstance(w, dict) else Waypoint(w) for w in route.get('via', [])]
+        checks = route_checks(route['method'], route.get('checks'))
+        early = [] if via else feasibility(start, end, checks)
         block = hose(start, end, via=via, method=route['method'], colour=entry['colour'], name=entry['id'])
     source = document(block, name=namespace + '.ldr', author=author)
     folder = CACHE / 'inline-flex' / hashlib.sha256(source.encode()).hexdigest()
     path = folder / 'constraints.ldr'
     atomic_write(path, source)
     curves = []
+    if 'wheels' in route:
+        checks, early = route.get('checks'), []
     report = build(path, folder / 'asset.mpd', parts, namespace=namespace, force=True,
-                   checks=route.get('checks'), timeout=route.get('timeout', 90), curves_out=curves)
+                   checks=checks, timeout=route.get('timeout', 90), curves_out=curves)
     report['placement'] = identity.where(section, entry['id'])
+    if early:
+        where = identity.where(section, entry['id'])
+        report['validation']['diagnostics'] = [*(dict(d, **where) for d in early), *report['validation']['diagnostics']]
     return report, curves
 
 

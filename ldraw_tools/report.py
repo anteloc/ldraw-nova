@@ -15,7 +15,7 @@ import jsonschema
 
 ERRORS = 12
 EXAMPLES = 3
-BULKY = {'source_map', 'geometry', 'diagnostics', 'flex', 'structure', 'artifacts', 'source_dependencies',
+BULKY = {'source_map', 'geometry', 'diagnostics', 'flex', 'structure', 'mechanism', 'artifacts', 'source_dependencies',
          'flex_interactions', 'sources'}
 DETAILS = ('pointer', 'file', 'action', 'separation', 'gap', 'depth', 'penetration', 'count', 'group_size',
            'replacement', 'facing', 'side', 'connector_data', 'component_count', 'main_group',
@@ -72,7 +72,7 @@ def geometry_summary(geometry):
         return None
     keys = dict(placements='occurrence_count', groups='optimistic_component_count', main_group='main_group_size',
                 contacts_checked='contacts_checked', overlap_candidates='overlap_candidate_count', bounds='bounds',
-                appearance='appearance')
+                appearance='appearance', technic='technic')
     return {name: geometry.get(key) for name, key in keys.items() if geometry.get(key) is not None}
 
 
@@ -119,6 +119,10 @@ def summarize(report):
         out['structure'] = {name: dict(checks_passed=s.get('checks_passed'),
                                        errors=sum(d.get('severity') == 'error' for d in s.get('diagnostics', [])))
                             for name, s in report['structure'].items()}
+    if isinstance(report.get('mechanism'), dict):
+        out['mechanism'] = {name: dict(checks_passed=m.get('checks_passed'), degrees_of_freedom=m.get('degrees_of_freedom'),
+                                       input_moves=m.get('input_moves'), output_moves_with_input=m.get('output_moves_with_input'))
+                            for name, m in report['mechanism'].items()}
     if isinstance(report.get('flex'), list):
         out['flex'] = [dict(output=a.get('output'), checks_passed=(a.get('validation') or {}).get('checks_passed'))
                        for a in report['flex']]
@@ -167,7 +171,7 @@ def text(value, indent=0):
     return '[\n' + ',\n'.join(inner + text(v, indent + 1) for v in value) + '\n' + pad + ']'
 
 
-MODES = ('at', 'on', 'under', 'attach', 'snap', 'flex')
+MODES = ('at', 'on', 'under', 'attach', 'snap', 'flex', 'join')
 EXAMPLE = {
     'at': '"at": [0, -24, 0]', 'on': '"on": "base" or "on": {"to": "core", "face": "-Z"}',
     'attach': '"attach": {"to": "lower", "anchor": "next", "using": "base"}',
@@ -175,6 +179,7 @@ EXAMPLE = {
     'colour': '"colour": 4 or "colour": "@colours.Red"', 'matrix': '"matrix": [[1, 0, 0], [0, 1, 0], [0, 0, 1]]',
     'repeat': '"repeat": {"count": 4, "step": [40, 0, 0]}', 'orient': '"orient": {"up": "-Z"}',
     'under': '"under": {"to": "deck", "socket": 0}',
+    'join': '"join": {"to": "rail", "holes": {"hole-0": "hole-0", "hole-1": "hole-1"}, "side": "+X"}',
     'id': '"id": "wall-left"', 'steps': '"steps": [[{"id": "base", "ref": "3001.dat", "colour": 4, "at": [0, 0, 0]}]]',
 }
 
@@ -185,7 +190,7 @@ def explain_placement(entry):
         return None, None
     present = [m for m in MODES if m in entry]
     if not present:
-        return 'A placement needs exactly one position: at, on, under, attach, snap or flex.', 'at'
+        return 'A placement needs exactly one position: at, on, under, join, attach, snap or flex.', 'at'
     if len(present) > 1:
         return f"This placement mixes position modes {', '.join(present)}; keep exactly one.", present[0]
     mode = present[0]
@@ -193,6 +198,8 @@ def explain_placement(entry):
         return 'Add ref: the part (for example 3001.dat) or section (name.ldr) to place.', 'ref'
     if mode == 'flex' and entry.keys() & {'ref', 'yaw', 'matrix', 'orient', 'repeat', 'offset_studs'}:
         return 'A flex placement takes only id, colour and flex.', None
+    if mode == 'join' and entry.keys() & {'matrix', 'yaw', 'orient', 'repeat', 'offset_studs'}:
+        return 'join sets the pose from the matched holes; remove matrix, yaw, orient, repeat or offset_studs.', 'join'
     if 'repeat' in entry and mode != 'at':
         return 'repeat works only with at; use a generator loop or an included section.', 'repeat'
     if 'offset_studs' in entry and mode != 'on':

@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [
+    {
+      "name": "technic-rack-steering.ldr",
+      "description": "Rack-and-pinion steering: kingpin hubs, L-liftarm arms and a 1 x 7 rack driven by a 12-tooth pinion",
+      "mechanism": {
+        "ground": "frame",
+        "input": "pinion-shaft",
+        "outputs": [
+          "rack",
+          "hub-l",
+          "hub-r"
+        ],
+        "dof": 1
+      },
+      "steps": [
+        [
+          {
+            "id": "frame",
+            "ref": "64179.dat",
+            "colour": 71,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "5 x 7 open frame lying flat: the chassis"
+          }
+        ],
+        [
+          {
+            "id": "kingpin-l",
+            "ref": "3705.dat",
+            "colour": 0,
+            "on": {
+              "to": "frame",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "end": "-Y",
+              "past": 20
+            },
+            "purpose": "Left kingpin: a 4-long axle turning in the frame's front corner hole"
+          },
+          {
+            "id": "kingpin-r",
+            "ref": "3705.dat",
+            "colour": 0,
+            "on": {
+              "to": "frame",
+              "hole": "hole-13",
+              "pin": "shaft",
+              "end": "-Y",
+              "past": 20
+            },
+            "purpose": "Right kingpin"
+          }
+        ],
+        [
+          {
+            "id": "hub-l",
+            "ref": "6536.dat",
+            "colour": 71,
+            "on": {
+              "to": "kingpin-l",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame",
+              "side": "-Y",
+              "roll": 270
+            },
+            "purpose": "Steering hub keyed on the kingpin; its round hole carries the wheel stub"
+          },
+          {
+            "id": "hub-r",
+            "ref": "6536.dat",
+            "colour": 71,
+            "on": {
+              "to": "kingpin-r",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame",
+              "side": "-Y",
+              "roll": 270
+            },
+            "purpose": "Steering hub keyed on the kingpin; its round hole carries the wheel stub"
+          }
+        ],
+        [
+          {
+            "id": "spacer-l",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "kingpin-l",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame",
+              "side": "+Y"
+            },
+            "purpose": "Bush under the frame: lowers the steering arm below the rack layer"
+          },
+          {
+            "id": "spacer-r",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "kingpin-r",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame",
+              "side": "+Y"
+            },
+            "purpose": "Bush under the frame"
+          }
+        ],
+        [
+          {
+            "id": "arm-l",
+            "ref": "32140.dat",
+            "colour": 72,
+            "on": {
+              "to": "kingpin-l",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "spacer-l",
+              "side": "+Y",
+              "roll": 0,
+              "flip": true
+            },
+            "purpose": "Steering arm: L-liftarm keyed on the kingpin, short arm pointing outward"
+          },
+          {
+            "id": "arm-r",
+            "ref": "32140.dat",
+            "colour": 72,
+            "on": {
+              "to": "kingpin-r",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "spacer-r",
+              "side": "+Y",
+              "roll": 0
+            },
+            "purpose": "Right steering arm"
+          }
+        ],
+        [
+          {
+            "id": "rack",
+            "ref": "87761.dat",
+            "colour": 71,
+            "join": {
+              "to": "arm-l",
+              "holes": {
+                "hole-4": "hole-0"
+              },
+              "side": "-Y",
+              "roll": 0,
+              "pins": "3673.dat"
+            },
+            "purpose": "1 x 7 rack, teeth up, pinned to the left arm's short end"
+          }
+        ],
+        [
+          {
+            "id": "rack-pin-r",
+            "ref": "3673.dat",
+            "colour": 71,
+            "on": {
+              "to": "rack",
+              "hole": "hole-3",
+              "pin": "grip-0",
+              "side": "+Y"
+            },
+            "purpose": "Frictionless pin from the rack's right end into the right arm: a parallelogram that steers both hubs"
+          }
+        ],
+        [
+          {
+            "id": "pinion-shaft",
+            "ref": "3707.dat",
+            "colour": 0,
+            "on": {
+              "to": "frame",
+              "hole": "hole-9",
+              "pin": "shaft",
+              "end": "-Z",
+              "past": 0
+            },
+            "purpose": "Steering shaft along the frame, in both end holes"
+          }
+        ],
+        [
+          {
+            "id": "pinion",
+            "ref": "32270.dat",
+            "colour": 14,
+            "on": {
+              "to": "pinion-shaft",
+              "hole": "hole-0",
+              "pin": "shaft"
+            },
+            "purpose": "12-tooth pinion 20 LDU above the rack's centre: the mesh distance for this rack"
+          }
+        ],
+        [
+          {
+            "id": "knob",
+            "ref": "32072.dat",
+            "colour": 0,
+            "on": {
+              "to": "pinion-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame",
+              "side": "+Z"
+            },
+            "purpose": "Knob at the back turns the steering"
+          }
+        ],
+        [
+          {
+            "id": "stub-l",
+            "ref": "3749.dat",
+            "colour": 1,
+            "on": {
+              "to": "hub-l",
+              "hole": "hole-1",
+              "pin": "pin-end",
+              "side": "-X"
+            },
+            "purpose": "Wheel stub: axle-pin turning in the hub's round hole"
+          },
+          {
+            "id": "stub-r",
+            "ref": "3749.dat",
+            "colour": 1,
+            "on": {
+              "to": "hub-r",
+              "hole": "hole-1",
+              "pin": "pin-end",
+              "side": "+X"
+            },
+            "purpose": "Right wheel stub"
+          }
+        ]
+      ]
+    }
+  ]
+}

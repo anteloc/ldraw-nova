@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [
+    {
+      "name": "technic-suspension-arm.ldr",
+      "description": "Swing arm on a frictionless pin, sprung by a 6.5L shock absorber to a rigid mount",
+      "mechanism": {
+        "ground": "frame",
+        "input": "arm",
+        "pivots": [
+          [
+            "arm",
+            "frame"
+          ]
+        ],
+        "dof": 1
+      },
+      "steps": [
+        [
+          {
+            "id": "frame",
+            "ref": "32524.dat",
+            "colour": 71,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "Frame beam lying flat along Z; holes run along Y"
+          }
+        ],
+        [
+          {
+            "id": "mount",
+            "ref": "32523.dat",
+            "colour": 72,
+            "join": {
+              "to": "frame",
+              "holes": {
+                "hole-5": "hole-1",
+                "hole-6": "hole-2"
+              },
+              "side": "-Y"
+            },
+            "purpose": "Shock mount: a 3-long beam pinned to the frame at two holes, so it is rigid"
+          }
+        ],
+        [
+          {
+            "id": "arm",
+            "ref": "32524.dat",
+            "colour": 4,
+            "join": {
+              "to": "frame",
+              "holes": {
+                "hole-0": "hole-0"
+              },
+              "side": "-Y",
+              "roll": -74.41,
+              "pins": "3673.dat"
+            },
+            "purpose": "Swing arm on one frictionless pin; turned so its sixth hole is 110 LDU from the mount"
+          }
+        ],
+        [
+          {
+            "id": "shock",
+            "ref": "76537.dat",
+            "colour": 0,
+            "join": {
+              "to": "arm",
+              "holes": {
+                "hole-5": "hole-0"
+              },
+              "side": "-Y",
+              "roll": 61.12,
+              "pins": "3673.dat"
+            },
+            "purpose": "6.5L shock absorber: eyes 110 LDU apart, from the arm to the mount"
+          }
+        ],
+        [
+          {
+            "id": "shock-pin",
+            "ref": "3673.dat",
+            "colour": 71,
+            "on": {
+              "to": "shock",
+              "hole": "hole-1",
+              "pin": "grip-0",
+              "side": "+Y"
+            },
+            "purpose": "Frictionless pin through the shock top eye into the mount"
+          }
+        ]
+      ]
+    }
+  ]
+}

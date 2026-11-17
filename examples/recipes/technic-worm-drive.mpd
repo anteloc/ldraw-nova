@@ -1,0 +1,57 @@
+0 FILE technic-worm-drive.ldr
+0 Worm driving a 24-tooth gear, between two open frames stacked two studs apart
+0 Name: technic-worm-drive.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // frame-a: Lower open frame lying flat
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 64179.dat
+0 STEP
+0 // riser-l: Spacer beam on the left side; the long pins below hold it
+1 72 -40 -20 0 1 0 0 0 1 0 0 0 1 32524.dat
+0 // riser-r: Spacer beam on the right side
+1 72 40 -20 0 1 0 0 0 1 0 0 0 1 32524.dat
+0 STEP
+0 // frame-b: Upper open frame, two studs above the lower: worm and gear axes cross 40 LDU apart
+1 71 0 -40 0 1 0 0 0 1 0 0 0 1 64179.dat
+0 STEP
+0 // pin-hole-0: Long friction pin through upper frame, spacer and lower frame
+1 1 -40 -20 -60 0 -1 0 1 0 0 0 0 1 6558.dat
+0 // pin-hole-6: Long friction pin through upper frame, spacer and lower frame
+1 1 -40 -20 60 0 -1 0 1 0 0 0 0 1 6558.dat
+0 // pin-hole-13: Long friction pin through upper frame, spacer and lower frame
+1 1 40 -20 -60 0 -1 0 1 0 0 0 0 1 6558.dat
+0 // pin-hole-19: Long friction pin through upper frame, spacer and lower frame
+1 1 40 -20 60 0 -1 0 1 0 0 0 0 1 6558.dat
+0 STEP
+0 // gear-shaft: Output shaft across the lower frame, along X
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3706.dat
+0 // worm-shaft: Input shaft across the upper frame, along Z
+1 0 0 -40 0 0 0 -1 0 1 0 1 0 0 3707.dat
+0 STEP
+0 // gear: 24-tooth gear in the middle of its shaft
+1 7 0 0 0 0 0 1 0 1 0 -1 0 0 3648b.dat
+0 // worm: Worm centred over the gear
+1 7 0 -40 0 1 0 0 0 1 0 0 0 1 4716.dat
+0 STEP
+0 // gear-spacer-l: Bush between gear and frame
+1 71 -20 0 0 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // gear-spacer-r: Bush between gear and frame
+1 71 20 0 0 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // worm-back-1: Backs the worm against its thrust
+1 71 0 -40 -30 1 0 0 0 1 0 0 0 1 3713.dat
+0 // worm-back-2: Backs the worm the other way
+1 71 0 -40 30 1 0 0 0 1 0 0 0 1 3713.dat
+0 STEP
+0 // worm-back-3: Half bush closes the gap to the frame
+1 71 0 -40 -45 1 0 0 0 1 0 0 0 1 32123a.dat
+0 // worm-back-4: Half bush closes the gap to the frame
+1 71 0 -40 45 1 0 0 0 1 0 0 0 1 32123a.dat
+0 // gear-cap-l: Half bush outside the frame
+1 71 -55 0 0 0 0 1 0 1 0 -1 0 0 32123a.dat
+0 // gear-cap-r: Half bush outside the frame
+1 71 55 0 0 0 0 1 0 1 0 -1 0 0 32123a.dat
+0 // worm-cap-a: Half bush outside the upper frame
+1 71 0 -40 -75 1 0 0 0 1 0 0 0 1 32123a.dat
+0 // worm-cap-b: Half bush outside the upper frame
+1 71 0 -40 75 1 0 0 0 1 0 0 0 1 32123a.dat
+0 NOFILE

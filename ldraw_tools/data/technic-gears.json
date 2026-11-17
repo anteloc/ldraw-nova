@@ -1,0 +1,1480 @@
+{
+ "version": 1,
+ "units": "LDU",
+ "generator": "scripts/technic_gears.py",
+ "rule": "Parallel gears mesh when their axes are 1.25 * (teeth_a + teeth_b) LDU apart.",
+ "evidence": {
+  "models": 165,
+  "parallel_pairs_within_3_ldu": 717,
+  "parallel_pairs_exact": 700
+ },
+ "gears": {
+  "10928": {
+   "description": "Technic Gear  8 Tooth Reinforced",
+   "type": "spur",
+   "teeth": 8,
+   "radius": 10.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "11955": {
+   "description": "Technic Gear  8 Tooth Reinforced Sliding",
+   "type": "spur",
+   "teeth": 8,
+   "radius": 10.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "15457": {
+   "description": "Technic Worm Gear 3L with Bush Ends",
+   "type": "worm",
+   "radius": 10.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 60.0,
+   "ports": [
+    "hole-0",
+    "hole-1",
+    "hole-2"
+   ]
+  },
+  "18575": {
+   "description": "Technic Gear 20 Tooth Double Bevel Reinforced",
+   "type": "double_bevel",
+   "teeth": 20,
+   "radius": 25.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "18940": {
+   "description": "Technic Gear Rack  1 x 14 with Bottom Beam Housing",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -149.0,
+     -49.0,
+     -20.0
+    ],
+    "max": [
+     149.0,
+     9.0,
+     20.0
+    ]
+   },
+   "pinion_axis": "z",
+   "normal": "y",
+   "side": -1.0,
+   "pitch": -80.0,
+   "evidence": {
+    "teeth": 16,
+    "offset": -100.0,
+    "count": 24
+   }
+  },
+  "18942": {
+   "description": "Technic Gear Rack  1 x 14 with Bottom Beam",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -139.0,
+     -29.0,
+     -10.0
+    ],
+    "max": [
+     139.0,
+     9.0,
+     10.0
+    ]
+   },
+   "pinion_axis": "z",
+   "normal": "y",
+   "side": -1.0,
+   "pitch": -60.0,
+   "evidence": {
+    "teeth": 16,
+    "offset": -80.0,
+    "count": 18
+   }
+  },
+  "18946": {
+   "description": "Technic Gear 16 Tooth with Clutch on Both Sides",
+   "type": "spur",
+   "teeth": 16,
+   "radius": 20.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "24505": {
+   "description": "Technic Gear 24 Tooth with Single Axle Hole",
+   "type": "spur",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-2"
+   ]
+  },
+  "2471": {
+   "description": "Technic Gear 24 Tooth with Clutch on Both Sides",
+   "type": "spur",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "27938": {
+   "description": "Technic Worm Gear 1L",
+   "type": "worm",
+   "radius": 10.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "32053": {
+   "description": "Technic Gear 24 Tooth Clutch Center",
+   "type": "spur",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "32060": {
+   "description": "Technic Gear  8 Tooth Timing Wheel",
+   "type": "spur",
+   "teeth": 8,
+   "radius": 10.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "32072": {
+   "description": "Technic Gear  4 Knob",
+   "type": "knob",
+   "radius": 20.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "32132": {
+   "description": "Technic Gear Rack  1 x 12 with Holes",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -120.0,
+     -4.0,
+     -10.0
+    ],
+    "max": [
+     120.0,
+     10.0,
+     10.0
+    ]
+   }
+  },
+  "32170": {
+   "description": "Technic Gear Rack Double with Ball Joint",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -12.81,
+     -12.81,
+     -11.469
+    ],
+    "max": [
+     12.81,
+     12.81,
+     132.81
+    ]
+   }
+  },
+  "32185": {
+   "description": "Technic Gear Rack  1 x 14 with Holes",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -140.0,
+     -4.0,
+     -10.0
+    ],
+    "max": [
+     140.0,
+     10.0,
+     10.0
+    ]
+   },
+   "pinion_axis": "z",
+   "normal": "y",
+   "side": -1.0,
+   "pitch": 0.0,
+   "evidence": {
+    "teeth": 8,
+    "offset": -10.0,
+    "count": 10
+   }
+  },
+  "32198a": {
+   "description": "Technic Gear 20 Tooth Bevel with Two Axlehole Slots",
+   "type": "bevel",
+   "teeth": 20,
+   "radius": 25.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    -5.0
+   ],
+   "width": 10.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "32269": {
+   "description": "Technic Gear 20 Tooth Double Bevel",
+   "type": "double_bevel",
+   "teeth": 20,
+   "radius": 25.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "32270": {
+   "description": "Technic Gear 12 Tooth Double Bevel",
+   "type": "double_bevel",
+   "teeth": 12,
+   "radius": 15.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "32498": {
+   "description": "Technic Gear 36 Tooth Double Bevel",
+   "type": "double_bevel",
+   "teeth": 36,
+   "radius": 45.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-2"
+   ]
+  },
+  "32905": {
+   "description": "Technic Worm Gear 2L with Axle Hole Two-toothed Sliding",
+   "type": "worm",
+   "radius": 10.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 40.0,
+   "ports": [
+    "hole-0",
+    "hole-1"
+   ]
+  },
+  "34432": {
+   "description": "Technic Gear 40 Tooth",
+   "type": "spur",
+   "teeth": 40,
+   "radius": 50.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-8"
+   ]
+  },
+  "35185": {
+   "description": "Technic Gear 20 Tooth Double Bevel with Clutch on Both Sides",
+   "type": "double_bevel",
+   "teeth": 20,
+   "radius": 25.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "3590": {
+   "description": "Technic Gear 12 Tooth with Clutch on One Side",
+   "type": "spur",
+   "teeth": 12,
+   "radius": 15.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    10.0
+   ],
+   "width": 40.0,
+   "ports": [
+    "hole-0",
+    "hole-1"
+   ]
+  },
+  "3647": {
+   "description": "Technic Gear  8 Tooth",
+   "type": "spur",
+   "teeth": 8,
+   "radius": 10.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "3648a": {
+   "description": "Technic Gear 24 Tooth with 3 Axleholes",
+   "type": "spur",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-3"
+   ]
+  },
+  "3648b": {
+   "description": "Technic Gear 24 Tooth with Single Axle Hole",
+   "type": "spur",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-2"
+   ]
+  },
+  "3649": {
+   "description": "Technic Gear 40 Tooth",
+   "type": "spur",
+   "teeth": 40,
+   "radius": 50.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-8"
+   ]
+  },
+  "3650a": {
+   "description": "Technic Gear 24 Tooth Crown Type 1",
+   "type": "crown",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    2.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "3650b": {
+   "description": "Technic Gear 24 Tooth Crown Type 2",
+   "type": "crown",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    2.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "3650c": {
+   "description": "Technic Gear 24 Tooth Crown Type 3",
+   "type": "crown",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    2.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "3743": {
+   "description": "Technic Gear Rack  1 x  4",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -40.0,
+     -6.0,
+     -10.0
+    ],
+    "max": [
+     40.0,
+     8.0,
+     10.0
+    ]
+   },
+   "pinion_axis": "z",
+   "normal": "y",
+   "side": -1.0,
+   "pitch": -4.0,
+   "evidence": {
+    "teeth": 8,
+    "offset": -14.0,
+    "count": 32
+   }
+  },
+  "3776": {
+   "description": "Plate  2 x  6 with Underside Worm Gear Rack",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -60.0,
+     -4.0,
+     -20.0
+    ],
+    "max": [
+     60.0,
+     8.0,
+     20.0
+    ]
+   }
+  },
+  "4019": {
+   "description": "Technic Gear 16 Tooth",
+   "type": "spur",
+   "teeth": 16,
+   "radius": 20.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "axle"
+   ]
+  },
+  "401926": {
+   "description": "Technic Gear 16 Tooth Black (Obsolete)",
+   "type": "spur",
+   "teeth": 16,
+   "radius": 20.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "4107539": {
+   "description": "Technic Gear 24 Tooth Clutch White/Dark Grey (Obsolete)",
+   "type": "spur",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "4143": {
+   "description": "Technic Gear 14 Tooth Bevel",
+   "type": "bevel",
+   "teeth": 14,
+   "radius": 17.5,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    -2.0
+   ],
+   "width": 10.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "46219": {
+   "description": "Technic Gear 12 Tooth Bevel with Single Axle Joiner",
+   "type": "bevel",
+   "teeth": 12,
+   "radius": 15.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    -11.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "46220": {
+   "description": "Technic Gear 12 Tooth Bevel with Double Axle Joiner",
+   "type": "bevel",
+   "teeth": 12,
+   "radius": 15.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    19.0
+   ],
+   "width": 80.0,
+   "ports": [
+    "hole-0",
+    "hole-1",
+    "hole-2",
+    "hole-3"
+   ]
+  },
+  "46372": {
+   "description": "Technic Gear 28 Tooth Double Bevel",
+   "type": "double_bevel",
+   "teeth": 28,
+   "radius": 35.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-2"
+   ]
+  },
+  "4716": {
+   "description": "Technic Worm Gear 2L",
+   "type": "worm",
+   "radius": 10.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 40.0,
+   "ports": [
+    "hole-0",
+    "hole-1"
+   ]
+  },
+  "5405": {
+   "description": "Technic Gear  4 Knob 45\u00b0",
+   "type": "knob",
+   "radius": 20.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "62821": {
+   "description": "Technic Differential with One Gear 28 Tooth Bevel",
+   "type": "differential",
+   "teeth": 28,
+   "radius": 35.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 60.0,
+   "ports": [
+    "hole-0",
+    "hole-1"
+   ]
+  },
+  "641": {
+   "description": "Technic Gear 14 Tooth",
+   "type": "spur",
+   "teeth": 14,
+   "radius": 17.5,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    -5.5
+   ],
+   "width": 10.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "64781": {
+   "description": "Technic Gear Rack  1 x 13 with Pegholes and Axleholes",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -130.0,
+     -10.0,
+     -10.0
+    ],
+    "max": [
+     130.0,
+     10.0,
+     10.0
+    ]
+   },
+   "pinion_axis": "z",
+   "normal": "y",
+   "side": -1.0,
+   "pitch": -5.0,
+   "evidence": {
+    "teeth": 12,
+    "offset": -20.0,
+    "count": 17
+   }
+  },
+  "65413": {
+   "description": "Technic Gear 28 Tooth Double Bevel with Peghole",
+   "type": "double_bevel",
+   "teeth": 28,
+   "radius": 35.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    5.0
+   ],
+   "width": 10.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "65414c01": {
+   "description": "Technic Differential with Red 28 Tooth Drive Gear and Tan Satellites",
+   "type": "differential",
+   "teeth": 28,
+   "radius": 35.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 60.0,
+   "ports": [
+    "hole-0",
+    "hole-1"
+   ]
+  },
+  "6542a": {
+   "description": "Technic Gear 16 Tooth with Clutch",
+   "type": "spur",
+   "teeth": 16,
+   "radius": 20.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "6542b": {
+   "description": "Technic Gear 16 Tooth with Clutch Smooth",
+   "type": "spur",
+   "teeth": 16,
+   "radius": 20.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "6573": {
+   "description": "Technic Differential with Gear 16 Tooth and 24 Tooth",
+   "type": "differential",
+   "teeth": 16,
+   "radius": 20.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 80.0,
+   "ports": [
+    "hole-0",
+    "hole-1"
+   ]
+  },
+  "6574": {
+   "description": "Technic Gear Rack  1 x  2.4 with Towballs",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -28.0,
+     -6.0,
+     -10.0
+    ],
+    "max": [
+     28.0,
+     12.0,
+     28.0
+    ]
+   }
+  },
+  "6589": {
+   "description": "Technic Gear 12 Tooth Bevel",
+   "type": "bevel",
+   "teeth": 12,
+   "radius": 15.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    2.0
+   ],
+   "width": 10.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "6592": {
+   "description": "Technic Gear Rack  1 x 10 with Holes",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -100.0,
+     -4.0,
+     -10.0
+    ],
+    "max": [
+     100.0,
+     10.0,
+     10.0
+    ]
+   },
+   "pinion_axis": "z",
+   "normal": "y",
+   "side": -1.0,
+   "pitch": -2.0,
+   "evidence": {
+    "teeth": 8,
+    "offset": -12.0,
+    "count": 8
+   }
+  },
+  "6630": {
+   "description": "Technic Gear Rack  1 x  8 with Holes",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -80.0,
+     -4.0,
+     -10.0
+    ],
+    "max": [
+     80.0,
+     10.0,
+     10.0
+    ]
+   }
+  },
+  "69762": {
+   "description": "Technic Gear 14 Tooth Bevel",
+   "type": "bevel",
+   "teeth": 14,
+   "radius": 17.5,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "69778": {
+   "description": "Technic Gear 12 Tooth",
+   "type": "spur",
+   "teeth": 12,
+   "radius": 15.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "69779": {
+   "description": "Technic Gear 20 Tooth",
+   "type": "spur",
+   "teeth": 20,
+   "radius": 25.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "73763": {
+   "description": "Technic Worm Gear  6L",
+   "type": "worm",
+   "radius": 10.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 120.0,
+   "ports": [
+    "hole-0",
+    "hole-1",
+    "hole-2",
+    "hole-3",
+    "hole-4",
+    "hole-5"
+   ]
+  },
+  "76019": {
+   "description": "Technic Gear 24 Tooth Clutch with Dark Grey Centre",
+   "type": "spur",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "76244": {
+   "description": "Technic Gear 24 Tooth Clutch with DkStone Centre",
+   "type": "spur",
+   "teeth": 24,
+   "radius": 30.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "81346": {
+   "description": "Technic Gear 20 Tooth with Clutch on Both Sides",
+   "type": "spur",
+   "teeth": 20,
+   "radius": 25.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "87407": {
+   "description": "Technic Gear 20 Tooth Bevel with Peghole",
+   "type": "bevel",
+   "teeth": 20,
+   "radius": 25.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    -10.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  },
+  "87761": {
+   "description": "Technic Gear Rack  1 x  7 with Pegholes and Axleholes",
+   "type": "rack",
+   "bounds": {
+    "min": [
+     -70.0,
+     -10.0,
+     -10.0
+    ],
+    "max": [
+     70.0,
+     10.0,
+     10.0
+    ]
+   },
+   "pinion_axis": "z",
+   "normal": "y",
+   "side": -1.0,
+   "pitch": -5.0,
+   "evidence": {
+    "teeth": 12,
+    "offset": -20.0,
+    "count": 33
+   }
+  },
+  "94925": {
+   "description": "Technic Gear 16 Tooth Reinforced",
+   "type": "spur",
+   "teeth": 16,
+   "radius": 20.0,
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "centre": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "width": 20.0,
+   "ports": [
+    "hole-0"
+   ]
+  }
+ },
+ "perpendicular": [
+  {
+   "a": [
+    "bevel",
+    12
+   ],
+   "b": [
+    "bevel",
+    12
+   ],
+   "offset_a": 15.0,
+   "offset_b": 15.0,
+   "count": 153
+  },
+  {
+   "a": [
+    "bevel",
+    12
+   ],
+   "b": [
+    "double_bevel",
+    12
+   ],
+   "offset_a": 15.0,
+   "offset_b": 20.0,
+   "count": 68
+  },
+  {
+   "a": [
+    "bevel",
+    12
+   ],
+   "b": [
+    "bevel",
+    20
+   ],
+   "offset_a": 25.0,
+   "offset_b": 10.0,
+   "count": 36
+  },
+  {
+   "a": [
+    "bevel",
+    12
+   ],
+   "b": [
+    "bevel",
+    20
+   ],
+   "offset_a": 25.0,
+   "offset_b": 12.0,
+   "count": 34
+  },
+  {
+   "a": [
+    "bevel",
+    14
+   ],
+   "b": [
+    "bevel",
+    14
+   ],
+   "offset_a": 15.0,
+   "offset_b": 15.0,
+   "count": 26
+  },
+  {
+   "a": [
+    "double_bevel",
+    12
+   ],
+   "b": [
+    "double_bevel",
+    12
+   ],
+   "offset_a": 20.0,
+   "offset_b": 20.0,
+   "count": 22
+  },
+  {
+   "a": [
+    "bevel",
+    12
+   ],
+   "b": [
+    "double_bevel",
+    20
+   ],
+   "offset_a": 25.0,
+   "offset_b": 20.0,
+   "count": 7
+  },
+  {
+   "a": [
+    "bevel",
+    20
+   ],
+   "b": [
+    "bevel",
+    20
+   ],
+   "offset_a": 22.0,
+   "offset_b": 22.0,
+   "count": 7
+  },
+  {
+   "a": [
+    "bevel",
+    14
+   ],
+   "b": [
+    "bevel",
+    14
+   ],
+   "offset_a": 15.0,
+   "offset_b": 16.0,
+   "count": 6
+  }
+ ],
+ "worm": [
+  {
+   "a": [
+    "spur",
+    8
+   ],
+   "b": [
+    "worm",
+    0
+   ],
+   "offset_a": 0.0,
+   "offset_b": 10.0,
+   "skew": 20.0,
+   "count": 21
+  },
+  {
+   "a": [
+    "spur",
+    24
+   ],
+   "b": [
+    "worm",
+    0
+   ],
+   "offset_a": 0.0,
+   "offset_b": 0.0,
+   "skew": 40.0,
+   "count": 20
+  },
+  {
+   "a": [
+    "crown",
+    24
+   ],
+   "b": [
+    "worm",
+    0
+   ],
+   "offset_a": 0.0,
+   "offset_b": 0.0,
+   "skew": 40.0,
+   "count": 5
+  }
+ ]
+}

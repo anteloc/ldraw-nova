@@ -58,11 +58,34 @@ class Identity:
                 for pi, entry in enumerate(step):
                     where = dict(origin, pointer=f"{origin['pointer']}/steps/{ti}/{pi}")
                     ids = [name for name, _ in repeat_offsets(entry)] if 'repeat' in entry else [entry['id']]
+                    if 'join' in entry and entry['join'].get('pins', True) is not False:
+                        # A join inserts one pin per matched hole pair: ID-pin-0, ID-pin-1, ...
+                        ids += [f"{entry['id']}-pin-{n}" for n in range(len(entry['join'].get('holes', {})))]
                     for name in ids:
                         if (key, name) in self.origins:
                             raise BuildError(f'Duplicate placement id {name} in {section["name"]}',
                                              section=section['name'], placement=name, **where)
                         self.origins[key, name] = where
+
+    def mirror(self, name, made):
+        """Register a mirrored section's parts under the original section's IDs."""
+        key = normalized(name)
+        if key in self.entries and self.entries[key]:
+            return
+        model = made[name]
+        stem = name.rsplit('-mirror-', 1)[0] + '.ldr'
+        source = self.entries.get(normalized(stem))
+        if source is None:
+            # A mirror of a mirror's child: its original is named before the first suffix.
+            return
+        pieces = iter(model.pieces)
+        self.entries[key] = {}
+        for ident, record in source.items():
+            if record['piece'] is None:
+                continue
+            self.entries[key][ident] = dict(piece=next(pieces), flex=False)
+            if (normalized(stem), ident) in self.origins:
+                self.origins[key, ident] = self.origins[normalized(stem), ident]
 
     def where(self, section, name):
         return dict(section=section, placement=name, **self.origins.get((normalized(section), name), {}))

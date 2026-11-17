@@ -282,10 +282,10 @@ def eligible(row, *, system=True):
 
 def structural_candidate(row, inventory=None):
     """Inspect the selected section, never exclude it just for its parent theme."""
-    from .technic import canonical, registry
+    from .technic import structural
     from .technic_review import MECHANISMS
     if row['kind'] == 'parts':
-        return canonical(row['part']) in registry()['parts']
+        return structural(row['part'])
     text = row['description']
     if MECHANISMS.search(text):
         return False

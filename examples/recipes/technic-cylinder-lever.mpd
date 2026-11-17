@@ -1,0 +1,28 @@
+0 FILE technic-cylinder-lever.ldr
+0 Lever on a frictionless pin, moved by a pneumatic cylinder to a rigid mount
+0 Name: technic-cylinder-lever.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // frame: Base beam lying flat along Z; holes run along Y
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 32524.dat
+0 STEP
+0 // mount: Cylinder mount: a 3-long beam pinned to the base at two holes, so it is rigid
+1 72 0 -20 40 1 0 0 0 1 0 0 0 1 32523.dat
+0 // mount-pin-0: 2780.dat
+1 0 0 -10 40 0 1 0 -1 0 0 0 0 1 2780.dat
+0 // mount-pin-1: 2780.dat
+1 0 0 -10 60 0 1 0 -1 0 0 0 0 1 2780.dat
+0 STEP
+0 // arm: Lever on one frictionless pin, turned so its sixth hole is the cylinder length from the mount
+1 14 58.975581505 -20 -48.960036859 0.183999385676 0 0.982926358417 0 1 0 -0.982926358417 0 0.183999385676 32524.dat
+0 // arm-pin-0: 3673.dat
+1 71 0 -10 -60 0 1 0 -1 0 0 0 0 1 3673.dat
+0 STEP
+0 // cylinder: Pneumatic cylinder, extended: eyes 116 LDU apart, from the lever to the mount
+1 71 98.292635842 -40 -41.600061432 0 0.847349999804 0.531034817909 -1 0 0 0 -0.531034817909 0.847349999804 74981-f2.dat
+0 // cylinder-pin-0: 3673.dat
+1 71 98.292635842 -30 -41.600061432 0 1 0 -1 0 0 0 0 1 3673.dat
+0 STEP
+0 // cylinder-pin: Frictionless pin through the rod eye into the mount
+1 71 0.000035865 -30 19.999977445 0 -1 0 1 0 0 0 0 1 3673.dat
+0 NOFILE

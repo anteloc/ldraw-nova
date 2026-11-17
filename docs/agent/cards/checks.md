@@ -21,7 +21,7 @@ Fix the first error, rebuild and repeat. `--quiet` prints one line and `--report
 | `appearance.exposed_side_studs` | Bare sideways studs show. Cover them with tiles unless they are intended. |
 | `appearance.glass_obstructed` | A part sits right behind or in front of a window pane, so the window looks blocked. |
 | `part.alias_or_internal` | The part number has moved: use `replacement`. |
-| `technic.*` | A declared Technic joint or seating failed; see the [Technic guide](../guides/technic.md). |
+| `technic.*` | A Technic rule failed: the [Technic card](technic.md#what-the-build-checks) gives the fix for each code. |
 | `coverage.*` | Something a check could not cover. It is not an error, but look at those parts in the images. |
 
 Warnings do not fail a build. Every `appearance.*` and `assembly.*` warning still names parts a person will notice, so check them in the render before delivering.

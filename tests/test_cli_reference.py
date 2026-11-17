@@ -17,3 +17,9 @@ def test_specialist_commands_are_hidden_from_help_but_still_run():
     assert '    build ' in listed and '    review ' in listed and '    matrix ' not in listed
     result = subprocess.run([sys.executable, '-m', 'ldraw_tools.cli', 'matrix', 'y', '90'], cwd=ROOT, capture_output=True, text=True)
     assert result.returncode == 0
+
+
+def test_technic_parts_reference_is_current():
+    result = subprocess.run([sys.executable, 'scripts/technic_parts_reference.py', '--check'], cwd=ROOT,
+                            capture_output=True, text=True)
+    assert result.returncode == 0, result.stdout + result.stderr

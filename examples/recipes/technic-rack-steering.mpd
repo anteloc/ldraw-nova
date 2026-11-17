@@ -1,0 +1,50 @@
+0 FILE technic-rack-steering.ldr
+0 Rack-and-pinion steering: kingpin hubs, L-liftarm arms and a 1 x 7 rack driven by a 12-tooth pinion
+0 Name: technic-rack-steering.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // frame: 5 x 7 open frame lying flat: the chassis
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 64179.dat
+0 STEP
+0 // kingpin-l: Left kingpin: a 4-long axle turning in the frame's front corner hole
+1 0 -40 10 -60 0 -1 0 1 0 0 0 0 1 3705.dat
+0 // kingpin-r: Right kingpin
+1 0 40 10 -60 0 -1 0 1 0 0 0 0 1 3705.dat
+0 STEP
+0 // hub-l: Steering hub keyed on the kingpin; its round hole carries the wheel stub
+1 71 -40 -20 -60 0 0 -1 1 0 0 0 -1 0 6536.dat
+0 // hub-r: Steering hub keyed on the kingpin; its round hole carries the wheel stub
+1 71 40 -20 -60 0 0 -1 1 0 0 0 -1 0 6536.dat
+0 STEP
+0 // spacer-l: Bush under the frame: lowers the steering arm below the rack layer
+1 71 -40 20 -60 1 0 0 0 0 1 0 -1 0 3713.dat
+0 // spacer-r: Bush under the frame
+1 71 40 20 -60 1 0 0 0 0 1 0 -1 0 3713.dat
+0 STEP
+0 // arm-l: Steering arm: L-liftarm keyed on the kingpin, short arm pointing outward
+1 72 -40 40 -60 -1 0 0 0 -1 0 0 0 1 32140.dat
+0 // arm-r: Right steering arm
+1 72 40 40 -60 1 0 0 0 1 0 0 0 1 32140.dat
+0 STEP
+0 // rack: 1 x 7 rack, teeth up, pinned to the left arm's short end
+1 71 0 20 0 1 0 0 0 1 0 0 0 1 87761.dat
+0 // rack-pin-0: 3673.dat
+1 71 -60 30 0 0 1 0 -1 0 0 0 0 1 3673.dat
+0 STEP
+0 // rack-pin-r: Frictionless pin from the rack's right end into the right arm: a parallelogram that steers both hubs
+1 71 60 30 0 0 -1 0 1 0 0 0 0 1 3673.dat
+0 STEP
+0 // pinion-shaft: Steering shaft along the frame, in both end holes
+1 0 0 0 10 0 0 -1 0 1 0 1 0 0 3707.dat
+0 STEP
+0 // pinion: 12-tooth pinion 20 LDU above the rack's centre: the mesh distance for this rack
+1 14 0 0 10 1 0 0 0 1 0 0 0 1 32270.dat
+0 STEP
+0 // knob: Knob at the back turns the steering
+1 0 0 0 80 1 0 0 0 1 0 0 0 1 32072.dat
+0 STEP
+0 // stub-l: Wheel stub: axle-pin turning in the hub's round hole
+1 1 -50 -20 -80 -1 0 0 0 1 0 0 0 -1 3749.dat
+0 // stub-r: Right wheel stub
+1 1 50 -20 -80 1 0 0 0 1 0 0 0 1 3749.dat
+0 NOFILE

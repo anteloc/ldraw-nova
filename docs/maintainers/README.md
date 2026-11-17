@@ -29,6 +29,28 @@ The card examples are built by `tests/test_cards.py`, and `tests/test_knowledge_
 
 Model generation is validated by its own review artifacts and the benchmark, not by rerunning the software test suite.
 
+### Technic data
+
+The Technic tables are generated from the installed library, its LDCad shadow data and the official sets in `data/models-annotated`. After a library or shadow update, or a change to the port rules in `ldraw_tools/technic_ports.py`, regenerate them in this order:
+
+```sh
+.venv/bin/python scripts/technic_ports.py                 # derived ports -> ldraw_tools/data/technic-ports.json
+.venv/bin/python scripts/technic_corpus.py ports --apply  # seat rates in official sets; records usage and withheld ports
+.venv/bin/python scripts/technic_ports.py                 # applies the withheld ports
+.venv/bin/python scripts/technic_gears.py                 # gear facts and mesh geometries -> technic-gears.json
+.venv/bin/python scripts/technic_parts_reference.py       # docs/agent/reference/technic-parts.md
+```
+
+`ldraw_tools/data/technic-parts.json` holds the hand-reviewed parts. The scripts never regenerate it, and it overrides derived ports. `tests/test_technic_ports.py` fails when the derived table is stale or no longer reproduces every reviewed port.
+
+Before you add a Technic check or change a threshold, measure it on the official sets:
+
+```sh
+.venv/bin/python scripts/technic_corpus.py checks
+```
+
+An error must fire less than once per 1,000 official placements; anything noisier ships as a warning. The command writes its rates and examples to `docs/reports/benchmarks/technic-corpus.json`. The mutation test in `tests/test_technic_checks.py` and the Walker1 cross-check in `tests/test_mechanism_crosscheck.py` must keep passing. The cross-check reads `../LegoTechnicSimulation` and skips when that checkout is absent.
+
 ## Change the knowledge base
 
 Package READMEs own `ldraw-knowledge` registrations. Edit those owners and regenerate compatibility catalogs with each atlas README's command. Keep scopes, aliases, source attribution and source, BOM and visual freshness gates. `docs/reports/` holds historical findings; `data/` and `lsynth-examples/` hold source research, not admitted construction lessons. Preserve the planning baseline in `docs/plans/knowledge-base-overhaul/snapshot/` and record later decisions in the implementation record.

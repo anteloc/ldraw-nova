@@ -1,0 +1,30 @@
+0 FILE technic-gear-pair.ldr
+0 Braced 8:24 gear pair: two shafts carried by two beams, a bush outside each beam
+0 Name: technic-gear-pair.ldr
+0 Author: ldraw-nova recipe
+0 !LDRAW_ORG Model
+0 // beam-a: Upright beam; its holes run along X
+1 71 0 0 0 0 -1 0 0 0 -1 1 0 0 32524.dat
+0 STEP
+0 // input: Input shaft: a 5-long axle, 1 stud out on the -X side
+1 0 20 40 0 1 0 0 0 1 0 0 0 1 32073.dat
+0 // output: Output shaft two holes away: 8 + 24 teeth mesh 40 LDU apart
+1 0 20 0 0 1 0 0 0 1 0 0 0 1 32073.dat
+0 STEP
+0 // input-gear: 8-tooth gear flush against beam A
+1 7 20 40 0 0 0 1 0 1 0 -1 0 0 3647.dat
+0 // output-gear: 24-tooth gear in the same plane
+1 7 20 0 0 0 0 1 0 1 0 -1 0 0 3648b.dat
+0 STEP
+0 // beam-b: Second beam on both shafts, flush against the gears: each shaft runs in two bearings
+1 71 40 0 0 0 -1 0 0 0 -1 1 0 0 32524.dat
+0 STEP
+0 // input-bush-a: Bush outside beam A
+1 71 -20 40 0 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // input-bush-b: Bush outside beam B: the shaft cannot slide either way
+1 71 60 40 0 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // output-bush-a: Bush outside beam A
+1 71 -20 0 0 0 0 1 0 1 0 -1 0 0 3713.dat
+0 // output-bush-b: Bush outside beam B
+1 71 60 0 0 0 0 1 0 1 0 -1 0 0 3713.dat
+0 NOFILE

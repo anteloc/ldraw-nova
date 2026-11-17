@@ -1,0 +1,165 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [
+    {
+      "name": "technic-gear-pair.ldr",
+      "description": "Braced 8:24 gear pair: two shafts carried by two beams, a bush outside each beam",
+      "mechanism": {
+        "ground": "beam-a",
+        "input": "input",
+        "outputs": [
+          "output"
+        ]
+      },
+      "steps": [
+        [
+          {
+            "id": "beam-a",
+            "ref": "32524.dat",
+            "colour": 71,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "orient": {
+              "up": "+X",
+              "x": "+Z"
+            },
+            "purpose": "Upright beam; its holes run along X"
+          }
+        ],
+        [
+          {
+            "id": "input",
+            "ref": "32073.dat",
+            "colour": 0,
+            "on": {
+              "to": "beam-a",
+              "hole": "hole-1",
+              "pin": "shaft",
+              "end": "-X",
+              "past": 20
+            },
+            "purpose": "Input shaft: a 5-long axle, 1 stud out on the -X side"
+          },
+          {
+            "id": "output",
+            "ref": "32073.dat",
+            "colour": 0,
+            "on": {
+              "to": "beam-a",
+              "hole": "hole-3",
+              "pin": "shaft",
+              "end": "-X",
+              "past": 20
+            },
+            "purpose": "Output shaft two holes away: 8 + 24 teeth mesh 40 LDU apart"
+          }
+        ],
+        [
+          {
+            "id": "input-gear",
+            "ref": "3647.dat",
+            "colour": 7,
+            "on": {
+              "to": "input",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "beam-a",
+              "side": "+X"
+            },
+            "purpose": "8-tooth gear flush against beam A"
+          },
+          {
+            "id": "output-gear",
+            "ref": "3648b.dat",
+            "colour": 7,
+            "on": {
+              "to": "output",
+              "hole": "hole-2",
+              "pin": "shaft",
+              "next_to": "beam-a",
+              "side": "+X"
+            },
+            "purpose": "24-tooth gear in the same plane"
+          }
+        ],
+        [
+          {
+            "id": "beam-b",
+            "ref": "32524.dat",
+            "colour": 71,
+            "orient": {
+              "up": "+X",
+              "x": "+Z"
+            },
+            "on": {
+              "to": "input",
+              "hole": "hole-1",
+              "pin": "shaft",
+              "next_to": "input-gear",
+              "side": "+X"
+            },
+            "purpose": "Second beam on both shafts, flush against the gears: each shaft runs in two bearings"
+          }
+        ],
+        [
+          {
+            "id": "input-bush-a",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "input",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "beam-a",
+              "side": "-X"
+            },
+            "purpose": "Bush outside beam A"
+          },
+          {
+            "id": "input-bush-b",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "input",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "beam-b",
+              "side": "+X"
+            },
+            "purpose": "Bush outside beam B: the shaft cannot slide either way"
+          },
+          {
+            "id": "output-bush-a",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "output",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "beam-a",
+              "side": "-X"
+            },
+            "purpose": "Bush outside beam A"
+          },
+          {
+            "id": "output-bush-b",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "output",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "beam-b",
+              "side": "+X"
+            },
+            "purpose": "Bush outside beam B"
+          }
+        ]
+      ]
+    }
+  ]
+}

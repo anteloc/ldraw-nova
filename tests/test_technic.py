@@ -25,6 +25,10 @@ def errors(report):
     return {d['code'] for d in report['diagnostics'] if d['severity'] == 'error'}
 
 
+def warnings(report):
+    return {d['code'] for d in report['diagnostics'] if d['severity'] == 'warning'}
+
+
 def test_registry_matches_geometry_and_removes_phantom_holes(official):
     assert all(definition(official.geometry(c)) for c in registry()['parts'])
     m = model(('32523', (0, 0, 0), I))
@@ -78,9 +82,41 @@ def test_thin_layers_fill_one_grip(official):
     # Thin beam holes have odd half-module Z offsets.
     thin = ('32063', (0, 5, 10), I)
     m = model(thin, ('2780', (0, 10, 0), PIN_Y))
-    assert 'technic.incomplete_grip' in errors(review_structure(m, official))
+    # Half a grip holds weakly but can be built (official studded sets do it): a warning, not an error.
+    report = review_structure(m, official)
+    assert 'technic.incomplete_grip' in warnings(report) and 'technic.incomplete_grip' not in errors(report)
     filled = model(thin, ('32063', (0, -5, 10), I), ('2780', (0, 10, 0), PIN_Y))
-    assert not errors(review_structure(filled, official))
+    report = review_structure(filled, official)
+    assert not errors(report) and 'technic.incomplete_grip' not in warnings(report)
+
+
+def test_a_pin_off_centre_in_a_layer_is_a_warning(official):
+    # A thin liftarm in the middle of a grip: buildable, as official studded sets show, so not an error.
+    off = model(('32063', (0, 0, 10), I), ('2780', (0, 10, 0), PIN_Y))
+    report = review_structure(off, official)
+    assert 'technic.invalid_seating' in warnings(report) and 'technic.invalid_seating' not in errors(report)
+
+
+def test_bent_arm_end_hole_keys_an_axle_turned_by_the_bend(official):
+    # Hole 6 of the 53.13-degree bent liftarm 32348 is on the bent segment: its cross is turned with it.
+    from ldraw import Matrix
+    turned = Matrix([[0, -0.6, 0.8], [1, 0, 0], [0, 0.8, 0.6]])  # axle along Y, cross turned 53.13 degrees
+    seated = model(('32348', (0, 0, 0), I), ('3705', (48, 0, 96), turned))
+    report = review_structure(seated, official)
+    assert 'technic.invalid_seating' not in errors(report) | warnings(report)
+    square = model(('32348', (0, 0, 0), I), ('3705', (48, 0, 96), PIN_Y))
+    # Reported; a warning because 32348's ports are derived, not hand-reviewed.
+    assert 'technic.invalid_seating' in warnings(review_structure(square, official))
+
+
+def test_seating_errors_need_reviewed_ports_on_every_part(official):
+    # Two reviewed beams on one pin span: an error. Two derived bent liftarms on one axle span: the
+    # same conflict, reported as a warning (derived ports fire too often on official sets for errors).
+    reviewed = model(('32523', (0, 0, 0), I), ('32523', (0, 0, 0), I), ('2780', (0, 10, 0), PIN_Y))
+    assert 'technic.occupied_span' in errors(review_structure(reviewed, official))
+    derived = model(('32348', (0, 0, 0), I), ('32348', (0, 0, 0), I), ('3705', (0, 0, 0), PIN_Y))
+    report = review_structure(derived, official)
+    assert 'technic.occupied_span' in warnings(report) and 'technic.occupied_span' not in errors(report)
 
 
 def test_occupied_spans_and_holes(official):

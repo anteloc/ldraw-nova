@@ -53,11 +53,20 @@ def test_snot_card_examples_build(official):
 
 
 def test_technic_card_examples_build(official):
-    frame, axle = blocks('technic.md')
+    pin, join, stack, mechanism = blocks('technic.md')
     context = {}
-    _, _, diagnostics = build_plan(plan_from(frame), official, context=context)
-    assert not errors(diagnostics) and [s['behavior'] for s in context['seats']] == ['pin', 'pin']
-    brick = '{"id": "brick", "ref": "32064a.dat", "colour": 71, "at": [0, 0, 0]}, ' + axle
+    _, _, diagnostics = build_plan(plan_from(pin), official, context=context)
+    assert not errors(diagnostics) and context['seats'][0]['behavior'] == 'pin'
+    _, model, diagnostics = build_plan(plan_from(join), official)
+    assert not errors(diagnostics) and [p.reference for p in model.pieces].count('2780.dat') == 2
     context = {}
-    _, _, diagnostics = build_plan(plan_from(brick), official, context=context)
-    assert not errors(diagnostics) and context['seats'][0]['behavior'] == 'keyed'
+    plan = plan_from(stack)
+    plan['sections'][0]['mechanism'] = json.loads(mechanism)
+    from ldraw_tools.builder import check_schema
+    from ldraw_tools.identity import Plan
+    from ldraw_tools.workflow import build_checked
+    check_schema(plan)
+    _, _, diagnostics = build_plan(plan, official, context=context)
+    assert not errors(diagnostics) and [s['behavior'] for s in context['seats']] == ['bearing', 'keyed', 'keyed']
+    _, _, report = build_checked(Plan(plan), official, detail='summary', contacts='auto')
+    assert report['checks_passed'] and report['mechanism']['card.ldr']['output_moves_with_input'] == {'gear': True}

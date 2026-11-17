@@ -1,0 +1,318 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [
+    {
+      "name": "technic-worm-drive.ldr",
+      "description": "Worm driving a 24-tooth gear, between two open frames stacked two studs apart",
+      "mechanism": {
+        "ground": "frame-a",
+        "input": "worm-shaft",
+        "outputs": [
+          "gear-shaft"
+        ]
+      },
+      "steps": [
+        [
+          {
+            "id": "frame-a",
+            "ref": "64179.dat",
+            "colour": 71,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "Lower open frame lying flat"
+          }
+        ],
+        [
+          {
+            "id": "riser-l",
+            "ref": "32524.dat",
+            "colour": 72,
+            "join": {
+              "to": "frame-a",
+              "holes": {
+                "hole-0": "hole-0",
+                "hole-6": "hole-6"
+              },
+              "side": "-Y",
+              "pins": false
+            },
+            "purpose": "Spacer beam on the left side; the long pins below hold it"
+          },
+          {
+            "id": "riser-r",
+            "ref": "32524.dat",
+            "colour": 72,
+            "join": {
+              "to": "frame-a",
+              "holes": {
+                "hole-13": "hole-0",
+                "hole-19": "hole-6"
+              },
+              "side": "-Y",
+              "pins": false
+            },
+            "purpose": "Spacer beam on the right side"
+          }
+        ],
+        [
+          {
+            "id": "frame-b",
+            "ref": "64179.dat",
+            "colour": 71,
+            "join": {
+              "to": "riser-l",
+              "holes": {
+                "hole-0": "hole-0",
+                "hole-6": "hole-6"
+              },
+              "side": "-Y",
+              "pins": false
+            },
+            "purpose": "Upper open frame, two studs above the lower: worm and gear axes cross 40 LDU apart"
+          }
+        ],
+        [
+          {
+            "id": "pin-hole-0",
+            "ref": "6558.dat",
+            "colour": 1,
+            "on": {
+              "to": "frame-b",
+              "hole": "hole-0",
+              "pin": "grip-0",
+              "side": "+Y"
+            },
+            "purpose": "Long friction pin through upper frame, spacer and lower frame"
+          },
+          {
+            "id": "pin-hole-6",
+            "ref": "6558.dat",
+            "colour": 1,
+            "on": {
+              "to": "frame-b",
+              "hole": "hole-6",
+              "pin": "grip-0",
+              "side": "+Y"
+            },
+            "purpose": "Long friction pin through upper frame, spacer and lower frame"
+          },
+          {
+            "id": "pin-hole-13",
+            "ref": "6558.dat",
+            "colour": 1,
+            "on": {
+              "to": "frame-b",
+              "hole": "hole-13",
+              "pin": "grip-0",
+              "side": "+Y"
+            },
+            "purpose": "Long friction pin through upper frame, spacer and lower frame"
+          },
+          {
+            "id": "pin-hole-19",
+            "ref": "6558.dat",
+            "colour": 1,
+            "on": {
+              "to": "frame-b",
+              "hole": "hole-19",
+              "pin": "grip-0",
+              "side": "+Y"
+            },
+            "purpose": "Long friction pin through upper frame, spacer and lower frame"
+          }
+        ],
+        [
+          {
+            "id": "gear-shaft",
+            "ref": "3706.dat",
+            "colour": 0,
+            "on": {
+              "to": "frame-a",
+              "hole": "hole-3",
+              "pin": "shaft",
+              "end": "-X",
+              "past": 10
+            },
+            "purpose": "Output shaft across the lower frame, along X"
+          },
+          {
+            "id": "worm-shaft",
+            "ref": "3707.dat",
+            "colour": 0,
+            "on": {
+              "to": "frame-b",
+              "hole": "hole-9",
+              "pin": "shaft",
+              "end": "-Z",
+              "past": 10
+            },
+            "purpose": "Input shaft across the upper frame, along Z"
+          }
+        ],
+        [
+          {
+            "id": "gear",
+            "ref": "3648b.dat",
+            "colour": 7,
+            "on": {
+              "to": "gear-shaft",
+              "hole": "hole-2",
+              "pin": "shaft"
+            },
+            "purpose": "24-tooth gear in the middle of its shaft"
+          },
+          {
+            "id": "worm",
+            "ref": "4716.dat",
+            "colour": 7,
+            "on": {
+              "to": "worm-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "slide": -10
+            },
+            "purpose": "Worm centred over the gear"
+          }
+        ],
+        [
+          {
+            "id": "gear-spacer-l",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "gear-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "gear",
+              "side": "-X"
+            },
+            "purpose": "Bush between gear and frame"
+          },
+          {
+            "id": "gear-spacer-r",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "gear-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "gear",
+              "side": "+X"
+            },
+            "purpose": "Bush between gear and frame"
+          },
+          {
+            "id": "worm-back-1",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "worm-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "worm",
+              "side": "-Z"
+            },
+            "purpose": "Backs the worm against its thrust"
+          },
+          {
+            "id": "worm-back-2",
+            "ref": "3713.dat",
+            "colour": 71,
+            "on": {
+              "to": "worm-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "worm",
+              "side": "+Z"
+            },
+            "purpose": "Backs the worm the other way"
+          }
+        ],
+        [
+          {
+            "id": "worm-back-3",
+            "ref": "32123a.dat",
+            "colour": 71,
+            "on": {
+              "to": "worm-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "worm-back-1",
+              "side": "-Z"
+            },
+            "purpose": "Half bush closes the gap to the frame"
+          },
+          {
+            "id": "worm-back-4",
+            "ref": "32123a.dat",
+            "colour": 71,
+            "on": {
+              "to": "worm-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "worm-back-2",
+              "side": "+Z"
+            },
+            "purpose": "Half bush closes the gap to the frame"
+          },
+          {
+            "id": "gear-cap-l",
+            "ref": "32123a.dat",
+            "colour": 71,
+            "on": {
+              "to": "gear-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame-a",
+              "side": "-X"
+            },
+            "purpose": "Half bush outside the frame"
+          },
+          {
+            "id": "gear-cap-r",
+            "ref": "32123a.dat",
+            "colour": 71,
+            "on": {
+              "to": "gear-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame-a",
+              "side": "+X"
+            },
+            "purpose": "Half bush outside the frame"
+          },
+          {
+            "id": "worm-cap-a",
+            "ref": "32123a.dat",
+            "colour": 71,
+            "on": {
+              "to": "worm-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame-b",
+              "side": "-Z"
+            },
+            "purpose": "Half bush outside the upper frame"
+          },
+          {
+            "id": "worm-cap-b",
+            "ref": "32123a.dat",
+            "colour": 71,
+            "on": {
+              "to": "worm-shaft",
+              "hole": "hole-0",
+              "pin": "shaft",
+              "next_to": "frame-b",
+              "side": "+Z"
+            },
+            "purpose": "Half bush outside the upper frame"
+          }
+        ]
+      ]
+    }
+  ]
+}

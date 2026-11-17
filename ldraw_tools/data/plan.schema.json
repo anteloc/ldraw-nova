@@ -125,6 +125,75 @@
               "$ref": "#/$defs/named_structure"
             }
           ]
+        },
+        "mechanism": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ground": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+            },
+            "input": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+            },
+            "inputs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+              },
+              "minItems": 1,
+              "maxItems": 16,
+              "uniqueItems": true
+            },
+            "outputs": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+              },
+              "maxItems": 64,
+              "uniqueItems": true
+            },
+            "dof": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 64
+            },
+            "pivots": {
+              "type": "array",
+              "maxItems": 256,
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+                },
+                "minItems": 2,
+                "maxItems": 2,
+                "uniqueItems": true
+              }
+            }
+          },
+          "anyOf": [
+            {
+              "required": [
+                "input"
+              ]
+            },
+            {
+              "required": [
+                "inputs"
+              ]
+            },
+            {
+              "required": [
+                "pivots"
+              ]
+            }
+          ]
         }
       }
     },
@@ -257,6 +326,24 @@
                   "type": "number",
                   "minimum": -1000,
                   "maximum": 1000
+                },
+                "side": {
+                  "$ref": "#/$defs/direction"
+                },
+                "next_to": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+                },
+                "end": {
+                  "$ref": "#/$defs/direction"
+                },
+                "past": {
+                  "type": "number",
+                  "minimum": -1000,
+                  "maximum": 1000
+                },
+                "flip": {
+                  "type": "boolean"
                 }
               }
             }
@@ -446,6 +533,67 @@
               "maximum": 360
             }
           }
+        },
+        "join": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "to",
+            "holes",
+            "side"
+          ],
+          "properties": {
+            "to": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+            },
+            "holes": {
+              "type": "object",
+              "minProperties": 1,
+              "maxProperties": 32,
+              "propertyNames": {
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              "additionalProperties": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$"
+              }
+            },
+            "side": {
+              "$ref": "#/$defs/direction"
+            },
+            "pins": {
+              "oneOf": [
+                {
+                  "const": false
+                },
+                {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*(\\.dat)?$",
+                  "maxLength": 64
+                }
+              ]
+            },
+            "pin_colour": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "roll": {
+              "type": "number",
+              "minimum": -360,
+              "maximum": 360
+            },
+            "flip": {
+              "type": "boolean"
+            }
+          }
+        },
+        "mirror": {
+          "enum": [
+            "x",
+            "y",
+            "z"
+          ]
         }
       },
       "oneOf": [
@@ -484,6 +632,11 @@
               {
                 "required": [
                   "under"
+                ]
+              },
+              {
+                "required": [
+                  "join"
                 ]
               }
             ]
@@ -524,6 +677,11 @@
               {
                 "required": [
                   "under"
+                ]
+              },
+              {
+                "required": [
+                  "join"
                 ]
               }
             ]
@@ -585,6 +743,11 @@
                 "required": [
                   "under"
                 ]
+              },
+              {
+                "required": [
+                  "join"
+                ]
               }
             ]
           }
@@ -634,6 +797,11 @@
               {
                 "required": [
                   "under"
+                ]
+              },
+              {
+                "required": [
+                  "join"
                 ]
               }
             ]
@@ -699,6 +867,11 @@
                 "required": [
                   "under"
                 ]
+              },
+              {
+                "required": [
+                  "join"
+                ]
               }
             ]
           }
@@ -753,6 +926,76 @@
               {
                 "required": [
                   "matrix"
+                ]
+              },
+              {
+                "required": [
+                  "join"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "join",
+            "ref"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "at"
+                ]
+              },
+              {
+                "required": [
+                  "on"
+                ]
+              },
+              {
+                "required": [
+                  "attach"
+                ]
+              },
+              {
+                "required": [
+                  "offset_studs"
+                ]
+              },
+              {
+                "required": [
+                  "snap"
+                ]
+              },
+              {
+                "required": [
+                  "flex"
+                ]
+              },
+              {
+                "required": [
+                  "under"
+                ]
+              },
+              {
+                "required": [
+                  "repeat"
+                ]
+              },
+              {
+                "required": [
+                  "yaw"
+                ]
+              },
+              {
+                "required": [
+                  "matrix"
+                ]
+              },
+              {
+                "required": [
+                  "orient"
                 ]
               }
             ]

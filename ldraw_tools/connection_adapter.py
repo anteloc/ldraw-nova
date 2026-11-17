@@ -77,10 +77,18 @@ def query_frames(inspection, *, snapping=False):
 
 
 def connection_contacts(inspection):
+    """Port pairs by the Technic fit rules; every other pair by pyldraw's generic matcher.
+
+    A Technic port can still mate with a part that has no ports (a System part
+    with a pin, an unlisted connector); only port-to-port pairs must pass the
+    stricter rules, so the generic matcher's port-to-port matches are dropped.
+    """
     from .technic import managed, contacts
-    ordinary = replace(inspection, occurrences=tuple(replace(o, connections=tuple(
-        f for f in o.connections if not managed(f))) for o in inspection.occurrences))
-    return (*query_frames(ordinary).connection_contacts(), *contacts(inspection))
+    if not any(managed(f) for o in inspection.occurrences for f in o.connections):
+        return (*query_frames(inspection).connection_contacts(), *contacts(inspection))
+    mixed = [c for c in query_frames(inspection).connection_contacts()
+             if not (managed(c.first) and managed(c.second))]
+    return (*mixed, *contacts(inspection))
 
 
 # --- Bounds of an occurrence without a Python loop over every point ---------

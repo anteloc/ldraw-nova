@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "author": "ldraw-nova recipe",
+  "sections": [
+    {
+      "name": "technic-cylinder-lever.ldr",
+      "description": "Lever on a frictionless pin, moved by a pneumatic cylinder to a rigid mount",
+      "mechanism": {
+        "ground": "frame",
+        "input": "cylinder",
+        "outputs": [
+          "arm"
+        ],
+        "pivots": [
+          [
+            "arm",
+            "frame"
+          ]
+        ],
+        "dof": 1
+      },
+      "steps": [
+        [
+          {
+            "id": "frame",
+            "ref": "32524.dat",
+            "colour": 71,
+            "at": [
+              0,
+              0,
+              0
+            ],
+            "purpose": "Base beam lying flat along Z; holes run along Y"
+          }
+        ],
+        [
+          {
+            "id": "mount",
+            "ref": "32523.dat",
+            "colour": 72,
+            "join": {
+              "to": "frame",
+              "holes": {
+                "hole-5": "hole-1",
+                "hole-6": "hole-2"
+              },
+              "side": "-Y"
+            },
+            "purpose": "Cylinder mount: a 3-long beam pinned to the base at two holes, so it is rigid"
+          }
+        ],
+        [
+          {
+            "id": "arm",
+            "ref": "32524.dat",
+            "colour": 14,
+            "join": {
+              "to": "frame",
+              "holes": {
+                "hole-0": "hole-0"
+              },
+              "side": "-Y",
+              "roll": -79.3972,
+              "pins": "3673.dat"
+            },
+            "purpose": "Lever on one frictionless pin, turned so its sixth hole is the cylinder length from the mount"
+          }
+        ],
+        [
+          {
+            "id": "cylinder",
+            "ref": "74981-f2.dat",
+            "colour": 71,
+            "join": {
+              "to": "arm",
+              "holes": {
+                "hole-5": "base-eye"
+              },
+              "side": "-Y",
+              "roll": -32.0754,
+              "pins": "3673.dat"
+            },
+            "purpose": "Pneumatic cylinder, extended: eyes 116 LDU apart, from the lever to the mount"
+          }
+        ],
+        [
+          {
+            "id": "cylinder-pin",
+            "ref": "3673.dat",
+            "colour": 71,
+            "on": {
+              "to": "cylinder",
+              "hole": "rod-eye",
+              "pin": "grip-0",
+              "side": "+Y"
+            },
+            "purpose": "Frictionless pin through the rod eye into the mount"
+          }
+        ]
+      ]
+    }
+  ]
+}

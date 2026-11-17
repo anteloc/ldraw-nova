@@ -72,8 +72,10 @@ def test_dry_run_prints_isolated_headless_commands_without_writing(tmp_path, cap
 
 def test_every_brief_has_checks_of_known_types():
     data = json.loads((ROOT / 'bench/briefs.json').read_text())
-    known = {'placements', 'connected', 'bom', 'parts_any', 'extent', 'ratio', 'ground'}
-    assert {b['round'] for b in data['briefs']} == {1, 2} and len([b for b in data['briefs'] if b['round'] == 1]) == 4
+    known = {'placements', 'connected', 'bom', 'parts_any', 'extent', 'ratio', 'ground', 'technic', 'no_codes'}
+    assert {b['round'] for b in data['briefs']} == {1, 2, 3} and len([b for b in data['briefs'] if b['round'] == 1]) == 4
+    technic = [b['id'] for b in data['briefs'] if b['family'] == 'technic']
+    assert {'steering-chassis', 'pneumatic-lift', 'micro-gearbox', 'micro-swing-arm'} <= set(technic)
     for brief in data['briefs']:
         assert brief['checks'] and {c['type'] for c in brief['checks']} <= known, brief['id']
         assert '{outdir}' in data['harness']
