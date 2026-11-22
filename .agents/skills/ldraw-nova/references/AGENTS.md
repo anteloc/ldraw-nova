@@ -17,22 +17,22 @@ Build LEGO models as LDraw MPD files from JSON plans with `./ldraw-agent`. You c
 4. **Build and fix:**
 
    ```sh
-   ./ldraw-agent build output/TASK/model.plan.json --output output/TASK/ai-generated.mpd
+   ./ldraw-agent build output/TASK/model.plan.json --output output/TASK/ai-NAME.mpd
    ./ldraw-agent review output/TASK/model.plan.json --outdir output/TASK/review --draft
    ```
 
-   `build` prints a short summary: errors with the placements they concern, warnings grouped by code, and the next step. A failing build leaves `ai-generated.draft.mpd`; `review --draft` renders it so you can see the problem. Read the [checks card](docs/agent/cards/checks.md) to act on a diagnostic. Fix the first error and rebuild.
+   `build` prints a short summary: errors with the placements they concern, warnings grouped by code, and the next step. `ai-NAME.mpd` names the model after its subject: `ai-` plus lowercase words joined by hyphens, e.g. `ai-ford-mustang.mpd`. A failing build leaves `ai-NAME.draft.mpd`; `review --draft` renders it so you can see the problem. Read the [checks card](docs/agent/cards/checks.md) to act on a diagnostic. Fix the first error and rebuild.
 5. **Review** with the same command once `build` passes; `--draft` only matters while checks fail. Open the previews and compare them with the brief, and look closely at every placement a warning names. The [review card](docs/agent/cards/review.md) explains how.
 6. **Soften vehicle silhouettes (mandatory for every vehicle: car, truck, plane, spacecraft, ship…).** Inspect the outline; where the subject is rounded, replace blocky straight-edged bricks with curves mounted by SNOT: [silhouette pass](docs/agent/guides/design-models.md#soften-blocky-vehicle-silhouettes).
 7. **Finalize and deliver** only the three mandatory items below for each model. Follow the [review card](docs/agent/cards/review.md#deliver) to finalize metadata, check the exact delivered bytes and link every required artifact.
 
 ## Mandatory model deliverables
 
-- **Metrics:** total generation time and timing for every stage, including planning, research, authoring, tooling execution, validation, repair, rendering, visual review and finalization. Include agent/model thinking time where telemetry exposes it; explicitly mark unavailable measurements and never invent them.
+- **Metrics:** total generation time and timing for every stage, including planning, research, authoring, tooling execution, validation, repair, rendering, visual review and finalization. Give every duration in seconds and as `hh:mm:ss`, e.g. `4523 s (01:15:23)`. Include agent/model thinking time where telemetry exposes it; explicitly mark unavailable measurements and never invent them.
 - **Visual evidence:** every xray board's `xray/<board>/mosaic.png`, plus stills and previews from different perspectives. Open the images before delivery.
-- **Generated model:** always `ai-generated.mpd`. Prefix the internal main-model title (the root section's `description`) with `[AI-GENERATED] ` exactly once. In the main model and every AI-generated submodel's header, include `0 Author:` with the name and version of every contributing agent/model, `0 !LICENSE CC-BY-NC`, immediately followed by `0 Allows sharing and adapting for noncommercial purposes only, with attribution to the AI that authored the current model.`, and `0 !KEYWORDS AI, AI-generated`. Preserve attribution and licences in imported third-party sections.
+- **Generated model:** `ai-NAME.mpd`, named after the model with the `ai-` prefix (`ai-wanderer.mpd`, `ai-ford-mustang.mpd`, `ai-mecha-invader.mpd`); `finalize` refuses other names. Prefix the internal main-model title (the root section's `description`) with `[AI-GENERATED] ` exactly once. In the main model and every AI-generated submodel's header, include `0 Author:` with the name and version of every contributing agent/model, `0 !LICENSE CC-BY-NC`, immediately followed by `0 Allows sharing and adapting for noncommercial purposes only, with attribution to the AI that authored the current model.`, and `0 !KEYWORDS AI, AI-generated`. Preserve attribution and licences in imported third-party sections.
 
-Plans, generators, logs, manifests, BOMs, check reports and review bundles are internal working files, not additional user deliverables. Do not produce extra exports or deliverables unless the user requests them: no `.blend`, `.glb`, videos, source packages or README handoffs by default. Each model gets its own directory so the required filename never collides.
+Plans, generators, logs, manifests, BOMs, check reports and review bundles are internal working files, not additional user deliverables. Do not produce extra exports or deliverables unless the user requests them: no `.blend`, `.glb`, videos, source packages or README handoffs by default. Each model gets its own directory.
 
 ## LDraw facts
 

@@ -35,7 +35,7 @@ Many commands that read a model accept the same selection and geometry options:
 | `review FILE` | Build if needed, check geometry, render and compare BOMs in one folder | `FILE` is a plan or MPD/LDR; `--outdir` (default `SOURCE-review`), `--force`, `--no-render`, `--draft`, `--views` (default home top front), `--section`, `--colour`, shared options |
 | `validate FILE` | Check an MPD's source and, with `--geometry`, its assembly geometry | `--profile {assembly,syntax}` (default assembly), `--geometry`, `--strict` (warnings fail), shared options |
 | `render FILE` | Render review views and export a LeoCAD BOM | `--outdir` (required), `--views` (default home top front), `--timeout`, `--section`, `--colour` |
-| `finalize MODEL` | Add the licence comment and AI keywords to a built MPD and check delivery metadata | in place unless `--output` |
+| `finalize MODEL` | Add the licence comment and AI keywords to a built MPD and check delivery metadata, including the `ai-<model-name>.mpd` filename | in place unless `--output` |
 | `part CODE...` | Origin, body, studs/sockets by face and Technic ports of one or more parts | `--full` (every connector record), `--limit` (default 30, with `--full`) |
 | `search KIND QUERY` | Search part descriptions or annotated models | `KIND {parts,models,submodels}`, `--limit` (10), `--offset`, parts only: `--field {part,description,both}`, `--match {terms,exact,like}`, `--dimensions`, `--min-size X Y Z`, `--max-size X Y Z` |
 | `dimensions REFS...` | Cached dimensions for identified parts, without geometry loading | — |

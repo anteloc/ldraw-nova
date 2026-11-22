@@ -286,7 +286,7 @@ Look up codes in the installed LDConfig.ldr
 
 Add the licence comment and AI keywords to a built MPD and check its delivery metadata
 
-- `MODEL`: Built MPD, usually ai-generated.mpd; finalized in place unless --output is given
+- `MODEL`: Built MPD named after the model, ai-<model-name>.mpd (e.g. ai-ford-mustang.mpd); finalized in place unless --output is given
 - `--output`: Write the finalized MPD here instead
 
 ### `build`

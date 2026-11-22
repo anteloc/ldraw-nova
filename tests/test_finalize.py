@@ -1,5 +1,5 @@
 """`finalize` adds the delivery metadata the plan cannot carry, once, and checks the rest."""
-from ldraw_tools.finalize import COMMENT, KEYWORDS, LICENCE, finalize, finalize_text
+from ldraw_tools.finalize import COMMENT, KEYWORDS, LICENCE, filename_problems, finalize, finalize_text
 
 HEADER = ['0 Name: {name}', '0 Author: Claude Code 2.1 (agent); Claude Opus 5.5 (claude-opus-5-5)', '0 !LDRAW_ORG Model', LICENCE]
 
@@ -20,13 +20,13 @@ def test_generated_sections_get_the_comment_and_keywords_once_and_keep_crlf(tmp_
     assert [lines[i + 1:i + 3] for i, line in enumerate(lines) if line == LICENCE] == [[COMMENT, KEYWORDS]] * 2
     assert lines.count(COMMENT) == 2 and 'Jane Builder' in done and done.count(KEYWORDS) == 2
     assert finalize_text(done) == (done, [])
-    path = tmp_path / 'ai-generated.mpd'
+    path = tmp_path / 'ai-crane.mpd'
     path.write_bytes(text.encode())
     assert finalize(path)['written'] and path.read_bytes().decode() == done
 
 
 def test_problems_are_named_and_nothing_is_written(tmp_path):
-    path = tmp_path / 'ai-generated.mpd'
+    path = tmp_path / 'ai-crane.mpd'
     path.write_bytes(mpd(('main.ldr', 'Crane', HEADER)).encode())
     report = finalize(path)
     assert not report['written'] and any('[AI-GENERATED] ' in p for p in report['problems'])
@@ -37,3 +37,15 @@ def test_problems_are_named_and_nothing_is_written(tmp_path):
     anonymous = [h for h in HEADER if not h.startswith('0 Author:')]
     _, problems = finalize_text(mpd(('main.ldr', '[AI-GENERATED] Crane', anonymous)))
     assert any("'0 Author:'" in p for p in problems)
+
+
+def test_delivered_file_is_named_after_the_model_with_the_ai_prefix(tmp_path):
+    assert filename_problems('ai-crane.mpd') == [] and filename_problems('ai-ford-mustang.mpd') == []
+    for bad in ('ai-generated.mpd', 'crane.mpd', 'AI-Crane.mpd', 'ai-crane.draft.mpd', 'ai_crane.mpd', 'ai-.mpd'):
+        assert filename_problems(bad), bad
+    text = mpd(('main.ldr', '[AI-GENERATED] Crane', HEADER))
+    path = tmp_path / 'ai-generated.mpd'
+    path.write_bytes(text.encode())
+    report = finalize(path)
+    assert not report['written'] and any('ai-<model-name>.mpd' in p for p in report['problems'])
+    assert finalize(path, output=tmp_path / 'ai-crane.mpd')['written']

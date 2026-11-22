@@ -53,7 +53,7 @@ A plan is built in memory with the same builder and checks as `build`; an existi
 | `bom-comparison.json` | Exact Python/LeoCAD comparison and model hash |
 | `previews/` | Requested PNG views and `leocad-bom.csv` |
 
-These are internal artifacts, not the delivery list; the internal `model.mpd` name never replaces `ai-generated.mpd` ([review-and-deliver](../../review-and-deliver/SKILL.md)).
+These are internal artifacts, not the delivery list; the internal `model.mpd` name never replaces the delivered `ai-NAME.mpd`, named after the model ([review-and-deliver](../../review-and-deliver/SKILL.md)).
 
 - **Reuse:** same inputs (source and dependency hashes, options, toolkit, library) return the existing manifest with `reused: true`; `--force` recomputes. Changed inputs replace the bundle as a unit. Plans with inline flex routes always recompute.
 - **Extra files or edited artifacts stop the review**: use another directory or move your work out.

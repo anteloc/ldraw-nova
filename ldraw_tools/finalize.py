@@ -3,14 +3,18 @@
 The plan writes the author, `0 !LICENSE CC-BY-NC` and the `[AI-GENERATED] `
 title; it has no field for the licence explanation or the keywords. `finalize`
 adds both to every section the plan generated (the sections carrying that
-licence line), keeps the file's line endings, and checks the rest. It is
-repeatable: lines already present are not added twice.
+licence line), keeps the file's line endings, and checks the rest, including
+the delivered filename `ai-<model-name>.mpd`. It is repeatable: lines already
+present are not added twice.
 """
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 LICENCE = '0 !LICENSE CC-BY-NC'
+FILENAME = re.compile(r'ai-[a-z0-9]+(?:-[a-z0-9]+)*\.mpd')
+GENERIC_NAMES = {'ai-generated.mpd', 'ai-model.mpd'}
 COMMENT = ('0 Allows sharing and adapting for noncommercial purposes only, with attribution to the AI '
            'that authored the current model.')
 KEYWORDS = '0 !KEYWORDS AI, AI-generated'
@@ -45,11 +49,22 @@ def finalize_text(text):
     return newline.join(out) + newline, problems
 
 
+def filename_problems(name):
+    """The delivered file is named after the model: ai-<model-name>.mpd, lowercase words joined by hyphens."""
+    if not FILENAME.fullmatch(name):
+        return [f"Name the delivered file ai-<model-name>.mpd, lowercase words joined by hyphens "
+                f"(e.g. ai-ford-mustang.mpd), not '{name}'."]
+    if name in GENERIC_NAMES:
+        return [f"'{name}' does not name the model: use ai-<model-name>.mpd, e.g. ai-ford-mustang.mpd."]
+    return []
+
+
 def finalize(path, output=None):
     """Finalize an MPD (in place unless ``output`` is given); the file is written only without problems."""
     source = Path(path)
     text, problems = finalize_text(source.read_bytes().decode())
     target = Path(output) if output else source
+    problems = filename_problems(target.name) + problems
     if not problems:
         target.write_bytes(text.encode())
     sections = text.count('0 FILE ') or 1

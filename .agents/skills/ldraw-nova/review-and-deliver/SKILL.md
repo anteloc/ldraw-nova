@@ -1,11 +1,11 @@
 ---
 name: review-and-deliver
-description: 'Reviews a built model visually and delivers it: review PLAN --outdir (BOM, previews, --views, --draft), opening and comparing images with the brief, the mandatory before/after silhouette boards for vehicles, rendering modules alone or in place with bin/ldraw-xray (boards, stud maps, cutaways, mosaic.png), then the delivery rules: metrics.md timing for every stage, visual evidence, ai-generated.mpd with [AI-GENERATED] title, Author, CC-BY-NC licence and keywords via finalize, and final review of the delivered bytes. Use after a build passes, when inspecting a warning in the render, and before handing a model to the user.'
+description: 'Reviews a built model visually and delivers it: review PLAN --outdir (BOM, previews, --views, --draft), opening and comparing images with the brief, the mandatory before/after silhouette boards for vehicles, rendering modules alone or in place with bin/ldraw-xray (boards, stud maps, cutaways, mosaic.png), then the delivery rules: metrics.md timing for every stage in seconds and hh:mm:ss, visual evidence, ai-NAME.mpd named after the model (ai- prefix, e.g. ai-ford-mustang.mpd) with [AI-GENERATED] title, Author, CC-BY-NC licence and keywords via finalize, and final review of the delivered bytes. Use after a build passes, when inspecting a warning in the render, and before handing a model to the user.'
 ---
 
 # Review and deliver
 
-Look at a built model, inspect anything a warning names with `bin/ldraw-xray`, then finalize and hand over exactly the three mandatory deliverables: timing metrics, visual evidence and `ai-generated.mpd` with the required metadata. Checks cannot tell whether a model looks right; the images can. Neither checks nor images prove clutch, strength or motion. Fixing diagnostics: [fix-build-errors](../fix-build-errors/SKILL.md).
+Look at a built model, inspect anything a warning names with `bin/ldraw-xray`, then finalize and hand over exactly the three mandatory deliverables: timing metrics, visual evidence and `ai-NAME.mpd` (named after the model) with the required metadata. Checks cannot tell whether a model looks right; the images can. Neither checks nor images prove clutch, strength or motion. Fixing diagnostics: [fix-build-errors](../fix-build-errors/SKILL.md).
 
 ## Review the plan
 
@@ -79,23 +79,24 @@ When construction order is unclear, `manual prepare FILE --section NAME --outdir
 
 For **each model**, give the user only these three deliverables under `output/TASK/`, with direct links in the final response:
 
-1. **Metrics** in `metrics.md`: total generation wall time and a breakdown for every stage (below).
+1. **Metrics** in `metrics.md`: total generation wall time and a breakdown for every stage (below), each duration in seconds and `hh:mm:ss`.
 2. **Visual evidence:** every `xray/<board>/mosaic.png`, plus stills and previews from different perspectives. Include every board produced during research, construction and review; label reference studies and intermediate revisions so they cannot be mistaken for the final model. Include final home, front, back, left, right, top and bottom views, and close-ups of hidden joins. For a vehicle, include the `silhouette-before` (labelled as an intermediate revision) and `silhouette-after` boards. Preview PNGs can serve as stills.
-3. **`ai-generated.mpd`** with the metadata below in every AI-generated model/submodel section. Use a separate directory per model; never a subject-specific MPD filename at handoff. The tool's internal `review/model.mpd` is not the user-facing file.
+3. **`ai-NAME.mpd`**, named after the model: `ai-` plus the model's name in lowercase words joined by hyphens (`ai-wanderer.mpd`, `ai-ford-mustang.mpd`, `ai-mecha-invader.mpd`), with the metadata below in every AI-generated model/submodel section. Never the generic `ai-generated.mpd`: `finalize` refuses it and any name without the prefix. Use a separate directory per model. The tool's internal `review/model.mpd` is not the user-facing file.
 
 Keep plans, generators, review reports, BOMs, xray recipes/manifests and notes internal. Do not attach or package them, or produce `.blend`, `.glb`, videos, README handoffs or other extras unless explicitly requested. Briefly state unresolved warnings or skipped checks in the final response.
 
 ### Timing (`metrics.md`)
 
 - Start a timing log **before planning** and update it throughout.
-- Record start/end timestamps, elapsed seconds and measurement source for: planning, construction/part research, plan or generator authoring, build/check execution, repairs, rendering/xray, visual inspection, metadata/finalization. Include setup or other stages when used, plus retries and failed commands. Mark unused stages `not run`.
+- Record start/end timestamps, elapsed time and measurement source for: planning, construction/part research, plan or generator authoring, build/check execution, repairs, rendering/xray, visual inspection, metadata/finalization. Include setup or other stages when used, plus retries and failed commands. Mark unused stages `not run`.
+- **Write every duration, per stage and in total, in seconds followed by its `hh:mm:ss` translation**: `4523.4 s (01:15:23)`, `42 s (00:00:42)`. Round `hh:mm:ss` to the nearest whole second, pad each field to two digits and do not wrap hours past 24 (`93784 s (26:03:04)`); show no unit smaller than seconds. Keep the seconds value as measured.
 - For each stage distinguish **wall time, tool execution time and agent/model thinking time**. Report total elapsed time, total tool time and per-agent/model thinking time where available, with the actual agent/model names and versions.
 - `LDRAW_AGENT_TRACE` records `ldraw-agent` command durations to an internal JSONL file: create its parent directory first and verify entries were written. Time other tools separately.
 - If a measurement is not exposed, write `unavailable` with the reason. **Never** equate elapsed minus tool time with thinking time. Label estimates and their method. State units, boundaries and overlaps; parallel durations are cumulative and must not be added to wall time as if sequential. Metrics describe durations, not reasoning transcripts.
 
 ### MPD metadata
 
-In the plan: set `author` to the actual contributing agent/model names and versions, `license` to `CC-BY-NC`, and prefix the root section's `description` with `[AI-GENERATED] ` exactly once. Override section authors when contributions differ; the root header lists all contributors. Use the runtime's model identifier; record `version unavailable` if not exposed, never invent one. Keep the filename, section names, `Name:` fields and references unchanged.
+In the plan: set `author` to the actual contributing agent/model names and versions, `license` to `CC-BY-NC`, and prefix the root section's `description` with `[AI-GENERATED] ` exactly once. Override section authors when contributions differ; the root header lists all contributors. Use the runtime's model identifier; record `version unavailable` if not exposed, never invent one. Keep the `ai-NAME.mpd` filename, section names, `Name:` fields and references unchanged; renaming after finalizing means finalizing and reviewing again.
 
 Each AI-generated section's header must contain, before its geometry:
 
@@ -111,13 +112,13 @@ These are section headers inside the MPD, not comments before its first `0 FILE`
 ### Finalize and verify the delivered bytes
 
 ```sh
-./ldraw-agent build output/TASK/model.plan.json --output output/TASK/ai-generated.mpd
-./ldraw-agent finalize output/TASK/ai-generated.mpd
-./ldraw-agent review output/TASK/ai-generated.mpd --outdir output/TASK/final-review --views home front back left right top bottom
-bin/ldraw-xray board overview output/TASK/ai-generated.mpd --output output/TASK/xray/final-overview
+./ldraw-agent build output/TASK/model.plan.json --output output/TASK/ai-NAME.mpd
+./ldraw-agent finalize output/TASK/ai-NAME.mpd
+./ldraw-agent review output/TASK/ai-NAME.mpd --outdir output/TASK/final-review --views home front back left right top bottom
+bin/ldraw-xray board overview output/TASK/ai-NAME.mpd --output output/TASK/xray/final-overview
 ```
 
-- `finalize` adds the licence comment below each generated `0 !LICENSE CC-BY-NC` line and the keywords after it, keeps CRLF, and checks the title prefix and authors. Run it again after every rebuild (it never duplicates a line). Do not write your own script for this or edit the managed review bundle.
+- `finalize` adds the licence comment below each generated `0 !LICENSE CC-BY-NC` line and the keywords after it, keeps CRLF, and checks the filename (`ai-NAME.mpd`), the title prefix and the authors. Run it again after every rebuild (it never duplicates a line). Do not write your own script for this or edit the managed review bundle.
 - Keep the successful **plan** review for declared structural/flex checks; an MPD review does not replace them. Then review the finalized MPD so final images and reports match the delivered bytes.
 - Open the final previews and mosaics. Verify: the filename; a single `[AI-GENERATED]` prefix; the exact licence/comment pair and other headers in every generated section; **byte equality with `final-review/model.mpd`**. Never deliver an old model after a failed rebuild. If the finalized MPD changes, refresh affected evidence.
 - Check every board has a nonempty `mosaic.png` and every required file is linked. Report any missing evidence explicitly rather than claiming delivery is complete.

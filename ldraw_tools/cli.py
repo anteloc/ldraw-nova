@@ -391,7 +391,7 @@ def parser():
     c.add_argument("degrees", type=float)
     commands.add_parser("profiles", help="List curated ordinary brick/plate dimensions for on placement")
     c = commands.add_parser("finalize", help="Add the licence comment and AI keywords to a built MPD and check its delivery metadata")
-    c.add_argument("model", help="Built MPD, usually ai-generated.mpd; finalized in place unless --output is given")
+    c.add_argument("model", help="Built MPD named after the model, ai-<model-name>.mpd (e.g. ai-ford-mustang.mpd); finalized in place unless --output is given")
     c.add_argument("--output", help="Write the finalized MPD here instead")
     c = commands.add_parser("build", help="Build a validated MPD from a JSON plan")
     c.add_argument("plan")

@@ -78,7 +78,7 @@ A renderable colour does not prove LEGO made that part in that colour.
 
 - BFC controls winding and back-face culling, not connectivity. At most one `CERTIFY [CCW|CW]` / `NOCERTIFY` before operational lines. `INVERTNEXT` applies only to the immediately following subfile record (blank lines allowed, no comment between). Do not use it on complete physical parts.
 - Keep titles, `Name:`, `Author:` and `!LDRAW_ORG Model` accurate. Preserve licences/authors on copied blocks; never label new work as official or assert someone else's licence.
-- The builder omits `!LICENSE` unless the plan supplies one. The example above is **not** a delivery-ready header: AI-generated models need the `[AI-GENERATED] ` title prefix, `0 Author:`, `0 !LICENSE CC-BY-NC` plus its comment line and `0 !KEYWORDS AI, AI-generated` in every generated section, delivered as `ai-generated.mpd` ([review-and-deliver](../../review-and-deliver/SKILL.md)).
+- The builder omits `!LICENSE` unless the plan supplies one. The example above is **not** a delivery-ready header: AI-generated models need the `[AI-GENERATED] ` title prefix, `0 Author:`, `0 !LICENSE CC-BY-NC` plus its comment line and `0 !KEYWORDS AI, AI-generated` in every generated section, delivered as `ai-NAME.mpd`, named after the model (e.g. `ai-ford-mustang.mpd`) ([review-and-deliver](../../review-and-deliver/SKILL.md)).
 
 ## Dimensions and origins (PDF p.63, p.143)
 

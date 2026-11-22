@@ -4,7 +4,7 @@ Toolkit changes are accepted or reverted on these numbers. Earlier attempts meas
 
 ## What a run is
 
-One fresh headless agent, one frozen brief from [briefs.json](briefs.json), one model tier, a time and cost budget, and an isolated workspace: a git worktree of the toolkit revision under test, so earlier models in `output/` are invisible. The agent receives the harness prompt plus the brief and follows the [model delivery requirements](../docs/agent/cards/review.md#deliver): timing metrics, visual evidence and `ai-generated.mpd` with the required metadata. Plans/generators and review bundles remain internal benchmark inputs for scoring, not extra user deliverables.
+One fresh headless agent, one frozen brief from [briefs.json](briefs.json), one model tier, a time and cost budget, and an isolated workspace: a git worktree of the toolkit revision under test, so earlier models in `output/` are invisible. The agent receives the harness prompt plus the brief and follows the [model delivery requirements](../docs/agent/cards/review.md#deliver): timing metrics, visual evidence and `ai-NAME.mpd` (named after the model) with the required metadata. Plans/generators and review bundles remain internal benchmark inputs for scoring, not extra user deliverables.
 
 ## Protocol
 
