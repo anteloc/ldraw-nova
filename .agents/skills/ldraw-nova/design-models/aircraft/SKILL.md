@@ -1,6 +1,6 @@
 ---
 name: aircraft
-description: 'Builds aircraft in any style: brief and datums, choosing a style, airframe topology (fuselage, wings, tail), moving features such as hinged surfaces, doors and gear, build order and review, using the aircraft family of reviewed real-set studies (examples --family aircraft). Use when the subject is a plane, jet, airliner, glider or other aircraft.'
+description: 'Builds aircraft in any style: brief and datums, choosing a style, airframe topology (fuselage, wings, tail), moving features such as hinged surfaces, doors and gear, build order with the mandatory silhouette pass (round blocky fuselage, nose, nacelle and wing edges with SNOT curves) and review, using the aircraft family of reviewed real-set studies (examples --family aircraft). Use when the subject is a plane, jet, airliner, glider or other aircraft.'
 ---
 
 # Aircraft
@@ -110,7 +110,8 @@ stateDiagram-v2
   Spine --> Mounts : gear pivots, wing roots, engine stations, tail base, cockpit floor
   Mounts --> Modules : wings, tail, engines, gear, cockpit in their own frames
   Modules --> Skins : nose, fuselage sides, roof, canopy, fairings, control surfaces
-  Skins --> Review : home, front, back, right, left, top, bottom, underside, exposed frame
+  Skins --> Soften : inspect the outline, then round nose, fuselage edges, wing edges, nacelles and fairings with SNOT curves
+  Soften --> Review : home, front, back, right, left, top, bottom, underside, exposed frame
   Review --> Mounts : floating module, wrong station, stance, clearance
   Review --> [*] : evidence recorded, limits stated
 ```
@@ -124,6 +125,7 @@ Open the images and answer before delivery:
 - **Seams:** is the fuselage closed between nose, cabin and tail, with the canopy on a rim and the fin base on studs or pins?
 - **Tail:** is the tailplane behind the wing by at least the wing chord, with a real root for fin and tailplane?
 - **Underside:** inspect belly, gear bays and pylons from below.
+- **Softness (mandatory):** does a brick-built fuselage, nose, nacelle or wing edge still read as stacked boxes? Round those edges with SNOT curves (`5892-snot-nose` shows a nose) unless the type is genuinely angular. Procedure and before/after boards: the silhouette pass in [design-models](../SKILL.md).
 
 `./ldraw-agent vehicle check MODEL.mpd --profile aircraft` runs the generic geometry checks and reports `vehicle.interfaces_unreviewed`; without `--recipe` it does not know which parts you used. Boards and the review workflow: [review-and-deliver](../../review-and-deliver/SKILL.md).
 

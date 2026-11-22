@@ -126,6 +126,9 @@ before inserting fittings. Render a roof-off view when the complete shell hides 
    fittings as appropriate. Every sideways tile needs a real side-stud interface.
 7. Cap selected broad surfaces with long tiles or curved pieces. Leave studs only
    where they support something or contribute deliberately to the LEGO character.
+8. Inspect the silhouette and round off the blocky edges with SNOT curves where
+   the subject is rounded. This step is mandatory; see
+   [soften blocky vehicle silhouettes](#soften-blocky-vehicle-silhouettes).
 
 The road examples expose chassis, axles, body, cab and front/rear fascias as
 separate sections. The other families author their own frame, hull or fuselage.
@@ -150,6 +153,8 @@ revision before delivery:
   Remove random stripes, excessive studs, oversized roof lips and unrelated trim.
 - Are tyres visibly clear of arches, sills and underbody? Are paired wheels
   aligned? Inspect both sides, not just the flattering three-quarter view.
+- Does the outline still read as stacked boxes where the subject is rounded?
+  Complete the [silhouette pass](#soften-blocky-vehicle-silhouettes) before delivery.
 
 For boats, inspect hull/helm proportions, deck access, hull-side clearance and
 the distinction between floor and waterline. For aircraft, inspect wing span and
@@ -285,9 +290,87 @@ Review the actual attachment structure before closing the skins, then inspect th
 
 Run normal source and geometry validation and compare Python/LeoCAD BOMs. The spaceship family does not imply car-wheel checks, flight physics or automatic symmetry checks. Preserve diagnostic coverage, especially on imported angled constructions and curves.
 
-Render home/front/back/right/left/top/bottom for a delivered spacecraft, plus exposed frame, cockpit and wing-root views where the exterior hides important work. Judge front/top silhouette, side thickness, rear engines, canopy fit, negative space, detail density and underside supports. Revise after opening the images.
+Render home/front/back/right/left/top/bottom for a delivered spacecraft, plus exposed frame, cockpit and wing-root views where the exterior hides important work. Judge front/top silhouette, side thickness, rear engines, canopy fit, negative space, detail density and underside supports. Revise after opening the images, including the mandatory [silhouette pass](#soften-blocky-vehicle-silhouettes).
 
 Deliver the editable MPD, reproducible plan/generator, design brief, checks, BOM comparison, attribution and final visual review. Explain source adaptations and outstanding physical limits. Atlas overviews are study images; a new model still needs its own final inspection.
+
+## Soften blocky vehicle silhouettes
+
+**Mandatory for every vehicle:** cars, trucks, buses, motorcycles, boats and
+ships, aircraft and spacecraft, including System bodywork on a Technic chassis.
+Parts with only straight edges and planar faces (bricks, plates, tiles, straight
+slopes and wedges) give a stepped, boxy outline. Once the construction builds and
+its first review is open, inspect the silhouette and round off blocky edges with
+SNOT where the subject is rounded.
+
+### 1. Inspect the silhouette
+
+Judge the outline, not the detail. Open the review's front, back, side and top
+views at thumbnail size. ldraw-xray renders a traced outline that makes stepped
+edges easy to see; turn a render into a board with `mosaic`:
+
+```sh
+bin/ldraw-xray render output/TASK/review/model.mpd --view front --view right --view top \
+  -o output/TASK/xray/silhouette-before
+bin/ldraw-xray mosaic output/TASK/xray/silhouette-before/manifest.json \
+  --output output/TASK/xray/silhouette-before/mosaic.png
+bin/ldraw-xray render output/TASK/review/model.mpd --section NAME.ldr --stud-map --view home \
+  -o output/TASK/xray/NAME-studs
+```
+
+The [xray guide](xray.md) covers the options. A stud map shows which side-stud
+faces already exist to carry curves. List where the outline reads as stairs or
+hard corners: nose and tail, roof and shoulder edges, bonnet-to-windscreen and
+cabin-to-tail transitions, wheel arches and fenders, wing leading edges and tips,
+nacelles, pods and engine housings, bow, stern and bilge, canopy surrounds,
+fuel tanks and fairings.
+
+### 2. Decide where rounding makes sense
+
+Round what the real subject rounds; keep square what is meant to be square:
+box bodies and cargo containers, deliberately faceted or wedge designs, flat
+functional faces such as doors, decks and ramps, and details too small for the
+model's scale. Do not trade function for shape: keep wheel and steering
+clearance, the swept space of moving parts, figure access and every real
+attachment. Prefer a few large curves on the primary edges to many small ones.
+
+### 3. Round with SNOT
+
+Each curve needs a real stud behind it, carried by a side-stud brick, a bracket,
+an `under` seat or a jumper offset ([SNOT card](../cards/snot.md)). Study the
+lesson before adapting it (`./ldraw-agent knowledge show ID`):
+
+| Blocky feature | SNOT technique | Parts | Lesson |
+|---|---|---|---|
+| Long body or roof edge | Brackets along the edge, studs out, carry curved-top bricks laid on their sides; tile their flat tops | `6081`, `6091` on `44728`, `2436b`, `99780` | `10258-rounded-roof` |
+| Pointed or tapered nose | Studs-up core one stud narrower than the body; triple-curved wedges hung sideways on side-stud bricks; curved and cheese slopes on top; cone tip on an axle | `43712`, `61678`, `54200`, `30414` | `5892-snot-nose` |
+| Rounded pod, nacelle or hull top | Two curved slopes back to back along the centreline | `15068` | `halcyon` |
+| Curved hull skin over a frame | Technic connectors and axle-hole round plates carry plate skins shaped by curved bricks | `4032a`, `30165`, `30602` | `b-wing-6208#side-shell` |
+| Smooth panel or shield | Studs-forward column under a tiled skin, capped by a triple-curved wedge | `99206`, `47753` | `10298-vespa-leg-shield` |
+| Ship hull side and bilge | Hull wall built flat in its own section and stood on its side; curved bilge edge | — | `10294-hull-panels#s17-10294-titanic-hull` |
+| Chin, belly or overhang | Inverted slope hung under a plate with `under`; inverted curved slopes for a softer edge | `3660b`, `32803` | `recipe-inverted-nose` |
+| Engine exhaust or nozzle | Round bricks and dishes on axle-pin supports | `3941`, `4740`, `43093` | `b-wing-6208#exhaust` |
+| Small corners and tips | Corner-round and round tiles; round-ended plates turned about one stud | `25269`, `27925`, `98138`, `14769`, `35480` | `cat` |
+| Side faces and vertical edges | Curved slopes seated on side studs | `11477`, `50950`, `61678`, `93273`, `24309` on `30414`, `87087`, `52107` | SNOT card |
+
+- Curved slopes have sockets only under their flat end; the curve overhangs.
+  Read `./ldraw-agent part CODE`, name the `socket`, and check `mated` in the
+  `--report` seats. Choose `roll` so the curve faces outward, and confirm it in a render.
+- Build a curved skin as its own module, upright, then seat it with
+  `socket_at` and `roll`. Five plates (40 LDU) equal two studs when sideways and
+  upright grids meet.
+- Keep one curve family and palette per surface; tile the flat studs of
+  curved-top bricks and cover bare side studs.
+
+### 4. Check and record
+
+Rebuild and review. Fix new `appearance.exposed_side_studs`,
+`appearance.deep_overlap` and `assembly.floating_group` warnings, and recheck
+wheel arches and moving parts. Render the same views again as
+`xray/silhouette-after` and compare them with the before board at thumbnail
+size; repeat until the primary edges read as intended. Both boards are visual
+evidence: label the first as an intermediate revision. In the final response,
+state which edges were rounded and which were deliberately left square, and why.
 
 ## Animals, objects and interiors
 

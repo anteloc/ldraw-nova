@@ -140,7 +140,8 @@ stateDiagram-v2
   Spine --> Mounts : gear pivots, wing roots, engine stations, tail base, cockpit floor
   Mounts --> Modules : wings, tail, engines, gear, cockpit in their own frames
   Modules --> Skins : nose, fuselage sides, roof, canopy, fairings, control surfaces
-  Skins --> Review : home, front, back, right, left, top, bottom, underside, exposed frame
+  Skins --> Soften : inspect the outline, then round nose, fuselage edges, wing edges, nacelles and fairings with SNOT curves
+  Soften --> Review : home, front, back, right, left, top, bottom, underside, exposed frame
   Review --> Mounts : floating module, wrong station, stance, clearance
   Review --> [*] : evidence recorded, limits stated
 ```
@@ -154,6 +155,7 @@ Open the images and answer these before delivery:
 - Seams: is the fuselage closed between nose, cabin and tail, with the canopy sitting on a rim and the fin base on studs or pins?
 - Tail: is the tail arm long enough (tailplane behind the wing by at least the wing chord), and do the fin and tailplane have a real root?
 - Underside: inspect the belly, gear bays and pylons from below; the three-quarter view hides them.
+- Softness: does a brick-built fuselage, nose, nacelle or wing edge still read as stacked boxes? The [silhouette pass](design-models.md#soften-blocky-vehicle-silhouettes) is mandatory: round those edges with SNOT curves (the `5892-snot-nose` lesson shows a nose) unless the type is genuinely angular.
 
 `./ldraw-agent vehicle check MODEL.mpd --profile aircraft` runs the generic geometry checks and reports `vehicle.interfaces_unreviewed`; without `--recipe` it does not know which parts you used. The [review workflow](review-models.md) and `bin/ldraw-xray` boards supply the evidence; a passing check and a pleasing render are different things.
 

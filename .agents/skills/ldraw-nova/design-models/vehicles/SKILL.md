@@ -1,6 +1,6 @@
 ---
 name: vehicles
-description: 'Builds System vehicles (cars, trucks, vans, buses, boats, motorcycles) with SNOT bodywork: master layout (X across, -Z forward, Y=0 at the road), wheels first, scale and stance decisions, dedicated fittings (vehicle list, vehicle wheels, vehicle details, vehicle plan), inside-out build order and render-driven revision, plus the Ferrari F40 reference with five small body studies. Use when the subject is a car, truck, boat, motorcycle or other System vehicle (for a Technic chassis see the technic skill).'
+description: 'Builds System vehicles (cars, trucks, vans, buses, boats, motorcycles) with SNOT bodywork: master layout (X across, -Z forward, Y=0 at the road), wheels first, scale and stance decisions, dedicated fittings (vehicle list, vehicle wheels, vehicle details, vehicle plan), inside-out build order, the mandatory silhouette pass that rounds blocky edges with SNOT curves, render-driven revision, plus the Ferrari F40 reference with five small body studies. Use when the subject is a car, truck, boat, motorcycle or other System vehicle (for a Technic chassis see the technic skill).'
 ---
 
 # Vehicles
@@ -70,6 +70,7 @@ Real-set vehicle details in the submodel atlas (`./ldraw-agent examples --family
 5. Fit glazing and any interior before closing the roof. Avoid a tall plate stack masquerading as a sports-car cabin; treat windscreen rake, roof width and overhang as one composition.
 6. Add supported front/rear fascias and restrained details: paired headlights, red tail lamps, grille, bumpers, mirrors, handles, exhaust or cargo fittings. Every sideways tile needs a real side-stud interface ([snot-construction](../../snot-construction/SKILL.md)).
 7. Cap selected broad surfaces with long tiles or curves. Leave studs only where they support something or add deliberate character.
+8. **Mandatory:** inspect the silhouette and round off the blocky edges (bonnet and roof edges, nose and tail, arches, fenders; bow, stern and bilge for boats; tank and fairings for motorcycles) with SNOT curves where the subject is rounded. Follow the silhouette pass in [design-models](../SKILL.md); the London bus roof (`10258-rounded-roof`: curved-top bricks on brackets) and the F40 studies are the vehicle lessons to start from.
 
 Expose chassis, axles, body, cab and front/rear fascias as separate sections ([write-plans](../../write-plans/SKILL.md)). Python helpers use X/Z in studs and height in LDU through the `Module`/builder API. New body families author their own modules around measured wheel interfaces; do not stretch existing plans.
 
@@ -105,6 +106,7 @@ Review front three-quarter, true side, front, rear, top and underside; view the 
 - Do roof thickness, glazing, interior and body width agree at this scale?
 - Are long surfaces cleanly seamed with an organized palette? Remove random stripes, excess studs, oversized roof lips, unrelated trim.
 - Are tyres clear of arches, sills and underbody, and paired wheels aligned? Inspect both sides.
+- Does the outline still read as stacked boxes where the subject is rounded? Complete the silhouette pass ([design-models](../SKILL.md)) with before/after boards.
 - Boats: hull/helm proportions, deck access, hull-side clearance, floor vs waterline. Motorcycles: frame/fairing fit, wheel alignment, handlebars, saddle, luggage clearance.
 
 Record image paths, findings and revisions; regenerate checks, BOM and renders from the final plan. Keep `physical_validity: not_proven` and state untested rolling freedom, strength, driver fit and part/colour availability.

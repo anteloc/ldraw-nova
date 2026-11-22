@@ -18,7 +18,7 @@ Write down the silhouette, the main dimensions in studs, where loads go and wher
 - A half pin with a stud (`4274`) in a beam hole gives a single stud for a tile or plate.
 - Panels (such as `64782`) and fairings hang on pins and axle-pins: seat the pin in the frame first, then the panel on it.
 
-Keep the skeleton's main lines clear and its palette controlled; reserve real mounts for panels and cladding. Compare all seven views and a thumbnail; fix proportions and unsupported mounts before decoration.
+Keep the skeleton's main lines clear and its palette controlled; reserve real mounts for panels and cladding. Compare all seven views and a thumbnail; fix proportions and unsupported mounts before decoration. A vehicle body clad in System bricks also gets the mandatory [silhouette pass](design-models.md#soften-blocky-vehicle-silhouettes).
 
 ## Choose a construction by function
 

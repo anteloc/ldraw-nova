@@ -114,7 +114,7 @@ A section's `structure` contract names joints that must exist and their assembly
 - A half pin with a stud (`4274`) in a beam hole gives a single stud for a tile or plate.
 - Panels (such as `64782`) and fairings hang on pins and axle-pins: seat the pin in the frame first, then the panel on it.
 
-Keep the skeleton's main lines clear and the palette controlled. Compare all seven views and a thumbnail; fix proportions and unsupported mounts before decoration.
+Keep the skeleton's main lines clear and the palette controlled. Compare all seven views and a thumbnail; fix proportions and unsupported mounts before decoration. A vehicle body clad in System bricks also gets the mandatory silhouette pass ([design-models](../design-models/SKILL.md)).
 
 ## Choose a construction by function
 

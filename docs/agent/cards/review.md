@@ -18,6 +18,7 @@
 
    The [xray guide](../guides/xray.md) has more views, including stud maps and cutaways.
 3. Fix what you see in the plan, then review again.
+4. **Vehicles:** do the mandatory [silhouette pass](../guides/design-models.md#soften-blocky-vehicle-silhouettes). Render the outline before and after rounding the blocky edges with SNOT curves, keep both boards, and say in the final response what was rounded and what was left square.
 
 Checks cannot tell whether a model looks right; the images can. Neither checks nor images prove clutch, strength or motion.
 

@@ -1,6 +1,6 @@
 ---
 name: review-and-deliver
-description: 'Reviews a built model visually and delivers it: review PLAN --outdir (BOM, previews, --views, --draft), opening and comparing images with the brief, rendering modules alone or in place with bin/ldraw-xray (boards, stud maps, cutaways, mosaic.png), then the delivery rules: metrics.md timing for every stage, visual evidence, ai-generated.mpd with [AI-GENERATED] title, Author, CC-BY-NC licence and keywords via finalize, and final review of the delivered bytes. Use after a build passes, when inspecting a warning in the render, and before handing a model to the user.'
+description: 'Reviews a built model visually and delivers it: review PLAN --outdir (BOM, previews, --views, --draft), opening and comparing images with the brief, the mandatory before/after silhouette boards for vehicles, rendering modules alone or in place with bin/ldraw-xray (boards, stud maps, cutaways, mosaic.png), then the delivery rules: metrics.md timing for every stage, visual evidence, ai-generated.mpd with [AI-GENERATED] title, Author, CC-BY-NC licence and keywords via finalize, and final review of the delivered bytes. Use after a build passes, when inspecting a warning in the render, and before handing a model to the user.'
 ---
 
 # Review and deliver
@@ -29,6 +29,14 @@ Look at a built model, inspect anything a warning names with `bin/ldraw-xray`, t
    ```
 
 3. Fix what you see in the plan, then review again.
+4. **Vehicles:** do the mandatory silhouette pass ([design-models](../design-models/SKILL.md)). Render the outline before and after rounding the blocky edges with SNOT curves, and keep both boards:
+
+   ```sh
+   bin/ldraw-xray render output/TASK/review/model.mpd --view front --view right --view top -o output/TASK/xray/silhouette-before
+   bin/ldraw-xray mosaic output/TASK/xray/silhouette-before/manifest.json --output output/TASK/xray/silhouette-before/mosaic.png
+   ```
+
+   A plain `render` writes no `mosaic.png`; the `mosaic` command adds the one every delivered board needs. Repeat as `silhouette-after`, and say in the final response which edges were rounded and which were left square.
 
 Open the whole model from useful sides, the underside and hidden joins. Check every module in isolation **and** in its parent context (every distinct parent where reused). A JSON report cannot establish visual review.
 
@@ -72,7 +80,7 @@ When construction order is unclear, `manual prepare FILE --section NAME --outdir
 For **each model**, give the user only these three deliverables under `output/TASK/`, with direct links in the final response:
 
 1. **Metrics** in `metrics.md`: total generation wall time and a breakdown for every stage (below).
-2. **Visual evidence:** every `xray/<board>/mosaic.png`, plus stills and previews from different perspectives. Include every board produced during research, construction and review; label reference studies and intermediate revisions so they cannot be mistaken for the final model. Include final home, front, back, left, right, top and bottom views, and close-ups of hidden joins. Preview PNGs can serve as stills.
+2. **Visual evidence:** every `xray/<board>/mosaic.png`, plus stills and previews from different perspectives. Include every board produced during research, construction and review; label reference studies and intermediate revisions so they cannot be mistaken for the final model. Include final home, front, back, left, right, top and bottom views, and close-ups of hidden joins. For a vehicle, include the `silhouette-before` (labelled as an intermediate revision) and `silhouette-after` boards. Preview PNGs can serve as stills.
 3. **`ai-generated.mpd`** with the metadata below in every AI-generated model/submodel section. Use a separate directory per model; never a subject-specific MPD filename at handoff. The tool's internal `review/model.mpd` is not the user-facing file.
 
 Keep plans, generators, review reports, BOMs, xray recipes/manifests and notes internal. Do not attach or package them, or produce `.blend`, `.glb`, videos, README handoffs or other extras unless explicitly requested. Briefly state unresolved warnings or skipped checks in the final response.

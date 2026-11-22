@@ -1,6 +1,6 @@
 ---
 name: snot-construction
-description: 'Builds sideways (SNOT, studs not on top), the default construction for new models: choose a support with side studs (87087, 30414, 52107, 67329, 99780, 4070, brackets, clips), seat parts and whole upright-built panel modules on its studs with on {to, face, stud, socket, socket_at, roll}, hang parts underneath with under, and cover exposed side studs. Includes the SNOT interface table of 43 parts with stud faces and indices, and the parrot head worked reference. Use when a surface must face outward, when building hull or body skins, or when fixing appearance.exposed_side_studs.'
+description: 'Builds sideways (SNOT, studs not on top), the default construction for new models: choose a support with side studs (87087, 30414, 52107, 67329, 99780, 4070, brackets, clips), seat parts and whole upright-built panel modules on its studs with on {to, face, stud, socket, socket_at, roll}, hang parts underneath with under, round off blocky edges with curved parts on side studs (naming the socket of curved slopes), and cover exposed side studs. Includes the SNOT interface table of 43 parts with stud faces and indices, and the parrot head worked reference. Use when a surface must face outward, when building hull or body skins, or when fixing appearance.exposed_side_studs.'
 ---
 
 # SNOT construction
@@ -55,6 +55,21 @@ Studs that point down, or parts built downward from a surface, use `under`: the 
 ```
 
 `socket` and `socket_face` pick the support's socket (default its underside); `stud` and `face` pick the placed part's stud (default its top). The default turn again covers the most studs.
+
+## 5. Round off blocky edges
+
+Curved parts seat on side studs like any other part, which is how SNOT softens a boxy outline. **Every vehicle must get this pass** (procedure and parts table: the silhouette pass in [design-models](../design-models/SKILL.md)).
+
+```json
+{"id": "core", "ref": "30414.dat", "colour": 71, "on": {"to": "base"}},
+{"id": "edge", "ref": "61678.dat", "colour": 15, "on": {"to": "core", "face": "-Z", "stud": 0, "socket": 2}}
+```
+
+- A curved slope's sockets sit only under its flat end; the curve overhangs. `part 61678` lists sockets at different heights: socket 0 is inside the curve, so seating by default covers 1 stud, while `"socket": 2` (on the bottom face) covers 2. Always name the socket and check `mated` in the `--report` seats.
+- Choose `roll` so the curve faces outward and confirm it in a render.
+- Long rounded edges: brackets studs-out along the edge carrying curved-top bricks (`6081`, `6091`) laid on their sides, with their flat studs tiled (`10258-rounded-roof`).
+- Noses: triple-curved wedges (`43712`) hung on side-stud bricks around a core one stud narrower than the body (`5892-snot-nose`).
+- Undersides: inverted curved slopes (`32803`) hang with `under`.
 
 ## Finish
 

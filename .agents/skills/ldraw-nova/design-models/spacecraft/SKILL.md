@@ -1,6 +1,6 @@
 ---
 name: spacecraft
-description: 'Builds spaceships with a SNOT core and hull skins: identity and scale, comparing at least three construction sources (spaceship list, knowledge search --family spaceship --diversify source, discover search), surfaces in their own local grids, frame-outward build order, attractive detailing and the seven-view review, with two studies that are not templates: the original Halcyon core-and-skin interceptor (spaceship export halcyon) and the 6208 B-Wing basics (Technic fittings carrying System skins, wings on their own grid, cockpit and engines as modules). Use when the subject is a spaceship, starfighter, freighter, capital ship or other spacecraft.'
+description: 'Builds spaceships with a SNOT core and hull skins: identity and scale, comparing at least three construction sources (spaceship list, knowledge search --family spaceship --diversify source, discover search), surfaces in their own local grids, frame-outward build order, attractive detailing, the mandatory silhouette pass that rounds blocky hulls, pods and noses with SNOT curves, and the seven-view review, with two studies that are not templates: the original Halcyon core-and-skin interceptor (spaceship export halcyon) and the 6208 B-Wing basics (Technic fittings carrying System skins, wings on their own grid, cockpit and engines as modules). Use when the subject is a spaceship, starfighter, freighter, capital ship or other spacecraft.'
 ---
 
 # Spacecraft
@@ -152,7 +152,9 @@ A construction-learning study of `6208-1.mpd` (credit Merlijn Wissink [Legolijnt
 
 ## Inspect
 
-Run normal validation and BOM comparison (no car-wheel checks, flight physics or automatic symmetry checks). Render home/front/back/right/left/top/bottom plus exposed frame, cockpit and wing-root views. Judge front/top silhouette, side thickness, rear engines, canopy fit, negative space, detail density and underside supports, and revise after opening the images. Delivery: [review-and-deliver](../../review-and-deliver/SKILL.md).
+Run normal validation and BOM comparison (no car-wheel checks, flight physics or automatic symmetry checks). Render home/front/back/right/left/top/bottom plus exposed frame, cockpit and wing-root views. Judge front/top silhouette, side thickness, rear engines, canopy fit, negative space, detail density and underside supports, and revise after opening the images.
+
+**Mandatory silhouette pass:** where the hull, nose, pods or wing edges still read as stacked boxes, round them with SNOT curves (curved slopes back to back on pods as on the Halcyon, triple-curved wedges hung on side studs for a nose, curved skins on round plates as on the B-Wing), unless the design is deliberately faceted. Procedure, parts table and before/after boards: [design-models](../SKILL.md). Delivery: [review-and-deliver](../../review-and-deliver/SKILL.md).
 
 ## Source docs
 

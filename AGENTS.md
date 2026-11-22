@@ -23,7 +23,8 @@ Build LEGO models as LDraw MPD files from JSON plans with `./ldraw-agent`. You c
 
    `build` prints a short summary: errors with the placements they concern, warnings grouped by code, and the next step. A failing build leaves `ai-generated.draft.mpd`; `review --draft` renders it so you can see the problem. Read the [checks card](docs/agent/cards/checks.md) to act on a diagnostic. Fix the first error and rebuild.
 5. **Review** with the same command once `build` passes; `--draft` only matters while checks fail. Open the previews and compare them with the brief, and look closely at every placement a warning names. The [review card](docs/agent/cards/review.md) explains how.
-6. **Finalize and deliver** only the three mandatory items below for each model. Follow the [review card](docs/agent/cards/review.md#deliver) to finalize metadata, check the exact delivered bytes and link every required artifact.
+6. **Soften vehicle silhouettes (mandatory for every vehicle: car, truck, plane, spacecraft, ship…).** Inspect the outline; where the subject is rounded, replace blocky straight-edged bricks with curves mounted by SNOT: [silhouette pass](docs/agent/guides/design-models.md#soften-blocky-vehicle-silhouettes).
+7. **Finalize and deliver** only the three mandatory items below for each model. Follow the [review card](docs/agent/cards/review.md#deliver) to finalize metadata, check the exact delivered bytes and link every required artifact.
 
 ## Mandatory model deliverables
 

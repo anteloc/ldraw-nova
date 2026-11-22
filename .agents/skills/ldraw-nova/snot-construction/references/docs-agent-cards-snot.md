@@ -51,4 +51,5 @@ Studs that point down, or parts built downward from a surface, use `under`: the 
 - Cover studs that face outward with tiles unless they are a deliberate texture; review warns with `appearance.exposed_side_studs`.
 - A sideways part needs studs behind it. Turning a part next to a wall does not attach it.
 - Five plates (40 LDU) equal two studs: use this to line up sideways and upright grids.
+- Round off blocky edges with curves on side studs; vehicles must ([silhouette pass](../guides/design-models.md#soften-blocky-vehicle-silhouettes)). A curved slope's sockets sit only under its flat end, so name one and check `mated`: `{"id": "edge", "ref": "61678.dat", "colour": 15, "on": {"to": "core", "face": "-Z", "stud": 0, "socket": 2}}` on a `30414`.
 - Real-set examples: `./ldraw-agent examples --family submodel --details snot` and the [SNOT guide](../guides/snot.md).
