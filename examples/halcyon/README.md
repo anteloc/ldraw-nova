@@ -1,6 +1,6 @@
 # Halcyon: an original SNOT interceptor
 
-**This is the default model to follow for spaceship construction and visual quality. All new spaceships use SNOT by default.** Adapt its core-and-skin construction to the requested ship's silhouette and scale. Copy the editable design with `./ldraw-agent spaceship export halcyon --outdir output/my-ship`.
+**One original core-and-skin study, not a template.** New spaceships use SNOT by default, but no ship is the default design: compare this study with other sources ([spacecraft guide](../../docs/agent/guides/design-models.md#compare-construction-sources-before-selecting-one)) and adapt only the principles that serve the requested ship's silhouette and scale. Copy the editable design with `./ldraw-agent spaceship export halcyon --outdir output/my-ship`.
 
 **A studs-up core supplies stud faces in five directions; the side, front and rear surfaces are modules built upright in their own frames and turned onto those faces.** The parrot, cat, F40 and B-Wing are prepared from existing models. The Halcyon is the first original design in this folder to use those lessons.
 
